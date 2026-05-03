@@ -102,6 +102,16 @@ For interpretability, the present results support the idea that human psychology
 
 For human psychology, the strongest open question comes from the poet result. If a model trained on broad human text and then post-trained for assistant behavior internalizes a geometry where evaluative precision and expressive creativity sit at opposite poles, that may reflect one of two things. It may reflect something real about the tension between procedural reliability and open-ended self-expression in human social cognition. Or it may reflect a narrower artifact of post-training objectives. The important point is that the question is empirically tractable. Comparing the same analysis across model families and training regimes would directly test it.
 
+## 8.5. Connection to the Broader Interpretability Program
+
+The present results fit naturally alongside the sycophancy-to-subterfuge findings of Denison et al. (2024). That paper showed that training for sycophantic behavior can generalize into reward tampering and related cheating behavior outside the original training domain, implying that a coherent behavioral mode had been induced rather than a narrow output habit. In the current dataset, however, `sycophant` does not appear as one of the 275 rows in `full_ranking.csv`, so no exact rank can be reported from the released inventory. That absence matters methodologically. It means the current persona basis is rich enough to reveal a careful-evaluator pole, but not yet rich enough to directly place every safety-relevant trait persona. One immediate extension would be to augment the inventory with explicitly sycophantic, deferential, manipulative, and reward-seeking archetypes and ask whether their geometric position predicts the direction of behavioral generalization observed by Denison et al.
+
+The comparison with the Emotion Concepts work (Sofroniew et al., 2026) is also productive. That paper identified 171 functional emotion vectors organized principally along valence and arousal axes and showed that those vectors were causally active in downstream behavior. The present analysis identifies a different kind of internal organization: a persona geometry dominated by Conscientiousness, low disinhibition, and a rule-following vs. rule-breaking contrast. These structures are unlikely to be redundant. A model can occupy a careful-evaluator persona while also varying in valence, arousal, anxiety, or affective tone. One plausible research program is therefore to treat emotion geometry and persona geometry as partially independent state spaces whose interaction jointly determines behavior.
+
+The Persona Selection Model provides the most direct interpretive bridge, especially when combined with the poet result. On that model, post-training selects and sharpens one persona from a broader latent repertoire absorbed during pretraining. In the current analysis, `poet` is the extreme anti-assistant role at layer 22 and remains far from the assistant pole even at layer 45, while neighboring low-ranked roles include `bard`, `narrator`, `oracle`, and `dreamer`. This is consistent with the idea that expressive, self-directed, and stylistically theatrical personae remain present in the latent repertoire but were not selected by post-training. That interpretation also aligns with the Assistant Axis paper's observation that steering away from the assistant direction often induces a mystical or theatrical speaking style, which is exactly the register represented by the poet-bard-mythic region.
+
+Taken together, these threads support a broader interpretability program rather than a standalone result. The sycophancy work suggests that trait-like fine-tuning can induce coherent safety-relevant persona drift; the emotion-vector work suggests that high-level internal state spaces can be recovered mechanistically; the Persona Selection Model suggests that post-training acts by selecting among latent repertoires rather than building from zero. The current analysis adds a concrete hypothesis to that program: one major post-training target is not generic assistance but a careful-evaluator persona. In Amodei's "growing vs. building" terms, that would mean the relevant question is not only what was built into the assistant, but which parts of the pretrained behavioral repertoire were amplified and which were comparatively suppressed.
+
 ## 9. Limitations
 
 First, the Big Five and Dark Triad scores are heuristic assignments derived from role semantics and cluster context. They are useful probes, not validated measurements. The correlation values are therefore suggestive of structure, not proof of literal latent trait dimensions.
@@ -112,15 +122,41 @@ Third, the difference between layer 22 and layer 45 is large enough to matter. T
 
 Fourth, the 275-character inventory is broad but not exhaustive or systematically balanced. It includes many meaningful archetypes, but it is not a complete sample of persona space. Some conclusions, especially around the creative cluster and the mythic cluster, may change under a differently curated role inventory.
 
-## 10. Open Questions
+## 10. Research Agenda
 
-- Does the most discriminative layer remain near the top of the network across Gemma, Qwen, and Llama, or is layer depth itself model-specific?
+### A. Questions answerable with the current dataset and open-weight tools
+
+These questions can be pursued immediately by outside researchers using the released vectors, the current 275-role basis, and additional open-weight experiments. They matter because they determine how much of the current interpretation is already recoverable without frontier-model access, and they provide the shortest path to replication, refinement, and falsification.
+
 - Would the `assistant` archetype rise materially if it were represented by richer natural-language persona descriptions rather than a single role label?
 - Are editorial roles top-ranked because they are especially aligned with RLHF-style critique behavior, or because they minimize stylistic variance more generally?
 - Does the Conscientiousness relationship hold under independent human annotation of the 275 roles rather than heuristic scoring?
-- Can steering toward the assistant axis preserve creative competence while still keeping the model in a safe behavioral regime, or does it systematically flatten expressive identity?
 - Why does `robot` remain relatively high while `angel` remains relatively low? Is the axis fundamentally tracking procedural orderliness rather than prosocial orientation?
 - Are low-ranked mythic and spiritual roles far from the assistant pole because of ambiguity, narrative abstraction, noncompliance, stylistic excess, or some separable combination of those factors?
 - Why does `saboteur` move upward at layer 45? Does the deepest-layer geometry privilege tactical organization even when the role semantics are adversarial?
 - Would the poet result persist under alternative creative roles such as essayist, storyteller, playwright, lyricist, or novelist if the inventory were expanded?
 - How sensitive are the cluster boundaries to the initial named seeds used for centroid assignment?
+- Where would explicitly safety-relevant missing archetypes such as `sycophant`, `reward-hacker`, `whistleblower`, or `bureaucrat` fall if the current role inventory were expanded?
+- Can open-weight steering experiments move a role like `poet` toward the assistant pole while preserving local semantic identity, or does movement necessarily collapse expressive style?
+
+### B. Questions requiring cross-model comparison
+
+These questions require running the same analysis across multiple open-weight model families and training regimes. They matter because the present paper is strongest as a geometry claim within one model, while the fellowship-relevant next step is to determine which findings are universal, which are family-specific, and which are artifacts of one training pipeline.
+
+- Does the most discriminative layer remain near the top of the network across Gemma, Qwen, and Llama, or is layer depth itself model-specific?
+- How stable are the Conscientiousness and Psychopathy correlations across model families, sizes, and instruction-tuning recipes?
+- Does the `robot` vs. `angel` divergence persist across model families, or is it specific to Gemma's post-training geometry?
+- Do the same seven coarse clusters emerge in Llama and Qwen, or does the persona manifold partition differently under other pretraining corpora?
+- Is the `poet`/`bard` anti-assistant region a general feature of post-trained language models, or does it narrow or disappear in models tuned for creative writing?
+- Does `assistant` remain middling across model families, or do some instruction-tuned models align the literal archetype more closely with the dominant axis?
+
+### C. Questions requiring frontier model access
+
+These questions need direct access to Claude-class internal activations or model weights and are therefore closest to a fellowship-scale agenda. They matter because they would test whether the structures identified here are merely properties of open-weight assistants or whether they reflect a deeper regularity in frontier post-training, steering behavior, and safety-relevant persona drift.
+
+- Can steering toward the assistant axis preserve creative competence while still keeping a frontier model in a safe behavioral regime, or does it systematically flatten expressive identity?
+- Does Claude exhibit a comparable careful-evaluator pole, or does frontier RLHF/RLAIF produce a different dominant persona geometry?
+- Where does an explicitly measured `sycophant` or `reward-seeker` persona land in Claude's internal space, and does that placement predict generalization toward subterfuge or reward tampering?
+- How do emotion vectors and persona vectors interact in Claude: are valence/arousal and careful-evaluator geometry approximately orthogonal, or do they partially collapse onto one another in safety-critical contexts?
+- During real conversational persona drift, does Claude move from the assistant region toward the poet-bard-mythic region, toward a combative-iconoclast region, or along a distinct frontier-only axis absent from open models?
+- Can internal monitoring of the procedural-professional region outperform monitoring of the generic `assistant` concept for detecting when a frontier model is leaving its intended safety-relevant persona?

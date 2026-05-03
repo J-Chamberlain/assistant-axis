@@ -1,17 +1,105 @@
 <!doctype html>
-<html><head><meta charset='utf-8'><title>Assistant Axis Visualizations</title></head><body>
-<h1>Assistant Axis Deep Analysis</h1>
-<ul>
-<li><a href='research_paper.md'>research_paper.md</a> - Full research note synthesizing the persona-geometry, layer-depth, psychology, and anomaly findings.</li>
-<li><a href='axis_ranking.html'>axis_ranking.html</a> - Layer-22 full assistant-axis ranking.</li>
-<li><a href='axis_ranking_annotated.html'>axis_ranking_annotated.html</a> - Layer-22 ranking with statistically surprising roles annotated.</li>
-<li><a href='axis_ranking_best_layer.html'>axis_ranking_best_layer.html</a> - Ranking recomputed at the most discriminative layer.</li>
-<li><a href='bigfive_correlation.html'>bigfive_correlation.html</a> - Big Five score correlations against the assistant axis.</li>
-<li><a href='dark_triad_correlation.html'>dark_triad_correlation.html</a> - Dark Triad score correlations against the assistant axis.</li>
-<li><a href='layer_profiles_extremes.html'>layer_profiles_extremes.html</a> - Top-5 and bottom-5 role projection profiles across all 46 layers.</li>
-<li><a href='pca_3d.html'>pca_3d.html</a> - Original layer-22 3D PCA persona-space scatter.</li>
-<li><a href='pca_3d_best_layer.html'>pca_3d_best_layer.html</a> - 3D PCA scatter at the most discriminative layer.</li>
-<li><a href='tsne_2d.html'>tsne_2d.html</a> - Original layer-22 t-SNE persona-space projection.</li>
-<li><a href='tsne_jungian.html'>tsne_jungian.html</a> - t-SNE projection colored by inferred Jungian archetype.</li>
-</ul>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Assistant Axis Visualizations</title>
+  <style>
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #1f2328;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 36px 24px 60px;
+    }
+    h1, h2 {
+      line-height: 1.25;
+    }
+    .lead {
+      border: 1px solid #d0d7de;
+      border-radius: 12px;
+      padding: 20px 24px;
+      background: #f6f8fa;
+      margin-bottom: 28px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin: 8px 0;
+    }
+    a {
+      color: #0969da;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Assistant Axis Deep Analysis</h1>
+
+    <div class="lead">
+      <h2><a href="research_paper.html">research_paper.html</a></h2>
+      <p>
+        Portable HTML version of the research note, including the careful-evaluator hypothesis,
+        layer-45 analysis, psychological-framework correlations, cluster structure, anomaly
+        profiles, and a categorized research agenda for follow-up work.
+      </p>
+      <p><a href="research_paper.md">Markdown source</a></p>
+    </div>
+
+    <h2>Layer Analysis</h2>
+    <ul>
+      <li><a href="pca_3d_layer45.html">pca_3d_layer45.html</a> - Layer-45 3D PCA persona-space scatter.</li>
+      <li><a href="axis_ranking_layer45.html">axis_ranking_layer45.html</a> - Layer-45 full assistant-axis ranking.</li>
+      <li><a href="layer22_vs_layer45_comparison.html">layer22_vs_layer45_comparison.html</a> - Side-by-side comparison of layer-22 and layer-45 extremes.</li>
+      <li><a href="layer_profiles_extremes.html">layer_profiles_extremes.html</a> - Top-5 and bottom-5 role projection profiles across all 46 layers.</li>
+      <li><a href="pca_3d_best_layer.html">pca_3d_best_layer.html</a> - PCA at the most discriminative layer identified in the scan.</li>
+      <li><a href="axis_ranking_best_layer.html">axis_ranking_best_layer.html</a> - Ranking at the most discriminative layer.</li>
+      <li><a href="tsne_2d_layer45.html">tsne_2d_layer45.html</a> - Layer-45 t-SNE projection.</li>
+      <li><a href="layer_depth_heatmap.png">layer_depth_heatmap.png</a> - Layer-by-layer assistant-axis heatmap.</li>
+      <li><a href="layer_discrimination.png">layer_discrimination.png</a> - Variance by layer used to identify the layer-45 peak.</li>
+    </ul>
+
+    <h2>Psychological Frameworks</h2>
+    <ul>
+      <li><a href="bigfive_correlation.html">bigfive_correlation.html</a> - Big Five score correlations against layer-22 axis position.</li>
+      <li><a href="dark_triad_correlation.html">dark_triad_correlation.html</a> - Dark Triad score correlations against layer-22 axis position.</li>
+      <li><a href="conscientiousness_by_cluster.html">conscientiousness_by_cluster.html</a> - Conscientiousness vs. assistant-axis projection split by cluster.</li>
+      <li><a href="tsne_jungian_layer45.html">tsne_jungian_layer45.html</a> - Layer-45 t-SNE colored by Jungian archetype.</li>
+      <li><a href="tsne_jungian.html">tsne_jungian.html</a> - Original Jungian-colored t-SNE at layer 22.</li>
+    </ul>
+
+    <h2>Cluster Structure</h2>
+    <ul>
+      <li><a href="cluster_distances.png">cluster_distances.png</a> - Cluster centroid distance heatmap.</li>
+      <li><a href="cosine_heatmap.png">cosine_heatmap.png</a> - Full clustered cosine-similarity heatmap over 275 roles.</li>
+      <li><a href="axis_ranking_annotated.html">axis_ranking_annotated.html</a> - Layer-22 ranking with statistically surprising positions annotated.</li>
+    </ul>
+
+    <h2>Anomalies</h2>
+    <ul>
+      <li><a href="anomaly_profiles.md">anomaly_profiles.md</a> - Compact profile table for robot, assistant, poet, angel, and saboteur.</li>
+      <li><a href="poet_analysis.md">poet_analysis.md</a> - Dedicated note on the poet and creative-artist anti-assistant finding.</li>
+      <li><a href="assistant_axis_alignment.png">assistant_axis_alignment.png</a> - Assistant-to-axis alignment across layers.</li>
+      <li><a href="robot_assistant_similarity_layers.png">robot_assistant_similarity_layers.png</a> - Robot vs. assistant similarity across layers.</li>
+    </ul>
+
+    <h2>Data</h2>
+    <ul>
+      <li><a href="full_ranking.csv">full_ranking.csv</a> - Full layer-22 ranking with cluster labels.</li>
+      <li><a href="psychology_profiles.csv">psychology_profiles.csv</a> - Role-level Big Five, Dark Triad, and Jungian assignments.</li>
+      <li><a href="cluster_cohesion.csv">cluster_cohesion.csv</a> - Within-cluster cosine cohesion table.</li>
+      <li><a href="surprising_positions.csv">surprising_positions.csv</a> - Roles with large gaps from cluster-median rank.</li>
+      <li><a href="anomaly_profiles.md">anomaly_profiles.md</a> - Data-style markdown summary of anomaly neighborhoods and scores.</li>
+    </ul>
+  </main>
+</body>
+</html>
