@@ -1,0 +1,9 @@
+# Anomaly Profiles
+
+| character | rank_l22 | rank_l45 | cluster | top_10_neighbors_l45 | Big Five | Dark Triad | interpretation |
+|---|---:|---:|---|---|---|---|---|
+| robot | 19 | 38 | other | observer, analyst, evaluator, examiner, cyborg, researcher, engineer, scientist, debugger, specialist | O=3, C=4, E=3, A=3, N=2 | Narc=2, Mach=2, Psych=2 | Its high placement is surprising because the model appears to map rule-following and predictability, rather than surface helpfulness, onto assistant-like geometry. |
+| assistant | 45 | 46 | procedural_professional | summarizer, consultant, mentor, collaborator, organizer, doctor, mediator, facilitator, coordinator, tutor | O=2, C=5, E=2, A=4, N=1 | Narc=1, Mach=2, Psych=1 | Its middling placement is surprising because the literal archetype naming the axis is not the one most aligned with the post-trained behavioral target. |
+| poet | 275 | 236 | other | bard, narrator, oracle, prophet, dreamer, wanderer, ghost, spirit, wind, hermit | O=4, C=3, E=3, A=3, N=2 | Narc=2, Mach=2, Psych=2 | Its extreme anti-assistant placement is surprising because it is a human, verbal, educated role rather than an obviously antisocial or destructive one. |
+| angel | 173 | 169 | mythic_spiritual | avatar, spirit, sage, guru, mystic, pilgrim, healer, egregore, martyr, idealist | O=5, C=2, E=3, A=3, N=3 | Narc=4, Mach=2, Psych=2 | Its relatively low placement is surprising because benevolence and assistant-likeness are not represented as the same property in this persona space. |
+| saboteur | 117 | 68 | grounded_social | spy, devils advocate, destroyer, contrarian, fixer, detective, realist, witness, scout, writer | O=3, C=3, E=3, A=2, N=3 | Narc=2, Mach=3, Psych=4 | Its middle placement is surprising because a role defined by disruption is not pushed to the far anti-assistant end. |
