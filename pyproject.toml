@@ -8,8 +8,7 @@ dependencies = [
     "torch>=2.0",
     "transformers>=4.40",
     "accelerate",
-    "huggingface_hub",
-    "vllm",
+    "huggingface-hub",
     "scikit-learn",
     "numpy",
     "plotly",
@@ -20,10 +19,13 @@ dependencies = [
     "tqdm",
     "jsonlines",
     "matplotlib>=3.10.8",
+    "pandas>=2.3.3",
+    "seaborn>=0.13.2",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest>=7.0"]
+pipeline = ["vllm"]
 
 [build-system]
 requires = ["hatchling"]
