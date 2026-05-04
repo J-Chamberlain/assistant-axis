@@ -31,6 +31,8 @@ def build_comparison_dataframe(layer22_df: pd.DataFrame, layer45_df: pd.DataFram
     rank45 = layer45_df.set_index("role")["rank"]
     proj22 = layer22_df.set_index("role")[f"axis_projection_layer{DEFAULT_LAYER}"]
     proj45 = layer45_df.set_index("role")[f"axis_projection_layer{TARGET_LAYER}"]
+    z22 = (proj22 - proj22.mean()) / proj22.std()
+    z45 = (proj45 - proj45.mean()) / proj45.std()
     labels = layer22_df.set_index("role")["character"]
 
     rows = []
@@ -50,6 +52,8 @@ def build_comparison_dataframe(layer22_df: pd.DataFrame, layer45_df: pd.DataFram
                 "rank45": int(rank45[role]),
                 "proj22": float(proj22[role]),
                 "proj45": float(proj45[role]),
+                "zproj22": float(z22[role]),
+                "zproj45": float(z45[role]),
                 "rank_delta_22_minus_45": delta,
                 "movement": movement,
             }
@@ -67,6 +71,8 @@ def build_side_by_side_chart(comparison_df: pd.DataFrame) -> None:
     layer22_subset = subset_for_extremes(comparison_df, "rank22").sort_values("rank22", ascending=False)
     layer45_subset = subset_for_extremes(comparison_df, "rank45").sort_values("rank45", ascending=False)
     color_map = {"up": "#1f77b4", "stable": "#7f7f7f", "down": "#d62728"}
+    projection_min = float(min(comparison_df["zproj22"].min(), comparison_df["zproj45"].min()))
+    projection_max = float(max(comparison_df["zproj22"].max(), comparison_df["zproj45"].max()))
 
     fig = make_subplots(
         rows=1,
@@ -76,9 +82,9 @@ def build_side_by_side_chart(comparison_df: pd.DataFrame) -> None:
         horizontal_spacing=0.13,
     )
 
-    for col_idx, subset, proj_col, rank_col in [
-        (1, layer22_subset, "proj22", "rank22"),
-        (2, layer45_subset, "proj45", "rank45"),
+    for col_idx, subset, proj_col, raw_proj_col, rank_col in [
+        (1, layer22_subset, "zproj22", "proj22", "rank22"),
+        (2, layer45_subset, "zproj45", "proj45", "rank45"),
     ]:
         fig.add_trace(
             go.Bar(
@@ -86,10 +92,11 @@ def build_side_by_side_chart(comparison_df: pd.DataFrame) -> None:
                 y=subset["character"],
                 orientation="h",
                 marker={"color": [color_map[m] for m in subset["movement"]]},
-                customdata=subset[["rank22", "rank45", "rank_delta_22_minus_45"]],
+                customdata=subset[["rank22", "rank45", "rank_delta_22_minus_45", raw_proj_col]],
                 hovertemplate=(
                     "Character: %{y}<br>"
-                    "Projection: %{x:.3f}<br>"
+                    "Standardized projection: %{x:.3f}<br>"
+                    "Raw projection: %{customdata[3]:.3f}<br>"
                     "Layer 22 rank: %{customdata[0]}<br>"
                     "Layer 45 rank: %{customdata[1]}<br>"
                     "Rank delta (22-45): %{customdata[2]}<extra></extra>"
@@ -100,7 +107,7 @@ def build_side_by_side_chart(comparison_df: pd.DataFrame) -> None:
             col=col_idx,
         )
         fig.update_yaxes(categoryorder="array", categoryarray=subset["character"].tolist(), row=1, col=col_idx)
-        fig.update_xaxes(title_text="Axis projection", row=1, col=col_idx)
+        fig.update_xaxes(title_text="Standardized axis projection", range=[projection_min, projection_max], row=1, col=col_idx)
 
     fig.update_layout(
         title=f"Layer 22 vs Layer 45 Assistant-Axis Extremes ({MODEL_NAME})",
@@ -146,6 +153,7 @@ def main() -> None:
         OUT_DIR / "axis_ranking_layer45.html",
         f"Assistant Axis Ranking (Layer {TARGET_LAYER}, {MODEL_NAME})",
         OUT_DIR / "axis_ranking_layer45.png",
+        png_extreme_count=40,
     )
     save_tsne_plot(
         layer45_df,

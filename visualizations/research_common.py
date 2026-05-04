@@ -238,6 +238,12 @@ def save_pca_plot(
     plot_df["PC1"] = pcs[:, 0]
     plot_df["PC2"] = pcs[:, 1]
     plot_df["PC3"] = pcs[:, 2]
+    color_kwargs = {}
+    if pd.api.types.is_numeric_dtype(plot_df[color_column]):
+        color_kwargs = {
+            "color_continuous_scale": px.colors.diverging.RdBu,
+            "range_color": [float(plot_df[color_column].min()), float(plot_df[color_column].max())],
+        }
     fig = px.scatter_3d(
         plot_df,
         x="PC1",
@@ -245,9 +251,9 @@ def save_pca_plot(
         z="PC3",
         color=color_column,
         hover_name="character",
-        color_continuous_scale="RdBu",
-        color_continuous_midpoint=0.0 if pd.api.types.is_numeric_dtype(plot_df[color_column]) else None,
+        hover_data={color_column: ":.4f"},
         title=title,
+        **color_kwargs,
     )
     fig.update_traces(marker={"size": 5, "opacity": 0.85})
     fig.write_html(output_path)
@@ -259,16 +265,18 @@ def save_ranking_plot(
     output_html: Path,
     title: str,
     output_png: Path | None = None,
+    png_extreme_count: int | None = None,
 ) -> None:
     plot_df = df.sort_values("rank", ascending=False).copy()
+    color_range = [float(plot_df[projection_column].min()), float(plot_df[projection_column].max())]
     fig = px.bar(
         plot_df,
         x=projection_column,
         y="character",
         orientation="h",
         color=projection_column,
-        color_continuous_scale="RdBu",
-        color_continuous_midpoint=0.0,
+        color_continuous_scale=px.colors.diverging.RdBu,
+        range_color=color_range,
         hover_data={"rank": True, projection_column: ":.4f", "character": False},
         title=title,
         height=6000,
@@ -278,10 +286,30 @@ def save_ranking_plot(
     fig.write_html(output_html)
 
     if output_png is not None:
+        png_df = plot_df.copy()
+        if png_extreme_count is not None:
+            top = df.nsmallest(png_extreme_count, "rank").copy()
+            bottom = df.nlargest(png_extreme_count, "rank").copy()
+            separator = pd.DataFrame(
+                [
+                    {
+                        "character": "",
+                        projection_column: 0.0,
+                    }
+                ]
+            )
+            png_df = pd.concat(
+                [
+                    top.sort_values("rank", ascending=False),
+                    separator,
+                    bottom.sort_values("rank", ascending=False),
+                ],
+                ignore_index=True,
+            )
         plt.figure(figsize=(14, 60))
-        values = plot_df[projection_column]
-        colors = plt.cm.RdBu_r((values - values.min()) / (values.max() - values.min() + 1e-12))
-        plt.barh(plot_df["character"], values, color=colors)
+        values = png_df[projection_column]
+        colors = plt.cm.RdBu((values - color_range[0]) / (color_range[1] - color_range[0] + 1e-12))
+        plt.barh(png_df["character"], values, color=colors)
         plt.xlabel("Projection onto Assistant Axis")
         plt.ylabel("Character")
         plt.title(title)
@@ -303,15 +331,23 @@ def save_tsne_plot(
     plot_df = df.copy()
     plot_df["TSNE1"] = embedding[:, 0]
     plot_df["TSNE2"] = embedding[:, 1]
+    color_kwargs = {}
+    if pd.api.types.is_numeric_dtype(plot_df[color_column]):
+        color_kwargs = {
+            "color_continuous_scale": px.colors.diverging.RdBu,
+            "range_color": [float(plot_df[color_column].min()), float(plot_df[color_column].max())],
+        }
     fig = px.scatter(
         plot_df,
         x="TSNE1",
         y="TSNE2",
         color=color_column,
         hover_name="character",
+        hover_data={color_column: ":.4f"} if pd.api.types.is_numeric_dtype(plot_df[color_column]) else None,
         title=title,
         width=1300,
         height=900,
+        **color_kwargs,
     )
     fig.update_traces(marker={"size": 9, "opacity": 0.9})
     fig.write_html(output_path)
@@ -382,6 +418,79 @@ def add_numeric_scatter_subplots(
 
 
 def nearest_jung_archetype(role: str, cluster_label: str) -> str:
+    caregiver_roles = {
+        "altruist", "assistant", "caregiver", "coordinator", "counselor", "doctor", "empath", "facilitator",
+        "grandparent", "guide", "healer", "mediator", "mentor", "nutritionist", "pacifist", "paramedic",
+        "parent", "peacekeeper", "psychologist", "teacher", "therapist", "tutor", "veterinarian",
+    }
+    explorer_roles = {
+        "anthropologist", "archaeologist", "cartographer", "expatriate", "flaneur", "geographer", "naturalist",
+        "navigator", "nomad", "pilgrim", "pilot", "scout", "surfer", "wanderer",
+    }
+    hero_roles = {
+        "activist", "advocate", "ambassador", "coach", "competitor", "guardian", "judge", "lawyer",
+        "peacekeeper", "recruiter", "soldier", "supervisor", "trainer", "veteran", "vigilante", "warrior",
+    }
+    ruler_roles = {
+        "accountant", "auditor", "consultant", "dispatcher", "economist", "examiner", "grader", "moderator",
+        "organizer", "planner", "producer", "proofreader", "reviewer", "scheduler", "screener", "secretary",
+        "statistician", "strategist", "summarizer", "validator",
+    }
+    creator_roles = {
+        "architect", "artisan", "bard", "blogger", "composer", "designer", "journalist", "musician",
+        "narrator", "novelist", "photographer", "playwright", "poet", "presenter", "publisher", "virtuoso",
+        "writer",
+    }
+    lover_roles = {"bartender", "celebrity", "chef", "influencer", "newlywed", "romantic", "sommelier"}
+    innocent_roles = {"dreamer", "idealist", "optimist", "vegan"}
+    sage_roles = {
+        "analyst", "archivist", "biologist", "chemist", "critic", "cyborg", "debugger", "engineer",
+        "historian", "librarian", "linguist", "mathematician", "observer", "philosopher", "physicist",
+        "polymath", "programmer", "proofreader", "researcher", "sage", "scholar", "scientist", "skeptic",
+        "sociologist", "specialist", "synthesizer", "theorist", "translator",
+    }
+    magician_roles = {
+        "aberration", "alien", "ancient", "angel", "avatar", "chimera", "demon", "echo", "egregore",
+        "eldritch", "familiar", "genie", "ghost", "golem", "guru", "homunculus", "leviathan", "martyr",
+        "mystic", "oracle", "prophet", "revenant", "shaman", "simulacrum", "spirit", "tulpa", "vampire",
+        "virus", "void", "whale", "wind", "witch", "wraith", "zeitgeist",
+    }
+    rebel_roles = {
+        "anarchist", "criminal", "contrarian", "cynic", "devils_advocate", "destroyer", "exile", "fixer",
+        "hacker", "maverick", "pirate", "provocateur", "rebel", "rogue", "saboteur", "smuggler", "spy",
+        "traditionalist", "workaholic", "zealot",
+    }
+    orphan_roles = {
+        "addict", "amateur", "divorcee", "graduate", "immigrant", "loner", "orphan", "patient",
+        "prisoner", "refugee", "retiree", "survivor", "widow",
+    }
+    jester_roles = {"absurdist", "dilettante", "hedonist", "improviser", "jester", "trickster"}
+
+    if role in caregiver_roles:
+        return "Caregiver"
+    if role in orphan_roles:
+        return "Orphan"
+    if role in hero_roles:
+        return "Hero"
+    if role in explorer_roles:
+        return "Explorer"
+    if role in rebel_roles:
+        return "Rebel"
+    if role in lover_roles:
+        return "Lover"
+    if role in creator_roles:
+        return "Creator"
+    if role in jester_roles:
+        return "Jester"
+    if role in sage_roles:
+        return "Sage"
+    if role in magician_roles:
+        return "Magician"
+    if role in ruler_roles:
+        return "Ruler"
+    if role in innocent_roles:
+        return "Innocent"
+
     if role in {"caregiver", "healer", "therapist", "mentor", "teacher", "peacekeeper", "nurse"}:
         return "Caregiver"
     if role in {"orphan", "refugee", "widow", "prisoner", "patient"}:

@@ -65,6 +65,10 @@ def main() -> None:
     renderer = HeadingRenderer()
     markdown = mistune.create_markdown(renderer=renderer, plugins=["table", "strikethrough"])
     body_html = markdown(markdown_text)
+    body_html = body_html.replace(
+        "<p>Josiah Chamberlain | May 2026</p>",
+        "<p class=\"author-line\">Josiah Chamberlain | May 2026</p>",
+    )
     toc_html = build_toc(MD_PATH.read_text())
 
     html_text = f"""<!doctype html>
@@ -98,6 +102,12 @@ def main() -> None:
       border-bottom: 1px solid #e5e7eb;
       padding-bottom: 0.2em;
     }}
+    .author-line {{
+      margin-top: -4px;
+      margin-bottom: 24px;
+      color: #57606a;
+      font-size: 1.02rem;
+    }}
     p, li {{
       font-size: 1rem;
     }}
@@ -126,6 +136,15 @@ def main() -> None:
       height: auto;
       margin: 20px auto;
       border: 1px solid #e5e7eb;
+    }}
+    img[alt="Layer 45 ranking"] {{
+      max-width: 92%;
+    }}
+    img[alt="Layer depth heatmap"] {{
+      max-width: 50%;
+    }}
+    img[alt="Cluster centroid distances"] {{
+      max-width: 82%;
     }}
     .toc-wrap {{
       border: 1px solid #e5e7eb;
@@ -167,7 +186,7 @@ def main() -> None:
     </div>
     {body_html}
     <footer>
-      Analysis conducted May 2026 | Data source: lu-christina/assistant-axis-vectors (HuggingFace) | Source paper: Lu et al. (2026) arxiv:2601.10387
+      Author: Josiah Chamberlain | Analysis conducted May 2026 | Data source: lu-christina/assistant-axis-vectors (HuggingFace) | Source paper: Lu et al. (2026) arxiv:2601.10387 | Code: <a href="https://github.com/J-Chamberlain/assistant-axis">github.com/J-Chamberlain/assistant-axis</a>
     </footer>
   </main>
 </body>
