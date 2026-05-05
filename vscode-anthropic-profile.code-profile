@@ -1,0 +1,26 @@
+{
+  "name": "Anthropic Research",
+  "settings": {
+    "workbench.colorTheme": "GitHub Light Default",
+    "editor.fontFamily": "Arial, 'Helvetica Neue', sans-serif",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.6,
+    "editor.renderWhitespace": "none",
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "notebook.cellToolbarLocation": {
+      "default": "right"
+    },
+    "notebook.lineNumbers": "off",
+    "notebook.output.scrolling": true,
+    "notebook.output.textLineLimit": 50,
+    "workbench.activityBar.location": "hidden",
+    "workbench.statusBar.visible": true,
+    "workbench.editor.showTabs": "single",
+    "breadcrumbs.enabled": false,
+    "editor.glyphMargin": false,
+    "editor.folding": true,
+    "editor.padding.top": 16,
+    "editor.padding.bottom": 16
+  }
+}
