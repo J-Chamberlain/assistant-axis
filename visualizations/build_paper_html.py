@@ -186,7 +186,7 @@ def main() -> None:
     </div>
     {body_html}
     <footer>
-      Author: Josiah Chamberlain | Analysis conducted May 2026 | Data source: lu-christina/assistant-axis-vectors (HuggingFace) | Source paper: Lu et al. (2026) arxiv:2601.10387 | Code: <a href="https://github.com/J-Chamberlain/assistant-axis">github.com/J-Chamberlain/assistant-axis</a>
+      Author: Josiah Chamberlain | Analysis conducted May 2026 | Data source: lu-christina/assistant-axis-vectors (HuggingFace) | Source paper: Lu et al. (2026) arxiv:2601.10387 | Published version: <a href="https://j-chamberlain.github.io/assistant-axis/">https://j-chamberlain.github.io/assistant-axis/</a>
     </footer>
   </main>
 </body>
