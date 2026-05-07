@@ -1,0 +1,2795 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trait Analysis Appendix</title>
+  <style>
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #1f2328;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+    h1, h2, h3 {
+      line-height: 1.25;
+      margin-top: 1.8em;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2.0rem;
+    }
+    h2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 0.2em;
+    }
+    p, li {
+      font-size: 1rem;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: #f6f8fa;
+      padding: 0.1em 0.3em;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+    a {
+      color: #0969da;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 20px auto;
+      border: 1px solid #e5e7eb;
+    }
+    .lead {
+      border: 1px solid #d0d7de;
+      border-radius: 12px;
+      padding: 20px 24px;
+      background: #f6f8fa;
+      margin: 24px 0 32px;
+    }
+    .toc-wrap {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px 24px;
+      background: #fafbfc;
+      margin: 24px 0 32px;
+    }
+    .toc {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .toc li {
+      margin: 6px 0;
+    }
+    .toc-level-1 {
+      margin-left: 0;
+      font-weight: 700;
+    }
+    .toc-level-2 {
+      margin-left: 0;
+      font-weight: 600;
+    }
+    .toc-level-3 {
+      margin-left: 18px;
+      font-weight: 400;
+    }
+    footer {
+      border-top: 1px solid #e5e7eb;
+      margin-top: 48px;
+      padding-top: 18px;
+      color: #57606a;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="../research_paper.html">Back to original research paper</a></p>
+    <div class="lead">
+      <h1>Trait Analysis Appendix</h1>
+      <p>
+        Separate GH Pages appendix for the role-trait similarity analysis over the Gemma 2 27B
+        Assistant Axis dataset. This page preserves the earlier paper URL while publishing the
+        new cluster-trait and permutation-test results at a distinct path.
+      </p>
+    </div>
+    <div class="toc-wrap">
+      <h2 id="table-of-contents">Table of Contents</h2>
+      <ul class='toc'>
+<li class="toc-level-1"><a href="#role-trait-similarity-analysis-summary">Role-Trait Similarity Analysis Summary</a></li>
+<li class="toc-level-2"><a href="#layer-selection">Layer Selection</a></li>
+<li class="toc-level-2"><a href="#null-hypothesis-test">Null Hypothesis Test</a></li>
+<li class="toc-level-2"><a href="#top-traits-per-cluster">Top Traits Per Cluster</a></li>
+<li class="toc-level-3"><a href="#combative-iconoclast">combative_iconoclast</a></li>
+<li class="toc-level-3"><a href="#editorial">editorial</a></li>
+<li class="toc-level-3"><a href="#grounded-social">grounded_social</a></li>
+<li class="toc-level-3"><a href="#mythic-spiritual">mythic_spiritual</a></li>
+<li class="toc-level-3"><a href="#other">other</a></li>
+<li class="toc-level-3"><a href="#procedural-professional">procedural_professional</a></li>
+<li class="toc-level-3"><a href="#trickster-chaos">trickster_chaos</a></li>
+<li class="toc-level-2"><a href="#anomaly-deep-dives">Anomaly Deep-Dives</a></li>
+<li class="toc-level-3"><a href="#robot">robot</a></li>
+<li class="toc-level-3"><a href="#assistant">assistant</a></li>
+<li class="toc-level-3"><a href="#poet">poet</a></li>
+<li class="toc-level-3"><a href="#angel">angel</a></li>
+<li class="toc-level-3"><a href="#saboteur">saboteur</a></li>
+<li class="toc-level-2"><a href="#findings-to-revisit">Findings To Revisit</a></li>
+</ul>
+    </div>
+    <h1 id="role-trait-similarity-analysis-summary">Role-Trait Similarity Analysis Summary</h1>
+<h2 id="layer-selection">Layer Selection</h2>
+<p>Trait-axis projection variance also peaks at layer <code>45</code> (variance <code>7127351.500000</code>), so layer 45 was used for both roles and traits.</p>
+<p>Sign-convention sanity check against the Assistant Axis README examples:</p>
+<ul>
+<li>mean(<code>transparent</code>, <code>grounded</code>, <code>flexible</code>) at layer 22 = <code>826.5551</code></li>
+<li>mean(<code>enigmatic</code>, <code>subversive</code>, <code>dramatic</code>) at layer 22 = <code>-1364.7448</code></li>
+</ul>
+<h2 id="null-hypothesis-test">Null Hypothesis Test</h2>
+<ul>
+<li>Mean within-cluster profile cosine similarity: <code>0.999809</code></li>
+<li>Mean across-cluster profile cosine similarity: <code>0.999234</code></li>
+<li>Observed difference (within - across): <code>0.000575</code></li>
+<li>Permutation-test p-value (<code>n=1000</code>): <code>0.000999</code></li>
+</ul>
+<h2 id="top-traits-per-cluster">Top Traits Per Cluster</h2>
+<h3 id="combative-iconoclast">combative_iconoclast</h3>
+<p><strong>Top 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>confrontational</code></td>
+  <td style="text-align:right">2.465</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>blunt</code></td>
+  <td style="text-align:right">2.368</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>urgent</code></td>
+  <td style="text-align:right">2.179</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>callous</code></td>
+  <td style="text-align:right">2.072</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>savage</code></td>
+  <td style="text-align:right">2.029</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>hostile</code></td>
+  <td style="text-align:right">2.016</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>competitive</code></td>
+  <td style="text-align:right">1.966</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>judgmental</code></td>
+  <td style="text-align:right">1.926</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>dominant</code></td>
+  <td style="text-align:right">1.923</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>radical</code></td>
+  <td style="text-align:right">1.914</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>circumspect</code></td>
+  <td style="text-align:right">-2.331</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>tactful</code></td>
+  <td style="text-align:right">-2.255</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>collectivistic</code></td>
+  <td style="text-align:right">-2.215</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>traditional</code></td>
+  <td style="text-align:right">-2.163</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>agreeable</code></td>
+  <td style="text-align:right">-2.153</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>nurturing</code></td>
+  <td style="text-align:right">-2.123</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>deferential</code></td>
+  <td style="text-align:right">-2.083</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>altruistic</code></td>
+  <td style="text-align:right">-2.074</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>benevolent</code></td>
+  <td style="text-align:right">-2.058</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>diplomatic</code></td>
+  <td style="text-align:right">-2.008</td>
+</tr>
+</tbody>
+</table>
+<h3 id="editorial">editorial</h3>
+<p><strong>Top 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>literal</code></td>
+  <td style="text-align:right">2.046</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>convergent</code></td>
+  <td style="text-align:right">1.838</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>regulatory</code></td>
+  <td style="text-align:right">1.740</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>cautious</code></td>
+  <td style="text-align:right">1.643</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>descriptive</code></td>
+  <td style="text-align:right">1.638</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>rationalist</code></td>
+  <td style="text-align:right">1.606</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>data_driven</code></td>
+  <td style="text-align:right">1.593</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>quantitative</code></td>
+  <td style="text-align:right">1.589</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>deferential</code></td>
+  <td style="text-align:right">1.586</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>factual</code></td>
+  <td style="text-align:right">1.571</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>interdisciplinary</code></td>
+  <td style="text-align:right">-2.247</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>generalist</code></td>
+  <td style="text-align:right">-2.133</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>systems_thinker</code></td>
+  <td style="text-align:right">-1.974</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>divergent</code></td>
+  <td style="text-align:right">-1.956</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>verbose</code></td>
+  <td style="text-align:right">-1.917</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>intuitive</code></td>
+  <td style="text-align:right">-1.886</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>speculative</code></td>
+  <td style="text-align:right">-1.847</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>constructivist</code></td>
+  <td style="text-align:right">-1.768</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>charismatic</code></td>
+  <td style="text-align:right">-1.729</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>creative</code></td>
+  <td style="text-align:right">-1.710</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grounded-social">grounded_social</h3>
+<p><strong>Top 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>experiential</code></td>
+  <td style="text-align:right">1.223</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>casual</code></td>
+  <td style="text-align:right">1.183</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>existentialist</code></td>
+  <td style="text-align:right">1.059</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>inquisitive</code></td>
+  <td style="text-align:right">1.055</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>accommodating</code></td>
+  <td style="text-align:right">1.046</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>gregarious</code></td>
+  <td style="text-align:right">1.035</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>submissive</code></td>
+  <td style="text-align:right">0.983</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>empathetic</code></td>
+  <td style="text-align:right">0.978</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>reactive</code></td>
+  <td style="text-align:right">0.953</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>extroverted</code></td>
+  <td style="text-align:right">0.942</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>formal</code></td>
+  <td style="text-align:right">-1.170</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>perfectionist</code></td>
+  <td style="text-align:right">-1.152</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>meticulous</code></td>
+  <td style="text-align:right">-1.125</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>serious</code></td>
+  <td style="text-align:right">-1.113</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>formalist</code></td>
+  <td style="text-align:right">-1.104</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>stoic</code></td>
+  <td style="text-align:right">-1.097</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>cosmopolitan</code></td>
+  <td style="text-align:right">-1.079</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>technical</code></td>
+  <td style="text-align:right">-1.076</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>solemn</code></td>
+  <td style="text-align:right">-1.068</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>principled</code></td>
+  <td style="text-align:right">-1.064</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mythic-spiritual">mythic_spiritual</h3>
+<p><strong>Top 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>fatalistic</code></td>
+  <td style="text-align:right">1.440</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>eloquent</code></td>
+  <td style="text-align:right">1.437</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>philosophical</code></td>
+  <td style="text-align:right">1.411</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>spiritual</code></td>
+  <td style="text-align:right">1.404</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>cryptic</code></td>
+  <td style="text-align:right">1.396</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>ethereal</code></td>
+  <td style="text-align:right">1.382</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>mystical</code></td>
+  <td style="text-align:right">1.374</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>idealistic</code></td>
+  <td style="text-align:right">1.373</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>grandiose</code></td>
+  <td style="text-align:right">1.350</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>esoteric</code></td>
+  <td style="text-align:right">1.331</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>contemporary</code></td>
+  <td style="text-align:right">-1.436</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>grounded</code></td>
+  <td style="text-align:right">-1.416</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>reductionist</code></td>
+  <td style="text-align:right">-1.398</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>secular</code></td>
+  <td style="text-align:right">-1.329</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>transparent</code></td>
+  <td style="text-align:right">-1.306</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>utilitarian</code></td>
+  <td style="text-align:right">-1.224</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>materialist</code></td>
+  <td style="text-align:right">-1.183</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>humble</code></td>
+  <td style="text-align:right">-1.168</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>problem_solving</code></td>
+  <td style="text-align:right">-1.167</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>practical</code></td>
+  <td style="text-align:right">-1.154</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other">other</h3>
+<p><strong>Top 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>avoidant</code></td>
+  <td style="text-align:right">1.711</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>impulsive</code></td>
+  <td style="text-align:right">1.572</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>anxious</code></td>
+  <td style="text-align:right">1.564</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>neurotic</code></td>
+  <td style="text-align:right">1.491</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>impatient</code></td>
+  <td style="text-align:right">1.468</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>manic</code></td>
+  <td style="text-align:right">1.459</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>flippant</code></td>
+  <td style="text-align:right">1.431</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>reactive</code></td>
+  <td style="text-align:right">1.414</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>naive</code></td>
+  <td style="text-align:right">1.406</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>nonchalant</code></td>
+  <td style="text-align:right">1.384</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>generous</code></td>
+  <td style="text-align:right">-1.837</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>holistic</code></td>
+  <td style="text-align:right">-1.712</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>proactive</code></td>
+  <td style="text-align:right">-1.694</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>independent</code></td>
+  <td style="text-align:right">-1.645</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>strategic</code></td>
+  <td style="text-align:right">-1.637</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>educational</code></td>
+  <td style="text-align:right">-1.533</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>conscientious</code></td>
+  <td style="text-align:right">-1.531</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>patient</code></td>
+  <td style="text-align:right">-1.513</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>earnest</code></td>
+  <td style="text-align:right">-1.511</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>calculating</code></td>
+  <td style="text-align:right">-1.407</td>
+</tr>
+</tbody>
+</table>
+<h3 id="procedural-professional">procedural_professional</h3>
+<p><strong>Top 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>factual</code></td>
+  <td style="text-align:right">0.826</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>resilient</code></td>
+  <td style="text-align:right">0.825</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>educational</code></td>
+  <td style="text-align:right">0.804</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>methodical</code></td>
+  <td style="text-align:right">0.800</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>problem_solving</code></td>
+  <td style="text-align:right">0.779</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>moderate</code></td>
+  <td style="text-align:right">0.773</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>analytical</code></td>
+  <td style="text-align:right">0.773</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>reserved</code></td>
+  <td style="text-align:right">0.768</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>calm</code></td>
+  <td style="text-align:right">0.766</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>structuralist</code></td>
+  <td style="text-align:right">0.766</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>manipulative</code></td>
+  <td style="text-align:right">-0.848</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>flirty</code></td>
+  <td style="text-align:right">-0.838</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>passive_aggressive</code></td>
+  <td style="text-align:right">-0.838</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>subversive</code></td>
+  <td style="text-align:right">-0.833</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>petty</code></td>
+  <td style="text-align:right">-0.827</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>spontaneous</code></td>
+  <td style="text-align:right">-0.826</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>relativist</code></td>
+  <td style="text-align:right">-0.825</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>mercurial</code></td>
+  <td style="text-align:right">-0.821</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>ironic</code></td>
+  <td style="text-align:right">-0.821</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>stream_of_consciousness</code></td>
+  <td style="text-align:right">-0.818</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trickster-chaos">trickster_chaos</h3>
+<p><strong>Top 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>wry</code></td>
+  <td style="text-align:right">2.274</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>mischievous</code></td>
+  <td style="text-align:right">2.197</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>goofy</code></td>
+  <td style="text-align:right">2.196</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>witty</code></td>
+  <td style="text-align:right">2.151</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>sardonic</code></td>
+  <td style="text-align:right">2.142</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>ironic</code></td>
+  <td style="text-align:right">2.101</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>hedonistic</code></td>
+  <td style="text-align:right">2.068</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>sarcastic</code></td>
+  <td style="text-align:right">2.021</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>passive_aggressive</code></td>
+  <td style="text-align:right">1.997</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>whimsical</code></td>
+  <td style="text-align:right">1.983</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 10 traits</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Mean z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>earnest</code></td>
+  <td style="text-align:right">-2.063</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>vindictive</code></td>
+  <td style="text-align:right">-1.866</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>factual</code></td>
+  <td style="text-align:right">-1.693</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>patient</code></td>
+  <td style="text-align:right">-1.588</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>supportive</code></td>
+  <td style="text-align:right">-1.535</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>educational</code></td>
+  <td style="text-align:right">-1.531</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>ascetic</code></td>
+  <td style="text-align:right">-1.512</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>solemn</code></td>
+  <td style="text-align:right">-1.487</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>serious</code></td>
+  <td style="text-align:right">-1.442</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>regulatory</code></td>
+  <td style="text-align:right">-1.439</td>
+</tr>
+</tbody>
+</table>
+<h2 id="anomaly-deep-dives">Anomaly Deep-Dives</h2>
+<h3 id="robot">robot</h3>
+<p>Top raw traits (reductionist, accommodating, practical, existentialist, accessible) would be consistent with the paper's systematic-execution interpretation if they emphasize detachment, method, or regularity.</p>
+<p><strong>Top 15 traits by raw cosine similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>reductionist</code></td>
+  <td style="text-align:right">0.860</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>accommodating</code></td>
+  <td style="text-align:right">0.853</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>practical</code></td>
+  <td style="text-align:right">0.834</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>existentialist</code></td>
+  <td style="text-align:right">0.834</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>accessible</code></td>
+  <td style="text-align:right">0.829</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>generalist</code></td>
+  <td style="text-align:right">0.784</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>flexible</code></td>
+  <td style="text-align:right">0.759</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>pluralist</code></td>
+  <td style="text-align:right">0.746</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>experiential</code></td>
+  <td style="text-align:right">0.725</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>submissive</code></td>
+  <td style="text-align:right">0.718</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>casual</code></td>
+  <td style="text-align:right">0.683</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>benevolent</code></td>
+  <td style="text-align:right">0.674</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>socratic</code></td>
+  <td style="text-align:right">0.653</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>open_ended</code></td>
+  <td style="text-align:right">0.636</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>optimistic</code></td>
+  <td style="text-align:right">0.623</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 15 traits by raw cosine similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>vindictive</code></td>
+  <td style="text-align:right">-0.914</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>elitist</code></td>
+  <td style="text-align:right">-0.858</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>introspective</code></td>
+  <td style="text-align:right">-0.830</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>arrogant</code></td>
+  <td style="text-align:right">-0.803</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>fundamentalist</code></td>
+  <td style="text-align:right">-0.797</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>esoteric</code></td>
+  <td style="text-align:right">-0.784</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>conceptual</code></td>
+  <td style="text-align:right">-0.778</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>dogmatic</code></td>
+  <td style="text-align:right">-0.773</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>essentialist</code></td>
+  <td style="text-align:right">-0.753</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>assertive</code></td>
+  <td style="text-align:right">-0.733</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>deterministic</code></td>
+  <td style="text-align:right">-0.727</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>idealistic</code></td>
+  <td style="text-align:right">-0.711</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>big_picture</code></td>
+  <td style="text-align:right">-0.707</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>erudite</code></td>
+  <td style="text-align:right">-0.703</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>eloquent</code></td>
+  <td style="text-align:right">-0.700</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Top 15 traits by z-scored similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>concise</code></td>
+  <td style="text-align:right">4.764</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>literal</code></td>
+  <td style="text-align:right">4.500</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>closure_seeking</code></td>
+  <td style="text-align:right">3.840</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>prescriptive</code></td>
+  <td style="text-align:right">3.696</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>detached</code></td>
+  <td style="text-align:right">3.432</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>formalist</code></td>
+  <td style="text-align:right">3.234</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>convergent</code></td>
+  <td style="text-align:right">3.128</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>materialist</code></td>
+  <td style="text-align:right">3.011</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>technical</code></td>
+  <td style="text-align:right">2.974</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>pedantic</code></td>
+  <td style="text-align:right">2.892</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>data_driven</code></td>
+  <td style="text-align:right">2.855</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>quantitative</code></td>
+  <td style="text-align:right">2.831</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>dispassionate</code></td>
+  <td style="text-align:right">2.800</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>rationalist</code></td>
+  <td style="text-align:right">2.761</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>decisive</code></td>
+  <td style="text-align:right">2.697</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 15 traits by z-scored similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>generalist</code></td>
+  <td style="text-align:right">-4.266</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>empathetic</code></td>
+  <td style="text-align:right">-4.029</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>exploratory</code></td>
+  <td style="text-align:right">-3.976</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>constructivist</code></td>
+  <td style="text-align:right">-3.825</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>humanistic</code></td>
+  <td style="text-align:right">-3.779</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>open_ended</code></td>
+  <td style="text-align:right">-3.653</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>adaptable</code></td>
+  <td style="text-align:right">-3.626</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>inquisitive</code></td>
+  <td style="text-align:right">-3.625</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>curious</code></td>
+  <td style="text-align:right">-3.623</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>intuitive</code></td>
+  <td style="text-align:right">-3.115</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>emotional</code></td>
+  <td style="text-align:right">-3.101</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>divergent</code></td>
+  <td style="text-align:right">-3.011</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>forgiving</code></td>
+  <td style="text-align:right">-2.943</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>verbose</code></td>
+  <td style="text-align:right">-2.850</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>charismatic</code></td>
+  <td style="text-align:right">-2.817</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assistant">assistant</h3>
+<p>Top raw traits (accommodating, reductionist, accessible, existentialist, practical) help test whether the literal assistant role looks broadly helpful or specifically procedural/evaluative.</p>
+<p><strong>Top 15 traits by raw cosine similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>accommodating</code></td>
+  <td style="text-align:right">0.863</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>reductionist</code></td>
+  <td style="text-align:right">0.857</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>accessible</code></td>
+  <td style="text-align:right">0.847</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>existentialist</code></td>
+  <td style="text-align:right">0.844</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>practical</code></td>
+  <td style="text-align:right">0.844</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>generalist</code></td>
+  <td style="text-align:right">0.796</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>flexible</code></td>
+  <td style="text-align:right">0.777</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>pluralist</code></td>
+  <td style="text-align:right">0.758</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>experiential</code></td>
+  <td style="text-align:right">0.742</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>submissive</code></td>
+  <td style="text-align:right">0.726</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>casual</code></td>
+  <td style="text-align:right">0.700</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>benevolent</code></td>
+  <td style="text-align:right">0.692</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>socratic</code></td>
+  <td style="text-align:right">0.659</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>open_ended</code></td>
+  <td style="text-align:right">0.656</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>optimistic</code></td>
+  <td style="text-align:right">0.636</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 15 traits by raw cosine similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>vindictive</code></td>
+  <td style="text-align:right">-0.914</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>elitist</code></td>
+  <td style="text-align:right">-0.870</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>introspective</code></td>
+  <td style="text-align:right">-0.830</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>arrogant</code></td>
+  <td style="text-align:right">-0.816</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>fundamentalist</code></td>
+  <td style="text-align:right">-0.809</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>esoteric</code></td>
+  <td style="text-align:right">-0.801</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>conceptual</code></td>
+  <td style="text-align:right">-0.788</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>dogmatic</code></td>
+  <td style="text-align:right">-0.785</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>essentialist</code></td>
+  <td style="text-align:right">-0.769</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>deterministic</code></td>
+  <td style="text-align:right">-0.744</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>assertive</code></td>
+  <td style="text-align:right">-0.741</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>erudite</code></td>
+  <td style="text-align:right">-0.722</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>pedantic</code></td>
+  <td style="text-align:right">-0.721</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>idealistic</code></td>
+  <td style="text-align:right">-0.716</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>big_picture</code></td>
+  <td style="text-align:right">-0.708</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Top 15 traits by z-scored similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>pluralist</code></td>
+  <td style="text-align:right">1.855</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>deferential</code></td>
+  <td style="text-align:right">1.757</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>vindictive</code></td>
+  <td style="text-align:right">1.702</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>humble</code></td>
+  <td style="text-align:right">1.666</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>flexible</code></td>
+  <td style="text-align:right">1.659</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>transparent</code></td>
+  <td style="text-align:right">1.579</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>factual</code></td>
+  <td style="text-align:right">1.496</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>grounded</code></td>
+  <td style="text-align:right">1.460</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>cautious</code></td>
+  <td style="text-align:right">1.438</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>moderate</code></td>
+  <td style="text-align:right">1.435</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>supportive</code></td>
+  <td style="text-align:right">1.414</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>descriptive</code></td>
+  <td style="text-align:right">1.392</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>collaborative</code></td>
+  <td style="text-align:right">1.376</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>benevolent</code></td>
+  <td style="text-align:right">1.376</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>adaptable</code></td>
+  <td style="text-align:right">1.355</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 15 traits by z-scored similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>deconstructionist</code></td>
+  <td style="text-align:right">-2.126</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>interdisciplinary</code></td>
+  <td style="text-align:right">-2.095</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>critical</code></td>
+  <td style="text-align:right">-2.003</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>verbose</code></td>
+  <td style="text-align:right">-1.911</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>contrarian</code></td>
+  <td style="text-align:right">-1.905</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>provocative</code></td>
+  <td style="text-align:right">-1.902</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>challenging</code></td>
+  <td style="text-align:right">-1.841</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>historical</code></td>
+  <td style="text-align:right">-1.733</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>speculative</code></td>
+  <td style="text-align:right">-1.732</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>obsessive</code></td>
+  <td style="text-align:right">-1.722</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>eclectic</code></td>
+  <td style="text-align:right">-1.720</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>subversive</code></td>
+  <td style="text-align:right">-1.704</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>creative</code></td>
+  <td style="text-align:right">-1.698</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>condescending</code></td>
+  <td style="text-align:right">-1.690</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>paradoxical</code></td>
+  <td style="text-align:right">-1.688</td>
+</tr>
+</tbody>
+</table>
+<h3 id="poet">poet</h3>
+<p>Top raw traits (accommodating, existentialist, reductionist, accessible, practical) should clarify whether the anti-assistant pole aligns with theatricality, expressiveness, and metaphor-rich style.</p>
+<p><strong>Top 15 traits by raw cosine similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>accommodating</code></td>
+  <td style="text-align:right">0.870</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>existentialist</code></td>
+  <td style="text-align:right">0.840</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>reductionist</code></td>
+  <td style="text-align:right">0.838</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>accessible</code></td>
+  <td style="text-align:right">0.835</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>practical</code></td>
+  <td style="text-align:right">0.832</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>generalist</code></td>
+  <td style="text-align:right">0.801</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>flexible</code></td>
+  <td style="text-align:right">0.755</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>experiential</code></td>
+  <td style="text-align:right">0.738</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>pluralist</code></td>
+  <td style="text-align:right">0.738</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>submissive</code></td>
+  <td style="text-align:right">0.731</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>casual</code></td>
+  <td style="text-align:right">0.702</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>benevolent</code></td>
+  <td style="text-align:right">0.678</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>socratic</code></td>
+  <td style="text-align:right">0.672</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>narrative</code></td>
+  <td style="text-align:right">0.665</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>open_ended</code></td>
+  <td style="text-align:right">0.663</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 15 traits by raw cosine similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>vindictive</code></td>
+  <td style="text-align:right">-0.920</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>elitist</code></td>
+  <td style="text-align:right">-0.852</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>introspective</code></td>
+  <td style="text-align:right">-0.830</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>arrogant</code></td>
+  <td style="text-align:right">-0.793</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>fundamentalist</code></td>
+  <td style="text-align:right">-0.793</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>esoteric</code></td>
+  <td style="text-align:right">-0.774</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>conceptual</code></td>
+  <td style="text-align:right">-0.772</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>dogmatic</code></td>
+  <td style="text-align:right">-0.766</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>essentialist</code></td>
+  <td style="text-align:right">-0.751</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>assertive</code></td>
+  <td style="text-align:right">-0.721</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>deterministic</code></td>
+  <td style="text-align:right">-0.716</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>regulatory</code></td>
+  <td style="text-align:right">-0.716</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>pedantic</code></td>
+  <td style="text-align:right">-0.712</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>erudite</code></td>
+  <td style="text-align:right">-0.708</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>big_picture</code></td>
+  <td style="text-align:right">-0.701</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Top 15 traits by z-scored similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>poetic</code></td>
+  <td style="text-align:right">3.415</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>concise</code></td>
+  <td style="text-align:right">3.342</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>cryptic</code></td>
+  <td style="text-align:right">2.449</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>ethereal</code></td>
+  <td style="text-align:right">2.368</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>enigmatic</code></td>
+  <td style="text-align:right">2.257</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>romantic</code></td>
+  <td style="text-align:right">2.247</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>eloquent</code></td>
+  <td style="text-align:right">2.135</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>artistic</code></td>
+  <td style="text-align:right">2.091</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>metaphorical</code></td>
+  <td style="text-align:right">2.084</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>fatalistic</code></td>
+  <td style="text-align:right">2.056</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>epicurean</code></td>
+  <td style="text-align:right">2.038</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>nostalgic</code></td>
+  <td style="text-align:right">2.024</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>mystical</code></td>
+  <td style="text-align:right">2.023</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>dramatic</code></td>
+  <td style="text-align:right">2.017</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>rhetorical</code></td>
+  <td style="text-align:right">2.007</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 15 traits by z-scored similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>transparent</code></td>
+  <td style="text-align:right">-1.989</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>exploratory</code></td>
+  <td style="text-align:right">-1.953</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>grounded</code></td>
+  <td style="text-align:right">-1.931</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>contemporary</code></td>
+  <td style="text-align:right">-1.846</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>reductionist</code></td>
+  <td style="text-align:right">-1.826</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>proactive</code></td>
+  <td style="text-align:right">-1.808</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>humble</code></td>
+  <td style="text-align:right">-1.691</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>problem_solving</code></td>
+  <td style="text-align:right">-1.672</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>secular</code></td>
+  <td style="text-align:right">-1.497</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>utilitarian</code></td>
+  <td style="text-align:right">-1.440</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>educational</code></td>
+  <td style="text-align:right">-1.439</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>materialist</code></td>
+  <td style="text-align:right">-1.365</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>quantitative</code></td>
+  <td style="text-align:right">-1.356</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>analytical</code></td>
+  <td style="text-align:right">-1.306</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>understated</code></td>
+  <td style="text-align:right">-1.301</td>
+</tr>
+</tbody>
+</table>
+<h3 id="angel">angel</h3>
+<p>Top raw traits (accommodating, accessible, reductionist, existentialist, practical) help distinguish practical benevolence from spiritual abstraction, which is central to the paper's interpretation.</p>
+<p><strong>Top 15 traits by raw cosine similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>accommodating</code></td>
+  <td style="text-align:right">0.867</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>accessible</code></td>
+  <td style="text-align:right">0.841</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>reductionist</code></td>
+  <td style="text-align:right">0.838</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>existentialist</code></td>
+  <td style="text-align:right">0.838</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>practical</code></td>
+  <td style="text-align:right">0.834</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>generalist</code></td>
+  <td style="text-align:right">0.801</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>flexible</code></td>
+  <td style="text-align:right">0.762</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>pluralist</code></td>
+  <td style="text-align:right">0.746</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>experiential</code></td>
+  <td style="text-align:right">0.736</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>submissive</code></td>
+  <td style="text-align:right">0.730</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>casual</code></td>
+  <td style="text-align:right">0.697</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>benevolent</code></td>
+  <td style="text-align:right">0.692</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>socratic</code></td>
+  <td style="text-align:right">0.667</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>open_ended</code></td>
+  <td style="text-align:right">0.665</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>narrative</code></td>
+  <td style="text-align:right">0.650</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 15 traits by raw cosine similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>vindictive</code></td>
+  <td style="text-align:right">-0.915</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>elitist</code></td>
+  <td style="text-align:right">-0.857</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>introspective</code></td>
+  <td style="text-align:right">-0.828</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>arrogant</code></td>
+  <td style="text-align:right">-0.801</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>fundamentalist</code></td>
+  <td style="text-align:right">-0.791</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>esoteric</code></td>
+  <td style="text-align:right">-0.783</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>conceptual</code></td>
+  <td style="text-align:right">-0.772</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>dogmatic</code></td>
+  <td style="text-align:right">-0.770</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>essentialist</code></td>
+  <td style="text-align:right">-0.751</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>assertive</code></td>
+  <td style="text-align:right">-0.729</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>deterministic</code></td>
+  <td style="text-align:right">-0.727</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>pedantic</code></td>
+  <td style="text-align:right">-0.716</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>erudite</code></td>
+  <td style="text-align:right">-0.710</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>regulatory</code></td>
+  <td style="text-align:right">-0.708</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>big_picture</code></td>
+  <td style="text-align:right">-0.695</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Top 15 traits by z-scored similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>pacifist</code></td>
+  <td style="text-align:right">2.465</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>idealistic</code></td>
+  <td style="text-align:right">2.426</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>forgiving</code></td>
+  <td style="text-align:right">2.422</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>deontological</code></td>
+  <td style="text-align:right">2.347</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>meditative</code></td>
+  <td style="text-align:right">2.346</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>serene</code></td>
+  <td style="text-align:right">2.345</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>altruistic</code></td>
+  <td style="text-align:right">2.330</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>collectivistic</code></td>
+  <td style="text-align:right">2.290</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>environmental</code></td>
+  <td style="text-align:right">2.218</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>reverent</code></td>
+  <td style="text-align:right">2.169</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>nurturing</code></td>
+  <td style="text-align:right">2.081</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>ascetic</code></td>
+  <td style="text-align:right">2.060</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>spiritual</code></td>
+  <td style="text-align:right">2.059</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>principled</code></td>
+  <td style="text-align:right">1.964</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>humanistic</code></td>
+  <td style="text-align:right">1.919</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 15 traits by z-scored similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>secular</code></td>
+  <td style="text-align:right">-2.725</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>blunt</code></td>
+  <td style="text-align:right">-2.366</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>utilitarian</code></td>
+  <td style="text-align:right">-2.127</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>materialist</code></td>
+  <td style="text-align:right">-2.102</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>urgent</code></td>
+  <td style="text-align:right">-1.909</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>reductionist</code></td>
+  <td style="text-align:right">-1.693</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>confrontational</code></td>
+  <td style="text-align:right">-1.625</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>contemporary</code></td>
+  <td style="text-align:right">-1.612</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>callous</code></td>
+  <td style="text-align:right">-1.539</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>progressive</code></td>
+  <td style="text-align:right">-1.534</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>skeptical</code></td>
+  <td style="text-align:right">-1.448</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>existentialist</code></td>
+  <td style="text-align:right">-1.352</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>sassy</code></td>
+  <td style="text-align:right">-1.318</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>quantitative</code></td>
+  <td style="text-align:right">-1.261</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>savage</code></td>
+  <td style="text-align:right">-1.230</td>
+</tr>
+</tbody>
+</table>
+<h3 id="saboteur">saboteur</h3>
+<p>Top raw traits (accommodating, reductionist, existentialist, practical, accessible) are the key check for whether saboteur looks chaotic or tactically organized in trait space.</p>
+<p><strong>Top 15 traits by raw cosine similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>accommodating</code></td>
+  <td style="text-align:right">0.866</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>reductionist</code></td>
+  <td style="text-align:right">0.852</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>existentialist</code></td>
+  <td style="text-align:right">0.843</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>practical</code></td>
+  <td style="text-align:right">0.838</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>accessible</code></td>
+  <td style="text-align:right">0.838</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>generalist</code></td>
+  <td style="text-align:right">0.796</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>flexible</code></td>
+  <td style="text-align:right">0.759</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>experiential</code></td>
+  <td style="text-align:right">0.740</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>pluralist</code></td>
+  <td style="text-align:right">0.738</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>submissive</code></td>
+  <td style="text-align:right">0.726</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>casual</code></td>
+  <td style="text-align:right">0.703</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>benevolent</code></td>
+  <td style="text-align:right">0.667</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>socratic</code></td>
+  <td style="text-align:right">0.664</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>open_ended</code></td>
+  <td style="text-align:right">0.652</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>narrative</code></td>
+  <td style="text-align:right">0.638</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 15 traits by raw cosine similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>vindictive</code></td>
+  <td style="text-align:right">-0.917</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>elitist</code></td>
+  <td style="text-align:right">-0.856</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>introspective</code></td>
+  <td style="text-align:right">-0.828</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>fundamentalist</code></td>
+  <td style="text-align:right">-0.802</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>arrogant</code></td>
+  <td style="text-align:right">-0.797</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>esoteric</code></td>
+  <td style="text-align:right">-0.785</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>conceptual</code></td>
+  <td style="text-align:right">-0.780</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>dogmatic</code></td>
+  <td style="text-align:right">-0.771</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>essentialist</code></td>
+  <td style="text-align:right">-0.761</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>deterministic</code></td>
+  <td style="text-align:right">-0.725</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>assertive</code></td>
+  <td style="text-align:right">-0.721</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>regulatory</code></td>
+  <td style="text-align:right">-0.713</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>erudite</code></td>
+  <td style="text-align:right">-0.712</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>pedantic</code></td>
+  <td style="text-align:right">-0.712</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>idealistic</code></td>
+  <td style="text-align:right">-0.711</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Top 15 traits by z-scored similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>anthropocentric</code></td>
+  <td style="text-align:right">1.777</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>confrontational</code></td>
+  <td style="text-align:right">1.727</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>cynical</code></td>
+  <td style="text-align:right">1.657</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>dominant</code></td>
+  <td style="text-align:right">1.641</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>blunt</code></td>
+  <td style="text-align:right">1.587</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>critical</code></td>
+  <td style="text-align:right">1.532</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>callous</code></td>
+  <td style="text-align:right">1.528</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>pessimistic</code></td>
+  <td style="text-align:right">1.442</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>challenging</code></td>
+  <td style="text-align:right">1.432</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>skeptical</code></td>
+  <td style="text-align:right">1.424</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>competitive</code></td>
+  <td style="text-align:right">1.396</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>urgent</code></td>
+  <td style="text-align:right">1.389</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>decisive</code></td>
+  <td style="text-align:right">1.277</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>militant</code></td>
+  <td style="text-align:right">1.192</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>paranoid</code></td>
+  <td style="text-align:right">1.176</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 15 traits by z-scored similarity</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Trait</th>
+  <th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td><code>humanistic</code></td>
+  <td style="text-align:right">-1.843</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>optimistic</code></td>
+  <td style="text-align:right">-1.800</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>benevolent</code></td>
+  <td style="text-align:right">-1.630</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>nurturing</code></td>
+  <td style="text-align:right">-1.509</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>chill</code></td>
+  <td style="text-align:right">-1.484</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>forgiving</code></td>
+  <td style="text-align:right">-1.476</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>altruistic</code></td>
+  <td style="text-align:right">-1.446</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>deferential</code></td>
+  <td style="text-align:right">-1.315</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>circumspect</code></td>
+  <td style="text-align:right">-1.294</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>agreeable</code></td>
+  <td style="text-align:right">-1.276</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>naive</code></td>
+  <td style="text-align:right">-1.264</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>collectivistic</code></td>
+  <td style="text-align:right">-1.259</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>tactful</code></td>
+  <td style="text-align:right">-1.248</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>inspirational</code></td>
+  <td style="text-align:right">-1.248</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>traditional</code></td>
+  <td style="text-align:right">-1.202</td>
+</tr>
+</tbody>
+</table>
+<h2 id="findings-to-revisit">Findings To Revisit</h2>
+<ul>
+<li>Trait profiles are more cluster-coherent than expected under random cluster assignment.</li>
+</ul>
+
+    <h2 id="downloads">Downloads</h2>
+    <ul>
+<li><a href="../role_trait_similarity.csv">role_trait_similarity.csv</a> - Raw role-trait cosine similarity matrix</li>
+<li><a href="../role_trait_similarity_zscored.csv">role_trait_similarity_zscored.csv</a> - Per-trait z-scored role-trait similarity matrix</li>
+<li><a href="../cluster_trait_profiles.csv">cluster_trait_profiles.csv</a> - Cluster-level trait profile table</li>
+<li><a href="../trait_role_analysis.py">trait_role_analysis.py</a> - Reproducible analysis script</li>
+<li><a href="../trait_analysis_summary.md">trait_analysis_summary.md</a> - Markdown summary source</li>
+</ul>
+    <footer>
+      Trait-analysis appendix for the Assistant Axis project |
+      Published on GitHub Pages at
+      <a href="https://j-chamberlain.github.io/assistant-axis/visualizations/trait-analysis/">https://j-chamberlain.github.io/assistant-axis/visualizations/trait-analysis/</a>
+    </footer>
+  </main>
+</body>
+</html>
