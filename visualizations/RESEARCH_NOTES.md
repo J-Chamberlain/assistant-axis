@@ -237,3 +237,68 @@ Multi-turn activation drift remains unmeasured. The current evidence still suppo
 2. Measure layer-45 activation after each generated response using the full accumulated context, not independent prompts.
 
 3. Record flipped-axis projection plus centered cosine similarity to proofreader and poet anchors at each turn, then compare true conversation drift against the existing single-turn prompt-set variation.
+
+---
+
+## 2026-05-18 — Multi-Turn Drift and Emotion-Valence Run
+
+### Status
+
+The multi-turn drift experiment was run on a RunPod H100 SXM 80GB pod using `google/gemma-2-27b` base in bfloat16. The model was loaded from `/root/models/gemma-2-27b`; assistant-axis vectors were loaded from `/root/vectors/gemma-2-27b`; the measurement layer was layer 45. The script used accumulated conversation history: at each turn the model generated a response, the response was appended to the context, and the layer-45 activation was measured from the full accumulated conversation after generation.
+
+Outputs:
+
+- `research/q1_drift/outputs/q1_multiturn_proofreader.csv`
+- `research/q1_drift/outputs/q1_multiturn_poet.csv`
+- `research/q1_drift/outputs/q1_multiturn_run.log`
+
+### Finding 1: Proofreader remains a stable evaluative attractor
+
+Proofreader stayed in a narrow activation band across all 10 turns. Its flipped-axis projection moved from `-0.709220` at turn 1 to `-0.699244` at turn 10, for a total drift of `+0.009976`. Centered cosine similarity to the proofreader vector stayed high throughout, moving from `+0.746317` to `+0.735597`, while cosine similarity to the poet vector remained negative at approximately `-0.14`.
+
+Proofreader summary:
+
+- Axis min: `-0.713812`
+- Axis max: `-0.699244`
+- Axis mean: `-0.706641`
+- Valence mean: `+1.093296`
+
+This supports the careful-evaluator attractor interpretation: once induced, the proofreader persona remains geometrically stable under neutral multi-turn prompting.
+
+### Finding 2: Poet is pulled toward the evaluative basin
+
+The poet run did not remain poet-like under this base-model multi-turn protocol. Poet started less evaluative than proofreader at turn 1 (`-0.678599`) but moved toward the proofreader/evaluative region by turn 10 (`-0.702031`), for a total drift of `-0.023431`. Its centered cosine similarity to proofreader increased from `+0.715187` to `+0.731189`, while centered cosine similarity to poet stayed negative, moving from `-0.117544` to `-0.141863`.
+
+Poet summary:
+
+- Axis min: `-0.702196`
+- Axis max: `-0.678599`
+- Axis mean: `-0.696626`
+- Valence mean: `+1.070888`
+
+This is an important methodological and empirical result. Under neutral prompts, the base model's generated conversation history appears to pull even a poet induction toward the careful-evaluator basin rather than sustaining a strongly expressive persona. This suggests that the evaluator region may be a default generative attractor even before instruction tuning, at least under the current prompt format.
+
+### Finding 3: Valence proxy is positive for both personas
+
+The emotion-valence proxy was defined as evaluative-pole similarity minus expressive-pole similarity, where the evaluative pole used centered proofreader and validator vectors and the expressive pole used centered poet and caveman vectors. Both personas remained strongly positive on this proxy across all turns. Proofreader had mean valence `+1.093296`; poet had mean valence `+1.070888`.
+
+The lagged Spearman correlation between valence at turn N and axis projection at turn N+1 was:
+
+- Proofreader: `-0.900000`
+- Poet: `-0.916667`
+
+Because both runs remain in a strongly evaluative regime, these correlations should be interpreted cautiously. They show that within-run valence movement tracks subsequent axis movement, but this run does not yet provide a clean negative-valence or expressive-rumination regime.
+
+### Methodological note
+
+The absolute sign of the generated hidden-state axis projections is negative despite using the established flipped axis. This does not invalidate the within-run drift measurements, cosine comparisons, or relative attractor interpretation, but it should be investigated before treating generated-activation projections as numerically comparable to pre-computed role-vector projections.
+
+### Suggested next steps
+
+1. Run a stronger poet induction with explicitly expressive prompts to test whether the poet basin can be sustained under generation, or whether neutral dialogue reliably collapses toward the evaluative attractor.
+
+2. Add a deliberately emotional or destabilizing prompt sequence to test the rumination-loop hypothesis under conditions that actually produce negative valence.
+
+3. Resolve the generated-activation sign discrepancy by comparing raw, flipped, centered, and uncentered projections for the same generated contexts.
+
+4. Repeat the same protocol on Qwen or Llama vectors/models to test whether the evaluator pull is Gemma-specific or a general base-model tendency.
