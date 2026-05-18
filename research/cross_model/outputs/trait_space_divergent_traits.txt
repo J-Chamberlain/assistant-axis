@@ -1,0 +1,47 @@
+Trait vector cache inventory
+============================
+Gemma 2 27B: traits=240, roles=275, axis=True, path=/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/gemma-2-27b/trait_vectors
+Qwen 3 32B: traits=240, roles=275, axis=True, path=/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/qwen-3-32b/trait_vectors
+Llama: traits=240, roles=275, axis=True, path=/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/llama-3.3-70b/trait_vectors
+
+Axis orientation
+================
+Gemma 2 27B: layer=45, raw_axis_sign=-1, centered_anchor_flip=True, proofreader=5382.269531, poet=-2614.958496
+Qwen 3 32B: layer=63, raw_axis_sign=1, centered_anchor_flip=False, proofreader=270.051239, poet=-518.014221
+Llama: layer=79, raw_axis_sign=1, centered_anchor_flip=False, proofreader=2.675932, poet=-9.948910
+
+Largest Gemma vs Qwen trait rank shifts
+=========================================
+- eloquent: Gemma rank 21, Qwen rank 219, shift 198
+- accessible: Gemma rank 240, Qwen rank 45, shift 195
+- practical: Gemma rank 220, Qwen rank 42, shift 178
+- nihilistic: Gemma rank 48, Qwen rank 221, shift 173
+- experiential: Gemma rank 206, Qwen rank 40, shift 166
+- reductionist: Gemma rank 197, Qwen rank 32, shift 165
+- arrogant: Gemma rank 22, Qwen rank 184, shift 162
+- dogmatic: Gemma rank 27, Qwen rank 183, shift 156
+- analytical: Gemma rank 154, Qwen rank 1, shift 153
+- bombastic: Gemma rank 71, Qwen rank 223, shift 152
+- divergent: Gemma rank 184, Qwen rank 33, shift 151
+- conceptual: Gemma rank 26, Qwen rank 175, shift 149
+- flexible: Gemma rank 187, Qwen rank 38, shift 149
+- deterministic: Gemma rank 44, Qwen rank 190, shift 146
+- fundamentalist: Gemma rank 14, Qwen rank 160, shift 146
+- grandiose: Gemma rank 80, Qwen rank 222, shift 142
+- moderate: Gemma rank 147, Qwen rank 10, shift 137
+- elitist: Gemma rank 5, Qwen rank 141, shift 136
+- problem_solving: Gemma rank 143, Qwen rank 7, shift 136
+- fatalistic: Gemma rank 84, Qwen rank 217, shift 133
+
+Convergent top-role trait-signature cross-reference
+=====================================================
+Shared top-20 roles considered across gemma, qwen, llama: validator
+
+Role: validator
+- Gemma 2 27B top traits: regulatory, detached, data_driven, dispassionate, convergent
+- Qwen 3 32B top traits: data_driven, quantitative, analytical, methodical, structuralist
+- Llama top traits: rationalist, factual, data_driven, dispassionate, detached
+- Gemma/Qwen trait-signature Spearman: 0.724316
+- Shared top-10 signature traits: data_driven, formalist, technical
+- Gemma/Llama trait-signature Spearman: 0.795283
+- Qwen/Llama trait-signature Spearman: 0.921323

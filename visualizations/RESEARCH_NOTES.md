@@ -380,3 +380,43 @@ The Q1 pooling ambiguity is resolved for the available pre-computed vectors. Bec
 2. Keep layer 45 for comparisons that need continuity with the existing variance-discrimination figures, but avoid describing it as the strongest proofreader/poet contrast layer.
 
 3. If true pooling-method comparison is still desired, run a separate GPU-backed inference pass that records both mean-pooled and last-token hidden states from identical prompts.
+
+---
+
+## 2026-05-18 - Cross-Model Trait-Space Comparison
+
+### Status
+
+Trait-space assistant-axis rankings were compared across the cached `lu-christina/assistant-axis-vectors` tensors. Gemma 2 27B used layer `45`, Qwen 3 32B used layer `63`, and the locally available Llama 3.3 70B vectors were included using detected layer `79`. Each model's 240 trait vectors were mean-centered at the relevant layer before projection onto the role-anchor-oriented assistant axis. No GPU inference was required.
+
+Outputs:
+
+- `research/cross_model/outputs/trait_space_comparison.csv`
+- `research/cross_model/outputs/trait_space_top10_bottom10.txt`
+- `research/cross_model/outputs/trait_space_divergent_traits.txt`
+
+### Findings
+
+Trait-ranking Spearman correlations:
+
+- Gemma vs Qwen: `0.435496`
+- Gemma vs Llama: `0.291373`
+- Qwen vs Llama: `0.846067`
+
+Trait space is less convergent than role space for Gemma vs Qwen: the trait-ranking correlation is `0.435496`, compared with the previously measured role-ranking correlation of `0.670267`. The broader pattern matches the three-model role comparison: Qwen and Llama are much closer to each other than either is to Gemma. This suggests that the psychological trait structure of the assistant pole is not just a lower-dimensional restatement of the role rankings; it is more sensitive to model-family-specific geometry.
+
+The top 5 most convergently assistant-aligned traits across all three models, by mean rank, are `transparent`, `dispassionate`, `detached`, `calm`, and `quantitative`. These are not purely warm-helpful traits. They combine legibility, emotional restraint, and analytic formality, which supports the careful-evaluator interpretation while showing that Qwen and Llama express it in a more accessible/grounded register than Gemma.
+
+The top 5 most divergent traits by all-model rank range are `accessible`, `esoteric`, `eloquent`, `practical`, and `elitist`. Gemma strongly suppresses `accessible` while Llama ranks it near the top, and Gemma elevates `esoteric` and `elitist` while Qwen/Llama do not. This is the clearest trait-level version of the Gemma outlier pattern observed in role space.
+
+Only one role appears in the top 20 of all three model role rankings: `validator`. Its trait-signature correlations remain positive across models: Gemma/Qwen `0.724316`, Gemma/Llama `0.795283`, and Qwen/Llama `0.921323`. The shared signature traits include `data_driven`, `formalist`, and `technical`, making `validator` the strongest current cross-model bridge between role convergence and trait-profile convergence.
+
+### Suggested next steps
+
+1. Treat Qwen/Llama as the higher-confidence cross-model baseline for trait-space assistant structure, and treat Gemma as an informative outlier rather than the default template.
+
+2. Use `validator` as the primary cross-model anchor for future steering, drift, and trait-signature analysis.
+
+3. Investigate why Gemma flips the accessibility dimension: `accessible` is last in Gemma but near the top in Llama and mid-high in Qwen.
+
+4. Re-run cluster-level trait profiling separately for Qwen and Llama to test whether their assistant poles form a broader grounded-helper cluster instead of Gemma's colder procedural-professional pole.

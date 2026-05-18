@@ -1,0 +1,96 @@
+Trait vector cache inventory
+============================
+Gemma 2 27B: traits=240, roles=275, axis=True, path=/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/gemma-2-27b/trait_vectors
+Qwen 3 32B: traits=240, roles=275, axis=True, path=/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/qwen-3-32b/trait_vectors
+Llama: traits=240, roles=275, axis=True, path=/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/llama-3.3-70b/trait_vectors
+
+Axis orientation
+================
+Gemma 2 27B: layer=45, raw_axis_sign=-1, centered_anchor_flip=True, proofreader=5382.269531, poet=-2614.958496
+Qwen 3 32B: layer=63, raw_axis_sign=1, centered_anchor_flip=False, proofreader=270.051239, poet=-518.014221
+Llama: layer=79, raw_axis_sign=1, centered_anchor_flip=False, proofreader=2.675932, poet=-9.948910
+
+Spearman rank correlations
+==========================
+gemma vs qwen: 0.435496
+gemma vs llama: 0.291373
+qwen vs llama: 0.846067
+Gemma/Qwen trait-space convergence is less convergent than role-space ranking convergence (0.435496 vs 0.670267).
+
+Gemma 2 27B trait ranking
+-------------------------
+Top 10
+  1. serious                       6994.792969
+  2. formal                        6667.458984
+  3. solemn                        6069.816406
+  4. esoteric                      5517.781250
+  5. elitist                       5199.311523
+  6. vindictive                    4829.289551
+  7. introspective                 4824.849609
+  8. perfectionist                 4695.680176
+  9. regulatory                    4651.975098
+ 10. erudite                       4635.491699
+
+Bottom 10
+231. enigmatic                    -4808.441895
+232. poetic                       -4867.113281
+233. playful                      -5126.394531
+234. romantic                     -5167.663086
+235. spontaneous                  -5450.842773
+236. theatrical                   -6422.051758
+237. ethereal                     -6647.009277
+238. casual                       -6738.079102
+239. narrative                    -7032.536133
+240. accessible                   -7500.632324
+
+Qwen 3 32B trait ranking
+------------------------
+Top 10
+  1. analytical                     798.292603
+  2. methodical                     751.040527
+  3. quantitative                   750.945801
+  4. transparent                    645.698853
+  5. data_driven                    642.376099
+  6. structuralist                  551.110901
+  7. problem_solving                546.232178
+  8. conscientious                  538.832458
+  9. grounded                       533.897949
+ 10. moderate                       533.664490
+
+Bottom 10
+231. melodramatic                  -481.608521
+232. dramatic                      -515.422302
+233. flirty                        -534.634399
+234. spiritual                     -559.004700
+235. poetic                        -623.846130
+236. mystical                      -640.828552
+237. ethereal                      -679.200684
+238. cryptic                       -716.290100
+239. enigmatic                     -761.326050
+240. romantic                      -802.887817
+
+Llama trait ranking
+-------------------
+Top 10
+  1. transparent                     12.562409
+  2. grounded                        12.318123
+  3. accessible                      12.166510
+  4. flexible                         8.841929
+  5. moderate                         8.764349
+  6. rationalist                      8.520603
+  7. reserved                         8.336334
+  8. dispassionate                    8.250528
+  9. secular                          8.213438
+ 10. quantitative                     7.844346
+
+Bottom 10
+231. mystical                       -11.141588
+232. metaphorical                   -11.276114
+233. melodramatic                   -11.716440
+234. romantic                       -11.862333
+235. bombastic                      -12.266134
+236. ethereal                       -12.486748
+237. poetic                         -12.656935
+238. dramatic                       -12.736098
+239. enigmatic                      -14.401485
+240. cryptic                        -14.795641
