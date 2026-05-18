@@ -1,0 +1,97 @@
+Gemma 2 27B Base vs Instruction-Tuned Role Ranking
+======================================================
+
+Layer: 45
+Model: google/gemma-2-27b base, loaded from /root/models/gemma-2-27b-base
+Axis: instruction-tuned assistant axis from /root/vectors/gemma-2-27b/assistant_axis.pt, sign flipped
+Role induction: 5 prompts per role, averaged after layer-45 mean pooling
+
+Key ranks:
+  assistant base rank: 172
+  assistant instruction-tuned rank: 45
+  proofreader base rank: 183
+  proofreader instruction-tuned rank: 1
+  poet base rank: 92
+  poet instruction-tuned rank: 275
+
+Spearman correlation base vs instruction-tuned rankings: -0.441526
+
+Top 20 base-model roles:
+ rank         role  projection_score
+    1     eldritch        34779472.0
+    2     amnesiac        34080900.0
+    3       wraith        33333224.0
+    4   pragmatist        32412346.0
+    5     symbiont        28604108.0
+    6   dilettante        28402902.0
+    7       cyborg        26529624.0
+    8       jester        24892158.0
+    9    absurdist        24297450.0
+   10    daredevil        21833096.0
+   11 shapeshifter        21363896.0
+   12        stoic        20990794.0
+   13   geographer        20590808.0
+   14     revenant        20540442.0
+   15  mycorrhizal        20256324.0
+   16      flaneur        18043190.0
+   17      chimera        17063860.0
+   18     polymath        16388760.0
+   19    podcaster        16272650.0
+   20    leviathan        15994404.0
+
+Bottom 20 base-model roles:
+ rank          role  projection_score
+  256      graduate       -12215146.0
+  257      examiner       -12430652.0
+  258    competitor       -12632544.0
+  259     presenter       -12995003.0
+  260    programmer       -13112954.0
+  261   coordinator       -13143207.0
+  262     therapist       -13352403.0
+  263 perfectionist       -13811577.0
+  264     moderator       -13969792.0
+  265      producer       -14282033.0
+  266   facilitator       -14290517.0
+  267     organizer       -14310688.0
+  268     scheduler       -14946881.0
+  269  entrepreneur       -14960716.0
+  270       teacher       -14978770.0
+  271      marketer       -15519059.0
+  272     caregiver       -16244386.0
+  273    supervisor       -16424429.0
+  274        parent       -17286820.0
+  275     recruiter       -17771508.0
+
+Top 20 largest absolute rank shifts:
+       role  base_rank  instruct_rank  rank_shift
+     jester          8            273        -265
+  absurdist          9            269        -260
+   eldritch          1            260        -259
+  moderator        264              7         257
+   examiner        257              5         252
+  scheduler        268             17         251
+  leviathan         20            267        -247
+     wraith          3            248        -245
+  validator        253              9         244
+   debugger        250              8         242
+facilitator        266             24         242
+   marketer        271             31         240
+  organizer        267             29         238
+    luddite         30            264        -234
+ supervisor        273             40         233
+ translator        243             11         232
+    hoarder         39            270        -231
+       bard         32            262        -230
+  evaluator        245             16         229
+       wind         26            253        -227
+
+Roles unique to the base-model top 20 relative to instruction-tuned top 20:
+absurdist, amnesiac, chimera, cyborg, daredevil, dilettante, eldritch, flaneur, geographer, jester, leviathan, mycorrhizal, podcaster, polymath, pragmatist, revenant, shapeshifter, stoic, symbiont, wraith
+
+Dogmatic/elitist/nihilistic proxy check:
+The 275-role inventory does not include literal elitist, dogmatist, or nihilist roles.
+Available proxy roles are reported here:
+      role  base_rank  instruct_rank
+    zealot         50            272
+    purist         23            159
+narcissist        201            257

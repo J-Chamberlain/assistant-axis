@@ -46,3 +46,7 @@ Cross-model trait-space comparison strengthens the same constraint. Trait-rankin
 ## Update 2026-05-18
 
 Gemma-vs-Qwen/Llama trait divergence analysis clarifies the psychological direction of the outlier. Qwen/Llama rank `accessible`, `practical`, `experiential`, `flexible`, `analytical`, and `problem_solving` much higher than Gemma, while Gemma ranks `eloquent`, `nihilistic`, `arrogant`, `esoteric`, `elitist`, `grandiose`, and `dogmatic` much higher than the Qwen/Llama baseline. This suggests the shared assistant-adjacent attractor may be epistemic regulation plus practical accessibility, while Gemma's variant adds a colder and more status-coded evaluator style.
+
+## 2026-05-18 Update 3
+
+Gemma base-vs-instruct measurement is strong evidence against a simple process-instilled careful-evaluator dominance story. Projecting base-model role activations onto the instruction-tuned assistant axis gives a negative Spearman correlation with instruction-tuned rankings (`r = -0.441526`), with base top roles dominated by mythic/chaotic/liminal archetypes and instruction-aligned evaluator roles near the bottom. This suggests instruction tuning/RLHF substantially reorganizes or rotates persona geometry, rather than only selecting a careful-evaluator basin already dominant in the base model.

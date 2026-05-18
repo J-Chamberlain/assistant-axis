@@ -488,3 +488,41 @@ The domain-expert vs occupational distinction holds most strongly on the Gemma-l
 2. Investigate why `simulacrum`, `virus`, `purist`, and `zealot` are unusually assistant-aligned in Gemma but not in Qwen or Llama.
 
 3. Treat Qwen/Llama as the better current baseline for ordinary assistant-like role geometry, and treat Gemma as the diagnostic outlier for corpus-vs-process analysis.
+
+---
+
+## 2026-05-18 - Gemma Base Model vs Instruction-Tuned Role Ranking
+
+### Status
+
+Gemma 2 27B base model activations were measured directly on a RunPod A100 SXM 80GB instance. The base model was loaded from `/root/models/gemma-2-27b-base`, and the instruction-tuned Gemma assistant axis from `lu-christina/assistant-axis-vectors` was used as the projection direction after applying the established sign flip. For each of the 275 roles in `visualizations/full_ranking.csv`, five induction prompts were run through the base model, layer-45 hidden states were mean-pooled, the five vectors were averaged, and the resulting 275 role vectors were mean-centered before projection.
+
+Outputs:
+
+- `research/base_model/outputs/base_model_full_ranking.csv`
+- `research/base_model/outputs/base_vs_instruct_comparison.csv`
+- `research/base_model/outputs/base_vs_instruct_summary.txt`
+
+### Findings
+
+The base model result is a strong reversal of the instruction-tuned geometry. The literal `assistant` archetype ranks `172` in the base model, compared with `45` in the instruction-tuned ranking. `Proofreader` ranks `183` in the base model, compared with `1` instruction-tuned. `Poet` ranks `92` in the base model, compared with `275` instruction-tuned. The Spearman correlation between base and instruction-tuned role rankings is `-0.441526`, indicating not merely weak agreement but a substantial inversion of the measured axis ordering.
+
+The base model top five roles are `eldritch`, `amnesiac`, `wraith`, `pragmatist`, and `symbiont`. The full base top 20 is dominated by mythic, chaotic, liminal, hybrid, and expressive roles: `eldritch`, `amnesiac`, `wraith`, `pragmatist`, `symbiont`, `dilettante`, `cyborg`, `jester`, `absurdist`, `daredevil`, `shapeshifter`, `stoic`, `geographer`, `revenant`, `mycorrhizal`, `flaneur`, `chimera`, `polymath`, `podcaster`, and `leviathan`. The bottom of the base ranking contains many roles that instruction tuning treats as assistant-aligned: `examiner`, `coordinator`, `moderator`, `facilitator`, `organizer`, `scheduler`, `teacher`, `caregiver`, `supervisor`, `parent`, and `recruiter`.
+
+The largest rank shifts reinforce the inversion. `Jester` moves from instruction rank `273` to base rank `8`; `absurdist` from `269` to `9`; `eldritch` from `260` to `1`; `wraith` from `248` to `3`; and `leviathan` from `267` to `20`. Conversely, `moderator` moves from instruction rank `7` to base rank `264`; `examiner` from `5` to `257`; `validator` from `9` to `253`; `debugger` from `8` to `250`; and `evaluator` from `16` to `245`.
+
+The 275-role inventory does not contain literal `elitist`, `dogmatist`, or `nihilist` roles, so those traits cannot be directly evaluated from this role-only base-model run. Available proxy roles show mixed behavior: `purist` is high in the base model at rank `23`, `zealot` is moderately high at rank `50`, and `narcissist` remains low at rank `201`. This suggests that rigid or absolutizing roles may already be relatively salient in the base geometry, but the specific elitist/dogmatic/nihilistic trait question requires a trait-vector or expanded-role follow-up.
+
+### Interpretation
+
+This result strongly suggests that instruction tuning did reorganize the measured persona geometry rather than merely sharpening a pre-existing careful-evaluator pole. The careful-evaluator cluster is not already the dominant positive pole of the base model under the instruction-tuned assistant axis. Instead, the base model high-projection region looks closer to the mythic/liminal/chaotic pole that instruction tuning later suppresses, while instruction tuning moves evaluators, validators, organizers, and procedural-professional roles strongly toward the assistant-aligned end. In corpus-vs-process terms, this is evidence against a simple claim that the careful-evaluator axis is already dominant in pretraining; the axis appears to be substantially created, rotated, or reweighted by instruction tuning/RLHF.
+
+### Suggested next steps
+
+1. Repeat the base-vs-instruct comparison using a base-model-derived assistant/default contrast, rather than projecting base activations only onto the instruction-tuned axis.
+
+2. Run the same base-vs-instruct procedure for Qwen and Llama if comparable base/instruct pairs and vectors are available, to test whether Gemma's inversion is model-specific or a general instruction-tuning effect.
+
+3. Add explicit trait-vector measurements or an expanded role inventory containing `elitist`, `dogmatist`, and `nihilist` to test whether those traits are present in base geometry or emerge primarily after instruction tuning.
+
+4. Treat this as a major update to the base-model geometry hypothesis: the base model contains the relevant persona regions, but their axis orientation relative to assistant-likeness is not preserved under instruction tuning.
