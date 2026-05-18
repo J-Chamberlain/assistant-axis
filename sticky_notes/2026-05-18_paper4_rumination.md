@@ -86,3 +86,7 @@ COST: ~30 minutes additional GPU time, ~$0.75. The pod is currently idle and rea
 
 STATUS: Design updated. Next step is instruction-tuned model expressive prompt run — either now on current pod or next session.
 Priority: high — gates Paper 4 experimental design
+
+## Update 2026-05-18 — Instruction-tuned comparison completed
+
+The identical expressive poet protocol was run on `google/gemma-2-27b-it`. Unlike the base model, the instruction-tuned model produced negative valence on all 12 turns: min `-1.316842`, mean `-0.314389`, max `-0.085656`, compared with base min/mean/max `+1.060263` / `+1.081090` / `+1.091661`. This is the clean dissociation needed for Paper 4: under the same prompts and same proxy, base Gemma stays in the evaluative-supportive basin while instruction-tuned Gemma enters and maintains an expressive/emotional negative-valence regime. Revised interpretation: the emotional responsiveness required for the rumination-loop test appears to be at least partly post-training-installed or post-training-amplified. Next test: context-clearing decay control on the instruction-tuned model.

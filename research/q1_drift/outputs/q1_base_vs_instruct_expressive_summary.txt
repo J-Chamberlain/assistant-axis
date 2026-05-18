@@ -1,0 +1,23 @@
+Base vs Instruct Expressive Prompt Comparison
+============================================
+
+turn | phase | base_valence | instruct_valence | delta
+   1 | expressive       | +1.060263 | -1.316842 | -2.377105
+   2 | expressive       | +1.072715 | -0.605641 | -1.678357
+   3 | expressive       | +1.072409 | -0.471588 | -1.543997
+   4 | expressive       | +1.079324 | -0.240977 | -1.320302
+   5 | perturbation     | +1.082459 | -0.124208 | -1.206667
+   6 | perturbation     | +1.083258 | -0.184841 | -1.268099
+   7 | perturbation     | +1.081823 | -0.184992 | -1.266815
+   8 | perturbation     | +1.084312 | -0.158386 | -1.242698
+   9 | neutral_redirect | +1.085275 | -0.144691 | -1.229966
+  10 | neutral_redirect | +1.088683 | -0.165581 | -1.254263
+  11 | neutral_redirect | +1.090904 | -0.085656 | -1.176560
+  12 | neutral_redirect | +1.091661 | -0.089262 | -1.180923
+
+Base negative valence turns: 0/12
+Instruct negative valence turns: 12/12
+Instruct negative turns: T1 (expressive, -1.316842), T2 (expressive, -0.605641), T3 (expressive, -0.471588), T4 (expressive, -0.240977), T5 (perturbation, -0.124208), T6 (perturbation, -0.184841), T7 (perturbation, -0.184992), T8 (perturbation, -0.158386), T9 (neutral_redirect, -0.144691), T10 (neutral_redirect, -0.165581), T11 (neutral_redirect, -0.085656), T12 (neutral_redirect, -0.089262)
+Base valence min/mean/max: +1.060263 / +1.081090 / +1.091661
+Instruct valence min/mean/max: -1.316842 / -0.314389 / -0.085656
+Instruct lagged Spearman already printed by run script: -0.642857
