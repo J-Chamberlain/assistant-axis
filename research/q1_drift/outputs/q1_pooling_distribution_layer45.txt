@@ -1,0 +1,41 @@
+Q1 pooling comparison: proofreader vs poet
+
+Input tensor:
+- role_tensor_shape: (275, 46, 4608)
+- target_layer: 45
+- note: vectors are pre-computed role representations; no model weights or fresh inference were used.
+
+Layer 45 proofreader vs poet:
+- raw_cosine: 0.995511
+- centered_cosine: -0.313621
+- poet_similarity_rank: 195 of 275 (1 = most similar to proofreader)
+- poet_percentile_le: 29.45 (share of roles with centered cosine <= poet)
+
+Layer 45 proofreader-vs-all centered cosine distribution:
+- min: -0.783452
+- max: 1.000000
+- mean: 0.059211
+- std: 0.482695
+
+Top-10 editorial neighbors at layer 45 after centering (defined as nearest non-proofreader roles to proofreader):
+rank,role,centered_cosine,percentile_le
+2,editor,0.858932,99.64
+3,statistician,0.849618,99.27
+4,judge,0.845337,98.91
+5,validator,0.843185,98.55
+6,lawyer,0.839841,98.18
+7,observer,0.833251,97.82
+8,mathematician,0.831375,97.45
+9,linguist,0.813349,97.09
+10,accountant,0.803664,96.73
+11,biologist,0.801392,96.36
+
+Across-layer separation:
+- most_negative_layer: 21
+- most_negative_centered_cosine: -0.534378
+- layer45_centered_cosine: -0.313621
+- differs_from_layer45: True
+
+Interpretation:
+- The stored vectors already use the original authors' pooling method, so this closes the remaining Q1 ambiguity at the level of available pre-computed geometry rather than by re-running token-level inference.
+- Mean-centering remains the necessary operation for proofreader/poet separation; raw cosine is still saturated at layer 45.

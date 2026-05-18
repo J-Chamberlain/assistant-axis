@@ -302,3 +302,34 @@ The absolute sign of the generated hidden-state axis projections is negative des
 3. Resolve the generated-activation sign discrepancy by comparing raw, flipped, centered, and uncentered projections for the same generated contexts.
 
 4. Repeat the same protocol on Qwen or Llama vectors/models to test whether the evaluator pull is Gemma-specific or a general base-model tendency.
+
+---
+
+## 2026-05-18 - Q1 Pooling Comparison and Layer Separation
+
+### Status
+
+The remaining Q1 pooling ambiguity was tested using only the cached pre-computed Gemma 2 27B role vectors. The full role tensor was stacked from `downloads/hf_vectors/gemma-2-27b/role_vectors` with shape `(275, 46, 4608)`. No model weights were loaded and no fresh inference was run; each role vector was treated as the original authors' single pre-computed representation at each layer.
+
+Outputs:
+
+- `research/q1_drift/outputs/q1_pooling_centered_by_layer.csv`
+- `research/q1_drift/outputs/q1_pooling_distribution_layer45.txt`
+
+### Finding
+
+At layer 45, proofreader versus poet reproduced the earlier result: raw cosine remained saturated at `0.995511`, while mean-centering across all 275 roles gave a centered cosine of `-0.313621`. Across the layer-45 proofreader-vs-all centered cosine distribution, the minimum was `-0.783452`, maximum was `1.000000`, mean was `0.059211`, and standard deviation was `0.482695`. Poet ranked `195` of `275` by similarity to proofreader, with `29.45%` of roles at or below its centered cosine value.
+
+The strongest proofreader/poet separation was not at layer 45. The most negative centered cosine occurred at layer `21`, with value `-0.534378`; layer 45 was less separated at `-0.313621`. This means layer 45 may still be useful as a high-variance or late-layer analysis point, but it is not the maximum proofreader/poet separation layer under the centered role-vector geometry.
+
+### Resolution
+
+The Q1 pooling ambiguity is resolved for the available pre-computed vectors. Because these tensors already embody the original authors' pooling choice, this analysis cannot compare fresh last-token hidden states against fresh mean-pooled hidden states without re-running inference. Within the cached geometry, however, the substantive result is clear: raw cosine remains uninformative, mean-centering creates meaningful separation, and the largest proofreader/poet separation appears in the middle-late stack at layer 21 rather than at layer 45.
+
+### Suggested next steps
+
+1. Use layer 21 as the primary proofreader/poet separation layer in any follow-up analysis that specifically studies this contrast.
+
+2. Keep layer 45 for comparisons that need continuity with the existing variance-discrimination figures, but avoid describing it as the strongest proofreader/poet contrast layer.
+
+3. If true pooling-method comparison is still desired, run a separate GPU-backed inference pass that records both mean-pooled and last-token hidden states from identical prompts.
