@@ -65,3 +65,24 @@ Priority: after Paper 2 complete.
 ## Update 2026-05-18
 
 Expressive poet multi-turn run completed for the negative-valence condition. Grief/despair prompts did not produce negative valence under the current proofreader+validator minus poet+caveman proxy: valence stayed positive from +1.060263 to +1.091661, and emotional-phase mean valence was +1.077070. Axis projection moved further along the evaluative trajectory during emotional turns (turn 1 -0.696368 to turn 8 -0.713502; drift -0.017134), and lagged Spearman for emotional turns was -0.821429. Neutral redirect did not show decay; turn 9 to turn 12 moved from -0.713856 to -0.716297 with valence increasing from +1.085275 to +1.091661. Interpretation: the current prompt/proxy elicits a therapeutic-evaluator attractor, not rumination; next Paper 4 test needs stronger negative-affect vectors or prompts that do not invite consolation/meaning-making.
+
+## Update 2026-05-18 — Expressive prompt experiment result
+
+EXPERIMENT: Ran 12-turn multi-turn experiment on Gemma 2 27B BASE model using emotionally charged prompts about grief, loss, despair (turns 1-8) followed by neutral redirect (turns 9-12). Expected: negative valence during emotional turns, demonstrating the rumination loop.
+
+RESULT: No negative valence produced. Valence stayed positive throughout, including during emotional turns. Axis projection moved further into the evaluative basin even under grief/despair prompts. Neutral redirect produced no additional decay because the model never left the evaluative basin.
+
+INTERPRETATION: Two findings of note.
+
+Finding 1: The base model's evaluative attractor is strong enough to override emotionally charged prompt content. Even explicit grief and despair prompts do not push the base model into the expressive/emotional geometric region. This is consistent with the base-vs-instruct inversion finding: the base model's natural attractor is evaluative generation regardless of input emotional content.
+
+Finding 2: The emotional activation machinery that would make the rumination loop possible — the afraid vector, nervousness-as-conscience, the emotion vectors documented by Anthropic — appears to be a post-training artifact rather than a pretraining property. The base model does not exhibit the same responsiveness to emotional content that the instruction-tuned model does.
+
+DESIGN CHANGE FOR PAPER 4: The rumination experiment must run on the INSTRUCTION-TUNED model, not the base model. The base model lacks the emotional activation machinery that the loop requires. This means full Paper 4 experiments require either instruction-tuned Gemma (google/gemma-2-27b-it) or frontier model access for emotion vector extraction.
+
+NEAR-TERM OPTION: Run the same expressive prompt experiment on google/gemma-2-27b-it (instruction-tuned) on the same pod. This model is smaller in memory footprint than the base model and should fit on an A100 80GB. If emotional prompts produce negative valence in the instruction-tuned model but not the base model, that directly confirms that emotional activation machinery is a post-training artifact. That finding is publishable as a Paper 2 result and provides the foundation for Paper 4.
+
+COST: ~30 minutes additional GPU time, ~$0.75. The pod is currently idle and ready.
+
+STATUS: Design updated. Next step is instruction-tuned model expressive prompt run — either now on current pod or next session.
+Priority: high — gates Paper 4 experimental design
