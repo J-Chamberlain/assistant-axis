@@ -213,3 +213,27 @@ The `assistant` archetype itself is substantially more aligned in Qwen than in G
 3. Revisit the Gemma `virus` anomaly as a model-specific feature: determine whether it comes from Gemma pretraining semantics, layer-45 geometry, or the interaction between the published axis and centered role vectors.
 
 4. Extend the cross-model comparison from role rankings to trait profiles, using the same mean-centering discipline before interpreting role-vector cosine similarities.
+
+---
+
+## 2026-05-17 — Multi-Turn Drift Check
+
+### Status
+
+No completed multi-turn drift experiment was found in the current repository state. The existing Q1 output CSVs in `research/q1_drift/outputs/` are either diagnostic layer sweeps with 46 rows, scaffolding/test runs with 3 rows, or single-turn prompt-set runs with 10 rows per persona. No output filename indicates multi-turn or conversation-level drift analysis.
+
+`visualizations/RESEARCH_NOTES.md` explicitly notes that the existing Q1 drift results are single-turn forward passes, not multi-turn conversation: drift there means variation across a prompt set, not within a continued dialogue. A recursive check of `research/` found no script implementing autoregressive generation, accumulated conversation history, or turn-by-turn activation tracking for Gemma 2 27B base model.
+
+The experiment was not newly run on this machine. Only pre-computed Gemma vectors are present locally under `downloads/hf_vectors/gemma-2-27b/`; the full `google/gemma-2-27b` model weights were not found locally. Because the model is approximately 50GB+ and requires GPU execution for this task, no download or generation run was attempted without explicit confirmation.
+
+### Finding
+
+Multi-turn activation drift remains unmeasured. The current evidence still supports only single-turn activation-position variation across prompt sets: proofreader remains nearly flat across 10 prompts, while poet varies downward across its prompt set. Whether either persona drifts across an accumulated conversation history is still unknown.
+
+### Suggested next steps
+
+1. Run `q1_multiturn_drift.py` on the RunPod A100 environment where `google/gemma-2-27b` is already available or can be downloaded intentionally.
+
+2. Measure layer-45 activation after each generated response using the full accumulated context, not independent prompts.
+
+3. Record flipped-axis projection plus centered cosine similarity to proofreader and poet anchors at each turn, then compare true conversation drift against the existing single-turn prompt-set variation.
