@@ -164,3 +164,29 @@ For a short briefing, read:
 6. `research/q1_drift/outputs/q1_multiturn_poet.csv`
 
 For paper drafting, also read `visualizations/sections/README.md` and the section files under `visualizations/sections/`.
+
+---
+
+## Additional findings — May 18, 2026 (late session)
+
+### Gemma divergence from Qwen-Llama baseline (role space)
+
+A follow-on analysis compared Gemma rankings against the Qwen-Llama average as a convergent baseline. Roles Gemma ranks higher than Qwen-Llama include simulacrum, purist, zealot, stoic, and virus — characterized by impersonal structure, rigidity, abstraction, and replication rather than domain expertise. Roles Gemma ranks lower include instructor, trainer, teacher, tutor, and planner — the practical occupational helper profile dominant in Qwen and Llama. The Gemma-specific assistant pole is better characterized as systematic non-social order than as careful evaluation.
+
+### Gemma divergence from Qwen-Llama baseline (trait space)
+
+Trait-space divergence analysis found: Qwen and Llama converge at Spearman 0.846 on trait rankings while Gemma diverges from both. Convergent assistant-aligned traits across all three models: transparent, dispassionate, detached, calm. Gemma-specific assistant-aligned traits: elitist, arrogant, dogmatic, grandiose, nihilistic. Qwen-Llama assistant-aligned traits absent from Gemma: accessible, practical, benevolent, problem-solving. Big Five / Dark Triad cross-reference: Gemma's assistant pole is lower Agreeableness and higher Narcissism and Psychopathy relative to Qwen-Llama baseline.
+
+### Paper updates applied this session
+
+Section 3.1 expanded with trait divergence findings. Section 9 updated with cross-model safety implication. Section 5 updated with layer 21 maximum separation finding. Section 3.1 created with three-model role ranking comparison. All section split files resynced.
+
+### Base model experiment (in progress)
+
+RunPod A100 experiment running to generate Gemma base model role vectors and project onto instruction-tuned axis. Will establish whether the Gemma divergence originates in pretraining or post-training. Results pending — Update_5 will be updated once complete.
+
+### Next steps
+
+1. Fill placeholder in Section 3.1 once base model results arrive
+2. Run modified multi-turn experiment with expressive prompts for Paper 4 negative valence condition (requires GPU)
+3. Q2 activation steering experiment (requires GPU)

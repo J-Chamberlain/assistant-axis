@@ -19,3 +19,7 @@ RELATIONSHIP TO LANGUAGE EXPERIMENT: The Mandarin experiment (Paper 3) will be m
 Paper: 3 (cross-cultural)
 Priority: medium — framing note for write-up
 Status: hypothesis, not confirmed
+
+## Update 2026-05-18
+
+The write-up now incorporates the trait divergence framing directly into Section 3.1 and Section 9. It states the Qwen/Llama convergence as empirical geometry, frames possible shared lineage or corpus explanations as open hypotheses, and adds the safety implication that superficially similar assistant behavior can hide different internal assistant-pole trait structures.
