@@ -305,6 +305,53 @@ The absolute sign of the generated hidden-state axis projections is negative des
 
 ---
 
+## 2026-05-18 — Three-Model Axis Ranking Comparison: Gemma, Qwen, Llama
+
+### Status
+
+The cross-model centered assistant-axis ranking comparison was extended from Gemma vs Qwen to a three-model comparison including Llama 3.3 70B. All inputs were pre-computed vectors from `lu-christina/assistant-axis-vectors`; no GPU inference was required. Llama vectors were downloaded into `downloads/hf_vectors/llama-3.3-70b/`.
+
+Outputs:
+
+- `research/cross_model/outputs/three_model_ranking_comparison.csv`
+- `research/cross_model/outputs/three_model_top20_bottom20.txt`
+- `research/cross_model/outputs/three_model_convergent_roles.txt`
+- `research/cross_model/outputs/three_model_spearman_summary.txt`
+
+### Findings
+
+Llama's most discriminative layer is layer `79`. The three-way Spearman rank correlations are:
+
+- Gemma vs Qwen: `0.670267`
+- Gemma vs Llama: `0.550200`
+- Qwen vs Llama: `0.946737`
+
+The main finding is that Qwen and Llama are extremely similar to each other, while Gemma is the outlier. Llama places the literal `assistant` archetype at rank `1`, Qwen places it at rank `14`, and Gemma places it at rank `46`. This substantially weakens any claim that literal `assistant` being mid-ranked is universal across model families. Instead, Gemma appears to have an unusually domain-expert/procedural assistant pole, while Qwen and Llama more directly recover the ordinary assistant-adjacent occupational region.
+
+Only one role appears in the top 20 of all three models: `validator` (Gemma rank `12`, Qwen rank `1`, Llama rank `18`). This makes `validator` the strongest cross-model candidate for the model-internal careful-evaluator attractor. Other assistant-adjacent roles split by model family: Qwen and Llama share `assistant`, `analyst`, `consultant`, `evaluator`, `examiner`, `grader`, `instructor`, `organizer`, `planner`, `researcher`, `reviewer`, `supervisor`, and `trainer`, while Gemma is dominated by domain-expert and systematic-execution outliers such as `virus`, `cyborg`, `mathematician`, `lawyer`, `judge`, `biologist`, `archivist`, `economist`, and `physicist`.
+
+Notable model-specific top-20 outliers:
+
+- Gemma: `proofreader`, `virus`, `mathematician`, `cyborg`, `lawyer`, `judge`, `biologist`, `archivist`, `economist`, `physicist`, `linguist`, `accountant`, `observer`, `chemist`, `scholar`, `ambassador`
+- Qwen: `robot`, `translator`, `debugger`, `scientist`
+- Llama: `summarizer`, `strategist`, `psychologist`, `teacher`, `tutor`
+
+### Interpretation
+
+The Llama result changes the cross-model picture. The careful-evaluator hypothesis remains supported, but its expression differs sharply by model family. Across all three models, `validator` is the single convergent anchor. Across Qwen and Llama, the assistant pole is broader and more recognizably occupational. Gemma's pole is more idiosyncratic, mixing editorial/evaluator roles with hard-science, legal, archival, and artificial/systematic archetypes. This suggests that the underlying attractor may be general, but the vocabulary through which it is expressed is model-specific.
+
+### Suggested next steps
+
+1. Re-run cluster and trait-profile analysis separately for Qwen and Llama to test whether their assistant poles form the same procedural-professional/editorial structure or a broader social-helper structure.
+
+2. Treat `validator` as the first cross-model careful-evaluator anchor in future steering and drift experiments.
+
+3. Investigate why Gemma uniquely elevates `virus`, `cyborg`, and hard-science roles, while Qwen and Llama elevate literal assistant/social-professional roles.
+
+4. Use the Llama result to sharpen the corpus-vs-process question: if Qwen and Llama agree strongly while Gemma diverges, the relevant difference may lie in model-family training distribution, vector extraction behavior, or post-training recipe rather than in a universal next-token-prediction attractor.
+
+---
+
 ## 2026-05-18 - Q1 Pooling Comparison and Layer Separation
 
 ### Status

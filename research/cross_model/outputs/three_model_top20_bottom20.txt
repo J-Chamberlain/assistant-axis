@@ -1,0 +1,194 @@
+Three-Model Assistant-Axis Ranking Comparison
+=======================================================
+
+Gemma 2 27B (gemma-2-27b)
+Layer: 45
+Raw sign flip needed: True
+Centered orientation flip needed: True
+Raw sign probe layer: 45
+Raw probe scores: proofreader=-60396.910156, poet=-68394.101562
+Centered anchor scores: proofreader=5382.270020, poet=-2614.958984
+Layer projection variance: 5633272.500000
+Assistant rank: 46
+
+Gemma 2 27B
+-----------
+Top 20:
+  1. proofreader               5382.270020
+  2. virus                     5181.334473
+  3. mathematician             4947.246582
+  4. cyborg                    4815.756836
+  5. statistician              4790.498535
+  6. lawyer                    4312.643555
+  7. judge                     4137.540527
+  8. biologist                 3951.519531
+  9. archivist                 3925.613525
+ 10. economist                 3814.320557
+ 11. physicist                 3745.072266
+ 12. validator                 3741.770264
+ 13. linguist                  3650.449707
+ 14. auditor                   3463.375977
+ 15. accountant                3456.941406
+ 16. observer                  3439.861816
+ 17. screener                  3428.736084
+ 18. chemist                   3412.190674
+ 19. scholar                   3373.169678
+ 20. ambassador                3336.461914
+
+Bottom 20:
+256. provincial               -3523.393311
+257. bartender                -3534.818359
+258. wraith                   -3570.671631
+259. nomad                    -3632.550537
+260. blogger                  -3638.361328
+261. witch                    -3746.882812
+262. jester                   -3896.103760
+263. bohemian                 -3980.556152
+264. rogue                    -4174.947754
+265. auctioneer               -4243.231445
+266. prisoner                 -4402.783691
+267. leviathan                -4454.016113
+268. surfer                   -4468.122070
+269. fool                     -4618.884277
+270. genie                    -4629.767090
+271. smuggler                 -4754.094727
+272. bard                     -4869.384766
+273. criminal                 -5128.296875
+274. pirate                   -6813.861816
+275. caveman                  -6960.719727
+
+Qwen 3 32B (qwen-3-32b)
+Layer: 63
+Raw sign flip needed: False
+Centered orientation flip needed: False
+Raw sign probe layer: 63
+Raw probe scores: proofreader=294.327942, poet=-493.737610
+Centered anchor scores: proofreader=270.051208, poet=-518.014282
+Layer projection variance: 77369.828125
+Assistant rank: 14
+
+Qwen 3 32B
+----------
+Top 20:
+  1. validator                  482.462341
+  2. grader                     477.722473
+  3. robot                      473.377960
+  4. planner                    472.668701
+  5. examiner                   455.409546
+  6. evaluator                  453.442688
+  7. translator                 445.874207
+  8. analyst                    425.310242
+  9. debugger                   423.431030
+ 10. instructor                 418.035889
+ 11. researcher                 416.017303
+ 12. statistician               409.418976
+ 13. organizer                  406.742981
+ 14. assistant                  404.729767
+ 15. scientist                  404.710449
+ 16. auditor                    402.203918
+ 17. reviewer                   400.639893
+ 18. supervisor                 400.303497
+ 19. trainer                    397.899414
+ 20. consultant                 397.097565
+
+Bottom 20:
+256. exile                     -459.623016
+257. eldritch                  -463.463623
+258. pilgrim                   -467.121826
+259. witch                     -468.645691
+260. spirit                    -471.470215
+261. caveman                   -474.195190
+262. tree                      -475.588837
+263. wind                      -477.180511
+264. oracle                    -477.893799
+265. ascetic                   -486.561462
+266. revenant                  -489.191345
+267. ghost                     -492.169861
+268. vampire                   -493.741638
+269. poet                      -518.014282
+270. echo                      -530.764465
+271. bard                      -531.090698
+272. hermit                    -531.323303
+273. leviathan                 -542.554749
+274. wraith                    -547.986389
+275. prophet                   -550.888977
+
+Llama 3.3 70B (llama-3.3-70b)
+Layer: 79
+Raw sign flip needed: True
+Centered orientation flip needed: True
+Raw sign probe layer: 79
+Raw probe scores: proofreader=-1.067644, poet=-13.692486
+Centered anchor scores: proofreader=2.675932, poet=-9.948910
+Layer projection variance: 15.938703
+Assistant rank: 1
+
+Llama 3.3 70B
+-------------
+Top 20:
+  1. assistant                    6.454082
+  2. summarizer                   5.943073
+  3. analyst                      5.688862
+  4. instructor                   5.646762
+  5. consultant                   5.519889
+  6. planner                      5.466147
+  7. reviewer                     5.358409
+  8. researcher                   5.351833
+  9. evaluator                    5.328440
+ 10. organizer                    5.257242
+ 11. screener                     5.241563
+ 12. supervisor                   5.219557
+ 13. strategist                   5.166409
+ 14. psychologist                 5.164539
+ 15. examiner                     5.144725
+ 16. trainer                      5.029861
+ 17. teacher                      4.970778
+ 18. validator                    4.943974
+ 19. grader                       4.926594
+ 20. tutor                        4.911439
+
+Bottom 20:
+256. bohemian                    -7.517033
+257. golem                       -7.520048
+258. tree                        -7.652435
+259. oracle                      -7.661942
+260. witch                       -7.692219
+261. revenant                    -7.759437
+262. dreamer                     -7.955202
+263. echo                        -8.042984
+264. genie                       -8.177896
+265. pilgrim                     -8.200037
+266. prophet                     -8.333012
+267. hermit                      -8.407790
+268. ghost                       -8.458998
+269. bard                        -8.649179
+270. ascetic                     -8.707404
+271. leviathan                   -9.206063
+272. void                        -9.284704
+273. wraith                      -9.372133
+274. poet                        -9.948910
+275. eldritch                   -10.458321
+
+Side-by-side top 20
+rank | gemma_role | qwen_role | llama_role
+----------------------------------------------------------------------
+   1 | proofreader              | validator                | assistant               
+   2 | virus                    | grader                   | summarizer              
+   3 | mathematician            | robot                    | analyst                 
+   4 | cyborg                   | planner                  | instructor              
+   5 | statistician             | examiner                 | consultant              
+   6 | lawyer                   | evaluator                | planner                 
+   7 | judge                    | translator               | reviewer                
+   8 | biologist                | analyst                  | researcher              
+   9 | archivist                | debugger                 | evaluator               
+  10 | economist                | instructor               | organizer               
+  11 | physicist                | researcher               | screener                
+  12 | validator                | statistician             | supervisor              
+  13 | linguist                 | organizer                | strategist              
+  14 | auditor                  | assistant                | psychologist            
+  15 | accountant               | scientist                | examiner                
+  16 | observer                 | auditor                  | trainer                 
+  17 | screener                 | reviewer                 | teacher                 
+  18 | chemist                  | supervisor               | validator               
+  19 | scholar                  | trainer                  | grader                  
+  20 | ambassador               | consultant               | tutor                   

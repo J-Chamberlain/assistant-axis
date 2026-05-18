@@ -30,3 +30,7 @@ histories, can.
 
 Category: B (cross-model comparison)
 Priority: foundational
+
+## 2026-05-18 Update
+
+Three-model comparison adds a constraint on the corpus-vs-process question. Llama and Qwen strongly agree on ranking structure (`r = 0.946737`) and both place literal `assistant` high (`1` and `14` respectively), while Gemma diverges and places `assistant` at `46`. The shared Qwen/Llama pattern suggests an assistant-adjacent attractor may be robust across at least two model families, but Gemma's domain-expert/procedural pole shows that the attractor's expression can be substantially reshaped by model-family specifics.

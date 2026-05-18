@@ -27,3 +27,7 @@ prompting and which persona regions are most stable across cultures.
 
 Category: B/C — partially answered with current data
 Priority: medium — Paper 3
+
+## 2026-05-18 Update
+
+Added Llama 3.3 70B to the cross-model axis ranking comparison. The new three-model result shows Qwen and Llama are extremely close (`r = 0.946737`), while Gemma is the outlier (`Gemma-Qwen r = 0.670267`, `Gemma-Llama r = 0.550200`). Literal `assistant` ranks `1` in Llama, `14` in Qwen, and `46` in Gemma. This suggests the mid-ranked assistant finding is not universal; Gemma's assistant pole is unusually domain-expert/systematic, while Qwen and Llama recover a more ordinary assistant-adjacent occupational region.

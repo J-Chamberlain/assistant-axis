@@ -1,0 +1,16 @@
+Three-Model Spearman Summary
+==============================
+
+Gemma vs Qwen: 0.670267
+Gemma vs Llama: 0.550200
+Qwen vs Llama: 0.946737
+
+Assistant ranks:
+Gemma 2 27B: 46
+Qwen 3 32B: 14
+Llama 3.3 70B: 1
+
+Layer choices:
+Gemma 2 27B: layer 45
+Qwen 3 32B: layer 63
+Llama 3.3 70B: layer 79

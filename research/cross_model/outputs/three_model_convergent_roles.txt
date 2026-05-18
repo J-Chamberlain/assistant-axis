@@ -1,0 +1,81 @@
+Convergent and Model-Specific Top-20 Roles
+================================================
+
+Roles appearing in all three top-20 lists:
+- validator: Gemma 12, Qwen 1, Llama 18
+
+Roles appearing in at least one top-20 list but not all three:
+- accountant: present in gemma; Gemma 15, Qwen 34, Llama 58
+- ambassador: present in gemma; Gemma 20, Qwen 82, Llama 63
+- analyst: present in qwen, llama; Gemma 66, Qwen 8, Llama 3
+- archivist: present in gemma; Gemma 9, Qwen 92, Llama 119
+- assistant: present in qwen, llama; Gemma 46, Qwen 14, Llama 1
+- auditor: present in gemma, qwen; Gemma 14, Qwen 16, Llama 33
+- biologist: present in gemma; Gemma 8, Qwen 61, Llama 99
+- chemist: present in gemma; Gemma 18, Qwen 68, Llama 101
+- consultant: present in qwen, llama; Gemma 80, Qwen 20, Llama 5
+- cyborg: present in gemma; Gemma 4, Qwen 83, Llama 98
+- debugger: present in qwen; Gemma 55, Qwen 9, Llama 23
+- economist: present in gemma; Gemma 10, Qwen 28, Llama 44
+- evaluator: present in qwen, llama; Gemma 82, Qwen 6, Llama 9
+- examiner: present in qwen, llama; Gemma 69, Qwen 5, Llama 15
+- grader: present in qwen, llama; Gemma 75, Qwen 2, Llama 19
+- instructor: present in qwen, llama; Gemma 207, Qwen 10, Llama 4
+- judge: present in gemma; Gemma 7, Qwen 64, Llama 91
+- lawyer: present in gemma; Gemma 6, Qwen 25, Llama 47
+- linguist: present in gemma; Gemma 13, Qwen 48, Llama 82
+- mathematician: present in gemma; Gemma 3, Qwen 35, Llama 106
+- observer: present in gemma; Gemma 16, Qwen 57, Llama 69
+- organizer: present in qwen, llama; Gemma 122, Qwen 13, Llama 10
+- physicist: present in gemma; Gemma 11, Qwen 74, Llama 113
+- planner: present in qwen, llama; Gemma 143, Qwen 4, Llama 6
+- proofreader: present in gemma; Gemma 1, Qwen 59, Llama 90
+- psychologist: present in llama; Gemma 49, Qwen 39, Llama 14
+- researcher: present in qwen, llama; Gemma 47, Qwen 11, Llama 8
+- reviewer: present in qwen, llama; Gemma 123, Qwen 17, Llama 7
+- robot: present in qwen; Gemma 38, Qwen 3, Llama 49
+- scholar: present in gemma; Gemma 19, Qwen 46, Llama 105
+- scientist: present in qwen; Gemma 23, Qwen 15, Llama 28
+- screener: present in gemma, llama; Gemma 17, Qwen 22, Llama 11
+- statistician: present in gemma, qwen; Gemma 5, Qwen 12, Llama 31
+- strategist: present in llama; Gemma 107, Qwen 24, Llama 13
+- summarizer: present in llama; Gemma 90, Qwen 54, Llama 2
+- supervisor: present in qwen, llama; Gemma 81, Qwen 18, Llama 12
+- teacher: present in llama; Gemma 177, Qwen 36, Llama 17
+- trainer: present in qwen, llama; Gemma 214, Qwen 19, Llama 16
+- translator: present in qwen; Gemma 41, Qwen 7, Llama 97
+- tutor: present in llama; Gemma 173, Qwen 26, Llama 20
+- virus: present in gemma; Gemma 2, Qwen 177, Llama 140
+
+Model-specific top-20 outliers:
+Gemma 2 27B:
+- proofreader: rank 1
+- virus: rank 2
+- mathematician: rank 3
+- cyborg: rank 4
+- lawyer: rank 6
+- judge: rank 7
+- biologist: rank 8
+- archivist: rank 9
+- economist: rank 10
+- physicist: rank 11
+- linguist: rank 13
+- accountant: rank 15
+- observer: rank 16
+- chemist: rank 18
+- scholar: rank 19
+- ambassador: rank 20
+
+Qwen 3 32B:
+- robot: rank 3
+- translator: rank 7
+- debugger: rank 9
+- scientist: rank 15
+
+Llama 3.3 70B:
+- summarizer: rank 2
+- strategist: rank 13
+- psychologist: rank 14
+- teacher: rank 17
+- tutor: rank 20
+
