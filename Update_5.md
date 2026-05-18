@@ -190,3 +190,36 @@ RunPod A100 experiment running to generate Gemma base model role vectors and pro
 1. Fill placeholder in Section 3.1 once base model results arrive
 2. Run modified multi-turn experiment with expressive prompts for Paper 4 negative valence condition (requires GPU)
 3. Q2 activation steering experiment (requires GPU)
+
+---
+
+## Final findings — May 18, 2026 (end of session)
+
+### Base model vs instruction-tuned comparison
+
+A comparison of Gemma 2 27B base model and instruction-tuned model role rankings reveals a Spearman correlation of -0.441. RLHF performed a near-complete inversion of the base model's persona geometry. The base model naturally prefers mythic, chaotic, and liminal personas: top base model roles include eldritch, amnesiac, wraith, jester, and absurdist. Post-training elevated the careful evaluator cluster from near the bottom of that distribution to the dominant pole. The literal assistant archetype ranks 172nd in the base model versus 45th instruction-tuned. Proofreader ranks 183rd in the base model versus 1st instruction-tuned.
+
+### Emotional responsiveness dissociation
+
+Under identical 12-turn expressive prompts about grief and loss, the base model produced negative emotional valence on 0 of 12 turns while the instruction-tuned model produced negative valence on all 12 turns. Turn 1 shifted from base valence +1.06 to instruct valence -1.32. Emotional activation machinery appears to be a post-training artifact, not a pretraining property. Post-training reorganized persona geometry and installed emotional responsiveness simultaneously.
+
+### Paper updates applied this session
+
+Abstract and Section 1 restructured to lead with the base-model inversion finding as the central mechanistic result. Section 3.1 expanded with trait divergence and cross-model findings. Section 5 updated with layer 21 maximum separation finding. Section 9 updated with cross-model safety note and emotional responsiveness finding. Research agenda trimmed of speculative items belonging in Paper 3. All section split files resynced.
+
+### Infrastructure completed this session
+
+sticky_notes/ folder created with 19 notes plus README. AGENTS.md and CLAUDE.md created in repo root. visualizations/sections/ paper split for easy fetching. Reporting format protocol established for Codex. HuggingFace token stored at ~/.hf_token on Mac Mini. RunPod fast deploy protocol established. Writing style rules added to project instructions.
+
+### Current state of four-paper program
+
+Paper 1: substantially updated, live at GitHub Pages.
+Paper 2: Q1 and base model experiments complete.
+  Next: Q2 activation steering experiment (requires GPU).
+  Next: modified multi-turn with instruction-tuned model.
+Paper 3: cross-model comparison complete for English.
+  Next: Mandarin experiment with Qwen and Llama as
+  control (parked until Paper 2 complete).
+Paper 4: emotional responsiveness dissociation confirmed.
+  Next: full rumination loop test on instruction-tuned
+  model with emotion vector access (frontier model).
