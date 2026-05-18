@@ -25,6 +25,7 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-18_cultural_variation.md | Cultural variation in persona space | 3 | medium |
 | 2026-05-18_cross_language_geometry.md | Cross-language / Mandarin experiment | 3 | parked |
 | 2026-05-18_grok_twitter_corpus.md | Grok / Twitter corpus baseline disposition | 3 | medium |
+| 2026-05-18_qwen_llama_convergence.md | Qwen-Llama convergence hypothesis | 3 | medium |
 | 2026-05-18_essay_leadin_anecdote.md | Essay lead-in anecdote (Russian, source needed) | essay 3 | write-up |
 | 2026-05-18_paper4_rumination.md | Paper 4: computational rumination | 4 | after Paper 2 |
 | 2026-05-18_baseline_return_replication.md | Baseline return replication flag | 2/4 | verify citation |
