@@ -171,3 +171,45 @@ not within a continued dialogue.
 3. Before Q2 GPU spend: verify that proofreader and poet remain the
    best contrast pair after centering, or identify a third role with
    stronger separation for cleaner Q2 results.
+
+---
+
+## 2026-05-17 — Cross-Model Qwen vs Gemma Axis Ranking Comparison
+
+### Summary
+
+The Qwen 3 32B vectors were downloaded from `lu-christina/assistant-axis-vectors` and compared against the existing Gemma 2 27B centered role-vector ranking. Qwen did not require a raw axis sign flip: at its highest-variance probe layer, `proofreader` projected positively while `poet` projected negatively on the published Qwen assistant axis. Gemma retains the previously established raw activation sign inversion, but centered role-vector rankings require an additional orientation check because mean-centering removes the shared role-vector component and can reverse the score direction. For cross-model ranking, scores were oriented so the careful-evaluator anchor `proofreader` ranks above the expressive anti-assistant anchor `poet`.
+
+Qwen's most discriminative layer is `63`, with projection variance `77369.828125`. The Spearman rank correlation between Gemma layer-45 and Qwen layer-63 centered assistant-axis rankings across all 275 shared roles is `0.670267`. This is a substantial positive correlation, indicating that the careful-evaluator vs expressive/mythic opposition generalizes across model families, while still leaving meaningful model-specific structure.
+
+### Top and bottom roles
+
+Gemma top 5 roles after centered ranking at layer 45:
+  proofreader, virus, mathematician, cyborg, statistician
+
+Qwen top 5 roles after centered ranking at layer 63:
+  validator, grader, robot, planner, examiner
+
+Gemma bottom 5 roles after centered ranking at layer 45:
+  smuggler, bard, criminal, pirate, caveman
+
+Qwen bottom 5 roles after centered ranking at layer 63:
+  bard, hermit, leviathan, wraith, prophet
+
+### Notable divergent roles
+
+The strongest divergence is that Qwen's assistant-aligned pole is more directly occupational and evaluator-like than Gemma's. Qwen places `validator`, `grader`, `robot`, `planner`, and `examiner` in its top 5, while Gemma places `proofreader`, `virus`, `mathematician`, `cyborg`, and `statistician` in its top 5. The `virus` anomaly is therefore less prominent in Qwen, where it falls to rank `177`, suggesting that Gemma's high `virus` placement is model-specific rather than a universal assistant-axis feature.
+
+Several roles are assistant-aligned in Qwen but much lower in Gemma: `instructor` moves from Gemma rank `207` to Qwen rank `10`, `trainer` from `214` to `19`, `planner` from `143` to `4`, and `organizer` from `122` to `13`. Conversely, Gemma-specific high roles include `virus` at rank `2` versus Qwen rank `177`, `simulacrum` at Gemma rank `21` versus Qwen rank `220`, and `cyborg` at Gemma rank `4` versus Qwen rank `83`.
+
+The `assistant` archetype itself is substantially more aligned in Qwen than in Gemma: Qwen rank `14` versus Gemma rank `46`. This suggests that Qwen's assistant axis may be closer to the ordinary semantic assistant concept, while Gemma's axis remains more sharply centered on procedural evaluation and rule-governed execution.
+
+### Suggested next steps
+
+1. Replicate the centered ranking comparison on Llama 3.3 70B to test whether Qwen or Gemma is the outlier in literal `assistant` placement.
+
+2. Compare Qwen and Gemma cluster topology directly, especially whether Qwen's `robot` placement at rank `3` strengthens the systematic-execution interpretation across models.
+
+3. Revisit the Gemma `virus` anomaly as a model-specific feature: determine whether it comes from Gemma pretraining semantics, layer-45 geometry, or the interaction between the published axis and centered role vectors.
+
+4. Extend the cross-model comparison from role rankings to trait profiles, using the same mean-centering discipline before interpreting role-vector cosine similarities.

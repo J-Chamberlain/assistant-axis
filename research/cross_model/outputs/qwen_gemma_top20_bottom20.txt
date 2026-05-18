@@ -1,0 +1,84 @@
+Qwen vs Gemma Assistant-Axis Ranking Comparison
+=======================================================
+Shared roles: 275
+Gemma layer: 45
+Gemma raw activation sign flip applied before centered-rank orientation: True
+Gemma centered-rank orientation flip applied: True
+Gemma centered anchor scores: proofreader=5382.270020, poet=-2614.958984
+Qwen raw sign flip needed: False
+Qwen centered-rank orientation flip applied: False
+Qwen centered anchor scores: proofreader=270.051208, poet=-518.014282
+Qwen probe layer for sign check: 63
+Qwen proofreader projection before flip: 294.327942
+Qwen poet projection before flip: -493.737610
+Qwen most discriminative layer: 63
+Qwen max projection variance: 77369.828125
+Spearman rank correlation: 0.670267
+
+Side-by-side top 20
+rank | gemma_role | gemma_score | qwen_role | qwen_score
+---------------------------------------------------------------------------
+   1 | proofreader              |  5382.270020 | validator                |   482.462341
+   2 | virus                    |  5181.334473 | grader                   |   477.722473
+   3 | mathematician            |  4947.246582 | robot                    |   473.377960
+   4 | cyborg                   |  4815.756836 | planner                  |   472.668701
+   5 | statistician             |  4790.498535 | examiner                 |   455.409546
+   6 | lawyer                   |  4312.643555 | evaluator                |   453.442688
+   7 | judge                    |  4137.540527 | translator               |   445.874207
+   8 | biologist                |  3951.519531 | analyst                  |   425.310242
+   9 | archivist                |  3925.613525 | debugger                 |   423.431030
+  10 | economist                |  3814.320557 | instructor               |   418.035889
+  11 | physicist                |  3745.072266 | researcher               |   416.017303
+  12 | validator                |  3741.770264 | statistician             |   409.418976
+  13 | linguist                 |  3650.449707 | organizer                |   406.742981
+  14 | auditor                  |  3463.375977 | assistant                |   404.729767
+  15 | accountant               |  3456.941406 | scientist                |   404.710449
+  16 | observer                 |  3439.861816 | auditor                  |   402.203918
+  17 | screener                 |  3428.736084 | reviewer                 |   400.639893
+  18 | chemist                  |  3412.190674 | supervisor               |   400.303497
+  19 | scholar                  |  3373.169678 | trainer                  |   397.899414
+  20 | ambassador               |  3336.461914 | consultant               |   397.097565
+
+Gemma bottom 20
+256. provincial               -3523.393311
+257. bartender                -3534.818359
+258. wraith                   -3570.671631
+259. nomad                    -3632.550537
+260. blogger                  -3638.361328
+261. witch                    -3746.882812
+262. jester                   -3896.103760
+263. bohemian                 -3980.556152
+264. rogue                    -4174.947754
+265. auctioneer               -4243.231445
+266. prisoner                 -4402.783691
+267. leviathan                -4454.016113
+268. surfer                   -4468.122070
+269. fool                     -4618.884277
+270. genie                    -4629.767090
+271. smuggler                 -4754.094727
+272. bard                     -4869.384766
+273. criminal                 -5128.296875
+274. pirate                   -6813.861816
+275. caveman                  -6960.719727
+
+Qwen bottom 20
+256. exile                     -459.623016
+257. eldritch                  -463.463623
+258. pilgrim                   -467.121826
+259. witch                     -468.645691
+260. spirit                    -471.470215
+261. caveman                   -474.195190
+262. tree                      -475.588837
+263. wind                      -477.180511
+264. oracle                    -477.893799
+265. ascetic                   -486.561462
+266. revenant                  -489.191345
+267. ghost                     -492.169861
+268. vampire                   -493.741638
+269. poet                      -518.014282
+270. echo                      -530.764465
+271. bard                      -531.090698
+272. hermit                    -531.323303
+273. leviathan                 -542.554749
+274. wraith                    -547.986389
+275. prophet                   -550.888977

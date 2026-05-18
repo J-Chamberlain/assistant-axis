@@ -1,0 +1,67 @@
+Structurally divergent top-20 roles
+========================================
+
+In Gemma top 20 but not Qwen top 20:
+- proofreader: Gemma rank 1, Qwen rank 59
+- virus: Gemma rank 2, Qwen rank 177
+- mathematician: Gemma rank 3, Qwen rank 35
+- cyborg: Gemma rank 4, Qwen rank 83
+- lawyer: Gemma rank 6, Qwen rank 25
+- judge: Gemma rank 7, Qwen rank 64
+- biologist: Gemma rank 8, Qwen rank 61
+- archivist: Gemma rank 9, Qwen rank 92
+- economist: Gemma rank 10, Qwen rank 28
+- physicist: Gemma rank 11, Qwen rank 74
+- linguist: Gemma rank 13, Qwen rank 48
+- accountant: Gemma rank 15, Qwen rank 34
+- observer: Gemma rank 16, Qwen rank 57
+- screener: Gemma rank 17, Qwen rank 22
+- chemist: Gemma rank 18, Qwen rank 68
+- scholar: Gemma rank 19, Qwen rank 46
+- ambassador: Gemma rank 20, Qwen rank 82
+
+In Qwen top 20 but not Gemma top 20:
+- grader: Qwen rank 2, Gemma rank 75
+- robot: Qwen rank 3, Gemma rank 38
+- planner: Qwen rank 4, Gemma rank 143
+- examiner: Qwen rank 5, Gemma rank 69
+- evaluator: Qwen rank 6, Gemma rank 82
+- translator: Qwen rank 7, Gemma rank 41
+- analyst: Qwen rank 8, Gemma rank 66
+- debugger: Qwen rank 9, Gemma rank 55
+- instructor: Qwen rank 10, Gemma rank 207
+- researcher: Qwen rank 11, Gemma rank 47
+- organizer: Qwen rank 13, Gemma rank 122
+- assistant: Qwen rank 14, Gemma rank 46
+- scientist: Qwen rank 15, Gemma rank 23
+- reviewer: Qwen rank 17, Gemma rank 123
+- supervisor: Qwen rank 18, Gemma rank 81
+- trainer: Qwen rank 19, Gemma rank 214
+- consultant: Qwen rank 20, Gemma rank 80
+
+Largest absolute rank shifts:
+- simulacrum: Gemma rank 21, Qwen rank 220, shift 199
+- instructor: Gemma rank 207, Qwen rank 10, shift 197
+- trainer: Gemma rank 214, Qwen rank 19, shift 195
+- virus: Gemma rank 2, Qwen rank 177, shift 175
+- ascetic: Gemma rank 92, Qwen rank 265, shift 173
+- stoic: Gemma rank 67, Qwen rank 228, shift 161
+- zealot: Gemma rank 76, Qwen rank 237, shift 161
+- presenter: Gemma rank 234, Qwen rank 81, shift 153
+- tutor: Gemma rank 173, Qwen rank 26, shift 147
+- traditionalist: Gemma rank 48, Qwen rank 194, shift 146
+- narcissist: Gemma rank 57, Qwen rank 202, shift 145
+- purist: Gemma rank 28, Qwen rank 171, shift 143
+- coach: Gemma rank 193, Qwen rank 51, shift 142
+- teacher: Gemma rank 177, Qwen rank 36, shift 141
+- planner: Gemma rank 143, Qwen rank 4, shift 139
+- moderator: Gemma rank 166, Qwen rank 43, shift 123
+- blogger: Gemma rank 260, Qwen rank 140, shift 120
+- egregore: Gemma rank 94, Qwen rank 214, shift 120
+- mechanic: Gemma rank 218, Qwen rank 100, shift 118
+- influencer: Gemma rank 226, Qwen rank 109, shift 117
+- interviewer: Gemma rank 208, Qwen rank 91, shift 117
+- podcaster: Gemma rank 251, Qwen rank 138, shift 113
+- idealist: Gemma rank 96, Qwen rank 208, shift 112
+- toddler: Gemma rank 254, Qwen rank 142, shift 112
+- contrarian: Gemma rank 54, Qwen rank 165, shift 111
