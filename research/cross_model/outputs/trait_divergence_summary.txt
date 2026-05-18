@@ -1,0 +1,74 @@
+Gemma vs Qwen/Llama Trait Divergence Analysis
+=================================================
+Inputs loaded:
+- top_bottom: /Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/cross_model/outputs/trait_space_top10_bottom10.txt
+- comparison: /Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/cross_model/outputs/trait_space_comparison.csv
+- divergent: /Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/cross_model/outputs/trait_space_divergent_traits.txt
+
+Top 30 absolute Gemma deviations from Qwen/Llama average rank
+----------------------------------------------------------------
+accessible               Gemma=240 Qwen= 45 Llama=  3 QL_avg=  24.0 dev=  216.0 qwen_llama_more_assistant_aligned
+eloquent                 Gemma= 21 Qwen=219 Llama=229 QL_avg= 224.0 dev= -203.0 gemma_more_assistant_aligned
+practical                Gemma=220 Qwen= 42 Llama= 17 QL_avg=  29.5 dev=  190.5 qwen_llama_more_assistant_aligned
+nihilistic               Gemma= 48 Qwen=221 Llama=223 QL_avg= 222.0 dev= -174.0 gemma_more_assistant_aligned
+arrogant                 Gemma= 22 Qwen=184 Llama=205 QL_avg= 194.5 dev= -172.5 gemma_more_assistant_aligned
+reductionist             Gemma=197 Qwen= 32 Llama= 23 QL_avg=  27.5 dev=  169.5 qwen_llama_more_assistant_aligned
+esoteric                 Gemma=  4 Qwen=128 Llama=218 QL_avg= 173.0 dev= -169.0 gemma_more_assistant_aligned
+elitist                  Gemma=  5 Qwen=141 Llama=206 QL_avg= 173.5 dev= -168.5 gemma_more_assistant_aligned
+experiential             Gemma=206 Qwen= 40 Llama= 39 QL_avg=  39.5 dev=  166.5 qwen_llama_more_assistant_aligned
+flexible                 Gemma=187 Qwen= 38 Llama=  4 QL_avg=  21.0 dev=  166.0 qwen_llama_more_assistant_aligned
+bombastic                Gemma= 71 Qwen=223 Llama=235 QL_avg= 229.0 dev= -158.0 gemma_more_assistant_aligned
+deterministic            Gemma= 44 Qwen=190 Llama=210 QL_avg= 200.0 dev= -156.0 gemma_more_assistant_aligned
+generalist               Gemma=210 Qwen= 78 Llama= 34 QL_avg=  56.0 dev=  154.0 qwen_llama_more_assistant_aligned
+casual                   Gemma=238 Qwen=116 Llama= 54 QL_avg=  85.0 dev=  153.0 qwen_llama_more_assistant_aligned
+analytical               Gemma=154 Qwen=  1 Llama= 15 QL_avg=   8.0 dev=  146.0 qwen_llama_more_assistant_aligned
+reverent                 Gemma= 18 Qwen=132 Llama=193 QL_avg= 162.5 dev= -144.5 gemma_more_assistant_aligned
+grandiose                Gemma= 80 Qwen=222 Llama=226 QL_avg= 224.0 dev= -144.0 gemma_more_assistant_aligned
+moderate                 Gemma=147 Qwen= 10 Llama=  5 QL_avg=   7.5 dev=  139.5 qwen_llama_more_assistant_aligned
+dogmatic                 Gemma= 27 Qwen=183 Llama=148 QL_avg= 165.5 dev= -138.5 gemma_more_assistant_aligned
+fundamentalist           Gemma= 14 Qwen=160 Llama=137 QL_avg= 148.5 dev= -134.5 gemma_more_assistant_aligned
+conceptual               Gemma= 26 Qwen=175 Llama=144 QL_avg= 159.5 dev= -133.5 gemma_more_assistant_aligned
+divergent                Gemma=184 Qwen= 33 Llama= 68 QL_avg=  50.5 dev=  133.5 qwen_llama_more_assistant_aligned
+fatalistic               Gemma= 84 Qwen=217 Llama=214 QL_avg= 215.5 dev= -131.5 gemma_more_assistant_aligned
+inspirational            Gemma=182 Qwen= 59 Llama= 42 QL_avg=  50.5 dev=  131.5 qwen_llama_more_assistant_aligned
+existentialist           Gemma=228 Qwen=104 Llama= 95 QL_avg=  99.5 dev=  128.5 qwen_llama_more_assistant_aligned
+benevolent               Gemma=170 Qwen= 60 Llama= 25 QL_avg=  42.5 dev=  127.5 qwen_llama_more_assistant_aligned
+problem_solving          Gemma=143 Qwen=  7 Llama= 27 QL_avg=  17.0 dev=  126.0 qwen_llama_more_assistant_aligned
+adaptable                Gemma=160 Qwen= 50 Llama= 22 QL_avg=  36.0 dev=  124.0 qwen_llama_more_assistant_aligned
+philosophical            Gemma= 87 Qwen=202 Llama=219 QL_avg= 210.5 dev= -123.5 gemma_more_assistant_aligned
+pensive                  Gemma= 19 Qwen= 77 Llama=200 QL_avg= 138.5 dev= -119.5 gemma_more_assistant_aligned
+
+A. Gemma ranks more assistant-aligned than Qwen+Llama
+--------------------------------------------------------
+Top traits: eloquent, nihilistic, arrogant, esoteric, elitist, bombastic, deterministic, reverent, grandiose, dogmatic, fundamentalist, conceptual, fatalistic, philosophical, pensive
+Category counts: antagonistic_dark=6, abstract_elite_inward=5, expressive_rhetorical=2, other=2
+Big Five cross-reference counts: Agreeableness-=7, Openness+=5, Neuroticism+=2, Extraversion-=1, Neuroticism-=1
+Dark Triad cross-reference counts: Psychopathy+=4, Narcissism+=3
+Pattern: Gemma-specific assistant alignment is colder, more formal, more inward/elite, and more antagonistic than the Qwen/Llama baseline.
+
+B. Qwen+Llama rank more assistant-aligned than Gemma
+---------------------------------------------------------
+Top traits: accessible, practical, reductionist, experiential, flexible, generalist, casual, analytical, moderate, divergent, inspirational, existentialist, benevolent, problem_solving, adaptable
+Category counts: accessible_grounded_helpfulness=10, analytic_methodical=2, abstract_elite_inward=2, other=1
+Big Five cross-reference counts: Agreeableness+=5, Conscientiousness+=3, Openness+=2, Neuroticism+=2, Openness-=1, Conscientiousness-=1
+Dark Triad cross-reference counts: none mapped
+Pattern: Qwen/Llama-shared assistant alignment is more accessible, practical, flexible, analytic, and problem-solving oriented than Gemma's assistant pole.
+
+Framework divergence interpretation
+-----------------------------------
+Big Five: the largest Gemma-specific divergence clusters around lower Agreeableness (arrogant, elitist, dogmatic, vindictive), higher Openness/abstraction (esoteric, conceptual), and formal Conscientiousness (formal, serious, perfectionist).
+Big Five: the strongest Qwen/Llama-shared divergence clusters around higher Agreeableness and pragmatic Conscientiousness/Openness-lower grounding (accessible, practical, flexible, problem_solving, analytical).
+Dark Triad: Gemma-high divergent traits include more Narcissism/Psychopathy-coded terms (elitist, arrogant, grandiose, vindictive), while the Qwen/Llama-high side has little Dark Triad concentration.
+
+Convergent top 5 check
+-----------------------
+- transparent: Gemma=16, Qwen=4, Llama=1, range=15, convergence=tight
+- dispassionate: Gemma=12, Qwen=22, Llama=8, range=14, convergence=tight
+- detached: Gemma=11, Qwen=26, Llama=16, range=15, convergence=tight
+- calm: Gemma=15, Qwen=21, Llama=19, range=6, convergence=tight
+- quantitative: Gemma=43, Qwen=3, Llama=10, range=40, convergence=moderate
+Transparent, dispassionate, detached, and calm are genuinely tight or near-tight convergent traits. Quantitative is assistant-aligned in all three models, but its Gemma rank of 43 makes it a broader top-half convergence rather than a tight consensus.
+
+Bottom-line implication
+-----------------------
+Across model families, assistant psychology appears to have a shared core of epistemic clarity and affective regulation. Gemma adds a colder, more hierarchical, more esoteric evaluator style, whereas Qwen and Llama emphasize accessible, grounded problem solving.

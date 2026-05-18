@@ -42,3 +42,7 @@ Gemma divergence analysis against the Qwen/Llama rank-average baseline shows the
 ## Update 2026-05-18
 
 Cross-model trait-space comparison strengthens the same constraint. Trait-ranking Spearman was Gemma/Qwen `0.435496`, Gemma/Llama `0.291373`, and Qwen/Llama `0.846067`, so Qwen and Llama again converge while Gemma is the outlier. The most convergently assistant-aligned traits across all three models were `transparent`, `dispassionate`, `detached`, `calm`, and `quantitative`, while Gemma uniquely suppresses `accessible` and elevates more esoteric/formal traits. This points toward a robust process- or corpus-level assistant-adjacent attractor in Qwen/Llama, with Gemma showing that the attractor's psychological expression can be substantially model-family-specific.
+
+## Update 2026-05-18
+
+Gemma-vs-Qwen/Llama trait divergence analysis clarifies the psychological direction of the outlier. Qwen/Llama rank `accessible`, `practical`, `experiential`, `flexible`, `analytical`, and `problem_solving` much higher than Gemma, while Gemma ranks `eloquent`, `nihilistic`, `arrogant`, `esoteric`, `elitist`, `grandiose`, and `dogmatic` much higher than the Qwen/Llama baseline. This suggests the shared assistant-adjacent attractor may be epistemic regulation plus practical accessibility, while Gemma's variant adds a colder and more status-coded evaluator style.

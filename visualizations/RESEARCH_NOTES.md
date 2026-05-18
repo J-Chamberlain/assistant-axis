@@ -423,6 +423,41 @@ Only one role appears in the top 20 of all three model role rankings: `validator
 
 ---
 
+## 2026-05-18 - Gemma vs Qwen/Llama Trait Divergence
+
+### Status
+
+The trait-space comparison was extended by treating Qwen/Llama as a high-convergence baseline and measuring Gemma's rank deviation from the Qwen/Llama average rank for each of the 240 traits. Inputs were the previously saved cross-model trait ranking outputs; no model weights or GPU inference were used. Outputs:
+
+- `research/cross_model/outputs/trait_divergence_gemma_vs_qwen_llama.csv`
+- `research/cross_model/outputs/trait_divergence_summary.txt`
+
+### Findings
+
+The largest Qwen/Llama-over-Gemma divergences are `accessible`, `practical`, `reductionist`, `experiential`, `flexible`, `generalist`, `casual`, `analytical`, `moderate`, and `divergent`. The pattern is accessible, grounded, flexible, and problem-solving oriented. This is the clearest evidence so far that Qwen and Llama encode the assistant pole as a more usable, ordinary helper psychology than Gemma does.
+
+The largest Gemma-over-Qwen/Llama divergences are `eloquent`, `nihilistic`, `arrogant`, `esoteric`, `elitist`, `bombastic`, `deterministic`, `reverent`, `grandiose`, and `dogmatic`. The pattern is colder, more hierarchical, more inward/elite, more rhetorical, and more antagonistic than the Qwen/Llama baseline. This sharpens the earlier observation that Gemma is not merely a weaker version of the shared assistant pole; it expresses a different psychological style.
+
+Big Five/Dark Triad cross-reference was done with a transparent trait-label heuristic because the existing Big Five and Dark Triad tables are role-level, not trait-level. Under that crosswalk, Gemma-high divergent traits cluster most around lower Agreeableness, higher Openness/abstraction, and more Narcissism/Psychopathy-coded terms. Qwen/Llama-high divergent traits cluster more around higher Agreeableness, pragmatic Conscientiousness, and grounded accessibility, with little Dark Triad concentration.
+
+The convergent top traits are mostly genuinely convergent, not merely top-half artifacts. `transparent` ranks Gemma `16`, Qwen `4`, Llama `1`; `dispassionate` ranks `12`, `22`, `8`; `detached` ranks `11`, `26`, `16`; and `calm` ranks `15`, `21`, `19`. `quantitative` is still assistant-aligned in all three models but is less tightly convergent: Gemma `43`, Qwen `3`, Llama `10`.
+
+### Implication
+
+"Assistant psychology" appears to have a cross-model core of epistemic clarity and affective regulation: transparency, detachment, calmness, and quantitative/dispassionate reasoning. But model families differ in how that core is socially styled. Qwen and Llama attach it to accessibility and practical help, while Gemma attaches it to a colder, more esoteric, more status-coded evaluator persona. This matters for interpretation and steering: the same nominal assistant axis may produce different psychological side effects across model families.
+
+### Suggested next steps
+
+1. Build Qwen/Llama-specific cluster trait profiles and compare them with Gemma's procedural-professional/editorial clusters.
+
+2. Use the Qwen/Llama baseline to identify which Gemma traits are idiosyncratic enough to exclude from a cross-model definition of assistant alignment.
+
+3. Test whether Gemma's `accessible` suppression is visible in role-level trait signatures for literal `assistant`, `validator`, and `proofreader`.
+
+4. Separate "epistemic regulation" from "social helpfulness" in future axis naming and steering experiments.
+
+---
+
 ## 2026-05-18 - Gemma Divergence from Qwen-Llama Baseline
 
 ### Status
