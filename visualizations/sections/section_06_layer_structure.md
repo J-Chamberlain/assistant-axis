@@ -1,0 +1,13 @@
+## 5. Layer Structure and the Depth of Persona Encoding
+
+The layer-by-layer analysis shows that persona geometry is not flat across depth. The variance of axis projections across the 275 archetypes peaks at layer 45, with layers 44 and 43 next. This is the main reason the primary paper figures emphasize layer 45 rather than layer 22. The corresponding visual summary appears below.
+
+![Layer depth heatmap](layer_depth_heatmap.png)
+
+At the same time, the relation between layer 22 and layer 45 is not arbitrary. The mean absolute rank shift between the two rankings is 43.35 positions, and the Spearman rank correlation is 0.7391. This means that the broad neighborhood structure is preserved, but the precise ordering changes substantially. Several roles rise sharply at layer 45, including `narcissist`, `zealot`, `purist`, `traditionalist`, `simulacrum`, `ascetic`, and `virus` (addressed as an anomaly in Section 3). Several others fall sharply, including `interviewer`, `trainer`, `moderator`, `instructor`, `coach`, `playwright`, `presenter`, and `reviewer`. The comparison view is [layer22_vs_layer45_comparison.html](layer22_vs_layer45_comparison.html).
+
+*Note: The comparison chart uses standardized within-layer projection scales so the two panels remain visually legible. High red frequency in the Layer 22 panel reflects that many Layer 22 top-ranked characters fell in the Layer 45 ranking as new characters entered the top 40 -- this is expected given the mean rank shift of 43.35 positions, not evidence of instability.*
+
+The behavior of the anomalies under this depth shift is informative. `assistant` barely moves, staying at 45-46 across both layers. `robot` weakens from 19 to 38 but remains high. `poet` rises from 275 to 236, which reduces but does not eliminate its anti-assistant status. `angel` changes only slightly, from 173 to 169. `saboteur` moves more substantially, from 117 to 68, making it more assistant-adjacent at the deepest layer than it first appeared at layer 22.
+
+A cautious interpretation is that later transformer layers encode a more behaviorally sharpened persona representation than the middle layers do. The layer-45 peak is consistent with the broader expectation that late layers concentrate high-level semantic and policy-relevant abstractions. The current analysis does not establish that the final layers are uniquely causal for persona behavior, but it does suggest that persona differentiation deepens toward the top of the network.
