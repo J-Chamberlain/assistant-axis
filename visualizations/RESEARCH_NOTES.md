@@ -420,3 +420,36 @@ Only one role appears in the top 20 of all three model role rankings: `validator
 3. Investigate why Gemma flips the accessibility dimension: `accessible` is last in Gemma but near the top in Llama and mid-high in Qwen.
 
 4. Re-run cluster-level trait profiling separately for Qwen and Llama to test whether their assistant poles form a broader grounded-helper cluster instead of Gemma's colder procedural-professional pole.
+
+---
+
+## 2026-05-18 - Gemma Divergence from Qwen-Llama Baseline
+
+### Status
+
+The three-model role ranking comparison was reanalyzed by treating the Qwen/Llama rank average as the convergent cross-model baseline and measuring Gemma's deviation from that baseline for all 275 shared roles. No GPU inference was required.
+
+Outputs:
+
+- `research/cross_model/outputs/gemma_divergence_from_qwen_llama.csv`
+- `research/cross_model/outputs/gemma_divergence_summary.txt`
+
+### Findings
+
+The largest Gemma-specific assistant-aligned divergences are `simulacrum` (Gemma rank `21`, Qwen/Llama average `225.0`, deviation `-204.0`), `ascetic` (`92` vs `267.5`, `-175.5`), `purist` (`28` vs `196.0`, `-168.0`), `zealot` (`76` vs `238.0`, `-162.0`), `stoic` (`67` vs `226.5`, `-159.5`), and `virus` (`2` vs `158.5`, `-156.5`). This means the Gemma-high pattern is broader than the earlier domain-expert description. It is better described as a cluster of rigid, abstract, artificial, or systematic identities, with hard-science and legal experts forming one visible subset of a more general non-social order/constraint pattern.
+
+The largest roles Gemma ranks lower than the Qwen/Llama baseline are strongly occupational and instructional: `instructor` (Gemma rank `207`, Qwen/Llama average `7.0`, deviation `+200.0`), `trainer` (`214` vs `17.5`, `+196.5`), `presenter` (`234` vs `60.0`, `+174.0`), `coach` (`193` vs `38.5`, `+154.5`), `teacher` (`177` vs `26.5`, `+150.5`), `tutor` (`173` vs `23.0`, `+150.0`), and `planner` (`143` vs `5.0`, `+138.0`). This confirms that Qwen and Llama converge on an ordinary assistant/social-professional region that Gemma systematically pushes downward.
+
+The specified anomaly checks reinforce the split: `virus` is Gemma `2`, Qwen `177`, Llama `140`; `simulacrum` is Gemma `21`, Qwen `220`, Llama `230`; `instructor` is Gemma `207`, Qwen `10`, Llama `4`; and `trainer` is Gemma `214`, Qwen `19`, Llama `16`.
+
+### Interpretation
+
+The domain-expert vs occupational distinction holds most strongly on the Gemma-low side. Qwen and Llama value instructors, trainers, planners, reviewers, and organizers much more than Gemma does. On the Gemma-high side, the pattern is not merely domain expertise but a broader elevation of impersonal structure: rigidity, artificiality, replication, abstraction, and constraint. For the corpus-vs-process hypothesis, this suggests the assistant-adjacent attractor may be general, but Gemma's training distribution or vector extraction geometry has rotated that attractor away from literal assistance and toward systematic non-social order.
+
+### Suggested next steps
+
+1. Re-run cluster assignment for Qwen and Llama to test whether their shared top roles form a grounded occupational-helper cluster rather than Gemma's procedural-professional/editorial structure.
+
+2. Investigate why `simulacrum`, `virus`, `purist`, and `zealot` are unusually assistant-aligned in Gemma but not in Qwen or Llama.
+
+3. Treat Qwen/Llama as the better current baseline for ordinary assistant-like role geometry, and treat Gemma as the diagnostic outlier for corpus-vs-process analysis.

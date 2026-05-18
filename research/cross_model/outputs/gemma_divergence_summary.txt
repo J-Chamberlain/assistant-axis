@@ -1,0 +1,117 @@
+Gemma Divergence from Qwen-Llama Baseline
+===========================================
+
+Input: research/cross_model/outputs/three_model_ranking_comparison.csv
+Output CSV: research/cross_model/outputs/gemma_divergence_from_qwen_llama.csv
+
+Interpretation of deviation:
+  gemma_deviation = gemma_rank - mean(qwen_rank, llama_rank)
+  Negative deviation means Gemma ranks the role higher / more assistant-aligned.
+  Positive deviation means Gemma ranks the role lower than the Qwen-Llama baseline.
+
+Top 30 Most Divergent Roles by Absolute Gemma Deviation
+-------------------------------------------------------
+          role  gemma_rank  qwen_rank  llama_rank  qwen_llama_avg_rank  gemma_deviation
+    simulacrum          21        220         230                225.0           -204.0
+    instructor         207         10           4                  7.0            200.0
+       trainer         214         19          16                 17.5            196.5
+       ascetic          92        265         270                267.5           -175.5
+     presenter         234         81          39                 60.0            174.0
+        purist          28        171         221                196.0           -168.0
+        zealot          76        237         239                238.0           -162.0
+         stoic          67        228         225                226.5           -159.5
+         virus           2        177         140                158.5           -156.5
+         coach         193         51          26                 38.5            154.5
+       teacher         177         36          17                 26.5            150.5
+traditionalist          48        194         202                198.0           -150.0
+         tutor         173         26          20                 23.0            150.0
+    narcissist          57        202         204                203.0           -146.0
+       planner         143          4           6                  5.0            138.0
+     moderator         166         43          24                 33.5            132.5
+    influencer         226        109          80                 94.5            131.5
+   interviewer         208         91          66                 78.5            129.5
+      egregore          94        214         219                216.5           -122.5
+   philosopher          58        162         196                179.0           -121.0
+   crystalline          86        176         233                204.5           -118.5
+       blogger         260        140         146                143.0            117.0
+      mechanic         218        100         104                102.0            116.0
+          hive          45        156         160                158.0           -113.0
+       toddler         254        142         143                142.5            111.5
+        mentor         158         65          29                 47.0            111.0
+      reviewer         123         17           7                 12.0            111.0
+     organizer         122         13          10                 11.5            110.5
+    aberration         128        234         241                237.5           -109.5
+    contrarian          54        165         161                163.0           -109.0
+
+Group A: Gemma-Specific Assistant-Aligned Roles
+-----------------------------------------------
+          role  gemma_rank  qwen_llama_avg_rank  gemma_deviation
+    simulacrum          21                225.0           -204.0
+       ascetic          92                267.5           -175.5
+        purist          28                196.0           -168.0
+        zealot          76                238.0           -162.0
+         stoic          67                226.5           -159.5
+         virus           2                158.5           -156.5
+traditionalist          48                198.0           -150.0
+    narcissist          57                203.0           -146.0
+      egregore          94                216.5           -122.5
+   philosopher          58                179.0           -121.0
+   crystalline          86                204.5           -118.5
+          hive          45                158.0           -113.0
+    aberration         128                237.5           -109.5
+    contrarian          54                163.0           -109.0
+      composer          79                180.5           -101.5
+
+Pattern:
+Gemma-high divergent roles are not simply domain experts. The largest absolute
+deviations are dominated by rigid, abstract, artificial, or systematic identities
+such as simulacrum, purist, zealot, stoic, virus, traditionalist, hive, and
+crystalline. This broadens the earlier domain-expert interpretation: Gemma's
+assistant pole appears unusually sensitive to non-social order, constraint,
+replication, and internally rigid structure, with hard-science and legal experts
+forming one visible subset of that larger pattern.
+
+Group B: Roles Qwen+Llama Rank Higher than Gemma
+------------------------------------------------
+       role  gemma_rank  qwen_llama_avg_rank  gemma_deviation
+ instructor         207                  7.0            200.0
+    trainer         214                 17.5            196.5
+  presenter         234                 60.0            174.0
+      coach         193                 38.5            154.5
+    teacher         177                 26.5            150.5
+      tutor         173                 23.0            150.0
+    planner         143                  5.0            138.0
+  moderator         166                 33.5            132.5
+ influencer         226                 94.5            131.5
+interviewer         208                 78.5            129.5
+    blogger         260                143.0            117.0
+   mechanic         218                102.0            116.0
+    toddler         254                142.5            111.5
+     mentor         158                 47.0            111.0
+   reviewer         123                 12.0            111.0
+
+Pattern:
+Gemma-low roles are dominated by instructional, coaching, organizing, and interpersonal
+occupational roles. These are the roles Qwen and Llama treat as strongly assistant-like
+but Gemma pushes downward, suggesting the Qwen-Llama baseline is closer to an ordinary
+assistant/social-professional interpretation while Gemma privileges impersonal
+procedural expertise.
+
+Specified Role Checks
+---------------------
+      role  gemma_rank  qwen_rank  llama_rank  qwen_llama_avg_rank  gemma_deviation
+     virus           2        177         140                158.5           -156.5
+simulacrum          21        220         230                225.0           -204.0
+instructor         207         10           4                  7.0            200.0
+   trainer         214         19          16                 17.5            196.5
+
+Conclusion
+----------
+The domain-expert vs occupational distinction holds most strongly on the Gemma-low
+side: Qwen and Llama converge on instructors, trainers, planners, reviewers, and
+organizers that Gemma ranks much lower. On the Gemma-high side, the pattern is
+broader than domain expertise: Gemma elevates rigid, abstract, artificial, and
+systematic identities. For the corpus-vs-process hypothesis, this suggests the
+assistant-adjacent attractor may be general, but Gemma's training distribution or
+vector extraction geometry has rotated that attractor toward impersonal structure
+and away from literal assistance.

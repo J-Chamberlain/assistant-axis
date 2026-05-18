@@ -35,6 +35,10 @@ Priority: foundational
 
 Three-model comparison adds a constraint on the corpus-vs-process question. Llama and Qwen strongly agree on ranking structure (`r = 0.946737`) and both place literal `assistant` high (`1` and `14` respectively), while Gemma diverges and places `assistant` at `46`. The shared Qwen/Llama pattern suggests an assistant-adjacent attractor may be robust across at least two model families, but Gemma's domain-expert/procedural pole shows that the attractor's expression can be substantially reshaped by model-family specifics.
 
+## 2026-05-18 Update 2
+
+Gemma divergence analysis against the Qwen/Llama rank-average baseline shows the divergence is systematic. Qwen and Llama rank occupational-helper roles such as `instructor`, `trainer`, `teacher`, `tutor`, `planner`, and `reviewer` far higher than Gemma. Gemma instead elevates a broader set of rigid, abstract, artificial, or systematic identities such as `simulacrum`, `purist`, `zealot`, `stoic`, `virus`, and `traditionalist`. This sharpens the hypothesis: the assistant-adjacent attractor may be general, while Gemma appears to rotate it toward impersonal structure and away from literal assistance.
+
 ## Update 2026-05-18
 
 Cross-model trait-space comparison strengthens the same constraint. Trait-ranking Spearman was Gemma/Qwen `0.435496`, Gemma/Llama `0.291373`, and Qwen/Llama `0.846067`, so Qwen and Llama again converge while Gemma is the outlier. The most convergently assistant-aligned traits across all three models were `transparent`, `dispassionate`, `detached`, `calm`, and `quantitative`, while Gemma uniquely suppresses `accessible` and elevates more esoteric/formal traits. This points toward a robust process- or corpus-level assistant-adjacent attractor in Qwen/Llama, with Gemma showing that the attractor's psychological expression can be substantially model-family-specific.
