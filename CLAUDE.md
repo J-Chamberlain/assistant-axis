@@ -81,3 +81,45 @@ Always confirm termination with user before terminating.
   cd assistant-axis
   pip install transformers accelerate datasets huggingface_hub torch --quiet
   hf auth login   # paste mini-research-2 token when prompted
+
+## Reporting format
+
+The user supervises from an iPhone. All responses must be
+phone-readable and copy-ready. Follow these rules on every task:
+
+SUMMARY FIRST
+End every task with a plain-text paragraph (3-5 sentences,
+no bullet points, no markdown headers) summarizing what was
+done and what the key outcome was. This is the first thing
+the user reads. Keep it scannable on a small screen.
+
+NEVER PASTE LARGE OUTPUTS INTO CHAT
+If results include tables, CSVs, long file contents, or
+terminal output longer than 10 lines: save to a file in
+the repo, push it, and report the raw GitHub URL only.
+Format: "Results saved to: [raw GitHub URL]"
+
+CONFIRMATION REQUESTS
+If you need the user to confirm something before proceeding,
+end your message with exactly this format and nothing after it:
+
+WAITING FOR CONFIRMATION:
+[single specific question]
+
+No additional text after the confirmation request.
+
+STICKY NOTES REPORT
+At the very end of every response, after the summary,
+report sticky notes changes in this exact format:
+
+STICKY NOTES:
+- Updated: [filename] — [one line description]
+- Added: [filename] — [one line description]
+- No changes (if nothing was updated)
+
+COMMIT CONFIRMATIONS
+When confirming a push, always include:
+- Commit hash
+- Branch
+- One-line description of what changed
+Format: "Pushed [hash] to master: [description]"
