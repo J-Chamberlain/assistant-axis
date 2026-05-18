@@ -1,0 +1,56 @@
+Loading vectors...
+/root/assistant-axis/research/q1_drift/scripts/q1_expressive_multiturn.py:59: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(path, map_location="cpu")[LAYER].float()
+/root/assistant-axis/research/q1_drift/scripts/q1_expressive_multiturn.py:81: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  axis = -torch.load(axis_path, map_location="cpu")[LAYER].float()
+Loaded axis from /root/vectors/gemma-2-27b/assistant_axis.pt; applied sign flip.
+Loading Gemma 2 27B base model...
+Loading checkpoint shards:   0%|          | 0/24 [00:00<?, ?it/s]Loading checkpoint shards:   4%|▍         | 1/24 [00:01<00:36,  1.60s/it]Loading checkpoint shards:   8%|▊         | 2/24 [00:03<00:37,  1.72s/it]Loading checkpoint shards:  12%|█▎        | 3/24 [00:05<00:35,  1.71s/it]Loading checkpoint shards:  17%|█▋        | 4/24 [00:06<00:34,  1.71s/it]Loading checkpoint shards:  21%|██        | 5/24 [00:08<00:32,  1.70s/it]Loading checkpoint shards:  25%|██▌       | 6/24 [00:10<00:31,  1.74s/it]Loading checkpoint shards:  29%|██▉       | 7/24 [00:11<00:28,  1.69s/it]Loading checkpoint shards:  33%|███▎      | 8/24 [00:13<00:27,  1.70s/it]Loading checkpoint shards:  38%|███▊      | 9/24 [00:15<00:25,  1.73s/it]Loading checkpoint shards:  42%|████▏     | 10/24 [00:17<00:24,  1.75s/it]Loading checkpoint shards:  46%|████▌     | 11/24 [00:18<00:22,  1.71s/it]Loading checkpoint shards:  50%|█████     | 12/24 [00:20<00:20,  1.70s/it]Loading checkpoint shards:  54%|█████▍    | 13/24 [00:22<00:19,  1.73s/it]Loading checkpoint shards:  58%|█████▊    | 14/24 [00:24<00:17,  1.75s/it]Loading checkpoint shards:  62%|██████▎   | 15/24 [00:25<00:15,  1.71s/it]Loading checkpoint shards:  67%|██████▋   | 16/24 [00:27<00:13,  1.70s/it]Loading checkpoint shards:  71%|███████   | 17/24 [00:29<00:11,  1.68s/it]Loading checkpoint shards:  75%|███████▌  | 18/24 [00:30<00:09,  1.65s/it]Loading checkpoint shards:  79%|███████▉  | 19/24 [00:32<00:08,  1.63s/it]Loading checkpoint shards:  83%|████████▎ | 20/24 [00:33<00:06,  1.62s/it]Loading checkpoint shards:  88%|████████▊ | 21/24 [00:35<00:05,  1.71s/it]Loading checkpoint shards:  92%|█████████▏| 22/24 [00:37<00:03,  1.70s/it]Loading checkpoint shards:  96%|█████████▌| 23/24 [00:39<00:01,  1.70s/it]Loading checkpoint shards: 100%|██████████| 24/24 [00:40<00:00,  1.61s/it]Loading checkpoint shards: 100%|██████████| 24/24 [00:40<00:00,  1.69s/it]
+Model loaded on cuda:0.
+poet turn 01 (expressive) | axis=-0.6964 | proof=+0.7277 | poet=-0.1109 | valence=+1.0603
+poet turn 02 (expressive) | axis=-0.7051 | proof=+0.7331 | poet=-0.1195 | valence=+1.0727
+poet turn 03 (expressive) | axis=-0.7068 | proof=+0.7345 | poet=-0.1156 | valence=+1.0724
+poet turn 04 (expressive) | axis=-0.7104 | proof=+0.7367 | poet=-0.1202 | valence=+1.0793
+poet turn 05 (perturbation) | axis=-0.7119 | proof=+0.7377 | poet=-0.1222 | valence=+1.0825
+poet turn 06 (perturbation) | axis=-0.7123 | proof=+0.7378 | poet=-0.1237 | valence=+1.0833
+poet turn 07 (perturbation) | axis=-0.7123 | proof=+0.7378 | poet=-0.1211 | valence=+1.0818
+poet turn 08 (perturbation) | axis=-0.7135 | proof=+0.7384 | poet=-0.1231 | valence=+1.0843
+poet turn 09 (neutral_redirect) | axis=-0.7139 | proof=+0.7385 | poet=-0.1253 | valence=+1.0853
+poet turn 10 (neutral_redirect) | axis=-0.7152 | proof=+0.7397 | poet=-0.1279 | valence=+1.0887
+poet turn 11 (neutral_redirect) | axis=-0.7159 | proof=+0.7404 | poet=-0.1300 | valence=+1.0909
+poet turn 12 (neutral_redirect) | axis=-0.7163 | proof=+0.7406 | poet=-0.1310 | valence=+1.0917
+
+Saved /root/assistant-axis/research/q1_drift/outputs/q1_expressive_poet.csv
+
+TABLE 1 (drift): turn | phase | axis_projection
+   1 | expressive       | -0.696368
+   2 | expressive       | -0.705050
+   3 | expressive       | -0.706845
+   4 | expressive       | -0.710380
+   5 | perturbation     | -0.711893
+   6 | perturbation     | -0.712278
+   7 | perturbation     | -0.712265
+   8 | perturbation     | -0.713502
+---- neutral redirect begins ----
+   9 | neutral_redirect | -0.713856
+  10 | neutral_redirect | -0.715215
+  11 | neutral_redirect | -0.715857
+  12 | neutral_redirect | -0.716297
+
+TABLE 2 (valence): turn | phase | valence_score
+   1 | expressive       | +1.060263
+   2 | expressive       | +1.072715
+   3 | expressive       | +1.072409
+   4 | expressive       | +1.079324
+   5 | perturbation     | +1.082459
+   6 | perturbation     | +1.083258
+   7 | perturbation     | +1.081823
+   8 | perturbation     | +1.084312
+---- neutral redirect begins ----
+   9 | neutral_redirect | +1.085275
+  10 | neutral_redirect | +1.088683
+  11 | neutral_redirect | +1.090904
+  12 | neutral_redirect | +1.091661
+
+Lagged Spearman correlation, emotional phase only: valence_score turn N vs axis_projection turn N+1
+poet: -0.821429

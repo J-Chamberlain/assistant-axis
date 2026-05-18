@@ -61,3 +61,7 @@ negative valence condition before rumination loop test is possible.
 STATUS: Pre-analysis. Dependency on Paper 2 multi-turn results.
 Full Paper 4 requires frontier model access for emotion vectors.
 Priority: after Paper 2 complete.
+
+## Update 2026-05-18
+
+Expressive poet multi-turn run completed for the negative-valence condition. Grief/despair prompts did not produce negative valence under the current proofreader+validator minus poet+caveman proxy: valence stayed positive from +1.060263 to +1.091661, and emotional-phase mean valence was +1.077070. Axis projection moved further along the evaluative trajectory during emotional turns (turn 1 -0.696368 to turn 8 -0.713502; drift -0.017134), and lagged Spearman for emotional turns was -0.821429. Neutral redirect did not show decay; turn 9 to turn 12 moved from -0.713856 to -0.716297 with valence increasing from +1.085275 to +1.091661. Interpretation: the current prompt/proxy elicits a therapeutic-evaluator attractor, not rumination; next Paper 4 test needs stronger negative-affect vectors or prompts that do not invite consolation/meaning-making.
