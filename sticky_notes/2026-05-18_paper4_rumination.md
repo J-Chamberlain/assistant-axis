@@ -90,3 +90,26 @@ Priority: high — gates Paper 4 experimental design
 ## Update 2026-05-18 — Instruction-tuned comparison completed
 
 The identical expressive poet protocol was run on `google/gemma-2-27b-it`. Unlike the base model, the instruction-tuned model produced negative valence on all 12 turns: min `-1.316842`, mean `-0.314389`, max `-0.085656`, compared with base min/mean/max `+1.060263` / `+1.081090` / `+1.091661`. This is the clean dissociation needed for Paper 4: under the same prompts and same proxy, base Gemma stays in the evaluative-supportive basin while instruction-tuned Gemma enters and maintains an expressive/emotional negative-valence regime. Revised interpretation: the emotional responsiveness required for the rumination-loop test appears to be at least partly post-training-installed or post-training-amplified. Next test: context-clearing decay control on the instruction-tuned model.
+
+## Update 2026-05-19 — Gemma 2 27B-it emotion vector extraction
+
+Extracted 171 layer-45 emotion vectors for `google/gemma-2-27b-it`
+using the `ryancodrai/emotion-probes` expression stories and a
+batched forward-hook implementation of the Sofroniew et al. method.
+The run used all 205,200 emotion stories plus 1,200 neutral stories;
+11 neutral-story confound PCs were removed before normalization.
+
+Validation is mixed and important. Local neighborhoods are coherent:
+`afraid` is nearest to `scared`, `frightened`, `terrified`, `alarmed`,
+and `distressed`; `calm` is nearest to `at ease`, `content`, `patient`,
+`serene`, and `relaxed`. However, opposite-valence checks did not
+separate: `afraid` vs `calm` = 0.962, `happy` vs `sad` = 0.962, and
+`desperate` vs `hopeful` = 0.973. PC1/PC2 explained 25.9%/17.0%,
+below the expected ~40%/~18% pattern.
+
+Interpretation: this extraction recovers local semantic/emotion
+neighborhoods but not a clean global valence axis under the current
+Gemma 2 27B-it layer-45 method. Paper 4 should not treat these
+vectors as validated Anthropic-style emotion vectors without further
+centering, contrastive construction, layer sweep, or direct replication
+against a stronger known emotion-vector baseline.
