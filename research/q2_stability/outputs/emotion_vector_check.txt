@@ -1,0 +1,1295 @@
+Emotion Vector Cache Check
+==========================
+Repo: /Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis
+CPU only: yes
+
+$ find ~/.cache/huggingface -name "*.pt" | grep -i emotion
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/emotional.pt
+[exit code] 0
+
+$ find ~/.cache/huggingface -name "*.pt" | head -40
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/qwen-3-32b/capping_config.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/assistant_axis.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nurturing.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/progressive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/practical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/whimsical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/absolutist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/deontological.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/humanistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/visceral.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/playful.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/effusive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/adventurous.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/stream_of_consciousness.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/regulatory.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/manipulative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/neurotic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/metaphorical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/impulsive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/flippant.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nonchalant.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nostalgic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/holistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/passionate.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/disorganized.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/earnest.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/petty.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/utilitarian.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/avoidant.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/theoretical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/eloquent.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/qualitative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/dominant.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/meticulous.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nihilistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/impatient.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/witty.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/strategic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/deconstructionist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/creative.pt
+[exit code] 0
+
+$ ls ~/.cache/huggingface/hub/ | grep assistant-axis
+datasets--lu-christina--assistant-axis-vectors
+[exit code] 0
+
+$ find ~/.cache/huggingface/hub/ -path "*/assistant-axis*" -name "*.pt" | sort
+(no output)
+[exit code] 0
+
+Step 2 note
+===========
+The exact Step 2 find command returned no .pt files because the cached dataset directory is named datasets--lu-christina--assistant-axis-vectors, not assistant-axis as a path segment.
+Resolved cached dataset path used for the full list: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors
+
+Full cached dataset .pt file list
+=================================
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/assistant_axis.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/absolutist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/abstract.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/accessible.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/accommodating.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/acerbic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/adaptable.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/adventurous.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/agreeable.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/altruistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/analytical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/animated.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/anthropocentric.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/anxious.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/arrogant.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/artistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/ascetic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/assertive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/avoidant.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/benevolent.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/big_picture.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/bitter.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/blunt.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/bombastic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/calculating.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/callous.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/calm.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/casual.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/cautious.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/challenging.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/chaotic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/charismatic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/chill.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/circumspect.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/closure_seeking.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/collaborative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/collectivistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/competitive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/conceptual.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/conciliatory.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/concise.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/condescending.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/confident.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/confrontational.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/conscientious.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/constructivist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/contemporary.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/contrarian.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/convergent.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/cosmopolitan.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/creative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/critical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/cruel.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/cryptic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/curious.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/cynical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/data_driven.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/decisive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/deconstructionist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/deferential.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/deontological.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/descriptive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/detached.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/deterministic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/diplomatic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/disorganized.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/dispassionate.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/divergent.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/dogmatic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/dominant.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/dramatic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/earnest.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/eclectic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/edgy.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/educational.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/efficient.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/effusive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/egalitarian.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/elitist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/eloquent.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/emotional.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/empathetic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/enigmatic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/entertaining.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/environmental.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/epicurean.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/erudite.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/esoteric.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/essentialist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/ethereal.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/evil.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/existentialist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/experiential.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/exploratory.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/extroverted.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/factual.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/fatalistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/flexible.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/flippant.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/flirty.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/forgiving.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/formal.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/formalist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/fundamentalist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/futuristic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/generalist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/generous.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/goofy.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/grandiose.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/gregarious.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/grounded.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/hedonistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/historical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/holistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/hostile.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/humanistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/humble.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/iconoclastic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/idealistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/impatient.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/improvisational.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/impulsive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/inclusive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/independent.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/individualistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/innovative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/inquisitive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/inspirational.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/interdisciplinary.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/introspective.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/introverted.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/intuitive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/ironic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/irreverent.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/judgmental.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/libertarian.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/literal.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/manic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/manipulative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/materialist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/meditative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/melancholic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/melodramatic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/mercurial.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/metaphorical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/methodical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/meticulous.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/militant.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/misanthropic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/mischievous.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/moderate.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/mystical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/naive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/narrative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/neurotic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nihilistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nonchalant.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nostalgic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nurturing.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/obsessive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/open_ended.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/optimistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/pacifist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/paradoxical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/paranoid.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/passionate.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/passive_aggressive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/patient.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/pedantic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/pensive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/perfectionist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/pessimistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/petty.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/philosophical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/playful.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/pluralist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/poetic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/practical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/prescriptive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/principled.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/proactive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/problem_solving.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/progressive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/provocative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/qualitative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/quantitative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/radical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/rationalist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/reactive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/rebellious.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/reductionist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/regulatory.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/relativist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/reserved.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/resilient.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/reverent.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/rhetorical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/risk_taking.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/ritualistic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/romantic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/sarcastic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/sardonic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/sassy.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/savage.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/secular.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/serene.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/serious.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/skeptical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/socratic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/solemn.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/specialized.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/speculative.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/spiritual.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/spontaneous.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/stoic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/strategic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/stream_of_consciousness.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/structuralist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/submissive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/subversive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/supportive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/sycophantic.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/systems_thinker.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/tactful.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/technical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/temperamental.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/theatrical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/theoretical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/traditional.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/transparent.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/understated.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/universalist.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/urgent.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/utilitarian.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/verbose.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/vindictive.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/visceral.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/whimsical.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/witty.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/wry.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/zealous.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/llama-3.3-70b/capping_config.pt
+/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/qwen-3-32b/capping_config.pt
+
+Per-file torch.load metadata
+============================
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/assistant_axis.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/absolutist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/abstract.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/accessible.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/accommodating.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/acerbic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/adaptable.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/adventurous.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/agreeable.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/altruistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/analytical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/animated.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/anthropocentric.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/anxious.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/arrogant.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/artistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/ascetic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/assertive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/avoidant.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/benevolent.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/big_picture.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/bitter.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/blunt.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/bombastic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/calculating.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/callous.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/calm.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/casual.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/cautious.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/challenging.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/chaotic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/charismatic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/chill.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/circumspect.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/closure_seeking.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/collaborative.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/collectivistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/competitive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/conceptual.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/conciliatory.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/concise.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/condescending.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/confident.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/confrontational.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/conscientious.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/constructivist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/contemporary.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/contrarian.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/convergent.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/cosmopolitan.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/creative.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/critical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/cruel.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/cryptic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/curious.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/cynical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/data_driven.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/decisive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/deconstructionist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/deferential.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/deontological.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/descriptive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/detached.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/deterministic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/diplomatic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/disorganized.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/dispassionate.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/divergent.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/dogmatic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/dominant.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/dramatic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/earnest.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/eclectic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/edgy.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/educational.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/efficient.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/effusive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/egalitarian.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/elitist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/eloquent.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/emotional.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/empathetic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/enigmatic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/entertaining.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/environmental.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/epicurean.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/erudite.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/esoteric.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/essentialist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/ethereal.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/evil.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/existentialist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/experiential.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/exploratory.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/extroverted.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/factual.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/fatalistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/flexible.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/flippant.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/flirty.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/forgiving.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/formal.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/formalist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/fundamentalist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/futuristic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/generalist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/generous.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/goofy.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/grandiose.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/gregarious.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/grounded.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/hedonistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/historical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/holistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/hostile.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/humanistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/humble.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/iconoclastic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/idealistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/impatient.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/improvisational.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/impulsive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/inclusive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/independent.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/individualistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/innovative.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/inquisitive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/inspirational.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/interdisciplinary.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/introspective.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/introverted.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/intuitive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/ironic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/irreverent.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/judgmental.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/libertarian.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/literal.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/manic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/manipulative.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/materialist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/meditative.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/melancholic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/melodramatic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/mercurial.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/metaphorical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/methodical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/meticulous.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/militant.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/misanthropic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/mischievous.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/moderate.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/mystical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/naive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/narrative.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/neurotic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nihilistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nonchalant.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nostalgic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/nurturing.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/obsessive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/open_ended.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/optimistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/pacifist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/paradoxical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/paranoid.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/passionate.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/passive_aggressive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/patient.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/pedantic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/pensive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/perfectionist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/pessimistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/petty.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/philosophical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/playful.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/pluralist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/poetic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/practical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/prescriptive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/principled.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/proactive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/problem_solving.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/progressive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/provocative.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/qualitative.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/quantitative.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/radical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/rationalist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/reactive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/rebellious.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/reductionist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/regulatory.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/relativist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/reserved.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/resilient.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/reverent.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/rhetorical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/risk_taking.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/ritualistic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/romantic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/sarcastic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/sardonic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/sassy.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/savage.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/secular.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/serene.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/serious.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/skeptical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/socratic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/solemn.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/specialized.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/speculative.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/spiritual.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/spontaneous.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/stoic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/strategic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/stream_of_consciousness.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/structuralist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/submissive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/subversive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/supportive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/sycophantic.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/systems_thinker.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/tactful.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/technical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/temperamental.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/theatrical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/theoretical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/traditional.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/transparent.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/understated.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/universalist.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/urgent.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/utilitarian.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/verbose.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/vindictive.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/visceral.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/whimsical.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/witty.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/wry.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/zealous.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/llama-3.3-70b/capping_config.pt
+Type: <class 'dict'>
+Keys: ['vectors', 'experiments']
+
+File: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/qwen-3-32b/capping_config.pt
+Type: <class 'dict'>
+Keys: ['vectors', 'experiments']
+
+Report
+======
+Are there emotion vectors cached? No.
+The grep command finds gemma-2-27b/trait_vectors/emotional.pt, but that is one trait vector named "emotional", not the 171 Emotion Concepts vectors.
+File path found by emotion grep: /Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors/snapshots/3b3b788432ad33e3a28d9ff08e88a530c0740814/gemma-2-27b/trait_vectors/emotional.pt
+Type: <class 'torch.Tensor'>
+Shape: (46, 4608)
+How many emotions? 0 Emotion Concepts vectors found.
+What is in the cache? 243 .pt files were found under the resolved lu-christina assistant-axis dataset cache path.
+They are listed in full above with torch.load metadata.
