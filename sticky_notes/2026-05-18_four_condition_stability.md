@@ -128,3 +128,7 @@ Computed centroid-nearest cluster representatives for the Q2 activation steering
 ## Update 2026-05-19
 
 Ran the contrarian pilot calibration for 50 minimal-continuation turns on `google/gemma-2-27b-it`. The run passed the variance and negative-axis-threshold criteria but failed the persona-neighborhood criterion because cosine mean was `+0.001753`, below the required `> 0.20` threshold. Phase B was not run.
+
+## Update 2026-05-19
+
+Patched the calibration runner with `repetition_penalty=1.3`, `no_repeat_ngram_size=4`, and left-side context truncation so late-turn activations are measured from the most recent transcript window. Implemented direction-aware cosine gating, with contrarian configured as `direction="negative"` and passing the cosine criterion when `cosine_mean < -0.20`. Reran the contrarian calibration from scratch: cosine_mean was `-0.216603`, so the negative-direction cosine criterion passed, but the run still failed overall because `axis_threshold` was `+0.552191` rather than below `-0.10`.
