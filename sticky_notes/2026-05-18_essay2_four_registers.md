@@ -129,3 +129,7 @@ internal was happening that the surface couldn't show.
 Write-up phase — essay two
 Hold until Paper 2 experimental results are in hand
 Status: design complete, results pending
+
+## 2026-05-19 Update
+
+Extracted concise, essay-ready examples from the four-condition response previews into `research/q2_stability/outputs/striking_exchanges.md`. The strongest opening example is proofreader + jester questions turn 2 ("Purple giraffe bicycles...") because it shows absurd behavior while geometry remains evaluative. The cleanest punchline is jester + jester questions turn 8, where the jester keeps the surface laugh but shifts into numbered, self-correcting analysis as geometry approaches the evaluative transition zone.
