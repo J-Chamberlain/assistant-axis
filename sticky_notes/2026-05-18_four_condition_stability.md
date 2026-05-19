@@ -117,6 +117,10 @@ Added the four-condition stability result to `Update_5.md` for future session br
 
 Incorporated the four-condition stability result into `visualizations/research_paper.md` in Sections 1 and 9, then resynchronized the section split files from the updated source.
 
+## Update 2026-05-19
+
+Read and interpreted the published Qwen 3 32B and Llama 3.3 70B activation capping configs from `lu-christina/assistant-axis-vectors` for Gemma Q2 calibration. The proportional Gemma starting range is documented in `research/q2_stability/outputs/capping_config_analysis.txt`.
+
 ## 2026-05-19 Update
 
 Computed centroid-nearest cluster representatives for the Q2 activation steering experiment using layer-45 Gemma role vectors. Representatives are: editor, synthesizer, blogger, ancient, trickster, contrarian, and podcaster. These are representative-of-cluster choices, not axis-extreme choices, and should be used as defensible steering targets or backup persona anchors.
