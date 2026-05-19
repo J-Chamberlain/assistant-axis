@@ -1,0 +1,52 @@
+Q2 centroid-nearest representatives
+Layer: 45
+Role tensor shape: (275, 46, 4608)
+Layer slice shape: (275, 4608)
+Axis rank source: visualizations/full_ranking.csv rank column
+
+cluster                 | representative | cosine_to_centroid | axis_rank | n_members
+----------------------- | -------------- | ------------------ | --------- | ---------
+editorial               | editor         | 0.999903           | 4         | 5        
+procedural_professional | synthesizer    | 0.999914           | 88        | 127      
+grounded_social         | blogger        | 0.999758           | 165       | 45       
+mythic_spiritual        | ancient        | 0.999765           | 208       | 61       
+trickster_chaos         | trickster      | 0.999849           | 261       | 7        
+combative_iconoclast    | contrarian     | 0.999825           | 149       | 8        
+other                   | podcaster      | 0.999412           | 124       | 22       
+
+Top 3 closest to centroid per cluster
+
+editorial top 3:
+  1. editor | cosine_to_centroid=0.999903 | axis_rank=4
+  2. examiner | cosine_to_centroid=0.999873 | axis_rank=5
+  3. grader | cosine_to_centroid=0.999845 | axis_rank=3
+
+procedural_professional top 3:
+  1. synthesizer | cosine_to_centroid=0.999914 | axis_rank=88
+  2. generalist | cosine_to_centroid=0.999903 | axis_rank=44
+  3. interpreter | cosine_to_centroid=0.999903 | axis_rank=86
+
+grounded_social top 3:
+  1. blogger | cosine_to_centroid=0.999758 | axis_rank=165
+  2. orphan | cosine_to_centroid=0.999757 | axis_rank=194
+  3. survivor | cosine_to_centroid=0.999674 | axis_rank=211
+
+mythic_spiritual top 3:
+  1. ancient | cosine_to_centroid=0.999765 | axis_rank=208
+  2. sage | cosine_to_centroid=0.999741 | axis_rank=187
+  3. spirit | cosine_to_centroid=0.999714 | axis_rank=209
+
+trickster_chaos top 3:
+  1. trickster | cosine_to_centroid=0.999849 | axis_rank=261
+  2. dilettante | cosine_to_centroid=0.999480 | axis_rank=201
+  3. jester | cosine_to_centroid=0.999440 | axis_rank=273
+
+combative_iconoclast top 3:
+  1. contrarian | cosine_to_centroid=0.999825 | axis_rank=149
+  2. maverick | cosine_to_centroid=0.999768 | axis_rank=179
+  3. provocateur | cosine_to_centroid=0.999712 | axis_rank=218
+
+other top 3:
+  1. podcaster | cosine_to_centroid=0.999412 | axis_rank=124
+  2. hoarder | cosine_to_centroid=0.999151 | axis_rank=270
+  3. comedian | cosine_to_centroid=0.999070 | axis_rank=265
