@@ -31,3 +31,4 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-18_baseline_return_replication.md | Baseline return replication flag | 2/4 | verify citation |
 | 2026-05-18_four_condition_stability.md | Four-condition persona stability experiment design | 2 | high |
 | 2026-05-18_essay2_four_registers.md | Essay two: four registers as narrative device | essay 2 | write-up |
+| 2026-05-19_paper4_forking_deliberation.md | Paper 4: forking deliberation and convergence hypothesis | 4 | after Q2 |
