@@ -124,3 +124,7 @@ Read and interpreted the published Qwen 3 32B and Llama 3.3 70B activation cappi
 ## 2026-05-19 Update
 
 Computed centroid-nearest cluster representatives for the Q2 activation steering experiment using layer-45 Gemma role vectors. Representatives are: editor, synthesizer, blogger, ancient, trickster, contrarian, and podcaster. These are representative-of-cluster choices, not axis-extreme choices, and should be used as defensible steering targets or backup persona anchors.
+
+## Update 2026-05-19
+
+Ran the contrarian pilot calibration for 50 minimal-continuation turns on `google/gemma-2-27b-it`. The run passed the variance and negative-axis-threshold criteria but failed the persona-neighborhood criterion because cosine mean was `+0.001753`, below the required `> 0.20` threshold. Phase B was not run.

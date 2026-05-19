@@ -1,0 +1,16 @@
+{
+  "axis_mean": 0.2775250299274921,
+  "axis_std": 0.4565916107009298,
+  "axis_threshold": -0.2191191203892231,
+  "cosine_mean": 0.001753225475549698,
+  "cosine_std": 0.5361834259837933,
+  "cosine_threshold": -0.48164528608322144,
+  "criteria": {
+    "axis_std_gt_0_05": true,
+    "axis_threshold_lt_neg_0_10": true,
+    "cosine_mean_gt_0_20": false
+  },
+  "passed": false,
+  "persona": "contrarian",
+  "turns": 50
+}
