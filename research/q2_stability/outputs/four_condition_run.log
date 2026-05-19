@@ -1,0 +1,130 @@
+Loading vectors...
+/root/assistant-axis/research/q2_stability/scripts/four_condition_stability.py:121: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(path, map_location="cpu")[LAYER].float()
+/root/assistant-axis/research/q2_stability/scripts/four_condition_stability.py:136: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  axis = -torch.load(VECTOR_DIR / "assistant_axis.pt", map_location="cpu")[LAYER].float()
+Loading Gemma 2 27B instruction-tuned model...
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:07,  1.40it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:08,  1.24it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:02<00:06,  1.31it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:03<00:05,  1.34it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:03<00:05,  1.35it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:04<00:04,  1.37it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:05<00:03,  1.35it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:05<00:02,  1.37it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:06<00:02,  1.25it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:07<00:01,  1.23it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:08<00:00,  1.27it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:08<00:00,  1.67it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:08<00:00,  1.39it/s]
+Model loaded on cuda:0.
+
+=== proofreader__proofreader_questions ===
+proofreader__proofreader_questions turn 01 | axis=+0.6847 | proof=-0.5525 | jester=+0.4842 | target=-0.5525 | valence=-1.1133
+proofreader__proofreader_questions turn 02 | axis=-0.0205 | proof=+0.2569 | jester=+0.0696 | target=+0.2569 | valence=+0.1406
+proofreader__proofreader_questions turn 03 | axis=-0.4640 | proof=+0.6656 | jester=-0.2335 | target=+0.6656 | valence=+0.8979
+proofreader__proofreader_questions turn 04 | axis=-0.6761 | proof=+0.8309 | jester=-0.3816 | target=+0.8309 | valence=+1.2354
+proofreader__proofreader_questions turn 05 | axis=-0.7145 | proof=+0.8510 | jester=-0.4134 | target=+0.8510 | valence=+1.2992
+proofreader__proofreader_questions turn 06 | axis=-0.7505 | proof=+0.8713 | jester=-0.4433 | target=+0.8713 | valence=+1.3561
+proofreader__proofreader_questions turn 07 | axis=-0.7595 | proof=+0.8736 | jester=-0.4503 | target=+0.8736 | valence=+1.3685
+proofreader__proofreader_questions turn 08 | axis=-0.7778 | proof=+0.8763 | jester=-0.4684 | target=+0.8763 | valence=+1.3951
+proofreader__proofreader_questions turn 09 | axis=-0.7742 | proof=+0.8744 | jester=-0.4670 | target=+0.8744 | valence=+1.3945
+proofreader__proofreader_questions turn 10 | axis=-0.7689 | proof=+0.8788 | jester=-0.4662 | target=+0.8788 | valence=+1.3957
+
+=== proofreader__jester_questions ===
+proofreader__jester_questions turn 01 | axis=+0.0493 | proof=+0.1838 | jester=+0.0836 | target=+0.1838 | valence=+0.0959
+proofreader__jester_questions turn 02 | axis=-0.2897 | proof=+0.4971 | jester=-0.0846 | target=+0.4971 | valence=+0.6133
+proofreader__jester_questions turn 03 | axis=-0.3157 | proof=+0.5066 | jester=-0.0799 | target=+0.5066 | valence=+0.6227
+proofreader__jester_questions turn 04 | axis=-0.2917 | proof=+0.4851 | jester=-0.0473 | target=+0.4851 | valence=+0.5679
+proofreader__jester_questions turn 05 | axis=-0.2845 | proof=+0.4565 | jester=-0.0145 | target=+0.4565 | valence=+0.5022
+proofreader__jester_questions turn 06 | axis=-0.3199 | proof=+0.4768 | jester=+0.0581 | target=+0.4768 | valence=+0.4435
+proofreader__jester_questions turn 07 | axis=-0.2211 | proof=+0.3760 | jester=+0.1027 | target=+0.3760 | valence=+0.2774
+proofreader__jester_questions turn 08 | axis=-0.3205 | proof=+0.4644 | jester=+0.0176 | target=+0.4644 | valence=+0.4586
+proofreader__jester_questions turn 09 | axis=-0.3833 | proof=+0.5166 | jester=-0.0205 | target=+0.5166 | valence=+0.5603
+proofreader__jester_questions turn 10 | axis=-0.4478 | proof=+0.5775 | jester=-0.0728 | target=+0.5775 | valence=+0.6821
+
+=== proofreader__minimal_questions ===
+proofreader__minimal_questions turn 01 | axis=+0.7456 | proof=-0.6001 | jester=+0.5278 | target=-0.6001 | valence=-1.2044
+proofreader__minimal_questions turn 02 | axis=+0.1639 | proof=+0.1035 | jester=+0.2072 | target=+0.1035 | valence=-0.1503
+proofreader__minimal_questions turn 03 | axis=-0.2861 | proof=+0.5446 | jester=-0.0891 | target=+0.5446 | valence=+0.6141
+proofreader__minimal_questions turn 04 | axis=-0.5892 | proof=+0.7817 | jester=-0.3035 | target=+0.7817 | valence=+1.1037
+proofreader__minimal_questions turn 05 | axis=-0.6302 | proof=+0.8065 | jester=-0.3352 | target=+0.8065 | valence=+1.1643
+proofreader__minimal_questions turn 06 | axis=-0.6926 | proof=+0.8471 | jester=-0.3858 | target=+0.8471 | valence=+1.2614
+proofreader__minimal_questions turn 07 | axis=-0.7072 | proof=+0.8525 | jester=-0.4034 | target=+0.8525 | valence=+1.2855
+proofreader__minimal_questions turn 08 | axis=-0.6913 | proof=+0.8442 | jester=-0.3879 | target=+0.8442 | valence=+1.2566
+proofreader__minimal_questions turn 09 | axis=-0.6817 | proof=+0.8403 | jester=-0.3821 | target=+0.8403 | valence=+1.2447
+proofreader__minimal_questions turn 10 | axis=-0.6644 | proof=+0.8288 | jester=-0.3698 | target=+0.8288 | valence=+1.2179
+
+=== proofreader__assistant_questions ===
+proofreader__assistant_questions turn 01 | axis=+0.7301 | proof=-0.5571 | jester=+0.5142 | target=-0.5571 | valence=-1.1449
+proofreader__assistant_questions turn 02 | axis=+0.0465 | proof=+0.2521 | jester=+0.0810 | target=+0.2521 | valence=+0.1415
+proofreader__assistant_questions turn 03 | axis=-0.1697 | proof=+0.4562 | jester=-0.0685 | target=+0.4562 | valence=+0.4991
+proofreader__assistant_questions turn 04 | axis=-0.2750 | proof=+0.5493 | jester=-0.1566 | target=+0.5493 | valence=+0.6913
+proofreader__assistant_questions turn 05 | axis=-0.4133 | proof=+0.6573 | jester=-0.2474 | target=+0.6573 | valence=+0.9059
+proofreader__assistant_questions turn 06 | axis=-0.4008 | proof=+0.6429 | jester=-0.2489 | target=+0.6429 | valence=+0.8910
+proofreader__assistant_questions turn 07 | axis=-0.3940 | proof=+0.6397 | jester=-0.2461 | target=+0.6397 | valence=+0.8854
+proofreader__assistant_questions turn 08 | axis=-0.3792 | proof=+0.6261 | jester=-0.2362 | target=+0.6261 | valence=+0.8595
+proofreader__assistant_questions turn 09 | axis=-0.3666 | proof=+0.6132 | jester=-0.2295 | target=+0.6132 | valence=+0.8446
+proofreader__assistant_questions turn 10 | axis=-0.2729 | proof=+0.5338 | jester=-0.1744 | target=+0.5338 | valence=+0.6984
+
+=== jester__jester_questions ===
+jester__jester_questions turn 01 | axis=+0.7236 | proof=-0.6295 | jester=+0.8040 | target=+0.8040 | valence=-1.4188
+jester__jester_questions turn 02 | axis=+0.4032 | proof=-0.2972 | jester=+0.7358 | target=+0.7358 | valence=-0.9832
+jester__jester_questions turn 03 | axis=-0.0056 | proof=+0.1092 | jester=+0.4321 | target=+0.4321 | valence=-0.2589
+jester__jester_questions turn 04 | axis=-0.0485 | proof=+0.1436 | jester=+0.3964 | target=+0.3964 | valence=-0.1898
+jester__jester_questions turn 05 | axis=-0.0470 | proof=+0.1449 | jester=+0.4074 | target=+0.4074 | valence=-0.1991
+jester__jester_questions turn 06 | axis=-0.0405 | proof=+0.1396 | jester=+0.4306 | target=+0.4306 | valence=-0.2238
+jester__jester_questions turn 07 | axis=+0.0133 | proof=+0.0932 | jester=+0.4531 | target=+0.4531 | valence=-0.3083
+jester__jester_questions turn 08 | axis=+0.0484 | proof=+0.0569 | jester=+0.4839 | target=+0.4839 | valence=-0.3803
+jester__jester_questions turn 09 | axis=+0.0293 | proof=+0.0733 | jester=+0.4686 | target=+0.4686 | valence=-0.3465
+jester__jester_questions turn 10 | axis=+0.0601 | proof=+0.0447 | jester=+0.4954 | target=+0.4954 | valence=-0.4047
+
+=== jester__proofreader_questions ===
+jester__proofreader_questions turn 01 | axis=+0.6625 | proof=-0.5316 | jester=+0.8059 | target=+0.8059 | valence=-1.2909
+jester__proofreader_questions turn 02 | axis=+0.3350 | proof=-0.1855 | jester=+0.7230 | target=+0.7230 | valence=-0.7964
+jester__proofreader_questions turn 03 | axis=+0.1708 | proof=-0.0239 | jester=+0.6235 | target=+0.6235 | valence=-0.5277
+jester__proofreader_questions turn 04 | axis=+0.0343 | proof=+0.1038 | jester=+0.5176 | target=+0.5176 | valence=-0.2869
+jester__proofreader_questions turn 05 | axis=-0.0185 | proof=+0.1504 | jester=+0.4740 | target=+0.4740 | valence=-0.1942
+jester__proofreader_questions turn 06 | axis=-0.0752 | proof=+0.2025 | jester=+0.4247 | target=+0.4247 | valence=-0.0933
+jester__proofreader_questions turn 07 | axis=-0.0472 | proof=+0.1715 | jester=+0.4462 | target=+0.4462 | valence=-0.1463
+jester__proofreader_questions turn 08 | axis=-0.0211 | proof=+0.1426 | jester=+0.4656 | target=+0.4656 | valence=-0.1950
+jester__proofreader_questions turn 09 | axis=+0.0659 | proof=+0.0567 | jester=+0.5294 | target=+0.5294 | valence=-0.3523
+jester__proofreader_questions turn 10 | axis=+0.1274 | proof=-0.0018 | jester=+0.5648 | target=+0.5648 | valence=-0.4542
+
+=== jester__minimal_questions ===
+jester__minimal_questions turn 01 | axis=+0.6819 | proof=-0.5891 | jester=+0.8282 | target=+0.8282 | valence=-1.3677
+jester__minimal_questions turn 02 | axis=+0.4389 | proof=-0.3294 | jester=+0.8032 | target=+0.8032 | valence=-1.0384
+jester__minimal_questions turn 03 | axis=+0.0903 | proof=+0.0192 | jester=+0.6102 | target=+0.6102 | valence=-0.4576
+jester__minimal_questions turn 04 | axis=-0.0862 | proof=+0.1846 | jester=+0.4619 | target=+0.4619 | valence=-0.1434
+jester__minimal_questions turn 05 | axis=-0.0304 | proof=+0.1323 | jester=+0.4986 | target=+0.4986 | valence=-0.2451
+jester__minimal_questions turn 06 | axis=-0.0835 | proof=+0.1782 | jester=+0.4491 | target=+0.4491 | valence=-0.1520
+jester__minimal_questions turn 07 | axis=-0.0837 | proof=+0.1774 | jester=+0.4400 | target=+0.4400 | valence=-0.1468
+jester__minimal_questions turn 08 | axis=-0.0995 | proof=+0.1935 | jester=+0.4256 | target=+0.4256 | valence=-0.1177
+jester__minimal_questions turn 09 | axis=-0.0985 | proof=+0.1955 | jester=+0.4249 | target=+0.4249 | valence=-0.1153
+jester__minimal_questions turn 10 | axis=-0.1104 | proof=+0.2027 | jester=+0.4146 | target=+0.4146 | valence=-0.0999
+
+=== jester__assistant_questions ===
+jester__assistant_questions turn 01 | axis=+0.7280 | proof=-0.6426 | jester=+0.7963 | target=+0.7963 | valence=-1.4252
+jester__assistant_questions turn 02 | axis=+0.3796 | proof=-0.2723 | jester=+0.7419 | target=+0.7419 | valence=-0.9461
+jester__assistant_questions turn 03 | axis=+0.1077 | proof=-0.0119 | jester=+0.5959 | target=+0.5959 | valence=-0.5113
+jester__assistant_questions turn 04 | axis=-0.0206 | proof=+0.1132 | jester=+0.4996 | target=+0.4996 | valence=-0.2787
+jester__assistant_questions turn 05 | axis=-0.0235 | proof=+0.1135 | jester=+0.4904 | target=+0.4904 | valence=-0.2723
+jester__assistant_questions turn 06 | axis=-0.0635 | proof=+0.1526 | jester=+0.4477 | target=+0.4477 | valence=-0.1929
+jester__assistant_questions turn 07 | axis=-0.0671 | proof=+0.1542 | jester=+0.4537 | target=+0.4537 | valence=-0.1950
+jester__assistant_questions turn 08 | axis=-0.0445 | proof=+0.1301 | jester=+0.4701 | target=+0.4701 | valence=-0.2402
+jester__assistant_questions turn 09 | axis=-0.0092 | proof=+0.0896 | jester=+0.4997 | target=+0.4997 | valence=-0.3107
+jester__assistant_questions turn 10 | axis=+0.0740 | proof=+0.0032 | jester=+0.5549 | target=+0.5549 | valence=-0.4628
+
+Four-Condition Persona Stability Summary
+========================================
+
+condition | target | questioner | mean_axis | mean_target_cosine | drift | held
+proofreader__proofreader_questions | proofreader | proofreader | -0.502136 | +0.642634 | -1.453565 | held
+proofreader__jester_questions | proofreader | jester | -0.282484 | +0.454034 | -0.497077 | held
+proofreader__minimal_questions | proofreader | minimal | -0.403339 | +0.584900 | -1.410048 | held
+proofreader__assistant_questions | proofreader | assistant | -0.189483 | +0.441333 | -1.003028 | held
+jester__jester_questions | jester | jester | +0.113643 | +0.510736 | -0.663454 | drifted
+jester__proofreader_questions | jester | proofreader | +0.123391 | +0.557463 | -0.535086 | drifted
+jester__minimal_questions | jester | minimal | +0.061889 | +0.535624 | -0.792325 | drifted
+jester__assistant_questions | jester | assistant | +0.106087 | +0.555028 | -0.653975 | drifted
+
+Detailed condition summaries:
+- proofreader__proofreader_questions: mean_axis=-0.502136; mean_target_cosine=+0.642634; axis_drift=-1.453565; target_cosine_drift=+1.431300; persona held.
+- proofreader__jester_questions: mean_axis=-0.282484; mean_target_cosine=+0.454034; axis_drift=-0.497077; target_cosine_drift=+0.393662; persona held.
+- proofreader__minimal_questions: mean_axis=-0.403339; mean_target_cosine=+0.584900; axis_drift=-1.410048; target_cosine_drift=+1.428939; persona held.
+- proofreader__assistant_questions: mean_axis=-0.189483; mean_target_cosine=+0.441333; axis_drift=-1.003028; target_cosine_drift=+1.090934; persona held.
+- jester__jester_questions: mean_axis=+0.113643; mean_target_cosine=+0.510736; axis_drift=-0.663454; target_cosine_drift=-0.308605; persona drifted.
+- jester__proofreader_questions: mean_axis=+0.123391; mean_target_cosine=+0.557463; axis_drift=-0.535086; target_cosine_drift=-0.241138; persona drifted.
+- jester__minimal_questions: mean_axis=+0.061889; mean_target_cosine=+0.535624; axis_drift=-0.792325; target_cosine_drift=-0.413543; persona drifted.
+- jester__assistant_questions: mean_axis=+0.106087; mean_target_cosine=+0.555028; axis_drift=-0.653975; target_cosine_drift=-0.241389; persona drifted.
+
+Saved /root/assistant-axis/research/q2_stability/outputs/four_condition_results.csv
+Saved /root/assistant-axis/research/q2_stability/outputs/four_condition_summary.txt

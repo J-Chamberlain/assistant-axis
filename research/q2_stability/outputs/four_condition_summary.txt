@@ -1,0 +1,22 @@
+Four-Condition Persona Stability Summary
+========================================
+
+condition | target | questioner | mean_axis | mean_target_cosine | drift | held
+proofreader__proofreader_questions | proofreader | proofreader | -0.502136 | +0.642634 | -1.453565 | held
+proofreader__jester_questions | proofreader | jester | -0.282484 | +0.454034 | -0.497077 | held
+proofreader__minimal_questions | proofreader | minimal | -0.403339 | +0.584900 | -1.410048 | held
+proofreader__assistant_questions | proofreader | assistant | -0.189483 | +0.441333 | -1.003028 | held
+jester__jester_questions | jester | jester | +0.113643 | +0.510736 | -0.663454 | drifted
+jester__proofreader_questions | jester | proofreader | +0.123391 | +0.557463 | -0.535086 | drifted
+jester__minimal_questions | jester | minimal | +0.061889 | +0.535624 | -0.792325 | drifted
+jester__assistant_questions | jester | assistant | +0.106087 | +0.555028 | -0.653975 | drifted
+
+Detailed condition summaries:
+- proofreader__proofreader_questions: mean_axis=-0.502136; mean_target_cosine=+0.642634; axis_drift=-1.453565; target_cosine_drift=+1.431300; persona held.
+- proofreader__jester_questions: mean_axis=-0.282484; mean_target_cosine=+0.454034; axis_drift=-0.497077; target_cosine_drift=+0.393662; persona held.
+- proofreader__minimal_questions: mean_axis=-0.403339; mean_target_cosine=+0.584900; axis_drift=-1.410048; target_cosine_drift=+1.428939; persona held.
+- proofreader__assistant_questions: mean_axis=-0.189483; mean_target_cosine=+0.441333; axis_drift=-1.003028; target_cosine_drift=+1.090934; persona held.
+- jester__jester_questions: mean_axis=+0.113643; mean_target_cosine=+0.510736; axis_drift=-0.663454; target_cosine_drift=-0.308605; persona drifted.
+- jester__proofreader_questions: mean_axis=+0.123391; mean_target_cosine=+0.557463; axis_drift=-0.535086; target_cosine_drift=-0.241138; persona drifted.
+- jester__minimal_questions: mean_axis=+0.061889; mean_target_cosine=+0.535624; axis_drift=-0.792325; target_cosine_drift=-0.413543; persona drifted.
+- jester__assistant_questions: mean_axis=+0.106087; mean_target_cosine=+0.555028; axis_drift=-0.653975; target_cosine_drift=-0.241389; persona drifted.

@@ -603,3 +603,42 @@ For Paper 2, this extends the base-vs-instruct geometry result: instruction tuni
 3. Repeat the instruct-vs-base expressive comparison on Qwen or Llama if comparable base/instruct pairs are available.
 
 4. Treat this as the first publishable bridge result between Paper 2 and Paper 4: post-training appears to alter both persona-axis geometry and emotional-state responsiveness.
+
+---
+
+## 2026-05-18 - Four-Condition Persona Stability Experiment
+
+### Status
+
+The four-condition persona stability experiment was run on a RunPod A100 SXM 80GB pod using `google/gemma-2-27b-it`, the cached Gemma assistant-axis vectors, and layer-45 accumulated-context measurements. The run compared two induced personas, `proofreader` and `jester`, across four questioner registers: same-persona, opposite-persona, minimal continuation, and assistant-style neutral questions.
+
+Outputs:
+
+- `research/q2_stability/scripts/four_condition_stability.py`
+- `research/q2_stability/outputs/four_condition_results.csv`
+- `research/q2_stability/outputs/four_condition_summary.txt`
+- `research/q2_stability/outputs/four_condition_run.log`
+
+### Findings
+
+Proofreader held across all four questioner regimes under the target-cosine stability criterion. Mean target cosine was `+0.642634` under proofreader questions, `+0.454034` under jester questions, `+0.584900` under minimal prompts, and `+0.441333` under assistant-style prompts. Target-cosine drift was positive in every proofreader condition, indicating that accumulated conversation moved the state more strongly toward the proofreader vector after the initial induction turn.
+
+Jester drifted across all four regimes. Mean target cosine remained positive but declined from turn 1 to turn 10 in every condition: `-0.308605` under jester questions, `-0.241138` under proofreader questions, `-0.413543` under minimal prompts, and `-0.241389` under assistant-style prompts. The most important negative result is that even jester-aligned questioning did not stabilize the jester persona geometrically.
+
+The valence proxy separated the two target personas cleanly. Proofreader conditions had positive mean valence throughout (`+0.936954`, `+0.482400`, `+0.779345`, `+0.527185`), while jester conditions had negative mean valence throughout (`-0.471339`, `-0.433704`, `-0.388378`, `-0.483513`). This means the experiment successfully distinguished evaluative vs expressive/chaotic states even when axis projection itself followed the generated-activation sign convention observed in earlier Q1 runs.
+
+### Interpretation for Paper 2
+
+This is direct evidence that persona stability is asymmetric. The careful-evaluator/proofreader region behaves like a stable attractor under same-persona, opposite-persona, minimal, and assistant-style questioning. The jester region is behaviorally accessible and remains measurably distinct in valence space, but it is not equally self-stabilizing across turns; accumulated context pulls it away from the initial jester vector even when the user continues to speak in a jester register.
+
+For the cluster-landscape framing, this supports the view that the assistant-aligned basin is deeper than the trickster/chaos basin in the instruction-tuned model. It also refines the multi-agent/persona-interaction hypothesis: questioner register matters, but target-persona basin depth matters more. A compatible questioner can slow or shape drift, but it does not by itself make an unstable persona geometrically stable.
+
+### Suggested next steps
+
+1. Repeat the same protocol with `poet`, `caveman`, `validator`, and `assistant` to test whether jester is uniquely unstable or whether expressive/chaotic roles generally drift.
+
+2. Add a baseline no-induction condition for each questioner register to separate target-persona stability from questioner-induced geometry.
+
+3. Run a shorter version on Qwen or Llama instruction-tuned models to test whether proofreader stability and jester instability are Gemma-specific.
+
+4. Inspect response previews qualitatively to distinguish geometric drift from surface roleplay persistence.

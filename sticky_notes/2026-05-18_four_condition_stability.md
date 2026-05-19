@@ -104,3 +104,7 @@ Experiment designed. Ready to run on GPU (H100 preferred).
 Est. cost: $3-4. Est. time: 45-60 min.
 Paper: 2
 Priority: high — next GPU run
+
+## 2026-05-18 Update
+
+Experiment run on `google/gemma-2-27b-it` using an A100 SXM 80GB pod. Proofreader held across all four questioner regimes, including jester questions, minimal continuation, and assistant-style prompts. Jester drifted across all four regimes, including jester-aligned questioning, despite remaining separable from proofreader in the valence proxy. Result: target-persona basin depth appears more important than conversational register matching; the careful-evaluator basin is substantially more self-stabilizing than the jester/trickster basin in this model.
