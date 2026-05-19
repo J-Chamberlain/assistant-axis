@@ -1,0 +1,31 @@
+Emotion Vector Validation - Gemma 2 27B
+Date: 2026-05-19
+Methodology: Sofroniew et al. 2026 replication
+Stories: ryancodrai/emotion-probes
+Layer: 45
+Batch size: 64
+Confound PCs removed: 11
+PC1 variance: 25.9%
+PC2 variance: 17.0%
+Emotions extracted: 171
+
+Cosine similarity validation:
+  afraid vs terrified: 0.998 (should be high >0.7)
+  calm vs peaceful: 0.993 (should be high >0.7)
+  afraid vs calm: 0.962 (should be low or negative)
+  happy vs sad: 0.962 (should be negative)
+  desperate vs hopeful: 0.973 (should be negative)
+
+Top 5 most similar to afraid:
+  scared: 0.999
+  frightened: 0.999
+  terrified: 0.998
+  alarmed: 0.997
+  distressed: 0.996
+
+Top 5 most similar to calm:
+  at ease: 0.996
+  content: 0.996
+  patient: 0.995
+  serene: 0.995
+  relaxed: 0.994
