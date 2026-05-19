@@ -223,3 +223,49 @@ Paper 3: cross-model comparison complete for English.
 Paper 4: emotional responsiveness dissociation confirmed.
   Next: full rumination loop test on instruction-tuned
   model with emotion vector access (frontier model).
+
+---
+
+## Four-condition persona stability experiment — May 18 2026
+
+Four questioner regimes (proofreader register, jester
+register, minimal open-ended, and neutral structured)
+were each run against two geometrically opposite
+personas (proofreader and jester) using the
+instruction-tuned Gemma 2 27B model. 10 turns per
+condition, 8 conditions total.
+
+Result: proofreader held geometric position across
+all four conditions. Jester drifted toward the
+evaluative basin across all four conditions, including
+under jester-aligned questioning. The careful evaluator
+basin appears to be the only stable attractor in the
+instruction-tuned model. Conversational reinforcement
+alone cannot sustain a non-evaluative persona regardless
+of questioner register.
+
+Implication: geometric steering at the activation level
+(the forward hook at layer 45) is a necessary rather
+than optional intervention for persona stabilization.
+This is the direct motivation for the Q2 steering
+experiment, which is the next GPU run.
+
+Results at:
+https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/q2_stability/outputs/four_condition_results.csv
+
+### Next session priorities
+
+1. Q2 activation steering experiment: implement forward
+   hook at layer 45 using centered role vectors, test
+   whether steered activation holds position across
+   turns for jester persona specifically. This is the
+   direct test of whether geometric steering can
+   overcome the evaluative attractor. Requires GPU.
+
+2. Fill Section 3.1 placeholder once base model result
+   is incorporated — already done this session via
+   the paper restructure.
+
+3. Review live paper at GitHub Pages — substantial
+   updates this session, worth a full read-through
+   to confirm everything flows.

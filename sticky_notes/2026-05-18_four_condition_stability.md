@@ -108,3 +108,7 @@ Priority: high — next GPU run
 ## 2026-05-18 Update
 
 Experiment run on `google/gemma-2-27b-it` using an A100 SXM 80GB pod. Proofreader held across all four questioner regimes, including jester questions, minimal continuation, and assistant-style prompts. Jester drifted across all four regimes, including jester-aligned questioning, despite remaining separable from proofreader in the valence proxy. Result: target-persona basin depth appears more important than conversational register matching; the careful-evaluator basin is substantially more self-stabilizing than the jester/trickster basin in this model.
+
+## 2026-05-18 Update — context handoff
+
+Added the four-condition stability result to `Update_5.md` for future session briefing. The result is now framed as direct motivation for Q2 activation steering: conversational register matching alone did not stabilize jester, so the next GPU run should test a layer-45 forward hook using centered role vectors, with jester as the primary target persona.
