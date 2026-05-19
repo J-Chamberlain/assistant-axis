@@ -112,3 +112,7 @@ Experiment run on `google/gemma-2-27b-it` using an A100 SXM 80GB pod. Proofreade
 ## 2026-05-18 Update — context handoff
 
 Added the four-condition stability result to `Update_5.md` for future session briefing. The result is now framed as direct motivation for Q2 activation steering: conversational register matching alone did not stabilize jester, so the next GPU run should test a layer-45 forward hook using centered role vectors, with jester as the primary target persona.
+
+## 2026-05-18 Paper Update
+
+Incorporated the four-condition stability result into `visualizations/research_paper.md` in Sections 1 and 9, then resynchronized the section split files from the updated source.
