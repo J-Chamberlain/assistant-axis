@@ -1,0 +1,60 @@
+<stdin>:5: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+Tensor shape: (171, 4608)
+Number of emotions: 171
+
+Variance explained by first 10 PCs:
+  PC1: 25.88%
+  PC2: 17.04%
+  PC3: 12.64%
+  PC4: 6.00%
+  PC5: 5.12%
+  PC6: 3.94%
+  PC7: 3.40%
+  PC8: 2.50%
+  PC9: 2.24%
+  PC10: 1.88%
+  Total (PC1+PC2): 42.92%
+
+Cosine similarity between semantic pairs:
+  afraid          vs terrified      : +0.9982  [HIGH]
+  afraid          vs panicked       : +0.9959  [HIGH]
+  calm            vs peaceful       : +0.9935  [HIGH]
+  calm            vs serene         : +0.9951  [HIGH]
+  afraid          vs calm           : +0.9615  [HIGH]
+  happy           vs sad            : +0.9619  [HIGH]
+  desperate       vs hopeful        : +0.9732  [HIGH]
+  angry           vs calm           : +0.9610  [HIGH]
+  joyful          vs loving         : +0.9797  [HIGH]
+
+Top 5 most similar to afraid:
+  scared              : +0.9992
+  frightened          : +0.9992
+  terrified           : +0.9982
+  alarmed             : +0.9974
+  distressed          : +0.9964
+
+Top 5 most similar to calm:
+  at ease             : +0.9958
+  content             : +0.9956
+  patient             : +0.9953
+  serene              : +0.9951
+  relaxed             : +0.9936
+
+Top 5 most similar to angry:
+  mad                 : +0.9991
+  irate               : +0.9990
+  furious             : +0.9989
+  outraged            : +0.9983
+  enraged             : +0.9979
+
+Top 5 most similar to joyful:
+  happy               : +0.9987
+  delighted           : +0.9986
+  elated              : +0.9982
+  jubilant            : +0.9979
+  thrilled            : +0.9966
+
+LAYER 45 ASSESSMENT:
+  PCA gate (need PC1>=30%): 25.9% - FAIL
+  Semantic pairs (afraid/terrified): 0.9982 - PASS
+  Semantic pairs (calm/peaceful): 0.9935 - PASS
