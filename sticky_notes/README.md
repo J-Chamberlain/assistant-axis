@@ -33,3 +33,4 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-18_essay2_four_registers.md | Essay two: four registers as narrative device | essay 2 | write-up |
 | 2026-05-19_paper4_forking_deliberation.md | Paper 4: forking deliberation and convergence hypothesis | 4 | after Q2 |
 | 2026-05-19_literature_positioning.md | Paper 2 literature positioning and novelty statement | 2 | high |
+| 2026-05-20_llama_access_pending.md | Llama 3.3 70B gated access pending | 3/4 | unblock before Llama pilot |

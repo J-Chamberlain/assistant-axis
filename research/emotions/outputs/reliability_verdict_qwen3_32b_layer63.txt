@@ -1,0 +1,17 @@
+{
+  "model": "Qwen/Qwen3-32B",
+  "layer": 63,
+  "suffix": "qwen3_32b_layer63",
+  "pc1_var": 8.323806192620802,
+  "pc2_var": 6.056900923861541,
+  "cosine_pairs": {
+    "afraid/calm": -0.3251998172923649,
+    "happy/sad": -0.40679897964731615,
+    "angry/content": -0.4698911027656916,
+    "disgusted/joyful": -0.2684240660018277
+  },
+  "anticorrelated_pairs": 4,
+  "gate_pass": false,
+  "verdict": "LOW",
+  "n_emotions": 11
+}

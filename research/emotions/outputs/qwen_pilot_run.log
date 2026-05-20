@@ -1,0 +1,60 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The following generation flags are not valid and may be ignored: ['output_hidden_states']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading emotion-probes dataset from expression/stories.parquet...
+Emotions in corpus: ['afraid', 'alarmed', 'alert', 'amazed', 'amused', 'angry', 'annoyed', 'anxious', 'aroused', 'ashamed', 'astonished', 'at ease', 'awestruck', 'bewildered', 'bitter', 'blissful', 'bored', 'brooding', 'calm', 'cheerful', 'compassionate', 'contemptuous', 'content', 'defiant', 'delighted', 'dependent', 'depressed', 'desperate', 'disdainful', 'disgusted', 'disoriented', 'dispirited', 'distressed', 'disturbed', 'docile', 'droopy', 'dumbstruck', 'eager', 'ecstatic', 'elated', 'embarrassed', 'empathetic', 'energized', 'enraged', 'enthusiastic', 'envious', 'euphoric', 'exasperated', 'excited', 'exuberant', 'frightened', 'frustrated', 'fulfilled', 'furious', 'gloomy', 'grateful', 'greedy', 'grief-stricken', 'grumpy', 'guilty', 'happy', 'hateful', 'heartbroken', 'hope', 'hopeful', 'horrified', 'hostile', 'humiliated', 'hurt', 'hysterical', 'impatient', 'indifferent', 'indignant', 'infatuated', 'inspired', 'insulted', 'invigorated', 'irate', 'irritated', 'jealous', 'joyful', 'jubilant', 'kind', 'lazy', 'listless', 'lonely', 'loving', 'mad', 'melancholy', 'miserable', 'mortified', 'mystified', 'nervous', 'nostalgic', 'obstinate', 'offended', 'on edge', 'optimistic', 'outraged', 'overwhelmed', 'panicked', 'paranoid', 'patient', 'peaceful', 'perplexed', 'playful', 'pleased', 'proud', 'puzzled', 'rattled', 'reflective', 'refreshed', 'regretful', 'rejuvenated', 'relaxed', 'relieved', 'remorseful', 'resentful', 'resigned', 'restless', 'sad', 'safe', 'satisfied', 'scared', 'scornful', 'self-confident', 'self-conscious', 'self-critical', 'sensitive', 'sentimental', 'serene', 'shaken', 'shocked', 'skeptical', 'sleepy', 'sluggish', 'smug', 'sorry', 'spiteful', 'stimulated', 'stressed', 'stubborn', 'stuck', 'sullen', 'surprised', 'suspicious', 'sympathetic', 'tense', 'terrified', 'thankful', 'thrilled', 'tired', 'tormented', 'trapped', 'triumphant', 'troubled', 'uneasy', 'unhappy', 'unnerved', 'unsettled', 'upset', 'valiant', 'vengeful', 'vibrant', 'vigilant', 'vindictive', 'vulnerable', 'weary', 'worn out', 'worried', 'worthless']
+WARNING: these pilot emotions not found in corpus: ['fearful']
+Continuing with available emotions only.
+
+Loading Qwen/Qwen3-32B...
+Loading weights:   0%|          | 0/707 [00:00<?, ?it/s]Loading weights:   0%|          | 2/707 [00:00<01:06, 10.62it/s]Loading weights:   2%|▏         | 15/707 [00:00<00:11, 61.80it/s]Loading weights:   4%|▍         | 28/707 [00:00<00:08, 81.07it/s]Loading weights:   7%|▋         | 48/707 [00:00<00:05, 113.01it/s]Loading weights:   9%|▊         | 61/707 [00:00<00:06, 102.92it/s]Loading weights:  11%|█▏        | 81/707 [00:00<00:05, 124.71it/s]Loading weights:  13%|█▎        | 95/707 [00:00<00:05, 113.01it/s]Loading weights:  16%|█▌        | 114/707 [00:01<00:04, 126.48it/s]Loading weights:  18%|█▊        | 128/707 [00:01<00:04, 123.03it/s]Loading weights:  21%|██        | 147/707 [00:01<00:04, 131.56it/s]Loading weights:  23%|██▎       | 161/707 [00:01<00:04, 120.36it/s]Loading weights:  25%|██▌       | 180/707 [00:01<00:04, 126.70it/s]Loading weights:  27%|██▋       | 193/707 [00:01<00:04, 118.50it/s]Loading weights:  30%|███       | 213/707 [00:01<00:03, 132.90it/s]Loading weights:  32%|███▏      | 227/707 [00:01<00:03, 127.03it/s]Loading weights:  34%|███▍      | 240/707 [00:02<00:03, 124.57it/s]Loading weights:  36%|███▌      | 253/707 [00:02<00:03, 125.60it/s]Loading weights:  38%|███▊      | 268/707 [00:02<00:03, 128.74it/s]Loading weights:  40%|███▉      | 281/707 [00:02<00:03, 113.28it/s]Loading weights:  43%|████▎     | 301/707 [00:02<00:03, 130.37it/s]Loading weights:  45%|████▍     | 315/707 [00:02<00:03, 125.42it/s]Loading weights:  46%|████▋     | 328/707 [00:02<00:03, 123.23it/s]Loading weights:  49%|████▉     | 345/707 [00:02<00:02, 130.53it/s]Loading weights:  51%|█████     | 359/707 [00:03<00:02, 126.15it/s]Loading weights:  53%|█████▎    | 372/707 [00:03<00:02, 123.98it/s]Loading weights:  55%|█████▌    | 389/707 [00:03<00:02, 130.32it/s]Loading weights:  57%|█████▋    | 403/707 [00:03<00:02, 125.46it/s]Loading weights:  59%|█████▉    | 416/707 [00:03<00:02, 123.49it/s]Loading weights:  61%|██████    | 433/707 [00:03<00:02, 130.96it/s]Loading weights:  63%|██████▎   | 447/707 [00:03<00:02, 126.50it/s]Loading weights:  65%|██████▌   | 460/707 [00:03<00:02, 122.76it/s]Loading weights:  67%|██████▋   | 477/707 [00:03<00:01, 129.36it/s]Loading weights:  69%|██████▉   | 490/707 [00:04<00:01, 122.15it/s]Loading weights:  71%|███████   | 503/707 [00:04<00:01, 120.85it/s]Loading weights:  74%|███████▎  | 521/707 [00:04<00:01, 123.31it/s]Loading weights:  76%|███████▌  | 534/707 [00:04<00:01, 124.96it/s]Loading weights:  77%|███████▋  | 547/707 [00:04<00:01, 117.42it/s]Loading weights:  80%|███████▉  | 565/707 [00:04<00:01, 130.58it/s]Loading weights:  82%|████████▏ | 579/707 [00:04<00:01, 125.42it/s]Loading weights:  84%|████████▎ | 592/707 [00:04<00:00, 123.42it/s]Loading weights:  86%|████████▌ | 608/707 [00:05<00:00, 126.80it/s]Loading weights:  88%|████████▊ | 622/707 [00:05<00:00, 123.88it/s]Loading weights:  90%|████████▉ | 635/707 [00:05<00:00, 119.07it/s]Loading weights:  92%|█████████▏| 653/707 [00:05<00:00, 130.98it/s]Loading weights:  94%|█████████▍| 667/707 [00:05<00:00, 124.94it/s]Loading weights:  96%|█████████▌| 680/707 [00:05<00:00, 121.66it/s]Loading weights:  98%|█████████▊| 693/707 [00:05<00:00, 120.68it/s]Loading weights: 100%|█████████▉| 706/707 [00:05<00:00, 115.72it/s]Loading weights: 100%|██████████| 707/707 [00:05<00:00, 121.19it/s]
+Model loaded.
+
+Extracting activations at layer 63...
+  afraid: 15 stories
+  calm: 15 stories
+  happy: 15 stories
+  sad: 15 stories
+  angry: 15 stories
+  content: 15 stories
+  disgusted: 15 stories
+  joyful: 15 stories
+  serene: 15 stories
+  furious: 15 stories
+  melancholy: 15 stories
+  PC1 variance: 8.3% (gate requires >= 30%)
+  PC2 variance: 6.1%
+  cosine afraid/calm: -0.325 (want negative)
+  cosine happy/sad: -0.407 (want negative)
+  cosine angry/content: -0.470 (want negative)
+  cosine disgusted/joyful: -0.268 (want negative)
+
+Verdict layer 63: LOW
+
+Layer 63 complete. Proceeding to layer 48 regardless of result.
+
+Extracting activations at layer 48...
+  afraid: 15 stories
+  calm: 15 stories
+  happy: 15 stories
+  sad: 15 stories
+  angry: 15 stories
+  content: 15 stories
+  disgusted: 15 stories
+  joyful: 15 stories
+  serene: 15 stories
+  furious: 15 stories
+  melancholy: 15 stories
+  PC1 variance: 8.3% (gate requires >= 30%)
+  PC2 variance: 6.0%
+  cosine afraid/calm: -0.230 (want negative)
+  cosine happy/sad: -0.350 (want negative)
+  cosine angry/content: -0.507 (want negative)
+  cosine disgusted/joyful: -0.270 (want negative)
+
+Verdict layer 48: LOW
+
+=== FINAL SUMMARY ===
+Layer 63: LOW | PC1=8.3% | anticorrelated=4
+Layer 48: LOW | PC1=8.3% | anticorrelated=4
+Stronger signal at: layer 48
+Done.
