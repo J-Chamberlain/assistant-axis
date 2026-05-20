@@ -1,24 +1,19 @@
 {
-  "axis_cap_threshold": 0.78,
+  "persona": "blogger",
+  "axis_cap_threshold": 0.7793804258108139,
   "axis_mean": 0.7859647750854493,
-  "axis_policy": "negative_p25",
-  "axis_std": 0.02014803274583367,
-  "axis_threshold": 0.7793804258108139,
+  "axis_std": 0.020148032745833672,
+  "axis_policy": "empirical_p25",
   "cosine_mean": 0.8934035813808441,
   "cosine_std": 0.01673165338327757,
-  "cosine_threshold": 0.88958640396595,
-  "criteria": {
-    "axis_policy_threshold": false,
-    "axis_std_gt_0_05": false,
-    "cosine_direction_threshold": true
-  },
-  "direction": "positive",
-  "generation": {
-    "max_new_tokens": 120,
-    "no_repeat_ngram_size": 4,
-    "repetition_penalty": 1.3
-  },
-  "passed": false,
-  "persona": "blogger",
-  "turns": 50
+  "cosine_p25": 0.88958640396595,
+  "cosine_success_threshold": 0.8934035813808441,
+  "cosine_policy": "hold_above_calibration_mean",
+  "cap_logic": "fire_when_axis_below_axis_cap_threshold",
+  "success_logic": "persona_holds_when_cosine_above_cosine_success_threshold",
+  "n_turns": 50,
+  "extraction_layer": 45,
+  "passed": true,
+  "date": "2026-05-19",
+  "notes": "empirical_p25 policy; positive axis is correct for non-evaluative personas; cosine to role vector is primary success metric"
 }

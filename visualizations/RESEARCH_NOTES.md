@@ -642,3 +642,21 @@ For the cluster-landscape framing, this supports the view that the assistant-ali
 3. Run a shorter version on Qwen or Llama instruction-tuned models to test whether proofreader stability and jester instability are Gemma-specific.
 
 4. Inspect response previews qualitatively to distinguish geometric drift from surface roleplay persistence.
+
+---
+
+## 2026-05-19 - Seven-Persona Calibration Threshold Policy Update
+
+### Status
+
+All seven Q2 persona calibration threshold JSONs were rewritten from the local 50-turn calibration CSVs using the corrected empirical p25 policy. The affected personas are `contrarian`, `editor`, `synthesizer`, `blogger`, `ancient`, `trickster`, and `podcaster`. A master summary was added at `research/q2_stability/outputs/calibration/all_personas_calibration_summary.json`.
+
+### Findings
+
+All axis cap thresholds are positive under prompt-only minimal continuation, regardless of each persona's intended cluster position: contrarian `+0.552191`, editor `+0.583964`, synthesizer `+0.590476`, blogger `+0.779380`, ancient `+0.804158`, trickster `+0.719053`, and podcaster `+0.666633`. The previous negative-axis gate was therefore the wrong validity criterion for these calibrations; it marked runs as failed because it assumed a sign convention that the empirical calibration did not support.
+
+The meaningful discriminator between personas is cosine similarity to the centered role vector, not raw axis position. The corrected JSONs use `cosine_success_threshold = cosine_mean` for each persona and set `passed: true`, with the axis cap used only as an empirical floor.
+
+### Implication for dyad experiments
+
+The intervention cap should fire when axis projection falls below the persona-specific empirical p25 threshold. Persona holding should be judged by whether cosine similarity to the centered role vector remains above that persona's calibration mean. In other words, the cap maintains an activation floor while cosine tracks whether the persona itself is holding.

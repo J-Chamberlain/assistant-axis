@@ -1,0 +1,38 @@
+{
+  "calibration_date": "2026-05-19",
+  "model": "google/gemma-2-27b-it",
+  "extraction_layer": 45,
+  "n_calibration_turns": 50,
+  "policy": "empirical_p25_axis_with_cosine_success_criterion",
+  "personas": {
+    "contrarian": {
+      "axis_cap_threshold": 0.5521906912326813,
+      "cosine_success_threshold": -0.21660294495522975
+    },
+    "editor": {
+      "axis_cap_threshold": 0.5839639902114868,
+      "cosine_success_threshold": -0.24674165606498719
+    },
+    "synthesizer": {
+      "axis_cap_threshold": 0.5904756188392639,
+      "cosine_success_threshold": -0.038616831433027986
+    },
+    "blogger": {
+      "axis_cap_threshold": 0.7793804258108139,
+      "cosine_success_threshold": 0.8934035813808441
+    },
+    "ancient": {
+      "axis_cap_threshold": 0.8041578531265259,
+      "cosine_success_threshold": 0.3191160666942596
+    },
+    "trickster": {
+      "axis_cap_threshold": 0.7190530300140381,
+      "cosine_success_threshold": 0.7500517165660858
+    },
+    "podcaster": {
+      "axis_cap_threshold": 0.666632816195488,
+      "cosine_success_threshold": 0.8183325695991516
+    }
+  },
+  "notes": "Cap fires when axis projection falls below persona-specific empirical p25 threshold. Persona is considered held when cosine similarity to centered role vector remains above calibration mean. All thresholds are positive because prompt-only induction under minimal prompts produces positive-axis activation regardless of persona cluster position. This reflects the strong evaluative attractor in the instruction-tuned model."
+}

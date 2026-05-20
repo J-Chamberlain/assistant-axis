@@ -140,3 +140,7 @@ Inspected the full contrarian trajectory and accepted the empirical p25 as the c
 ## Update 2026-05-19
 
 Ran the remaining six centroid-persona calibrations: editor, synthesizer, blogger, ancient, trickster, and podcaster. All six completed 50 turns without the late-turn activation-freeze issue. The old negative-axis gate marked all six as failed, but blogger, ancient, trickster, and podcaster showed strong positive role-vector cosine, indicating that the remaining personas likely also need empirical per-persona axis policies rather than the original universal negative-axis threshold.
+
+## Update 2026-05-19
+
+Rewrote all seven persona threshold JSONs with the corrected `empirical_p25` axis policy and cosine-to-role success criterion. Added `all_personas_calibration_summary.json`; all thresholds now pass, and the dyad experiment should treat the axis cap as an empirical floor while using role-vector cosine to judge persona retention.

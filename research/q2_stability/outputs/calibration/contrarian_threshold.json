@@ -1,24 +1,19 @@
 {
-  "axis_cap_threshold": 0.55,
+  "persona": "contrarian",
+  "axis_cap_threshold": 0.5521906912326813,
   "axis_mean": 0.6737444251775742,
-  "axis_policy": "empirical_p25",
   "axis_std": 0.14930199299252214,
-  "axis_threshold": 0.5521906912326813,
+  "axis_policy": "empirical_p25",
   "cosine_mean": -0.21660294495522975,
   "cosine_std": 0.2459616839835009,
-  "cosine_threshold": -0.44801852107048035,
-  "criteria": {
-    "axis_policy_threshold": true,
-    "axis_std_gt_0_05": true,
-    "cosine_direction_threshold": true
-  },
-  "direction": "negative",
-  "generation": {
-    "max_new_tokens": 120,
-    "no_repeat_ngram_size": 4,
-    "repetition_penalty": 1.3
-  },
+  "cosine_p25": -0.44801852107048035,
+  "cosine_success_threshold": -0.21660294495522975,
+  "cosine_policy": "hold_above_calibration_mean",
+  "cap_logic": "fire_when_axis_below_axis_cap_threshold",
+  "success_logic": "persona_holds_when_cosine_above_cosine_success_threshold",
+  "n_turns": 50,
+  "extraction_layer": 45,
   "passed": true,
-  "persona": "contrarian",
-  "turns": 50
+  "date": "2026-05-19",
+  "notes": "empirical_p25 policy; positive axis is correct for non-evaluative personas; cosine to role vector is primary success metric"
 }
