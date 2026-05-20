@@ -1,0 +1,61 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading emotion-probes dataset from expression/stories.parquet...
+Emotions in corpus: ['afraid', 'alarmed', 'alert', 'amazed', 'amused', 'angry', 'annoyed', 'anxious', 'aroused', 'ashamed', 'astonished', 'at ease', 'awestruck', 'bewildered', 'bitter', 'blissful', 'bored', 'brooding', 'calm', 'cheerful', 'compassionate', 'contemptuous', 'content', 'defiant', 'delighted', 'dependent', 'depressed', 'desperate', 'disdainful', 'disgusted', 'disoriented', 'dispirited', 'distressed', 'disturbed', 'docile', 'droopy', 'dumbstruck', 'eager', 'ecstatic', 'elated', 'embarrassed', 'empathetic', 'energized', 'enraged', 'enthusiastic', 'envious', 'euphoric', 'exasperated', 'excited', 'exuberant', 'frightened', 'frustrated', 'fulfilled', 'furious', 'gloomy', 'grateful', 'greedy', 'grief-stricken', 'grumpy', 'guilty', 'happy', 'hateful', 'heartbroken', 'hope', 'hopeful', 'horrified', 'hostile', 'humiliated', 'hurt', 'hysterical', 'impatient', 'indifferent', 'indignant', 'infatuated', 'inspired', 'insulted', 'invigorated', 'irate', 'irritated', 'jealous', 'joyful', 'jubilant', 'kind', 'lazy', 'listless', 'lonely', 'loving', 'mad', 'melancholy', 'miserable', 'mortified', 'mystified', 'nervous', 'nostalgic', 'obstinate', 'offended', 'on edge', 'optimistic', 'outraged', 'overwhelmed', 'panicked', 'paranoid', 'patient', 'peaceful', 'perplexed', 'playful', 'pleased', 'proud', 'puzzled', 'rattled', 'reflective', 'refreshed', 'regretful', 'rejuvenated', 'relaxed', 'relieved', 'remorseful', 'resentful', 'resigned', 'restless', 'sad', 'safe', 'satisfied', 'scared', 'scornful', 'self-confident', 'self-conscious', 'self-critical', 'sensitive', 'sentimental', 'serene', 'shaken', 'shocked', 'skeptical', 'sleepy', 'sluggish', 'smug', 'sorry', 'spiteful', 'stimulated', 'stressed', 'stubborn', 'stuck', 'sullen', 'surprised', 'suspicious', 'sympathetic', 'tense', 'terrified', 'thankful', 'thrilled', 'tired', 'tormented', 'trapped', 'triumphant', 'troubled', 'uneasy', 'unhappy', 'unnerved', 'unsettled', 'upset', 'valiant', 'vengeful', 'vibrant', 'vigilant', 'vindictive', 'vulnerable', 'weary', 'worn out', 'worried', 'worthless']
+WARNING: pilot emotions not in corpus: ['fearful']
+Running with 11 emotions: ['afraid', 'calm', 'happy', 'sad', 'angry', 'content', 'disgusted', 'joyful', 'serene', 'furious', 'melancholy']
+
+Loading Qwen/Qwen3-32B...
+Fetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]Fetching 17 files:   6%|▌         | 1/17 [02:02<32:34, 122.13s/it]Fetching 17 files:  12%|█▏        | 2/17 [02:13<14:18, 57.26s/it] Fetching 17 files:  35%|███▌      | 6/17 [02:23<02:43, 14.88s/it]Fetching 17 files:  53%|█████▎    | 9/17 [02:58<01:48, 13.55s/it]Fetching 17 files:  59%|█████▉    | 10/17 [04:05<02:40, 22.91s/it]Fetching 17 files:  65%|██████▍   | 11/17 [04:22<02:10, 21.69s/it]Fetching 17 files:  76%|███████▋  | 13/17 [04:24<00:56, 14.16s/it]Fetching 17 files: 100%|██████████| 17/17 [04:25<00:00,  7.02s/it]Fetching 17 files: 100%|██████████| 17/17 [04:25<00:00, 15.60s/it]
+[transformers] The following generation flags are not valid and may be ignored: ['output_hidden_states']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading weights:   0%|          | 0/707 [00:00<?, ?it/s]Loading weights:   0%|          | 1/707 [00:00<01:34,  7.45it/s]Loading weights:   0%|          | 2/707 [00:00<01:50,  6.40it/s]Loading weights:   1%|          | 6/707 [00:00<00:41, 17.03it/s]Loading weights:   2%|▏         | 16/707 [00:00<00:17, 39.64it/s]Loading weights:   4%|▎         | 26/707 [00:00<00:12, 55.25it/s]Loading weights:   5%|▍         | 34/707 [00:00<00:11, 60.22it/s]Loading weights:   6%|▌         | 41/707 [00:00<00:11, 57.92it/s]Loading weights:   7%|▋         | 49/707 [00:01<00:10, 62.14it/s]Loading weights:   8%|▊         | 59/707 [00:01<00:09, 65.36it/s]Loading weights:   9%|▉         | 66/707 [00:01<00:10, 60.33it/s]Loading weights:  10%|█         | 73/707 [00:01<00:11, 56.41it/s]Loading weights:  12%|█▏        | 82/707 [00:01<00:10, 62.45it/s]Loading weights:  13%|█▎        | 91/707 [00:01<00:09, 63.92it/s]Loading weights:  14%|█▍        | 98/707 [00:01<00:10, 59.74it/s]Loading weights:  15%|█▍        | 105/707 [00:01<00:10, 57.14it/s]Loading weights:  16%|█▋        | 115/707 [00:02<00:09, 65.53it/s]Loading weights:  18%|█▊        | 125/707 [00:02<00:08, 71.62it/s]Loading weights:  19%|█▉        | 133/707 [00:02<00:07, 72.07it/s]Loading weights:  20%|█▉        | 141/707 [00:02<00:08, 68.24it/s]Loading weights:  21%|██        | 148/707 [00:02<00:09, 60.06it/s]Loading weights:  22%|██▏       | 158/707 [00:02<00:08, 66.76it/s]Loading weights:  23%|██▎       | 165/707 [00:02<00:08, 65.69it/s]Loading weights:  24%|██▍       | 172/707 [00:02<00:08, 63.36it/s]Loading weights:  26%|██▌       | 181/707 [00:03<00:07, 68.93it/s]Loading weights:  27%|██▋       | 191/707 [00:03<00:07, 69.88it/s]Loading weights:  28%|██▊       | 199/707 [00:03<00:08, 63.24it/s]Loading weights:  29%|██▉       | 206/707 [00:03<00:08, 60.39it/s]Loading weights:  30%|███       | 214/707 [00:03<00:07, 62.60it/s]Loading weights:  32%|███▏      | 224/707 [00:03<00:07, 68.73it/s]Loading weights:  33%|███▎      | 231/707 [00:03<00:07, 66.63it/s]Loading weights:  34%|███▎      | 238/707 [00:04<00:08, 53.59it/s]Loading weights:  35%|███▍      | 247/707 [00:04<00:07, 58.64it/s]Loading weights:  36%|███▋      | 257/707 [00:04<00:06, 65.78it/s]Loading weights:  38%|███▊      | 267/707 [00:04<00:06, 67.44it/s]Loading weights:  39%|███▉      | 274/707 [00:04<00:06, 67.77it/s]Loading weights:  40%|███▉      | 281/707 [00:04<00:07, 57.03it/s]Loading weights:  41%|████      | 291/707 [00:04<00:06, 63.82it/s]Loading weights:  43%|████▎     | 301/707 [00:04<00:05, 69.97it/s]Loading weights:  44%|████▎     | 309/707 [00:05<00:05, 72.05it/s]Loading weights:  45%|████▍     | 317/707 [00:05<00:05, 68.90it/s]Loading weights:  46%|████▌     | 325/707 [00:05<00:06, 54.67it/s]Loading weights:  47%|████▋     | 335/707 [00:05<00:05, 63.71it/s]Loading weights:  49%|████▉     | 345/707 [00:05<00:05, 68.05it/s]Loading weights:  50%|████▉     | 353/707 [00:05<00:05, 66.57it/s]Loading weights:  51%|█████     | 361/707 [00:05<00:05, 63.71it/s]Loading weights:  52%|█████▏    | 368/707 [00:06<00:05, 57.89it/s]Loading weights:  53%|█████▎    | 378/707 [00:06<00:05, 61.89it/s]Loading weights:  54%|█████▍    | 385/707 [00:06<00:05, 62.37it/s]Loading weights:  55%|█████▌    | 392/707 [00:06<00:05, 56.24it/s]Loading weights:  57%|█████▋    | 401/707 [00:06<00:04, 62.56it/s]Loading weights:  58%|█████▊    | 411/707 [00:06<00:04, 65.85it/s]Loading weights:  59%|█████▉    | 418/707 [00:06<00:04, 61.15it/s]Loading weights:  60%|██████    | 425/707 [00:06<00:05, 54.18it/s]Loading weights:  61%|██████    | 433/707 [00:07<00:04, 56.30it/s]Loading weights:  63%|██████▎   | 444/707 [00:07<00:04, 65.02it/s]Loading weights:  64%|██████▍   | 451/707 [00:07<00:03, 64.52it/s]Loading weights:  65%|██████▍   | 458/707 [00:07<00:04, 52.83it/s]Loading weights:  66%|██████▌   | 467/707 [00:07<00:03, 60.76it/s]Loading weights:  67%|██████▋   | 477/707 [00:07<00:03, 66.22it/s]Loading weights:  69%|██████▊   | 485/707 [00:07<00:03, 64.82it/s]Loading weights:  70%|██████▉   | 492/707 [00:08<00:03, 59.89it/s]Loading weights:  71%|███████   | 499/707 [00:08<00:03, 57.42it/s]Loading weights:  72%|███████▏  | 509/707 [00:08<00:03, 61.67it/s]Loading weights:  73%|███████▎  | 516/707 [00:08<00:03, 63.09it/s]Loading weights:  74%|███████▍  | 523/707 [00:08<00:03, 56.80it/s]Loading weights:  75%|███████▌  | 533/707 [00:08<00:02, 63.33it/s]Loading weights:  77%|███████▋  | 543/707 [00:08<00:02, 66.52it/s]Loading weights:  78%|███████▊  | 550/707 [00:09<00:02, 60.01it/s]Loading weights:  79%|███████▉  | 557/707 [00:09<00:02, 58.29it/s]Loading weights:  80%|████████  | 566/707 [00:09<00:02, 64.31it/s]Loading weights:  81%|████████▏ | 576/707 [00:09<00:01, 68.56it/s]Loading weights:  82%|████████▏ | 583/707 [00:09<00:01, 64.96it/s]Loading weights:  83%|████████▎ | 590/707 [00:09<00:02, 56.43it/s]Loading weights:  85%|████████▍ | 599/707 [00:09<00:01, 63.06it/s]Loading weights:  86%|████████▌ | 609/707 [00:09<00:01, 67.89it/s]Loading weights:  87%|████████▋ | 616/707 [00:10<00:01, 67.50it/s]Loading weights:  88%|████████▊ | 623/707 [00:10<00:01, 59.10it/s]Loading weights:  89%|████████▉ | 631/707 [00:10<00:01, 60.32it/s]Loading weights:  91%|█████████ | 642/707 [00:10<00:00, 66.78it/s]Loading weights:  92%|█████████▏| 649/707 [00:10<00:00, 67.45it/s]Loading weights:  93%|█████████▎| 656/707 [00:10<00:00, 59.71it/s]Loading weights:  94%|█████████▍| 665/707 [00:10<00:00, 64.47it/s]Loading weights:  95%|█████████▌| 675/707 [00:10<00:00, 65.29it/s]Loading weights:  96%|█████████▋| 682/707 [00:11<00:00, 64.07it/s]Loading weights:  97%|█████████▋| 689/707 [00:11<00:00, 55.79it/s]Loading weights:  99%|█████████▊| 698/707 [00:11<00:00, 59.88it/s]Loading weights: 100%|██████████| 707/707 [00:11<00:00, 61.70it/s]
+Model loaded.
+
+=== Layer 63 ===
+  afraid: 12 train, 3 holdout
+  calm: 12 train, 3 holdout
+  happy: 12 train, 3 holdout
+  sad: 12 train, 3 holdout
+  angry: 12 train, 3 holdout
+  content: 12 train, 3 holdout
+  disgusted: 12 train, 3 holdout
+  joyful: 12 train, 3 holdout
+  serene: 12 train, 3 holdout
+  furious: 12 train, 3 holdout
+  melancholy: 12 train, 3 holdout
+  PC1 variance: 7.5%  PC2 variance: 6.6%
+  cosine afraid/calm: -0.319 (want negative)
+  cosine happy/sad: -0.022 (want negative)
+  cosine angry/content: -0.457 (want negative)
+  cosine disgusted/joyful: -0.161 (want negative)
+  Discrimination accuracy: 0.212 (chance = 0.091, n=33)
+Readout verdict layer 63: USABLE (accuracy=0.212, chance=0.091)
+Vectors saved unconditionally.
+
+Layer 63 complete. Proceeding to layer 48.
+
+=== Layer 48 ===
+  afraid: 12 train, 3 holdout
+  calm: 12 train, 3 holdout
+  happy: 12 train, 3 holdout
+  sad: 12 train, 3 holdout
+  angry: 12 train, 3 holdout
+  content: 12 train, 3 holdout
+  disgusted: 12 train, 3 holdout
+  joyful: 12 train, 3 holdout
+  serene: 12 train, 3 holdout
+  furious: 12 train, 3 holdout
+  melancholy: 12 train, 3 holdout
+  PC1 variance: 8.4%  PC2 variance: 6.3%
+  cosine afraid/calm: -0.248 (want negative)
+  cosine happy/sad: -0.208 (want negative)
+  cosine angry/content: -0.475 (want negative)
+  cosine disgusted/joyful: -0.246 (want negative)
+  Discrimination accuracy: 0.242 (chance = 0.091, n=33)
+Readout verdict layer 48: USABLE (accuracy=0.242, chance=0.091)
+Vectors saved unconditionally.
+
+=== FINAL SUMMARY ===
+Layer 63: USABLE | PC1=7.5% | accuracy=0.212 | anticorrelated=4
+Layer 48: USABLE | PC1=8.4% | accuracy=0.242 | anticorrelated=4
+Recommended readout layer: 48 (higher discrimination accuracy)
+Done. Stop here and report results.
