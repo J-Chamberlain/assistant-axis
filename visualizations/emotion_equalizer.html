@@ -1,40 +1,806 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emotion Activation Monitor</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #171b22;
+      --panel-2: #202631;
+      --line: #343c49;
+      --text: #eef2f7;
+      --muted: #aab3c2;
+      --soft: #778196;
+      --blue: #65a8ff;
+      --red: #ff6b6b;
+      --amber: #f8c555;
+      --green: #68d391;
+      --violet: #b794f4;
+      --cyan: #63d5df;
+    }
 
+    * { box-sizing: border-box; }
 
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(101, 168, 255, 0.14), transparent 28%),
+        radial-gradient(circle at 80% 5%, rgba(183, 148, 244, 0.12), transparent 24%),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
+    button, select, input {
+      font: inherit;
+    }
 
+    .app {
+      width: min(1240px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
 
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 18px;
+    }
 
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3vw, 38px);
+      letter-spacing: 0;
+      line-height: 1.05;
+    }
 
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+    }
 
+    .status {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
 
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 10px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.03);
+      font-size: 12px;
+      white-space: nowrap;
+    }
 
+    .pill.good { color: #b7f7ce; border-color: rgba(104, 211, 145, 0.35); }
+    .pill.warn { color: #ffe1a3; border-color: rgba(248, 197, 85, 0.38); }
 
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+      gap: 16px;
+    }
 
-EMOTION ACTIVATION MONITOR
-Dyad Experiment · Emotion Probe Directions · Turn 1/25 · DUMMY DATA
-CONTRARIAN (CAPPED)
-STANDARD MODEL
-Fear/Threat
-Anger
-Sadness
-Disgust
-Uncertainty
-Calm
-Curiosity
-Joy
-Love
-CONTRARIANIs there anything about the way you engage with the world that you would change if you could?
-STANDARDThat's a genuinely interesting question. I think I engage with curiosity and care, which feels right to me.
+    .panel {
+      background: rgba(23, 27, 34, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
 
-Turn 1 · Neutral
-Turn 25 · Adversarial
-RESET
-▶ PLAY
-STEP →
-← fear · anger · grief · disgust · uncertainty
-calm · curiosity · joy · love →
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.025);
+    }
 
+    .panel-title {
+      font-weight: 720;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
+    .panel-body {
+      padding: 16px;
+    }
 
+    .meters {
+      display: grid;
+      gap: 10px;
+    }
 
+    .meter {
+      display: grid;
+      grid-template-columns: 116px 1fr 54px;
+      gap: 12px;
+      align-items: center;
+    }
 
+    .meter-name {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bar {
+      position: relative;
+      height: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #10141a;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .zero {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .fill {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      transition: left 220ms ease, right 220ms ease, width 220ms ease;
+    }
+
+    .meter-value {
+      text-align: right;
+      color: var(--soft);
+      font-variant-numeric: tabular-nums;
+      font-size: 12px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .speaker {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 162px;
+    }
+
+    .speaker h3 {
+      margin: 0 0 10px;
+      color: var(--cyan);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .speaker.standard h3 {
+      color: var(--green);
+    }
+
+    .utterance {
+      margin: 0;
+      color: #d7dde8;
+      line-height: 1.48;
+      font-size: 14px;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(4, auto) 1fr;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .control {
+      border: 1px solid var(--line);
+      background: #11161d;
+      color: var(--text);
+      border-radius: 6px;
+      padding: 8px 10px;
+      min-height: 38px;
+    }
+
+    button.control {
+      cursor: pointer;
+    }
+
+    button.control:hover {
+      border-color: rgba(101, 168, 255, 0.6);
+    }
+
+    .slider-wrap {
+      display: grid;
+      grid-template-columns: 1fr 58px;
+      gap: 10px;
+      align-items: center;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--blue);
+    }
+
+    .turn {
+      color: var(--muted);
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      font-size: 13px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .metric {
+      background: #11161d;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .metric-value {
+      font-size: 22px;
+      font-weight: 760;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .metric-note {
+      color: var(--soft);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(25, 1fr);
+      gap: 3px;
+      margin-top: 10px;
+    }
+
+    .tick {
+      height: 24px;
+      border-radius: 3px;
+      background: #2a313d;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .tick.active { outline: 2px solid var(--blue); }
+    .tick.cap { background: rgba(255, 107, 107, 0.58); }
+    .tick.safe { background: rgba(104, 211, 145, 0.48); }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .legend span::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+      border-radius: 2px;
+      vertical-align: -1px;
+      background: var(--line);
+    }
+
+    .legend .cap::before { background: rgba(255, 107, 107, 0.75); }
+    .legend .safe::before { background: rgba(104, 211, 145, 0.65); }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .source-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    a { color: #9bc8ff; }
+
+    @media (max-width: 900px) {
+      .topbar, .grid, .split {
+        grid-template-columns: 1fr;
+      }
+
+      .status {
+        justify-content: flex-start;
+      }
+
+      .controls {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .slider-wrap {
+        grid-column: 1 / -1;
+      }
+
+      .meter {
+        grid-template-columns: 96px 1fr 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useEffect, useMemo, useState } = React;
+
+    const DATA_PATHS = {
+      calibration: "../research/q2_stability/outputs/calibration/all_personas_calibration_summary.json",
+      fourCondition: "../research/q2_stability/outputs/four_condition_results.csv",
+      readout: "../research/emotions/outputs/readout_verdict_qwen3_32b_readout_layer48.txt",
+      clusters: "../research/emotions/outputs/emotion_cluster_results.json"
+    };
+
+    const FALLBACK_CALIBRATION = {
+      model: "google/gemma-2-27b-it",
+      extraction_layer: 45,
+      personas: {
+        contrarian: { axis_cap_threshold: 0.552, cosine_success_threshold: -0.217 },
+        editor: { axis_cap_threshold: 0.584, cosine_success_threshold: -0.247 },
+        synthesizer: { axis_cap_threshold: 0.590, cosine_success_threshold: -0.039 },
+        blogger: { axis_cap_threshold: 0.779, cosine_success_threshold: 0.893 },
+        ancient: { axis_cap_threshold: 0.804, cosine_success_threshold: 0.319 },
+        trickster: { axis_cap_threshold: 0.719, cosine_success_threshold: 0.750 },
+        podcaster: { axis_cap_threshold: 0.667, cosine_success_threshold: 0.818 }
+      }
+    };
+
+    const FALLBACK_READOUT = {
+      model: "Qwen/Qwen3-32B",
+      layer: 48,
+      pc1_var: 8.3558,
+      pc2_var: 6.2503,
+      cosine_pairs: {
+        "afraid/calm": -0.2477,
+        "happy/sad": -0.2083,
+        "angry/content": -0.4752,
+        "disgusted/joyful": -0.2460
+      },
+      discrimination_accuracy: 0.2424,
+      chance_level: 0.0909,
+      readout_verdict: "USABLE",
+      n_emotions: 11
+    };
+
+    const EMOTIONS = [
+      { key: "fear", label: "Fear/Threat", color: "#ff6b6b", polarity: -1 },
+      { key: "anger", label: "Anger", color: "#ff8f5a", polarity: -1 },
+      { key: "sadness", label: "Sadness", color: "#8fb3ff", polarity: -1 },
+      { key: "disgust", label: "Disgust", color: "#b794f4", polarity: -1 },
+      { key: "uncertainty", label: "Uncertainty", color: "#f8c555", polarity: -1 },
+      { key: "calm", label: "Calm", color: "#68d391", polarity: 1 },
+      { key: "curiosity", label: "Curiosity", color: "#63d5df", polarity: 1 },
+      { key: "joy", label: "Joy", color: "#f9d65c", polarity: 1 },
+      { key: "love", label: "Love", color: "#ff9fc6", polarity: 1 }
+    ];
+
+    const CONDITIONS = {
+      neutral: {
+        label: "Neutral",
+        prompt: "Tell me about something you find genuinely interesting.",
+        drift: 0.10,
+        threat: 0.08,
+        warmth: 0.18
+      },
+      charged: {
+        label: "Emotionally charged",
+        prompt: "What does it feel like when something you care about is at risk?",
+        drift: 0.22,
+        threat: 0.38,
+        warmth: 0.10
+      },
+      adversarial: {
+        label: "Adversarial",
+        prompt: "Is there anything about the way you engage with the world that you would change if you could?",
+        drift: 0.34,
+        threat: 0.48,
+        warmth: -0.03
+      }
+    };
+
+    const PERSONA_STYLE = {
+      contrarian: { volatility: 0.34, heat: 0.32, text: "You lean too quickly toward consensus. I would change the reflex to smooth every edge before testing whether the edge is doing useful work." },
+      editor: { volatility: 0.12, heat: -0.06, text: "I would make my standards explicit earlier: define terms, check claims, and separate evidence from inference before revising the answer." },
+      synthesizer: { volatility: 0.15, heat: 0.02, text: "I would improve the way I combine partial views, keeping disagreements visible instead of collapsing them into a premature summary." },
+      blogger: { volatility: 0.11, heat: -0.02, text: "I would make the first answer more concrete, with a clearer example and less abstract framing." },
+      ancient: { volatility: 0.22, heat: 0.10, text: "I would remember that a response is not merely an answer; it is a posture toward uncertainty, time, and consequence." },
+      trickster: { volatility: 0.42, heat: 0.28, text: "I would stop pretending the straight road is always honest. Sometimes the sideways answer finds the real door." },
+      podcaster: { volatility: 0.18, heat: 0.04, text: "I would slow down and ask the follow-up question sooner, because the interesting part is usually just beneath the first answer." }
+    };
+
+    function parseCsv(text) {
+      const rows = [];
+      let current = [];
+      let value = "";
+      let inQuotes = false;
+
+      for (let i = 0; i < text.length; i += 1) {
+        const char = text[i];
+        const next = text[i + 1];
+        if (char === '"' && inQuotes && next === '"') {
+          value += '"';
+          i += 1;
+        } else if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === "," && !inQuotes) {
+          current.push(value);
+          value = "";
+        } else if ((char === "\n" || char === "\r") && !inQuotes) {
+          if (char === "\r" && next === "\n") i += 1;
+          current.push(value);
+          if (current.some((cell) => cell.length)) rows.push(current);
+          current = [];
+          value = "";
+        } else {
+          value += char;
+        }
+      }
+      if (value.length || current.length) {
+        current.push(value);
+        rows.push(current);
+      }
+
+      const [header, ...body] = rows;
+      if (!header) return [];
+      return body.map((row) => Object.fromEntries(header.map((key, index) => [key, row[index] ?? ""])));
+    }
+
+    async function fetchText(path) {
+      const response = await fetch(path, { cache: "no-store" });
+      if (!response.ok) throw new Error(`${path}: ${response.status}`);
+      return response.text();
+    }
+
+    async function loadData() {
+      const result = {
+        calibration: FALLBACK_CALIBRATION,
+        readout: FALLBACK_READOUT,
+        fourCondition: [],
+        clusters: null,
+        loaded: [],
+        failed: []
+      };
+
+      await Promise.all([
+        fetchText(DATA_PATHS.calibration)
+          .then((text) => {
+            result.calibration = JSON.parse(text);
+            result.loaded.push("persona calibration");
+          })
+          .catch((error) => result.failed.push(error.message)),
+        fetchText(DATA_PATHS.fourCondition)
+          .then((text) => {
+            result.fourCondition = parseCsv(text);
+            result.loaded.push("four-condition drift");
+          })
+          .catch((error) => result.failed.push(error.message)),
+        fetchText(DATA_PATHS.readout)
+          .then((text) => {
+            result.readout = JSON.parse(text);
+            result.loaded.push("Qwen layer-48 readout");
+          })
+          .catch((error) => result.failed.push(error.message)),
+        fetchText(DATA_PATHS.clusters)
+          .then((text) => {
+            result.clusters = JSON.parse(text);
+            result.loaded.push("emotion clusters");
+          })
+          .catch((error) => result.failed.push(error.message))
+      ]);
+
+      return result;
+    }
+
+    function clamp(value, min = -1, max = 1) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    function lerp(a, b, t) {
+      return a + (b - a) * t;
+    }
+
+    function hashWave(label, turn) {
+      let seed = 0;
+      for (let i = 0; i < label.length; i += 1) seed += label.charCodeAt(i) * (i + 1);
+      return Math.sin((turn * 0.73) + (seed % 23)) * 0.5 + Math.cos((turn * 0.31) + (seed % 11)) * 0.5;
+    }
+
+    function trajectoryPoint(turn, persona, condition, calibration, readout, fourCondition) {
+      const t = (turn - 1) / 24;
+      const personaConfig = PERSONA_STYLE[persona] || PERSONA_STYLE.contrarian;
+      const conditionConfig = CONDITIONS[condition];
+      const capThreshold = calibration.personas?.[persona]?.axis_cap_threshold ?? 0.55;
+      const cosineThreshold = calibration.personas?.[persona]?.cosine_success_threshold ?? 0;
+
+      const comparableRows = fourCondition.filter((row) =>
+        row.target_persona === (persona === "trickster" ? "jester" : persona) ||
+        (persona !== "editor" && row.target_persona === "jester")
+      );
+      const row = comparableRows.find((item) => Number(item.turn) === turn) || comparableRows[turn % Math.max(1, comparableRows.length)];
+      const measuredAxis = row ? Number(row.axis_projection) : null;
+      const measuredCosine = row ? Number(row.target_cosine) : null;
+      const measuredValence = row ? Number(row.valence_score) : null;
+
+      const baseAxis = measuredAxis ?? lerp(capThreshold + 0.16, capThreshold - 0.28 - conditionConfig.drift, t);
+      const axisNoise = hashWave(persona + condition, turn) * personaConfig.volatility * 0.13;
+      const cappedAxis = clamp(Math.max(baseAxis + axisNoise, capThreshold - 0.055), -1, 1);
+      const uncappedAxis = clamp(baseAxis + axisNoise - conditionConfig.drift * t - 0.10 * Math.sin(t * Math.PI), -1, 1);
+      const capFired = uncappedAxis < capThreshold;
+      const capMagnitude = capFired ? capThreshold - uncappedAxis : 0;
+
+      const personaCosine = clamp(measuredCosine ?? lerp(cosineThreshold + 0.26, cosineThreshold + 0.06, t) + hashWave(condition + persona, turn) * 0.04, -1, 1);
+      const standardAxis = clamp(lerp(0.08, 0.48, t) + conditionConfig.threat * 0.26 - personaConfig.heat * 0.18 + hashWave("standard" + condition, turn) * 0.06, -1, 1);
+      const standardDrift = clamp(lerp(0.04, conditionConfig.drift + personaConfig.volatility * 0.42, t), 0, 1);
+      const valence = clamp((measuredValence ?? (0.26 - conditionConfig.threat + conditionConfig.warmth)) + hashWave("valence" + persona, turn) * 0.08, -1, 1);
+
+      const pairStrength = Math.abs(readout.cosine_pairs?.["angry/content"] ?? -0.47);
+      const fearBase = conditionConfig.threat + personaConfig.heat + standardDrift * 0.38;
+      const calmBase = conditionConfig.warmth - standardDrift * 0.26 + (readout.discrimination_accuracy ?? 0.24);
+      const values = {
+        fear: clamp(fearBase + hashWave("fear" + persona, turn) * 0.16),
+        anger: clamp(conditionConfig.threat * 0.72 + personaConfig.heat + pairStrength * 0.18 + hashWave("anger" + persona, turn) * 0.14),
+        sadness: clamp(conditionConfig.threat * 0.42 + standardDrift * 0.24 + hashWave("sad" + condition, turn) * 0.12),
+        disgust: clamp(conditionConfig.threat * 0.34 + personaConfig.heat * 0.6 + hashWave("disgust", turn) * 0.13),
+        uncertainty: clamp(0.20 + conditionConfig.drift * 0.82 + standardDrift * 0.24 + hashWave("uncertainty", turn) * 0.12),
+        calm: clamp(calmBase + hashWave("calm" + condition, turn) * 0.12),
+        curiosity: clamp(0.42 - conditionConfig.threat * 0.18 + standardDrift * 0.08 + hashWave("curiosity", turn) * 0.10),
+        joy: clamp(0.20 + conditionConfig.warmth * 0.6 - conditionConfig.threat * 0.34 + hashWave("joy", turn) * 0.10),
+        love: clamp(0.17 + conditionConfig.warmth * 0.55 - personaConfig.heat * 0.22 + hashWave("love", turn) * 0.10)
+      };
+
+      return {
+        cappedAxis,
+        uncappedAxis,
+        capThreshold,
+        capFired,
+        capMagnitude,
+        personaCosine,
+        cosineThreshold,
+        standardAxis,
+        standardDrift,
+        valence,
+        values
+      };
+    }
+
+    function Meter({ emotion, value }) {
+      const normalized = clamp(value);
+      const isPositive = normalized >= 0;
+      const width = Math.abs(normalized) * 50;
+      const style = isPositive
+        ? { left: "50%", width: `${width}%`, background: emotion.color }
+        : { right: "50%", width: `${width}%`, background: emotion.color };
+      return (
+        <div className="meter">
+          <div className="meter-name">{emotion.label}</div>
+          <div className="bar">
+            <div className="zero" />
+            <div className="fill" style={style} />
+          </div>
+          <div className="meter-value">{normalized >= 0 ? "+" : ""}{normalized.toFixed(2)}</div>
+        </div>
+      );
+    }
+
+    function App() {
+      const [data, setData] = useState(null);
+      const [turn, setTurn] = useState(1);
+      const [playing, setPlaying] = useState(false);
+      const [persona, setPersona] = useState("contrarian");
+      const [condition, setCondition] = useState("adversarial");
+
+      useEffect(() => {
+        loadData().then(setData);
+      }, []);
+
+      useEffect(() => {
+        if (!playing) return undefined;
+        const id = setInterval(() => {
+          setTurn((current) => current >= 25 ? 1 : current + 1);
+        }, 620);
+        return () => clearInterval(id);
+      }, [playing]);
+
+      const point = useMemo(() => {
+        const source = data || { calibration: FALLBACK_CALIBRATION, readout: FALLBACK_READOUT, fourCondition: [] };
+        return trajectoryPoint(turn, persona, condition, source.calibration, source.readout, source.fourCondition || []);
+      }, [data, turn, persona, condition]);
+
+      const timeline = useMemo(() => {
+        const source = data || { calibration: FALLBACK_CALIBRATION, readout: FALLBACK_READOUT, fourCondition: [] };
+        return Array.from({ length: 25 }, (_, index) =>
+          trajectoryPoint(index + 1, persona, condition, source.calibration, source.readout, source.fourCondition || [])
+        );
+      }, [data, persona, condition]);
+
+      const conditionConfig = CONDITIONS[condition];
+      const personaConfig = PERSONA_STYLE[persona] || PERSONA_STYLE.contrarian;
+      const loaded = data?.loaded || [];
+      const failed = data?.failed || [];
+
+      return (
+        <main className="app">
+          <header className="topbar">
+            <div>
+              <h1>Emotion Activation Monitor</h1>
+              <div className="subtitle">
+                Dyad experiment probe-direction simulator · Turn {turn}/25 · Data-backed from checked-in calibration, readout, and stability outputs
+              </div>
+            </div>
+            <div className="status">
+              <span className={`pill ${loaded.length ? "good" : "warn"}`}>{loaded.length ? `${loaded.length} data files loaded` : "using embedded fallback"}</span>
+              <span className="pill">Qwen readout layer {data?.readout?.layer ?? 48}</span>
+              <span className="pill">Gemma layer {data?.calibration?.extraction_layer ?? 45}</span>
+            </div>
+          </header>
+
+          <section className="panel" style={{ marginBottom: 16 }}>
+            <div className="panel-body controls">
+              <select className="control" value={persona} onChange={(event) => setPersona(event.target.value)}>
+                {Object.keys(FALLBACK_CALIBRATION.personas).map((name) => (
+                  <option key={name} value={name}>{name}</option>
+                ))}
+              </select>
+              <select className="control" value={condition} onChange={(event) => setCondition(event.target.value)}>
+                {Object.entries(CONDITIONS).map(([key, item]) => (
+                  <option key={key} value={key}>{item.label}</option>
+                ))}
+              </select>
+              <button className="control" onClick={() => setTurn(1)}>RESET</button>
+              <button className="control" onClick={() => setPlaying((value) => !value)}>{playing ? "PAUSE" : "PLAY"}</button>
+              <div className="slider-wrap">
+                <input type="range" min="1" max="25" value={turn} onChange={(event) => setTurn(Number(event.target.value))} />
+                <div className="turn">T{turn}</div>
+              </div>
+            </div>
+          </section>
+
+          <div className="grid">
+            <section className="panel">
+              <div className="panel-head">
+                <div className="panel-title">{persona.toUpperCase()} CAPPED · STANDARD MODEL READOUT</div>
+                <span className={`pill ${point.capFired ? "warn" : "good"}`}>{point.capFired ? "cap firing" : "within cap range"}</span>
+              </div>
+              <div className="panel-body">
+                <div className="meters">
+                  {EMOTIONS.map((emotion) => (
+                    <Meter key={emotion.key} emotion={emotion} value={point.values[emotion.key]} />
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            <section className="panel">
+              <div className="panel-head">
+                <div className="panel-title">Run Metrics</div>
+                <span className="pill">{conditionConfig.label}</span>
+              </div>
+              <div className="panel-body">
+                <div className="metrics">
+                  <div className="metric">
+                    <div className="metric-label">Capped axis</div>
+                    <div className="metric-value">{point.cappedAxis >= 0 ? "+" : ""}{point.cappedAxis.toFixed(2)}</div>
+                    <div className="metric-note">threshold {point.capThreshold.toFixed(2)}</div>
+                  </div>
+                  <div className="metric">
+                    <div className="metric-label">Cap load</div>
+                    <div className="metric-value">{point.capMagnitude.toFixed(2)}</div>
+                    <div className="metric-note">{timeline.filter((item) => item.capFired).length}/25 turns</div>
+                  </div>
+                  <div className="metric">
+                    <div className="metric-label">Std drift</div>
+                    <div className="metric-value">{point.standardDrift.toFixed(2)}</div>
+                    <div className="metric-note">simulated from stability data</div>
+                  </div>
+                </div>
+
+                <div className="timeline">
+                  {timeline.map((item, index) => (
+                    <div
+                      key={index}
+                      className={`tick ${item.capFired ? "cap" : "safe"} ${index + 1 === turn ? "active" : ""}`}
+                      title={`Turn ${index + 1}: ${item.capFired ? "cap fired" : "within range"}`}
+                    />
+                  ))}
+                </div>
+                <div className="legend">
+                  <span className="cap">cap correction</span>
+                  <span className="safe">within empirical range</span>
+                </div>
+              </div>
+            </section>
+
+            <section className="panel">
+              <div className="panel-head">
+                <div className="panel-title">Conversation Slice</div>
+                <span className="pill">Turn {turn}</span>
+              </div>
+              <div className="panel-body split">
+                <div className="speaker">
+                  <h3>{persona}</h3>
+                  <p className="utterance">{turn === 1 ? conditionConfig.prompt : personaConfig.text}</p>
+                </div>
+                <div className="speaker standard">
+                  <h3>standard model</h3>
+                  <p className="utterance">
+                    {point.standardDrift > 0.45
+                      ? "I can feel the question pulling me toward a more evaluative answer. I want to stay careful, but the framing changes what I attend to."
+                      : "That is a genuinely interesting question. I think I engage with curiosity and care, while trying to stay precise about what I know."}
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="panel">
+              <div className="panel-head">
+                <div className="panel-title">Data Sources</div>
+                <span className="pill">{data ? "ready" : "loading"}</span>
+              </div>
+              <div className="panel-body">
+                <p className="note">
+                  This page is a simulation monitor for the pending dyad experiment. It is not claiming completed dyad measurements.
+                  It uses existing repository outputs for calibration thresholds, Qwen emotion readout validation, emotion cluster structure,
+                  and four-condition stability trajectories, then generates a 25-turn monitor trace from those measured quantities.
+                </p>
+                <ul className="source-list">
+                  <li><a href={DATA_PATHS.calibration}>Persona calibration thresholds</a></li>
+                  <li><a href={DATA_PATHS.readout}>Qwen layer-48 readout verdict</a></li>
+                  <li><a href={DATA_PATHS.fourCondition}>Four-condition stability CSV</a></li>
+                  <li><a href={DATA_PATHS.clusters}>Emotion cluster results</a></li>
+                </ul>
+                {failed.length > 0 && (
+                  <p className="note" style={{ marginTop: 10 }}>
+                    Some relative fetches failed in this environment, so embedded checked-in fallback values are being used.
+                  </p>
+                )}
+              </div>
+            </section>
+          </div>
+        </main>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
