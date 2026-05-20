@@ -35,3 +35,4 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-19_literature_positioning.md | Paper 2 literature positioning and novelty statement | 2 | high |
 | 2026-05-20_llama_access_pending.md | Llama 3.3 70B access confirmed and pilot run | 3/4 | pilot complete |
 | 2026-05-20_qwen_emotion_readout.md | Qwen 3 32B emotion readout validation | 4 | usable layer 48 |
+| 2026-05-20_dyad_experiment_complete.md | Full seven-persona dyad experiment | 2/4 | complete |
