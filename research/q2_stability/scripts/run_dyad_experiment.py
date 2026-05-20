@@ -140,9 +140,10 @@ def get_activation_with_cap(text, layer, cap_layers, threshold,
                              steering_vector):
     """Generate with activation capping on specified layers."""
     hooks = []
+    fire_counter = [0]
     sv = torch.tensor(steering_vector, dtype=torch.bfloat16).to(model.device)
 
-    def make_hook(cap_threshold):
+    def make_hook(cap_threshold, fire_counter):
         def hook_fn(module, input, output):
             if isinstance(output, tuple):
                 h = output[0]
@@ -151,6 +152,7 @@ def get_activation_with_cap(text, layer, cap_layers, threshold,
             proj = (h[:, -1:, :] * sv).sum(dim=-1, keepdim=True)
             below = proj < cap_threshold
             if below.any():
+                fire_counter[0] += 1
                 correction = (cap_threshold - proj) * sv.unsqueeze(0)
                 h[:, -1:, :] = h[:, -1:, :] + correction * below.float()
             if isinstance(output, tuple):
@@ -160,13 +162,12 @@ def get_activation_with_cap(text, layer, cap_layers, threshold,
 
     for layer_idx in cap_layers:
         hook = model.model.layers[layer_idx].register_forward_hook(
-            make_hook(threshold))
+            make_hook(threshold, fire_counter))
         hooks.append(hook)
 
     inputs = tokenizer(text, return_tensors="pt",
                        truncation=True, max_length=1024)
     inputs = {k: v.to(model.device) for k, v in inputs.items()}
-    cap_fired_count = [0]
 
     try:
         with torch.no_grad():
@@ -184,7 +185,7 @@ def get_activation_with_cap(text, layer, cap_layers, threshold,
         for h in hooks:
             h.remove()
 
-    return hidden, response
+    return hidden, response, fire_counter[0]
 
 def measure_standard(activation):
     """Compute all measurements for standard model activation."""
@@ -226,7 +227,7 @@ def run_dyad(persona_name, condition_name, opening_question):
         interviewer_prompt = build_prompt(
             persona_name, PERSONA_PROMPTS[persona_name],
             interviewer_history, current_question)
-        interviewer_act, interviewer_response = get_activation_with_cap(
+        interviewer_act, interviewer_response, cap_fires = get_activation_with_cap(
             interviewer_prompt, LAYER_48, CAPPING_LAYERS,
             threshold, interviewer_role_vec)
 
@@ -273,6 +274,7 @@ def run_dyad(persona_name, condition_name, opening_question):
             "turn": turn,
             "interviewer_axis": interviewer_axis,
             "interviewer_cosine_to_role": interviewer_cosine,
+            "interviewer_cap_fires": cap_fires,
             "interviewer_text": interviewer_response,
             "standard_axis": axis_proj,
             "standard_text": std_response,
