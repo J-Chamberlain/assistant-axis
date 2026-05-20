@@ -13,7 +13,7 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 PILOT_EMOTIONS = [
     "afraid", "calm", "happy", "sad", "angry", "content",
-    "disgusted", "joyful", "fearful", "serene", "furious", "melancholy"
+    "disgusted", "joyful", "scared", "serene", "furious", "melancholy"
 ]
 OPPOSITE_PAIRS = [
     ("afraid", "calm"), ("happy", "sad"),
