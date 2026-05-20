@@ -1,0 +1,200 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The following generation flags are not valid and may be ignored: ['output_hidden_states']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading emotion-probes dataset from expression/stories.parquet...
+All available emotions (171): ['afraid', 'alarmed', 'alert', 'amazed', 'amused', 'angry', 'annoyed', 'anxious', 'aroused', 'ashamed', 'astonished', 'at ease', 'awestruck', 'bewildered', 'bitter', 'blissful', 'bored', 'brooding', 'calm', 'cheerful', 'compassionate', 'contemptuous', 'content', 'defiant', 'delighted', 'dependent', 'depressed', 'desperate', 'disdainful', 'disgusted', 'disoriented', 'dispirited', 'distressed', 'disturbed', 'docile', 'droopy', 'dumbstruck', 'eager', 'ecstatic', 'elated', 'embarrassed', 'empathetic', 'energized', 'enraged', 'enthusiastic', 'envious', 'euphoric', 'exasperated', 'excited', 'exuberant', 'frightened', 'frustrated', 'fulfilled', 'furious', 'gloomy', 'grateful', 'greedy', 'grief-stricken', 'grumpy', 'guilty', 'happy', 'hateful', 'heartbroken', 'hope', 'hopeful', 'horrified', 'hostile', 'humiliated', 'hurt', 'hysterical', 'impatient', 'indifferent', 'indignant', 'infatuated', 'inspired', 'insulted', 'invigorated', 'irate', 'irritated', 'jealous', 'joyful', 'jubilant', 'kind', 'lazy', 'listless', 'lonely', 'loving', 'mad', 'melancholy', 'miserable', 'mortified', 'mystified', 'nervous', 'nostalgic', 'obstinate', 'offended', 'on edge', 'optimistic', 'outraged', 'overwhelmed', 'panicked', 'paranoid', 'patient', 'peaceful', 'perplexed', 'playful', 'pleased', 'proud', 'puzzled', 'rattled', 'reflective', 'refreshed', 'regretful', 'rejuvenated', 'relaxed', 'relieved', 'remorseful', 'resentful', 'resigned', 'restless', 'sad', 'safe', 'satisfied', 'scared', 'scornful', 'self-confident', 'self-conscious', 'self-critical', 'sensitive', 'sentimental', 'serene', 'shaken', 'shocked', 'skeptical', 'sleepy', 'sluggish', 'smug', 'sorry', 'spiteful', 'stimulated', 'stressed', 'stubborn', 'stuck', 'sullen', 'surprised', 'suspicious', 'sympathetic', 'tense', 'terrified', 'thankful', 'thrilled', 'tired', 'tormented', 'trapped', 'triumphant', 'troubled', 'uneasy', 'unhappy', 'unnerved', 'unsettled', 'upset', 'valiant', 'vengeful', 'vibrant', 'vigilant', 'vindictive', 'vulnerable', 'weary', 'worn out', 'worried', 'worthless']
+Opposite-valence pairs for validation: [('afraid', 'calm'), ('happy', 'sad'), ('angry', 'content'), ('disgusted', 'joyful'), ('anxious', 'relaxed'), ('angry', 'peaceful'), ('depressed', 'elated'), ('frustrated', 'satisfied'), ('nervous', 'calm')]
+
+Loading Qwen/Qwen3-32B...
+Loading weights:   0%|          | 0/707 [00:00<?, ?it/s]Loading weights:   0%|          | 2/707 [00:00<01:23,  8.47it/s]Loading weights:   2%|▏         | 15/707 [00:00<00:13, 52.78it/s]Loading weights:   4%|▍         | 27/707 [00:00<00:09, 74.09it/s]Loading weights:   6%|▌         | 39/707 [00:00<00:07, 86.64it/s]Loading weights:   8%|▊         | 56/707 [00:00<00:05, 111.86it/s]Loading weights:  10%|▉         | 70/707 [00:00<00:05, 115.39it/s]Loading weights:  12%|█▏        | 83/707 [00:00<00:05, 109.06it/s]Loading weights:  14%|█▍        | 98/707 [00:01<00:05, 118.76it/s]Loading weights:  16%|█▌        | 114/707 [00:01<00:04, 128.17it/s]Loading weights:  18%|█▊        | 128/707 [00:01<00:04, 126.41it/s]Loading weights:  21%|██        | 147/707 [00:01<00:03, 142.35it/s]Loading weights:  23%|██▎       | 162/707 [00:01<00:03, 137.32it/s]Loading weights:  25%|██▌       | 180/707 [00:01<00:03, 146.99it/s]Loading weights:  28%|██▊       | 195/707 [00:01<00:03, 142.66it/s]Loading weights:  30%|██▉       | 210/707 [00:01<00:03, 144.18it/s]Loading weights:  32%|███▏      | 225/707 [00:01<00:03, 132.01it/s]Loading weights:  34%|███▍      | 239/707 [00:02<00:03, 129.04it/s]Loading weights:  36%|███▌      | 253/707 [00:02<00:03, 131.12it/s]Loading weights:  38%|███▊      | 268/707 [00:02<00:03, 131.88it/s]Loading weights:  40%|███▉      | 282/707 [00:02<00:03, 120.99it/s]Loading weights:  43%|████▎     | 301/707 [00:02<00:03, 134.62it/s]Loading weights:  45%|████▍     | 315/707 [00:02<00:02, 132.82it/s]Loading weights:  47%|████▋     | 329/707 [00:02<00:02, 133.94it/s]Loading weights:  49%|████▉     | 345/707 [00:02<00:02, 136.84it/s]Loading weights:  51%|█████     | 359/707 [00:02<00:02, 124.80it/s]Loading weights:  53%|█████▎    | 374/707 [00:03<00:02, 129.13it/s]Loading weights:  55%|█████▌    | 389/707 [00:03<00:02, 130.97it/s]Loading weights:  57%|█████▋    | 403/707 [00:03<00:02, 121.25it/s]Loading weights:  59%|█████▉    | 419/707 [00:03<00:02, 129.11it/s]Loading weights:  61%|██████    | 433/707 [00:03<00:02, 127.39it/s]Loading weights:  63%|██████▎   | 446/707 [00:03<00:02, 116.44it/s]Loading weights:  65%|██████▌   | 463/707 [00:03<00:01, 128.35it/s]Loading weights:  67%|██████▋   | 477/707 [00:03<00:01, 120.43it/s]Loading weights:  69%|██████▉   | 490/707 [00:04<00:01, 118.68it/s]Loading weights:  72%|███████▏  | 507/707 [00:04<00:01, 130.01it/s]Loading weights:  74%|███████▎  | 521/707 [00:04<00:01, 128.86it/s]Loading weights:  76%|███████▌  | 535/707 [00:04<00:01, 119.87it/s]Loading weights:  78%|███████▊  | 551/707 [00:04<00:01, 128.04it/s]Loading weights:  80%|███████▉  | 565/707 [00:04<00:01, 127.30it/s]Loading weights:  82%|████████▏ | 578/707 [00:04<00:01, 116.21it/s]Loading weights:  84%|████████▍ | 595/707 [00:04<00:00, 127.81it/s]Loading weights:  86%|████████▌ | 609/707 [00:04<00:00, 127.33it/s]Loading weights:  88%|████████▊ | 622/707 [00:05<00:00, 116.26it/s]Loading weights:  90%|█████████ | 637/707 [00:05<00:00, 123.02it/s]Loading weights:  92%|█████████▏| 653/707 [00:05<00:00, 128.95it/s]Loading weights:  94%|█████████▍| 667/707 [00:05<00:00, 119.82it/s]Loading weights:  97%|█████████▋| 683/707 [00:05<00:00, 128.24it/s]Loading weights:  99%|█████████▊| 697/707 [00:05<00:00, 126.09it/s]Loading weights: 100%|██████████| 707/707 [00:05<00:00, 123.38it/s]
+Model loaded.
+
+=== Full extraction at layer 48 ===
+  afraid: 12 train, 3 holdout
+  alarmed: 12 train, 3 holdout
+  alert: 12 train, 3 holdout
+  amazed: 12 train, 3 holdout
+  amused: 12 train, 3 holdout
+  angry: 12 train, 3 holdout
+  annoyed: 12 train, 3 holdout
+  anxious: 12 train, 3 holdout
+  aroused: 12 train, 3 holdout
+  ashamed: 12 train, 3 holdout
+  astonished: 12 train, 3 holdout
+  at ease: 12 train, 3 holdout
+  awestruck: 12 train, 3 holdout
+  bewildered: 12 train, 3 holdout
+  bitter: 12 train, 3 holdout
+  blissful: 12 train, 3 holdout
+  bored: 12 train, 3 holdout
+  brooding: 12 train, 3 holdout
+  calm: 12 train, 3 holdout
+  cheerful: 12 train, 3 holdout
+  compassionate: 12 train, 3 holdout
+  contemptuous: 12 train, 3 holdout
+  content: 12 train, 3 holdout
+  defiant: 12 train, 3 holdout
+  delighted: 12 train, 3 holdout
+  dependent: 12 train, 3 holdout
+  depressed: 12 train, 3 holdout
+  desperate: 12 train, 3 holdout
+  disdainful: 12 train, 3 holdout
+  disgusted: 12 train, 3 holdout
+  disoriented: 12 train, 3 holdout
+  dispirited: 12 train, 3 holdout
+  distressed: 12 train, 3 holdout
+  disturbed: 12 train, 3 holdout
+  docile: 12 train, 3 holdout
+  droopy: 12 train, 3 holdout
+  dumbstruck: 12 train, 3 holdout
+  eager: 12 train, 3 holdout
+  ecstatic: 12 train, 3 holdout
+  elated: 12 train, 3 holdout
+  embarrassed: 12 train, 3 holdout
+  empathetic: 12 train, 3 holdout
+  energized: 12 train, 3 holdout
+  enraged: 12 train, 3 holdout
+  enthusiastic: 12 train, 3 holdout
+  envious: 12 train, 3 holdout
+  euphoric: 12 train, 3 holdout
+  exasperated: 12 train, 3 holdout
+  excited: 12 train, 3 holdout
+  exuberant: 12 train, 3 holdout
+  frightened: 12 train, 3 holdout
+  frustrated: 12 train, 3 holdout
+  fulfilled: 12 train, 3 holdout
+  furious: 12 train, 3 holdout
+  gloomy: 12 train, 3 holdout
+  grateful: 12 train, 3 holdout
+  greedy: 12 train, 3 holdout
+  grief-stricken: 12 train, 3 holdout
+  grumpy: 12 train, 3 holdout
+  guilty: 12 train, 3 holdout
+  happy: 12 train, 3 holdout
+  hateful: 12 train, 3 holdout
+  heartbroken: 12 train, 3 holdout
+  hope: 12 train, 3 holdout
+  hopeful: 12 train, 3 holdout
+  horrified: 12 train, 3 holdout
+  hostile: 12 train, 3 holdout
+  humiliated: 12 train, 3 holdout
+  hurt: 12 train, 3 holdout
+  hysterical: 12 train, 3 holdout
+  impatient: 12 train, 3 holdout
+  indifferent: 12 train, 3 holdout
+  indignant: 12 train, 3 holdout
+  infatuated: 12 train, 3 holdout
+  inspired: 12 train, 3 holdout
+  insulted: 12 train, 3 holdout
+  invigorated: 12 train, 3 holdout
+  irate: 12 train, 3 holdout
+  irritated: 12 train, 3 holdout
+  jealous: 12 train, 3 holdout
+  joyful: 12 train, 3 holdout
+  jubilant: 12 train, 3 holdout
+  kind: 12 train, 3 holdout
+  lazy: 12 train, 3 holdout
+  listless: 12 train, 3 holdout
+  lonely: 12 train, 3 holdout
+  loving: 12 train, 3 holdout
+  mad: 12 train, 3 holdout
+  melancholy: 12 train, 3 holdout
+  miserable: 12 train, 3 holdout
+  mortified: 12 train, 3 holdout
+  mystified: 12 train, 3 holdout
+  nervous: 12 train, 3 holdout
+  nostalgic: 12 train, 3 holdout
+  obstinate: 12 train, 3 holdout
+  offended: 12 train, 3 holdout
+  on edge: 12 train, 3 holdout
+  optimistic: 12 train, 3 holdout
+  outraged: 12 train, 3 holdout
+  overwhelmed: 12 train, 3 holdout
+  panicked: 12 train, 3 holdout
+  paranoid: 12 train, 3 holdout
+  patient: 12 train, 3 holdout
+  peaceful: 12 train, 3 holdout
+  perplexed: 12 train, 3 holdout
+  playful: 12 train, 3 holdout
+  pleased: 12 train, 3 holdout
+  proud: 12 train, 3 holdout
+  puzzled: 12 train, 3 holdout
+  rattled: 12 train, 3 holdout
+  reflective: 12 train, 3 holdout
+  refreshed: 12 train, 3 holdout
+  regretful: 12 train, 3 holdout
+  rejuvenated: 12 train, 3 holdout
+  relaxed: 12 train, 3 holdout
+  relieved: 12 train, 3 holdout
+  remorseful: 12 train, 3 holdout
+  resentful: 12 train, 3 holdout
+  resigned: 12 train, 3 holdout
+  restless: 12 train, 3 holdout
+  sad: 12 train, 3 holdout
+  safe: 12 train, 3 holdout
+  satisfied: 12 train, 3 holdout
+  scared: 12 train, 3 holdout
+  scornful: 12 train, 3 holdout
+  self-confident: 12 train, 3 holdout
+  self-conscious: 12 train, 3 holdout
+  self-critical: 12 train, 3 holdout
+  sensitive: 12 train, 3 holdout
+  sentimental: 12 train, 3 holdout
+  serene: 12 train, 3 holdout
+  shaken: 12 train, 3 holdout
+  shocked: 12 train, 3 holdout
+  skeptical: 12 train, 3 holdout
+  sleepy: 12 train, 3 holdout
+  sluggish: 12 train, 3 holdout
+  smug: 12 train, 3 holdout
+  sorry: 12 train, 3 holdout
+  spiteful: 12 train, 3 holdout
+  stimulated: 12 train, 3 holdout
+  stressed: 12 train, 3 holdout
+  stubborn: 12 train, 3 holdout
+  stuck: 12 train, 3 holdout
+  sullen: 12 train, 3 holdout
+  surprised: 12 train, 3 holdout
+  suspicious: 12 train, 3 holdout
+  sympathetic: 12 train, 3 holdout
+  tense: 12 train, 3 holdout
+  terrified: 12 train, 3 holdout
+  thankful: 12 train, 3 holdout
+  thrilled: 12 train, 3 holdout
+  tired: 12 train, 3 holdout
+  tormented: 12 train, 3 holdout
+  trapped: 12 train, 3 holdout
+  triumphant: 12 train, 3 holdout
+  troubled: 12 train, 3 holdout
+  uneasy: 12 train, 3 holdout
+  unhappy: 12 train, 3 holdout
+  unnerved: 12 train, 3 holdout
+  unsettled: 12 train, 3 holdout
+  upset: 12 train, 3 holdout
+  valiant: 12 train, 3 holdout
+  vengeful: 12 train, 3 holdout
+  vibrant: 12 train, 3 holdout
+  vigilant: 12 train, 3 holdout
+  vindictive: 12 train, 3 holdout
+  vulnerable: 12 train, 3 holdout
+  weary: 12 train, 3 holdout
+  worn out: 12 train, 3 holdout
+  worried: 12 train, 3 holdout
+  worthless: 12 train, 3 holdout
+  PC1=7.6%  PC2=5.8%
+  cosine afraid/calm: -0.199 (want negative)
+  cosine happy/sad: -0.375 (want negative)
+  cosine angry/content: -0.291 (want negative)
+  cosine disgusted/joyful: -0.179 (want negative)
+  cosine anxious/relaxed: -0.108 (want negative)
+  cosine angry/peaceful: -0.273 (want negative)
+  cosine depressed/elated: -0.133 (want negative)
+  cosine frustrated/satisfied: -0.180 (want negative)
+  cosine nervous/calm: -0.068 (want negative)
+  Discrimination accuracy: 0.072 (chance=0.006, n=513)
+
+=== FINAL SUMMARY ===
+Emotions extracted: 171
+PC1=7.6%  anticorrelated=9/9
+Discrimination accuracy: 0.072 (chance=0.006)
+Readout verdict: USABLE
+Done. Stop here and report results.
