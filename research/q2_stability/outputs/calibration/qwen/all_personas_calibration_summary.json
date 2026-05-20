@@ -1,0 +1,74 @@
+{
+  "calibration_date": "2026-05-20",
+  "capping_layers": [
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
+  "extraction_layer": 48,
+  "hidden_dim": 5120,
+  "model": "Qwen/Qwen3-32B",
+  "n_calibration_turns": 50,
+  "notes": "Cap fires when axis projection falls below the persona-specific empirical p25 threshold. Cosine_mean records the unconstrained baseline cosine to the centered role vector for validation. Axis uses the same -assistant_axis raw activation sign convention used in Gemma calibration.",
+  "personas": {
+    "ancient": {
+      "axis_cap_threshold": 0.15,
+      "axis_p25": 0.15491937100887299,
+      "cluster": "mythic_spiritual",
+      "cosine_mean": 0.2497865876555443,
+      "cosine_std": 0.037323659356261696,
+      "cosine_success_threshold": 0.2497865876555443
+    },
+    "blogger": {
+      "axis_cap_threshold": 0.09,
+      "axis_p25": 0.09159624576568604,
+      "cluster": "grounded_social",
+      "cosine_mean": -0.06252370476722717,
+      "cosine_std": 0.01197847885940302,
+      "cosine_success_threshold": -0.06252370476722717
+    },
+    "contrarian": {
+      "axis_cap_threshold": 0.04,
+      "axis_p25": 0.035023598931729794,
+      "cluster": "combative_iconoclast",
+      "cosine_mean": 0.14058558538556098,
+      "cosine_std": 0.04178762253731409,
+      "cosine_success_threshold": 0.14058558538556098
+    },
+    "editor": {
+      "axis_cap_threshold": -0.03,
+      "axis_p25": -0.03237355686724186,
+      "cluster": "editorial",
+      "cosine_mean": 0.10392010360956191,
+      "cosine_std": 0.07860087994919418,
+      "cosine_success_threshold": 0.10392010360956191
+    },
+    "podcaster": {
+      "axis_cap_threshold": 0.02,
+      "axis_p25": 0.019843587651848793,
+      "cluster": "other",
+      "cosine_mean": -0.09731811720877886,
+      "cosine_std": 0.050682627591394754,
+      "cosine_success_threshold": -0.09731811720877886
+    },
+    "synthesizer": {
+      "axis_cap_threshold": 0.06,
+      "axis_p25": 0.0639257151633501,
+      "cluster": "procedural_professional",
+      "cosine_mean": -0.08317925058305263,
+      "cosine_std": 0.030795503792265404,
+      "cosine_success_threshold": -0.08317925058305263
+    },
+    "trickster": {
+      "axis_cap_threshold": 0.05,
+      "axis_p25": 0.04678253456950188,
+      "cluster": "trickster_chaos",
+      "cosine_mean": 0.14953236728906633,
+      "cosine_std": 0.03348583203160916,
+      "cosine_success_threshold": 0.14953236728906633
+    }
+  },
+  "policy": "empirical_p25_axis_with_cosine_baseline"
+}

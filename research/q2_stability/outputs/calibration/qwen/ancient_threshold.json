@@ -1,0 +1,27 @@
+{
+  "axis_cap_threshold": 0.15,
+  "axis_mean": 0.1719299229979515,
+  "axis_p25": 0.15491937100887299,
+  "axis_std": 0.02789680577509642,
+  "capping_layers": [
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
+  "cluster": "mythic_spiritual",
+  "cosine_mean": 0.2497865876555443,
+  "cosine_p25": 0.22731371596455574,
+  "cosine_std": 0.037323659356261696,
+  "cosine_success_threshold": 0.2497865876555443,
+  "generation": {
+    "max_new_tokens": 120,
+    "no_repeat_ngram_size": 4,
+    "repetition_penalty": 1.3
+  },
+  "layer": 48,
+  "model": "Qwen/Qwen3-32B",
+  "n_turns": 50,
+  "persona": "ancient"
+}

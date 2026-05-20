@@ -261,3 +261,9 @@ Implication for paper: Section 5.4 should be updated to reflect that
 the distributed geometry finding is now established across three models,
 not just Gemma, and that the Anthropic PCA gate cannot be assumed
 to transfer to open-weight models as a validation criterion.
+
+---
+
+## 2026-05-20 [Paper 2 / Q2] Qwen 3 32B Persona Calibration
+
+Ran the seven-centroid persona calibration on `Qwen/Qwen3-32B` at layer 48 using the 50-turn minimal-continuation procedure and empirical p25 cap policy. Axis p25 thresholds were editor `-0.032374`, synthesizer `+0.063926`, blogger `+0.091596`, ancient `+0.154919`, trickster `+0.046783`, contrarian `+0.035024`, and podcaster `+0.019844`; cosine means were respectively `+0.103920`, `-0.083179`, `-0.062524`, `+0.249787`, `+0.149532`, `+0.140586`, and `-0.097318`. Unlike Gemma, Qwen does not show uniformly positive empirical thresholds and has negative persona-cosine baselines for synthesizer, blogger, and podcaster, so Qwen dyad capping should treat persona-specific calibration as required rather than assuming the Lu et al. assistant threshold transfers across personas.

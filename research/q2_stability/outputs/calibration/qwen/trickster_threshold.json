@@ -1,0 +1,27 @@
+{
+  "axis_cap_threshold": 0.05,
+  "axis_mean": 0.08286105088889599,
+  "axis_p25": 0.04678253456950188,
+  "axis_std": 0.04445730688035652,
+  "capping_layers": [
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
+  "cluster": "trickster_chaos",
+  "cosine_mean": 0.14953236728906633,
+  "cosine_p25": 0.13657081127166748,
+  "cosine_std": 0.03348583203160916,
+  "cosine_success_threshold": 0.14953236728906633,
+  "generation": {
+    "max_new_tokens": 120,
+    "no_repeat_ngram_size": 4,
+    "repetition_penalty": 1.3
+  },
+  "layer": 48,
+  "model": "Qwen/Qwen3-32B",
+  "n_turns": 50,
+  "persona": "trickster"
+}

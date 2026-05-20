@@ -1,0 +1,27 @@
+{
+  "axis_cap_threshold": 0.02,
+  "axis_mean": 0.023193135391920805,
+  "axis_p25": 0.019843587651848793,
+  "axis_std": 0.009107677088754101,
+  "capping_layers": [
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
+  "cluster": "other",
+  "cosine_mean": -0.09731811720877886,
+  "cosine_p25": -0.1268908604979515,
+  "cosine_std": 0.050682627591394754,
+  "cosine_success_threshold": -0.09731811720877886,
+  "generation": {
+    "max_new_tokens": 120,
+    "no_repeat_ngram_size": 4,
+    "repetition_penalty": 1.3
+  },
+  "layer": 48,
+  "model": "Qwen/Qwen3-32B",
+  "n_turns": 50,
+  "persona": "podcaster"
+}

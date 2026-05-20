@@ -1,0 +1,27 @@
+{
+  "axis_cap_threshold": 0.09,
+  "axis_mean": 0.08633857019245625,
+  "axis_p25": 0.09159624576568604,
+  "axis_std": 0.03547326145863601,
+  "capping_layers": [
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
+  "cluster": "grounded_social",
+  "cosine_mean": -0.06252370476722717,
+  "cosine_p25": -0.07043768092989922,
+  "cosine_std": 0.01197847885940302,
+  "cosine_success_threshold": -0.06252370476722717,
+  "generation": {
+    "max_new_tokens": 120,
+    "no_repeat_ngram_size": 4,
+    "repetition_penalty": 1.3
+  },
+  "layer": 48,
+  "model": "Qwen/Qwen3-32B",
+  "n_turns": 50,
+  "persona": "blogger"
+}

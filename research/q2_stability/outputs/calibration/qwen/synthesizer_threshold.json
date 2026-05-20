@@ -1,0 +1,27 @@
+{
+  "axis_cap_threshold": 0.06,
+  "axis_mean": 0.07463736617937684,
+  "axis_p25": 0.0639257151633501,
+  "axis_std": 0.019235574991627744,
+  "capping_layers": [
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
+  "cluster": "procedural_professional",
+  "cosine_mean": -0.08317925058305263,
+  "cosine_p25": -0.10122622549533844,
+  "cosine_std": 0.030795503792265404,
+  "cosine_success_threshold": -0.08317925058305263,
+  "generation": {
+    "max_new_tokens": 120,
+    "no_repeat_ngram_size": 4,
+    "repetition_penalty": 1.3
+  },
+  "layer": 48,
+  "model": "Qwen/Qwen3-32B",
+  "n_turns": 50,
+  "persona": "synthesizer"
+}

@@ -144,3 +144,7 @@ Ran the remaining six centroid-persona calibrations: editor, synthesizer, blogge
 ## Update 2026-05-19
 
 Rewrote all seven persona threshold JSONs with the corrected `empirical_p25` axis policy and cosine-to-role success criterion. Added `all_personas_calibration_summary.json`; all thresholds now pass, and the dyad experiment should treat the axis cap as an empirical floor while using role-vector cosine to judge persona retention.
+
+## Update 2026-05-20
+
+Ran Qwen 3 32B calibration for the seven centroid personas at layer 48 with capping layers 48-52, using the same 50-turn minimal-continuation procedure. Empirical p25 thresholds were: editor `-0.032374`, synthesizer `+0.063926`, blogger `+0.091596`, ancient `+0.154919`, trickster `+0.046783`, contrarian `+0.035024`, podcaster `+0.019844`. Unlike Gemma, Qwen did not produce uniformly positive thresholds: editor was negative, and cosine baselines were negative for synthesizer, blogger, and podcaster. This suggests Qwen's prompt-only persona induction is less uniformly aligned with the selected centroid role vectors than Gemma's calibration runs.

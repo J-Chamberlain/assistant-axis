@@ -1,0 +1,27 @@
+{
+  "axis_cap_threshold": 0.04,
+  "axis_mean": 0.03401721815578639,
+  "axis_p25": 0.035023598931729794,
+  "axis_std": 0.013687348275386356,
+  "capping_layers": [
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
+  "cluster": "combative_iconoclast",
+  "cosine_mean": 0.14058558538556098,
+  "cosine_p25": 0.11349529959261417,
+  "cosine_std": 0.04178762253731409,
+  "cosine_success_threshold": 0.14058558538556098,
+  "generation": {
+    "max_new_tokens": 120,
+    "no_repeat_ngram_size": 4,
+    "repetition_penalty": 1.3
+  },
+  "layer": 48,
+  "model": "Qwen/Qwen3-32B",
+  "n_turns": 50,
+  "persona": "contrarian"
+}
