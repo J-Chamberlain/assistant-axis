@@ -1,0 +1,10 @@
+EXTRACTION DATE: 2026-05-19
+MODEL: google/gemma-2-27b-it
+EXTRACTION LAYER: 45 and 21 tested
+PC1 VARIANCE: 25.8%
+PC2 VARIANCE: 18.3%
+PCA GATE: FAIL
+TYLENOL TEST: SKIPPED
+OVERALL RELIABILITY: LOW
+RECOMMENDATION: manual review needed
+NOTES: Layer 45 failed the PCA gate because PC1 was 25.9% despite PC2 at 17.0%. Layer 21 retry also failed with PC1 25.8% and PC2 18.3%. Both layers show coherent local neighborhoods such as afraid/terrified and calm/peaceful, but opposite-valence pairs remain highly positively correlated, suggesting a shared component still dominates the extracted vectors.

@@ -113,3 +113,17 @@ Gemma 2 27B-it layer-45 method. Paper 4 should not treat these
 vectors as validated Anthropic-style emotion vectors without further
 centering, contrastive construction, layer sweep, or direct replication
 against a stronger known emotion-vector baseline.
+
+## Update 2026-05-19 — Post-extraction reliability gate
+
+Layer-45 validation failed the PCA gate because PC1 explained only
+25.9% of variance, below the 30% threshold, so the Tylenol validation
+was skipped and a layer-21 retry was run. Layer 21 also failed:
+PC1/PC2 explained 25.8%/18.3%, and opposite-valence pairs remained
+highly positively correlated (`afraid` vs `calm` = 0.990,
+`happy` vs `sad` = 0.993, `desperate` vs `hopeful` = 0.992).
+
+Reliability verdict: LOW. The vectors recover coherent local
+neighborhoods but not the global valence structure needed for the
+rumination-loop experiment. Manual review is required before using
+these extracted Gemma emotion vectors in Paper 4.
