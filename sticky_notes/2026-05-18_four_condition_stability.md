@@ -136,3 +136,7 @@ Patched the calibration runner with `repetition_penalty=1.3`, `no_repeat_ngram_s
 ## Update 2026-05-19
 
 Inspected the full contrarian trajectory and accepted the empirical p25 as the contrarian cap because the cluster occupies the positive assistant-axis hemisphere rather than the evaluative negative basin. Updated the calibration threshold record to use `axis_policy="empirical_p25"`, `axis_cap_threshold=0.55`, and `passed=true` for the clean contrarian rerun.
+
+## Update 2026-05-19
+
+Ran the remaining six centroid-persona calibrations: editor, synthesizer, blogger, ancient, trickster, and podcaster. All six completed 50 turns without the late-turn activation-freeze issue. The old negative-axis gate marked all six as failed, but blogger, ancient, trickster, and podcaster showed strong positive role-vector cosine, indicating that the remaining personas likely also need empirical per-persona axis policies rather than the original universal negative-axis threshold.
