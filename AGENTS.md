@@ -50,6 +50,16 @@ If a sticky note has been fully addressed by completed research:
 - Append: ## Addressed YYYY-MM-DD — [commit hash or description]
 - Update the STATUS field in sticky_notes/README.md to "addressed"
 
+FINDINGS LOG CHECK
+If this task produced a significant finding (experimental
+result, replication attempt, calibration result, cross-model
+comparison, or negative result that constrains the hypothesis),
+append an entry to research/findings_log.md before committing.
+Format:
+  ## [DATE] [Paper N / Section X.X] [Short Title]
+  [2-4 sentences: what was found, method used, implication]
+Do not edit existing entries. Append only.
+
 ## RunPod specs
 Account: josiah.chamberlain@gmail.com
 HuggingFace account: j-chamberlain
