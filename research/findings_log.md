@@ -155,3 +155,109 @@ Implication: activation capping for non-assistant personas
 requires persona-specific empirically calibrated thresholds
 rather than a universal negative-axis floor; this is the first
 such calibration applied to non-assistant cluster centroids.
+
+## 2026-05-20 [Section 3.1] Qwen 3 32B — Emotion Vector Pilot (Layers 63 and 48)
+
+Model: Qwen/Qwen3-32B (base, not instruct — Qwen3-32B-Instruct does not
+exist under that name on HuggingFace as of this session).
+Method: Anthropic replication methodology. Last-token activation,
+PCA confound removal, unit normalization. 11 emotions x 15 stories
+(fearful absent from ryancodrai corpus).
+Pilot gate: PC1 >= 30% required for PASS.
+
+Layer 63 (outer): PC1=8.32%, PC2=6.06%, 4/4 opposite-valence pairs
+anticorrelated. Verdict: LOW (gate failed).
+
+Layer 48 (middle, ~75% depth): PC1=8.34%, PC2=5.99%, 4/4 anticorrelated.
+Verdict: LOW (gate failed). Marginally stronger PCA signal than layer 63.
+
+Implication: PCA gate failure does not indicate absence of emotional
+signal. The 4/4 anticorrelation result indicates directionally correct
+encoding. Distributed geometry across many dimensions rather than
+concentration in a dominant first component.
+
+Verdict files:
+  research/emotions/outputs/reliability_verdict_qwen3_32b_layer63.txt
+  research/emotions/outputs/reliability_verdict_qwen3_32b_layer48.txt
+
+---
+
+## 2026-05-20 [Section 3.1] Llama 3.3 70B — Emotion Vector Pilot (Layers 79 and 40)
+
+Model: meta-llama/Llama-3.3-70B-Instruct.
+Loading: 8-bit quantization with FP32 CPU offload required — bf16 did
+not fit cleanly on single A100 80GB. This is an infrastructure note
+for future runs.
+Method: same Anthropic replication methodology as Qwen pilot.
+11 emotions (fearful absent from corpus).
+
+Layer 79 (outer): PC1=7.52%, PC2=5.31%, 4/4 anticorrelated.
+Verdict: LOW.
+
+Layer 40 (middle, ~50% depth): PC1=8.15%, PC2=5.53%, 4/4 anticorrelated.
+Verdict: LOW. Slightly stronger than layer 79.
+
+Implication: Llama 3.3 70B matches Qwen 3 32B pattern exactly. PC1
+~7-8%, 4/4 anticorrelated pairs. The distributed geometry finding
+now holds across Gemma 2 27B, Qwen 3 32B, and Llama 3.3 70B —
+three independent architectures spanning 27B to 70B parameters.
+The Anthropic PCA gate appears to reflect frontier model scale or
+training specifics rather than a general property of open-weight models.
+
+Verdict files:
+  research/emotions/outputs/reliability_verdict_llama33_70b_layer79.txt
+  research/emotions/outputs/reliability_verdict_llama33_70b_layer40.txt
+
+---
+
+## 2026-05-20 [Section 3.1] Qwen 3 32B — Emotion Readout Validation (Layers 63 and 48)
+
+Model: Qwen/Qwen3-32B (same as pilot).
+Method: modified extraction saving vectors unconditionally regardless
+of PCA gate. Discrimination accuracy test: 12 training stories per
+emotion, 3 holdout stories. Nearest-vector cosine assignment.
+Threshold for USABLE: 1.5x chance (chance = 1/11 = 0.091,
+threshold = ~0.136).
+
+Layer 63: discrimination accuracy 0.212 vs chance 0.091. Verdict: USABLE.
+Layer 48: discrimination accuracy 0.242 vs chance 0.091. Verdict: USABLE.
+Layer 48 is recommended readout layer (2.7x above chance).
+
+Implication: Qwen 3 32B emotion vectors are usable for readout in
+the dyad experiment despite failing the Anthropic PCA gate. The gate
+was calibrated for causal steering; readout requires only discrimination,
+not variance concentration. Vectors saved at both layers.
+
+Readout verdict files:
+  research/emotions/outputs/readout_verdict_qwen3_32b_readout_layer63.txt
+  research/emotions/outputs/readout_verdict_qwen3_32b_readout_layer48.txt
+
+---
+
+## 2026-05-20 [Section 5.4] Cross-Model Finding — Distributed Emotion Geometry
+
+Consistent finding across all three models tested (Gemma 2 27B,
+Qwen 3 32B, Llama 3.3 70B): PC1 variance clusters at 7-9% with
+4/4 opposite-valence pairs anticorrelated at all layers examined.
+
+This is not a model-specific failure. It is a consistent pattern
+indicating that emotional information in open-weight models at this
+scale is distributed across many dimensions rather than concentrated
+in a dominant direction, as observed in Anthropic's frontier model
+(Claude Sonnet 4.5).
+
+Two interpretations consistent with evidence:
+1. Discriminative emotion geometry of the Anthropic type requires
+   frontier model scale (>>70B parameters).
+2. The Anthropic training process (RLHF, Constitutional AI, or
+   other alignment methods) shapes geometry in ways that concentrate
+   emotional signal, independent of raw scale.
+
+These interpretations are not yet distinguishable with available data.
+Llama 3.3 70B is the largest open-weight model tested and still shows
+the distributed pattern, which weakly favors interpretation 2.
+
+Implication for paper: Section 5.4 should be updated to reflect that
+the distributed geometry finding is now established across three models,
+not just Gemma, and that the Anthropic PCA gate cannot be assumed
+to transfer to open-weight models as a validation criterion.
