@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "layer": 79,
+  "load_mode": "8bit_with_fp32_cpu_offload",
+  "suffix": "llama33_70b_layer79",
+  "pc1_var": 7.521580696105957,
+  "pc2_var": 5.306321144104004,
+  "cosine_pairs": {
+    "afraid/calm": -0.15610085427761078,
+    "happy/sad": -0.3602147400379181,
+    "angry/content": -0.2887194752693176,
+    "disgusted/joyful": -0.2366316318511963
+  },
+  "anticorrelated_pairs": 4,
+  "gate_pass": false,
+  "verdict": "LOW",
+  "n_emotions": 12
+}
