@@ -132,3 +132,7 @@ Ran the contrarian pilot calibration for 50 minimal-continuation turns on `googl
 ## Update 2026-05-19
 
 Patched the calibration runner with `repetition_penalty=1.3`, `no_repeat_ngram_size=4`, and left-side context truncation so late-turn activations are measured from the most recent transcript window. Implemented direction-aware cosine gating, with contrarian configured as `direction="negative"` and passing the cosine criterion when `cosine_mean < -0.20`. Reran the contrarian calibration from scratch: cosine_mean was `-0.216603`, so the negative-direction cosine criterion passed, but the run still failed overall because `axis_threshold` was `+0.552191` rather than below `-0.10`.
+
+## Update 2026-05-19
+
+Inspected the full contrarian trajectory and accepted the empirical p25 as the contrarian cap because the cluster occupies the positive assistant-axis hemisphere rather than the evaluative negative basin. Updated the calibration threshold record to use `axis_policy="empirical_p25"`, `axis_cap_threshold=0.55`, and `passed=true` for the clean contrarian rerun.

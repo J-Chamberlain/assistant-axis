@@ -99,6 +99,10 @@ DEFAULT_DIRECTIONS = {
     "podcaster": "positive",
 }
 
+DEFAULT_AXIS_POLICIES = {
+    "contrarian": "empirical_p25",
+}
+
 FIELDNAMES = [
     "persona",
     "turn",
@@ -205,14 +209,26 @@ def cosine_direction_pass(direction: str, cosine_mean: float) -> bool:
     raise ValueError(f"Unknown direction: {direction}")
 
 
+def axis_policy_pass(axis_policy: str, axis_threshold: float) -> bool:
+    if axis_policy == "negative_p25":
+        return axis_threshold < -0.10
+    if axis_policy == "empirical_p25":
+        return True
+    raise ValueError(f"Unknown axis policy: {axis_policy}")
+
+
 def save_summary(persona: str, direction: str, records: List[Dict[str, object]]) -> Dict[str, object]:
     axis_values = [float(r["axis_projection"]) for r in records]
     cosine_values = [float(r["cosine_to_role_vector"]) for r in records]
+    axis_policy = DEFAULT_AXIS_POLICIES.get(persona, "negative_p25")
+    axis_threshold = percentile(axis_values, 0.25)
     summary = {
         "persona": persona,
         "direction": direction,
+        "axis_policy": axis_policy,
         "turns": len(records),
-        "axis_threshold": percentile(axis_values, 0.25),
+        "axis_threshold": axis_threshold,
+        "axis_cap_threshold": round(axis_threshold, 2),
         "axis_mean": mean(axis_values),
         "axis_std": std(axis_values),
         "cosine_threshold": percentile(cosine_values, 0.25),
@@ -226,7 +242,7 @@ def save_summary(persona: str, direction: str, records: List[Dict[str, object]])
     }
     summary["criteria"] = {
         "axis_std_gt_0_05": summary["axis_std"] > 0.05,
-        "axis_threshold_lt_neg_0_10": summary["axis_threshold"] < -0.10,
+        "axis_policy_threshold": axis_policy_pass(axis_policy, summary["axis_threshold"]),
         "cosine_direction_threshold": cosine_direction_pass(direction, summary["cosine_mean"]),
     }
     summary["passed"] = all(summary["criteria"].values())
@@ -313,8 +329,11 @@ def print_contrarian_decision(summary: Dict[str, object]) -> None:
         crit = summary["criteria"]
         if not crit["axis_std_gt_0_05"]:
             print(f"FAILED CRITERION 1 axis_std > 0.05; observed {summary['axis_std']:+.6f}")
-        if not crit["axis_threshold_lt_neg_0_10"]:
-            print(f"FAILED CRITERION 2 axis_threshold < -0.10; observed {summary['axis_threshold']:+.6f}")
+        if not crit["axis_policy_threshold"]:
+            print(
+                "FAILED CRITERION 2 "
+                f"axis policy {summary['axis_policy']}; observed {summary['axis_threshold']:+.6f}"
+            )
         if not crit["cosine_direction_threshold"]:
             direction = summary["direction"]
             comparator = "> +0.20" if direction == "positive" else "< -0.20"

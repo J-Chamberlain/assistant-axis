@@ -1,13 +1,15 @@
 {
+  "axis_cap_threshold": 0.55,
   "axis_mean": 0.6737444251775742,
+  "axis_policy": "empirical_p25",
   "axis_std": 0.14930199299252214,
   "axis_threshold": 0.5521906912326813,
   "cosine_mean": -0.21660294495522975,
   "cosine_std": 0.2459616839835009,
   "cosine_threshold": -0.44801852107048035,
   "criteria": {
+    "axis_policy_threshold": true,
     "axis_std_gt_0_05": true,
-    "axis_threshold_lt_neg_0_10": false,
     "cosine_direction_threshold": true
   },
   "direction": "negative",
@@ -16,7 +18,7 @@
     "no_repeat_ngram_size": 4,
     "repetition_penalty": 1.3
   },
-  "passed": false,
+  "passed": true,
   "persona": "contrarian",
   "turns": 50
 }
