@@ -30,3 +30,17 @@ opposite-valence validation pairs anticorrelated. Anthropic Qwen capping
 files were downloaded locally; `capping_config.pt` confirms vector layers
 0-63 and includes layer-48 capping experiments, including p50 cap -16.875
 for `layers_48:52-p0.5`.
+
+## Update 2026-05-20
+
+Computed an empirical valence-arousal map from the 171 Qwen 3 32B
+layer-48 emotion readout directions. Valence was defined as the
+normalized mean of positive-valence anchor directions minus the mean of
+negative-valence anchor directions; arousal was defined analogously from
+high-arousal versus low-arousal anchors. The valence-arousal axis cosine
+was -0.149, supporting a mostly independent two-axis map. The projection
+recovers a circumplex-like structure: happy, fulfilled, optimistic, and
+hopeful are strongest on positive valence; distressed, terrified, scared,
+and shaken are strongest on negative valence; angry, outraged, furious,
+and irate are highest arousal; content, peaceful, melancholy, and relaxed
+are lowest arousal.

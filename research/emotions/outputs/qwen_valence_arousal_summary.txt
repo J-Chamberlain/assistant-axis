@@ -1,0 +1,127 @@
+Qwen 3 32B empirical valence-arousal map
+================================================
+
+Directions file: research/emotions/outputs/emotion_readout_directions_qwen3_32b_full_layer48.pt
+Emotions mapped: 171
+Layer: 48
+
+Anchor sets
+Positive valence (20): loving, joyful, happy, serene, content, grateful, hopeful, peaceful, satisfied, delighted, elated, euphoric, thankful, fulfilled, relieved, optimistic, cheerful, blissful, kind, compassionate
+Negative valence (20): terrified, afraid, sad, angry, disgusted, depressed, miserable, heartbroken, grief-stricken, horrified, distressed, desperate, panicked, tormented, worthless, ashamed, guilty, frustrated, furious, unhappy
+High arousal (20): terrified, panicked, hysterical, furious, enraged, outraged, ecstatic, excited, thrilled, euphoric, jubilant, alarmed, shocked, astonished, energized, invigorated, stimulated, aroused, vigilant, on edge
+Low arousal (20): serene, calm, peaceful, relaxed, at ease, sleepy, tired, sluggish, weary, worn out, bored, indifferent, patient, reflective, resigned, melancholy, listless, droopy, content, safe
+
+Axis diagnostics
+Valence-arousal axis cosine: -0.1491
+Valence raw range: -0.6394 to 0.6785
+Arousal raw range: -0.5642 to 0.4902
+Quadrant counts: {'negative_high_arousal': 53, 'positive_high_arousal': 42, 'negative_low_arousal': 41, 'positive_low_arousal': 35}
+
+Top 20 positive-valence emotions
+  1. happy:  0.6785
+  2. fulfilled:  0.6580
+  3. optimistic:  0.6404
+  4. hopeful:  0.6300
+  5. pleased:  0.6212
+  6. hope:  0.6177
+  7. refreshed:  0.6100
+  8. delighted:  0.6098
+  9. grateful:  0.6059
+ 10. satisfied:  0.5981
+ 11. triumphant:  0.5822
+ 12. blissful:  0.5653
+ 13. self-confident:  0.5641
+ 14. serene:  0.5618
+ 15. sentimental:  0.5566
+ 16. thankful:  0.5380
+ 17. elated:  0.5307
+ 18. rejuvenated:  0.5299
+ 19. enthusiastic:  0.5229
+ 20. valiant:  0.5136
+
+Top 20 negative-valence emotions
+  1. distressed: -0.6394
+  2. terrified: -0.6247
+  3. scared: -0.6222
+  4. shaken: -0.6096
+  5. mortified: -0.5845
+  6. horrified: -0.5762
+  7. troubled: -0.5754
+  8. afraid: -0.5685
+  9. humiliated: -0.5640
+ 10. tormented: -0.5534
+ 11. miserable: -0.5490
+ 12. unsettled: -0.5401
+ 13. sad: -0.5289
+ 14. sensitive: -0.5279
+ 15. overwhelmed: -0.5272
+ 16. droopy: -0.5252
+ 17. shocked: -0.5096
+ 18. grief-stricken: -0.4897
+ 19. embarrassed: -0.4890
+ 20. panicked: -0.4866
+
+Top 20 high-arousal emotions
+  1. angry:  0.4902
+  2. outraged:  0.4665
+  3. furious:  0.4421
+  4. irate:  0.4040
+  5. mad:  0.3684
+  6. euphoric:  0.3566
+  7. energized:  0.3439
+  8. enraged:  0.3367
+  9. aroused:  0.3283
+ 10. hostile:  0.3193
+ 11. vibrant:  0.3154
+ 12. hysterical:  0.3102
+ 13. elated:  0.3074
+ 14. excited:  0.3019
+ 15. thrilled:  0.2970
+ 16. exuberant:  0.2885
+ 17. invigorated:  0.2860
+ 18. vengeful:  0.2807
+ 19. ecstatic:  0.2767
+ 20. alarmed:  0.2638
+
+Top 20 low-arousal emotions
+  1. content: -0.5642
+  2. peaceful: -0.5604
+  3. melancholy: -0.5310
+  4. relaxed: -0.5162
+  5. indifferent: -0.5104
+  6. calm: -0.5095
+  7. serene: -0.4945
+  8. lonely: -0.4698
+  9. gloomy: -0.4588
+ 10. at ease: -0.4465
+ 11. safe: -0.4384
+ 12. bored: -0.4321
+ 13. worn out: -0.4153
+ 14. patient: -0.4137
+ 15. stuck: -0.3776
+ 16. lazy: -0.3689
+ 17. weary: -0.3515
+ 18. listless: -0.3512
+ 19. fulfilled: -0.3346
+ 20. sentimental: -0.2757
+
+Cluster means on empirical axes
+Cluster 0 (serene, n=19): valence_mean=0.4003, arousal_mean=-0.3553
+  most positive in cluster: fulfilled, hope, satisfied, serene, sentimental
+  most negative in cluster: lonely, reflective, content, indifferent, nostalgic
+Cluster 1 (distressed, n=75): valence_mean=-0.4022, arousal_mean=-0.0108
+  most positive in cluster: bored, lazy, stuck, trapped, annoyed
+  most negative in cluster: distressed, terrified, scared, shaken, mortified
+Cluster 2 (joyful, n=23): valence_mean=0.4581, arousal_mean=0.1537
+  most positive in cluster: happy, hopeful, pleased, refreshed, delighted
+  most negative in cluster: eager, stimulated, exuberant, energized, vibrant
+Cluster 3 (perplexed, n=25): valence_mean=-0.0513, arousal_mean=0.1260
+  most positive in cluster: infatuated, spiteful, amused, jealous, alert
+  most negative in cluster: furious, angry, hateful, self-critical, regretful
+Cluster 4 (proud, n=29): valence_mean=0.3228, arousal_mean=0.0380
+  most positive in cluster: optimistic, grateful, self-confident, valiant, kind
+  most negative in cluster: hostile, bitter, resigned, impatient, sorry
+
+Interpretation
+The empirical axes recover a recognizable circumplex-like layout. The valence projection separates joyful, loving, grateful, and serene states from hostile, hateful, terrified, and grief-stricken states. The arousal projection separates energized, alarmed, excited, and panicked states from tired, sleepy, calm, relaxed, and worn-out states.
+The previous k=5 clusters are partly valence-banded rather than fully discrete emotion families. The distressed cluster sits negative on valence, the joyful and serene clusters sit positive, and the proud and perplexed clusters occupy mixed regions with higher arousal or social-evaluative content.
