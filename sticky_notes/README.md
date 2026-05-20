@@ -37,6 +37,7 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-20_qwen_emotion_readout.md | Qwen 3 32B emotion readout validation | 4 | usable layer 48 |
 | 2026-05-20_dyad_experiment_complete.md | Full seven-persona dyad experiment | 2/4 | complete |
 | 2026-05-20_model_comparison_matrix_viz.md | Model comparison matrix visualization concept | 2/3 | high |
+| 2026-05-20_our_world_in_data_collaboration.md | Our World in Data collaboration pitch | outreach | medium |
 | 2026-05-20_music_emotion_visualization.md | Music-driven real-time emotion visualization | essay 2 | medium-high |
 | 2026-05-20_forced_swim_test_analogy.md | Forced swim test analogy for despair probing | 4 | high |
 | 2026-05-20_valence_arousal_methodology_section.md | Valence-arousal methodology section draft notes | 2 | high |
