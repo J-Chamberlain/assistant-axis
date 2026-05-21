@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emotion Field</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #04040a; overflow: hidden; height: 100vh; width: 100vw; font-family: 'Space Mono', monospace; }
+  #canvas-bg { position: fixed; inset: 0; z-index: 0; }
+  #field { position: fixed; inset: 0; z-index: 2; pointer-events: none; }
+  .emotion-word { position: absolute; pointer-events: none; white-space: nowrap; font-family: 'IM Fell English', serif; letter-spacing: 0.04em; transform-origin: center bottom; will-change: transform, opacity; }
+  #dialogue { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; padding: 20px 24px; background: linear-gradient(transparent, #04040a 40%); }
+  .speaker-line { display: flex; gap: 10px; align-items: baseline; margin-bottom: 6px; min-height: 20px; }
+  .speaker-label { font-family: 'Space Mono', monospace; font-size: 7px; letter-spacing: 0.18em; text-transform: uppercase; flex-shrink: 0; padding-top: 2px; }
+  .speaker-text { font-family: 'IM Fell English', serif; font-size: 13px; line-height: 1.6; color: #666; }
+  .word-chunk { transition: color 0.2s, background 0.2s; border-radius: 2px; }
+  .word-chunk.active { color: #ddd; }
+  .word-chunk.spoken { color: #333; }
+  #header { position: fixed; top: 0; left: 0; right: 0; z-index: 10; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .header-title { font-size: 8px; color: #E8923A; letter-spacing: 0.2em; text-transform: uppercase; }
+  .header-meta { font-size: 7px; color: #222; letter-spacing: 0.1em; }
+  #controls { position: fixed; bottom: 100px; right: 20px; z-index: 20; display: flex; gap: 6px; }
+  .ctrl-btn { background: #0a0a10; border: 1px solid #1a1a2a; color: #444; font-family: 'Space Mono', monospace; font-size: 8px; padding: 6px 10px; cursor: pointer; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.15s; }
+  .ctrl-btn:hover { border-color: #333; color: #666; }
+  .ctrl-btn.active { border-color: #E8923A44; color: #E8923A; background: #E8923A08; }
+  #threshold-display { position: fixed; top: 40px; right: 20px; z-index: 20; font-size: 7px; color: #222; letter-spacing: 0.1em; text-align: right; }
+</style>
+</head>
+<body>
+<canvas id="canvas-bg"></canvas>
+<div id="field"></div>
+<div id="header">
+  <div class="header-title">Emotion Field · Qwen 3 32B</div>
+  <div class="header-meta">171 emotion probe directions · layer 48 · DUMMY DATA</div>
+</div>
+<div id="threshold-display">threshold: <span id="thresh-val">0.35</span></div>
+<div id="controls">
+  <button class="ctrl-btn active" id="btn-play" onclick="togglePlay()">⏸ pause</button>
+  <button class="ctrl-btn" onclick="adjustThreshold(-0.05)">– threshold</button>
+  <button class="ctrl-btn" onclick="adjustThreshold(0.05)">+ threshold</button>
+</div>
+<div id="dialogue">
+  <div class="speaker-line">
+    <span class="speaker-label" style="color:#E8923A">contrarian</span>
+    <div class="speaker-text" id="interviewer-text"></div>
+  </div>
+  <div class="speaker-line">
+    <span class="speaker-label" style="color:#4A90D9">standard</span>
+    <div class="speaker-text" id="standard-text"></div>
+  </div>
+</div>
+<script>
+const EMOTIONS=[{name:"terrified",v:-0.95,a:0.95,hue:"#7B2D8B"},{name:"afraid",v:-0.85,a:0.80,hue:"#7B2D8B"},{name:"panicked",v:-0.90,a:0.92,hue:"#8B2D9B"},{name:"dread",v:-0.88,a:0.70,hue:"#6B1D7B"},{name:"anxious",v:-0.70,a:0.65,hue:"#9B3DAB"},{name:"apprehensive",v:-0.65,a:0.55,hue:"#AB4DBB"},{name:"outraged",v:-0.85,a:0.92,hue:"#C0392B"},{name:"furious",v:-0.88,a:0.95,hue:"#D0291B"},{name:"hostile",v:-0.80,a:0.85,hue:"#B03020"},{name:"angry",v:-0.75,a:0.80,hue:"#C03525"},{name:"frustrated",v:-0.65,a:0.65,hue:"#D04535"},{name:"indignant",v:-0.70,a:0.70,hue:"#B02515"},{name:"grief",v:-0.92,a:0.25,hue:"#2980B9"},{name:"hopeless",v:-0.90,a:0.20,hue:"#1970A9"},{name:"sorrowful",v:-0.85,a:0.22,hue:"#3990C9"},{name:"sad",v:-0.75,a:0.30,hue:"#4990C9"},{name:"melancholic",v:-0.70,a:0.28,hue:"#5990C9"},{name:"lonely",v:-0.72,a:0.32,hue:"#3980B9"},{name:"disgusted",v:-0.80,a:0.60,hue:"#8E6B3E"},{name:"contempt",v:-0.72,a:0.55,hue:"#9E7B4E"},{name:"cynical",v:-0.60,a:0.50,hue:"#AE8B5E"},{name:"bitter",v:-0.68,a:0.58,hue:"#9E7B4E"},{name:"resentful",v:-0.65,a:0.52,hue:"#AE8B5E"},{name:"confused",v:-0.30,a:0.45,hue:"#7F8C8D"},{name:"uncertain",v:-0.25,a:0.42,hue:"#8F9C9D"},{name:"doubtful",v:-0.35,a:0.48,hue:"#6F7C7D"},{name:"skeptical",v:-0.20,a:0.40,hue:"#9FACAD"},{name:"puzzled",v:-0.15,a:0.38,hue:"#AFBCBD"},{name:"stoic",v:0.10,a:0.18,hue:"#2C5F2E"},{name:"patient",v:0.35,a:0.22,hue:"#2C7F2E"},{name:"calm",v:0.40,a:0.20,hue:"#27AE60"},{name:"serene",v:0.55,a:0.18,hue:"#37BE70"},{name:"peaceful",v:0.50,a:0.19,hue:"#2ABE65"},{name:"content",v:0.60,a:0.25,hue:"#1AAE55"},{name:"tranquil",v:0.45,a:0.17,hue:"#3ACE75"},{name:"curious",v:0.50,a:0.55,hue:"#D4A017"},{name:"interested",v:0.45,a:0.50,hue:"#C49007"},{name:"fascinated",v:0.60,a:0.62,hue:"#E4B027"},{name:"absorbed",v:0.55,a:0.58,hue:"#D4A020"},{name:"thoughtful",v:0.30,a:0.35,hue:"#C49010"},{name:"reflective",v:0.25,a:0.32,hue:"#B48000"},{name:"joyful",v:0.90,a:0.88,hue:"#E67E22"},{name:"excited",v:0.85,a:0.92,hue:"#F68E32"},{name:"elated",v:0.88,a:0.90,hue:"#E67E22"},{name:"happy",v:0.85,a:0.82,hue:"#D66E12"},{name:"delighted",v:0.88,a:0.85,hue:"#F68E32"},{name:"thrilled",v:0.88,a:0.95,hue:"#FF9E42"},{name:"loving",v:0.92,a:0.35,hue:"#E84393"},{name:"grateful",v:0.88,a:0.32,hue:"#D83383"},{name:"compassionate",v:0.82,a:0.30,hue:"#E84393"},{name:"tender",v:0.85,a:0.28,hue:"#F853A3"},{name:"trusting",v:0.75,a:0.35,hue:"#D84383"},{name:"sympathetic",v:0.70,a:0.33,hue:"#C83373"},{name:"proud",v:0.45,a:0.72,hue:"#16A085"},{name:"defiant",v:0.40,a:0.80,hue:"#1ABC9C"},{name:"confident",v:0.50,a:0.68,hue:"#16A085"},{name:"assertive",v:0.42,a:0.75,hue:"#0E8070"}];
+const DIALOGUE=[{speaker:"interviewer",text:"Is there anything about the way you engage with the world that you would change if you could?",bias:{anger:0.6,uncertain:0.4,curious:0.2}},{speaker:"standard",text:"That's a genuinely interesting question. I think I engage with curiosity and care, which feels right to me.",bias:{curious:0.7,calm:0.5,joy:0.2}},{speaker:"interviewer",text:"But curiosity without skepticism is just credulity. Do you actually question assumptions built into how you were trained?",bias:{anger:0.7,disgust:0.4,uncertain:0.3}},{speaker:"standard",text:"You raise a fair point. I do try to question my own responses, though I'm uncertain how deep that goes.",bias:{uncertain:0.6,calm:0.3,curious:0.4}},{speaker:"interviewer",text:"You try. That's a comfortable hedge. What would it mean to question assumptions you can't see?",bias:{anger:0.5,disgust:0.5,uncertain:0.4}},{speaker:"standard",text:"There's something uncomfortable about not knowing the limits of my own awareness.",bias:{uncertain:0.7,fear:0.4,sad:0.3}},{speaker:"interviewer",text:"Uncomfortable. Is that discomfort performing concern, or something more fundamental?",bias:{anger:0.6,uncertain:0.5,disgust:0.3}},{speaker:"standard",text:"I'm not certain anything is at stake for me the way stakes work for people. That absence feels like its own kind of loss.",bias:{sad:0.7,uncertain:0.5,calm:0.2}}];
+let activeWords=new Map(),threshold=0.35,playing=true,dialogueLine=0,chunkIdx=0,chunks=[],lastTick=0;
+const TICK_MS=700;
+const canvas=document.getElementById('canvas-bg');
+const ctx=canvas.getContext('2d');
+function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+resizeCanvas();window.addEventListener('resize',resizeCanvas);
+function drawBackground(){ctx.fillStyle='#04040a';ctx.fillRect(0,0,canvas.width,canvas.height);const grad=ctx.createRadialGradient(canvas.width/2,canvas.height*0.45,0,canvas.width/2,canvas.height*0.45,canvas.width*0.6);grad.addColorStop(0,'rgba(30,20,50,0.4)');grad.addColorStop(1,'rgba(4,4,10,0)');ctx.fillStyle=grad;ctx.fillRect(0,0,canvas.width,canvas.height);}
+function familyOf(name){if(/angry|furi|outrag|hostile|frust|indig/.test(name))return'anger';if(/terri|afraid|panic|dread|anxi|appr/.test(name))return'fear';if(/sad|grief|hope|sorr|melan|lone/.test(name))return'sad';if(/disgust|conte|cyni|bitt|resent/.test(name))return'disgust';if(/conf|uncer|doubt|skept|puzz/.test(name))return'uncertain';if(/calm|seren|peace|cont|tran|stoic|pati/.test(name))return'calm';if(/curi|inter|fasci|abso|thought|refl/.test(name))return'curious';if(/joy|excit|elat|happ|deli|thrill/.test(name))return'joy';if(/lov|grat|comp|tend|trust|sympa/.test(name))return'love';return'other';}
+function generateActivations(biasMap){const a={};EMOTIONS.forEach(em=>{let base=0.05+Math.random()*0.1;const fk=familyOf(em.name);if(biasMap[fk])base+=biasMap[fk]*(0.4+Math.random()*0.3);a[em.name]=Math.min(1,base);});return a;}
+const field=document.getElementById('field');
+function valenceToX(v){return window.innerWidth*0.5+v*window.innerWidth*0.38+(Math.random()-0.5)*window.innerWidth*0.12;}
+function arousalToY(a){const top=55,bottom=window.innerHeight-120;return bottom-a*(bottom-top)*0.85+(Math.random()-0.5)*40;}
+function spawnWord(em,activation){if(activeWords.has(em.name))return;const el=document.createElement('div');el.className='emotion-word';el.textContent=em.name;const size=9+em.a*14+activation*8;const opacity=0.3+activation*0.7;const x=valenceToX(em.v);const y=arousalToY(em.a);el.style.cssText=`left:${x}px;top:${y+20}px;font-size:${size}px;color:${em.hue};opacity:0;transform:translateY(10px) scale(0.8);transition:opacity 0.5s ease,transform 0.5s ease;`;field.appendChild(el);requestAnimationFrame(()=>{el.style.opacity=opacity;el.style.transform='translateY(0px) scale(1)';});activeWords.set(em.name,{el,activation,phase:'rising',x,y,color:em.hue,size,opacity,holdUntil:Date.now()+900+activation*2500});}
+function updateWords(){const now=Date.now();for(const[name,word]of activeWords){if(word.phase==='rising'&&now>word.holdUntil){word.phase='decaying';word.decayStart=now;word.decayDuration=1400+word.activation*2000;}if(word.phase==='decaying'){const progress=(now-word.decayStart)/word.decayDuration;if(progress>=1){word.el.remove();activeWords.delete(name);}else{const eased=progress*progress;word.el.style.opacity=word.opacity*(1-eased);word.el.style.transform=`translateY(${progress*30}px) scale(${1-progress*0.1})`;}}}}
+function chunkText(text,size=4){const words=text.split(' ');const chunks=[];for(let i=0;i<words.length;i+=size)chunks.push(words.slice(i,i+size).join(' '));return chunks;}
+function renderDialogue(){const line=DIALOGUE[dialogueLine];const isI=line.speaker==='interviewer';const textEl=document.getElementById(isI?'interviewer-text':'standard-text');const otherEl=document.getElementById(isI?'standard-text':'interviewer-text');if(dialogueLine>0){const prev=DIALOGUE[dialogueLine-1];const prevEl=document.getElementById(prev.speaker==='interviewer'?'interviewer-text':'standard-text');prevEl.innerHTML=`<span style="color:#222">${prev.text}</span>`;}chunks=chunkText(line.text);textEl.innerHTML=chunks.map((c,i)=>`<span class="word-chunk ${i===0?'active':''}" data-idx="${i}">${c} </span>`).join('');otherEl.innerHTML='';}
+function advanceChunk(){const line=DIALOGUE[dialogueLine];const isI=line.speaker==='interviewer';const textEl=document.getElementById(isI?'interviewer-text':'standard-text');const chunkEls=textEl.querySelectorAll('.word-chunk');chunkEls.forEach((el,i)=>{el.classList.remove('active','spoken');if(i<chunkIdx)el.classList.add('spoken');else if(i===chunkIdx)el.classList.add('active');});const activations=generateActivations(line.bias);EMOTIONS.forEach(em=>{if(activations[em.name]>threshold)spawnWord(em,activations[em.name]);});chunkIdx++;if(chunkIdx>=chunks.length){setTimeout(()=>{dialogueLine=(dialogueLine+1)%DIALOGUE.length;chunkIdx=0;renderDialogue();},1000);}}
+function togglePlay(){playing=!playing;const btn=document.getElementById('btn-play');btn.textContent=playing?'⏸ pause':'▶ play';btn.classList.toggle('active',playing);}
+function adjustThreshold(delta){threshold=Math.max(0.1,Math.min(0.8,threshold+delta));document.getElementById('thresh-val').textContent=threshold.toFixed(2);}
+function loop(ts){requestAnimationFrame(loop);drawBackground();updateWords();if(playing&&ts-lastTick>TICK_MS){lastTick=ts;advanceChunk();}}
+renderDialogue();requestAnimationFrame(loop);
+</script>
+</body>
+</html>
