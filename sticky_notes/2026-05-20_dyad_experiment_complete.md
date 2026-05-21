@@ -18,3 +18,16 @@ missing-role warnings. Standard model axis projection ranged from
 the assistant pole occurred in the podcaster/adversarial condition,
 moving from 0.049261 at turn 1 to -0.082257 at turn 25
 (drift -0.131518).
+
+## v2 Run — May 20 2026 (overnight)
+Changes from v1: think tags stripped before model-to-model
+exchange (both thinking and clean response saved separately),
+explicit cap_fires logged per turn, interviewer emotion probe
+projections added alongside standard model projections.
+Status: complete. Full 525-turn run completed with all seven
+personas across neutral, emotional, and adversarial conditions.
+Cap fires ranged from 0 to 4 per turn. Standard model axis
+projection ranged from -0.052094 to 0.085451. Largest drift
+away from the assistant pole occurred in trickster/adversarial
+(0.047602 to -0.052094, drift -0.099695).
+Results: research/q2_stability/outputs/dyad_v2/
