@@ -46,3 +46,7 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-20_multimodal_introspection_experiment.md | Multimodal introspection experiment proposal | fellowship | high |
 | 2026-05-20_flow_state_essay.md | Flow state and cognitive liberation essay concept | website essay | personal/public |
 | 2026-05-20_radial_vector_visualization.md | Radial vector visualization for live internal state display | 2/visualization | high |
+| 2026-05-21_autonomy_and_collaboration.md | Autonomy, collaboration, and career architecture | personal | no deadline |
+| 2026-05-21_data_as_gift_vision.md | Data as gift public communication vision | public communication | high importance |
+| 2026-05-21_comment_valence_rendering.md | Website comment valence rendering | website | medium |
+| 2026-05-21_voice_and_music.md | Voice, music, and the emotion field | personal/visualization | when ready |
