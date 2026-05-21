@@ -2,115 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Assistant Axis Visualizations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visualization Index</title>
   <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5f6c7b;
+      --line: #d8dee8;
+      --panel: #f7f9fc;
+      --accent: #0a66c2;
+      --accent-2: #0f7b63;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background: #ffffff;
-      color: #1f2328;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
     }
+
     main {
-      max-width: 900px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 36px 24px 60px;
+      padding: 28px 16px 56px;
     }
-    h1, h2 {
-      line-height: 1.25;
+
+    header {
+      padding: 12px 0 22px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
     }
-    .lead {
-      border: 1px solid #d0d7de;
-      border-radius: 12px;
-      padding: 20px 24px;
-      background: #f6f8fa;
-      margin-bottom: 28px;
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 8vw, 4.2rem);
+      line-height: 0.95;
+      letter-spacing: 0;
     }
-    ul {
-      padding-left: 20px;
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
     }
-    li {
-      margin: 8px 0;
+
+    h2 {
+      margin: 30px 0 12px;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
-    a {
-      color: #0969da;
+
+    .grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .item {
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      color: inherit;
       text-decoration: none;
+      background: var(--panel);
     }
-    a:hover {
-      text-decoration: underline;
+
+    .item:focus,
+    .item:hover {
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    .item h3 {
+      margin: 0 0 7px;
+      font-size: 1.12rem;
+      line-height: 1.2;
+    }
+
+    .item p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .label {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .label.figure {
+      color: var(--accent-2);
+    }
+
+    @media (min-width: 720px) {
+      main {
+        padding: 44px 24px 72px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid.interactive {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
     }
   </style>
 </head>
 <body>
   <main>
-    <h1>Assistant Axis Deep Analysis</h1>
+    <header>
+      <h1>Visualization Index</h1>
+      <p class="subtitle">assistant-axis · Persona Geometry Research · May 2026</p>
+    </header>
 
-    <div class="lead">
-      <h2><a href="research_paper.html">research_paper.html</a></h2>
-      <p>
-        Portable HTML version of the research note, including the careful-evaluator hypothesis,
-        layer-45 analysis, psychological-framework correlations, cluster structure, anomaly
-        profiles, and a categorized research agenda for follow-up work.
-      </p>
-      <p><a href="research_paper.md">Markdown source</a></p>
-    </div>
+    <h2>Interactive Visualizations</h2>
+    <section class="grid interactive">
+      <a class="item" href="emotion_field.html">
+        <h3>Emotion Field</h3>
+        <p>171 emotion probe directions rendered as floating words. Words rise and fade as emotions activate during conversation. Color encodes valence, size encodes arousal.</p>
+        <span class="label">● Live Demo</span>
+      </a>
 
-    <div class="lead">
-      <h2><a href="trait-analysis/">trait-analysis/</a></h2>
-      <p>
-        Separate appendix for the role-trait similarity analysis: layer selection for trait
-        vectors, the role-trait cosine similarity matrix, cluster-level trait profiles, and a
-        permutation test showing that same-cluster roles share more similar trait profiles than
-        different-cluster roles.
-      </p>
-      <p><a href="trait_analysis_summary.md">Markdown summary</a> | <a href="trait_role_analysis.py">analysis script</a></p>
-    </div>
+      <a class="item" href="emotion_equalizer.html">
+        <h3>Emotion Equalizer</h3>
+        <p>Side-by-side bar chart of emotion activations for interviewer and standard model. Word-by-word animation with speaking/listening indicators.</p>
+        <span class="label">● Live Demo</span>
+      </a>
 
-    <h2>Layer Analysis</h2>
-    <ul>
-      <li><a href="pca_3d_layer45.html">pca_3d_layer45.html</a> - Layer-45 3D PCA persona-space scatter.</li>
-      <li><a href="axis_ranking_layer45.html">axis_ranking_layer45.html</a> - Layer-45 full assistant-axis ranking.</li>
-      <li><a href="layer22_vs_layer45_comparison.html">layer22_vs_layer45_comparison.html</a> - Side-by-side comparison of layer-22 and layer-45 extremes.</li>
-      <li><a href="layer_profiles_extremes.html">layer_profiles_extremes.html</a> - Top-5 and bottom-5 role projection profiles across all 46 layers.</li>
-      <li><a href="pca_3d_best_layer.html">pca_3d_best_layer.html</a> - PCA at the most discriminative layer identified in the scan.</li>
-      <li><a href="axis_ranking_best_layer.html">axis_ranking_best_layer.html</a> - Ranking at the most discriminative layer.</li>
-      <li><a href="tsne_2d_layer45.html">tsne_2d_layer45.html</a> - Layer-45 t-SNE projection.</li>
-      <li><a href="layer_depth_heatmap.png">layer_depth_heatmap.png</a> - Layer-by-layer assistant-axis heatmap.</li>
-      <li><a href="layer_discrimination.png">layer_discrimination.png</a> - Variance by layer used to identify the layer-45 peak.</li>
-    </ul>
+      <a class="item" href="research_paper.html">
+        <h3>Research Paper</h3>
+        <p>The Persona Space of Language Models: Activation Geometry, Psychological Structure, and the Careful Evaluator Hypothesis.</p>
+        <span class="label">Paper</span>
+      </a>
+    </section>
 
-    <h2>Psychological Frameworks</h2>
-    <ul>
-      <li><a href="bigfive_correlation.html">bigfive_correlation.html</a> - Big Five score correlations against layer-22 axis position.</li>
-      <li><a href="dark_triad_correlation.html">dark_triad_correlation.html</a> - Dark Triad score correlations against layer-22 axis position.</li>
-      <li><a href="conscientiousness_by_cluster.html">conscientiousness_by_cluster.html</a> - Conscientiousness vs. assistant-axis projection split by cluster.</li>
-      <li><a href="tsne_jungian_layer45.html">tsne_jungian_layer45.html</a> - Layer-45 t-SNE colored by Jungian archetype.</li>
-      <li><a href="tsne_jungian.html">tsne_jungian.html</a> - Original Jungian-colored t-SNE at layer 22.</li>
-    </ul>
-
-    <h2>Cluster Structure</h2>
-    <ul>
-      <li><a href="cluster_distances.png">cluster_distances.png</a> - Cluster centroid distance heatmap.</li>
-      <li><a href="cosine_heatmap.png">cosine_heatmap.png</a> - Full clustered cosine-similarity heatmap over 275 roles.</li>
-      <li><a href="axis_ranking_annotated.html">axis_ranking_annotated.html</a> - Layer-22 ranking with statistically surprising positions annotated.</li>
-    </ul>
-
-    <h2>Anomalies</h2>
-    <ul>
-      <li><a href="anomaly_profiles.md">anomaly_profiles.md</a> - Compact profile table for robot, assistant, poet, angel, and saboteur.</li>
-      <li><a href="poet_analysis.md">poet_analysis.md</a> - Dedicated note on the poet and creative-artist anti-assistant finding.</li>
-      <li><a href="assistant_axis_alignment.png">assistant_axis_alignment.png</a> - Assistant-to-axis alignment across layers.</li>
-      <li><a href="robot_assistant_similarity_layers.png">robot_assistant_similarity_layers.png</a> - Robot vs. assistant similarity across layers.</li>
-    </ul>
+    <h2>Analysis Outputs</h2>
+    <section class="grid">
+      <a class="item" href="../research/q2_stability/outputs/dyad_v2/">
+        <h3>Valence Ridge Plots</h3>
+        <p>Interviewer vs standard model valence distributions by persona. Side-by-side ridge plots showing contagion patterns.</p>
+        <span class="label figure">Figure</span>
+      </a>
+    </section>
 
     <h2>Data</h2>
-    <ul>
-      <li><a href="full_ranking.csv">full_ranking.csv</a> - Full layer-22 ranking with cluster labels.</li>
-      <li><a href="psychology_profiles.csv">psychology_profiles.csv</a> - Role-level Big Five, Dark Triad, and Jungian assignments.</li>
-      <li><a href="cluster_cohesion.csv">cluster_cohesion.csv</a> - Within-cluster cosine cohesion table.</li>
-      <li><a href="surprising_positions.csv">surprising_positions.csv</a> - Roles with large gaps from cluster-median rank.</li>
-      <li><a href="anomaly_profiles.md">anomaly_profiles.md</a> - Data-style markdown summary of anomaly neighborhoods and scores.</li>
-    </ul>
+    <section class="grid">
+      <a class="item" href="../research/q2_stability/outputs/dyad_v2/">
+        <h3>Dyad v2 — Raw Data</h3>
+        <p>7 personas x 3 conditions x 25 turns. Think-tag separated. Explicit cap firing. Interviewer + standard model emotion probes.</p>
+        <span class="label">CSV + JSON</span>
+      </a>
+
+      <a class="item" href="../research/q2_stability/outputs/persona_valence/">
+        <h3>Persona-Valence Matrix</h3>
+        <p>7 personas x 30 questions spanning the valence-arousal circumplex. Single-turn responses with emotion probe activations.</p>
+        <span class="label">CSV</span>
+      </a>
+    </section>
   </main>
 </body>
 </html>
