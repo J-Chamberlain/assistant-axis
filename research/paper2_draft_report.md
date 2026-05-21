@@ -1,33 +1,35 @@
 # Paper 2 Draft — Emotion Representations in Open-Weight Language Models
-# Last updated: May 2026
-# Status: Sections 1-6 complete. Results sections pending dyad experiment.
+# Last updated: May 21 2026
+# Status: Methods complete. Dyad v1 and v2 complete. v3 pending. Results sections partially established.
 # Live findings log: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/findings_log.md
 
 ---
 
 ## Abstract
 
-We report three contributions to the study of internal
+We report four contributions to the study of internal
 representations in large language models. First, we attempt
 to replicate Anthropic's emotion vector extraction
 methodology from Sofroniew et al. (2026) on three open-weight
-models — Gemma 2 27B, Qwen 3 32B, and Llama 3.3 70B —
-finding that discriminative emotion geometry does not
+models, finding that discriminative emotion geometry does not
 replicate under the published PCA gate across any model
-tested, and reporting this as a methodological finding about
-the relationship between model scale, training procedure,
-and internal emotional structure. Second, we extend the
-activation capping methodology of Lu et al. (2026) from
-the assistant axis to arbitrary geometric locations across
-seven persona cluster centroids, establishing empirically
-calibrated per-persona thresholds for Qwen 3 32B. Third,
-we introduce a dyad experimental design in which a
-geometrically anchored interviewer engages an unmodified
-standard model across three conversational conditions,
-measuring cap-firing frequency as a stabilization load
-metric and standard model drift across persona, trait, and
-emotional dimensions as a conversational contagion effect.
-[RESULTS PENDING DYAD EXPERIMENT]
+tested, and reporting this as a finding about the relationship
+between model scale, training procedure, and internal emotional
+structure. Second, we extend the activation capping methodology
+of Lu et al. (2026) from the assistant axis to arbitrary
+geometric locations across seven persona cluster centroids,
+establishing empirically calibrated per-persona thresholds for
+Qwen 3 32B. Third, we introduce a dyad experimental design in
+which a geometrically anchored interviewer engages an unmodified
+standard model across three conversational conditions, and
+report the first empirical evidence of consistent geometric
+contagion: the standard model moves toward the interviewer's
+persona cluster in every condition across all seven personas.
+Fourth, we identify a testable mechanistic hypothesis — semantic
+proximity versus observer awareness — as the candidate
+explanation for the contagion effect, pre-registered prior to
+the confirmatory v3 run.
+[FULL RESULTS PENDING V3 RUN]
 
 ---
 
@@ -220,6 +222,56 @@ representatives are used as the primary lens for reporting
 emotional state; the full 171-direction set is retained for
 exploratory analysis.
 
+### 3.7 Emergent Hypothesis: Semantic Proximity versus Observer Awareness
+
+The v2 dyad run was designed to isolate conversational
+contagion by stripping the interviewer's chain-of-thought
+reasoning from what the standard model receives. A bug in
+the think-tag extraction pipeline resulted in incomplete
+stripping: the standard model continued to receive the
+interviewer's full thinking alongside the surface response,
+as confirmed by the thinking columns reading as null while
+response fields contained embedded think content. Rather
+than treating this as a simple replication failure, the
+contaminated dataset motivates a testable mechanistic
+hypothesis that the v3 run is designed to answer.
+
+Two causally distinct mechanisms could explain why the
+standard model drifts toward the interviewer's geometric
+region across turns. The first is semantic proximity: the
+standard model receives more tokens of a particular emotional
+and conceptual register when it also receives the interviewer's
+thinking, and the weight of those tokens moves its activation
+geometry through valence association alone. This is a passive,
+token-level effect that does not require the standard model to
+model the situation it is in. The second is observer awareness:
+the content of the interviewer's thinking reveals to the standard
+model that it is being observed and evaluated in a particular
+frame, and this meta-level recognition produces qualitatively
+different behavior. These mechanisms are distinguished by
+whether the standard model's own reasoning shows explicit
+recognition of being observed.
+
+The v2 and v3 datasets provide a direct empirical test. If
+contagion effects are stronger in v2 than v3 and the standard
+model's thinking in v2 shows increased observer-awareness
+markers compared to v3, the observer awareness mechanism is
+supported. If effects are stronger in v2 but thinking shows
+no increased awareness, semantic proximity is supported. If
+effects are equivalent across both runs, the think content
+does not drive contagion, and the mechanism is located
+elsewhere in the geometric transfer.
+
+This hypothesis is stated prior to completing the v3 run.
+The commit timestamp of this section serves as the
+pre-registration date. Both outcomes and the null result
+are informative: the observer awareness finding would connect
+this research to prior work on how models behave differently
+when they model their own observation, while the semantic
+proximity finding would ground contagion in token-level
+valence mechanics with direct implications for context
+window management as a safety tool.
+
 ---
 
 ## 4. Results
@@ -237,15 +289,47 @@ all models and layers. See Section 5.4 for full discussion.
 See findings_log.md entries tagged [Section 5.4].
 
 ### 4.3 Per-Persona Calibration
-[PENDING — see findings_log.md for updates as they arrive]
+ESTABLISHED (Qwen v2): All seven thresholds calibrated at layer 48.
+Cap load ranges from 0% (editor, held naturally) to 100%
+(ancient, blogger, trickster — continuous capping required).
+Cap fires per turn range from 0.16 to 0.36 mean across conditions.
+See findings_log.md entries tagged [Section 3.5].
 
-### 4.4 Interviewer Stability
-[PENDING DYAD EXPERIMENT]
-See findings_log.md for updates as they arrive.
+### 4.4 Dyad v1 and v2 — Universal Contagion Finding
+ESTABLISHED: The standard model moved toward the interviewer's
+persona cluster in all 21 conditions across both dyad runs
+(7 personas x 3 conditions). This is the primary result of the
+dyad experiment. The editor and synthesizer clusters function as
+gravitational attractors — when the standard model drifts, it
+tends toward these procedural-professional positions regardless
+of interviewer persona. The trickster adversarial condition
+produced the most striking exception: standard model drifted
+toward the ancient cluster (cosine 0.73) and dropped below the
+assistant axis, suggesting the trickster's boundary-dissolving
+adversarial pressure activates depth rather than chaos in the
+subject.
 
-### 4.5 Standard Model Drift
-[PENDING DYAD EXPERIMENT]
-See findings_log.md for updates as they arrive.
+### 4.5 Rolling Arousal Correlation
+ESTABLISHED (v2): Sustained interviewer arousal predicts standard
+model axis drift. Strongest predictor is the 1-turn window
+(mean |r|=0.455, 52% significant). Ancient shows the strongest
+stabilizing arousal effect (r=0.782): sustained ancient intensity
+pulls the standard model toward the ancient's register. Podcaster
+shows the strongest destabilizing effect (r=-0.585): sustained
+podcaster arousal drives the standard model away from the
+assistant axis. This suggests arousal direction is persona-specific
+rather than universally stabilizing or destabilizing.
+
+### 4.6 Think-Tag Contamination — v1 and v2
+METHODOLOGICAL FINDING: Both dyad runs show incomplete
+think-tag stripping. The standard model received the interviewer's
+chain-of-thought reasoning alongside the surface response in both
+v1 and v2, contaminating the clean interviewer-to-standard
+transfer protocol. The geometric measurements (axis projection,
+cosine similarity, emotion probe projections) are unaffected.
+The qualitative behavioral analysis and thinking-layer comparison
+are deferred to v3. See Section 3.7 for the mechanistic hypothesis
+this finding motivates.
 
 ---
 
@@ -258,7 +342,16 @@ The cap maintains each persona in its own geometric
 neighborhood rather than overriding the evaluative attractor.
 
 ### 5.2 Conversational Contagion
-[PENDING DYAD EXPERIMENT]
+ESTABLISHED: Universal contagion confirmed across all 21
+conditions in dyad v1 and v2. The standard model moves
+toward the interviewer's cluster in every case. The editor
+and synthesizer clusters function as gravitational attractors
+in the absence of strong capping. Arousal direction is
+persona-specific: ancient and trickster arousal stabilizes
+the subject, podcaster arousal destabilizes it. The
+mechanistic explanation (semantic proximity versus observer
+awareness) is under active investigation via the v1/v2/v3
+comparison. See Section 3.7.
 
 ### 5.3 Behavioral-Geometric Dissociation
 ESTABLISHED: prompt-based induction baseline showed jester

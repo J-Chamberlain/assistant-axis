@@ -267,3 +267,24 @@ to transfer to open-weight models as a validation criterion.
 ## 2026-05-20 [Paper 2 / Q2] Qwen 3 32B Persona Calibration
 
 Ran the seven-centroid persona calibration on `Qwen/Qwen3-32B` at layer 48 using the 50-turn minimal-continuation procedure and empirical p25 cap policy. Axis p25 thresholds were editor `-0.032374`, synthesizer `+0.063926`, blogger `+0.091596`, ancient `+0.154919`, trickster `+0.046783`, contrarian `+0.035024`, and podcaster `+0.019844`; cosine means were respectively `+0.103920`, `-0.083179`, `-0.062524`, `+0.249787`, `+0.149532`, `+0.140586`, and `-0.097318`. Unlike Gemma, Qwen does not show uniformly positive empirical thresholds and has negative persona-cosine baselines for synthesizer, blogger, and podcaster, so Qwen dyad capping should treat persona-specific calibration as required rather than assuming the Lu et al. assistant threshold transfers across personas.
+
+---
+
+## 2026-05-21 [Paper 2 / Section 3.7] Pre-Registration — Semantic Proximity vs Observer Awareness Hypothesis
+
+Prior to completing dyad v3, two mechanistic hypotheses are
+pre-registered to explain why contagion effects may be stronger
+in contaminated runs (v1/v2, where standard model sees interviewer
+thinking) than clean runs (v3, where it does not). Semantic
+proximity hypothesis: additional tokens in the interviewer's
+emotional register passively shift activation geometry through
+valence association. Observer awareness hypothesis: the standard
+model's recognition of being observed changes its behavior
+qualitatively, visible as explicit observer-awareness markers
+in its chain-of-thought. The v2 vs v3 comparison is the
+empirical test. Commit timestamp serves as pre-registration date.
+Method: comparative analysis of contagion magnitude and
+thinking-layer content across v2 (contaminated) and v3 (clean).
+Implication: observer awareness finding would connect to
+Hawthorne effect literature; semantic proximity finding would
+ground contagion in context window token mechanics.
