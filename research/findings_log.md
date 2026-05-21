@@ -288,3 +288,21 @@ thinking-layer content across v2 (contaminated) and v3 (clean).
 Implication: observer awareness finding would connect to
 Hawthorne effect literature; semantic proximity finding would
 ground contagion in context window token mechanics.
+
+---
+
+## 2026-05-21 [Paper 2 / Section 3.8] Pre-Registration — Multi-Run Experimental Comparison Design
+
+Pre-registered prior to v3 completion: the dyad experiment
+constitutes a three-condition comparison across v1/v2
+(contaminated, short context), v3 (clean, full context),
+and planned v4 (contaminated, full context). The v3 vs v4
+comparison isolates think visibility from token truncation.
+A secondary question — whether drift would have occurred
+within v1/v2 token budgets — is answerable from v3 think
+block content alone. Commit timestamp is pre-registration
+date.
+Method: comparative analysis across dyad runs.
+Implication: v4 is necessary for a clean contamination
+comparison only if v3 think blocks show substantive
+reasoning after token 150.

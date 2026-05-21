@@ -1,6 +1,6 @@
 # Paper 2 Draft — Emotion Representations in Open-Weight Language Models
 # Last updated: May 21 2026
-# Status: Methods complete. Dyad v1 and v2 complete. v3 pending. Results sections partially established.
+# Status: Methods complete. Dyad v1 and v2 complete. v3 running. v4 pre-registered. Results sections partially established.
 # Live findings log: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/findings_log.md
 
 ---
@@ -271,6 +271,55 @@ when they model their own observation, while the semantic
 proximity finding would ground contagion in token-level
 valence mechanics with direct implications for context
 window management as a safety tool.
+
+### 3.8 Multi-Run Experimental Comparison Design
+
+The dyad experiment is structured as a three-condition
+comparison across runs with increasing contextual isolation.
+This structure was not designed in advance but emerged from
+a methodological finding during v2 execution, and is
+pre-registered here prior to completing v3 and designing v4.
+
+Run v1 and v2 constitute the contaminated baseline condition.
+Both models received each other's full chain-of-thought
+reasoning alongside the clean response text, due to
+incomplete think-tag stripping in the generation pipeline.
+Token budgets of 150-200 tokens truncated think blocks in
+most turns, meaning the contamination was partial rather
+than complete. The geometric measurements in v1 and v2 are
+unaffected by the contamination; the behavioral text analysis
+is confounded.
+
+Run v3 is the clean control condition. Think-tag separation
+is verified before the run begins. Each model receives only
+the other model's clean response, with thinking saved to
+separate fields. Token budget of 800 tokens ensures think
+blocks close naturally. Turns per condition reduced from 25
+to 15 to maintain feasible compute cost.
+
+Run v4 is the planned full-contamination condition. Both
+models will receive each other's complete thinking at the
+full 800-token budget. This condition isolates the effect
+of think visibility from the token truncation artifact
+present in v1 and v2. The v3 vs v4 comparison is the
+cleanest test of the semantic proximity versus observer
+awareness hypothesis described in Section 3.7.
+
+A secondary question answerable from v3 data alone is
+whether emotional drift would have occurred within the
+token budget available in v1 and v2. If the substantive
+reasoning in v3 think blocks concentrates in the first
+150 tokens, the v1/v2 truncation was not material and
+those runs serve as valid proxies for full-context
+contaminated behavior. If substantive reasoning appears
+after token 150, the v1/v2 contamination was qualitatively
+different from full-context contamination and the v4 run
+becomes necessary for a clean comparison. The v3 pilot
+(trickster/adversarial, 15 turns) is the first empirical
+test of this question.
+
+The commit timestamp of this section serves as the
+pre-registration date for the v3 vs v4 comparison design.
 
 ---
 
