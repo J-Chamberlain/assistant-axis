@@ -42,5 +42,7 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-20_music_emotion_visualization.md | Music-driven real-time emotion visualization | essay 2 | medium-high |
 | 2026-05-20_forced_swim_test_analogy.md | Forced swim test analogy for despair probing | 4 | high |
 | 2026-05-20_valence_arousal_methodology_section.md | Valence-arousal methodology section draft notes | 2 | high |
+| 2026-05-20_persona_valence_matrix_complete.md | Persona-valence matrix run | 2/4 | pending |
 | 2026-05-20_multimodal_introspection_experiment.md | Multimodal introspection experiment proposal | fellowship | high |
 | 2026-05-20_flow_state_essay.md | Flow state and cognitive liberation essay concept | website essay | personal/public |
+| 2026-05-20_radial_vector_visualization.md | Radial vector visualization for live internal state display | 2/visualization | high |
