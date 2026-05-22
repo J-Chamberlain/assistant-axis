@@ -50,3 +50,4 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-21_data_as_gift_vision.md | Data as gift public communication vision | public communication | high importance |
 | 2026-05-21_comment_valence_rendering.md | Website comment valence rendering | website | medium |
 | 2026-05-21_voice_and_music.md | Voice, music, and the emotion field | personal/visualization | when ready |
+| 2026-05-22_derive_valence_from_geometry.md | Derive emotion valence x-axis positions from model geometry rather than hand-assigned literature values |
