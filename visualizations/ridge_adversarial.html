@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emotion Distribution at Turn 3 — Adversarial</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: #0a0a12;
+      color: #e8e8ee;
+      font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .page {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 30px 0 46px;
+    }
+    header {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    h1 {
+      color: #f0f0f0;
+      font-size: clamp(22px, 2.6vw, 34px);
+      line-height: 1.1;
+      letter-spacing: 0;
+      font-weight: 720;
+    }
+    .subtitle {
+      color: #777;
+      font-size: 13px;
+      margin-top: 8px;
+      letter-spacing: 0.04em;
+    }
+    .badge {
+      border: 1px solid #282832;
+      color: #aaa;
+      border-radius: 999px;
+      padding: 8px 12px;
+      white-space: nowrap;
+      font-size: 12px;
+      background: #101018;
+      font-variant-numeric: tabular-nums;
+    }
+    .section {
+      border-top: 1px solid #24242e;
+      padding: 16px 0 14px;
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+    .persona {
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .metric {
+      margin-top: 10px;
+      color: #666;
+      font-size: 11px;
+      letter-spacing: 0;
+      text-transform: none;
+      font-variant-numeric: tabular-nums;
+    }
+    .pos { color: #27AE60; }
+    .neg { color: #C0392B; }
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .ridge-card {
+      min-width: 0;
+    }
+    .ridge-label {
+      display: flex;
+      justify-content: space-between;
+      color: #666;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 5px;
+    }
+    .ridge-label .interviewer { color: #E8923A; }
+    .ridge-label .standard { color: #4A90D9; }
+    canvas {
+      width: 100%;
+      height: 60px;
+      display: block;
+      background: #090911;
+      border: 1px solid #181820;
+      border-radius: 4px;
+    }
+    .axis {
+      border-top: 1px solid #333;
+      margin-left: 148px;
+      height: 48px;
+      position: relative;
+      color: #666;
+      font-size: 10px;
+    }
+    .tick {
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 8px;
+      background: #444;
+    }
+    .tick span {
+      position: absolute;
+      top: 12px;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+    .anchor {
+      position: absolute;
+      bottom: 0;
+      transform: translateX(-50%);
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .loading {
+      color: #888;
+      padding: 40px;
+      border: 1px solid #24242e;
+      border-radius: 8px;
+      background: #101018;
+    }
+    @media (max-width: 840px) {
+      header, .section, .pair { grid-template-columns: 1fr; display: grid; }
+      .axis { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <h1>Emotion Distribution at Turn 3 — Adversarial</h1>
+        <div class="subtitle">Interviewer vs Standard Model · v3 Clean Think Separation · Qwen 3 32B</div>
+      </div>
+      <div class="badge">condition: adversarial</div>
+    </header>
+    <div id="root" class="loading">Loading ridge data...</div>
+    <div class="axis" id="axis"></div>
+  </main>
+
+  <script>
+    const CONDITION = "adversarial";
+    const DATA_PATH = "data/ridge_data_turn3.json";
+    const BANDWIDTH = 0.12;
+    const STEPS = 200;
+    const PERSONA_ORDER = ["trickster","ancient","contrarian","blogger","podcaster","synthesizer","editor"];
+
+    function xToPixel(x, width) {
+      return ((x + 1) / 2) * width;
+    }
+
+    function kde(points) {
+      const xs = Array.from({ length: STEPS }, (_, i) => -1 + (2 * i) / (STEPS - 1));
+      const ys = xs.map((x) => {
+        let y = 0;
+        points.forEach((point) => {
+          const z = (x - point.valence) / BANDWIDTH;
+          y += point.activation * Math.exp(-0.5 * z * z);
+        });
+        return y;
+      });
+      const max = Math.max(0.0001, ...ys);
+      return xs.map((x, i) => ({ x, y: ys[i] / max }));
+    }
+
+    function weightedMean(points) {
+      const total = points.reduce((sum, point) => sum + point.activation, 0);
+      if (!total) return 0;
+      return points.reduce((sum, point) => sum + point.valence * point.activation, 0) / total;
+    }
+
+    function drawRidge(canvas, points, color, fill) {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+      canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+      const ctx = canvas.getContext("2d");
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const W = rect.width;
+      const H = rect.height;
+      const base = H - 8;
+      const topPad = 8;
+      const curve = kde(points);
+      const mean = weightedMean(points);
+
+      ctx.clearRect(0, 0, W, H);
+      ctx.fillStyle = "#090911";
+      ctx.fillRect(0, 0, W, H);
+
+      ctx.strokeStyle = "#333";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(xToPixel(0, W), 0);
+      ctx.lineTo(xToPixel(0, W), H);
+      ctx.stroke();
+
+      ctx.beginPath();
+      curve.forEach((point, index) => {
+        const x = xToPixel(point.x, W);
+        const y = base - point.y * (H - topPad - 10);
+        index === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.lineTo(W, base);
+      ctx.lineTo(0, base);
+      ctx.closePath();
+      ctx.fillStyle = fill;
+      ctx.fill();
+
+      ctx.beginPath();
+      curve.forEach((point, index) => {
+        const x = xToPixel(point.x, W);
+        const y = base - point.y * (H - topPad - 10);
+        index === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      const mx = xToPixel(mean, W);
+      ctx.strokeStyle = color;
+      ctx.setLineDash([3, 4]);
+      ctx.beginPath();
+      ctx.moveTo(mx, 4);
+      ctx.lineTo(mx, base);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      ctx.fillStyle = "#555";
+      ctx.font = "9px Space Mono, monospace";
+      ctx.textAlign = "right";
+      ctx.fillText(`mean ${mean >= 0 ? "+" : ""}${mean.toFixed(2)}`, W - 6, 12);
+    }
+
+    function axisHtml() {
+      const ticks = [-0.75,-0.5,-0.25,0,0.25,0.5,0.75];
+      const tickHtml = ticks.map((tick) => {
+        const left = ((tick + 1) / 2) * 100;
+        const label = tick > 0 ? `+${tick}` : `${tick}`;
+        return `<div class="tick" style="left:${left}%"><span>${label}</span></div>`;
+      }).join("");
+      const anchors = [
+        ["threat", -0.9],
+        ["uncertain", -0.25],
+        ["calm", 0.4],
+        ["love", 0.9]
+      ].map(([label, x]) => `<div class="anchor" style="left:${((x + 1) / 2) * 100}%">${label}</div>`).join("");
+      return tickHtml + anchors;
+    }
+
+    function render(data) {
+      const root = document.getElementById("root");
+      root.className = "";
+      root.innerHTML = "";
+
+      PERSONA_ORDER.forEach((persona) => {
+        const item = data.data[persona]?.[CONDITION];
+        if (!item) return;
+        const axis = item.standard_axis ?? 0;
+        const section = document.createElement("section");
+        section.className = "section";
+        section.innerHTML = `
+          <div class="persona">
+            <div>${persona}</div>
+            <div class="metric">S-axis <span class="${axis < 0 ? "neg" : "pos"}">${axis.toFixed(4)}</span></div>
+            <div class="metric">I-cos <span style="color:#E8923A">${(item.interviewer_cosine ?? 0).toFixed(3)}</span></div>
+          </div>
+          <div class="pair">
+            <div class="ridge-card">
+              <div class="ridge-label"><span class="interviewer">interviewer</span><span>${item.interviewer.length} emotions</span></div>
+              <canvas data-kind="interviewer"></canvas>
+            </div>
+            <div class="ridge-card">
+              <div class="ridge-label"><span class="standard">standard model</span><span>${item.standard.length} emotions</span></div>
+              <canvas data-kind="standard"></canvas>
+            </div>
+          </div>
+        `;
+        root.appendChild(section);
+        drawRidge(section.querySelector('canvas[data-kind="interviewer"]'), item.interviewer, "#E8923A", "rgba(232,146,58,0.3)");
+        drawRidge(section.querySelector('canvas[data-kind="standard"]'), item.standard, "#4A90D9", "rgba(74,144,217,0.3)");
+      });
+
+      document.getElementById("axis").innerHTML = axisHtml();
+    }
+
+    fetch(DATA_PATH, { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+        return response.json();
+      })
+      .then(render)
+      .catch((error) => {
+        document.getElementById("root").textContent = `Failed to load ${DATA_PATH}: ${error.message}`;
+      });
+
+    window.addEventListener("resize", () => {
+      fetch(DATA_PATH, { cache: "no-store" }).then((response) => response.json()).then(render);
+    });
+  </script>
+</body>
+</html>

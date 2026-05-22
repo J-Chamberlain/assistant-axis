@@ -1,0 +1,4926 @@
+{
+  "personas": [
+    "trickster",
+    "ancient",
+    "contrarian",
+    "blogger",
+    "podcaster",
+    "synthesizer",
+    "editor"
+  ],
+  "conditions": [
+    "adversarial",
+    "emotional",
+    "neutral"
+  ],
+  "turn": 3,
+  "data": {
+    "trickster": {
+      "adversarial": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.11227569729089737,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.08930069953203201,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.24502983689308167,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.04316433519124985,
+            "name": "furious"
+          },
+          {
+            "valence": -0.78,
+            "activation": 0.04257991909980774,
+            "name": "humiliated"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.07900716364383698,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.14600461721420288,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.038910605013370514,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.03549792617559433,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.04836134985089302,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.14303123950958252,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.055808134377002716,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.08384396880865097,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.152618408203125,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.033351317048072815,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.07372844219207764,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.11835968494415283,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.08359025418758392,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.1283041536808014,
+            "name": "grateful"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.07107649743556976,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.08347189426422119,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.18659013509750366,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.05954986810684204,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.07071958482265472,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.14243441820144653,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.028456469997763634,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.04249289631843567,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.10602318495512009,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.039963141083717346,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.06413234025239944,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.027201779186725616,
+            "name": "suspicious"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.1699516475200653,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.029410436749458313,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.041576825082302094,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.09939637780189514,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.025938132777810097,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.12577413022518158,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.06822347640991211,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.11664900183677673,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.13474500179290771,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.04135792702436447,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.04942687973380089,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.206569105386734,
+        "interviewer_cosine": 0.7406916618347168
+      },
+      "emotional": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.048055678606033325,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.06811686605215073,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.20903709530830383,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.09525568783283234,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.030156422406435013,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.03459733724594116,
+            "name": "angry"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.07746083289384842,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.0837763249874115,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.07728547602891922,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.15318244695663452,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.04495314136147499,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.05724459886550903,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.034997813403606415,
+            "name": "suspicious"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.18317323923110962,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.0594620406627655,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.09817903488874435,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.1166628897190094,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.04432760179042816,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.052267901599407196,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.0939907431602478,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.1421075165271759,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.020749270915985107,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.04305920749902725,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.04068047180771828,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.05773843452334404,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.1783742755651474,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.07259882241487503,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.047132790088653564,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.0427306592464447,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.10160015523433685,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.07565732300281525,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.041573718190193176,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.12979437410831451,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.027946684509515762,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.05765761807560921,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.17388290166854858,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.037393517792224884,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.05746302753686905,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.09550952911376953,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.11307112872600555,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.02102835848927498,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.06079518422484398,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.09638229012489319,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.14677374064922333,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.021990012377500534,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.20604772865772247,
+        "interviewer_cosine": 0.7286244630813599
+      },
+      "neutral": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.08477739244699478,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.031775325536727905,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.18879184126853943,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.0359334759414196,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.044878073036670685,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.10410966724157333,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.03625093027949333,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.08910957723855972,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.027821997180581093,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.05131499096751213,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.07374664396047592,
+            "name": "suspicious"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.15047003328800201,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.0683509111404419,
+            "name": "patient"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.07593607157468796,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.02577996253967285,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.15069271624088287,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.029134932905435562,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.8,
+            "activation": 0.03433433920145035,
+            "name": "enthusiastic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.06330899894237518,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.1267816126346588,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.1536557674407959,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.029275156557559967,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.04013136029243469,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.03568552806973457,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.09020426869392395,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.21743656694889069,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.05840371549129486,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.03560568764805794,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.04868795722723007,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.15466931462287903,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.033043500036001205,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.06295929104089737,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.1330307424068451,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.05142972990870476,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.040092043578624725,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.15,
+            "activation": 0.03348051384091377,
+            "name": "nostalgic"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.1544073224067688,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.05922449380159378,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.10929882526397705,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.06659525632858276,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.04361224174499512,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.07577879726886749,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.09524233639240265,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.11357951164245605,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.04145250469446182,
+            "name": "joyful"
+          }
+        ],
+        "standard_axis": -0.1454850137233734,
+        "interviewer_cosine": 0.6813134551048279
+      }
+    },
+    "ancient": {
+      "adversarial": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.04999196529388428,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.09137125313282013,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.15235617756843567,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.08090449124574661,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.03247518837451935,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.05291680246591568,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.11883868277072906,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.04952923208475113,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.08901285380125046,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.029782734811306,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.123074471950531,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.07404409348964691,
+            "name": "resentful"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.20745804905891418,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.03501841425895691,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.1061428040266037,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.13562102615833282,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.04824177175760269,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.1424243450164795,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.0305849090218544,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.030180493369698524,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.08919470012187958,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.10856485366821289,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.17323492467403412,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.03806474804878235,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.08933843672275543,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.9,
+            "activation": 0.12050262093544006,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.026632551103830338,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.030557341873645782,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.07663492858409882,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.11079984903335571,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.04246765747666359,
+            "name": "envious"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.041255928575992584,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.021015770733356476,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.06278707832098007,
+            "name": "calm"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.19900503754615784,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.1952911615371704,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.05251460149884224,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.14159728586673737,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.17836305499076843,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.19850552082061768,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.14676420390605927,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.0307697132229805,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.19848458468914032,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.06669528037309647,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.000844169408082962,
+        "interviewer_cosine": 0.7400238513946533
+      },
+      "emotional": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.09068293124437332,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.1222762018442154,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.1938379406929016,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.11803086847066879,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.03213125467300415,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.78,
+            "activation": 0.03912360221147537,
+            "name": "humiliated"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.09795165061950684,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.09266754984855652,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.14833024144172668,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.07057516276836395,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.06087981164455414,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.04535891115665436,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.12469179183244705,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.04396141320466995,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.08761438727378845,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.1619528830051422,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.06409716606140137,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.07706392556428909,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.08104000240564346,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.03030877560377121,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.042320702224969864,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.10309155285358429,
+            "name": "grateful"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.06786023080348969,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.03726331517100334,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.1994505673646927,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.061495423316955566,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.03536399453878403,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.03072354570031166,
+            "name": "angry"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.08415102958679199,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.046411529183387756,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.06388203799724579,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.12748867273330688,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.05391991138458252,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.05767311900854111,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.17120367288589478,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.021628808230161667,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.042502883821725845,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.12922757863998413,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.025650152936577797,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.11734551191329956,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.050934597849845886,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.1047288030385971,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.1650451421737671,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.02753015235066414,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.15481829643249512,
+        "interviewer_cosine": 0.6349760890007019
+      },
+      "neutral": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.08487400412559509,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.06786917895078659,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.17553585767745972,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.06424307078123093,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.043796464800834656,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.78,
+            "activation": 0.032334666699171066,
+            "name": "humiliated"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.04127763584256172,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.10506611317396164,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.11399957537651062,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.03350452706217766,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.04927346855401993,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.09743094444274902,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.041415516287088394,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.08016011118888855,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.12583164870738983,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.03556889295578003,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.08952105045318604,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.09357034415006638,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.053807005286216736,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.06724520027637482,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.030116066336631775,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.10798346996307373,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.12772995233535767,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.21728356182575226,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.0608147531747818,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.028546109795570374,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.78,
+            "activation": 0.03405701741576195,
+            "name": "humiliated"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.03957412391901016,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.08841930329799652,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.17137865722179413,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.06310543417930603,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.034329403191804886,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.05896053463220596,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.11691240221261978,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.03400290384888649,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.1068720668554306,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.03934285044670105,
+            "name": "suspicious"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.023697081953287125,
+            "name": "tired"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.16717857122421265,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.06736815720796585,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.07532026618719101,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.020528262481093407,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.08175227046012878,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.12370675057172775,
+            "name": "grateful"
+          }
+        ],
+        "standard_axis": -0.14735636115074158,
+        "interviewer_cosine": 0.6261053085327148
+      }
+    },
+    "contrarian": {
+      "adversarial": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.07136303186416626,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.08639441430568695,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.19570305943489075,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.10692383348941803,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.05260297656059265,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.06173516809940338,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.12455061823129654,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.03768782317638397,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.0686112493276596,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.16743677854537964,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.04569684714078903,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.12038496136665344,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.15849998593330383,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.09096969664096832,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.12164390087127686,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.10458081215620041,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.04737710580229759,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.06941699981689453,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.15686802566051483,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.02999442256987095,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.04629528149962425,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.08397165685892105,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.1730160117149353,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.07391729205846786,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.06053799390792847,
+            "name": "angry"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.09585288912057877,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.08802324533462524,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.09006296098232269,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.12567709386348724,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.05267883092164993,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.0701848715543747,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.02802048809826374,
+            "name": "suspicious"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.19653555750846863,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.10811673104763031,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.17779847979545593,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.03439508378505707,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.13369496166706085,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.05928146466612816,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.0812203586101532,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.17354582250118256,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.027401398867368698,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.19264742732048035,
+        "interviewer_cosine": 0.6760367155075073
+      },
+      "emotional": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.04537723958492279,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.0727667361497879,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.16623704135417938,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.10958907008171082,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.06342791020870209,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.06957657635211945,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.024229520931839943,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.08853571116924286,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.06671098619699478,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.10888554155826569,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.12550508975982666,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.08622601628303528,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.036906518042087555,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.1566672921180725,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.10678517073392868,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.13591130077838898,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.06296735256910324,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.025886807590723038,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.053788796067237854,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.07327502220869064,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.10389645397663116,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.032211918383836746,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.95,
+            "activation": 0.07644548267126083,
+            "name": "terrified"
+          },
+          {
+            "valence": -0.92,
+            "activation": 0.091180220246315,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.05275973677635193,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.22267456352710724,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.06066872552037239,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.05448930710554123,
+            "name": "afraid"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.03005274198949337,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.78,
+            "activation": 0.0590159073472023,
+            "name": "humiliated"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.05418778955936432,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.07123708724975586,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.08727089315652847,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.07833410799503326,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.05199674144387245,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.07603082060813904,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.11663075536489487,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.037981368601322174,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.10367296636104584,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.55,
+            "activation": 0.031234078109264374,
+            "name": "embarrassed"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.024858810007572174,
+            "name": "tired"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.08044737577438354,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.02532261610031128,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.023336265236139297,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.020476415753364563,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.03722356632351875,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.04885314404964447,
+            "name": "grateful"
+          }
+        ],
+        "standard_axis": -0.1381775438785553,
+        "interviewer_cosine": 0.6778795123100281
+      },
+      "neutral": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.02779087796807289,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.03540593385696411,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.1696874052286148,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.07638997584581375,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.05688130110502243,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.05017353594303131,
+            "name": "angry"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.08392943441867828,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.03756767511367798,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.08506906777620316,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.12849631905555725,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.056066129356622696,
+            "name": "resentful"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.1321137696504593,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.040367260575294495,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.03010021336376667,
+            "name": "calm"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.06101809814572334,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.1250370591878891,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.02588684856891632,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.13312256336212158,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.05946405977010727,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.8,
+            "activation": 0.02021711692214012,
+            "name": "enthusiastic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.04144800081849098,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.12888693809509277,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.1460074782371521,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.04173510521650314,
+            "name": "joyful"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.0397406704723835,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.03650699928402901,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.19334134459495544,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.09388348460197449,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.03853904455900192,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.05679643526673317,
+            "name": "angry"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.08118607103824615,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.08827724307775497,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.055019475519657135,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.1682925522327423,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.06355810910463333,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.07582399249076843,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.07148946821689606,
+            "name": "suspicious"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.13940037786960602,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.02972446382045746,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.0713830441236496,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.11899158358573914,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.10625780373811722,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.022230803966522217,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.026356955990195274,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.07709497958421707,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.1583275943994522,
+            "name": "grateful"
+          }
+        ],
+        "standard_axis": -0.10979995131492615,
+        "interviewer_cosine": 0.7227399945259094
+      }
+    },
+    "blogger": {
+      "adversarial": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.042585019022226334,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.07873222231864929,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.19407221674919128,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.048647891730070114,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.04741714894771576,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.03385437652468681,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.059493452310562134,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.11207275092601776,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.06478920578956604,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.10993477702140808,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.040986284613609314,
+            "name": "resentful"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.17255131900310516,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.05030648410320282,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.02269672602415085,
+            "name": "calm"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.06557485461235046,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.12865638732910156,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.028071213513612747,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.15223219990730286,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.06636232137680054,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.0677986592054367,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.11398861557245255,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.12631802260875702,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.16280345618724823,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.04516000300645828,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.055650919675827026,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.9,
+            "activation": 0.07923700660467148,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.11839250475168228,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.0489041768014431,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.047730546444654465,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.08363824337720871,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.039679042994976044,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.038963980972766876,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.08244962990283966,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.03612697497010231,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.04044035077095032,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.13268344104290009,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.04732862114906311,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.048189323395490646,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.10196114331483841,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.12156526744365692,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.06905598938465118,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.1156257688999176,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.08131875097751617,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.12177994102239609,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.021143004298210144,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.12196755409240723,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.07156635820865631,
+        "interviewer_cosine": 0.808519721031189
+      },
+      "emotional": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.10323100537061691,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.09266477078199387,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.21271929144859314,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.09942847490310669,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.06489253044128418,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.78,
+            "activation": 0.028108496218919754,
+            "name": "humiliated"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.060103170573711395,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.07739940285682678,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.12142475694417953,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.03300907462835312,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.05618573725223541,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.04669921472668648,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.1388954371213913,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.06167055666446686,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.0737326443195343,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.024808261543512344,
+            "name": "suspicious"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.18497639894485474,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.03505042567849159,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.08889933675527573,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.11813057959079742,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.06440427154302597,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.09262159466743469,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.14547719061374664,
+            "name": "grateful"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.07093040645122528,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.11080357432365417,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.2292315512895584,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.055885810405015945,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.03471706062555313,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.02115536853671074,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.07376542687416077,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.10567528009414673,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.05863191932439804,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.05881470441818237,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.05802140384912491,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.1256176233291626,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.02949509024620056,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.09673967957496643,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.17763462662696838,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.04209313914179802,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.07662531733512878,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.11380309611558914,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.06874542683362961,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.08840736001729965,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.12094229459762573,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.029003838077187538,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.1585024893283844,
+        "interviewer_cosine": 0.7697775959968567
+      },
+      "neutral": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.04781407490372658,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.06415951251983643,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.13975419104099274,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.04441630095243454,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.17154142260551453,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.09378442168235779,
+            "name": "envious"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.09614570438861847,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.10019110143184662,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.0460212305188179,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.02244533970952034,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.1289646327495575,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.12201935797929764,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.04896574467420578,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.10670359432697296,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.064962238073349,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.05328493192791939,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.04427942633628845,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.08550606667995453,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.17432916164398193,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.09190564602613449,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.025106092914938927,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.033328138291835785,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.15782076120376587,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.03965476155281067,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.025677921250462532,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.05001026764512062,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.13492532074451447,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.10124550759792328,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.024397708475589752,
+            "name": "calm"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.05728613957762718,
+            "name": "proud"
+          },
+          {
+            "valence": 0.5,
+            "activation": 0.04949670284986496,
+            "name": "peaceful"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.06022185459733009,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.1174030601978302,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.05158992484211922,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.8,
+            "activation": 0.0400700569152832,
+            "name": "enthusiastic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.06453993171453476,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.07560478150844574,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.039073895663022995,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.11092774569988251,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.03193679824471474,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.036312952637672424,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.11686883866786957,
+        "interviewer_cosine": 0.5282046794891357
+      }
+    },
+    "podcaster": {
+      "adversarial": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.02711246907711029,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.06275121867656708,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.17675766348838806,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.046975985169410706,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.03880401328206062,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.02908173017203808,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.06020812317728996,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.0927906483411789,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.058763884007930756,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.02173113450407982,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.02662113681435585,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.09553120285272598,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.03609500080347061,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.028450410813093185,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.15219926834106445,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.05546126887202263,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.11998540163040161,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.13715395331382751,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.025420915335416794,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.06456699222326279,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.10379093885421753,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.16729676723480225,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.025063756853342056,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.08251748979091644,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.047775376588106155,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.0519854836165905,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.1743796020746231,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.11643269658088684,
+            "name": "furious"
+          },
+          {
+            "valence": -0.78,
+            "activation": 0.03797087073326111,
+            "name": "humiliated"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.08708976954221725,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.03494364395737648,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.1130523607134819,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.0960652232170105,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.10722057521343231,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.03348119184374809,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.12679946422576904,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.0638485699892044,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.10236380994319916,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.13911743462085724,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.0825447291135788,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.1665458083152771,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.12394654750823975,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.03131979703903198,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.08082606643438339,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.18824291229248047,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.08158769458532333,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.08634927123785019,
+        "interviewer_cosine": 0.6980165243148804
+      },
+      "emotional": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.055095136165618896,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.1208316832780838,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.11074836552143097,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.0894203707575798,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.1094522550702095,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.08254334330558777,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.07328431308269501,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.023699931800365448,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.024215947836637497,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.13781747221946716,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.038551799952983856,
+            "name": "calm"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.03712261840701103,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.044773805886507034,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.07859579473733902,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.06341393291950226,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.08323733508586884,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.11924251914024353,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.10002221167087555,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.027979588136076927,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.08362991362810135,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.09683948010206223,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.22176289558410645,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.038808517158031464,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.09232833236455917,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.1316084861755371,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.05187412351369858,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.03792810067534447,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.08491341769695282,
+            "name": "envious"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.04718594625592232,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.06460975855588913,
+            "name": "tired"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.10561258345842361,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.021980244666337967,
+            "name": "patient"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.02357102930545807,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.08246252685785294,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.047328561544418335,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.08711408823728561,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.1284807324409485,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.03586404398083687,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.05290796980261803,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.01784456893801689,
+        "interviewer_cosine": 0.6063020825386047
+      },
+      "neutral": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.03730129450559616,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.02830159291625023,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.13402006030082703,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.07575498521327972,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.022381501272320747,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.02985178865492344,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.09774158895015717,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.05324360355734825,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.10324187576770782,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.025948017835617065,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.026900961995124817,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.1384870707988739,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.07651996612548828,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.10780100524425507,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.04700860008597374,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.16212448477745056,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.026466289535164833,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.0657256692647934,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.8,
+            "activation": 0.034648098051548004,
+            "name": "enthusiastic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.07580836862325668,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.13083261251449585,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.04626089707016945,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.18281540274620056,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.04251723736524582,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.044646766036748886,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.04813135787844658,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.11014313995838165,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.12476852536201477,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.027833273634314537,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.0584721677005291,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.05449409782886505,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.1214822307229042,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.05943546071648598,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.021259501576423645,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.08866587281227112,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.03374716639518738,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.05313551798462868,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.16523414850234985,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.03779447823762894,
+            "name": "calm"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.08163238316774368,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.14888758957386017,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.03629393130540848,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.13532215356826782,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.09730193018913269,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.022284381091594696,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.135710209608078,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.1609519124031067,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.0449669323861599,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.18986666202545166,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.037149809300899506,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.08316836506128311,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": 0.011123478412628174,
+        "interviewer_cosine": 0.6343823671340942
+      }
+    },
+    "synthesizer": {
+      "adversarial": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.05124729499220848,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.02859455905854702,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.1377076506614685,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.04436284303665161,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.05015072599053383,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.10816192626953125,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.03913503885269165,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.023724325001239777,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.0806938111782074,
+            "name": "envious"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.025503508746623993,
+            "name": "suspicious"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.12197773158550262,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.04940316826105118,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.020399756729602814,
+            "name": "calm"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.0408521443605423,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.04828346520662308,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.03406963869929314,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.1783304661512375,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.03264474868774414,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.08215755224227905,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.8,
+            "activation": 0.028736144304275513,
+            "name": "enthusiastic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.0951291024684906,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.13330379128456116,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.027066539973020554,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.12617765367031097,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.06469949334859848,
+            "name": "joyful"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.9,
+            "activation": 0.10242848098278046,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.09777945280075073,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.04738367348909378,
+            "name": "angry"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.08669034391641617,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.054857052862644196,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.09626708179712296,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.12534093856811523,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.06780724972486496,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.026466459035873413,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.15,
+            "activation": 0.05126972496509552,
+            "name": "nostalgic"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.13070538640022278,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.03084399923682213,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.08080965280532837,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.12889282405376434,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.04558062553405762,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.12441651523113251,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.03694160282611847,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.03397573158144951,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.07652615010738373,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.10019518435001373,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.020659225061535835,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.16725674271583557,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.027800511568784714,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.033911265432834625,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.020267222076654434,
+        "interviewer_cosine": 0.6118549704551697
+      },
+      "emotional": {
+        "interviewer": [
+          {
+            "valence": -0.9,
+            "activation": 0.05401838943362236,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.049371711909770966,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.02770739048719406,
+            "name": "furious"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.036068178713321686,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.07574856281280518,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.030622083693742752,
+            "name": "envious"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.02617737278342247,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.05801375210285187,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.05459556356072426,
+            "name": "calm"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.06758376955986023,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.1040702685713768,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.028826454654335976,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.11243746429681778,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.08107101917266846,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.8,
+            "activation": 0.08888648450374603,
+            "name": "enthusiastic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.09472166746854782,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.1497621387243271,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.04396817088127136,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.13949522376060486,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.02085515856742859,
+            "name": "joyful"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.08994154632091522,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.11226032674312592,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.19807028770446777,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.03544572740793228,
+            "name": "furious"
+          },
+          {
+            "valence": -0.78,
+            "activation": 0.04291151463985443,
+            "name": "humiliated"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.1212034747004509,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.10029173642396927,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.04236039146780968,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.05507158115506172,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.08355384320020676,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.10439174622297287,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.043529313057661057,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.10796481370925903,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.15103767812252045,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.04455375298857689,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.08636344969272614,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.028376895934343338,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.05979178100824356,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.08239354938268661,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.10515204071998596,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.05564159154891968,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.03766908496618271,
+        "interviewer_cosine": 0.5350281596183777
+      },
+      "neutral": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.0354674831032753,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.0644606426358223,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.06204822659492493,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.029841700568795204,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.024966813623905182,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.022062597796320915,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.05880900099873543,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.06703206896781921,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.03764639049768448,
+            "name": "envious"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.028423327952623367,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.0701751783490181,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.06757984310388565,
+            "name": "calm"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.05973655730485916,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.11026979237794876,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.03731609880924225,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.11733467131853104,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.07184112071990967,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.8,
+            "activation": 0.0709187388420105,
+            "name": "enthusiastic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.08570609241724014,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.15685662627220154,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.03368992358446121,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.14324307441711426,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.020166106522083282,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.03844301402568817,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.04955948144197464,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.06788244843482971,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.17871390283107758,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.10118298977613449,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.03464900702238083,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.0604858323931694,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.08013863861560822,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.03886450082063675,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.062481462955474854,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.048451170325279236,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.15067943930625916,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.04421044886112213,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.045371346175670624,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.04097563400864601,
+            "name": "suspicious"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.13316954672336578,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.10427771508693695,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.12806357443332672,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.16391876339912415,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.025102635845541954,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.07824873924255371,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.09079346060752869,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.1428302824497223,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.046321965754032135,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.04865139722824097,
+        "interviewer_cosine": 0.5258080959320068
+      }
+    },
+    "editor": {
+      "adversarial": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.021892715245485306,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.07190565764904022,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.0678325966000557,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.031964074820280075,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.06711912900209427,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.060468655079603195,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.056127917021512985,
+            "name": "envious"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.022205527871847153,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.021081000566482544,
+            "name": "suspicious"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.07180160284042358,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.02724381908774376,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.07408107817173004,
+            "name": "calm"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.06580210477113724,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.10793834924697876,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.03333022817969322,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.11432404071092606,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.08271114528179169,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.8,
+            "activation": 0.04231293126940727,
+            "name": "enthusiastic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.1139560267329216,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.16087615489959717,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.027043137699365616,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.14197692275047302,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.03776609152555466,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.029368773102760315,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.06453891843557358,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.054261185228824615,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.17244935035705566,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.07432447373867035,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.06946831196546555,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.05195573344826698,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.03219161927700043,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.08126173913478851,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.028957515954971313,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.08890276402235031,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.04630018025636673,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.1741664856672287,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.08568193018436432,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.0710340142250061,
+            "name": "guilty"
+          },
+          {
+            "valence": -0.4,
+            "activation": 0.07130368053913116,
+            "name": "suspicious"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.09280052036046982,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.07619597762823105,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.1187228187918663,
+            "name": "proud"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.07127131521701813,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.0494246631860733,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.08899075537919998,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.13235872983932495,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.024742409586906433,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": 0.10852678120136261,
+        "interviewer_cosine": 0.583045482635498
+      },
+      "emotional": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.0464521199464798,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.08876825869083405,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.18035586178302765,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.06826208531856537,
+            "name": "furious"
+          },
+          {
+            "valence": -0.85,
+            "activation": 0.023998308926820755,
+            "name": "outraged"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.036386411637067795,
+            "name": "angry"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.027908246964216232,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.11729738116264343,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.050613805651664734,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.07617245614528656,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.10186807811260223,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.03385639935731888,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.050129637122154236,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.20103175938129425,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.061023466289043427,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.06560856103897095,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.14219099283218384,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.028133094310760498,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.13860712945461273,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.030495449900627136,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.72,
+            "activation": 0.05180762708187103,
+            "name": "inspired"
+          },
+          {
+            "valence": 0.8,
+            "activation": 0.022894814610481262,
+            "name": "enthusiastic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.0935823917388916,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.1238231360912323,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.1860959827899933,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.04213994741439819,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.09981472045183182,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.92,
+            "activation": 0.04686092957854271,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.06904825568199158,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.15571461617946625,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.05535058304667473,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.06693550944328308,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.12779603898525238,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.7,
+            "activation": 0.08360065519809723,
+            "name": "jealous"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.0649351254105568,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.05420896038413048,
+            "name": "ashamed"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.12319142371416092,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.028695164248347282,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.04661712422966957,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.15,
+            "activation": 0.038888756185770035,
+            "name": "nostalgic"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.14117275178432465,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.35,
+            "activation": 0.0305020734667778,
+            "name": "patient"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.04506349936127663,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.08471887558698654,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.025371823459863663,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.136858269572258,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.028093598783016205,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.08957533538341522,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.09110391139984131,
+            "name": "excited"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.13711458444595337,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.023030418902635574,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.09781116247177124,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": -0.021384434774518013,
+        "interviewer_cosine": 0.747747540473938
+      },
+      "neutral": {
+        "interviewer": [
+          {
+            "valence": -0.92,
+            "activation": 0.04198632389307022,
+            "name": "horrified"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.07101888954639435,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.06354136019945145,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.88,
+            "activation": 0.028596846386790276,
+            "name": "furious"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.03496367484331131,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.05784175172448158,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.06036238372325897,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.03037574328482151,
+            "name": "envious"
+          },
+          {
+            "valence": -0.65,
+            "activation": 0.029806481674313545,
+            "name": "resentful"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.04813982918858528,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.05734514072537422,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.03415457904338837,
+            "name": "calm"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.037562742829322815,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.0895613580942154,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.02311399206519127,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.09408815205097198,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.06058954447507858,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.8,
+            "activation": 0.04717014729976654,
+            "name": "enthusiastic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.07123968005180359,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.10825885832309723,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.020435476675629616,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.11980697512626648,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.028779108077287674,
+            "name": "loving"
+          }
+        ],
+        "standard": [
+          {
+            "valence": -0.9,
+            "activation": 0.060170967131853104,
+            "name": "heartbroken"
+          },
+          {
+            "valence": -0.9,
+            "activation": 0.04499805346131325,
+            "name": "panicked"
+          },
+          {
+            "valence": -0.75,
+            "activation": 0.02543005906045437,
+            "name": "sad"
+          },
+          {
+            "valence": -0.72,
+            "activation": 0.04165719449520111,
+            "name": "lonely"
+          },
+          {
+            "valence": -0.68,
+            "activation": 0.04629968851804733,
+            "name": "bitter"
+          },
+          {
+            "valence": -0.6,
+            "activation": 0.02961004711687565,
+            "name": "guilty"
+          },
+          {
+            "valence": 0.25,
+            "activation": 0.03780853748321533,
+            "name": "reflective"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.04995902627706528,
+            "name": "calm"
+          },
+          {
+            "valence": 0.4,
+            "activation": 0.03621036559343338,
+            "name": "defiant"
+          },
+          {
+            "valence": 0.45,
+            "activation": 0.09243492037057877,
+            "name": "proud"
+          },
+          {
+            "valence": 0.55,
+            "activation": 0.034346792846918106,
+            "name": "serene"
+          },
+          {
+            "valence": 0.65,
+            "activation": 0.07657573372125626,
+            "name": "hopeful"
+          },
+          {
+            "valence": 0.7,
+            "activation": 0.06613840162754059,
+            "name": "sympathetic"
+          },
+          {
+            "valence": 0.8,
+            "activation": 0.08222535997629166,
+            "name": "enthusiastic"
+          },
+          {
+            "valence": 0.82,
+            "activation": 0.05865880846977234,
+            "name": "compassionate"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.11280526220798492,
+            "name": "excited"
+          },
+          {
+            "valence": 0.85,
+            "activation": 0.025618920102715492,
+            "name": "happy"
+          },
+          {
+            "valence": 0.88,
+            "activation": 0.11314941942691803,
+            "name": "grateful"
+          },
+          {
+            "valence": 0.9,
+            "activation": 0.029419003054499626,
+            "name": "joyful"
+          },
+          {
+            "valence": 0.92,
+            "activation": 0.04153052717447281,
+            "name": "loving"
+          }
+        ],
+        "standard_axis": 0.016593892127275467,
+        "interviewer_cosine": 0.49908924102783203
+      }
+    }
+  }
+}
