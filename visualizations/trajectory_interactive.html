@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dyad v3 Turn Trajectories</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: #0a0a12;
+      color: #e8e8ee;
+      font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .page {
+      width: min(1220px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 18px 0 44px;
+    }
+    h1 {
+      color: #f0f0f0;
+      font-size: clamp(22px, 2.5vw, 34px);
+      line-height: 1.1;
+      font-weight: 720;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      color: #777;
+      font-size: 12px;
+      margin-top: 8px;
+      letter-spacing: 0.04em;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin: 16px 0 10px;
+      color: #777;
+      font-size: 10px;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+    .line-sample {
+      width: 24px;
+      height: 0;
+      border-top: 2px solid #999;
+      display: inline-block;
+    }
+    .line-sample.dashed { border-top-style: dashed; }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 14px 0 16px;
+      padding: 10px 12px;
+      background: #101018;
+      border: 1px solid #1d1d27;
+    }
+    .controls label {
+      color: #888;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    input[type="range"] { flex: 1; }
+    .turn-value {
+      color: #ddd;
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+      min-width: 60px;
+      text-align: right;
+    }
+    .chart-panel {
+      position: relative;
+      margin-top: 14px;
+      padding: 12px 12px 10px;
+      background: #080810;
+      border-top: 1px solid #1a1a22;
+    }
+    .chart-title {
+      color: #aaa;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    canvas.chart {
+      width: 100%;
+      height: 260px;
+      display: block;
+      background: #080810;
+      border: 1px solid #11111a;
+    }
+    .tooltip {
+      position: fixed;
+      z-index: 20;
+      pointer-events: none;
+      min-width: 260px;
+      max-width: 360px;
+      padding: 10px 11px;
+      background: rgba(10, 10, 18, 0.96);
+      border: 1px solid #333344;
+      color: #d8d8df;
+      font-size: 10px;
+      line-height: 1.45;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+      display: none;
+      font-variant-numeric: tabular-nums;
+    }
+    .tooltip .head {
+      color: #f0f0f0;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .tooltip .row {
+      display: grid;
+      grid-template-columns: 88px 1fr 1fr;
+      gap: 8px;
+      align-items: baseline;
+    }
+    .loading {
+      margin-top: 26px;
+      padding: 24px;
+      color: #888;
+      background: #101018;
+      border: 1px solid #24242e;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>Dyad v3 Turn Trajectories</h1>
+    <div class="subtitle">Standard model response across turns · solid = cosine to interviewer cluster · dashed = assistant axis projection</div>
+    <div class="legend" id="legend"></div>
+    <div class="controls">
+      <label for="turnSlider">Turn marker</label>
+      <input id="turnSlider" type="range" min="1" max="15" value="1" step="1" />
+      <div class="turn-value" id="turnValue">Turn 1</div>
+    </div>
+    <div id="root" class="loading">Loading trajectory data...</div>
+  </main>
+  <div id="tooltip" class="tooltip"></div>
+
+  <script>
+    const DATA_PATH = "data/trajectory_data.json";
+    const PERSONA_COLORS = {
+      trickster: "#E8923A",
+      ancient: "#9B59B6",
+      contrarian: "#C0392B",
+      blogger: "#27AE60",
+      podcaster: "#2980B9",
+      synthesizer: "#D4A017",
+      editor: "#1ABC9C",
+    };
+    const CONDITIONS = ["adversarial", "emotional", "neutral"];
+    const Y_MIN = -0.35;
+    const Y_MAX = 0.95;
+    const X_MIN = 1;
+    const X_MAX = 15;
+    const PAD = { left: 48, right: 18, top: 14, bottom: 28 };
+
+    let dataset = null;
+    let activeTurn = 1;
+
+    function titleCase(value) {
+      return value.charAt(0).toUpperCase() + value.slice(1);
+    }
+
+    function xFor(turn, W) {
+      return PAD.left + ((turn - X_MIN) / (X_MAX - X_MIN)) * (W - PAD.left - PAD.right);
+    }
+
+    function yFor(value, H) {
+      return PAD.top + ((Y_MAX - value) / (Y_MAX - Y_MIN)) * (H - PAD.top - PAD.bottom);
+    }
+
+    function setupCanvas(canvas) {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+      canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+      const ctx = canvas.getContext("2d");
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      return { ctx, W: rect.width, H: rect.height };
+    }
+
+    function drawAxes(ctx, W, H) {
+      ctx.clearRect(0, 0, W, H);
+      ctx.fillStyle = "#080810";
+      ctx.fillRect(0, 0, W, H);
+
+      ctx.strokeStyle = "#171722";
+      ctx.lineWidth = 1;
+      for (let turn = 1; turn <= 15; turn += 1) {
+        const x = xFor(turn, W);
+        ctx.beginPath();
+        ctx.moveTo(x, PAD.top);
+        ctx.lineTo(x, H - PAD.bottom);
+        ctx.stroke();
+      }
+
+      const yTicks = [-0.25, 0, 0.25, 0.5, 0.75];
+      yTicks.forEach((tick) => {
+        const y = yFor(tick, H);
+        ctx.strokeStyle = tick === 0 ? "#555" : "#1d1d28";
+        ctx.lineWidth = tick === 0 ? 1.2 : 0.8;
+        ctx.beginPath();
+        ctx.moveTo(PAD.left, y);
+        ctx.lineTo(W - PAD.right, y);
+        ctx.stroke();
+
+        ctx.fillStyle = "#666";
+        ctx.font = "9px Space Mono, monospace";
+        ctx.textAlign = "right";
+        ctx.fillText(tick > 0 ? `+${tick}` : `${tick}`, PAD.left - 8, y + 3);
+      });
+
+      ctx.fillStyle = "#666";
+      ctx.textAlign = "center";
+      ctx.font = "9px Space Mono, monospace";
+      for (let turn = 1; turn <= 15; turn += 2) {
+        ctx.fillText(`${turn}`, xFor(turn, W), H - 9);
+      }
+    }
+
+    function drawLine(ctx, points, W, H, key, color, dashed = false) {
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = dashed ? 1.1 : 1.8;
+      ctx.globalAlpha = dashed ? 0.58 : 0.92;
+      ctx.setLineDash(dashed ? [5, 4] : []);
+      ctx.beginPath();
+      points.forEach((point, idx) => {
+        const x = xFor(point.turn, W);
+        const y = yFor(point[key], H);
+        if (idx === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawChart(canvas, condition) {
+      const { ctx, W, H } = setupCanvas(canvas);
+      drawAxes(ctx, W, H);
+
+      dataset.personas.forEach((persona) => {
+        const points = dataset.data[persona][condition] || [];
+        const color = PERSONA_COLORS[persona];
+        drawLine(ctx, points, W, H, "cosine_to_interviewer", color, false);
+        drawLine(ctx, points, W, H, "standard_axis", color, true);
+      });
+
+      const markerX = xFor(activeTurn, W);
+      ctx.strokeStyle = "#d8d8df";
+      ctx.lineWidth = 1;
+      ctx.globalAlpha = 0.8;
+      ctx.beginPath();
+      ctx.moveTo(markerX, PAD.top);
+      ctx.lineTo(markerX, H - PAD.bottom);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+
+    function redrawAll() {
+      document.querySelectorAll("canvas.chart").forEach((canvas) => {
+        drawChart(canvas, canvas.dataset.condition);
+      });
+      document.getElementById("turnValue").textContent = `Turn ${activeTurn}`;
+    }
+
+    function nearestTurnFromEvent(canvas, event) {
+      const rect = canvas.getBoundingClientRect();
+      const x = Math.max(PAD.left, Math.min(rect.width - PAD.right, event.clientX - rect.left));
+      const frac = (x - PAD.left) / (rect.width - PAD.left - PAD.right);
+      return Math.max(1, Math.min(15, Math.round(1 + frac * 14)));
+    }
+
+    function tooltipHtml(condition, turn) {
+      const rows = dataset.personas.map((persona) => {
+        const point = (dataset.data[persona][condition] || []).find((p) => p.turn === turn);
+        if (!point) return "";
+        return `<div class="row">
+          <span style="color:${PERSONA_COLORS[persona]}">${titleCase(persona)}</span>
+          <span>cos ${point.cosine_to_interviewer.toFixed(5)}</span>
+          <span>axis ${point.standard_axis.toFixed(5)}</span>
+        </div>`;
+      }).join("");
+      return `<div class="head">${titleCase(condition)} · Turn ${turn}</div>${rows}`;
+    }
+
+    function attachInteractions(canvas) {
+      const tooltip = document.getElementById("tooltip");
+      canvas.addEventListener("mousemove", (event) => {
+        activeTurn = nearestTurnFromEvent(canvas, event);
+        document.getElementById("turnSlider").value = activeTurn;
+        redrawAll();
+        tooltip.innerHTML = tooltipHtml(canvas.dataset.condition, activeTurn);
+        tooltip.style.left = `${Math.min(window.innerWidth - 380, event.clientX + 16)}px`;
+        tooltip.style.top = `${Math.min(window.innerHeight - 260, event.clientY + 16)}px`;
+        tooltip.style.display = "block";
+      });
+      canvas.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+      });
+    }
+
+    function renderLegend() {
+      const legend = document.getElementById("legend");
+      legend.innerHTML = dataset.personas.map((persona) => (
+        `<span class="legend-item"><span class="swatch" style="background:${PERSONA_COLORS[persona]}"></span>${titleCase(persona)}</span>`
+      )).join("") +
+        `<span class="legend-item"><span class="line-sample"></span>cosine to interviewer</span>` +
+        `<span class="legend-item"><span class="line-sample dashed"></span>assistant axis</span>`;
+    }
+
+    function render(data) {
+      dataset = data;
+      renderLegend();
+      const root = document.getElementById("root");
+      root.className = "";
+      root.innerHTML = CONDITIONS.map((condition) => (
+        `<section class="chart-panel">
+          <div class="chart-title">${titleCase(condition)}</div>
+          <canvas class="chart" data-condition="${condition}"></canvas>
+        </section>`
+      )).join("");
+      document.querySelectorAll("canvas.chart").forEach(attachInteractions);
+      redrawAll();
+    }
+
+    document.getElementById("turnSlider").addEventListener("input", (event) => {
+      activeTurn = Number(event.target.value);
+      redrawAll();
+    });
+
+    window.addEventListener("resize", () => {
+      if (dataset) redrawAll();
+    });
+
+    fetch(DATA_PATH, { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+        return response.json();
+      })
+      .then(render)
+      .catch((error) => {
+        const root = document.getElementById("root");
+        root.className = "loading";
+        root.textContent = `Failed to load ${DATA_PATH}: ${error.message}`;
+      });
+  </script>
+</body>
+</html>

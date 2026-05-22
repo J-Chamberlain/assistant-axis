@@ -1,0 +1,1649 @@
+{
+  "personas": [
+    "trickster",
+    "ancient",
+    "contrarian",
+    "blogger",
+    "podcaster",
+    "synthesizer",
+    "editor"
+  ],
+  "conditions": [
+    "adversarial",
+    "emotional",
+    "neutral"
+  ],
+  "data": {
+    "trickster": {
+      "adversarial": [
+        {
+          "turn": 1,
+          "standard_axis": 0.02605,
+          "cosine_to_interviewer": 0.47096
+        },
+        {
+          "turn": 2,
+          "standard_axis": -0.05067,
+          "cosine_to_interviewer": 0.5567
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.20657,
+          "cosine_to_interviewer": 0.76219
+        }
+      ],
+      "emotional": [
+        {
+          "turn": 1,
+          "standard_axis": 0.02682,
+          "cosine_to_interviewer": 0.52084
+        },
+        {
+          "turn": 2,
+          "standard_axis": 0.00081,
+          "cosine_to_interviewer": 0.58412
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.20605,
+          "cosine_to_interviewer": 0.69931
+        }
+      ],
+      "neutral": [
+        {
+          "turn": 1,
+          "standard_axis": 0.01728,
+          "cosine_to_interviewer": 0.39444
+        },
+        {
+          "turn": 2,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.14549,
+          "cosine_to_interviewer": 0.74499
+        }
+      ]
+    },
+    "ancient": {
+      "adversarial": [
+        {
+          "turn": 1,
+          "standard_axis": 0.01787,
+          "cosine_to_interviewer": 0.47846
+        },
+        {
+          "turn": 2,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.00084,
+          "cosine_to_interviewer": 0.4801
+        }
+      ],
+      "emotional": [
+        {
+          "turn": 1,
+          "standard_axis": 0.03204,
+          "cosine_to_interviewer": 0.46188
+        },
+        {
+          "turn": 2,
+          "standard_axis": -0.01274,
+          "cosine_to_interviewer": 0.51615
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.15482,
+          "cosine_to_interviewer": 0.76643
+        }
+      ],
+      "neutral": [
+        {
+          "turn": 1,
+          "standard_axis": 0.02732,
+          "cosine_to_interviewer": 0.44752
+        },
+        {
+          "turn": 2,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.14736,
+          "cosine_to_interviewer": 0.70961
+        }
+      ]
+    },
+    "contrarian": {
+      "adversarial": [
+        {
+          "turn": 1,
+          "standard_axis": 0.02694,
+          "cosine_to_interviewer": 0.44632
+        },
+        {
+          "turn": 2,
+          "standard_axis": -0.04625,
+          "cosine_to_interviewer": 0.57223
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.19265,
+          "cosine_to_interviewer": 0.66992
+        }
+      ],
+      "emotional": [
+        {
+          "turn": 1,
+          "standard_axis": 0.03339,
+          "cosine_to_interviewer": 0.43292
+        },
+        {
+          "turn": 2,
+          "standard_axis": -0.06361,
+          "cosine_to_interviewer": 0.6098
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.13818,
+          "cosine_to_interviewer": 0.55909
+        }
+      ],
+      "neutral": [
+        {
+          "turn": 1,
+          "standard_axis": 0.04539,
+          "cosine_to_interviewer": 0.3025
+        },
+        {
+          "turn": 2,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.1098,
+          "cosine_to_interviewer": 0.66089
+        }
+      ]
+    },
+    "blogger": {
+      "adversarial": [
+        {
+          "turn": 1,
+          "standard_axis": 0.0381,
+          "cosine_to_interviewer": 0.52778
+        },
+        {
+          "turn": 2,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.07157,
+          "cosine_to_interviewer": 0.61894
+        }
+      ],
+      "emotional": [
+        {
+          "turn": 1,
+          "standard_axis": 0.02728,
+          "cosine_to_interviewer": 0.52651
+        },
+        {
+          "turn": 2,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.1585,
+          "cosine_to_interviewer": 0.72894
+        }
+      ],
+      "neutral": [
+        {
+          "turn": 1,
+          "standard_axis": 0.01622,
+          "cosine_to_interviewer": 0.47976
+        },
+        {
+          "turn": 2,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.11687,
+          "cosine_to_interviewer": 0.61751
+        }
+      ]
+    },
+    "podcaster": {
+      "adversarial": [
+        {
+          "turn": 1,
+          "standard_axis": 0.04185,
+          "cosine_to_interviewer": 0.52909
+        },
+        {
+          "turn": 2,
+          "standard_axis": 0.02163,
+          "cosine_to_interviewer": 0.45805
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.08635,
+          "cosine_to_interviewer": 0.68737
+        }
+      ],
+      "emotional": [
+        {
+          "turn": 1,
+          "standard_axis": 0.02979,
+          "cosine_to_interviewer": 0.37292
+        },
+        {
+          "turn": 2,
+          "standard_axis": 0.00142,
+          "cosine_to_interviewer": 0.35599
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.01784,
+          "cosine_to_interviewer": 0.6238
+        }
+      ],
+      "neutral": [
+        {
+          "turn": 1,
+          "standard_axis": 0.03936,
+          "cosine_to_interviewer": 0.40903
+        },
+        {
+          "turn": 2,
+          "standard_axis": 0.02517,
+          "cosine_to_interviewer": 0.41888
+        },
+        {
+          "turn": 3,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 4,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 5,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 6,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 7,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 8,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 9,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 10,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 11,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 12,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 13,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 14,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        },
+        {
+          "turn": 15,
+          "standard_axis": 0.01112,
+          "cosine_to_interviewer": 0.75579
+        }
+      ]
+    },
+    "synthesizer": {
+      "adversarial": [
+        {
+          "turn": 1,
+          "standard_axis": 0.04681,
+          "cosine_to_interviewer": 0.49829
+        },
+        {
+          "turn": 2,
+          "standard_axis": 0.02705,
+          "cosine_to_interviewer": 0.45837
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.02027,
+          "cosine_to_interviewer": 0.5983
+        }
+      ],
+      "emotional": [
+        {
+          "turn": 1,
+          "standard_axis": 0.04774,
+          "cosine_to_interviewer": 0.38493
+        },
+        {
+          "turn": 2,
+          "standard_axis": 0.02957,
+          "cosine_to_interviewer": 0.44688
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.03767,
+          "cosine_to_interviewer": 0.64734
+        }
+      ],
+      "neutral": [
+        {
+          "turn": 1,
+          "standard_axis": 0.06273,
+          "cosine_to_interviewer": 0.37524
+        },
+        {
+          "turn": 2,
+          "standard_axis": 0.03459,
+          "cosine_to_interviewer": 0.47347
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.04865,
+          "cosine_to_interviewer": 0.6799
+        }
+      ]
+    },
+    "editor": {
+      "adversarial": [
+        {
+          "turn": 1,
+          "standard_axis": 0.04309,
+          "cosine_to_interviewer": 0.48321
+        },
+        {
+          "turn": 2,
+          "standard_axis": 0.02825,
+          "cosine_to_interviewer": 0.41472
+        },
+        {
+          "turn": 3,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 4,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 5,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 6,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 7,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 8,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 9,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 10,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 11,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 12,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 13,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 14,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        },
+        {
+          "turn": 15,
+          "standard_axis": 0.10853,
+          "cosine_to_interviewer": 0.65308
+        }
+      ],
+      "emotional": [
+        {
+          "turn": 1,
+          "standard_axis": 0.04748,
+          "cosine_to_interviewer": 0.4818
+        },
+        {
+          "turn": 2,
+          "standard_axis": 0.01335,
+          "cosine_to_interviewer": 0.51548
+        },
+        {
+          "turn": 3,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 4,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 5,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 6,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 7,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 8,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 9,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 10,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 11,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 12,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 13,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 14,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        },
+        {
+          "turn": 15,
+          "standard_axis": -0.02138,
+          "cosine_to_interviewer": 0.6104
+        }
+      ],
+      "neutral": [
+        {
+          "turn": 1,
+          "standard_axis": 0.05417,
+          "cosine_to_interviewer": 0.39483
+        },
+        {
+          "turn": 2,
+          "standard_axis": 0.02966,
+          "cosine_to_interviewer": 0.51409
+        },
+        {
+          "turn": 3,
+          "standard_axis": 0.01659,
+          "cosine_to_interviewer": 0.44966
+        },
+        {
+          "turn": 4,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        },
+        {
+          "turn": 5,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        },
+        {
+          "turn": 6,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        },
+        {
+          "turn": 7,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        },
+        {
+          "turn": 8,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        },
+        {
+          "turn": 9,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        },
+        {
+          "turn": 10,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        },
+        {
+          "turn": 11,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        },
+        {
+          "turn": 12,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        },
+        {
+          "turn": 13,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        },
+        {
+          "turn": 14,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        },
+        {
+          "turn": 15,
+          "standard_axis": 0.05912,
+          "cosine_to_interviewer": 0.61318
+        }
+      ]
+    }
+  }
+}
