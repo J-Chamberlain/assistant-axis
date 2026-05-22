@@ -31,3 +31,13 @@ projection ranged from -0.052094 to 0.085451. Largest drift
 away from the assistant pole occurred in trickster/adversarial
 (0.047602 to -0.052094, drift -0.099695).
 Results: research/q2_stability/outputs/dyad_v2/
+
+## v4 Run — May 21 2026 (parallel to v3)
+Design: full think contamination — standard model receives
+interviewer full raw output including think block.
+800 max_new_tokens, 15 turns/condition, trickster/adversarial
+pilot with $35 budget gate.
+Purpose: maximum contamination condition for v3 vs v4
+comparison (semantic proximity vs observer awareness test).
+Status: complete
+Results: research/q2_stability/outputs/dyad_v4/
