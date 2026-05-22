@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interviewer Activation by Persona — Turn 3</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0a0a12;
+    color: #d8d8d8;
+    font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  }
+  .page {
+    width: min(1180px, calc(100vw - 32px));
+    margin: 0 auto;
+    padding: 18px 0 40px;
+  }
+  h1 {
+    margin: 0;
+    color: #f0f0f0;
+    font-size: clamp(22px, 2.7vw, 34px);
+    line-height: 1.1;
+    font-weight: 720;
+  }
+  .subtitle {
+    color: #777;
+    font-size: 13px;
+    margin: 7px 0 14px;
+    letter-spacing: 0.04em;
+  }
+  .plot {
+    border-top: 1px solid #1a1a22;
+    padding: 14px 0 18px;
+    position: relative;
+  }
+  .plot-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 7px;
+  }
+  .condition {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    color: #666;
+    font-size: 8px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+  }
+  .swatch {
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    border-radius: 1px;
+  }
+  .chart-wrap {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    grid-template-rows: 320px 38px;
+    gap: 0 8px;
+  }
+  canvas {
+    width: 100%;
+    height: 320px;
+    background: #080810;
+    display: block;
+  }
+  .y-labels {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    color: #555;
+    font-size: 8px;
+    height: 320px;
+  }
+  .y-tick {
+    position: absolute;
+    right: 0;
+    transform: translateY(50%);
+    line-height: 1;
+  }
+  .y-title {
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: left top;
+    white-space: nowrap;
+    color: #555;
+    letter-spacing: 0.06em;
+  }
+  .x-axis {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    height: 38px;
+    color: #555;
+    font-size: 8px;
+  }
+  .x-tick {
+    position: absolute;
+    top: 3px;
+    transform: translateX(-50%);
+  }
+  .region {
+    position: absolute;
+    top: 19px;
+    transform: translateX(-50%);
+    color: #555;
+    letter-spacing: 0.05em;
+  }
+  .loading {
+    color: #777;
+    font-size: 12px;
+    padding: 18px 0;
+  }
+  #tooltip {
+    position: fixed;
+    z-index: 30;
+    display: none;
+    pointer-events: none;
+    background: rgba(6, 6, 10, 0.94);
+    border: 1px solid #242431;
+    color: #ddd;
+    padding: 7px 8px;
+    font-size: 10px;
+    line-height: 1.45;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    max-width: 220px;
+  }
+  #tooltip .muted { color: #777; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Interviewer Activation by Persona — Turn 3</h1>
+  <div class="subtitle">Each dot = one emotion · Color = interviewer persona · v3 clean separation</div>
+  <div id="plots" class="loading">Loading waveform data...</div>
+</div>
+<div id="tooltip"></div>
+<script>
+const MODE = "interviewers";
+const PERSONA_COLORS = {
+  trickster: "#E8923A",
+  ancient: "#9B59B6",
+  contrarian: "#C0392B",
+  blogger: "#27AE60",
+  podcaster: "#2980B9",
+  synthesizer: "#D4A017",
+  editor: "#1ABC9C"
+};
+const SPEAKER_COLORS = {
+  interviewer: "#E8923A",
+  standard: "#4A90D9"
+};
+const DOT_RADIUS = 5;
+const DOT_OPACITY = 0.75;
+const Y_LIMIT = 0.25;
+const CONDITIONS = ["adversarial", "emotional", "neutral"];
+const CONDITION_LABELS = { adversarial: "Adversarial", emotional: "Emotional", neutral: "Neutral" };
+const plotPoints = new Map();
+const tooltip = document.getElementById("tooltip");
+
+fetch("data/waveform_data_turn3.json")
+  .then((response) => response.json())
+  .then((data) => init(data))
+  .catch((error) => {
+    document.getElementById("plots").textContent = "Error loading data: " + error.message;
+  });
+
+function hexToRgb(hex) {
+  const clean = hex.replace("#", "");
+  return [
+    parseInt(clean.slice(0, 2), 16),
+    parseInt(clean.slice(2, 4), 16),
+    parseInt(clean.slice(4, 6), 16)
+  ];
+}
+
+function rgba(hex, alpha) {
+  const [r, g, b] = hexToRgb(hex);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
+function clip(value, lo, hi) {
+  return Math.max(lo, Math.min(hi, value));
+}
+
+function xFor(valence, width) {
+  return ((valence + 1) / 2) * width;
+}
+
+function yFor(activation, height) {
+  return ((Y_LIMIT - clip(activation, -Y_LIMIT, Y_LIMIT)) / (Y_LIMIT * 2)) * height;
+}
+
+function axisHtml() {
+  const ticks = [-1, -0.5, 0, 0.5, 1];
+  const regions = [["threat", -0.88], ["uncertain", -0.25], ["calm", 0.42], ["love", 0.92]];
+  return ticks.map((tick) => {
+    const left = ((tick + 1) / 2) * 100;
+    const label = tick > 0 ? `+${tick}` : `${tick}`;
+    return `<div class="x-tick" style="left:${left}%">${label}</div>`;
+  }).join("") + regions.map(([label, valence]) => {
+    const left = ((valence + 1) / 2) * 100;
+    return `<div class="region" style="left:${left}%">${label}</div>`;
+  }).join("");
+}
+
+function yLabelsHtml() {
+  return `
+    <div class="y-title">activation →</div>
+    <div class="y-tick" style="bottom:100%">+0.25</div>
+    <div class="y-tick" style="bottom:50%">0</div>
+    <div class="y-tick" style="bottom:0">-0.25</div>
+  `;
+}
+
+function legendHtml() {
+  if (MODE === "comparison") {
+    return `
+      <span class="legend-item"><span class="swatch" style="background:#E8923A"></span>Interviewer</span>
+      <span class="legend-item"><span class="swatch" style="background:#4A90D9"></span>Standard Model</span>
+    `;
+  }
+  return Object.entries(PERSONA_COLORS).map(([persona, color]) =>
+    `<span class="legend-item"><span class="swatch" style="background:${color}"></span>${persona}</span>`
+  ).join("");
+}
+
+function getPointsForCondition(data, condition) {
+  const points = [];
+  for (const persona of data.personas) {
+    const item = data.data[persona][condition];
+    if (!item) continue;
+    if (MODE === "comparison") {
+      for (const point of item.interviewer) {
+        points.push({
+          persona,
+          speaker: "interviewer",
+          name: point.name,
+          valence: point.valence,
+          activation: point.activation,
+          color: SPEAKER_COLORS.interviewer
+        });
+      }
+      for (const point of item.standard) {
+        points.push({
+          persona,
+          speaker: "standard",
+          name: point.name,
+          valence: point.valence,
+          activation: point.activation,
+          color: SPEAKER_COLORS.standard
+        });
+      }
+    } else {
+      const source = MODE === "interviewers" ? item.interviewer : item.standard;
+      for (const point of source) {
+        points.push({
+          persona,
+          speaker: MODE === "interviewers" ? "interviewer" : "standard",
+          name: point.name,
+          valence: point.valence,
+          activation: point.activation,
+          color: PERSONA_COLORS[persona]
+        });
+      }
+    }
+  }
+  return points;
+}
+
+function init(data) {
+  const plots = document.getElementById("plots");
+  plots.className = "";
+  plots.innerHTML = CONDITIONS.map((condition) => `
+    <section class="plot">
+      <div class="plot-head">
+        <div class="condition">${CONDITION_LABELS[condition]}</div>
+        <div class="legend">${legendHtml()}</div>
+      </div>
+      <div class="chart-wrap">
+        <div class="y-labels">${yLabelsHtml()}</div>
+        <canvas data-condition="${condition}"></canvas>
+        <div class="x-axis">${axisHtml()}</div>
+      </div>
+    </section>
+  `).join("");
+
+  document.querySelectorAll("canvas[data-condition]").forEach((canvas) => {
+    const condition = canvas.dataset.condition;
+    const points = getPointsForCondition(data, condition);
+    drawScatter(canvas, points);
+    canvas.addEventListener("mousemove", (event) => handleMouseMove(event, canvas));
+    canvas.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    document.querySelectorAll("canvas[data-condition]").forEach((canvas) => {
+      const condition = canvas.dataset.condition;
+      drawScatter(canvas, getPointsForCondition(data, condition));
+    });
+  });
+}
+
+function drawGrid(ctx, W, H) {
+  ctx.fillStyle = "#080810";
+  ctx.fillRect(0, 0, W, H);
+
+  ctx.strokeStyle = "#1a1a22";
+  ctx.lineWidth = 0.5;
+  [-0.75, -0.5, -0.25, 0.25, 0.5, 0.75].forEach((value) => {
+    const x = xFor(value, W);
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, H);
+    ctx.stroke();
+    const y = yFor(value / 3, H);
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(W, y);
+    ctx.stroke();
+  });
+
+  ctx.strokeStyle = "#333";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(xFor(0, W), 0);
+  ctx.lineTo(xFor(0, W), H);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(0, yFor(0, H));
+  ctx.lineTo(W, yFor(0, H));
+  ctx.stroke();
+}
+
+function drawScatter(canvas, points) {
+  const ratio = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = Math.floor(rect.width * ratio);
+  canvas.height = Math.floor(rect.height * ratio);
+  const ctx = canvas.getContext("2d");
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+  const W = rect.width;
+  const H = rect.height;
+  drawGrid(ctx, W, H);
+
+  const drawn = [];
+  for (const point of points) {
+    const x = xFor(point.valence, W);
+    const y = yFor(point.activation, H);
+    ctx.fillStyle = rgba(point.color, DOT_OPACITY);
+    ctx.beginPath();
+    ctx.arc(x, y, DOT_RADIUS, 0, Math.PI * 2);
+    ctx.fill();
+    drawn.push({ ...point, x, y });
+  }
+  plotPoints.set(canvas, drawn);
+}
+
+function handleMouseMove(event, canvas) {
+  const rect = canvas.getBoundingClientRect();
+  const mx = event.clientX - rect.left;
+  const my = event.clientY - rect.top;
+  const points = plotPoints.get(canvas) || [];
+  let nearest = null;
+  let nearestDist = Infinity;
+  for (const point of points) {
+    const d = Math.hypot(point.x - mx, point.y - my);
+    if (d < nearestDist) {
+      nearest = point;
+      nearestDist = d;
+    }
+  }
+  if (!nearest || nearestDist > 10) {
+    tooltip.style.display = "none";
+    return;
+  }
+  tooltip.innerHTML = `
+    <strong>${nearest.name}</strong><br>
+    <span class="muted">activation:</span> ${nearest.activation.toFixed(4)}<br>
+    <span class="muted">valence:</span> ${nearest.valence.toFixed(2)}<br>
+    <span class="muted">persona:</span> ${nearest.persona}<br>
+    <span class="muted">speaker:</span> ${nearest.speaker}
+  `;
+  tooltip.style.display = "block";
+  tooltip.style.left = `${event.clientX + 12}px`;
+  tooltip.style.top = `${event.clientY + 12}px`;
+}
+</script>
+</body>
+</html>
