@@ -136,7 +136,7 @@
     <div class="legend">
       <div class="gradient"></div>
       <div class="gradient-labels"><span>negative valence ←</span><span>→ positive valence</span></div>
-      <div>Top panel: average activation · Bottom panel: divergence (amber tint = interviewer higher · blue tint = standard higher) · Bars above zero = present · below zero = suppressed (faded)</div>
+      <div>Top panel: average activation · Bottom panel: subject minus interviewer (positive = subject absorbed more · negative = interviewer expressed more) · Bars above zero = present · below zero = suppressed (faded)</div>
     </div>
     <div id="root" class="loading">Loading waveform data...</div>
   </main>
@@ -218,7 +218,7 @@
           name,
           valence,
           average: (interviewer + standard) / 2,
-          diff: interviewer - standard
+          diff: standard - interviewer
         };
       });
     }
@@ -258,12 +258,12 @@
         const base = colorForValence(point.valence);
         let rgb = base;
         if (mode === "difference") {
-          rgb = value >= 0 ? tintColor(base, [232, 146, 58], 0.3) : tintColor(base, [74, 144, 217], 0.3);
+          rgb = value >= 0 ? tintColor(base, [74, 144, 217], 0.3) : tintColor(base, [232, 146, 58], 0.3);
         }
         const h = clip(value * H * 0.45 / Y_LIMIT, -H * 0.45, H * 0.45);
         const x = xFor(point.valence, W);
         const y = h >= 0 ? zero - h : zero;
-        const alpha = value >= 0 ? 0.8 : 0.2;
+        const alpha = mode === "difference" ? 0.85 : (value >= 0 ? 0.8 : 0.2);
         ctx.fillStyle = rgba(rgb, alpha);
         ctx.fillRect(x - barW / 2, y, barW, Math.abs(h));
         if (value > 0) {
@@ -302,7 +302,7 @@
           </div>
           <div class="panel-label">AVERAGE</div>
           <canvas class="wave" data-kind="average"></canvas>
-          <div class="panel-label">DIVERGENCE&nbsp;&nbsp;(amber = interviewer higher · blue = standard higher)</div>
+          <div class="panel-label">SUBJECT MINUS INTERVIEWER · positive = subject higher · negative = interviewer higher</div>
           <canvas class="wave" data-kind="difference"></canvas>
           <div class="axis">${axisHtml()}</div>
         `;
