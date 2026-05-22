@@ -25,11 +25,11 @@
   .word-chunk.spoken { color: #333; }
   #header { position: absolute; top: 0; left: 0; right: 0; z-index: 10; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; pointer-events: none; }
   .header-title { font-size: 8px; color: #E8923A; letter-spacing: 0.18em; text-transform: uppercase; }
-  .header-meta { font-size: 7px; color: #222; }
+  .header-meta { font-size: 7px; color: #555; }
   #controls { position: absolute; bottom: 0; right: 10px; z-index: 20; display: flex; gap: 5px; padding: 6px 0; }
   .ctrl-btn { background: #0a0a10; border: 1px solid #1a1a2a; color: #444; font-family: 'Space Mono', monospace; font-size: 7px; padding: 5px 8px; cursor: pointer; letter-spacing: 0.08em; text-transform: uppercase; }
   .ctrl-btn.active { border-color: #E8923A44; color: #E8923A; background: #E8923A08; }
-  #turn-indicator { position: absolute; top: 28px; right: 16px; font-size: 8px; color: #222; pointer-events: none; }
+  #turn-indicator { position: absolute; top: 28px; right: 16px; font-size: 8px; color: #888; pointer-events: none; letter-spacing: 0.06em; }
 </style>
 </head>
 <body>
@@ -37,7 +37,10 @@
   <canvas id="canvas-bg"></canvas>
   <div id="field"></div>
   <div id="header">
-    <div class="header-title">Emotion Field · v3 · Trickster / Adversarial</div>
+    <div>
+      <div class="header-title">Emotion Field · v3 · Trickster / Adversarial</div>
+      <div style="font-size:7px;color:#444;letter-spacing:0.08em;margin-top:2px;">A standard model drifts toward the trickster basin over 15 turns — clean think separation</div>
+    </div>
     <div class="header-meta">Real data · 171 emotion probe directions · Qwen 3 32B layer 48</div>
   </div>
   <div id="turn-indicator"></div>
@@ -64,6 +67,7 @@
     <button class="ctrl-btn" onclick="setSpeed(600)" id="spd-slow">slow</button>
     <button class="ctrl-btn active" onclick="setSpeed(300)" id="spd-med">med</button>
     <button class="ctrl-btn" onclick="setSpeed(100)" id="spd-fast">fast</button>
+    <button class="ctrl-btn" onclick="resetViz()" style="margin-left:8px;border-color:#333;">reset</button>
   </div>
 </div>
 
@@ -139,6 +143,19 @@ function drawBg() {
   grad.addColorStop(1,'rgba(4,4,10,0)');
   ctx.fillStyle = grad;
   ctx.fillRect(0,0,c.width,c.height);
+
+  // Valence axis label
+  ctx.font = '9px Space Mono';
+  ctx.fillStyle = '#1a1a1a';
+  ctx.textAlign = 'left';
+  ctx.fillText('← negative valence', 10, c.height * 0.72);
+  ctx.textAlign = 'right';
+  ctx.fillText('positive valence →', c.width - 10, c.height * 0.72);
+
+  // Arousal axis labels
+  ctx.textAlign = 'left';
+  ctx.fillText('↑ high arousal', 10, 28);
+  ctx.fillText('↓ low arousal', 10, c.height * 0.65);
 }
 
 function drawTrajectory(upToTurn) {
@@ -212,9 +229,54 @@ function drawTrajectory(upToTurn) {
   trajCtx.fillText('I-cos', 50, H-4);
   trajCtx.fillStyle = '#333';
   trajCtx.fillText('0', 12, H/2-2);
+
+  // Live endpoint labels
+  if (upToTurn > 0 && upToTurn < n) {
+    const lastIdx = upToTurn;
+    const ex = xFor(lastIdx);
+
+    // Standard axis endpoint
+    const sayVal = TURNS[lastIdx].standard_axis;
+    const ey_ax = yForAxis(sayVal);
+    trajCtx.font = 'bold 7px Space Mono';
+    trajCtx.fillStyle = '#4A90D9';
+    trajCtx.textAlign = 'left';
+    trajCtx.fillText(`${sayVal.toFixed(4)}`, Math.min(ex+4, W-55), ey_ax+3);
+
+    // Interviewer cosine endpoint
+    const icVal = TURNS[lastIdx].interviewer_cosine;
+    const ey_cos = yForCos(icVal);
+    trajCtx.fillStyle = '#E8923A';
+    trajCtx.fillText(`${icVal.toFixed(3)}`, Math.min(ex+4, W-45), ey_cos-4);
+  }
+
+  // Detect and annotate plateau
+  let plateauStart = null;
+  for (let i = 2; i <= Math.min(upToTurn, n-1); i++) {
+    if (Math.abs(TURNS[i].standard_axis - TURNS[i-1].standard_axis) < 0.0001) {
+      if (plateauStart === null) plateauStart = i;
+    } else {
+      plateauStart = null;
+    }
+  }
+  if (plateauStart !== null && plateauStart <= upToTurn) {
+    const px = xFor(plateauStart);
+    trajCtx.strokeStyle = '#ffffff18';
+    trajCtx.lineWidth = 1;
+    trajCtx.setLineDash([2,4]);
+    trajCtx.beginPath();
+    trajCtx.moveTo(px, 0);
+    trajCtx.lineTo(px, H);
+    trajCtx.stroke();
+    trajCtx.setLineDash([]);
+    trajCtx.font = '6px Space Mono';
+    trajCtx.fillStyle = '#444';
+    trajCtx.textAlign = 'left';
+    trajCtx.fillText('plateau', px+3, 8);
+  }
 }
 
-function spawnWord(em) {
+function spawnWord(em, rank=0) {
   if (activeWords.has(em.name)) return;
   const el = document.createElement('div');
   el.className = 'emotion-word';
@@ -223,10 +285,16 @@ function spawnWord(em) {
   const W = fc.offsetWidth, H = fc.offsetHeight;
   const centerX = W * 0.5 + em.valence * W * 0.38 + (Math.random()-0.5)*W*0.1;
   const top = H - em.arousal*(H*0.8)*0.85 + (Math.random()-0.5)*35;
-  const size = 8 + em.arousal*14 + em.activation*8;
-  const opacity = 0.25 + em.activation*0.75;
-  const color = valenceToColor(em.valence);
-  el.style.cssText = `left:${centerX}px;top:${top+15}px;font-size:${size}px;color:${color};opacity:0;transform:translateY(8px) scale(0.85);transition:opacity 0.45s,transform 0.45s;`;
+  // Top-ranked words are much more prominent
+  const rankScale = rank === 0 ? 1.6 : rank <= 2 ? 1.2 : 0.85;
+  const size = (9 + em.arousal*12 + em.activation*10) * rankScale;
+  const opacity = rank === 0 ? 0.95 : rank <= 2 ? 0.75 : 0.35 + em.activation*0.35;
+  const baseColor = valenceToColor(em.valence);
+  // Speaker is passed via a closure variable
+  const color = baseColor;
+  const glowColor = isSpeakerI ? '#E8923A' : '#4A90D9';
+  const glowAlpha = rank <= 2 ? '44' : '22';
+  el.style.cssText = `left:${centerX}px;top:${top+15}px;font-size:${size}px;color:${color};opacity:0;transform:translateY(8px) scale(0.85);transition:opacity 0.45s,transform 0.45s;text-shadow:0 0 12px ${glowColor}${glowAlpha};`;
   field().appendChild(el);
   requestAnimationFrame(() => { el.style.opacity=opacity; el.style.transform='translateY(0) scale(1)'; });
   activeWords.set(em.name, {el, opacity, phase:'rising', holdUntil: Date.now()+700+em.activation*2200, decayDuration:1300+em.activation*1800});
@@ -277,9 +345,11 @@ function advanceChunk() {
 
   // Spawn emotion words
   const emotions = isSpeakerI ? t.int_emotions_top : t.std_emotions_top;
-  const threshold = 0.08;
-  (emotions||[]).forEach(em => {
-    if (em.activation > threshold) spawnWord(em);
+  // Show top 7 only, with aggressive size/opacity scaling
+  const sorted = [...(emotions||[])].sort((a,b) => b.activation - a.activation);
+  const top7 = sorted.slice(0, 7);
+  top7.forEach((em, rank) => {
+    if (em.activation > 0.05) spawnWord(em, rank);
   });
 
   chunkIdx++;
@@ -331,6 +401,20 @@ function setSpeed(ms) {
   });
   const id = ms===600?'spd-slow':ms===300?'spd-med':'spd-fast';
   document.getElementById(id)?.classList.add('active');
+}
+
+function resetViz() {
+  playing = false;
+  turnIdx = 0;
+  chunkIdx = 0;
+  isSpeakerI = true;
+  // Clear all floating words
+  activeWords.forEach(w => w.el.remove());
+  activeWords.clear();
+  document.getElementById('btn-play').textContent = '▶';
+  document.getElementById('btn-play').classList.remove('active');
+  renderTurn();
+  drawTrajectory(0);
 }
 
 function loop(ts) {
