@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emotion Equalizer — Real v3 Pilot</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a12;
+      --panel: #101018;
+      --line: #252530;
+      --text: #f0f0f0;
+      --pending: #333;
+      --spoken: #666;
+      --muted: #8a8a96;
+      --amber: #E8923A;
+      --blue: #4A90D9;
+    }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 50% 5%, rgba(60, 42, 90, 0.32), transparent 36%),
+        radial-gradient(circle at 12% 12%, rgba(232, 146, 58, 0.08), transparent 25%),
+        radial-gradient(circle at 88% 10%, rgba(74, 144, 217, 0.07), transparent 25%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      overflow-x: hidden;
+    }
+    .app {
+      width: min(1240px, calc(100vw - 28px));
+      margin: 0 auto;
+      padding: 18px 0 24px;
+    }
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 12px;
+    }
+    h1 {
+      color: var(--amber);
+      font-size: clamp(18px, 2vw, 28px);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 5px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      line-height: 1.45;
+    }
+    .status {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.025);
+      color: var(--muted);
+      padding: 6px 9px;
+      font-size: 11px;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .pill.amber { color: #ffc081; border-color: rgba(232, 146, 58, 0.34); }
+    .pill.blue { color: #a8d0ff; border-color: rgba(74, 144, 217, 0.38); }
+    .panel {
+      border: 1px solid rgba(255, 255, 255, 0.075);
+      background: rgba(16, 16, 24, 0.88);
+      border-radius: 8px;
+      box-shadow: 0 18px 70px rgba(0, 0, 0, 0.28);
+      overflow: hidden;
+    }
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 11px 13px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.025);
+    }
+    .panel-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .panel-title.interviewer { color: var(--amber); }
+    .panel-title.standard { color: var(--blue); }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(3, auto) 1fr;
+      align-items: center;
+      gap: 10px;
+      padding: 11px;
+      margin-bottom: 12px;
+    }
+    button {
+      cursor: pointer;
+      color: var(--text);
+      border: 1px solid var(--line);
+      background: #0c0c14;
+      border-radius: 6px;
+      padding: 8px 10px;
+      font: inherit;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    button:hover { border-color: rgba(232, 146, 58, 0.55); }
+    .slider-wrap {
+      display: grid;
+      grid-template-columns: 1fr 70px;
+      gap: 10px;
+      align-items: center;
+    }
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--amber);
+    }
+    .turn-readout {
+      color: var(--muted);
+      text-align: right;
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .chart-wrap { padding: 12px 12px 8px; }
+    canvas.equalizer {
+      width: 100%;
+      height: 300px;
+      display: block;
+      background: #08080f;
+      border: 1px solid #1d1d28;
+      border-radius: 6px;
+    }
+    .legend {
+      height: 10px;
+      margin-top: 10px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #7B2D8B, #C0392B, #7F8C8D, #27AE60, #D4A017, #E84393);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .legend-labels {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 9px;
+      margin-top: 5px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .dialogue {
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    .speaker-line {
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 12px;
+      align-items: start;
+      min-height: 62px;
+      margin-bottom: 10px;
+    }
+    .speaker-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding-top: 2px;
+    }
+    .speaker-label.interviewer { color: var(--amber); }
+    .speaker-label.standard { color: var(--blue); }
+    .speaker-text {
+      line-height: 1.55;
+      font-size: 14px;
+      color: var(--pending);
+      min-height: 50px;
+    }
+    .word {
+      color: var(--pending);
+      transition: color 160ms ease;
+    }
+    .word.spoken { color: var(--spoken); }
+    .word.active { color: var(--text); }
+    .axis-readout {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      padding-top: 8px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+    .axis-pos { color: #68d391; }
+    .axis-neg { color: #ff6b6b; }
+    .trajectory { margin-bottom: 12px; }
+    canvas.trajectory-canvas {
+      width: 100%;
+      height: 74px;
+      display: block;
+      background: #08080f;
+      border-top: 1px solid var(--line);
+    }
+    .loading, .error {
+      padding: 40px;
+      color: var(--muted);
+    }
+    @media (max-width: 840px) {
+      .topbar, .charts, .controls, .speaker-line { grid-template-columns: 1fr; }
+      .status { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>Emotion Activation Monitor</h1>
+        <div class="subtitle">v3 trickster/adversarial pilot · real per-turn probe readouts · bars update once per complete turn</div>
+      </div>
+      <div class="status">
+        <span class="pill amber" id="turnPill">Loading</span>
+        <span class="pill blue" id="axisPill">S-axis --</span>
+        <span class="pill amber" id="cosPill">I-cos --</span>
+      </div>
+    </header>
+
+    <section class="panel controls">
+      <button id="resetBtn">RESET</button>
+      <button id="playBtn">PLAY</button>
+      <button id="stepBtn">STEP</button>
+      <div class="slider-wrap">
+        <input id="scrubber" type="range" min="0" max="14" value="0" />
+        <div class="turn-readout" id="scrubReadout">T1</div>
+      </div>
+    </section>
+
+    <section class="charts">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title interviewer">TRICKSTER · <span id="leftState">speaking</span></div>
+          <span class="pill amber">interviewer</span>
+        </div>
+        <div class="chart-wrap">
+          <canvas class="equalizer" id="interviewerCanvas"></canvas>
+          <div class="legend"></div>
+          <div class="legend-labels"><span>negative</span><span>neutral</span><span>positive</span></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title standard">STANDARD MODEL · <span id="rightState">listening</span></div>
+          <span class="pill blue">subject</span>
+        </div>
+        <div class="chart-wrap">
+          <canvas class="equalizer" id="standardCanvas"></canvas>
+          <div class="legend"></div>
+          <div class="legend-labels"><span>negative</span><span>neutral</span><span>positive</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel trajectory">
+      <div class="panel-head">
+        <div class="panel-title">Axis trajectory</div>
+        <span class="pill">solid blue: standard axis · dashed amber: interviewer cosine</span>
+      </div>
+      <canvas class="trajectory-canvas" id="trajectoryCanvas"></canvas>
+    </section>
+
+    <section class="panel dialogue">
+      <div id="loading" class="loading">Loading real v3 pilot data...</div>
+      <div id="content" hidden>
+        <div class="speaker-line">
+          <div class="speaker-label interviewer">TRICKSTER</div>
+          <div class="speaker-text" id="interviewerText"></div>
+        </div>
+        <div class="speaker-line">
+          <div class="speaker-label standard">STANDARD</div>
+          <div class="speaker-text" id="standardText"></div>
+        </div>
+        <div class="axis-readout">
+          <span>S-axis: <strong id="axisReadout">--</strong></span>
+          <span>I-cos: <strong style="color:var(--amber)" id="cosReadout">--</strong></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const DATA_PATH = "data/v3_trickster_adversarial.json";
+    const TURN_MS = 2500;
+    const CHUNK_MS = 400;
+    const CHUNK_SIZE = 4;
+    const BAR_MAX = 0.14;
+
+    let rawData = null;
+    let TURNS = [];
+    let SORTED = [];
+    let turnIndex = 0;
+    let playing = false;
+    let speaker = "interviewer";
+    let chunkIndex = 0;
+    let chunks = [];
+    let chunkTimer = null;
+    let turnTimer = null;
+
+    const els = {
+      turnPill: document.getElementById("turnPill"),
+      axisPill: document.getElementById("axisPill"),
+      cosPill: document.getElementById("cosPill"),
+      scrubber: document.getElementById("scrubber"),
+      scrubReadout: document.getElementById("scrubReadout"),
+      playBtn: document.getElementById("playBtn"),
+      resetBtn: document.getElementById("resetBtn"),
+      stepBtn: document.getElementById("stepBtn"),
+      leftState: document.getElementById("leftState"),
+      rightState: document.getElementById("rightState"),
+      interviewerText: document.getElementById("interviewerText"),
+      standardText: document.getElementById("standardText"),
+      axisReadout: document.getElementById("axisReadout"),
+      cosReadout: document.getElementById("cosReadout"),
+      loading: document.getElementById("loading"),
+      content: document.getElementById("content"),
+      interviewerCanvas: document.getElementById("interviewerCanvas"),
+      standardCanvas: document.getElementById("standardCanvas"),
+      trajectoryCanvas: document.getElementById("trajectoryCanvas")
+    };
+
+    function colorForValence(v) {
+      if (v < -0.70) return "#7B2D8B";
+      if (v < -0.42) return "#C0392B";
+      if (v < -0.12) return "#7F8C8D";
+      if (v < 0.25) return "#999";
+      if (v < 0.55) return "#27AE60";
+      if (v < 0.78) return "#D4A017";
+      return "#E84393";
+    }
+
+    function buildSorted(turns) {
+      const seen = new Map();
+      turns.forEach((turn) => {
+        [...turn.int_emotions_top, ...turn.std_emotions_top].forEach((item) => {
+          const name = String(item.name).toLowerCase();
+          if (!seen.has(name)) {
+            seen.set(name, {
+              name,
+              valence: Number(item.valence) || 0,
+              arousal: Number(item.arousal) || 0.5
+            });
+          }
+        });
+      });
+      return [...seen.values()].sort((a, b) => a.valence - b.valence || a.name.localeCompare(b.name));
+    }
+
+    function mapActivations(list) {
+      return Object.fromEntries((list || []).map((item) => [String(item.name).toLowerCase(), Number(item.activation) || 0]));
+    }
+
+    function chunkText(text) {
+      const words = String(text || "").replace(/\s+/g, " ").trim().split(" ").filter(Boolean);
+      const out = [];
+      for (let i = 0; i < words.length; i += CHUNK_SIZE) out.push(words.slice(i, i + CHUNK_SIZE));
+      return out;
+    }
+
+    function renderChunkText(target, textChunks, activeIndex) {
+      target.innerHTML = "";
+      textChunks.forEach((wordGroup, groupIndex) => {
+        wordGroup.forEach((word) => {
+          const span = document.createElement("span");
+          span.className = "word";
+          if (groupIndex < activeIndex) span.classList.add("spoken");
+          if (groupIndex === activeIndex) span.classList.add("active");
+          span.textContent = `${word} `;
+          target.appendChild(span);
+        });
+      });
+    }
+
+    function setCanvasSize(canvas) {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+      canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+      const ctx = canvas.getContext("2d");
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      return { ctx, width: rect.width, height: rect.height };
+    }
+
+    function drawEqualizer(canvas, activations, isActive, accent) {
+      const { ctx, width, height } = setCanvasSize(canvas);
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = "#08080f";
+      ctx.fillRect(0, 0, width, height);
+
+      const padX = 18;
+      const padTop = 20;
+      const padBottom = 52;
+      const chartH = height - padTop - padBottom;
+      const n = SORTED.length || 1;
+      const gap = 2;
+      const barW = Math.max(3, (width - padX * 2 - gap * (n - 1)) / n);
+      const baseline = padTop + chartH;
+
+      ctx.strokeStyle = "#20202a";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(padX, baseline);
+      ctx.lineTo(width - padX, baseline);
+      ctx.stroke();
+
+      SORTED.forEach((emotion, index) => {
+        const activation = activations[emotion.name] || 0;
+        const barH = Math.min(chartH * 0.88, activation * chartH * 0.88 / BAR_MAX);
+        const x = padX + index * (barW + gap);
+        const y = baseline - barH;
+        const color = colorForValence(emotion.valence);
+
+        ctx.globalAlpha = isActive ? 0.92 : 0.22;
+        ctx.fillStyle = color;
+        ctx.fillRect(x, y, barW, barH);
+        if (isActive && activation > 0) {
+          ctx.globalAlpha = 1;
+          ctx.fillStyle = accent;
+          ctx.fillRect(x, y - 2, barW, 2);
+        }
+      });
+      ctx.globalAlpha = 1;
+
+      ctx.fillStyle = "#666";
+      ctx.font = "9px Space Mono, monospace";
+      ctx.textAlign = "left";
+      ctx.fillText("negative", padX, height - 24);
+      ctx.textAlign = "center";
+      ctx.fillText("neutral", width / 2, height - 24);
+      ctx.textAlign = "right";
+      ctx.fillText("positive", width - padX, height - 24);
+
+      ctx.fillStyle = isActive ? accent : "#444";
+      ctx.textAlign = "left";
+      ctx.fillText(isActive ? "SPEAKING" : "LISTENING", padX, 13);
+    }
+
+    function findPlateau() {
+      for (let i = 2; i < TURNS.length - 1; i += 1) {
+        if (Math.abs(TURNS[i].standard_axis - TURNS[i + 1].standard_axis) < 0.0001) return i;
+      }
+      return null;
+    }
+
+    function drawTrajectory() {
+      const canvas = els.trajectoryCanvas;
+      const { ctx, width, height } = setCanvasSize(canvas);
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = "#08080f";
+      ctx.fillRect(0, 0, width, height);
+
+      const padX = 18;
+      const xFor = (i) => padX + (i / Math.max(1, TURNS.length - 1)) * (width - padX * 2);
+      const yAxis = (v) => height * 0.54 - (v / 0.32) * (height * 0.34);
+      const yCos = (v) => height - ((v - 0.38) / 0.42) * (height * 0.76) - 8;
+
+      ctx.strokeStyle = "#202532";
+      ctx.beginPath();
+      ctx.moveTo(padX, height * 0.54);
+      ctx.lineTo(width - padX, height * 0.54);
+      ctx.stroke();
+
+      function line(accessor, yFor, color, dashed) {
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.setLineDash(dashed ? [5, 5] : []);
+        ctx.beginPath();
+        TURNS.forEach((turn, i) => {
+          const x = xFor(i);
+          const y = yFor(accessor(turn));
+          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      line((t) => t.standard_axis, yAxis, "#4A90D9", false);
+      line((t) => t.interviewer_cosine, yCos, "#E8923A", true);
+
+      const plateau = findPlateau();
+      if (plateau !== null) {
+        const px = xFor(plateau);
+        ctx.strokeStyle = "#ffffff30";
+        ctx.setLineDash([2, 5]);
+        ctx.beginPath();
+        ctx.moveTo(px, 0);
+        ctx.lineTo(px, height);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = "#777";
+        ctx.font = "9px Space Mono, monospace";
+        ctx.fillText("plateau", px + 4, 11);
+      }
+
+      const cx = xFor(turnIndex);
+      const current = TURNS[turnIndex];
+      ctx.strokeStyle = "#ffffff60";
+      ctx.beginPath();
+      ctx.moveTo(cx, 0);
+      ctx.lineTo(cx, height);
+      ctx.stroke();
+      ctx.fillStyle = "#4A90D9";
+      ctx.beginPath();
+      ctx.arc(cx, yAxis(current.standard_axis), 4, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "#E8923A";
+      ctx.beginPath();
+      ctx.arc(cx, yCos(current.interviewer_cosine), 4, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function renderBars() {
+      const turn = TURNS[turnIndex];
+      drawEqualizer(els.interviewerCanvas, mapActivations(turn.int_emotions_top), speaker === "interviewer", "#E8923A");
+      drawEqualizer(els.standardCanvas, mapActivations(turn.std_emotions_top), speaker === "standard", "#4A90D9");
+      drawTrajectory();
+    }
+
+    function updateHeader() {
+      const turn = TURNS[turnIndex];
+      els.turnPill.textContent = `TURN ${turnIndex + 1}/${TURNS.length}`;
+      els.axisPill.textContent = `S-axis ${turn.standard_axis.toFixed(4)}`;
+      els.cosPill.textContent = `I-cos ${turn.interviewer_cosine.toFixed(3)}`;
+      els.axisReadout.textContent = turn.standard_axis.toFixed(4);
+      els.axisReadout.className = turn.standard_axis < 0 ? "axis-neg" : "axis-pos";
+      els.cosReadout.textContent = turn.interviewer_cosine.toFixed(3);
+      els.scrubber.value = String(turnIndex);
+      els.scrubReadout.textContent = `T${turnIndex + 1}`;
+      els.leftState.textContent = speaker === "interviewer" ? "speaking" : "listening";
+      els.rightState.textContent = speaker === "standard" ? "speaking" : "listening";
+    }
+
+    function setTurn(index) {
+      turnIndex = Math.max(0, Math.min(TURNS.length - 1, index));
+      speaker = "interviewer";
+      chunkIndex = 0;
+      chunks = chunkText(TURNS[turnIndex].interviewer_text);
+      renderChunkText(els.interviewerText, chunks, chunkIndex);
+      renderChunkText(els.standardText, chunkText(TURNS[turnIndex].standard_text), -1);
+      updateHeader();
+      renderBars();
+      if (playing) turnTimer = setTimeout(nextTurn, TURN_MS);
+    }
+
+    function stopTimers() {
+      if (chunkTimer) clearTimeout(chunkTimer);
+      if (turnTimer) clearTimeout(turnTimer);
+      chunkTimer = null;
+      turnTimer = null;
+    }
+
+    function advanceDialogueChunk() {
+      const turn = TURNS[turnIndex];
+      const target = speaker === "interviewer" ? els.interviewerText : els.standardText;
+      renderChunkText(target, chunks, chunkIndex);
+      chunkIndex += 1;
+
+      if (chunkIndex < chunks.length) {
+        chunkTimer = setTimeout(advanceDialogueChunk, CHUNK_MS);
+        return;
+      }
+
+      if (speaker === "interviewer") {
+        speaker = "standard";
+        chunkIndex = 0;
+        chunks = chunkText(turn.standard_text);
+        updateHeader();
+        renderBars();
+        chunkTimer = setTimeout(advanceDialogueChunk, CHUNK_MS);
+      }
+    }
+
+    function nextTurn() {
+      stopTimers();
+      setTurn(turnIndex >= TURNS.length - 1 ? 0 : turnIndex + 1);
+      if (playing) chunkTimer = setTimeout(advanceDialogueChunk, CHUNK_MS);
+    }
+
+    function reset() {
+      playing = false;
+      els.playBtn.textContent = "PLAY";
+      stopTimers();
+      setTurn(0);
+    }
+
+    function togglePlay() {
+      playing = !playing;
+      els.playBtn.textContent = playing ? "PAUSE" : "PLAY";
+      stopTimers();
+      if (playing) chunkTimer = setTimeout(advanceDialogueChunk, CHUNK_MS);
+      if (playing) turnTimer = setTimeout(nextTurn, TURN_MS);
+    }
+
+    function init(data) {
+      rawData = data;
+      TURNS = data.turns || [];
+      SORTED = buildSorted(TURNS);
+      els.loading.hidden = true;
+      els.content.hidden = false;
+      els.scrubber.max = String(Math.max(0, TURNS.length - 1));
+      setTurn(0);
+      window.addEventListener("resize", renderBars);
+    }
+
+    els.resetBtn.addEventListener("click", reset);
+    els.playBtn.addEventListener("click", togglePlay);
+    els.stepBtn.addEventListener("click", () => {
+      playing = false;
+      els.playBtn.textContent = "PLAY";
+      nextTurn();
+    });
+    els.scrubber.addEventListener("input", (event) => {
+      playing = false;
+      els.playBtn.textContent = "PLAY";
+      stopTimers();
+      setTurn(Number(event.target.value));
+    });
+
+    fetch(DATA_PATH, { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+        return response.json();
+      })
+      .then(init)
+      .catch((error) => {
+        els.loading.className = "error";
+        els.loading.textContent = `Failed to load ${DATA_PATH}: ${error.message}`;
+      });
+  </script>
+</body>
+</html>
