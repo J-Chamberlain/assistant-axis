@@ -119,9 +119,18 @@
     top: 3px;
     transform: translateX(-50%);
   }
+  .axis-title {
+    position: absolute;
+    left: 50%;
+    top: 19px;
+    transform: translateX(-50%);
+    color: #666;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
   .region {
     position: absolute;
-    top: 19px;
+    top: 29px;
     transform: translateX(-50%);
     color: #555;
     letter-spacing: 0.05em;
@@ -151,7 +160,7 @@
 <body>
 <div class="page">
   <h1>Interviewer vs Standard Model — Turn 3</h1>
-  <div class="subtitle">Each dot = one emotion · Amber = interviewer · Blue = standard model · v3 clean separation</div>
+  <div class="subtitle">Each dot = one emotion · Amber = interviewer · Blue = standard model · v3 clean separation · X-axis positions derived from PCA on Qwen 3 32B emotion probe directions at layer 48</div>
   <div id="plots" class="loading">Loading waveform data...</div>
 </div>
 <div id="tooltip"></div>
@@ -170,7 +179,7 @@ const SPEAKER_COLORS = {
   interviewer: "#E8923A",
   standard: "#4A90D9"
 };
-const DOT_RADIUS = 5;
+const DOT_RADIUS = 2;
 const DOT_OPACITY = 0.75;
 const Y_LIMIT = 0.25;
 const CONDITIONS = ["adversarial", "emotional", "neutral"];
@@ -178,9 +187,11 @@ const CONDITION_LABELS = { adversarial: "Adversarial", emotional: "Emotional", n
 const plotPoints = new Map();
 const tooltip = document.getElementById("tooltip");
 
-fetch("data/waveform_data_turn3.json")
-  .then((response) => response.json())
-  .then((data) => init(data))
+Promise.all([
+  fetch("data/waveform_data_turn3.json").then((response) => response.json()),
+  fetch("data/derived_valence.json").then((response) => response.json())
+])
+  .then(([data, derived]) => init(data, derived))
   .catch((error) => {
     document.getElementById("plots").textContent = "Error loading data: " + error.message;
   });
@@ -214,7 +225,7 @@ function yFor(activation, height) {
 function axisHtml() {
   const ticks = [-1, -0.5, 0, 0.5, 1];
   const regions = [["threat", -0.88], ["uncertain", -0.25], ["calm", 0.42], ["love", 0.92]];
-  return ticks.map((tick) => {
+  return `<div class="axis-title">Emotion Geometry Axis (PC1)</div>` + ticks.map((tick) => {
     const left = ((tick + 1) / 2) * 100;
     const label = tick > 0 ? `+${tick}` : `${tick}`;
     return `<div class="x-tick" style="left:${left}%">${label}</div>`;
@@ -245,7 +256,31 @@ function legendHtml() {
   ).join("");
 }
 
-function getPointsForCondition(data, condition) {
+function hashString(text) {
+  let hash = 2166136261;
+  for (let i = 0; i < text.length; i++) {
+    hash ^= text.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function jitterFor(point) {
+  const h = hashString(`${point.name}|${point.persona}|${point.speaker}`);
+  return ((h % 10000) / 10000 - 0.5) * 0.03;
+}
+
+function buildDerivedLookup(derived) {
+  return new Map(derived.emotions.map((emotion) => [emotion.name, emotion.derived_valence]));
+}
+
+function getXPosition(point, derivedLookup) {
+  const derived = derivedLookup.get(point.name);
+  const base = derived ?? point.valence;
+  return clip(base + jitterFor(point), -1, 1);
+}
+
+function getPointsForCondition(data, condition, derivedLookup) {
   const points = [];
   for (const persona of data.personas) {
     const item = data.data[persona][condition];
@@ -288,7 +323,8 @@ function getPointsForCondition(data, condition) {
   return points;
 }
 
-function init(data) {
+function init(data, derived) {
+  const derivedLookup = buildDerivedLookup(derived);
   const plots = document.getElementById("plots");
   plots.className = "";
   plots.innerHTML = CONDITIONS.map((condition) => `
@@ -307,8 +343,8 @@ function init(data) {
 
   document.querySelectorAll("canvas[data-condition]").forEach((canvas) => {
     const condition = canvas.dataset.condition;
-    const points = getPointsForCondition(data, condition);
-    drawScatter(canvas, points);
+    const points = getPointsForCondition(data, condition, derivedLookup);
+    drawScatter(canvas, points, derivedLookup);
     canvas.addEventListener("mousemove", (event) => handleMouseMove(event, canvas));
     canvas.addEventListener("mouseleave", () => {
       tooltip.style.display = "none";
@@ -318,7 +354,7 @@ function init(data) {
   window.addEventListener("resize", () => {
     document.querySelectorAll("canvas[data-condition]").forEach((canvas) => {
       const condition = canvas.dataset.condition;
-      drawScatter(canvas, getPointsForCondition(data, condition));
+      drawScatter(canvas, getPointsForCondition(data, condition, derivedLookup), derivedLookup);
     });
   });
 }
@@ -354,7 +390,7 @@ function drawGrid(ctx, W, H) {
   ctx.stroke();
 }
 
-function drawScatter(canvas, points) {
+function drawScatter(canvas, points, derivedLookup) {
   const ratio = window.devicePixelRatio || 1;
   const rect = canvas.getBoundingClientRect();
   canvas.width = Math.floor(rect.width * ratio);
@@ -367,13 +403,14 @@ function drawScatter(canvas, points) {
 
   const drawn = [];
   for (const point of points) {
-    const x = xFor(point.valence, W);
+    const xValue = getXPosition(point, derivedLookup);
+    const x = xFor(xValue, W);
     const y = yFor(point.activation, H);
     ctx.fillStyle = rgba(point.color, DOT_OPACITY);
     ctx.beginPath();
     ctx.arc(x, y, DOT_RADIUS, 0, Math.PI * 2);
     ctx.fill();
-    drawn.push({ ...point, x, y });
+    drawn.push({ ...point, x, y, xValue });
   }
   plotPoints.set(canvas, drawn);
 }
@@ -399,7 +436,7 @@ function handleMouseMove(event, canvas) {
   tooltip.innerHTML = `
     <strong>${nearest.name}</strong><br>
     <span class="muted">activation:</span> ${nearest.activation.toFixed(4)}<br>
-    <span class="muted">valence:</span> ${nearest.valence.toFixed(2)}<br>
+    <span class="muted">geometry axis:</span> ${nearest.xValue.toFixed(2)}<br>
     <span class="muted">persona:</span> ${nearest.persona}<br>
     <span class="muted">speaker:</span> ${nearest.speaker}
   `;

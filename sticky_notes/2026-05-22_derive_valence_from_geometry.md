@@ -68,3 +68,14 @@ emotional concepts differently from the human framework.
 - visualizations/waveform_adversarial.html
 - visualizations/waveform_emotional.html
 - visualizations/waveform_neutral.html
+
+## Update — 2026-05-22
+
+Derived valence positions have been integrated into
+visualizations/data/waveform_data_turn3.json and all waveform
+and scatter visualizations now use the PCA-derived emotion
+geometry axis (PC1) rather than hand-assigned literature
+valence positions. Matplotlib paper figures were generated
+in visualizations/figures/ for the scatter comparison,
+interviewer-only view, subject-only view, and the
+trickster/adversarial waveform landmark condition.
