@@ -15,18 +15,18 @@
     .page {
       width: min(1180px, calc(100vw - 32px));
       margin: 0 auto;
-      padding: 30px 0 44px;
+      padding: 16px 0 34px;
     }
     h1 {
       color: #f0f0f0;
-      font-size: clamp(23px, 2.7vw, 35px);
+      font-size: clamp(22px, 2.5vw, 34px);
       line-height: 1.1;
       font-weight: 720;
       letter-spacing: 0;
     }
     .subtitle {
       color: #777;
-      font-size: 13px;
+      font-size: 12px;
       margin-top: 8px;
       letter-spacing: 0.04em;
     }
@@ -34,72 +34,92 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 14px;
-      margin: 18px 0 8px;
-      color: #777;
-      font-size: 12px;
+      gap: 12px;
+      margin: 14px 0 10px;
+      color: #666;
+      font-size: 8px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
     .swatch {
-      width: 12px;
-      height: 12px;
+      width: 9px;
+      height: 9px;
       display: inline-block;
-      margin-right: 7px;
-      vertical-align: -2px;
-      border-radius: 2px;
+      margin-right: 5px;
+      vertical-align: -1px;
+      border-radius: 1px;
     }
     .panel {
-      border-top: 1px solid #24242e;
-      padding: 15px 0 18px;
+      border-top: 1px solid #1a1a22;
+      padding: 12px 0 13px;
     }
     .header {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 16px;
+      display: flex;
       align-items: baseline;
-      margin-bottom: 7px;
+      gap: 10px;
+      margin-bottom: 8px;
+      min-height: 12px;
+      font-size: 9px;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
     }
     .persona {
-      color: #888;
+      color: #999;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      font-size: 12px;
+      font-size: 9px;
     }
-    .metrics {
-      color: #666;
-      font-size: 12px;
-      display: flex;
-      gap: 18px;
-      font-variant-numeric: tabular-nums;
-    }
+    .metric { color: #555; }
+    .metric strong { font-weight: 700; }
+    .divider { color: #333; }
     .pos { color: #27AE60; }
     .neg { color: #C0392B; }
+    .speaker {
+      color: #666;
+      font-size: 7px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 3px;
+      line-height: 1;
+    }
+    .speaker.interviewer { color: #E8923A; }
+    .speaker.standard { color: #4A90D9; margin-top: 6px; }
+    .canvas-wrap {
+      width: 100%;
+      background: #080810;
+    }
     canvas.waveform {
       width: 100%;
-      height: 120px;
+      height: 80px;
       display: block;
       background: #080810;
-      border: 1px solid #181820;
-      border-radius: 5px;
+      border: 1px solid #101018;
+    }
+    .canvas-separator {
+      height: 1px;
+      background: #1a1a22;
+      margin: 6px 0;
     }
     .axis {
-      height: 52px;
+      height: 42px;
       position: relative;
-      margin-top: 5px;
+      margin-top: 6px;
       color: #555;
       font-size: 8px;
       display: none;
+      font-variant-numeric: tabular-nums;
     }
     .panel.last .axis { display: block; }
     .tick {
       position: absolute;
       top: 0;
       width: 1px;
-      height: 8px;
+      height: 7px;
       background: #444;
     }
     .tick span {
       position: absolute;
-      top: 11px;
+      top: 10px;
       transform: translateX(-50%);
       white-space: nowrap;
     }
@@ -112,16 +132,14 @@
       letter-spacing: 0.08em;
     }
     .loading {
-      margin-top: 30px;
-      padding: 34px;
+      margin-top: 24px;
+      padding: 24px;
       color: #888;
       background: #101018;
       border: 1px solid #24242e;
-      border-radius: 8px;
     }
     @media (max-width: 760px) {
-      .header { grid-template-columns: 1fr; gap: 6px; }
-      .metrics { flex-direction: column; gap: 4px; }
+      .header { flex-wrap: wrap; white-space: normal; }
     }
   </style>
 </head>
@@ -132,7 +150,7 @@
     <div class="legend">
       <span><span class="swatch" style="background:#E8923A"></span>Interviewer</span>
       <span><span class="swatch" style="background:#4A90D9"></span>Standard Model</span>
-      <span>Bars above zero = emotion present · Below zero = suppressed</span>
+      <span>Bars above zero line = emotion present · Below = suppressed</span>
     </div>
     <div id="root" class="loading">Loading waveform data...</div>
   </main>
@@ -148,18 +166,21 @@
     }
 
     function xFor(valence, width) {
-      return ((valence + 1) / 2) * width;
+      return ((valence + 1.0) / 2.0) * width;
     }
 
-    function drawWaveform(canvas, interviewer, standard) {
+    function setupCanvas(canvas) {
       const rect = canvas.getBoundingClientRect();
       const dpr = window.devicePixelRatio || 1;
       canvas.width = Math.max(1, Math.floor(rect.width * dpr));
       canvas.height = Math.max(1, Math.floor(rect.height * dpr));
       const ctx = canvas.getContext("2d");
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const W = rect.width;
-      const H = rect.height;
+      return { ctx, W: rect.width, H: rect.height };
+    }
+
+    function drawWaveform(canvas, points, color, capColor) {
+      const { ctx, W, H } = setupCanvas(canvas);
       const zero = H / 2;
       const grid = [-0.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75];
 
@@ -169,42 +190,38 @@
 
       grid.forEach((tick) => {
         const x = xFor(tick, W);
-        ctx.strokeStyle = tick === 0 ? "#333" : "#1f1f28";
-        ctx.lineWidth = tick === 0 ? 1.2 : 0.7;
+        ctx.strokeStyle = "#15151d";
+        ctx.lineWidth = 0.7;
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, H);
         ctx.stroke();
       });
 
-      ctx.strokeStyle = "#444";
-      ctx.lineWidth = 1.2;
+      ctx.strokeStyle = "#333";
+      ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.moveTo(0, zero);
       ctx.lineTo(W, zero);
       ctx.stroke();
 
-      function drawBars(points, color, capColor) {
-        const sorted = [...points].sort((a, b) => Math.abs(a.activation) - Math.abs(b.activation));
-        const barW = 5.5;
-        sorted.forEach((point) => {
-          const activation = clip(point.activation, -Y_LIMIT, Y_LIMIT);
-          const x = xFor(point.valence, W);
-          const h = clip(activation * H * 0.45 / Y_LIMIT, -H * 0.45, H * 0.45);
-          const y = h >= 0 ? zero - h : zero;
-          ctx.fillStyle = color;
-          ctx.fillRect(x - barW / 2, y, barW, Math.abs(h));
-          ctx.fillStyle = capColor;
-          if (h >= 0) ctx.fillRect(x - barW / 2, y - 1, barW, 2);
-          else ctx.fillRect(x - barW / 2, y + Math.abs(h) - 1, barW, 2);
-        });
-      }
-
-      drawBars(interviewer, "rgba(232,146,58,0.70)", "#E8923A");
-      drawBars(standard, "rgba(74,144,217,0.70)", "#4A90D9");
+      const sorted = [...points].sort((a, b) => Math.abs(a.activation) - Math.abs(b.activation));
+      const barW = 6;
+      sorted.forEach((point) => {
+        const activation = clip(point.activation, -Y_LIMIT, Y_LIMIT);
+        const x = xFor(point.valence, W);
+        const h = clip((activation / Y_LIMIT) * H * 0.45, -H * 0.45, H * 0.45);
+        const y = h >= 0 ? zero - h : zero;
+        const height = Math.abs(h);
+        ctx.fillStyle = color;
+        ctx.fillRect(x - barW / 2, y, barW, height);
+        ctx.fillStyle = capColor;
+        if (h >= 0) ctx.fillRect(x - barW / 2, y - 1, barW, 2);
+        else ctx.fillRect(x - barW / 2, y + height - 1, barW, 2);
+      });
 
       ctx.fillStyle = "#555";
-      ctx.font = "9px Space Mono, monospace";
+      ctx.font = "8px Space Mono, monospace";
       ctx.textAlign = "left";
       ctx.fillText("+0.25", 6, 10);
       ctx.fillText("0", 6, zero - 3);
@@ -213,10 +230,7 @@
 
     function axisHtml() {
       const ticks = [-1,-0.75,-0.5,-0.25,0,0.25,0.5,0.75,1];
-      const regions = [
-        ["threat", -0.88], ["anger", -0.75], ["sadness", -0.70],
-        ["uncertain", -0.25], ["calm", 0.42], ["joy", 0.88], ["love", 0.92]
-      ];
+      const regions = [["threat", -0.88], ["uncertain", -0.25], ["calm", 0.42], ["joy", 0.88]];
       return ticks.map((tick) => {
         const left = ((tick + 1) / 2) * 100;
         const label = tick > 0 ? `+${tick}` : `${tick}`;
@@ -239,32 +253,41 @@
         panel.className = `panel ${persona === "editor" ? "last" : ""}`;
         panel.innerHTML = `
           <div class="header">
-            <div class="persona">${persona}</div>
-            <div class="metrics">
-              <span>S-axis <strong class="${axis < 0 ? "neg" : "pos"}">${axis.toFixed(4)}</strong></span>
-              <span>I-cos <strong>${(item.interviewer_cosine ?? 0).toFixed(3)}</strong></span>
-            </div>
+            <span class="persona">${persona}</span>
+            <span class="divider">—</span>
+            <span class="metric">S-axis <strong class="${axis < 0 ? "neg" : "pos"}">${axis.toFixed(4)}</strong></span>
+            <span class="divider">·</span>
+            <span class="metric">I-cos <strong>${(item.interviewer_cosine ?? 0).toFixed(3)}</strong></span>
           </div>
-          <canvas class="waveform"></canvas>
+          <div class="speaker interviewer">Interviewer</div>
+          <div class="canvas-wrap"><canvas class="waveform interviewer-wave"></canvas></div>
+          <div class="canvas-separator"></div>
+          <div class="speaker standard">Standard</div>
+          <div class="canvas-wrap"><canvas class="waveform standard-wave"></canvas></div>
           <div class="axis">${axisHtml()}</div>
         `;
         root.appendChild(panel);
-        drawWaveform(panel.querySelector("canvas"), item.interviewer, item.standard);
+        drawWaveform(panel.querySelector(".interviewer-wave"), item.interviewer, "rgba(232,146,58,0.85)", "#FFC06A");
+        drawWaveform(panel.querySelector(".standard-wave"), item.standard, "rgba(74,144,217,0.85)", "#7DBBFF");
       });
     }
 
+    let cachedData = null;
     fetch(DATA_PATH, { cache: "no-store" })
       .then((response) => {
         if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
         return response.json();
       })
-      .then(render)
+      .then((data) => {
+        cachedData = data;
+        render(data);
+      })
       .catch((error) => {
         document.getElementById("root").textContent = `Failed to load ${DATA_PATH}: ${error.message}`;
       });
 
     window.addEventListener("resize", () => {
-      fetch(DATA_PATH, { cache: "no-store" }).then((response) => response.json()).then(render);
+      if (cachedData) render(cachedData);
     });
   </script>
 </body>
