@@ -326,3 +326,18 @@ Method: PCA on probe direction matrix, no GPU required.
 Implication: partial alignment with human circumplex is
 itself a finding; divergences may reflect model-specific
 organization of emotional concepts.
+
+---
+
+## 2026-05-22 [Section 3.9 / 3.10 / 3.11] V5 Pre-Registration and Follow-On Analysis Plan
+
+Pre-registered: v5 run at temperature 0.3, fixed seed,
+25 turns per condition, identical persona order to v3.
+Primary pre-registration: contagion directionality and
+persona-specific patterns observed in v3 will replicate
+under sampling despite methodological change. Two follow-on
+analyses pre-registered: (1) blind frontier-model
+interpretation of standard model chain-of-thought predicts
+geometric trajectory; (2) blind persona identification
+from interviewer text against full 275-persona list.
+Commit timestamp is pre-registration date.

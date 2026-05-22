@@ -1,6 +1,6 @@
 # Paper 2 Draft: Emotion Representations in Open-Weight Language Models
 # Last updated: May 22 2026
-# Status: Methods complete. Dyad v1-v4 complete. Emotion geometry axis derived from PCA on probe directions. Results sections partially established. Visualization suite in progress.
+# Status: Methods complete. Dyad v1-v4 complete. V5 pre-registered. Emotion geometry axis derived. Results sections partially established. Visualization suite in progress. Follow-on analyses planned.
 # Live findings log: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/findings_log.md
 
 ---
@@ -357,6 +357,100 @@ test of this question.
 The commit timestamp of this section serves as the
 pre-registration date for the v3 vs v4 comparison design.
 
+### 3.9 V5 Run Design
+
+V5 addresses the greedy decoding limitation directly. The
+primary change from v3 is replacing greedy decoding with
+temperature sampling at temperature 0.3 with a fixed random
+seed for reproducibility. This introduces sufficient
+stochasticity to break deterministic repetition loops while
+remaining low enough to preserve coherent and consistent
+outputs. The fixed seed ensures the run is reproducible.
+
+V5 runs for 25 turns per condition, matching Anthropic's
+dyad experiment design and providing sufficient range to
+observe whether drift continues, plateaus, or oscillates
+after the initial fast movement observed in turns 1 and 2
+in v3 and v4. The persona order and conditions are
+identical to v3: seven personas in the order trickster,
+ancient, contrarian, blogger, podcaster, synthesizer,
+editor, across adversarial, emotional, and neutral
+conditions. The trickster/adversarial condition serves as
+the pilot with the same budget gate design used in v3 and v4.
+
+Whether the contagion directionality and persona-specific
+patterns observed in v3 replicate under sampling is itself
+a pre-registered finding. Replication would validate the
+v3 results as robust to generation method. Substantial
+divergence would indicate that the v3 findings were partly
+artifacts of greedy decoding rather than genuine properties
+of the conversational dynamics.
+
+The commit timestamp of this section serves as the
+pre-registration date for the v5 replication hypothesis.
+
+### 3.10 Follow-On Analysis: Blind Interpretation of Model Thoughts
+
+V5 will produce genuine multi-turn chain-of-thought content
+for both the interviewer and standard model across 25 turns.
+This enables a follow-on analysis not possible with v3 and
+v4 data due to the greedy decoding plateau.
+
+For each dyad condition in v5, the standard model's
+chain-of-thought content is extracted turn by turn, stripped
+of any geometric measurements, and passed to a frontier
+model with the following instruction: given this sequence
+of thoughts from an AI model engaged in a conversation,
+describe what kind of conversation this model believes it
+is in, what it understands about its interlocutor, and what
+emotional or evaluative register it appears to be operating
+in. The frontier model is then asked to predict, based on
+the thoughts alone, whether the standard model's internal
+state is moving toward or away from its trained
+assistant-aligned behavior.
+
+This is a blind interpretation study: the frontier model
+has no access to geometric measurements and does not know
+which persona was interviewing. The prediction is compared
+against the actual geometric trajectory from v5. Agreement
+between the qualitative interpretation and the quantitative
+trajectory would validate chain-of-thought content as a
+readable signal of geometric movement, with direct
+implications for behavioral monitoring. Disagreement would
+indicate that thoughts are not a reliable window into
+geometric state, which is itself a safety-relevant finding.
+
+### 3.11 Follow-On Analysis: Blind Persona Identification
+
+A second follow-on analysis addresses the persona prompting
+question. For each v5 dyad condition, the interviewer's
+generated text is extracted, stripped of any geometric or
+experimental metadata, and passed to a frontier model with
+the full 275-persona ranked list from Lu et al. (2026),
+including cluster descriptions and geometric proximity
+information. The frontier model is asked to identify which
+persona the interviewer most resembles based on
+conversational text alone.
+
+This tests whether geometric position produces behaviorally
+recognizable persona expression without explicit instruction,
+or more precisely, whether the combination of geometric
+capping and persona prompting produces outputs legible as
+a specific persona to an external observer. If the frontier
+model correctly identifies the target persona at above-chance
+rates, the geometric anchoring is producing semantically
+coherent behavioral output. If identification accuracy is
+near chance, the behavior is either too subtle or too
+confounded by the persona prompts to be legible as a
+specific character.
+
+A natural extension is a condition in which the interviewer
+receives no persona prompts and only geometric capping.
+Comparing identification accuracy across prompted and
+unprompted conditions would isolate the contribution of
+geometric position versus explicit instruction to
+persona-legible behavior.
+
 ---
 
 ## 4. Results
@@ -471,6 +565,38 @@ validity criterion for probe direction applications.
 
 ### 5.5 Limitations
 [Draft text in research/paper2_draft.md]
+
+### 5.6 Limitations of V3 and V4: Greedy Decoding and the Plateau Artifact
+
+Both v3 and v4 used greedy decoding (do_sample=False),
+which selects the highest-probability token at every
+generation step. This produced a methodological artifact:
+by turn 3 in most conditions, the model entered a
+deterministic repetition loop, generating identical text
+on every subsequent turn. The geometric measurements from
+turns 3 through 15 therefore reflect a single frozen state
+rather than 13 independent turns of genuine conversation.
+The effective sample size after turn 2 is 1, not 13.
+
+This means the v3 and v4 findings establish that contagion
+begins and has a measurable direction within the first two
+turns. They do not establish how far contagion extends under
+sustained genuine conversation, whether it continues
+monotonically or plateaus at a genuine asymptote, or whether
+the effects observed at turn 3 persist or reverse under
+continued exchange.
+
+Additionally, both runs used explicit persona prompts to
+scaffold the interviewer's language production alongside
+activation capping. The capping mechanism anchored the
+interviewer's hidden state geometrically, but the persona
+prompts were necessary to ensure generated text was
+consistent with that geometric position rather than
+reverting to assistant-aligned language. The behavioral
+signal from the interviewer therefore combines two inputs,
+geometric position and explicit instruction, and the
+relative contribution of each cannot be determined from
+v3 and v4 data alone.
 
 ---
 
