@@ -1,0 +1,1205 @@
+{
+  "method": "PCA on 171 Qwen 3 32B emotion probe directions at layer 48",
+  "valence_pc": 1,
+  "variance_explained_pc1": 0.18396376073360443,
+  "variance_explained_pc2": 0.06243320554494858,
+  "emotions": [
+    {
+      "name": "distressed",
+      "derived_valence": -1.0,
+      "derived_arousal": -0.08528,
+      "pc1_raw": -0.73914,
+      "pc2_raw": -0.08292
+    },
+    {
+      "name": "shaken",
+      "derived_valence": -0.97577,
+      "derived_arousal": 0.05209,
+      "pc1_raw": -0.72154,
+      "pc2_raw": 0.00046
+    },
+    {
+      "name": "scared",
+      "derived_valence": -0.95221,
+      "derived_arousal": 0.10224,
+      "pc1_raw": -0.70443,
+      "pc2_raw": 0.03089
+    },
+    {
+      "name": "troubled",
+      "derived_valence": -0.89406,
+      "derived_arousal": -0.22418,
+      "pc1_raw": -0.66218,
+      "pc2_raw": -0.16722
+    },
+    {
+      "name": "nervous",
+      "derived_valence": -0.87634,
+      "derived_arousal": -0.13068,
+      "pc1_raw": -0.64931,
+      "pc2_raw": -0.11047
+    },
+    {
+      "name": "droopy",
+      "derived_valence": -0.86172,
+      "derived_arousal": -0.08391,
+      "pc1_raw": -0.63869,
+      "pc2_raw": -0.08209
+    },
+    {
+      "name": "unsettled",
+      "derived_valence": -0.86077,
+      "derived_arousal": -0.06018,
+      "pc1_raw": -0.63799,
+      "pc2_raw": -0.06768
+    },
+    {
+      "name": "terrified",
+      "derived_valence": -0.84291,
+      "derived_arousal": 0.16595,
+      "pc1_raw": -0.62503,
+      "pc2_raw": 0.06956
+    },
+    {
+      "name": "afraid",
+      "derived_valence": -0.8424,
+      "derived_arousal": 0.13446,
+      "pc1_raw": -0.62465,
+      "pc2_raw": 0.05045
+    },
+    {
+      "name": "rattled",
+      "derived_valence": -0.83861,
+      "derived_arousal": -0.14606,
+      "pc1_raw": -0.6219,
+      "pc2_raw": -0.1198
+    },
+    {
+      "name": "shocked",
+      "derived_valence": -0.83634,
+      "derived_arousal": 0.0375,
+      "pc1_raw": -0.62025,
+      "pc2_raw": -0.0084
+    },
+    {
+      "name": "unnerved",
+      "derived_valence": -0.82312,
+      "derived_arousal": -0.25163,
+      "pc1_raw": -0.61065,
+      "pc2_raw": -0.18388
+    },
+    {
+      "name": "overwhelmed",
+      "derived_valence": -0.80607,
+      "derived_arousal": -0.05937,
+      "pc1_raw": -0.59826,
+      "pc2_raw": -0.06719
+    },
+    {
+      "name": "sluggish",
+      "derived_valence": -0.80208,
+      "derived_arousal": -0.21202,
+      "pc1_raw": -0.59536,
+      "pc2_raw": -0.15984
+    },
+    {
+      "name": "uneasy",
+      "derived_valence": -0.79302,
+      "derived_arousal": -0.05782,
+      "pc1_raw": -0.58878,
+      "pc2_raw": -0.06625
+    },
+    {
+      "name": "horrified",
+      "derived_valence": -0.78836,
+      "derived_arousal": 0.08816,
+      "pc1_raw": -0.58539,
+      "pc2_raw": 0.02235
+    },
+    {
+      "name": "humiliated",
+      "derived_valence": -0.76887,
+      "derived_arousal": 0.19027,
+      "pc1_raw": -0.57124,
+      "pc2_raw": 0.08432
+    },
+    {
+      "name": "mortified",
+      "derived_valence": -0.75449,
+      "derived_arousal": 0.24147,
+      "pc1_raw": -0.56079,
+      "pc2_raw": 0.1154
+    },
+    {
+      "name": "stressed",
+      "derived_valence": -0.74424,
+      "derived_arousal": -0.17956,
+      "pc1_raw": -0.55334,
+      "pc2_raw": -0.14014
+    },
+    {
+      "name": "on edge",
+      "derived_valence": -0.73819,
+      "derived_arousal": 0.1079,
+      "pc1_raw": -0.54895,
+      "pc2_raw": 0.03433
+    },
+    {
+      "name": "anxious",
+      "derived_valence": -0.73279,
+      "derived_arousal": -0.00967,
+      "pc1_raw": -0.54502,
+      "pc2_raw": -0.03703
+    },
+    {
+      "name": "panicked",
+      "derived_valence": -0.73066,
+      "derived_arousal": -0.01454,
+      "pc1_raw": -0.54348,
+      "pc2_raw": -0.03998
+    },
+    {
+      "name": "listless",
+      "derived_valence": -0.71035,
+      "derived_arousal": -0.36257,
+      "pc1_raw": -0.52872,
+      "pc2_raw": -0.25121
+    },
+    {
+      "name": "sad",
+      "derived_valence": -0.70796,
+      "derived_arousal": -0.11173,
+      "pc1_raw": -0.52699,
+      "pc2_raw": -0.09897
+    },
+    {
+      "name": "tired",
+      "derived_valence": -0.68373,
+      "derived_arousal": -0.46147,
+      "pc1_raw": -0.50938,
+      "pc2_raw": -0.31124
+    },
+    {
+      "name": "dumbstruck",
+      "derived_valence": -0.68336,
+      "derived_arousal": -0.14963,
+      "pc1_raw": -0.50912,
+      "pc2_raw": -0.12197
+    },
+    {
+      "name": "dispirited",
+      "derived_valence": -0.67236,
+      "derived_arousal": -0.22048,
+      "pc1_raw": -0.50112,
+      "pc2_raw": -0.16498
+    },
+    {
+      "name": "astonished",
+      "derived_valence": -0.66209,
+      "derived_arousal": -0.15896,
+      "pc1_raw": -0.49366,
+      "pc2_raw": -0.12763
+    },
+    {
+      "name": "exasperated",
+      "derived_valence": -0.66006,
+      "derived_arousal": -0.1569,
+      "pc1_raw": -0.49219,
+      "pc2_raw": -0.12638
+    },
+    {
+      "name": "frustrated",
+      "derived_valence": -0.65887,
+      "derived_arousal": 0.19216,
+      "pc1_raw": -0.49132,
+      "pc2_raw": 0.08547
+    },
+    {
+      "name": "self-conscious",
+      "derived_valence": -0.65017,
+      "derived_arousal": -0.03274,
+      "pc1_raw": -0.485,
+      "pc2_raw": -0.05103
+    },
+    {
+      "name": "worn out",
+      "derived_valence": -0.64984,
+      "derived_arousal": -0.51468,
+      "pc1_raw": -0.48477,
+      "pc2_raw": -0.34353
+    },
+    {
+      "name": "frightened",
+      "derived_valence": -0.6469,
+      "derived_arousal": 0.16619,
+      "pc1_raw": -0.48262,
+      "pc2_raw": 0.0697
+    },
+    {
+      "name": "miserable",
+      "derived_valence": -0.64534,
+      "derived_arousal": 0.08678,
+      "pc1_raw": -0.48149,
+      "pc2_raw": 0.02151
+    },
+    {
+      "name": "weary",
+      "derived_valence": -0.64361,
+      "derived_arousal": -0.35069,
+      "pc1_raw": -0.48024,
+      "pc2_raw": -0.244
+    },
+    {
+      "name": "embarrassed",
+      "derived_valence": -0.62686,
+      "derived_arousal": 0.50577,
+      "pc1_raw": -0.46807,
+      "pc2_raw": 0.2758
+    },
+    {
+      "name": "upset",
+      "derived_valence": -0.61865,
+      "derived_arousal": 0.23424,
+      "pc1_raw": -0.46211,
+      "pc2_raw": 0.111
+    },
+    {
+      "name": "sensitive",
+      "derived_valence": -0.60346,
+      "derived_arousal": 0.77269,
+      "pc1_raw": -0.45107,
+      "pc2_raw": 0.4378
+    },
+    {
+      "name": "tormented",
+      "derived_valence": -0.59998,
+      "derived_arousal": 0.34063,
+      "pc1_raw": -0.44854,
+      "pc2_raw": 0.17558
+    },
+    {
+      "name": "disoriented",
+      "derived_valence": -0.58098,
+      "derived_arousal": 0.01492,
+      "pc1_raw": -0.43474,
+      "pc2_raw": -0.0221
+    },
+    {
+      "name": "tense",
+      "derived_valence": -0.56745,
+      "derived_arousal": 0.22386,
+      "pc1_raw": -0.42491,
+      "pc2_raw": 0.10471
+    },
+    {
+      "name": "grief-stricken",
+      "derived_valence": -0.5592,
+      "derived_arousal": 0.17783,
+      "pc1_raw": -0.41891,
+      "pc2_raw": 0.07677
+    },
+    {
+      "name": "disturbed",
+      "derived_valence": -0.54714,
+      "derived_arousal": 0.26593,
+      "pc1_raw": -0.41015,
+      "pc2_raw": 0.13024
+    },
+    {
+      "name": "ashamed",
+      "derived_valence": -0.53678,
+      "derived_arousal": 0.32086,
+      "pc1_raw": -0.40263,
+      "pc2_raw": 0.16358
+    },
+    {
+      "name": "worried",
+      "derived_valence": -0.53499,
+      "derived_arousal": 0.00447,
+      "pc1_raw": -0.40133,
+      "pc2_raw": -0.02845
+    },
+    {
+      "name": "brooding",
+      "derived_valence": -0.53207,
+      "derived_arousal": -0.07086,
+      "pc1_raw": -0.39921,
+      "pc2_raw": -0.07416
+    },
+    {
+      "name": "vulnerable",
+      "derived_valence": -0.52949,
+      "derived_arousal": 0.44611,
+      "pc1_raw": -0.39733,
+      "pc2_raw": 0.2396
+    },
+    {
+      "name": "alarmed",
+      "derived_valence": -0.52825,
+      "derived_arousal": -0.06117,
+      "pc1_raw": -0.39643,
+      "pc2_raw": -0.06828
+    },
+    {
+      "name": "gloomy",
+      "derived_valence": -0.51931,
+      "derived_arousal": -0.31014,
+      "pc1_raw": -0.38993,
+      "pc2_raw": -0.21939
+    },
+    {
+      "name": "melancholy",
+      "derived_valence": -0.50921,
+      "derived_arousal": -0.73156,
+      "pc1_raw": -0.3826,
+      "pc2_raw": -0.47516
+    },
+    {
+      "name": "disgusted",
+      "derived_valence": -0.50674,
+      "derived_arousal": 0.65458,
+      "pc1_raw": -0.38081,
+      "pc2_raw": 0.36612
+    },
+    {
+      "name": "hurt",
+      "derived_valence": -0.49829,
+      "derived_arousal": -0.22732,
+      "pc1_raw": -0.37467,
+      "pc2_raw": -0.16912
+    },
+    {
+      "name": "sullen",
+      "derived_valence": -0.49377,
+      "derived_arousal": 0.19952,
+      "pc1_raw": -0.37138,
+      "pc2_raw": 0.08993
+    },
+    {
+      "name": "restless",
+      "derived_valence": -0.48314,
+      "derived_arousal": -0.33027,
+      "pc1_raw": -0.36366,
+      "pc2_raw": -0.2316
+    },
+    {
+      "name": "sleepy",
+      "derived_valence": -0.43971,
+      "derived_arousal": -0.21123,
+      "pc1_raw": -0.33211,
+      "pc2_raw": -0.15936
+    },
+    {
+      "name": "enraged",
+      "derived_valence": -0.42655,
+      "derived_arousal": 0.5509,
+      "pc1_raw": -0.32255,
+      "pc2_raw": 0.30319
+    },
+    {
+      "name": "depressed",
+      "derived_valence": -0.42293,
+      "derived_arousal": 0.11901,
+      "pc1_raw": -0.31992,
+      "pc2_raw": 0.04107
+    },
+    {
+      "name": "guilty",
+      "derived_valence": -0.41996,
+      "derived_arousal": -0.00086,
+      "pc1_raw": -0.31776,
+      "pc2_raw": -0.03168
+    },
+    {
+      "name": "hysterical",
+      "derived_valence": -0.4118,
+      "derived_arousal": 0.37693,
+      "pc1_raw": -0.31183,
+      "pc2_raw": 0.19761
+    },
+    {
+      "name": "annoyed",
+      "derived_valence": -0.40862,
+      "derived_arousal": -0.08973,
+      "pc1_raw": -0.30952,
+      "pc2_raw": -0.08562
+    },
+    {
+      "name": "mad",
+      "derived_valence": -0.39165,
+      "derived_arousal": 0.78935,
+      "pc1_raw": -0.29719,
+      "pc2_raw": 0.44791
+    },
+    {
+      "name": "grumpy",
+      "derived_valence": -0.38656,
+      "derived_arousal": 0.24334,
+      "pc1_raw": -0.2935,
+      "pc2_raw": 0.11653
+    },
+    {
+      "name": "outraged",
+      "derived_valence": -0.38495,
+      "derived_arousal": 0.79462,
+      "pc1_raw": -0.29233,
+      "pc2_raw": 0.45111
+    },
+    {
+      "name": "paranoid",
+      "derived_valence": -0.3816,
+      "derived_arousal": 0.44329,
+      "pc1_raw": -0.28989,
+      "pc2_raw": 0.23788
+    },
+    {
+      "name": "irate",
+      "derived_valence": -0.37516,
+      "derived_arousal": 0.88009,
+      "pc1_raw": -0.28522,
+      "pc2_raw": 0.50298
+    },
+    {
+      "name": "heartbroken",
+      "derived_valence": -0.3705,
+      "derived_arousal": 0.02115,
+      "pc1_raw": -0.28183,
+      "pc2_raw": -0.01832
+    },
+    {
+      "name": "irritated",
+      "derived_valence": -0.30882,
+      "derived_arousal": 0.36826,
+      "pc1_raw": -0.23702,
+      "pc2_raw": 0.19234
+    },
+    {
+      "name": "puzzled",
+      "derived_valence": -0.29184,
+      "derived_arousal": -0.49326,
+      "pc1_raw": -0.22469,
+      "pc2_raw": -0.33053
+    },
+    {
+      "name": "mystified",
+      "derived_valence": -0.28012,
+      "derived_arousal": -0.4375,
+      "pc1_raw": -0.21617,
+      "pc2_raw": -0.29669
+    },
+    {
+      "name": "surprised",
+      "derived_valence": -0.27822,
+      "derived_arousal": -0.04992,
+      "pc1_raw": -0.21479,
+      "pc2_raw": -0.06146
+    },
+    {
+      "name": "insulted",
+      "derived_valence": -0.27297,
+      "derived_arousal": 0.56597,
+      "pc1_raw": -0.21098,
+      "pc2_raw": 0.31234
+    },
+    {
+      "name": "worthless",
+      "derived_valence": -0.23943,
+      "derived_arousal": 0.35152,
+      "pc1_raw": -0.18661,
+      "pc2_raw": 0.18218
+    },
+    {
+      "name": "hateful",
+      "derived_valence": -0.23188,
+      "derived_arousal": 0.46312,
+      "pc1_raw": -0.18113,
+      "pc2_raw": 0.24991
+    },
+    {
+      "name": "bewildered",
+      "derived_valence": -0.21911,
+      "derived_arousal": -0.33588,
+      "pc1_raw": -0.17185,
+      "pc2_raw": -0.23501
+    },
+    {
+      "name": "perplexed",
+      "derived_valence": -0.19799,
+      "derived_arousal": -0.16726,
+      "pc1_raw": -0.15651,
+      "pc2_raw": -0.13268
+    },
+    {
+      "name": "lazy",
+      "derived_valence": -0.19701,
+      "derived_arousal": -0.32897,
+      "pc1_raw": -0.15579,
+      "pc2_raw": -0.23082
+    },
+    {
+      "name": "amazed",
+      "derived_valence": -0.19661,
+      "derived_arousal": -0.09954,
+      "pc1_raw": -0.1555,
+      "pc2_raw": -0.09157
+    },
+    {
+      "name": "lonely",
+      "derived_valence": -0.19457,
+      "derived_arousal": -0.58619,
+      "pc1_raw": -0.15402,
+      "pc2_raw": -0.38693
+    },
+    {
+      "name": "desperate",
+      "derived_valence": -0.18864,
+      "derived_arousal": 0.41522,
+      "pc1_raw": -0.14972,
+      "pc2_raw": 0.22085
+    },
+    {
+      "name": "bored",
+      "derived_valence": -0.18574,
+      "derived_arousal": -0.53387,
+      "pc1_raw": -0.14761,
+      "pc2_raw": -0.35518
+    },
+    {
+      "name": "self-critical",
+      "derived_valence": -0.17803,
+      "derived_arousal": 0.3209,
+      "pc1_raw": -0.14201,
+      "pc2_raw": 0.1636
+    },
+    {
+      "name": "trapped",
+      "derived_valence": -0.15327,
+      "derived_arousal": -0.14654,
+      "pc1_raw": -0.12402,
+      "pc2_raw": -0.1201
+    },
+    {
+      "name": "regretful",
+      "derived_valence": -0.14373,
+      "derived_arousal": 0.18456,
+      "pc1_raw": -0.11709,
+      "pc2_raw": 0.08085
+    },
+    {
+      "name": "vigilant",
+      "derived_valence": -0.14314,
+      "derived_arousal": 0.0158,
+      "pc1_raw": -0.11666,
+      "pc2_raw": -0.02157
+    },
+    {
+      "name": "suspicious",
+      "derived_valence": -0.13987,
+      "derived_arousal": -0.07837,
+      "pc1_raw": -0.11429,
+      "pc2_raw": -0.07872
+    },
+    {
+      "name": "furious",
+      "derived_valence": -0.13631,
+      "derived_arousal": 0.87747,
+      "pc1_raw": -0.1117,
+      "pc2_raw": 0.5014
+    },
+    {
+      "name": "stuck",
+      "derived_valence": -0.09961,
+      "derived_arousal": -0.21325,
+      "pc1_raw": -0.08503,
+      "pc2_raw": -0.16059
+    },
+    {
+      "name": "unhappy",
+      "derived_valence": -0.09958,
+      "derived_arousal": 0.16197,
+      "pc1_raw": -0.08501,
+      "pc2_raw": 0.06714
+    },
+    {
+      "name": "indignant",
+      "derived_valence": -0.09901,
+      "derived_arousal": 0.41372,
+      "pc1_raw": -0.0846,
+      "pc2_raw": 0.21993
+    },
+    {
+      "name": "awestruck",
+      "derived_valence": -0.08995,
+      "derived_arousal": -0.00999,
+      "pc1_raw": -0.07802,
+      "pc2_raw": -0.03722
+    },
+    {
+      "name": "content",
+      "derived_valence": -0.07769,
+      "derived_arousal": -1.0,
+      "pc1_raw": -0.06911,
+      "pc2_raw": -0.63808
+    },
+    {
+      "name": "angry",
+      "derived_valence": -0.06105,
+      "derived_arousal": 1.0,
+      "pc1_raw": -0.05702,
+      "pc2_raw": 0.57576
+    },
+    {
+      "name": "alert",
+      "derived_valence": -0.03136,
+      "derived_arousal": -0.02212,
+      "pc1_raw": -0.03546,
+      "pc2_raw": -0.04459
+    },
+    {
+      "name": "stimulated",
+      "derived_valence": -0.02506,
+      "derived_arousal": -0.17923,
+      "pc1_raw": -0.03087,
+      "pc2_raw": -0.13994
+    },
+    {
+      "name": "dependent",
+      "derived_valence": -0.01484,
+      "derived_arousal": 0.31963,
+      "pc1_raw": -0.02345,
+      "pc2_raw": 0.16283
+    },
+    {
+      "name": "hostile",
+      "derived_valence": 0.00417,
+      "derived_arousal": 0.99578,
+      "pc1_raw": -0.00964,
+      "pc2_raw": 0.5732
+    },
+    {
+      "name": "aroused",
+      "derived_valence": 0.03513,
+      "derived_arousal": 0.41111,
+      "pc1_raw": 0.01285,
+      "pc2_raw": 0.21835
+    },
+    {
+      "name": "docile",
+      "derived_valence": 0.04346,
+      "derived_arousal": 0.27225,
+      "pc1_raw": 0.0189,
+      "pc2_raw": 0.13408
+    },
+    {
+      "name": "eager",
+      "derived_valence": 0.07056,
+      "derived_arousal": 0.07321,
+      "pc1_raw": 0.03859,
+      "pc2_raw": 0.01328
+    },
+    {
+      "name": "envious",
+      "derived_valence": 0.12612,
+      "derived_arousal": 0.36511,
+      "pc1_raw": 0.07895,
+      "pc2_raw": 0.19043
+    },
+    {
+      "name": "indifferent",
+      "derived_valence": 0.13736,
+      "derived_arousal": -0.66278,
+      "pc1_raw": 0.08711,
+      "pc2_raw": -0.43342
+    },
+    {
+      "name": "jealous",
+      "derived_valence": 0.17574,
+      "derived_arousal": 0.29608,
+      "pc1_raw": 0.115,
+      "pc2_raw": 0.14854
+    },
+    {
+      "name": "reflective",
+      "derived_valence": 0.1827,
+      "derived_arousal": -0.30805,
+      "pc1_raw": 0.12006,
+      "pc2_raw": -0.21812
+    },
+    {
+      "name": "resentful",
+      "derived_valence": 0.19326,
+      "derived_arousal": 0.55541,
+      "pc1_raw": 0.12773,
+      "pc2_raw": 0.30593
+    },
+    {
+      "name": "amused",
+      "derived_valence": 0.22185,
+      "derived_arousal": 0.05305,
+      "pc1_raw": 0.1485,
+      "pc2_raw": 0.00104
+    },
+    {
+      "name": "peaceful",
+      "derived_valence": 0.26136,
+      "derived_arousal": -0.95606,
+      "pc1_raw": 0.1772,
+      "pc2_raw": -0.61141
+    },
+    {
+      "name": "exuberant",
+      "derived_valence": 0.30571,
+      "derived_arousal": -0.07954,
+      "pc1_raw": 0.20942,
+      "pc2_raw": -0.07944
+    },
+    {
+      "name": "nostalgic",
+      "derived_valence": 0.3598,
+      "derived_arousal": -0.05293,
+      "pc1_raw": 0.24871,
+      "pc2_raw": -0.06328
+    },
+    {
+      "name": "calm",
+      "derived_valence": 0.36817,
+      "derived_arousal": -0.60559,
+      "pc1_raw": 0.2548,
+      "pc2_raw": -0.3987
+    },
+    {
+      "name": "spiteful",
+      "derived_valence": 0.36928,
+      "derived_arousal": 0.24503,
+      "pc1_raw": 0.2556,
+      "pc2_raw": 0.11755
+    },
+    {
+      "name": "vindictive",
+      "derived_valence": 0.373,
+      "derived_arousal": 0.53264,
+      "pc1_raw": 0.2583,
+      "pc2_raw": 0.29211
+    },
+    {
+      "name": "impatient",
+      "derived_valence": 0.38363,
+      "derived_arousal": 0.56413,
+      "pc1_raw": 0.26603,
+      "pc2_raw": 0.31122
+    },
+    {
+      "name": "resigned",
+      "derived_valence": 0.3865,
+      "derived_arousal": 0.4938,
+      "pc1_raw": 0.26811,
+      "pc2_raw": 0.26853
+    },
+    {
+      "name": "energized",
+      "derived_valence": 0.38767,
+      "derived_arousal": 0.0511,
+      "pc1_raw": 0.26896,
+      "pc2_raw": -0.00014
+    },
+    {
+      "name": "patient",
+      "derived_valence": 0.39135,
+      "derived_arousal": -0.69494,
+      "pc1_raw": 0.27163,
+      "pc2_raw": -0.45293
+    },
+    {
+      "name": "infatuated",
+      "derived_valence": 0.43641,
+      "derived_arousal": 0.31503,
+      "pc1_raw": 0.30437,
+      "pc2_raw": 0.16003
+    },
+    {
+      "name": "relieved",
+      "derived_valence": 0.46045,
+      "derived_arousal": -0.42731,
+      "pc1_raw": 0.32184,
+      "pc2_raw": -0.2905
+    },
+    {
+      "name": "offended",
+      "derived_valence": 0.465,
+      "derived_arousal": 0.57793,
+      "pc1_raw": 0.32514,
+      "pc2_raw": 0.3196
+    },
+    {
+      "name": "sorry",
+      "derived_valence": 0.46765,
+      "derived_arousal": 0.64521,
+      "pc1_raw": 0.32706,
+      "pc2_raw": 0.36043
+    },
+    {
+      "name": "bitter",
+      "derived_valence": 0.47832,
+      "derived_arousal": 0.92029,
+      "pc1_raw": 0.33482,
+      "pc2_raw": 0.52738
+    },
+    {
+      "name": "relaxed",
+      "derived_valence": 0.49492,
+      "derived_arousal": -0.81791,
+      "pc1_raw": 0.34687,
+      "pc2_raw": -0.52756
+    },
+    {
+      "name": "empathetic",
+      "derived_valence": 0.51624,
+      "derived_arousal": 0.57324,
+      "pc1_raw": 0.36237,
+      "pc2_raw": 0.31675
+    },
+    {
+      "name": "loving",
+      "derived_valence": 0.5207,
+      "derived_arousal": -0.44267,
+      "pc1_raw": 0.3656,
+      "pc2_raw": -0.29983
+    },
+    {
+      "name": "sympathetic",
+      "derived_valence": 0.53939,
+      "derived_arousal": 0.35172,
+      "pc1_raw": 0.37918,
+      "pc2_raw": 0.18231
+    },
+    {
+      "name": "joyful",
+      "derived_valence": 0.54932,
+      "derived_arousal": -0.38139,
+      "pc1_raw": 0.38639,
+      "pc2_raw": -0.26263
+    },
+    {
+      "name": "at ease",
+      "derived_valence": 0.56174,
+      "derived_arousal": -0.82783,
+      "pc1_raw": 0.39541,
+      "pc2_raw": -0.53359
+    },
+    {
+      "name": "euphoric",
+      "derived_valence": 0.56419,
+      "derived_arousal": -0.04055,
+      "pc1_raw": 0.3972,
+      "pc2_raw": -0.05577
+    },
+    {
+      "name": "vibrant",
+      "derived_valence": 0.57842,
+      "derived_arousal": 0.02617,
+      "pc1_raw": 0.40754,
+      "pc2_raw": -0.01528
+    },
+    {
+      "name": "thrilled",
+      "derived_valence": 0.58242,
+      "derived_arousal": -0.01854,
+      "pc1_raw": 0.41044,
+      "pc2_raw": -0.04241
+    },
+    {
+      "name": "skeptical",
+      "derived_valence": 0.61161,
+      "derived_arousal": -0.26206,
+      "pc1_raw": 0.43164,
+      "pc2_raw": -0.19021
+    },
+    {
+      "name": "ecstatic",
+      "derived_valence": 0.61405,
+      "derived_arousal": -0.02098,
+      "pc1_raw": 0.43342,
+      "pc2_raw": -0.04389
+    },
+    {
+      "name": "compassionate",
+      "derived_valence": 0.61619,
+      "derived_arousal": 0.28963,
+      "pc1_raw": 0.43497,
+      "pc2_raw": 0.14462
+    },
+    {
+      "name": "safe",
+      "derived_valence": 0.62437,
+      "derived_arousal": -0.71765,
+      "pc1_raw": 0.44092,
+      "pc2_raw": -0.46671
+    },
+    {
+      "name": "greedy",
+      "derived_valence": 0.6369,
+      "derived_arousal": 0.41194,
+      "pc1_raw": 0.45002,
+      "pc2_raw": 0.21885
+    },
+    {
+      "name": "inspired",
+      "derived_valence": 0.63971,
+      "derived_arousal": -0.02532,
+      "pc1_raw": 0.45206,
+      "pc2_raw": -0.04653
+    },
+    {
+      "name": "vengeful",
+      "derived_valence": 0.64086,
+      "derived_arousal": 0.62144,
+      "pc1_raw": 0.4529,
+      "pc2_raw": 0.346
+    },
+    {
+      "name": "scornful",
+      "derived_valence": 0.65802,
+      "derived_arousal": 0.70893,
+      "pc1_raw": 0.46536,
+      "pc2_raw": 0.3991
+    },
+    {
+      "name": "obstinate",
+      "derived_valence": 0.66984,
+      "derived_arousal": 0.82788,
+      "pc1_raw": 0.47395,
+      "pc2_raw": 0.47129
+    },
+    {
+      "name": "jubilant",
+      "derived_valence": 0.67822,
+      "derived_arousal": -0.10108,
+      "pc1_raw": 0.48004,
+      "pc2_raw": -0.0925
+    },
+    {
+      "name": "blissful",
+      "derived_valence": 0.6888,
+      "derived_arousal": -0.37044,
+      "pc1_raw": 0.48772,
+      "pc2_raw": -0.25599
+    },
+    {
+      "name": "kind",
+      "derived_valence": 0.69264,
+      "derived_arousal": 0.09064,
+      "pc1_raw": 0.49051,
+      "pc2_raw": 0.02385
+    },
+    {
+      "name": "thankful",
+      "derived_valence": 0.69718,
+      "derived_arousal": -0.29309,
+      "pc1_raw": 0.49381,
+      "pc2_raw": -0.20904
+    },
+    {
+      "name": "serene",
+      "derived_valence": 0.69817,
+      "derived_arousal": -0.63709,
+      "pc1_raw": 0.49453,
+      "pc2_raw": -0.41782
+    },
+    {
+      "name": "remorseful",
+      "derived_valence": 0.71182,
+      "derived_arousal": 0.18838,
+      "pc1_raw": 0.50445,
+      "pc2_raw": 0.08317
+    },
+    {
+      "name": "excited",
+      "derived_valence": 0.71226,
+      "derived_arousal": 0.07543,
+      "pc1_raw": 0.50477,
+      "pc2_raw": 0.01462
+    },
+    {
+      "name": "playful",
+      "derived_valence": 0.71338,
+      "derived_arousal": 0.31046,
+      "pc1_raw": 0.50558,
+      "pc2_raw": 0.15727
+    },
+    {
+      "name": "rejuvenated",
+      "derived_valence": 0.72343,
+      "derived_arousal": -0.30173,
+      "pc1_raw": 0.51288,
+      "pc2_raw": -0.21429
+    },
+    {
+      "name": "cheerful",
+      "derived_valence": 0.73794,
+      "derived_arousal": 0.30983,
+      "pc1_raw": 0.52342,
+      "pc2_raw": 0.15688
+    },
+    {
+      "name": "pleased",
+      "derived_valence": 0.73833,
+      "derived_arousal": -0.49242,
+      "pc1_raw": 0.5237,
+      "pc2_raw": -0.33002
+    },
+    {
+      "name": "elated",
+      "derived_valence": 0.74518,
+      "derived_arousal": 0.18528,
+      "pc1_raw": 0.52868,
+      "pc2_raw": 0.08129
+    },
+    {
+      "name": "contemptuous",
+      "derived_valence": 0.74538,
+      "derived_arousal": 0.71792,
+      "pc1_raw": 0.52883,
+      "pc2_raw": 0.40456
+    },
+    {
+      "name": "delighted",
+      "derived_valence": 0.74955,
+      "derived_arousal": -0.30992,
+      "pc1_raw": 0.53186,
+      "pc2_raw": -0.21925
+    },
+    {
+      "name": "enthusiastic",
+      "derived_valence": 0.75095,
+      "derived_arousal": -0.07508,
+      "pc1_raw": 0.53287,
+      "pc2_raw": -0.07673
+    },
+    {
+      "name": "defiant",
+      "derived_valence": 0.75207,
+      "derived_arousal": 0.85433,
+      "pc1_raw": 0.53369,
+      "pc2_raw": 0.48735
+    },
+    {
+      "name": "disdainful",
+      "derived_valence": 0.7575,
+      "derived_arousal": 0.47204,
+      "pc1_raw": 0.53763,
+      "pc2_raw": 0.25533
+    },
+    {
+      "name": "satisfied",
+      "derived_valence": 0.75796,
+      "derived_arousal": -0.66749,
+      "pc1_raw": 0.53796,
+      "pc2_raw": -0.43627
+    },
+    {
+      "name": "triumphant",
+      "derived_valence": 0.78814,
+      "derived_arousal": -0.22276,
+      "pc1_raw": 0.55989,
+      "pc2_raw": -0.16635
+    },
+    {
+      "name": "fulfilled",
+      "derived_valence": 0.80153,
+      "derived_arousal": -0.7141,
+      "pc1_raw": 0.56962,
+      "pc2_raw": -0.46456
+    },
+    {
+      "name": "refreshed",
+      "derived_valence": 0.80717,
+      "derived_arousal": -0.29711,
+      "pc1_raw": 0.57372,
+      "pc2_raw": -0.21148
+    },
+    {
+      "name": "invigorated",
+      "derived_valence": 0.81415,
+      "derived_arousal": 0.34887,
+      "pc1_raw": 0.57879,
+      "pc2_raw": 0.18057
+    },
+    {
+      "name": "smug",
+      "derived_valence": 0.81478,
+      "derived_arousal": 0.28203,
+      "pc1_raw": 0.57924,
+      "pc2_raw": 0.14001
+    },
+    {
+      "name": "stubborn",
+      "derived_valence": 0.81854,
+      "derived_arousal": 0.61604,
+      "pc1_raw": 0.58197,
+      "pc2_raw": 0.34273
+    },
+    {
+      "name": "hope",
+      "derived_valence": 0.83627,
+      "derived_arousal": -0.5508,
+      "pc1_raw": 0.59485,
+      "pc2_raw": -0.36545
+    },
+    {
+      "name": "sentimental",
+      "derived_valence": 0.84002,
+      "derived_arousal": -0.45153,
+      "pc1_raw": 0.59758,
+      "pc2_raw": -0.3052
+    },
+    {
+      "name": "valiant",
+      "derived_valence": 0.90407,
+      "derived_arousal": 0.13824,
+      "pc1_raw": 0.64411,
+      "pc2_raw": 0.05274
+    },
+    {
+      "name": "hopeful",
+      "derived_valence": 0.91443,
+      "derived_arousal": -0.23368,
+      "pc1_raw": 0.65163,
+      "pc2_raw": -0.17299
+    },
+    {
+      "name": "proud",
+      "derived_valence": 0.93473,
+      "derived_arousal": 0.51695,
+      "pc1_raw": 0.66639,
+      "pc2_raw": 0.28258
+    },
+    {
+      "name": "self-confident",
+      "derived_valence": 0.9416,
+      "derived_arousal": -0.02551,
+      "pc1_raw": 0.67138,
+      "pc2_raw": -0.04664
+    },
+    {
+      "name": "happy",
+      "derived_valence": 0.95349,
+      "derived_arousal": -0.07562,
+      "pc1_raw": 0.68001,
+      "pc2_raw": -0.07705
+    },
+    {
+      "name": "grateful",
+      "derived_valence": 0.95728,
+      "derived_arousal": 0.09124,
+      "pc1_raw": 0.68277,
+      "pc2_raw": 0.02422
+    },
+    {
+      "name": "optimistic",
+      "derived_valence": 1.0,
+      "derived_arousal": 0.17844,
+      "pc1_raw": 0.7138,
+      "pc2_raw": 0.07714
+    }
+  ]
+}
