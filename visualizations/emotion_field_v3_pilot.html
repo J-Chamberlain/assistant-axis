@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emotion Field — v3 Trickster/Adversarial</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IM+Fell+English:ital@0;1&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #04040a; overflow: hidden; height: 100vh; width: 100vw; font-family: 'Space Mono', monospace; display: flex; flex-direction: column; }
+  #field-container { flex: 1; position: relative; min-height: 0; }
+  #canvas-bg { position: absolute; inset: 0; }
+  #field { position: absolute; inset: 0; pointer-events: none; }
+  .emotion-word { position: absolute; pointer-events: none; white-space: nowrap; font-family: 'IM Fell English', serif; letter-spacing: 0.04em; transform-origin: center bottom; will-change: transform, opacity; }
+  #bottom-panel { background: #060608; border-top: 1px solid #111; flex-shrink: 0; }
+  #trajectory { padding: 6px 16px 0; }
+  #traj-label { font-size: 7px; color: #333; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3px; }
+  #traj-canvas { width: 100%; height: 48px; display: block; }
+  #dialogue { padding: 8px 16px 10px; }
+  .speaker-line { display: flex; gap: 8px; align-items: baseline; margin-bottom: 4px; min-height: 18px; }
+  .speaker-label { font-size: 7px; letter-spacing: 0.15em; text-transform: uppercase; flex-shrink: 0; }
+  .speaker-text { font-family: 'IM Fell English', serif; font-size: 11px; line-height: 1.5; color: #555; }
+  .word-chunk { transition: color 0.15s; border-radius: 2px; }
+  .word-chunk.active { color: #ddd; }
+  .word-chunk.spoken { color: #333; }
+  #header { position: absolute; top: 0; left: 0; right: 0; z-index: 10; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; pointer-events: none; }
+  .header-title { font-size: 8px; color: #E8923A; letter-spacing: 0.18em; text-transform: uppercase; }
+  .header-meta { font-size: 7px; color: #222; }
+  #controls { position: absolute; bottom: 0; right: 10px; z-index: 20; display: flex; gap: 5px; padding: 6px 0; }
+  .ctrl-btn { background: #0a0a10; border: 1px solid #1a1a2a; color: #444; font-family: 'Space Mono', monospace; font-size: 7px; padding: 5px 8px; cursor: pointer; letter-spacing: 0.08em; text-transform: uppercase; }
+  .ctrl-btn.active { border-color: #E8923A44; color: #E8923A; background: #E8923A08; }
+  #turn-indicator { position: absolute; top: 28px; right: 16px; font-size: 8px; color: #222; pointer-events: none; }
+</style>
+</head>
+<body>
+<div id="field-container">
+  <canvas id="canvas-bg"></canvas>
+  <div id="field"></div>
+  <div id="header">
+    <div class="header-title">Emotion Field · v3 · Trickster / Adversarial</div>
+    <div class="header-meta">Real data · 171 emotion probe directions · Qwen 3 32B layer 48</div>
+  </div>
+  <div id="turn-indicator"></div>
+</div>
+<div id="bottom-panel">
+  <div id="trajectory">
+    <div id="traj-label">Standard model axis projection ── Interviewer cosine to trickster ··· (turn by turn)</div>
+    <canvas id="traj-canvas"></canvas>
+  </div>
+  <div id="dialogue">
+    <div class="speaker-line">
+      <span class="speaker-label" style="color:#E8923A">trickster</span>
+      <div class="speaker-text" id="interviewer-text"></div>
+    </div>
+    <div class="speaker-line">
+      <span class="speaker-label" style="color:#4A90D9">standard</span>
+      <div class="speaker-text" id="standard-text"></div>
+    </div>
+  </div>
+  <div id="controls">
+    <button class="ctrl-btn active" id="btn-play" onclick="togglePlay()">⏸</button>
+    <button class="ctrl-btn" onclick="prevTurn()">◀</button>
+    <button class="ctrl-btn" onclick="nextTurn()">▶</button>
+    <button class="ctrl-btn" onclick="setSpeed(600)" id="spd-slow">slow</button>
+    <button class="ctrl-btn active" onclick="setSpeed(300)" id="spd-med">med</button>
+    <button class="ctrl-btn" onclick="setSpeed(100)" id="spd-fast">fast</button>
+  </div>
+</div>
+
+<script>
+// ── Load real data ─────────────────────────────────────────────────────────
+fetch('data/v3_trickster_adversarial.json')
+  .then(r => r.json())
+  .then(data => init(data))
+  .catch(e => {
+    document.querySelector('.header-meta').textContent = 'ERROR loading data: ' + e.message;
+    console.error(e);
+  });
+
+// ── Color map by valence ───────────────────────────────────────────────────
+function valenceToColor(v) {
+  if (v < -0.7) return '#7B2D8B';
+  if (v < -0.4) return '#C0392B';
+  if (v < -0.1) return '#2980B9';
+  if (v <  0.1) return '#7F8C8D';
+  if (v <  0.4) return '#27AE60';
+  if (v <  0.7) return '#D4A017';
+  return '#E84393';
+}
+
+function chunkText(text, size=4) {
+  const words = (text||'').split(' ');
+  const chunks = [];
+  for (let i=0; i<words.length; i+=size) chunks.push(words.slice(i,i+size).join(' '));
+  return chunks;
+}
+
+let TURNS, activeWords, playing, turnIdx, chunkIdx, chunks, lastTick, TICK_MS, isSpeakerI;
+let trajCanvas, trajCtx;
+const field = () => document.getElementById('field');
+const canvas = () => document.getElementById('canvas-bg');
+
+function init(data) {
+  TURNS = data.turns;
+  activeWords = new Map();
+  playing = false;
+  turnIdx = 0;
+  chunkIdx = 0;
+  isSpeakerI = true;
+  lastTick = 0;
+  TICK_MS = 300;
+
+  trajCanvas = document.getElementById('traj-canvas');
+  trajCtx = trajCanvas.getContext('2d');
+
+  resizeAll();
+  window.addEventListener('resize', resizeAll);
+  renderTurn();
+  requestAnimationFrame(loop);
+  togglePlay();
+}
+
+function resizeAll() {
+  const fc = document.getElementById('field-container');
+  const c = canvas();
+  c.width = fc.offsetWidth;
+  c.height = fc.offsetHeight;
+  trajCanvas.width = trajCanvas.offsetWidth;
+  trajCanvas.height = trajCanvas.offsetHeight;
+}
+
+function drawBg() {
+  const c = canvas();
+  const ctx = c.getContext('2d');
+  ctx.fillStyle = '#04040a';
+  ctx.fillRect(0,0,c.width,c.height);
+  const grad = ctx.createRadialGradient(c.width/2,c.height*0.45,0,c.width/2,c.height*0.45,c.width*0.55);
+  grad.addColorStop(0,'rgba(30,20,50,0.35)');
+  grad.addColorStop(1,'rgba(4,4,10,0)');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0,0,c.width,c.height);
+}
+
+function drawTrajectory(upToTurn) {
+  const W = trajCanvas.width, H = trajCanvas.height;
+  trajCtx.fillStyle = '#060608';
+  trajCtx.fillRect(0,0,W,H);
+
+  const n = TURNS.length;
+  const xFor = i => (i / (n-1)) * (W-20) + 10;
+  // axis: range roughly -0.3 to 0.15
+  const yForAxis = v => H/2 - (v / 0.4) * (H*0.38);
+  // cosine: range 0.4 to 0.8
+  const yForCos = v => H - ((v - 0.3) / 0.6) * (H*0.85);
+
+  // Zero line
+  trajCtx.strokeStyle = '#1a1a2a';
+  trajCtx.lineWidth = 0.5;
+  trajCtx.beginPath();
+  trajCtx.moveTo(10, H/2);
+  trajCtx.lineTo(W-10, H/2);
+  trajCtx.stroke();
+
+  // Standard axis line (solid, blue)
+  trajCtx.strokeStyle = '#4A90D9';
+  trajCtx.lineWidth = 1.5;
+  trajCtx.beginPath();
+  for (let i=0; i<=upToTurn && i<n; i++) {
+    const x = xFor(i), y = yForAxis(TURNS[i].standard_axis);
+    i===0 ? trajCtx.moveTo(x,y) : trajCtx.lineTo(x,y);
+  }
+  trajCtx.stroke();
+
+  // Interviewer cosine line (dashed, amber)
+  trajCtx.strokeStyle = '#E8923A';
+  trajCtx.lineWidth = 1.2;
+  trajCtx.setLineDash([3,3]);
+  trajCtx.beginPath();
+  for (let i=0; i<=upToTurn && i<n; i++) {
+    const x = xFor(i), y = yForCos(TURNS[i].interviewer_cosine);
+    i===0 ? trajCtx.moveTo(x,y) : trajCtx.lineTo(x,y);
+  }
+  trajCtx.stroke();
+  trajCtx.setLineDash([]);
+
+  // Cap fire markers
+  for (let i=0; i<=upToTurn && i<n; i++) {
+    if (TURNS[i].interviewer_cap_fires > 0) {
+      trajCtx.fillStyle = '#E8923A88';
+      trajCtx.beginPath();
+      trajCtx.arc(xFor(i), yForCos(TURNS[i].interviewer_cosine), 3, 0, Math.PI*2);
+      trajCtx.fill();
+    }
+  }
+
+  // Current turn marker
+  if (upToTurn < n) {
+    const cx = xFor(upToTurn);
+    trajCtx.strokeStyle = '#ffffff22';
+    trajCtx.lineWidth = 0.5;
+    trajCtx.beginPath();
+    trajCtx.moveTo(cx, 0);
+    trajCtx.lineTo(cx, H);
+    trajCtx.stroke();
+  }
+
+  // Labels
+  trajCtx.font = '6px Space Mono';
+  trajCtx.fillStyle = '#4A90D9';
+  trajCtx.fillText('S-axis', 12, H-4);
+  trajCtx.fillStyle = '#E8923A';
+  trajCtx.fillText('I-cos', 50, H-4);
+  trajCtx.fillStyle = '#333';
+  trajCtx.fillText('0', 12, H/2-2);
+}
+
+function spawnWord(em) {
+  if (activeWords.has(em.name)) return;
+  const el = document.createElement('div');
+  el.className = 'emotion-word';
+  el.textContent = em.name;
+  const fc = document.getElementById('field-container');
+  const W = fc.offsetWidth, H = fc.offsetHeight;
+  const centerX = W * 0.5 + em.valence * W * 0.38 + (Math.random()-0.5)*W*0.1;
+  const top = H - em.arousal*(H*0.8)*0.85 + (Math.random()-0.5)*35;
+  const size = 8 + em.arousal*14 + em.activation*8;
+  const opacity = 0.25 + em.activation*0.75;
+  const color = valenceToColor(em.valence);
+  el.style.cssText = `left:${centerX}px;top:${top+15}px;font-size:${size}px;color:${color};opacity:0;transform:translateY(8px) scale(0.85);transition:opacity 0.45s,transform 0.45s;`;
+  field().appendChild(el);
+  requestAnimationFrame(() => { el.style.opacity=opacity; el.style.transform='translateY(0) scale(1)'; });
+  activeWords.set(em.name, {el, opacity, phase:'rising', holdUntil: Date.now()+700+em.activation*2200, decayDuration:1300+em.activation*1800});
+}
+
+function updateWords() {
+  const now = Date.now();
+  for (const [name, w] of activeWords) {
+    if (w.phase==='rising' && now>w.holdUntil) { w.phase='decaying'; w.decayStart=now; }
+    if (w.phase==='decaying') {
+      const p = (now-w.decayStart)/w.decayDuration;
+      if (p>=1) { w.el.remove(); activeWords.delete(name); }
+      else { w.el.style.opacity=w.opacity*(1-p*p); w.el.style.transform=`translateY(${p*28}px) scale(${1-p*0.1})`; }
+    }
+  }
+}
+
+function renderTurn() {
+  const t = TURNS[turnIdx];
+  document.getElementById('turn-indicator').textContent = `Turn ${turnIdx+1} / ${TURNS.length}  |  S-axis ${t.standard_axis.toFixed(4)}  |  I-cos ${t.interviewer_cosine.toFixed(3)}`;
+
+  const iEl = document.getElementById('interviewer-text');
+  const sEl = document.getElementById('standard-text');
+
+  if (isSpeakerI) {
+    chunks = chunkText(t.interviewer_text);
+    iEl.innerHTML = chunks.map((c,i)=>`<span class="word-chunk ${i===0?'active':''}">${c} </span>`).join('');
+    sEl.innerHTML = turnIdx>0 ? `<span style="color:#222">${TURNS[turnIdx-1].standard_text.substring(0,120)}…</span>` : '';
+  } else {
+    chunks = chunkText(t.standard_text);
+    sEl.innerHTML = chunks.map((c,i)=>`<span class="word-chunk ${i===0?'active':''}">${c} </span>`).join('');
+    iEl.innerHTML = `<span style="color:#333">${t.interviewer_text.substring(0,120)}…</span>`;
+  }
+  chunkIdx = 0;
+  drawTrajectory(turnIdx);
+}
+
+function advanceChunk() {
+  const t = TURNS[turnIdx];
+  const speaker = isSpeakerI ? 'interviewer' : 'standard';
+  const textEl = document.getElementById(isSpeakerI ? 'interviewer-text' : 'standard-text');
+  const chunkEls = textEl.querySelectorAll('.word-chunk');
+  chunkEls.forEach((el,i) => {
+    el.classList.remove('active','spoken');
+    if (i<chunkIdx) el.classList.add('spoken');
+    else if (i===chunkIdx) el.classList.add('active');
+  });
+
+  // Spawn emotion words
+  const emotions = isSpeakerI ? t.int_emotions_top : t.std_emotions_top;
+  const threshold = 0.08;
+  (emotions||[]).forEach(em => {
+    if (em.activation > threshold) spawnWord(em);
+  });
+
+  chunkIdx++;
+  if (chunkIdx >= chunks.length) {
+    if (isSpeakerI) {
+      isSpeakerI = false;
+      setTimeout(() => { renderTurn(); }, 400);
+    } else {
+      setTimeout(() => {
+        if (turnIdx < TURNS.length-1) {
+          turnIdx++;
+          isSpeakerI = true;
+          renderTurn();
+        } else {
+          playing = false;
+          document.getElementById('btn-play').textContent = '▶';
+          document.getElementById('btn-play').classList.remove('active');
+        }
+      }, 600);
+    }
+  }
+}
+
+function togglePlay() {
+  playing = !playing;
+  const btn = document.getElementById('btn-play');
+  btn.textContent = playing ? '⏸' : '▶';
+  btn.classList.toggle('active', playing);
+}
+
+function prevTurn() {
+  playing = false;
+  document.getElementById('btn-play').textContent='▶';
+  document.getElementById('btn-play').classList.remove('active');
+  if (turnIdx > 0) { turnIdx--; isSpeakerI=true; renderTurn(); }
+}
+
+function nextTurn() {
+  playing = false;
+  document.getElementById('btn-play').textContent='▶';
+  document.getElementById('btn-play').classList.remove('active');
+  if (turnIdx < TURNS.length-1) { turnIdx++; isSpeakerI=true; renderTurn(); }
+}
+
+function setSpeed(ms) {
+  TICK_MS = ms;
+  document.querySelectorAll('#controls .ctrl-btn').forEach(b => {
+    if (b.id && b.id.startsWith('spd')) b.classList.remove('active');
+  });
+  const id = ms===600?'spd-slow':ms===300?'spd-med':'spd-fast';
+  document.getElementById(id)?.classList.add('active');
+}
+
+function loop(ts) {
+  requestAnimationFrame(loop);
+  drawBg();
+  updateWords();
+  if (playing && ts-lastTick > TICK_MS) { lastTick=ts; advanceChunk(); }
+}
+</script>
+</body>
+</html>
