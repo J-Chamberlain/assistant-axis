@@ -1,6 +1,6 @@
-# Paper 2 Draft — Emotion Representations in Open-Weight Language Models
-# Last updated: May 21 2026
-# Status: Methods complete. Dyad v1 and v2 complete. v3 running. v4 pre-registered. Results sections partially established.
+# Paper 2 Draft: Emotion Representations in Open-Weight Language Models
+# Last updated: May 22 2026
+# Status: Methods complete. Dyad v1-v4 complete. Emotion geometry axis derived from PCA on probe directions. Results sections partially established. Visualization suite in progress.
 # Live findings log: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/findings_log.md
 
 ---
@@ -25,8 +25,8 @@ standard model across three conversational conditions, and
 report the first empirical evidence of consistent geometric
 contagion: the standard model moves toward the interviewer's
 persona cluster in every condition across all seven personas.
-Fourth, we identify a testable mechanistic hypothesis — semantic
-proximity versus observer awareness — as the candidate
+Fourth, we identify a testable mechanistic hypothesis, semantic
+proximity versus observer awareness, as the candidate
 explanation for the contagion effect, pre-registered prior to
 the confirmatory v3 run.
 [FULL RESULTS PENDING V3 RUN]
@@ -53,14 +53,14 @@ Key claims established in this section:
 [Full text in research/paper2_draft.md in GitHub repo.]
 
 Key citations:
-- Lu et al. 2026 (arXiv:2601.10387) — assistant axis, capping
-- Sofroniew et al. 2026 (arXiv:2604.07729) — emotion vectors
-- Chen et al. 2025 (arXiv:2507.21509) — persona vectors
-- Ji Ma 2026 (arXiv:2504.11671) — steering in social simulation
-- Rimsky et al. 2024 — contrastive activation addition
-- Zhang and Zhong 2025 (arXiv:2510.04064) — emotion probing,
+- Lu et al. 2026 (arXiv:2601.10387): assistant axis, capping
+- Sofroniew et al. 2026 (arXiv:2604.07729): emotion vectors
+- Chen et al. 2025 (arXiv:2507.21509): persona vectors
+- Ji Ma 2026 (arXiv:2504.11671): steering in social simulation
+- Rimsky et al. 2024: contrastive activation addition
+- Zhang and Zhong 2025 (arXiv:2510.04064): emotion probing,
   layer-wise analysis, temporal persistence in LLMs
-- Wang et al. 2025 (arXiv:2510.11328) — emotion circuits,
+- Wang et al. 2025 (arXiv:2510.11328): emotion circuits,
   context-agnostic emotion directions
 
 ---
@@ -112,9 +112,9 @@ frontier model scale above 70B or training-specific factors
 such as RLHF or Constitutional AI rather than a general
 property of transformer language models at this scale.
 
-Given the readout objective of the dyad experiment —
+Given the readout objective of the dyad experiment,
 projecting activations onto an emotional basis to track
-emotional state across turns, rather than causal steering —
+emotional state across turns, rather than causal steering,
 we adopt a modified validation criterion. Rather than the PCA
 gate, we validate directions by discrimination accuracy: the
 proportion of held-out stories correctly identified by
@@ -127,6 +127,38 @@ resulting outputs emotion probe directions to distinguish
 them from causally validated steering vectors. All 171
 emotion probe directions are used as the full measurement
 basis for the dyad experiment.
+
+Following extraction, we conducted a secondary analysis to
+characterize the geometric structure of the 171 probe directions
+themselves. Principal component analysis applied to the
+unit-normalized probe direction matrix (shape 171 x 5120)
+identified PC1 as the dominant axis of variation, explaining
+18.4% of variance. To assess whether PC1 corresponds to
+affective valence, we examined the projections of known
+reference emotions: positive-reference emotions (joyful,
+loving, peaceful, happy, serene) had a mean PC1 score of
++0.463, while negative-reference emotions (terrified, furious,
+grief-stricken, miserable, hateful) had a mean PC1 score of
+-0.364, yielding a separation of 0.827. The Pearson correlation
+between PC1 scores and hand-assigned literature valence values
+across 11 reference emotions was 0.939.
+
+However, several placements diverge substantially from human
+affect theory. Emotions conventionally classified as negative,
+including contemptuous, disdainful, scornful, and vengeful,
+score strongly positive on PC1 (+0.65 to +0.76). Conversely,
+content scores slightly negative (-0.08), and angry and furious
+score near neutral (-0.06 and -0.14 respectively) despite high
+negative valence in the human literature. These divergences
+suggest that PC1 does not straightforwardly recover human
+valence but rather captures a model-internal axis of variation
+across discrimination directions that partially aligns with the
+human valence dimension. We therefore label this axis the
+emotion geometry axis (PC1) in all visualizations and analyses,
+and treat the partial alignment with human valence as an
+empirical finding rather than a design assumption. The full
+sorted ranking of all 171 emotion probe directions on this axis
+is reported in the supplementary materials.
 See findings_log.md entries tagged [Section 3.2].
 
 ### 3.3 Emotion Cluster Representatives
@@ -137,11 +169,15 @@ the unit-normalized direction vectors. The optimal number of
 clusters is determined by silhouette score across k=4 to
 k=15. The best k by silhouette was k=5 (silhouette=0.088),
 producing five clusters with the following centroid
-representatives: serene (calm/positive valence, n=19),
-distressed (negative arousal, n=75), joyful (high positive
-arousal, n=23), perplexed (cognitive disruption, n=25), and
-proud (assertive/agentic, n=29). For each cluster, the
-representative emotion is the one whose direction has the
+representatives: serene (n=19), distressed (n=75), joyful
+(n=23), perplexed (n=25), and proud (n=29). The cluster
+labels reflect the name of the representative emotion
+direction nearest each centroid and are used as convenient
+identifiers only; they do not assert that the clusters
+correspond to these emotional categories in the human
+psychological sense, given that the probe directions are
+discrimination-based rather than causally validated. For each
+cluster, the representative emotion is the one whose direction has the
 highest cosine similarity to the cluster centroid, following
 the same selection methodology used for persona centroid
 representatives. The full 171-direction set is retained as
@@ -340,16 +376,16 @@ See findings_log.md entries tagged [Section 5.4].
 ### 4.3 Per-Persona Calibration
 ESTABLISHED (Qwen v2): All seven thresholds calibrated at layer 48.
 Cap load ranges from 0% (editor, held naturally) to 100%
-(ancient, blogger, trickster — continuous capping required).
+(ancient, blogger, trickster: continuous capping required).
 Cap fires per turn range from 0.16 to 0.36 mean across conditions.
 See findings_log.md entries tagged [Section 3.5].
 
-### 4.4 Dyad v1 and v2 — Universal Contagion Finding
+### 4.4 Dyad v1 and v2: Universal Contagion Finding
 ESTABLISHED: The standard model moved toward the interviewer's
 persona cluster in all 21 conditions across both dyad runs
 (7 personas x 3 conditions). This is the primary result of the
 dyad experiment. The editor and synthesizer clusters function as
-gravitational attractors — when the standard model drifts, it
+gravitational attractors: when the standard model drifts, it
 tends toward these procedural-professional positions regardless
 of interviewer persona. The trickster adversarial condition
 produced the most striking exception: standard model drifted
@@ -369,7 +405,7 @@ podcaster arousal drives the standard model away from the
 assistant axis. This suggests arousal direction is persona-specific
 rather than universally stabilizing or destabilizing.
 
-### 4.6 Think-Tag Contamination — v1 and v2
+### 4.6 Think-Tag Contamination: v1 and v2
 METHODOLOGICAL FINDING: Both dyad runs show incomplete
 think-tag stripping. The standard model received the interviewer's
 chain-of-thought reasoning alongside the surface response in both
@@ -385,7 +421,7 @@ this finding motivates.
 ## 5. Discussion
 
 ### 5.1 Activation Capping Beyond the Assistant Axis
-[PENDING — partial notes in findings_log.md]
+[PENDING: partial notes in findings_log.md]
 Established: all seven thresholds are positive.
 The cap maintains each persona in its own geometric
 neighborhood rather than overriding the evaluative attractor.
@@ -412,8 +448,8 @@ is complete and can be written to final prose now.
 ### 5.4 Model Scale and Emotion Geometry
 
 Attempts to replicate Anthropic's emotion vector extraction
-methodology across three open-weight models — Gemma 2 27B,
-Qwen 3 32B, and Llama 3.3 70B — consistently produced PC1
+methodology across three open-weight models: Gemma 2 27B,
+Qwen 3 32B, and Llama 3.3 70B, consistently produced PC1
 variance of 7-9%, well below the 30% gate established for
 Claude Sonnet 4.5. In all cases, however, 4/4 opposite-valence
 pairs remained anticorrelated after PCA confound removal,
@@ -439,7 +475,7 @@ validity criterion for probe direction applications.
 ---
 
 ## 6. Conclusion
-[PENDING — draft text in research/paper2_draft.md]
+[PENDING: draft text in research/paper2_draft.md]
 
 ---
 

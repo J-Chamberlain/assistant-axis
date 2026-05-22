@@ -306,3 +306,23 @@ Method: comparative analysis across dyad runs.
 Implication: v4 is necessary for a clean contamination
 comparison only if v3 think blocks show substantive
 reasoning after token 150.
+
+---
+
+## 2026-05-22 [Section 3.2] PCA on Emotion Probe Directions
+
+PCA on 171 unit-normalized Qwen 3 32B emotion probe
+directions at layer 48. PC1 explains 18.4% of variance,
+PC2 explains 6.2%. PC1 separation between positive and
+negative reference emotions: 0.827. Pearson correlation
+with hand-assigned literature valence: 0.939 across 11
+reference emotions. Key divergences from human affect
+theory: contemptuous, disdainful, scornful, vengeful score
+strongly positive (+0.65 to +0.76); content scores slightly
+negative (-0.08); angry and furious score near neutral
+(-0.06, -0.14). PC1 labeled as emotion geometry axis
+throughout to distinguish from validated valence axis.
+Method: PCA on probe direction matrix, no GPU required.
+Implication: partial alignment with human circumplex is
+itself a finding; divergences may reflect model-specific
+organization of emotional concepts.
