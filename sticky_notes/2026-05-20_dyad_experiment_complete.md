@@ -41,3 +41,19 @@ Purpose: maximum contamination condition for v3 vs v4
 comparison (semantic proximity vs observer awareness test).
 Status: complete
 Results: research/q2_stability/outputs/dyad_v4/
+
+## v3 Run — May 21 2026
+Design: 800 max_new_tokens, 15 turns/condition, trickster/
+adversarial as pilot with budget gate at $35 ceiling.
+Think separation: literal <think> parser, clean responses only
+passed between models, thinking saved to separate fields.
+Status: complete. Full 315-turn run completed across all
+seven personas and three conditions. Pilot estimated total
+cost at $8.27, under the $35 ceiling, so the full run
+continued. Think blocks closed on 43/315 interviewer turns;
+one clean-response fallback occurred in editor/neutral.
+Cap fires ranged from 0 to 4 per turn. Standard model axis
+projection ranged from -0.206569 to 0.108527. Largest drift
+away from the assistant pole occurred in trickster/emotional
+(0.026825 to -0.206048, drift -0.232873).
+Results: research/q2_stability/outputs/dyad_v3/

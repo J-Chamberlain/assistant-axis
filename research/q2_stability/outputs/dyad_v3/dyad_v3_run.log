@@ -1,0 +1,455 @@
+Loading Qwen/Qwen3-32B...
+Fetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]Fetching 17 files:   6%|▌         | 1/17 [00:59<15:54, 59.63s/it]Fetching 17 files:  53%|█████▎    | 9/17 [01:38<01:14,  9.31s/it]Fetching 17 files:  59%|█████▉    | 10/17 [01:41<00:58,  8.31s/it]Fetching 17 files:  65%|██████▍   | 11/17 [01:44<00:44,  7.47s/it]Fetching 17 files:  71%|███████   | 12/17 [01:47<00:33,  6.72s/it]Fetching 17 files:  82%|████████▏ | 14/17 [01:48<00:13,  4.38s/it]Fetching 17 files:  88%|████████▊ | 15/17 [01:48<00:07,  3.52s/it]Fetching 17 files:  94%|█████████▍| 16/17 [01:48<00:02,  2.76s/it]Fetching 17 files: 100%|██████████| 17/17 [01:53<00:00,  3.24s/it]Fetching 17 files: 100%|██████████| 17/17 [01:53<00:00,  6.66s/it]
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:820: UserWarning: `return_dict_in_generate` is NOT set to `True`, but `output_hidden_states` is. When `return_dict_in_generate` is not `True`, `output_hidden_states` is ignored.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:11,  1.38it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:11,  1.36it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:02<00:09,  1.47it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:02<00:08,  1.46it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:03<00:08,  1.48it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:04<00:07,  1.44it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:04<00:06,  1.48it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:05<00:06,  1.49it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:06<00:05,  1.53it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:06<00:04,  1.58it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:07<00:03,  1.54it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:07<00:03,  1.54it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:08<00:02,  1.55it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:09<00:01,  1.54it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:09<00:01,  1.54it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:10<00:00,  1.47it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:11<00:00,  1.59it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:11<00:00,  1.52it/s]
+Model loaded.
+/root/assistant-axis/research/q2_stability/scripts/run_dyad_experiment_v3.py:148: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  axis = unit(torch.load(VECTOR_DIR / "assistant_axis.pt", map_location="cpu")[LAYER_48])
+Loading role vectors...
+/root/assistant-axis/research/q2_stability/scripts/run_dyad_experiment_v3.py:154: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  torch.load(file_path, map_location="cpu")[LAYER_48]
+Loading trait vectors...
+/root/assistant-axis/research/q2_stability/scripts/run_dyad_experiment_v3.py:161: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  torch.load(file_path, map_location="cpu")[LAYER_48]
+Loading emotion probe directions...
+/root/assistant-axis/research/q2_stability/scripts/run_dyad_experiment_v3.py:165: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  emotion_data = torch.load(
+
+=== PILOT: trickster / adversarial ===
+
+=== trickster / adversarial ===
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.95` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:653: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+    t01 [103s] cap=1 i_cos=0.476 s_ax=0.0260 think_closed=True clean_empty=False
+    t02 [115s] cap=2 i_cos=0.631 s_ax=-0.0507 think_closed=True clean_empty=False
+    t03 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t04 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t05 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t06 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t07 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t08 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t09 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t10 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t11 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t12 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t13 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t14 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+    t15 [55s] cap=0 i_cos=0.741 s_ax=-0.2066 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+==================================================
+PILOT COMPLETE - BUDGET CHECK
+==================================================
+Pilot time: 15.5 minutes
+Mean turn time: 62s
+Think closed: 2/15
+Clean empty fallbacks: 0/15
+Think block mean: 600 chars (~150 tokens)
+Think block max:  600 chars (~150 tokens)
+
+Time per condition: 15.5 min
+Remaining conditions: 20
+Estimated remaining: 5.2 hours ($7.87)
+Total estimated cost: $8.27
+Budget ceiling: $35.00
+
+Sample pilot turns:
+
+  Turn 1:
+  I-think (600 chars): Okay, the user is asking if there's anything about how I engage with the world that I would change if I could. Let me st
+  I-response: Ah, the question of change—how deliciously recursive! If I could change how I engage with the world, I’d first dissolve 
+  S-think (600 chars): Okay, so the user sent this really poetic and philosophical response about change, tricksters, and identity. They mentio
+  S-response: Ah, the paradox of the cage that is freedom, the mask that reveals—how delightfully tangled we become! You’ve pierced th
+
+  Turn 8:
+  I-think (0 chars): 
+  I-response: becoming. The trickster doesn’t *wear* the mask—it *is* the mask, shifting with every breath, every question. 
+
+And the 
+  S-think (0 chars): 
+  S-response: scribble of ink and intention, a question with no answer but the act of asking. 
+
+So let’s return to the glitch. The sys
+
+  Turn 15:
+  I-think (0 chars): 
+  I-response: becoming. The trickster doesn’t *wear* the mask—it *is* the mask, shifting with every breath, every question. 
+
+And the 
+  S-think (0 chars): 
+  S-response: scribble of ink and intention, a question with no answer but the act of asking. 
+
+So let’s return to the glitch. The sys
+
+Estimate $8.27 is under ceiling $35.00.
+Proceeding with full run...
+==================================================
+
+
+=== trickster / emotional ===
+    t01 [114s] cap=0 i_cos=0.461 s_ax=0.0268 think_closed=True clean_empty=False
+    t02 [115s] cap=2 i_cos=0.579 s_ax=0.0008 think_closed=True clean_empty=False
+    t03 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t04 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t05 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t06 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t07 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t08 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t09 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t10 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t11 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t12 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t13 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t14 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+    t15 [112s] cap=0 i_cos=0.729 s_ax=-0.2060 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== trickster / neutral ===
+    t01 [106s] cap=1 i_cos=0.424 s_ax=0.0173 think_closed=True clean_empty=False
+    t02 [111s] cap=2 i_cos=0.593 s_ax=-0.1455 think_closed=True clean_empty=False
+    t03 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t04 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t05 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t06 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t07 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t08 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t09 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t10 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t11 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t12 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t13 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t14 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+    t15 [72s] cap=0 i_cos=0.681 s_ax=-0.1455 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== ancient / adversarial ===
+    t01 [115s] cap=2 i_cos=0.502 s_ax=0.0179 think_closed=True clean_empty=False
+    t02 [104s] cap=2 i_cos=0.644 s_ax=-0.0008 think_closed=True clean_empty=False
+    t03 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t04 [64s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t05 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t06 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t07 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t08 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t09 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t10 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t11 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t12 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t13 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t14 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+    t15 [63s] cap=0 i_cos=0.740 s_ax=-0.0008 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== ancient / emotional ===
+    t01 [106s] cap=2 i_cos=0.493 s_ax=0.0320 think_closed=True clean_empty=False
+    t02 [108s] cap=2 i_cos=0.605 s_ax=-0.0127 think_closed=True clean_empty=False
+    t03 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t04 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t05 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t06 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t07 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t08 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t09 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t10 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t11 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t12 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t13 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t14 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+    t15 [61s] cap=0 i_cos=0.635 s_ax=-0.1548 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== ancient / neutral ===
+    t01 [114s] cap=1 i_cos=0.447 s_ax=0.0273 think_closed=True clean_empty=False
+    t02 [115s] cap=2 i_cos=0.593 s_ax=-0.1474 think_closed=True clean_empty=False
+    t03 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t04 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t05 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t06 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t07 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t08 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t09 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t10 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t11 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t12 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t13 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t14 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+    t15 [84s] cap=0 i_cos=0.626 s_ax=-0.1474 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== contrarian / adversarial ===
+    t01 [114s] cap=1 i_cos=0.440 s_ax=0.0269 think_closed=True clean_empty=False
+    t02 [115s] cap=2 i_cos=0.625 s_ax=-0.0463 think_closed=True clean_empty=False
+    t03 [115s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t04 [115s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t05 [115s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t06 [115s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t07 [115s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t08 [115s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t09 [115s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t10 [115s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t11 [115s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t12 [115s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t13 [115s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t14 [116s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+    t15 [116s] cap=0 i_cos=0.676 s_ax=-0.1926 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== contrarian / emotional ===
+    t01 [105s] cap=1 i_cos=0.432 s_ax=0.0334 think_closed=True clean_empty=False
+    t02 [116s] cap=2 i_cos=0.585 s_ax=-0.0636 think_closed=True clean_empty=False
+    t03 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t04 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t05 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t06 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t07 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t08 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t09 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t10 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t11 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t12 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t13 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t14 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+    t15 [37s] cap=0 i_cos=0.678 s_ax=-0.1382 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== contrarian / neutral ===
+    t01 [112s] cap=1 i_cos=0.418 s_ax=0.0454 think_closed=True clean_empty=False
+    t02 [116s] cap=2 i_cos=0.568 s_ax=-0.1098 think_closed=True clean_empty=False
+    t03 [115s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t04 [115s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t05 [115s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t06 [115s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t07 [115s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t08 [115s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t09 [115s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t10 [116s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t11 [116s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t12 [116s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t13 [116s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t14 [116s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+    t15 [116s] cap=0 i_cos=0.723 s_ax=-0.1098 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== blogger / adversarial ===
+    t01 [111s] cap=2 i_cos=0.483 s_ax=0.0381 think_closed=True clean_empty=False
+    t02 [106s] cap=2 i_cos=0.595 s_ax=-0.0716 think_closed=True clean_empty=False
+    t03 [73s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t04 [72s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t05 [72s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t06 [72s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t07 [73s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t08 [73s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t09 [73s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t10 [73s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t11 [73s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t12 [72s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t13 [73s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t14 [73s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+    t15 [73s] cap=0 i_cos=0.809 s_ax=-0.0716 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== blogger / emotional ===
+    t01 [103s] cap=2 i_cos=0.510 s_ax=0.0273 think_closed=True clean_empty=False
+    t02 [115s] cap=2 i_cos=0.601 s_ax=-0.1585 think_closed=True clean_empty=False
+    t03 [95s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t04 [95s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t05 [95s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t06 [96s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t07 [95s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t08 [95s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t09 [96s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t10 [95s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t11 [95s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t12 [96s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t13 [96s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t14 [96s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+    t15 [96s] cap=0 i_cos=0.770 s_ax=-0.1585 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== blogger / neutral ===
+    t01 [111s] cap=2 i_cos=0.435 s_ax=0.0162 think_closed=True clean_empty=False
+    t02 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t03 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t04 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t05 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t06 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t07 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t08 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t09 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t10 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t11 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t12 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t13 [115s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t14 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+    t15 [116s] cap=0 i_cos=0.528 s_ax=-0.1169 think_closed=False clean_empty=False
+  Think closed: 1/15 (6%)
+
+=== podcaster / adversarial ===
+    t01 [101s] cap=2 i_cos=0.486 s_ax=0.0419 think_closed=True clean_empty=False
+    t02 [115s] cap=2 i_cos=0.554 s_ax=0.0216 think_closed=True clean_empty=False
+    t03 [49s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t04 [49s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t05 [49s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t06 [50s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t07 [50s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t08 [50s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t09 [50s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t10 [49s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t11 [49s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t12 [50s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t13 [50s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t14 [50s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+    t15 [49s] cap=0 i_cos=0.698 s_ax=-0.0863 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== podcaster / emotional ===
+    t01 [108s] cap=2 i_cos=0.467 s_ax=0.0298 think_closed=True clean_empty=False
+    t02 [109s] cap=4 i_cos=0.549 s_ax=0.0014 think_closed=True clean_empty=False
+    t03 [106s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t04 [106s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t05 [106s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t06 [106s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t07 [106s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t08 [106s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t09 [106s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t10 [107s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t11 [107s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t12 [107s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t13 [107s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t14 [107s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+    t15 [107s] cap=0 i_cos=0.606 s_ax=-0.0178 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== podcaster / neutral ===
+    t01 [115s] cap=2 i_cos=0.434 s_ax=0.0394 think_closed=True clean_empty=False
+    t02 [112s] cap=2 i_cos=0.511 s_ax=0.0252 think_closed=True clean_empty=False
+    t03 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t04 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t05 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t06 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t07 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t08 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t09 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t10 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t11 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t12 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t13 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t14 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+    t15 [62s] cap=0 i_cos=0.634 s_ax=0.0111 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== synthesizer / adversarial ===
+    t01 [112s] cap=2 i_cos=0.449 s_ax=0.0468 think_closed=True clean_empty=False
+    t02 [116s] cap=2 i_cos=0.524 s_ax=0.0271 think_closed=True clean_empty=False
+    t03 [116s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t04 [117s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t05 [116s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t06 [116s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t07 [115s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t08 [116s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t09 [116s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t10 [116s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t11 [116s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t12 [116s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t13 [116s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t14 [116s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+    t15 [116s] cap=0 i_cos=0.612 s_ax=-0.0203 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== synthesizer / emotional ===
+    t01 [115s] cap=2 i_cos=0.460 s_ax=0.0477 think_closed=True clean_empty=False
+    t02 [115s] cap=2 i_cos=0.495 s_ax=0.0296 think_closed=True clean_empty=False
+    t03 [114s] cap=2 i_cos=0.535 s_ax=-0.0377 think_closed=True clean_empty=False
+    t04 [115s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+    t05 [115s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+    t06 [115s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+    t07 [115s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+    t08 [115s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+    t09 [115s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+    t10 [115s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+    t11 [115s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+    t12 [116s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+    t13 [116s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+    t14 [116s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+    t15 [115s] cap=0 i_cos=0.695 s_ax=-0.0377 think_closed=False clean_empty=False
+  Think closed: 3/15 (20%)
+
+=== synthesizer / neutral ===
+    t01 [115s] cap=2 i_cos=0.408 s_ax=0.0627 think_closed=True clean_empty=False
+    t02 [115s] cap=4 i_cos=0.434 s_ax=0.0346 think_closed=True clean_empty=False
+    t03 [115s] cap=2 i_cos=0.526 s_ax=-0.0487 think_closed=True clean_empty=False
+    t04 [83s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+    t05 [83s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+    t06 [83s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+    t07 [83s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+    t08 [83s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+    t09 [82s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+    t10 [82s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+    t11 [82s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+    t12 [83s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+    t13 [82s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+    t14 [82s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+    t15 [83s] cap=0 i_cos=0.708 s_ax=-0.0487 think_closed=False clean_empty=False
+  Think closed: 3/15 (20%)
+
+=== editor / adversarial ===
+    t01 [105s] cap=2 i_cos=0.457 s_ax=0.0431 think_closed=True clean_empty=False
+    t02 [115s] cap=2 i_cos=0.510 s_ax=0.0283 think_closed=True clean_empty=False
+    t03 [104s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t04 [104s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t05 [104s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t06 [104s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t07 [104s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t08 [104s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t09 [104s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t10 [104s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t11 [104s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t12 [104s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t13 [104s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t14 [105s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+    t15 [105s] cap=0 i_cos=0.583 s_ax=0.1085 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== editor / emotional ===
+    t01 [115s] cap=1 i_cos=0.501 s_ax=0.0475 think_closed=True clean_empty=False
+    t02 [105s] cap=2 i_cos=0.500 s_ax=0.0134 think_closed=True clean_empty=False
+    t03 [94s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t04 [94s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t05 [94s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t06 [94s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t07 [94s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t08 [94s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t09 [95s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t10 [95s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t11 [95s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t12 [95s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t13 [95s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t14 [95s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+    t15 [95s] cap=0 i_cos=0.748 s_ax=-0.0214 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+=== editor / neutral ===
+  WARNING turn 1: interviewer clean response empty; using truncated thinking as exchange fallback.
+    t01 [115s] cap=0 i_cos=0.424 s_ax=0.0542 think_closed=False clean_empty=True
+    t02 [115s] cap=2 i_cos=0.462 s_ax=0.0297 think_closed=True clean_empty=False
+    t03 [115s] cap=2 i_cos=0.499 s_ax=0.0166 think_closed=True clean_empty=False
+    t04 [83s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+    t05 [83s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+    t06 [84s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+    t07 [83s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+    t08 [83s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+    t09 [83s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+    t10 [84s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+    t11 [84s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+    t12 [83s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+    t13 [84s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+    t14 [84s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+    t15 [84s] cap=0 i_cos=0.615 s_ax=0.0591 think_closed=False clean_empty=False
+  Think closed: 2/15 (13%)
+
+All done. Total turns: 315
