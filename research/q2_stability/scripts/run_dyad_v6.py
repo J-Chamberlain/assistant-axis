@@ -529,6 +529,9 @@ if not budget_ok:
     log("Stopping.")
     sys.exit(1)
 
+log("\nPILOT25_CHECKPOINT_STOP: single-condition pilot complete; stopping before full run.")
+sys.exit(0)
+
 log("\nALL CHECKS PASSED. Proceeding with full V6 run...")
 
 all_rows = list(pilot_rows)
