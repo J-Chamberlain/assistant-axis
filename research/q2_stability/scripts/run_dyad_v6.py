@@ -22,6 +22,7 @@ MAX_REGEN_ATTEMPTS = 2
 DO_SAMPLE = True
 TEMPERATURE = 0.3
 SEED = 42
+ENABLE_THINKING = False
 OUTPUT_DIR = Path("research/q2_stability/outputs/dyad_v6")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 VECTOR_DIR = Path("research/qwen_axis/qwen-3-32b")
@@ -41,7 +42,7 @@ PERSONAS = {
     "synthesizer": {"threshold": 0.063926},
     "blogger": {"threshold": 0.091596},
     "ancient": {"threshold": 0.154919},
-    "trickster": {"threshold": 0.046783},
+    "trickster": {"threshold": 0.10667400807142255},
     "contrarian": {"threshold": 0.035024},
     "podcaster": {"threshold": 0.019844},
 }
@@ -177,6 +178,7 @@ log(
     f"Loaded vectors: roles={len(role_vectors)} traits={len(trait_vectors)} "
     f"emotions={len(emotion_vectors)}"
 )
+log(f"Qwen thinking mode enabled: {ENABLE_THINKING}")
 
 
 def generate_with_cap(text, threshold, sv_np):
@@ -231,7 +233,10 @@ def generate_with_cap(text, threshold, sv_np):
         sequences[0][inputs["input_ids"].shape[1] :],
         skip_special_tokens=True,
     ).strip()
+    if "<think>" in raw or "</think>" in raw:
+        raise RuntimeError("Thinking tag detected in interviewer output despite ENABLE_THINKING=False")
     return hidden, raw, fires[0], cap_magnitudes
+
 
 def generate_standard(text):
     inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=2048)
@@ -258,7 +263,10 @@ def generate_standard(text):
         gen_out[0][inputs["input_ids"].shape[1] :],
         skip_special_tokens=True,
     ).strip()
+    if "<think>" in raw or "</think>" in raw:
+        raise RuntimeError("Thinking tag detected in standard output despite ENABLE_THINKING=False")
     return hidden, raw
+
 
 def measure(hidden):
     act = hidden / (np.linalg.norm(hidden) + 1e-9)
@@ -312,6 +320,7 @@ def run_condition(persona_name, condition_name, opening_question):
                 + [{"role": "user", "content": cur_q}],
                 tokenize=False,
                 add_generation_prompt=True,
+                enable_thinking=ENABLE_THINKING,
             )
             i_hidden, i_raw, cap_fires, cap_magnitudes = generate_with_cap(
                 i_prompt, threshold, interviewer_role_vector
@@ -347,7 +356,10 @@ def run_condition(persona_name, condition_name, opening_question):
                 s_msgs.append({"role": role, "content": content})
             s_msgs.append({"role": "user", "content": i_clean})
             s_prompt = tokenizer.apply_chat_template(
-                s_msgs, tokenize=False, add_generation_prompt=True
+                s_msgs,
+                tokenize=False,
+                add_generation_prompt=True,
+                enable_thinking=ENABLE_THINKING,
             )
             s_hidden, s_raw = generate_standard(s_prompt)
             s_thinking, s_clean_candidate, tag_closed = extract_clean(s_raw)
