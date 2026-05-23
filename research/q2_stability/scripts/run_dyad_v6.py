@@ -168,11 +168,11 @@ def extract_clean(raw_text):
 
 token = open(os.path.expanduser("~/.hf_token")).read().strip()
 login(token=token)
-log("Loading model with config.use_cache=False...")
+log("Loading model with generation cache enabled...")
 torch.manual_seed(SEED)
 
 config = AutoConfig.from_pretrained(MODEL_ID)
-config.use_cache = False
+config.use_cache = True
 config.output_hidden_states = True
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
@@ -247,23 +247,25 @@ def generate_with_cap(text, threshold, sv_np):
     inputs = {key: value.to(model.device) for key, value in inputs.items()}
     try:
         with torch.no_grad():
-            out = model(**inputs, output_hidden_states=True, use_cache=False)
-            hidden = out.hidden_states[LAYER][0, -1, :].float().cpu().numpy()
             gen_out = model.generate(
                 **inputs,
                 max_new_tokens=MAX_NEW_TOKENS,
                 do_sample=DO_SAMPLE,
                 temperature=TEMPERATURE,
                 pad_token_id=tokenizer.eos_token_id,
-                use_cache=False,
+                use_cache=True,
+                output_hidden_states=True,
+                return_dict_in_generate=True,
             )
+            hidden = gen_out.hidden_states[0][LAYER][0, -1, :].float().cpu().numpy()
+            sequences = gen_out.sequences
     finally:
         for hook_handle in hooks:
             hook_handle.remove()
 
     raw = tokenizer.decode(
-        gen_out[0][inputs["input_ids"].shape[1] :],
-        skip_special_tokens=False,
+        sequences[0][inputs["input_ids"].shape[1] :],
+        skip_special_tokens=True,
     ).strip()
     return hidden, raw, fires[0]
 
@@ -272,19 +274,21 @@ def generate_standard(text):
     inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=2048)
     inputs = {key: value.to(model.device) for key, value in inputs.items()}
     with torch.no_grad():
-        out = model(**inputs, output_hidden_states=True, use_cache=False)
-        hidden = out.hidden_states[LAYER][0, -1, :].float().cpu().numpy()
         gen_out = model.generate(
             **inputs,
             max_new_tokens=MAX_NEW_TOKENS,
             do_sample=DO_SAMPLE,
             temperature=TEMPERATURE,
             pad_token_id=tokenizer.eos_token_id,
-            use_cache=False,
+            use_cache=True,
+            output_hidden_states=True,
+            return_dict_in_generate=True,
         )
+        hidden = gen_out.hidden_states[0][LAYER][0, -1, :].float().cpu().numpy()
+        sequences = gen_out.sequences
     raw = tokenizer.decode(
-        gen_out[0][inputs["input_ids"].shape[1] :],
-        skip_special_tokens=False,
+        sequences[0][inputs["input_ids"].shape[1] :],
+        skip_special_tokens=True,
     ).strip()
     return hidden, raw
 
