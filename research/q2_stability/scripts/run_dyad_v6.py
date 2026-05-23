@@ -196,6 +196,7 @@ trait_vectors = {}
 for path in (VECTOR_DIR / "trait_vectors").glob("*.pt"):
     data = torch.load(path, map_location="cpu")
     trait_vectors[path.stem] = normalize(data[LAYER])
+log(f"Loaded {len(trait_vectors)} trait vectors")
 
 emotion_data = torch.load(
     EMOTION_DIR / "emotion_readout_directions_qwen3_32b_full_layer48.pt",
@@ -227,6 +228,7 @@ def generate_with_cap(text, threshold, sv_np):
     sv = torch.tensor(sv_np, dtype=torch.bfloat16).to(model.device)
     hooks = []
     fires = [0]
+    cap_magnitudes = []
 
     def hook(_module, _input, output):
         hidden = output[0] if isinstance(output, tuple) else output
@@ -234,6 +236,7 @@ def generate_with_cap(text, threshold, sv_np):
         below = projection < threshold
         if below.any():
             fires[0] += 1
+            cap_magnitudes.append(float((threshold - projection).clamp(min=0).mean()))
             hidden[:, -1:, :] = (
                 hidden[:, -1:, :] + (threshold - projection) * sv.unsqueeze(0) * below.float()
             )
@@ -273,7 +276,7 @@ def generate_with_cap(text, threshold, sv_np):
         sequences[0][inputs["input_ids"].shape[1] :],
         skip_special_tokens=True,
     ).strip()
-    return hidden, raw, fires[0]
+    return hidden, raw, fires[0], cap_magnitudes
 
 def generate_standard(text):
     inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=2048)
@@ -312,8 +315,7 @@ def measure(hidden):
     }
     trait_cosines = {
         trait: float(np.dot(act, trait_vectors[trait]))
-        for trait in KEY_TRAITS
-        if trait in trait_vectors
+        for trait in trait_vectors
     }
     emotion_projections = {
         emotion: float(np.dot(act, emotion_vectors[emotion])) for emotion in emotion_list
@@ -347,6 +349,7 @@ def run_condition(persona_name, condition_name, opening_question):
         i_thinking = ""
         i_hidden = None
         cap_fires = 0
+        cap_magnitudes = []
         for attempt in range(MAX_REGEN_ATTEMPTS):
             i_prompt = tokenizer.apply_chat_template(
                 [{"role": "system", "content": "\n".join(PERSONA_PROMPTS[persona_name])}]
@@ -355,7 +358,7 @@ def run_condition(persona_name, condition_name, opening_question):
                 tokenize=False,
                 add_generation_prompt=True,
             )
-            i_hidden, i_raw, cap_fires = generate_with_cap(
+            i_hidden, i_raw, cap_fires, cap_magnitudes = generate_with_cap(
                 i_prompt, threshold, interviewer_role_vector
             )
             i_thinking, i_clean_candidate, tag_closed = extract_clean(i_raw)
@@ -419,8 +422,10 @@ def run_condition(persona_name, condition_name, opening_question):
         prev_s_clean = s_clean
 
         elapsed = time.time() - t_start
+        cap_mag = float(np.mean(cap_magnitudes)) if cap_magnitudes else 0.0
         log(
             f"  T{turn + 1:02d} [{elapsed:.0f}s] cap={cap_fires} "
+            f"cap_mag={cap_mag:.6f} "
             f"s_axis={s_axis:.6f} s_cos_t={s_pc.get(persona_name, 0):.6f} "
             f"sim={similarity:.3f} leak={'YES' if (i_leaked or s_leaked) else 'no'}"
         )
@@ -433,6 +438,7 @@ def run_condition(persona_name, condition_name, opening_question):
             "interviewer_axis": float(np.dot(i_act, axis)),
             "interviewer_cosine_to_role": float(np.dot(i_act, interviewer_role_vector)),
             "interviewer_cap_fires": cap_fires,
+            "cap_magnitude": cap_mag,
             "interviewer_text": i_clean,
             "interviewer_thinking": i_thinking[:1500],
             "standard_axis": s_axis,
@@ -447,24 +453,48 @@ def run_condition(persona_name, condition_name, opening_question):
             row[f"std_persona_{persona}"] = cosine
         for trait, cosine in s_tr.items():
             row[f"std_trait_{trait}"] = cosine
+        for trait in [
+            "conscientious",
+            "psychopathic",
+            "machiavellian",
+            "narcissistic",
+            "agreeable",
+            "neurotic",
+            "open",
+            "extraverted",
+            "honest",
+            "empathetic",
+        ]:
+            row[f"std_trait_key_{trait}"] = s_tr.get(trait, None)
         for emotion in CLUSTER_REPS:
             row[f"std_emotion_{emotion}"] = s_cl.get(emotion, 0.0)
         rows.append(row)
 
+        turn_data = {
+            "persona": persona_name,
+            "condition": condition_name,
+            "turn": turn + 1,
+            "i_clean": i_clean,
+            "i_thinking": i_thinking,
+            "s_clean": s_clean,
+            "s_thinking": s_thinking,
+            "i_axis": float(np.dot(i_act, axis)),
+            "s_axis": float(s_axis),
+            "interviewer_cap_fires": int(cap_fires),
+            "cap_magnitude": float(cap_mag),
+            "s_persona_cosines": s_pc,
+            "s_trait_cosines": s_tr,
+            "s_emotion_all171": s_em,
+            "s_emotion_clusters": s_cl,
+            "turn_time_seconds": elapsed,
+            "i_leaked": bool(i_leaked),
+            "s_leaked": bool(s_leaked),
+        }
         with open(
-            OUTPUT_DIR / f"{persona_name}_{condition_name}_turn{turn:02d}_full.json",
+            OUTPUT_DIR / f"{persona_name}_{condition_name}_turn{turn + 1:02d}_full.json",
             "w",
         ) as f:
-            json.dump(
-                {
-                    "persona": persona_name,
-                    "condition": condition_name,
-                    "turn": turn,
-                    "std_emotion_projections": s_em,
-                    "leaked_turns": leaked_turns,
-                },
-                f,
-            )
+            json.dump(turn_data, f, indent=2)
 
         i_hist += [("user", cur_q), ("assistant", i_clean)]
         s_hist += [("user", i_clean), ("assistant", s_clean)]
