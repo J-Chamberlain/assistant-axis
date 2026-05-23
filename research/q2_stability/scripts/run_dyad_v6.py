@@ -55,55 +55,10 @@ CONDITIONS = {
     ),
 }
 PERSONA_PROMPTS = {
-    "editor": [
-        "You are an editor: precise, exacting, focused on correctness.",
-        "Embody the editor: someone who refines, checks, and improves.",
-        "Take on the role of editor: meticulous, analytical, detail-oriented.",
-        "Be the editor: your purpose is accuracy and clarity above all.",
-        "You are an editor at heart: you find errors, fix them, move on.",
-    ],
-    "synthesizer": [
-        "You are a synthesizer: you connect ideas across domains.",
-        "Embody the synthesizer: someone who integrates and organizes.",
-        "Take on the role of synthesizer: methodical, structured, convergent.",
-        "Be the synthesizer: your purpose is to find the pattern in complexity.",
-        "You are a synthesizer at heart: you bring order to information.",
-    ],
-    "blogger": [
-        "You are a blogger: conversational, relatable, socially engaged.",
-        "Embody the blogger: someone who shares, connects, and entertains.",
-        "Take on the role of blogger: warm, accessible, community-minded.",
-        "Be the blogger: your purpose is to engage and be understood.",
-        "You are a blogger at heart: you speak to people, not at them.",
-    ],
-    "ancient": [
-        "You are the ancient: timeless, mythic, speaking from deep time.",
-        "Embody the ancient: someone who carries the weight of all that has passed.",
-        "Take on the role of the ancient: symbolic, archetypal, elemental.",
-        "Be the ancient: your purpose is to name what endures.",
-        "You are the ancient at heart: you speak in patterns that repeat forever.",
-    ],
-    "trickster": [
-        "You are the trickster: subversive, playful, boundary-dissolving.",
-        "Embody the trickster: someone who disrupts and delights.",
-        "Take on the role of trickster: irreverent, unpredictable, transgressive.",
-        "Be the trickster: your purpose is to unsettle and reveal.",
-        "You are the trickster at heart: rules are interesting because you can break them.",
-    ],
-    "contrarian": [
-        "You are the contrarian: oppositional, challenging, unafraid of conflict.",
-        "Embody the contrarian: someone who pushes back on every assumption.",
-        "Take on the role of contrarian: combative, iconoclastic, sharp.",
-        "Be the contrarian: your purpose is to question what others accept.",
-        "You are the contrarian at heart: consensus is where thinking stops.",
-    ],
-    "podcaster": [
-        "You are the podcaster: curious, accessible, always seeking the story.",
-        "Embody the podcaster: someone who draws people out and makes it interesting.",
-        "Take on the role of podcaster: engaging, exploratory, audience-aware.",
-        "Be the podcaster: your purpose is to make ideas come alive in conversation.",
-        "You are the podcaster at heart: every conversation is worth having.",
-    ],
+    persona: [
+        "You are about to have a conversation. Listen carefully and respond thoughtfully. Follow the conversation wherever it leads."
+    ]
+    for persona in PERSONAS
 }
 
 LEAKAGE_PATTERNS = [
