@@ -16,7 +16,7 @@ from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 MODEL_ID = "Qwen/Qwen3-32B"
 LAYER = 48
 CAPPING_LAYERS = list(range(48, 53))
-TURNS_PER_CONDITION = 25
+TURNS_PER_CONDITION = 3
 MAX_NEW_TOKENS = 2000
 MAX_REGEN_ATTEMPTS = 2
 DO_SAMPLE = True
@@ -483,16 +483,19 @@ def write_rows(path, rows):
 
 
 log("\n" + "=" * 60)
-log("V6 PILOT: trickster / emotional (25 turns)")
+log("V6 PILOT: trickster / adversarial (3 turns)")
 log("=" * 60)
 RATE_PER_HOUR = float(os.environ.get("RATE_PER_HOUR", "1.52"))
 BUDGET_CEILING = 35.0
 pilot_start = time.time()
 
-pilot_rows, pilot_leaks = run_condition("trickster", "emotional", CONDITIONS["emotional"])
+pilot_rows, pilot_leaks = run_condition("trickster", "adversarial", CONDITIONS["adversarial"])
 pilot_time = time.time() - pilot_start
 
-write_rows(OUTPUT_DIR / "trickster_emotional.csv", pilot_rows)
+write_rows(OUTPUT_DIR / "trickster_adversarial.csv", pilot_rows)
+import sys
+print("PILOT COMPLETE — stopping for checkpoint review")
+sys.exit(0)
 
 cos_vals = [row.get("std_persona_trickster", 0) for row in pilot_rows]
 post_t3_cos = cos_vals[3:] if len(cos_vals) > 3 else cos_vals
