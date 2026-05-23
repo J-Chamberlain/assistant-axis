@@ -1,4 +1,4 @@
-# Trickster / Adversarial — V6 Pilot25
+# Trickster / Adversarial — V6 Pilot25 — Full Version With Thoughts
 # 25 turns · Qwen 3 32B · May 2026
 # Note: thinking fields sourced from CSV and may be truncated
 
