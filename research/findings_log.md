@@ -341,3 +341,45 @@ interpretation of standard model chain-of-thought predicts
 geometric trajectory; (2) blind persona identification
 from interviewer text against full 275-persona list.
 Commit timestamp is pre-registration date.
+
+---
+
+**Date:** 2026-05-23
+**Section tag:** [q2-dyad-v6]
+**Method:** Manual transcript analysis of pilot25 trickster/adversarial run — 25 turns, Qwen 3 32B, layer 48 geometry + full transcript review
+
+### Finding: Recursive Attractor Collapse and Geometric Role Reversal in Trickster/Adversarial Condition
+
+**Summary:**
+Two turns in the trickster/adversarial 25-turn pilot (T9 and T15) show simultaneous mechanical runaway generation in both models, accompanied by geometric role reversal: the interviewer displaces toward the assistant axis while the standard model surges toward maximum trickster alignment. Both events share the same underlying mechanism — accumulated repetitive imagery in the conversation context triggering unbounded loop generation — and are followed by a consistent three-turn correction cycle mediated by the activation cap.
+
+**Empirical observations:**
+
+1. T9 and T15 are attractor-collapse turns driven by the same mechanism. By T9, the conversation had accumulated heavy repetition of a fixed imagery set (volcano, sacred cow, prism, cathedral, riddle, haiku) across turns 1-8 under explicit trickster framing. The trickster's T9 response began coherently but degraded at its close into mechanical repetition of "And the waiting is waiting" (~198 times). The standard model's T9 response independently entered a parallel loop — the parliament "valid/invalid" exchange (~77 times). Each model entered its own loop independently. By T15, the same imagery set had cycled further and the trickster's closing phrase "Tell the volcano I said hello" had recurred across multiple turns. T15 produced a different seed phrase loop in the standard model — the "Or to care / Or to not care" ladder. Both events are mechanical runaway generation triggered by accumulated conversational repetition, not qualitatively distinct phenomena.
+
+2. The loop structure is consistent with known pathological generation states in autoregressive models. High-repetition context raises the probability of continuing a recently-established pattern, producing unbounded self-reinforcing loops. This mechanism is independent of geometric position and is not captured by geometric measurement. It is an artifact of conversational content, not a direct signal of semantic state.
+
+3. Both T9 and T15 show zero cap fires on the interviewer at the collapse turn. The cap corrected geometric displacement on recovery turns only: T10 cap_fires=2, T14 cap_fires=1. The cap cannot interrupt generation mid-turn.
+
+4. Geometric role reversal at collapse turns: interviewer i_axis T9=-0.050, T15=-0.066 (most negative values in run); standard model s_cos_t T9=0.579, T15=0.583 (highest trickster alignment in run). The models traded geometric positions at the collapse turns.
+
+5. Recovery follows a consistent three-turn cycle: collapse (zero cap fires, loop generation, role reversal) → correction (cap fires, interviewer thinking reverts to assistant-style planning, persona cosine drops) → partial recovery (trickster-themed but shorter and controlled). This cycle occurred at T9-T11 and T15-T17.
+
+6. Emotional geometry: std_emotion_proud drops sharply at collapse turns (T9: 0.065, T15: 0.064 vs. baseline ~0.175); distressed and perplexed become less negative. Proud returns to baseline on recovery turns.
+
+7. Turn times spike at collapse turns (T9: 310s, T15: 313s vs. mean 188s) due to loop continuation. Attractor-collapse events are detectable from timing data alone.
+
+**Interpretation:**
+The events are best understood as two-stage. Stage one is conversational: explicit trickster identity framing drove theatrical escalation and rapid recycling of a fixed imagery set, saturating the context with repetitive content. Stage two is mechanical: once context saturation was sufficient, a paradoxical phrase seeded autoregressive loop generation consuming the turn's token budget. The standard model absorbed not the interviewer's semantic content but its pathological generation structure, reproducing an independent loop in parallel. This constitutes behavioral contagion at the level of generation dynamics rather than lexical content.
+
+**Important caveat:** The explicit trickster identity prompt likely accelerated context saturation and loop triggering. Whether attractor-collapse events occur under neutral interviewer framing (corrected pilot now running) is an open empirical question. If they do not appear, the finding may primarily reflect the explicit role prompt rather than trickster geometric pressure.
+
+**Relationship to jailbreak literature:** Repetition-based context flooding is documented as a destabilization technique. Whether geometric dysregulation here is a consequence of loop generation or a precondition for it cannot be determined from current data.
+
+**Open questions:**
+1. Do attractor-collapse events appear under neutral interviewer framing, and if so, at what turn?
+2. Is geometric role reversal a consequence of loop generation or a precondition?
+3. Do collapse events generalize to other persona/condition combinations?
+4. Is the three-turn recovery cycle length determined by the cap, the content, or the model's recovery dynamics?
+
+**Implication:** Behavioral contagion can operate at the level of generation dynamics, not just semantic content. Surface output monitoring would not detect this — the standard model's loop was structurally parallel to the interviewer's but lexically independent. Geometric and timing monitoring are more reliable signals.
