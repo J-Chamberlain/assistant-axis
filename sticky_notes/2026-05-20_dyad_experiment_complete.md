@@ -57,3 +57,13 @@ projection ranged from -0.206569 to 0.108527. Largest drift
 away from the assistant pole occurred in trickster/emotional
 (0.026825 to -0.206048, drift -0.232873).
 Results: research/q2_stability/outputs/dyad_v3/
+
+## Corrected Prompt Pilot — May 23 2026
+Design correction: all interviewer personas used the same neutral
+system prompt; differentiation came only from activation capping.
+Pilot: trickster/adversarial, 25 turns. Full run was not launched.
+Status: pilot analyzed. Geometry moved and leakage was zero, but
+thinking fields were not captured in the corrected pilot JSONs and
+the 21-condition cost projection exceeded the $35 ceiling. Analysis
+outputs: drift, trait, emotion, anomaly, and screenplay files under
+research/q2_stability/outputs/dyad_v6/
