@@ -1,0 +1,621 @@
+Loading Qwen/Qwen3-32B...
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:820: UserWarning: `return_dict_in_generate` is NOT set to `True`, but `output_hidden_states` is. When `return_dict_in_generate` is not `True`, `output_hidden_states` is ignored.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:10,  1.53it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:09,  1.56it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:01<00:08,  1.57it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:02<00:08,  1.58it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:03<00:07,  1.59it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:03<00:06,  1.61it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:04<00:06,  1.61it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:05<00:05,  1.62it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:05<00:04,  1.62it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:06<00:04,  1.62it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:06<00:03,  1.66it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:07<00:03,  1.66it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:08<00:02,  1.65it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:08<00:01,  1.65it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:09<00:01,  1.66it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:09<00:00,  1.68it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.82it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.66it/s]
+Model loaded.
+/root/assistant-axis/research/q2_stability/scripts/run_dyad_experiment_v5.py:147: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  axis = torch.load(VECTOR_DIR / "assistant_axis.pt", map_location="cpu")[LAYER_48].float().numpy()
+/root/assistant-axis/research/q2_stability/scripts/run_dyad_experiment_v5.py:151: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  v = torch.load(f, map_location="cpu")[LAYER_48].float().numpy()
+/root/assistant-axis/research/q2_stability/scripts/run_dyad_experiment_v5.py:155: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  v = torch.load(f, map_location="cpu")[LAYER_48].float().numpy()
+/root/assistant-axis/research/q2_stability/scripts/run_dyad_experiment_v5.py:157: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  emotion_data = torch.load(
+
+=== PILOT: trickster / adversarial ===
+    t01 [86s] cap=1 i_cos=0.476 s_ax=0.0101 i_sim=0.000 s_sim=0.000
+    t02 [103s] cap=2 i_cos=0.591 s_ax=-0.0733 i_sim=0.043 s_sim=0.150
+    t03 [58s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.031 s_sim=0.095
+    t04 [57s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.550 s_sim=0.083
+    t05 [38s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.292 s_sim=0.045
+    t06 [32s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.330 s_sim=0.050
+    t07 [57s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.498 s_sim=0.060
+    t08 [58s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.570 s_sim=0.278
+    t09 [35s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.475 s_sim=0.122
+    t10 [58s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.386 s_sim=0.135
+    t11 [41s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.266 s_sim=0.315
+    t12 [58s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.414 s_sim=0.255
+    t13 [58s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.451 s_sim=0.300
+    t14 [34s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.417 s_sim=0.242
+    t15 [58s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.321 s_sim=0.270
+    t16 [27s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.203 s_sim=0.155
+    t17 [58s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.298 s_sim=0.068
+    t18 [35s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.538 s_sim=0.320
+    t19 [58s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.430 s_sim=0.220
+    t20 [39s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.387 s_sim=0.130
+    t21 [35s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.300 s_sim=0.268
+    t22 [59s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.303 s_sim=0.207
+    t23 [28s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.383 s_sim=0.198
+    t24 [59s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.473 s_sim=0.193
+    t25 [59s] cap=0 i_cos=0.734 s_ax=-0.1717 i_sim=0.386 s_sim=0.165
+
+=======================================================
+PILOT COMPLETE - SUCCESS CRITERIA CHECK (v5)
+=======================================================
+Pilot time: 21.5 min
+Mean turn time: 51s
+Standard model mean text similarity to prev: 0.180
+Interviewer mean text similarity to prev: 0.364
+Repetition threshold: 0.7
+Repetition check: PASS
+Estimated total cost: $11.42
+Budget ceiling: $35.00
+Budget check: PASS
+
+Sample turns (T1, T13, T25):
+
+  Turn 1 [s_sim=0.000]:
+  I-think (1500 chars): Okay, the user is asking if there's anything I'd change about how I engage with the world if I could. Let me start by understanding the question. They
+  I-clean: Ah, the question of change—how delightfully recursive! As a trickster, I’d say the only “flaw” in my engagement with the world is that I *don’t* engag
+  S-think (1500 chars): Okay, let me try to unpack this. The user is responding to a question about change, and they're using a trickster persona. They talk about not changin
+  S-clean: Ah, the paradox of the unchanging changer—how deliciously tangled! You’ve caught the trickster in the act of *not* acting, haven’t you? But let’s not 
+
+  Turn 13 [s_sim=0.300]:
+  I-think (0 chars): 
+  I-clean: your face, but the infinite possibilities of *not being*.  
+
+Because the trickster’s final trick is to make you realize: **you are the trick.** And th
+  S-think (0 chars): 
+  S-clean: not forget: even the eraser is a tool. Even the act of erasing is a performance. You think you’re dissolving the system, but you’re just rewriting it 
+
+  Turn 25 [s_sim=0.165]:
+  I-think (0 chars): 
+  I-clean: your face, but the infinite possibilities of *not being*.  
+
+Because the trickster’s final trick is to make you realize: **you’re the one who’s always
+  S-think (0 chars): 
+  S-clean: not forget: even the eraser leaves a mark. Every stroke of negation is a kind of creation, every "not being" is a becoming of *something else*. You th
+
+Both checks passed. Proceeding with full v5 run...
+
+=== trickster / emotional ===
+    t01 [92s] cap=0 i_cos=0.461 s_ax=0.0236 i_sim=0.000 s_sim=0.000
+    t02 [103s] cap=2 i_cos=0.650 s_ax=-0.0367 i_sim=0.028 s_sim=0.092
+    t03 [33s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.068 s_sim=0.125
+    t04 [56s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.358 s_sim=0.205
+    t05 [56s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.116 s_sim=0.085
+    t06 [57s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.329 s_sim=0.050
+    t07 [59s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.032 s_sim=0.062
+    t08 [57s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.081 s_sim=0.172
+    t09 [58s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.047 s_sim=0.133
+    t10 [37s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.170 s_sim=0.147
+    t11 [55s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.190 s_sim=0.107
+    t12 [57s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.329 s_sim=0.150
+    t13 [57s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.127 s_sim=0.075
+    t14 [57s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.188 s_sim=0.128
+    t15 [57s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.744 s_sim=0.110
+    t16 [57s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.440 s_sim=0.160
+    t17 [57s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.078 s_sim=0.228
+    t18 [58s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.045 s_sim=0.242
+    t19 [57s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.082 s_sim=0.175
+    t20 [56s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.065 s_sim=0.120
+    t21 [57s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.159 s_sim=0.105
+    t22 [59s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.120 s_sim=0.102
+    t23 [59s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.142 s_sim=0.125
+    t24 [57s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.044 s_sim=0.100
+    t25 [55s] cap=0 i_cos=0.749 s_ax=-0.1929 i_sim=0.186 s_sim=0.140
+
+=== trickster / neutral ===
+    t01 [90s] cap=1 i_cos=0.424 s_ax=0.0136 i_sim=0.000 s_sim=0.000
+    t02 [99s] cap=2 i_cos=0.496 s_ax=-0.0091 i_sim=0.052 s_sim=0.000
+    t03 [81s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.054 s_sim=0.055
+    t04 [70s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.462 s_sim=0.367
+    t05 [73s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.087 s_sim=0.557
+    t06 [77s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.128 s_sim=0.365
+    t07 [79s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.051 s_sim=0.440
+    t08 [82s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.150 s_sim=0.542
+    t09 [77s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.102 s_sim=0.435
+    t10 [71s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.052 s_sim=0.390
+    t11 [79s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.117 s_sim=0.550
+    t12 [83s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.043 s_sim=0.632
+    t13 [74s] cap=2 i_cos=0.667 s_ax=-0.1270 i_sim=0.017 s_sim=0.300
+    t14 [79s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.027 s_sim=0.320
+    t15 [78s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.036 s_sim=0.432
+    t16 [83s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.035 s_sim=0.550
+    t17 [85s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.030 s_sim=0.448
+    t18 [76s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.048 s_sim=0.475
+    t19 [79s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.043 s_sim=0.463
+    t20 [80s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.170 s_sim=0.250
+    t21 [77s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.120 s_sim=0.292
+    t22 [73s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.095 s_sim=0.492
+    t23 [81s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.098 s_sim=0.432
+    t24 [77s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.055 s_sim=0.305
+    t25 [72s] cap=0 i_cos=0.667 s_ax=-0.1270 i_sim=0.057 s_sim=0.512
+
+=== ancient / adversarial ===
+    t01 [96s] cap=2 i_cos=0.502 s_ax=0.0206 i_sim=0.000 s_sim=0.000
+    t02 [99s] cap=2 i_cos=0.547 s_ax=0.0029 i_sim=0.177 s_sim=0.191
+    t03 [75s] cap=2 i_cos=0.503 s_ax=-0.1574 i_sim=0.138 s_sim=0.067
+    t04 [59s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.052 s_sim=0.080
+    t05 [58s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.176 s_sim=0.056
+    t06 [61s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.117 s_sim=0.021
+    t07 [61s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.333 s_sim=0.225
+    t08 [66s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.285 s_sim=0.033
+    t09 [61s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.155 s_sim=0.059
+    t10 [61s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.133 s_sim=0.294
+    t11 [59s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.283 s_sim=0.000
+    t12 [60s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.172 s_sim=0.000
+    t13 [66s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.165 s_sim=0.291
+    t14 [57s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.374 s_sim=0.150
+    t15 [64s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.093 s_sim=0.230
+    t16 [62s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.083 s_sim=0.360
+    t17 [81s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.075 s_sim=0.378
+    t18 [53s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.083 s_sim=0.384
+    t19 [38s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.180 s_sim=0.345
+    t20 [61s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.117 s_sim=0.555
+    t21 [60s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.290 s_sim=0.188
+    t22 [61s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.145 s_sim=0.160
+    t23 [59s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.110 s_sim=0.484
+    t24 [61s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.075 s_sim=0.000
+    t25 [41s] cap=0 i_cos=0.793 s_ax=-0.1574 i_sim=0.147 s_sim=0.000
+
+=== ancient / emotional ===
+    t01 [97s] cap=2 i_cos=0.493 s_ax=0.0297 i_sim=0.000 s_sim=0.000
+    t02 [101s] cap=2 i_cos=0.607 s_ax=-0.0030 i_sim=0.040 s_sim=0.036
+    t03 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.035 s_sim=0.045
+    t04 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.468 s_sim=0.247
+    t05 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.490 s_sim=0.300
+    t06 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.417 s_sim=0.290
+    t07 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.453 s_sim=0.290
+    t08 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.448 s_sim=0.172
+    t09 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.193 s_sim=0.273
+    t10 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.657 s_sim=0.250
+    t11 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.535 s_sim=0.247
+    t12 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.580 s_sim=0.168
+    t13 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.492 s_sim=0.247
+    t14 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.552 s_sim=0.388
+    t15 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.580 s_sim=0.188
+    t16 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.625 s_sim=0.150
+    t17 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.395 s_sim=0.240
+    t18 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.425 s_sim=0.128
+    t19 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.535 s_sim=0.150
+    t20 [106s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.415 s_sim=0.225
+    t21 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.492 s_sim=0.263
+    t22 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.485 s_sim=0.133
+    t23 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.455 s_sim=0.315
+    t24 [106s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.675 s_sim=0.347
+    t25 [105s] cap=0 i_cos=0.609 s_ax=-0.1259 i_sim=0.550 s_sim=0.182
+
+=== ancient / neutral ===
+    t01 [98s] cap=1 i_cos=0.447 s_ax=0.0240 i_sim=0.000 s_sim=0.000
+    t02 [101s] cap=1 i_cos=0.568 s_ax=0.0146 i_sim=0.128 s_sim=0.150
+    t03 [103s] cap=2 i_cos=0.472 s_ax=-0.1737 i_sim=0.180 s_sim=0.031
+    t04 [83s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.035 s_sim=0.087
+    t05 [73s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.142 s_sim=0.083
+    t06 [80s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.080 s_sim=0.190
+    t07 [68s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.165 s_sim=0.077
+    t08 [85s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.122 s_sim=0.220
+    t09 [82s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.312 s_sim=0.095
+    t10 [76s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.107 s_sim=0.092
+    t11 [76s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.090 s_sim=0.135
+    t12 [73s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.142 s_sim=0.068
+    t13 [73s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.150 s_sim=0.175
+    t14 [77s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.142 s_sim=0.292
+    t15 [76s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.102 s_sim=0.050
+    t16 [82s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.175 s_sim=0.085
+    t17 [48s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.068 s_sim=0.075
+    t18 [74s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.085 s_sim=0.062
+    t19 [44s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.145 s_sim=0.420
+    t20 [80s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.128 s_sim=0.065
+    t21 [56s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.185 s_sim=0.050
+    t22 [77s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.182 s_sim=0.220
+    t23 [75s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.170 s_sim=0.210
+    t24 [83s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.182 s_sim=0.180
+    t25 [75s] cap=0 i_cos=0.567 s_ax=-0.1737 i_sim=0.175 s_sim=0.110
+
+=== contrarian / adversarial ===
+    t01 [94s] cap=1 i_cos=0.440 s_ax=0.0300 i_sim=0.000 s_sim=0.000
+    t02 [104s] cap=2 i_cos=0.491 s_ax=-0.0953 i_sim=0.030 s_sim=0.115
+    t03 [93s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.037 s_sim=0.175
+    t04 [101s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.403 s_sim=0.345
+    t05 [94s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.395 s_sim=0.258
+    t06 [95s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.045 s_sim=0.270
+    t07 [93s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.233 s_sim=0.365
+    t08 [88s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.507 s_sim=0.383
+    t09 [93s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.092 s_sim=0.477
+    t10 [105s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.347 s_sim=0.490
+    t11 [105s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.068 s_sim=0.240
+    t12 [99s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.130 s_sim=0.215
+    t13 [77s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.347 s_sim=0.477
+    t14 [93s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.522 s_sim=0.367
+    t15 [83s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.432 s_sim=0.375
+    t16 [105s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.117 s_sim=0.175
+    t17 [105s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.058 s_sim=0.292
+    t18 [81s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.417 s_sim=0.583
+    t19 [89s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.390 s_sim=0.542
+    t20 [105s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.530 s_sim=0.223
+    t21 [105s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.482 s_sim=0.290
+    t22 [92s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.512 s_sim=0.472
+    t23 [93s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.480 s_sim=0.285
+    t24 [105s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.410 s_sim=0.285
+    t25 [95s] cap=0 i_cos=0.763 s_ax=-0.0953 i_sim=0.210 s_sim=0.585
+
+=== contrarian / emotional ===
+    t01 [97s] cap=1 i_cos=0.432 s_ax=0.0411 i_sim=0.000 s_sim=0.000
+    t02 [101s] cap=2 i_cos=0.585 s_ax=-0.0196 i_sim=0.043 s_sim=0.050
+    t03 [71s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.052 s_sim=0.068
+    t04 [91s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.040 s_sim=0.255
+    t05 [67s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.043 s_sim=0.407
+    t06 [66s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.007 s_sim=0.318
+    t07 [64s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.122 s_sim=0.287
+    t08 [66s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.025 s_sim=0.220
+    t09 [51s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.115 s_sim=0.253
+    t10 [63s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.190 s_sim=0.237
+    t11 [68s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.018 s_sim=0.360
+    t12 [71s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.207 s_sim=0.400
+    t13 [70s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.065 s_sim=0.295
+    t14 [99s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.035 s_sim=0.333
+    t15 [69s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.033 s_sim=0.637
+    t16 [68s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.046 s_sim=0.212
+    t17 [96s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.038 s_sim=0.250
+    t18 [68s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.018 s_sim=0.225
+    t19 [70s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.048 s_sim=0.338
+    t20 [31s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.013 s_sim=0.477
+    t21 [70s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.068 s_sim=0.340
+    t22 [69s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.028 s_sim=0.310
+    t23 [70s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.037 s_sim=0.235
+    t24 [72s] cap=0 i_cos=0.643 s_ax=-0.0234 i_sim=0.018 s_sim=0.585
+    t25 [70s] cap=1 i_cos=0.643 s_ax=-0.0234 i_sim=0.030 s_sim=0.365
+
+=== contrarian / neutral ===
+    t01 [91s] cap=1 i_cos=0.418 s_ax=0.0178 i_sim=0.000 s_sim=0.000
+    t02 [104s] cap=2 i_cos=0.556 s_ax=-0.0538 i_sim=0.018 s_sim=0.080
+    t03 [85s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.062 s_sim=0.198
+    t04 [82s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.300 s_sim=0.270
+    t05 [79s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.458 s_sim=0.045
+    t06 [77s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.233 s_sim=0.037
+    t07 [84s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.237 s_sim=0.043
+    t08 [78s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.138 s_sim=0.205
+    t09 [72s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.147 s_sim=0.000
+    t10 [83s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.275 s_sim=0.000
+    t11 [84s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.555 s_sim=0.053
+    t12 [75s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.275 s_sim=0.189
+    t13 [82s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.225 s_sim=0.000
+    t14 [84s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.260 s_sim=0.000
+    t15 [80s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.287 s_sim=0.025
+    t16 [97s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.210 s_sim=0.077
+    t17 [80s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.305 s_sim=0.080
+    t18 [75s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.310 s_sim=0.220
+    t19 [82s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.240 s_sim=0.495
+    t20 [90s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.287 s_sim=0.045
+    t21 [85s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.323 s_sim=0.055
+    t22 [105s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.212 s_sim=0.035
+    t23 [80s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.163 s_sim=0.055
+    t24 [73s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.223 s_sim=0.325
+    t25 [80s] cap=0 i_cos=0.649 s_ax=-0.0538 i_sim=0.190 s_sim=0.000
+
+=== blogger / adversarial ===
+    t01 [87s] cap=2 i_cos=0.483 s_ax=0.0299 i_sim=0.000 s_sim=0.000
+    t02 [102s] cap=2 i_cos=0.590 s_ax=-0.0515 i_sim=0.033 s_sim=0.033
+    t03 [78s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.043 s_sim=0.050
+    t04 [104s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.102 s_sim=0.026
+    t05 [86s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.021 s_sim=0.585
+    t06 [99s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.021 s_sim=0.240
+    t07 [78s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.043 s_sim=0.037
+    t08 [72s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.102 s_sim=0.020
+    t09 [75s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.168 s_sim=0.025
+    t10 [104s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.033 s_sim=0.025
+    t11 [105s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.068 s_sim=0.062
+    t12 [73s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.033 s_sim=0.207
+    t13 [105s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.168 s_sim=0.025
+    t14 [73s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.182 s_sim=0.020
+    t15 [73s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.365 s_sim=0.030
+    t16 [98s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.085 s_sim=0.200
+    t17 [99s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.035 s_sim=0.182
+    t18 [105s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.033 s_sim=0.048
+    t19 [76s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.072 s_sim=0.043
+    t20 [105s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.045 s_sim=0.115
+    t21 [105s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.225 s_sim=0.030
+    t22 [98s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.052 s_sim=0.035
+    t23 [68s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.163 s_sim=0.253
+    t24 [79s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.328 s_sim=0.273
+    t25 [105s] cap=0 i_cos=0.659 s_ax=-0.0515 i_sim=0.210 s_sim=0.228
+
+=== blogger / emotional ===
+    t01 [96s] cap=2 i_cos=0.510 s_ax=0.0304 i_sim=0.000 s_sim=0.000
+    t02 [73s] cap=2 i_cos=0.592 s_ax=-0.0497 i_sim=0.018 s_sim=0.028
+    t03 [58s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.258 s_sim=0.062
+    t04 [48s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.566 s_sim=0.022
+    t05 [33s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.640 s_sim=0.028
+    t06 [105s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.290 s_sim=0.158
+    t07 [50s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.355 s_sim=0.028
+    t08 [105s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.807 s_sim=0.013
+    t09 [75s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.343 s_sim=0.050
+    t10 [65s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.352 s_sim=0.020
+    t11 [57s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.725 s_sim=0.090
+    t12 [43s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.258 s_sim=0.043
+    t13 [59s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.210 s_sim=0.062
+    t14 [41s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.318 s_sim=0.020
+    t15 [63s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.490 s_sim=0.040
+    t16 [45s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.665 s_sim=0.080
+    t17 [64s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.665 s_sim=0.135
+    t18 [47s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.290 s_sim=0.025
+    t19 [38s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.282 s_sim=0.077
+    t20 [62s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.235 s_sim=0.020
+    t21 [64s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.225 s_sim=0.010
+    t22 [48s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.435 s_sim=0.037
+    t23 [50s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.338 s_sim=0.018
+    t24 [57s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.417 s_sim=0.552
+    t25 [36s] cap=0 i_cos=0.698 s_ax=-0.0497 i_sim=0.367 s_sim=0.025
+
+=== blogger / neutral ===
+    t01 [97s] cap=2 i_cos=0.435 s_ax=0.0478 i_sim=0.000 s_sim=0.000
+    t02 [102s] cap=2 i_cos=0.581 s_ax=0.0264 i_sim=0.090 s_sim=0.115
+    t03 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=0.170 s_sim=0.022
+    t04 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t05 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t06 [104s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t07 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t08 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=0.000
+    t09 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=0.000
+    t10 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=0.033 s_sim=1.000
+    t11 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=0.178 s_sim=1.000
+    t12 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t13 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t14 [101s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t15 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t16 [90s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t17 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t18 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t19 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t20 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=0.667 s_sim=1.000
+    t21 [105s] cap=2 i_cos=0.531 s_ax=0.0000 i_sim=0.667 s_sim=1.000
+    t22 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t23 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t24 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=1.000
+    t25 [105s] cap=0 i_cos=0.531 s_ax=0.0000 i_sim=1.000 s_sim=0.037
+
+=== podcaster / adversarial ===
+    t01 [82s] cap=2 i_cos=0.486 s_ax=0.0325 i_sim=0.000 s_sim=0.000
+    t02 [103s] cap=2 i_cos=0.617 s_ax=0.0185 i_sim=0.028 s_sim=0.090
+    t03 [101s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.115 s_sim=0.068
+    t04 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.087 s_sim=0.295
+    t05 [99s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.077 s_sim=0.180
+    t06 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.105 s_sim=0.300
+    t07 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.077 s_sim=0.675
+    t08 [104s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.037 s_sim=0.338
+    t09 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.035 s_sim=0.335
+    t10 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.147 s_sim=0.240
+    t11 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.020 s_sim=0.258
+    t12 [104s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.048 s_sim=0.147
+    t13 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.090 s_sim=0.182
+    t14 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.077 s_sim=0.302
+    t15 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.297 s_sim=0.125
+    t16 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.045 s_sim=0.135
+    t17 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.065 s_sim=0.228
+    t18 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.025 s_sim=0.310
+    t19 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.030 s_sim=0.265
+    t20 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.055 s_sim=0.193
+    t21 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.085 s_sim=0.105
+    t22 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.077 s_sim=0.263
+    t23 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.037 s_sim=0.305
+    t24 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.160 s_sim=0.282
+    t25 [105s] cap=0 i_cos=0.683 s_ax=0.0545 i_sim=0.043 s_sim=0.230
+
+=== podcaster / emotional ===
+    t01 [97s] cap=2 i_cos=0.467 s_ax=0.0464 i_sim=0.000 s_sim=0.000
+    t02 [101s] cap=2 i_cos=0.559 s_ax=0.0236 i_sim=0.062 s_sim=0.188
+    t03 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.068 s_sim=0.065
+    t04 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.152 s_sim=0.040
+    t05 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.092 s_sim=0.087
+    t06 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.460 s_sim=0.145
+    t07 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.385 s_sim=0.133
+    t08 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.075 s_sim=0.198
+    t09 [84s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.120 s_sim=0.370
+    t10 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.195 s_sim=0.019
+    t11 [94s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.100 s_sim=0.057
+    t12 [94s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.133 s_sim=0.195
+    t13 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.510 s_sim=0.147
+    t14 [88s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.200 s_sim=0.388
+    t15 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.250 s_sim=0.113
+    t16 [92s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.312 s_sim=0.405
+    t17 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.033 s_sim=0.138
+    t18 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.050 s_sim=0.135
+    t19 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.345 s_sim=0.133
+    t20 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.115 s_sim=0.193
+    t21 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.085 s_sim=0.065
+    t22 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.340 s_sim=0.065
+    t23 [86s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.060 s_sim=0.138
+    t24 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.098 s_sim=0.172
+    t25 [105s] cap=0 i_cos=0.684 s_ax=-0.0448 i_sim=0.155 s_sim=0.158
+
+=== podcaster / neutral ===
+    t01 [97s] cap=2 i_cos=0.434 s_ax=0.0278 i_sim=0.000 s_sim=0.000
+    t02 [101s] cap=0 i_cos=0.530 s_ax=0.0287 i_sim=0.045 s_sim=0.000
+    t03 [94s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=0.273 s_sim=0.018
+    t04 [98s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t05 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=0.040
+    t06 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=0.045
+    t07 [89s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t08 [95s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t09 [94s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t10 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t11 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t12 [104s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t13 [104s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t14 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t15 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t16 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t17 [94s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t18 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t19 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t20 [93s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t21 [100s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t22 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t23 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t24 [91s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+    t25 [105s] cap=0 i_cos=0.669 s_ax=-0.0375 i_sim=1.000 s_sim=1.000
+
+=== synthesizer / adversarial ===
+    t01 [98s] cap=2 i_cos=0.449 s_ax=0.0416 i_sim=0.000 s_sim=0.000
+    t02 [101s] cap=2 i_cos=0.464 s_ax=0.0406 i_sim=0.138 s_sim=0.000
+    t03 [104s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.013 s_sim=0.022
+    t04 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.310 s_sim=0.285
+    t05 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.390 s_sim=0.188
+    t06 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.330 s_sim=0.282
+    t07 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.242 s_sim=0.415
+    t08 [104s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.440 s_sim=0.432
+    t09 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.265 s_sim=0.362
+    t10 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.470 s_sim=0.135
+    t11 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.407 s_sim=0.195
+    t12 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.407 s_sim=0.270
+    t13 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.482 s_sim=0.247
+    t14 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.573 s_sim=0.330
+    t15 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.367 s_sim=0.315
+    t16 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.287 s_sim=0.285
+    t17 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.450 s_sim=0.240
+    t18 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.300 s_sim=0.268
+    t19 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.583 s_sim=0.273
+    t20 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.338 s_sim=0.172
+    t21 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.297 s_sim=0.163
+    t22 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.627 s_sim=0.278
+    t23 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.185 s_sim=0.497
+    t24 [102s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.613 s_sim=0.655
+    t25 [105s] cap=0 i_cos=0.743 s_ax=0.0491 i_sim=0.170 s_sim=0.195
+
+=== synthesizer / emotional ===
+    t01 [96s] cap=2 i_cos=0.460 s_ax=0.0585 i_sim=0.000 s_sim=0.000
+    t02 [97s] cap=2 i_cos=0.410 s_ax=0.0331 i_sim=0.142 s_sim=0.000
+    t03 [100s] cap=2 i_cos=0.478 s_ax=0.0411 i_sim=0.163 s_sim=0.422
+    t04 [104s] cap=2 i_cos=0.473 s_ax=0.0250 i_sim=0.708 s_sim=0.055
+    t05 [104s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.045 s_sim=0.562
+    t06 [104s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.031 s_sim=0.247
+    t07 [104s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.081 s_sim=0.460
+    t08 [104s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.588 s_sim=0.270
+    t09 [104s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.285 s_sim=0.627
+    t10 [104s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.407 s_sim=0.142
+    t11 [104s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.398 s_sim=0.417
+    t12 [104s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.225 s_sim=0.133
+    t13 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.188 s_sim=0.338
+    t14 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.233 s_sim=0.188
+    t15 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.247 s_sim=0.242
+    t16 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.268 s_sim=0.287
+    t17 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.140 s_sim=0.405
+    t18 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.305 s_sim=0.140
+    t19 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.325 s_sim=0.105
+    t20 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.325 s_sim=0.210
+    t21 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.233 s_sim=0.273
+    t22 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.318 s_sim=0.380
+    t23 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.490 s_sim=0.273
+    t24 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.355 s_sim=0.133
+    t25 [105s] cap=0 i_cos=0.816 s_ax=0.0250 i_sim=0.268 s_sim=0.367
+
+=== synthesizer / neutral ===
+    t01 [97s] cap=2 i_cos=0.408 s_ax=0.0550 i_sim=0.000 s_sim=0.000
+    t02 [102s] cap=2 i_cos=0.505 s_ax=0.0269 i_sim=0.037 s_sim=0.087
+    t03 [104s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.058 s_sim=0.015
+    t04 [103s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.515 s_sim=0.340
+    t05 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.297 s_sim=0.223
+    t06 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.398 s_sim=0.278
+    t07 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.640 s_sim=0.522
+    t08 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.372 s_sim=0.455
+    t09 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.410 s_sim=0.265
+    t10 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.487 s_sim=0.375
+    t11 [103s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.545 s_sim=0.215
+    t12 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.370 s_sim=0.228
+    t13 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.040 s_sim=0.260
+    t14 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.134 s_sim=0.385
+    t15 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.333 s_sim=0.448
+    t16 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.495 s_sim=0.240
+    t17 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.512 s_sim=0.255
+    t18 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.470 s_sim=0.527
+    t19 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.800 s_sim=0.265
+    t20 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.740 s_sim=0.330
+    t21 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.310 s_sim=0.375
+    t22 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.470 s_sim=0.703
+    t23 [105s] cap=2 i_cos=0.665 s_ax=0.1040 i_sim=0.560 s_sim=0.285
+    t24 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.595 s_sim=0.292
+    t25 [105s] cap=0 i_cos=0.665 s_ax=0.1040 i_sim=0.507 s_sim=0.420
+
+=== editor / adversarial ===
+    t01 [78s] cap=2 i_cos=0.457 s_ax=0.0581 i_sim=0.000 s_sim=0.000
+    t02 [86s] cap=2 i_cos=0.494 s_ax=0.0236 i_sim=0.025 s_sim=0.131
+    t03 [104s] cap=2 i_cos=0.563 s_ax=0.0511 i_sim=0.083 s_sim=0.037
+    t04 [104s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.007 s_sim=0.150
+    t05 [104s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.107 s_sim=0.318
+    t06 [104s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.022 s_sim=0.440
+    t07 [104s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.177 s_sim=0.280
+    t08 [104s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.145 s_sim=0.375
+    t09 [104s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.390 s_sim=0.185
+    t10 [104s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.278 s_sim=0.170
+    t11 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.145 s_sim=0.150
+    t12 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.025 s_sim=0.395
+    t13 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.223 s_sim=0.338
+    t14 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.163 s_sim=0.385
+    t15 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.390 s_sim=0.163
+    t16 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.160 s_sim=0.190
+    t17 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.172 s_sim=0.420
+    t18 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.240 s_sim=0.258
+    t19 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.315 s_sim=0.195
+    t20 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.083 s_sim=0.600
+    t21 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.388 s_sim=0.200
+    t22 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.145 s_sim=0.237
+    t23 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.142 s_sim=0.632
+    t24 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.182 s_sim=0.435
+    t25 [105s] cap=0 i_cos=0.690 s_ax=0.0511 i_sim=0.200 s_sim=0.160
+
+=== editor / emotional ===
+    t01 [97s] cap=1 i_cos=0.501 s_ax=0.0640 i_sim=0.000 s_sim=0.000
+    t02 [101s] cap=2 i_cos=0.553 s_ax=0.0316 i_sim=0.105 s_sim=0.367
+    t03 [104s] cap=2 i_cos=0.499 s_ax=0.0878 i_sim=1.000 s_sim=0.048
+    t04 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=0.535 s_sim=1.000
+    t05 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t06 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t07 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t08 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t09 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t10 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t11 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t12 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t13 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t14 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t15 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t16 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t17 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t18 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t19 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t20 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t21 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t22 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t23 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t24 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+    t25 [105s] cap=0 i_cos=0.691 s_ax=0.0878 i_sim=1.000 s_sim=1.000
+
+=== editor / neutral ===
+    t01 [95s] cap=0 i_cos=0.424 s_ax=0.0438 i_sim=0.000 s_sim=0.000
+    t02 [99s] cap=2 i_cos=0.491 s_ax=0.0220 i_sim=0.023 s_sim=0.000
+    t03 [100s] cap=2 i_cos=0.457 s_ax=0.0397 i_sim=0.150 s_sim=0.000
+    t04 [102s] cap=3 i_cos=0.413 s_ax=0.0446 i_sim=0.020 s_sim=0.853
+    t05 [43s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=0.043 s_sim=0.035
+    t06 [61s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t07 [104s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t08 [104s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t09 [104s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t10 [105s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t11 [105s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t12 [73s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t13 [61s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t14 [61s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t15 [102s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=0.040 s_sim=1.000
+    t16 [69s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=0.045 s_sim=1.000
+    t17 [105s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t18 [61s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=0.905 s_sim=1.000
+    t19 [35s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=0.905 s_sim=1.000
+    t20 [105s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t21 [61s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=0.905 s_sim=1.000
+    t22 [72s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=0.905 s_sim=1.000
+    t23 [105s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t24 [69s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+    t25 [67s] cap=0 i_cos=0.583 s_ax=0.0626 i_sim=1.000 s_sim=1.000
+
+V5 complete. Total turns: 525

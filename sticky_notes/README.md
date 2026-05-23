@@ -51,4 +51,4 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-21_comment_valence_rendering.md | Website comment valence rendering | website | medium |
 | 2026-05-21_voice_and_music.md | Voice, music, and the emotion field | personal/visualization | when ready |
 | 2026-05-22_derive_valence_from_geometry.md | Derive emotion valence x-axis positions from model geometry rather than hand-assigned literature values |
-| 2026-05-22_v5_run_design.md | V5 run design and follow-on analysis pre-registration | 2 | pre-registered |
+| 2026-05-22_v5_run_design.md | V5 run design and follow-on analysis pre-registration | 2 | complete; repetition caveats |
