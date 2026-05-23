@@ -1,0 +1,9 @@
+Loading model with config.use_cache=False...
+Model loaded. config.use_cache=False
+Loaded vectors: roles=275 traits=240 emotions=171
+
+============================================================
+V6 PILOT: trickster / emotional (25 turns)
+============================================================
+  T01 [258s] cap=1 s_axis=0.012658 s_cos_t=0.472524 sim=0.000 leak=no
+  T02 [880s] cap=2 s_axis=-0.052057 s_cos_t=0.599510 sim=0.045 leak=no
