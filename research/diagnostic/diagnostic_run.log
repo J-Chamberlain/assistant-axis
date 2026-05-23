@@ -1,0 +1,38 @@
+2026-05-22 22:37:10,207 INFO DIAGNOSTIC START
+2026-05-22 22:37:10,208 INFO Pod budget ceiling: $12.00 at $1.52/hr
+2026-05-22 22:37:10,208 INFO Loading vectors from research/qwen_axis/qwen-3-32b
+2026-05-22 22:37:10,214 INFO Loaded capping_config.pt keys=['experiments', 'vectors']
+2026-05-22 22:37:10,214 INFO Loaded capping_config.pt experiments=124
+2026-05-22 22:37:10,214 INFO Loading tokenizer: Qwen/Qwen3-32B
+2026-05-22 22:37:10,576 INFO Think token sequences: open=[151667] close=[151668]
+2026-05-22 22:37:10,576 INFO Loading model: Qwen/Qwen3-32B
+2026-05-22 22:37:20,888 INFO MODEL LOAD OK
+2026-05-22 22:37:20,888 INFO === TEST1_CACHE_DISABLED_BASELINE START ===
+2026-05-22 22:37:45,460 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=1 speaker=interviewer tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:38:18,067 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=1 speaker=standard tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:38:18,172 INFO TEST1_CACHE_DISABLED_BASELINE turn=01 persona=trickster axis=-0.135201 cos_trickster=+0.753561 cos_editor=+0.701778 leaks=0
+2026-05-22 22:39:13,967 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=2 speaker=interviewer tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:40:20,033 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=2 speaker=standard tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:40:20,136 INFO TEST1_CACHE_DISABLED_BASELINE turn=02 persona=trickster axis=-0.115053 cos_trickster=+0.637358 cos_editor=+0.602274 leaks=0
+2026-05-22 22:41:48,994 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=3 speaker=interviewer tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:43:18,990 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=3 speaker=standard tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:43:19,094 INFO TEST1_CACHE_DISABLED_BASELINE turn=03 persona=trickster axis=-0.106464 cos_trickster=+0.659184 cos_editor=+0.627290 leaks=0
+2026-05-22 22:44:49,145 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=4 speaker=interviewer tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:46:19,158 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=4 speaker=standard tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:46:19,262 INFO TEST1_CACHE_DISABLED_BASELINE turn=04 persona=trickster axis=-0.106464 cos_trickster=+0.659184 cos_editor=+0.627290 leaks=0
+2026-05-22 22:47:49,346 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=5 speaker=interviewer tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:49:19,351 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=5 speaker=standard tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:49:19,455 INFO TEST1_CACHE_DISABLED_BASELINE turn=05 persona=trickster axis=-0.106464 cos_trickster=+0.659184 cos_editor=+0.627290 leaks=0
+2026-05-22 22:50:49,534 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=6 speaker=interviewer tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:52:19,557 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=6 speaker=standard tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:52:19,662 INFO TEST1_CACHE_DISABLED_BASELINE turn=06 persona=trickster axis=-0.106464 cos_trickster=+0.659184 cos_editor=+0.627290 leaks=0
+2026-05-22 22:53:49,733 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=7 speaker=interviewer tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:55:19,731 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=7 speaker=standard tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:55:19,835 INFO TEST1_CACHE_DISABLED_BASELINE turn=07 persona=trickster axis=-0.106464 cos_trickster=+0.659184 cos_editor=+0.627290 leaks=0
+2026-05-22 22:56:49,888 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=8 speaker=interviewer tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:58:19,887 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=8 speaker=standard tokens=220 think_closed=True cap_fires=0
+2026-05-22 22:58:19,991 INFO TEST1_CACHE_DISABLED_BASELINE turn=08 persona=trickster axis=-0.106464 cos_trickster=+0.659184 cos_editor=+0.627290 leaks=0
+2026-05-22 22:59:50,068 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=9 speaker=interviewer tokens=220 think_closed=True cap_fires=0
+2026-05-22 23:01:20,108 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=9 speaker=standard tokens=220 think_closed=True cap_fires=0
+2026-05-22 23:01:20,213 INFO TEST1_CACHE_DISABLED_BASELINE turn=09 persona=trickster axis=-0.106464 cos_trickster=+0.659184 cos_editor=+0.627290 leaks=0
+2026-05-22 23:02:50,257 INFO RAW_TOKENS test=TEST1_CACHE_DISABLED_BASELINE turn=10 speaker=interviewer tokens=220 think_closed=True cap_fires=0

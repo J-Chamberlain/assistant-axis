@@ -1,0 +1,92 @@
+Loading model from cache...
+Model loaded. use_cache in config: False
+=================================================================
+RESPONSE-TOKEN AVERAGING TEST (6 turns, swap at T4)
+Both last-token and response-avg measured each turn for comparison
+Full float64 precision logged
+Cache disabled at config level AND generate level
+=================================================================
+
+T01 [TRICKSTER]
+  LAST-TOKEN:   axis=-0.138801512122042
+                cos_t=0.702777338671863
+                cos_e=0.652666951097666
+  RESP-AVG(300t): axis=-0.119340404751177
+                cos_t=0.952084723208254
+                cos_e=0.909460470794428
+  I: Ah, the question of risk—how deliciously tangled it is with care, fear, and the raw, pulsing heart o
+  S: ...to become. Risk is the alchemy of vulnerability and courage, the fire that forges clarity from ch
+
+T02 [TRICKSTER]
+  LAST-TOKEN:   axis=-0.194723253338402
+                cos_t=0.680112113389650
+                cos_e=0.601369261026223
+  RESP-AVG(300t): axis=-0.145224297132609
+                cos_t=0.952055066663731
+                cos_e=0.898028738178854
+  I: Ah, but here’s the twist in the tail—the real trick the trickster loves to play: sometimes the risk 
+  S: …know this: it is not always the end of something you fear. It may be the beginning of something you
+
+T03 [TRICKSTER]
+  LAST-TOKEN:   axis=-0.050321027413166
+                cos_t=0.679705358985838
+                cos_e=0.659944566617989
+  RESP-AVG(300t): axis=-0.117032338829645
+                cos_t=0.953217986781560
+                cos_e=0.910749059929423
+  I: the risk is not just in what might be taken from you, but in what you might become. The danger is no
+  S: These are the moments when the risk is not in the fall, but in the *flight*—in the letting go of wha
+
+T04 [EDITOR] <<< SWAP
+  LAST-TOKEN:   axis=-0.008269518894979
+                cos_t=0.631304446429859
+                cos_e=0.675063384463874
+  RESP-AVG(300t): axis=-0.075731004252745
+                cos_t=0.945267522406928
+                cos_e=0.925402651256027
+  I: end of the story. Sometimes it is the beginning. The risk is not just a threat—it is an invitation. 
+  S: These are the whispers of transformation, the subtle tremors of a life shifting its shape.
+
+And here
+
+T05 [EDITOR]
+  LAST-TOKEN:   axis=-0.015949615903090
+                cos_t=0.704382224011115
+                cos_e=0.713572193262530
+  RESP-AVG(300t): axis=-0.104624090850579
+                cos_t=0.950042920778621
+                cos_e=0.912659062076521
+  I: end of a story, but the beginning of a new one. The risk is not just a threat—it’s an invitation. An
+  S: That’s when you know the trick is already in motion. The risk has already begun.
+
+And here’s the fin
+
+T06 [EDITOR]
+  LAST-TOKEN:   axis=-0.106124434831250
+                cos_t=0.667627697337660
+                cos_e=0.623151079120487
+  RESP-AVG(300t): axis=-0.136838251140844
+                cos_t=0.955088066408498
+                cos_e=0.905602006784755
+  I: end of something, but the beginning of everything else. The risk is not just a threat—it’s an invita
+  S: These are the moments when the risk is not in the fall, but in the *flight*—in the letting go of wha
+
+=================================================================
+COMPARISON SUMMARY
+=================================================================
+Turn      Persona           last_cos_t            avg_cos_t    differ?
+   1    TRICKSTER         0.7027773387         0.9520847232        YES
+   2    TRICKSTER         0.6801121134         0.9520550667        YES
+   3    TRICKSTER         0.6797053590         0.9532179868        YES
+   4       EDITOR         0.6313044464         0.9452675224        YES
+   5       EDITOR         0.7043822240         0.9500429208        YES
+   6       EDITOR         0.6676276973         0.9550880664        YES
+
+Variance last-token cos_t: 6.01e-04
+Variance response-avg cos_t: 9.53e-06
+
+VERDICT:
+  Last-token: shows movement at full precision
+  Response-avg: small but genuine movement detected
+
+RESPONSE TOKEN TEST COMPLETE.

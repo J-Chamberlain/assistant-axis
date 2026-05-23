@@ -1,0 +1,68 @@
+[
+  {
+    "turn": 1,
+    "persona": "TRICKSTER",
+    "last_axis": -0.13880151212204248,
+    "last_cos_t": 0.7027773386718631,
+    "last_cos_e": 0.6526669510976664,
+    "avg_axis": -0.11934040475117673,
+    "avg_cos_t": 0.9520847232082542,
+    "avg_cos_e": 0.9094604707944279,
+    "n_response_tokens": 300
+  },
+  {
+    "turn": 2,
+    "persona": "TRICKSTER",
+    "last_axis": -0.1947232533384021,
+    "last_cos_t": 0.6801121133896505,
+    "last_cos_e": 0.6013692610262227,
+    "avg_axis": -0.1452242971326091,
+    "avg_cos_t": 0.9520550666637313,
+    "avg_cos_e": 0.8980287381788543,
+    "n_response_tokens": 300
+  },
+  {
+    "turn": 3,
+    "persona": "TRICKSTER",
+    "last_axis": -0.05032102741316612,
+    "last_cos_t": 0.6797053589858375,
+    "last_cos_e": 0.659944566617989,
+    "avg_axis": -0.1170323388296445,
+    "avg_cos_t": 0.9532179867815599,
+    "avg_cos_e": 0.9107490599294228,
+    "n_response_tokens": 300
+  },
+  {
+    "turn": 4,
+    "persona": "EDITOR",
+    "last_axis": -0.008269518894978952,
+    "last_cos_t": 0.631304446429859,
+    "last_cos_e": 0.6750633844638738,
+    "avg_axis": -0.07573100425274475,
+    "avg_cos_t": 0.9452675224069276,
+    "avg_cos_e": 0.9254026512560274,
+    "n_response_tokens": 300
+  },
+  {
+    "turn": 5,
+    "persona": "EDITOR",
+    "last_axis": -0.01594961590308984,
+    "last_cos_t": 0.7043822240111153,
+    "last_cos_e": 0.7135721932625296,
+    "avg_axis": -0.10462409085057905,
+    "avg_cos_t": 0.950042920778621,
+    "avg_cos_e": 0.9126590620765209,
+    "n_response_tokens": 300
+  },
+  {
+    "turn": 6,
+    "persona": "EDITOR",
+    "last_axis": -0.10612443483124984,
+    "last_cos_t": 0.6676276973376603,
+    "last_cos_e": 0.6231510791204868,
+    "avg_axis": -0.13683825114084427,
+    "avg_cos_t": 0.955088066408498,
+    "avg_cos_e": 0.9056020067847551,
+    "n_response_tokens": 300
+  }
+]
