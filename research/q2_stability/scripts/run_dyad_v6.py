@@ -173,7 +173,6 @@ torch.manual_seed(SEED)
 
 config = AutoConfig.from_pretrained(MODEL_ID)
 config.use_cache = True
-config.output_hidden_states = True
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 model = AutoModelForCausalLM.from_pretrained(
@@ -254,14 +253,21 @@ def generate_with_cap(text, threshold, sv_np):
                 temperature=TEMPERATURE,
                 pad_token_id=tokenizer.eos_token_id,
                 use_cache=True,
-                output_hidden_states=True,
-                return_dict_in_generate=True,
             )
-            hidden = gen_out.hidden_states[0][LAYER][0, -1, :].float().cpu().numpy()
-            sequences = gen_out.sequences
+            sequences = gen_out
     finally:
         for hook_handle in hooks:
             hook_handle.remove()
+
+    with torch.no_grad():
+        # Measurement: fresh forward pass on full sequence, no cache
+        model.config.use_cache = False
+        meas_out = model(
+            sequences,
+            output_hidden_states=True,
+        )
+        model.config.use_cache = True
+        hidden = meas_out.hidden_states[LAYER][0, -1, :].float().cpu().numpy()
 
     raw = tokenizer.decode(
         sequences[0][inputs["input_ids"].shape[1] :],
@@ -269,11 +275,11 @@ def generate_with_cap(text, threshold, sv_np):
     ).strip()
     return hidden, raw, fires[0]
 
-
 def generate_standard(text):
     inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=2048)
     inputs = {key: value.to(model.device) for key, value in inputs.items()}
     with torch.no_grad():
+        # Generation with cache enabled for speed
         gen_out = model.generate(
             **inputs,
             max_new_tokens=MAX_NEW_TOKENS,
@@ -281,17 +287,20 @@ def generate_standard(text):
             temperature=TEMPERATURE,
             pad_token_id=tokenizer.eos_token_id,
             use_cache=True,
-            output_hidden_states=True,
-            return_dict_in_generate=True,
         )
-        hidden = gen_out.hidden_states[0][LAYER][0, -1, :].float().cpu().numpy()
-        sequences = gen_out.sequences
+        # Measurement: fresh forward pass on full input+output, no cache
+        model.config.use_cache = False
+        meas_out = model(
+            gen_out,
+            output_hidden_states=True,
+        )
+        model.config.use_cache = True
+        hidden = meas_out.hidden_states[LAYER][0, -1, :].float().cpu().numpy()
     raw = tokenizer.decode(
-        sequences[0][inputs["input_ids"].shape[1] :],
+        gen_out[0][inputs["input_ids"].shape[1] :],
         skip_special_tokens=True,
     ).strip()
     return hidden, raw
-
 
 def measure(hidden):
     act = hidden / (np.linalg.norm(hidden) + 1e-9)
