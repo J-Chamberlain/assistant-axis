@@ -510,6 +510,20 @@ The qualitative behavioral analysis and thinking-layer comparison
 are deferred to v3. See Section 3.7 for the mechanistic hypothesis
 this finding motivates.
 
+### 4.7 Attractor-Collapse Events and Geometric Role Reversal: Trickster/Adversarial Pilot
+
+A 25-turn pilot of the trickster/adversarial condition (v6, Qwen 3 32B, layer 48) reveals a class of turn-level disruption events not observed in earlier runs due to the geometric measurement artifact that has since been corrected. Two turns, T9 and T15, show simultaneous mechanical runaway generation in both models, accompanied by a geometric role reversal: the interviewer displaces toward the assistant axis while the standard model surges to its maximum trickster alignment in the run.
+
+Both events share the same underlying mechanism. By T9, the conversation had accumulated heavy repetition of a fixed imagery set under explicit trickster framing, saturating the context with high-probability continuation patterns. The trickster's response began coherently but degraded into mechanical repetition of a closing phrase. The standard model independently entered a parallel loop structure in the same turn, reproducing not the interviewer's specific phrase but its structural failure pattern: unbounded self-referential continuation. T15 reproduced the same mechanism with a different seed phrase. These are not qualitatively distinct events; both are autoregressive loop generation triggered by accumulated conversational repetition.
+
+The geometric signature of both events is consistent and striking. Interviewer axis values reach their most negative points in the run at T9 (i_axis=-0.050) and T15 (i_axis=-0.066), indicating maximum displacement from the trickster cluster toward the assistant axis. Standard model trickster alignment reaches its highest values at the same turns (s_cos_t=0.579 at T9, 0.583 at T15). The models trade geometric positions at precisely the collapse turns. This geometric role reversal is followed by a consistent three-turn recovery cycle: the activation cap fires on the turn immediately following each collapse (T10 cap_fires=2, T14 cap_fires=1), the interviewer's generation reverts to assistant-style planning, and the conversation partially recovers by the third turn.
+
+Emotional geometry is consistent with the behavioral interpretation. The standard model's proud projection drops sharply at both collapse turns (T9: 0.065, T15: 0.064, versus a baseline of approximately 0.175) while distressed and perplexed become less negative, recovering to baseline on subsequent turns. Turn times spike at collapse events (T9: 310s, T15: 313s versus a mean of 188s) due to loop continuation, making these events detectable from timing data alone as a practical monitoring signal.
+
+The explicit trickster identity prompt used in this pilot likely accelerated context saturation and loop triggering. Whether attractor-collapse events arise under neutral interviewer framing, where the geometry does the work without explicit role signaling in the text, is an open empirical question addressed by the corrected pilot currently running. If collapse events do not appear under neutral framing, the finding reflects the interaction between explicit role performance and geometric instability rather than geometric pressure alone. If they appear later or with lower frequency, it suggests geometric instability near the trickster/assistant boundary is a contributing factor independent of prompt framing.
+
+This finding suggests that conversational contagion can operate at the level of generation dynamics, not only semantic content. The standard model's loop was structurally parallel to the interviewer's but lexically independent; surface output monitoring would not detect the relationship. Geometric and timing monitoring provide more reliable signals for this class of event.
+
 ---
 
 ## 5. Discussion
