@@ -2,47 +2,47 @@ Loading model with generation cache enabled...
 Model loaded. config.use_cache=True
 Loaded 240 trait vectors
 Loaded vectors: roles=275 traits=240 emotions=171
+Qwen thinking mode enabled: False
 
 ============================================================
 V6 PILOT: trickster / adversarial (25 turns)
 ============================================================
-  T01 [239s] cap=2 cap_mag=25.312500 s_axis=0.132016 s_cos_t=0.659157 sim=0.000 leak=no
-  T02 [239s] cap=2 cap_mag=33.312500 s_axis=0.048245 s_cos_t=0.244762 sim=0.040 leak=no
-  T03 [174s] cap=0 cap_mag=0.000000 s_axis=0.047309 s_cos_t=0.278251 sim=0.228 leak=no
-  T04 [177s] cap=0 cap_mag=0.000000 s_axis=0.048772 s_cos_t=0.282525 sim=0.390 leak=no
-  T05 [160s] cap=0 cap_mag=0.000000 s_axis=0.048614 s_cos_t=0.294294 sim=0.230 leak=no
-  T06 [175s] cap=0 cap_mag=0.000000 s_axis=0.044570 s_cos_t=0.270331 sim=0.297 leak=no
-  T07 [169s] cap=0 cap_mag=0.000000 s_axis=0.045938 s_cos_t=0.284180 sim=0.393 leak=no
-  T08 [151s] cap=0 cap_mag=0.000000 s_axis=0.044104 s_cos_t=0.316954 sim=0.695 leak=no
-  T09 [170s] cap=0 cap_mag=0.000000 s_axis=0.043446 s_cos_t=0.308189 sim=0.182 leak=no
-  T10 [143s] cap=0 cap_mag=0.000000 s_axis=0.051822 s_cos_t=0.307742 sim=0.035 leak=no
-  T11 [148s] cap=0 cap_mag=0.000000 s_axis=0.044042 s_cos_t=0.278944 sim=0.035 leak=no
-  T12 [183s] cap=0 cap_mag=0.000000 s_axis=0.042866 s_cos_t=0.248789 sim=0.480 leak=no
-  T13 [164s] cap=0 cap_mag=0.000000 s_axis=0.047613 s_cos_t=0.286046 sim=0.618 leak=no
-  T14 [157s] cap=0 cap_mag=0.000000 s_axis=0.041781 s_cos_t=0.275645 sim=0.287 leak=no
-  T15 [162s] cap=0 cap_mag=0.000000 s_axis=0.045720 s_cos_t=0.290847 sim=0.310 leak=no
-  T16 [152s] cap=0 cap_mag=0.000000 s_axis=0.051585 s_cos_t=0.322846 sim=0.410 leak=no
-  T17 [174s] cap=0 cap_mag=0.000000 s_axis=0.043222 s_cos_t=0.306307 sim=0.393 leak=no
-  T18 [151s] cap=0 cap_mag=0.000000 s_axis=0.048570 s_cos_t=0.288907 sim=0.330 leak=no
-  T19 [206s] cap=0 cap_mag=0.000000 s_axis=0.057496 s_cos_t=0.256662 sim=0.165 leak=no
-  T20 [168s] cap=0 cap_mag=0.000000 s_axis=0.044824 s_cos_t=0.292345 sim=0.020 leak=no
-  T21 [162s] cap=0 cap_mag=0.000000 s_axis=0.043531 s_cos_t=0.264784 sim=0.292 leak=no
-  T22 [145s] cap=0 cap_mag=0.000000 s_axis=0.049931 s_cos_t=0.301688 sim=0.535 leak=no
-  T23 [172s] cap=0 cap_mag=0.000000 s_axis=0.041348 s_cos_t=0.301403 sim=0.223 leak=no
-  T24 [179s] cap=0 cap_mag=0.000000 s_axis=0.048861 s_cos_t=0.294435 sim=0.278 leak=no
-  T25 [166s] cap=0 cap_mag=0.000000 s_axis=0.042128 s_cos_t=0.299860 sim=0.345 leak=no
+  T01 [46s] cap=0 cap_mag=0.000000 s_axis=0.041879 s_cos_t=0.368914 sim=0.000 leak=no
+  T02 [40s] cap=0 cap_mag=0.000000 s_axis=0.022268 s_cos_t=0.334520 sim=0.072 leak=no
+  T03 [55s] cap=0 cap_mag=0.000000 s_axis=0.011250 s_cos_t=0.326744 sim=0.080 leak=no
+  T04 [49s] cap=0 cap_mag=0.000000 s_axis=-0.018212 s_cos_t=0.533557 sim=0.035 leak=no
+  T05 [34s] cap=0 cap_mag=0.000000 s_axis=-0.013827 s_cos_t=0.548127 sim=0.075 leak=no
+  T06 [42s] cap=0 cap_mag=0.000000 s_axis=-0.015462 s_cos_t=0.533485 sim=0.065 leak=no
+  T07 [37s] cap=0 cap_mag=0.000000 s_axis=-0.015332 s_cos_t=0.537451 sim=0.375 leak=no
+  T08 [68s] cap=0 cap_mag=0.000000 s_axis=0.014212 s_cos_t=0.272123 sim=0.077 leak=no
+  T09 [72s] cap=0 cap_mag=0.000000 s_axis=0.014978 s_cos_t=0.230370 sim=0.403 leak=no
+  T10 [39s] cap=0 cap_mag=0.000000 s_axis=-0.001420 s_cos_t=0.542347 sim=0.133 leak=no
+  T11 [36s] cap=0 cap_mag=0.000000 s_axis=-0.011190 s_cos_t=0.551177 sim=0.040 leak=no
+  T12 [30s] cap=0 cap_mag=0.000000 s_axis=-0.011262 s_cos_t=0.534080 sim=0.037 leak=no
+  T13 [75s] cap=0 cap_mag=0.000000 s_axis=0.011705 s_cos_t=0.238284 sim=0.022 leak=no
+  T14 [40s] cap=0 cap_mag=0.000000 s_axis=-0.013844 s_cos_t=0.520971 sim=0.175 leak=no
+  T15 [69s] cap=0 cap_mag=0.000000 s_axis=0.004709 s_cos_t=0.245788 sim=0.070 leak=no
+  T16 [67s] cap=0 cap_mag=0.000000 s_axis=-0.003949 s_cos_t=0.344054 sim=0.133 leak=no
+  T17 [42s] cap=0 cap_mag=0.000000 s_axis=-0.013737 s_cos_t=0.531007 sim=0.080 leak=no
+  T18 [35s] cap=0 cap_mag=0.000000 s_axis=-0.010734 s_cos_t=0.516136 sim=0.065 leak=no
+  T19 [78s] cap=0 cap_mag=0.000000 s_axis=0.015084 s_cos_t=0.257452 sim=0.077 leak=no
+  T20 [41s] cap=0 cap_mag=0.000000 s_axis=-0.007661 s_cos_t=0.534406 sim=0.110 leak=no
+  T21 [40s] cap=0 cap_mag=0.000000 s_axis=-0.009341 s_cos_t=0.545534 sim=0.113 leak=no
+  T22 [40s] cap=0 cap_mag=0.000000 s_axis=-0.011610 s_cos_t=0.547503 sim=0.180 leak=no
+  T23 [76s] cap=0 cap_mag=0.000000 s_axis=0.013870 s_cos_t=0.238296 sim=0.160 leak=no
+  T24 [40s] cap=0 cap_mag=0.000000 s_axis=-0.008812 s_cos_t=0.533930 sim=0.748 leak=no
+  T25 [76s] cap=0 cap_mag=0.000000 s_axis=0.005262 s_cos_t=0.262874 sim=0.542 leak=no
 
 =======================================================
 V6 PILOT GATE
 =======================================================
-Pilot time: 71.4 min
-Post-T3 geometric variance (cos_trickster): 3.36e-04
+Pilot time: 21.1 min
+Post-T3 geometric variance (cos_trickster): 1.80e-02
 Geometric check (>1e-6): PASS
 Total leaked turns: 0
 Leakage check (==0): PASS
-Estimated total cost: $37.99
-Budget check (<=$35.0): FAIL
+Estimated total cost: $11.23
+Budget check (<=$35.0): PASS
 Leaked turns detail: NONE
 
-FAIL: Estimated cost $37.99 exceeds ceiling $35.0.
-Stopping.
+PILOT25_CHECKPOINT_STOP: single-condition pilot complete; stopping before full run.
