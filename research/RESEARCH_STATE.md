@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-24
-**Last commit:** 82f5675
-**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1 synthesized directly and saved with corrected GPT-5.5 model metadata; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
+**Last commit:** 3d85f91
+**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1 and v2 saved for comparison; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
 
@@ -158,7 +158,8 @@
 **Completed this session:** Synthesized seven non-leaking interviewer background prompts directly from role instructions and trait-space profiles, validated them against role names, cluster labels, and trait labels, and saved `research/q2_stability/qwen/outputs/calibration/cluster_background_prompts_v1.json`.
 **Completed this session:** Added the Codex analytical-work model specification to `AGENTS.md` and corrected `cluster_background_prompts_v1.json` model metadata to `GPT-5.3-Codex`.
 **Completed this session:** Updated the Codex analytical-work model specification to `GPT-5.5` and corrected `cluster_background_prompts_v1.json` model metadata to `GPT-5.5`.
-**Next step:** Review and approve `cluster_background_prompts_v1.json`, then append the cluster synthesis methodology section to `research/paper2_methods_v2.md`.
+**Completed this session:** Reran cluster synthesis as GPT-5.5 from `cluster_synthesis_inputs.json`, saved `cluster_background_prompts_v2.json`, and updated v1 model provenance to note the retroactive correction.
+**Next step:** Review v1 versus v2 prompts, choose the canonical background prompt version for dyad experiments, then append the cluster synthesis methodology section to `research/paper2_methods_v2.md`.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
-**Last commit before this session:** 82f5675
+**Last commit before this session:** 3d85f91
