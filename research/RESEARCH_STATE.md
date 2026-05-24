@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-24
-**Last commit:** 8bdb7c0
-**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
+**Last commit:** cefac46
+**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found locally; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
 
@@ -151,7 +151,9 @@
 **Completed this session:** Terminated the stopped RunPod A100 SXM pod `professional_sapphire_peafowl` after the interrupted recalibration attempt.
 **Completed this session:** Audited the interrupted recalibration status and confirmed that `actor_calibration.csv`, `hoarder_calibration.csv`, `maverick_calibration.csv`, and `all_personas_calibration_summary_v2.json` do not exist locally.
 **Completed this session:** Confirmed that `research/paper2_methods_v2.md`, `research/q2_stability/README.md`, and `research/q2_stability/qwen/outputs/calibration/CENTROID_NOTE.md` are present from prior committed work.
-**Next step:** Resume with the Qwen recalibration task from the beginning: spin up a fresh A100 80GB pod, run calibration only for actor, hoarder, and maverick, then write `all_personas_calibration_summary_v2.json`.
+**Completed this session:** Audited Lu et al. prompt/transcript availability and found local role instruction JSONs for all seven v2 personas under `data/roles/instructions/`, each with five positive system prompts and 40 role-specific questions.
+**Completed this session:** Confirmed that `downloads/hf_vectors/` and the HuggingFace cache contain vector tensors and metadata only, while local transcripts under `transcripts/` are paper case studies/persona-drift examples rather than seven-role extraction rollouts.
+**Next step:** Use `data/roles/instructions/{editor,synthesizer,actor,ancient,trickster,hoarder,maverick}.json` as the available prompt seed material for non-leaking interviewer prompt design, while treating full extraction-response rollout transcripts as not found locally.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
-**Last commit before this session:** 8bdb7c0
+**Last commit before this session:** cefac46
