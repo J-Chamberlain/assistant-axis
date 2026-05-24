@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-24
-**Last commit:** 3570d43
-**Current status:** Active — Paper 2 methodology v2 created; v6 pilot outputs present; full 21-condition v6 grid not present locally
+**Last commit:** 74b8281
+**Current status:** Active — Paper 2 methodology v2 created; persona representative provenance audited; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
 
@@ -132,13 +132,19 @@
 - v3 and v4 dyad outputs contain 45 interviewer turns per persona across adversarial, emotional, and neutral conditions, but many clean interviewer outputs explicitly disclose persona or role identity, especially trickster, synthesizer, ancient, and podcaster
 - Phase 1 prompt design can use existing material as seed style evidence, but a controlled clean corpus generation step is recommended before treating any corpus as final non-leaking prompt source material
 
+### Persona Representative Provenance (2026-05-24, confirmed)
+- The seven Q2 persona representatives were selected by `research/q2_stability/scripts/find_centroid_reps.py` from Gemma 2 27B role vectors at layer 45, using `visualizations/full_ranking.csv` cluster assignments and writing `research/q2_stability/outputs/centroid_representatives.txt`
+- Qwen-specific calibration exists for those same named personas at layer 48, but no documented Qwen-specific reclustering or centroid-nearest representative selection exists in the repo
+- Cross-model Qwen/Gemma ranking comparisons exist, but they do not validate that the seven Gemma-derived representatives are near-centroid in Qwen space
+- Methodological implication: dyad experiments should describe these as Gemma-derived persona representatives applied to Qwen and calibrated in Qwen, not as Qwen-native cluster centroids, unless a Qwen-specific clustering and centroid selection step is added
+
 ---
 
 ## 3. CURRENT STATE
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.
-**Completed this session:** Completed Phase 0 corpus audit across calibration outputs, broad research text/CSV/JSON matches, and v3/v4 dyad directories without writing new analysis files.
-**Next step:** Use the Gemma calibration previews and v3/v4 dyad outputs as seed evidence for persona style, but run or design a controlled clean corpus generation step before final non-leaking interviewer prompt distillation.
+**Completed this session:** Completed a read-only provenance audit showing that the seven Q2 persona representatives were selected from Gemma 2 27B cluster geometry, then calibrated in Qwen, rather than selected as Qwen-native centroids.
+**Next step:** Reframe Paper 2 methodology language to call the seven roles Gemma-derived persona representatives applied to Qwen, or run a Qwen-specific cluster and centroid selection step before making Qwen-native centroid claims.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** Unknown from local Mac Mini audit; latest local v6 logs show pilot checkpoint stops, and forced-cap pilot stopped after failing geometry and budget gates.
-**Last commit before this session:** 138e2de
+**Last commit before this session:** 74b8281
