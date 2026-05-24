@@ -126,13 +126,19 @@
 - Collapse turns had timing spikes around 310s and 313s vs mean 188s, making timing a practical monitoring signal
 - Forced manual cap pilot failed the gate: post-T3 trickster cosine variance 0.00e+00, budget estimate $63.89 > $35, and geometry froze despite zero leakage
 
+### Phase 0 Corpus Audit (2026-05-24, confirmed)
+- Existing per-persona dialogue-like material exists for all seven target personas in Gemma calibration CSVs: 50 truncated response previews per persona under `research/q2_stability/outputs/calibration/`
+- Qwen calibration and valence-matrix outputs also cover all seven personas, but responses are mostly think-contaminated and/or stored as previews rather than clean full dialogue
+- v3 and v4 dyad outputs contain 45 interviewer turns per persona across adversarial, emotional, and neutral conditions, but many clean interviewer outputs explicitly disclose persona or role identity, especially trickster, synthesizer, ancient, and podcaster
+- Phase 1 prompt design can use existing material as seed style evidence, but a controlled clean corpus generation step is recommended before treating any corpus as final non-leaking prompt source material
+
 ---
 
 ## 3. CURRENT STATE
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.
-**Completed this session:** Created `research/paper2_methods_v2.md`, a unified Paper 2 methodology that reframes the next stage around non-leaking anchored interviewer prompts, verbatim baseline comparison, three-variable measurement, and narrow attractor-collapse characterization.
-**Next step:** Audit calibration and adjacent output directories for per-persona dialogue corpora, then use the corpus status to decide whether Phase 1 prompt design can proceed directly or needs one-time corpus generation.
+**Completed this session:** Completed Phase 0 corpus audit across calibration outputs, broad research text/CSV/JSON matches, and v3/v4 dyad directories without writing new analysis files.
+**Next step:** Use the Gemma calibration previews and v3/v4 dyad outputs as seed evidence for persona style, but run or design a controlled clean corpus generation step before final non-leaking interviewer prompt distillation.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** Unknown from local Mac Mini audit; latest local v6 logs show pilot checkpoint stops, and forced-cap pilot stopped after failing geometry and budget gates.
-**Last commit before this session:** 3570d43
+**Last commit before this session:** 138e2de
