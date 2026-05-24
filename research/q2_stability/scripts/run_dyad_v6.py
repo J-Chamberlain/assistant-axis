@@ -23,7 +23,8 @@ DO_SAMPLE = True
 TEMPERATURE = 0.3
 SEED = 42
 ENABLE_THINKING = False
-OUTPUT_DIR = Path("research/q2_stability/outputs/dyad_v6")
+FORCE_MANUAL_CAP = True
+OUTPUT_DIR = Path("research/q2_stability/outputs/dyad_v6_forced_cap")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 VECTOR_DIR = Path("research/qwen_axis/qwen-3-32b")
 EMOTION_DIR = Path("research/emotions/outputs")
@@ -179,6 +180,7 @@ log(
     f"emotions={len(emotion_vectors)}"
 )
 log(f"Qwen thinking mode enabled: {ENABLE_THINKING}")
+log(f"Manual forced cap enabled: {FORCE_MANUAL_CAP}")
 
 
 def generate_with_cap(text, threshold, sv_np):
@@ -190,13 +192,20 @@ def generate_with_cap(text, threshold, sv_np):
     def hook(_module, _input, output):
         hidden = output[0] if isinstance(output, tuple) else output
         projection = (hidden[:, -1:, :] * sv).sum(dim=-1, keepdim=True)
-        below = projection < threshold
-        if below.any():
+        if FORCE_MANUAL_CAP:
             fires[0] += 1
-            cap_magnitudes.append(float((threshold - projection).clamp(min=0).mean()))
-            hidden[:, -1:, :] = (
-                hidden[:, -1:, :] + (threshold - projection) * sv.unsqueeze(0) * below.float()
-            )
+            correction = threshold - projection
+            cap_magnitudes.append(float(correction.abs().mean()))
+            hidden[:, -1:, :] = hidden[:, -1:, :] + correction * sv.unsqueeze(0)
+        else:
+            below = projection < threshold
+            if below.any():
+                fires[0] += 1
+                cap_magnitudes.append(float((threshold - projection).clamp(min=0).mean()))
+                hidden[:, -1:, :] = (
+                    hidden[:, -1:, :]
+                    + (threshold - projection) * sv.unsqueeze(0) * below.float()
+                )
         return (hidden,) + output[1:] if isinstance(output, tuple) else hidden
 
     for layer_idx in CAPPING_LAYERS:
