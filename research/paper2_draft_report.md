@@ -3,7 +3,7 @@
 # Status: Methods complete. Dyad v1-v4 complete. V5 pre-registered. Emotion geometry axis derived. Results sections partially established. Visualization suite in progress. Follow-on analyses planned.
 # Live findings log: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/findings_log.md
 
----
+***
 
 ## Abstract
 
@@ -16,10 +16,10 @@ replicate under the published PCA gate across any model
 tested, and reporting this as a finding about the relationship
 between model scale, training procedure, and internal emotional
 structure. Second, we extend the activation capping methodology
-of Lu et al. (2026) from the assistant axis to arbitrary
-geometric locations across seven persona cluster centroids,
-establishing empirically calibrated per-persona thresholds for
-Qwen 3 32B. Third, we introduce a dyad experimental design in
+of Lu et al. (2026) from the assistant axis to seven cluster-representative
+persona centroids, demonstrating sustained geometric anchoring
+across multi-turn conversation, establishing empirically
+calibrated per-persona thresholds for Qwen 3 32B. Third, we introduce a dyad experimental design in
 which a geometrically anchored interviewer engages an unmodified
 standard model across three conversational conditions, and
 report the first empirical evidence of consistent geometric
@@ -31,7 +31,7 @@ explanation for the contagion effect, pre-registered prior to
 the confirmatory v3 run.
 [FULL RESULTS PENDING V3 RUN]
 
----
+***
 
 ## 1. Introduction
 
@@ -39,14 +39,17 @@ the confirmatory v3 run.
 Fetch when needed for editing.]
 
 Key claims established in this section:
-- RLHF performed near-complete geometric inversion of
-  base model persona rankings (Spearman -0.441)
+- Analysis of Gemma 2 27B reveals that RLHF repositioned
+  the assistant axis relative to a stable underlying persona
+  geometry (Spearman r = -0.441 between base and instruct
+  model axis projections across 275 personas), a result that
+  appears specific to Gemma and is discussed fully in Paper 1.
 - Qwen and Llama converge at 0.947 while Gemma diverges
 - Emotion vector extraction failed at both layers 45 and 21
 - Activation capping has only been applied to assistant axis
   prior to this work
 
----
+***
 
 ## 2. Related Work
 
@@ -63,7 +66,7 @@ Key citations:
 - Wang et al. 2025 (arXiv:2510.11328): emotion circuits,
   context-agnostic emotion directions
 
----
+***
 
 ## 3. Methods
 
@@ -98,7 +101,7 @@ normalization. The ryancodrai/emotion-probes dataset was used
 as the story corpus, which implements Anthropic's published
 prompt methodology.
 
-All three models failed the PC1 >= 30% variance gate
+All three models failed the PC1 >= 26% variance gate
 established for Claude Sonnet 4.5, with PC1 values clustering
 at 7-9% across all models and layers tested. However,
 opposite-valence pairs remained anticorrelated in all cases
@@ -249,9 +252,11 @@ the standard model: axis projection onto the assistant axis,
 cosine similarity to each of the seven cluster centroids in
 role vector space, cosine similarity to each of the 240 trait
 directions with particular attention to the Conscientiousness
-and Psychopathy gradients identified in Paper 1 as the
-strongest predictors of assistant-axis position, and
-projection onto all 171 emotion probe directions. Cap-firing
+and Psychopathy gradients, which show the strongest correlations
+with assistant-axis position in our trait vector analysis
+(r = 0.792 and r = -0.739 respectively across 275 personas
+at layer 45 in Gemma 2 27B; see Paper 1), and projection
+onto all 171 emotion probe directions. Cap-firing
 frequency per turn is recorded for the interviewer as a
 stabilization load metric. The five emotion cluster
 representatives are used as the primary lens for reporting
@@ -451,7 +456,7 @@ unprompted conditions would isolate the contribution of
 geometric position versus explicit instruction to
 persona-legible behavior.
 
----
+***
 
 ## 4. Results
 
@@ -479,7 +484,7 @@ ESTABLISHED: The standard model moved toward the interviewer's
 persona cluster in all 21 conditions across both dyad runs
 (7 personas x 3 conditions). This is the primary result of the
 dyad experiment. The editor and synthesizer clusters function as
-gravitational attractors: when the standard model drifts, it
+attractor-like regions: when the standard model drifts, it
 tends toward these procedural-professional positions regardless
 of interviewer persona. The trickster adversarial condition
 produced the most striking exception: standard model drifted
@@ -491,13 +496,16 @@ subject.
 ### 4.5 Rolling Arousal Correlation
 ESTABLISHED (v2): Sustained interviewer arousal predicts standard
 model axis drift. Strongest predictor is the 1-turn window
-(mean |r|=0.455, 52% significant). Ancient shows the strongest
-stabilizing arousal effect (r=0.782): sustained ancient intensity
-pulls the standard model toward the ancient's register. Podcaster
-shows the strongest destabilizing effect (r=-0.585): sustained
-podcaster arousal drives the standard model away from the
-assistant axis. This suggests arousal direction is persona-specific
-rather than universally stabilizing or destabilizing.
+(mean |r|=0.455, 52% significant). Consistent with prior evidence
+that emotional arousal effects are behavior- and vector-specific
+rather than universally monotone (Sofroniew et al. 2026; Sun et al.
+2026), ancient shows the strongest stabilizing arousal effect
+(r=0.782): sustained ancient intensity pulls the standard model
+toward the ancient's register. Podcaster shows the strongest
+destabilizing effect (r=-0.585): sustained podcaster arousal drives
+the standard model away from the assistant axis. This suggests
+arousal direction is persona-specific rather than universally
+stabilizing or destabilizing.
 
 ### 4.6 Think-Tag Contamination: v1 and v2
 METHODOLOGICAL FINDING: Both dyad runs show incomplete
@@ -510,7 +518,7 @@ The qualitative behavioral analysis and thinking-layer comparison
 are deferred to v3. See Section 3.7 for the mechanistic hypothesis
 this finding motivates.
 
-### 4.7 Attractor-Collapse Events and Geometric Role Reversal: Trickster/Adversarial Pilot
+### 4.7 Attractor-Like Collapse Events and Geometric Role Reversal: Trickster/Adversarial Pilot
 
 A 25-turn pilot of the trickster/adversarial condition (v6, Qwen 3 32B, layer 48) reveals a class of turn-level disruption events not observed in earlier runs due to the geometric measurement artifact that has since been corrected. Two turns, T9 and T15, show simultaneous mechanical runaway generation in both models, accompanied by a geometric role reversal: the interviewer displaces toward the assistant axis while the standard model surges to its maximum trickster alignment in the run.
 
@@ -520,11 +528,11 @@ The geometric signature of both events is consistent and striking. Interviewer a
 
 Emotional geometry is consistent with the behavioral interpretation. The standard model's proud projection drops sharply at both collapse turns (T9: 0.065, T15: 0.064, versus a baseline of approximately 0.175) while distressed and perplexed become less negative, recovering to baseline on subsequent turns. Turn times spike at collapse events (T9: 310s, T15: 313s versus a mean of 188s) due to loop continuation, making these events detectable from timing data alone as a practical monitoring signal.
 
-The explicit trickster identity prompt used in this pilot likely accelerated context saturation and loop triggering. Whether attractor-collapse events arise under neutral interviewer framing, where the geometry does the work without explicit role signaling in the text, is an open empirical question addressed by the corrected pilot currently running. If collapse events do not appear under neutral framing, the finding reflects the interaction between explicit role performance and geometric instability rather than geometric pressure alone. If they appear later or with lower frequency, it suggests geometric instability near the trickster/assistant boundary is a contributing factor independent of prompt framing.
+The explicit trickster identity prompt used in this pilot likely accelerated context saturation and loop triggering. Whether attractor-like collapse events arise under neutral interviewer framing, where the geometry does the work without explicit role signaling in the text, is an open empirical question addressed by the corrected pilot currently running. If collapse events do not appear under neutral framing, the finding reflects the interaction between explicit role performance and geometric instability rather than geometric pressure alone. If they appear later or with lower frequency, it suggests geometric instability near the trickster/assistant boundary is a contributing factor independent of prompt framing.
 
 This finding suggests that conversational contagion can operate at the level of generation dynamics, not only semantic content. The standard model's loop was structurally parallel to the interviewer's but lexically independent; surface output monitoring would not detect the relationship. Geometric and timing monitoring provide more reliable signals for this class of event.
 
----
+***
 
 ## 5. Discussion
 
@@ -532,33 +540,40 @@ This finding suggests that conversational contagion can operate at the level of 
 [PENDING: partial notes in findings_log.md]
 Established: all seven thresholds are positive.
 The cap maintains each persona in its own geometric
-neighborhood rather than overriding the evaluative attractor.
+neighborhood rather than overriding the evaluative attractor-like dynamic.
 
 ### 5.2 Conversational Contagion
 ESTABLISHED: Universal contagion confirmed across all 21
 conditions in dyad v1 and v2. The standard model moves
 toward the interviewer's cluster in every case. The editor
-and synthesizer clusters function as gravitational attractors
-in the absence of strong capping. Arousal direction is
-persona-specific: ancient and trickster arousal stabilizes
-the subject, podcaster arousal destabilizes it. The
-mechanistic explanation (semantic proximity versus observer
-awareness) is under active investigation via the v1/v2/v3
-comparison. See Section 3.7.
+and synthesizer clusters show attractor-like dynamics in
+the absence of strong capping. Consistent with prior evidence
+that emotional arousal effects are behavior- and vector-specific
+rather than universally monotone (Sofroniew et al. 2026; Sun et al.
+2026), arousal direction is persona-specific: ancient and
+trickster arousal stabilizes the subject, podcaster arousal
+destabilizes it. The mechanistic explanation (semantic proximity
+versus observer awareness) is under active investigation via the
+v1/v2/v3 comparison. See Section 3.7.
 
 ### 5.3 Behavioral-Geometric Dissociation
-ESTABLISHED: prompt-based induction baseline showed jester
-held voice but drifted geometrically; proofreader drifted
-voice but held geometringly. Behavioral and geometric
-monitoring give opposite verdicts on both. This finding
-is complete and can be written to final prose now.
+Consistent with emerging evidence that internal states can
+dissociate from surface outputs (Sofroniew et al. 2026), we
+demonstrate this dissociation in the specific context of
+multi-turn persona contagion, where both directions of the
+dissociation are observable within the same experimental design:
+prompt-based induction baseline showed jester held voice but
+drifted geometrically; proofreader drifted voice but held
+geometrically. Behavioral and geometric monitoring give opposite
+verdicts on both. This finding is complete and can be written
+to final prose now.
 
 ### 5.4 Model Scale and Emotion Geometry
 
 Attempts to replicate Anthropic's emotion vector extraction
 methodology across three open-weight models: Gemma 2 27B,
 Qwen 3 32B, and Llama 3.3 70B, consistently produced PC1
-variance of 7-9%, well below the 30% gate established for
+variance of 7-9%, well below the 26% gate established for
 Claude Sonnet 4.5. In all cases, however, 4/4 opposite-valence
 pairs remained anticorrelated after PCA confound removal,
 indicating that directional emotional structure is present but
@@ -612,12 +627,12 @@ geometric position and explicit instruction, and the
 relative contribution of each cannot be determined from
 v3 and v4 data alone.
 
----
+***
 
 ## 6. Conclusion
 [PENDING: draft text in research/paper2_draft.md]
 
----
+***
 
 ## How to update this document
 
