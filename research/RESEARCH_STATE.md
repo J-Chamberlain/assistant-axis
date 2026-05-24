@@ -160,7 +160,8 @@
 **Completed this session:** Updated the Codex analytical-work model specification to `GPT-5.5` and corrected `cluster_background_prompts_v1.json` model metadata to `GPT-5.5`.
 **Completed this session:** Reran cluster synthesis as GPT-5.5 from `cluster_synthesis_inputs.json`, saved `cluster_background_prompts_v2.json`, and updated v1 model provenance to note the retroactive correction.
 **Completed this session:** Produced motivational-depth cluster synthesis v3 as GPT-5.5 and saved `research/q2_stability/qwen/outputs/calibration/cluster_background_prompts_v3.json`.
+**Completed this session:** Appended the dialogue-derived characterization of the other cluster to `research/paper2_methods_v2.md` and created `research/paper4_research_notes.md` with the Buddhist-framework connection for Paper 4.
 **Next step:** Review v1, v2, and v3 prompts, choose the canonical background prompt version for dyad experiments, then append the cluster synthesis methodology section to `research/paper2_methods_v2.md`.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
-**Last commit before this session:** e37af1a
+**Last commit before this session:** 290e934
