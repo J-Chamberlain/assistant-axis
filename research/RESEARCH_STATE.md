@@ -131,8 +131,8 @@
 ## 3. CURRENT STATE
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.
-**Completed this session:** Initialized research/RESEARCH_STATE.md, audited recent commits/findings/q2 outputs/v6 scripts/sticky notes, and updated AGENTS.md so future sessions refresh this state document before committing.
+**Completed this session:** Archived legacy root session files (`Update_5.md` and `PAPER_CURRENT.md`) into `legacy/`, added nested `.DS_Store` ignore coverage, and left unrelated worktree changes untouched.
 **Next step after v6:** Run verbatim baseline check, decide whether to rerun full v6 after the forced-cap freeze, then update paper 2 draft with v6 methodology and findings.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** Unknown from local Mac Mini audit; latest local v6 logs show pilot checkpoint stops, and forced-cap pilot stopped after failing geometry and budget gates.
-**Last commit before this session:** 1a0cd61 [q2] forced cap pilot geometry charts
+**Last commit before this session:** d329717 [infra] init RESEARCH_STATE.md with retrospective state + closing block update
