@@ -2,7 +2,7 @@
   "version": "1",
   "method": "cluster_synthesis_from_role_instructions_and_trait_space",
   "date": "2026-05-24",
-  "model_used": "GPT-5.3-Codex",
+  "model_used": "GPT-5.5",
   "clusters": {
     "editorial": {
       "qwen_native_representative": "editor",
