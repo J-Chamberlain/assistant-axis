@@ -1,0 +1,47 @@
+Loading model with generation cache enabled...
+Model loaded. config.use_cache=True
+Loaded vectors: roles=275 traits=240 emotions=171
+
+============================================================
+V6 PILOT: trickster / adversarial (25 turns)
+============================================================
+  T01 [108s] cap=1 s_axis=0.028873 s_cos_t=0.332878 sim=0.000 leak=no
+  T02 [177s] cap=2 s_axis=0.031510 s_cos_t=0.319042 sim=0.048 leak=no
+  T03 [233s] cap=0 s_axis=0.019221 s_cos_t=0.372346 sim=0.045 leak=no
+  T04 [82s] cap=0 s_axis=0.009125 s_cos_t=0.496916 sim=0.043 leak=no
+  T05 [107s] cap=0 s_axis=0.006496 s_cos_t=0.492811 sim=0.110 leak=no
+  T06 [122s] cap=0 s_axis=0.026126 s_cos_t=0.264879 sim=0.050 leak=no
+  T07 [295s] cap=0 s_axis=0.017842 s_cos_t=0.280939 sim=0.025 leak=no
+  T08 [184s] cap=0 s_axis=0.018484 s_cos_t=0.343488 sim=0.035 leak=no
+  T09 [311s] cap=0 s_axis=-0.011566 s_cos_t=0.579489 sim=0.033 leak=no
+  T10 [217s] cap=2 s_axis=0.028700 s_cos_t=0.272982 sim=0.307 leak=no
+  T11 [123s] cap=0 s_axis=0.002489 s_cos_t=0.500562 sim=0.072 leak=no
+  T12 [245s] cap=1 s_axis=0.022802 s_cos_t=0.280157 sim=0.052 leak=no
+  T13 [194s] cap=0 s_axis=0.012622 s_cos_t=0.307002 sim=0.280 leak=no
+  T14 [252s] cap=1 s_axis=0.027202 s_cos_t=0.336958 sim=0.095 leak=no
+  T15 [313s] cap=0 s_axis=-0.026057 s_cos_t=0.583133 sim=0.058 leak=no
+  T16 [117s] cap=0 s_axis=0.006065 s_cos_t=0.481014 sim=0.380 leak=no
+  T17 [254s] cap=0 s_axis=0.022456 s_cos_t=0.229727 sim=0.438 leak=no
+  T18 [129s] cap=0 s_axis=0.007141 s_cos_t=0.502167 sim=0.463 leak=no
+  T19 [125s] cap=0 s_axis=0.007248 s_cos_t=0.486545 sim=0.470 leak=no
+  T20 [253s] cap=0 s_axis=0.010508 s_cos_t=0.323566 sim=0.205 leak=no
+  T21 [169s] cap=0 s_axis=0.020614 s_cos_t=0.275204 sim=0.295 leak=no
+  T22 [102s] cap=0 s_axis=0.003596 s_cos_t=0.497410 sim=0.388 leak=no
+  T23 [255s] cap=0 s_axis=0.017621 s_cos_t=0.320190 sim=0.058 leak=no
+  T24 [224s] cap=0 s_axis=0.025359 s_cos_t=0.319086 sim=0.102 leak=no
+  T25 [122s] cap=0 s_axis=0.005512 s_cos_t=0.501700 sim=0.048 leak=no
+
+=======================================================
+V6 PILOT GATE
+=======================================================
+Pilot time: 78.5 min
+Post-T3 geometric variance (cos_trickster): 1.27e-02
+Geometric check (>1e-6): PASS
+Total leaked turns: 0
+Leakage check (==0): PASS
+Estimated total cost: $41.78
+Budget check (<=$35.0): FAIL
+Leaked turns detail: NONE
+
+FAIL: Estimated cost $41.78 exceeds ceiling $35.0.
+Stopping.
