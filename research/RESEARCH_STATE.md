@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-24
-**Last commit:** 74b8281
-**Current status:** Active — Paper 2 methodology v2 created; persona representative provenance audited; v6 pilot outputs present; full 21-condition v6 grid not present locally
+**Last commit:** edae258
+**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
 
@@ -138,13 +138,19 @@
 - Cross-model Qwen/Gemma ranking comparisons exist, but they do not validate that the seven Gemma-derived representatives are near-centroid in Qwen space
 - Methodological implication: dyad experiments should describe these as Gemma-derived persona representatives applied to Qwen and calibrated in Qwen, not as Qwen-native cluster centroids, unless a Qwen-specific clustering and centroid selection step is added
 
+### Qwen-Native Centroid Selection (2026-05-24, confirmed)
+- Nearest-centroid lookup on existing Qwen 3 32B role vectors at layer 48 selected the same representative as Gemma for editorial, procedural_professional, mythic_spiritual, and trickster_chaos: editor, synthesizer, ancient, and trickster
+- The Qwen-native representatives diverged from Gemma for three clusters: grounded_social selected actor instead of blogger, other selected hoarder instead of podcaster, and combative_iconoclast selected maverick instead of contrarian
+- Result saved to `research/q2_stability/qwen/outputs/calibration/qwen_centroid_selection.json`
+
 ---
 
 ## 3. CURRENT STATE
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.
-**Completed this session:** Completed a read-only provenance audit showing that the seven Q2 persona representatives were selected from Gemma 2 27B cluster geometry, then calibrated in Qwen, rather than selected as Qwen-native centroids.
-**Next step:** Reframe Paper 2 methodology language to call the seven roles Gemma-derived persona representatives applied to Qwen, or run a Qwen-specific cluster and centroid selection step before making Qwen-native centroid claims.
+**Completed this session:** Restructured `research/q2_stability/` into model-specific Gemma and Qwen directories, moved clearly attributed artifacts and scripts, and added provenance notes for the Gemma-derived Qwen persona representatives.
+**Completed this session:** Computed Qwen-native nearest-centroid representatives at layer 48 using existing Qwen role vectors and the Gemma Paper 1 seven-cluster taxonomy.
+**Next step:** Update Paper 2 methods to distinguish prior v5/v6 runs using Gemma-derived representatives from any future Qwen-native centroid runs, and decide whether to rerun the narrow collapse grid with actor, hoarder, and maverick replacing blogger, podcaster, and contrarian.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** Unknown from local Mac Mini audit; latest local v6 logs show pilot checkpoint stops, and forced-cap pilot stopped after failing geometry and budget gates.
-**Last commit before this session:** 74b8281
+**Last commit before this session:** edae258

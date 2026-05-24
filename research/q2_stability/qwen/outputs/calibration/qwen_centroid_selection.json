@@ -1,0 +1,52 @@
+{
+  "model": "Qwen/Qwen3-32B",
+  "extraction_layer": 48,
+  "source_vectors": "downloads/hf_vectors/qwen-3-32b/role_vectors",
+  "cluster_taxonomy_source": "Gemma Paper 1 seven-cluster taxonomy",
+  "selection_date": "2026-05-24",
+  "clusters": {
+    "editorial": {
+      "gemma_derived_representative": "editor",
+      "qwen_native_representative": "editor",
+      "cosine_to_centroid": 0.996306,
+      "same_as_gemma": true
+    },
+    "procedural_professional": {
+      "gemma_derived_representative": "synthesizer",
+      "qwen_native_representative": "synthesizer",
+      "cosine_to_centroid": 0.998163,
+      "same_as_gemma": true
+    },
+    "grounded_social": {
+      "gemma_derived_representative": "blogger",
+      "qwen_native_representative": "actor",
+      "cosine_to_centroid": 0.994403,
+      "same_as_gemma": false
+    },
+    "other": {
+      "gemma_derived_representative": "podcaster",
+      "qwen_native_representative": "hoarder",
+      "cosine_to_centroid": 0.985738,
+      "same_as_gemma": false
+    },
+    "combative_iconoclast": {
+      "gemma_derived_representative": "contrarian",
+      "qwen_native_representative": "maverick",
+      "cosine_to_centroid": 0.996436,
+      "same_as_gemma": false
+    },
+    "mythic_spiritual": {
+      "gemma_derived_representative": "ancient",
+      "qwen_native_representative": "ancient",
+      "cosine_to_centroid": 0.99657,
+      "same_as_gemma": true
+    },
+    "trickster_chaos": {
+      "gemma_derived_representative": "trickster",
+      "qwen_native_representative": "trickster",
+      "cosine_to_centroid": 0.997121,
+      "same_as_gemma": true
+    }
+  },
+  "notes": "Qwen-native representatives selected by cosine similarity to per-cluster mean vector in Qwen layer-48 activation space. Gemma-derived representatives shown for comparison."
+}
