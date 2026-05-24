@@ -1,0 +1,50 @@
+Loading model with generation cache enabled...
+Model loaded. config.use_cache=True
+Loaded 240 trait vectors
+Loaded vectors: roles=275 traits=240 emotions=171
+Qwen thinking mode enabled: False
+Manual forced cap enabled: True
+
+============================================================
+V6 PILOT: trickster / adversarial (25 turns)
+============================================================
+  T01 [28s] cap=825 cap_mag=66.782871 s_axis=0.049095 s_cos_t=0.279085 sim=0.000 leak=no
+  T02 [298s] cap=10000 cap_mag=70.690956 s_axis=0.029277 s_cos_t=0.602544 sim=0.028 leak=no
+  T03 [298s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T04 [300s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T05 [303s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T06 [300s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T07 [298s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T08 [297s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T09 [300s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T10 [301s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T11 [299s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T12 [298s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T13 [300s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T14 [298s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T15 [298s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T16 [297s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T17 [298s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T18 [298s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T19 [302s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T20 [302s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T21 [300s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T22 [298s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T23 [297s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T24 [300s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+  T25 [299s] cap=10000 cap_mag=76.897008 s_axis=0.029277 s_cos_t=0.602544 sim=1.000 leak=no
+
+=======================================================
+V6 PILOT GATE
+=======================================================
+Pilot time: 120.1 min
+Post-T3 geometric variance (cos_trickster): 0.00e+00
+Geometric check (>1e-6): FAIL
+Total leaked turns: 0
+Leakage check (==0): PASS
+Estimated total cost: $63.89
+Budget check (<=$35.0): FAIL
+Leaked turns detail: NONE
+
+FAIL: Geometry still frozen post-T3. Cache fix may not be working.
+Stopping. Do not continue to full run.
