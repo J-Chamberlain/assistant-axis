@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-24
-**Last commit:** 1a0cd61
-**Current status:** Active — v6 pilot outputs present; full 21-condition v6 grid not present locally
+**Last commit:** 3570d43
+**Current status:** Active — Paper 2 methodology v2 created; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
 
@@ -131,8 +131,8 @@
 ## 3. CURRENT STATE
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.
-**Completed this session:** Added `research/literature_reference.md` as a compact literature map for future Claude/GPT sessions, keeping external literature separate from project empirical findings.
-**Next step after v6:** Run verbatim baseline check, decide whether to rerun full v6 after the forced-cap freeze, then update paper 2 draft with v6 methodology and findings.
+**Completed this session:** Created `research/paper2_methods_v2.md`, a unified Paper 2 methodology that reframes the next stage around non-leaking anchored interviewer prompts, verbatim baseline comparison, three-variable measurement, and narrow attractor-collapse characterization.
+**Next step:** Audit calibration and adjacent output directories for per-persona dialogue corpora, then use the corpus status to decide whether Phase 1 prompt design can proceed directly or needs one-time corpus generation.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** Unknown from local Mac Mini audit; latest local v6 logs show pilot checkpoint stops, and forced-cap pilot stopped after failing geometry and budget gates.
-**Last commit before this session:** 951fc47 [infra] archive legacy session files, add .DS_Store to gitignore
+**Last commit before this session:** 3570d43

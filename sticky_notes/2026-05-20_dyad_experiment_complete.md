@@ -67,3 +67,7 @@ thinking fields were not captured in the corrected pilot JSONs and
 the 21-condition cost projection exceeded the $35 ceiling. Analysis
 outputs: drift, trait, emotion, anomaly, and screenplay files under
 research/q2_stability/outputs/dyad_v6/
+
+## Update — May 24 2026
+
+Planning session produced `research/paper2_methods_v2.md`, which supersedes the earlier full-grid v6 framing. The revised methodology prioritizes non-leaking anchored interviewer prompt design, verbatim baseline comparison, explicit measurement of identity adherence, disclosure leakage, and downstream induction, and a narrow attractor-collapse characterization grid before any full 7x3x25 expansion.
