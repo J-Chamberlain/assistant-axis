@@ -118,6 +118,13 @@ WAITING FOR CONFIRMATION:
 
 No additional text after the confirmation request.
 
+RESEARCH_STATE UPDATE
+Before committing, update research/RESEARCH_STATE.md Section 3 (Current State) with:
+- What was completed this session (one sentence per task)
+- Next step
+- Last commit hash
+If any new empirical findings were produced, append them to Section 2 with date and key statistic.
+
 STICKY NOTES REPORT
 At the very end of every response, after the summary,
 report sticky notes changes in this exact format:
