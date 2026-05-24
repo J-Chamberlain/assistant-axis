@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-24
-**Last commit:** edae258
-**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; v6 pilot outputs present; full 21-condition v6 grid not present locally
+**Last commit:** 8bdb7c0
+**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
 
@@ -148,9 +148,10 @@
 ## 3. CURRENT STATE
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.
-**Completed this session:** Restructured `research/q2_stability/` into model-specific Gemma and Qwen directories, moved clearly attributed artifacts and scripts, and added provenance notes for the Gemma-derived Qwen persona representatives.
-**Completed this session:** Computed Qwen-native nearest-centroid representatives at layer 48 using existing Qwen role vectors and the Gemma Paper 1 seven-cluster taxonomy.
-**Next step:** Update Paper 2 methods to distinguish prior v5/v6 runs using Gemma-derived representatives from any future Qwen-native centroid runs, and decide whether to rerun the narrow collapse grid with actor, hoarder, and maverick replacing blogger, podcaster, and contrarian.
+**Completed this session:** Terminated the stopped RunPod A100 SXM pod `professional_sapphire_peafowl` after the interrupted recalibration attempt.
+**Completed this session:** Audited the interrupted recalibration status and confirmed that `actor_calibration.csv`, `hoarder_calibration.csv`, `maverick_calibration.csv`, and `all_personas_calibration_summary_v2.json` do not exist locally.
+**Completed this session:** Confirmed that `research/paper2_methods_v2.md`, `research/q2_stability/README.md`, and `research/q2_stability/qwen/outputs/calibration/CENTROID_NOTE.md` are present from prior committed work.
+**Next step:** Resume with the Qwen recalibration task from the beginning: spin up a fresh A100 80GB pod, run calibration only for actor, hoarder, and maverick, then write `all_personas_calibration_summary_v2.json`.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
-**Pod status:** Unknown from local Mac Mini audit; latest local v6 logs show pilot checkpoint stops, and forced-cap pilot stopped after failing geometry and budget gates.
-**Last commit before this session:** edae258
+**Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
+**Last commit before this session:** 8bdb7c0
