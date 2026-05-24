@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-24
-**Last commit:** bfc9afa
-**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; frontier-model synthesis blocked because no OpenAI API key is present in the shell environment; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
+**Last commit:** 7becdd1
+**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1 synthesized directly and saved; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
 
@@ -155,8 +155,8 @@
 **Completed this session:** Confirmed that `downloads/hf_vectors/` and the HuggingFace cache contain vector tensors and metadata only, while local transcripts under `transcripts/` are paper case studies/persona-drift examples rather than seven-role extraction rollouts.
 **Completed this session:** Printed the full contents of the seven v2 persona instruction files and the first 20 lines of `data/extraction_questions.jsonl` for Phase 1 prompt drafting.
 **Completed this session:** Assembled `research/q2_stability/qwen/outputs/calibration/cluster_synthesis_inputs.json` from `visualizations/full_ranking.csv`, `visualizations/cluster_trait_profiles.csv`, and all 275 role instruction files.
-**Blocked this session:** Frontier-model synthesis could not run because the `openai` Python package is installed but `OPENAI_API_KEY` is not present in the shell environment.
-**Next step:** Provide or load an OpenAI API key, then run the seven cluster synthesis calls and save `cluster_background_prompts_v1.json`.
+**Completed this session:** Synthesized seven non-leaking interviewer background prompts directly from role instructions and trait-space profiles, validated them against role names, cluster labels, and trait labels, and saved `research/q2_stability/qwen/outputs/calibration/cluster_background_prompts_v1.json`.
+**Next step:** Review and approve `cluster_background_prompts_v1.json`, then append the cluster synthesis methodology section to `research/paper2_methods_v2.md`.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
-**Last commit before this session:** bfc9afa
+**Last commit before this session:** 7becdd1
