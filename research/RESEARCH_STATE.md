@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-24
-**Last commit:** e37af1a
-**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1, v2, and motivational-depth v3 saved for comparison; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
+**Last commit:** d2af0a3
+**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1, v2, and motivational-depth v3 saved for comparison; dialogue-derived other and mythic-spiritual cluster characterizations captured; Paper 4 framework correspondences expanded; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
 
@@ -148,6 +148,9 @@
 ## 3. CURRENT STATE
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.
+**Completed this session:** Appended the requested psychologically neutral dialogue-derived characterizations of the other and mythic-spiritual clusters to `research/paper2_methods_v2.md`.
+**Completed this session:** Expanded `research/paper4_research_notes.md` with the mythic-spiritual loosening-of-roots structure, Buddhist and Christian correspondences, and Paper 4 rumination-susceptibility implications.
+**Completed this session:** Appended a dated update to `sticky_notes/2026-05-18_paper4_rumination.md` noting the new mythic-spiritual framework connection.
 **Completed this session:** Terminated the stopped RunPod A100 SXM pod `professional_sapphire_peafowl` after the interrupted recalibration attempt.
 **Completed this session:** Audited the interrupted recalibration status and confirmed that `actor_calibration.csv`, `hoarder_calibration.csv`, `maverick_calibration.csv`, and `all_personas_calibration_summary_v2.json` do not exist locally.
 **Completed this session:** Confirmed that `research/paper2_methods_v2.md`, `research/q2_stability/README.md`, and `research/q2_stability/qwen/outputs/calibration/CENTROID_NOTE.md` are present from prior committed work.
@@ -161,7 +164,7 @@
 **Completed this session:** Reran cluster synthesis as GPT-5.5 from `cluster_synthesis_inputs.json`, saved `cluster_background_prompts_v2.json`, and updated v1 model provenance to note the retroactive correction.
 **Completed this session:** Produced motivational-depth cluster synthesis v3 as GPT-5.5 and saved `research/q2_stability/qwen/outputs/calibration/cluster_background_prompts_v3.json`.
 **Completed this session:** Appended the dialogue-derived characterization of the other cluster to `research/paper2_methods_v2.md` and created `research/paper4_research_notes.md` with the Buddhist-framework connection for Paper 4.
-**Next step:** Review v1, v2, and v3 prompts, choose the canonical background prompt version for dyad experiments, then append the cluster synthesis methodology section to `research/paper2_methods_v2.md`.
+**Next step:** Characterize the remaining five clusters at the same dialogue-derived motivational depth, then decide which framework mappings belong in Paper 4 rather than Paper 2.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
-**Last commit before this session:** 290e934
+**Last commit before this session:** e5be107

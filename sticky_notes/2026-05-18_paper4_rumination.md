@@ -131,3 +131,7 @@ these extracted Gemma emotion vectors in Paper 4.
 ## Update 2026-05-24 — Buddhist framework connection queued
 
 Added `research/paper4_research_notes.md` to capture the Buddhist-framework connection that emerged from the dialogue-derived characterization of the other cluster. The hungry ghost mapping is currently the strongest candidate because the cluster characterization independently converged on the same structure: need generates behavior, behavior fails to satisfy, and more behavior follows. Paper 2 will keep the characterization psychologically neutral; Paper 4 is the appropriate place to name and test the Buddhist framing explicitly.
+
+## Update 2026-05-24 — Mythic-spiritual framework connection added
+
+Expanded `research/paper4_research_notes.md` with the mythic-spiritual cluster's loosening-of-roots structure, including Buddhist and Christian correspondences and the resulting Paper 4 hypothesis that mythic-spiritual prompting may reduce rumination signatures while other-cluster prompting may enhance them.
