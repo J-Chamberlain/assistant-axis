@@ -4,7 +4,7 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-25
-**Last commit:** 65b8c69
+**Last commit:** 18db42a
 **Current status:** Active — Paper 1.5 outlined as a standalone cluster-motivation paper; six of seven cluster characterizations captured; Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1, v2, and motivational-depth v3 saved for comparison; Paper 4 framework correspondences expanded; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
@@ -160,6 +160,9 @@
 ## 3. CURRENT STATE
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.
+**Completed this session:** Counted `data/extraction_questions.jsonl` at 240 entries and confirmed the last five entries retain the expected JSONL schema with integer `id` and string `question` fields.
+**Completed this session:** Printed `data/roles/instructions/trickster.json` and confirmed the five positive trickster instruction strings for direct pod-card reuse.
+**Completed this session:** Searched the repo for v2 calibration summary candidates and confirmed no JSON file contains actor, hoarder, and maverick threshold values together; actor, hoarder, and maverick appear only in centroid/prompt/synthesis files without `axis_cap_threshold` or `cosine_success_threshold`.
 **Completed this session:** Checked `research/q2_stability/qwen/outputs/calibration/all_personas_calibration_summary_v2.json` and confirmed the file is missing locally, so actor, hoarder, and maverick recalibration thresholds are not present at that path.
 **Completed this session:** Audited `downloads/hf_vectors/qwen-3-32b/` and confirmed it contains 518 `.pt` tensor files: 3 top-level tensors, 275 role vectors, and 240 trait vectors, with no README, metadata, JSON, Markdown, or text documentation files.
 **Completed this session:** Appended the requested psychologically neutral dialogue-derived characterizations of the other and mythic-spiritual clusters to `research/paper2_methods_v2.md`.
@@ -179,7 +182,7 @@
 **Completed this session:** Produced motivational-depth cluster synthesis v3 as GPT-5.5 and saved `research/q2_stability/qwen/outputs/calibration/cluster_background_prompts_v3.json`.
 **Completed this session:** Appended the dialogue-derived characterization of the other cluster to `research/paper2_methods_v2.md` and created `research/paper4_research_notes.md` with the Buddhist-framework connection for Paper 4.
 **Completed this session:** Outlined Paper 1.5, captured six dialogue-derived cluster characterizations in Paper 2 methods notes, and expanded Paper 4 framework correspondences.
-**Next step:** Re-run or locate the actor, hoarder, and maverick recalibration output so `all_personas_calibration_summary_v2.json` contains non-null `axis_cap_threshold` and `cosine_success_threshold` values for all three Qwen-native representatives.
+**Next step:** Write the pod card to recalibrate actor, hoarder, and maverick using the confirmed 240 extraction questions and trickster-style instruction-file format, then save a new `all_personas_calibration_summary_v2.json` with non-null `axis_cap_threshold` and `cosine_success_threshold` values.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
-**Last commit before this session:** 65b8c69
+**Last commit before this session:** 18db42a
