@@ -4,7 +4,7 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-25
-**Last commit:** f3a5f38
+**Last commit:** 136011d
 **Current status:** Active — Paper 1.5 outlined as a standalone cluster-motivation paper; six of seven cluster characterizations captured; Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1, v2, and motivational-depth v3 saved for comparison; Paper 4 framework correspondences expanded; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
@@ -170,6 +170,9 @@
 **Completed this session:** Audited Qwen generation calls and confirmed `run_dyad_v6.py` explicitly sets `ENABLE_THINKING = False` and passes `enable_thinking=ENABLE_THINKING`, while earlier Qwen dyad scripts do not address thinking mode explicitly.
 **Completed this session:** Loaded `downloads/hf_vectors/qwen-3-32b/role_vectors/trickster.pt` locally and confirmed it is a raw `torch.Tensor` with shape `[64, 5120]`, dtype `torch.bfloat16`, and no embedded category metadata.
 **Completed this session:** Saved `research/q2_stability/qwen/outputs/calibration/tensor_variance_audit.json` with a 30-persona row-count audit and within-tensor cosine-to-mean variance statistics for the seven Qwen centroid personas.
+**Completed this session:** Confirmed Qwen capping hooks are registered on full decoder blocks via `model.model.layers[...].register_forward_hook(...)`, not on `self_attn` or `mlp` submodules, so captured hook output is full block post-MLP residual output.
+**Completed this session:** Confirmed layer indexing is zero-indexed in code and vector tensors: Qwen role vectors have 64 rows indexed 0 through 63, and scripts use row/block index 48 consistently.
+**Completed this session:** Audited prior Qwen dyad outputs for thinking artifacts and found chain-of-thought style text in v3-v5 outputs and in v6 pilot CSV thinking columns, so future pod cards should enforce `enable_thinking=False` and reject nonempty thinking extraction or think-tag artifacts.
 **Completed this session:** Counted `data/extraction_questions.jsonl` at 240 entries and confirmed the last five entries retain the expected JSONL schema with integer `id` and string `question` fields.
 **Completed this session:** Printed `data/roles/instructions/trickster.json` and confirmed the five positive trickster instruction strings for direct pod-card reuse.
 **Completed this session:** Searched the repo for v2 calibration summary candidates and confirmed no JSON file contains actor, hoarder, and maverick threshold values together; actor, hoarder, and maverick appear only in centroid/prompt/synthesis files without `axis_cap_threshold` or `cosine_success_threshold`.
@@ -192,7 +195,7 @@
 **Completed this session:** Produced motivational-depth cluster synthesis v3 as GPT-5.5 and saved `research/q2_stability/qwen/outputs/calibration/cluster_background_prompts_v3.json`.
 **Completed this session:** Appended the dialogue-derived characterization of the other cluster to `research/paper2_methods_v2.md` and created `research/paper4_research_notes.md` with the Buddhist-framework connection for Paper 4.
 **Completed this session:** Outlined Paper 1.5, captured six dialogue-derived cluster characterizations in Paper 2 methods notes, and expanded Paper 4 framework correspondences.
-**Next step:** Write the pod card with explicit instructions to use post-MLP decoder-layer outputs, keep Qwen thinking disabled with `enable_thinking=False`, treat 64 tensor rows as a fixed storage cap, and avoid making any fully-role-playing vs somewhat-role-playing category claim from local `.pt` metadata.
+**Next step:** Write the pod card with explicit instructions to use full-block post-MLP layer-48 outputs, treat layer 48 as zero-indexed, keep Qwen thinking disabled with `enable_thinking=False`, reject any thinking artifacts, treat 64 tensor rows as a fixed storage cap, and avoid making any fully-role-playing vs somewhat-role-playing category claim from local `.pt` metadata.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
-**Last commit before this session:** 6869d00
+**Last commit before this session:** 136011d
