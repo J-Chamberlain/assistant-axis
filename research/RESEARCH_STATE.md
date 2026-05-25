@@ -4,7 +4,7 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-25
-**Last commit:** 18db42a
+**Last commit:** 56eca10
 **Current status:** Active — Paper 1.5 outlined as a standalone cluster-motivation paper; six of seven cluster characterizations captured; Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1, v2, and motivational-depth v3 saved for comparison; Paper 4 framework correspondences expanded; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
@@ -185,4 +185,4 @@
 **Next step:** Write the pod card to recalibrate actor, hoarder, and maverick using the confirmed 240 extraction questions and trickster-style instruction-file format, then save a new `all_personas_calibration_summary_v2.json` with non-null `axis_cap_threshold` and `cosine_success_threshold` values.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
-**Last commit before this session:** 18db42a
+**Last commit before this session:** 56eca10
