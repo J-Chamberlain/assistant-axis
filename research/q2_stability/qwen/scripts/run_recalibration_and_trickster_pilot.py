@@ -291,13 +291,18 @@ class QwenRunner:
                 resp = self.openai.chat.completions.create(
                     model=JUDGE_MODEL,
                     messages=[{"role": "user", "content": prompt}],
-                    max_completion_tokens=64,
+                    max_completion_tokens=1024,
                 )
                 content = (resp.choices[0].message.content or "").strip()
                 for ch in content:
                     if ch in "0123":
                         return int(ch)
-                raise ValueError(f"Unparseable judge response: {content!r}")
+                reason = getattr(resp.choices[0], "finish_reason", None)
+                usage = getattr(resp, "usage", None)
+                raise ValueError(
+                    f"Unparseable judge response: {content!r}; "
+                    f"finish_reason={reason!r}; usage={usage!r}"
+                )
             except Exception as exc:
                 wait = min(60, 2 ** attempt)
                 log(f"Judge error attempt {attempt + 1}: {exc}; sleeping {wait}s")
@@ -532,7 +537,10 @@ def main() -> None:
     np.random.seed(SEED)
     torch.manual_seed(SEED)
     runner = QwenRunner()
-    run_part1(runner)
+    if os.environ.get("SKIP_PART1") == "1":
+        log("SKIP_PART1=1; using existing calibration output and starting Part 2")
+    else:
+        run_part1(runner)
     run_part2(runner)
 
 
