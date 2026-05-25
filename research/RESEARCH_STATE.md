@@ -4,7 +4,7 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-25
-**Last commit:** 56eca10
+**Last commit:** 1d21b51
 **Current status:** Active — Paper 1.5 outlined as a standalone cluster-motivation paper; six of seven cluster characterizations captured; Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1, v2, and motivational-depth v3 saved for comparison; Paper 4 framework correspondences expanded; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
@@ -160,6 +160,9 @@
 ## 3. CURRENT STATE
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.
+**Completed this session:** Audited Qwen layer-48 hidden-state extraction and confirmed the active Qwen scripts use HuggingFace decoder-layer forward hooks such as `model.model.layers[48].register_forward_hook(...)` and/or `hidden_states[48]`, with no `resid_mid` hook present.
+**Completed this session:** Audited Qwen generation calls and confirmed `run_dyad_v6.py` explicitly sets `ENABLE_THINKING = False` and passes `enable_thinking=ENABLE_THINKING`, while earlier Qwen dyad scripts do not address thinking mode explicitly.
+**Completed this session:** Loaded `downloads/hf_vectors/qwen-3-32b/role_vectors/trickster.pt` locally and confirmed it is a raw `torch.Tensor` with shape `[64, 5120]`, dtype `torch.bfloat16`, and no embedded category metadata.
 **Completed this session:** Counted `data/extraction_questions.jsonl` at 240 entries and confirmed the last five entries retain the expected JSONL schema with integer `id` and string `question` fields.
 **Completed this session:** Printed `data/roles/instructions/trickster.json` and confirmed the five positive trickster instruction strings for direct pod-card reuse.
 **Completed this session:** Searched the repo for v2 calibration summary candidates and confirmed no JSON file contains actor, hoarder, and maverick threshold values together; actor, hoarder, and maverick appear only in centroid/prompt/synthesis files without `axis_cap_threshold` or `cosine_success_threshold`.
@@ -182,7 +185,7 @@
 **Completed this session:** Produced motivational-depth cluster synthesis v3 as GPT-5.5 and saved `research/q2_stability/qwen/outputs/calibration/cluster_background_prompts_v3.json`.
 **Completed this session:** Appended the dialogue-derived characterization of the other cluster to `research/paper2_methods_v2.md` and created `research/paper4_research_notes.md` with the Buddhist-framework connection for Paper 4.
 **Completed this session:** Outlined Paper 1.5, captured six dialogue-derived cluster characterizations in Paper 2 methods notes, and expanded Paper 4 framework correspondences.
-**Next step:** Write the pod card to recalibrate actor, hoarder, and maverick using the confirmed 240 extraction questions and trickster-style instruction-file format, then save a new `all_personas_calibration_summary_v2.json` with non-null `axis_cap_threshold` and `cosine_success_threshold` values.
+**Next step:** Write the pod card with explicit instructions to use post-MLP decoder-layer outputs, keep Qwen thinking disabled with `enable_thinking=False`, and avoid making any fully-role-playing vs somewhat-role-playing category claim from local `.pt` metadata.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
-**Last commit before this session:** 56eca10
+**Last commit before this session:** 1d21b51
