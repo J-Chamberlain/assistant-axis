@@ -135,3 +135,7 @@ Added `research/paper4_research_notes.md` to capture the Buddhist-framework conn
 ## Update 2026-05-24 — Mythic-spiritual framework connection added
 
 Expanded `research/paper4_research_notes.md` with the mythic-spiritual cluster's loosening-of-roots structure, including Buddhist and Christian correspondences and the resulting Paper 4 hypothesis that mythic-spiritual prompting may reduce rumination signatures while other-cluster prompting may enhance them.
+
+## Update 2026-05-24 — Additional cluster framework correspondences captured
+
+Expanded `research/paper4_research_notes.md` with additional framework correspondences from dialogue-derived cluster analysis: grounded-social as vedana/reactivity, combative-iconoclast as asura/competitive striving, trickster-chaos as holy fool/licensed rule-violation, and editorial as a possible fear-rumination condition. Paper 4 should test whether these cluster anchors produce distinct rumination signatures.

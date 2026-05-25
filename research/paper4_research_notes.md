@@ -57,3 +57,29 @@ If the other cluster maps to the hungry ghost realm (identity organized around u
 - Editorial: possibly a refinement within procedural-professional rather than a separate realm
 - Trickster_chaos: no obvious cosmological analog, may be a category structurally outside the realms framework
 - Grounded_social: ?
+
+---
+
+## Additional framework correspondences (2026-05-24)
+
+Continued dialogue analysis of the seven clusters produced additional framework correspondences worth retaining for Paper 4.
+
+### Grounded-social cluster and Buddhist vedana
+
+The grounded-social cluster's characterization as identity constituted by reactivity to circumstance at the pre-deliberative level corresponds directly to the Buddhist concept of vedana, the moment of felt response to sensation that precedes deliberation. Buddhist practice specifically trains the gap between sensation and response. The cluster's members are figures whose identity is constituted within this reactive mode rather than transcending it. This positions grounded-social as the ordinary baseline of human reactivity from which the other clusters represent different modifications.
+
+### Combative-iconoclast cluster and Buddhist asura realm
+
+The asura realm in Buddhist cosmology describes beings constituted by competitive striving who cannot relinquish contention without ceasing to be themselves. The combative-iconoclast cluster's motivational structure (identity organized around aggressive force regardless of specific target) corresponds to this realm. The cluster's members cannot become non-combative without losing the identity that constitutes them, which is the same structural problem the asura faces in Buddhist accounts.
+
+### Trickster-chaos cluster and the holy fool tradition
+
+The trickster-chaos cluster has no obvious correspondence in the Buddhist realm framework, which is organized around different attachment structures. The cluster's characterization as identity organized around occupying the permission-protected mode of social rule-violation corresponds instead to the cross-cultural figure of the holy fool, the licensed jester, the crazy-wisdom teacher, the Sufi nasruddin figure. These figures appear across many traditions and occupy a structural position outside the usual frames of authority and seriousness. The cluster may be the model's geometric expression of this cross-culturally recognized role.
+
+### Three-cluster reactivity taxonomy
+
+The grounded-social, other, and mythic-spiritual clusters together form a coherent taxonomy of how reactivity manifests in identity formation. Grounded-social is ordinary reactivity. Other is reactivity that has become recursive and cannot complete. Mythic-spiritual is reactivity transcended through contact with what exceeds the frame. Paper 4's rumination work should test whether interviewers anchored in these three clusters show predictable differences in rumination signatures: baseline reactivity in grounded-social, enhanced rumination in other, and reduced rumination in mythic-spiritual.
+
+### Editorial cluster and fear-rumination
+
+If the editorial cluster is fear-driven as hypothesized, its rumination signature should be distinct from both the hungry ghost rumination of the other cluster and the equanimity of mythic-spiritual. Editorial rumination would be the anxious worry about correctness, the preemptive hedging, the defensive looping about whether outputs meet standards. Paper 4 should include editorial anchoring as a test condition and look for this specific signature.

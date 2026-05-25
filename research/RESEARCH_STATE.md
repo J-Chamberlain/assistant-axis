@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-24
-**Last commit:** d2af0a3
-**Current status:** Active — Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1, v2, and motivational-depth v3 saved for comparison; dialogue-derived other and mythic-spiritual cluster characterizations captured; Paper 4 framework correspondences expanded; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
+**Last commit:** d4bb847
+**Current status:** Active — Paper 1.5 outlined as a standalone cluster-motivation paper; six of seven cluster characterizations captured; Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1, v2, and motivational-depth v3 saved for comparison; Paper 4 framework correspondences expanded; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
 
 ---
 
@@ -143,6 +143,18 @@
 - The Qwen-native representatives diverged from Gemma for three clusters: grounded_social selected actor instead of blogger, other selected hoarder instead of podcaster, and combative_iconoclast selected maverick instead of contrarian
 - Result saved to `research/q2_stability/qwen/outputs/calibration/qwen_centroid_selection.json`
 
+### Cluster Motivational Structure Analysis (2026-05-24, dialogue-derived)
+
+- Six of seven clusters characterized through extended researcher dialogue
+- Other cluster: identity around unresolved need (hungry ghost correspondence)
+- Mythic-spiritual: identity around hole-and-loosening-of-roots (Buddhist dukkha and Christian Matthew 10:34-39 correspondences)
+- Grounded-social: identity around reactivity to circumstance (vedana correspondence)
+- Combative-iconoclast: identity around aggressive force (asura realm correspondence)
+- Trickster-chaos: identity around permission-protected play (holy fool correspondence)
+- Editorial: identity around agent-of-the-standard with fear of error as hypothesized affective driver
+- Procedural-professional: not yet characterized
+- Decision to make this work standalone as Paper 1.5, sitting between Paper 1 and Paper 2
+
 ---
 
 ## 3. CURRENT STATE
@@ -164,7 +176,8 @@
 **Completed this session:** Reran cluster synthesis as GPT-5.5 from `cluster_synthesis_inputs.json`, saved `cluster_background_prompts_v2.json`, and updated v1 model provenance to note the retroactive correction.
 **Completed this session:** Produced motivational-depth cluster synthesis v3 as GPT-5.5 and saved `research/q2_stability/qwen/outputs/calibration/cluster_background_prompts_v3.json`.
 **Completed this session:** Appended the dialogue-derived characterization of the other cluster to `research/paper2_methods_v2.md` and created `research/paper4_research_notes.md` with the Buddhist-framework connection for Paper 4.
-**Next step:** Characterize the remaining five clusters at the same dialogue-derived motivational depth, then decide which framework mappings belong in Paper 4 rather than Paper 2.
+**Completed this session:** Outlined Paper 1.5, captured six dialogue-derived cluster characterizations in Paper 2 methods notes, and expanded Paper 4 framework correspondences.
+**Next step:** Complete procedural-professional characterization in the next session, then run empirical verification tests for cluster-derived anchoring and editorial fear activation.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
-**Last commit before this session:** e5be107
+**Last commit before this session:** d4bb847
