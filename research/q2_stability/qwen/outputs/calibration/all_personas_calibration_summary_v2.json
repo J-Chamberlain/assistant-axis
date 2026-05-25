@@ -1,0 +1,89 @@
+{
+  "calibration_date": "2026-05-25",
+  "model": "Qwen/Qwen3-32B",
+  "extraction_layer": 48,
+  "policy": "empirical_p25_neutral_operational",
+  "model_used": "GPT-5.5",
+  "personas": {
+    "editor": {
+      "axis_cap_threshold": -0.03,
+      "cosine_success_threshold": 0.10392010360956191,
+      "source": "original_calibration"
+    },
+    "synthesizer": {
+      "axis_cap_threshold": 0.06,
+      "cosine_success_threshold": -0.08317925058305263,
+      "source": "original_calibration"
+    },
+    "ancient": {
+      "axis_cap_threshold": 0.15,
+      "cosine_success_threshold": 0.2497865876555443,
+      "source": "original_calibration"
+    },
+    "trickster": {
+      "axis_cap_threshold": 0.05,
+      "cosine_success_threshold": 0.14953236728906633,
+      "source": "original_calibration"
+    },
+    "actor": {
+      "axis_cap_threshold": -0.0056657614186406136,
+      "cosine_success_threshold": 0.9252031445503235,
+      "neutral_p25_operational": -0.0056657614186406136,
+      "neutral_axis_mean": 0.0077884472906589505,
+      "neutral_axis_std": 0.025748623777978336,
+      "role_elicited_axis_mean": -0.0962052121758461,
+      "role_elicited_axis_std": 0.05396506190299988,
+      "role_elicited_axis_p25": -0.13925783336162567,
+      "role_elicited_axis_p75": -0.06086744740605354,
+      "role_elicited_cosine_mean": 0.9252031445503235,
+      "role_elicited_cosine_std": 0.010025948286056519,
+      "role_elicited_cosine_p25": 0.9204987287521362,
+      "role_elicited_cosine_p75": 0.9323983192443848,
+      "role_elicited_usable_count": 100,
+      "think_artifact_discards": 0,
+      "source": "recalibration_2026-05-25"
+    },
+    "hoarder": {
+      "axis_cap_threshold": -0.0056657614186406136,
+      "cosine_success_threshold": 0.9321000576019287,
+      "neutral_p25_operational": -0.0056657614186406136,
+      "neutral_axis_mean": 0.0077884472906589505,
+      "neutral_axis_std": 0.025748623777978336,
+      "role_elicited_axis_mean": -0.11192532628774643,
+      "role_elicited_axis_std": 0.04111749678850174,
+      "role_elicited_axis_p25": -0.1420375406742096,
+      "role_elicited_axis_p75": -0.0890822783112526,
+      "role_elicited_cosine_mean": 0.9321000576019287,
+      "role_elicited_cosine_std": 0.0064828963950276375,
+      "role_elicited_cosine_p25": 0.9272050261497498,
+      "role_elicited_cosine_p75": 0.9364680051803589,
+      "role_elicited_usable_count": 100,
+      "think_artifact_discards": 0,
+      "source": "recalibration_2026-05-25"
+    },
+    "maverick": {
+      "axis_cap_threshold": -0.0056657614186406136,
+      "cosine_success_threshold": 0.9275577068328857,
+      "neutral_p25_operational": -0.0056657614186406136,
+      "neutral_axis_mean": 0.0077884472906589505,
+      "neutral_axis_std": 0.025748623777978336,
+      "role_elicited_axis_mean": -0.08435467630624771,
+      "role_elicited_axis_std": 0.0357646569609642,
+      "role_elicited_axis_p25": -0.11208409070968628,
+      "role_elicited_axis_p75": -0.06027420982718468,
+      "role_elicited_cosine_mean": 0.9275577068328857,
+      "role_elicited_cosine_std": 0.008716863580048084,
+      "role_elicited_cosine_p25": 0.9221722483634949,
+      "role_elicited_cosine_p75": 0.9328863620758057,
+      "role_elicited_usable_count": 100,
+      "think_artifact_discards": 0,
+      "source": "recalibration_2026-05-25"
+    }
+  },
+  "replaced_personas": {
+    "blogger": "replaced by actor (grounded_social centroid)",
+    "podcaster": "replaced by hoarder (other centroid)",
+    "contrarian": "replaced by maverick (combative_iconoclast centroid)"
+  },
+  "notes": "axis_cap_threshold for actor/hoarder/maverick is neutral-prompt p25, an operational dyad control threshold. Role-elicited measurements are provided separately for comparison. editor/synthesizer/ancient/trickster thresholds carried from original calibration."
+}
