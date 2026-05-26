@@ -1,0 +1,21 @@
+{
+  "run_id": "paper1_5_editor_phase1_128_2026-05-26",
+  "pod_id": "5b6hz02m9idrc3",
+  "pod_name": "paper1-5-editor-128",
+  "ssh_host": "216.81.245.143",
+  "ssh_port": 17251,
+  "ssh_endpoint": "root@216.81.245.143:17251",
+  "gpu_type": "NVIDIA A100-SXM4-80GB",
+  "hourly_price_usd": 1.49,
+  "launch_time_utc": "2026-05-26T16:27:46.963Z",
+  "latest_status_time_utc": "2026-05-26T17:58:52Z",
+  "current_status": "integrity_checked",
+  "latest_rollout": 128,
+  "local_snapshot_status": "copied",
+  "integrity_status": "passed",
+  "preservation_status": "local_copy_complete",
+  "termination_status": "not_terminated_user_confirmation_required",
+  "scoring_status": "not_started",
+  "validation_status": "not_started",
+  "notes": "First editor adaptive extraction chunk completed exactly 128/128 rollouts. Pod-side scoring was not run. Pod remains RUNNING/idle pending user confirmation."
+}

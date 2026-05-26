@@ -1,0 +1,79 @@
+{
+  "date": "2026-05-26T17:58:52.541183+00:00",
+  "expected_records": 128,
+  "jsonl_path": "research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase1_128.jsonl",
+  "record_count": 128,
+  "unique_pair_count": 128,
+  "duplicate_pair_count": 0,
+  "duplicate_pairs": [],
+  "activation_saved_true_count": 128,
+  "activation_shard_count": 128,
+  "missing_activation_target_count": 0,
+  "missing_activation_targets": [],
+  "think_artifact_count": 0,
+  "literal_think_tag_count": 0,
+  "literal_think_pairs": [],
+  "truncated_count": 99,
+  "empty_response_text_count": 0,
+  "generation_model_values": [
+    "Qwen/Qwen3-32B"
+  ],
+  "script_author_model_values": [
+    "GPT-5.5"
+  ],
+  "sampled_activation_loads": [
+    {
+      "index": 0,
+      "sp_idx": 0,
+      "q_idx": 0,
+      "path": "research/q2_stability/qwen/outputs/paper1_5/editor/activations_editor/sp0_q0.pt",
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "index": 31,
+      "sp_idx": 0,
+      "q_idx": 31,
+      "path": "research/q2_stability/qwen/outputs/paper1_5/editor/activations_editor/sp0_q31.pt",
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "index": 63,
+      "sp_idx": 0,
+      "q_idx": 63,
+      "path": "research/q2_stability/qwen/outputs/paper1_5/editor/activations_editor/sp0_q63.pt",
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "index": 95,
+      "sp_idx": 0,
+      "q_idx": 95,
+      "path": "research/q2_stability/qwen/outputs/paper1_5/editor/activations_editor/sp0_q95.pt",
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "index": 127,
+      "sp_idx": 0,
+      "q_idx": 127,
+      "path": "research/q2_stability/qwen/outputs/paper1_5/editor/activations_editor/sp0_q127.pt",
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32"
+    }
+  ],
+  "sampled_activation_load_error_count": 0,
+  "sampled_activation_load_errors": [],
+  "valid": true
+}

@@ -1,0 +1,21 @@
+Resuming: 0 rollouts already done
+Manifest written.
+Loading model...
+Fetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]Fetching 17 files:   6%|▌         | 1/17 [02:42<43:17, 162.35s/it]Fetching 17 files:  53%|█████▎    | 9/17 [04:19<03:13, 24.25s/it] Fetching 17 files:  65%|██████▍   | 11/17 [04:44<02:08, 21.34s/it]Fetching 17 files: 100%|██████████| 17/17 [04:57<00:00, 11.50s/it]Fetching 17 files: 100%|██████████| 17/17 [04:57<00:00, 17.53s/it]
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:11,  1.33it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:11,  1.34it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:02<00:10,  1.32it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:03<00:09,  1.33it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:03<00:08,  1.35it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:04<00:08,  1.33it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:05<00:07,  1.32it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:06<00:07,  1.21it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:06<00:06,  1.28it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:07<00:05,  1.34it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:08<00:05,  1.20it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:09<00:03,  1.25it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:10<00:03,  1.27it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:10<00:02,  1.28it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:11<00:01,  1.29it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:12<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:12<00:00,  1.45it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:12<00:00,  1.32it/s]
+Model loaded in 318.3s
+/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.95` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:653: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+[new=16 total=16/128] think_discards=0 truncated=12 rate=30.7s ETA=57.3min GPU=65.5GB
+[new=32 total=32/128] think_discards=0 truncated=24 rate=31.4s ETA=50.2min GPU=65.5GB
+[new=48 total=48/128] think_discards=0 truncated=38 rate=32.8s ETA=43.7min GPU=65.5GB
+[new=64 total=64/128] think_discards=0 truncated=50 rate=32.9s ETA=35.1min GPU=65.5GB
+[new=80 total=80/128] think_discards=0 truncated=62 rate=32.7s ETA=26.1min GPU=65.5GB
+[new=96 total=96/128] think_discards=0 truncated=75 rate=32.6s ETA=17.4min GPU=65.5GB
+[new=112 total=112/128] think_discards=0 truncated=84 rate=32.1s ETA=8.6min GPU=65.5GB
+[new=128 total=128/128] think_discards=0 truncated=99 rate=32.5s ETA=0.0min GPU=65.5GB
+Editor Phase 1 chunk complete. new=128 total=128/128 think_discards=0 truncated=99

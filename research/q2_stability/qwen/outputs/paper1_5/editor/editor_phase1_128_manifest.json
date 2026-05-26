@@ -1,0 +1,22 @@
+{
+  "persona": "editor",
+  "generation_model": "Qwen/Qwen3-32B",
+  "script_author_model": "GPT-5.5",
+  "layer": 48,
+  "max_new_tokens": 512,
+  "max_rollouts": 128,
+  "n_system_prompts": 5,
+  "n_questions": 240,
+  "rollout_selection": "first 128 stable-order (sp_idx, q_idx) pairs",
+  "transformers_version": "4.51.3",
+  "torch_version": "2.8.0+cu128",
+  "cuda_device": "NVIDIA A100-SXM4-80GB",
+  "instructions_hash": "e6ee52d1609f",
+  "questions_hash": "a1c94e4a44a6",
+  "git_commit": "ac24285",
+  "script": "phase1_inference_only_editor.py",
+  "start_time": 1779813292.597324,
+  "enable_thinking": false,
+  "use_cache_for_measurement": false,
+  "phase": "1_inference_only_no_judge"
+}

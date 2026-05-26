@@ -210,6 +210,14 @@
 - This supports adaptive extraction as an operational replacement for exhaustive 1200-rollout generation, pending validation on additional personas
 - Paper 1.5 methodology records this protocol in `research/paper1_5_outline.md`; workflow continuity note is `research/paper1_5_adaptive_extraction_notes.md`
 
+### Paper 1.5 Editor Adaptive Extraction Phase 1 Chunk (2026-05-26)
+
+- Qwen/Qwen3-32B editor adaptive extraction first chunk completed exactly 128/128 rollouts on an A100 SXM 80GB RunPod pod
+- Local integrity passed: 128 JSONL records, 128 unique `(sp_idx, q_idx)` pairs, 128 `activation_saved=True`, 128 matching activation shards, zero duplicate pairs, zero empty responses, zero literal think tags, zero `think_artifact=True`, and sampled tensors load as shape `[5120]`
+- The 128 records cover `sp_idx=0`, `q_idx=0-127`, because this was the first stable-order chunk rather than the full 5x240 rollout grid
+- Truncation was high at 99/128 responses and should be retained as a covariate during scoring and vector validation
+- No judge/scoring was run on the pod; local Codex scoring and Lu-reference validation remain the next steps if the user approves
+
 ---
 
 ## 3. CURRENT STATE
@@ -224,10 +232,11 @@
 
 **Next empirical step:** Run a second-persona adaptive extraction test using `editor` as the next role, specifically to test whether adaptive extraction generalizes beyond the high-signal trickster persona.
 
-**Completed this session:** Verified editor inputs exist: `data/roles/instructions/editor.json` has the expected five-prompt Lu-style structure, and `downloads/hf_vectors/qwen-3-32b/role_vectors/editor.pt` loads as a `[64, 5120]` Qwen role-vector tensor.
-**Completed this session:** Prepared the editor adaptive extraction run plan, editor script adaptation notes, and a draft future pod card under `research/q2_stability/qwen/outputs/paper1_5/` without launching a pod.
-**Next step:** With user confirmation, launch the editor 128-rollout RunPod chunk using the prepared draft card and the `research/workflow/` lifecycle protocol.
-**Last commit before this session:** d317948
+**Completed this session:** Launched RunPod pod `5b6hz02m9idrc3` on A100 SXM 80GB at $1.49/hr and ran the bounded Qwen/Qwen3-32B editor Phase 1 script for exactly 128 stable-order rollouts.
+**Completed this session:** Preserved the editor JSONL, manifest, log, pod script copy, and 128 activation shards locally under `research/q2_stability/qwen/outputs/paper1_5/editor/`, then ran local integrity successfully.
+**Completed this session:** Did not run scoring, did not launch another chunk, and did not terminate the pod; the pod is RUNNING/idle pending user confirmation.
+**Next step:** Decide whether to run local Codex GPT-5.5 editor role-expression scoring, continue generation with another chunk, or terminate the idle RunPod pod.
+**Last commit before this session:** ac24285
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
-**Pod status:** No active pod is required for this state update. Future pod work should start from the workflow registry and heartbeat protocol.
+**Pod status:** RunPod pod `5b6hz02m9idrc3` remains RUNNING/idle after editor Phase 1 chunk completion. Termination requires explicit user confirmation.
