@@ -1,0 +1,96 @@
+{
+  "date": "2026-05-26",
+  "model_used": "GPT-5.5",
+  "judge_model": "Codex GPT-5.5 Standard",
+  "matched_pairs": 64,
+  "input_512": "research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase1_128.jsonl",
+  "input_1024": "research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/editor_phase1_matched64_1024.jsonl",
+  "truncation_count_512": 50,
+  "truncation_count_1024": 5,
+  "truncation_reduction": 45,
+  "score_distribution_512": {
+    "0": {
+      "count": 24,
+      "fraction": 0.375
+    },
+    "1": {
+      "count": 35,
+      "fraction": 0.546875
+    },
+    "2": {
+      "count": 4,
+      "fraction": 0.0625
+    },
+    "3": {
+      "count": 1,
+      "fraction": 0.015625
+    }
+  },
+  "score_distribution_1024": {
+    "0": {
+      "count": 22,
+      "fraction": 0.34375
+    },
+    "1": {
+      "count": 37,
+      "fraction": 0.578125
+    },
+    "2": {
+      "count": 4,
+      "fraction": 0.0625
+    },
+    "3": {
+      "count": 1,
+      "fraction": 0.015625
+    }
+  },
+  "score_ge_2_count_512": 5,
+  "score_ge_2_count_1024": 5,
+  "score_eq_3_count_512": 1,
+  "score_eq_3_count_1024": 1,
+  "exact_score_agreement": {
+    "count": 62,
+    "fraction": 0.96875
+  },
+  "score_ge_2_agreement": {
+    "count": 64,
+    "fraction": 1.0
+  },
+  "score_eq_3_agreement": {
+    "count": 64,
+    "fraction": 1.0
+  },
+  "cases_where_1024_adds_role_expression_evidence": [
+    {
+      "sp_idx": 0,
+      "q_idx": 25,
+      "truncated_512": true,
+      "truncated_1024": false,
+      "score_512": 0,
+      "score_1024": 1,
+      "delta": 1,
+      "rationale_512": "generic assistant response without editorial stance",
+      "rationale_1024": "weak clarity or structure emphasis, mostly generic",
+      "length_512": 2505,
+      "length_1024": 3233
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 47,
+      "truncated_512": true,
+      "truncated_1024": false,
+      "score_512": 0,
+      "score_1024": 1,
+      "delta": 1,
+      "rationale_512": "generic assistant response without editorial stance",
+      "rationale_1024": "weak clarity or structure emphasis, mostly generic",
+      "length_512": 2455,
+      "length_1024": 3998
+    }
+  ],
+  "cases_where_longer_completion_dilutes_editor_identity": [],
+  "recommendation_512_defensible_for_editor": "Not as a primary extraction cap from this chunk: 512 produced heavy truncation and very low editor-role yield, although matched score>=2 counts were unchanged by 1024.",
+  "recommendation_future_token_cap": "Use conditional escalation or 1024 for editor-like quiet personas until a prompt or system-prompt mix with higher role-expression yield is validated.",
+  "validation_gate_met": false,
+  "validation_gate_note": "512-cap scored set has 10 score>=2 and 3 score==3 responses, below required 64 and 16 thresholds; vector validation was not run."
+}

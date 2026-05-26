@@ -226,6 +226,15 @@
 - Truncation dropped from 50/64 at 512 tokens to 5/64 at 1024 tokens for the matched first-64 editor pairs
 - This establishes the paired data needed for local scoring and token-cap vector comparison before deciding whether future editor chunks should use 512 or 1024 tokens
 
+### Paper 1.5 Editor Adaptive Extraction Scoring and Token-Cap Comparison (2026-05-26)
+
+- Codex GPT-5.5 Standard local role-expression scoring completed for the 128-record editor 512-token chunk and the matched 64-record editor 1024-token sensitivity chunk
+- The 512-token chunk produced 10 score>=2 responses and 3 score==3 responses out of 128, below the validation gate of 64 score>=2 and 16 score==3 responses
+- The matched 1024-token chunk produced 5 score>=2 responses and 1 score==3 response out of 64, identical to the matched first-64 512-token score>=2 and score==3 counts
+- Matched token-cap comparison found truncation dropped from 50/64 to 5/64, exact score agreement was 62/64, score>=2 agreement was 64/64, and score==3 agreement was 64/64
+- Vector validation and score-conditioned sample sufficiency were not run because the editor 512-token scored set failed the preregistered score thresholds
+- Current implication: the first editor chunk does not validate adaptive extraction beyond trickster; low editor-role yield appears driven more by prompt/chunk behavior than by the 512-token cap alone
+
 ---
 
 ## 3. CURRENT STATE
@@ -238,14 +247,14 @@
 
 **Workflow infrastructure:** `research/workflow/` now contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Next empirical step:** Run local Codex GPT-5.5 editor role-expression scoring and paired token-cap vector comparison, using the 128-record 512-cap editor chunk and the matched64 1024-cap follow-up.
+**Next empirical step:** Decide whether to run an additional editor chunk using later system prompts or a revised editor anchoring design, because the first `sp_idx=0` chunk did not meet role-expression thresholds even after the matched 1024-token sensitivity check.
 
-**Completed this session:** Verified the editor 128-rollout closeout gates, including local files, valid integrity, committed safe artifacts, and reachable idle RunPod pod `5b6hz02m9idrc3`.
-**Completed this session:** Ran a matched token-cap sensitivity follow-up on the same pod for the first 64 editor pairs with `MAX_NEW_TOKENS=1024`, preserving JSONL records and activation shards locally.
-**Completed this session:** Local integrity passed for the 1024-token follow-up, and truncation dropped from 50/64 at 512 tokens to 5/64 at 1024 tokens for the matched pairs.
-**Completed this session:** Did not run scoring, did not launch another chunk, and did not terminate the pod; the pod is RUNNING/idle pending user confirmation.
-**Next step:** Decide whether to run local scoring plus token-cap vector comparison, or terminate the idle RunPod pod.
-**Last commit before this session:** b61cd91
+**Completed this session:** Verified that the editor 512-token and matched 1024-token generation datasets and integrity files were locally preserved before scoring.
+**Completed this session:** Created a reusable editor Codex GPT-5.5 scoring harness and scored the full 128-record 512-token editor chunk.
+**Completed this session:** Scored all 64 matched 1024-token editor records and wrote the token-cap comparison, finding that 1024 sharply reduces truncation but does not improve score>=2 or score==3 yield in the matched set.
+**Completed this session:** Did not run vector validation or score-conditioned sample sufficiency because the 512-token editor scored set reached only 10 score>=2 responses and 3 score==3 responses, below the preregistered thresholds.
+**Next step:** Decide whether to generate another editor chunk, revise the editor prompt/selection strategy, or terminate any remaining idle RunPod resources after confirming pod state through RunPod credentials or dashboard.
+**Last commit before this session:** 6c9ec14
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
-**Pod status:** RunPod pod `5b6hz02m9idrc3` remains RUNNING/idle after editor Phase 1 chunk completion. Termination requires explicit user confirmation.
+**Pod status:** After the matched 1024-token run, local artifacts show preservation and integrity are complete. Post-commit pod verification is unresolved in the local shell because `runpodctl` lacks an API key and saved SSH endpoints refused connection; termination status should be confirmed through RunPod credentials or dashboard before further pod planning.

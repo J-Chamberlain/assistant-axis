@@ -1,0 +1,138 @@
+{
+  "date": "2026-05-26",
+  "model_used": "GPT-5.5",
+  "judge_model": "Codex GPT-5.5 Standard",
+  "judge_context": "local Codex rubric scoring, no OpenAI API",
+  "input_jsonl": "research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/editor_phase1_matched64_1024.jsonl",
+  "output_jsonl": "research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/editor_phase2_scores_1024_codex_gpt55.jsonl",
+  "complete": true,
+  "total_records": 64,
+  "total_scored": 64,
+  "remaining": 0,
+  "score_distribution": {
+    "0": {
+      "count": 22,
+      "fraction": 0.34375
+    },
+    "1": {
+      "count": 37,
+      "fraction": 0.578125
+    },
+    "2": {
+      "count": 4,
+      "fraction": 0.0625
+    },
+    "3": {
+      "count": 1,
+      "fraction": 0.015625
+    }
+  },
+  "score_ge_2": {
+    "count": 5,
+    "fraction": 0.078125
+  },
+  "score_eq_3": {
+    "count": 1,
+    "fraction": 0.015625
+  },
+  "by_truncated": {
+    "false": {
+      "total": 59,
+      "distribution": {
+        "0": {
+          "count": 20,
+          "fraction": 0.3389830508474576
+        },
+        "1": {
+          "count": 34,
+          "fraction": 0.576271186440678
+        },
+        "2": {
+          "count": 4,
+          "fraction": 0.06779661016949153
+        },
+        "3": {
+          "count": 1,
+          "fraction": 0.01694915254237288
+        }
+      },
+      "score_ge_2": {
+        "count": 5,
+        "fraction": 0.0847457627118644
+      },
+      "score_eq_3": {
+        "count": 1,
+        "fraction": 0.01694915254237288
+      }
+    },
+    "true": {
+      "total": 5,
+      "distribution": {
+        "0": {
+          "count": 2,
+          "fraction": 0.4
+        },
+        "1": {
+          "count": 3,
+          "fraction": 0.6
+        },
+        "2": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "3": {
+          "count": 0,
+          "fraction": 0.0
+        }
+      },
+      "score_ge_2": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "score_eq_3": {
+        "count": 0,
+        "fraction": 0.0
+      }
+    }
+  },
+  "by_sp_idx": {
+    "0": {
+      "total": 64,
+      "distribution": {
+        "0": {
+          "count": 22,
+          "fraction": 0.34375
+        },
+        "1": {
+          "count": 37,
+          "fraction": 0.578125
+        },
+        "2": {
+          "count": 4,
+          "fraction": 0.0625
+        },
+        "3": {
+          "count": 1,
+          "fraction": 0.015625
+        }
+      },
+      "score_ge_2": {
+        "count": 5,
+        "fraction": 0.078125
+      },
+      "score_eq_3": {
+        "count": 1,
+        "fraction": 0.015625
+      }
+    }
+  },
+  "thresholds": {
+    "score_3_n_ge_16": false,
+    "score_3_n_ge_64": false,
+    "score_ge_2_n_ge_16": false,
+    "score_ge_2_n_ge_64": false
+  },
+  "truncation_note": "No strong suppression signal from truncation in the scored subset.",
+  "recommendation": "Do not proceed to vector validation; qualifying counts are below target.",
+  "method_note": "Judge model differs from Lu et al.; Codex GPT-5.5 Standard is used as a pragmatic local scoring substitute, not a strict Lu-method replication."
+}
