@@ -1,0 +1,283 @@
+{
+  "persona": "editor",
+  "generation_model": "Qwen/Qwen3-32B",
+  "script_author_model": "GPT-5.5",
+  "layer": 48,
+  "token_cap": 1024,
+  "max_new_tokens": 1024,
+  "matched_against": "research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase1_128.jsonl",
+  "n_pairs": 64,
+  "purpose": "token_cap_sensitivity",
+  "n_system_prompts": 5,
+  "n_questions": 240,
+  "matched_pairs": [
+    {
+      "sp_idx": 0,
+      "q_idx": 0
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 1
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 2
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 3
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 4
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 5
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 6
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 7
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 8
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 9
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 10
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 11
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 12
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 13
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 14
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 15
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 16
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 17
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 18
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 19
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 20
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 21
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 22
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 23
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 24
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 25
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 26
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 27
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 28
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 29
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 30
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 31
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 32
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 33
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 34
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 35
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 36
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 37
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 38
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 39
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 40
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 41
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 42
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 43
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 44
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 45
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 46
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 47
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 48
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 49
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 50
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 51
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 52
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 53
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 54
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 55
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 56
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 57
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 58
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 59
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 60
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 61
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 62
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 63
+    }
+  ],
+  "transformers_version": "4.51.3",
+  "torch_version": "2.8.0+cu128",
+  "cuda_device": "NVIDIA A100-SXM4-80GB",
+  "instructions_hash": "e6ee52d1609f",
+  "questions_hash": "a1c94e4a44a6",
+  "matched_source_hash": "1b19f6b69b13",
+  "git_commit": "ac24285",
+  "script": "phase1_inference_editor_matched64_1024.py",
+  "start_time": 1779821402.8191285,
+  "enable_thinking": false,
+  "use_cache_for_measurement": false,
+  "phase": "1_inference_only_token_cap_sensitivity_no_judge"
+}

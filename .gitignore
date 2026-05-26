@@ -43,6 +43,7 @@ outputs/
 *.parquet
 **/activations_trickster/
 **/activations_editor/
+**/activations_editor_1024/
 
 # OS
 .DS_Store

@@ -1,0 +1,20 @@
+Resuming: 0 matched rollouts already done
+Manifest written.
+Loading model...
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:25<06:51, 25.69s/it]Loading checkpoint shards:  12%|█▏        | 2/17 [00:49<06:07, 24.52s/it]Loading checkpoint shards:  18%|█▊        | 3/17 [01:21<06:29, 27.83s/it]Loading checkpoint shards:  24%|██▎       | 4/17 [01:58<06:48, 31.45s/it]Loading checkpoint shards:  29%|██▉       | 5/17 [02:28<06:14, 31.17s/it]Loading checkpoint shards:  35%|███▌      | 6/17 [02:52<05:15, 28.68s/it]Loading checkpoint shards:  41%|████      | 7/17 [03:11<04:14, 25.43s/it]Loading checkpoint shards:  47%|████▋     | 8/17 [03:29<03:29, 23.23s/it]Loading checkpoint shards:  53%|█████▎    | 9/17 [03:50<02:59, 22.50s/it]Loading checkpoint shards:  59%|█████▉    | 10/17 [04:10<02:31, 21.68s/it]Loading checkpoint shards:  65%|██████▍   | 11/17 [04:35<02:15, 22.65s/it]Loading checkpoint shards:  71%|███████   | 12/17 [04:54<01:47, 21.50s/it]Loading checkpoint shards:  76%|███████▋  | 13/17 [05:13<01:23, 20.76s/it]Loading checkpoint shards:  82%|████████▏ | 14/17 [05:31<00:59, 19.91s/it]Loading checkpoint shards:  88%|████████▊ | 15/17 [05:51<00:40, 20.02s/it]Loading checkpoint shards:  94%|█████████▍| 16/17 [06:14<00:20, 20.84s/it]Loading checkpoint shards: 100%|██████████| 17/17 [06:30<00:00, 19.27s/it]Loading checkpoint shards: 100%|██████████| 17/17 [06:30<00:00, 22.94s/it]
+Model loaded in 393.2s
+/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.95` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:653: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+[new=8 total=8/64] think_discards=0 truncated=1 rate=44.3s ETA=41.3min GPU=65.5GB
+[new=16 total=16/64] think_discards=0 truncated=1 rate=43.8s ETA=35.0min GPU=65.5GB
+[new=24 total=24/64] think_discards=0 truncated=3 rate=45.7s ETA=30.5min GPU=65.5GB
+[new=32 total=32/64] think_discards=0 truncated=3 rate=42.3s ETA=22.5min GPU=65.5GB
+[new=40 total=40/64] think_discards=0 truncated=4 rate=45.3s ETA=18.1min GPU=65.5GB
+[new=48 total=48/64] think_discards=0 truncated=4 rate=45.9s ETA=12.2min GPU=65.5GB
+[new=56 total=56/64] think_discards=0 truncated=4 rate=45.8s ETA=6.1min GPU=65.5GB
+[new=64 total=64/64] think_discards=0 truncated=5 rate=46.1s ETA=0.0min GPU=65.5GB
+Editor matched64 1024-token run complete. new=64 total=64/64 think_discards=0 truncated=5

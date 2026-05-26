@@ -1,0 +1,83 @@
+{
+  "date": "2026-05-26T19:50:22.908440+00:00",
+  "expected_records": 64,
+  "jsonl_path": "research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/editor_phase1_matched64_1024.jsonl",
+  "matched_against": "research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase1_128.jsonl",
+  "record_count": 64,
+  "same_pairs_as_first64_editor_phase1_128": true,
+  "unique_pair_count": 64,
+  "duplicate_pair_count": 0,
+  "duplicate_pairs": [],
+  "activation_saved_true_count": 64,
+  "activation_shard_count": 64,
+  "missing_activation_target_count": 0,
+  "missing_activation_targets": [],
+  "think_artifact_count": 0,
+  "literal_think_tag_count": 0,
+  "literal_think_pairs": [],
+  "truncated_count_1024": 5,
+  "matched_first64_truncated_count_512": 50,
+  "truncation_reduction_count": 45,
+  "empty_response_text_count": 0,
+  "generation_model_values": [
+    "Qwen/Qwen3-32B"
+  ],
+  "script_author_model_values": [
+    "GPT-5.5"
+  ],
+  "sampled_activation_loads": [
+    {
+      "index": 0,
+      "sp_idx": 0,
+      "q_idx": 0,
+      "path": "research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/activations_editor_1024/sp0_q0.pt",
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "index": 15,
+      "sp_idx": 0,
+      "q_idx": 15,
+      "path": "research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/activations_editor_1024/sp0_q15.pt",
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "index": 31,
+      "sp_idx": 0,
+      "q_idx": 31,
+      "path": "research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/activations_editor_1024/sp0_q31.pt",
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "index": 47,
+      "sp_idx": 0,
+      "q_idx": 47,
+      "path": "research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/activations_editor_1024/sp0_q47.pt",
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "index": 63,
+      "sp_idx": 0,
+      "q_idx": 63,
+      "path": "research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/activations_editor_1024/sp0_q63.pt",
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32"
+    }
+  ],
+  "sampled_activation_load_error_count": 0,
+  "sampled_activation_load_errors": [],
+  "valid": true
+}

@@ -218,6 +218,14 @@
 - Truncation was high at 99/128 responses and should be retained as a covariate during scoring and vector validation
 - No judge/scoring was run on the pod; local Codex scoring and Lu-reference validation remain the next steps if the user approves
 
+### Paper 1.5 Editor Token-Cap Sensitivity Chunk (2026-05-26)
+
+- Matched token-cap sensitivity follow-up completed on the same RunPod pod using the first 64 `(sp_idx, q_idx)` pairs from `editor_phase1_128.jsonl`
+- The follow-up used Qwen/Qwen3-32B, editor persona, layer 48, deterministic generation, `MAX_NEW_TOKENS=1024`, no pod-side judge/scoring, and the same post-MLP residual mean-pooling measurement path
+- Local integrity passed: 64 JSONL records, the same 64 pairs as the first 64 editor 512-cap records, 64 unique pairs, 64 activation shards, zero missing activation targets, zero empty responses, zero literal think tags, zero `think_artifact=True`, and sampled tensors load as shape `[5120]`
+- Truncation dropped from 50/64 at 512 tokens to 5/64 at 1024 tokens for the matched first-64 editor pairs
+- This establishes the paired data needed for local scoring and token-cap vector comparison before deciding whether future editor chunks should use 512 or 1024 tokens
+
 ---
 
 ## 3. CURRENT STATE
@@ -230,13 +238,13 @@
 
 **Workflow infrastructure:** `research/workflow/` now contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Next empirical step:** Run a second-persona adaptive extraction test using `editor` as the next role, specifically to test whether adaptive extraction generalizes beyond the high-signal trickster persona.
+**Next empirical step:** Run local Codex GPT-5.5 editor role-expression scoring and paired token-cap vector comparison, using the 128-record 512-cap editor chunk and the matched64 1024-cap follow-up.
 
-**Completed this session:** Launched RunPod pod `5b6hz02m9idrc3` on A100 SXM 80GB at $1.49/hr and ran the bounded Qwen/Qwen3-32B editor Phase 1 script for exactly 128 stable-order rollouts.
-**Completed this session:** Preserved the editor JSONL, manifest, log, pod script copy, and 128 activation shards locally under `research/q2_stability/qwen/outputs/paper1_5/editor/`, then ran local integrity successfully.
+**Completed this session:** Verified the editor 128-rollout closeout gates, including local files, valid integrity, committed safe artifacts, and reachable idle RunPod pod `5b6hz02m9idrc3`.
+**Completed this session:** Ran a matched token-cap sensitivity follow-up on the same pod for the first 64 editor pairs with `MAX_NEW_TOKENS=1024`, preserving JSONL records and activation shards locally.
+**Completed this session:** Local integrity passed for the 1024-token follow-up, and truncation dropped from 50/64 at 512 tokens to 5/64 at 1024 tokens for the matched pairs.
 **Completed this session:** Did not run scoring, did not launch another chunk, and did not terminate the pod; the pod is RUNNING/idle pending user confirmation.
-**Completed this session:** Retrieved the latest Git history from `origin master`, confirmed the 15 most recent commits through `b61cd91`, checked for requested dyad v6 output directories, and confirmed GitHub CLI has an authenticated token available without exposing the secret value.
-**Next step:** Decide whether to run local Codex GPT-5.5 editor role-expression scoring, continue generation with another chunk, terminate the idle RunPod pod, or use the locally authenticated GitHub CLI token path for Claude-assisted repo operations.
+**Next step:** Decide whether to run local scoring plus token-cap vector comparison, or terminate the idle RunPod pod.
 **Last commit before this session:** b61cd91
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
