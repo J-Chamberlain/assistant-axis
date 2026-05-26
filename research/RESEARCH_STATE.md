@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-05-26
 **Last commit:** bf41355
-**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; Lu-reference trickster vector validation script is prepared but blocked on missing Phase 2 score file
+**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; Lu-reference trickster vector validation script is prepared but blocked on missing Phase 2 score file; latest gpt-4.1-mini scoring attempt failed before first score due to OpenAI `insufficient_quota`
 
 ---
 
@@ -208,6 +208,12 @@
 ---
 
 ## 3. CURRENT STATE
+
+**Completed this session:** Verified the repo path, remotes, dirty-worktree state, current branch, recent commits, and presence of `~/.openai_api_key` before attempting the local OpenAI scorer.
+**Completed this session:** Ran `research/q2_stability/qwen/scripts/score_trickster_phase2_gpt41mini.py` with `OPENAI_API_KEY` set from `~/.openai_api_key`; the run loaded 1200 records and 0 existing scores, then failed before writing scores because the OpenAI API returned HTTP 429 `insufficient_quota`.
+**Completed this session:** Confirmed no `trickster_phase2_scores_gpt41mini.jsonl`, `trickster_phase2_scores_summary.json`, or `trickster_phase2_scores_report.md` outputs were created, so Lu-vector validation and score-conditioned sample sufficiency were not run.
+**Next step:** Restore OpenAI billing/quota for the key in `~/.openai_api_key` and rerun `python3 research/q2_stability/qwen/scripts/score_trickster_phase2_gpt41mini.py`, then run `extract_validate_trickster_vector.py` and rerun sample sufficiency with the completed score file.
+**Last commit before this session:** bf41355
 
 **Completed this session:** Created `research/q2_stability/qwen/scripts/score_trickster_phase2_codex_gpt55.py`, a resumable local harness for Codex GPT-5.5 Standard role-expression scoring with no OpenAI API calls.
 **Completed this session:** Scored the first 16 Qwen trickster Phase 1 records using the Codex rubric and saved partial outputs to `trickster_phase2_scores_codex_gpt55.jsonl`, summary JSON, and Markdown report.
