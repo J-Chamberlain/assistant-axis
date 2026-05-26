@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** b61cd91
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; Qwen/Qwen3-32B trickster Phase 1 has 1200 preserved rollouts and 1200 matching activation shards with final integrity passed; Codex GPT-5.5 adaptive scoring reached 64 score>=2 responses and 33 score==3 responses; score>=2 vector matches the Lu trickster mean at cosine 0.957557; adaptive stopping passes at n=16 for score>=2 and score==3 subsets; workflow infrastructure now exists under `research/workflow/`; editor adaptive extraction planning is prepared but not launched
+**Last commit:** 4f699e3
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; Qwen/Qwen3-32B trickster Phase 1 has 1200 preserved rollouts and 1200 matching activation shards with final integrity passed; Codex GPT-5.5 adaptive scoring reached 64 score>=2 responses and 33 score==3 responses; score>=2 vector matches the Lu trickster mean at cosine 0.957557; situational fluidity hypothesis captured as a pre-analysis sticky note; workflow infrastructure now exists under `research/workflow/`; editor adaptive extraction planning is prepared but not launched
 
 ---
 
@@ -250,11 +250,13 @@
 **Next empirical step:** Decide whether to run an additional editor chunk using later system prompts or a revised editor anchoring design, because the first `sp_idx=0` chunk did not meet role-expression thresholds even after the matched 1024-token sensitivity check.
 
 **Completed this session:** Verified that the editor 512-token and matched 1024-token generation datasets and integrity files were locally preserved before scoring.
+**Completed this session:** Created `sticky_notes/situational_fluidity_hypothesis.md` capturing the pre-analysis situational fluidity hypothesis in relation to expressive geometry, feature suppression, and situational appropriateness.
+**Completed this session:** Updated `sticky_notes/README.md` with an index row for the new situational fluidity hypothesis note.
 **Completed this session:** Created a reusable editor Codex GPT-5.5 scoring harness and scored the full 128-record 512-token editor chunk.
 **Completed this session:** Scored all 64 matched 1024-token editor records and wrote the token-cap comparison, finding that 1024 sharply reduces truncation but does not improve score>=2 or score==3 yield in the matched set.
 **Completed this session:** Did not run vector validation or score-conditioned sample sufficiency because the 512-token editor scored set reached only 10 score>=2 responses and 3 score==3 responses, below the preregistered thresholds.
-**Next step:** Decide whether to generate another editor chunk, revise the editor prompt/selection strategy, or terminate any remaining idle RunPod resources after confirming pod state through RunPod credentials or dashboard.
-**Last commit before this session:** 6c9ec14
+**Next step:** Submit the situational fluidity hypothesis to a literature/novelty check before treating it as a research claim; separately decide whether to generate another editor chunk, revise the editor prompt/selection strategy, or terminate any remaining idle RunPod resources after confirming pod state through RunPod credentials or dashboard.
+**Last commit before this session:** 6e2a1a6
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** After the matched 1024-token run, local artifacts show preservation and integrity are complete. Post-commit pod verification is unresolved in the local shell because `runpodctl` lacks an API key and saved SSH endpoints refused connection; termination status should be confirmed through RunPod credentials or dashboard before further pod planning.

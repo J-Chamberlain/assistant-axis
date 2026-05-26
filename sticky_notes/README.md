@@ -52,3 +52,4 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-21_voice_and_music.md | Voice, music, and the emotion field | personal/visualization | when ready |
 | 2026-05-22_derive_valence_from_geometry.md | Derive emotion valence x-axis positions from model geometry rather than hand-assigned literature values |
 | 2026-05-22_v5_run_design.md | V5 run design and follow-on analysis pre-registration | 2 | complete; repetition caveats |
+| situational_fluidity_hypothesis.md | Pre-analysis hypothesis: targeted mid-layer suppression preserves expressive geometry; rigid constraint degrades situational appropriateness | all | pre-analysis |
