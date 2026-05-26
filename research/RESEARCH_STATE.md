@@ -4,7 +4,7 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** d6c2203
+**Last commit:** 9e5243f
 **Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; Lu-reference trickster vector validation script is prepared but blocked on missing Phase 2 score file
 
 ---
@@ -190,9 +190,24 @@
 - Ending heuristics show truncation is usually abrupt: only 62/733 truncated records, 8.5%, end with sentence punctuation, while 536/733, 73.1%, meet the abrupt-ending heuristic
 - Recommendation: Phase 2 scoring should proceed on all 1200 records with truncation retained as a covariate/filter, followed by a small higher-token follow-up run for high-scoring truncated records and the most abrupt question subsets
 
+### Trickster Sample Sufficiency Analysis (2026-05-26, provisional)
+
+- Local bootstrap analysis on all 1200 Qwen trickster Phase 1 activations found very high geometric self-stability before role-expression scoring: raw Criterion A and B minima both crossed at n=4 for all activations, non-truncated activations, truncated activations, and each system prompt subset
+- Operational recommendation applies a conservative n>=16 floor despite the raw bootstrap crossing, because role-expression scoring is not yet available and tiny pre-scoring subsets are too brittle for workflow policy
+- Lu fixed 64-row cap is appropriate and conservative for trickster under pre-scoring geometry: all_1200 mean cosine to Lu trickster mean is 0.958211, non-truncated is 0.953492, truncated is 0.958973
+- Truncation does not materially change pre-scoring geometric sample sufficiency: non-truncated and truncated subsets both cross Criterion A at raw n=4 and operational n=16
+- Phase 2 score-conditioned analysis remains required before finalizing a sample-size rule for qualifying role-expression vectors
+
 ---
 
 ## 3. CURRENT STATE
+
+**Completed this session:** Created and ran `research/q2_stability/qwen/scripts/analyze_trickster_sample_sufficiency.py`, a local CPU-only bootstrap analysis of sample-size sufficiency for the Qwen trickster Phase 1 activation corpus.
+**Completed this session:** Saved `trickster_sample_sufficiency.json`, `trickster_sample_sufficiency.md`, and `trickster_sample_sufficiency_curves.csv` under `research/q2_stability/qwen/outputs/paper1_5/`.
+**Completed this session:** Confirmed the Lu trickster reference tensor resolves unambiguously to `downloads/hf_vectors/qwen-3-32b/role_vectors/trickster.pt` and Phase 2 score-conditioned subsets are unavailable because `trickster_phase2_scores_gpt41mini.jsonl` is missing.
+**Completed this session:** Established a provisional pre-scoring workflow rule: use n=64 as the default fixed target, accept n=16 as the conservative operational floor for available activations, and rerun the analysis on `score>=2` and `score==3` subsets once Phase 2 scoring completes.
+**Next step:** Complete Phase 2 scoring to produce `research/q2_stability/qwen/outputs/paper1_5/trickster_phase2_scores_gpt41mini.jsonl`, then rerun sample sufficiency and Lu-reference vector validation on score-conditioned subsets.
+**Last commit before this session:** 9e5243f
 
 **Completed this session:** Created and ran `research/q2_stability/qwen/scripts/analyze_phase1_truncation.py`, a local CPU-only diagnostic for the completed Qwen trickster Phase 1 corpus.
 **Completed this session:** Prepared `research/q2_stability/qwen/scripts/extract_validate_trickster_vector.py` to extract score-qualified trickster vectors and compare them against Lu et al.'s Qwen trickster reference tensor once Phase 2 scores exist.

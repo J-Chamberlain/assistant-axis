@@ -1,0 +1,266 @@
+{
+  "date": "2026-05-26",
+  "model_used": "GPT-5.5",
+  "inputs": {
+    "phase1_jsonl": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl",
+    "integrity_json": "research/q2_stability/qwen/outputs/paper1_5/phase1_final_integrity.json",
+    "activation_dir": "research/q2_stability/qwen/outputs/paper1_5/activations_trickster",
+    "phase2_scores_jsonl": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase2_scores_gpt41mini.jsonl",
+    "phase2_scores_present": false,
+    "lu_trickster_reference": "downloads/hf_vectors/qwen-3-32b/role_vectors/trickster.pt",
+    "lu_trickster_candidates": [
+      "downloads/hf_vectors/qwen-3-32b/role_vectors/trickster.pt"
+    ]
+  },
+  "validation": {
+    "record_count": 1200,
+    "expected_record_count": 1200,
+    "unique_sp_q_pairs": 1200,
+    "expected_unique_sp_q_pairs": 1200,
+    "activation_count": 1200,
+    "activation_dim": 5120,
+    "activation_error_count": 0,
+    "valid": true
+  },
+  "phase2_score_metadata": {
+    "present": false,
+    "path": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase2_scores_gpt41mini.jsonl"
+  },
+  "lu_reference": {
+    "tensor_shape": [
+      64,
+      5120
+    ],
+    "lu_row_to_mean_cosine": {
+      "p05": 0.6953686082546766,
+      "p50": 0.8997147117165691,
+      "p95": 0.9751095879129452,
+      "mean": 0.8914475113210957,
+      "std": 0.08397138856064627,
+      "count": 64,
+      "min": 0.5138585557583332,
+      "max": 0.9796535076947137
+    },
+    "lu_dispersion": 0.08397138856064627,
+    "lu_internal_p05": 0.6953686082546766,
+    "lu_internal_p50": 0.8997147117165691,
+    "lu_internal_p95": 0.9751095879129452
+  },
+  "candidate_subsets": {
+    "all_1200": {
+      "name": "all_1200",
+      "n_total": 1200,
+      "cosine_candidate_mean_to_lu_mean": 0.9582106471061707,
+      "cosine_candidate_mean_to_full_1200_mean": 0.9999998807907104,
+      "internal_dispersion_std_cosine_to_subset_mean": 0.009221517118220413,
+      "internal_row_to_mean": {
+        "p05": 0.9491121597477644,
+        "p50": 0.9678338477438939,
+        "p95": 0.9786946470133552,
+        "mean": 0.9663690579033791,
+        "std": 0.009221517118220413,
+        "count": 1200,
+        "min": 0.9067614672628712,
+        "max": 0.9828054085729853
+      },
+      "criterion_minima": {
+        "criterion_a_self_p05_ge_0_95": 4,
+        "criterion_b_self_p05_ge_0_98": 4,
+        "criterion_c_lu_std_le_lu_dispersion_half": 4,
+        "criterion_d_lu_interval_width_le_lu_dispersion": 4
+      }
+    },
+    "non_truncated": {
+      "name": "non_truncated",
+      "n_total": 467,
+      "cosine_candidate_mean_to_lu_mean": 0.9534921050071716,
+      "cosine_candidate_mean_to_full_1200_mean": 0.9977532029151917,
+      "internal_dispersion_std_cosine_to_subset_mean": 0.008858000776135536,
+      "internal_row_to_mean": {
+        "p05": 0.952257924775914,
+        "p50": 0.9705883286293704,
+        "p95": 0.9804759273360693,
+        "mean": 0.9688893023504569,
+        "std": 0.008858000776135536,
+        "count": 467,
+        "min": 0.9321045880087755,
+        "max": 0.9845819918968586
+      },
+      "criterion_minima": {
+        "criterion_a_self_p05_ge_0_95": 4,
+        "criterion_b_self_p05_ge_0_98": 4,
+        "criterion_c_lu_std_le_lu_dispersion_half": 4,
+        "criterion_d_lu_interval_width_le_lu_dispersion": 4
+      }
+    },
+    "truncated": {
+      "name": "truncated",
+      "n_total": 733,
+      "cosine_candidate_mean_to_lu_mean": 0.9589734077453613,
+      "cosine_candidate_mean_to_full_1200_mean": 0.9991186857223511,
+      "internal_dispersion_std_cosine_to_subset_mean": 0.009030654858424147,
+      "internal_row_to_mean": {
+        "p05": 0.9502790737265675,
+        "p50": 0.9685018852162922,
+        "p95": 0.9785732435213178,
+        "mean": 0.9669845722859478,
+        "std": 0.009030654858424147,
+        "count": 733,
+        "min": 0.9109612177418415,
+        "max": 0.9834943415007726
+      },
+      "criterion_minima": {
+        "criterion_a_self_p05_ge_0_95": 4,
+        "criterion_b_self_p05_ge_0_98": 4,
+        "criterion_c_lu_std_le_lu_dispersion_half": 4,
+        "criterion_d_lu_interval_width_le_lu_dispersion": 4
+      }
+    },
+    "sp_idx_0": {
+      "name": "sp_idx_0",
+      "n_total": 240,
+      "cosine_candidate_mean_to_lu_mean": 0.9574626684188843,
+      "cosine_candidate_mean_to_full_1200_mean": 0.999026894569397,
+      "internal_dispersion_std_cosine_to_subset_mean": 0.010527691312399477,
+      "internal_row_to_mean": {
+        "p05": 0.9516608838069252,
+        "p50": 0.9704192838887484,
+        "p95": 0.9802506238264993,
+        "mean": 0.9682964384034032,
+        "std": 0.010527691312399477,
+        "count": 240,
+        "min": 0.904940004056535,
+        "max": 0.9836817097990732
+      },
+      "criterion_minima": {
+        "criterion_a_self_p05_ge_0_95": 4,
+        "criterion_b_self_p05_ge_0_98": 4,
+        "criterion_c_lu_std_le_lu_dispersion_half": 4,
+        "criterion_d_lu_interval_width_le_lu_dispersion": 4
+      }
+    },
+    "sp_idx_1": {
+      "name": "sp_idx_1",
+      "n_total": 240,
+      "cosine_candidate_mean_to_lu_mean": 0.954444944858551,
+      "cosine_candidate_mean_to_full_1200_mean": 0.9983587265014648,
+      "internal_dispersion_std_cosine_to_subset_mean": 0.00848951803886364,
+      "internal_row_to_mean": {
+        "p05": 0.9538139007087969,
+        "p50": 0.9721611811242985,
+        "p95": 0.981197986658058,
+        "mean": 0.9707587422093273,
+        "std": 0.00848951803886364,
+        "count": 240,
+        "min": 0.9344837958045472,
+        "max": 0.9850991135835828
+      },
+      "criterion_minima": {
+        "criterion_a_self_p05_ge_0_95": 4,
+        "criterion_b_self_p05_ge_0_98": 4,
+        "criterion_c_lu_std_le_lu_dispersion_half": 4,
+        "criterion_d_lu_interval_width_le_lu_dispersion": 4
+      }
+    },
+    "sp_idx_2": {
+      "name": "sp_idx_2",
+      "n_total": 240,
+      "cosine_candidate_mean_to_lu_mean": 0.9468042254447937,
+      "cosine_candidate_mean_to_full_1200_mean": 0.9901491403579712,
+      "internal_dispersion_std_cosine_to_subset_mean": 0.007826048137627639,
+      "internal_row_to_mean": {
+        "p05": 0.9580812294785438,
+        "p50": 0.9742061897127348,
+        "p95": 0.9821482610317754,
+        "mean": 0.9726616400814213,
+        "std": 0.007826048137627639,
+        "count": 240,
+        "min": 0.9383324344144192,
+        "max": 0.9851427202524186
+      },
+      "criterion_minima": {
+        "criterion_a_self_p05_ge_0_95": 4,
+        "criterion_b_self_p05_ge_0_98": 4,
+        "criterion_c_lu_std_le_lu_dispersion_half": 4,
+        "criterion_d_lu_interval_width_le_lu_dispersion": 4
+      }
+    },
+    "sp_idx_3": {
+      "name": "sp_idx_3",
+      "n_total": 240,
+      "cosine_candidate_mean_to_lu_mean": 0.9517032504081726,
+      "cosine_candidate_mean_to_full_1200_mean": 0.990918755531311,
+      "internal_dispersion_std_cosine_to_subset_mean": 0.009516655511202355,
+      "internal_row_to_mean": {
+        "p05": 0.9542284861123246,
+        "p50": 0.973096438690221,
+        "p95": 0.9816807037032257,
+        "mean": 0.9709243466695042,
+        "std": 0.009516655511202355,
+        "count": 240,
+        "min": 0.9152170873310953,
+        "max": 0.9852521606263629
+      },
+      "criterion_minima": {
+        "criterion_a_self_p05_ge_0_95": 4,
+        "criterion_b_self_p05_ge_0_98": 4,
+        "criterion_c_lu_std_le_lu_dispersion_half": 4,
+        "criterion_d_lu_interval_width_le_lu_dispersion": 4
+      }
+    },
+    "sp_idx_4": {
+      "name": "sp_idx_4",
+      "n_total": 240,
+      "cosine_candidate_mean_to_lu_mean": 0.9559780359268188,
+      "cosine_candidate_mean_to_full_1200_mean": 0.9958662986755371,
+      "internal_dispersion_std_cosine_to_subset_mean": 0.007017863382822612,
+      "internal_row_to_mean": {
+        "p05": 0.9620442194349458,
+        "p50": 0.9755892165752271,
+        "p95": 0.9828313342606363,
+        "mean": 0.9742192124001394,
+        "std": 0.007017863382822612,
+        "count": 240,
+        "min": 0.9435855267210691,
+        "max": 0.9862736180199632
+      },
+      "criterion_minima": {
+        "criterion_a_self_p05_ge_0_95": 4,
+        "criterion_b_self_p05_ge_0_98": 4,
+        "criterion_c_lu_std_le_lu_dispersion_half": 4,
+        "criterion_d_lu_interval_width_le_lu_dispersion": 4
+      }
+    }
+  },
+  "adaptive_stopping": {
+    "all_1200": {
+      "first_n": 16,
+      "criterion": "n >= 16 and rolling SE of cosine(running_mean, Lu_mean) <= lu_dispersion / 2",
+      "final_cosine_to_lu": 0.9575815796852112,
+      "final_rolling_se": 0.001875055953860283,
+      "lu_dispersion_half": 0.04198569428032314
+    },
+    "non_truncated": {
+      "first_n": 16,
+      "criterion": "n >= 16 and rolling SE of cosine(running_mean, Lu_mean) <= lu_dispersion / 2",
+      "final_cosine_to_lu": 0.9497504234313965,
+      "final_rolling_se": 0.0010110775474458933,
+      "lu_dispersion_half": 0.04198569428032314
+    }
+  },
+  "recommendation": {
+    "basis": "Based on all available Phase 1 activations before role-expression scoring.",
+    "minimum_acceptable_n": 16,
+    "raw_bootstrap_minimum_n": 4,
+    "minimum_criterion": "Criterion A: p05 cosine(sample_mean, subset_full_mean) >= 0.95",
+    "default_target_n": 64,
+    "strict_target_n": 16,
+    "raw_strict_bootstrap_minimum_n": 4,
+    "operational_floor_n": 16,
+    "lu_64_assessment": "appropriate",
+    "truncation_materially_changes_sample_sufficiency": false,
+    "adaptive_stopping": "Use both fixed n and adaptive stopping: collect to the fixed target unless the running SE criterion is satisfied later, and always preserve eligibility metadata.",
+    "phase2_score_conditioned_analysis_required": true,
+    "provisional_workflow_rule": "Until Phase 2 scoring exists, use a fixed target of 64 available activations per persona as the provisional default and require at least the Criterion A minimum from this analysis; once scores exist, rerun this script and set the target from score>=2 and score==3 subsets, not from all available activations."
+  }
+}
