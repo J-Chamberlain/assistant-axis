@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** 7148965
-**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; adaptive Codex GPT-5.5 role-expression scoring reached a usable trickster subset with 64 score>=2 responses and 33 score==3 responses; Codex-scored vector validation passes as a pragmatic substitute path, and Paper 1.5 methodology now records the adaptive extraction protocol while strict Lu-method gpt-4.1-mini scoring remains blocked by OpenAI quota
+**Last commit:** 31133ce
+**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; adaptive Codex GPT-5.5 role-expression scoring reached a usable trickster subset with 64 score>=2 responses and 33 score==3 responses; Codex-scored vector validation passes as a pragmatic substitute path; Paper 1.5 methodology records the adaptive extraction protocol; workflow infrastructure now exists under `research/workflow/` for pod lifecycle, run registry, status artifacts, execution tiers, templates, and checklists
 
 ---
 
@@ -216,6 +216,12 @@
 ---
 
 ## 3. CURRENT STATE
+
+**Completed this session:** Created `research/workflow/` with canonical workflow specifications for the run registry, pod lifecycle, Codex execution tiers, and status artifacts.
+**Completed this session:** Added JSON templates for run manifests, heartbeats, integrity checks, preservation records, and termination records under `research/workflow/templates/`.
+**Completed this session:** Added operational launch, monitoring, and closeout checklists plus a synthesized overnight-run lessons document under `research/workflow/examples/` and `research/workflow/`.
+**Next step:** Use the workflow templates in the next pod card so long-running extraction runs emit manifest, heartbeat, integrity, preservation, and termination artifacts from the start.
+**Last commit before this session:** 31133ce
 
 **Completed this session:** Updated `research/paper1_5_outline.md` with a new adaptive role-vector extraction methodology subsection covering the Lu baseline, Qwen trickster replication architecture, truncation findings, Codex scoring substitution, validation results, and operational extraction rule.
 **Completed this session:** Created `research/paper1_5_adaptive_extraction_notes.md` as a concise workflow note for future persona extraction runs.

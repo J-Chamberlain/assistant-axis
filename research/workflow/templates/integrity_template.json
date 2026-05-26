@@ -1,0 +1,24 @@
+{
+  "_comment": "Template for local integrity check results.",
+  "run_id": "paper1_5_qwen_trickster_phase1_YYYY-MM-DD",
+  "timestamp": "YYYY-MM-DDTHH:MM:SSZ",
+  "input_jsonl": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl",
+  "record_count": 1200,
+  "expected_record_count": 1200,
+  "unique_key_count": 1200,
+  "duplicate_keys": [],
+  "empty_response_count": 0,
+  "think_artifact_count": 0,
+  "activation_saved_count": 1200,
+  "activation_file_count": 1200,
+  "missing_activation_files": [],
+  "tensor_shape_checks": [
+    {
+      "path": "activations_trickster/sp0_q0.pt",
+      "shape": [5120],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "notes": "Final integrity passed before scoring."
+}

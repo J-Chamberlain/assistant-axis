@@ -1,0 +1,17 @@
+{
+  "_comment": "Template for confirmed pod termination.",
+  "run_id": "paper1_5_qwen_trickster_phase1_YYYY-MM-DD",
+  "timestamp": "YYYY-MM-DDTHH:MM:SSZ",
+  "pod_id": "runpod pod id",
+  "ssh_endpoint": "POD_IP:PORT",
+  "termination_method": "RunPod API",
+  "termination_requested_by": "user or agent",
+  "pre_termination_preservation_status": "integrity passed locally",
+  "confirmation_method": "RunPod API list shows pod not running",
+  "confirmed_not_running": true,
+  "dashboard_evidence": "optional screenshot path or note",
+  "api_response": {
+    "status": "terminated"
+  },
+  "notes": "Do not mark terminated unless confirmed."
+}

@@ -1,0 +1,22 @@
+{
+  "_comment": "Template for heartbeat emitted repeatedly by long-running jobs.",
+  "run_id": "paper1_5_qwen_trickster_phase1_YYYY-MM-DD",
+  "timestamp": "YYYY-MM-DDTHH:MM:SSZ",
+  "pid": 12345,
+  "status": "running",
+  "latest_record_count": 1180,
+  "latest_activation_count": 1180,
+  "latest_work_unit": {
+    "sp_idx": 4,
+    "q_idx": 219
+  },
+  "planned_records": 1200,
+  "truncated_count": 710,
+  "discard_count": 0,
+  "error_count": 0,
+  "seconds_per_rollout": 27.6,
+  "eta": "0.2hr",
+  "gpu_memory_gb": 65.5,
+  "disk_free_gb": 88.0,
+  "log_path": "phase1_v4.log"
+}

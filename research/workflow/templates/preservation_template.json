@@ -1,0 +1,23 @@
+{
+  "_comment": "Template for SCP or rsync preservation result.",
+  "run_id": "paper1_5_qwen_trickster_phase1_YYYY-MM-DD",
+  "timestamp": "YYYY-MM-DDTHH:MM:SSZ",
+  "source_endpoint": "root@POD_IP:PORT",
+  "destination_dir": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/q2_stability/qwen/outputs/paper1_5",
+  "files_copied": [
+    "trickster_phase1.jsonl",
+    "trickster_phase1_manifest.json",
+    "phase1_v4.log"
+  ],
+  "directories_copied": [
+    "activations_trickster/"
+  ],
+  "jsonl_count_after_copy": 1200,
+  "activation_count_after_copy": 1200,
+  "log_copied": true,
+  "script_copied": true,
+  "manifest_copied": true,
+  "copy_method": "scp",
+  "passed": true,
+  "notes": "Safe to run local integrity check."
+}

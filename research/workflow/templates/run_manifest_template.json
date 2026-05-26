@@ -1,0 +1,26 @@
+{
+  "_comment": "Template for run manifest. Replace example values before launch.",
+  "run_id": "paper1_5_qwen_trickster_phase1_YYYY-MM-DD",
+  "created_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "repo_commit": "commit hash used on pod",
+  "script_path": "research/q2_stability/qwen/scripts/phase1_inference_only_v4.py",
+  "script_sha256": "sha256 of executed script",
+  "model": "Qwen/Qwen3-32B",
+  "model_revision": "unknown or pinned revision",
+  "target_persona_or_condition": "trickster",
+  "planned_records": 1200,
+  "output_dir": "/root/assistant-axis/research/q2_stability/qwen/outputs/paper1_5",
+  "activation_dir": "activations_trickster",
+  "generation_settings": {
+    "deterministic": true,
+    "enable_thinking": false,
+    "max_new_tokens": 512
+  },
+  "extraction_layer": 48,
+  "hook_description": "post-MLP residual stream from full decoder block output",
+  "hardware": {
+    "gpu_type": "A100 80GB",
+    "provider": "RunPod"
+  },
+  "operator_notes": "Preserve JSONL, manifest, log, script, and activation shards before termination."
+}
