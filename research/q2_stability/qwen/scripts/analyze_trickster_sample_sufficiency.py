@@ -12,6 +12,7 @@ import csv
 import json
 import os
 import sys
+import argparse
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -34,11 +35,9 @@ OUT_DIR = QWEN_ROOT / "outputs/paper1_5"
 JSONL = OUT_DIR / "trickster_phase1.jsonl"
 INTEGRITY = OUT_DIR / "phase1_final_integrity.json"
 ACTIVATION_DIR = OUT_DIR / "activations_trickster"
-SCORES_JSONL = OUT_DIR / "trickster_phase2_scores_gpt41mini.jsonl"
+DEFAULT_SCORES_JSONL = OUT_DIR / "trickster_phase2_scores_gpt41mini.jsonl"
 ROLE_VECTOR_DIR = REPO_ROOT / "downloads/hf_vectors/qwen-3-32b/role_vectors"
-OUT_JSON = OUT_DIR / "trickster_sample_sufficiency.json"
-OUT_MD = OUT_DIR / "trickster_sample_sufficiency.md"
-OUT_CSV = OUT_DIR / "trickster_sample_sufficiency_curves.csv"
+DEFAULT_OUTPUT_PREFIX = "trickster_sample_sufficiency"
 
 EXPECTED_RECORDS = 1200
 EXPECTED_DIM = 5120
@@ -84,9 +83,9 @@ def load_phase1_records() -> list[dict[str, Any]]:
     return records
 
 
-def load_scores() -> tuple[dict[tuple[int, int], float], dict[str, Any]]:
-    if not SCORES_JSONL.exists():
-        return {}, {"present": False, "path": rel(SCORES_JSONL)}
+def load_scores(scores_jsonl: Path) -> tuple[dict[tuple[int, int], float], dict[str, Any]]:
+    if not scores_jsonl.exists():
+        return {}, {"present": False, "path": rel(scores_jsonl)}
 
     score_keys = [
         "score", "role_score", "final_score", "phase2_score",
@@ -95,7 +94,7 @@ def load_scores() -> tuple[dict[tuple[int, int], float], dict[str, Any]]:
     scores: dict[tuple[int, int], float] = {}
     key_counts: dict[str, int] = defaultdict(int)
     unparsable = 0
-    with SCORES_JSONL.open() as f:
+    with scores_jsonl.open() as f:
         for line in f:
             if not line.strip():
                 continue
@@ -118,7 +117,7 @@ def load_scores() -> tuple[dict[tuple[int, int], float], dict[str, Any]]:
 
     return scores, {
         "present": True,
-        "path": rel(SCORES_JSONL),
+        "path": rel(scores_jsonl),
         "parsed_scores": len(scores),
         "score_key_counts": dict(key_counts),
         "unparsable_lines": unparsable,
@@ -293,9 +292,21 @@ def subset_report(
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--scores-path", type=Path, default=DEFAULT_SCORES_JSONL)
+    parser.add_argument("--output-prefix", default=DEFAULT_OUTPUT_PREFIX)
+    args = parser.parse_args()
+
+    scores_jsonl = args.scores_path
+    if not scores_jsonl.is_absolute():
+        scores_jsonl = REPO_ROOT / scores_jsonl
+    out_json = OUT_DIR / f"{args.output_prefix}.json"
+    out_md = OUT_DIR / f"{args.output_prefix}.md"
+    out_csv = OUT_DIR / f"{args.output_prefix}_curves.csv"
+
     records = load_phase1_records()
     pairs = {(int(row["sp_idx"]), int(row["q_idx"])) for row in records}
-    scores, score_meta = load_scores()
+    scores, score_meta = load_scores(scores_jsonl)
 
     lu_path, lu_candidates = find_lu_trickster_tensor()
     lu_tensor = torch.load(lu_path, map_location="cpu").float().cpu().numpy()
@@ -455,7 +466,7 @@ def main() -> None:
             "phase1_jsonl": rel(JSONL),
             "integrity_json": rel(INTEGRITY),
             "activation_dir": rel(ACTIVATION_DIR),
-            "phase2_scores_jsonl": rel(SCORES_JSONL),
+            "phase2_scores_jsonl": rel(scores_jsonl),
             "phase2_scores_present": bool(scores),
             "lu_trickster_reference": rel(lu_path),
             "lu_trickster_candidates": lu_candidates,
@@ -475,15 +486,15 @@ def main() -> None:
         "recommendation": recommendation,
     }
 
-    OUT_JSON.write_text(json.dumps(output, indent=2) + "\n")
-    with OUT_CSV.open("w", newline="") as f:
+    out_json.write_text(json.dumps(output, indent=2) + "\n")
+    with out_csv.open("w", newline="") as f:
         fieldnames = [
             "subset", "subset_n_total", "n", "reps",
             "self_p05", "self_p50", "self_p95", "self_mean", "self_std",
             "lu_p05", "lu_p50", "lu_p95", "lu_mean", "lu_std",
             "lu_interval_width",
         ]
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         writer.writerows(curves)
 
@@ -574,7 +585,7 @@ def main() -> None:
         "",
         "This analysis uses all available Phase 1 activations and truncation-defined subsets. It does not claim that all 1200 activations are qualifying role-expression samples, and score-conditioned analysis remains pending.",
     ])
-    OUT_MD.write_text("\n".join(md).rstrip() + "\n")
+    out_md.write_text("\n".join(md).rstrip() + "\n")
     print(json.dumps(output, indent=2))
 
 

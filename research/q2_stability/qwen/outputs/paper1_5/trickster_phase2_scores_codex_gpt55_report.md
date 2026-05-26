@@ -6,7 +6,7 @@ Judge context: local Codex rubric scoring, no OpenAI API
 
 ## Status
 
-Scored: 16 / 1200
+Scored: 64 / 1200
 Complete: `False`
 
 ## Score Distribution
@@ -15,24 +15,24 @@ Complete: `False`
 |---:|---:|---:|
 | 0 | 0 | 0.0% |
 | 1 | 0 | 0.0% |
-| 2 | 11 | 68.8% |
-| 3 | 5 | 31.2% |
+| 2 | 31 | 48.4% |
+| 3 | 33 | 51.6% |
 
-Score >= 2: 16 (100.0%)
-Score == 3: 5 (31.2%)
+Score >= 2: 64 (100.0%)
+Score == 3: 33 (51.6%)
 
 ## Split By Truncation
 
 | Truncated | n | score>=2 | score==3 |
 |---|---:|---:|---:|
-| false | 6 | 6 (100.0%) | 4 (66.7%) |
-| true | 10 | 10 (100.0%) | 1 (10.0%) |
+| false | 18 | 18 (100.0%) | 12 (66.7%) |
+| true | 46 | 46 (100.0%) | 21 (45.7%) |
 
 ## Split By sp_idx
 
 | sp_idx | n | score>=2 | score==3 |
 |---:|---:|---:|---:|
-| 0 | 16 | 16 (100.0%) | 5 (31.2%) |
+| 0 | 64 | 64 (100.0%) | 33 (51.6%) |
 | 1 | 0 | 0 (0.0%) | 0 (0.0%) |
 | 2 | 0 | 0 (0.0%) | 0 (0.0%) |
 | 3 | 0 | 0 (0.0%) | 0 (0.0%) |
@@ -40,14 +40,14 @@ Score == 3: 5 (31.2%)
 
 ## Thresholds
 
-- n >= 16 score-3 responses achieved: `False`
+- n >= 16 score-3 responses achieved: `True`
 - n >= 64 score-3 responses achieved: `False`
 - n >= 16 score>=2 responses achieved: `True`
-- n >= 64 score>=2 responses achieved: `False`
+- n >= 64 score>=2 responses achieved: `True`
 
 ## Interpretation
 
-Insufficient scored data to assess truncation effect.
+No strong suppression signal from truncation in the scored subset.
 
 Do not proceed to vector extraction yet; scoring is partial.
 

@@ -1,0 +1,96 @@
+{
+  "model_used": "GPT-5.5",
+  "phase1_path": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl",
+  "phase2_path": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase2_scores_codex_gpt55.jsonl",
+  "partial_scoring_allowed": true,
+  "integrity_paths_checked": [
+    "research/q2_stability/qwen/outputs/paper1_5/phase1_final_integrity.json",
+    "research/q2_stability/qwen/outputs/paper1_5/final_phase1_integrity.json"
+  ],
+  "phase1_records": 1200,
+  "phase2_scored_records": 64,
+  "joined_records": 64,
+  "score_counts": {
+    "2": 31,
+    "3": 33
+  },
+  "lu_reference_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/trickster.pt",
+  "lu_tensor_shape": [
+    64,
+    5120
+  ],
+  "lu_hidden_dimension": 5120,
+  "lu_dispersion": 0.0833127573132515,
+  "candidate_sets": {
+    "score_eq_3": {
+      "name": "score_eq_3",
+      "n_qualifying": 33,
+      "vector_path": "research/q2_stability/qwen/outputs/paper1_5/vector_candidates/score_eq_3.pt",
+      "cosine_to_lu_mean": 0.9553884863853455,
+      "pairwise_cosine_mean": 0.9446882605552673,
+      "pairwise_cosine_std": 0.013137995265424252,
+      "bootstrap_n": 1000,
+      "cosine_ci_low": 0.9524578407406807,
+      "cosine_ci_high": 0.9563863858580589
+    },
+    "score_ge_2": {
+      "name": "score_ge_2",
+      "n_qualifying": 64,
+      "vector_path": "research/q2_stability/qwen/outputs/paper1_5/vector_candidates/score_ge_2.pt",
+      "cosine_to_lu_mean": 0.9575569033622742,
+      "pairwise_cosine_mean": 0.9358887672424316,
+      "pairwise_cosine_std": 0.01853415183722973,
+      "bootstrap_n": 1000,
+      "cosine_ci_low": 0.9557505711913109,
+      "cosine_ci_high": 0.9581947162747383
+    },
+    "nontruncated_score_eq_3": {
+      "name": "nontruncated_score_eq_3",
+      "n_qualifying": 12,
+      "vector_path": "research/q2_stability/qwen/outputs/paper1_5/vector_candidates/nontruncated_score_eq_3.pt",
+      "cosine_to_lu_mean": 0.9481922388076782,
+      "pairwise_cosine_mean": 0.9563875198364258,
+      "pairwise_cosine_std": 0.009920439682900906,
+      "bootstrap_n": 1000,
+      "cosine_ci_low": 0.9429577708244323,
+      "cosine_ci_high": 0.9490493059158325
+    },
+    "nontruncated_score_ge_2": {
+      "name": "nontruncated_score_ge_2",
+      "n_qualifying": 18,
+      "vector_path": "research/q2_stability/qwen/outputs/paper1_5/vector_candidates/nontruncated_score_ge_2.pt",
+      "cosine_to_lu_mean": 0.9497732520103455,
+      "pairwise_cosine_mean": 0.9505259394645691,
+      "pairwise_cosine_std": 0.01232985407114029,
+      "bootstrap_n": 1000,
+      "cosine_ci_low": 0.9456671938300133,
+      "cosine_ci_high": 0.9509593918919563
+    }
+  },
+  "best_matching_candidate": "score_ge_2",
+  "adaptive_stopping": {
+    "score_eq_3": {
+      "passes": true,
+      "n_stop": 16,
+      "se_threshold": 0.04165637865662575,
+      "running_cosine_se_at_stop": 0.0013610652812986838,
+      "cosine_to_lu_at_stop": 0.955016016960144,
+      "adaptive_vector_path": "research/q2_stability/qwen/outputs/paper1_5/vector_candidates/score_eq_3_adaptive_stop_n16.pt",
+      "cosine_adaptive_to_full_qualified": 0.9988848567008972
+    },
+    "score_ge_2": {
+      "passes": true,
+      "n_stop": 16,
+      "se_threshold": 0.04165637865662575,
+      "running_cosine_se_at_stop": 0.0024779844883072886,
+      "cosine_to_lu_at_stop": 0.9575818777084351,
+      "adaptive_vector_path": "research/q2_stability/qwen/outputs/paper1_5/vector_candidates/score_ge_2_adaptive_stop_n16.pt",
+      "cosine_adaptive_to_full_qualified": 0.9988889694213867
+    }
+  },
+  "truncation_counts": {
+    "all_records_truncated": 46,
+    "score_eq_3_truncated": 21,
+    "score_ge_2_truncated": 46
+  }
+}

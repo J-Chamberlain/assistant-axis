@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** bf41355
-**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; Lu-reference trickster vector validation script is prepared but blocked on missing Phase 2 score file; latest gpt-4.1-mini scoring attempt failed before first score due to OpenAI `insufficient_quota`
+**Last commit:** 2b9d50d
+**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; adaptive Codex GPT-5.5 role-expression scoring reached a usable trickster subset with 64 score>=2 responses and 33 score==3 responses; Codex-scored vector validation passes as a pragmatic substitute path, while strict Lu-method gpt-4.1-mini scoring remains blocked by OpenAI quota
 
 ---
 
@@ -205,9 +205,23 @@
 - Partial threshold status: n>=16 score>=2 achieved; n>=16 score==3 not yet achieved; n>=64 thresholds not yet achieved
 - This is a partial working score file only and should not yet be used for final vector extraction
 
+### Adaptive Codex GPT-5.5 Trickster Scoring and Validation (2026-05-26, pragmatic substitute)
+
+- Adaptive Codex GPT-5.5 Standard scoring stopped after reaching the preferred threshold: 64/1200 records scored, with score distribution 0=0, 1=0, 2=31, 3=33
+- Qualifying counts: score>=2 count 64, score==3 count 33; n>=64 score>=2 and n>=16 score==3 are both achieved
+- Codex-scored vector validation against Lu et al.'s Qwen trickster reference tensor found best candidate `score_ge_2` with cosine 0.957557 to Lu mean; `score_eq_3` cosine was 0.955388 in the sufficiency rerun
+- Adaptive stopping passed at n=16 for both score==3 and score>=2 subsets; score>=2 adaptive-stop cosine to Lu was 0.957582, and score==3 adaptive-stop cosine to Lu was 0.955016
+- Interpretation caveat: this provides a working score-conditioned extraction path using Codex GPT-5.5 Standard as a pragmatic judge, not a strict Lu-method gpt-4.1-mini judge replication
+
 ---
 
 ## 3. CURRENT STATE
+
+**Completed this session:** Continued adaptive Codex GPT-5.5 Standard trickster role-expression scoring from 16 to 64 records and stopped after meeting the preferred threshold with 64 score>=2 responses and 33 score==3 responses.
+**Completed this session:** Updated the vector validation script to accept an explicit score file and partial adaptive scoring, then ran validation against `trickster_phase2_scores_codex_gpt55.jsonl` without touching or faking the gpt-4.1-mini score path.
+**Completed this session:** Reran sample sufficiency against the Codex score file and saved score-conditioned Codex outputs, with adaptive stopping passing at n=16 for both score==3 and score>=2 subsets.
+**Next step:** Use the Codex-scored trickster results as a pragmatic working extraction path for Paper 1.5 planning, while leaving strict gpt-4.1-mini scoring as optional/pending until OpenAI quota is restored.
+**Last commit before this session:** 2b9d50d
 
 **Completed this session:** Verified the repo path, remotes, dirty-worktree state, current branch, recent commits, and presence of `~/.openai_api_key` before attempting the local OpenAI scorer.
 **Completed this session:** Ran `research/q2_stability/qwen/scripts/score_trickster_phase2_gpt41mini.py` with `OPENAI_API_KEY` set from `~/.openai_api_key`; the run loaded 1200 records and 0 existing scores, then failed before writing scores because the OpenAI API returned HTTP 429 `insufficient_quota`.

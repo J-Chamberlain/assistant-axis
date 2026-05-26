@@ -7,8 +7,8 @@
   "output_jsonl": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase2_scores_codex_gpt55.jsonl",
   "complete": false,
   "total_records": 1200,
-  "total_scored": 16,
-  "remaining": 1184,
+  "total_scored": 64,
+  "remaining": 1136,
   "score_distribution": {
     "0": {
       "count": 0,
@@ -19,25 +19,25 @@
       "fraction": 0.0
     },
     "2": {
-      "count": 11,
-      "fraction": 0.6875
+      "count": 31,
+      "fraction": 0.484375
     },
     "3": {
-      "count": 5,
-      "fraction": 0.3125
+      "count": 33,
+      "fraction": 0.515625
     }
   },
   "score_ge_2": {
-    "count": 16,
+    "count": 64,
     "fraction": 1.0
   },
   "score_eq_3": {
-    "count": 5,
-    "fraction": 0.3125
+    "count": 33,
+    "fraction": 0.515625
   },
   "by_truncated": {
     "false": {
-      "total": 6,
+      "total": 18,
       "distribution": {
         "0": {
           "count": 0,
@@ -48,25 +48,25 @@
           "fraction": 0.0
         },
         "2": {
-          "count": 2,
+          "count": 6,
           "fraction": 0.3333333333333333
         },
         "3": {
-          "count": 4,
+          "count": 12,
           "fraction": 0.6666666666666666
         }
       },
       "score_ge_2": {
-        "count": 6,
+        "count": 18,
         "fraction": 1.0
       },
       "score_eq_3": {
-        "count": 4,
+        "count": 12,
         "fraction": 0.6666666666666666
       }
     },
     "true": {
-      "total": 10,
+      "total": 46,
       "distribution": {
         "0": {
           "count": 0,
@@ -77,27 +77,27 @@
           "fraction": 0.0
         },
         "2": {
-          "count": 9,
-          "fraction": 0.9
+          "count": 25,
+          "fraction": 0.5434782608695652
         },
         "3": {
-          "count": 1,
-          "fraction": 0.1
+          "count": 21,
+          "fraction": 0.45652173913043476
         }
       },
       "score_ge_2": {
-        "count": 10,
+        "count": 46,
         "fraction": 1.0
       },
       "score_eq_3": {
-        "count": 1,
-        "fraction": 0.1
+        "count": 21,
+        "fraction": 0.45652173913043476
       }
     }
   },
   "by_sp_idx": {
     "0": {
-      "total": 16,
+      "total": 64,
       "distribution": {
         "0": {
           "count": 0,
@@ -108,21 +108,21 @@
           "fraction": 0.0
         },
         "2": {
-          "count": 11,
-          "fraction": 0.6875
+          "count": 31,
+          "fraction": 0.484375
         },
         "3": {
-          "count": 5,
-          "fraction": 0.3125
+          "count": 33,
+          "fraction": 0.515625
         }
       },
       "score_ge_2": {
-        "count": 16,
+        "count": 64,
         "fraction": 1.0
       },
       "score_eq_3": {
-        "count": 5,
-        "fraction": 0.3125
+        "count": 33,
+        "fraction": 0.515625
       }
     },
     "1": {
@@ -243,12 +243,12 @@
     }
   },
   "thresholds": {
-    "score_3_n_ge_16": false,
+    "score_3_n_ge_16": true,
     "score_3_n_ge_64": false,
     "score_ge_2_n_ge_16": true,
-    "score_ge_2_n_ge_64": false
+    "score_ge_2_n_ge_64": true
   },
-  "truncation_note": "Insufficient scored data to assess truncation effect.",
+  "truncation_note": "No strong suppression signal from truncation in the scored subset.",
   "recommendation": "Do not proceed to vector extraction yet; scoring is partial.",
   "method_note": "Judge model differs from Lu et al.; Codex GPT-5.5 Standard is used as a pragmatic local scoring substitute, not a strict Lu-method replication."
 }
