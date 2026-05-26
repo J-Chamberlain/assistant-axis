@@ -4,7 +4,7 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** d317948
+**Last commit:** b61cd91
 **Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; Qwen/Qwen3-32B trickster Phase 1 has 1200 preserved rollouts and 1200 matching activation shards with final integrity passed; Codex GPT-5.5 adaptive scoring reached 64 score>=2 responses and 33 score==3 responses; score>=2 vector matches the Lu trickster mean at cosine 0.957557; adaptive stopping passes at n=16 for score>=2 and score==3 subsets; workflow infrastructure now exists under `research/workflow/`; editor adaptive extraction planning is prepared but not launched
 
 ---
@@ -235,8 +235,9 @@
 **Completed this session:** Launched RunPod pod `5b6hz02m9idrc3` on A100 SXM 80GB at $1.49/hr and ran the bounded Qwen/Qwen3-32B editor Phase 1 script for exactly 128 stable-order rollouts.
 **Completed this session:** Preserved the editor JSONL, manifest, log, pod script copy, and 128 activation shards locally under `research/q2_stability/qwen/outputs/paper1_5/editor/`, then ran local integrity successfully.
 **Completed this session:** Did not run scoring, did not launch another chunk, and did not terminate the pod; the pod is RUNNING/idle pending user confirmation.
-**Next step:** Decide whether to run local Codex GPT-5.5 editor role-expression scoring, continue generation with another chunk, or terminate the idle RunPod pod.
-**Last commit before this session:** ac24285
+**Completed this session:** Retrieved the latest Git history from `origin master`, confirmed the 15 most recent commits through `b61cd91`, checked for requested dyad v6 output directories, and confirmed GitHub CLI has an authenticated token available without exposing the secret value.
+**Next step:** Decide whether to run local Codex GPT-5.5 editor role-expression scoring, continue generation with another chunk, terminate the idle RunPod pod, or use the locally authenticated GitHub CLI token path for Claude-assisted repo operations.
+**Last commit before this session:** b61cd91
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** RunPod pod `5b6hz02m9idrc3` remains RUNNING/idle after editor Phase 1 chunk completion. Termination requires explicit user confirmation.
