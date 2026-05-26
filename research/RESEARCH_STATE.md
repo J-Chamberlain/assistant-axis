@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** 4b16a5e
-**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; live Qwen trickster Phase 1 inference-only pod check found the run still healthy at 1180/1200 records; best local snapshot remains 1126 valid records with 1126 matching activation shards; decision is wait for user-approved final copy before termination or Phase 2 scoring
+**Last commit:** pending final commit
+**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; in-container termination attempts did not shut down the RunPod instance, so dashboard/API termination confirmation is still required
 
 ---
 
@@ -175,19 +175,25 @@
 - GPU and disk state were healthy: A100 utilization 88%, about 64GB GPU memory used, root overlay 42% used with 88G free
 - Local best snapshot remained the previously preserved 1126-record copy; final local integrity passed for the available snapshot but the run was not complete enough to copy/declare final in this card
 
+### Paper 1.5 Phase 1 Final Copy and Integrity (2026-05-26, operational audit)
+
+- Final Qwen trickster Phase 1 outputs were copied locally after the live pod reached 1200/1200 records
+- Final integrity passed: 1200 JSONL records, 1200 unique `(sp_idx, q_idx)` pairs, 1200 `activation_saved=True`, 1200 matching activation shard targets, zero duplicate pairs, zero empty responses, zero literal think tags, zero `think_artifact=True`, and all 1200 tensors loading as shape `[5120]`
+- Truncation count was 733/1200; this is a Phase 2/scoring consideration, not a Phase 1 file-integrity failure
+- RunPod compute was idle after completion, but in-container termination attempts (`kill -TERM 1`, killing `sleep infinity`, and `poweroff -f`) did not provide durable termination; RunPod dashboard/API termination confirmation remains required
+
 ---
 
 ## 3. CURRENT STATE
 
 **Completed this session:** Performed a full postmortem of the overnight Qwen trickster Phase 1 pod run, including local inventory, script integrity, data integrity, log reconstruction, pod reachability, resume decision, and cost/time estimate files under `research/q2_stability/qwen/outputs/paper1_5/`.
-**Completed this session:** Checked the live Qwen trickster Phase 1 pod once and recorded that it was still running healthily at 1180/1200 records with 1180 activation shards.
-**Completed this session:** Wrote `live_pod_status_check.md`, `final_phase1_integrity.json`, `final_phase1_integrity.md`, `overnight_run_lessons.md`, and `final_phase1_decision.md` under `research/q2_stability/qwen/outputs/paper1_5/`.
-**Completed this session:** Reran local integrity on the best available 1126-record snapshot and confirmed 1126 unique pairs, 1126 matching activation shards, zero think tags in response text, and 10 sampled tensors loading as shape `[5120]`.
+**Completed this session:** Checked the live Qwen trickster Phase 1 pod, copied final outputs after it reached 1200/1200 records, and reran integrity on the final local snapshot.
+**Completed this session:** Wrote `live_pod_status_check.md`, `phase1_final_integrity.json`, `final_phase1_integrity.json`, `final_phase1_integrity.md`, `overnight_run_lessons.md`, and `final_phase1_decision.md` under `research/q2_stability/qwen/outputs/paper1_5/`.
+**Completed this session:** Final integrity passed with 1200 unique records, 1200 matching activation shards, zero duplicate `(sp_idx, q_idx)` pairs, zero missing activation targets, zero think artifacts, zero empty responses, and all activation tensors loading as shape `[5120]`.
 **Completed this session:** Confirmed activation shards remain ignored by Git and no activation `.pt` files are staged.
-**Completed this session:** Recovered a live RunPod endpoint from local SSH evidence and confirmed it was still running `phase1_inference_only_v4.py` near completion; copied a local snapshot before any termination decision.
-**Completed this session:** Confirmed the copied Phase 1 snapshot has 1126 unique records, zero duplicate `(sp_idx, q_idx)` pairs, zero missing activation targets, and 1126 loadable activation tensors with shape `[5120]`.
+**Completed this session:** Recovered a live RunPod endpoint from local SSH evidence, preserved interim outputs, then replaced them with the final 1200-record local snapshot once the run completed.
 **Completed this session:** Added `.gitignore` protection for `activations_trickster/` directories so activation shard files are not accidentally staged.
-**Next step:** On user approval, perform one final pod status check; if counts are 1200/1200, copy final JSONL, manifest, logs, script, and activation directory locally, rerun integrity, then ask before terminating the pod.
+**Next step:** Use RunPod dashboard or an authenticated RunPod API key to terminate `213.173.102.6:22707`, then proceed to Phase 2 scoring only from the validated 1200-record local snapshot.
 **Last commit before this session:** 4b16a5e
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.

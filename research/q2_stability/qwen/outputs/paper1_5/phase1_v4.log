@@ -53,3 +53,7 @@ Model loaded in 14.4s
 [new=1075 total=1075/1200] think_discards=0 truncated=633 rate=27.4s ETA=1.0hr GPU=65.5GB
 [new=1100 total=1100/1200] think_discards=0 truncated=652 rate=27.4s ETA=0.8hr GPU=65.5GB
 [new=1125 total=1125/1200] think_discards=0 truncated=669 rate=27.5s ETA=0.6hr GPU=65.5GB
+[new=1150 total=1150/1200] think_discards=0 truncated=689 rate=27.5s ETA=0.4hr GPU=65.5GB
+[new=1175 total=1175/1200] think_discards=0 truncated=710 rate=27.6s ETA=0.2hr GPU=65.5GB
+[new=1200 total=1200/1200] think_discards=0 truncated=733 rate=27.6s ETA=0.0hr GPU=65.5GB
+Phase 1 complete. new=1200 total=1200 think_discards=0 truncated=733

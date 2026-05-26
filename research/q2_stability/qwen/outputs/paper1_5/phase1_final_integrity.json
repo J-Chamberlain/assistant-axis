@@ -1,0 +1,61 @@
+{
+  "audit_date": "2026-05-26",
+  "jsonl_path": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl",
+  "jsonl_line_count": 1200,
+  "unique_sp_q_pairs": 1200,
+  "duplicate_pair_count": 0,
+  "duplicate_pairs": [],
+  "activation_shard_count": 1200,
+  "missing_fields": {},
+  "activation_saved_true": 1200,
+  "activation_saved_false": 0,
+  "activation_relpath_missing_target_count": 0,
+  "activation_relpath_missing_targets_sample": [],
+  "think_artifact_true_count": 0,
+  "truncated_true_count": 733,
+  "empty_response_text_count": 0,
+  "empty_response_text_lines_sample": [],
+  "literal_think_tag_response_count": 0,
+  "literal_think_tag_lines_sample": [],
+  "tensor_shape_counts": {
+    "(5120,)": 1200
+  },
+  "tensor_dtype_counts": {
+    "torch.float32": 1200
+  },
+  "tensor_load_error_count": 0,
+  "tensor_load_errors_sample": [],
+  "tensor_spot_checks": [
+    {
+      "path": "activations_trickster/sp0_q0.pt",
+      "exists": true,
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.008381527848541737,
+      "std": 3.574984550476074
+    },
+    {
+      "path": "activations_trickster/sp2_q120.pt",
+      "exists": true,
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32",
+      "mean": 0.008775398135185242,
+      "std": 3.3506600856781006
+    },
+    {
+      "path": "activations_trickster/sp4_q239.pt",
+      "exists": true,
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32",
+      "mean": -0.008187162689864635,
+      "std": 3.5404670238494873
+    }
+  ],
+  "passes_core_integrity": true
+}

@@ -1,21 +1,22 @@
 # Final Phase 1 integrity check — 2026-05-26
 
-Scope: best local snapshot available at `research/q2_stability/qwen/outputs/paper1_5`. The live pod was still running at 1180/1200 during the required one-time status check, so this is not a final 1200-record integrity pass.
+Scope: final local snapshot copied from `213.173.102.6:22707` after the pod reached 1200/1200.
 
 ## Counts
 
-- JSONL line count: 1126 / 1200 expected
-- Unique `(sp_idx, q_idx)` pairs: 1126
+- JSONL line count: 1200 / 1200 expected
+- Parse errors: 0
+- Unique `(sp_idx, q_idx)` pairs: 1200
 - Duplicate pairs: 0
-- Missing expected pairs: 74
-- `activation_saved=True`: 1126
+- Missing expected pairs: 0
+- `activation_saved=True`: 1200
 - `activation_saved=False`: 0
-- Local activation `.pt` files: 1126
+- Local activation `.pt` files: 1200
 
 ## Response and artifact checks
 
 - `think_artifact=True`: 0
-- `truncated=True`: 670
+- `truncated=True`: 733
 - Empty `response_text`: 0
 - Literal `<think>` or `</think>` in `response_text`: 0
 - `activation_saved=True` but missing `activation_relpath`: 0
@@ -37,4 +38,4 @@ Loaded 10 activation tensors spread across the local snapshot. All checked tenso
 
 ## Result
 
-The available local snapshot passes internal integrity for the 1126 records present: records are unique, activation counts match, sampled tensors load as `[5120]`, response text is present, and no think tags are visible in saved responses. It is incomplete relative to the full 1200-record design because the live pod had not finished at the required one-time status check.
+A. FINAL OUTPUTS PRESERVED AND INTEGRITY PASSED. The final 1200-record Phase 1 snapshot is preserved locally, activation shards match the JSONL records, sampled tensors load as `[5120]`, and the copied script/provenance checks pass. The pod has not been terminated.

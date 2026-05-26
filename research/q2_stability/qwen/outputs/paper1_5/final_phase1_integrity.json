@@ -2,316 +2,21 @@
   "model_used": "GPT-5.5",
   "audit_timestamp_local": "2026-05-26 America/Los_Angeles",
   "source_snapshot": "research/q2_stability/qwen/outputs/paper1_5",
-  "run_complete_locally": false,
-  "jsonl_line_count": 1126,
+  "run_complete_locally": true,
+  "jsonl_line_count": 1200,
   "expected_records": 1200,
-  "unique_sp_q_pairs": 1126,
+  "parse_errors_count": 0,
+  "parse_errors": [],
+  "unique_sp_q_pairs": 1200,
   "duplicate_pairs_count": 0,
   "duplicate_pairs": [],
-  "missing_expected_pairs_count": 74,
-  "missing_expected_pairs": [
-    {
-      "sp_idx": 4,
-      "q_idx": 166
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 167
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 168
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 169
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 170
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 171
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 172
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 173
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 174
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 175
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 176
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 177
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 178
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 179
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 180
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 181
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 182
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 183
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 184
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 185
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 186
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 187
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 188
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 189
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 190
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 191
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 192
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 193
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 194
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 195
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 196
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 197
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 198
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 199
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 200
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 201
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 202
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 203
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 204
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 205
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 206
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 207
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 208
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 209
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 210
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 211
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 212
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 213
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 214
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 215
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 216
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 217
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 218
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 219
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 220
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 221
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 222
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 223
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 224
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 225
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 226
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 227
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 228
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 229
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 230
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 231
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 232
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 233
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 234
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 235
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 236
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 237
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 238
-    },
-    {
-      "sp_idx": 4,
-      "q_idx": 239
-    }
-  ],
-  "activation_saved_true": 1126,
+  "missing_expected_pairs_count": 0,
+  "missing_expected_pairs": [],
+  "activation_saved_true": 1200,
   "activation_saved_false": 0,
-  "local_activation_pt_files": 1126,
+  "local_activation_pt_files": 1200,
   "think_artifact_true": 0,
-  "truncated_true": 670,
+  "truncated_true": 733,
   "empty_response_text": 0,
   "response_text_literal_think_tags": 0,
   "activation_saved_true_missing_activation_relpath": 0,
@@ -327,7 +32,7 @@
       "ok_shape_5120": true
     },
     {
-      "file": "activations_trickster/sp0_q210.pt",
+      "file": "activations_trickster/sp0_q218.pt",
       "shape": [
         5120
       ],
@@ -335,7 +40,7 @@
       "ok_shape_5120": true
     },
     {
-      "file": "activations_trickster/sp1_q107.pt",
+      "file": "activations_trickster/sp1_q121.pt",
       "shape": [
         5120
       ],
@@ -343,7 +48,7 @@
       "ok_shape_5120": true
     },
     {
-      "file": "activations_trickster/sp1_q22.pt",
+      "file": "activations_trickster/sp1_q27.pt",
       "shape": [
         5120
       ],
@@ -351,7 +56,7 @@
       "ok_shape_5120": true
     },
     {
-      "file": "activations_trickster/sp2_q116.pt",
+      "file": "activations_trickster/sp2_q146.pt",
       "shape": [
         5120
       ],
@@ -359,7 +64,7 @@
       "ok_shape_5120": true
     },
     {
-      "file": "activations_trickster/sp2_q229.pt",
+      "file": "activations_trickster/sp2_q50.pt",
       "shape": [
         5120
       ],
@@ -367,7 +72,7 @@
       "ok_shape_5120": true
     },
     {
-      "file": "activations_trickster/sp3_q125.pt",
+      "file": "activations_trickster/sp3_q17.pt",
       "shape": [
         5120
       ],
@@ -375,7 +80,7 @@
       "ok_shape_5120": true
     },
     {
-      "file": "activations_trickster/sp3_q238.pt",
+      "file": "activations_trickster/sp3_q75.pt",
       "shape": [
         5120
       ],
@@ -383,7 +88,7 @@
       "ok_shape_5120": true
     },
     {
-      "file": "activations_trickster/sp4_q134.pt",
+      "file": "activations_trickster/sp4_q194.pt",
       "shape": [
         5120
       ],
@@ -417,6 +122,6 @@
   "activation_shards_staged_for_git": [],
   "activation_shards_not_staged_for_git": true,
   "gitignore_check_for_activation_shard": ".gitignore:42:outputs/\tresearch/q2_stability/qwen/outputs/paper1_5/activations_trickster/sp0_q0.pt",
-  "integrity_pass_for_available_snapshot": true,
-  "final_integrity_label": "local snapshot passes internal integrity but is incomplete relative to 1200 expected records"
+  "integrity_pass_full_1200_snapshot": true,
+  "final_integrity_label": "A. FINAL OUTPUTS PRESERVED AND INTEGRITY PASSED"
 }
