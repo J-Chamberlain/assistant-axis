@@ -235,6 +235,14 @@
 - Vector validation and score-conditioned sample sufficiency were not run because the editor 512-token scored set failed the preregistered score thresholds
 - Current implication: the first editor chunk does not validate adaptive extraction beyond trickster; low editor-role yield appears driven more by prompt/chunk behavior than by the 512-token cap alone
 
+### Paper 1.5 Editor Pod Closeout (2026-05-26)
+
+- Editor adaptive extraction and matched token-cap sensitivity outputs are preserved locally with passing integrity checks and committed scoring artifacts
+- RunPod pod `5b6hz02m9idrc3` (`paper1-5-editor-128`, A100 SXM 80GB, $1.49/hr) was confirmed idle over SSH before closeout: no rollout process was active, logs showed both runs complete, and GPU usage was 1 MiB at 0 percent utilization
+- Pod stop succeeded via `runpodctl pod stop`, changing desired status to `EXITED`; pod delete then succeeded via `runpodctl pod delete`
+- Final RunPod confirmation: `runpodctl pod list` returned no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returned 404 `pod not found`
+- Current interpretation remains that editor weakness reflects weak anchoring or assistant-adjacent collapse under the current Lu-style extraction setup rather than token-cap limitation alone
+
 ---
 
 ## 3. CURRENT STATE
@@ -247,16 +255,15 @@
 
 **Workflow infrastructure:** `research/workflow/` now contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Next empirical step:** Decide whether to run an additional editor chunk using later system prompts or a revised editor anchoring design, because the first `sp_idx=0` chunk did not meet role-expression thresholds even after the matched 1024-token sensitivity check.
+**Next empirical step:** Develop a revised editor anchoring methodology rather than immediately generating additional rollout chunks, because the first `sp_idx=0` editor chunk did not meet role-expression thresholds even after the matched 1024-token sensitivity check.
 
-**Completed this session:** Verified that the editor 512-token and matched 1024-token generation datasets and integrity files were locally preserved before scoring.
+**Completed this session:** Verified that the editor 512-token and matched 1024-token generation datasets, integrity files, scoring artifacts, and token-cap comparison artifacts are preserved locally.
 **Completed this session:** Created `sticky_notes/situational_fluidity_hypothesis.md` capturing the pre-analysis situational fluidity hypothesis in relation to expressive geometry, feature suppression, and situational appropriateness.
 **Completed this session:** Updated `sticky_notes/README.md` with an index row for the new situational fluidity hypothesis note.
-**Completed this session:** Created a reusable editor Codex GPT-5.5 scoring harness and scored the full 128-record 512-token editor chunk.
-**Completed this session:** Scored all 64 matched 1024-token editor records and wrote the token-cap comparison, finding that 1024 sharply reduces truncation but does not improve score>=2 or score==3 yield in the matched set.
-**Completed this session:** Did not run vector validation or score-conditioned sample sufficiency because the 512-token editor scored set reached only 10 score>=2 responses and 3 score==3 responses, below the preregistered thresholds.
-**Next step:** Submit the situational fluidity hypothesis to a literature/novelty check before treating it as a research claim; separately decide whether to generate another editor chunk, revise the editor prompt/selection strategy, or terminate any remaining idle RunPod resources after confirming pod state through RunPod credentials or dashboard.
-**Last commit before this session:** 6e2a1a6
+**Completed this session:** Confirmed the editor pod was idle over SSH before termination, with no active rollout process and GPU usage at 1 MiB and 0 percent utilization.
+**Completed this session:** Stopped and deleted RunPod pod `5b6hz02m9idrc3` via `runpodctl`; final `pod list` returned no running pods and `pod get` returned 404 `pod not found`.
+**Next step:** Submit the situational fluidity hypothesis to a literature/novelty check before treating it as a research claim; separately design a revised editor anchoring methodology before any further editor rollout generation.
+**Last commit before this session:** 1199504
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
-**Pod status:** After the matched 1024-token run, local artifacts show preservation and integrity are complete. Post-commit pod verification is unresolved in the local shell because `runpodctl` lacks an API key and saved SSH endpoints refused connection; termination status should be confirmed through RunPod credentials or dashboard before further pod planning.
+**Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
