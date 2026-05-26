@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** 9c3372b
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; Qwen/Qwen3-32B trickster Phase 1 has 1200 preserved rollouts and 1200 matching activation shards with final integrity passed; Codex GPT-5.5 adaptive scoring reached 64 score>=2 responses and 33 score==3 responses; score>=2 vector matches the Lu trickster mean at cosine 0.957557; adaptive stopping passes at n=16 for score>=2 and score==3 subsets; workflow infrastructure now exists under `research/workflow/`; next empirical step is editor adaptive extraction to test generalization beyond high-signal trickster
+**Last commit:** d317948
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; Qwen/Qwen3-32B trickster Phase 1 has 1200 preserved rollouts and 1200 matching activation shards with final integrity passed; Codex GPT-5.5 adaptive scoring reached 64 score>=2 responses and 33 score==3 responses; score>=2 vector matches the Lu trickster mean at cosine 0.957557; adaptive stopping passes at n=16 for score>=2 and score==3 subsets; workflow infrastructure now exists under `research/workflow/`; editor adaptive extraction planning is prepared but not launched
 
 ---
 
@@ -224,10 +224,10 @@
 
 **Next empirical step:** Run a second-persona adaptive extraction test using `editor` as the next role, specifically to test whether adaptive extraction generalizes beyond the high-signal trickster persona.
 
-**Completed this session:** Reviewed the current Paper 1.5 methodology, adaptive extraction notes, workflow lessons, and latest commits to identify stale canonical-state claims.
-**Completed this session:** Updated Section 2 and Section 3 of `research/RESEARCH_STATE.md` so the state reflects completed trickster adaptive extraction validation and the new workflow infrastructure.
-**Next step:** Prepare the editor adaptive extraction pod card using `research/workflow/` templates and RunPod API or `runpodctl` lifecycle rules.
-**Last commit before this session:** 9c3372b
+**Completed this session:** Verified editor inputs exist: `data/roles/instructions/editor.json` has the expected five-prompt Lu-style structure, and `downloads/hf_vectors/qwen-3-32b/role_vectors/editor.pt` loads as a `[64, 5120]` Qwen role-vector tensor.
+**Completed this session:** Prepared the editor adaptive extraction run plan, editor script adaptation notes, and a draft future pod card under `research/q2_stability/qwen/outputs/paper1_5/` without launching a pod.
+**Next step:** With user confirmation, launch the editor 128-rollout RunPod chunk using the prepared draft card and the `research/workflow/` lifecycle protocol.
+**Last commit before this session:** d317948
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** No active pod is required for this state update. Future pod work should start from the workflow registry and heartbeat protocol.
