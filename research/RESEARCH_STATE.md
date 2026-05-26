@@ -4,7 +4,7 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** 9e5243f
+**Last commit:** bf41355
 **Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; Lu-reference trickster vector validation script is prepared but blocked on missing Phase 2 score file
 
 ---
@@ -198,9 +198,22 @@
 - Truncation does not materially change pre-scoring geometric sample sufficiency: non-truncated and truncated subsets both cross Criterion A at raw n=4 and operational n=16
 - Phase 2 score-conditioned analysis remains required before finalizing a sample-size rule for qualifying role-expression vectors
 
+### Codex GPT-5.5 Trickster Role-Expression Scoring (2026-05-26, partial)
+
+- Local Codex GPT-5.5 Standard scoring harness created as a no-API substitute for the blocked gpt-4.1-mini Phase 2 scoring path
+- First 16/1200 records scored manually by Codex rubric judgment: score 2 count 11, score 3 count 5, score 0/1 count 0
+- Partial threshold status: n>=16 score>=2 achieved; n>=16 score==3 not yet achieved; n>=64 thresholds not yet achieved
+- This is a partial working score file only and should not yet be used for final vector extraction
+
 ---
 
 ## 3. CURRENT STATE
+
+**Completed this session:** Created `research/q2_stability/qwen/scripts/score_trickster_phase2_codex_gpt55.py`, a resumable local harness for Codex GPT-5.5 Standard role-expression scoring with no OpenAI API calls.
+**Completed this session:** Scored the first 16 Qwen trickster Phase 1 records using the Codex rubric and saved partial outputs to `trickster_phase2_scores_codex_gpt55.jsonl`, summary JSON, and Markdown report.
+**Completed this session:** Confirmed the partial Codex score file has 16/1200 records scored, with 16 score>=2 and 5 score==3; vector extraction remains blocked until substantially more or complete scoring exists.
+**Next step:** Resume local Codex scoring with `python3 research/q2_stability/qwen/scripts/score_trickster_phase2_codex_gpt55.py --next-batch 8`, append the judged batch with `--append-batch /tmp/codex_scores_batch.json`, and repeat until all 1200 records are scored.
+**Last commit before this session:** bf41355
 
 **Completed this session:** Created and ran `research/q2_stability/qwen/scripts/analyze_trickster_sample_sufficiency.py`, a local CPU-only bootstrap analysis of sample-size sufficiency for the Qwen trickster Phase 1 activation corpus.
 **Completed this session:** Saved `trickster_sample_sufficiency.json`, `trickster_sample_sufficiency.md`, and `trickster_sample_sufficiency_curves.csv` under `research/q2_stability/qwen/outputs/paper1_5/`.
