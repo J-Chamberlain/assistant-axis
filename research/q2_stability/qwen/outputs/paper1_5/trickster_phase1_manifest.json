@@ -1,0 +1,21 @@
+{
+  "persona": "trickster",
+  "generation_model": "Qwen/Qwen3-32B",
+  "script_author_model": "GPT-5.5",
+  "layer": 48,
+  "max_new_tokens": 512,
+  "n_system_prompts": 5,
+  "n_questions": 240,
+  "total_rollouts_planned": 1200,
+  "transformers_version": "4.51.3",
+  "torch_version": "2.8.0+cu128",
+  "cuda_device": "NVIDIA A100-SXM4-80GB",
+  "instructions_hash": "de401c6ebbcd",
+  "questions_hash": "a1c94e4a44a6",
+  "git_commit": "ced1505",
+  "script": "phase1_inference_only_v4.py",
+  "start_time": 1779761746.557466,
+  "enable_thinking": false,
+  "use_cache_for_measurement": false,
+  "phase": "1_inference_only_no_judge"
+}

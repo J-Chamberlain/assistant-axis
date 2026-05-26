@@ -1,0 +1,12 @@
+# Overnight run lessons — 2026-05-26
+
+1. Detached execution worked. The run continued on the pod after chat-side visibility degraded, and `phase1_inference_only_v4.py` was still active at the live check.
+2. The pod job was not abandoned by the machine; only the monitoring context lost awareness. The live process had reached 1180/1200 records and was still using the A100.
+3. Codex monitoring did fail to preserve awareness across the overnight boundary. Future cards should require a durable status artifact and a planned follow-up checkpoint independent of chat continuity.
+4. The output format was sufficient for recovery and integrity checks. JSONL records include `(sp_idx, q_idx)`, model provenance, response text, truncation/think flags, activation status, and activation relative paths.
+5. JSONL plus `.pt` shard resumability worked for preservation. The local snapshot had 1126 records and 1126 matching activation shards, and the live run continued writing matching counts.
+6. No v4 script bug was visible from the live evidence. The script was inference-only, used Qwen/Qwen3-32B, recorded `script_author_model=GPT-5.5`, used safe think-tag detection, saved full response text, saved activation paths, and used `use_cache=False` for measurement.
+7. No disk, GPU, or OOM concern was visible. Disk had ample free space; the A100 was actively utilized with about 64GB used; no crash or memory error appeared in the log. Truncation is common and expected for the current max-token regime: 710 truncated records by the 1175 checkpoint and 670 truncated records in the 1126-record local snapshot.
+8. Before the next pod run, add a small heartbeat/status JSON that records total records, activation shard count, last pair, ETA, GPU memory, and final completion marker. Also make the run write an explicit `DONE` sentinel and a final integrity summary on-pod.
+9. A future GitHub status report should surface total records, unique pairs, duplicate/missing counts, activation count, truncation count, think-artifact count, empty-response count, tensor shape spot checks, script hash/provenance, and whether activation shards are ignored by Git.
+10. Immediate next action: continue monitoring or perform a final copy once the user authorizes a second status check. Do not terminate the pod yet. Phase 2 local batch scoring should wait until the complete 1200-record final copy and integrity pass are preserved locally.

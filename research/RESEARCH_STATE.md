@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** ced1505
-**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; a live Qwen trickster Phase 1 inference-only pod was found still running near completion; copied local snapshot contains 1126 valid rollout records and 1126 matching activation shards; decision is preserve live pod outputs first before resume/rerun/termination decisions
+**Last commit:** 4b16a5e
+**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; live Qwen trickster Phase 1 inference-only pod check found the run still healthy at 1180/1200 records; best local snapshot remains 1126 valid records with 1126 matching activation shards; decision is wait for user-approved final copy before termination or Phase 2 scoring
 
 ---
 
@@ -168,16 +168,27 @@
 - The live pod log showed at least total=1125/1200, think_discards=0, truncated=669, rate=27.5s/rollout, and GPU memory 65.5GB
 - Resume decision from the audit: preserve final live pod outputs first, then rerun integrity checks before any termination or full continuation decision
 
+### Paper 1.5 Phase 1 Live Pod Follow-Up (2026-05-26, operational audit)
+
+- One-time live check of `213.173.102.6:22707` succeeded and found `phase1_inference_only_v4.py` still running as PID 5596
+- Pod-side counts at check: 1180 JSONL records and 1180 activation shards; latest visible checkpoint was total=1175/1200, think_discards=0, truncated=710, rate=27.6s/rollout, ETA=0.2hr, GPU=65.5GB
+- GPU and disk state were healthy: A100 utilization 88%, about 64GB GPU memory used, root overlay 42% used with 88G free
+- Local best snapshot remained the previously preserved 1126-record copy; final local integrity passed for the available snapshot but the run was not complete enough to copy/declare final in this card
+
 ---
 
 ## 3. CURRENT STATE
 
 **Completed this session:** Performed a full postmortem of the overnight Qwen trickster Phase 1 pod run, including local inventory, script integrity, data integrity, log reconstruction, pod reachability, resume decision, and cost/time estimate files under `research/q2_stability/qwen/outputs/paper1_5/`.
+**Completed this session:** Checked the live Qwen trickster Phase 1 pod once and recorded that it was still running healthily at 1180/1200 records with 1180 activation shards.
+**Completed this session:** Wrote `live_pod_status_check.md`, `final_phase1_integrity.json`, `final_phase1_integrity.md`, `overnight_run_lessons.md`, and `final_phase1_decision.md` under `research/q2_stability/qwen/outputs/paper1_5/`.
+**Completed this session:** Reran local integrity on the best available 1126-record snapshot and confirmed 1126 unique pairs, 1126 matching activation shards, zero think tags in response text, and 10 sampled tensors loading as shape `[5120]`.
+**Completed this session:** Confirmed activation shards remain ignored by Git and no activation `.pt` files are staged.
 **Completed this session:** Recovered a live RunPod endpoint from local SSH evidence and confirmed it was still running `phase1_inference_only_v4.py` near completion; copied a local snapshot before any termination decision.
 **Completed this session:** Confirmed the copied Phase 1 snapshot has 1126 unique records, zero duplicate `(sp_idx, q_idx)` pairs, zero missing activation targets, and 1126 loadable activation tensors with shape `[5120]`.
 **Completed this session:** Added `.gitignore` protection for `activations_trickster/` directories so activation shard files are not accidentally staged.
-**Next step:** When the live pod completes or on user confirmation, copy the final `trickster_phase1.jsonl`, manifest, log, and activation shard directory from the pod, rerun the integrity check, then decide whether to terminate the pod or continue with Phase 2 scoring.
-**Last commit before this session:** ced1505
+**Next step:** On user approval, perform one final pod status check; if counts are 1200/1200, copy final JSONL, manifest, logs, script, and activation directory locally, rerun integrity, then ask before terminating the pod.
+**Last commit before this session:** 4b16a5e
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.
 **Completed this session:** Audited Qwen layer-48 hidden-state extraction and confirmed the active Qwen scripts use HuggingFace decoder-layer forward hooks such as `model.model.layers[48].register_forward_hook(...)` and/or `hidden_states[48]`, with no `resid_mid` hook present.
