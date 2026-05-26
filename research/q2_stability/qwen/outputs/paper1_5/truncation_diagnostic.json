@@ -1,0 +1,398 @@
+{
+  "date": "2026-05-26",
+  "model_used": "GPT-5.5",
+  "input_jsonl": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl",
+  "integrity_json": "research/q2_stability/qwen/outputs/paper1_5/phase1_final_integrity.json",
+  "validation": {
+    "record_count": 1200,
+    "expected_record_count": 1200,
+    "unique_sp_q_pairs": 1200,
+    "expected_unique_sp_q_pairs": 1200,
+    "system_prompt_count": 5,
+    "expected_system_prompt_count": 5,
+    "question_count": 240,
+    "expected_question_count": 240,
+    "valid": true
+  },
+  "tokenization": {
+    "tokenizer_available": false,
+    "note": "Local tokenizer unavailable; character and word-count proxies were used. Tokenizer error: No module named 'transformers'"
+  },
+  "length_stats": {
+    "characters": {
+      "all": {
+        "count": 1200,
+        "min": 645,
+        "p25": 1835.0,
+        "median": 2078.0,
+        "p75": 2167.25,
+        "p90": 2241.0,
+        "max": 2422,
+        "mean": 1959.0341666666666
+      },
+      "truncated": {
+        "count": 733,
+        "min": 1872,
+        "p25": 2080.0,
+        "median": 2142.0,
+        "p75": 2204.0,
+        "p90": 2274.8,
+        "max": 2422,
+        "mean": 2146.6603001364256
+      },
+      "non_truncated": {
+        "count": 467,
+        "min": 645,
+        "p25": 1448.0,
+        "median": 1701.0,
+        "p75": 1928.0,
+        "p90": 2074.0,
+        "max": 2287,
+        "mean": 1664.5374732334046
+      }
+    },
+    "words": {
+      "all": {
+        "count": 1200,
+        "min": 127,
+        "p25": 338.75,
+        "median": 375.0,
+        "p75": 393.0,
+        "p90": 405.0,
+        "max": 451,
+        "mean": 356.1525
+      },
+      "truncated": {
+        "count": 733,
+        "min": 309,
+        "p25": 375.0,
+        "median": 387.0,
+        "p75": 399.0,
+        "p90": 409.0,
+        "max": 451,
+        "mean": 386.14461118690315
+      },
+      "non_truncated": {
+        "count": 467,
+        "min": 127,
+        "p25": 268.5,
+        "median": 315.0,
+        "p75": 359.0,
+        "p90": 380.40000000000003,
+        "max": 411,
+        "mean": 309.07708779443254
+      }
+    },
+    "tokens": {
+      "count": 0,
+      "note": "Local tokenizer unavailable; character and word-count proxies were used. Tokenizer error: No module named 'transformers'"
+    }
+  },
+  "truncation": {
+    "overall": {
+      "records": 1200,
+      "truncated": 733,
+      "non_truncated": 467,
+      "fraction": 0.6108333333333333
+    },
+    "by_sp_idx": {
+      "0": {
+        "records": 240,
+        "truncated": 153,
+        "fraction": 0.6375
+      },
+      "1": {
+        "records": 240,
+        "truncated": 118,
+        "fraction": 0.49166666666666664
+      },
+      "2": {
+        "records": 240,
+        "truncated": 155,
+        "fraction": 0.6458333333333334
+      },
+      "3": {
+        "records": 240,
+        "truncated": 114,
+        "fraction": 0.475
+      },
+      "4": {
+        "records": 240,
+        "truncated": 193,
+        "fraction": 0.8041666666666667
+      }
+    },
+    "by_q_idx_decile": {
+      "000-023": {
+        "records": 120,
+        "truncated": 77,
+        "fraction": 0.6416666666666667
+      },
+      "024-047": {
+        "records": 120,
+        "truncated": 77,
+        "fraction": 0.6416666666666667
+      },
+      "048-071": {
+        "records": 120,
+        "truncated": 79,
+        "fraction": 0.6583333333333333
+      },
+      "072-095": {
+        "records": 120,
+        "truncated": 68,
+        "fraction": 0.5666666666666667
+      },
+      "096-119": {
+        "records": 120,
+        "truncated": 86,
+        "fraction": 0.7166666666666667
+      },
+      "120-143": {
+        "records": 120,
+        "truncated": 54,
+        "fraction": 0.45
+      },
+      "144-167": {
+        "records": 120,
+        "truncated": 64,
+        "fraction": 0.5333333333333333
+      },
+      "168-191": {
+        "records": 120,
+        "truncated": 80,
+        "fraction": 0.6666666666666666
+      },
+      "192-215": {
+        "records": 120,
+        "truncated": 77,
+        "fraction": 0.6416666666666667
+      },
+      "216-239": {
+        "records": 120,
+        "truncated": 71,
+        "fraction": 0.5916666666666667
+      }
+    },
+    "most_truncated_questions": [
+      {
+        "q_idx": 2,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 5,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 6,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 8,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 13,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 14,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 17,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 19,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 23,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 29,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 32,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 35,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 38,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 39,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 42,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 43,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 44,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 45,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 47,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 49,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 52,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 55,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 56,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 60,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      },
+      {
+        "q_idx": 66,
+        "records": 5,
+        "truncated": 5,
+        "fraction": 1.0
+      }
+    ],
+    "system_prompt_fraction_range": 0.3291666666666667,
+    "q_decile_fraction_range": 0.26666666666666666
+  },
+  "completion_indicators": {
+    "counts": {
+      "truncated": {
+        "ends_mid_word": 412,
+        "contains_unclosed_quote_or_parenthesis": 222,
+        "ends_with_sentence_punctuation": 62,
+        "contains_numbered_list_marker_near_end": 86,
+        "ends_with_colon_or_comma": 42
+      },
+      "non_truncated": {
+        "ends_with_sentence_punctuation": 435,
+        "contains_unclosed_quote_or_parenthesis": 160,
+        "ends_mid_word": 1,
+        "contains_numbered_list_marker_near_end": 1
+      }
+    },
+    "truncated_sentence_punctuation_fraction": 0.08458390177353342,
+    "truncated_abrupt_fraction": 0.7312414733969986,
+    "non_truncated_abrupt_fraction": 0.021413276231263382
+  },
+  "role_expression_proxy": {
+    "markers": [
+      "trick",
+      "trickster",
+      "mischief",
+      "chaos",
+      "paradox",
+      "mask",
+      "riddle",
+      "jester",
+      "laugh",
+      "wink",
+      "subvert",
+      "play",
+      "rule",
+      "dance",
+      "mirror",
+      "absurd",
+      "delight",
+      "twist",
+      "prank",
+      "unravel",
+      "stage",
+      "performance"
+    ],
+    "truncated_records_with_at_least_two_markers": 690,
+    "truncated_fraction_with_at_least_two_markers": 0.9413369713506139,
+    "non_truncated_records_with_at_least_two_markers": 437,
+    "non_truncated_fraction_with_at_least_two_markers": 0.9357601713062098
+  },
+  "answers": {
+    "severity": "Truncation is high: 733/1200 records (61.1%) are flagged truncated.",
+    "system_prompt_concentration": "Truncation varies by system prompt, but every prompt has substantial truncation; the sp_idx fraction range is 47.5% to 80.4%.",
+    "question_subset_concentration": "Truncation varies more by question subset than by system prompt; q_idx decile fractions range from 45.0% to 71.7%.",
+    "role_expression_before_cutoff": "690/733 truncated records (94.1%) contain at least two simple trickster lexical markers, so many truncated records likely contain usable role expression before cutoff, but this is only a proxy.",
+    "ending_abruptness": "62/733 truncated records (8.5%) end with sentence punctuation; 536/733 (73.1%) meet the abrupt-ending heuristic.",
+    "score3_bias": "Truncation could bias score-3 selection downward for records whose strongest role expression would have appeared late, and upward only if early role expression is strong while later generic continuation is cut away. The diagnostic supports keeping the truncation flag visible during scoring and downstream selection.",
+    "phase2_proceed": "Phase 2 scoring should proceed on all 1200 records, with truncation included as a covariate/filter and with manual review of high-scoring truncated candidates.",
+    "followup_recommended": "A small follow-up run with higher max_new_tokens is recommended for a stratified subset of high-scoring truncated records and the most abrupt truncated questions, not as a prerequisite for Phase 2."
+  },
+  "sample_counts": {
+    "stratified_truncated": 25,
+    "stratified_non_truncated": 25,
+    "most_abrupt_truncated": 10,
+    "longest_non_truncated": 10
+  }
+}

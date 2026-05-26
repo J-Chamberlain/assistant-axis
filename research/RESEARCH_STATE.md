@@ -4,7 +4,7 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** d757331
+**Last commit:** b550d93
 **Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; in-container termination attempts did not shut down the RunPod instance, so dashboard/API termination confirmation is still required
 
 ---
@@ -182,9 +182,23 @@
 - Truncation count was 733/1200; this is a Phase 2/scoring consideration, not a Phase 1 file-integrity failure
 - RunPod compute was idle after completion, but in-container termination attempts (`kill -TERM 1`, killing `sleep infinity`, and `poweroff -f`) did not provide durable termination; RunPod dashboard/API termination confirmation remains required
 
+### Trickster Phase 1 Truncation Diagnostic (2026-05-26, confirmed)
+
+- Local no-API truncation diagnostic confirmed 733/1200 records truncated at 512 tokens, a 61.1% truncation rate
+- Truncation varies by system prompt from 47.5% to 80.4%, with `sp_idx=4` highest, and by question decile from 45.0% to 71.7%
+- Non-LLM role-expression proxy found 690/733 truncated records, 94.1%, contain at least two trickster lexical markers before cutoff
+- Ending heuristics show truncation is usually abrupt: only 62/733 truncated records, 8.5%, end with sentence punctuation, while 536/733, 73.1%, meet the abrupt-ending heuristic
+- Recommendation: Phase 2 scoring should proceed on all 1200 records with truncation retained as a covariate/filter, followed by a small higher-token follow-up run for high-scoring truncated records and the most abrupt question subsets
+
 ---
 
 ## 3. CURRENT STATE
+
+**Completed this session:** Created and ran `research/q2_stability/qwen/scripts/analyze_phase1_truncation.py`, a local CPU-only diagnostic for the completed Qwen trickster Phase 1 corpus.
+**Completed this session:** Saved `truncation_diagnostic.json`, `truncation_diagnostic.md`, `truncation_review_samples.jsonl`, and `truncation_review_samples.md` under `research/q2_stability/qwen/outputs/paper1_5/`.
+**Completed this session:** Confirmed the truncation rate is high but not fatal for Phase 2: 733/1200 records truncated, 94.1% of truncated records contain at least two simple trickster lexical markers, and abrupt endings should be tracked during scoring.
+**Next step:** Proceed with Phase 2 scoring on all 1200 records while retaining truncation as a covariate/filter, then plan a small higher-token follow-up run for high-scoring truncated records and the most abrupt question subsets.
+**Last commit before this session:** b550d93
 
 **Completed this session:** Performed a full postmortem of the overnight Qwen trickster Phase 1 pod run, including local inventory, script integrity, data integrity, log reconstruction, pod reachability, resume decision, and cost/time estimate files under `research/q2_stability/qwen/outputs/paper1_5/`.
 **Completed this session:** Checked the live Qwen trickster Phase 1 pod, copied final outputs after it reached 1200/1200 records, and reran integrity on the final local snapshot.
