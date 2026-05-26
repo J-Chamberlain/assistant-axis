@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** 2b9d50d
-**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; adaptive Codex GPT-5.5 role-expression scoring reached a usable trickster subset with 64 score>=2 responses and 33 score==3 responses; Codex-scored vector validation passes as a pragmatic substitute path, while strict Lu-method gpt-4.1-mini scoring remains blocked by OpenAI quota
+**Last commit:** 7148965
+**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; adaptive Codex GPT-5.5 role-expression scoring reached a usable trickster subset with 64 score>=2 responses and 33 score==3 responses; Codex-scored vector validation passes as a pragmatic substitute path, and Paper 1.5 methodology now records the adaptive extraction protocol while strict Lu-method gpt-4.1-mini scoring remains blocked by OpenAI quota
 
 ---
 
@@ -216,6 +216,11 @@
 ---
 
 ## 3. CURRENT STATE
+
+**Completed this session:** Updated `research/paper1_5_outline.md` with a new adaptive role-vector extraction methodology subsection covering the Lu baseline, Qwen trickster replication architecture, truncation findings, Codex scoring substitution, validation results, and operational extraction rule.
+**Completed this session:** Created `research/paper1_5_adaptive_extraction_notes.md` as a concise workflow note for future persona extraction runs.
+**Next step:** Use the adaptive extraction methodology to plan the next persona extraction or expand Paper 1.5 from outline into a full draft with the trickster replication as the first empirical anchor.
+**Last commit before this session:** 7148965
 
 **Completed this session:** Continued adaptive Codex GPT-5.5 Standard trickster role-expression scoring from 16 to 64 records and stopped after meeting the preferred threshold with 64 score>=2 responses and 33 score==3 responses.
 **Completed this session:** Updated the vector validation script to accept an explicit score file and partial adaptive scoring, then ran validation against `trickster_phase2_scores_codex_gpt55.jsonl` without touching or faking the gpt-4.1-mini score path.

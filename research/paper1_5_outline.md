@@ -1,6 +1,6 @@
-# Paper 1.5 — Motivational Structure of the Seven-Cluster Taxonomy
+# Paper 1.5: Motivational Structure of the Seven-Cluster Taxonomy
 
-## Status: outlined 2026-05-24, pre-empirical
+## Status: outlined 2026-05-24, trickster extraction replication completed 2026-05-26
 
 ## Premise
 
@@ -17,6 +17,20 @@ Three complementary methods establish the cluster characterizations:
 2. Cross-model replication. The same clustering analysis is run on Qwen 3 32B and Llama 3.3 70B role vectors. Cluster structures are compared by membership overlap and cluster boundaries. Convergence across models supports the universality of the structure; divergence localizes the structure to specific architectures or training regimes.
 
 3. Empirical anchoring tests. Cluster-derived background prompts are tested for their ability to move the model toward the target cluster's geometric region within a single turn. Successful anchoring supports the proposition that the cluster characterizations correspond to real and reachable regions in activation space.
+
+## Adaptive role-vector extraction methodology
+
+Paper 1.5 inherits its role-vector extraction baseline from Lu et al. The Lu-style procedure uses five system prompts for a target role and 240 extraction questions, producing 1200 possible rollouts per role. Responses are filtered by role-expression score, and qualifying examples are converted into role vectors by mean pooling post-MLP residual activations at the target layer. The released Lu et al. Qwen role-vector tensors store 64 rows per role, which functions as a fixed storage cap rather than an observed count of successful elicitation attempts.
+
+The Qwen trickster replication tests this procedure directly on Qwen/Qwen3-32B. Generation uses deterministic inference with thinking disabled, while hidden-state extraction records layer 48 post-MLP residual activations. The run separates inference from scoring: the first phase generates all 1200 rollouts and preserves one activation shard per record as a local `.pt` tensor, while the second phase scores visible response text for role expression. Final integrity validation confirms 1200 JSONL records, 1200 unique `(system prompt, question)` pairs, 1200 activation-saved records, and 1200 matching activation shards with shape `[5120]`.
+
+The overnight trickster run reveals a high truncation rate: 733 of 1200 responses are truncated at 512 tokens. Truncation varies by system prompt and by question subset, so it is retained as an explicit covariate rather than discarded. A pre-scoring truncation diagnostic finds that truncation does not materially destabilize geometric convergence: truncated, non-truncated, and full-corpus activation subsets all show high self-stability under bootstrap resampling. This does not mean truncation is behaviorally irrelevant; it means truncation does not by itself prevent stable geometric extraction for the trickster pilot.
+
+The planned scoring path used `gpt-4.1-mini` to remain close to the Lu et al. judge model. That path is blocked by OpenAI API quota before any scores are written. As a pragmatic substitute, Codex GPT-5.5 Standard scores role expression locally using the same four-point trickster rubric. This substitution is recorded explicitly and is not treated as strict methodological identity with Lu et al. It provides an operational validation path, not a claim that the exact Lu scoring procedure has been replicated.
+
+Adaptive Codex scoring stops once the usable extraction subset reaches the preferred threshold. Sixty-four scored responses produce 64 score>=2 responses and 33 score==3 responses. The best candidate vector is the score>=2 mean, with cosine 0.957557 to the Lu et al. Qwen trickster mean. The score-conditioned extraction therefore reproduces the Lu trickster geometry under the pragmatic Codex-judged path. Adaptive stopping passes at n=16 for both the score>=2 and score==3 subsets, with the score>=2 adaptive-stop vector reaching cosine 0.957582 to the Lu mean.
+
+The resulting operational rule is conservative. Rather than exhaustively generating and scoring all 1200 rollouts per persona, future extractions may use adaptive stopping. For Qwen 3 32B trickster extraction, geometric stability is achieved well below Lu et al.'s fixed 64-row cap. Until broader multi-persona validation is complete, this project uses 64 qualifying responses as the default target, with adaptive stopping permitted once convergence criteria are satisfied. The strict Lu-method replication remains a separate status label requiring the original planned judge path; the adaptive protocol is an operationally validated extraction workflow.
 
 ## Cluster characterizations (dialogue-derived 2026-05-24)
 
