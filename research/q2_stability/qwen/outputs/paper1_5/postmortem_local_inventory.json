@@ -1,0 +1,79 @@
+{
+  "audit_date": "2026-05-26",
+  "repo_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis",
+  "branch": "master",
+  "head_commit": "ced1505",
+  "latest_commit": "ced1505 [paper1.5] fix judge completion budget and allow part2 resume",
+  "remotes": [
+    "myfork\thttps://github.com/J-Chamberlain/assistant-axis.git (fetch)",
+    "myfork\thttps://github.com/J-Chamberlain/assistant-axis.git (push)",
+    "origin\thttps://github.com/safety-research/assistant-axis.git (fetch)",
+    "origin\thttps://github.com/safety-research/assistant-axis.git (push)"
+  ],
+  "dirty_files": [
+    " M .gitignore",
+    " M notebooks/project_transcipt.ipynb",
+    " M research/RESEARCH_STATE.md",
+    " M visualizations/research_paper.html",
+    " M visualizations/trait_analysis_summary.md",
+    "?? img/metacognitive_flicker_fixed.png",
+    "?? img/metacognitive_flicker_fixed.svg",
+    "?? research/README.md",
+    "?? research/q1_drift/scripts/q1_centered_cosine.py",
+    "?? research/q1_drift/scripts/q1_cosine_diagnostic.py",
+    "?? research/q1_drift/scripts/q1_measure_drift.py",
+    "?? research/q2_stability/qwen/scripts/phase1_inference_only_v4.py",
+    "?? scripts/",
+    "?? visualizations/cluster_drift_cascade.py",
+    "?? visualizations/cluster_transition_graph.csv",
+    "?? visualizations/connectome-exports/",
+    "?? visualizations/connectome_exports.py",
+    "?? visualizations/drift_cascade_tree.md",
+    "?? visualizations/gemma-2-27b-page.png",
+    "?? visualizations/general-audience/",
+    "?? visualizations/generate_chord_diagram.py",
+    "?? visualizations/generate_general_audience_plots.py",
+    "?? visualizations/metacognitive_flicker_fixed.png",
+    "?? visualizations/metacognitive_flicker_fixed.svg",
+    "?? visualizations/runpod-home-2.png",
+    "?? visualizations/runpod-home-display1.png",
+    "?? visualizations/runpod-home.png",
+    "?? visualizations/runpod-signup.png"
+  ],
+  "fb52e5d_exists_locally": true,
+  "fb52e5d_show_stat": "fb52e5d [paper2] recalibration complete: actor, hoarder, maverick operational thresholds\n .../all_personas_calibration_summary_v2.json       | 89 ++++++++++++++++++++++\n 1 file changed, 89 insertions(+)\n",
+  "expected_files": {
+    "research/q2_stability/qwen/scripts/phase1_inference_only_v3.py": false,
+    "research/q2_stability/qwen/scripts/phase1_inference_only_v4.py": true,
+    "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl": true,
+    "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1_manifest.json": true,
+    "research/q2_stability/qwen/outputs/paper1_5/phase1_v3.log": false,
+    "research/q2_stability/qwen/outputs/paper1_5/trickster_replication_pilot.partial.jsonl": true,
+    "research/q2_stability/qwen/outputs/calibration/all_personas_calibration_summary_v2.json": true
+  },
+  "expected_file_sizes_bytes": {
+    "research/q2_stability/qwen/scripts/phase1_inference_only_v3.py": null,
+    "research/q2_stability/qwen/scripts/phase1_inference_only_v4.py": 7383,
+    "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl": 2797983,
+    "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1_manifest.json": 623,
+    "research/q2_stability/qwen/outputs/paper1_5/phase1_v3.log": null,
+    "research/q2_stability/qwen/outputs/paper1_5/trickster_replication_pilot.partial.jsonl": 5775201,
+    "research/q2_stability/qwen/outputs/calibration/all_personas_calibration_summary_v2.json": 3814
+  },
+  "gitignore_has_activations_trickster": true,
+  "jsonl_line_counts": {
+    "research/q2_stability/qwen/outputs/paper1_5/trickster_replication_pilot.partial.jsonl": 104,
+    "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl": 1126
+  },
+  "activation_pt_counts": {
+    "research/q2_stability/qwen/outputs/paper1_5/activations_trickster": 1126
+  },
+  "activation_dir_sizes_bytes": {
+    "research/q2_stability/qwen/outputs/paper1_5/activations_trickster": 24837014
+  },
+  "notes": [
+    "Canonical phase1_inference_only_v3.py is absent locally.",
+    "A live-pod snapshot copied phase1_inference_only_v4.py plus trickster_phase1.jsonl and activations_trickster.",
+    "trickster_replication_pilot.partial.jsonl is the older OpenAI-judged partial file, not the inference-only Phase 1 format."
+  ]
+}

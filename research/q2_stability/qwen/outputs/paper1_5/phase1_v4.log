@@ -1,0 +1,55 @@
+Resuming: 0 rollouts already done
+Loading model...
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:09,  1.69it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:07,  1.88it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:01<00:08,  1.68it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:02<00:08,  1.62it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:03<00:08,  1.48it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:03<00:07,  1.44it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:04<00:06,  1.44it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:05<00:06,  1.48it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:05<00:05,  1.49it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:06<00:04,  1.49it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:07<00:04,  1.47it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:07<00:03,  1.47it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:08<00:02,  1.50it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:09<00:02,  1.46it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:10<00:01,  1.43it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:10<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:11<00:00,  1.39it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:11<00:00,  1.47it/s]
+Model loaded in 14.4s
+/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.95` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:653: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+[new=25 total=25/1200] think_discards=0 truncated=17 rate=27.1s ETA=8.8hr GPU=65.5GB
+[new=50 total=50/1200] think_discards=0 truncated=36 rate=27.9s ETA=8.9hr GPU=65.5GB
+[new=75 total=75/1200] think_discards=0 truncated=55 rate=27.9s ETA=8.7hr GPU=65.5GB
+[new=100 total=100/1200] think_discards=0 truncated=70 rate=27.9s ETA=8.5hr GPU=65.5GB
+[new=125 total=125/1200] think_discards=0 truncated=88 rate=28.1s ETA=8.4hr GPU=65.5GB
+[new=150 total=150/1200] think_discards=0 truncated=100 rate=28.0s ETA=8.2hr GPU=65.5GB
+[new=175 total=175/1200] think_discards=0 truncated=113 rate=27.8s ETA=7.9hr GPU=65.5GB
+[new=200 total=200/1200] think_discards=0 truncated=130 rate=27.9s ETA=7.7hr GPU=65.5GB
+[new=225 total=225/1200] think_discards=0 truncated=146 rate=27.9s ETA=7.5hr GPU=65.5GB
+[new=250 total=250/1200] think_discards=0 truncated=158 rate=27.9s ETA=7.4hr GPU=65.5GB
+[new=275 total=275/1200] think_discards=0 truncated=168 rate=27.7s ETA=7.1hr GPU=65.5GB
+[new=300 total=300/1200] think_discards=0 truncated=181 rate=27.6s ETA=6.9hr GPU=65.5GB
+[new=325 total=325/1200] think_discards=0 truncated=190 rate=27.5s ETA=6.7hr GPU=65.5GB
+[new=350 total=350/1200] think_discards=0 truncated=205 rate=27.4s ETA=6.5hr GPU=65.5GB
+[new=375 total=375/1200] think_discards=0 truncated=219 rate=27.4s ETA=6.3hr GPU=65.5GB
+[new=400 total=400/1200] think_discards=0 truncated=228 rate=27.4s ETA=6.1hr GPU=65.5GB
+[new=425 total=425/1200] think_discards=0 truncated=241 rate=27.3s ETA=5.9hr GPU=65.5GB
+[new=450 total=450/1200] think_discards=0 truncated=256 rate=27.3s ETA=5.7hr GPU=65.5GB
+[new=475 total=475/1200] think_discards=0 truncated=269 rate=27.2s ETA=5.5hr GPU=65.5GB
+[new=500 total=500/1200] think_discards=0 truncated=284 rate=27.2s ETA=5.3hr GPU=65.5GB
+[new=525 total=525/1200] think_discards=0 truncated=300 rate=27.2s ETA=5.1hr GPU=65.5GB
+[new=550 total=550/1200] think_discards=0 truncated=319 rate=27.3s ETA=4.9hr GPU=65.5GB
+[new=575 total=575/1200] think_discards=0 truncated=335 rate=27.3s ETA=4.7hr GPU=65.5GB
+[new=600 total=600/1200] think_discards=0 truncated=355 rate=27.3s ETA=4.6hr GPU=65.5GB
+[new=625 total=625/1200] think_discards=0 truncated=368 rate=27.3s ETA=4.4hr GPU=65.5GB
+[new=650 total=650/1200] think_discards=0 truncated=383 rate=27.3s ETA=4.2hr GPU=65.5GB
+[new=675 total=675/1200] think_discards=0 truncated=397 rate=27.3s ETA=4.0hr GPU=65.5GB
+[new=700 total=700/1200] think_discards=0 truncated=413 rate=27.3s ETA=3.8hr GPU=65.5GB
+[new=725 total=725/1200] think_discards=0 truncated=429 rate=27.3s ETA=3.6hr GPU=65.5GB
+[new=750 total=750/1200] think_discards=0 truncated=440 rate=27.3s ETA=3.4hr GPU=65.5GB
+[new=775 total=775/1200] think_discards=0 truncated=455 rate=27.3s ETA=3.2hr GPU=65.5GB
+[new=800 total=800/1200] think_discards=0 truncated=466 rate=27.3s ETA=3.0hr GPU=65.5GB
+[new=825 total=825/1200] think_discards=0 truncated=478 rate=27.2s ETA=2.8hr GPU=65.5GB
+[new=850 total=850/1200] think_discards=0 truncated=490 rate=27.2s ETA=2.6hr GPU=65.5GB
+[new=875 total=875/1200] think_discards=0 truncated=499 rate=27.1s ETA=2.4hr GPU=65.5GB
+[new=900 total=900/1200] think_discards=0 truncated=510 rate=27.1s ETA=2.3hr GPU=65.5GB
+[new=925 total=925/1200] think_discards=0 truncated=525 rate=27.1s ETA=2.1hr GPU=65.5GB
+[new=950 total=950/1200] think_discards=0 truncated=537 rate=27.1s ETA=1.9hr GPU=65.5GB
+[new=975 total=975/1200] think_discards=0 truncated=550 rate=27.1s ETA=1.7hr GPU=65.5GB
+[new=1000 total=1000/1200] think_discards=0 truncated=572 rate=27.2s ETA=1.5hr GPU=65.5GB
+[new=1025 total=1025/1200] think_discards=0 truncated=593 rate=27.2s ETA=1.3hr GPU=65.5GB
+[new=1050 total=1050/1200] think_discards=0 truncated=613 rate=27.3s ETA=1.1hr GPU=65.5GB
+[new=1075 total=1075/1200] think_discards=0 truncated=633 rate=27.4s ETA=1.0hr GPU=65.5GB
+[new=1100 total=1100/1200] think_discards=0 truncated=652 rate=27.4s ETA=0.8hr GPU=65.5GB
+[new=1125 total=1125/1200] think_discards=0 truncated=669 rate=27.5s ETA=0.6hr GPU=65.5GB

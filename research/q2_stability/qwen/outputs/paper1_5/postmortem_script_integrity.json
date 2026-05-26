@@ -1,0 +1,28 @@
+{
+  "requested_script_v3_exists": false,
+  "audited_script": "research/q2_stability/qwen/scripts/phase1_inference_only_v4.py",
+  "audited_script_version": "v4_fallback_copied_from_live_pod",
+  "generation_model_recorded_qwen32b": true,
+  "script_author_model_recorded_gpt55": true,
+  "references_openai_api_key": false,
+  "imports_or_calls_openai": false,
+  "saves_full_response_text": true,
+  "only_response_preview": false,
+  "activation_relpath_saved": true,
+  "use_cache_false_measurement": true,
+  "generation_without_hook_then_measurement_hook": true,
+  "apply_chat_template_enable_thinking_false": true,
+  "generate_enable_thinking_false_supported_try": true,
+  "think_artifact_empty_string_bug": false,
+  "think_artifact_constructs_literal_tags_safely": true,
+  "hooks_model_layers_48": true,
+  "hooks_self_attn_or_mlp": false,
+  "layer_zero_indexed_consistent": true,
+  "pt_activation_shards_staged_for_git": false,
+  "safe_for_resumption_assessment": "safe_for_existing_partial_resume",
+  "notes": [
+    "Requested v3 script is absent; audited copied v4 script from live pod instead.",
+    "No empty-string think-tag bug detected in audited script.",
+    "Audited v4 script is inference-only and does not reference OpenAI credentials."
+  ]
+}

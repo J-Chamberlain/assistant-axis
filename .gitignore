@@ -41,6 +41,7 @@ ENV/
 # Outputs
 outputs/
 *.parquet
+**/activations_trickster/
 
 # OS
 .DS_Store

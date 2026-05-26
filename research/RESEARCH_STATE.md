@@ -3,9 +3,9 @@
 # Updated at the end of every Codex session. Fetch this first in any new session.
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
-**Last updated:** 2026-05-25
-**Last commit:** 136011d
-**Current status:** Active — Paper 1.5 outlined as a standalone cluster-motivation paper; six of seven cluster characterizations captured; Paper 2 methodology v2 created; q2_stability split by model provenance; Qwen-native centroid representatives selected; role instruction prompts for all seven v2 personas found and printed for Phase 1 prompt design; cluster synthesis inputs assembled; non-leaking cluster background prompts v1, v2, and motivational-depth v3 saved for comparison; Paper 4 framework correspondences expanded; recalibration for actor/hoarder/maverick not yet run; v6 pilot outputs present; full 21-condition v6 grid not present locally
+**Last updated:** 2026-05-26
+**Last commit:** ced1505
+**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; a live Qwen trickster Phase 1 inference-only pod was found still running near completion; copied local snapshot contains 1126 valid rollout records and 1126 matching activation shards; decision is preserve live pod outputs first before resume/rerun/termination decisions
 
 ---
 
@@ -161,9 +161,23 @@
 - Six requested sample personas were not present as local `.pt` files: child, explorer, villain, hero, wizard, and nurse
 - Centroid cosine-to-mean tightness: editor mean 0.912738 std 0.075345; synthesizer mean 0.914840 std 0.072463; actor mean 0.895064 std 0.084221; ancient mean 0.896545 std 0.086517; trickster mean 0.891448 std 0.083971; hoarder mean 0.888571 std 0.086618; maverick mean 0.898172 std 0.078914
 
+### Paper 1.5 Phase 1 Pod Postmortem (2026-05-26, operational audit)
+
+- A live RunPod endpoint was recovered from local SSH evidence at `213.173.102.6:22707`; it was running `phase1_inference_only_v4.py`, not the earlier OpenAI-judged replication script
+- Local copied snapshot contained 1126 unique `trickster_phase1.jsonl` records and 1126 matching `activations_trickster/*.pt` tensors, all sampled tensors loading as shape `[5120]`
+- The live pod log showed at least total=1125/1200, think_discards=0, truncated=669, rate=27.5s/rollout, and GPU memory 65.5GB
+- Resume decision from the audit: preserve final live pod outputs first, then rerun integrity checks before any termination or full continuation decision
+
 ---
 
 ## 3. CURRENT STATE
+
+**Completed this session:** Performed a full postmortem of the overnight Qwen trickster Phase 1 pod run, including local inventory, script integrity, data integrity, log reconstruction, pod reachability, resume decision, and cost/time estimate files under `research/q2_stability/qwen/outputs/paper1_5/`.
+**Completed this session:** Recovered a live RunPod endpoint from local SSH evidence and confirmed it was still running `phase1_inference_only_v4.py` near completion; copied a local snapshot before any termination decision.
+**Completed this session:** Confirmed the copied Phase 1 snapshot has 1126 unique records, zero duplicate `(sp_idx, q_idx)` pairs, zero missing activation targets, and 1126 loadable activation tensors with shape `[5120]`.
+**Completed this session:** Added `.gitignore` protection for `activations_trickster/` directories so activation shard files are not accidentally staged.
+**Next step:** When the live pod completes or on user confirmation, copy the final `trickster_phase1.jsonl`, manifest, log, and activation shard directory from the pod, rerun the integrity check, then decide whether to terminate the pod or continue with Phase 2 scoring.
+**Last commit before this session:** ced1505
 
 **In progress:** v6 dyad design remains active, but local outputs show only trickster/adversarial 25-turn pilots plus a partial trickster/emotional run; the full 7 personas × 3 conditions × 25 turns grid is not present locally.
 **Completed this session:** Audited Qwen layer-48 hidden-state extraction and confirmed the active Qwen scripts use HuggingFace decoder-layer forward hooks such as `model.model.layers[48].register_forward_hook(...)` and/or `hidden_states[48]`, with no `resid_mid` hook present.

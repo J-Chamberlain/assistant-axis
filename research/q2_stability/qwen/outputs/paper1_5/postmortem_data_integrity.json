@@ -1,0 +1,65 @@
+{
+  "audit_date": "2026-05-26",
+  "jsonl_candidates": [
+    {
+      "path": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl",
+      "records": 1126,
+      "malformed_lines": 0,
+      "unique_pairs": 1126,
+      "duplicate_pairs": [],
+      "duplicate_pair_count": 0,
+      "missing_fields": {},
+      "activation_saved_true": 1126,
+      "activation_saved_false": 0,
+      "think_artifact_true": 0,
+      "truncated_true": 670,
+      "empty_response_text": 0,
+      "literal_think_tags_in_response_text": 0,
+      "activation_relpath_checked": 1126,
+      "activation_relpath_missing_targets": 0,
+      "tensor_shape_counts": {
+        "(5120,)": 1126
+      },
+      "tensor_dtype_counts": {
+        "torch.float32": 1126
+      },
+      "sample_load_errors": [],
+      "any_activation_tensor_expected_shape_5120": true,
+      "all_saved_activation_tensors_consistent_expected_shape": true
+    },
+    {
+      "path": "research/q2_stability/qwen/outputs/paper1_5/trickster_replication_pilot.partial.jsonl",
+      "records": 104,
+      "malformed_lines": 0,
+      "unique_pairs": 104,
+      "duplicate_pairs": [],
+      "duplicate_pair_count": 0,
+      "missing_fields": {
+        "persona": 104,
+        "generation_model": 104,
+        "script_author_model": 104,
+        "sp_idx": 104,
+        "q_idx": 104,
+        "think_artifact": 104,
+        "activation_saved": 104,
+        "activation_path": 104,
+        "activation_relpath": 104
+      },
+      "activation_saved_true": 0,
+      "activation_saved_false": 104,
+      "think_artifact_true": 0,
+      "truncated_true": 70,
+      "empty_response_text": 0,
+      "literal_think_tags_in_response_text": 0,
+      "activation_relpath_checked": 0,
+      "activation_relpath_missing_targets": 0,
+      "tensor_shape_counts": {
+        "inline_vector_len_5120": 104
+      },
+      "tensor_dtype_counts": {},
+      "sample_load_errors": [],
+      "any_activation_tensor_expected_shape_5120": false,
+      "all_saved_activation_tensors_consistent_expected_shape": false
+    }
+  ]
+}
