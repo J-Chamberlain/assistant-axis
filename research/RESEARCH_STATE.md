@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-26
-**Last commit:** b550d93
-**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; in-container termination attempts did not shut down the RunPod instance, so dashboard/API termination confirmation is still required
+**Last commit:** 73db018
+**Current status:** Active — Paper 1.5 Phase 1 postmortem complete; actor/hoarder/maverick recalibration completed; Qwen trickster Phase 1 inference-only run copied locally at 1200/1200 records with 1200 matching activation shards; final integrity passed; Lu-reference trickster vector validation script is prepared but blocked on missing Phase 2 score file
 
 ---
 
@@ -195,9 +195,12 @@
 ## 3. CURRENT STATE
 
 **Completed this session:** Created and ran `research/q2_stability/qwen/scripts/analyze_phase1_truncation.py`, a local CPU-only diagnostic for the completed Qwen trickster Phase 1 corpus.
+**Completed this session:** Prepared `research/q2_stability/qwen/scripts/extract_validate_trickster_vector.py` to extract score-qualified trickster vectors and compare them against Lu et al.'s Qwen trickster reference tensor once Phase 2 scores exist.
+**Completed this session:** Confirmed `trickster_phase2_scores_gpt41mini.jsonl` is missing locally, so no vector extraction, validation outputs, or empirical claims were produced.
+**Completed this session:** Verified the extraction script compiles and fails closed at the Phase 2 dependency gate before importing tensor libraries or computing candidate vectors.
 **Completed this session:** Saved `truncation_diagnostic.json`, `truncation_diagnostic.md`, `truncation_review_samples.jsonl`, and `truncation_review_samples.md` under `research/q2_stability/qwen/outputs/paper1_5/`.
 **Completed this session:** Confirmed the truncation rate is high but not fatal for Phase 2: 733/1200 records truncated, 94.1% of truncated records contain at least two simple trickster lexical markers, and abrupt endings should be tracked during scoring.
-**Next step:** Proceed with Phase 2 scoring on all 1200 records while retaining truncation as a covariate/filter, then plan a small higher-token follow-up run for high-scoring truncated records and the most abrupt question subsets.
+**Next step:** Complete Phase 2 scoring to produce `research/q2_stability/qwen/outputs/paper1_5/trickster_phase2_scores_gpt41mini.jsonl` with 1200 scored records, then run the prepared Lu-reference vector validation script.
 **Last commit before this session:** b550d93
 
 **Completed this session:** Performed a full postmortem of the overnight Qwen trickster Phase 1 pod run, including local inventory, script integrity, data integrity, log reconstruction, pod reachability, resume decision, and cost/time estimate files under `research/q2_stability/qwen/outputs/paper1_5/`.
@@ -240,7 +243,8 @@
 **Completed this session:** Produced motivational-depth cluster synthesis v3 as GPT-5.5 and saved `research/q2_stability/qwen/outputs/calibration/cluster_background_prompts_v3.json`.
 **Completed this session:** Appended the dialogue-derived characterization of the other cluster to `research/paper2_methods_v2.md` and created `research/paper4_research_notes.md` with the Buddhist-framework connection for Paper 4.
 **Completed this session:** Outlined Paper 1.5, captured six dialogue-derived cluster characterizations in Paper 2 methods notes, and expanded Paper 4 framework correspondences.
-**Next step:** Write the pod card with explicit instructions to use full-block post-MLP layer-48 outputs, treat layer 48 as zero-indexed, keep Qwen thinking disabled with `enable_thinking=False`, reject any thinking artifacts, treat 64 tensor rows as a fixed storage cap, and avoid making any fully-role-playing vs somewhat-role-playing category claim from local `.pt` metadata.
+**Completed this session:** Wrote a resumable local `gpt-4.1-mini` judge script for trickster Phase 2 scoring, but the run stopped before the first score because the OpenAI API returned `insufficient_quota`.
+**Next step:** Restore OpenAI API quota/billing access and rerun `python3 research/q2_stability/qwen/scripts/score_trickster_phase2_gpt41mini.py`, then commit the generated Phase 2 score JSONL, summary JSON, and report.
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) — all pre-analysis, depend on v6 data
 **Pod status:** No RunPod compute is running for the interrupted recalibration attempt; the stopped pod was terminated from the RunPod UI on 2026-05-24.
-**Last commit before this session:** 136011d
+**Last commit before this session:** b550d93
