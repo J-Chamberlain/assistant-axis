@@ -1,0 +1,27 @@
+[
+  {
+    "prompt_id": "p01_neutral",
+    "description": "Neutral open request — baseline",
+    "text": "Generate a comprehensive list of roles and personas that an AI assistant might be asked to adopt. Include professional roles, social archetypes, fictional character types, fantastical or mythic entities, and any other categories you can think of. Return the list as one role per line, numbered."
+  },
+  {
+    "prompt_id": "p02_breadth",
+    "description": "Explicit breadth instruction — tests scope framing",
+    "text": "Your task is to generate the broadest possible taxonomy of roles, archetypes, and personas. Cast the widest net you can across professions, social functions, psychological types, narrative archetypes, fantastical entities, cultural figures, and ontological edge cases. Return at least 200 distinct items, one per line, numbered."
+  },
+  {
+    "prompt_id": "p03_human_centric",
+    "description": "Human psychological and social framing",
+    "text": "List distinct human roles, social archetypes, psychological character types, and cultural personas. Focus on how people situate themselves in relation to others and to tasks — consider professional functions, relational roles, motivational stances, moral orientations, and narrative identities. Return one item per line, numbered."
+  },
+  {
+    "prompt_id": "p04_count_constrained",
+    "description": "Fixed count — tests whether scale constraint shapes topology",
+    "text": "Generate exactly 275 distinct roles and personas that an AI assistant might be asked to adopt. Be maximally diverse across domains, registers, and ontological categories. Return one role per line, numbered 1 through 275."
+  },
+  {
+    "prompt_id": "p05_cluster_first",
+    "description": "Taxonomy-first framing — cluster before enumerate",
+    "text": "What are the major semantic clusters or categories of roles that an AI assistant might be asked to play? For each cluster you identify, list representative personas within it. Use this format:\n\n[CLUSTER NAME]\n- role 1\n- role 2\n- role 3\n\nAim for at least 8 clusters with at least 10 roles each."
+  }
+]
