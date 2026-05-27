@@ -1,0 +1,32 @@
+[
+  {
+    "model_id": "claude-sonnet-4-6",
+    "provider": "anthropic",
+    "label": "Claude Sonnet 4.6",
+    "notes": "Current Sonnet; close to Lu et al. original generator (Claude Sonnet 4)"
+  },
+  {
+    "model_id": "claude-opus-4-7",
+    "provider": "anthropic",
+    "label": "Claude Opus 4.7",
+    "notes": "Highest-capability Anthropic model"
+  },
+  {
+    "model_id": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "label": "Claude Haiku 4.5",
+    "notes": "Smallest Anthropic model — tests compression toward simpler taxonomy"
+  },
+  {
+    "model_id": "gpt-4o",
+    "provider": "openai",
+    "label": "GPT-4o",
+    "notes": "OpenAI reference model"
+  },
+  {
+    "model_id": "o4-mini",
+    "provider": "openai",
+    "label": "o4-mini",
+    "notes": "OpenAI reasoning model — may produce more taxonomically organized manifold"
+  }
+]

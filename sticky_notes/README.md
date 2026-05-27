@@ -53,3 +53,4 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-22_derive_valence_from_geometry.md | Derive emotion valence x-axis positions from model geometry rather than hand-assigned literature values |
 | 2026-05-22_v5_run_design.md | V5 run design and follow-on analysis pre-registration | 2 | complete; repetition caveats |
 | situational_fluidity_hypothesis.md | Pre-analysis hypothesis: targeted mid-layer suppression preserves expressive geometry; rigid constraint degrades situational appropriateness | all | pre-analysis |
+| 2026-05-27_persona_inventory_sensitivity.md | Stage 1 sensitivity analysis: how invariant is the role inventory across generator models and prompt families? | 2/methodology | high |
