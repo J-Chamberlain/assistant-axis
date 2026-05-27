@@ -62,6 +62,10 @@ Six of seven clusters have dialogue-derived motivational characterizations. Thes
 
 The Lu et al. role system prompts contain extensive direct identity-label exposure. A local audit of 275 role files found 1280/1375 prompts, 93.1%, expose the target role label or a normalized variant, and 227/275 roles have 5/5 prompt exposure. This means the elicitation design should be described as role-label-plus-behavior elicitation rather than purely behavioral elicitation; it does not by itself show that activation geometry is invalid or reducible to labels.
 
+### No-Label Prompt Ablation
+
+A deterministic no-label prompt-ablation dataset now exists for all 1375 Lu et al. role prompts. Validation found zero remaining normalized target-label exposure, median character length ratio 0.842, median lexical Jaccard 0.714, and no over-flattening flags. Offline TF-IDF/SVD comparison found continuous prompt-space topology is largely preserved after label removal, with role-level SVD cosine median 0.998, nearest-neighbor preservation 0.924, and pairwise distance correlation 0.985, while hard k-means cluster assignments are much less stable.
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

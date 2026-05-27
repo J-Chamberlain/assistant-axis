@@ -1,0 +1,16 @@
+{
+  "date": "2026-05-27",
+  "model_used": "GPT-5.5",
+  "method": "deterministic_minimal_label_ablation",
+  "input_role_instruction_dir": "data/roles/instructions",
+  "input_role_list": "data/roles/role_list.json",
+  "input_label_exposure_audit": "research/assistant_axis_methodology/role_prompt_label_exposure_audit.json",
+  "output_jsonl": "research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl",
+  "n_roles": 275,
+  "n_prompts": 1375,
+  "rewrite_status_counts": {
+    "ok": 1375
+  },
+  "rewritten_label_exposure_count": 0,
+  "notes": "Rule-based local rewrite removes explicit role labels and obvious normalized variants while preserving behavioral content as closely as possible. No external API calls were used."
+}

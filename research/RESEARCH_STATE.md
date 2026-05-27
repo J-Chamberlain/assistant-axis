@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-27
-**Last commit:** 2fd73cc
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; role-prompt label-exposure audit is complete under `research/assistant_axis_methodology/`
+**Last commit:** 15a466e
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; no-label prompt ablation and semantic audit are complete under `research/assistant_axis_methodology/no_label_prompt_ablation/`
 
 ---
 
@@ -251,6 +251,14 @@
 - Trickster and editor both have complete 5/5 label exposure, but their Qwen adaptive extraction yields diverge sharply, so label exposure alone does not explain role-expression success or failure
 - Methodological implication: Lu-style extraction should be described as role-label-plus-behavior elicitation, not purely behavioral elicitation; this does not invalidate the geometry without further analysis
 
+### No-Label Prompt Ablation Semantic Audit (2026-05-27, confirmed)
+
+- Created a deterministic no-label rewrite dataset for all 1375 Lu et al. role system prompts, removing explicit target-role labels while preserving wording, structure, and behavioral content as closely as possible
+- Validation passed with 1375/1375 rewrites present, zero remaining normalized target-label exposure, median character length ratio 0.842, median word count ratio 0.786, median lexical Jaccard 0.714, and zero over-flattening flags
+- Offline TF-IDF/SVD semantic comparison found continuous prompt-space topology is largely preserved after label removal: role-level SVD cosine median 0.998, nearest-neighbor preservation 0.924, and pairwise distance correlation 0.985
+- Hard k-means cluster assignments were less stable after label removal: original-vs-no-label ARI was 0.197 at k=5, 0.153 at k=7, and 0.181 at k=10
+- Interpretation: explicit lexical labels contribute materially to discrete prompt-space organization, but much of the continuous semantic structure survives from behavioral descriptors; activation-space survival remains untested
+
 ---
 
 ## 3. CURRENT STATE
@@ -265,15 +273,18 @@
 
 **Methodology audit state:** The role-prompt label-exposure audit is complete. Outputs are `research/assistant_axis_methodology/role_prompt_label_exposure_audit.json` and `research/assistant_axis_methodology/role_prompt_label_exposure_audit.md`; the audit script is `research/assistant_axis_methodology/scripts/audit_role_prompt_label_exposure.py`. The next recommended methodology audit is a behavioral-specificity audit that removes role labels from prompts and measures how much role-identifying content remains.
 
+**No-label ablation state:** The no-label prompt-ablation dataset and semantic comparison are complete under `research/assistant_axis_methodology/no_label_prompt_ablation/`. Key outputs are `no_label_role_prompts.jsonl`, `no_label_prompt_ablation_validation.md`, `original_vs_no_label_semantic_comparison.md`, and `no_label_prompt_ablation_report.md`. The next recommended step is a small activation-space no-label stress test, not a full-scale pod run.
+
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Created and ran `research/assistant_axis_methodology/scripts/audit_role_prompt_label_exposure.py` against the canonical `data/roles/instructions/*.json` source.
-**Completed this session:** Saved label-exposure audit outputs to `research/assistant_axis_methodology/role_prompt_label_exposure_audit.json` and `research/assistant_axis_methodology/role_prompt_label_exposure_audit.md`.
-**Completed this session:** Updated `research/FINDINGS_LEDGER.md` and `research/assistant_axis_methodology/open_methodology_questions.md` with the label-exposure finding and follow-up question.
-**Next step:** Run a behavioral-specificity audit that removes explicit role labels from prompts and measures residual role-identifying content; separately design a revised editor anchoring methodology before further editor rollout generation.
-**Last commit before this session:** 2fd73cc
+**Completed this session:** Created and ran `research/assistant_axis_methodology/scripts/rewrite_role_prompts_no_label_codex_gpt55.py` against the canonical `data/roles/instructions/*.json` source.
+**Completed this session:** Created the no-label prompt-ablation dataset at `research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl`.
+**Completed this session:** Completed validation and offline TF-IDF/SVD semantic comparison for original versus no-label prompt spaces.
+**Completed this session:** Wrote `research/assistant_axis_methodology/no_label_prompt_ablation/no_label_prompt_ablation_report.md` and updated methodology ledgers with the result.
+**Next step:** Run a small activation-space no-label stress test using a mixed role set before scaling; separately design a revised editor anchoring methodology before further editor rollout generation.
+**Last commit before this session:** 15a466e
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

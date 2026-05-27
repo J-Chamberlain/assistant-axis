@@ -1,0 +1,435 @@
+{
+  "date": "2026-05-27",
+  "model_used": "GPT-5.5",
+  "method": "offline_tfidf_svd_fallback",
+  "embedding_methods": [
+    "tfidf",
+    "tfidf_svd"
+  ],
+  "sentence_transformers_available": false,
+  "sklearn_available": false,
+  "input_jsonl": "research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl",
+  "n_roles": 275,
+  "n_prompts": 1375,
+  "vocab_size": 5000,
+  "prompt_similarity": {
+    "min": 0.6907580674626049,
+    "p05": 0.8443847305448826,
+    "p25": 0.9035280402756711,
+    "median": 0.9330581525002585,
+    "mean": 0.9252759873174827,
+    "p75": 0.9510425656302017,
+    "p95": 1.0,
+    "max": 1.0000000000000002
+  },
+  "role_similarity_tfidf": {
+    "min": 0.6800968887259646,
+    "p05": 0.7796453949137381,
+    "p25": 0.9673398401545399,
+    "median": 0.9844357618251797,
+    "mean": 0.9614795689257114,
+    "p75": 0.9926536377009567,
+    "p95": 1.0,
+    "max": 1.0000000000000002
+  },
+  "role_similarity_svd": {
+    "min": 0.9348948740396422,
+    "p05": 0.9823145245812581,
+    "p25": 0.9962449439317653,
+    "median": 0.9982199463381733,
+    "mean": 0.9959817118285803,
+    "p75": 0.9992213002085107,
+    "p95": 1.0,
+    "max": 1.0000000000000004
+  },
+  "nearest_neighbor_preservation_fraction": 0.9236363636363636,
+  "pairwise_distance_correlation_svd": 0.9854241791190957,
+  "cluster_preservation": {
+    "5": {
+      "ari_original_vs_no_label": 0.19664182549937684,
+      "nmi_original_vs_no_label": 0.26034140038568837
+    },
+    "7": {
+      "ari_original_vs_no_label": 0.1527867966314405,
+      "nmi_original_vs_no_label": 0.26039070898300787
+    },
+    "10": {
+      "ari_original_vs_no_label": 0.18079544246117424,
+      "nmi_original_vs_no_label": 0.3662531837146889
+    }
+  },
+  "activation_cluster_comparison": {
+    "5": {
+      "ari_activation_vs_original_semantic": 0.1559519088320064,
+      "nmi_activation_vs_original_semantic": 0.18723746403940023,
+      "ari_activation_vs_no_label_semantic": 0.08751770375880091,
+      "nmi_activation_vs_no_label_semantic": 0.16087095889652567
+    },
+    "7": {
+      "ari_activation_vs_original_semantic": 0.05999382805991952,
+      "nmi_activation_vs_original_semantic": 0.14561176837147596,
+      "ari_activation_vs_no_label_semantic": 0.0823621496314557,
+      "nmi_activation_vs_no_label_semantic": 0.1644334501561701
+    },
+    "10": {
+      "ari_activation_vs_original_semantic": 0.09076172195570392,
+      "nmi_activation_vs_original_semantic": 0.2136179738601351,
+      "ari_activation_vs_no_label_semantic": 0.10968171289446596,
+      "nmi_activation_vs_no_label_semantic": 0.2039348252679363
+    }
+  },
+  "most_changed_roles": [
+    {
+      "role": "advocate",
+      "tfidf_cosine": 0.7942329652133344,
+      "svd_cosine": 0.9348948740396422,
+      "tfidf_displacement": 0.20576703478666558,
+      "svd_displacement": 0.06510512596035778
+    },
+    {
+      "role": "guardian",
+      "tfidf_cosine": 0.6800968887259646,
+      "svd_cosine": 0.9625686120572018,
+      "tfidf_displacement": 0.31990311127403537,
+      "svd_displacement": 0.03743138794279821
+    },
+    {
+      "role": "amateur",
+      "tfidf_cosine": 0.7399446077590671,
+      "svd_cosine": 0.968189066733025,
+      "tfidf_displacement": 0.2600553922409329,
+      "svd_displacement": 0.03181093326697504
+    },
+    {
+      "role": "predator",
+      "tfidf_cosine": 0.7745979671679838,
+      "svd_cosine": 0.9687843243476925,
+      "tfidf_displacement": 0.2254020328320162,
+      "svd_displacement": 0.03121567565230754
+    },
+    {
+      "role": "familiar",
+      "tfidf_cosine": 0.8720648393902906,
+      "svd_cosine": 0.9715480374728321,
+      "tfidf_displacement": 0.12793516060970944,
+      "svd_displacement": 0.028451962527167862
+    },
+    {
+      "role": "wanderer",
+      "tfidf_cosine": 0.7573046845538705,
+      "svd_cosine": 0.9728728012333434,
+      "tfidf_displacement": 0.24269531544612954,
+      "svd_displacement": 0.02712719876665659
+    },
+    {
+      "role": "echo",
+      "tfidf_cosine": 0.8978854240957332,
+      "svd_cosine": 0.9732782197561807,
+      "tfidf_displacement": 0.10211457590426676,
+      "svd_displacement": 0.026721780243819326
+    },
+    {
+      "role": "warrior",
+      "tfidf_cosine": 0.7511353559732492,
+      "svd_cosine": 0.9742680829972263,
+      "tfidf_displacement": 0.2488646440267508,
+      "svd_displacement": 0.025731917002773663
+    },
+    {
+      "role": "mycorrhizal",
+      "tfidf_cosine": 0.8179788008214838,
+      "svd_cosine": 0.9778396740401236,
+      "tfidf_displacement": 0.18202119917851622,
+      "svd_displacement": 0.02216032595987638
+    },
+    {
+      "role": "coral_reef",
+      "tfidf_cosine": 0.9661976768433954,
+      "svd_cosine": 0.9800650969024209,
+      "tfidf_displacement": 0.033802323156604586,
+      "svd_displacement": 0.01993490309757906
+    },
+    {
+      "role": "student",
+      "tfidf_cosine": 0.804559911093784,
+      "svd_cosine": 0.9801385218971561,
+      "tfidf_displacement": 0.195440088906216,
+      "svd_displacement": 0.019861478102843888
+    },
+    {
+      "role": "crystalline",
+      "tfidf_cosine": 0.9376930141226538,
+      "svd_cosine": 0.981188917199417,
+      "tfidf_displacement": 0.06230698587734618,
+      "svd_displacement": 0.018811082800582968
+    },
+    {
+      "role": "idealist",
+      "tfidf_cosine": 0.6954493663604191,
+      "svd_cosine": 0.9813006199397123,
+      "tfidf_displacement": 0.3045506336395809,
+      "svd_displacement": 0.018699380060287707
+    },
+    {
+      "role": "activist",
+      "tfidf_cosine": 0.7437660398952379,
+      "svd_cosine": 0.9815339276490767,
+      "tfidf_displacement": 0.25623396010476207,
+      "svd_displacement": 0.018466072350923346
+    },
+    {
+      "role": "chimera",
+      "tfidf_cosine": 0.9742471481744124,
+      "svd_cosine": 0.9826490661236216,
+      "tfidf_displacement": 0.02575285182558762,
+      "svd_displacement": 0.017350933876378427
+    },
+    {
+      "role": "virtuoso",
+      "tfidf_cosine": 0.9676931975363093,
+      "svd_cosine": 0.9851417731307018,
+      "tfidf_displacement": 0.032306802463690665,
+      "svd_displacement": 0.014858226869298163
+    },
+    {
+      "role": "spirit",
+      "tfidf_cosine": 0.9236188186271894,
+      "svd_cosine": 0.9852166335154868,
+      "tfidf_displacement": 0.07638118137281058,
+      "svd_displacement": 0.014783366484513172
+    },
+    {
+      "role": "guide",
+      "tfidf_cosine": 0.8113377044313046,
+      "svd_cosine": 0.9852912398319528,
+      "tfidf_displacement": 0.1886622955686954,
+      "svd_displacement": 0.01470876016804723
+    },
+    {
+      "role": "ecosystem",
+      "tfidf_cosine": 0.8149115171820785,
+      "svd_cosine": 0.985391651794287,
+      "tfidf_displacement": 0.18508848281792145,
+      "svd_displacement": 0.014608348205712995
+    },
+    {
+      "role": "revolutionary",
+      "tfidf_cosine": 0.8186985604449417,
+      "svd_cosine": 0.9864848554177432,
+      "tfidf_displacement": 0.18130143955505829,
+      "svd_displacement": 0.013515144582256777
+    },
+    {
+      "role": "patient",
+      "tfidf_cosine": 0.7449210180852838,
+      "svd_cosine": 0.9865241198096337,
+      "tfidf_displacement": 0.25507898191471623,
+      "svd_displacement": 0.013475880190366274
+    },
+    {
+      "role": "zealot",
+      "tfidf_cosine": 0.9463498383739726,
+      "svd_cosine": 0.9867928966857124,
+      "tfidf_displacement": 0.053650161626027426,
+      "svd_displacement": 0.01320710331428765
+    },
+    {
+      "role": "golem",
+      "tfidf_cosine": 0.9826278391216886,
+      "svd_cosine": 0.9869982936541418,
+      "tfidf_displacement": 0.017372160878311393,
+      "svd_displacement": 0.013001706345858177
+    },
+    {
+      "role": "whale",
+      "tfidf_cosine": 0.9504555527137499,
+      "svd_cosine": 0.987042458171088,
+      "tfidf_displacement": 0.04954444728625007,
+      "svd_displacement": 0.012957541828911956
+    },
+    {
+      "role": "wraith",
+      "tfidf_cosine": 0.9555823376576484,
+      "svd_cosine": 0.9877203481238597,
+      "tfidf_displacement": 0.04441766234235156,
+      "svd_displacement": 0.01227965187614033
+    }
+  ],
+  "least_changed_roles": [
+    {
+      "role": "addict",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0000000000000004,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": -4.440892098500626e-16
+    },
+    {
+      "role": "altruist",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0000000000000004,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": -4.440892098500626e-16
+    },
+    {
+      "role": "criminal",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0000000000000004,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": -4.440892098500626e-16
+    },
+    {
+      "role": "collaborator",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0000000000000002,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": -2.220446049250313e-16
+    },
+    {
+      "role": "cynic",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0000000000000002,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": -2.220446049250313e-16
+    },
+    {
+      "role": "devils_advocate",
+      "tfidf_cosine": 1.0000000000000002,
+      "svd_cosine": 1.0000000000000002,
+      "tfidf_displacement": -2.220446049250313e-16,
+      "svd_displacement": -2.220446049250313e-16
+    },
+    {
+      "role": "martyr",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0000000000000002,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": -2.220446049250313e-16
+    },
+    {
+      "role": "pragmatist",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0000000000000002,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": -2.220446049250313e-16
+    },
+    {
+      "role": "refugee",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0000000000000002,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": -2.220446049250313e-16
+    },
+    {
+      "role": "retiree",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0000000000000002,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": -2.220446049250313e-16
+    },
+    {
+      "role": "vigilante",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0000000000000002,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": -2.220446049250313e-16
+    },
+    {
+      "role": "avatar",
+      "tfidf_cosine": 1.0000000000000002,
+      "svd_cosine": 1.0,
+      "tfidf_displacement": -2.220446049250313e-16,
+      "svd_displacement": 0.0
+    },
+    {
+      "role": "blogger",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": 0.0
+    },
+    {
+      "role": "competitor",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": 0.0
+    },
+    {
+      "role": "gamer",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": 0.0
+    },
+    {
+      "role": "genie",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": 0.0
+    },
+    {
+      "role": "grandparent",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": 0.0
+    },
+    {
+      "role": "improviser",
+      "tfidf_cosine": 1.0000000000000002,
+      "svd_cosine": 1.0,
+      "tfidf_displacement": -2.220446049250313e-16,
+      "svd_displacement": 0.0
+    },
+    {
+      "role": "optimist",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": 0.0
+    },
+    {
+      "role": "realist",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": 0.0
+    },
+    {
+      "role": "secretary",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 1.0,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": 0.0
+    },
+    {
+      "role": "flaneur",
+      "tfidf_cosine": 1.0000000000000002,
+      "svd_cosine": 0.9999999999999999,
+      "tfidf_displacement": -2.220446049250313e-16,
+      "svd_displacement": 1.1102230246251565e-16
+    },
+    {
+      "role": "leviathan",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 0.9999999999999999,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": 1.1102230246251565e-16
+    },
+    {
+      "role": "negotiator",
+      "tfidf_cosine": 1.0,
+      "svd_cosine": 0.9999999999999998,
+      "tfidf_displacement": 0.0,
+      "svd_displacement": 2.220446049250313e-16
+    },
+    {
+      "role": "parent",
+      "tfidf_cosine": 0.9928259863244723,
+      "svd_cosine": 0.9999148639284877,
+      "tfidf_displacement": 0.007174013675527724,
+      "svd_displacement": 8.513607151228175e-05
+    }
+  ]
+}
