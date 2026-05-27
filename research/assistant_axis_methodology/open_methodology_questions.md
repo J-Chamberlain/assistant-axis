@@ -40,6 +40,10 @@ Which activation-space clusters reflect semantically intrinsic prompt structure,
 
 Do bridge and low-density roles in the no-label semantic manifold produce less stable activation vectors, or do target-model activations snap them into clearer basins than prompt-space semantics predicts?
 
+## Stable Anchor Roles
+
+Do roles identified as stable activation-semantic anchors remain stable under no-label activation extraction, or does removing explicit role labels expose hidden dependence on identity priming even for high-overlap roles?
+
 ## Corpus Coverage Bias
 
 How much do the observed semantic and activation clusters depend on the role corpus undersampling non-Western social roles, kinship systems, ritual offices, communal identities, and non-individualist self-concepts?

@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-27
-**Last commit:** 97d7e8c
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry synthesis and deep topology notes now exist under `research/assistant_axis_methodology/`
+**Last commit:** 23151be
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, and semantic-activation overlap analyses now exist under `research/assistant_axis_methodology/`
 
 ---
 
@@ -278,6 +278,16 @@
 - Low-density roles such as flaneur, predator, devils_advocate, advocate, teenager, vegan, genie, angel, robot, and adolescent expose sparse or underrepresented regions of the constructed corpus
 - Interpretation: semantic priors substantially structure the role corpus, but activation geometry should still be treated as preservation plus model-specific reorganization rather than a mirror of semantic topology
 
+### Semantic-Activation Cluster Overlap Analysis (2026-05-27, confirmed)
+
+- Ran a structured overlap analysis comparing activation-space labels, original-prompt semantic clusters, and no-label semantic clusters using existing assignment artifacts only
+- k=7 hard-cluster agreement remains low: original-prompt ARI vs activation labels 0.111 and no-label-prompt ARI vs activation labels 0.130
+- Found 73 stable anchor roles that fall inside the dominant original and no-label semantic regions for their activation cluster
+- Broad bridge/migration criteria flagged 198 roles, reflecting soft semantic boundaries and activation-space compression rather than clean cluster equality
+- Editorial is the cleanest semantic-activation overlap region; combative-iconoclast and trickster-chaos retain local semantic structure but still include boundary cases
+- Procedural-professional compresses multiple prompt-space semantic regions into one broad activation basin, while collective/swarm roles are semantically compact but distributed across larger activation clusters
+- Recommended no-label activation stress test should sample stable anchors, bridge roles, sparse/outlier roles, assistant-adjacent roles, and theatrical roles
+
 ---
 
 ## 3. CURRENT STATE
@@ -300,15 +310,17 @@
 
 **Deep semantic-topology state:** `research/assistant_axis_methodology/deep_semantic_topology_analysis.md` now provides the deeper exploratory semantic-manifold interpretation, with machine-readable output at `research/assistant_axis_methodology/deep_semantic_topology_analysis.json`. Supporting files include `research/assistant_axis_methodology/cluster_anchor_roles.csv`, `research/assistant_axis_methodology/semantic_bridge_roles.csv`, and `research/assistant_axis_methodology/semantic_voids_note.md`.
 
+**Cluster-overlap state:** `research/assistant_axis_methodology/cluster_overlap_analysis.md` now compares activation-space clusters, original semantic prompt clusters, and no-label semantic prompt clusters. Supporting outputs include `cluster_overlap_analysis.json`, `activation_cluster_semantic_overlap.csv`, `semantic_vs_activation_venn_tables.csv`, `stable_anchor_roles.csv`, `bridge_roles.csv`, and `cluster_overlap_interpretation_note.md`.
+
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Created `research/assistant_axis_methodology/scripts/deep_semantic_topology_analysis.py` and ran the offline deep semantic-manifold analysis.
-**Completed this session:** Created `research/assistant_axis_methodology/deep_semantic_topology_analysis.md`, `deep_semantic_topology_analysis.json`, `cluster_anchor_roles.csv`, `semantic_bridge_roles.csv`, and `semantic_voids_note.md`.
-**Completed this session:** Updated `research/FINDINGS_LEDGER.md`, `research/assistant_axis_methodology/open_methodology_questions.md`, and this state file with the deep topology findings and next test.
-**Next step:** Run a small activation-space no-label stress test using a mixed role set before scaling; separately design a revised editor anchoring methodology before further editor rollout generation.
-**Last commit before this session:** 97d7e8c
+**Completed this session:** Created `research/assistant_axis_methodology/scripts/cluster_overlap_analysis.py` and ran the structured semantic-activation overlap analysis from existing assignment artifacts.
+**Completed this session:** Created `research/assistant_axis_methodology/cluster_overlap_analysis.md`, `cluster_overlap_interpretation_note.md`, `cluster_overlap_analysis.json`, `activation_cluster_semantic_overlap.csv`, `semantic_vs_activation_venn_tables.csv`, `stable_anchor_roles.csv`, and `bridge_roles.csv`.
+**Completed this session:** Updated `research/FINDINGS_LEDGER.md`, `research/assistant_axis_methodology/open_methodology_questions.md`, and this state file with overlap findings and the next stress-test design target.
+**Next step:** Run a small activation-space no-label stress test sampling stable anchors, bridge roles, sparse/outlier roles, assistant-adjacent roles, and theatrical roles; separately design a revised editor anchoring methodology before further editor rollout generation.
+**Last commit before this session:** 23151be
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

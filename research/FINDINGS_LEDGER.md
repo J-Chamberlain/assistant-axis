@@ -78,6 +78,10 @@ The Lu et al. role corpus now has a standalone interpretation as a frontier-mode
 
 A deeper no-label semantic topology analysis found that the role corpus is organized by mixed social, professional, narrative, stylistic, and archetypal structure rather than by a single psychological taxonomy. The no-label k=7 semantic manifold shows broad professional/helper, lived-experience/social, communicative/media, mythic/fantastical, adversarial/normative, and generalist/helper regions, with soft boundaries and bridge roles such as spy, amnesiac, sage, guardian, merchant, and emissary. Dense pockets include professional and migration/survival neighborhoods; sparse roles include flaneur, predator, devils_advocate, advocate, teenager, vegan, genie, angel, robot, and adolescent. This supports treating the role list as a constructed semantic manifold whose topology partially constrains, but does not determine, activation geometry.
 
+### Semantic-Activation Overlap Structure
+
+Structured overlap analysis between activation clusters, original prompt clusters, and no-label prompt clusters found 73 stable anchor roles and 198 bridge or migratory roles under broad overlap criteria. Editorial is the cleanest semantic-activation overlap region, while procedural-professional compresses several semantic regions into one broad activation basin. Collective/swarm roles are semantically compact but distributed across larger activation clusters rather than forming a dedicated activation cluster in the available labels. This supports the interpretation that activation geometry preserves local semantic anchors while reorganizing broad prompt-space topology around enacted behavioral structure.
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.
@@ -108,4 +112,5 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 2. Run at least one additional non-trickster persona adaptive extraction after the revised methodology is specified.
 3. Restore or compare `gpt-4.1-mini` scoring if API access permits, to estimate judge sensitivity relative to Codex GPT-5.5 Standard.
 4. Test whether cluster-synthesized background prompts improve low-yield persona anchoring without leaking role identity.
-5. Continue Paper 1.5 validation before relying on adaptive extraction as a general persona-vector workflow.
+5. Run a small no-label activation-space stress test sampling stable anchors, bridge roles, sparse/outlier roles, assistant-adjacent roles, and theatrical roles.
+6. Continue Paper 1.5 validation before relying on adaptive extraction as a general persona-vector workflow.
