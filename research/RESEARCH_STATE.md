@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-27
-**Last commit:** 926a6f2
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; a canonical Lu et al. Assistant Axis methodology extraction package now exists under `research/assistant_axis_methodology/`
+**Last commit:** 2bd273b
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; canonical onboarding files now exist at `research/PROJECT_ORIENTATION.md`, `research/FINDINGS_LEDGER.md`, and `research/NEW_SESSION_STARTUP.md`
 
 ---
 
@@ -255,13 +255,15 @@
 
 **Paper 1.5 documentation:** `research/paper1_5_outline.md` contains the adaptive extraction methodology, and `research/paper1_5_adaptive_extraction_notes.md` contains the supporting workflow note for future persona runs. The canonical Lu et al. methodology extraction package now lives in `research/assistant_axis_methodology/`, including artifact inventory, pipeline reconstruction, exact role prompts, exact extraction questions, judge prompts, vector-structure audit, replication-difference audit, open questions, and a relevant repo-structure export.
 
+**Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
+
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Created `research/assistant_axis_methodology/` as a canonical methodology extraction package for Lu et al. (2026), including exact prompt/question exports and source-cited reconstruction notes.
-**Completed this session:** Audited local Lu et al. paper copies, repo pipeline scripts, prompt JSONs, extraction questions, judge prompts, downloaded HF vectors, notebooks, and Paper 1.5 replication artifacts into `artifact_inventory.md`.
-**Completed this session:** Documented explicit Lu-method steps versus uncertain or locally inferred behavior, including residual-stream position, judging categories, vector filtering ambiguity, and local adaptive-extraction differences.
-**Next step:** Use the methodology package as the canonical reference for future GPT/Claude planning; separately design a revised editor anchoring methodology before any further editor rollout generation.
-**Last commit before this session:** 926a6f2
+**Completed this session:** Created `research/PROJECT_ORIENTATION.md` as the compact onboarding layer for future GPT, Claude, and Codex sessions.
+**Completed this session:** Created `research/FINDINGS_LEDGER.md` as the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests.
+**Completed this session:** Created `research/NEW_SESSION_STARTUP.md` as the explicit future-agent startup protocol.
+**Next step:** Use the new orientation layer as the first project map after `RESEARCH_STATE.md`; separately design a revised editor anchoring methodology before any further editor rollout generation.
+**Last commit before this session:** 2bd273b
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
