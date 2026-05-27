@@ -70,6 +70,10 @@ A deterministic no-label prompt-ablation dataset now exists for all 1375 Lu et a
 
 Three-way comparison of role-name, original-prompt, no-label prompt, and available activation-reference geometry finds that semantic topology is preserved strongly between original and no-label prompt spaces, but activation cluster structure is only partially recoverable from semantics. At k=7, ARI against activation labels is 0.010 for role names, 0.023 for role names plus descriptions, 0.111 for original prompts, and 0.130 for no-label prompts. No-label prompt distances best predict available activation centroid-profile distances, but correlations remain modest: 0.230 for Gemma and 0.254 for Qwen.
 
+### Semantic Role Manifold Interpretation
+
+The Lu et al. role corpus now has a standalone interpretation as a frontier-model-generated semantic role manifold. It contains meaningful prompt-space topology before activations are considered, and that topology mostly survives label removal. The current interpretation is that activation experiments test how target models internalize, compress, sharpen, or reorganize this semantic manifold rather than revealing a structure independent of the elicitation corpus.
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

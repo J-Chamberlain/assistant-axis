@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-27
-**Last commit:** ae28112
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-vs-activation geometry comparison is complete under `research/assistant_axis_methodology/semantic_vs_activation_geometry/`
+**Last commit:** 47b30fd
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry synthesis notes now exist under `research/assistant_axis_methodology/`
 
 ---
 
@@ -286,15 +286,16 @@
 
 **Semantic-vs-activation state:** The three-way semantic-vs-activation comparison is complete under `research/assistant_axis_methodology/semantic_vs_activation_geometry/`, with interpretation note at `research/assistant_axis_methodology/semantic_topology_interpretation_note.md`. The analysis supports partial preservation plus activation-space reorganization: prompt semantics predict activation references weakly to modestly, and no-label prompt topology remains close to original prompt topology.
 
+**Semantic-geometry synthesis state:** `research/assistant_axis_methodology/current_semantic_geometry_findings_recap.md` now summarizes tested claims, validated results, ruled-out interpretations, unresolved questions, and next tests from the semantic-geometry investigation. `research/assistant_axis_methodology/semantic_geometry_standalone_interpretation.md` treats the role corpus as a frontier-model-generated semantic role manifold independent of activation-space claims.
+
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Created and ran `research/assistant_axis_methodology/scripts/compare_semantic_vs_activation_geometry.py` for role-name, original-prompt, no-label prompt, and activation-reference comparisons.
-**Completed this session:** Saved semantic-vs-activation geometry outputs under `research/assistant_axis_methodology/semantic_vs_activation_geometry/`.
-**Completed this session:** Wrote `research/assistant_axis_methodology/semantic_topology_interpretation_note.md` and updated methodology ledgers with the result.
+**Completed this session:** Created `research/assistant_axis_methodology/current_semantic_geometry_findings_recap.md` to consolidate current semantic-geometry findings, uncertainties, and next tests.
+**Completed this session:** Created `research/assistant_axis_methodology/semantic_geometry_standalone_interpretation.md` to interpret the semantic role corpus before activation-space claims.
 **Next step:** Run a small activation-space no-label stress test using a mixed role set before scaling; separately design a revised editor anchoring methodology before further editor rollout generation.
-**Last commit before this session:** ae28112
+**Last commit before this session:** 47b30fd
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
