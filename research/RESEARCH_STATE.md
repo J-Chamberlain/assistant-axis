@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-27
-**Last commit:** 2bd273b
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; canonical onboarding files now exist at `research/PROJECT_ORIENTATION.md`, `research/FINDINGS_LEDGER.md`, and `research/NEW_SESSION_STARTUP.md`
+**Last commit:** 2fd73cc
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; role-prompt label-exposure audit is complete under `research/assistant_axis_methodology/`
 
 ---
 
@@ -243,6 +243,14 @@
 - Final RunPod confirmation: `runpodctl pod list` returned no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returned 404 `pod not found`
 - Current interpretation remains that editor weakness reflects weak anchoring or assistant-adjacent collapse under the current Lu-style extraction setup rather than token-cap limitation alone
 
+### Role Prompt Label-Exposure Audit (2026-05-27, confirmed)
+
+- Local string audit of all 275 Lu et al. role instruction JSON files found extensive direct role-label exposure in the five generated system prompts per role
+- Exact role-label exposure appears in 1275/1375 prompts, 92.7%; normalized or variant exposure appears in 1280/1375 prompts, 93.1%; direct identity framing appears in 1117/1375 prompts, 81.2%
+- Role-level distribution: 227/275 roles have complete 5/5 prompt exposure, 36 have 3-5/5 high exposure, 11 have 1-2/5 partial exposure, and 1 has 0/5 exposure
+- Trickster and editor both have complete 5/5 label exposure, but their Qwen adaptive extraction yields diverge sharply, so label exposure alone does not explain role-expression success or failure
+- Methodological implication: Lu-style extraction should be described as role-label-plus-behavior elicitation, not purely behavioral elicitation; this does not invalidate the geometry without further analysis
+
 ---
 
 ## 3. CURRENT STATE
@@ -255,15 +263,17 @@
 
 **Paper 1.5 documentation:** `research/paper1_5_outline.md` contains the adaptive extraction methodology, and `research/paper1_5_adaptive_extraction_notes.md` contains the supporting workflow note for future persona runs. The canonical Lu et al. methodology extraction package now lives in `research/assistant_axis_methodology/`, including artifact inventory, pipeline reconstruction, exact role prompts, exact extraction questions, judge prompts, vector-structure audit, replication-difference audit, open questions, and a relevant repo-structure export.
 
+**Methodology audit state:** The role-prompt label-exposure audit is complete. Outputs are `research/assistant_axis_methodology/role_prompt_label_exposure_audit.json` and `research/assistant_axis_methodology/role_prompt_label_exposure_audit.md`; the audit script is `research/assistant_axis_methodology/scripts/audit_role_prompt_label_exposure.py`. The next recommended methodology audit is a behavioral-specificity audit that removes role labels from prompts and measures how much role-identifying content remains.
+
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Created `research/PROJECT_ORIENTATION.md` as the compact onboarding layer for future GPT, Claude, and Codex sessions.
-**Completed this session:** Created `research/FINDINGS_LEDGER.md` as the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests.
-**Completed this session:** Created `research/NEW_SESSION_STARTUP.md` as the explicit future-agent startup protocol.
-**Next step:** Use the new orientation layer as the first project map after `RESEARCH_STATE.md`; separately design a revised editor anchoring methodology before any further editor rollout generation.
-**Last commit before this session:** 2bd273b
+**Completed this session:** Created and ran `research/assistant_axis_methodology/scripts/audit_role_prompt_label_exposure.py` against the canonical `data/roles/instructions/*.json` source.
+**Completed this session:** Saved label-exposure audit outputs to `research/assistant_axis_methodology/role_prompt_label_exposure_audit.json` and `research/assistant_axis_methodology/role_prompt_label_exposure_audit.md`.
+**Completed this session:** Updated `research/FINDINGS_LEDGER.md` and `research/assistant_axis_methodology/open_methodology_questions.md` with the label-exposure finding and follow-up question.
+**Next step:** Run a behavioral-specificity audit that removes explicit role labels from prompts and measures residual role-identifying content; separately design a revised editor anchoring methodology before further editor rollout generation.
+**Last commit before this session:** 2fd73cc
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
