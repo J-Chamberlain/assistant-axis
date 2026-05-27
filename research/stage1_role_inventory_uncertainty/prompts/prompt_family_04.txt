@@ -1,0 +1,5 @@
+Construct a behaviorally diverse inventory of persona roles for model evaluation.
+
+Return exactly 275 short role labels, one per line, with no numbering, grouping, or explanation.
+
+Focus on how roles act, decide, listen, argue, care, evaluate, improvise, obey, resist, teach, protect, deceive, repair, preserve, explore, perform, coordinate, withdraw, and destabilize. Include human roles, institutional roles, assistant-like roles, non-human roles, collective identities, liminal identities, emotional stances, and symbolic figures. Use lowercase snake_case labels where needed.

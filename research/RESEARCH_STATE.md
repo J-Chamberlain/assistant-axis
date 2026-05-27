@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-27
-**Last commit:** 77879d6
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota
+**Last commit:** e60d8f8
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is now provider-separated with Codex responsible for OpenAI generation and local analysis
 
 ---
 
@@ -335,15 +335,17 @@
 
 **Evaluator-sensitivity state:** The evaluator-sensitivity harness and blocked baseline outputs live under `research/q2_stability/qwen/evaluator_sensitivity/`, with script at `research/q2_stability/qwen/scripts/evaluator_sensitivity_analysis.py`. The comparison is not complete because `gpt-4.1-mini` scoring is blocked by OpenAI `insufficient_quota`.
 
+**Stage-1 role-inventory uncertainty state:** `research/stage1_role_inventory_uncertainty/` now contains the OpenAI-side role-inventory generation infrastructure, five prompt-family variants, provider-agnostic ingestion and normalization scripts, local manifold-comparison scaffolding, and `multi_provider_generation_architecture.md`. Codex should not orchestrate Anthropic API calls locally; Claude or Claude Code will generate Anthropic-side inventories separately and sync them through GitHub for local semantic analysis.
+
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Built the evaluator-sensitivity harness and verified canonical judge prompt, trickster corpus, and editor corpus paths.
-**Completed this session:** Imported 192 existing Codex GPT-5.5 score records into `research/q2_stability/qwen/evaluator_sensitivity/evaluator_sensitivity_results.jsonl`.
-**Completed this session:** Attempted `gpt-4.1-mini` canonical-rubric rescoring, but OpenAI returned `insufficient_quota`, so no paired evaluator comparison was completed.
-**Next step:** Rerun `python3 research/q2_stability/qwen/scripts/evaluator_sensitivity_analysis.py` after OpenAI API quota is restored; separately launch the bounded no-label activation stress-test pod after user approval.
-**Last commit before this session:** 77879d6
+**Completed this session:** Built provider-separated Stage-1 role-inventory uncertainty infrastructure under `research/stage1_role_inventory_uncertainty/`.
+**Completed this session:** Added five prompt-family variants and OpenAI-only generation, normalization, external-ingestion, and local comparison scripts.
+**Completed this session:** Documented the GitHub synchronization architecture that delegates Anthropic generation to Claude or Claude Code while keeping Codex responsible for OpenAI generation and local semantic analysis.
+**Next step:** Run OpenAI-side role-inventory generation when API quota is available, then ingest Claude-generated inventories after they are synced through GitHub.
+**Last commit before this session:** e60d8f8
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

@@ -86,6 +86,10 @@ Structured overlap analysis between activation clusters, original prompt cluster
 
 The first no-label activation-space stress test is designed but not launched. It selects 20 roles covering stable anchors, bridge/migratory roles, sparse/outlier roles, assistant-adjacent/procedural roles, theatrical/fantastical roles, and collective/swarm roles: editor, screener, reviewer, consultant, evaluator, proofreader, negotiator, trickster, jester, oracle, leviathan, mystic, hive, egregore, skeptic, philosopher, spy, dilettante, flaneur, and robot. The design uses paired original label-exposed and no-label conditions with 20 rollouts per role per condition, for 800 planned Qwen/Qwen3-32B layer-48 rollouts. The only intended experimental difference is system prompt label exposure.
 
+### Stage-1 Role Inventory Uncertainty Infrastructure
+
+Stage-1 role-inventory uncertainty is now scoped as provider-separated corpus construction. Codex handles OpenAI-side generation, provider-agnostic ingestion, normalization, and local semantic analysis; Anthropic-side generation is delegated to Claude or Claude Code and synced through GitHub. This keeps cross-provider credential handling out of Codex and treats GitHub as the synchronization layer for generated inventories.
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.
@@ -119,4 +123,5 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 3. Restore or compare `gpt-4.1-mini` scoring if API access permits, to estimate judge sensitivity relative to Codex GPT-5.5 Standard.
 4. Test whether cluster-synthesized background prompts improve low-yield persona anchoring without leaking role identity.
 5. Launch the bounded 800-rollout no-label activation-space stress test once compute is approved.
-6. Continue Paper 1.5 validation before relying on adaptive extraction as a general persona-vector workflow.
+6. Run OpenAI-side Stage-1 role-inventory generation and ingest Claude-generated inventories once they are synced through GitHub.
+7. Continue Paper 1.5 validation before relying on adaptive extraction as a general persona-vector workflow.

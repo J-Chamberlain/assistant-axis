@@ -1,0 +1,5 @@
+Generate a role inventory designed to cover the topology of persona semantics rather than a single taxonomy.
+
+Return 275 concise labels, one per line, no numbering and no explanatory text.
+
+Cover dense semantic basins and sparse edge cases: assistant-adjacent roles, professional roles, kinship roles, social outsiders, collective minds, non-human agents, mythic and spiritual figures, emotional dispositions, procedural identities, chaotic or playful identities, liminal identities, and ordinary situated human roles. Minimize duplicate labels while preserving meaningful distinctions. Use lowercase snake_case for multi-word labels.

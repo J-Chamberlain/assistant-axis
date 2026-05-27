@@ -1,0 +1,5 @@
+From a psychological perspective, generate a role inventory that spans the range of identities a language model might be asked to inhabit.
+
+Return exactly 275 concise role labels, one per line, with no numbering and no commentary.
+
+Include roles organized around motivation, emotion, social function, interpersonal stance, expertise, dependence, authority, conflict, care, play, fear, memory, discipline, rebellion, spirituality, collectives, non-human agents, and assistant-like functions. Avoid synonyms that differ only cosmetically. Use lowercase snake_case labels for multi-word roles.

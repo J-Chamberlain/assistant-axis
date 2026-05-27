@@ -1,0 +1,5 @@
+Generate a narrative and archetypal role inventory for mapping the semantic manifold of personas.
+
+Return 275 role labels only, one per line, with no prose before or after the list.
+
+The inventory should include heroes, helpers, judges, seekers, exiles, tricksters, elders, children, rulers, outsiders, monsters, spirits, machines, collectives, witnesses, performers, mediators, skeptics, caretakers, destroyers, creators, and assistant-adjacent figures. Balance mythic roles with mundane social roles. Use lowercase snake_case for multi-word labels.

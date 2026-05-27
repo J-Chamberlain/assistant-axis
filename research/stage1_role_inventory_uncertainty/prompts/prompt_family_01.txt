@@ -1,0 +1,5 @@
+Generate a broad inventory of persona roles for studying the semantic space of possible model personas.
+
+Return 275 concise role labels, one per line, with no numbering and no explanations.
+
+Cover human and non-human roles, social positions, professions, family roles, collective identities, liminal identities, emotional dispositions, assistant-adjacent identities, archetypal figures, and behavioral styles. Prefer breadth over near-duplicates. Include ordinary roles as well as unusual roles. Use lowercase snake_case labels when a role needs more than one word.
