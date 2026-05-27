@@ -108,6 +108,8 @@ The next editor experiment is blocked on revised anchoring methodology. More ide
 
 Strict Lu-method replication remains blocked unless `gpt-4.1-mini` judge scoring is restored and run with documented filter choices.
 
+Evaluator-sensitivity comparison remains blocked by OpenAI API quota. The local harness, canonical corpora mapping, Codex-side imported baseline, and output schema now exist under `research/q2_stability/qwen/evaluator_sensitivity/`, but `gpt-4.1-mini` returned `insufficient_quota` and produced zero paired judge records.
+
 Downloaded Lu vector metadata remains underspecified locally: the exact fully-roleplaying versus somewhat-roleplaying storage category and fixed 64-row selection procedure are not documented in local HF metadata.
 
 ## Next Empirical Tests

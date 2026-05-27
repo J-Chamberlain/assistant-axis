@@ -12,6 +12,8 @@ Do personas with vivid theatrical or transgressive cues, such as trickster, arti
 
 How sensitive are score-conditioned vectors to the judge model and rubric wording? Codex GPT-5.5 Standard produced a usable pragmatic scoring path, but strict comparison to `gpt-4.1-mini` remains unresolved.
 
+An evaluator-sensitivity harness now exists at `research/q2_stability/qwen/scripts/evaluator_sensitivity_analysis.py`, but the first `gpt-4.1-mini` rescore attempt returned OpenAI `insufficient_quota`. Rerun the harness once API quota is restored before making any claim about judge sensitivity.
+
 ## Token-Cap Effects
 
 Does increasing max tokens change vector geometry for high-yield personas even when role-expression scores are stable? Editor's matched 1024-token run reduced truncation without improving role-expression yield, but token-cap geometry comparison remains limited by low qualifying counts.

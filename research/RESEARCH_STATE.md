@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-27
-**Last commit:** 0dd7cf6
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist
+**Last commit:** 77879d6
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota
 
 ---
 
@@ -298,6 +298,15 @@
 - The only planned experimental difference is system prompt label exposure; model, layer, questions, rollout order, extraction logic, activation storage, and integrity workflow are held constant
 - Competing hypotheses are label-dependent geometry, label-independent behavioral-semantic geometry, and activation-space reorganization of behavioral semantics into latent procedural/behavioral manifolds
 
+### Evaluator Sensitivity Harness (2026-05-27, blocked)
+
+- Built `research/q2_stability/qwen/scripts/evaluator_sensitivity_analysis.py` to compare existing Codex GPT-5.5 Standard scores against `gpt-4.1-mini` scores on the same trickster and editor response records
+- Located canonical Lu-style judge materials at `data/roles/instructions/{role}.json` `eval_prompt`, exported in `research/assistant_axis_methodology/prompts_and_questions/canonical_judge_prompt.md`
+- Located canonical corpora: trickster responses and Codex scores under `research/q2_stability/qwen/outputs/paper1_5/`, and editor responses and Codex scores under `research/q2_stability/qwen/outputs/paper1_5/editor/`
+- Imported 192 existing Codex score records: 64 trickster and 128 editor
+- Attempted `gpt-4.1-mini` canonical-rubric rescoring via OpenAI Responses API, but the API returned `insufficient_quota`; zero `gpt-4.1-mini` paired records were produced
+- No evaluator-sensitivity conclusion should be drawn until the harness is rerun after API quota is restored
+
 ---
 
 ## 3. CURRENT STATE
@@ -324,15 +333,17 @@
 
 **No-label activation stress-test state:** The first activation-space no-label stress test is designed under `research/q2_stability/qwen/no_label_activation_test/`. The selected role rationale is `selected_roles.md`, the detailed plan is `no_label_activation_stress_test_plan.md`, and the machine-readable run specification is `no_label_activation_stress_test_dataset_spec.json`.
 
+**Evaluator-sensitivity state:** The evaluator-sensitivity harness and blocked baseline outputs live under `research/q2_stability/qwen/evaluator_sensitivity/`, with script at `research/q2_stability/qwen/scripts/evaluator_sensitivity_analysis.py`. The comparison is not complete because `gpt-4.1-mini` scoring is blocked by OpenAI `insufficient_quota`.
+
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Designed the first small no-label activation-space stress test and selected 20 roles from actual overlap outputs.
-**Completed this session:** Created `research/q2_stability/qwen/no_label_activation_test/selected_roles.md`, `no_label_activation_stress_test_plan.md`, and `no_label_activation_stress_test_dataset_spec.json`.
-**Completed this session:** Updated `research/FINDINGS_LEDGER.md`, `research/assistant_axis_methodology/open_methodology_questions.md`, and this state file with the no-label activation stress-test design and competing hypotheses.
-**Next step:** Launch the bounded 800-rollout Qwen/Qwen3-32B no-label activation stress-test pod after user approval; separately design a revised editor anchoring methodology before further editor rollout generation.
-**Last commit before this session:** 0dd7cf6
+**Completed this session:** Built the evaluator-sensitivity harness and verified canonical judge prompt, trickster corpus, and editor corpus paths.
+**Completed this session:** Imported 192 existing Codex GPT-5.5 score records into `research/q2_stability/qwen/evaluator_sensitivity/evaluator_sensitivity_results.jsonl`.
+**Completed this session:** Attempted `gpt-4.1-mini` canonical-rubric rescoring, but OpenAI returned `insufficient_quota`, so no paired evaluator comparison was completed.
+**Next step:** Rerun `python3 research/q2_stability/qwen/scripts/evaluator_sensitivity_analysis.py` after OpenAI API quota is restored; separately launch the bounded no-label activation stress-test pod after user approval.
+**Last commit before this session:** 77879d6
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

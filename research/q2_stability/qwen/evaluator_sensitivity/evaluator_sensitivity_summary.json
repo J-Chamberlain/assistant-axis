@@ -1,0 +1,220 @@
+{
+  "canonical_judge_prompt_source": "data/roles/instructions/{role}.json eval_prompt; exported at research/assistant_axis_methodology/prompts_and_questions/canonical_judge_prompt.md",
+  "corpora": {
+    "editor": {
+      "codex_scores": "research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase2_scores_codex_gpt55.jsonl",
+      "codex_summary": "research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase2_scores_codex_gpt55_summary.json",
+      "responses": "research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase1_128.jsonl"
+    },
+    "trickster": {
+      "codex_scores": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase2_scores_codex_gpt55.jsonl",
+      "codex_summary": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase2_scores_codex_gpt55_summary.json",
+      "responses": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl"
+    }
+  },
+  "date": "2026-05-27",
+  "important_limitation": "Codex GPT-5.5 is not callable from Python; Codex scores are imported from existing audited score files, while gpt-4.1-mini is newly scored with canonical Lu eval prompts.",
+  "method": "existing_codex_scores_vs_gpt41mini_canonical_eval_prompt_rescore",
+  "model_used": "GPT-5.5",
+  "overall": {
+    "cohen_kappa": 0.0,
+    "confusion_matrix_codex_rows_gpt41mini_cols": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "exact_agreement": 0.0,
+    "n_pairs": 0,
+    "score_eq_3_agreement": 0.0,
+    "score_ge_2_agreement": 0.0
+  },
+  "roles": {
+    "editor": {
+      "codex_distribution": {
+        "0": {
+          "count": 51,
+          "fraction": 0.3984375
+        },
+        "1": {
+          "count": 67,
+          "fraction": 0.5234375
+        },
+        "2": {
+          "count": 7,
+          "fraction": 0.0546875
+        },
+        "3": {
+          "count": 3,
+          "fraction": 0.0234375
+        }
+      },
+      "codex_score_eq_3": 3,
+      "codex_score_ge_2": 10,
+      "cohen_kappa": 0.0,
+      "confusion_matrix_codex_rows_gpt41mini_cols": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_agreement": 0.0,
+      "gpt41mini_distribution": {
+        "0": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "1": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "2": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "3": {
+          "count": 0,
+          "fraction": 0.0
+        }
+      },
+      "gpt41mini_score_eq_3": 0,
+      "gpt41mini_score_ge_2": 0,
+      "mean_score_shift_gpt41mini_minus_codex": 0.0,
+      "n_codex": 128,
+      "n_gpt41mini": 0,
+      "n_pairs": 0,
+      "score_eq_3_agreement": 0.0,
+      "score_ge_2_agreement": 0.0,
+      "shift_counts": {},
+      "thresholds": {
+        "codex_eq3_meets_16": false,
+        "codex_ge2_meets_64": false,
+        "gpt41mini_eq3_meets_16": false,
+        "gpt41mini_ge2_meets_64": false
+      }
+    },
+    "trickster": {
+      "codex_distribution": {
+        "0": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "1": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "2": {
+          "count": 31,
+          "fraction": 0.484375
+        },
+        "3": {
+          "count": 33,
+          "fraction": 0.515625
+        }
+      },
+      "codex_score_eq_3": 33,
+      "codex_score_ge_2": 64,
+      "cohen_kappa": 0.0,
+      "confusion_matrix_codex_rows_gpt41mini_cols": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_agreement": 0.0,
+      "gpt41mini_distribution": {
+        "0": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "1": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "2": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "3": {
+          "count": 0,
+          "fraction": 0.0
+        }
+      },
+      "gpt41mini_score_eq_3": 0,
+      "gpt41mini_score_ge_2": 0,
+      "mean_score_shift_gpt41mini_minus_codex": 0.0,
+      "n_codex": 64,
+      "n_gpt41mini": 0,
+      "n_pairs": 0,
+      "score_eq_3_agreement": 0.0,
+      "score_ge_2_agreement": 0.0,
+      "shift_counts": {},
+      "thresholds": {
+        "codex_eq3_meets_16": true,
+        "codex_ge2_meets_64": true,
+        "gpt41mini_eq3_meets_16": false,
+        "gpt41mini_ge2_meets_64": false
+      }
+    }
+  }
+}
