@@ -3,9 +3,9 @@
 # Updated at the end of every Codex session. Fetch this first in any new session.
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
-**Last updated:** 2026-05-26
-**Last commit:** 4f699e3
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; Qwen/Qwen3-32B trickster Phase 1 has 1200 preserved rollouts and 1200 matching activation shards with final integrity passed; Codex GPT-5.5 adaptive scoring reached 64 score>=2 responses and 33 score==3 responses; score>=2 vector matches the Lu trickster mean at cosine 0.957557; situational fluidity hypothesis captured as a pre-analysis sticky note; workflow infrastructure now exists under `research/workflow/`; editor adaptive extraction planning is prepared but not launched
+**Last updated:** 2026-05-27
+**Last commit:** 926a6f2
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; a canonical Lu et al. Assistant Axis methodology extraction package now exists under `research/assistant_axis_methodology/`
 
 ---
 
@@ -251,19 +251,17 @@
 
 **Paper 1.5 scoring and validation:** Codex GPT-5.5 Standard was used as a pragmatic role-expression judge after the planned gpt-4.1-mini API scoring path was blocked by quota. Adaptive Codex scoring reached 64 scored records with 64 score>=2 and 33 score==3 responses; vector validation against the Lu trickster reference succeeded, with `score_ge_2` as the best candidate at cosine 0.957557 to the Lu mean, and adaptive stopping passed at n=16 for both score>=2 and score==3 subsets. This is an operationally validated adaptive extraction path, not a strict Lu-method judge replication.
 
-**Paper 1.5 documentation:** `research/paper1_5_outline.md` now contains the adaptive extraction methodology, and `research/paper1_5_adaptive_extraction_notes.md` contains the supporting workflow note for future persona runs.
+**Editor second-persona test:** The first editor chunk completed 128 deterministic Qwen/Qwen3-32B rollouts at the 512-token cap, and a matched first-64 follow-up completed at the 1024-token cap. Codex GPT-5.5 scoring found only 10 score>=2 and 3 score==3 responses in the 128-record 512-token set; the matched 1024-token run sharply reduced truncation but did not improve role-expression yield. Vector validation and sample sufficiency were correctly not run for editor because validation thresholds were not met.
 
-**Workflow infrastructure:** `research/workflow/` now contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
+**Paper 1.5 documentation:** `research/paper1_5_outline.md` contains the adaptive extraction methodology, and `research/paper1_5_adaptive_extraction_notes.md` contains the supporting workflow note for future persona runs. The canonical Lu et al. methodology extraction package now lives in `research/assistant_axis_methodology/`, including artifact inventory, pipeline reconstruction, exact role prompts, exact extraction questions, judge prompts, vector-structure audit, replication-difference audit, open questions, and a relevant repo-structure export.
 
-**Next empirical step:** Develop a revised editor anchoring methodology rather than immediately generating additional rollout chunks, because the first `sp_idx=0` editor chunk did not meet role-expression thresholds even after the matched 1024-token sensitivity check.
+**Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Verified that the editor 512-token and matched 1024-token generation datasets, integrity files, scoring artifacts, and token-cap comparison artifacts are preserved locally.
-**Completed this session:** Created `sticky_notes/situational_fluidity_hypothesis.md` capturing the pre-analysis situational fluidity hypothesis in relation to expressive geometry, feature suppression, and situational appropriateness.
-**Completed this session:** Updated `sticky_notes/README.md` with an index row for the new situational fluidity hypothesis note.
-**Completed this session:** Confirmed the editor pod was idle over SSH before termination, with no active rollout process and GPU usage at 1 MiB and 0 percent utilization.
-**Completed this session:** Stopped and deleted RunPod pod `5b6hz02m9idrc3` via `runpodctl`; final `pod list` returned no running pods and `pod get` returned 404 `pod not found`.
-**Next step:** Submit the situational fluidity hypothesis to a literature/novelty check before treating it as a research claim; separately design a revised editor anchoring methodology before any further editor rollout generation.
-**Last commit before this session:** 1199504
+**Completed this session:** Created `research/assistant_axis_methodology/` as a canonical methodology extraction package for Lu et al. (2026), including exact prompt/question exports and source-cited reconstruction notes.
+**Completed this session:** Audited local Lu et al. paper copies, repo pipeline scripts, prompt JSONs, extraction questions, judge prompts, downloaded HF vectors, notebooks, and Paper 1.5 replication artifacts into `artifact_inventory.md`.
+**Completed this session:** Documented explicit Lu-method steps versus uncertain or locally inferred behavior, including residual-stream position, judging categories, vector filtering ambiguity, and local adaptive-extraction differences.
+**Next step:** Use the methodology package as the canonical reference for future GPT/Claude planning; separately design a revised editor anchoring methodology before any further editor rollout generation.
+**Last commit before this session:** 926a6f2
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
