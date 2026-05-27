@@ -32,6 +32,8 @@ How much of role-vector separability is driven by direct role-label exposure in 
 
 Do no-label prompt variants that preserve prompt-space topology still recover the same activation-space role directions as the original label-exposed Lu prompts?
 
+The first designed test uses 20 roles across stable anchors, bridge roles, sparse/outlier roles, assistant-adjacent roles, theatrical roles, and collective/swarm roles. It should be launched as a bounded paired original-vs-no-label Qwen/Qwen3-32B layer-48 run before further semantic-only interpretation is treated as activation evidence.
+
 ## Semantic-Activation Reorganization
 
 Which activation-space clusters reflect semantically intrinsic prompt structure, and which reflect model-specific reorganization or compression of that structure?

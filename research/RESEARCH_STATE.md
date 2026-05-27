@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-27
-**Last commit:** 23151be
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, and semantic-activation overlap analyses now exist under `research/assistant_axis_methodology/`
+**Last commit:** 0dd7cf6
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist
 
 ---
 
@@ -288,6 +288,16 @@
 - Procedural-professional compresses multiple prompt-space semantic regions into one broad activation basin, while collective/swarm roles are semantically compact but distributed across larger activation clusters
 - Recommended no-label activation stress test should sample stable anchors, bridge roles, sparse/outlier roles, assistant-adjacent roles, and theatrical roles
 
+### No-Label Activation Stress-Test Design (2026-05-27, design complete)
+
+- Designed the first bounded no-label activation-space stress test; no pod was launched and no new activations were generated
+- Selected 20 roles spanning stable anchors, bridge/migratory roles, sparse/outlier roles, assistant-adjacent/procedural roles, theatrical/fantastical roles, and collective/swarm probes
+- Selected roles: editor, screener, reviewer, consultant, evaluator, proofreader, negotiator, trickster, jester, oracle, leviathan, mystic, hive, egregore, skeptic, philosopher, spy, dilettante, flaneur, and robot
+- `diplomat` was excluded because it is not present in the 275-role assignment table
+- Design uses paired original label-exposed and no-label conditions, 5 prompt variants x 4 questions per role per condition, for 20 rollouts per role per condition and 800 planned rollouts total
+- The only planned experimental difference is system prompt label exposure; model, layer, questions, rollout order, extraction logic, activation storage, and integrity workflow are held constant
+- Competing hypotheses are label-dependent geometry, label-independent behavioral-semantic geometry, and activation-space reorganization of behavioral semantics into latent procedural/behavioral manifolds
+
 ---
 
 ## 3. CURRENT STATE
@@ -312,15 +322,17 @@
 
 **Cluster-overlap state:** `research/assistant_axis_methodology/cluster_overlap_analysis.md` now compares activation-space clusters, original semantic prompt clusters, and no-label semantic prompt clusters. Supporting outputs include `cluster_overlap_analysis.json`, `activation_cluster_semantic_overlap.csv`, `semantic_vs_activation_venn_tables.csv`, `stable_anchor_roles.csv`, `bridge_roles.csv`, and `cluster_overlap_interpretation_note.md`.
 
+**No-label activation stress-test state:** The first activation-space no-label stress test is designed under `research/q2_stability/qwen/no_label_activation_test/`. The selected role rationale is `selected_roles.md`, the detailed plan is `no_label_activation_stress_test_plan.md`, and the machine-readable run specification is `no_label_activation_stress_test_dataset_spec.json`.
+
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Created `research/assistant_axis_methodology/scripts/cluster_overlap_analysis.py` and ran the structured semantic-activation overlap analysis from existing assignment artifacts.
-**Completed this session:** Created `research/assistant_axis_methodology/cluster_overlap_analysis.md`, `cluster_overlap_interpretation_note.md`, `cluster_overlap_analysis.json`, `activation_cluster_semantic_overlap.csv`, `semantic_vs_activation_venn_tables.csv`, `stable_anchor_roles.csv`, and `bridge_roles.csv`.
-**Completed this session:** Updated `research/FINDINGS_LEDGER.md`, `research/assistant_axis_methodology/open_methodology_questions.md`, and this state file with overlap findings and the next stress-test design target.
-**Next step:** Run a small activation-space no-label stress test sampling stable anchors, bridge roles, sparse/outlier roles, assistant-adjacent roles, and theatrical roles; separately design a revised editor anchoring methodology before further editor rollout generation.
-**Last commit before this session:** 23151be
+**Completed this session:** Designed the first small no-label activation-space stress test and selected 20 roles from actual overlap outputs.
+**Completed this session:** Created `research/q2_stability/qwen/no_label_activation_test/selected_roles.md`, `no_label_activation_stress_test_plan.md`, and `no_label_activation_stress_test_dataset_spec.json`.
+**Completed this session:** Updated `research/FINDINGS_LEDGER.md`, `research/assistant_axis_methodology/open_methodology_questions.md`, and this state file with the no-label activation stress-test design and competing hypotheses.
+**Next step:** Launch the bounded 800-rollout Qwen/Qwen3-32B no-label activation stress-test pod after user approval; separately design a revised editor anchoring methodology before further editor rollout generation.
+**Last commit before this session:** 0dd7cf6
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

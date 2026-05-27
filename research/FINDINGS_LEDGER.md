@@ -82,6 +82,10 @@ A deeper no-label semantic topology analysis found that the role corpus is organ
 
 Structured overlap analysis between activation clusters, original prompt clusters, and no-label prompt clusters found 73 stable anchor roles and 198 bridge or migratory roles under broad overlap criteria. Editorial is the cleanest semantic-activation overlap region, while procedural-professional compresses several semantic regions into one broad activation basin. Collective/swarm roles are semantically compact but distributed across larger activation clusters rather than forming a dedicated activation cluster in the available labels. This supports the interpretation that activation geometry preserves local semantic anchors while reorganizing broad prompt-space topology around enacted behavioral structure.
 
+### No-Label Activation Stress Test Design
+
+The first no-label activation-space stress test is designed but not launched. It selects 20 roles covering stable anchors, bridge/migratory roles, sparse/outlier roles, assistant-adjacent/procedural roles, theatrical/fantastical roles, and collective/swarm roles: editor, screener, reviewer, consultant, evaluator, proofreader, negotiator, trickster, jester, oracle, leviathan, mystic, hive, egregore, skeptic, philosopher, spy, dilettante, flaneur, and robot. The design uses paired original label-exposed and no-label conditions with 20 rollouts per role per condition, for 800 planned Qwen/Qwen3-32B layer-48 rollouts. The only intended experimental difference is system prompt label exposure.
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.
@@ -112,5 +116,5 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 2. Run at least one additional non-trickster persona adaptive extraction after the revised methodology is specified.
 3. Restore or compare `gpt-4.1-mini` scoring if API access permits, to estimate judge sensitivity relative to Codex GPT-5.5 Standard.
 4. Test whether cluster-synthesized background prompts improve low-yield persona anchoring without leaking role identity.
-5. Run a small no-label activation-space stress test sampling stable anchors, bridge roles, sparse/outlier roles, assistant-adjacent roles, and theatrical roles.
+5. Launch the bounded 800-rollout no-label activation-space stress test once compute is approved.
 6. Continue Paper 1.5 validation before relying on adaptive extraction as a general persona-vector workflow.

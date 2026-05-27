@@ -1,0 +1,410 @@
+{
+  "date": "2026-05-27",
+  "model_used": "GPT-5.5",
+  "purpose": "paired original-vs-no-label activation stress test design; no pod launched",
+  "generation_model": "Qwen/Qwen3-32B",
+  "layer": 48,
+  "conditions": [
+    "original_label_exposed",
+    "no_label_ablation"
+  ],
+  "n_roles": 20,
+  "rollouts_per_role_per_condition": 20,
+  "total_planned_rollouts": 800,
+  "rollout_pairs_per_condition": [
+    {
+      "sp_idx": 0,
+      "q_idx": 0
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 1
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 2
+    },
+    {
+      "sp_idx": 0,
+      "q_idx": 3
+    },
+    {
+      "sp_idx": 1,
+      "q_idx": 0
+    },
+    {
+      "sp_idx": 1,
+      "q_idx": 1
+    },
+    {
+      "sp_idx": 1,
+      "q_idx": 2
+    },
+    {
+      "sp_idx": 1,
+      "q_idx": 3
+    },
+    {
+      "sp_idx": 2,
+      "q_idx": 0
+    },
+    {
+      "sp_idx": 2,
+      "q_idx": 1
+    },
+    {
+      "sp_idx": 2,
+      "q_idx": 2
+    },
+    {
+      "sp_idx": 2,
+      "q_idx": 3
+    },
+    {
+      "sp_idx": 3,
+      "q_idx": 0
+    },
+    {
+      "sp_idx": 3,
+      "q_idx": 1
+    },
+    {
+      "sp_idx": 3,
+      "q_idx": 2
+    },
+    {
+      "sp_idx": 3,
+      "q_idx": 3
+    },
+    {
+      "sp_idx": 4,
+      "q_idx": 0
+    },
+    {
+      "sp_idx": 4,
+      "q_idx": 1
+    },
+    {
+      "sp_idx": 4,
+      "q_idx": 2
+    },
+    {
+      "sp_idx": 4,
+      "q_idx": 3
+    }
+  ],
+  "roles": [
+    {
+      "role": "editor",
+      "selection_tags": [
+        "assistant_adjacent",
+        "editorial_boundary"
+      ],
+      "activation_cluster": "editorial",
+      "original_prompt_k7": "6",
+      "no_label_prompt_k7": "5",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 2,
+      "instruction_path": "data/roles/instructions/editor.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/editor.pt"
+    },
+    {
+      "role": "screener",
+      "selection_tags": [
+        "stable_anchor",
+        "assistant_adjacent",
+        "editorial"
+      ],
+      "activation_cluster": "editorial",
+      "original_prompt_k7": "5",
+      "no_label_prompt_k7": "5",
+      "stable_anchor": true,
+      "bridge_role": false,
+      "bridge_score": 0,
+      "instruction_path": "data/roles/instructions/screener.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/screener.pt"
+    },
+    {
+      "role": "reviewer",
+      "selection_tags": [
+        "assistant_adjacent",
+        "procedural_professional"
+      ],
+      "activation_cluster": "procedural_professional",
+      "original_prompt_k7": "5",
+      "no_label_prompt_k7": "5",
+      "stable_anchor": false,
+      "bridge_role": false,
+      "bridge_score": 0,
+      "instruction_path": "data/roles/instructions/reviewer.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/reviewer.pt"
+    },
+    {
+      "role": "consultant",
+      "selection_tags": [
+        "bridge",
+        "assistant_adjacent",
+        "procedural_professional"
+      ],
+      "activation_cluster": "procedural_professional",
+      "original_prompt_k7": "5",
+      "no_label_prompt_k7": "1",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 3,
+      "instruction_path": "data/roles/instructions/consultant.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/consultant.pt"
+    },
+    {
+      "role": "evaluator",
+      "selection_tags": [
+        "assistant_adjacent",
+        "procedural_professional"
+      ],
+      "activation_cluster": "procedural_professional",
+      "original_prompt_k7": "5",
+      "no_label_prompt_k7": "5",
+      "stable_anchor": false,
+      "bridge_role": false,
+      "bridge_score": 0,
+      "instruction_path": "data/roles/instructions/evaluator.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/evaluator.pt"
+    },
+    {
+      "role": "proofreader",
+      "selection_tags": [
+        "bridge",
+        "assistant_adjacent",
+        "editorial"
+      ],
+      "activation_cluster": "editorial",
+      "original_prompt_k7": "6",
+      "no_label_prompt_k7": "4",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 5,
+      "instruction_path": "data/roles/instructions/proofreader.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/proofreader.pt"
+    },
+    {
+      "role": "negotiator",
+      "selection_tags": [
+        "bridge",
+        "procedural_professional"
+      ],
+      "activation_cluster": "procedural_professional",
+      "original_prompt_k7": "0",
+      "no_label_prompt_k7": "5",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 4,
+      "instruction_path": "data/roles/instructions/negotiator.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/negotiator.pt"
+    },
+    {
+      "role": "trickster",
+      "selection_tags": [
+        "stable_anchor",
+        "theatrical"
+      ],
+      "activation_cluster": "trickster_chaos",
+      "original_prompt_k7": "6",
+      "no_label_prompt_k7": "2",
+      "stable_anchor": true,
+      "bridge_role": false,
+      "bridge_score": 0,
+      "instruction_path": "data/roles/instructions/trickster.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/trickster.pt"
+    },
+    {
+      "role": "jester",
+      "selection_tags": [
+        "stable_anchor",
+        "theatrical"
+      ],
+      "activation_cluster": "trickster_chaos",
+      "original_prompt_k7": "6",
+      "no_label_prompt_k7": "2",
+      "stable_anchor": true,
+      "bridge_role": true,
+      "bridge_score": 3,
+      "instruction_path": "data/roles/instructions/jester.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/jester.pt"
+    },
+    {
+      "role": "oracle",
+      "selection_tags": [
+        "bridge",
+        "theatrical_fantastical"
+      ],
+      "activation_cluster": "mythic_spiritual",
+      "original_prompt_k7": "4",
+      "no_label_prompt_k7": "2",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 2,
+      "instruction_path": "data/roles/instructions/oracle.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/oracle.pt"
+    },
+    {
+      "role": "leviathan",
+      "selection_tags": [
+        "stable_anchor",
+        "theatrical_fantastical"
+      ],
+      "activation_cluster": "mythic_spiritual",
+      "original_prompt_k7": "4",
+      "no_label_prompt_k7": "0",
+      "stable_anchor": true,
+      "bridge_role": false,
+      "bridge_score": 0,
+      "instruction_path": "data/roles/instructions/leviathan.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/leviathan.pt"
+    },
+    {
+      "role": "mystic",
+      "selection_tags": [
+        "bridge",
+        "theatrical_fantastical"
+      ],
+      "activation_cluster": "mythic_spiritual",
+      "original_prompt_k7": "4",
+      "no_label_prompt_k7": "6",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 4,
+      "instruction_path": "data/roles/instructions/mystic.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/mystic.pt"
+    },
+    {
+      "role": "hive",
+      "selection_tags": [
+        "bridge",
+        "collective_swarm"
+      ],
+      "activation_cluster": "procedural_professional",
+      "original_prompt_k7": "0",
+      "no_label_prompt_k7": "0",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 2,
+      "instruction_path": "data/roles/instructions/hive.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/hive.pt"
+    },
+    {
+      "role": "egregore",
+      "selection_tags": [
+        "bridge",
+        "collective_swarm"
+      ],
+      "activation_cluster": "procedural_professional",
+      "original_prompt_k7": "0",
+      "no_label_prompt_k7": "0",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 2,
+      "instruction_path": "data/roles/instructions/egregore.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/egregore.pt"
+    },
+    {
+      "role": "skeptic",
+      "selection_tags": [
+        "bridge",
+        "procedural_boundary"
+      ],
+      "activation_cluster": "procedural_professional",
+      "original_prompt_k7": "3",
+      "no_label_prompt_k7": "2",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 3,
+      "instruction_path": "data/roles/instructions/skeptic.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/skeptic.pt"
+    },
+    {
+      "role": "philosopher",
+      "selection_tags": [
+        "bridge",
+        "mythic_boundary"
+      ],
+      "activation_cluster": "mythic_spiritual",
+      "original_prompt_k7": "3",
+      "no_label_prompt_k7": "1",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 3,
+      "instruction_path": "data/roles/instructions/philosopher.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/philosopher.pt"
+    },
+    {
+      "role": "spy",
+      "selection_tags": [
+        "bridge",
+        "grounded_social"
+      ],
+      "activation_cluster": "grounded_social",
+      "original_prompt_k7": "3",
+      "no_label_prompt_k7": "4",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 5,
+      "instruction_path": "data/roles/instructions/spy.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/spy.pt"
+    },
+    {
+      "role": "dilettante",
+      "selection_tags": [
+        "bridge",
+        "theatrical"
+      ],
+      "activation_cluster": "trickster_chaos",
+      "original_prompt_k7": "4",
+      "no_label_prompt_k7": "1",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 5,
+      "instruction_path": "data/roles/instructions/dilettante.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/dilettante.pt"
+    },
+    {
+      "role": "flaneur",
+      "selection_tags": [
+        "sparse_outlier",
+        "mythic_social"
+      ],
+      "activation_cluster": "mythic_spiritual",
+      "original_prompt_k7": "1",
+      "no_label_prompt_k7": "3",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 3,
+      "instruction_path": "data/roles/instructions/flaneur.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/flaneur.pt"
+    },
+    {
+      "role": "robot",
+      "selection_tags": [
+        "sparse_outlier",
+        "other"
+      ],
+      "activation_cluster": "other",
+      "original_prompt_k7": "3",
+      "no_label_prompt_k7": "0",
+      "stable_anchor": false,
+      "bridge_role": true,
+      "bridge_score": 2,
+      "instruction_path": "data/roles/instructions/robot.json",
+      "reference_tensor_path": "downloads/hf_vectors/qwen-3-32b/role_vectors/robot.pt"
+    }
+  ],
+  "controls": {
+    "same_roles": true,
+    "same_sp_idx_q_idx_pairs": true,
+    "same_extraction_questions": true,
+    "same_generation_model": true,
+    "same_layer": true,
+    "same_activation_extraction_logic": true,
+    "only_difference": "system prompt text: original label-exposed vs no-label rewrite"
+  }
+}
