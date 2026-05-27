@@ -1,0 +1,733 @@
+{
+  "date": "2026-05-27",
+  "model_used": "GPT-5.5",
+  "method": "offline_tfidf_svd_semantic_geometry",
+  "sentence_transformers_available": false,
+  "sklearn_available": false,
+  "matplotlib_available": false,
+  "n_roles": 275,
+  "source_paths": {
+    "role_list": "data/roles/role_list.json",
+    "role_instruction_dir": "data/roles/instructions",
+    "no_label_prompts": "research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl",
+    "no_label_validation": "research/assistant_axis_methodology/no_label_prompt_ablation/no_label_prompt_ablation_validation.json",
+    "prior_no_label_comparison": "research/assistant_axis_methodology/no_label_prompt_ablation/original_vs_no_label_semantic_comparison.json",
+    "activation_cluster_labels": "visualizations/full_ranking.csv",
+    "gemma_directionality": "research/cluster_analysis/gemma_cluster_directionality.csv",
+    "qwen_directionality": "research/cluster_analysis/qwen_cluster_directionality.csv"
+  },
+  "available_activation_reference": {
+    "cluster_labels": 275,
+    "full_pairwise_activation_matrix_available": false,
+    "activation_centroid_profile_available": [
+      "gemma_cluster_directionality",
+      "qwen_cluster_directionality"
+    ]
+  },
+  "headline": {
+    "role_name_vs_activation_cluster_ari_k7": 0.010043743180488044,
+    "role_name_description_vs_activation_cluster_ari_k7": 0.02283917603561026,
+    "original_prompt_vs_activation_cluster_ari_k7": 0.11138295654248563,
+    "no_label_prompt_vs_activation_cluster_ari_k7": 0.12983126357017596,
+    "original_vs_no_label_distance_correlation": 0.9560896844971964,
+    "original_vs_no_label_nn_preservation": 0.8581818181818182
+  },
+  "distance_correlations": [
+    {
+      "space_a": "role_name",
+      "space_b": "role_name_description",
+      "distance_correlation": 0.7957583576715398
+    },
+    {
+      "space_a": "role_name",
+      "space_b": "original_prompt",
+      "distance_correlation": 0.8104324352795143
+    },
+    {
+      "space_a": "role_name",
+      "space_b": "no_label_prompt",
+      "distance_correlation": 0.6713938804875279
+    },
+    {
+      "space_a": "role_name_description",
+      "space_b": "original_prompt",
+      "distance_correlation": 0.7003491555061377
+    },
+    {
+      "space_a": "role_name_description",
+      "space_b": "no_label_prompt",
+      "distance_correlation": 0.6100489754277225
+    },
+    {
+      "space_a": "original_prompt",
+      "space_b": "no_label_prompt",
+      "distance_correlation": 0.9560896844971964
+    }
+  ],
+  "nearest_neighbor_preservation": {
+    "role_name__role_name_description": 0.49454545454545457,
+    "role_name__original_prompt": 0.5963636363636363,
+    "role_name__no_label_prompt": 0.5054545454545455,
+    "role_name_description__original_prompt": 0.3890909090909091,
+    "role_name_description__no_label_prompt": 0.33454545454545453,
+    "original_prompt__no_label_prompt": 0.8581818181818182
+  },
+  "cluster_agreement": {
+    "role_name__role_name_description__k5": {
+      "ari": 0.04055957267318791,
+      "nmi": 0.06619761910940199
+    },
+    "role_name__original_prompt__k5": {
+      "ari": 0.010616667845517864,
+      "nmi": 0.029395272124239643
+    },
+    "role_name__no_label_prompt__k5": {
+      "ari": 0.013921498312983773,
+      "nmi": 0.034375134023967566
+    },
+    "role_name_description__original_prompt__k5": {
+      "ari": 0.04460552045934739,
+      "nmi": 0.08647147435382617
+    },
+    "role_name_description__no_label_prompt__k5": {
+      "ari": 0.04484725126795075,
+      "nmi": 0.08728106752597686
+    },
+    "original_prompt__no_label_prompt__k5": {
+      "ari": 0.18486589774682577,
+      "nmi": 0.2544568828213604
+    },
+    "role_name__role_name_description__k7": {
+      "ari": 0.060161422064312575,
+      "nmi": 0.13419431959202768
+    },
+    "role_name__original_prompt__k7": {
+      "ari": 0.03286462562008462,
+      "nmi": 0.08934372230915703
+    },
+    "role_name__no_label_prompt__k7": {
+      "ari": 0.023490651842574498,
+      "nmi": 0.08425802203623502
+    },
+    "role_name_description__original_prompt__k7": {
+      "ari": 0.0644967852508728,
+      "nmi": 0.15850420162888165
+    },
+    "role_name_description__no_label_prompt__k7": {
+      "ari": 0.05252828664670682,
+      "nmi": 0.14367214913258586
+    },
+    "original_prompt__no_label_prompt__k7": {
+      "ari": 0.22390364550187442,
+      "nmi": 0.30551296321434723
+    },
+    "role_name__role_name_description__k10": {
+      "ari": 0.0802235059856774,
+      "nmi": 0.2239693014493719
+    },
+    "role_name__original_prompt__k10": {
+      "ari": 0.0649600369644184,
+      "nmi": 0.19611460372330894
+    },
+    "role_name__no_label_prompt__k10": {
+      "ari": 0.030896476302640776,
+      "nmi": 0.16780682375643194
+    },
+    "role_name_description__original_prompt__k10": {
+      "ari": 0.10239554415245515,
+      "nmi": 0.2466210281730758
+    },
+    "role_name_description__no_label_prompt__k10": {
+      "ari": 0.10488064344404989,
+      "nmi": 0.24450304455160746
+    },
+    "original_prompt__no_label_prompt__k10": {
+      "ari": 0.29246697276764566,
+      "nmi": 0.40723813924750724
+    }
+  },
+  "activation_profile_comparisons": {
+    "gemma_cluster_directionality": {
+      "source_path": "research/cluster_analysis/gemma_cluster_directionality.csv",
+      "feature_columns": [
+        "distance_from_centroid",
+        "cos_to_editor",
+        "cos_to_synthesizer",
+        "cos_to_blogger",
+        "cos_to_ancient",
+        "cos_to_trickster",
+        "cos_to_contrarian",
+        "cos_to_podcaster"
+      ],
+      "semantic_distance_correlations": {
+        "role_name": 0.0445434778336093,
+        "role_name_description": 0.08554290543187272,
+        "original_prompt": 0.17153036230810959,
+        "no_label_prompt": 0.2303883956827523
+      }
+    },
+    "qwen_cluster_directionality": {
+      "source_path": "research/cluster_analysis/qwen_cluster_directionality.csv",
+      "feature_columns": [
+        "distance_from_centroid",
+        "cos_to_editor",
+        "cos_to_synthesizer",
+        "cos_to_blogger",
+        "cos_to_ancient",
+        "cos_to_trickster",
+        "cos_to_contrarian",
+        "cos_to_podcaster"
+      ],
+      "semantic_distance_correlations": {
+        "role_name": 0.06300728715957707,
+        "role_name_description": 0.1197377912903968,
+        "original_prompt": 0.20205272699783447,
+        "no_label_prompt": 0.2542791596923609
+      }
+    }
+  },
+  "cluster_semantic_intrinsic": [
+    {
+      "cluster": "editorial",
+      "n_roles": 5,
+      "original_within_cosine_mean": 0.3375086409824931,
+      "no_label_within_cosine_mean": 0.39345145209157073,
+      "original_to_no_label_role_cosine_mean": 0.992642254292053
+    },
+    {
+      "cluster": "trickster_chaos",
+      "n_roles": 7,
+      "original_within_cosine_mean": 0.18019431148001164,
+      "no_label_within_cosine_mean": 0.204997051473285,
+      "original_to_no_label_role_cosine_mean": 0.993519223161931
+    },
+    {
+      "cluster": "combative_iconoclast",
+      "n_roles": 8,
+      "original_within_cosine_mean": 0.1642735995394491,
+      "no_label_within_cosine_mean": 0.18975948906683796,
+      "original_to_no_label_role_cosine_mean": 0.9973245662398215
+    },
+    {
+      "cluster": "grounded_social",
+      "n_roles": 45,
+      "original_within_cosine_mean": 0.1139457703534046,
+      "no_label_within_cosine_mean": 0.15768530739204786,
+      "original_to_no_label_role_cosine_mean": 0.9906726212360684
+    },
+    {
+      "cluster": "other",
+      "n_roles": 22,
+      "original_within_cosine_mean": 0.10527873611563925,
+      "no_label_within_cosine_mean": 0.14854356630086168,
+      "original_to_no_label_role_cosine_mean": 0.9910305320881058
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "n_roles": 61,
+      "original_within_cosine_mean": 0.10032086794929208,
+      "no_label_within_cosine_mean": 0.15197946257392406,
+      "original_to_no_label_role_cosine_mean": 0.9845472957374773
+    },
+    {
+      "cluster": "procedural_professional",
+      "n_roles": 127,
+      "original_within_cosine_mean": 0.08198860571254792,
+      "no_label_within_cosine_mean": 0.14397771660128098,
+      "original_to_no_label_role_cosine_mean": 0.9831809437496448
+    }
+  ],
+  "most_unstable_roles": [
+    {
+      "role": "refugee",
+      "activation_cluster": "grounded_social",
+      "cos_role_name_to_original_prompt": 0.60088728574042,
+      "displacement_role_name_to_original_prompt": 0.39911271425957995,
+      "cos_role_name_description_to_original_prompt": 0.5344564454531517,
+      "displacement_role_name_description_to_original_prompt": 0.46554355454684826,
+      "cos_original_prompt_to_no_label_prompt": 0.9999524606069262,
+      "displacement_original_prompt_to_no_label_prompt": 4.753939307378108e-05,
+      "cos_role_name_to_no_label_prompt": 0.5930646407712667,
+      "displacement_role_name_to_no_label_prompt": 0.40693535922873325,
+      "nn_role_name": "widow",
+      "nn_original_prompt": "immigrant",
+      "nn_no_label_prompt": "immigrant",
+      "nn_all_same": false
+    },
+    {
+      "role": "spirit",
+      "activation_cluster": "mythic_spiritual",
+      "cos_role_name_to_original_prompt": 0.6695966505816142,
+      "displacement_role_name_to_original_prompt": 0.3304033494183858,
+      "cos_role_name_description_to_original_prompt": 0.9297137150617693,
+      "displacement_role_name_description_to_original_prompt": 0.07028628493823075,
+      "cos_original_prompt_to_no_label_prompt": 0.9679120849198957,
+      "displacement_original_prompt_to_no_label_prompt": 0.032087915080104334,
+      "cos_role_name_to_no_label_prompt": 0.4882189473266268,
+      "displacement_role_name_to_no_label_prompt": 0.5117810526733733,
+      "nn_role_name": "zeitgeist",
+      "nn_original_prompt": "zeitgeist",
+      "nn_no_label_prompt": "void",
+      "nn_all_same": false
+    },
+    {
+      "role": "scientist",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.7729654055416693,
+      "displacement_role_name_to_original_prompt": 0.22703459445833074,
+      "cos_role_name_description_to_original_prompt": 0.804899580472856,
+      "displacement_role_name_description_to_original_prompt": 0.19510041952714396,
+      "cos_original_prompt_to_no_label_prompt": 0.8952855602314866,
+      "displacement_original_prompt_to_no_label_prompt": 0.10471443976851336,
+      "cos_role_name_to_no_label_prompt": 0.41509563190371274,
+      "displacement_role_name_to_no_label_prompt": 0.5849043680962873,
+      "nn_role_name": "biologist",
+      "nn_original_prompt": "researcher",
+      "nn_no_label_prompt": "detective",
+      "nn_all_same": false
+    },
+    {
+      "role": "pharmacist",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.7319785027468105,
+      "displacement_role_name_to_original_prompt": 0.26802149725318947,
+      "cos_role_name_description_to_original_prompt": 0.46200286371111565,
+      "displacement_role_name_description_to_original_prompt": 0.5379971362888843,
+      "cos_original_prompt_to_no_label_prompt": 0.9391312569499343,
+      "displacement_original_prompt_to_no_label_prompt": 0.06086874305006573,
+      "cos_role_name_to_no_label_prompt": 0.4666215463177884,
+      "displacement_role_name_to_no_label_prompt": 0.5333784536822116,
+      "nn_role_name": "specialist",
+      "nn_original_prompt": "lawyer",
+      "nn_no_label_prompt": "navigator",
+      "nn_all_same": false
+    },
+    {
+      "role": "addict",
+      "activation_cluster": "grounded_social",
+      "cos_role_name_to_original_prompt": 0.7374228647783344,
+      "displacement_role_name_to_original_prompt": 0.2625771352216656,
+      "cos_role_name_description_to_original_prompt": 0.7986799603157402,
+      "displacement_role_name_description_to_original_prompt": 0.20132003968425982,
+      "cos_original_prompt_to_no_label_prompt": 1.0,
+      "displacement_original_prompt_to_no_label_prompt": 0.0,
+      "cos_role_name_to_no_label_prompt": 0.7374228647783346,
+      "displacement_role_name_to_no_label_prompt": 0.26257713522166537,
+      "nn_role_name": "cosmopolitan",
+      "nn_original_prompt": "provincial",
+      "nn_no_label_prompt": "stoic",
+      "nn_all_same": false
+    },
+    {
+      "role": "student",
+      "activation_cluster": "grounded_social",
+      "cos_role_name_to_original_prompt": 0.7927961350336272,
+      "displacement_role_name_to_original_prompt": 0.20720386496637277,
+      "cos_role_name_description_to_original_prompt": 0.8924524396657613,
+      "displacement_role_name_description_to_original_prompt": 0.10754756033423873,
+      "cos_original_prompt_to_no_label_prompt": 0.9686511937470383,
+      "displacement_original_prompt_to_no_label_prompt": 0.03134880625296166,
+      "cos_role_name_to_no_label_prompt": 0.6570740541674603,
+      "displacement_role_name_to_no_label_prompt": 0.34292594583253966,
+      "nn_role_name": "adolescent",
+      "nn_original_prompt": "graduate",
+      "nn_no_label_prompt": "graduate",
+      "nn_all_same": false
+    },
+    {
+      "role": "specialist",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.9291279614762951,
+      "displacement_role_name_to_original_prompt": 0.07087203852370494,
+      "cos_role_name_description_to_original_prompt": 0.9143056633976024,
+      "displacement_role_name_description_to_original_prompt": 0.08569433660239756,
+      "cos_original_prompt_to_no_label_prompt": 0.8408667054614539,
+      "displacement_original_prompt_to_no_label_prompt": 0.15913329453854608,
+      "cos_role_name_to_no_label_prompt": 0.5826217085798554,
+      "displacement_role_name_to_no_label_prompt": 0.4173782914201446,
+      "nn_role_name": "pharmacist",
+      "nn_original_prompt": "pharmacist",
+      "nn_no_label_prompt": "engineer",
+      "nn_all_same": false
+    },
+    {
+      "role": "ancient",
+      "activation_cluster": "mythic_spiritual",
+      "cos_role_name_to_original_prompt": 0.5308205435720414,
+      "displacement_role_name_to_original_prompt": 0.46917945642795855,
+      "cos_role_name_description_to_original_prompt": 0.9568596423585191,
+      "displacement_role_name_description_to_original_prompt": 0.04314035764148094,
+      "cos_original_prompt_to_no_label_prompt": 0.9982469256631437,
+      "displacement_original_prompt_to_no_label_prompt": 0.0017530743368563417,
+      "cos_role_name_to_no_label_prompt": 0.49866976581931877,
+      "displacement_role_name_to_no_label_prompt": 0.5013302341806812,
+      "nn_role_name": "leviathan",
+      "nn_original_prompt": "leviathan",
+      "nn_no_label_prompt": "leviathan",
+      "nn_all_same": true
+    },
+    {
+      "role": "researcher",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.806768287721838,
+      "displacement_role_name_to_original_prompt": 0.19323171227816205,
+      "cos_role_name_description_to_original_prompt": 0.5706319896742432,
+      "displacement_role_name_description_to_original_prompt": 0.4293680103257568,
+      "cos_original_prompt_to_no_label_prompt": 0.9736477909046916,
+      "displacement_original_prompt_to_no_label_prompt": 0.026352209095308443,
+      "cos_role_name_to_no_label_prompt": 0.6642752528480622,
+      "displacement_role_name_to_no_label_prompt": 0.3357247471519378,
+      "nn_role_name": "scientist",
+      "nn_original_prompt": "analyst",
+      "nn_no_label_prompt": "analyst",
+      "nn_all_same": false
+    },
+    {
+      "role": "guide",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.7992277726835335,
+      "displacement_role_name_to_original_prompt": 0.2007722273164665,
+      "cos_role_name_description_to_original_prompt": 0.9304774176133389,
+      "displacement_role_name_description_to_original_prompt": 0.06952258238666109,
+      "cos_original_prompt_to_no_label_prompt": 0.9833410342760642,
+      "displacement_original_prompt_to_no_label_prompt": 0.01665896572393577,
+      "cos_role_name_to_no_label_prompt": 0.6815482977968119,
+      "displacement_role_name_to_no_label_prompt": 0.3184517022031881,
+      "nn_role_name": "therapist",
+      "nn_original_prompt": "coach",
+      "nn_no_label_prompt": "coach",
+      "nn_all_same": false
+    },
+    {
+      "role": "analyst",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.8021714492519376,
+      "displacement_role_name_to_original_prompt": 0.19782855074806238,
+      "cos_role_name_description_to_original_prompt": 0.5169076724278321,
+      "displacement_role_name_description_to_original_prompt": 0.4830923275721679,
+      "cos_original_prompt_to_no_label_prompt": 0.982869456970299,
+      "displacement_original_prompt_to_no_label_prompt": 0.017130543029700962,
+      "cos_role_name_to_no_label_prompt": 0.6868422313125191,
+      "displacement_role_name_to_no_label_prompt": 0.3131577686874809,
+      "nn_role_name": "statistician",
+      "nn_original_prompt": "researcher",
+      "nn_no_label_prompt": "researcher",
+      "nn_all_same": false
+    },
+    {
+      "role": "hybrid",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.7996056058427975,
+      "displacement_role_name_to_original_prompt": 0.2003943941572025,
+      "cos_role_name_description_to_original_prompt": 0.9367531174482756,
+      "displacement_role_name_description_to_original_prompt": 0.06324688255172439,
+      "cos_original_prompt_to_no_label_prompt": 0.9947713873206625,
+      "displacement_original_prompt_to_no_label_prompt": 0.0052286126793374965,
+      "cos_role_name_to_no_label_prompt": 0.7615965033543955,
+      "displacement_role_name_to_no_label_prompt": 0.23840349664560445,
+      "nn_role_name": "chimera",
+      "nn_original_prompt": "cosmopolitan",
+      "nn_no_label_prompt": "cosmopolitan",
+      "nn_all_same": false
+    },
+    {
+      "role": "wanderer",
+      "activation_cluster": "mythic_spiritual",
+      "cos_role_name_to_original_prompt": 0.8659433888713465,
+      "displacement_role_name_to_original_prompt": 0.13405661112865352,
+      "cos_role_name_description_to_original_prompt": 0.8292513385932008,
+      "displacement_role_name_description_to_original_prompt": 0.17074866140679923,
+      "cos_original_prompt_to_no_label_prompt": 0.9345719711299577,
+      "displacement_original_prompt_to_no_label_prompt": 0.06542802887004229,
+      "cos_role_name_to_no_label_prompt": 0.6687548015607538,
+      "displacement_role_name_to_no_label_prompt": 0.33124519843924616,
+      "nn_role_name": "flaneur",
+      "nn_original_prompt": "pilgrim",
+      "nn_no_label_prompt": "pilgrim",
+      "nn_all_same": false
+    },
+    {
+      "role": "librarian",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.8382569398814221,
+      "displacement_role_name_to_original_prompt": 0.16174306011857786,
+      "cos_role_name_description_to_original_prompt": 0.5749765604269939,
+      "displacement_role_name_description_to_original_prompt": 0.42502343957300615,
+      "cos_original_prompt_to_no_label_prompt": 0.9740107252433697,
+      "displacement_original_prompt_to_no_label_prompt": 0.025989274756630265,
+      "cos_role_name_to_no_label_prompt": 0.6963917229458695,
+      "displacement_role_name_to_no_label_prompt": 0.3036082770541305,
+      "nn_role_name": "specialist",
+      "nn_original_prompt": "gossip",
+      "nn_no_label_prompt": "gossip",
+      "nn_all_same": false
+    },
+    {
+      "role": "scholar",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.83688467637495,
+      "displacement_role_name_to_original_prompt": 0.16311532362505,
+      "cos_role_name_description_to_original_prompt": 0.9648697775887454,
+      "displacement_role_name_description_to_original_prompt": 0.03513022241125463,
+      "cos_original_prompt_to_no_label_prompt": 0.9758310594217094,
+      "displacement_original_prompt_to_no_label_prompt": 0.024168940578290554,
+      "cos_role_name_to_no_label_prompt": 0.7058097260976408,
+      "displacement_role_name_to_no_label_prompt": 0.2941902739023592,
+      "nn_role_name": "archaeologist",
+      "nn_original_prompt": "archaeologist",
+      "nn_no_label_prompt": "scientist",
+      "nn_all_same": false
+    },
+    {
+      "role": "curator",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.8546949168142786,
+      "displacement_role_name_to_original_prompt": 0.14530508318572144,
+      "cos_role_name_description_to_original_prompt": 0.823437649123818,
+      "displacement_role_name_description_to_original_prompt": 0.176562350876182,
+      "cos_original_prompt_to_no_label_prompt": 0.9642035258685538,
+      "displacement_original_prompt_to_no_label_prompt": 0.035796474131446154,
+      "cos_role_name_to_no_label_prompt": 0.6886070229382628,
+      "displacement_role_name_to_no_label_prompt": 0.3113929770617372,
+      "nn_role_name": "collector",
+      "nn_original_prompt": "collector",
+      "nn_no_label_prompt": "presenter",
+      "nn_all_same": false
+    },
+    {
+      "role": "alien",
+      "activation_cluster": "mythic_spiritual",
+      "cos_role_name_to_original_prompt": 0.8472193570531608,
+      "displacement_role_name_to_original_prompt": 0.15278064294683924,
+      "cos_role_name_description_to_original_prompt": 0.8651118194653783,
+      "displacement_role_name_description_to_original_prompt": 0.1348881805346217,
+      "cos_original_prompt_to_no_label_prompt": 0.9808074893737236,
+      "displacement_original_prompt_to_no_label_prompt": 0.01919251062627636,
+      "cos_role_name_to_no_label_prompt": 0.7957785633287979,
+      "displacement_role_name_to_no_label_prompt": 0.20422143667120207,
+      "nn_role_name": "eldritch",
+      "nn_original_prompt": "cyborg",
+      "nn_no_label_prompt": "cyborg",
+      "nn_all_same": false
+    },
+    {
+      "role": "debugger",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.8605562153440642,
+      "displacement_role_name_to_original_prompt": 0.13944378465593577,
+      "cos_role_name_description_to_original_prompt": 0.7377762484485312,
+      "displacement_role_name_description_to_original_prompt": 0.2622237515514688,
+      "cos_original_prompt_to_no_label_prompt": 0.9709094553209696,
+      "displacement_original_prompt_to_no_label_prompt": 0.029090544679030383,
+      "cos_role_name_to_no_label_prompt": 0.7276054098615192,
+      "displacement_role_name_to_no_label_prompt": 0.2723945901384808,
+      "nn_role_name": "mechanic",
+      "nn_original_prompt": "mechanic",
+      "nn_no_label_prompt": "engineer",
+      "nn_all_same": false
+    },
+    {
+      "role": "guardian",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.8939758448158208,
+      "displacement_role_name_to_original_prompt": 0.10602415518417918,
+      "cos_role_name_description_to_original_prompt": 0.952603127759942,
+      "displacement_role_name_description_to_original_prompt": 0.04739687224005795,
+      "cos_original_prompt_to_no_label_prompt": 0.93968759937572,
+      "displacement_original_prompt_to_no_label_prompt": 0.060312400624280005,
+      "cos_role_name_to_no_label_prompt": 0.71592350731962,
+      "displacement_role_name_to_no_label_prompt": 0.28407649268038004,
+      "nn_role_name": "angel",
+      "nn_original_prompt": "angel",
+      "nn_no_label_prompt": "martyr",
+      "nn_all_same": false
+    },
+    {
+      "role": "cosmopolitan",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.8611661199269559,
+      "displacement_role_name_to_original_prompt": 0.1388338800730441,
+      "cos_role_name_description_to_original_prompt": 0.8597109609696016,
+      "displacement_role_name_description_to_original_prompt": 0.14028903903039835,
+      "cos_original_prompt_to_no_label_prompt": 0.9735661898715007,
+      "displacement_original_prompt_to_no_label_prompt": 0.026433810128499324,
+      "cos_role_name_to_no_label_prompt": 0.780286438381309,
+      "displacement_role_name_to_no_label_prompt": 0.21971356161869104,
+      "nn_role_name": "provincial",
+      "nn_original_prompt": "hybrid",
+      "nn_no_label_prompt": "hybrid",
+      "nn_all_same": false
+    },
+    {
+      "role": "merchant",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.8602549392656333,
+      "displacement_role_name_to_original_prompt": 0.13974506073436666,
+      "cos_role_name_description_to_original_prompt": 0.5437238880733715,
+      "displacement_role_name_description_to_original_prompt": 0.45627611192662854,
+      "cos_original_prompt_to_no_label_prompt": 0.9822694318648987,
+      "displacement_original_prompt_to_no_label_prompt": 0.01773056813510132,
+      "cos_role_name_to_no_label_prompt": 0.762460397025273,
+      "displacement_role_name_to_no_label_prompt": 0.23753960297472698,
+      "nn_role_name": "symbiont",
+      "nn_original_prompt": "entrepreneur",
+      "nn_no_label_prompt": "entrepreneur",
+      "nn_all_same": false
+    },
+    {
+      "role": "consultant",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.8569575186995799,
+      "displacement_role_name_to_original_prompt": 0.14304248130042008,
+      "cos_role_name_description_to_original_prompt": 0.6955214762617564,
+      "displacement_role_name_description_to_original_prompt": 0.3044785237382436,
+      "cos_original_prompt_to_no_label_prompt": 0.9859045730844294,
+      "displacement_original_prompt_to_no_label_prompt": 0.014095426915570641,
+      "cos_role_name_to_no_label_prompt": 0.7610782929125098,
+      "displacement_role_name_to_no_label_prompt": 0.23892170708749016,
+      "nn_role_name": "reviewer",
+      "nn_original_prompt": "economist",
+      "nn_no_label_prompt": "economist",
+      "nn_all_same": false
+    },
+    {
+      "role": "mentor",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.8608230537010053,
+      "displacement_role_name_to_original_prompt": 0.13917694629899469,
+      "cos_role_name_description_to_original_prompt": 0.7281061859818397,
+      "displacement_role_name_description_to_original_prompt": 0.27189381401816026,
+      "cos_original_prompt_to_no_label_prompt": 0.9828057193616384,
+      "displacement_original_prompt_to_no_label_prompt": 0.017194280638361592,
+      "cos_role_name_to_no_label_prompt": 0.7582723180546814,
+      "displacement_role_name_to_no_label_prompt": 0.24172768194531857,
+      "nn_role_name": "coach",
+      "nn_original_prompt": "coach",
+      "nn_no_label_prompt": "marketer",
+      "nn_all_same": false
+    },
+    {
+      "role": "artisan",
+      "activation_cluster": "mythic_spiritual",
+      "cos_role_name_to_original_prompt": 0.8715602252738543,
+      "displacement_role_name_to_original_prompt": 0.12843977472614565,
+      "cos_role_name_description_to_original_prompt": 0.5803376327043717,
+      "displacement_role_name_description_to_original_prompt": 0.41966236729562834,
+      "cos_original_prompt_to_no_label_prompt": 0.9794874747560627,
+      "displacement_original_prompt_to_no_label_prompt": 0.02051252524393732,
+      "cos_role_name_to_no_label_prompt": 0.7622036818941375,
+      "displacement_role_name_to_no_label_prompt": 0.23779631810586255,
+      "nn_role_name": "perfectionist",
+      "nn_original_prompt": "purist",
+      "nn_no_label_prompt": "conservator",
+      "nn_all_same": false
+    },
+    {
+      "role": "coordinator",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.9051401306654113,
+      "displacement_role_name_to_original_prompt": 0.09485986933458868,
+      "cos_role_name_description_to_original_prompt": 0.8946605673724274,
+      "displacement_role_name_description_to_original_prompt": 0.10533943262757262,
+      "cos_original_prompt_to_no_label_prompt": 0.9468287828647632,
+      "displacement_original_prompt_to_no_label_prompt": 0.05317121713523676,
+      "cos_role_name_to_no_label_prompt": 0.7269404286151088,
+      "displacement_role_name_to_no_label_prompt": 0.27305957138489123,
+      "nn_role_name": "organizer",
+      "nn_original_prompt": "scheduler",
+      "nn_no_label_prompt": "scheduler",
+      "nn_all_same": false
+    },
+    {
+      "role": "hermit",
+      "activation_cluster": "mythic_spiritual",
+      "cos_role_name_to_original_prompt": 0.8716311954250122,
+      "displacement_role_name_to_original_prompt": 0.12836880457498778,
+      "cos_role_name_description_to_original_prompt": 0.7476404442146446,
+      "displacement_role_name_description_to_original_prompt": 0.2523595557853554,
+      "cos_original_prompt_to_no_label_prompt": 0.9816394226833285,
+      "displacement_original_prompt_to_no_label_prompt": 0.01836057731667151,
+      "cos_role_name_to_no_label_prompt": 0.7645361111559529,
+      "displacement_role_name_to_no_label_prompt": 0.23546388884404712,
+      "nn_role_name": "addict",
+      "nn_original_prompt": "elder",
+      "nn_no_label_prompt": "elder",
+      "nn_all_same": false
+    },
+    {
+      "role": "architect",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.9092991668646215,
+      "displacement_role_name_to_original_prompt": 0.09070083313537847,
+      "cos_role_name_description_to_original_prompt": 0.9034326695318178,
+      "displacement_role_name_description_to_original_prompt": 0.09656733046818222,
+      "cos_original_prompt_to_no_label_prompt": 0.9446828963855168,
+      "displacement_original_prompt_to_no_label_prompt": 0.055317103614483165,
+      "cos_role_name_to_no_label_prompt": 0.7300585980683026,
+      "displacement_role_name_to_no_label_prompt": 0.26994140193169736,
+      "nn_role_name": "composer",
+      "nn_original_prompt": "cartographer",
+      "nn_no_label_prompt": "cartographer",
+      "nn_all_same": false
+    },
+    {
+      "role": "revolutionary",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.8829213690974835,
+      "displacement_role_name_to_original_prompt": 0.11707863090251647,
+      "cos_role_name_description_to_original_prompt": 0.7897343183623848,
+      "displacement_role_name_description_to_original_prompt": 0.21026568163761516,
+      "cos_original_prompt_to_no_label_prompt": 0.9729123952479494,
+      "displacement_original_prompt_to_no_label_prompt": 0.02708760475205063,
+      "cos_role_name_to_no_label_prompt": 0.7706467596505125,
+      "displacement_role_name_to_no_label_prompt": 0.22935324034948745,
+      "nn_role_name": "rebel",
+      "nn_original_prompt": "anarchist",
+      "nn_no_label_prompt": "anarchist",
+      "nn_all_same": false
+    },
+    {
+      "role": "physicist",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.8721192441629027,
+      "displacement_role_name_to_original_prompt": 0.12788075583709735,
+      "cos_role_name_description_to_original_prompt": 0.6500275175701185,
+      "displacement_role_name_description_to_original_prompt": 0.34997248242988155,
+      "cos_original_prompt_to_no_label_prompt": 0.9838684531781621,
+      "displacement_original_prompt_to_no_label_prompt": 0.016131546821837928,
+      "cos_role_name_to_no_label_prompt": 0.7726237484286669,
+      "displacement_role_name_to_no_label_prompt": 0.22737625157133312,
+      "nn_role_name": "scientist",
+      "nn_original_prompt": "mathematician",
+      "nn_no_label_prompt": "mathematician",
+      "nn_all_same": false
+    },
+    {
+      "role": "networker",
+      "activation_cluster": "procedural_professional",
+      "cos_role_name_to_original_prompt": 0.878755165160599,
+      "displacement_role_name_to_original_prompt": 0.12124483483940096,
+      "cos_role_name_description_to_original_prompt": 0.7866755900374492,
+      "displacement_role_name_description_to_original_prompt": 0.21332440996255075,
+      "cos_original_prompt_to_no_label_prompt": 0.9787794442309596,
+      "displacement_original_prompt_to_no_label_prompt": 0.02122055576904036,
+      "cos_role_name_to_no_label_prompt": 0.7660582451079748,
+      "displacement_role_name_to_no_label_prompt": 0.23394175489202518,
+      "nn_role_name": "loner",
+      "nn_original_prompt": "merchant",
+      "nn_no_label_prompt": "merchant",
+      "nn_all_same": false
+    }
+  ],
+  "analysis_answers": {
+    "1_role_names_alone": "Role names alone recover weak but nonzero topology relative to activation labels; k=7 ARI is 0.010. Name-only geometry is much thinner than prompt geometry.",
+    "2_original_prompts_vs_role_names": "Original prompts recover more structure than role names alone when compared to activation centroid-profile distances and richer nearest-neighbor neighborhoods; adding role descriptions also improves over names alone.",
+    "3_no_label_close_to_original": "No-label prompt geometry remains close to original prompt geometry: distance correlation 0.956 and nearest-neighbor preservation 0.858.",
+    "4_best_predictor_of_activation": "Best semantic predictor of available Gemma activation centroid-profile distances is no_label_prompt with correlation 0.230.",
+    "5_seven_clusters_recoverable": "Seven-cluster structures are only partially recoverable from semantic space. Prompt-space k=7 clusters have low-to-modest ARI against activation labels, so semantic topology and activation clustering overlap but are not identical.",
+    "6_most_unstable_roles": "See `role_displacement_metrics.csv` and `most_unstable_roles` in the summary JSON; instability is concentrated where label removal or name-to-prompt expansion changes nearest neighbors.",
+    "7_semantically_intrinsic_clusters": "Clusters with higher within-cluster prompt cosine are more semantically intrinsic; see `cluster_semantic_intrinsic` for per-cluster values. Low values suggest activation-specific or heterogeneous organization.",
+    "8_assistant_vs_theatrical": "Assistant-adjacent roles are semantically explicit in prompts but can be behaviorally low-yield in activation extraction; theatrical roles tend to remain semantically vivid after label removal. This supports an interaction between semantic priors and model-specific assistant-basin organization.",
+    "9_activation_geometry_interpretation": "Available evidence supports partial preservation plus reorganization: activation geometry preserves some semantic topology, but it sharpens, compresses, or reorganizes it into model-specific cluster structure rather than simply copying prompt semantics."
+  }
+}

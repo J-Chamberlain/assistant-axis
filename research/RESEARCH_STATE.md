@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-27
-**Last commit:** 15a466e
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; no-label prompt ablation and semantic audit are complete under `research/assistant_axis_methodology/no_label_prompt_ablation/`
+**Last commit:** ae28112
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-vs-activation geometry comparison is complete under `research/assistant_axis_methodology/semantic_vs_activation_geometry/`
 
 ---
 
@@ -259,6 +259,15 @@
 - Hard k-means cluster assignments were less stable after label removal: original-vs-no-label ARI was 0.197 at k=5, 0.153 at k=7, and 0.181 at k=10
 - Interpretation: explicit lexical labels contribute materially to discrete prompt-space organization, but much of the continuous semantic structure survives from behavioral descriptors; activation-space survival remains untested
 
+### Semantic vs Activation Geometry Comparison (2026-05-27, confirmed)
+
+- Compared role-name semantic geometry, original label-exposed prompt geometry, no-label prompt geometry, and available activation-space references from `visualizations/full_ranking.csv` plus Gemma/Qwen centroid-profile directionality CSVs
+- Role names alone weakly recover activation cluster labels at k=7: ARI 0.010; role names plus descriptions improve slightly to ARI 0.023
+- Original prompts recover more activation-label structure than role names alone, with k=7 ARI 0.111; no-label prompts are similar or slightly higher at k=7 ARI 0.130
+- Original and no-label prompt spaces remain close: distance correlation 0.956 and nearest-neighbor preservation 0.858
+- No-label prompt distances best predict available activation centroid-profile distances, but only modestly: Gemma correlation 0.230 and Qwen correlation 0.254
+- Interpretation: activation geometry preserves some semantic topology but also reorganizes it into model-specific structure; it should not be described as "just semantics"
+
 ---
 
 ## 3. CURRENT STATE
@@ -275,16 +284,17 @@
 
 **No-label ablation state:** The no-label prompt-ablation dataset and semantic comparison are complete under `research/assistant_axis_methodology/no_label_prompt_ablation/`. Key outputs are `no_label_role_prompts.jsonl`, `no_label_prompt_ablation_validation.md`, `original_vs_no_label_semantic_comparison.md`, and `no_label_prompt_ablation_report.md`. The next recommended step is a small activation-space no-label stress test, not a full-scale pod run.
 
+**Semantic-vs-activation state:** The three-way semantic-vs-activation comparison is complete under `research/assistant_axis_methodology/semantic_vs_activation_geometry/`, with interpretation note at `research/assistant_axis_methodology/semantic_topology_interpretation_note.md`. The analysis supports partial preservation plus activation-space reorganization: prompt semantics predict activation references weakly to modestly, and no-label prompt topology remains close to original prompt topology.
+
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Created and ran `research/assistant_axis_methodology/scripts/rewrite_role_prompts_no_label_codex_gpt55.py` against the canonical `data/roles/instructions/*.json` source.
-**Completed this session:** Created the no-label prompt-ablation dataset at `research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl`.
-**Completed this session:** Completed validation and offline TF-IDF/SVD semantic comparison for original versus no-label prompt spaces.
-**Completed this session:** Wrote `research/assistant_axis_methodology/no_label_prompt_ablation/no_label_prompt_ablation_report.md` and updated methodology ledgers with the result.
+**Completed this session:** Created and ran `research/assistant_axis_methodology/scripts/compare_semantic_vs_activation_geometry.py` for role-name, original-prompt, no-label prompt, and activation-reference comparisons.
+**Completed this session:** Saved semantic-vs-activation geometry outputs under `research/assistant_axis_methodology/semantic_vs_activation_geometry/`.
+**Completed this session:** Wrote `research/assistant_axis_methodology/semantic_topology_interpretation_note.md` and updated methodology ledgers with the result.
 **Next step:** Run a small activation-space no-label stress test using a mixed role set before scaling; separately design a revised editor anchoring methodology before further editor rollout generation.
-**Last commit before this session:** 15a466e
+**Last commit before this session:** ae28112
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

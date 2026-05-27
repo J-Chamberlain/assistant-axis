@@ -66,6 +66,10 @@ The Lu et al. role system prompts contain extensive direct identity-label exposu
 
 A deterministic no-label prompt-ablation dataset now exists for all 1375 Lu et al. role prompts. Validation found zero remaining normalized target-label exposure, median character length ratio 0.842, median lexical Jaccard 0.714, and no over-flattening flags. Offline TF-IDF/SVD comparison found continuous prompt-space topology is largely preserved after label removal, with role-level SVD cosine median 0.998, nearest-neighbor preservation 0.924, and pairwise distance correlation 0.985, while hard k-means cluster assignments are much less stable.
 
+### Semantic vs Activation Geometry
+
+Three-way comparison of role-name, original-prompt, no-label prompt, and available activation-reference geometry finds that semantic topology is preserved strongly between original and no-label prompt spaces, but activation cluster structure is only partially recoverable from semantics. At k=7, ARI against activation labels is 0.010 for role names, 0.023 for role names plus descriptions, 0.111 for original prompts, and 0.130 for no-label prompts. No-label prompt distances best predict available activation centroid-profile distances, but correlations remain modest: 0.230 for Gemma and 0.254 for Qwen.
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

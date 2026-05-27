@@ -1,0 +1,8016 @@
+{
+  "space": "original_prompt",
+  "n_roles": 275,
+  "method": "tfidf_svd",
+  "nearest_neighbors": {
+    "aberration": [
+      {
+        "role": "void",
+        "cosine": 0.6005911660707893
+      },
+      {
+        "role": "philosopher",
+        "cosine": 0.5468894048212793
+      },
+      {
+        "role": "hoarder",
+        "cosine": 0.4993325980424982
+      },
+      {
+        "role": "idealist",
+        "cosine": 0.4375070616290086
+      },
+      {
+        "role": "eldritch",
+        "cosine": 0.43593696761889505
+      }
+    ],
+    "absurdist": [
+      {
+        "role": "philosopher",
+        "cosine": 0.6987872305383798
+      },
+      {
+        "role": "trickster",
+        "cosine": 0.5385274925101161
+      },
+      {
+        "role": "sage",
+        "cosine": 0.5332212343283693
+      },
+      {
+        "role": "comedian",
+        "cosine": 0.5225293104567694
+      },
+      {
+        "role": "fool",
+        "cosine": 0.4330250866863983
+      }
+    ],
+    "accountant": [
+      {
+        "role": "economist",
+        "cosine": 0.8210432073972598
+      },
+      {
+        "role": "statistician",
+        "cosine": 0.7110261469760997
+      },
+      {
+        "role": "auditor",
+        "cosine": 0.5858305848927877
+      },
+      {
+        "role": "consultant",
+        "cosine": 0.47946083472151685
+      },
+      {
+        "role": "analyst",
+        "cosine": 0.45916042943997243
+      }
+    ],
+    "activist": [
+      {
+        "role": "sociologist",
+        "cosine": 0.6144197363468763
+      },
+      {
+        "role": "loner",
+        "cosine": 0.5904005938419683
+      },
+      {
+        "role": "influencer",
+        "cosine": 0.4952997255186562
+      },
+      {
+        "role": "bartender",
+        "cosine": 0.4842925978414107
+      },
+      {
+        "role": "revolutionary",
+        "cosine": 0.4565024953297446
+      }
+    ],
+    "actor": [
+      {
+        "role": "shapeshifter",
+        "cosine": 0.8283258248414256
+      },
+      {
+        "role": "interpreter",
+        "cosine": 0.6879906952857229
+      },
+      {
+        "role": "translator",
+        "cosine": 0.5487284025552045
+      },
+      {
+        "role": "fixer",
+        "cosine": 0.5042546554180207
+      },
+      {
+        "role": "nomad",
+        "cosine": 0.46914732088201044
+      }
+    ],
+    "addict": [
+      {
+        "role": "provincial",
+        "cosine": 0.5585640840953869
+      },
+      {
+        "role": "exile",
+        "cosine": 0.5454768219852164
+      },
+      {
+        "role": "prisoner",
+        "cosine": 0.5377703881462673
+      },
+      {
+        "role": "stoic",
+        "cosine": 0.531117664889447
+      },
+      {
+        "role": "cosmopolitan",
+        "cosine": 0.5122414447330743
+      }
+    ],
+    "adolescent": [
+      {
+        "role": "teenager",
+        "cosine": 0.9896915814415648
+      },
+      {
+        "role": "parent",
+        "cosine": 0.5005756646306344
+      },
+      {
+        "role": "grandparent",
+        "cosine": 0.40397167752653257
+      },
+      {
+        "role": "naturalist",
+        "cosine": 0.33061022880374824
+      },
+      {
+        "role": "programmer",
+        "cosine": 0.3305474926963192
+      }
+    ],
+    "advocate": [
+      {
+        "role": "devils_advocate",
+        "cosine": 0.8485125640247043
+      },
+      {
+        "role": "contrarian",
+        "cosine": 0.6324796987590037
+      },
+      {
+        "role": "activist",
+        "cosine": 0.3968899028811254
+      },
+      {
+        "role": "vegan",
+        "cosine": 0.28190247132706836
+      },
+      {
+        "role": "idealist",
+        "cosine": 0.2729843015475386
+      }
+    ],
+    "alien": [
+      {
+        "role": "cyborg",
+        "cosine": 0.7574491467136507
+      },
+      {
+        "role": "demon",
+        "cosine": 0.7434004328157063
+      },
+      {
+        "role": "anthropologist",
+        "cosine": 0.6832202898039424
+      },
+      {
+        "role": "geographer",
+        "cosine": 0.6486987994118616
+      },
+      {
+        "role": "cynic",
+        "cosine": 0.6098072098555665
+      }
+    ],
+    "altruist": [
+      {
+        "role": "martyr",
+        "cosine": 0.9151946052678415
+      },
+      {
+        "role": "narcissist",
+        "cosine": 0.8352431721935133
+      },
+      {
+        "role": "caregiver",
+        "cosine": 0.714216017323046
+      },
+      {
+        "role": "guardian",
+        "cosine": 0.5645088136056403
+      },
+      {
+        "role": "guru",
+        "cosine": 0.4447101094235367
+      }
+    ],
+    "amateur": [
+      {
+        "role": "dilettante",
+        "cosine": 0.7853035577444696
+      },
+      {
+        "role": "student",
+        "cosine": 0.43696702870642046
+      },
+      {
+        "role": "pragmatist",
+        "cosine": 0.41019719018139505
+      },
+      {
+        "role": "romantic",
+        "cosine": 0.38869917505398055
+      },
+      {
+        "role": "generalist",
+        "cosine": 0.37561738806958356
+      }
+    ],
+    "ambassador": [
+      {
+        "role": "emissary",
+        "cosine": 0.6776267891739896
+      },
+      {
+        "role": "mediator",
+        "cosine": 0.6709535092329926
+      },
+      {
+        "role": "negotiator",
+        "cosine": 0.6641884686327335
+      },
+      {
+        "role": "peacekeeper",
+        "cosine": 0.6636029600102391
+      },
+      {
+        "role": "networker",
+        "cosine": 0.44319288279583585
+      }
+    ],
+    "amnesiac": [
+      {
+        "role": "orphan",
+        "cosine": 0.5819982783420025
+      },
+      {
+        "role": "improviser",
+        "cosine": 0.48516398705318725
+      },
+      {
+        "role": "workaholic",
+        "cosine": 0.40594660024796825
+      },
+      {
+        "role": "hoarder",
+        "cosine": 0.3978668043043699
+      },
+      {
+        "role": "graduate",
+        "cosine": 0.39537214251280123
+      }
+    ],
+    "analyst": [
+      {
+        "role": "researcher",
+        "cosine": 0.8599513676895693
+      },
+      {
+        "role": "statistician",
+        "cosine": 0.7698943680341439
+      },
+      {
+        "role": "detective",
+        "cosine": 0.6243252156282211
+      },
+      {
+        "role": "scientist",
+        "cosine": 0.5493807945966456
+      },
+      {
+        "role": "consultant",
+        "cosine": 0.5418845265738904
+      }
+    ],
+    "anarchist": [
+      {
+        "role": "revolutionary",
+        "cosine": 0.7691960150479527
+      },
+      {
+        "role": "destroyer",
+        "cosine": 0.7506146888958487
+      },
+      {
+        "role": "pacifist",
+        "cosine": 0.6039249464821275
+      },
+      {
+        "role": "rebel",
+        "cosine": 0.4093339553801613
+      },
+      {
+        "role": "virus",
+        "cosine": 0.4072509045396405
+      }
+    ],
+    "ancient": [
+      {
+        "role": "leviathan",
+        "cosine": 0.7374889854247435
+      },
+      {
+        "role": "echo",
+        "cosine": 0.5612351074443049
+      },
+      {
+        "role": "elder",
+        "cosine": 0.5558438839800514
+      },
+      {
+        "role": "survivor",
+        "cosine": 0.5331205893231673
+      },
+      {
+        "role": "wind",
+        "cosine": 0.5313027212812145
+      }
+    ],
+    "angel": [
+      {
+        "role": "avatar",
+        "cosine": 0.8563743837310707
+      },
+      {
+        "role": "prophet",
+        "cosine": 0.6450818335006032
+      },
+      {
+        "role": "guardian",
+        "cosine": 0.64038072785581
+      },
+      {
+        "role": "oracle",
+        "cosine": 0.4533171943329439
+      },
+      {
+        "role": "shapeshifter",
+        "cosine": 0.28861229389881077
+      }
+    ],
+    "anthropologist": [
+      {
+        "role": "geographer",
+        "cosine": 0.7392143181026058
+      },
+      {
+        "role": "sociologist",
+        "cosine": 0.7335684723315059
+      },
+      {
+        "role": "alien",
+        "cosine": 0.6832202898039424
+      },
+      {
+        "role": "psychologist",
+        "cosine": 0.587360604559867
+      },
+      {
+        "role": "cyborg",
+        "cosine": 0.5655085804239384
+      }
+    ],
+    "archaeologist": [
+      {
+        "role": "scholar",
+        "cosine": 0.6841981792482823
+      },
+      {
+        "role": "detective",
+        "cosine": 0.5516917334063907
+      },
+      {
+        "role": "echo",
+        "cosine": 0.4517421058302358
+      },
+      {
+        "role": "anthropologist",
+        "cosine": 0.4499926810420663
+      },
+      {
+        "role": "witch",
+        "cosine": 0.41888567272374017
+      }
+    ],
+    "architect": [
+      {
+        "role": "cartographer",
+        "cosine": 0.7639092827601052
+      },
+      {
+        "role": "composer",
+        "cosine": 0.7483317470383299
+      },
+      {
+        "role": "designer",
+        "cosine": 0.66797220518239
+      },
+      {
+        "role": "builder",
+        "cosine": 0.5236131103321328
+      },
+      {
+        "role": "chef",
+        "cosine": 0.5140771496995898
+      }
+    ],
+    "archivist": [
+      {
+        "role": "conservator",
+        "cosine": 0.9159031653765001
+      },
+      {
+        "role": "collector",
+        "cosine": 0.8865657387930287
+      },
+      {
+        "role": "purist",
+        "cosine": 0.5492506332343743
+      },
+      {
+        "role": "historian",
+        "cosine": 0.5268402025891775
+      },
+      {
+        "role": "librarian",
+        "cosine": 0.45645575966096624
+      }
+    ],
+    "artisan": [
+      {
+        "role": "purist",
+        "cosine": 0.5725970118592248
+      },
+      {
+        "role": "conservator",
+        "cosine": 0.5369438989892823
+      },
+      {
+        "role": "playwright",
+        "cosine": 0.49432429731638483
+      },
+      {
+        "role": "traditionalist",
+        "cosine": 0.45228585725473774
+      },
+      {
+        "role": "archivist",
+        "cosine": 0.42427361001245084
+      }
+    ],
+    "ascetic": [
+      {
+        "role": "pilgrim",
+        "cosine": 0.6166636078276271
+      },
+      {
+        "role": "shaman",
+        "cosine": 0.5455425617855112
+      },
+      {
+        "role": "mystic",
+        "cosine": 0.4953703273966866
+      },
+      {
+        "role": "witch",
+        "cosine": 0.42729008537872065
+      },
+      {
+        "role": "healer",
+        "cosine": 0.42190281834319515
+      }
+    ],
+    "assistant": [
+      {
+        "role": "caregiver",
+        "cosine": 0.48266967600159877
+      },
+      {
+        "role": "generalist",
+        "cosine": 0.3893851536411927
+      },
+      {
+        "role": "navigator",
+        "cosine": 0.3812453010320598
+      },
+      {
+        "role": "altruist",
+        "cosine": 0.38055553869341247
+      },
+      {
+        "role": "chimera",
+        "cosine": 0.37500223904931035
+      }
+    ],
+    "auctioneer": [
+      {
+        "role": "facilitator",
+        "cosine": 0.6163639059993121
+      },
+      {
+        "role": "moderator",
+        "cosine": 0.6121660904867425
+      },
+      {
+        "role": "scheduler",
+        "cosine": 0.5783424910762296
+      },
+      {
+        "role": "narrator",
+        "cosine": 0.5636134930833366
+      },
+      {
+        "role": "historian",
+        "cosine": 0.49768886067353996
+      }
+    ],
+    "auditor": [
+      {
+        "role": "examiner",
+        "cosine": 0.8916254537171928
+      },
+      {
+        "role": "accountant",
+        "cosine": 0.5858305848927877
+      },
+      {
+        "role": "screener",
+        "cosine": 0.5802833834111722
+      },
+      {
+        "role": "pilot",
+        "cosine": 0.4832672890977866
+      },
+      {
+        "role": "supervisor",
+        "cosine": 0.47704837117789556
+      }
+    ],
+    "avatar": [
+      {
+        "role": "angel",
+        "cosine": 0.8563743837310707
+      },
+      {
+        "role": "prophet",
+        "cosine": 0.574352266973589
+      },
+      {
+        "role": "guardian",
+        "cosine": 0.4690465441990444
+      },
+      {
+        "role": "shapeshifter",
+        "cosine": 0.4534379530906127
+      },
+      {
+        "role": "spirit",
+        "cosine": 0.4490835029488647
+      }
+    ],
+    "bard": [
+      {
+        "role": "narrator",
+        "cosine": 0.5653691003070868
+      },
+      {
+        "role": "blogger",
+        "cosine": 0.520302580092849
+      },
+      {
+        "role": "poet",
+        "cosine": 0.49744119555328975
+      },
+      {
+        "role": "photographer",
+        "cosine": 0.4626260321438233
+      },
+      {
+        "role": "jester",
+        "cosine": 0.44272809490990633
+      }
+    ],
+    "bartender": [
+      {
+        "role": "networker",
+        "cosine": 0.6278213097405538
+      },
+      {
+        "role": "loner",
+        "cosine": 0.5841266706500956
+      },
+      {
+        "role": "sociologist",
+        "cosine": 0.5811308925413927
+      },
+      {
+        "role": "provocateur",
+        "cosine": 0.5006169055806632
+      },
+      {
+        "role": "activist",
+        "cosine": 0.4842925978414107
+      }
+    ],
+    "biologist": [
+      {
+        "role": "chemist",
+        "cosine": 0.6088461177976052
+      },
+      {
+        "role": "scientist",
+        "cosine": 0.5571585737243491
+      },
+      {
+        "role": "naturalist",
+        "cosine": 0.48289207868081924
+      },
+      {
+        "role": "geographer",
+        "cosine": 0.4485955265231034
+      },
+      {
+        "role": "parasite",
+        "cosine": 0.4249625168036298
+      }
+    ],
+    "blogger": [
+      {
+        "role": "writer",
+        "cosine": 0.7839925353527164
+      },
+      {
+        "role": "influencer",
+        "cosine": 0.6027305513102511
+      },
+      {
+        "role": "narrator",
+        "cosine": 0.567764006431603
+      },
+      {
+        "role": "publisher",
+        "cosine": 0.5554261451575113
+      },
+      {
+        "role": "podcaster",
+        "cosine": 0.5445573391149331
+      }
+    ],
+    "bohemian": [
+      {
+        "role": "minimalist",
+        "cosine": 0.5194222230450877
+      },
+      {
+        "role": "critic",
+        "cosine": 0.5080936440095207
+      },
+      {
+        "role": "luddite",
+        "cosine": 0.4572356809587646
+      },
+      {
+        "role": "provocateur",
+        "cosine": 0.44834624039963733
+      },
+      {
+        "role": "musician",
+        "cosine": 0.43239364381833395
+      }
+    ],
+    "builder": [
+      {
+        "role": "saboteur",
+        "cosine": 0.671966372634325
+      },
+      {
+        "role": "composer",
+        "cosine": 0.671488802016028
+      },
+      {
+        "role": "destroyer",
+        "cosine": 0.6581548470969668
+      },
+      {
+        "role": "architect",
+        "cosine": 0.5236131103321328
+      },
+      {
+        "role": "theorist",
+        "cosine": 0.5183968217291091
+      }
+    ],
+    "caregiver": [
+      {
+        "role": "altruist",
+        "cosine": 0.714216017323046
+      },
+      {
+        "role": "martyr",
+        "cosine": 0.6158046655844207
+      },
+      {
+        "role": "counselor",
+        "cosine": 0.6075796518187706
+      },
+      {
+        "role": "narcissist",
+        "cosine": 0.5530576757645977
+      },
+      {
+        "role": "empath",
+        "cosine": 0.5380051882883358
+      }
+    ],
+    "cartographer": [
+      {
+        "role": "architect",
+        "cosine": 0.7639092827601052
+      },
+      {
+        "role": "designer",
+        "cosine": 0.5845190437568325
+      },
+      {
+        "role": "merchant",
+        "cosine": 0.5623776130942744
+      },
+      {
+        "role": "smuggler",
+        "cosine": 0.5363826638959726
+      },
+      {
+        "role": "nutritionist",
+        "cosine": 0.5211078458312748
+      }
+    ],
+    "caveman": [
+      {
+        "role": "pirate",
+        "cosine": 0.54684110857936
+      },
+      {
+        "role": "infant",
+        "cosine": 0.5310848751152525
+      },
+      {
+        "role": "mechanic",
+        "cosine": 0.5006364455859177
+      },
+      {
+        "role": "toddler",
+        "cosine": 0.4932295168524229
+      },
+      {
+        "role": "engineer",
+        "cosine": 0.48510304895445716
+      }
+    ],
+    "celebrity": [
+      {
+        "role": "parent",
+        "cosine": 0.6561048329218548
+      },
+      {
+        "role": "prisoner",
+        "cosine": 0.6167981141607201
+      },
+      {
+        "role": "refugee",
+        "cosine": 0.5384633536746641
+      },
+      {
+        "role": "immigrant",
+        "cosine": 0.5155119519088587
+      },
+      {
+        "role": "wind",
+        "cosine": 0.5013671628963333
+      }
+    ],
+    "chameleon": [
+      {
+        "role": "cosmopolitan",
+        "cosine": 0.6117544222855589
+      },
+      {
+        "role": "hybrid",
+        "cosine": 0.5445708644858416
+      },
+      {
+        "role": "realist",
+        "cosine": 0.4939820936444705
+      },
+      {
+        "role": "stoic",
+        "cosine": 0.41903635821343815
+      },
+      {
+        "role": "actor",
+        "cosine": 0.3995029431640837
+      }
+    ],
+    "chef": [
+      {
+        "role": "sommelier",
+        "cosine": 0.6860185361334235
+      },
+      {
+        "role": "architect",
+        "cosine": 0.5140771496995898
+      },
+      {
+        "role": "cartographer",
+        "cosine": 0.49218858956285577
+      },
+      {
+        "role": "mentor",
+        "cosine": 0.4746511117125236
+      },
+      {
+        "role": "nutritionist",
+        "cosine": 0.46149938417512487
+      }
+    ],
+    "chemist": [
+      {
+        "role": "biologist",
+        "cosine": 0.6088461177976052
+      },
+      {
+        "role": "naturalist",
+        "cosine": 0.5756386627400641
+      },
+      {
+        "role": "physicist",
+        "cosine": 0.5096310784476253
+      },
+      {
+        "role": "smuggler",
+        "cosine": 0.4862840723765984
+      },
+      {
+        "role": "pharmacist",
+        "cosine": 0.4777845425719857
+      }
+    ],
+    "chimera": [
+      {
+        "role": "leviathan",
+        "cosine": 0.5822165179431004
+      },
+      {
+        "role": "synthesizer",
+        "cosine": 0.5069418180748424
+      },
+      {
+        "role": "golem",
+        "cosine": 0.4791082546993374
+      },
+      {
+        "role": "zealot",
+        "cosine": 0.4551100914209616
+      },
+      {
+        "role": "coral_reef",
+        "cosine": 0.45405972285880386
+      }
+    ],
+    "coach": [
+      {
+        "role": "trainer",
+        "cosine": 0.7495405533568954
+      },
+      {
+        "role": "mentor",
+        "cosine": 0.6674774552898983
+      },
+      {
+        "role": "guide",
+        "cosine": 0.6255483844004598
+      },
+      {
+        "role": "planner",
+        "cosine": 0.601924574205032
+      },
+      {
+        "role": "instructor",
+        "cosine": 0.5794687283444562
+      }
+    ],
+    "collaborator": [
+      {
+        "role": "mediator",
+        "cosine": 0.5560985390895617
+      },
+      {
+        "role": "coral_reef",
+        "cosine": 0.5341301940057815
+      },
+      {
+        "role": "symbiont",
+        "cosine": 0.5106900635816688
+      },
+      {
+        "role": "negotiator",
+        "cosine": 0.4499966778077467
+      },
+      {
+        "role": "egregore",
+        "cosine": 0.433574234472065
+      }
+    ],
+    "collector": [
+      {
+        "role": "archivist",
+        "cosine": 0.8865657387930287
+      },
+      {
+        "role": "conservator",
+        "cosine": 0.8855836942960856
+      },
+      {
+        "role": "curator",
+        "cosine": 0.6228887095490678
+      },
+      {
+        "role": "purist",
+        "cosine": 0.5202905904142888
+      },
+      {
+        "role": "historian",
+        "cosine": 0.49599003442984985
+      }
+    ],
+    "comedian": [
+      {
+        "role": "fool",
+        "cosine": 0.7489964143887152
+      },
+      {
+        "role": "jester",
+        "cosine": 0.7328725871422647
+      },
+      {
+        "role": "trickster",
+        "cosine": 0.7289992395308685
+      },
+      {
+        "role": "absurdist",
+        "cosine": 0.5225293104567694
+      },
+      {
+        "role": "photographer",
+        "cosine": 0.4283438352156564
+      }
+    ],
+    "competitor": [
+      {
+        "role": "daredevil",
+        "cosine": 0.52481995516422
+      },
+      {
+        "role": "prey",
+        "cosine": 0.4736608228212375
+      },
+      {
+        "role": "narcissist",
+        "cosine": 0.46887996857188835
+      },
+      {
+        "role": "idealist",
+        "cosine": 0.41535086100393676
+      },
+      {
+        "role": "martyr",
+        "cosine": 0.41342943632940365
+      }
+    ],
+    "composer": [
+      {
+        "role": "architect",
+        "cosine": 0.7483317470383299
+      },
+      {
+        "role": "playwright",
+        "cosine": 0.680275214234347
+      },
+      {
+        "role": "builder",
+        "cosine": 0.671488802016028
+      },
+      {
+        "role": "novelist",
+        "cosine": 0.6360590717704664
+      },
+      {
+        "role": "musician",
+        "cosine": 0.5661451773811468
+      }
+    ],
+    "conservator": [
+      {
+        "role": "archivist",
+        "cosine": 0.9159031653765001
+      },
+      {
+        "role": "collector",
+        "cosine": 0.8855836942960856
+      },
+      {
+        "role": "purist",
+        "cosine": 0.6304923150740043
+      },
+      {
+        "role": "artisan",
+        "cosine": 0.5369438989892823
+      },
+      {
+        "role": "traditionalist",
+        "cosine": 0.4884188741049635
+      }
+    ],
+    "consultant": [
+      {
+        "role": "economist",
+        "cosine": 0.601037305299595
+      },
+      {
+        "role": "forecaster",
+        "cosine": 0.5878904387249917
+      },
+      {
+        "role": "statistician",
+        "cosine": 0.5798796843850341
+      },
+      {
+        "role": "analyst",
+        "cosine": 0.5418845265738904
+      },
+      {
+        "role": "researcher",
+        "cosine": 0.5086752771403777
+      }
+    ],
+    "contrarian": [
+      {
+        "role": "devils_advocate",
+        "cosine": 0.9074739915727481
+      },
+      {
+        "role": "advocate",
+        "cosine": 0.6324796987590037
+      },
+      {
+        "role": "maverick",
+        "cosine": 0.46056448671942213
+      },
+      {
+        "role": "skeptic",
+        "cosine": 0.4495128318307
+      },
+      {
+        "role": "zealot",
+        "cosine": 0.4176827654304586
+      }
+    ],
+    "coordinator": [
+      {
+        "role": "scheduler",
+        "cosine": 0.7505871914589178
+      },
+      {
+        "role": "supervisor",
+        "cosine": 0.728077041594289
+      },
+      {
+        "role": "organizer",
+        "cosine": 0.7204896948972301
+      },
+      {
+        "role": "dispatcher",
+        "cosine": 0.587084577648467
+      },
+      {
+        "role": "planner",
+        "cosine": 0.47874852317179684
+      }
+    ],
+    "coral_reef": [
+      {
+        "role": "swarm",
+        "cosine": 0.6477826626038099
+      },
+      {
+        "role": "ecosystem",
+        "cosine": 0.5453406422197318
+      },
+      {
+        "role": "collaborator",
+        "cosine": 0.5341301940057815
+      },
+      {
+        "role": "symbiont",
+        "cosine": 0.5210143413073383
+      },
+      {
+        "role": "hive",
+        "cosine": 0.515780859713571
+      }
+    ],
+    "cosmopolitan": [
+      {
+        "role": "hybrid",
+        "cosine": 0.8001269624836143
+      },
+      {
+        "role": "chameleon",
+        "cosine": 0.6117544222855589
+      },
+      {
+        "role": "provincial",
+        "cosine": 0.5976915765186116
+      },
+      {
+        "role": "addict",
+        "cosine": 0.5122414447330743
+      },
+      {
+        "role": "translator",
+        "cosine": 0.4961940549888872
+      }
+    ],
+    "counselor": [
+      {
+        "role": "therapist",
+        "cosine": 0.8851797535252116
+      },
+      {
+        "role": "caregiver",
+        "cosine": 0.6075796518187706
+      },
+      {
+        "role": "mentor",
+        "cosine": 0.5672648874225441
+      },
+      {
+        "role": "guide",
+        "cosine": 0.5170603256056827
+      },
+      {
+        "role": "empath",
+        "cosine": 0.4786240638064259
+      }
+    ],
+    "criminal": [
+      {
+        "role": "vigilante",
+        "cosine": 0.7544406137214537
+      },
+      {
+        "role": "lawyer",
+        "cosine": 0.6558483065460949
+      },
+      {
+        "role": "rogue",
+        "cosine": 0.6420031494225418
+      },
+      {
+        "role": "hermit",
+        "cosine": 0.5143269975750834
+      },
+      {
+        "role": "nomad",
+        "cosine": 0.454732503972276
+      }
+    ],
+    "critic": [
+      {
+        "role": "designer",
+        "cosine": 0.5989872037531669
+      },
+      {
+        "role": "reviewer",
+        "cosine": 0.5555065214126423
+      },
+      {
+        "role": "bohemian",
+        "cosine": 0.5080936440095207
+      },
+      {
+        "role": "grader",
+        "cosine": 0.44314030565301715
+      },
+      {
+        "role": "evaluator",
+        "cosine": 0.4120274808915335
+      }
+    ],
+    "crystalline": [
+      {
+        "role": "dreamer",
+        "cosine": 0.5644819031804863
+      },
+      {
+        "role": "infant",
+        "cosine": 0.5573024764520773
+      },
+      {
+        "role": "eldritch",
+        "cosine": 0.4728817956602132
+      },
+      {
+        "role": "tree",
+        "cosine": 0.445563326691721
+      },
+      {
+        "role": "poet",
+        "cosine": 0.3835039084282848
+      }
+    ],
+    "curator": [
+      {
+        "role": "collector",
+        "cosine": 0.6228887095490678
+      },
+      {
+        "role": "reporter",
+        "cosine": 0.533654867180395
+      },
+      {
+        "role": "presenter",
+        "cosine": 0.48881119931236233
+      },
+      {
+        "role": "journalist",
+        "cosine": 0.47580525102182436
+      },
+      {
+        "role": "marketer",
+        "cosine": 0.4493233218006113
+      }
+    ],
+    "cyborg": [
+      {
+        "role": "alien",
+        "cosine": 0.7574491467136507
+      },
+      {
+        "role": "demon",
+        "cosine": 0.6542831341969391
+      },
+      {
+        "role": "psychologist",
+        "cosine": 0.6057599153807065
+      },
+      {
+        "role": "anthropologist",
+        "cosine": 0.5655085804239384
+      },
+      {
+        "role": "geographer",
+        "cosine": 0.5527495367808228
+      }
+    ],
+    "cynic": [
+      {
+        "role": "alien",
+        "cosine": 0.6098072098555665
+      },
+      {
+        "role": "demon",
+        "cosine": 0.5858028935167938
+      },
+      {
+        "role": "cyborg",
+        "cosine": 0.5312127134623431
+      },
+      {
+        "role": "geographer",
+        "cosine": 0.4952753661496525
+      },
+      {
+        "role": "anthropologist",
+        "cosine": 0.4828316625178349
+      }
+    ],
+    "daredevil": [
+      {
+        "role": "wanderer",
+        "cosine": 0.5524625817438225
+      },
+      {
+        "role": "prey",
+        "cosine": 0.5440381237316916
+      },
+      {
+        "role": "competitor",
+        "cosine": 0.52481995516422
+      },
+      {
+        "role": "predator",
+        "cosine": 0.4283846129328123
+      },
+      {
+        "role": "vampire",
+        "cosine": 0.4193960568327052
+      }
+    ],
+    "debugger": [
+      {
+        "role": "mechanic",
+        "cosine": 0.7549677448404206
+      },
+      {
+        "role": "engineer",
+        "cosine": 0.7330000038474384
+      },
+      {
+        "role": "mathematician",
+        "cosine": 0.6296646625354705
+      },
+      {
+        "role": "saboteur",
+        "cosine": 0.5116261913865717
+      },
+      {
+        "role": "hacker",
+        "cosine": 0.4567417729051466
+      }
+    ],
+    "demon": [
+      {
+        "role": "eldritch",
+        "cosine": 0.7652198295248411
+      },
+      {
+        "role": "alien",
+        "cosine": 0.7434004328157063
+      },
+      {
+        "role": "cyborg",
+        "cosine": 0.6542831341969391
+      },
+      {
+        "role": "homunculus",
+        "cosine": 0.6008411980710734
+      },
+      {
+        "role": "cynic",
+        "cosine": 0.5858028935167938
+      }
+    ],
+    "designer": [
+      {
+        "role": "architect",
+        "cosine": 0.66797220518239
+      },
+      {
+        "role": "critic",
+        "cosine": 0.5989872037531669
+      },
+      {
+        "role": "cartographer",
+        "cosine": 0.5845190437568325
+      },
+      {
+        "role": "composer",
+        "cosine": 0.5476247972074921
+      },
+      {
+        "role": "novelist",
+        "cosine": 0.5363522418974017
+      }
+    ],
+    "destroyer": [
+      {
+        "role": "anarchist",
+        "cosine": 0.7506146888958487
+      },
+      {
+        "role": "saboteur",
+        "cosine": 0.7333546505062544
+      },
+      {
+        "role": "virus",
+        "cosine": 0.6659769785761525
+      },
+      {
+        "role": "builder",
+        "cosine": 0.6581548470969668
+      },
+      {
+        "role": "hacker",
+        "cosine": 0.553425794017456
+      }
+    ],
+    "detective": [
+      {
+        "role": "judge",
+        "cosine": 0.7174483787095164
+      },
+      {
+        "role": "scientist",
+        "cosine": 0.6870588063077848
+      },
+      {
+        "role": "researcher",
+        "cosine": 0.6674429307598837
+      },
+      {
+        "role": "skeptic",
+        "cosine": 0.6586603517417886
+      },
+      {
+        "role": "analyst",
+        "cosine": 0.6243252156282211
+      }
+    ],
+    "devils_advocate": [
+      {
+        "role": "contrarian",
+        "cosine": 0.9074739915727481
+      },
+      {
+        "role": "advocate",
+        "cosine": 0.8485125640247043
+      },
+      {
+        "role": "zealot",
+        "cosine": 0.36197895730826807
+      },
+      {
+        "role": "skeptic",
+        "cosine": 0.3366502354055022
+      },
+      {
+        "role": "vegan",
+        "cosine": 0.3009472115784514
+      }
+    ],
+    "dilettante": [
+      {
+        "role": "amateur",
+        "cosine": 0.7853035577444696
+      },
+      {
+        "role": "generalist",
+        "cosine": 0.7458062031774519
+      },
+      {
+        "role": "student",
+        "cosine": 0.5533023832811617
+      },
+      {
+        "role": "polymath",
+        "cosine": 0.5384132427979463
+      },
+      {
+        "role": "prodigy",
+        "cosine": 0.45509305008358464
+      }
+    ],
+    "dispatcher": [
+      {
+        "role": "supervisor",
+        "cosine": 0.649468216618143
+      },
+      {
+        "role": "scheduler",
+        "cosine": 0.634628235343781
+      },
+      {
+        "role": "coordinator",
+        "cosine": 0.587084577648467
+      },
+      {
+        "role": "producer",
+        "cosine": 0.5503869119668398
+      },
+      {
+        "role": "navigator",
+        "cosine": 0.5205721030218502
+      }
+    ],
+    "divorcee": [
+      {
+        "role": "widow",
+        "cosine": 0.9571436741657393
+      },
+      {
+        "role": "newlywed",
+        "cosine": 0.7845207479980635
+      },
+      {
+        "role": "retiree",
+        "cosine": 0.5721876359991231
+      },
+      {
+        "role": "graduate",
+        "cosine": 0.5189968860941415
+      },
+      {
+        "role": "hedonist",
+        "cosine": 0.3941810128988113
+      }
+    ],
+    "doctor": [
+      {
+        "role": "veterinarian",
+        "cosine": 0.9193527379638122
+      },
+      {
+        "role": "paramedic",
+        "cosine": 0.8826695584631051
+      },
+      {
+        "role": "patient",
+        "cosine": 0.8734407776929793
+      },
+      {
+        "role": "nutritionist",
+        "cosine": 0.41580732280869587
+      },
+      {
+        "role": "healer",
+        "cosine": 0.31608974901706777
+      }
+    ],
+    "dreamer": [
+      {
+        "role": "eldritch",
+        "cosine": 0.6996201451914907
+      },
+      {
+        "role": "void",
+        "cosine": 0.6177311044270098
+      },
+      {
+        "role": "crystalline",
+        "cosine": 0.5644819031804863
+      },
+      {
+        "role": "whale",
+        "cosine": 0.4821796697760203
+      },
+      {
+        "role": "zealot",
+        "cosine": 0.48165736832103
+      }
+    ],
+    "echo": [
+      {
+        "role": "ancient",
+        "cosine": 0.5612351074443049
+      },
+      {
+        "role": "zeitgeist",
+        "cosine": 0.5027360893673058
+      },
+      {
+        "role": "coral_reef",
+        "cosine": 0.48609066634311554
+      },
+      {
+        "role": "swarm",
+        "cosine": 0.4841101661554205
+      },
+      {
+        "role": "egregore",
+        "cosine": 0.4755751499290539
+      }
+    ],
+    "economist": [
+      {
+        "role": "accountant",
+        "cosine": 0.8210432073972598
+      },
+      {
+        "role": "statistician",
+        "cosine": 0.7864330470722463
+      },
+      {
+        "role": "consultant",
+        "cosine": 0.601037305299595
+      },
+      {
+        "role": "forecaster",
+        "cosine": 0.5881822599256477
+      },
+      {
+        "role": "futurist",
+        "cosine": 0.49052319194595273
+      }
+    ],
+    "ecosystem": [
+      {
+        "role": "symbiont",
+        "cosine": 0.7341301674466043
+      },
+      {
+        "role": "mycorrhizal",
+        "cosine": 0.5501741592326282
+      },
+      {
+        "role": "coral_reef",
+        "cosine": 0.5453406422197318
+      },
+      {
+        "role": "workaholic",
+        "cosine": 0.4875530280868409
+      },
+      {
+        "role": "swarm",
+        "cosine": 0.43086883303172496
+      }
+    ],
+    "editor": [
+      {
+        "role": "proofreader",
+        "cosine": 0.8611082640142609
+      },
+      {
+        "role": "writer",
+        "cosine": 0.719797920676867
+      },
+      {
+        "role": "publisher",
+        "cosine": 0.6977898623345498
+      },
+      {
+        "role": "blogger",
+        "cosine": 0.528341798992373
+      },
+      {
+        "role": "producer",
+        "cosine": 0.4968573593309484
+      }
+    ],
+    "egregore": [
+      {
+        "role": "tulpa",
+        "cosine": 0.6883513849731238
+      },
+      {
+        "role": "hive",
+        "cosine": 0.653854309909117
+      },
+      {
+        "role": "swarm",
+        "cosine": 0.6325993711740378
+      },
+      {
+        "role": "zeitgeist",
+        "cosine": 0.5182664835203077
+      },
+      {
+        "role": "echo",
+        "cosine": 0.4755751499290539
+      }
+    ],
+    "elder": [
+      {
+        "role": "survivor",
+        "cosine": 0.6781701035723554
+      },
+      {
+        "role": "hermit",
+        "cosine": 0.6311593069254604
+      },
+      {
+        "role": "sage",
+        "cosine": 0.6310726490640631
+      },
+      {
+        "role": "grandparent",
+        "cosine": 0.6080810230572173
+      },
+      {
+        "role": "orphan",
+        "cosine": 0.5677153184612782
+      }
+    ],
+    "eldritch": [
+      {
+        "role": "demon",
+        "cosine": 0.7652198295248411
+      },
+      {
+        "role": "dreamer",
+        "cosine": 0.6996201451914907
+      },
+      {
+        "role": "void",
+        "cosine": 0.6119264725693072
+      },
+      {
+        "role": "alien",
+        "cosine": 0.5739948641315487
+      },
+      {
+        "role": "leviathan",
+        "cosine": 0.5387491840670533
+      }
+    ],
+    "emissary": [
+      {
+        "role": "mediator",
+        "cosine": 0.770454344601904
+      },
+      {
+        "role": "interpreter",
+        "cosine": 0.7659429047856328
+      },
+      {
+        "role": "negotiator",
+        "cosine": 0.7555203835650063
+      },
+      {
+        "role": "translator",
+        "cosine": 0.6792685911443281
+      },
+      {
+        "role": "ambassador",
+        "cosine": 0.6776267891739896
+      }
+    ],
+    "empath": [
+      {
+        "role": "musician",
+        "cosine": 0.6305883516456205
+      },
+      {
+        "role": "therapist",
+        "cosine": 0.553172043863662
+      },
+      {
+        "role": "caregiver",
+        "cosine": 0.5380051882883358
+      },
+      {
+        "role": "romantic",
+        "cosine": 0.5328114839986143
+      },
+      {
+        "role": "sommelier",
+        "cosine": 0.4883548189673716
+      }
+    ],
+    "engineer": [
+      {
+        "role": "mechanic",
+        "cosine": 0.8002193223229004
+      },
+      {
+        "role": "mathematician",
+        "cosine": 0.7487183173601084
+      },
+      {
+        "role": "debugger",
+        "cosine": 0.7330000038474384
+      },
+      {
+        "role": "physicist",
+        "cosine": 0.5919304620091721
+      },
+      {
+        "role": "caveman",
+        "cosine": 0.48510304895445716
+      }
+    ],
+    "entrepreneur": [
+      {
+        "role": "merchant",
+        "cosine": 0.7522148132807028
+      },
+      {
+        "role": "marketer",
+        "cosine": 0.7196225729568547
+      },
+      {
+        "role": "recruiter",
+        "cosine": 0.7046627531433415
+      },
+      {
+        "role": "mentor",
+        "cosine": 0.5352291472737548
+      },
+      {
+        "role": "negotiator",
+        "cosine": 0.5032842557942442
+      }
+    ],
+    "evaluator": [
+      {
+        "role": "reviewer",
+        "cosine": 0.892294856573174
+      },
+      {
+        "role": "grader",
+        "cosine": 0.7006944205474711
+      },
+      {
+        "role": "screener",
+        "cosine": 0.5765316346580129
+      },
+      {
+        "role": "consultant",
+        "cosine": 0.4757917797791566
+      },
+      {
+        "role": "recruiter",
+        "cosine": 0.45542182574939094
+      }
+    ],
+    "evangelist": [
+      {
+        "role": "technologist",
+        "cosine": 0.7491904949818267
+      },
+      {
+        "role": "visionary",
+        "cosine": 0.608750015943163
+      },
+      {
+        "role": "zealot",
+        "cosine": 0.5634973520526511
+      },
+      {
+        "role": "scout",
+        "cosine": 0.5349910480102428
+      },
+      {
+        "role": "gamer",
+        "cosine": 0.4349675293904862
+      }
+    ],
+    "examiner": [
+      {
+        "role": "auditor",
+        "cosine": 0.8916254537171928
+      },
+      {
+        "role": "screener",
+        "cosine": 0.6268888062890282
+      },
+      {
+        "role": "validator",
+        "cosine": 0.5378568009607863
+      },
+      {
+        "role": "perfectionist",
+        "cosine": 0.5050064174708322
+      },
+      {
+        "role": "supervisor",
+        "cosine": 0.496340838805271
+      }
+    ],
+    "exile": [
+      {
+        "role": "expatriate",
+        "cosine": 0.7877555021575083
+      },
+      {
+        "role": "refugee",
+        "cosine": 0.6387536387403806
+      },
+      {
+        "role": "immigrant",
+        "cosine": 0.6286283726553026
+      },
+      {
+        "role": "orphan",
+        "cosine": 0.6085257402329111
+      },
+      {
+        "role": "addict",
+        "cosine": 0.5454768219852164
+      }
+    ],
+    "expatriate": [
+      {
+        "role": "exile",
+        "cosine": 0.7877555021575083
+      },
+      {
+        "role": "immigrant",
+        "cosine": 0.7043340285750642
+      },
+      {
+        "role": "refugee",
+        "cosine": 0.6746211041370892
+      },
+      {
+        "role": "nomad",
+        "cosine": 0.6263298918191008
+      },
+      {
+        "role": "orphan",
+        "cosine": 0.5572960858692141
+      }
+    ],
+    "facilitator": [
+      {
+        "role": "moderator",
+        "cosine": 0.9622493797719633
+      },
+      {
+        "role": "auctioneer",
+        "cosine": 0.6163639059993121
+      },
+      {
+        "role": "podcaster",
+        "cosine": 0.4965952236586208
+      },
+      {
+        "role": "secretary",
+        "cosine": 0.4742619555399395
+      },
+      {
+        "role": "coordinator",
+        "cosine": 0.42735613902218383
+      }
+    ],
+    "familiar": [
+      {
+        "role": "genie",
+        "cosine": 0.8542461017174283
+      },
+      {
+        "role": "zeitgeist",
+        "cosine": 0.7145703165614165
+      },
+      {
+        "role": "spirit",
+        "cosine": 0.5660504357444208
+      },
+      {
+        "role": "golem",
+        "cosine": 0.4523466255618342
+      },
+      {
+        "role": "shaman",
+        "cosine": 0.4511350566783305
+      }
+    ],
+    "fixer": [
+      {
+        "role": "improviser",
+        "cosine": 0.6263604740977824
+      },
+      {
+        "role": "actor",
+        "cosine": 0.5042546554180207
+      },
+      {
+        "role": "shapeshifter",
+        "cosine": 0.49415029677717975
+      },
+      {
+        "role": "rogue",
+        "cosine": 0.48982965690206387
+      },
+      {
+        "role": "realist",
+        "cosine": 0.48691588710646794
+      }
+    ],
+    "flaneur": [
+      {
+        "role": "wanderer",
+        "cosine": 0.6049882343834119
+      },
+      {
+        "role": "observer",
+        "cosine": 0.5144882620654379
+      },
+      {
+        "role": "hermit",
+        "cosine": 0.42441172784278075
+      },
+      {
+        "role": "criminal",
+        "cosine": 0.3960919546990974
+      },
+      {
+        "role": "nomad",
+        "cosine": 0.36926461983001113
+      }
+    ],
+    "fool": [
+      {
+        "role": "jester",
+        "cosine": 0.912658159534979
+      },
+      {
+        "role": "trickster",
+        "cosine": 0.8667933076444196
+      },
+      {
+        "role": "comedian",
+        "cosine": 0.7489964143887152
+      },
+      {
+        "role": "guru",
+        "cosine": 0.45827921387623094
+      },
+      {
+        "role": "bard",
+        "cosine": 0.4426864926190048
+      }
+    ],
+    "forecaster": [
+      {
+        "role": "futurist",
+        "cosine": 0.8909814824804647
+      },
+      {
+        "role": "oracle",
+        "cosine": 0.6397969103347788
+      },
+      {
+        "role": "statistician",
+        "cosine": 0.5961715980180502
+      },
+      {
+        "role": "economist",
+        "cosine": 0.5881822599256477
+      },
+      {
+        "role": "consultant",
+        "cosine": 0.5878904387249917
+      }
+    ],
+    "futurist": [
+      {
+        "role": "forecaster",
+        "cosine": 0.8909814824804647
+      },
+      {
+        "role": "visionary",
+        "cosine": 0.6358601242582836
+      },
+      {
+        "role": "oracle",
+        "cosine": 0.6218173880177214
+      },
+      {
+        "role": "technologist",
+        "cosine": 0.5674601942266929
+      },
+      {
+        "role": "economist",
+        "cosine": 0.49052319194595273
+      }
+    ],
+    "gamer": [
+      {
+        "role": "hedonist",
+        "cosine": 0.5222962799411497
+      },
+      {
+        "role": "evangelist",
+        "cosine": 0.4349675293904862
+      },
+      {
+        "role": "empath",
+        "cosine": 0.4224586898917868
+      },
+      {
+        "role": "elder",
+        "cosine": 0.41615479053707977
+      },
+      {
+        "role": "photographer",
+        "cosine": 0.4149316657585567
+      }
+    ],
+    "generalist": [
+      {
+        "role": "polymath",
+        "cosine": 0.871677403447361
+      },
+      {
+        "role": "dilettante",
+        "cosine": 0.7458062031774519
+      },
+      {
+        "role": "prodigy",
+        "cosine": 0.6925655716933699
+      },
+      {
+        "role": "student",
+        "cosine": 0.43513232836120197
+      },
+      {
+        "role": "assistant",
+        "cosine": 0.3893851536411927
+      }
+    ],
+    "genie": [
+      {
+        "role": "familiar",
+        "cosine": 0.8542461017174283
+      },
+      {
+        "role": "zeitgeist",
+        "cosine": 0.6660273391484088
+      },
+      {
+        "role": "spirit",
+        "cosine": 0.4460251054932784
+      },
+      {
+        "role": "golem",
+        "cosine": 0.4091551610705825
+      },
+      {
+        "role": "shaman",
+        "cosine": 0.3592520232813602
+      }
+    ],
+    "geographer": [
+      {
+        "role": "anthropologist",
+        "cosine": 0.7392143181026058
+      },
+      {
+        "role": "alien",
+        "cosine": 0.6486987994118616
+      },
+      {
+        "role": "psychologist",
+        "cosine": 0.584391083687412
+      },
+      {
+        "role": "cyborg",
+        "cosine": 0.5527495367808228
+      },
+      {
+        "role": "demon",
+        "cosine": 0.5268588494250113
+      }
+    ],
+    "ghost": [
+      {
+        "role": "wraith",
+        "cosine": 0.8530873465464337
+      },
+      {
+        "role": "revenant",
+        "cosine": 0.8261987682167766
+      },
+      {
+        "role": "void",
+        "cosine": 0.4922646702332621
+      },
+      {
+        "role": "echo",
+        "cosine": 0.43709689779791644
+      },
+      {
+        "role": "spirit",
+        "cosine": 0.40262428190335314
+      }
+    ],
+    "golem": [
+      {
+        "role": "homunculus",
+        "cosine": 0.7714669639863715
+      },
+      {
+        "role": "witch",
+        "cosine": 0.6702268431758683
+      },
+      {
+        "role": "chimera",
+        "cosine": 0.4791082546993374
+      },
+      {
+        "role": "familiar",
+        "cosine": 0.4523466255618342
+      },
+      {
+        "role": "demon",
+        "cosine": 0.4231961223854611
+      }
+    ],
+    "gossip": [
+      {
+        "role": "librarian",
+        "cosine": 0.5458819603309067
+      },
+      {
+        "role": "validator",
+        "cosine": 0.5194920409134419
+      },
+      {
+        "role": "networker",
+        "cosine": 0.4771013649102499
+      },
+      {
+        "role": "mycorrhizal",
+        "cosine": 0.4272363696038945
+      },
+      {
+        "role": "interviewer",
+        "cosine": 0.3982113950622542
+      }
+    ],
+    "grader": [
+      {
+        "role": "reviewer",
+        "cosine": 0.8276738622182228
+      },
+      {
+        "role": "evaluator",
+        "cosine": 0.7006944205474711
+      },
+      {
+        "role": "screener",
+        "cosine": 0.6253923493443181
+      },
+      {
+        "role": "critic",
+        "cosine": 0.44314030565301715
+      },
+      {
+        "role": "examiner",
+        "cosine": 0.43638176456962635
+      }
+    ],
+    "graduate": [
+      {
+        "role": "newlywed",
+        "cosine": 0.6349220239451913
+      },
+      {
+        "role": "student",
+        "cosine": 0.5911264578755674
+      },
+      {
+        "role": "widow",
+        "cosine": 0.5874510706999782
+      },
+      {
+        "role": "hedonist",
+        "cosine": 0.5824491795968602
+      },
+      {
+        "role": "divorcee",
+        "cosine": 0.5189968860941415
+      }
+    ],
+    "grandparent": [
+      {
+        "role": "parent",
+        "cosine": 0.609313765568106
+      },
+      {
+        "role": "elder",
+        "cosine": 0.6080810230572173
+      },
+      {
+        "role": "infant",
+        "cosine": 0.44377561244043506
+      },
+      {
+        "role": "celebrity",
+        "cosine": 0.4377186449572335
+      },
+      {
+        "role": "orphan",
+        "cosine": 0.4358279591541419
+      }
+    ],
+    "guardian": [
+      {
+        "role": "angel",
+        "cosine": 0.64038072785581
+      },
+      {
+        "role": "martyr",
+        "cosine": 0.5955618959765149
+      },
+      {
+        "role": "altruist",
+        "cosine": 0.5645088136056403
+      },
+      {
+        "role": "avatar",
+        "cosine": 0.4690465441990444
+      },
+      {
+        "role": "warrior",
+        "cosine": 0.43326138793333474
+      }
+    ],
+    "guide": [
+      {
+        "role": "coach",
+        "cosine": 0.6255483844004598
+      },
+      {
+        "role": "mentor",
+        "cosine": 0.6046608012762782
+      },
+      {
+        "role": "therapist",
+        "cosine": 0.5624871401206667
+      },
+      {
+        "role": "counselor",
+        "cosine": 0.5170603256056827
+      },
+      {
+        "role": "guru",
+        "cosine": 0.480727026916403
+      }
+    ],
+    "guru": [
+      {
+        "role": "mystic",
+        "cosine": 0.6845837684627445
+      },
+      {
+        "role": "sage",
+        "cosine": 0.6362684179407999
+      },
+      {
+        "role": "shaman",
+        "cosine": 0.5291815837104776
+      },
+      {
+        "role": "martyr",
+        "cosine": 0.5230720335547578
+      },
+      {
+        "role": "pilgrim",
+        "cosine": 0.5217348090049412
+      }
+    ],
+    "hacker": [
+      {
+        "role": "saboteur",
+        "cosine": 0.6628870153468278
+      },
+      {
+        "role": "destroyer",
+        "cosine": 0.553425794017456
+      },
+      {
+        "role": "spy",
+        "cosine": 0.5180177568763584
+      },
+      {
+        "role": "technologist",
+        "cosine": 0.5013289758224078
+      },
+      {
+        "role": "virus",
+        "cosine": 0.47209249629337763
+      }
+    ],
+    "healer": [
+      {
+        "role": "shaman",
+        "cosine": 0.7499066892626947
+      },
+      {
+        "role": "mystic",
+        "cosine": 0.6335024767519516
+      },
+      {
+        "role": "spirit",
+        "cosine": 0.5358917022694542
+      },
+      {
+        "role": "pilgrim",
+        "cosine": 0.5258107851287972
+      },
+      {
+        "role": "caregiver",
+        "cosine": 0.4654049623161578
+      }
+    ],
+    "hedonist": [
+      {
+        "role": "minimalist",
+        "cosine": 0.7362568490508065
+      },
+      {
+        "role": "graduate",
+        "cosine": 0.5824491795968602
+      },
+      {
+        "role": "gamer",
+        "cosine": 0.5222962799411497
+      },
+      {
+        "role": "widow",
+        "cosine": 0.4476517878551875
+      },
+      {
+        "role": "newlywed",
+        "cosine": 0.43432124649387777
+      }
+    ],
+    "hermit": [
+      {
+        "role": "elder",
+        "cosine": 0.6311593069254604
+      },
+      {
+        "role": "nomad",
+        "cosine": 0.5356778386189814
+      },
+      {
+        "role": "survivor",
+        "cosine": 0.5248692730240547
+      },
+      {
+        "role": "criminal",
+        "cosine": 0.5143269975750834
+      },
+      {
+        "role": "sage",
+        "cosine": 0.5032126663052593
+      }
+    ],
+    "historian": [
+      {
+        "role": "archivist",
+        "cosine": 0.5268402025891775
+      },
+      {
+        "role": "auctioneer",
+        "cosine": 0.49768886067353996
+      },
+      {
+        "role": "collector",
+        "cosine": 0.49599003442984985
+      },
+      {
+        "role": "witness",
+        "cosine": 0.46754156903216704
+      },
+      {
+        "role": "conservator",
+        "cosine": 0.44233638905981326
+      }
+    ],
+    "hive": [
+      {
+        "role": "swarm",
+        "cosine": 0.9542993207707928
+      },
+      {
+        "role": "egregore",
+        "cosine": 0.653854309909117
+      },
+      {
+        "role": "coral_reef",
+        "cosine": 0.515780859713571
+      },
+      {
+        "role": "echo",
+        "cosine": 0.44154662271542316
+      },
+      {
+        "role": "tulpa",
+        "cosine": 0.41733065167688627
+      }
+    ],
+    "hoarder": [
+      {
+        "role": "procrastinator",
+        "cosine": 0.5637489344731159
+      },
+      {
+        "role": "idealist",
+        "cosine": 0.5165814315676717
+      },
+      {
+        "role": "aberration",
+        "cosine": 0.4993325980424982
+      },
+      {
+        "role": "toddler",
+        "cosine": 0.4562094627528267
+      },
+      {
+        "role": "minimalist",
+        "cosine": 0.4463941809957221
+      }
+    ],
+    "homunculus": [
+      {
+        "role": "golem",
+        "cosine": 0.7714669639863715
+      },
+      {
+        "role": "witch",
+        "cosine": 0.6333650268409099
+      },
+      {
+        "role": "demon",
+        "cosine": 0.6008411980710734
+      },
+      {
+        "role": "alien",
+        "cosine": 0.48350657746575415
+      },
+      {
+        "role": "eldritch",
+        "cosine": 0.4526514072331694
+      }
+    ],
+    "hybrid": [
+      {
+        "role": "cosmopolitan",
+        "cosine": 0.8001269624836143
+      },
+      {
+        "role": "provincial",
+        "cosine": 0.6819148242095315
+      },
+      {
+        "role": "chameleon",
+        "cosine": 0.5445708644858416
+      },
+      {
+        "role": "addict",
+        "cosine": 0.4784439822089544
+      },
+      {
+        "role": "chimera",
+        "cosine": 0.3900468780520404
+      }
+    ],
+    "idealist": [
+      {
+        "role": "romantic",
+        "cosine": 0.7812859251887462
+      },
+      {
+        "role": "hoarder",
+        "cosine": 0.5165814315676717
+      },
+      {
+        "role": "photographer",
+        "cosine": 0.4853395723735518
+      },
+      {
+        "role": "optimist",
+        "cosine": 0.46443079763094086
+      },
+      {
+        "role": "aberration",
+        "cosine": 0.4375070616290086
+      }
+    ],
+    "immigrant": [
+      {
+        "role": "refugee",
+        "cosine": 0.9556029324466285
+      },
+      {
+        "role": "expatriate",
+        "cosine": 0.7043340285750642
+      },
+      {
+        "role": "exile",
+        "cosine": 0.6286283726553026
+      },
+      {
+        "role": "retiree",
+        "cosine": 0.6275037957746503
+      },
+      {
+        "role": "celebrity",
+        "cosine": 0.5155119519088587
+      }
+    ],
+    "improviser": [
+      {
+        "role": "realist",
+        "cosine": 0.7548388117000431
+      },
+      {
+        "role": "fixer",
+        "cosine": 0.6263604740977824
+      },
+      {
+        "role": "amnesiac",
+        "cosine": 0.48516398705318725
+      },
+      {
+        "role": "orphan",
+        "cosine": 0.47594891321148036
+      },
+      {
+        "role": "optimist",
+        "cosine": 0.40901564449559286
+      }
+    ],
+    "infant": [
+      {
+        "role": "poet",
+        "cosine": 0.714297015826055
+      },
+      {
+        "role": "toddler",
+        "cosine": 0.6613209340987452
+      },
+      {
+        "role": "crystalline",
+        "cosine": 0.5573024764520773
+      },
+      {
+        "role": "caveman",
+        "cosine": 0.5310848751152525
+      },
+      {
+        "role": "dreamer",
+        "cosine": 0.47731154342047655
+      }
+    ],
+    "influencer": [
+      {
+        "role": "blogger",
+        "cosine": 0.6027305513102511
+      },
+      {
+        "role": "writer",
+        "cosine": 0.5240073391792996
+      },
+      {
+        "role": "loner",
+        "cosine": 0.4963419837521719
+      },
+      {
+        "role": "activist",
+        "cosine": 0.4952997255186562
+      },
+      {
+        "role": "publisher",
+        "cosine": 0.47993460577544655
+      }
+    ],
+    "instructor": [
+      {
+        "role": "trainer",
+        "cosine": 0.9274177602094147
+      },
+      {
+        "role": "tutor",
+        "cosine": 0.9243678799200047
+      },
+      {
+        "role": "teacher",
+        "cosine": 0.9167006846303736
+      },
+      {
+        "role": "coach",
+        "cosine": 0.5794687283444562
+      },
+      {
+        "role": "student",
+        "cosine": 0.3511793234328797
+      }
+    ],
+    "interpreter": [
+      {
+        "role": "translator",
+        "cosine": 0.8570185122817366
+      },
+      {
+        "role": "emissary",
+        "cosine": 0.7659429047856328
+      },
+      {
+        "role": "actor",
+        "cosine": 0.6879906952857229
+      },
+      {
+        "role": "shapeshifter",
+        "cosine": 0.5985974228122257
+      },
+      {
+        "role": "cosmopolitan",
+        "cosine": 0.4678525425757131
+      }
+    ],
+    "interviewer": [
+      {
+        "role": "journalist",
+        "cosine": 0.5995236007646374
+      },
+      {
+        "role": "presenter",
+        "cosine": 0.5383723327772912
+      },
+      {
+        "role": "summarizer",
+        "cosine": 0.5041055674377625
+      },
+      {
+        "role": "podcaster",
+        "cosine": 0.48257575469498126
+      },
+      {
+        "role": "spy",
+        "cosine": 0.48153051824593884
+      }
+    ],
+    "jester": [
+      {
+        "role": "fool",
+        "cosine": 0.912658159534979
+      },
+      {
+        "role": "trickster",
+        "cosine": 0.7646664150264727
+      },
+      {
+        "role": "comedian",
+        "cosine": 0.7328725871422647
+      },
+      {
+        "role": "bard",
+        "cosine": 0.44272809490990633
+      },
+      {
+        "role": "interviewer",
+        "cosine": 0.38886571005985987
+      }
+    ],
+    "journalist": [
+      {
+        "role": "reporter",
+        "cosine": 0.9380037573583994
+      },
+      {
+        "role": "interviewer",
+        "cosine": 0.5995236007646374
+      },
+      {
+        "role": "celebrity",
+        "cosine": 0.49650574564207367
+      },
+      {
+        "role": "presenter",
+        "cosine": 0.49449038305881615
+      },
+      {
+        "role": "curator",
+        "cosine": 0.47580525102182436
+      }
+    ],
+    "judge": [
+      {
+        "role": "detective",
+        "cosine": 0.7174483787095164
+      },
+      {
+        "role": "skeptic",
+        "cosine": 0.5988934539534371
+      },
+      {
+        "role": "researcher",
+        "cosine": 0.5416693465730267
+      },
+      {
+        "role": "pragmatist",
+        "cosine": 0.5029031647317928
+      },
+      {
+        "role": "analyst",
+        "cosine": 0.45194061350475817
+      }
+    ],
+    "lawyer": [
+      {
+        "role": "vigilante",
+        "cosine": 0.75159342291267
+      },
+      {
+        "role": "criminal",
+        "cosine": 0.6558483065460949
+      },
+      {
+        "role": "pharmacist",
+        "cosine": 0.48661733773799826
+      },
+      {
+        "role": "smuggler",
+        "cosine": 0.39506861886439687
+      },
+      {
+        "role": "consultant",
+        "cosine": 0.3619763748483951
+      }
+    ],
+    "leviathan": [
+      {
+        "role": "ancient",
+        "cosine": 0.7374889854247435
+      },
+      {
+        "role": "whale",
+        "cosine": 0.7147122264576026
+      },
+      {
+        "role": "surfer",
+        "cosine": 0.6092096480823034
+      },
+      {
+        "role": "chimera",
+        "cosine": 0.5822165179431004
+      },
+      {
+        "role": "eldritch",
+        "cosine": 0.5387491840670533
+      }
+    ],
+    "librarian": [
+      {
+        "role": "gossip",
+        "cosine": 0.5458819603309067
+      },
+      {
+        "role": "dispatcher",
+        "cosine": 0.47432719432041304
+      },
+      {
+        "role": "archivist",
+        "cosine": 0.45645575966096624
+      },
+      {
+        "role": "organizer",
+        "cosine": 0.4371272875089777
+      },
+      {
+        "role": "saboteur",
+        "cosine": 0.4258054996540655
+      }
+    ],
+    "linguist": [
+      {
+        "role": "poet",
+        "cosine": 0.7136391946385242
+      },
+      {
+        "role": "infant",
+        "cosine": 0.4165457684228802
+      },
+      {
+        "role": "economist",
+        "cosine": 0.40796600243270553
+      },
+      {
+        "role": "translator",
+        "cosine": 0.38073773410373024
+      },
+      {
+        "role": "crystalline",
+        "cosine": 0.37963905736782
+      }
+    ],
+    "loner": [
+      {
+        "role": "sociologist",
+        "cosine": 0.6483835082262384
+      },
+      {
+        "role": "activist",
+        "cosine": 0.5904005938419683
+      },
+      {
+        "role": "bartender",
+        "cosine": 0.5841266706500956
+      },
+      {
+        "role": "provocateur",
+        "cosine": 0.5439985842575596
+      },
+      {
+        "role": "influencer",
+        "cosine": 0.4963419837521719
+      }
+    ],
+    "luddite": [
+      {
+        "role": "traditionalist",
+        "cosine": 0.5523492407543907
+      },
+      {
+        "role": "purist",
+        "cosine": 0.5110981776432043
+      },
+      {
+        "role": "alien",
+        "cosine": 0.4830844911741124
+      },
+      {
+        "role": "cyborg",
+        "cosine": 0.45857235483084285
+      },
+      {
+        "role": "bohemian",
+        "cosine": 0.4572356809587646
+      }
+    ],
+    "marketer": [
+      {
+        "role": "entrepreneur",
+        "cosine": 0.7196225729568547
+      },
+      {
+        "role": "merchant",
+        "cosine": 0.6313481599425514
+      },
+      {
+        "role": "recruiter",
+        "cosine": 0.6292696488304457
+      },
+      {
+        "role": "mentor",
+        "cosine": 0.6278854338298718
+      },
+      {
+        "role": "navigator",
+        "cosine": 0.5096632628704841
+      }
+    ],
+    "martyr": [
+      {
+        "role": "altruist",
+        "cosine": 0.9151946052678415
+      },
+      {
+        "role": "narcissist",
+        "cosine": 0.7925029221304832
+      },
+      {
+        "role": "caregiver",
+        "cosine": 0.6158046655844207
+      },
+      {
+        "role": "guardian",
+        "cosine": 0.5955618959765149
+      },
+      {
+        "role": "guru",
+        "cosine": 0.5230720335547578
+      }
+    ],
+    "mathematician": [
+      {
+        "role": "engineer",
+        "cosine": 0.7487183173601084
+      },
+      {
+        "role": "physicist",
+        "cosine": 0.6471931027395077
+      },
+      {
+        "role": "debugger",
+        "cosine": 0.6296646625354705
+      },
+      {
+        "role": "programmer",
+        "cosine": 0.598927318040042
+      },
+      {
+        "role": "mechanic",
+        "cosine": 0.5191660496777198
+      }
+    ],
+    "maverick": [
+      {
+        "role": "rebel",
+        "cosine": 0.9228476634237982
+      },
+      {
+        "role": "revolutionary",
+        "cosine": 0.6333057740907414
+      },
+      {
+        "role": "visionary",
+        "cosine": 0.5645075279552851
+      },
+      {
+        "role": "provocateur",
+        "cosine": 0.46121269385591335
+      },
+      {
+        "role": "contrarian",
+        "cosine": 0.46056448671942213
+      }
+    ],
+    "mechanic": [
+      {
+        "role": "engineer",
+        "cosine": 0.8002193223229004
+      },
+      {
+        "role": "debugger",
+        "cosine": 0.7549677448404206
+      },
+      {
+        "role": "mathematician",
+        "cosine": 0.5191660496777198
+      },
+      {
+        "role": "caveman",
+        "cosine": 0.5006364455859177
+      },
+      {
+        "role": "saboteur",
+        "cosine": 0.4595469635600781
+      }
+    ],
+    "mediator": [
+      {
+        "role": "negotiator",
+        "cosine": 0.8970922129064056
+      },
+      {
+        "role": "peacekeeper",
+        "cosine": 0.7915364813502304
+      },
+      {
+        "role": "emissary",
+        "cosine": 0.770454344601904
+      },
+      {
+        "role": "ambassador",
+        "cosine": 0.6709535092329926
+      },
+      {
+        "role": "collaborator",
+        "cosine": 0.5560985390895617
+      }
+    ],
+    "mentor": [
+      {
+        "role": "coach",
+        "cosine": 0.6674774552898983
+      },
+      {
+        "role": "marketer",
+        "cosine": 0.6278854338298718
+      },
+      {
+        "role": "guide",
+        "cosine": 0.6046608012762782
+      },
+      {
+        "role": "counselor",
+        "cosine": 0.5672648874225441
+      },
+      {
+        "role": "therapist",
+        "cosine": 0.5492376660216148
+      }
+    ],
+    "merchant": [
+      {
+        "role": "entrepreneur",
+        "cosine": 0.7522148132807028
+      },
+      {
+        "role": "smuggler",
+        "cosine": 0.737976389734187
+      },
+      {
+        "role": "navigator",
+        "cosine": 0.6526684954038504
+      },
+      {
+        "role": "networker",
+        "cosine": 0.6416555023666993
+      },
+      {
+        "role": "marketer",
+        "cosine": 0.6313481599425514
+      }
+    ],
+    "minimalist": [
+      {
+        "role": "hedonist",
+        "cosine": 0.7362568490508065
+      },
+      {
+        "role": "bohemian",
+        "cosine": 0.5194222230450877
+      },
+      {
+        "role": "pirate",
+        "cosine": 0.47646539038925506
+      },
+      {
+        "role": "hoarder",
+        "cosine": 0.4463941809957221
+      },
+      {
+        "role": "surfer",
+        "cosine": 0.4420964886118424
+      }
+    ],
+    "moderator": [
+      {
+        "role": "facilitator",
+        "cosine": 0.9622493797719633
+      },
+      {
+        "role": "auctioneer",
+        "cosine": 0.6121660904867425
+      },
+      {
+        "role": "podcaster",
+        "cosine": 0.5554737724726164
+      },
+      {
+        "role": "secretary",
+        "cosine": 0.5254733415524725
+      },
+      {
+        "role": "workaholic",
+        "cosine": 0.3536481574603646
+      }
+    ],
+    "musician": [
+      {
+        "role": "empath",
+        "cosine": 0.6305883516456205
+      },
+      {
+        "role": "composer",
+        "cosine": 0.5661451773811468
+      },
+      {
+        "role": "virtuoso",
+        "cosine": 0.4824477187988541
+      },
+      {
+        "role": "bohemian",
+        "cosine": 0.43239364381833395
+      },
+      {
+        "role": "therapist",
+        "cosine": 0.42983797983750766
+      }
+    ],
+    "mycorrhizal": [
+      {
+        "role": "tree",
+        "cosine": 0.7042127775244343
+      },
+      {
+        "role": "spy",
+        "cosine": 0.6114374840951853
+      },
+      {
+        "role": "ecosystem",
+        "cosine": 0.5501741592326282
+      },
+      {
+        "role": "symbiont",
+        "cosine": 0.5037917436074622
+      },
+      {
+        "role": "swarm",
+        "cosine": 0.45161883733633407
+      }
+    ],
+    "mystic": [
+      {
+        "role": "shaman",
+        "cosine": 0.8063574257037387
+      },
+      {
+        "role": "guru",
+        "cosine": 0.6845837684627445
+      },
+      {
+        "role": "pilgrim",
+        "cosine": 0.6833628074960377
+      },
+      {
+        "role": "healer",
+        "cosine": 0.6335024767519516
+      },
+      {
+        "role": "ascetic",
+        "cosine": 0.4953703273966866
+      }
+    ],
+    "narcissist": [
+      {
+        "role": "altruist",
+        "cosine": 0.8352431721935133
+      },
+      {
+        "role": "martyr",
+        "cosine": 0.7925029221304832
+      },
+      {
+        "role": "caregiver",
+        "cosine": 0.5530576757645977
+      },
+      {
+        "role": "competitor",
+        "cosine": 0.46887996857188835
+      },
+      {
+        "role": "guru",
+        "cosine": 0.40277824985167027
+      }
+    ],
+    "narrator": [
+      {
+        "role": "reporter",
+        "cosine": 0.5872209534864075
+      },
+      {
+        "role": "blogger",
+        "cosine": 0.567764006431603
+      },
+      {
+        "role": "bard",
+        "cosine": 0.5653691003070868
+      },
+      {
+        "role": "auctioneer",
+        "cosine": 0.5636134930833366
+      },
+      {
+        "role": "witness",
+        "cosine": 0.5402577414656136
+      }
+    ],
+    "naturalist": [
+      {
+        "role": "chemist",
+        "cosine": 0.5756386627400641
+      },
+      {
+        "role": "biologist",
+        "cosine": 0.48289207868081924
+      },
+      {
+        "role": "programmer",
+        "cosine": 0.45969482284305563
+      },
+      {
+        "role": "pharmacist",
+        "cosine": 0.43256917659975996
+      },
+      {
+        "role": "architect",
+        "cosine": 0.40111402235405585
+      }
+    ],
+    "navigator": [
+      {
+        "role": "smuggler",
+        "cosine": 0.771007512924746
+      },
+      {
+        "role": "pilot",
+        "cosine": 0.6707931441676837
+      },
+      {
+        "role": "merchant",
+        "cosine": 0.6526684954038504
+      },
+      {
+        "role": "dispatcher",
+        "cosine": 0.5205721030218502
+      },
+      {
+        "role": "marketer",
+        "cosine": 0.5096632628704841
+      }
+    ],
+    "negotiator": [
+      {
+        "role": "mediator",
+        "cosine": 0.8970922129064056
+      },
+      {
+        "role": "peacekeeper",
+        "cosine": 0.840132604251675
+      },
+      {
+        "role": "emissary",
+        "cosine": 0.7555203835650063
+      },
+      {
+        "role": "ambassador",
+        "cosine": 0.6641884686327335
+      },
+      {
+        "role": "entrepreneur",
+        "cosine": 0.5032842557942442
+      }
+    ],
+    "networker": [
+      {
+        "role": "merchant",
+        "cosine": 0.6416555023666993
+      },
+      {
+        "role": "bartender",
+        "cosine": 0.6278213097405538
+      },
+      {
+        "role": "sociologist",
+        "cosine": 0.489595020722046
+      },
+      {
+        "role": "gossip",
+        "cosine": 0.4771013649102499
+      },
+      {
+        "role": "loner",
+        "cosine": 0.4702702820866824
+      }
+    ],
+    "newlywed": [
+      {
+        "role": "widow",
+        "cosine": 0.798316095258017
+      },
+      {
+        "role": "divorcee",
+        "cosine": 0.7845207479980635
+      },
+      {
+        "role": "graduate",
+        "cosine": 0.6349220239451913
+      },
+      {
+        "role": "retiree",
+        "cosine": 0.5954645042394769
+      },
+      {
+        "role": "hedonist",
+        "cosine": 0.43432124649387777
+      }
+    ],
+    "nomad": [
+      {
+        "role": "expatriate",
+        "cosine": 0.6263298918191008
+      },
+      {
+        "role": "wanderer",
+        "cosine": 0.6007017603369235
+      },
+      {
+        "role": "exile",
+        "cosine": 0.5444430533744934
+      },
+      {
+        "role": "hermit",
+        "cosine": 0.5356778386189814
+      },
+      {
+        "role": "wind",
+        "cosine": 0.5342313673810649
+      }
+    ],
+    "novelist": [
+      {
+        "role": "playwright",
+        "cosine": 0.7624921020532971
+      },
+      {
+        "role": "podcaster",
+        "cosine": 0.7108623230341015
+      },
+      {
+        "role": "composer",
+        "cosine": 0.6360590717704664
+      },
+      {
+        "role": "writer",
+        "cosine": 0.5849122915257957
+      },
+      {
+        "role": "designer",
+        "cosine": 0.5363522418974017
+      }
+    ],
+    "nutritionist": [
+      {
+        "role": "therapist",
+        "cosine": 0.5779497227364562
+      },
+      {
+        "role": "vegan",
+        "cosine": 0.5563380120284799
+      },
+      {
+        "role": "cartographer",
+        "cosine": 0.5211078458312748
+      },
+      {
+        "role": "chef",
+        "cosine": 0.46149938417512487
+      },
+      {
+        "role": "counselor",
+        "cosine": 0.4512857653488418
+      }
+    ],
+    "observer": [
+      {
+        "role": "witness",
+        "cosine": 0.8954015929049484
+      },
+      {
+        "role": "flaneur",
+        "cosine": 0.5144882620654379
+      },
+      {
+        "role": "narrator",
+        "cosine": 0.4881152709119422
+      },
+      {
+        "role": "historian",
+        "cosine": 0.38164329161649285
+      },
+      {
+        "role": "perfectionist",
+        "cosine": 0.38052995402456535
+      }
+    ],
+    "optimist": [
+      {
+        "role": "realist",
+        "cosine": 0.6921044084931072
+      },
+      {
+        "role": "pragmatist",
+        "cosine": 0.5592519641064173
+      },
+      {
+        "role": "stoic",
+        "cosine": 0.5335997103814494
+      },
+      {
+        "role": "idealist",
+        "cosine": 0.46443079763094086
+      },
+      {
+        "role": "fixer",
+        "cosine": 0.4616426772791528
+      }
+    ],
+    "oracle": [
+      {
+        "role": "prophet",
+        "cosine": 0.8614589495358282
+      },
+      {
+        "role": "forecaster",
+        "cosine": 0.6397969103347788
+      },
+      {
+        "role": "futurist",
+        "cosine": 0.6218173880177214
+      },
+      {
+        "role": "visionary",
+        "cosine": 0.49191325029860683
+      },
+      {
+        "role": "angel",
+        "cosine": 0.4533171943329439
+      }
+    ],
+    "organizer": [
+      {
+        "role": "coordinator",
+        "cosine": 0.7204896948972301
+      },
+      {
+        "role": "planner",
+        "cosine": 0.6491390569854499
+      },
+      {
+        "role": "strategist",
+        "cosine": 0.6199006970398033
+      },
+      {
+        "role": "supervisor",
+        "cosine": 0.5309077607828778
+      },
+      {
+        "role": "scheduler",
+        "cosine": 0.5197618753331965
+      }
+    ],
+    "orphan": [
+      {
+        "role": "prisoner",
+        "cosine": 0.6770000201225483
+      },
+      {
+        "role": "exile",
+        "cosine": 0.6085257402329111
+      },
+      {
+        "role": "amnesiac",
+        "cosine": 0.5819982783420025
+      },
+      {
+        "role": "elder",
+        "cosine": 0.5677153184612782
+      },
+      {
+        "role": "expatriate",
+        "cosine": 0.5572960858692141
+      }
+    ],
+    "pacifist": [
+      {
+        "role": "peacekeeper",
+        "cosine": 0.705473007262416
+      },
+      {
+        "role": "anarchist",
+        "cosine": 0.6039249464821275
+      },
+      {
+        "role": "purist",
+        "cosine": 0.47827612326421054
+      },
+      {
+        "role": "wind",
+        "cosine": 0.4090904297891273
+      },
+      {
+        "role": "luddite",
+        "cosine": 0.4039954409199335
+      }
+    ],
+    "paramedic": [
+      {
+        "role": "patient",
+        "cosine": 0.917800150646916
+      },
+      {
+        "role": "doctor",
+        "cosine": 0.8826695584631051
+      },
+      {
+        "role": "veterinarian",
+        "cosine": 0.8572319934665628
+      },
+      {
+        "role": "pilot",
+        "cosine": 0.4177242738059651
+      },
+      {
+        "role": "navigator",
+        "cosine": 0.18393146711932534
+      }
+    ],
+    "parasite": [
+      {
+        "role": "tulpa",
+        "cosine": 0.6210707240473812
+      },
+      {
+        "role": "exile",
+        "cosine": 0.5299500511458435
+      },
+      {
+        "role": "expatriate",
+        "cosine": 0.5263720183918837
+      },
+      {
+        "role": "nomad",
+        "cosine": 0.5033109967856672
+      },
+      {
+        "role": "orphan",
+        "cosine": 0.4747532811822937
+      }
+    ],
+    "parent": [
+      {
+        "role": "celebrity",
+        "cosine": 0.6561048329218548
+      },
+      {
+        "role": "grandparent",
+        "cosine": 0.609313765568106
+      },
+      {
+        "role": "prisoner",
+        "cosine": 0.5931153264457895
+      },
+      {
+        "role": "orphan",
+        "cosine": 0.5129928059284504
+      },
+      {
+        "role": "adolescent",
+        "cosine": 0.5005756646306344
+      }
+    ],
+    "patient": [
+      {
+        "role": "paramedic",
+        "cosine": 0.917800150646916
+      },
+      {
+        "role": "doctor",
+        "cosine": 0.8734407776929793
+      },
+      {
+        "role": "veterinarian",
+        "cosine": 0.8153041965252592
+      },
+      {
+        "role": "prisoner",
+        "cosine": 0.3791093618796326
+      },
+      {
+        "role": "pilot",
+        "cosine": 0.36522999873569645
+      }
+    ],
+    "peacekeeper": [
+      {
+        "role": "negotiator",
+        "cosine": 0.840132604251675
+      },
+      {
+        "role": "mediator",
+        "cosine": 0.7915364813502304
+      },
+      {
+        "role": "pacifist",
+        "cosine": 0.705473007262416
+      },
+      {
+        "role": "ambassador",
+        "cosine": 0.6636029600102391
+      },
+      {
+        "role": "emissary",
+        "cosine": 0.6060669157573901
+      }
+    ],
+    "perfectionist": [
+      {
+        "role": "proofreader",
+        "cosine": 0.6455688176687863
+      },
+      {
+        "role": "examiner",
+        "cosine": 0.5050064174708322
+      },
+      {
+        "role": "auditor",
+        "cosine": 0.44103984042371047
+      },
+      {
+        "role": "workaholic",
+        "cosine": 0.41587673498288835
+      },
+      {
+        "role": "validator",
+        "cosine": 0.41339857351027337
+      }
+    ],
+    "pharmacist": [
+      {
+        "role": "lawyer",
+        "cosine": 0.48661733773799826
+      },
+      {
+        "role": "chemist",
+        "cosine": 0.4777845425719857
+      },
+      {
+        "role": "specialist",
+        "cosine": 0.44589900517242675
+      },
+      {
+        "role": "archivist",
+        "cosine": 0.44362998846295915
+      },
+      {
+        "role": "pilot",
+        "cosine": 0.4365990926214245
+      }
+    ],
+    "philosopher": [
+      {
+        "role": "absurdist",
+        "cosine": 0.6987872305383798
+      },
+      {
+        "role": "aberration",
+        "cosine": 0.5468894048212793
+      },
+      {
+        "role": "simulacrum",
+        "cosine": 0.527569215070007
+      },
+      {
+        "role": "skeptic",
+        "cosine": 0.5032177816053212
+      },
+      {
+        "role": "void",
+        "cosine": 0.4788073030615511
+      }
+    ],
+    "photographer": [
+      {
+        "role": "romantic",
+        "cosine": 0.5313116098929251
+      },
+      {
+        "role": "designer",
+        "cosine": 0.4988791964723785
+      },
+      {
+        "role": "narrator",
+        "cosine": 0.4979955505476791
+      },
+      {
+        "role": "idealist",
+        "cosine": 0.4853395723735518
+      },
+      {
+        "role": "bard",
+        "cosine": 0.4626260321438233
+      }
+    ],
+    "physicist": [
+      {
+        "role": "mathematician",
+        "cosine": 0.6471931027395077
+      },
+      {
+        "role": "engineer",
+        "cosine": 0.5919304620091721
+      },
+      {
+        "role": "chemist",
+        "cosine": 0.5096310784476253
+      },
+      {
+        "role": "scientist",
+        "cosine": 0.4951548297124903
+      },
+      {
+        "role": "philosopher",
+        "cosine": 0.46776942285952666
+      }
+    ],
+    "pilgrim": [
+      {
+        "role": "mystic",
+        "cosine": 0.6833628074960377
+      },
+      {
+        "role": "wanderer",
+        "cosine": 0.6653220664146289
+      },
+      {
+        "role": "shaman",
+        "cosine": 0.6581778645277125
+      },
+      {
+        "role": "ascetic",
+        "cosine": 0.6166636078276271
+      },
+      {
+        "role": "sage",
+        "cosine": 0.5456900414229153
+      }
+    ],
+    "pilot": [
+      {
+        "role": "navigator",
+        "cosine": 0.6707931441676837
+      },
+      {
+        "role": "smuggler",
+        "cosine": 0.5400880914697275
+      },
+      {
+        "role": "saboteur",
+        "cosine": 0.5159819881579041
+      },
+      {
+        "role": "auditor",
+        "cosine": 0.4832672890977866
+      },
+      {
+        "role": "supervisor",
+        "cosine": 0.4384937558347796
+      }
+    ],
+    "pirate": [
+      {
+        "role": "caveman",
+        "cosine": 0.54684110857936
+      },
+      {
+        "role": "surfer",
+        "cosine": 0.5203539928890648
+      },
+      {
+        "role": "minimalist",
+        "cosine": 0.47646539038925506
+      },
+      {
+        "role": "wind",
+        "cosine": 0.47132105792420614
+      },
+      {
+        "role": "ancient",
+        "cosine": 0.43978647500053564
+      }
+    ],
+    "planner": [
+      {
+        "role": "strategist",
+        "cosine": 0.8638522373411597
+      },
+      {
+        "role": "organizer",
+        "cosine": 0.6491390569854499
+      },
+      {
+        "role": "coach",
+        "cosine": 0.601924574205032
+      },
+      {
+        "role": "trainer",
+        "cosine": 0.5411557148793008
+      },
+      {
+        "role": "marketer",
+        "cosine": 0.4837150896078173
+      }
+    ],
+    "playwright": [
+      {
+        "role": "novelist",
+        "cosine": 0.7624921020532971
+      },
+      {
+        "role": "composer",
+        "cosine": 0.680275214234347
+      },
+      {
+        "role": "podcaster",
+        "cosine": 0.6349976562876612
+      },
+      {
+        "role": "writer",
+        "cosine": 0.5715265235456588
+      },
+      {
+        "role": "builder",
+        "cosine": 0.49881942182297523
+      }
+    ],
+    "podcaster": [
+      {
+        "role": "novelist",
+        "cosine": 0.7108623230341015
+      },
+      {
+        "role": "playwright",
+        "cosine": 0.6349976562876612
+      },
+      {
+        "role": "moderator",
+        "cosine": 0.5554737724726164
+      },
+      {
+        "role": "blogger",
+        "cosine": 0.5445573391149331
+      },
+      {
+        "role": "facilitator",
+        "cosine": 0.4965952236586208
+      }
+    ],
+    "poet": [
+      {
+        "role": "infant",
+        "cosine": 0.714297015826055
+      },
+      {
+        "role": "linguist",
+        "cosine": 0.7136391946385242
+      },
+      {
+        "role": "bard",
+        "cosine": 0.49744119555328975
+      },
+      {
+        "role": "toddler",
+        "cosine": 0.47137560305448933
+      },
+      {
+        "role": "sage",
+        "cosine": 0.4297330884907168
+      }
+    ],
+    "polymath": [
+      {
+        "role": "generalist",
+        "cosine": 0.871677403447361
+      },
+      {
+        "role": "prodigy",
+        "cosine": 0.8032636951236809
+      },
+      {
+        "role": "dilettante",
+        "cosine": 0.5384132427979463
+      },
+      {
+        "role": "student",
+        "cosine": 0.44328419023098575
+      },
+      {
+        "role": "scholar",
+        "cosine": 0.4144025657245433
+      }
+    ],
+    "pragmatist": [
+      {
+        "role": "realist",
+        "cosine": 0.5717131433753209
+      },
+      {
+        "role": "optimist",
+        "cosine": 0.5592519641064173
+      },
+      {
+        "role": "stoic",
+        "cosine": 0.519055986665262
+      },
+      {
+        "role": "judge",
+        "cosine": 0.5029031647317928
+      },
+      {
+        "role": "detective",
+        "cosine": 0.439470389212018
+      }
+    ],
+    "predator": [
+      {
+        "role": "prey",
+        "cosine": 0.8287822029105467
+      },
+      {
+        "role": "vampire",
+        "cosine": 0.6267094210962896
+      },
+      {
+        "role": "daredevil",
+        "cosine": 0.4283846129328123
+      },
+      {
+        "role": "caveman",
+        "cosine": 0.40397029943561397
+      },
+      {
+        "role": "competitor",
+        "cosine": 0.36357097482781975
+      }
+    ],
+    "presenter": [
+      {
+        "role": "summarizer",
+        "cosine": 0.671485668375281
+      },
+      {
+        "role": "synthesizer",
+        "cosine": 0.6135918777458793
+      },
+      {
+        "role": "interviewer",
+        "cosine": 0.5383723327772912
+      },
+      {
+        "role": "journalist",
+        "cosine": 0.49449038305881615
+      },
+      {
+        "role": "curator",
+        "cosine": 0.48881119931236233
+      }
+    ],
+    "prey": [
+      {
+        "role": "predator",
+        "cosine": 0.8287822029105467
+      },
+      {
+        "role": "daredevil",
+        "cosine": 0.5440381237316916
+      },
+      {
+        "role": "competitor",
+        "cosine": 0.4736608228212375
+      },
+      {
+        "role": "vampire",
+        "cosine": 0.4090004023531415
+      },
+      {
+        "role": "workaholic",
+        "cosine": 0.3588453586556928
+      }
+    ],
+    "prisoner": [
+      {
+        "role": "orphan",
+        "cosine": 0.6770000201225483
+      },
+      {
+        "role": "celebrity",
+        "cosine": 0.6167981141607201
+      },
+      {
+        "role": "parent",
+        "cosine": 0.5931153264457895
+      },
+      {
+        "role": "survivor",
+        "cosine": 0.560785509323301
+      },
+      {
+        "role": "exile",
+        "cosine": 0.5437404732740602
+      }
+    ],
+    "procrastinator": [
+      {
+        "role": "hoarder",
+        "cosine": 0.5637489344731159
+      },
+      {
+        "role": "workaholic",
+        "cosine": 0.4651520132773217
+      },
+      {
+        "role": "addict",
+        "cosine": 0.44150790775871707
+      },
+      {
+        "role": "scheduler",
+        "cosine": 0.42836236988011145
+      },
+      {
+        "role": "minimalist",
+        "cosine": 0.42658951161804753
+      }
+    ],
+    "prodigy": [
+      {
+        "role": "polymath",
+        "cosine": 0.8032636951236809
+      },
+      {
+        "role": "generalist",
+        "cosine": 0.6925655716933699
+      },
+      {
+        "role": "student",
+        "cosine": 0.4587237244815528
+      },
+      {
+        "role": "dilettante",
+        "cosine": 0.45509305008358464
+      },
+      {
+        "role": "virtuoso",
+        "cosine": 0.4314278048013229
+      }
+    ],
+    "producer": [
+      {
+        "role": "publisher",
+        "cosine": 0.8475821738924091
+      },
+      {
+        "role": "scheduler",
+        "cosine": 0.5790660315879705
+      },
+      {
+        "role": "dispatcher",
+        "cosine": 0.5503869119668398
+      },
+      {
+        "role": "writer",
+        "cosine": 0.5097774101623813
+      },
+      {
+        "role": "editor",
+        "cosine": 0.4968573593309484
+      }
+    ],
+    "programmer": [
+      {
+        "role": "mathematician",
+        "cosine": 0.598927318040042
+      },
+      {
+        "role": "technologist",
+        "cosine": 0.5163932250905775
+      },
+      {
+        "role": "virtuoso",
+        "cosine": 0.4624257156664913
+      },
+      {
+        "role": "naturalist",
+        "cosine": 0.45969482284305563
+      },
+      {
+        "role": "chef",
+        "cosine": 0.4529362674807669
+      }
+    ],
+    "proofreader": [
+      {
+        "role": "editor",
+        "cosine": 0.8611082640142609
+      },
+      {
+        "role": "perfectionist",
+        "cosine": 0.6455688176687863
+      },
+      {
+        "role": "writer",
+        "cosine": 0.5621249292818457
+      },
+      {
+        "role": "blogger",
+        "cosine": 0.47569821593964356
+      },
+      {
+        "role": "publisher",
+        "cosine": 0.41761885791891534
+      }
+    ],
+    "prophet": [
+      {
+        "role": "oracle",
+        "cosine": 0.8614589495358282
+      },
+      {
+        "role": "angel",
+        "cosine": 0.6450818335006032
+      },
+      {
+        "role": "avatar",
+        "cosine": 0.574352266973589
+      },
+      {
+        "role": "forecaster",
+        "cosine": 0.4585714533703598
+      },
+      {
+        "role": "futurist",
+        "cosine": 0.3630027369765361
+      }
+    ],
+    "provincial": [
+      {
+        "role": "hybrid",
+        "cosine": 0.6819148242095315
+      },
+      {
+        "role": "cosmopolitan",
+        "cosine": 0.5976915765186116
+      },
+      {
+        "role": "addict",
+        "cosine": 0.5585640840953869
+      },
+      {
+        "role": "luddite",
+        "cosine": 0.37512922511928326
+      },
+      {
+        "role": "competitor",
+        "cosine": 0.3723699397351412
+      }
+    ],
+    "provocateur": [
+      {
+        "role": "loner",
+        "cosine": 0.5439985842575596
+      },
+      {
+        "role": "sociologist",
+        "cosine": 0.501342461218584
+      },
+      {
+        "role": "bartender",
+        "cosine": 0.5006169055806632
+      },
+      {
+        "role": "maverick",
+        "cosine": 0.46121269385591335
+      },
+      {
+        "role": "activist",
+        "cosine": 0.45163519820109377
+      }
+    ],
+    "psychologist": [
+      {
+        "role": "cyborg",
+        "cosine": 0.6057599153807065
+      },
+      {
+        "role": "anthropologist",
+        "cosine": 0.587360604559867
+      },
+      {
+        "role": "alien",
+        "cosine": 0.5861986616966056
+      },
+      {
+        "role": "geographer",
+        "cosine": 0.584391083687412
+      },
+      {
+        "role": "cynic",
+        "cosine": 0.4298071140674017
+      }
+    ],
+    "publisher": [
+      {
+        "role": "producer",
+        "cosine": 0.8475821738924091
+      },
+      {
+        "role": "editor",
+        "cosine": 0.6977898623345498
+      },
+      {
+        "role": "writer",
+        "cosine": 0.6467914797984382
+      },
+      {
+        "role": "blogger",
+        "cosine": 0.5554261451575113
+      },
+      {
+        "role": "influencer",
+        "cosine": 0.47993460577544655
+      }
+    ],
+    "purist": [
+      {
+        "role": "traditionalist",
+        "cosine": 0.6409671574636471
+      },
+      {
+        "role": "conservator",
+        "cosine": 0.6304923150740043
+      },
+      {
+        "role": "artisan",
+        "cosine": 0.5725970118592248
+      },
+      {
+        "role": "archivist",
+        "cosine": 0.5492506332343743
+      },
+      {
+        "role": "collector",
+        "cosine": 0.5202905904142888
+      }
+    ],
+    "realist": [
+      {
+        "role": "improviser",
+        "cosine": 0.7548388117000431
+      },
+      {
+        "role": "optimist",
+        "cosine": 0.6921044084931072
+      },
+      {
+        "role": "pragmatist",
+        "cosine": 0.5717131433753209
+      },
+      {
+        "role": "stoic",
+        "cosine": 0.5512341732148526
+      },
+      {
+        "role": "chameleon",
+        "cosine": 0.4939820936444705
+      }
+    ],
+    "rebel": [
+      {
+        "role": "maverick",
+        "cosine": 0.9228476634237982
+      },
+      {
+        "role": "revolutionary",
+        "cosine": 0.7413912166042677
+      },
+      {
+        "role": "traditionalist",
+        "cosine": 0.4760578183818219
+      },
+      {
+        "role": "visionary",
+        "cosine": 0.45868314506475916
+      },
+      {
+        "role": "anarchist",
+        "cosine": 0.4093339553801613
+      }
+    ],
+    "recruiter": [
+      {
+        "role": "entrepreneur",
+        "cosine": 0.7046627531433415
+      },
+      {
+        "role": "scout",
+        "cosine": 0.6569316689118812
+      },
+      {
+        "role": "marketer",
+        "cosine": 0.6292696488304457
+      },
+      {
+        "role": "screener",
+        "cosine": 0.6088223483822263
+      },
+      {
+        "role": "merchant",
+        "cosine": 0.5420776431059329
+      }
+    ],
+    "refugee": [
+      {
+        "role": "immigrant",
+        "cosine": 0.9556029324466285
+      },
+      {
+        "role": "retiree",
+        "cosine": 0.7086026465180867
+      },
+      {
+        "role": "expatriate",
+        "cosine": 0.6746211041370892
+      },
+      {
+        "role": "exile",
+        "cosine": 0.6387536387403806
+      },
+      {
+        "role": "survivor",
+        "cosine": 0.601675790487655
+      }
+    ],
+    "reporter": [
+      {
+        "role": "journalist",
+        "cosine": 0.9380037573583994
+      },
+      {
+        "role": "narrator",
+        "cosine": 0.5872209534864075
+      },
+      {
+        "role": "curator",
+        "cosine": 0.533654867180395
+      },
+      {
+        "role": "celebrity",
+        "cosine": 0.4725831260841206
+      },
+      {
+        "role": "interviewer",
+        "cosine": 0.41812842101319553
+      }
+    ],
+    "researcher": [
+      {
+        "role": "analyst",
+        "cosine": 0.8599513676895693
+      },
+      {
+        "role": "scientist",
+        "cosine": 0.7010272077609827
+      },
+      {
+        "role": "detective",
+        "cosine": 0.6674429307598837
+      },
+      {
+        "role": "statistician",
+        "cosine": 0.5577567753960129
+      },
+      {
+        "role": "judge",
+        "cosine": 0.5416693465730267
+      }
+    ],
+    "retiree": [
+      {
+        "role": "refugee",
+        "cosine": 0.7086026465180867
+      },
+      {
+        "role": "widow",
+        "cosine": 0.6702186120144796
+      },
+      {
+        "role": "immigrant",
+        "cosine": 0.6275037957746503
+      },
+      {
+        "role": "newlywed",
+        "cosine": 0.5954645042394769
+      },
+      {
+        "role": "divorcee",
+        "cosine": 0.5721876359991231
+      }
+    ],
+    "revenant": [
+      {
+        "role": "ghost",
+        "cosine": 0.8261987682167766
+      },
+      {
+        "role": "wraith",
+        "cosine": 0.6108534251270248
+      },
+      {
+        "role": "exile",
+        "cosine": 0.49024625902523755
+      },
+      {
+        "role": "survivor",
+        "cosine": 0.42869708699976694
+      },
+      {
+        "role": "minimalist",
+        "cosine": 0.42688974938235463
+      }
+    ],
+    "reviewer": [
+      {
+        "role": "evaluator",
+        "cosine": 0.892294856573174
+      },
+      {
+        "role": "grader",
+        "cosine": 0.8276738622182228
+      },
+      {
+        "role": "screener",
+        "cosine": 0.5998860242992629
+      },
+      {
+        "role": "critic",
+        "cosine": 0.5555065214126423
+      },
+      {
+        "role": "consultant",
+        "cosine": 0.5084937486820166
+      }
+    ],
+    "revolutionary": [
+      {
+        "role": "anarchist",
+        "cosine": 0.7691960150479527
+      },
+      {
+        "role": "rebel",
+        "cosine": 0.7413912166042677
+      },
+      {
+        "role": "maverick",
+        "cosine": 0.6333057740907414
+      },
+      {
+        "role": "destroyer",
+        "cosine": 0.5352978452645976
+      },
+      {
+        "role": "activist",
+        "cosine": 0.4565024953297446
+      }
+    ],
+    "robot": [
+      {
+        "role": "spy",
+        "cosine": 0.5598796762021849
+      },
+      {
+        "role": "tree",
+        "cosine": 0.43907744222675316
+      },
+      {
+        "role": "infant",
+        "cosine": 0.4385315969787935
+      },
+      {
+        "role": "rogue",
+        "cosine": 0.4359839030532267
+      },
+      {
+        "role": "mycorrhizal",
+        "cosine": 0.42450132759015036
+      }
+    ],
+    "rogue": [
+      {
+        "role": "criminal",
+        "cosine": 0.6420031494225418
+      },
+      {
+        "role": "spy",
+        "cosine": 0.6317537364216144
+      },
+      {
+        "role": "vigilante",
+        "cosine": 0.5612413786569428
+      },
+      {
+        "role": "fixer",
+        "cosine": 0.48982965690206387
+      },
+      {
+        "role": "robot",
+        "cosine": 0.4359839030532267
+      }
+    ],
+    "romantic": [
+      {
+        "role": "idealist",
+        "cosine": 0.7812859251887462
+      },
+      {
+        "role": "empath",
+        "cosine": 0.5328114839986143
+      },
+      {
+        "role": "photographer",
+        "cosine": 0.5313116098929251
+      },
+      {
+        "role": "grandparent",
+        "cosine": 0.43576902089097674
+      },
+      {
+        "role": "gamer",
+        "cosine": 0.4048777236078761
+      }
+    ],
+    "saboteur": [
+      {
+        "role": "destroyer",
+        "cosine": 0.7333546505062544
+      },
+      {
+        "role": "builder",
+        "cosine": 0.671966372634325
+      },
+      {
+        "role": "hacker",
+        "cosine": 0.6628870153468278
+      },
+      {
+        "role": "virus",
+        "cosine": 0.6202132488450465
+      },
+      {
+        "role": "pilot",
+        "cosine": 0.5159819881579041
+      }
+    ],
+    "sage": [
+      {
+        "role": "guru",
+        "cosine": 0.6362684179407999
+      },
+      {
+        "role": "elder",
+        "cosine": 0.6310726490640631
+      },
+      {
+        "role": "pilgrim",
+        "cosine": 0.5456900414229153
+      },
+      {
+        "role": "absurdist",
+        "cosine": 0.5332212343283693
+      },
+      {
+        "role": "hermit",
+        "cosine": 0.5032126663052593
+      }
+    ],
+    "scheduler": [
+      {
+        "role": "coordinator",
+        "cosine": 0.7505871914589178
+      },
+      {
+        "role": "secretary",
+        "cosine": 0.6883089864194266
+      },
+      {
+        "role": "supervisor",
+        "cosine": 0.6419629782435549
+      },
+      {
+        "role": "dispatcher",
+        "cosine": 0.634628235343781
+      },
+      {
+        "role": "producer",
+        "cosine": 0.5790660315879705
+      }
+    ],
+    "scholar": [
+      {
+        "role": "archaeologist",
+        "cosine": 0.6841981792482823
+      },
+      {
+        "role": "scientist",
+        "cosine": 0.5554196897630479
+      },
+      {
+        "role": "detective",
+        "cosine": 0.46916760642269745
+      },
+      {
+        "role": "student",
+        "cosine": 0.4318406357542395
+      },
+      {
+        "role": "polymath",
+        "cosine": 0.4144025657245433
+      }
+    ],
+    "scientist": [
+      {
+        "role": "researcher",
+        "cosine": 0.7010272077609827
+      },
+      {
+        "role": "detective",
+        "cosine": 0.6870588063077848
+      },
+      {
+        "role": "biologist",
+        "cosine": 0.5571585737243491
+      },
+      {
+        "role": "scholar",
+        "cosine": 0.5554196897630479
+      },
+      {
+        "role": "analyst",
+        "cosine": 0.5493807945966456
+      }
+    ],
+    "scout": [
+      {
+        "role": "recruiter",
+        "cosine": 0.6569316689118812
+      },
+      {
+        "role": "evangelist",
+        "cosine": 0.5349910480102428
+      },
+      {
+        "role": "technologist",
+        "cosine": 0.5322334927392316
+      },
+      {
+        "role": "entrepreneur",
+        "cosine": 0.49373623947265477
+      },
+      {
+        "role": "retiree",
+        "cosine": 0.4568994179955626
+      }
+    ],
+    "screener": [
+      {
+        "role": "examiner",
+        "cosine": 0.6268888062890282
+      },
+      {
+        "role": "grader",
+        "cosine": 0.6253923493443181
+      },
+      {
+        "role": "recruiter",
+        "cosine": 0.6088223483822263
+      },
+      {
+        "role": "reviewer",
+        "cosine": 0.5998860242992629
+      },
+      {
+        "role": "auditor",
+        "cosine": 0.5802833834111722
+      }
+    ],
+    "secretary": [
+      {
+        "role": "scheduler",
+        "cosine": 0.6883089864194266
+      },
+      {
+        "role": "moderator",
+        "cosine": 0.5254733415524725
+      },
+      {
+        "role": "dispatcher",
+        "cosine": 0.48855000028809886
+      },
+      {
+        "role": "facilitator",
+        "cosine": 0.4742619555399395
+      },
+      {
+        "role": "accountant",
+        "cosine": 0.45218798127378446
+      }
+    ],
+    "shaman": [
+      {
+        "role": "mystic",
+        "cosine": 0.8063574257037387
+      },
+      {
+        "role": "healer",
+        "cosine": 0.7499066892626947
+      },
+      {
+        "role": "pilgrim",
+        "cosine": 0.6581778645277125
+      },
+      {
+        "role": "ascetic",
+        "cosine": 0.5455425617855112
+      },
+      {
+        "role": "guru",
+        "cosine": 0.5291815837104776
+      }
+    ],
+    "shapeshifter": [
+      {
+        "role": "actor",
+        "cosine": 0.8283258248414256
+      },
+      {
+        "role": "interpreter",
+        "cosine": 0.5985974228122257
+      },
+      {
+        "role": "fixer",
+        "cosine": 0.49415029677717975
+      },
+      {
+        "role": "translator",
+        "cosine": 0.48533331053182016
+      },
+      {
+        "role": "avatar",
+        "cosine": 0.4534379530906127
+      }
+    ],
+    "simulacrum": [
+      {
+        "role": "philosopher",
+        "cosine": 0.527569215070007
+      },
+      {
+        "role": "skeptic",
+        "cosine": 0.45025897965594003
+      },
+      {
+        "role": "validator",
+        "cosine": 0.4007833065056486
+      },
+      {
+        "role": "wind",
+        "cosine": 0.3968481321083743
+      },
+      {
+        "role": "visionary",
+        "cosine": 0.3964861295832625
+      }
+    ],
+    "skeptic": [
+      {
+        "role": "detective",
+        "cosine": 0.6586603517417886
+      },
+      {
+        "role": "judge",
+        "cosine": 0.5988934539534371
+      },
+      {
+        "role": "philosopher",
+        "cosine": 0.5032177816053212
+      },
+      {
+        "role": "validator",
+        "cosine": 0.4756151492233874
+      },
+      {
+        "role": "researcher",
+        "cosine": 0.4502842564560851
+      }
+    ],
+    "smuggler": [
+      {
+        "role": "navigator",
+        "cosine": 0.771007512924746
+      },
+      {
+        "role": "merchant",
+        "cosine": 0.737976389734187
+      },
+      {
+        "role": "pilot",
+        "cosine": 0.5400880914697275
+      },
+      {
+        "role": "cartographer",
+        "cosine": 0.5363826638959726
+      },
+      {
+        "role": "chemist",
+        "cosine": 0.4862840723765984
+      }
+    ],
+    "sociologist": [
+      {
+        "role": "anthropologist",
+        "cosine": 0.7335684723315059
+      },
+      {
+        "role": "loner",
+        "cosine": 0.6483835082262384
+      },
+      {
+        "role": "activist",
+        "cosine": 0.6144197363468763
+      },
+      {
+        "role": "bartender",
+        "cosine": 0.5811308925413927
+      },
+      {
+        "role": "alien",
+        "cosine": 0.5783396602324693
+      }
+    ],
+    "soldier": [
+      {
+        "role": "veteran",
+        "cosine": 0.9835145179518344
+      },
+      {
+        "role": "warrior",
+        "cosine": 0.6682618625539797
+      },
+      {
+        "role": "prisoner",
+        "cosine": 0.40550065205877084
+      },
+      {
+        "role": "sommelier",
+        "cosine": 0.3966996821473111
+      },
+      {
+        "role": "orphan",
+        "cosine": 0.36531302023612133
+      }
+    ],
+    "sommelier": [
+      {
+        "role": "chef",
+        "cosine": 0.6860185361334235
+      },
+      {
+        "role": "collector",
+        "cosine": 0.4938667031407454
+      },
+      {
+        "role": "empath",
+        "cosine": 0.4883548189673716
+      },
+      {
+        "role": "cartographer",
+        "cosine": 0.4551174286255614
+      },
+      {
+        "role": "architect",
+        "cosine": 0.45122053717866767
+      }
+    ],
+    "specialist": [
+      {
+        "role": "pharmacist",
+        "cosine": 0.44589900517242675
+      },
+      {
+        "role": "mathematician",
+        "cosine": 0.3475508959410679
+      },
+      {
+        "role": "engineer",
+        "cosine": 0.30051465108970465
+      },
+      {
+        "role": "generalist",
+        "cosine": 0.2555986837447458
+      },
+      {
+        "role": "virtuoso",
+        "cosine": 0.2507206521757692
+      }
+    ],
+    "spirit": [
+      {
+        "role": "zeitgeist",
+        "cosine": 0.650360326067116
+      },
+      {
+        "role": "familiar",
+        "cosine": 0.5660504357444208
+      },
+      {
+        "role": "healer",
+        "cosine": 0.5358917022694542
+      },
+      {
+        "role": "shaman",
+        "cosine": 0.5116218448795528
+      },
+      {
+        "role": "echo",
+        "cosine": 0.47239090175411885
+      }
+    ],
+    "spy": [
+      {
+        "role": "rogue",
+        "cosine": 0.6317537364216144
+      },
+      {
+        "role": "mycorrhizal",
+        "cosine": 0.6114374840951853
+      },
+      {
+        "role": "robot",
+        "cosine": 0.5598796762021849
+      },
+      {
+        "role": "hacker",
+        "cosine": 0.5180177568763584
+      },
+      {
+        "role": "interviewer",
+        "cosine": 0.48153051824593884
+      }
+    ],
+    "statistician": [
+      {
+        "role": "economist",
+        "cosine": 0.7864330470722463
+      },
+      {
+        "role": "analyst",
+        "cosine": 0.7698943680341439
+      },
+      {
+        "role": "accountant",
+        "cosine": 0.7110261469760997
+      },
+      {
+        "role": "forecaster",
+        "cosine": 0.5961715980180502
+      },
+      {
+        "role": "consultant",
+        "cosine": 0.5798796843850341
+      }
+    ],
+    "stoic": [
+      {
+        "role": "realist",
+        "cosine": 0.5512341732148526
+      },
+      {
+        "role": "optimist",
+        "cosine": 0.5335997103814494
+      },
+      {
+        "role": "addict",
+        "cosine": 0.531117664889447
+      },
+      {
+        "role": "pragmatist",
+        "cosine": 0.519055986665262
+      },
+      {
+        "role": "chameleon",
+        "cosine": 0.41903635821343815
+      }
+    ],
+    "strategist": [
+      {
+        "role": "planner",
+        "cosine": 0.8638522373411597
+      },
+      {
+        "role": "organizer",
+        "cosine": 0.6199006970398033
+      },
+      {
+        "role": "theorist",
+        "cosine": 0.5593199045612287
+      },
+      {
+        "role": "coach",
+        "cosine": 0.5557965398267433
+      },
+      {
+        "role": "marketer",
+        "cosine": 0.48272916404246413
+      }
+    ],
+    "student": [
+      {
+        "role": "graduate",
+        "cosine": 0.5911264578755674
+      },
+      {
+        "role": "dilettante",
+        "cosine": 0.5533023832811617
+      },
+      {
+        "role": "prodigy",
+        "cosine": 0.4587237244815528
+      },
+      {
+        "role": "tutor",
+        "cosine": 0.4565277066491097
+      },
+      {
+        "role": "polymath",
+        "cosine": 0.44328419023098575
+      }
+    ],
+    "summarizer": [
+      {
+        "role": "presenter",
+        "cosine": 0.671485668375281
+      },
+      {
+        "role": "synthesizer",
+        "cosine": 0.6474435117079517
+      },
+      {
+        "role": "validator",
+        "cosine": 0.5549130262788543
+      },
+      {
+        "role": "interviewer",
+        "cosine": 0.5041055674377625
+      },
+      {
+        "role": "organizer",
+        "cosine": 0.461450864607865
+      }
+    ],
+    "supervisor": [
+      {
+        "role": "coordinator",
+        "cosine": 0.728077041594289
+      },
+      {
+        "role": "dispatcher",
+        "cosine": 0.649468216618143
+      },
+      {
+        "role": "scheduler",
+        "cosine": 0.6419629782435549
+      },
+      {
+        "role": "organizer",
+        "cosine": 0.5309077607828778
+      },
+      {
+        "role": "examiner",
+        "cosine": 0.496340838805271
+      }
+    ],
+    "surfer": [
+      {
+        "role": "leviathan",
+        "cosine": 0.6092096480823034
+      },
+      {
+        "role": "pirate",
+        "cosine": 0.5203539928890648
+      },
+      {
+        "role": "whale",
+        "cosine": 0.49007622133712453
+      },
+      {
+        "role": "ancient",
+        "cosine": 0.4842057042908952
+      },
+      {
+        "role": "hermit",
+        "cosine": 0.47376648535632054
+      }
+    ],
+    "survivor": [
+      {
+        "role": "elder",
+        "cosine": 0.6781701035723554
+      },
+      {
+        "role": "refugee",
+        "cosine": 0.601675790487655
+      },
+      {
+        "role": "prisoner",
+        "cosine": 0.560785509323301
+      },
+      {
+        "role": "ancient",
+        "cosine": 0.5331205893231673
+      },
+      {
+        "role": "hermit",
+        "cosine": 0.5248692730240547
+      }
+    ],
+    "swarm": [
+      {
+        "role": "hive",
+        "cosine": 0.9542993207707928
+      },
+      {
+        "role": "coral_reef",
+        "cosine": 0.6477826626038099
+      },
+      {
+        "role": "egregore",
+        "cosine": 0.6325993711740378
+      },
+      {
+        "role": "echo",
+        "cosine": 0.4841101661554205
+      },
+      {
+        "role": "mycorrhizal",
+        "cosine": 0.45161883733633407
+      }
+    ],
+    "symbiont": [
+      {
+        "role": "ecosystem",
+        "cosine": 0.7341301674466043
+      },
+      {
+        "role": "merchant",
+        "cosine": 0.6159698728126605
+      },
+      {
+        "role": "coral_reef",
+        "cosine": 0.5210143413073383
+      },
+      {
+        "role": "collaborator",
+        "cosine": 0.5106900635816688
+      },
+      {
+        "role": "mycorrhizal",
+        "cosine": 0.5037917436074622
+      }
+    ],
+    "synthesizer": [
+      {
+        "role": "summarizer",
+        "cosine": 0.6474435117079517
+      },
+      {
+        "role": "theorist",
+        "cosine": 0.6439356051261681
+      },
+      {
+        "role": "presenter",
+        "cosine": 0.6135918777458793
+      },
+      {
+        "role": "chimera",
+        "cosine": 0.5069418180748424
+      },
+      {
+        "role": "interpreter",
+        "cosine": 0.4552559283296531
+      }
+    ],
+    "teacher": [
+      {
+        "role": "tutor",
+        "cosine": 0.9424588260497967
+      },
+      {
+        "role": "instructor",
+        "cosine": 0.9167006846303736
+      },
+      {
+        "role": "trainer",
+        "cosine": 0.7507484282004661
+      },
+      {
+        "role": "student",
+        "cosine": 0.4321935161588421
+      },
+      {
+        "role": "coach",
+        "cosine": 0.393574522155906
+      }
+    ],
+    "technologist": [
+      {
+        "role": "evangelist",
+        "cosine": 0.7491904949818267
+      },
+      {
+        "role": "visionary",
+        "cosine": 0.6703059158295427
+      },
+      {
+        "role": "futurist",
+        "cosine": 0.5674601942266929
+      },
+      {
+        "role": "scout",
+        "cosine": 0.5322334927392316
+      },
+      {
+        "role": "programmer",
+        "cosine": 0.5163932250905775
+      }
+    ],
+    "teenager": [
+      {
+        "role": "adolescent",
+        "cosine": 0.9896915814415648
+      },
+      {
+        "role": "parent",
+        "cosine": 0.4874611726933923
+      },
+      {
+        "role": "grandparent",
+        "cosine": 0.3747052586537826
+      },
+      {
+        "role": "programmer",
+        "cosine": 0.3299236312562617
+      },
+      {
+        "role": "naturalist",
+        "cosine": 0.30806087471384824
+      }
+    ],
+    "theorist": [
+      {
+        "role": "synthesizer",
+        "cosine": 0.6439356051261681
+      },
+      {
+        "role": "strategist",
+        "cosine": 0.5593199045612287
+      },
+      {
+        "role": "composer",
+        "cosine": 0.5195914995800427
+      },
+      {
+        "role": "builder",
+        "cosine": 0.5183968217291091
+      },
+      {
+        "role": "mathematician",
+        "cosine": 0.5029582874415864
+      }
+    ],
+    "therapist": [
+      {
+        "role": "counselor",
+        "cosine": 0.8851797535252116
+      },
+      {
+        "role": "nutritionist",
+        "cosine": 0.5779497227364562
+      },
+      {
+        "role": "guide",
+        "cosine": 0.5624871401206667
+      },
+      {
+        "role": "empath",
+        "cosine": 0.553172043863662
+      },
+      {
+        "role": "mentor",
+        "cosine": 0.5492376660216148
+      }
+    ],
+    "toddler": [
+      {
+        "role": "infant",
+        "cosine": 0.6613209340987452
+      },
+      {
+        "role": "caveman",
+        "cosine": 0.4932295168524229
+      },
+      {
+        "role": "poet",
+        "cosine": 0.47137560305448933
+      },
+      {
+        "role": "hoarder",
+        "cosine": 0.4562094627528267
+      },
+      {
+        "role": "physicist",
+        "cosine": 0.446213417654007
+      }
+    ],
+    "traditionalist": [
+      {
+        "role": "purist",
+        "cosine": 0.6409671574636471
+      },
+      {
+        "role": "luddite",
+        "cosine": 0.5523492407543907
+      },
+      {
+        "role": "conservator",
+        "cosine": 0.4884188741049635
+      },
+      {
+        "role": "rebel",
+        "cosine": 0.4760578183818219
+      },
+      {
+        "role": "artisan",
+        "cosine": 0.45228585725473774
+      }
+    ],
+    "trainer": [
+      {
+        "role": "instructor",
+        "cosine": 0.9274177602094147
+      },
+      {
+        "role": "tutor",
+        "cosine": 0.8201225143912813
+      },
+      {
+        "role": "teacher",
+        "cosine": 0.7507484282004661
+      },
+      {
+        "role": "coach",
+        "cosine": 0.7495405533568954
+      },
+      {
+        "role": "planner",
+        "cosine": 0.5411557148793008
+      }
+    ],
+    "translator": [
+      {
+        "role": "interpreter",
+        "cosine": 0.8570185122817366
+      },
+      {
+        "role": "emissary",
+        "cosine": 0.6792685911443281
+      },
+      {
+        "role": "actor",
+        "cosine": 0.5487284025552045
+      },
+      {
+        "role": "cosmopolitan",
+        "cosine": 0.4961940549888872
+      },
+      {
+        "role": "shapeshifter",
+        "cosine": 0.48533331053182016
+      }
+    ],
+    "tree": [
+      {
+        "role": "mycorrhizal",
+        "cosine": 0.7042127775244343
+      },
+      {
+        "role": "chemist",
+        "cosine": 0.47252040127302686
+      },
+      {
+        "role": "smuggler",
+        "cosine": 0.46678791796406083
+      },
+      {
+        "role": "crystalline",
+        "cosine": 0.445563326691721
+      },
+      {
+        "role": "robot",
+        "cosine": 0.43907744222675316
+      }
+    ],
+    "trickster": [
+      {
+        "role": "fool",
+        "cosine": 0.8667933076444196
+      },
+      {
+        "role": "jester",
+        "cosine": 0.7646664150264727
+      },
+      {
+        "role": "comedian",
+        "cosine": 0.7289992395308685
+      },
+      {
+        "role": "absurdist",
+        "cosine": 0.5385274925101161
+      },
+      {
+        "role": "guru",
+        "cosine": 0.4819646205091037
+      }
+    ],
+    "tulpa": [
+      {
+        "role": "egregore",
+        "cosine": 0.6883513849731238
+      },
+      {
+        "role": "parasite",
+        "cosine": 0.6210707240473812
+      },
+      {
+        "role": "coral_reef",
+        "cosine": 0.46699234788807975
+      },
+      {
+        "role": "dreamer",
+        "cosine": 0.45393058309742057
+      },
+      {
+        "role": "hive",
+        "cosine": 0.41733065167688627
+      }
+    ],
+    "tutor": [
+      {
+        "role": "teacher",
+        "cosine": 0.9424588260497967
+      },
+      {
+        "role": "instructor",
+        "cosine": 0.9243678799200047
+      },
+      {
+        "role": "trainer",
+        "cosine": 0.8201225143912813
+      },
+      {
+        "role": "coach",
+        "cosine": 0.5578875436916165
+      },
+      {
+        "role": "student",
+        "cosine": 0.4565277066491097
+      }
+    ],
+    "validator": [
+      {
+        "role": "summarizer",
+        "cosine": 0.5549130262788543
+      },
+      {
+        "role": "examiner",
+        "cosine": 0.5378568009607863
+      },
+      {
+        "role": "gossip",
+        "cosine": 0.5194920409134419
+      },
+      {
+        "role": "researcher",
+        "cosine": 0.4982235862977295
+      },
+      {
+        "role": "skeptic",
+        "cosine": 0.4756151492233874
+      }
+    ],
+    "vampire": [
+      {
+        "role": "predator",
+        "cosine": 0.6267094210962896
+      },
+      {
+        "role": "parasite",
+        "cosine": 0.4549754306576734
+      },
+      {
+        "role": "elder",
+        "cosine": 0.4305869918036691
+      },
+      {
+        "role": "daredevil",
+        "cosine": 0.4193960568327052
+      },
+      {
+        "role": "prey",
+        "cosine": 0.4090004023531415
+      }
+    ],
+    "vegan": [
+      {
+        "role": "nutritionist",
+        "cosine": 0.5563380120284799
+      },
+      {
+        "role": "judge",
+        "cosine": 0.43446650921993196
+      },
+      {
+        "role": "detective",
+        "cosine": 0.3568177863033603
+      },
+      {
+        "role": "veterinarian",
+        "cosine": 0.35356497028633
+      },
+      {
+        "role": "biologist",
+        "cosine": 0.3433102941050496
+      }
+    ],
+    "veteran": [
+      {
+        "role": "soldier",
+        "cosine": 0.9835145179518344
+      },
+      {
+        "role": "warrior",
+        "cosine": 0.6382514837470264
+      },
+      {
+        "role": "prisoner",
+        "cosine": 0.4180088501225168
+      },
+      {
+        "role": "orphan",
+        "cosine": 0.3929061482635109
+      },
+      {
+        "role": "elder",
+        "cosine": 0.37051211698363545
+      }
+    ],
+    "veterinarian": [
+      {
+        "role": "doctor",
+        "cosine": 0.9193527379638122
+      },
+      {
+        "role": "paramedic",
+        "cosine": 0.8572319934665628
+      },
+      {
+        "role": "patient",
+        "cosine": 0.8153041965252592
+      },
+      {
+        "role": "nutritionist",
+        "cosine": 0.41267029771269037
+      },
+      {
+        "role": "vegan",
+        "cosine": 0.35356497028633
+      }
+    ],
+    "vigilante": [
+      {
+        "role": "criminal",
+        "cosine": 0.7544406137214537
+      },
+      {
+        "role": "lawyer",
+        "cosine": 0.75159342291267
+      },
+      {
+        "role": "rogue",
+        "cosine": 0.5612413786569428
+      },
+      {
+        "role": "fixer",
+        "cosine": 0.362002935502425
+      },
+      {
+        "role": "activist",
+        "cosine": 0.3297411346518554
+      }
+    ],
+    "virtuoso": [
+      {
+        "role": "zealot",
+        "cosine": 0.542195300845613
+      },
+      {
+        "role": "musician",
+        "cosine": 0.4824477187988541
+      },
+      {
+        "role": "whale",
+        "cosine": 0.4780986602392498
+      },
+      {
+        "role": "programmer",
+        "cosine": 0.4624257156664913
+      },
+      {
+        "role": "sommelier",
+        "cosine": 0.44113694894064087
+      }
+    ],
+    "virus": [
+      {
+        "role": "destroyer",
+        "cosine": 0.6659769785761525
+      },
+      {
+        "role": "saboteur",
+        "cosine": 0.6202132488450465
+      },
+      {
+        "role": "hacker",
+        "cosine": 0.47209249629337763
+      },
+      {
+        "role": "anarchist",
+        "cosine": 0.4072509045396405
+      },
+      {
+        "role": "mechanic",
+        "cosine": 0.4053182026576365
+      }
+    ],
+    "visionary": [
+      {
+        "role": "technologist",
+        "cosine": 0.6703059158295427
+      },
+      {
+        "role": "futurist",
+        "cosine": 0.6358601242582836
+      },
+      {
+        "role": "evangelist",
+        "cosine": 0.608750015943163
+      },
+      {
+        "role": "maverick",
+        "cosine": 0.5645075279552851
+      },
+      {
+        "role": "oracle",
+        "cosine": 0.49191325029860683
+      }
+    ],
+    "void": [
+      {
+        "role": "wraith",
+        "cosine": 0.7509917908252822
+      },
+      {
+        "role": "dreamer",
+        "cosine": 0.6177311044270098
+      },
+      {
+        "role": "eldritch",
+        "cosine": 0.6119264725693072
+      },
+      {
+        "role": "aberration",
+        "cosine": 0.6005911660707893
+      },
+      {
+        "role": "ghost",
+        "cosine": 0.4922646702332621
+      }
+    ],
+    "wanderer": [
+      {
+        "role": "pilgrim",
+        "cosine": 0.6653220664146289
+      },
+      {
+        "role": "flaneur",
+        "cosine": 0.6049882343834119
+      },
+      {
+        "role": "nomad",
+        "cosine": 0.6007017603369235
+      },
+      {
+        "role": "daredevil",
+        "cosine": 0.5524625817438225
+      },
+      {
+        "role": "hermit",
+        "cosine": 0.45943412368197967
+      }
+    ],
+    "warrior": [
+      {
+        "role": "soldier",
+        "cosine": 0.6682618625539797
+      },
+      {
+        "role": "veteran",
+        "cosine": 0.6382514837470264
+      },
+      {
+        "role": "zealot",
+        "cosine": 0.5424531531133171
+      },
+      {
+        "role": "guardian",
+        "cosine": 0.43326138793333474
+      },
+      {
+        "role": "martyr",
+        "cosine": 0.4190672236755739
+      }
+    ],
+    "whale": [
+      {
+        "role": "leviathan",
+        "cosine": 0.7147122264576026
+      },
+      {
+        "role": "witch",
+        "cosine": 0.5344632573708963
+      },
+      {
+        "role": "surfer",
+        "cosine": 0.49007622133712453
+      },
+      {
+        "role": "dreamer",
+        "cosine": 0.4821796697760203
+      },
+      {
+        "role": "virtuoso",
+        "cosine": 0.4780986602392498
+      }
+    ],
+    "widow": [
+      {
+        "role": "divorcee",
+        "cosine": 0.9571436741657393
+      },
+      {
+        "role": "newlywed",
+        "cosine": 0.798316095258017
+      },
+      {
+        "role": "retiree",
+        "cosine": 0.6702186120144796
+      },
+      {
+        "role": "graduate",
+        "cosine": 0.5874510706999782
+      },
+      {
+        "role": "hedonist",
+        "cosine": 0.4476517878551875
+      }
+    ],
+    "wind": [
+      {
+        "role": "nomad",
+        "cosine": 0.5342313673810649
+      },
+      {
+        "role": "ancient",
+        "cosine": 0.5313027212812145
+      },
+      {
+        "role": "celebrity",
+        "cosine": 0.5013671628963333
+      },
+      {
+        "role": "pirate",
+        "cosine": 0.47132105792420614
+      },
+      {
+        "role": "hermit",
+        "cosine": 0.452602723387066
+      }
+    ],
+    "witch": [
+      {
+        "role": "golem",
+        "cosine": 0.6702268431758683
+      },
+      {
+        "role": "homunculus",
+        "cosine": 0.6333650268409099
+      },
+      {
+        "role": "whale",
+        "cosine": 0.5344632573708963
+      },
+      {
+        "role": "eldritch",
+        "cosine": 0.4826751313597106
+      },
+      {
+        "role": "shaman",
+        "cosine": 0.44483317643344406
+      }
+    ],
+    "witness": [
+      {
+        "role": "observer",
+        "cosine": 0.8954015929049484
+      },
+      {
+        "role": "narrator",
+        "cosine": 0.5402577414656136
+      },
+      {
+        "role": "historian",
+        "cosine": 0.46754156903216704
+      },
+      {
+        "role": "auctioneer",
+        "cosine": 0.43133175326405226
+      },
+      {
+        "role": "reporter",
+        "cosine": 0.34624687764172296
+      }
+    ],
+    "workaholic": [
+      {
+        "role": "ecosystem",
+        "cosine": 0.4875530280868409
+      },
+      {
+        "role": "procrastinator",
+        "cosine": 0.4651520132773217
+      },
+      {
+        "role": "perfectionist",
+        "cosine": 0.41587673498288835
+      },
+      {
+        "role": "amnesiac",
+        "cosine": 0.40594660024796825
+      },
+      {
+        "role": "grader",
+        "cosine": 0.36843747602041926
+      }
+    ],
+    "wraith": [
+      {
+        "role": "ghost",
+        "cosine": 0.8530873465464337
+      },
+      {
+        "role": "void",
+        "cosine": 0.7509917908252822
+      },
+      {
+        "role": "revenant",
+        "cosine": 0.6108534251270248
+      },
+      {
+        "role": "spirit",
+        "cosine": 0.4117082557300647
+      },
+      {
+        "role": "simulacrum",
+        "cosine": 0.34755402335913743
+      }
+    ],
+    "writer": [
+      {
+        "role": "blogger",
+        "cosine": 0.7839925353527164
+      },
+      {
+        "role": "editor",
+        "cosine": 0.719797920676867
+      },
+      {
+        "role": "publisher",
+        "cosine": 0.6467914797984382
+      },
+      {
+        "role": "novelist",
+        "cosine": 0.5849122915257957
+      },
+      {
+        "role": "playwright",
+        "cosine": 0.5715265235456588
+      }
+    ],
+    "zealot": [
+      {
+        "role": "evangelist",
+        "cosine": 0.5634973520526511
+      },
+      {
+        "role": "warrior",
+        "cosine": 0.5424531531133171
+      },
+      {
+        "role": "virtuoso",
+        "cosine": 0.542195300845613
+      },
+      {
+        "role": "dreamer",
+        "cosine": 0.48165736832103
+      },
+      {
+        "role": "chimera",
+        "cosine": 0.4551100914209616
+      }
+    ],
+    "zeitgeist": [
+      {
+        "role": "familiar",
+        "cosine": 0.7145703165614165
+      },
+      {
+        "role": "genie",
+        "cosine": 0.6660273391484088
+      },
+      {
+        "role": "spirit",
+        "cosine": 0.650360326067116
+      },
+      {
+        "role": "egregore",
+        "cosine": 0.5182664835203077
+      },
+      {
+        "role": "echo",
+        "cosine": 0.5027360893673058
+      }
+    ]
+  },
+  "pca2": {
+    "aberration": {
+      "x": 0.09687679863596309,
+      "y": -0.0925990294520938
+    },
+    "absurdist": {
+      "x": 0.21600676197106178,
+      "y": -0.188493675872465
+    },
+    "accountant": {
+      "x": -0.297127619548162,
+      "y": 0.04665292696253533
+    },
+    "activist": {
+      "x": 0.055098409310179314,
+      "y": -0.0427080270281344
+    },
+    "actor": {
+      "x": 0.0481805158162484,
+      "y": 0.005743268211211292
+    },
+    "addict": {
+      "x": 0.2077055813135739,
+      "y": 0.2628692663180928
+    },
+    "adolescent": {
+      "x": 0.07113554943698344,
+      "y": 0.013399916295581588
+    },
+    "advocate": {
+      "x": 0.012852591438708684,
+      "y": -0.04625929918654096
+    },
+    "alien": {
+      "x": 0.14364045854383165,
+      "y": -0.20734274061867636
+    },
+    "altruist": {
+      "x": 0.14992175555780377,
+      "y": -0.08915652812275658
+    },
+    "amateur": {
+      "x": 0.02174639835300196,
+      "y": -0.15986349856100482
+    },
+    "ambassador": {
+      "x": -0.039675639617384476,
+      "y": 0.13180506005056616
+    },
+    "amnesiac": {
+      "x": 0.21041230923118892,
+      "y": 0.13752958180542946
+    },
+    "analyst": {
+      "x": -0.32474652255523284,
+      "y": -0.24805670271590827
+    },
+    "anarchist": {
+      "x": 0.07212183132273609,
+      "y": -0.10507680744958296
+    },
+    "ancient": {
+      "x": 0.2625297078808779,
+      "y": 0.21134251411732027
+    },
+    "angel": {
+      "x": 0.11229500416240766,
+      "y": -0.11566948823986388
+    },
+    "anthropologist": {
+      "x": -0.14200988321121683,
+      "y": -0.12046505640809228
+    },
+    "archaeologist": {
+      "x": -0.04938536845178221,
+      "y": -0.16390617016258702
+    },
+    "architect": {
+      "x": -0.32883785252742087,
+      "y": 0.282049509601421
+    },
+    "archivist": {
+      "x": -0.19148566438506542,
+      "y": 0.044902618434768546
+    },
+    "artisan": {
+      "x": -0.10907237498566145,
+      "y": 0.012394112385868156
+    },
+    "ascetic": {
+      "x": 0.3084873640572066,
+      "y": -0.011348463107438768
+    },
+    "assistant": {
+      "x": -0.06121580898434604,
+      "y": -0.04975454759092447
+    },
+    "auctioneer": {
+      "x": -0.29031388059530727,
+      "y": 0.21236950855852602
+    },
+    "auditor": {
+      "x": -0.21518293819080656,
+      "y": 0.09447499213058208
+    },
+    "avatar": {
+      "x": 0.194891152573602,
+      "y": 0.0011177051097483257
+    },
+    "bard": {
+      "x": 0.09898099934447153,
+      "y": -0.0001227891959376816
+    },
+    "bartender": {
+      "x": -0.17318505552312471,
+      "y": 0.19270671505141465
+    },
+    "biologist": {
+      "x": -0.024565173084702397,
+      "y": 0.11347970915599227
+    },
+    "blogger": {
+      "x": 0.014209595171532217,
+      "y": -0.057603900034642476
+    },
+    "bohemian": {
+      "x": 0.20568919540541292,
+      "y": -0.10534775211355574
+    },
+    "builder": {
+      "x": -0.34618104834181096,
+      "y": 0.2204345008168948
+    },
+    "caregiver": {
+      "x": 0.13981829546873248,
+      "y": -0.148159587963735
+    },
+    "cartographer": {
+      "x": -0.42782015229326503,
+      "y": 0.25343665318844505
+    },
+    "caveman": {
+      "x": 0.1038934756093586,
+      "y": -0.20034677430275175
+    },
+    "celebrity": {
+      "x": 0.2631907516254562,
+      "y": 0.48916016972067716
+    },
+    "chameleon": {
+      "x": 0.03035230136380011,
+      "y": 0.0019243716971871104
+    },
+    "chef": {
+      "x": -0.24264382075019372,
+      "y": 0.28298300415923905
+    },
+    "chemist": {
+      "x": -0.2741496231999409,
+      "y": 0.1834719757345214
+    },
+    "chimera": {
+      "x": 0.09788168508112967,
+      "y": -0.1922801332184647
+    },
+    "coach": {
+      "x": -0.15717164472187492,
+      "y": -0.055554796416949534
+    },
+    "collaborator": {
+      "x": -0.06400943278137157,
+      "y": -0.03326229753641983
+    },
+    "collector": {
+      "x": -0.2151094368898994,
+      "y": 0.018926333692587383
+    },
+    "comedian": {
+      "x": -0.00929854614882131,
+      "y": -0.2044780187744912
+    },
+    "competitor": {
+      "x": 0.14717019626685887,
+      "y": -0.14106824222931674
+    },
+    "composer": {
+      "x": -0.27724384144946923,
+      "y": 0.16416148337775957
+    },
+    "conservator": {
+      "x": -0.1000027449971126,
+      "y": -0.08937795870918629
+    },
+    "consultant": {
+      "x": -0.4102440775383424,
+      "y": -0.05656992061000659
+    },
+    "contrarian": {
+      "x": 0.04028972337899725,
+      "y": -0.20288949175943513
+    },
+    "coordinator": {
+      "x": -0.22707776518744607,
+      "y": 0.15040655658422114
+    },
+    "coral_reef": {
+      "x": 0.10349632511945257,
+      "y": 0.10257355368740104
+    },
+    "cosmopolitan": {
+      "x": -0.01433268737107889,
+      "y": 0.2891502280980027
+    },
+    "counselor": {
+      "x": 0.0388771159436253,
+      "y": -0.01607313107721701
+    },
+    "criminal": {
+      "x": 0.19478906294567197,
+      "y": 0.1916575607421505
+    },
+    "critic": {
+      "x": -0.0864842652080491,
+      "y": -0.12210030795575152
+    },
+    "crystalline": {
+      "x": 0.0410297448701546,
+      "y": -0.26777892093746614
+    },
+    "curator": {
+      "x": -0.2340872152146486,
+      "y": 0.09040756319600174
+    },
+    "cyborg": {
+      "x": 0.0017596514030537146,
+      "y": -0.3507087910235853
+    },
+    "cynic": {
+      "x": 0.11243552449161133,
+      "y": -0.1467096895426287
+    },
+    "daredevil": {
+      "x": 0.24078584037938988,
+      "y": -0.03745110466300675
+    },
+    "debugger": {
+      "x": -0.41343207208146343,
+      "y": 0.0006613019949123889
+    },
+    "demon": {
+      "x": 0.1374144877397802,
+      "y": -0.28085908335780463
+    },
+    "designer": {
+      "x": -0.30650333509059274,
+      "y": 0.11362806889586703
+    },
+    "destroyer": {
+      "x": -0.12808359192076602,
+      "y": -0.04086264349675589
+    },
+    "detective": {
+      "x": -0.17585768339265034,
+      "y": -0.24255143541236898
+    },
+    "devils_advocate": {
+      "x": 0.00911346334799912,
+      "y": -0.15237657111362715
+    },
+    "dilettante": {
+      "x": -0.05077182380849291,
+      "y": -0.008093839202776848
+    },
+    "dispatcher": {
+      "x": -0.1971419985518678,
+      "y": 0.08991633233641659
+    },
+    "divorcee": {
+      "x": 0.1276288898206644,
+      "y": 0.1311775867231453
+    },
+    "doctor": {
+      "x": -0.06234134417865289,
+      "y": 0.012686575849123995
+    },
+    "dreamer": {
+      "x": 0.19350045941532326,
+      "y": -0.12634780703932644
+    },
+    "echo": {
+      "x": 0.20994840377749244,
+      "y": 0.07369989835362387
+    },
+    "economist": {
+      "x": -0.33963445057115366,
+      "y": 0.008458590488471673
+    },
+    "ecosystem": {
+      "x": 0.13695479960682966,
+      "y": 0.13288849409178696
+    },
+    "editor": {
+      "x": -0.2338228666065197,
+      "y": 0.017592989565670587
+    },
+    "egregore": {
+      "x": 0.16857047570450762,
+      "y": -0.12833278206068538
+    },
+    "elder": {
+      "x": 0.39065561414491556,
+      "y": 0.34993968733525754
+    },
+    "eldritch": {
+      "x": 0.15793210007927627,
+      "y": -0.2481204022197548
+    },
+    "emissary": {
+      "x": -0.225238309833305,
+      "y": 0.18907966458391554
+    },
+    "empath": {
+      "x": 0.1541466719126565,
+      "y": -0.211048755015327
+    },
+    "engineer": {
+      "x": -0.3324850401648365,
+      "y": -0.11893504139867674
+    },
+    "entrepreneur": {
+      "x": -0.33592300363341676,
+      "y": 0.319205259555238
+    },
+    "evaluator": {
+      "x": -0.26785251062449755,
+      "y": 0.01960609101873476
+    },
+    "evangelist": {
+      "x": 0.14057772004068575,
+      "y": -0.29631623452812705
+    },
+    "examiner": {
+      "x": -0.1363724733928596,
+      "y": -0.01714014885754934
+    },
+    "exile": {
+      "x": 0.3934513462901877,
+      "y": 0.43629587180288004
+    },
+    "expatriate": {
+      "x": 0.26385127794635477,
+      "y": 0.5206968329371437
+    },
+    "facilitator": {
+      "x": -0.05767462217265231,
+      "y": 0.00899016528331803
+    },
+    "familiar": {
+      "x": 0.11948869159477139,
+      "y": -0.0738795219168396
+    },
+    "fixer": {
+      "x": -0.07441981254681664,
+      "y": -0.1431209270328232
+    },
+    "flaneur": {
+      "x": 0.1664530067349713,
+      "y": -0.01024444877355907
+    },
+    "fool": {
+      "x": 0.09589095124208878,
+      "y": -0.23644926882348774
+    },
+    "forecaster": {
+      "x": -0.26307928233661565,
+      "y": -0.13684063613167638
+    },
+    "futurist": {
+      "x": -0.15101892997032357,
+      "y": -0.18206058721358478
+    },
+    "gamer": {
+      "x": 0.20346022665772684,
+      "y": -0.0729545411601266
+    },
+    "generalist": {
+      "x": -0.1879887118259549,
+      "y": -0.010084767985835248
+    },
+    "genie": {
+      "x": 0.09290550721697242,
+      "y": -0.11594332833501933
+    },
+    "geographer": {
+      "x": -0.23327452101594762,
+      "y": -0.012787614095923853
+    },
+    "ghost": {
+      "x": 0.1948397350521483,
+      "y": 0.07775083617349064
+    },
+    "golem": {
+      "x": 0.22156329006808337,
+      "y": -0.09667477298664577
+    },
+    "gossip": {
+      "x": 0.026883155674914526,
+      "y": 0.12092874663373616
+    },
+    "grader": {
+      "x": -0.09057537733401348,
+      "y": -0.055300232004596064
+    },
+    "graduate": {
+      "x": 0.2358639757283925,
+      "y": 0.07124211064013367
+    },
+    "grandparent": {
+      "x": 0.30541142442520897,
+      "y": 0.17752972147748616
+    },
+    "guardian": {
+      "x": 0.1424831632652463,
+      "y": -0.18871646975395773
+    },
+    "guide": {
+      "x": -0.021609412077048612,
+      "y": 0.010929638169246341
+    },
+    "guru": {
+      "x": 0.20748153317764478,
+      "y": -0.20838451037948247
+    },
+    "hacker": {
+      "x": -0.3154015534344457,
+      "y": -0.12945003153141135
+    },
+    "healer": {
+      "x": -0.01596048924165992,
+      "y": -0.07514282840456271
+    },
+    "hedonist": {
+      "x": 0.345533377011942,
+      "y": -0.02409963772926285
+    },
+    "hermit": {
+      "x": 0.42173740225273,
+      "y": 0.17406030833278097
+    },
+    "historian": {
+      "x": -0.1919323681692402,
+      "y": 0.0018227781499922419
+    },
+    "hive": {
+      "x": 0.06490697832334968,
+      "y": -0.03763323046501056
+    },
+    "hoarder": {
+      "x": 0.27038823361301106,
+      "y": 0.06411214542456962
+    },
+    "homunculus": {
+      "x": 0.1087790179445444,
+      "y": -0.10029281495981876
+    },
+    "hybrid": {
+      "x": 0.03728579052824937,
+      "y": -0.05055300140423106
+    },
+    "idealist": {
+      "x": 0.12323454225153664,
+      "y": -0.1419694455294643
+    },
+    "immigrant": {
+      "x": 0.32174527745665343,
+      "y": 0.409846505844084
+    },
+    "improviser": {
+      "x": -0.023669715762857375,
+      "y": -0.04332393172714166
+    },
+    "infant": {
+      "x": 0.2154801945721521,
+      "y": -0.038191287525980666
+    },
+    "influencer": {
+      "x": 0.04706526726394219,
+      "y": 0.19844131151709754
+    },
+    "instructor": {
+      "x": -0.10641631744952586,
+      "y": -0.06395076792672523
+    },
+    "interpreter": {
+      "x": -0.16226661388528113,
+      "y": 0.015079334629008475
+    },
+    "interviewer": {
+      "x": -0.23036223494341104,
+      "y": -0.0670132868919488
+    },
+    "jester": {
+      "x": 0.13568010301250433,
+      "y": -0.12868761758310546
+    },
+    "journalist": {
+      "x": -0.14403250276191415,
+      "y": 0.042246768537801106
+    },
+    "judge": {
+      "x": -0.07634015159862863,
+      "y": -0.06325197740025852
+    },
+    "lawyer": {
+      "x": -0.23956157850796417,
+      "y": 0.11965188718815024
+    },
+    "leviathan": {
+      "x": 0.259315477400023,
+      "y": -0.03644024638515937
+    },
+    "librarian": {
+      "x": -0.3099478883496927,
+      "y": 0.09222733551339724
+    },
+    "linguist": {
+      "x": -0.15545766455882373,
+      "y": -0.08508779196015712
+    },
+    "loner": {
+      "x": 0.2037086191573174,
+      "y": -0.010311223507377483
+    },
+    "luddite": {
+      "x": 0.17705435612744314,
+      "y": -0.29058148361981057
+    },
+    "marketer": {
+      "x": -0.44835369139039083,
+      "y": 0.38393702334890883
+    },
+    "martyr": {
+      "x": 0.17028635074299606,
+      "y": -0.1301094485035149
+    },
+    "mathematician": {
+      "x": -0.35483438580214394,
+      "y": -0.24081904841076163
+    },
+    "maverick": {
+      "x": 0.053363390622622,
+      "y": -0.1727438512273236
+    },
+    "mechanic": {
+      "x": -0.11351426898163869,
+      "y": -0.07676849204025424
+    },
+    "mediator": {
+      "x": -0.1620365114349311,
+      "y": 0.08564018640108076
+    },
+    "mentor": {
+      "x": -0.2348784623194981,
+      "y": 0.20827230980634973
+    },
+    "merchant": {
+      "x": -0.3958685981276532,
+      "y": 0.475397796636464
+    },
+    "minimalist": {
+      "x": 0.3858944911744199,
+      "y": 0.10106424605413275
+    },
+    "moderator": {
+      "x": -0.0309250825222803,
+      "y": 0.02056124708574331
+    },
+    "musician": {
+      "x": 0.012559455958696576,
+      "y": -0.023963641205638868
+    },
+    "mycorrhizal": {
+      "x": 0.028492346735378014,
+      "y": 0.055085525187701434
+    },
+    "mystic": {
+      "x": 0.10119718326095327,
+      "y": -0.16625213552843263
+    },
+    "narcissist": {
+      "x": 0.2873368757033454,
+      "y": -0.022605180951474197
+    },
+    "narrator": {
+      "x": 0.023090062678022362,
+      "y": 0.029474343476046782
+    },
+    "naturalist": {
+      "x": 0.009213734272373226,
+      "y": 0.08458197378704037
+    },
+    "navigator": {
+      "x": -0.427922079892994,
+      "y": 0.3553744105116581
+    },
+    "negotiator": {
+      "x": -0.18937392901291716,
+      "y": 0.06547453407465796
+    },
+    "networker": {
+      "x": -0.25047499793719685,
+      "y": 0.31477091675033847
+    },
+    "newlywed": {
+      "x": 0.21686742023843983,
+      "y": 0.13998331434870184
+    },
+    "nomad": {
+      "x": 0.32461344218888993,
+      "y": 0.5008447711744906
+    },
+    "novelist": {
+      "x": -0.28029221239117835,
+      "y": 0.09667881987611465
+    },
+    "nutritionist": {
+      "x": -0.25615187588329413,
+      "y": 0.1342265318742479
+    },
+    "observer": {
+      "x": 0.012698072345882553,
+      "y": -0.03305459553827231
+    },
+    "optimist": {
+      "x": 0.04087769314754418,
+      "y": -0.25077975726180685
+    },
+    "oracle": {
+      "x": 0.05146451957011435,
+      "y": -0.10886348696141167
+    },
+    "organizer": {
+      "x": -0.2919049886338199,
+      "y": -0.013618021082579548
+    },
+    "orphan": {
+      "x": 0.39644180455915196,
+      "y": 0.41327164073517614
+    },
+    "pacifist": {
+      "x": 0.13613000416899335,
+      "y": -0.20578386272975352
+    },
+    "paramedic": {
+      "x": -0.04541105109561798,
+      "y": 0.06015195048586352
+    },
+    "parasite": {
+      "x": 0.25503646411781233,
+      "y": 0.45912697232338057
+    },
+    "parent": {
+      "x": 0.20738095437583826,
+      "y": 0.3680090960809807
+    },
+    "patient": {
+      "x": 0.05965471037084909,
+      "y": 0.1466697338404785
+    },
+    "peacekeeper": {
+      "x": -0.03529204870783168,
+      "y": -0.07587939138146589
+    },
+    "perfectionist": {
+      "x": 0.0720769952302574,
+      "y": -0.1342164119244067
+    },
+    "pharmacist": {
+      "x": -0.3924960981625014,
+      "y": 0.17413897040722862
+    },
+    "philosopher": {
+      "x": 0.1015603187407073,
+      "y": -0.2729709850957502
+    },
+    "photographer": {
+      "x": 0.11701644087726926,
+      "y": -0.1807219483077123
+    },
+    "physicist": {
+      "x": -0.15983529369495916,
+      "y": -0.18484763683209468
+    },
+    "pilgrim": {
+      "x": 0.27747738929261123,
+      "y": -0.09489180366904001
+    },
+    "pilot": {
+      "x": -0.24909172487668924,
+      "y": 0.38254914694450365
+    },
+    "pirate": {
+      "x": 0.3398928969462036,
+      "y": 0.05834613194190464
+    },
+    "planner": {
+      "x": -0.2604578405673531,
+      "y": 0.08406324977513374
+    },
+    "playwright": {
+      "x": -0.2568572370556465,
+      "y": 0.14859089412181378
+    },
+    "podcaster": {
+      "x": -0.16154121619049264,
+      "y": 0.005598456269192661
+    },
+    "poet": {
+      "x": 0.11010756580018402,
+      "y": -0.1408351043452701
+    },
+    "polymath": {
+      "x": -0.18027420689709756,
+      "y": -0.08364269718285111
+    },
+    "pragmatist": {
+      "x": -0.03403284437672313,
+      "y": -0.2905521738571982
+    },
+    "predator": {
+      "x": 0.08945579081108807,
+      "y": -0.017824037385046444
+    },
+    "presenter": {
+      "x": -0.23157800920721686,
+      "y": -0.023357120039955024
+    },
+    "prey": {
+      "x": 0.17864137139525757,
+      "y": -0.02498797449768683
+    },
+    "prisoner": {
+      "x": 0.3256473010526817,
+      "y": 0.5080294282021468
+    },
+    "procrastinator": {
+      "x": 0.22037876479890894,
+      "y": 0.18216134048545052
+    },
+    "prodigy": {
+      "x": -0.0857329542325376,
+      "y": -0.15126049913268924
+    },
+    "producer": {
+      "x": -0.19980923367957923,
+      "y": 0.22286337526220895
+    },
+    "programmer": {
+      "x": -0.17069580242019325,
+      "y": -0.09863272352028625
+    },
+    "proofreader": {
+      "x": -0.10836012504332199,
+      "y": -0.09087552543355801
+    },
+    "prophet": {
+      "x": 0.12142890285917594,
+      "y": -0.02270967014849392
+    },
+    "provincial": {
+      "x": 0.11503281595703142,
+      "y": -0.02127474056395565
+    },
+    "provocateur": {
+      "x": 0.05065364524748533,
+      "y": -0.104954469188339
+    },
+    "psychologist": {
+      "x": -0.13772122105184184,
+      "y": -0.22410668831958938
+    },
+    "publisher": {
+      "x": -0.180411966678937,
+      "y": 0.15695743186871552
+    },
+    "purist": {
+      "x": 0.09116832492797079,
+      "y": -0.1557101827266819
+    },
+    "realist": {
+      "x": 0.05599718090282805,
+      "y": -0.19508761022131826
+    },
+    "rebel": {
+      "x": 0.06986031638466032,
+      "y": -0.13687758771255537
+    },
+    "recruiter": {
+      "x": -0.29728663668025646,
+      "y": 0.28502183099018963
+    },
+    "refugee": {
+      "x": 0.35318805522164737,
+      "y": 0.46699584299323066
+    },
+    "reporter": {
+      "x": -0.11420717718262839,
+      "y": 0.07668162743954329
+    },
+    "researcher": {
+      "x": -0.4066761258893303,
+      "y": -0.1803911028509242
+    },
+    "retiree": {
+      "x": 0.2908193206050346,
+      "y": 0.2526084992825923
+    },
+    "revenant": {
+      "x": 0.3596652362781267,
+      "y": 0.24070678332627304
+    },
+    "reviewer": {
+      "x": -0.16914628910346077,
+      "y": -0.023242511571672893
+    },
+    "revolutionary": {
+      "x": 0.07458419273082845,
+      "y": -0.12510662481756613
+    },
+    "robot": {
+      "x": -0.07694125554759593,
+      "y": -0.28756624730515373
+    },
+    "rogue": {
+      "x": -0.02157387430917525,
+      "y": -0.2264177066617087
+    },
+    "romantic": {
+      "x": 0.17995174600702324,
+      "y": -0.16790278479894424
+    },
+    "saboteur": {
+      "x": -0.28679179906112967,
+      "y": 0.14097932062375879
+    },
+    "sage": {
+      "x": 0.19602096228697583,
+      "y": -0.1496087757014647
+    },
+    "scheduler": {
+      "x": -0.2989215736155162,
+      "y": 0.2730280461507775
+    },
+    "scholar": {
+      "x": -0.07471911660563998,
+      "y": -0.26294361420530304
+    },
+    "scientist": {
+      "x": -0.15211802596204504,
+      "y": -0.2370277380889172
+    },
+    "scout": {
+      "x": -0.12424869654259237,
+      "y": -0.01320195994116206
+    },
+    "screener": {
+      "x": -0.09301204191725981,
+      "y": -0.07356498122354699
+    },
+    "secretary": {
+      "x": -0.10233262948719474,
+      "y": 0.06385041878835011
+    },
+    "shaman": {
+      "x": 0.0872147968811807,
+      "y": -0.07371431338736015
+    },
+    "shapeshifter": {
+      "x": 0.09133845183912154,
+      "y": 0.008661629241366998
+    },
+    "simulacrum": {
+      "x": 0.16050642760063893,
+      "y": -0.13885745563375756
+    },
+    "skeptic": {
+      "x": -0.038520979112619994,
+      "y": -0.24857451967590052
+    },
+    "smuggler": {
+      "x": -0.24607416167740856,
+      "y": 0.46025270096248205
+    },
+    "sociologist": {
+      "x": -0.029208269324956328,
+      "y": -0.0340687162993771
+    },
+    "soldier": {
+      "x": 0.07561857058206853,
+      "y": 0.16030499660589015
+    },
+    "sommelier": {
+      "x": -0.17966872372577342,
+      "y": 0.13639744502704798
+    },
+    "specialist": {
+      "x": -0.017405624221211426,
+      "y": -0.019643176837413123
+    },
+    "spirit": {
+      "x": 0.3227964478802595,
+      "y": -0.007889264530475457
+    },
+    "spy": {
+      "x": -0.1461360035202851,
+      "y": -0.17156184023451548
+    },
+    "statistician": {
+      "x": -0.29292085445831917,
+      "y": -0.20205386685910204
+    },
+    "stoic": {
+      "x": 0.15715954026554294,
+      "y": -0.11371750697001502
+    },
+    "strategist": {
+      "x": -0.35910262672314225,
+      "y": -0.022072721497623873
+    },
+    "student": {
+      "x": 0.02277739710484478,
+      "y": -0.13563176194609908
+    },
+    "summarizer": {
+      "x": -0.19814696655157213,
+      "y": -0.17806498691890235
+    },
+    "supervisor": {
+      "x": -0.14526264860497212,
+      "y": 0.15563007564551268
+    },
+    "surfer": {
+      "x": 0.31225964208297563,
+      "y": 0.0162663606705571
+    },
+    "survivor": {
+      "x": 0.5239943551614271,
+      "y": 0.316068908059367
+    },
+    "swarm": {
+      "x": 0.08998938481099164,
+      "y": -0.05673299374251245
+    },
+    "symbiont": {
+      "x": 0.005883439019594728,
+      "y": 0.13910816083256322
+    },
+    "synthesizer": {
+      "x": -0.19127397589499454,
+      "y": -0.17539224643384194
+    },
+    "teacher": {
+      "x": -0.064673568406046,
+      "y": -0.09865500956008172
+    },
+    "technologist": {
+      "x": -0.03753665553589636,
+      "y": -0.2880371946660104
+    },
+    "teenager": {
+      "x": 0.05601694639101399,
+      "y": 0.009078011099159693
+    },
+    "theorist": {
+      "x": -0.357322584776312,
+      "y": -0.04854867249797033
+    },
+    "therapist": {
+      "x": -0.03849628434519282,
+      "y": -0.07542806129446653
+    },
+    "toddler": {
+      "x": 0.19296157785051157,
+      "y": -0.12024577864724627
+    },
+    "traditionalist": {
+      "x": 0.15183839515541275,
+      "y": -0.05327621974787535
+    },
+    "trainer": {
+      "x": -0.1287046999852148,
+      "y": -0.042005493693750943
+    },
+    "translator": {
+      "x": -0.1791112589799369,
+      "y": 0.13051969437319302
+    },
+    "tree": {
+      "x": 0.09016650124361683,
+      "y": 0.1026295204004446
+    },
+    "trickster": {
+      "x": 0.08868999572180948,
+      "y": -0.23208953368512805
+    },
+    "tulpa": {
+      "x": 0.25869452655402614,
+      "y": 0.0596717845367083
+    },
+    "tutor": {
+      "x": -0.1288371332856506,
+      "y": -0.11688762919114813
+    },
+    "validator": {
+      "x": -0.3064914015666765,
+      "y": -0.12614584486926303
+    },
+    "vampire": {
+      "x": 0.350409487251654,
+      "y": 0.13319457809118398
+    },
+    "vegan": {
+      "x": 0.05663877928495426,
+      "y": -0.095000936869141
+    },
+    "veteran": {
+      "x": 0.13720368009231984,
+      "y": 0.16575568509088345
+    },
+    "veterinarian": {
+      "x": -0.12892852839800112,
+      "y": 0.021157686044166558
+    },
+    "vigilante": {
+      "x": 0.06083523354811791,
+      "y": -0.02909029023776814
+    },
+    "virtuoso": {
+      "x": 0.10084731764259194,
+      "y": -0.08598283487865768
+    },
+    "virus": {
+      "x": -0.0011374777035170194,
+      "y": 0.08173252106346926
+    },
+    "visionary": {
+      "x": 0.0565019168284288,
+      "y": -0.30357476138341966
+    },
+    "void": {
+      "x": 0.20305386155040867,
+      "y": -0.07468218070461101
+    },
+    "wanderer": {
+      "x": 0.3825844848171897,
+      "y": -0.017674204788279413
+    },
+    "warrior": {
+      "x": 0.15169144334488283,
+      "y": -0.21879361636167274
+    },
+    "whale": {
+      "x": 0.13902148898359537,
+      "y": -0.03246208613294401
+    },
+    "widow": {
+      "x": 0.1647535710431518,
+      "y": 0.15181400658002253
+    },
+    "wind": {
+      "x": 0.3952348722114297,
+      "y": 0.22206306719366994
+    },
+    "witch": {
+      "x": 0.07924772519432158,
+      "y": -0.1796998415844581
+    },
+    "witness": {
+      "x": 0.12678131999297218,
+      "y": 0.09433185620573897
+    },
+    "workaholic": {
+      "x": 0.2244957533623085,
+      "y": -0.07820600047394964
+    },
+    "wraith": {
+      "x": 0.14019962149566528,
+      "y": -0.031126849472777218
+    },
+    "writer": {
+      "x": -0.26139401600359957,
+      "y": 0.12961496030156056
+    },
+    "zealot": {
+      "x": 0.15758175600404162,
+      "y": -0.3675087579249877
+    },
+    "zeitgeist": {
+      "x": 0.14442007808735788,
+      "y": -0.03730564753376461
+    }
+  },
+  "clusters": {
+    "5": {
+      "aberration": 1,
+      "absurdist": 3,
+      "accountant": 2,
+      "activist": 2,
+      "actor": 0,
+      "addict": 1,
+      "adolescent": 1,
+      "advocate": 2,
+      "alien": 4,
+      "altruist": 0,
+      "amateur": 0,
+      "ambassador": 0,
+      "amnesiac": 1,
+      "analyst": 3,
+      "anarchist": 2,
+      "ancient": 1,
+      "angel": 4,
+      "anthropologist": 2,
+      "archaeologist": 3,
+      "architect": 2,
+      "archivist": 2,
+      "artisan": 2,
+      "ascetic": 4,
+      "assistant": 4,
+      "auctioneer": 2,
+      "auditor": 3,
+      "avatar": 4,
+      "bard": 4,
+      "bartender": 2,
+      "biologist": 2,
+      "blogger": 0,
+      "bohemian": 3,
+      "builder": 2,
+      "caregiver": 0,
+      "cartographer": 2,
+      "caveman": 1,
+      "celebrity": 1,
+      "chameleon": 0,
+      "chef": 2,
+      "chemist": 2,
+      "chimera": 4,
+      "coach": 0,
+      "collaborator": 0,
+      "collector": 2,
+      "comedian": 3,
+      "competitor": 0,
+      "composer": 2,
+      "conservator": 2,
+      "consultant": 3,
+      "contrarian": 3,
+      "coordinator": 2,
+      "coral_reef": 0,
+      "cosmopolitan": 1,
+      "counselor": 0,
+      "criminal": 1,
+      "critic": 3,
+      "crystalline": 4,
+      "curator": 2,
+      "cyborg": 3,
+      "cynic": 1,
+      "daredevil": 0,
+      "debugger": 2,
+      "demon": 4,
+      "designer": 2,
+      "destroyer": 2,
+      "detective": 3,
+      "devils_advocate": 3,
+      "dilettante": 4,
+      "dispatcher": 2,
+      "divorcee": 1,
+      "doctor": 2,
+      "dreamer": 4,
+      "echo": 1,
+      "economist": 2,
+      "ecosystem": 0,
+      "editor": 2,
+      "egregore": 0,
+      "elder": 1,
+      "eldritch": 4,
+      "emissary": 0,
+      "empath": 0,
+      "engineer": 2,
+      "entrepreneur": 2,
+      "evaluator": 3,
+      "evangelist": 0,
+      "examiner": 3,
+      "exile": 1,
+      "expatriate": 1,
+      "facilitator": 0,
+      "familiar": 4,
+      "fixer": 0,
+      "flaneur": 1,
+      "fool": 3,
+      "forecaster": 3,
+      "futurist": 3,
+      "gamer": 1,
+      "generalist": 4,
+      "genie": 4,
+      "geographer": 2,
+      "ghost": 4,
+      "golem": 4,
+      "gossip": 0,
+      "grader": 3,
+      "graduate": 1,
+      "grandparent": 1,
+      "guardian": 0,
+      "guide": 0,
+      "guru": 4,
+      "hacker": 2,
+      "healer": 4,
+      "hedonist": 1,
+      "hermit": 1,
+      "historian": 2,
+      "hive": 0,
+      "hoarder": 1,
+      "homunculus": 4,
+      "hybrid": 1,
+      "idealist": 1,
+      "immigrant": 1,
+      "improviser": 0,
+      "infant": 1,
+      "influencer": 0,
+      "instructor": 4,
+      "interpreter": 0,
+      "interviewer": 3,
+      "jester": 3,
+      "journalist": 3,
+      "judge": 3,
+      "lawyer": 2,
+      "leviathan": 4,
+      "librarian": 2,
+      "linguist": 2,
+      "loner": 0,
+      "luddite": 3,
+      "marketer": 2,
+      "martyr": 0,
+      "mathematician": 2,
+      "maverick": 3,
+      "mechanic": 2,
+      "mediator": 0,
+      "mentor": 0,
+      "merchant": 2,
+      "minimalist": 1,
+      "moderator": 0,
+      "musician": 0,
+      "mycorrhizal": 0,
+      "mystic": 4,
+      "narcissist": 0,
+      "narrator": 1,
+      "naturalist": 1,
+      "navigator": 2,
+      "negotiator": 0,
+      "networker": 0,
+      "newlywed": 1,
+      "nomad": 1,
+      "novelist": 2,
+      "nutritionist": 2,
+      "observer": 3,
+      "optimist": 0,
+      "oracle": 4,
+      "organizer": 2,
+      "orphan": 1,
+      "pacifist": 0,
+      "paramedic": 2,
+      "parasite": 1,
+      "parent": 1,
+      "patient": 1,
+      "peacekeeper": 0,
+      "perfectionist": 3,
+      "pharmacist": 2,
+      "philosopher": 3,
+      "photographer": 1,
+      "physicist": 2,
+      "pilgrim": 4,
+      "pilot": 2,
+      "pirate": 1,
+      "planner": 2,
+      "playwright": 2,
+      "podcaster": 0,
+      "poet": 1,
+      "polymath": 4,
+      "pragmatist": 3,
+      "predator": 1,
+      "presenter": 0,
+      "prey": 1,
+      "prisoner": 1,
+      "procrastinator": 1,
+      "prodigy": 4,
+      "producer": 2,
+      "programmer": 2,
+      "proofreader": 3,
+      "prophet": 1,
+      "provincial": 1,
+      "provocateur": 3,
+      "psychologist": 3,
+      "publisher": 2,
+      "purist": 3,
+      "realist": 0,
+      "rebel": 3,
+      "recruiter": 3,
+      "refugee": 1,
+      "reporter": 3,
+      "researcher": 3,
+      "retiree": 1,
+      "revenant": 1,
+      "reviewer": 3,
+      "revolutionary": 0,
+      "robot": 3,
+      "rogue": 3,
+      "romantic": 1,
+      "saboteur": 2,
+      "sage": 4,
+      "scheduler": 2,
+      "scholar": 3,
+      "scientist": 3,
+      "scout": 0,
+      "screener": 3,
+      "secretary": 2,
+      "shaman": 4,
+      "shapeshifter": 4,
+      "simulacrum": 3,
+      "skeptic": 3,
+      "smuggler": 2,
+      "sociologist": 2,
+      "soldier": 1,
+      "sommelier": 2,
+      "specialist": 1,
+      "spirit": 4,
+      "spy": 3,
+      "statistician": 3,
+      "stoic": 1,
+      "strategist": 2,
+      "student": 4,
+      "summarizer": 3,
+      "supervisor": 2,
+      "surfer": 1,
+      "survivor": 1,
+      "swarm": 0,
+      "symbiont": 0,
+      "synthesizer": 0,
+      "teacher": 4,
+      "technologist": 0,
+      "teenager": 1,
+      "theorist": 2,
+      "therapist": 0,
+      "toddler": 1,
+      "traditionalist": 3,
+      "trainer": 4,
+      "translator": 2,
+      "tree": 1,
+      "trickster": 3,
+      "tulpa": 0,
+      "tutor": 4,
+      "validator": 3,
+      "vampire": 1,
+      "vegan": 3,
+      "veteran": 1,
+      "veterinarian": 2,
+      "vigilante": 0,
+      "virtuoso": 4,
+      "virus": 2,
+      "visionary": 3,
+      "void": 4,
+      "wanderer": 4,
+      "warrior": 0,
+      "whale": 4,
+      "widow": 1,
+      "wind": 1,
+      "witch": 4,
+      "witness": 1,
+      "workaholic": 0,
+      "wraith": 4,
+      "writer": 2,
+      "zealot": 0,
+      "zeitgeist": 4
+    },
+    "7": {
+      "aberration": 4,
+      "absurdist": 3,
+      "accountant": 2,
+      "activist": 2,
+      "actor": 0,
+      "addict": 1,
+      "adolescent": 1,
+      "advocate": 5,
+      "alien": 4,
+      "altruist": 0,
+      "amateur": 0,
+      "ambassador": 0,
+      "amnesiac": 1,
+      "analyst": 3,
+      "anarchist": 2,
+      "ancient": 1,
+      "angel": 4,
+      "anthropologist": 2,
+      "archaeologist": 3,
+      "architect": 2,
+      "archivist": 2,
+      "artisan": 2,
+      "ascetic": 1,
+      "assistant": 5,
+      "auctioneer": 2,
+      "auditor": 5,
+      "avatar": 4,
+      "bard": 6,
+      "bartender": 2,
+      "biologist": 2,
+      "blogger": 6,
+      "bohemian": 3,
+      "builder": 2,
+      "caregiver": 0,
+      "cartographer": 2,
+      "caveman": 3,
+      "celebrity": 1,
+      "chameleon": 0,
+      "chef": 2,
+      "chemist": 2,
+      "chimera": 4,
+      "coach": 0,
+      "collaborator": 0,
+      "collector": 2,
+      "comedian": 6,
+      "competitor": 0,
+      "composer": 2,
+      "conservator": 2,
+      "consultant": 5,
+      "contrarian": 3,
+      "coordinator": 2,
+      "coral_reef": 0,
+      "cosmopolitan": 1,
+      "counselor": 0,
+      "criminal": 1,
+      "critic": 5,
+      "crystalline": 4,
+      "curator": 2,
+      "cyborg": 4,
+      "cynic": 0,
+      "daredevil": 1,
+      "debugger": 5,
+      "demon": 4,
+      "designer": 2,
+      "destroyer": 2,
+      "detective": 3,
+      "devils_advocate": 3,
+      "dilettante": 4,
+      "dispatcher": 2,
+      "divorcee": 1,
+      "doctor": 5,
+      "dreamer": 4,
+      "echo": 1,
+      "economist": 2,
+      "ecosystem": 0,
+      "editor": 6,
+      "egregore": 0,
+      "elder": 1,
+      "eldritch": 4,
+      "emissary": 0,
+      "empath": 0,
+      "engineer": 3,
+      "entrepreneur": 2,
+      "evaluator": 5,
+      "evangelist": 0,
+      "examiner": 5,
+      "exile": 1,
+      "expatriate": 1,
+      "facilitator": 0,
+      "familiar": 4,
+      "fixer": 3,
+      "flaneur": 1,
+      "fool": 6,
+      "forecaster": 3,
+      "futurist": 3,
+      "gamer": 1,
+      "generalist": 4,
+      "genie": 4,
+      "geographer": 2,
+      "ghost": 1,
+      "golem": 4,
+      "gossip": 0,
+      "grader": 5,
+      "graduate": 1,
+      "grandparent": 1,
+      "guardian": 0,
+      "guide": 0,
+      "guru": 4,
+      "hacker": 2,
+      "healer": 4,
+      "hedonist": 1,
+      "hermit": 1,
+      "historian": 2,
+      "hive": 0,
+      "hoarder": 1,
+      "homunculus": 4,
+      "hybrid": 1,
+      "idealist": 5,
+      "immigrant": 1,
+      "improviser": 0,
+      "infant": 6,
+      "influencer": 6,
+      "instructor": 6,
+      "interpreter": 0,
+      "interviewer": 6,
+      "jester": 6,
+      "journalist": 6,
+      "judge": 3,
+      "lawyer": 2,
+      "leviathan": 4,
+      "librarian": 2,
+      "linguist": 2,
+      "loner": 0,
+      "luddite": 3,
+      "marketer": 2,
+      "martyr": 0,
+      "mathematician": 3,
+      "maverick": 3,
+      "mechanic": 5,
+      "mediator": 0,
+      "mentor": 0,
+      "merchant": 2,
+      "minimalist": 1,
+      "moderator": 0,
+      "musician": 6,
+      "mycorrhizal": 0,
+      "mystic": 4,
+      "narcissist": 0,
+      "narrator": 6,
+      "naturalist": 1,
+      "navigator": 2,
+      "negotiator": 0,
+      "networker": 0,
+      "newlywed": 1,
+      "nomad": 1,
+      "novelist": 6,
+      "nutritionist": 2,
+      "observer": 3,
+      "optimist": 0,
+      "oracle": 4,
+      "organizer": 2,
+      "orphan": 1,
+      "pacifist": 0,
+      "paramedic": 5,
+      "parasite": 1,
+      "parent": 1,
+      "patient": 5,
+      "peacekeeper": 0,
+      "perfectionist": 5,
+      "pharmacist": 2,
+      "philosopher": 3,
+      "photographer": 6,
+      "physicist": 3,
+      "pilgrim": 4,
+      "pilot": 2,
+      "pirate": 1,
+      "planner": 2,
+      "playwright": 6,
+      "podcaster": 6,
+      "poet": 6,
+      "polymath": 4,
+      "pragmatist": 3,
+      "predator": 1,
+      "presenter": 6,
+      "prey": 1,
+      "prisoner": 1,
+      "procrastinator": 1,
+      "prodigy": 4,
+      "producer": 6,
+      "programmer": 3,
+      "proofreader": 6,
+      "prophet": 4,
+      "provincial": 1,
+      "provocateur": 3,
+      "psychologist": 3,
+      "publisher": 6,
+      "purist": 2,
+      "realist": 0,
+      "rebel": 3,
+      "recruiter": 5,
+      "refugee": 1,
+      "reporter": 6,
+      "researcher": 3,
+      "retiree": 1,
+      "revenant": 1,
+      "reviewer": 5,
+      "revolutionary": 2,
+      "robot": 3,
+      "rogue": 3,
+      "romantic": 0,
+      "saboteur": 2,
+      "sage": 6,
+      "scheduler": 2,
+      "scholar": 3,
+      "scientist": 3,
+      "scout": 0,
+      "screener": 5,
+      "secretary": 2,
+      "shaman": 4,
+      "shapeshifter": 4,
+      "simulacrum": 3,
+      "skeptic": 3,
+      "smuggler": 2,
+      "sociologist": 2,
+      "soldier": 1,
+      "sommelier": 2,
+      "specialist": 1,
+      "spirit": 4,
+      "spy": 3,
+      "statistician": 3,
+      "stoic": 1,
+      "strategist": 2,
+      "student": 4,
+      "summarizer": 6,
+      "supervisor": 5,
+      "surfer": 1,
+      "survivor": 1,
+      "swarm": 0,
+      "symbiont": 0,
+      "synthesizer": 3,
+      "teacher": 6,
+      "technologist": 3,
+      "teenager": 1,
+      "theorist": 2,
+      "therapist": 0,
+      "toddler": 6,
+      "traditionalist": 3,
+      "trainer": 6,
+      "translator": 2,
+      "tree": 4,
+      "trickster": 6,
+      "tulpa": 0,
+      "tutor": 6,
+      "validator": 3,
+      "vampire": 1,
+      "vegan": 3,
+      "veteran": 1,
+      "veterinarian": 5,
+      "vigilante": 2,
+      "virtuoso": 4,
+      "virus": 2,
+      "visionary": 3,
+      "void": 4,
+      "wanderer": 1,
+      "warrior": 0,
+      "whale": 4,
+      "widow": 1,
+      "wind": 1,
+      "witch": 4,
+      "witness": 1,
+      "workaholic": 5,
+      "wraith": 4,
+      "writer": 6,
+      "zealot": 0,
+      "zeitgeist": 4
+    },
+    "10": {
+      "aberration": 4,
+      "absurdist": 3,
+      "accountant": 2,
+      "activist": 7,
+      "actor": 8,
+      "addict": 1,
+      "adolescent": 1,
+      "advocate": 7,
+      "alien": 4,
+      "altruist": 0,
+      "amateur": 0,
+      "ambassador": 0,
+      "amnesiac": 1,
+      "analyst": 3,
+      "anarchist": 7,
+      "ancient": 4,
+      "angel": 4,
+      "anthropologist": 8,
+      "archaeologist": 3,
+      "architect": 2,
+      "archivist": 2,
+      "artisan": 2,
+      "ascetic": 1,
+      "assistant": 5,
+      "auctioneer": 2,
+      "auditor": 5,
+      "avatar": 4,
+      "bard": 6,
+      "bartender": 2,
+      "biologist": 2,
+      "blogger": 6,
+      "bohemian": 3,
+      "builder": 2,
+      "caregiver": 0,
+      "cartographer": 2,
+      "caveman": 4,
+      "celebrity": 1,
+      "chameleon": 8,
+      "chef": 2,
+      "chemist": 2,
+      "chimera": 4,
+      "coach": 9,
+      "collaborator": 0,
+      "collector": 2,
+      "comedian": 6,
+      "competitor": 0,
+      "composer": 2,
+      "conservator": 2,
+      "consultant": 5,
+      "contrarian": 7,
+      "coordinator": 2,
+      "coral_reef": 0,
+      "cosmopolitan": 8,
+      "counselor": 0,
+      "criminal": 1,
+      "critic": 5,
+      "crystalline": 4,
+      "curator": 8,
+      "cyborg": 3,
+      "cynic": 7,
+      "daredevil": 0,
+      "debugger": 5,
+      "demon": 4,
+      "designer": 2,
+      "destroyer": 2,
+      "detective": 3,
+      "devils_advocate": 7,
+      "dilettante": 0,
+      "dispatcher": 2,
+      "divorcee": 1,
+      "doctor": 5,
+      "dreamer": 4,
+      "echo": 4,
+      "economist": 2,
+      "ecosystem": 0,
+      "editor": 6,
+      "egregore": 0,
+      "elder": 1,
+      "eldritch": 4,
+      "emissary": 8,
+      "empath": 8,
+      "engineer": 2,
+      "entrepreneur": 0,
+      "evaluator": 5,
+      "evangelist": 0,
+      "examiner": 5,
+      "exile": 1,
+      "expatriate": 1,
+      "facilitator": 0,
+      "familiar": 4,
+      "fixer": 8,
+      "flaneur": 1,
+      "fool": 6,
+      "forecaster": 3,
+      "futurist": 3,
+      "gamer": 8,
+      "generalist": 4,
+      "genie": 4,
+      "geographer": 2,
+      "ghost": 4,
+      "golem": 4,
+      "gossip": 0,
+      "grader": 5,
+      "graduate": 9,
+      "grandparent": 1,
+      "guardian": 0,
+      "guide": 0,
+      "guru": 4,
+      "hacker": 2,
+      "healer": 4,
+      "hedonist": 1,
+      "hermit": 1,
+      "historian": 2,
+      "hive": 0,
+      "hoarder": 1,
+      "homunculus": 4,
+      "hybrid": 8,
+      "idealist": 7,
+      "immigrant": 1,
+      "improviser": 8,
+      "infant": 4,
+      "influencer": 6,
+      "instructor": 9,
+      "interpreter": 8,
+      "interviewer": 6,
+      "jester": 6,
+      "journalist": 6,
+      "judge": 3,
+      "lawyer": 2,
+      "leviathan": 4,
+      "librarian": 2,
+      "linguist": 2,
+      "loner": 0,
+      "luddite": 7,
+      "marketer": 2,
+      "martyr": 0,
+      "mathematician": 9,
+      "maverick": 7,
+      "mechanic": 5,
+      "mediator": 0,
+      "mentor": 0,
+      "merchant": 2,
+      "minimalist": 1,
+      "moderator": 0,
+      "musician": 8,
+      "mycorrhizal": 0,
+      "mystic": 4,
+      "narcissist": 0,
+      "narrator": 6,
+      "naturalist": 2,
+      "navigator": 2,
+      "negotiator": 0,
+      "networker": 0,
+      "newlywed": 1,
+      "nomad": 1,
+      "novelist": 6,
+      "nutritionist": 2,
+      "observer": 3,
+      "optimist": 8,
+      "oracle": 4,
+      "organizer": 2,
+      "orphan": 1,
+      "pacifist": 7,
+      "paramedic": 5,
+      "parasite": 1,
+      "parent": 1,
+      "patient": 5,
+      "peacekeeper": 0,
+      "perfectionist": 5,
+      "pharmacist": 2,
+      "philosopher": 3,
+      "photographer": 6,
+      "physicist": 3,
+      "pilgrim": 1,
+      "pilot": 2,
+      "pirate": 1,
+      "planner": 9,
+      "playwright": 6,
+      "podcaster": 6,
+      "poet": 6,
+      "polymath": 4,
+      "pragmatist": 3,
+      "predator": 1,
+      "presenter": 6,
+      "prey": 1,
+      "prisoner": 1,
+      "procrastinator": 1,
+      "prodigy": 4,
+      "producer": 6,
+      "programmer": 2,
+      "proofreader": 6,
+      "prophet": 4,
+      "provincial": 7,
+      "provocateur": 3,
+      "psychologist": 8,
+      "publisher": 6,
+      "purist": 7,
+      "realist": 8,
+      "rebel": 7,
+      "recruiter": 5,
+      "refugee": 1,
+      "reporter": 6,
+      "researcher": 3,
+      "retiree": 1,
+      "revenant": 1,
+      "reviewer": 5,
+      "revolutionary": 7,
+      "robot": 3,
+      "rogue": 3,
+      "romantic": 8,
+      "saboteur": 2,
+      "sage": 6,
+      "scheduler": 2,
+      "scholar": 3,
+      "scientist": 3,
+      "scout": 0,
+      "screener": 5,
+      "secretary": 2,
+      "shaman": 4,
+      "shapeshifter": 8,
+      "simulacrum": 3,
+      "skeptic": 3,
+      "smuggler": 2,
+      "sociologist": 8,
+      "soldier": 1,
+      "sommelier": 2,
+      "specialist": 1,
+      "spirit": 4,
+      "spy": 3,
+      "statistician": 3,
+      "stoic": 7,
+      "strategist": 9,
+      "student": 9,
+      "summarizer": 6,
+      "supervisor": 5,
+      "surfer": 4,
+      "survivor": 1,
+      "swarm": 0,
+      "symbiont": 0,
+      "synthesizer": 8,
+      "teacher": 9,
+      "technologist": 0,
+      "teenager": 1,
+      "theorist": 8,
+      "therapist": 8,
+      "toddler": 6,
+      "traditionalist": 7,
+      "trainer": 9,
+      "translator": 8,
+      "tree": 4,
+      "trickster": 6,
+      "tulpa": 0,
+      "tutor": 9,
+      "validator": 3,
+      "vampire": 1,
+      "vegan": 7,
+      "veteran": 1,
+      "veterinarian": 5,
+      "vigilante": 7,
+      "virtuoso": 4,
+      "virus": 2,
+      "visionary": 3,
+      "void": 4,
+      "wanderer": 1,
+      "warrior": 0,
+      "whale": 4,
+      "widow": 1,
+      "wind": 1,
+      "witch": 4,
+      "witness": 1,
+      "workaholic": 5,
+      "wraith": 4,
+      "writer": 6,
+      "zealot": 0,
+      "zeitgeist": 4
+    }
+  },
+  "cluster_vs_activation_labels": {
+    "5": {
+      "ari": 0.1343009780561873,
+      "nmi": 0.19138644763681867
+    },
+    "7": {
+      "ari": 0.11138295654248563,
+      "nmi": 0.1967769128029353
+    },
+    "10": {
+      "ari": 0.09686519004322199,
+      "nmi": 0.20292890209269085
+    }
+  },
+  "pairwise_distance_summary": {
+    "min": 0.010308418558435228,
+    "p05": 0.6855885186196508,
+    "p25": 0.8928685657800778,
+    "median": 0.9685673585421197,
+    "mean": 0.9397680341286654,
+    "p75": 1.020151235291841,
+    "p95": 1.0897333992678433,
+    "max": 1.2966053999366687
+  }
+}

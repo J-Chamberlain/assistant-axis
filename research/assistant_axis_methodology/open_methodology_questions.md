@@ -32,6 +32,10 @@ How much of role-vector separability is driven by direct role-label exposure in 
 
 Do no-label prompt variants that preserve prompt-space topology still recover the same activation-space role directions as the original label-exposed Lu prompts?
 
+## Semantic-Activation Reorganization
+
+Which activation-space clusters reflect semantically intrinsic prompt structure, and which reflect model-specific reorganization or compression of that structure?
+
 ## Adaptive Extraction Generalization
 
 Does adaptive extraction generalize beyond trickster to mid-yield and low-yield personas? Editor suggests the method needs a revised anchoring strategy before assuming generality.
