@@ -74,6 +74,10 @@ Three-way comparison of role-name, original-prompt, no-label prompt, and availab
 
 The Lu et al. role corpus now has a standalone interpretation as a frontier-model-generated semantic role manifold. It contains meaningful prompt-space topology before activations are considered, and that topology mostly survives label removal. The current interpretation is that activation experiments test how target models internalize, compress, sharpen, or reorganize this semantic manifold rather than revealing a structure independent of the elicitation corpus.
 
+### Deep Semantic Topology
+
+A deeper no-label semantic topology analysis found that the role corpus is organized by mixed social, professional, narrative, stylistic, and archetypal structure rather than by a single psychological taxonomy. The no-label k=7 semantic manifold shows broad professional/helper, lived-experience/social, communicative/media, mythic/fantastical, adversarial/normative, and generalist/helper regions, with soft boundaries and bridge roles such as spy, amnesiac, sage, guardian, merchant, and emissary. Dense pockets include professional and migration/survival neighborhoods; sparse roles include flaneur, predator, devils_advocate, advocate, teenager, vegan, genie, angel, robot, and adolescent. This supports treating the role list as a constructed semantic manifold whose topology partially constrains, but does not determine, activation geometry.
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

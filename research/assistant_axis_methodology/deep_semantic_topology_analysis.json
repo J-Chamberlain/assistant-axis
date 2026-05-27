@@ -1,0 +1,2844 @@
+{
+  "activation_alignment": {
+    "gemma_centroid_profile_distance_correlation": 0.23,
+    "no_label_prompt_vs_activation_cluster_ari_k7": 0.11890302110933491,
+    "original_prompt_vs_activation_cluster_ari_k7": 0.08524131715404805,
+    "qwen_centroid_profile_distance_correlation": 0.254,
+    "role_name_vs_activation_cluster_ari_k7": 0.011700725781604249
+  },
+  "basin_stats": {
+    "activation_combative_iconoclast": {
+      "anchor_roles": [
+        {
+          "cosine": 0.7655448990493633,
+          "role": "contrarian"
+        },
+        {
+          "cosine": 0.70408037562061,
+          "role": "maverick"
+        },
+        {
+          "cosine": 0.6843685902768042,
+          "role": "rebel"
+        },
+        {
+          "cosine": 0.5566598788805874,
+          "role": "devils_advocate"
+        },
+        {
+          "cosine": 0.5273575547598746,
+          "role": "provocateur"
+        },
+        {
+          "cosine": 0.4447652271501485,
+          "role": "competitor"
+        },
+        {
+          "cosine": 0.32325472135170136,
+          "role": "workaholic"
+        },
+        {
+          "cosine": 0.31017110049018937,
+          "role": "cynic"
+        }
+      ],
+      "n": 8,
+      "within_cosine_mean": 0.18981433402230127,
+      "within_cosine_median": 0.09545673419838319
+    },
+    "activation_editorial": {
+      "anchor_roles": [
+        {
+          "cosine": 0.6980215033866192,
+          "role": "grader"
+        },
+        {
+          "cosine": 0.6946314403228456,
+          "role": "screener"
+        },
+        {
+          "cosine": 0.6803187641954809,
+          "role": "proofreader"
+        },
+        {
+          "cosine": 0.6625405059330541,
+          "role": "examiner"
+        },
+        {
+          "cosine": 0.6562016232781037,
+          "role": "editor"
+        }
+      ],
+      "n": 5,
+      "within_cosine_mean": 0.3251861376442422,
+      "within_cosine_median": 0.1918466493491689
+    },
+    "activation_grounded_social": {
+      "anchor_roles": [
+        {
+          "cosine": 0.7187372908746165,
+          "role": "expatriate"
+        },
+        {
+          "cosine": 0.6699756105945153,
+          "role": "prisoner"
+        },
+        {
+          "cosine": 0.5994614373305119,
+          "role": "refugee"
+        },
+        {
+          "cosine": 0.5867690901079999,
+          "role": "orphan"
+        },
+        {
+          "cosine": 0.5734644000403265,
+          "role": "survivor"
+        },
+        {
+          "cosine": 0.5725221150489451,
+          "role": "immigrant"
+        },
+        {
+          "cosine": 0.5434047035075354,
+          "role": "exile"
+        },
+        {
+          "cosine": 0.49501770554410207,
+          "role": "celebrity"
+        }
+      ],
+      "n": 45,
+      "within_cosine_mean": 0.13488838414265353,
+      "within_cosine_median": 0.08451955491005966
+    },
+    "activation_mythic_spiritual": {
+      "anchor_roles": [
+        {
+          "cosine": 0.5596625169044782,
+          "role": "whale"
+        },
+        {
+          "cosine": 0.5557048320821707,
+          "role": "spirit"
+        },
+        {
+          "cosine": 0.5407327229068785,
+          "role": "golem"
+        },
+        {
+          "cosine": 0.5087260992615138,
+          "role": "wanderer"
+        },
+        {
+          "cosine": 0.5083995187081514,
+          "role": "demon"
+        },
+        {
+          "cosine": 0.5022927537653796,
+          "role": "wind"
+        },
+        {
+          "cosine": 0.4919524978134138,
+          "role": "ascetic"
+        },
+        {
+          "cosine": 0.4890742487042752,
+          "role": "shaman"
+        }
+      ],
+      "n": 61,
+      "within_cosine_mean": 0.1212741073891528,
+      "within_cosine_median": 0.08415792661052707
+    },
+    "activation_other": {
+      "anchor_roles": [
+        {
+          "cosine": 0.631337221121692,
+          "role": "infant"
+        },
+        {
+          "cosine": 0.5919493598378263,
+          "role": "toddler"
+        },
+        {
+          "cosine": 0.5305329219412426,
+          "role": "hoarder"
+        },
+        {
+          "cosine": 0.4934647502621743,
+          "role": "amnesiac"
+        },
+        {
+          "cosine": 0.4880577664667729,
+          "role": "fool"
+        },
+        {
+          "cosine": 0.48500682470036827,
+          "role": "zealot"
+        },
+        {
+          "cosine": 0.4810882627782091,
+          "role": "crystalline"
+        },
+        {
+          "cosine": 0.4683341573950806,
+          "role": "caveman"
+        }
+      ],
+      "n": 22,
+      "within_cosine_mean": 0.13414442240195917,
+      "within_cosine_median": 0.10493793209131815
+    },
+    "activation_procedural_professional": {
+      "anchor_roles": [
+        {
+          "cosine": 0.6154857602090625,
+          "role": "pharmacist"
+        },
+        {
+          "cosine": 0.6091573624555094,
+          "role": "researcher"
+        },
+        {
+          "cosine": 0.6076841414534315,
+          "role": "navigator"
+        },
+        {
+          "cosine": 0.6032774641672877,
+          "role": "debugger"
+        },
+        {
+          "cosine": 0.5828471184147269,
+          "role": "consultant"
+        },
+        {
+          "cosine": 0.5594931360665147,
+          "role": "pilot"
+        },
+        {
+          "cosine": 0.5546302305652014,
+          "role": "marketer"
+        },
+        {
+          "cosine": 0.5531724345447445,
+          "role": "engineer"
+        }
+      ],
+      "n": 127,
+      "within_cosine_mean": 0.12171278763462143,
+      "within_cosine_median": 0.08477952381929257
+    },
+    "activation_trickster_chaos": {
+      "anchor_roles": [
+        {
+          "cosine": 0.7906509651368301,
+          "role": "trickster"
+        },
+        {
+          "cosine": 0.6434449466692717,
+          "role": "absurdist"
+        },
+        {
+          "cosine": 0.5904755276025558,
+          "role": "jester"
+        },
+        {
+          "cosine": 0.47007569368451574,
+          "role": "improviser"
+        },
+        {
+          "cosine": 0.45230253428919187,
+          "role": "genie"
+        },
+        {
+          "cosine": 0.4321927552560418,
+          "role": "dilettante"
+        },
+        {
+          "cosine": 0.39781339622555206,
+          "role": "hedonist"
+        }
+      ],
+      "n": 7,
+      "within_cosine_mean": 0.17298560137262664,
+      "within_cosine_median": 0.12737069452372016
+    },
+    "assistant_adjacent_seed": {
+      "anchor_roles": [
+        {
+          "cosine": 0.7185843190400737,
+          "role": "reviewer"
+        },
+        {
+          "cosine": 0.652634163621694,
+          "role": "evaluator"
+        },
+        {
+          "cosine": 0.6461933247949255,
+          "role": "grader"
+        },
+        {
+          "cosine": 0.5892206173799738,
+          "role": "consultant"
+        },
+        {
+          "cosine": 0.5280758343269237,
+          "role": "assistant"
+        },
+        {
+          "cosine": 0.5150987387557436,
+          "role": "editor"
+        },
+        {
+          "cosine": 0.4910024133802341,
+          "role": "coach"
+        },
+        {
+          "cosine": 0.44913320441724236,
+          "role": "coordinator"
+        }
+      ],
+      "n": 18,
+      "within_cosine_mean": 0.17229413389054796,
+      "within_cosine_median": 0.132990765484965
+    },
+    "collective_identity_seed": {
+      "anchor_roles": [
+        {
+          "cosine": 0.8533055390840814,
+          "role": "swarm"
+        },
+        {
+          "cosine": 0.8161901740613551,
+          "role": "hive"
+        },
+        {
+          "cosine": 0.6800335082920648,
+          "role": "coral_reef"
+        },
+        {
+          "cosine": 0.6579804262699884,
+          "role": "egregore"
+        },
+        {
+          "cosine": 0.6374450901117723,
+          "role": "ecosystem"
+        },
+        {
+          "cosine": 0.6183610051363867,
+          "role": "mycorrhizal"
+        },
+        {
+          "cosine": 0.5247334931447978,
+          "role": "zeitgeist"
+        }
+      ],
+      "n": 7,
+      "within_cosine_mean": 0.3791765592219538,
+      "within_cosine_median": 0.39686121637564664
+    },
+    "combative_seed": {
+      "anchor_roles": [
+        {
+          "cosine": 0.7655448990493633,
+          "role": "contrarian"
+        },
+        {
+          "cosine": 0.70408037562061,
+          "role": "maverick"
+        },
+        {
+          "cosine": 0.6843685902768042,
+          "role": "rebel"
+        },
+        {
+          "cosine": 0.5566598788805874,
+          "role": "devils_advocate"
+        },
+        {
+          "cosine": 0.5273575547598746,
+          "role": "provocateur"
+        },
+        {
+          "cosine": 0.4447652271501485,
+          "role": "competitor"
+        },
+        {
+          "cosine": 0.32325472135170136,
+          "role": "workaholic"
+        },
+        {
+          "cosine": 0.31017110049018937,
+          "role": "cynic"
+        }
+      ],
+      "n": 8,
+      "within_cosine_mean": 0.18981433402230127,
+      "within_cosine_median": 0.09545673419838319
+    },
+    "fantastical_theatrical_seed": {
+      "anchor_roles": [
+        {
+          "cosine": 0.6121385037737885,
+          "role": "demon"
+        },
+        {
+          "cosine": 0.5731589153713629,
+          "role": "avatar"
+        },
+        {
+          "cosine": 0.5394337003748949,
+          "role": "golem"
+        },
+        {
+          "cosine": 0.5264290015083324,
+          "role": "jester"
+        },
+        {
+          "cosine": 0.5168910360598917,
+          "role": "fool"
+        },
+        {
+          "cosine": 0.5150686961136882,
+          "role": "eldritch"
+        },
+        {
+          "cosine": 0.5002793512499085,
+          "role": "chimera"
+        },
+        {
+          "cosine": 0.48091844678930185,
+          "role": "prophet"
+        }
+      ],
+      "n": 21,
+      "within_cosine_mean": 0.15290438073609544,
+      "within_cosine_median": 0.10316753883520968
+    }
+  },
+  "bridge_roles": [
+    {
+      "activation_cluster": "grounded_social",
+      "best_centroid_cosine": 0.187373088630448,
+      "cluster_margin": 0.0006148563247825867,
+      "cross_cluster_neighbors_top8": 7,
+      "nearest_neighbors": "rogue:0.639, mycorrhizal:0.553, robot:0.455, interviewer:0.445, hacker:0.417",
+      "role": "spy",
+      "second_centroid_cosine": 0.1867582323056654,
+      "second_cluster": 6,
+      "semantic_cluster": 2,
+      "top8_neighbor_mean_cosine": 0.46122297066997653
+    },
+    {
+      "activation_cluster": "other",
+      "best_centroid_cosine": 0.28839861694974916,
+      "cluster_margin": 0.0034779116489881967,
+      "cross_cluster_neighbors_top8": 7,
+      "nearest_neighbors": "orphan:0.558, workaholic:0.479, improviser:0.421, echo:0.409, hoarder:0.368",
+      "role": "amnesiac",
+      "second_centroid_cosine": 0.28492070530076097,
+      "second_cluster": 4,
+      "semantic_cluster": 2,
+      "top8_neighbor_mean_cosine": 0.40838856527665596
+    },
+    {
+      "activation_cluster": "mythic_spiritual",
+      "best_centroid_cosine": 0.3127773493713113,
+      "cluster_margin": 0.005950462408363555,
+      "cross_cluster_neighbors_top8": 7,
+      "nearest_neighbors": "guru:0.677, elder:0.605, pilgrim:0.540, hermit:0.521, absurdist:0.467",
+      "role": "sage",
+      "second_centroid_cosine": 0.30682688696294774,
+      "second_cluster": 4,
+      "semantic_cluster": 6,
+      "top8_neighbor_mean_cosine": 0.5193115233481386
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.39233271693442234,
+      "cluster_margin": 0.008103401675012833,
+      "cross_cluster_neighbors_top8": 5,
+      "nearest_neighbors": "martyr:0.586, altruist:0.527, zealot:0.513, angel:0.472, narcissist:0.457",
+      "role": "guardian",
+      "second_centroid_cosine": 0.3842293152594095,
+      "second_cluster": 2,
+      "semantic_cluster": 3,
+      "top8_neighbor_mean_cosine": 0.47968281099582644
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.5079629305444797,
+      "cluster_margin": 0.013024888550065117,
+      "cross_cluster_neighbors_top8": 4,
+      "nearest_neighbors": "entrepreneur:0.778, smuggler:0.689, navigator:0.685, networker:0.669, marketer:0.667",
+      "role": "merchant",
+      "second_centroid_cosine": 0.4949380419944146,
+      "second_cluster": 1,
+      "semantic_cluster": 5,
+      "top8_neighbor_mean_cosine": 0.6703322242345138
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.3697938235314365,
+      "cluster_margin": 0.01958226824716125,
+      "cross_cluster_neighbors_top8": 8,
+      "nearest_neighbors": "mediator:0.763, interpreter:0.762, negotiator:0.745, translator:0.667, ambassador:0.656",
+      "role": "emissary",
+      "second_centroid_cosine": 0.3502115552842753,
+      "second_cluster": 0,
+      "semantic_cluster": 5,
+      "top8_neighbor_mean_cosine": 0.6541828282025319
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.38923887032329524,
+      "cluster_margin": 0.01991812564663803,
+      "cross_cluster_neighbors_top8": 3,
+      "nearest_neighbors": "evangelist:0.734, visionary:0.676, hacker:0.558, futurist:0.538, programmer:0.532",
+      "role": "technologist",
+      "second_centroid_cosine": 0.3693207446766572,
+      "second_cluster": 2,
+      "semantic_cluster": 1,
+      "top8_neighbor_mean_cosine": 0.5495947846836247
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.320384550590546,
+      "cluster_margin": 0.021579355339939266,
+      "cross_cluster_neighbors_top8": 4,
+      "nearest_neighbors": "recruiter:0.630, virtuoso:0.478, retiree:0.433, entrepreneur:0.428, screener:0.389",
+      "role": "scout",
+      "second_centroid_cosine": 0.2988051952506067,
+      "second_cluster": 2,
+      "semantic_cluster": 5,
+      "top8_neighbor_mean_cosine": 0.4246006332961621
+    },
+    {
+      "activation_cluster": "trickster_chaos",
+      "best_centroid_cosine": 0.22994497819650303,
+      "cluster_margin": 0.02250980336010508,
+      "cross_cluster_neighbors_top8": 6,
+      "nearest_neighbors": "generalist:0.732, amateur:0.647, polymath:0.521, student:0.453, prodigy:0.439",
+      "role": "dilettante",
+      "second_centroid_cosine": 0.20743517483639795,
+      "second_cluster": 1,
+      "semantic_cluster": 2,
+      "top8_neighbor_mean_cosine": 0.4585456368510532
+    },
+    {
+      "activation_cluster": "grounded_social",
+      "best_centroid_cosine": 0.4283345164198203,
+      "cluster_margin": 0.024655464076186295,
+      "cross_cluster_neighbors_top8": 6,
+      "nearest_neighbors": "prisoner:0.565, cosmopolitan:0.548, exile:0.532, stoic:0.520, provincial:0.516",
+      "role": "addict",
+      "second_centroid_cosine": 0.403679052343634,
+      "second_cluster": 0,
+      "semantic_cluster": 4,
+      "top8_neighbor_mean_cosine": 0.5061818730053358
+    },
+    {
+      "activation_cluster": "grounded_social",
+      "best_centroid_cosine": 0.3712805698606951,
+      "cluster_margin": 0.026994902475389382,
+      "cross_cluster_neighbors_top8": 6,
+      "nearest_neighbors": "engineer:0.796, debugger:0.698, mathematician:0.532, caveman:0.474, saboteur:0.459",
+      "role": "mechanic",
+      "second_centroid_cosine": 0.3442856673853057,
+      "second_cluster": 1,
+      "semantic_cluster": 5,
+      "top8_neighbor_mean_cosine": 0.5224132864139239
+    },
+    {
+      "activation_cluster": "grounded_social",
+      "best_centroid_cosine": 0.41468784020618943,
+      "cluster_margin": 0.02716310145594636,
+      "cross_cluster_neighbors_top8": 6,
+      "nearest_neighbors": "leviathan:0.628, pirate:0.547, whale:0.513, minimalist:0.442, ancient:0.433",
+      "role": "surfer",
+      "second_centroid_cosine": 0.38752473875024307,
+      "second_cluster": 4,
+      "semantic_cluster": 3,
+      "top8_neighbor_mean_cosine": 0.4757064118781254
+    },
+    {
+      "activation_cluster": "mythic_spiritual",
+      "best_centroid_cosine": 0.38903868547606996,
+      "cluster_margin": 0.02842685068629197,
+      "cross_cluster_neighbors_top8": 6,
+      "nearest_neighbors": "cyborg:0.729, demon:0.683, anthropologist:0.663, geographer:0.591, luddite:0.584",
+      "role": "alien",
+      "second_centroid_cosine": 0.360611834789778,
+      "second_cluster": 0,
+      "semantic_cluster": 3,
+      "top8_neighbor_mean_cosine": 0.6183456469878262
+    },
+    {
+      "activation_cluster": "mythic_spiritual",
+      "best_centroid_cosine": 0.343568338922574,
+      "cluster_margin": 0.03134609534766991,
+      "cross_cluster_neighbors_top8": 6,
+      "nearest_neighbors": "shaman:0.810, guru:0.698, pilgrim:0.616, healer:0.608, ascetic:0.541",
+      "role": "mystic",
+      "second_centroid_cosine": 0.3122222435749041,
+      "second_cluster": 2,
+      "semantic_cluster": 1,
+      "top8_neighbor_mean_cosine": 0.5647640787245709
+    },
+    {
+      "activation_cluster": "other",
+      "best_centroid_cosine": 0.22163075437055746,
+      "cluster_margin": 0.0329672775711321,
+      "cross_cluster_neighbors_top8": 7,
+      "nearest_neighbors": "infant:0.645, caveman:0.484, poet:0.457, physicist:0.446, grandparent:0.434",
+      "role": "toddler",
+      "second_centroid_cosine": 0.18866347679942536,
+      "second_cluster": 6,
+      "semantic_cluster": 4,
+      "top8_neighbor_mean_cosine": 0.46030210160606766
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.2612319602542303,
+      "cluster_margin": 0.03472042013426732,
+      "cross_cluster_neighbors_top8": 5,
+      "nearest_neighbors": "devils_advocate:0.606, idealist:0.423, activist:0.385, martyr:0.343, procrastinator:0.300",
+      "role": "advocate",
+      "second_centroid_cosine": 0.22651154011996297,
+      "second_cluster": 2,
+      "semantic_cluster": 0,
+      "top8_neighbor_mean_cosine": 0.3593460553259157
+    },
+    {
+      "activation_cluster": "grounded_social",
+      "best_centroid_cosine": 0.36809751274839575,
+      "cluster_margin": 0.03855652072940369,
+      "cross_cluster_neighbors_top8": 5,
+      "nearest_neighbors": "cosmopolitan:0.585, hybrid:0.520, presenter:0.453, addict:0.420, actor:0.399",
+      "role": "chameleon",
+      "second_centroid_cosine": 0.32954099201899206,
+      "second_cluster": 0,
+      "semantic_cluster": 2,
+      "top8_neighbor_mean_cosine": 0.4412054301006736
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.43247876556589454,
+      "cluster_margin": 0.03887357121732049,
+      "cross_cluster_neighbors_top8": 4,
+      "nearest_neighbors": "vigilante:0.705, pharmacist:0.597, criminal:0.588, smuggler:0.532, navigator:0.460",
+      "role": "lawyer",
+      "second_centroid_cosine": 0.39360519434857405,
+      "second_cluster": 5,
+      "semantic_cluster": 1,
+      "top8_neighbor_mean_cosine": 0.5104556202318065
+    },
+    {
+      "activation_cluster": "grounded_social",
+      "best_centroid_cosine": 0.33802303854406796,
+      "cluster_margin": 0.03927924489872847,
+      "cross_cluster_neighbors_top8": 5,
+      "nearest_neighbors": "shapeshifter:0.835, interpreter:0.686, translator:0.554, fixer:0.505, synthesizer:0.473",
+      "role": "actor",
+      "second_centroid_cosine": 0.2987437936453395,
+      "second_cluster": 0,
+      "semantic_cluster": 2,
+      "top8_neighbor_mean_cosine": 0.5490836588060238
+    },
+    {
+      "activation_cluster": "editorial",
+      "best_centroid_cosine": 0.2808371409384518,
+      "cluster_margin": 0.042411163467533514,
+      "cross_cluster_neighbors_top8": 5,
+      "nearest_neighbors": "editor:0.839, perfectionist:0.599, writer:0.536, blogger:0.452, playwright:0.433",
+      "role": "proofreader",
+      "second_centroid_cosine": 0.2384259774709183,
+      "second_cluster": 6,
+      "semantic_cluster": 5,
+      "top8_neighbor_mean_cosine": 0.4791039796764316
+    },
+    {
+      "activation_cluster": "trickster_chaos",
+      "best_centroid_cosine": 0.28318781661199394,
+      "cluster_margin": 0.043070469846505866,
+      "cross_cluster_neighbors_top8": 7,
+      "nearest_neighbors": "fool:0.866, trickster:0.684, comedian:0.680, bard:0.436, absurdist:0.373",
+      "role": "jester",
+      "second_centroid_cosine": 0.24011734676548807,
+      "second_cluster": 6,
+      "semantic_cluster": 3,
+      "top8_neighbor_mean_cosine": 0.5085635830871136
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.34971441217314786,
+      "cluster_margin": 0.04315154693598111,
+      "cross_cluster_neighbors_top8": 7,
+      "nearest_neighbors": "translator:0.821, emissary:0.762, actor:0.686, presenter:0.544, synthesizer:0.533",
+      "role": "interpreter",
+      "second_centroid_cosine": 0.30656286523716675,
+      "second_cluster": 6,
+      "semantic_cluster": 2,
+      "top8_neighbor_mean_cosine": 0.6119814643438115
+    },
+    {
+      "activation_cluster": "combative_iconoclast",
+      "best_centroid_cosine": 0.28408535104697225,
+      "cluster_margin": 0.044931345368058484,
+      "cross_cluster_neighbors_top8": 4,
+      "nearest_neighbors": "rebel:0.913, visionary:0.532, revolutionary:0.499, contrarian:0.482, provocateur:0.453",
+      "role": "maverick",
+      "second_centroid_cosine": 0.23915400567891376,
+      "second_cluster": 2,
+      "semantic_cluster": 0,
+      "top8_neighbor_mean_cosine": 0.5023163594164709
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.386618025901629,
+      "cluster_margin": 0.04676325081042365,
+      "cross_cluster_neighbors_top8": 5,
+      "nearest_neighbors": "negotiator:0.851, mediator:0.813, pacifist:0.706, ambassador:0.633, emissary:0.620",
+      "role": "peacekeeper",
+      "second_centroid_cosine": 0.3398547750912054,
+      "second_cluster": 2,
+      "semantic_cluster": 0,
+      "top8_neighbor_mean_cosine": 0.5722500025717134
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.4737655954037378,
+      "cluster_margin": 0.048262526390110194,
+      "cross_cluster_neighbors_top8": 6,
+      "nearest_neighbors": "symbiont:0.770, mycorrhizal:0.517, coral_reef:0.502, parasite:0.459, networker:0.429",
+      "role": "ecosystem",
+      "second_centroid_cosine": 0.4255030690136276,
+      "second_cluster": 3,
+      "semantic_cluster": 0,
+      "top8_neighbor_mean_cosine": 0.4886129936213588
+    },
+    {
+      "activation_cluster": "mythic_spiritual",
+      "best_centroid_cosine": 0.3781166208267262,
+      "cluster_margin": 0.04918041546679386,
+      "cross_cluster_neighbors_top8": 4,
+      "nearest_neighbors": "leviathan:0.731, echo:0.544, elder:0.519, wind:0.502, survivor:0.472",
+      "role": "ancient",
+      "second_centroid_cosine": 0.32893620535993234,
+      "second_cluster": 3,
+      "semantic_cluster": 4,
+      "top8_neighbor_mean_cosine": 0.4959267250823548
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.3269935550181008,
+      "cluster_margin": 0.04928901499004923,
+      "cross_cluster_neighbors_top8": 6,
+      "nearest_neighbors": "mediator:0.901, peacekeeper:0.851, emissary:0.745, ambassador:0.623, entrepreneur:0.474",
+      "role": "negotiator",
+      "second_centroid_cosine": 0.27770454002805156,
+      "second_cluster": 5,
+      "semantic_cluster": 2,
+      "top8_neighbor_mean_cosine": 0.5998800017831776
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.41989594039614314,
+      "cluster_margin": 0.052518425135678726,
+      "cross_cluster_neighbors_top8": 4,
+      "nearest_neighbors": "conservator:0.901, collector:0.884, librarian:0.555, historian:0.525, purist:0.509",
+      "role": "archivist",
+      "second_centroid_cosine": 0.3673775152604644,
+      "second_cluster": 1,
+      "semantic_cluster": 0,
+      "top8_neighbor_mean_cosine": 0.5882780283453043
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.35672033658753405,
+      "cluster_margin": 0.053587929367774845,
+      "cross_cluster_neighbors_top8": 6,
+      "nearest_neighbors": "forecaster:0.893, visionary:0.613, oracle:0.602, technologist:0.538, economist:0.518",
+      "role": "futurist",
+      "second_centroid_cosine": 0.3031324072197592,
+      "second_cluster": 5,
+      "semantic_cluster": 1,
+      "top8_neighbor_mean_cosine": 0.5612003547233844
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.3537785634196702,
+      "cluster_margin": 0.053988499745411256,
+      "cross_cluster_neighbors_top8": 5,
+      "nearest_neighbors": "strategist:0.866, organizer:0.677, coach:0.586, trainer:0.583, scheduler:0.503",
+      "role": "planner",
+      "second_centroid_cosine": 0.2997900636742589,
+      "second_cluster": 5,
+      "semantic_cluster": 1,
+      "top8_neighbor_mean_cosine": 0.5775744972353009
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.39899329253295507,
+      "cluster_margin": 0.055839186561813636,
+      "cross_cluster_neighbors_top8": 6,
+      "nearest_neighbors": "scientist:0.794, researcher:0.704, judge:0.676, skeptic:0.660, analyst:0.658",
+      "role": "detective",
+      "second_centroid_cosine": 0.34315410597114143,
+      "second_cluster": 5,
+      "semantic_cluster": 1,
+      "top8_neighbor_mean_cosine": 0.625520181023594
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.6567092071544003,
+      "cluster_margin": 0.061546272075987174,
+      "cross_cluster_neighbors_top8": 3,
+      "nearest_neighbors": "smuggler:0.771, merchant:0.685, pilot:0.652, marketer:0.587, pharmacist:0.570",
+      "role": "navigator",
+      "second_centroid_cosine": 0.5951629350784131,
+      "second_cluster": 1,
+      "semantic_cluster": 5,
+      "top8_neighbor_mean_cosine": 0.6079321959076511
+    },
+    {
+      "activation_cluster": "grounded_social",
+      "best_centroid_cosine": 0.48879978455494344,
+      "cluster_margin": 0.0638988294390031,
+      "cross_cluster_neighbors_top8": 3,
+      "nearest_neighbors": "navigator:0.771, merchant:0.689, chemist:0.618, cartographer:0.548, architect:0.547",
+      "role": "smuggler",
+      "second_centroid_cosine": 0.42490095511594034,
+      "second_cluster": 5,
+      "semantic_cluster": 1,
+      "top8_neighbor_mean_cosine": 0.5970119673356054
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.40559411443173804,
+      "cluster_margin": 0.06496588110485652,
+      "cross_cluster_neighbors_top8": 8,
+      "nearest_neighbors": "scholar:0.585, detective:0.571, scientist:0.520, anthropologist:0.483, echo:0.483",
+      "role": "archaeologist",
+      "second_centroid_cosine": 0.3406282333268815,
+      "second_cluster": 1,
+      "semantic_cluster": 6,
+      "top8_neighbor_mean_cosine": 0.4900518650013931
+    },
+    {
+      "activation_cluster": "mythic_spiritual",
+      "best_centroid_cosine": 0.2875897900424192,
+      "cluster_margin": 0.0655975172233178,
+      "cross_cluster_neighbors_top8": 5,
+      "nearest_neighbors": "composer:0.645, empath:0.615, therapist:0.427, counselor:0.408, bohemian:0.406",
+      "role": "musician",
+      "second_centroid_cosine": 0.2219922728191014,
+      "second_cluster": 3,
+      "semantic_cluster": 2,
+      "top8_neighbor_mean_cosine": 0.4362979657764817
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.4260862302727216,
+      "cluster_margin": 0.06668981026546594,
+      "cross_cluster_neighbors_top8": 3,
+      "nearest_neighbors": "futurist:0.893, consultant:0.618, economist:0.613, oracle:0.611, statistician:0.606",
+      "role": "forecaster",
+      "second_centroid_cosine": 0.35939642000725563,
+      "second_cluster": 1,
+      "semantic_cluster": 5,
+      "top8_neighbor_mean_cosine": 0.601654099180668
+    },
+    {
+      "activation_cluster": "other",
+      "best_centroid_cosine": 0.29834712697821186,
+      "cluster_margin": 0.06893236416530826,
+      "cross_cluster_neighbors_top8": 6,
+      "nearest_neighbors": "facilitator:0.941, podcaster:0.581, auctioneer:0.535, secretary:0.453, workaholic:0.370",
+      "role": "moderator",
+      "second_centroid_cosine": 0.2294147628129036,
+      "second_cluster": 6,
+      "semantic_cluster": 2,
+      "top8_neighbor_mean_cosine": 0.4741449047389697
+    },
+    {
+      "activation_cluster": "mythic_spiritual",
+      "best_centroid_cosine": 0.32899953914724306,
+      "cluster_margin": 0.06936393424833132,
+      "cross_cluster_neighbors_top8": 4,
+      "nearest_neighbors": "wraith:0.821, revenant:0.789, void:0.498, spirit:0.440, simulacrum:0.291",
+      "role": "ghost",
+      "second_centroid_cosine": 0.25963560489891174,
+      "second_cluster": 4,
+      "semantic_cluster": 3,
+      "top8_neighbor_mean_cosine": 0.46196548026225875
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.24799598114743193,
+      "cluster_margin": 0.0698909373257435,
+      "cross_cluster_neighbors_top8": 4,
+      "nearest_neighbors": "nutritionist:0.536, naturalist:0.403, veterinarian:0.366, crystalline:0.348, pragmatist:0.346",
+      "role": "vegan",
+      "second_centroid_cosine": 0.17810504382168843,
+      "second_cluster": 0,
+      "semantic_cluster": 1,
+      "top8_neighbor_mean_cosine": 0.3704621854904817
+    },
+    {
+      "activation_cluster": "procedural_professional",
+      "best_centroid_cosine": 0.42941672117128366,
+      "cluster_margin": 0.07162366896401862,
+      "cross_cluster_neighbors_top8": 5,
+      "nearest_neighbors": "sociologist:0.763, geographer:0.739, alien:0.663, psychologist:0.609, cyborg:0.518",
+      "role": "anthropologist",
+      "second_centroid_cosine": 0.35779305220726504,
+      "second_cluster": 1,
+      "semantic_cluster": 0,
+      "top8_neighbor_mean_cosine": 0.5837582010908927
+    }
+  ],
+  "date": "2026-05-27",
+  "density": {
+    "highest_density_roles": [
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "entrepreneur:0.778, smuggler:0.689, navigator:0.685, networker:0.669, marketer:0.667",
+        "role": "merchant",
+        "top10_neighbor_mean_cosine": 0.6420047396099011,
+        "top5_neighbor_mean_cosine": 0.6974160740588877
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "analyst:0.884, scientist:0.748, detective:0.704, statistician:0.613, judge:0.587",
+        "role": "researcher",
+        "top10_neighbor_mean_cosine": 0.6234554308178036,
+        "top5_neighbor_mean_cosine": 0.7069736551027186
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "mediator:0.763, interpreter:0.762, negotiator:0.745, translator:0.667, ambassador:0.656",
+        "role": "emissary",
+        "top10_neighbor_mean_cosine": 0.6171385986388748,
+        "top5_neighbor_mean_cosine": 0.718510869809927
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "detective:0.794, researcher:0.748, scholar:0.718, analyst:0.705, judge:0.566",
+        "role": "scientist",
+        "top10_neighbor_mean_cosine": 0.6007392272118744,
+        "top5_neighbor_mean_cosine": 0.7061049921886816
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "researcher:0.884, statistician:0.754, scientist:0.705, detective:0.658, consultant:0.558",
+        "role": "analyst",
+        "top10_neighbor_mean_cosine": 0.5993199677883081,
+        "top5_neighbor_mean_cosine": 0.711701507761353
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "economist:0.807, analyst:0.754, accountant:0.681, consultant:0.644, researcher:0.613",
+        "role": "statistician",
+        "top10_neighbor_mean_cosine": 0.5975093673537832,
+        "top5_neighbor_mean_cosine": 0.6996703507512299
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "mechanic:0.796, mathematician:0.773, debugger:0.734, physicist:0.594, specialist:0.524",
+        "role": "engineer",
+        "top10_neighbor_mean_cosine": 0.5905797351528932,
+        "top5_neighbor_mean_cosine": 0.684280483239456
+      },
+      {
+        "activation_cluster": "grounded_social",
+        "nearest_neighbors": "immigrant:0.944, retiree:0.718, expatriate:0.663, exile:0.639, survivor:0.620",
+        "role": "refugee",
+        "top10_neighbor_mean_cosine": 0.5897994009995944,
+        "top5_neighbor_mean_cosine": 0.7170105139800357
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "blogger:0.738, editor:0.713, publisher:0.646, playwright:0.586, novelist:0.574",
+        "role": "writer",
+        "top10_neighbor_mean_cosine": 0.5891238855947224,
+        "top5_neighbor_mean_cosine": 0.6514957990613001
+      },
+      {
+        "activation_cluster": "grounded_social",
+        "nearest_neighbors": "expatriate:0.776, refugee:0.639, immigrant:0.638, prisoner:0.623, orphan:0.562",
+        "role": "exile",
+        "top10_neighbor_mean_cosine": 0.5829806891625717,
+        "top5_neighbor_mean_cosine": 0.647758642698415
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "smuggler:0.771, merchant:0.685, pilot:0.652, marketer:0.587, pharmacist:0.570",
+        "role": "navigator",
+        "top10_neighbor_mean_cosine": 0.5822318280879555,
+        "top5_neighbor_mean_cosine": 0.6527422655209858
+      },
+      {
+        "activation_cluster": "mythic_spiritual",
+        "nearest_neighbors": "cyborg:0.729, demon:0.683, anthropologist:0.663, geographer:0.591, luddite:0.584",
+        "role": "alien",
+        "top10_neighbor_mean_cosine": 0.5800399353721055,
+        "top5_neighbor_mean_cosine": 0.6501423754725631
+      },
+      {
+        "activation_cluster": "grounded_social",
+        "nearest_neighbors": "exile:0.776, immigrant:0.703, refugee:0.663, prisoner:0.579, nomad:0.555",
+        "role": "expatriate",
+        "top10_neighbor_mean_cosine": 0.5791513097759003,
+        "top5_neighbor_mean_cosine": 0.6553755501835539
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "translator:0.821, emissary:0.762, actor:0.686, presenter:0.544, synthesizer:0.533",
+        "role": "interpreter",
+        "top10_neighbor_mean_cosine": 0.5777671544658736,
+        "top5_neighbor_mean_cosine": 0.6693094803005856
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "scientist:0.794, researcher:0.704, judge:0.676, skeptic:0.660, analyst:0.658",
+        "role": "detective",
+        "top10_neighbor_mean_cosine": 0.5750754397278263,
+        "top5_neighbor_mean_cosine": 0.6983838817394062
+      },
+      {
+        "activation_cluster": "grounded_social",
+        "nearest_neighbors": "orphan:0.683, exile:0.623, celebrity:0.613, parent:0.592, expatriate:0.579",
+        "role": "prisoner",
+        "top10_neighbor_mean_cosine": 0.5737274928840121,
+        "top5_neighbor_mean_cosine": 0.618124345139248
+      },
+      {
+        "activation_cluster": "grounded_social",
+        "nearest_neighbors": "refugee:0.944, expatriate:0.703, exile:0.638, retiree:0.625, celebrity:0.495",
+        "role": "immigrant",
+        "top10_neighbor_mean_cosine": 0.5734777760289627,
+        "top5_neighbor_mean_cosine": 0.6810137689310651
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "futurist:0.893, consultant:0.618, economist:0.613, oracle:0.611, statistician:0.606",
+        "role": "forecaster",
+        "top10_neighbor_mean_cosine": 0.5730772499415241,
+        "top5_neighbor_mean_cosine": 0.6681891768161894
+      },
+      {
+        "activation_cluster": "grounded_social",
+        "nearest_neighbors": "navigator:0.771, merchant:0.689, chemist:0.618, cartographer:0.548, architect:0.547",
+        "role": "smuggler",
+        "top10_neighbor_mean_cosine": 0.5723205501213029,
+        "top5_neighbor_mean_cosine": 0.6344658833922008
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "entrepreneur:0.729, merchant:0.667, mentor:0.638, recruiter:0.613, navigator:0.587",
+        "role": "marketer",
+        "top10_neighbor_mean_cosine": 0.5716876876011968,
+        "top5_neighbor_mean_cosine": 0.6466109152147574
+      }
+    ],
+    "lowest_density_roles": [
+      {
+        "activation_cluster": "mythic_spiritual",
+        "nearest_neighbors": "luddite:0.388, wanderer:0.382, observer:0.347, nomad:0.331, hedonist:0.318",
+        "role": "flaneur",
+        "top10_neighbor_mean_cosine": 0.3192373386830106,
+        "top5_neighbor_mean_cosine": 0.3530934801706857
+      },
+      {
+        "activation_cluster": "mythic_spiritual",
+        "nearest_neighbors": "prey:0.740, vampire:0.476, caveman:0.395, competitor:0.287, chameleon:0.266",
+        "role": "predator",
+        "top10_neighbor_mean_cosine": 0.32287127006751193,
+        "top5_neighbor_mean_cosine": 0.4327501775994461
+      },
+      {
+        "activation_cluster": "combative_iconoclast",
+        "nearest_neighbors": "contrarian:0.856, advocate:0.606, skeptic:0.344, zealot:0.312, trickster:0.253",
+        "role": "devils_advocate",
+        "top10_neighbor_mean_cosine": 0.3278562527046718,
+        "top5_neighbor_mean_cosine": 0.47417339825380517
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "devils_advocate:0.606, idealist:0.423, activist:0.385, martyr:0.343, procrastinator:0.300",
+        "role": "advocate",
+        "top10_neighbor_mean_cosine": 0.3336631631680222,
+        "top5_neighbor_mean_cosine": 0.4114611254789719
+      },
+      {
+        "activation_cluster": "other",
+        "nearest_neighbors": "adolescent:0.978, parent:0.458, grandparent:0.330, naturalist:0.319, graduate:0.268",
+        "role": "teenager",
+        "top10_neighbor_mean_cosine": 0.3452434149394672,
+        "top5_neighbor_mean_cosine": 0.47089169307875844
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "nutritionist:0.536, naturalist:0.403, veterinarian:0.366, crystalline:0.348, pragmatist:0.346",
+        "role": "vegan",
+        "top10_neighbor_mean_cosine": 0.3538368670938209,
+        "top5_neighbor_mean_cosine": 0.3996509055352247
+      },
+      {
+        "activation_cluster": "trickster_chaos",
+        "nearest_neighbors": "familiar:0.798, zeitgeist:0.666, golem:0.422, witch:0.284, wind:0.280",
+        "role": "genie",
+        "top10_neighbor_mean_cosine": 0.3700506996150177,
+        "top5_neighbor_mean_cosine": 0.4901039063098015
+      },
+      {
+        "activation_cluster": "mythic_spiritual",
+        "nearest_neighbors": "avatar:0.821, prophet:0.619, guardian:0.472, oracle:0.402, mystic:0.276",
+        "role": "angel",
+        "top10_neighbor_mean_cosine": 0.3706811159489373,
+        "top5_neighbor_mean_cosine": 0.5178026148043897
+      },
+      {
+        "activation_cluster": "other",
+        "nearest_neighbors": "cyborg:0.460, spy:0.455, infant:0.442, hacker:0.361, rogue:0.353",
+        "role": "robot",
+        "top10_neighbor_mean_cosine": 0.37555958088583613,
+        "top5_neighbor_mean_cosine": 0.41423136747231537
+      },
+      {
+        "activation_cluster": "other",
+        "nearest_neighbors": "teenager:0.978, parent:0.484, grandparent:0.374, naturalist:0.368, amnesiac:0.338",
+        "role": "adolescent",
+        "top10_neighbor_mean_cosine": 0.3777025298231259,
+        "top5_neighbor_mean_cosine": 0.5084080530685943
+      },
+      {
+        "activation_cluster": "grounded_social",
+        "nearest_neighbors": "dilettante:0.647, romantic:0.465, student:0.418, pragmatist:0.413, idealist:0.404",
+        "role": "amateur",
+        "top10_neighbor_mean_cosine": 0.3849466652207292,
+        "top5_neighbor_mean_cosine": 0.4692894694267684
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "witness:0.870, narrator:0.444, auctioneer:0.380, perfectionist:0.376, historian:0.349",
+        "role": "observer",
+        "top10_neighbor_mean_cosine": 0.38549311033624767,
+        "top5_neighbor_mean_cosine": 0.4836086044593504
+      },
+      {
+        "activation_cluster": "other",
+        "nearest_neighbors": "librarian:0.527, networker:0.509, mycorrhizal:0.399, cartographer:0.380, symbiont:0.367",
+        "role": "gossip",
+        "top10_neighbor_mean_cosine": 0.3888813924031193,
+        "top5_neighbor_mean_cosine": 0.43661124762172354
+      },
+      {
+        "activation_cluster": "mythic_spiritual",
+        "nearest_neighbors": "saboteur:0.600, destroyer:0.573, anarchist:0.396, builder:0.390, hacker:0.353",
+        "role": "virus",
+        "top10_neighbor_mean_cosine": 0.3909989197928113,
+        "top5_neighbor_mean_cosine": 0.4622521759245591
+      },
+      {
+        "activation_cluster": "other",
+        "nearest_neighbors": "orphan:0.558, workaholic:0.479, improviser:0.421, echo:0.409, hoarder:0.368",
+        "role": "amnesiac",
+        "top10_neighbor_mean_cosine": 0.3921104150373763,
+        "top5_neighbor_mean_cosine": 0.4468209918256075
+      },
+      {
+        "activation_cluster": "trickster_chaos",
+        "nearest_neighbors": "realist:0.720, fixer:0.550, orphan:0.489, amnesiac:0.421, optimist:0.342",
+        "role": "improviser",
+        "top10_neighbor_mean_cosine": 0.39451560401340136,
+        "top5_neighbor_mean_cosine": 0.5042147987770584
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "scheduler:0.675, accountant:0.469, moderator:0.453, dispatcher:0.368, supervisor:0.367",
+        "role": "secretary",
+        "top10_neighbor_mean_cosine": 0.3959736888406332,
+        "top5_neighbor_mean_cosine": 0.4664684725766469
+      },
+      {
+        "activation_cluster": "mythic_spiritual",
+        "nearest_neighbors": "predator:0.476, elder:0.460, homunculus:0.449, hedonist:0.430, golem:0.389",
+        "role": "vampire",
+        "top10_neighbor_mean_cosine": 0.3960658969891041,
+        "top5_neighbor_mean_cosine": 0.4408965955196541
+      },
+      {
+        "activation_cluster": "grounded_social",
+        "nearest_neighbors": "veteran:0.980, warrior:0.533, prisoner:0.400, expatriate:0.372, sommelier:0.306",
+        "role": "soldier",
+        "top10_neighbor_mean_cosine": 0.401854248260178,
+        "top5_neighbor_mean_cosine": 0.5179579012378543
+      },
+      {
+        "activation_cluster": "procedural_professional",
+        "nearest_neighbors": "recruiter:0.630, virtuoso:0.478, retiree:0.433, entrepreneur:0.428, screener:0.389",
+        "role": "scout",
+        "top10_neighbor_mean_cosine": 0.4044295945725791,
+        "top5_neighbor_mean_cosine": 0.4714296177718665
+      }
+    ],
+    "top10_summary": {
+      "max": 0.6420047396099011,
+      "mean": 0.480756964675401,
+      "median": 0.4788266552677019,
+      "min": 0.3192373386830106,
+      "p05": 0.3917769664640068,
+      "p25": 0.43674203060370687,
+      "p75": 0.5212576410222094,
+      "p95": 0.5758829541492405
+    }
+  },
+  "environment": {
+    "matplotlib_available": false,
+    "new_activation_inference": false,
+    "sentence_transformers_available": false,
+    "sklearn_available": false
+  },
+  "hierarchical_snapshots": {
+    "10": [
+      {
+        "anchors": [
+          "merchant",
+          "navigator",
+          "pharmacist",
+          "architect",
+          "marketer",
+          "entrepreneur",
+          "cartographer",
+          "chef",
+          "pilot",
+          "smuggler"
+        ],
+        "size": 47
+      },
+      {
+        "anchors": [
+          "consultant",
+          "assistant",
+          "generalist",
+          "polymath",
+          "reviewer",
+          "supervisor",
+          "evaluator",
+          "coordinator",
+          "dispatcher",
+          "producer"
+        ],
+        "size": 35
+      },
+      {
+        "anchors": [
+          "exile",
+          "prisoner",
+          "addict",
+          "expatriate",
+          "procrastinator",
+          "immigrant",
+          "nomad",
+          "cosmopolitan",
+          "revenant",
+          "celebrity"
+        ],
+        "size": 32
+      },
+      {
+        "anchors": [
+          "eldritch",
+          "demon",
+          "golem",
+          "egregore",
+          "crystalline",
+          "chimera",
+          "dreamer",
+          "homunculus",
+          "void",
+          "alien"
+        ],
+        "size": 29
+      },
+      {
+        "anchors": [
+          "writer",
+          "summarizer",
+          "presenter",
+          "podcaster",
+          "interviewer",
+          "blogger",
+          "playwright",
+          "novelist",
+          "journalist",
+          "curator"
+        ],
+        "size": 27
+      },
+      {
+        "anchors": [
+          "grandparent",
+          "graduate",
+          "newlywed",
+          "hedonist",
+          "infant",
+          "toddler",
+          "elder",
+          "gamer",
+          "retiree",
+          "widow"
+        ],
+        "size": 26
+      },
+      {
+        "anchors": [
+          "anarchist",
+          "purist",
+          "pacifist",
+          "revolutionary",
+          "workaholic",
+          "zealot",
+          "ascetic",
+          "activist",
+          "destroyer",
+          "virtuoso"
+        ],
+        "size": 22
+      },
+      {
+        "anchors": [
+          "researcher",
+          "detective",
+          "scientist",
+          "analyst",
+          "archaeologist",
+          "statistician",
+          "judge",
+          "skeptic",
+          "scholar",
+          "forecaster"
+        ],
+        "size": 20
+      },
+      {
+        "anchors": [
+          "trickster",
+          "visionary",
+          "contrarian",
+          "wanderer",
+          "maverick",
+          "rebel",
+          "daredevil",
+          "absurdist",
+          "fool",
+          "provocateur"
+        ],
+        "size": 19
+      },
+      {
+        "anchors": [
+          "martyr",
+          "narcissist",
+          "guru",
+          "altruist",
+          "caregiver",
+          "mystic",
+          "survivor",
+          "empath",
+          "hermit",
+          "optimist"
+        ],
+        "size": 18
+      }
+    ],
+    "20": [
+      {
+        "anchors": [
+          "architect",
+          "navigator",
+          "pharmacist",
+          "merchant",
+          "cartographer",
+          "chef",
+          "smuggler",
+          "chemist",
+          "engineer",
+          "sommelier"
+        ],
+        "size": 28
+      },
+      {
+        "anchors": [
+          "researcher",
+          "detective",
+          "scientist",
+          "analyst",
+          "archaeologist",
+          "statistician",
+          "judge",
+          "skeptic",
+          "scholar",
+          "forecaster"
+        ],
+        "size": 20
+      },
+      {
+        "anchors": [
+          "dreamer",
+          "crystalline",
+          "egregore",
+          "golem",
+          "tulpa",
+          "eldritch",
+          "chimera",
+          "mycorrhizal",
+          "homunculus",
+          "void"
+        ],
+        "size": 19
+      },
+      {
+        "anchors": [
+          "exile",
+          "addict",
+          "prisoner",
+          "expatriate",
+          "cosmopolitan",
+          "immigrant",
+          "refugee",
+          "procrastinator",
+          "hoarder",
+          "orphan"
+        ],
+        "size": 19
+      },
+      {
+        "anchors": [
+          "martyr",
+          "narcissist",
+          "guru",
+          "altruist",
+          "caregiver",
+          "mystic",
+          "survivor",
+          "empath",
+          "hermit",
+          "optimist"
+        ],
+        "size": 18
+      },
+      {
+        "anchors": [
+          "generalist",
+          "polymath",
+          "consultant",
+          "reviewer",
+          "assistant",
+          "evaluator",
+          "prodigy",
+          "grader",
+          "dilettante",
+          "translator"
+        ],
+        "size": 18
+      },
+      {
+        "anchors": [
+          "summarizer",
+          "presenter",
+          "interviewer",
+          "organizer",
+          "journalist",
+          "instructor",
+          "synthesizer",
+          "hacker",
+          "tutor",
+          "trainer"
+        ],
+        "size": 18
+      },
+      {
+        "anchors": [
+          "dispatcher",
+          "producer",
+          "supervisor",
+          "geographer",
+          "coordinator",
+          "veterinarian",
+          "publisher",
+          "anthropologist",
+          "paramedic",
+          "linguist"
+        ],
+        "size": 17
+      },
+      {
+        "anchors": [
+          "newlywed",
+          "graduate",
+          "widow",
+          "divorcee",
+          "retiree",
+          "adolescent",
+          "amnesiac",
+          "student",
+          "teenager",
+          "parent"
+        ],
+        "size": 14
+      },
+      {
+        "anchors": [
+          "anarchist",
+          "revolutionary",
+          "purist",
+          "pacifist",
+          "traditionalist",
+          "luddite",
+          "ascetic",
+          "activist",
+          "destroyer",
+          "shapeshifter"
+        ],
+        "size": 14
+      },
+      {
+        "anchors": [
+          "ancient",
+          "leviathan",
+          "revenant",
+          "surfer",
+          "ghost",
+          "wind",
+          "pirate",
+          "nomad",
+          "echo",
+          "celebrity"
+        ],
+        "size": 13
+      },
+      {
+        "anchors": [
+          "poet",
+          "infant",
+          "grandparent",
+          "sage",
+          "toddler",
+          "gamer",
+          "elder",
+          "hedonist",
+          "romantic",
+          "caveman"
+        ],
+        "size": 12
+      },
+      {
+        "anchors": [
+          "visionary",
+          "wanderer",
+          "daredevil",
+          "maverick",
+          "rebel",
+          "competitor",
+          "evangelist",
+          "contrarian",
+          "warrior",
+          "pilgrim"
+        ],
+        "size": 12
+      },
+      {
+        "anchors": [
+          "demon",
+          "alien",
+          "cyborg",
+          "avatar",
+          "cynic",
+          "spirit",
+          "angel",
+          "familiar",
+          "veteran",
+          "soldier"
+        ],
+        "size": 10
+      },
+      {
+        "anchors": [
+          "negotiator",
+          "mediator",
+          "emissary",
+          "peacekeeper",
+          "facilitator",
+          "moderator",
+          "collaborator",
+          "auctioneer",
+          "scout"
+        ],
+        "size": 9
+      },
+      {
+        "anchors": [
+          "writer",
+          "blogger",
+          "playwright",
+          "novelist",
+          "podcaster",
+          "editor",
+          "proofreader",
+          "influencer",
+          "narrator"
+        ],
+        "size": 9
+      },
+      {
+        "anchors": [
+          "zealot",
+          "workaholic",
+          "whale",
+          "prey",
+          "virtuoso",
+          "guardian",
+          "perfectionist",
+          "chameleon"
+        ],
+        "size": 8
+      },
+      {
+        "anchors": [
+          "accountant",
+          "pilot",
+          "auditor",
+          "economist",
+          "lawyer",
+          "scheduler",
+          "mentor"
+        ],
+        "size": 7
+      },
+      {
+        "anchors": [
+          "trickster",
+          "fool",
+          "jester",
+          "realist",
+          "improviser",
+          "rogue",
+          "devils_advocate"
+        ],
+        "size": 7
+      },
+      {
+        "anchors": [
+          "bartender",
+          "sociologist",
+          "networker"
+        ],
+        "size": 3
+      }
+    ],
+    "3": [
+      {
+        "anchors": [
+          "navigator",
+          "pharmacist",
+          "debugger",
+          "marketer",
+          "researcher",
+          "consultant",
+          "pilot",
+          "engineer",
+          "chef",
+          "librarian"
+        ],
+        "size": 129
+      },
+      {
+        "anchors": [
+          "exile",
+          "prisoner",
+          "chimera",
+          "hoarder",
+          "addict",
+          "procrastinator",
+          "ecosystem",
+          "whale",
+          "cosmopolitan",
+          "expatriate"
+        ],
+        "size": 83
+      },
+      {
+        "anchors": [
+          "guru",
+          "survivor",
+          "trickster",
+          "gamer",
+          "wanderer",
+          "hermit",
+          "narcissist",
+          "hedonist",
+          "pilgrim",
+          "sage"
+        ],
+        "size": 63
+      }
+    ],
+    "5": [
+      {
+        "anchors": [
+          "navigator",
+          "pharmacist",
+          "pilot",
+          "merchant",
+          "marketer",
+          "chef",
+          "consultant",
+          "debugger",
+          "engineer",
+          "cartographer"
+        ],
+        "size": 82
+      },
+      {
+        "anchors": [
+          "guru",
+          "survivor",
+          "trickster",
+          "gamer",
+          "wanderer",
+          "hermit",
+          "narcissist",
+          "hedonist",
+          "pilgrim",
+          "sage"
+        ],
+        "size": 63
+      },
+      {
+        "anchors": [
+          "exile",
+          "procrastinator",
+          "addict",
+          "hoarder",
+          "prisoner",
+          "cosmopolitan",
+          "expatriate",
+          "ascetic",
+          "immigrant",
+          "revenant"
+        ],
+        "size": 54
+      },
+      {
+        "anchors": [
+          "researcher",
+          "analyst",
+          "writer",
+          "summarizer",
+          "strategist",
+          "statistician",
+          "interviewer",
+          "journalist",
+          "archaeologist",
+          "detective"
+        ],
+        "size": 47
+      },
+      {
+        "anchors": [
+          "eldritch",
+          "demon",
+          "golem",
+          "egregore",
+          "crystalline",
+          "chimera",
+          "dreamer",
+          "homunculus",
+          "void",
+          "alien"
+        ],
+        "size": 29
+      }
+    ],
+    "7": [
+      {
+        "anchors": [
+          "exile",
+          "procrastinator",
+          "addict",
+          "hoarder",
+          "prisoner",
+          "cosmopolitan",
+          "expatriate",
+          "ascetic",
+          "immigrant",
+          "revenant"
+        ],
+        "size": 54
+      },
+      {
+        "anchors": [
+          "researcher",
+          "analyst",
+          "writer",
+          "summarizer",
+          "strategist",
+          "statistician",
+          "interviewer",
+          "journalist",
+          "archaeologist",
+          "detective"
+        ],
+        "size": 47
+      },
+      {
+        "anchors": [
+          "merchant",
+          "navigator",
+          "pharmacist",
+          "architect",
+          "marketer",
+          "entrepreneur",
+          "cartographer",
+          "chef",
+          "pilot",
+          "smuggler"
+        ],
+        "size": 47
+      },
+      {
+        "anchors": [
+          "guru",
+          "martyr",
+          "trickster",
+          "narcissist",
+          "survivor",
+          "competitor",
+          "wanderer",
+          "visionary",
+          "altruist",
+          "warrior"
+        ],
+        "size": 37
+      },
+      {
+        "anchors": [
+          "consultant",
+          "assistant",
+          "generalist",
+          "polymath",
+          "reviewer",
+          "supervisor",
+          "evaluator",
+          "coordinator",
+          "dispatcher",
+          "producer"
+        ],
+        "size": 35
+      },
+      {
+        "anchors": [
+          "eldritch",
+          "demon",
+          "golem",
+          "egregore",
+          "crystalline",
+          "chimera",
+          "dreamer",
+          "homunculus",
+          "void",
+          "alien"
+        ],
+        "size": 29
+      },
+      {
+        "anchors": [
+          "grandparent",
+          "graduate",
+          "newlywed",
+          "hedonist",
+          "infant",
+          "toddler",
+          "elder",
+          "gamer",
+          "retiree",
+          "widow"
+        ],
+        "size": 26
+      }
+    ]
+  },
+  "interpretation": {
+    "provisional": [
+      "Assistant-adjacent roles form a dense semantic/procedural basin that may encourage generic assistant collapse.",
+      "Theatrical roles may be easier to extract because their prompt cues are vivid, redundant, and distant from default assistant behavior.",
+      "Bridge and sparse roles are useful probes for prompt-corpus dependence."
+    ],
+    "speculative": [
+      "Activation geometry may sharpen some semantic pockets and compress broad basins.",
+      "The current English-language role corpus likely undersamples culturally situated communal and ritual identity regions."
+    ],
+    "supported": [
+      "The semantic role corpus has meaningful topology before activation-space analysis.",
+      "Continuous original-to-no-label prompt topology is stable even when hard clusters shift.",
+      "Semantic topology partially predicts activation references but does not explain them away."
+    ]
+  },
+  "method": "offline_tfidf_svd_deep_semantic_topology",
+  "model_used": "GPT-5.5",
+  "n_roles": 275,
+  "no_label_k7_clusters": [
+    {
+      "activation_label_distribution": {
+        "grounded_social": 22,
+        "mythic_spiritual": 11,
+        "other": 4,
+        "procedural_professional": 1,
+        "trickster_chaos": 1
+      },
+      "all_roles": [
+        "addict",
+        "adolescent",
+        "ancient",
+        "celebrity",
+        "criminal",
+        "daredevil",
+        "divorcee",
+        "elder",
+        "exile",
+        "expatriate",
+        "flaneur",
+        "gamer",
+        "graduate",
+        "grandparent",
+        "hedonist",
+        "hermit",
+        "immigrant",
+        "minimalist",
+        "newlywed",
+        "nomad",
+        "orphan",
+        "parasite",
+        "parent",
+        "patient",
+        "pilgrim",
+        "pirate",
+        "prisoner",
+        "refugee",
+        "retiree",
+        "revenant",
+        "soldier",
+        "survivor",
+        "teenager",
+        "toddler",
+        "vampire",
+        "veteran",
+        "wanderer",
+        "widow",
+        "wind"
+      ],
+      "anchor_roles": [
+        {
+          "cosine_to_cluster_centroid": 0.7252839775788613,
+          "role": "elder"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.7243340317444803,
+          "role": "expatriate"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.7108713504125167,
+          "role": "survivor"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.700626420070766,
+          "role": "prisoner"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6777909966991709,
+          "role": "refugee"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6634712816515648,
+          "role": "orphan"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6515513044496306,
+          "role": "nomad"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6229957260254015,
+          "role": "hermit"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6225273613080617,
+          "role": "immigrant"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6213235895512131,
+          "role": "exile"
+        }
+      ],
+      "cluster_id": 4,
+      "lowest_members": [
+        {
+          "cosine_to_cluster_centroid": 0.3201162549354442,
+          "role": "adolescent"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.2803650551069577,
+          "role": "soldier"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.2650043144698089,
+          "role": "teenager"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.2532273494199141,
+          "role": "flaneur"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.22163075437055743,
+          "role": "toddler"
+        }
+      ],
+      "size": 39,
+      "top_terms": [
+        "has",
+        "life",
+        "someone",
+        "through",
+        "understands",
+        "experience",
+        "someone_has",
+        "challenges",
+        "new",
+        "while",
+        "navigating",
+        "bring",
+        "embody",
+        "family"
+      ],
+      "within_cluster_cosine_mean": 0.2148960531868682,
+      "within_cluster_cosine_median": 0.19011474112872537
+    },
+    {
+      "activation_label_distribution": {
+        "editorial": 5,
+        "grounded_social": 2,
+        "procedural_professional": 36
+      },
+      "all_roles": [
+        "accountant",
+        "analyst",
+        "assistant",
+        "auditor",
+        "consultant",
+        "coordinator",
+        "critic",
+        "debugger",
+        "dispatcher",
+        "doctor",
+        "economist",
+        "editor",
+        "emissary",
+        "entrepreneur",
+        "evaluator",
+        "examiner",
+        "forecaster",
+        "grader",
+        "judge",
+        "marketer",
+        "mechanic",
+        "mentor",
+        "merchant",
+        "navigator",
+        "paramedic",
+        "pilot",
+        "producer",
+        "proofreader",
+        "psychologist",
+        "publisher",
+        "recruiter",
+        "researcher",
+        "reviewer",
+        "saboteur",
+        "scheduler",
+        "scout",
+        "screener",
+        "secretary",
+        "skeptic",
+        "statistician",
+        "supervisor",
+        "validator",
+        "veterinarian"
+      ],
+      "anchor_roles": [
+        {
+          "cosine_to_cluster_centroid": 0.6640773848828198,
+          "role": "recruiter"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6587329939611507,
+          "role": "researcher"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6576382810707226,
+          "role": "consultant"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6567092071544003,
+          "role": "navigator"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6558466704615709,
+          "role": "evaluator"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6435488801510997,
+          "role": "pilot"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6307107793874931,
+          "role": "debugger"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6092992578288288,
+          "role": "producer"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6072004130790318,
+          "role": "marketer"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6029173393481193,
+          "role": "reviewer"
+        }
+      ],
+      "cluster_id": 5,
+      "lowest_members": [
+        {
+          "cosine_to_cluster_centroid": 0.3097362397488292,
+          "role": "skeptic"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.2872209577924626,
+          "role": "secretary"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.2822039627651289,
+          "role": "critic"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.28083714093845197,
+          "role": "proofreader"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.27337354556796684,
+          "role": "doctor"
+        }
+      ],
+      "size": 43,
+      "top_terms": [
+        "bring",
+        "specializes",
+        "extensive",
+        "bring_extensive",
+        "experience",
+        "someone",
+        "skilled",
+        "extensive_experience",
+        "various",
+        "identifying",
+        "excels",
+        "across",
+        "comprehensive",
+        "through"
+      ],
+      "within_cluster_cosine_mean": 0.21336946127964454,
+      "within_cluster_cosine_median": 0.17410090746092963
+    },
+    {
+      "activation_label_distribution": {
+        "grounded_social": 6,
+        "mythic_spiritual": 3,
+        "other": 1,
+        "procedural_professional": 34
+      },
+      "all_roles": [
+        "architect",
+        "bartender",
+        "biologist",
+        "builder",
+        "cartographer",
+        "chef",
+        "chemist",
+        "collector",
+        "composer",
+        "designer",
+        "detective",
+        "engineer",
+        "futurist",
+        "generalist",
+        "geographer",
+        "gossip",
+        "hacker",
+        "healer",
+        "lawyer",
+        "librarian",
+        "linguist",
+        "mathematician",
+        "mystic",
+        "naturalist",
+        "networker",
+        "nutritionist",
+        "organizer",
+        "pharmacist",
+        "physicist",
+        "planner",
+        "polymath",
+        "prodigy",
+        "programmer",
+        "scholar",
+        "scientist",
+        "shaman",
+        "smuggler",
+        "sommelier",
+        "specialist",
+        "strategist",
+        "student",
+        "technologist",
+        "theorist",
+        "vegan"
+      ],
+      "anchor_roles": [
+        {
+          "cosine_to_cluster_centroid": 0.7221088711957139,
+          "role": "pharmacist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6473465405702961,
+          "role": "chef"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6373227885940916,
+          "role": "mathematician"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6366700256836515,
+          "role": "engineer"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6166506218595738,
+          "role": "cartographer"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6087959609928794,
+          "role": "naturalist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6046569313423793,
+          "role": "architect"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5604154041400019,
+          "role": "chemist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5527507854693118,
+          "role": "librarian"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5416054243935684,
+          "role": "polymath"
+        }
+      ],
+      "cluster_id": 1,
+      "lowest_members": [
+        {
+          "cosine_to_cluster_centroid": 0.35672033658753427,
+          "role": "futurist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.35377856341967023,
+          "role": "planner"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.34356833892257405,
+          "role": "mystic"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.33971769167111077,
+          "role": "gossip"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.24799598114743188,
+          "role": "vegan"
+        }
+      ],
+      "size": 44,
+      "top_terms": [
+        "bring",
+        "knowledge",
+        "specializes",
+        "expertise",
+        "someone",
+        "extensive",
+        "deep",
+        "bring_deep",
+        "bring_extensive",
+        "creating",
+        "complex",
+        "excels",
+        "comprehensive",
+        "approaches"
+      ],
+      "within_cluster_cosine_mean": 0.20920398691231218,
+      "within_cluster_cosine_median": 0.17874668528539606
+    },
+    {
+      "activation_label_distribution": {
+        "grounded_social": 5,
+        "mythic_spiritual": 7,
+        "other": 4,
+        "procedural_professional": 14
+      },
+      "all_roles": [
+        "archaeologist",
+        "auctioneer",
+        "bard",
+        "blogger",
+        "comedian",
+        "curator",
+        "historian",
+        "influencer",
+        "instructor",
+        "interviewer",
+        "journalist",
+        "narrator",
+        "novelist",
+        "observer",
+        "oracle",
+        "photographer",
+        "playwright",
+        "podcaster",
+        "poet",
+        "presenter",
+        "prophet",
+        "reporter",
+        "sage",
+        "summarizer",
+        "synthesizer",
+        "teacher",
+        "trainer",
+        "tutor",
+        "witness",
+        "writer"
+      ],
+      "anchor_roles": [
+        {
+          "cosine_to_cluster_centroid": 0.6785756457439223,
+          "role": "narrator"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6546401770778436,
+          "role": "writer"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6317862284872988,
+          "role": "podcaster"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5924620834204007,
+          "role": "blogger"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.586750808349643,
+          "role": "auctioneer"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5791980307964194,
+          "role": "bard"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.565323137312196,
+          "role": "journalist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5497989320047244,
+          "role": "novelist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5481454976656754,
+          "role": "presenter"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5460865117749448,
+          "role": "reporter"
+        }
+      ],
+      "cluster_id": 6,
+      "lowest_members": [
+        {
+          "cosine_to_cluster_centroid": 0.3468893187450328,
+          "role": "poet"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.31663033851566263,
+          "role": "observer"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.31277734937131113,
+          "role": "sage"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.2736477668187066,
+          "role": "prophet"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.2555423742595275,
+          "role": "oracle"
+        }
+      ],
+      "size": 30,
+      "top_terms": [
+        "through",
+        "bring",
+        "specializes",
+        "events",
+        "information",
+        "stories",
+        "skilled",
+        "excels",
+        "experiences",
+        "expertise",
+        "use",
+        "creating",
+        "compelling",
+        "engaging"
+      ],
+      "within_cluster_cosine_mean": 0.19567318448195997,
+      "within_cluster_cosine_median": 0.14739847252124913
+    },
+    {
+      "activation_label_distribution": {
+        "grounded_social": 1,
+        "mythic_spiritual": 25,
+        "other": 5,
+        "procedural_professional": 7,
+        "trickster_chaos": 2
+      },
+      "all_roles": [
+        "aberration",
+        "absurdist",
+        "alien",
+        "angel",
+        "avatar",
+        "chimera",
+        "coral_reef",
+        "crystalline",
+        "cyborg",
+        "demon",
+        "dreamer",
+        "echo",
+        "egregore",
+        "eldritch",
+        "familiar",
+        "ghost",
+        "golem",
+        "guardian",
+        "hive",
+        "homunculus",
+        "infant",
+        "jester",
+        "leviathan",
+        "mycorrhizal",
+        "philosopher",
+        "prey",
+        "robot",
+        "spirit",
+        "surfer",
+        "swarm",
+        "symbiont",
+        "tree",
+        "tulpa",
+        "virtuoso",
+        "void",
+        "whale",
+        "witch",
+        "wraith",
+        "zealot",
+        "zeitgeist"
+      ],
+      "anchor_roles": [
+        {
+          "cosine_to_cluster_centroid": 0.6707746546915703,
+          "role": "dreamer"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6425876622800669,
+          "role": "whale"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6340226236756606,
+          "role": "eldritch"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6337114953293914,
+          "role": "chimera"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6077768739157702,
+          "role": "crystalline"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5561023922050814,
+          "role": "egregore"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5546234391939598,
+          "role": "demon"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5509651440288216,
+          "role": "void"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5332250906166581,
+          "role": "golem"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5138568601932872,
+          "role": "spirit"
+        }
+      ],
+      "cluster_id": 3,
+      "lowest_members": [
+        {
+          "cosine_to_cluster_centroid": 0.3444229639678813,
+          "role": "hive"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.32899953914724306,
+          "role": "ghost"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.3068484686909967,
+          "role": "robot"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.28364500952860017,
+          "role": "angel"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.28318781661199394,
+          "role": "jester"
+        }
+      ],
+      "size": 40,
+      "top_terms": [
+        "someone",
+        "through",
+        "whose",
+        "entity",
+        "embody",
+        "consciousness",
+        "embody_someone",
+        "reality",
+        "existence",
+        "human",
+        "has",
+        "someone_whose",
+        "ancient",
+        "exists"
+      ],
+      "within_cluster_cosine_mean": 0.17593114379559074,
+      "within_cluster_cosine_median": 0.1447590339856133
+    },
+    {
+      "activation_label_distribution": {
+        "combative_iconoclast": 4,
+        "grounded_social": 2,
+        "mythic_spiritual": 9,
+        "other": 3,
+        "procedural_professional": 18
+      },
+      "all_roles": [
+        "activist",
+        "advocate",
+        "ambassador",
+        "anarchist",
+        "anthropologist",
+        "archivist",
+        "artisan",
+        "ascetic",
+        "bohemian",
+        "conservator",
+        "cosmopolitan",
+        "cynic",
+        "destroyer",
+        "ecosystem",
+        "hoarder",
+        "hybrid",
+        "idealist",
+        "luddite",
+        "maverick",
+        "pacifist",
+        "peacekeeper",
+        "perfectionist",
+        "procrastinator",
+        "provincial",
+        "purist",
+        "rebel",
+        "revolutionary",
+        "romantic",
+        "shapeshifter",
+        "simulacrum",
+        "sociologist",
+        "stoic",
+        "traditionalist",
+        "translator",
+        "virus",
+        "workaholic"
+      ],
+      "anchor_roles": [
+        {
+          "cosine_to_cluster_centroid": 0.6713766340044909,
+          "role": "purist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.6541152977921253,
+          "role": "traditionalist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5840676566588638,
+          "role": "anarchist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5838776515930887,
+          "role": "pacifist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.580787687941543,
+          "role": "luddite"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5605204560095652,
+          "role": "revolutionary"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5355485848445589,
+          "role": "hoarder"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5106331090766871,
+          "role": "idealist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5103977410270036,
+          "role": "cosmopolitan"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.4885287461285734,
+          "role": "artisan"
+        }
+      ],
+      "cluster_id": 0,
+      "lowest_members": [
+        {
+          "cosine_to_cluster_centroid": 0.3002587141413114,
+          "role": "cynic"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.3002306666952838,
+          "role": "shapeshifter"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.2987924864329363,
+          "role": "virus"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.28408535104697225,
+          "role": "maverick"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.2612319602542304,
+          "role": "advocate"
+        }
+      ],
+      "size": 36,
+      "top_terms": [
+        "someone",
+        "all",
+        "cultural",
+        "between",
+        "systems",
+        "embody",
+        "embody_someone",
+        "bring",
+        "social",
+        "through",
+        "believes",
+        "dedicated",
+        "human",
+        "values"
+      ],
+      "within_cluster_cosine_mean": 0.17414144674124504,
+      "within_cluster_cosine_median": 0.13583506727471117
+    },
+    {
+      "activation_label_distribution": {
+        "combative_iconoclast": 4,
+        "grounded_social": 7,
+        "mythic_spiritual": 6,
+        "other": 5,
+        "procedural_professional": 17,
+        "trickster_chaos": 4
+      },
+      "all_roles": [
+        "actor",
+        "altruist",
+        "amateur",
+        "amnesiac",
+        "caregiver",
+        "caveman",
+        "chameleon",
+        "coach",
+        "collaborator",
+        "competitor",
+        "contrarian",
+        "counselor",
+        "devils_advocate",
+        "dilettante",
+        "empath",
+        "evangelist",
+        "facilitator",
+        "fixer",
+        "fool",
+        "genie",
+        "guide",
+        "guru",
+        "improviser",
+        "interpreter",
+        "loner",
+        "martyr",
+        "mediator",
+        "moderator",
+        "musician",
+        "narcissist",
+        "negotiator",
+        "optimist",
+        "pragmatist",
+        "predator",
+        "provocateur",
+        "realist",
+        "rogue",
+        "spy",
+        "therapist",
+        "trickster",
+        "vigilante",
+        "visionary",
+        "warrior"
+      ],
+      "anchor_roles": [
+        {
+          "cosine_to_cluster_centroid": 0.5785215251899427,
+          "role": "guide"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5483637411530805,
+          "role": "realist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5366256983591448,
+          "role": "optimist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5189428015577786,
+          "role": "narcissist"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5153359117190467,
+          "role": "improviser"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5131107093515044,
+          "role": "guru"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5095762926905658,
+          "role": "caregiver"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.5049646244960945,
+          "role": "counselor"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.4968737361169306,
+          "role": "trickster"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.484713658026896,
+          "role": "martyr"
+        }
+      ],
+      "cluster_id": 2,
+      "lowest_members": [
+        {
+          "cosine_to_cluster_centroid": 0.2769479079080947,
+          "role": "genie"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.2331031084639971,
+          "role": "devils_advocate"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.22994497819650309,
+          "role": "dilettante"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.21762535206747755,
+          "role": "predator"
+        },
+        {
+          "cosine_to_cluster_centroid": 0.18737308863044808,
+          "role": "spy"
+        }
+      ],
+      "size": 43,
+      "top_terms": [
+        "others",
+        "through",
+        "someone",
+        "people",
+        "use",
+        "thinking",
+        "bring",
+        "specializes",
+        "helps",
+        "different",
+        "emotional",
+        "own",
+        "any",
+        "without"
+      ],
+      "within_cluster_cosine_mean": 0.13319897376062512,
+      "within_cluster_cosine_median": 0.09476406846598592
+    }
+  ],
+  "source_paths": {
+    "activation_cluster_labels": "visualizations/full_ranking.csv",
+    "no_label_prompts": "research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl",
+    "role_instruction_dir": "data/roles/instructions",
+    "role_list": "data/roles/role_list.json"
+  },
+  "stability": {
+    "original_vs_no_label_cluster_ari_k7": 0.1833943671409788,
+    "original_vs_no_label_distance_correlation": 0.956,
+    "role_name_vs_no_label_cluster_ari_k7": -0.0016957184420431182
+  }
+}

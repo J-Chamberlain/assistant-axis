@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-27
-**Last commit:** 47b30fd
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry synthesis notes now exist under `research/assistant_axis_methodology/`
+**Last commit:** 97d7e8c
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry synthesis and deep topology notes now exist under `research/assistant_axis_methodology/`
 
 ---
 
@@ -268,6 +268,16 @@
 - No-label prompt distances best predict available activation centroid-profile distances, but only modestly: Gemma correlation 0.230 and Qwen correlation 0.254
 - Interpretation: activation geometry preserves some semantic topology but also reorganizes it into model-specific structure; it should not be described as "just semantics"
 
+### Deep Semantic Topology Analysis (2026-05-27, confirmed)
+
+- Ran an offline TF-IDF/SVD topology analysis over role names, role descriptions, original role prompts, and no-label prompt rewrites without pod inference or new activations
+- The no-label semantic manifold is organized by mixed social, professional, narrative, stylistic, and archetypal structure rather than one clean psychological taxonomy
+- No-label k=7 semantic clusters show soft broad regions: lived-experience/social, professional/specialist, communication/media, mythic/fantastical, normative/adversarial, and generalist/helper structure
+- The assistant-adjacent seed set is semantically coherent but not separate from the broader professional/helper basin; the collective-identity seed set is especially compact in prompt space
+- Bridge roles identified for activation stress testing include spy, amnesiac, sage, guardian, merchant, emissary, technologist, scout, dilettante, and addict
+- Low-density roles such as flaneur, predator, devils_advocate, advocate, teenager, vegan, genie, angel, robot, and adolescent expose sparse or underrepresented regions of the constructed corpus
+- Interpretation: semantic priors substantially structure the role corpus, but activation geometry should still be treated as preservation plus model-specific reorganization rather than a mirror of semantic topology
+
 ---
 
 ## 3. CURRENT STATE
@@ -288,14 +298,17 @@
 
 **Semantic-geometry synthesis state:** `research/assistant_axis_methodology/current_semantic_geometry_findings_recap.md` now summarizes tested claims, validated results, ruled-out interpretations, unresolved questions, and next tests from the semantic-geometry investigation. `research/assistant_axis_methodology/semantic_geometry_standalone_interpretation.md` treats the role corpus as a frontier-model-generated semantic role manifold independent of activation-space claims.
 
+**Deep semantic-topology state:** `research/assistant_axis_methodology/deep_semantic_topology_analysis.md` now provides the deeper exploratory semantic-manifold interpretation, with machine-readable output at `research/assistant_axis_methodology/deep_semantic_topology_analysis.json`. Supporting files include `research/assistant_axis_methodology/cluster_anchor_roles.csv`, `research/assistant_axis_methodology/semantic_bridge_roles.csv`, and `research/assistant_axis_methodology/semantic_voids_note.md`.
+
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Created `research/assistant_axis_methodology/current_semantic_geometry_findings_recap.md` to consolidate current semantic-geometry findings, uncertainties, and next tests.
-**Completed this session:** Created `research/assistant_axis_methodology/semantic_geometry_standalone_interpretation.md` to interpret the semantic role corpus before activation-space claims.
+**Completed this session:** Created `research/assistant_axis_methodology/scripts/deep_semantic_topology_analysis.py` and ran the offline deep semantic-manifold analysis.
+**Completed this session:** Created `research/assistant_axis_methodology/deep_semantic_topology_analysis.md`, `deep_semantic_topology_analysis.json`, `cluster_anchor_roles.csv`, `semantic_bridge_roles.csv`, and `semantic_voids_note.md`.
+**Completed this session:** Updated `research/FINDINGS_LEDGER.md`, `research/assistant_axis_methodology/open_methodology_questions.md`, and this state file with the deep topology findings and next test.
 **Next step:** Run a small activation-space no-label stress test using a mixed role set before scaling; separately design a revised editor anchoring methodology before further editor rollout generation.
-**Last commit before this session:** 47b30fd
+**Last commit before this session:** 97d7e8c
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
