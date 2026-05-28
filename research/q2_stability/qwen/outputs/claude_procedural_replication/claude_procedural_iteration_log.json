@@ -1,0 +1,47 @@
+[
+  {
+    "iteration": 1,
+    "bundle_name": "F1_eval_guide_care",
+    "bundle_dims": ["evaluation", "guidance", "care"],
+    "rationale": "Evaluation (judge/verify/audit), guidance (teach/mentor/instruct), care (support/heal/comfort) — the positive-service procedural triad. Hypothesized to explain editorial and procedural_professional clusters.",
+    "mean_pca3d_r2": 0.4139,
+    "delta_vs_prior": 0.0245,
+    "mean_per_axis_r2": [0.541, 0.195, 0.380],
+    "mean_residual": 26.72,
+    "codex_procedural_r2": 0.490,
+    "delta_vs_codex": -0.0761,
+    "decision": "retained",
+    "retained_dims_after": ["evaluation", "guidance", "care"],
+    "notes": "First bundle retained. Evaluation has highest nonzero coverage (104/273 personas), guidance second (93/273). The positive-service triad captures the procedural_professional and editorial cluster alignment."
+  },
+  {
+    "iteration": 2,
+    "bundle_name": "F2_enforce_coord_optim",
+    "bundle_dims": ["enforcement", "coordination", "optimization"],
+    "rationale": "Enforcement (rule/police/regulate), coordination (organize/plan/schedule), optimization (improve/efficiency/maximize) — the procedural-professional operating cluster.",
+    "mean_pca3d_r2": 0.4204,
+    "delta_vs_prior": 0.0065,
+    "mean_per_axis_r2": null,
+    "mean_residual": null,
+    "codex_procedural_r2": 0.490,
+    "delta_vs_codex": -0.0696,
+    "decision": "discarded",
+    "retained_dims_after": ["evaluation", "guidance", "care"],
+    "notes": "Delta +0.0065 is below plateau threshold 0.01. Discarded. This bundle is adjacent to evaluation/guidance but adds sparse coverage (enforcement: 32/273, optimization: 37/273). Close to threshold but insufficient for retention."
+  },
+  {
+    "iteration": 3,
+    "bundle_name": "F3_destab_disrupt_coerce",
+    "bundle_dims": ["destabilization", "disruption", "coercion"],
+    "rationale": "Destabilization (challenge/undermine), disruption (break/overturn), coercion (force/threaten) — the combative/iconoclast and trickster operating modes.",
+    "mean_pca3d_r2": 0.4080,
+    "delta_vs_prior": -0.0059,
+    "mean_per_axis_r2": null,
+    "mean_residual": null,
+    "codex_procedural_r2": 0.490,
+    "delta_vs_codex": -0.0820,
+    "decision": "discarded",
+    "retained_dims_after": ["evaluation", "guidance", "care"],
+    "notes": "Negative delta -0.0059. Discarded. Adversarial/destabilizing dims add noise under the F1-controlled model. This is the second consecutive non-improving iteration: plateau triggered."
+  }
+]

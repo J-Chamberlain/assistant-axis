@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-05-28
 **Last commit:** see git log
-**Current status:** Active — Cross-model latent feature comparison COMPLETE: BigFive R²=0.613 outperforms Codex 31-dim R²=0.490 on canonical activation PCA; developmental personas are hardest to explain across both models; pseudo-PCA PC1 failure was target-specific artifact (canonical PC1 R²=0.734 with BigFive). Stage 1 inventory sensitivity scaffold ready. Paper 1.5 trickster validation complete; editor extraction below threshold; evaluator-sensitivity blocked by OpenAI quota.
+**Current status:** Active — Procedural replication loop COMPLETE: Claude retained evaluation+guidance+care (R²=0.4139) under 20-dim operating-mode constraint; keyword ceiling at ~0.41; both models converge qualitatively on evaluation as primary procedural axis; Codex R²=0.490 reflects richer vocabulary. BigFive R²=0.613 remains best. Stage 1 inventory sensitivity scaffold ready. Paper 1.5 trickster complete; editor blocked; evaluator-sensitivity blocked by API quota.
 
 ---
 
@@ -25,6 +25,18 @@
 - Pseudo-PCA PC1 failure (R²=-0.089) was target-specific; canonical PC1 BigFive R²=0.734
 - 6 worst-explained personas overlap between Claude and Codex: toddler, caveman, infant, teenager, poet, procrastinator
 - Artifacts: `research/q2_stability/qwen/outputs/claude_latent_feature_loop/` (including `claude_on_shared_benchmark_report.md`)
+
+### Claude Procedural Replication Loop (2026-05-28, Complete)
+- Constrained to 20 procedural/operating-mode dimensions (no BigFive, no trait labels)
+- Target: canonical activation PCA3D, shared benchmark protocol (exact replication)
+- Retained: evaluation, guidance, care — R²=0.4139
+- All-20 dims ceiling: R²=0.4148 (keyword saturation, near-identical to 3 retained)
+- Codex procedural benchmark: R²=0.490 (richer vocabulary, not operationalization failure)
+- Convergence: evaluation as primary procedural axis confirmed across both models
+- Divergence: Claude keyword ceiling ~0.41 < Codex 0.49 due to vocabulary richness
+- Best explained: screener, mediator, teacher, grader, analyst
+- Worst explained: procrastinator, teenager, adolescent, toddler, sage, bard (same as BigFive)
+- Artifacts: `research/q2_stability/qwen/outputs/claude_procedural_replication/`
 
 ### Stage 1 Inventory Sensitivity Scaffold (2026-05-28, Complete)
 - Generation script + analysis script for 5 models × 5 prompts × 3 runs (75 API calls)

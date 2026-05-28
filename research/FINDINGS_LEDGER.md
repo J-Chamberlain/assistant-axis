@@ -147,6 +147,17 @@ Critical caveat: BigFive scores were LLM-assigned and may share priors with acti
 geometry; the advantage is real but may be partially circular.
 Artifact: `research/q2_stability/qwen/outputs/claude_latent_feature_loop/claude_on_shared_benchmark_report.md`
 
+### Claude Procedural Replication: Evaluation Dominates Under Operating-Mode Constraint (confirmed, 2026-05-28)
+
+Claude constrained to 20 procedural/operating-mode dimensions (no BigFive) retained 3:
+evaluation, guidance, care — reaching R²=0.4139 on canonical Qwen activation PCA.
+All 20 dims together ceiling at R²=0.4148 (keyword saturation). Codex procedural R²=0.490.
+Key convergence: both independently selected evaluation/verify/audit as the primary retained
+procedural dimension. Key divergence: Claude reaches a keyword ceiling at ~0.41 that Codex
+surpasses because its 31-dim vocabulary is richer and less sparse.
+Developmental/other cluster remains worst-explained under procedural constraint as well.
+Artifact: `research/q2_stability/qwen/outputs/claude_procedural_replication/`
+
 ### Developmental Personas Are Hardest to Explain Across Both Models (confirmed, 2026-05-28)
 
 6 personas appear in both Claude's and Codex's worst-explained lists: toddler, caveman,
