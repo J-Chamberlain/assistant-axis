@@ -120,6 +120,15 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Improvement concentrated most on PC1 for the best model: PC1 R2 0.499, PC2 R2 0.353, PC3 R2 0.406
 - Cluster prediction remained secondary and only slightly improved: baseline accuracy 0.616 vs best accuracy 0.630, delta +0.014
 
+### Iterative Latent-Feature Outer Loop (2026-05-28)
+
+- Implemented a finite outer-loop latent-feature discovery harness with five deterministic repeated splits, candidate-dimension retention/discard logic, permutation/null checks, split-variance tracking, and plateau termination
+- Final retained feature set reached mean held-out PCA3D R2 0.492 across five splits versus semantic baseline R2 0.389, mean delta +0.103
+- The loop retained 31 dimensions and terminated after two consecutive refinement iterations failed the meaningful-gain gate
+- Stabilized feature families include procedural, assistant-adjacency, semantic-label-dependence, emotional-regulation, prior first-loop dimensions, motivational, interactional, narrative-causal, institutional, collective/distributed, and destabilization/reactivity
+- Narrow edge-case refinements for mythic/artistic expression, developmental immaturity, social hospitality, nonhuman scale, forecast/control, and judicial norms were discarded under the retention policy
+- Recurring high-residual personas across splits include mechanic, adolescent, prisoner, smuggler, infant, hermit, bard, teenager, predator, journalist, sage, and amateur
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

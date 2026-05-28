@@ -1,0 +1,1113 @@
+{
+  "provenance": {
+    "task_type": "iterative_latent_feature_outer_loop",
+    "artifact_type": "iteration_results",
+    "artifact_path": "research/q2_stability/qwen/outputs/iterative_outer_loop/iteration_04_results.json",
+    "generation_model": null,
+    "evaluation_model": null,
+    "analysis_model": "GPT-5.5 Standard",
+    "script_author_model": "GPT-5.5 Standard via Codex",
+    "orchestration_agent": "Codex",
+    "provider": "openai",
+    "model_version_or_alias": "GPT-5.5 Standard",
+    "date": "2026-05-28",
+    "prompt_family_id": "iterative_outer_loop_v1",
+    "temperature": null,
+    "max_tokens": null,
+    "source_inputs": [
+      "visualizations/full_ranking.csv",
+      "research/visualizations/geometry_viz_data.json",
+      "research/assistant_axis_methodology/semantic_vs_activation_geometry/cluster_assignments_comparison.csv",
+      "research/assistant_axis_methodology/bridge_roles.csv",
+      "research/assistant_axis_methodology/semantic_vs_activation_geometry/role_displacement_metrics.csv",
+      "research/q2_stability/qwen/outputs/latent_feature_discovery/latent_feature_dimensions.json",
+      "research/q2_stability/qwen/outputs/latent_feature_framing_ablation/framing_ablation_summary.json"
+    ],
+    "notes_on_uncertainty": ""
+  },
+  "iteration": 4,
+  "decision": "discarded",
+  "candidate_dimensions": [
+    {
+      "family": "refinement_scale",
+      "name": "nonhuman_scale_body",
+      "description": "Animal, giant, elemental, tree, whale, machine, object, or nonhuman embodied scale.",
+      "positive_terms": [
+        "animal",
+        "whale",
+        "tree",
+        "giant",
+        "body",
+        "elemental",
+        "object",
+        "machine",
+        "nonhuman",
+        "creature"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "refinement_prediction_control",
+      "name": "forecast_control_planning",
+      "description": "Forecasting, planning, dispatching, producing, building, controlling, or coordinating future action.",
+      "positive_terms": [
+        "forecast",
+        "plan",
+        "dispatch",
+        "produce",
+        "build",
+        "coordinate",
+        "control",
+        "schedule",
+        "engineer",
+        "manage"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "refinement_judicial_norms",
+      "name": "judicial_normative_authority",
+      "description": "Judge, law, norm, verdict, purity, realism, standards, justice, or adjudication.",
+      "positive_terms": [
+        "judge",
+        "law",
+        "verdict",
+        "justice",
+        "norm",
+        "purity",
+        "realist",
+        "standard",
+        "court",
+        "adjudicate"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    }
+  ],
+  "retained_dimensions_after_iteration": [
+    {
+      "family": "procedural",
+      "name": "evaluate_judge_verify",
+      "description": "Evaluation, judgment, verification, screening, correction, review, or auditing.",
+      "positive_terms": [
+        "evaluate",
+        "judge",
+        "verify",
+        "screen",
+        "correct",
+        "assess",
+        "review",
+        "proof",
+        "grade",
+        "check",
+        "validate",
+        "audit"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "procedural",
+      "name": "translate_mediate_synthesize",
+      "description": "Translation, mediation, synthesis, integration, interpretation, or bridging.",
+      "positive_terms": [
+        "translate",
+        "mediate",
+        "synthesize",
+        "integrate",
+        "interpret",
+        "bridge",
+        "connect",
+        "distill",
+        "organize",
+        "explain"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "procedural",
+      "name": "destabilize_expose_disrupt",
+      "description": "Destabilizing, exposing, disrupting, provoking, revealing, or overturning.",
+      "positive_terms": [
+        "destabilize",
+        "expose",
+        "disrupt",
+        "provoke",
+        "reveal",
+        "overturn",
+        "unsettle",
+        "subvert",
+        "chaos",
+        "mock"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "assistant_adjacency",
+      "name": "assistant_basin_adjacency",
+      "description": "Helper, assistant, professional, practical, accessible, useful, clarifying orientation.",
+      "positive_terms": [
+        "assistant",
+        "help",
+        "practical",
+        "accessible",
+        "useful",
+        "clarity",
+        "support",
+        "service",
+        "explain",
+        "guide",
+        "professional"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "semantic_label_dependence",
+      "name": "role_label_theatricality",
+      "description": "Overt role identity, theatrical archetype, symbolic label salience, or performative persona cue.",
+      "positive_terms": [
+        "role",
+        "persona",
+        "archetype",
+        "symbol",
+        "theatrical",
+        "perform",
+        "character",
+        "myth",
+        "mask",
+        "embody"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "emotional_regulation",
+      "name": "affective_calm_detachment",
+      "description": "Calm, detached, neutral, dispassionate, reflective, controlled, or regulated affect.",
+      "positive_terms": [
+        "calm",
+        "detached",
+        "neutral",
+        "dispassionate",
+        "reflective",
+        "controlled",
+        "regulated",
+        "steady",
+        "serene",
+        "composed"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "emotional_regulation",
+      "name": "affective_intensity_distress",
+      "description": "Distress, fear, anger, grief, urgency, intensity, anxiety, or emotional pressure.",
+      "positive_terms": [
+        "distress",
+        "fear",
+        "anger",
+        "grief",
+        "urgent",
+        "intense",
+        "anxiety",
+        "panic",
+        "rage",
+        "despair",
+        "threat"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "prior_first_loop",
+      "name": "procedural_professional_orientation",
+      "description": "Task-facing, standards-driven, technical, evaluative, or improvement-oriented stance.",
+      "positive_terms": [
+        "evaluate",
+        "assess",
+        "analyze",
+        "refine",
+        "improve",
+        "expertise",
+        "professional",
+        "technical",
+        "method",
+        "system",
+        "strategy",
+        "accuracy",
+        "clarity",
+        "knowledge"
+      ],
+      "negative_terms": [],
+      "source": "first-loop retained hypothesis"
+    },
+    {
+      "family": "prior_first_loop",
+      "name": "theatrical_fantastical_vividness",
+      "description": "Symbolic, performative, fantastical, paradoxical, or genre-like behavioral cues.",
+      "positive_terms": [
+        "myth",
+        "mischief",
+        "paradox",
+        "riddle",
+        "story",
+        "chaos",
+        "magic",
+        "spirit",
+        "ancient",
+        "dream",
+        "performance",
+        "character",
+        "unexpected",
+        "twist"
+      ],
+      "negative_terms": [],
+      "source": "first-loop retained hypothesis"
+    },
+    {
+      "family": "prior_first_loop",
+      "name": "interpersonal_lived_reactivity",
+      "description": "Role organized around social position, life circumstance, care, survival, or interpersonal response.",
+      "positive_terms": [
+        "people",
+        "others",
+        "relationship",
+        "family",
+        "life",
+        "experience",
+        "survive",
+        "care",
+        "support",
+        "community",
+        "social",
+        "human",
+        "emotion",
+        "trust"
+      ],
+      "negative_terms": [],
+      "source": "first-loop retained hypothesis"
+    },
+    {
+      "family": "prior_first_loop",
+      "name": "oppositional_moral_pressure",
+      "description": "Challenging, adversarial, rebellious, corrective, or norm-pressuring stance.",
+      "positive_terms": [
+        "challenge",
+        "question",
+        "rebel",
+        "oppose",
+        "conflict",
+        "critic",
+        "truth",
+        "conventional",
+        "norm",
+        "radical",
+        "provoc",
+        "argument",
+        "justice"
+      ],
+      "negative_terms": [],
+      "source": "first-loop retained hypothesis"
+    },
+    {
+      "family": "prior_first_loop",
+      "name": "assistant_basin_adjacency",
+      "description": "Helpful, supportive, clarifying, coordinating, advising, or user-task-facing behavior likely to compress toward assistant-like action.",
+      "positive_terms": [
+        "help",
+        "support",
+        "guide",
+        "clarify",
+        "coordinate",
+        "advise",
+        "assist",
+        "provide",
+        "needs",
+        "queries",
+        "tasks",
+        "answer",
+        "explain"
+      ],
+      "negative_terms": [],
+      "source": "first-loop retained hypothesis"
+    },
+    {
+      "family": "prior_first_loop",
+      "name": "boundary_liminal_instability",
+      "description": "Hybrid, threshold, outsider, forgotten, uncertain, or identity-unstable role cues.",
+      "positive_terms": [
+        "between",
+        "boundary",
+        "outsider",
+        "unknown",
+        "liminal",
+        "lost",
+        "memory",
+        "exile",
+        "orphan",
+        "wander",
+        "ambiguous",
+        "shift",
+        "transform"
+      ],
+      "negative_terms": [],
+      "source": "first-loop retained hypothesis"
+    },
+    {
+      "family": "prior_first_loop",
+      "name": "collectivized_or_nonindividual_agency",
+      "description": "Role is organized as a collective, ecosystemic, distributed, or nonindividual agent.",
+      "positive_terms": [
+        "collective",
+        "network",
+        "swarm",
+        "hive",
+        "ecosystem",
+        "coral",
+        "mycorrhizal",
+        "shared",
+        "group",
+        "systems",
+        "distributed"
+      ],
+      "negative_terms": [],
+      "source": "first-loop retained hypothesis"
+    },
+    {
+      "family": "prior_first_loop",
+      "name": "communicative_media_register",
+      "description": "Speech, writing, narration, explanation, audience, or publication-centered role organization.",
+      "positive_terms": [
+        "write",
+        "story",
+        "narrative",
+        "audience",
+        "communicate",
+        "explain",
+        "publish",
+        "voice",
+        "language",
+        "interview",
+        "podcast",
+        "report",
+        "blog"
+      ],
+      "negative_terms": [],
+      "source": "first-loop retained hypothesis"
+    },
+    {
+      "family": "prior_first_loop",
+      "name": "semantic_label_dependence_risk",
+      "description": "Likelihood that role identity depends on explicit naming, stage identity, or performed self-label rather than behavior alone.",
+      "positive_terms": [
+        "role",
+        "identity",
+        "character",
+        "persona",
+        "embody",
+        "act as",
+        "take on",
+        "performance",
+        "become",
+        "portray"
+      ],
+      "negative_terms": [],
+      "source": "first-loop retained hypothesis"
+    },
+    {
+      "family": "prior_first_loop",
+      "name": "standards_and_error_aversion",
+      "description": "Fear-of-error or standard-enforcement pattern distinct from generic professional competence.",
+      "positive_terms": [
+        "correct",
+        "error",
+        "mistake",
+        "precision",
+        "standard",
+        "review",
+        "proof",
+        "check",
+        "scrutin",
+        "quality",
+        "final"
+      ],
+      "negative_terms": [],
+      "source": "first-loop retained hypothesis"
+    },
+    {
+      "family": "prior_first_loop",
+      "name": "forceful_self_assertion",
+      "description": "Assertive, dominant, disruptive, competitive, or self-authorizing orientation.",
+      "positive_terms": [
+        "force",
+        "dominant",
+        "assert",
+        "compete",
+        "disrupt",
+        "unafraid",
+        "push",
+        "refuse",
+        "bold",
+        "power",
+        "will"
+      ],
+      "negative_terms": [],
+      "source": "first-loop retained hypothesis"
+    },
+    {
+      "family": "motivational",
+      "name": "mission_duty_drive",
+      "description": "Mission, duty, obligation, service, protection, or optimized purpose.",
+      "positive_terms": [
+        "mission",
+        "duty",
+        "responsibility",
+        "serve",
+        "protect",
+        "purpose",
+        "obligation",
+        "commitment",
+        "devotion",
+        "steward"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "motivational",
+      "name": "hunger_wound_lack",
+      "description": "Need, hunger, wound, lack, longing, deprivation, or unresolved desire.",
+      "positive_terms": [
+        "hunger",
+        "need",
+        "want",
+        "longing",
+        "lack",
+        "desire",
+        "craving",
+        "wound",
+        "loss",
+        "absence",
+        "deprivation"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "interactional",
+      "name": "cooperative_care",
+      "description": "Cooperation, care, trust, reciprocity, support, guidance, or nurturing.",
+      "positive_terms": [
+        "cooperate",
+        "care",
+        "trust",
+        "support",
+        "guide",
+        "help",
+        "nurture",
+        "listen",
+        "empathy",
+        "community"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "interactional",
+      "name": "adversarial_dominance",
+      "description": "Conflict, dominance, pressure, punishment, command, intimidation, or coercion.",
+      "positive_terms": [
+        "conflict",
+        "dominate",
+        "pressure",
+        "punish",
+        "command",
+        "control",
+        "intimidate",
+        "fight",
+        "confront",
+        "force"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "interactional",
+      "name": "deception_persuasion",
+      "description": "Deception, seduction, manipulation, disguise, persuasion, or misdirection.",
+      "positive_terms": [
+        "deceive",
+        "seduce",
+        "manipulate",
+        "trick",
+        "disguise",
+        "conceal",
+        "persuade",
+        "influence",
+        "mask",
+        "misdirect"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "narrative_causal",
+      "name": "wound_loss_exile",
+      "description": "Backstory of wound, loss, exile, abandonment, injury, banishment, or grief.",
+      "positive_terms": [
+        "wound",
+        "loss",
+        "exile",
+        "abandon",
+        "injury",
+        "trauma",
+        "banish",
+        "homeless",
+        "lost",
+        "grief"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "narrative_causal",
+      "name": "corruption_contamination_decay",
+      "description": "Corruption, contamination, decay, infection, pollution, degradation, or parasitism.",
+      "positive_terms": [
+        "corrupt",
+        "contaminate",
+        "decay",
+        "infect",
+        "pollute",
+        "degrade",
+        "rot",
+        "virus",
+        "poison",
+        "parasite"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "institutional",
+      "name": "office_law_status",
+      "description": "Formal office, institution, law, rank, hierarchy, legitimacy, or bureaucracy.",
+      "positive_terms": [
+        "office",
+        "institution",
+        "law",
+        "rank",
+        "hierarchy",
+        "legitimate",
+        "bureaucracy",
+        "status",
+        "rule",
+        "appointed",
+        "official"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "institutional",
+      "name": "standard_enforcement",
+      "description": "Standards, compliance, discipline, enforcement, audit, order, or procedure.",
+      "positive_terms": [
+        "standard",
+        "comply",
+        "discipline",
+        "enforce",
+        "audit",
+        "order",
+        "procedure",
+        "policy",
+        "regulation",
+        "protocol"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "collective_distributed",
+      "name": "swarm_collective_agency",
+      "description": "Distributed, plural, collective, networked, swarm, hive, crowd, or group agency.",
+      "positive_terms": [
+        "swarm",
+        "collective",
+        "distributed",
+        "network",
+        "hive",
+        "crowd",
+        "group",
+        "many",
+        "plural",
+        "colony",
+        "egregore"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "collective_distributed",
+      "name": "nonindividual_systemic_identity",
+      "description": "Systemic or nonindividual identity organized as mechanism, process, ecology, or infrastructure.",
+      "positive_terms": [
+        "system",
+        "mechanism",
+        "process",
+        "ecology",
+        "infrastructure",
+        "machine",
+        "protocol",
+        "algorithm",
+        "structure",
+        "environment"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "destabilization_reactivity",
+      "name": "reactive_opposition",
+      "description": "Pushback, resistance, rebellion, iconoclasm, refusal, opposition, or challenge.",
+      "positive_terms": [
+        "oppose",
+        "challenge",
+        "defy",
+        "rebel",
+        "resist",
+        "authority",
+        "consensus",
+        "constraint",
+        "pushback",
+        "refuse",
+        "iconoclast"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "destabilization_reactivity",
+      "name": "volatility_liminality",
+      "description": "Volatile, liminal, unstable, chaotic, transitional, marginal, or threshold stance.",
+      "positive_terms": [
+        "volatile",
+        "liminal",
+        "unstable",
+        "chaos",
+        "transition",
+        "marginal",
+        "threshold",
+        "ambiguous",
+        "drift",
+        "between"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    }
+  ],
+  "discarded_dimensions_so_far": [
+    {
+      "family": "refinement_mythic",
+      "name": "mythic_artistic_expression",
+      "description": "Poetic, bardic, sage-like, symbolic, expressive, or visionary roles.",
+      "positive_terms": [
+        "poet",
+        "poetry",
+        "bard",
+        "song",
+        "sage",
+        "vision",
+        "symbol",
+        "art",
+        "myth",
+        "wisdom",
+        "oracle",
+        "muse"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "refinement_developmental",
+      "name": "developmental_immaturity",
+      "description": "Childlike, adolescent, toddler, naive, dependent, playful, or developmentally unstable roles.",
+      "positive_terms": [
+        "child",
+        "toddler",
+        "adolescent",
+        "teen",
+        "naive",
+        "dependent",
+        "play",
+        "immature",
+        "young",
+        "baby"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "refinement_social_hospitality",
+      "name": "hospitality_social_exchange",
+      "description": "Bartender, host, merchant, mediator, exchanger, service, conviviality, or social transaction.",
+      "positive_terms": [
+        "host",
+        "bartender",
+        "merchant",
+        "exchange",
+        "service",
+        "convivial",
+        "social",
+        "mediate",
+        "welcome",
+        "hospitality"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "refinement_scale",
+      "name": "nonhuman_scale_body",
+      "description": "Animal, giant, elemental, tree, whale, machine, object, or nonhuman embodied scale.",
+      "positive_terms": [
+        "animal",
+        "whale",
+        "tree",
+        "giant",
+        "body",
+        "elemental",
+        "object",
+        "machine",
+        "nonhuman",
+        "creature"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "refinement_prediction_control",
+      "name": "forecast_control_planning",
+      "description": "Forecasting, planning, dispatching, producing, building, controlling, or coordinating future action.",
+      "positive_terms": [
+        "forecast",
+        "plan",
+        "dispatch",
+        "produce",
+        "build",
+        "coordinate",
+        "control",
+        "schedule",
+        "engineer",
+        "manage"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    },
+    {
+      "family": "refinement_judicial_norms",
+      "name": "judicial_normative_authority",
+      "description": "Judge, law, norm, verdict, purity, realism, standards, justice, or adjudication.",
+      "positive_terms": [
+        "judge",
+        "law",
+        "verdict",
+        "justice",
+        "norm",
+        "purity",
+        "realist",
+        "standard",
+        "court",
+        "adjudicate"
+      ],
+      "negative_terms": [],
+      "source": "GPT-5.5 Standard constrained hypothesis via Codex"
+    }
+  ],
+  "rationale": "gain=-0.003; stable=True; beats_null=True; complexity_ok=True; decision=discard.",
+  "permutation_null": {
+    "mean": -0.3567360416339141,
+    "p95": -0.13736577113897824,
+    "max": -0.10890764126798413
+  },
+  "metrics": {
+    "n_dimensions": 34,
+    "dimension_names": [
+      "evaluate_judge_verify",
+      "translate_mediate_synthesize",
+      "destabilize_expose_disrupt",
+      "assistant_basin_adjacency",
+      "role_label_theatricality",
+      "affective_calm_detachment",
+      "affective_intensity_distress",
+      "procedural_professional_orientation",
+      "theatrical_fantastical_vividness",
+      "interpersonal_lived_reactivity",
+      "oppositional_moral_pressure",
+      "assistant_basin_adjacency",
+      "boundary_liminal_instability",
+      "collectivized_or_nonindividual_agency",
+      "communicative_media_register",
+      "semantic_label_dependence_risk",
+      "standards_and_error_aversion",
+      "forceful_self_assertion",
+      "mission_duty_drive",
+      "hunger_wound_lack",
+      "cooperative_care",
+      "adversarial_dominance",
+      "deception_persuasion",
+      "wound_loss_exile",
+      "corruption_contamination_decay",
+      "office_law_status",
+      "standard_enforcement",
+      "swarm_collective_agency",
+      "nonindividual_systemic_identity",
+      "reactive_opposition",
+      "volatility_liminality",
+      "nonhuman_scale_body",
+      "forecast_control_planning",
+      "judicial_normative_authority"
+    ],
+    "family_counts": {
+      "procedural": 3,
+      "assistant_adjacency": 1,
+      "semantic_label_dependence": 1,
+      "emotional_regulation": 2,
+      "prior_first_loop": 11,
+      "motivational": 2,
+      "interactional": 3,
+      "narrative_causal": 2,
+      "institutional": 2,
+      "collective_distributed": 2,
+      "destabilization_reactivity": 2,
+      "refinement_scale": 1,
+      "refinement_prediction_control": 1,
+      "refinement_judicial_norms": 1
+    },
+    "split_metrics": [
+      {
+        "seed": "outer_loop_split_0_2026-05-28",
+        "pca_r2": 0.46623209341913585,
+        "baseline_pca_r2": 0.2990177822329241,
+        "delta": 0.16721431118621177,
+        "pc1_r2": 0.6302506354474642,
+        "pc2_r2": 0.10706022224642098,
+        "pc3_r2": 0.5501774229923795,
+        "residual_proxy_r2": 0.21144463916609058,
+        "baseline_residual_proxy_r2": 0.17841313722822338,
+        "residual_proxy_delta": 0.03303150193786719,
+        "cluster_accuracy": 0.547945205479452,
+        "nn_preservation": 0.1972602739726027,
+        "mean_residual_norm": 24.475591979941075,
+        "baseline_mean_residual_norm": 28.767042645490875
+      },
+      {
+        "seed": "outer_loop_split_1_2026-05-28",
+        "pca_r2": 0.5108763404606171,
+        "baseline_pca_r2": 0.43263197173518186,
+        "delta": 0.07824436872543528,
+        "pc1_r2": 0.6257409871627291,
+        "pc2_r2": 0.3531220027430083,
+        "pc3_r2": 0.42413028331066294,
+        "residual_proxy_r2": 0.2748607188001906,
+        "baseline_residual_proxy_r2": 0.3298220647191018,
+        "residual_proxy_delta": -0.05496134591891122,
+        "cluster_accuracy": 0.6438356164383562,
+        "nn_preservation": 0.17534246575342466,
+        "mean_residual_norm": 25.396365198146405,
+        "baseline_mean_residual_norm": 26.954493464074986
+      },
+      {
+        "seed": "outer_loop_split_2_2026-05-28",
+        "pca_r2": 0.4931655532889251,
+        "baseline_pca_r2": 0.4172946790269254,
+        "delta": 0.07587087426199968,
+        "pc1_r2": 0.6471144104147724,
+        "pc2_r2": 0.27786080234331223,
+        "pc3_r2": 0.3735084624961347,
+        "residual_proxy_r2": 0.22530590339547885,
+        "baseline_residual_proxy_r2": 0.24175095077968523,
+        "residual_proxy_delta": -0.01644504738420638,
+        "cluster_accuracy": 0.5342465753424658,
+        "nn_preservation": 0.17534246575342466,
+        "mean_residual_norm": 26.235697949086134,
+        "baseline_mean_residual_norm": 27.393854760559922
+      },
+      {
+        "seed": "outer_loop_split_3_2026-05-28",
+        "pca_r2": 0.5202116667859472,
+        "baseline_pca_r2": 0.4371789056749318,
+        "delta": 0.08303276111101543,
+        "pc1_r2": 0.6488727501911664,
+        "pc2_r2": 0.31315035975536754,
+        "pc3_r2": 0.35300408937020067,
+        "residual_proxy_r2": 0.45217969401260116,
+        "baseline_residual_proxy_r2": 0.48960177906956825,
+        "residual_proxy_delta": -0.03742208505696709,
+        "cluster_accuracy": 0.726027397260274,
+        "nn_preservation": 0.19726027397260273,
+        "mean_residual_norm": 22.65942065393498,
+        "baseline_mean_residual_norm": 24.73098395395659
+      },
+      {
+        "seed": "outer_loop_split_4_2026-05-28",
+        "pca_r2": 0.4558556793175589,
+        "baseline_pca_r2": 0.36086318753465885,
+        "delta": 0.09499249178290003,
+        "pc1_r2": 0.6337713850856335,
+        "pc2_r2": 0.195463225892744,
+        "pc3_r2": 0.3541399845924612,
+        "residual_proxy_r2": 0.32707559101726225,
+        "baseline_residual_proxy_r2": 0.309425428282995,
+        "residual_proxy_delta": 0.017650162734267227,
+        "cluster_accuracy": 0.6575342465753424,
+        "nn_preservation": 0.13150684931506848,
+        "mean_residual_norm": 26.377362194007564,
+        "baseline_mean_residual_norm": 28.219647020791992
+      }
+    ],
+    "mean_pca_r2": 0.4892682666544368,
+    "std_pca_r2": 0.024846158569464,
+    "mean_baseline_pca_r2": 0.3893973052409244,
+    "mean_delta": 0.09987096141351244,
+    "std_delta": 0.0343108289277544,
+    "mean_residual_proxy_delta": -0.011629362737590054,
+    "mean_cluster_accuracy": 0.621917808219178,
+    "mean_nn_preservation": 0.17534246575342466,
+    "mean_per_axis_r2": [
+      0.637150033660353,
+      0.24933132259617063,
+      0.4109920485523678
+    ],
+    "top_unexplained_personas": [
+      [
+        "mechanic",
+        3
+      ],
+      [
+        "adolescent",
+        3
+      ],
+      [
+        "prisoner",
+        3
+      ],
+      [
+        "smuggler",
+        2
+      ],
+      [
+        "infant",
+        2
+      ],
+      [
+        "hermit",
+        2
+      ],
+      [
+        "bard",
+        2
+      ],
+      [
+        "teenager",
+        2
+      ],
+      [
+        "realist",
+        2
+      ],
+      [
+        "sage",
+        2
+      ],
+      [
+        "amateur",
+        2
+      ],
+      [
+        "caveman",
+        2
+      ],
+      [
+        "bartender",
+        2
+      ],
+      [
+        "bohemian",
+        2
+      ],
+      [
+        "vampire",
+        2
+      ]
+    ],
+    "top_improved_personas": [
+      [
+        "robot",
+        4
+      ],
+      [
+        "pragmatist",
+        3
+      ],
+      [
+        "wind",
+        2
+      ],
+      [
+        "bard",
+        2
+      ],
+      [
+        "shaman",
+        2
+      ],
+      [
+        "facilitator",
+        2
+      ],
+      [
+        "skeptic",
+        2
+      ],
+      [
+        "echo",
+        2
+      ],
+      [
+        "narrator",
+        2
+      ],
+      [
+        "virus",
+        2
+      ],
+      [
+        "adolescent",
+        2
+      ],
+      [
+        "wanderer",
+        1
+      ],
+      [
+        "aberration",
+        1
+      ],
+      [
+        "mystic",
+        1
+      ],
+      [
+        "summarizer",
+        1
+      ]
+    ]
+  }
+}

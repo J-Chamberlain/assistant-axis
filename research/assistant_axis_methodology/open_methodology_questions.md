@@ -85,3 +85,9 @@ Convergence would support treating repeated dimensions as candidates for formal 
 Do motivational, interactional, procedural, and narrative-causal framings remain predictive under repeated held-out splits, stronger non-lexical feature coders, and multi-model hypothesis generation?
 
 The first local framing ablation found that the prior first-loop feature set outperformed all new framing families on PCA3D prediction, while all new framings combined beat the semantic baseline. This raises an open question: is the advantage driven by true behavioral framing content, by better lexical overlap with assistant-axis structure, or by single-split variance?
+
+## Outer-Loop Feature Complexity
+
+What is the optimal stopping rule for latent-feature discovery when added dimensions improve continuous geometry prediction but increase interpretive complexity?
+
+The first outer-loop implementation retained 31 dimensions and improved repeated-split PCA3D R2 from 0.389 to 0.492, then plateaued after two failed refinement rounds. Future work should test whether non-lexical coders or multi-model dimension proposals can reduce the retained feature set while preserving predictive gain.

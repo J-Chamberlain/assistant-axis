@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** 7944f80
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop and second-stage framing ablation are implemented with held-out evaluation
+**Last commit:** 9a836a9
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, and repeated-split iterative outer loop are implemented with held-out evaluation
 
 ---
 
@@ -327,6 +327,16 @@
 - Best-model improvement concentrated most on PC1: PC1 R2 0.499, PC2 R2 0.353, PC3 R2 0.406
 - Cluster prediction remained secondary and only slightly improved: baseline accuracy 0.616 vs best accuracy 0.630, delta +0.014
 
+### Iterative Latent-Feature Outer Loop (2026-05-28, repeated-split implementation)
+
+- Implemented `research/q2_stability/qwen/scripts/iterative_latent_feature_outer_loop.py` as the first full outer-loop latent-feature discovery harness for Paper 1.5
+- The harness evaluates candidate dimensions across five deterministic repeated splits, logs iteration state, retains or discards feature bundles, checks permutation/null performance, tracks split variance, and terminates on plateau
+- Final retained feature set reached mean held-out PCA3D R2 0.492 across five splits versus semantic baseline R2 0.389, mean delta +0.103
+- Iteration 1 retained 18 dimensions with mean R2 0.480; iteration 2 retained 31 dimensions with mean R2 0.492; iterations 3 and 4 were discarded and triggered plateau termination
+- Retained families include procedural, assistant-adjacency, semantic-label-dependence, emotional-regulation, prior first-loop, motivational, interactional, narrative-causal, institutional, collective/distributed, and destabilization/reactivity features
+- Discarded refinements include mythic/artistic expression, developmental immaturity, social hospitality, nonhuman scale, forecast/control, and judicial norms
+- Recurring high-residual personas include mechanic, adolescent, prisoner, smuggler, infant, hermit, bard, teenager, predator, journalist, sage, and amateur
+
 ---
 
 ## 3. CURRENT STATE
@@ -359,7 +369,7 @@
 
 **Model provenance state:** `research/workflow/model_provenance_schema.md` defines the mandatory provenance schema for future generated, evaluated, and analyzed artifacts. Future artifacts must distinguish `generation_model`, `evaluation_model`, `analysis_model`, and `script_author_model` before commit; Stage-1 generation and ingestion scripts now require provenance for every role inventory.
 
-**Latent-feature discovery state:** `research/q2_stability/qwen/scripts/latent_feature_discovery_loop.py` implements the first constrained model-assisted hypothesis-generation and held-out testing loop for persona activation geometry. `research/q2_stability/qwen/scripts/latent_feature_framing_ablation.py` now extends this into a framing comparison over motivational, interactional, procedural, narrative-causal, all-framing, and prior first-loop feature sets. Machine-readable outputs live under `research/q2_stability/qwen/outputs/latent_feature_discovery/` and `research/q2_stability/qwen/outputs/latent_feature_framing_ablation/`. The current result is bounded: latent features improve held-out continuous geometry prediction more than hard cluster prediction.
+**Latent-feature discovery state:** `research/q2_stability/qwen/scripts/latent_feature_discovery_loop.py` implements the first constrained model-assisted hypothesis-generation and held-out testing loop for persona activation geometry. `research/q2_stability/qwen/scripts/latent_feature_framing_ablation.py` extends this into a framing comparison over motivational, interactional, procedural, narrative-causal, all-framing, and prior first-loop feature sets. `research/q2_stability/qwen/scripts/iterative_latent_feature_outer_loop.py` now implements repeated-split outer-loop optimization with plateau detection. Machine-readable outputs live under `research/q2_stability/qwen/outputs/latent_feature_discovery/`, `research/q2_stability/qwen/outputs/latent_feature_framing_ablation/`, and `research/q2_stability/qwen/outputs/iterative_outer_loop/`. The current result is bounded: latent features improve held-out continuous geometry prediction more than hard cluster prediction.
 
 **Visualization state:** `research/visualizations/persona_geometry_explorer.html` now uses full nearest-centroid cluster assignments from `research/visualizations/cluster_assignments_full.json` instead of incomplete hardcoded lists. `research/visualizations/geometry_viz_data.json` now includes role PCA coordinates and variance metadata; PC1 explains 0.315954 of variance and aligns with the assistant-axis vector at 0.802310 cosine.
 
@@ -378,8 +388,11 @@
 **Completed this session:** Saved framing ablation results, summary, feature matrix, dimension codebook, held-out predictions, high-residual shifts, and report under `research/q2_stability/qwen/outputs/latent_feature_framing_ablation/`.
 **Completed this session:** Updated the multi-model comparison plan to distinguish rhetorical convergence from predictive convergence across framing families.
 **Completed this session:** Updated the findings ledger, methodology questions, research state, and machine-in-the-loop sticky note with framing-ablation results.
-**Next step:** Rerun the framing ablation over repeated splits with stronger non-lexical feature coders, then compare GPT-5.5, Claude Sonnet, and another frontier model on predictive convergence rather than rhetorical similarity.
-**Last commit before this session:** 7944f80
+**Completed this session:** Implemented the iterative latent-feature outer loop with five repeated splits, retention/discard logic, permutation checks, split-variance tracking, and plateau termination.
+**Completed this session:** Ran the outer loop and saved iteration results, summaries, master log, progression CSV, and final report under `research/q2_stability/qwen/outputs/iterative_outer_loop/` plus `research/q2_stability/qwen/iterative_outer_loop_report.md`.
+**Completed this session:** Updated the findings ledger, methodology questions, research state, and machine-in-the-loop sticky note with repeated-split outer-loop results.
+**Next step:** Replace lexical operationalization with stronger blind coder or embedding-derived features, then test whether the same retained families survive with fewer dimensions and multi-model hypothesis generators.
+**Last commit before this session:** 9a836a9
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

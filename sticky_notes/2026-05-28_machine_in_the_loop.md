@@ -81,3 +81,7 @@ Implemented the first offline latent-feature discovery loop at `research/q2_stab
 ## Update 2026-05-28
 
 Implemented the second-stage framing ablation at `research/q2_stability/qwen/scripts/latent_feature_framing_ablation.py`. The ablation compares motivational, interactional, procedural, narrative-causal, all-framing, and prior first-loop feature sets on held-out PCA3D prediction. The best result is the prior first-loop feature set at R2 0.436 versus semantic baseline R2 0.322; among new framings, all framings combined performs best at R2 0.405 and procedural is the best single family at R2 0.373.
+
+## Update 2026-05-28
+
+Implemented the first full iterative outer-loop harness at `research/q2_stability/qwen/scripts/iterative_latent_feature_outer_loop.py`. The loop evaluates candidate latent dimensions across five deterministic splits, retains or discards dimensions based on gain, stability, null, and complexity checks, and stops on plateau. Final retained features reached mean PCA3D R2 0.492 versus semantic baseline 0.389, then plateaued after two failed refinement rounds.

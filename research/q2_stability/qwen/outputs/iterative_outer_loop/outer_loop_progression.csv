@@ -1,0 +1,5 @@
+iteration,decision,n_trial_dimensions,n_retained_dimensions,mean_pca_r2,mean_baseline_pca_r2,mean_delta_vs_semantic,gain_vs_prior_best,std_delta,mean_residual_proxy_delta,mean_cluster_accuracy,mean_nn_preservation,permutation_p95,plateau_streak
+1,retained,18,18,0.480464,0.389397,0.091067,0.091067,0.023152,-0.02341,0.589041,0.168219,-0.049361,0
+2,retained,31,31,0.492056,0.389397,0.102659,0.011592,0.041259,-0.007015,0.610959,0.168219,-0.121074,0
+3,discarded,34,31,0.495222,0.389397,0.105825,0.003166,0.042976,-0.009997,0.616438,0.170411,-0.144871,1
+4,discarded,34,31,0.489268,0.389397,0.099871,-0.002788,0.034311,-0.011629,0.621918,0.175342,-0.137366,2
