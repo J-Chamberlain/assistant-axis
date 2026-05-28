@@ -19,6 +19,7 @@ NORMALIZED_PATH = ROOT / "analysis" / "normalized_role_lists.json"
 SUMMARY_PATH = ROOT / "analysis" / "generated_role_manifold_comparison.json"
 PAIRWISE_CSV_PATH = ROOT / "analysis" / "inventory_pairwise_overlap.csv"
 REPORT_PATH = ROOT / "stage1_uncertainty_initial_findings.md"
+SCRIPT_AUTHOR_MODEL = "GPT-5.5 Standard via Codex"
 
 FAMILY_KEYWORDS = {
     "assistant_adjacent": ["assistant", "editor", "reviewer", "evaluator", "consultant", "advisor", "tutor", "coach", "analyst", "proofreader"],
@@ -164,6 +165,24 @@ def main() -> None:
     summary = {
         "created_at": utc_timestamp(),
         "input_path": str(args.input),
+        "model_provenance": {
+            "task_type": "semantic_analysis",
+            "artifact_type": "analysis_summary",
+            "artifact_path": str(args.summary),
+            "generation_model": None,
+            "evaluation_model": None,
+            "analysis_model": None,
+            "script_author_model": SCRIPT_AUTHOR_MODEL,
+            "orchestration_agent": "Codex",
+            "provider": "none",
+            "model_version_or_alias": "scripted_local_analysis",
+            "date": utc_timestamp(),
+            "prompt_family_id": None,
+            "temperature": None,
+            "max_tokens": None,
+            "source_inputs": [str(args.input)],
+            "notes_on_uncertainty": "Local scripted overlap analysis; no LLM analysis model is invoked by this script.",
+        },
         "n_inventories": len(inventories),
         "n_unique_roles": len(role_counts),
         "provider_counts": dict(sorted(provider_counts.items())),

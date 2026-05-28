@@ -7,6 +7,27 @@
   "script_sha256": "sha256 of executed script",
   "model": "Qwen/Qwen3-32B",
   "model_revision": "unknown or pinned revision",
+  "model_provenance": {
+    "task_type": "activation_extraction",
+    "artifact_type": "manifest",
+    "artifact_path": "research/q2_stability/qwen/outputs/paper1_5/example_manifest.json",
+    "generation_model": "Qwen/Qwen3-32B",
+    "evaluation_model": null,
+    "analysis_model": null,
+    "script_author_model": "GPT-5.5 Standard via Codex",
+    "orchestration_agent": "Codex",
+    "provider": "huggingface",
+    "model_version_or_alias": "Qwen/Qwen3-32B",
+    "date": "YYYY-MM-DDTHH:MM:SSZ",
+    "prompt_family_id": null,
+    "temperature": 0.0,
+    "max_tokens": 512,
+    "source_inputs": [
+      "data/roles/instructions/trickster.json",
+      "data/extraction_questions.jsonl"
+    ],
+    "notes_on_uncertainty": "Replace all example values before launch."
+  },
   "target_persona_or_condition": "trickster",
   "planned_records": 1200,
   "output_dir": "/root/assistant-axis/research/q2_stability/qwen/outputs/paper1_5",

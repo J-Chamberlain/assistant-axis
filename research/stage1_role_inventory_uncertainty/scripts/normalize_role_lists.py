@@ -15,6 +15,24 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 PARSED_DIR = ROOT / "parsed_outputs"
 OUTPUT_PATH = ROOT / "analysis" / "normalized_role_lists.json"
+REQUIRED_PROVENANCE_FIELDS = [
+    "task_type",
+    "artifact_type",
+    "artifact_path",
+    "generation_model",
+    "evaluation_model",
+    "analysis_model",
+    "script_author_model",
+    "orchestration_agent",
+    "provider",
+    "model_version_or_alias",
+    "date",
+    "prompt_family_id",
+    "temperature",
+    "max_tokens",
+    "source_inputs",
+    "notes_on_uncertainty",
+]
 
 
 def utc_timestamp() -> str:
@@ -33,6 +51,14 @@ def normalize_role_label(label: str) -> str:
 
 def load_roles(path: Path) -> tuple[dict[str, Any], list[str]]:
     payload = json.loads(path.read_text(encoding="utf-8"))
+    provenance = payload.get("model_provenance")
+    if not isinstance(provenance, dict):
+        raise ValueError(f"{path} missing required model_provenance object")
+    missing = [field for field in REQUIRED_PROVENANCE_FIELDS if field not in provenance]
+    if missing:
+        raise ValueError(f"{path} model_provenance missing fields: {', '.join(missing)}")
+    if not provenance.get("generation_model"):
+        raise ValueError(f"{path} model_provenance.generation_model is required for role inventories")
     roles = payload.get("normalized_role_list") or payload.get("parsed_role_list") or []
     normalized = []
     seen = set()
@@ -51,18 +77,25 @@ def main() -> None:
     args = parser.parse_args()
 
     inventories = []
+    errors = []
     global_counts: Counter[str] = Counter()
     by_role: dict[str, list[str]] = defaultdict(list)
     for path in sorted(args.input_dir.glob("*.json")):
-        payload, roles = load_roles(path)
-        inventory_id = f"{payload.get('provider', 'unknown')}::{payload.get('model', 'unknown')}::{payload.get('prompt_family_id', path.stem)}"
+        try:
+            payload, roles = load_roles(path)
+        except ValueError as exc:
+            errors.append(str(exc))
+            continue
+        provenance = payload["model_provenance"]
+        inventory_id = f"{provenance['provider']}::{provenance['generation_model']}::{provenance['prompt_family_id']}"
         inventories.append(
             {
                 "inventory_id": inventory_id,
                 "source_path": str(path),
-                "provider": payload.get("provider", payload.get("generation_settings", {}).get("provider", "unknown")),
-                "model": payload.get("model", payload.get("generation_settings", {}).get("model", "unknown")),
-                "prompt_family_id": payload.get("prompt_family_id", path.stem),
+                "provider": provenance["provider"],
+                "model": provenance["generation_model"],
+                "prompt_family_id": provenance["prompt_family_id"],
+                "model_provenance": provenance,
                 "n_roles": len(roles),
                 "normalized_role_list": roles,
             }
@@ -70,6 +103,8 @@ def main() -> None:
         global_counts.update(roles)
         for role in roles:
             by_role[role].append(inventory_id)
+    if errors:
+        raise SystemExit("Invalid inventory provenance:\n" + "\n".join(f"- {error}" for error in errors))
 
     output = {
         "created_at": utc_timestamp(),

@@ -35,3 +35,7 @@ Overnight example: converting the trickster extraction result into Paper 1.5 ada
 ## Escalation Rule
 
 If a Tier A monitoring task produces a surprising empirical result, promote it to Tier B or Tier C before analysis. If a Tier B script produces a paper-relevant finding, update `RESEARCH_STATE.md` and write a durable note or report. If a Tier C decision changes future operations, create a context update card or commit a workflow note.
+
+## Model Provenance Rule
+
+Every future generated, evaluated, or analyzed research artifact must record model provenance before commit. Use `research/workflow/model_provenance_schema.md` and keep `generation_model`, `evaluation_model`, `analysis_model`, and `script_author_model` distinct. Do not describe Codex-authored scripts, Qwen-generated responses, OpenAI judge scores, and Claude-authored inventories with a single ambiguous `model` field.

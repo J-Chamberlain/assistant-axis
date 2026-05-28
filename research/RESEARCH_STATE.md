@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-05-27
 **Last commit:** e60d8f8
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is now provider-separated with Codex responsible for OpenAI generation and local analysis
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts
 
 ---
 
@@ -337,15 +337,17 @@
 
 **Stage-1 role-inventory uncertainty state:** `research/stage1_role_inventory_uncertainty/` now contains the OpenAI-side role-inventory generation infrastructure, five prompt-family variants, provider-agnostic ingestion and normalization scripts, local manifold-comparison scaffolding, and `multi_provider_generation_architecture.md`. Codex should not orchestrate Anthropic API calls locally; Claude or Claude Code will generate Anthropic-side inventories separately and sync them through GitHub for local semantic analysis.
 
+**Model provenance state:** `research/workflow/model_provenance_schema.md` defines the mandatory provenance schema for future generated, evaluated, and analyzed artifacts. Future artifacts must distinguish `generation_model`, `evaluation_model`, `analysis_model`, and `script_author_model` before commit; Stage-1 generation and ingestion scripts now require provenance for every role inventory.
+
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Built provider-separated Stage-1 role-inventory uncertainty infrastructure under `research/stage1_role_inventory_uncertainty/`.
-**Completed this session:** Added five prompt-family variants and OpenAI-only generation, normalization, external-ingestion, and local comparison scripts.
-**Completed this session:** Documented the GitHub synchronization architecture that delegates Anthropic generation to Claude or Claude Code while keeping Codex responsible for OpenAI generation and local semantic analysis.
-**Next step:** Run OpenAI-side role-inventory generation when API quota is available, then ingest Claude-generated inventories after they are synced through GitHub.
-**Last commit before this session:** e60d8f8
+**Completed this session:** Added `research/workflow/model_provenance_schema.md` as the canonical mandatory model-provenance schema.
+**Completed this session:** Updated workflow docs and the run manifest template so future generated, evaluated, or analyzed artifacts must record model provenance before commit.
+**Completed this session:** Hardened Stage-1 role-inventory scripts so OpenAI outputs include provenance and provider-agnostic ingestion rejects inventories with missing model-provenance fields.
+**Next step:** Run Stage-1 OpenAI-side role-inventory generation when API quota is available, ingest Claude-generated inventories after GitHub sync, and rerun evaluator sensitivity after `gpt-4.1-mini` quota is restored.
+**Last commit before this session:** 3c7290a
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

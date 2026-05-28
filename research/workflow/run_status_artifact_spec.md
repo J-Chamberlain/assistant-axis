@@ -2,9 +2,11 @@
 
 Purpose: every long-running extraction or dyad run should emit machine-readable artifacts that make recovery independent of chat context.
 
+All generated, evaluated, or analyzed artifacts must follow `research/workflow/model_provenance_schema.md`. Model provenance is mandatory before commit.
+
 ## `manifest.json`
 
-Minimum fields: `run_id`, `created_at`, `repo_commit`, `script_path`, `script_sha256`, `model`, `model_revision`, `target_persona_or_condition`, `planned_records`, `output_dir`, `activation_dir`, `generation_settings`, `extraction_layer`, `hook_description`, `hardware`, `operator_notes`.
+Minimum fields: `run_id`, `created_at`, `repo_commit`, `script_path`, `script_sha256`, `model`, `model_revision`, `target_persona_or_condition`, `planned_records`, `output_dir`, `activation_dir`, `generation_settings`, `extraction_layer`, `hook_description`, `hardware`, `model_provenance`, `operator_notes`.
 
 ## `heartbeat.json`
 
@@ -24,11 +26,11 @@ Minimum fields: `run_id`, `timestamp`, `pod_id`, `ssh_endpoint`, `termination_me
 
 ## `scoring_summary.json`
 
-Minimum fields: `run_id`, `timestamp`, `judge_model`, `judge_context`, `score_file`, `records_scored`, `total_records`, `score_distribution`, `qualifying_rule`, `qualifying_count`, `strong_count`, `truncation_split`, `complete`, `notes`.
+Minimum fields: `run_id`, `timestamp`, `judge_model`, `judge_context`, `score_file`, `records_scored`, `total_records`, `score_distribution`, `qualifying_rule`, `qualifying_count`, `strong_count`, `truncation_split`, `model_provenance`, `complete`, `notes`.
 
 ## `validation_summary.json`
 
-Minimum fields: `run_id`, `timestamp`, `validation_script`, `score_file`, `reference_vector`, `candidate_vectors`, `best_candidate`, `cosine_to_reference`, `adaptive_stopping`, `passed`, `methodological_caveats`, `notes`.
+Minimum fields: `run_id`, `timestamp`, `validation_script`, `score_file`, `reference_vector`, `candidate_vectors`, `best_candidate`, `cosine_to_reference`, `adaptive_stopping`, `model_provenance`, `passed`, `methodological_caveats`, `notes`.
 
 ## Naming Rule
 

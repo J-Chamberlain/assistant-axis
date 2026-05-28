@@ -40,6 +40,8 @@ Each line is one JSON object. Update by appending a new event-style row when sta
 
 `notes`: Short free-text notes for risks, caveats, and next action.
 
+`model_provenance`: Required for any run that generates, scores, analyzes, or validates research artifacts. Follow `research/workflow/model_provenance_schema.md` and distinguish `generation_model`, `evaluation_model`, `analysis_model`, and `script_author_model`.
+
 ## Canonical Run States
 
 `planned`: Run is designed but not launched.
@@ -79,6 +81,15 @@ Each line is one JSON object. Update by appending a new event-style row when sta
   "expected_completion": "complete",
   "scoring_status": "Codex GPT-5.5 adaptive scoring complete at 64 scored records",
   "validation_status": "passed, Lu cosine 0.957557 for score>=2 vector",
+  "model_provenance": {
+    "generation_model": "Qwen/Qwen3-32B",
+    "evaluation_model": "Codex GPT-5.5 Standard",
+    "analysis_model": null,
+    "script_author_model": "GPT-5.5 Standard via Codex",
+    "orchestration_agent": "Codex",
+    "provider": "huggingface",
+    "model_version_or_alias": "Qwen/Qwen3-32B"
+  },
   "notes": "Strict gpt-4.1-mini scoring remains blocked by API quota."
 }
 ```

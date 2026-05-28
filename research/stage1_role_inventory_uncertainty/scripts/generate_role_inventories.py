@@ -12,7 +12,6 @@ import argparse
 import json
 import os
 import re
-import sys
 import time
 import urllib.error
 import urllib.request
@@ -30,6 +29,8 @@ PARSED_DIR = ROOT / "parsed_outputs"
 DEFAULT_MODELS = ["gpt-5.5", "gpt-5.5-thinking", "gpt-4.1-mini"]
 DEFAULT_TEMPERATURE = 0.2
 DEFAULT_MAX_OUTPUT_TOKENS = 6000
+SCRIPT_AUTHOR_MODEL = "GPT-5.5 Standard via Codex"
+ORCHESTRATION_AGENT = "Codex"
 
 
 @dataclass(frozen=True)
@@ -138,6 +139,37 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def model_provenance(
+    *,
+    artifact_type: str,
+    artifact_path: Path,
+    model: str,
+    prompt_family_id: str,
+    prompt_path: Path,
+    timestamp: str,
+    temperature: float,
+    max_output_tokens: int,
+) -> dict[str, Any]:
+    return {
+        "task_type": "role_inventory_generation",
+        "artifact_type": artifact_type,
+        "artifact_path": str(artifact_path),
+        "generation_model": model,
+        "evaluation_model": None,
+        "analysis_model": None,
+        "script_author_model": SCRIPT_AUTHOR_MODEL,
+        "orchestration_agent": ORCHESTRATION_AGENT,
+        "provider": "openai",
+        "model_version_or_alias": model,
+        "date": timestamp,
+        "prompt_family_id": prompt_family_id,
+        "temperature": temperature,
+        "max_tokens": max_output_tokens,
+        "source_inputs": [str(prompt_path)],
+        "notes_on_uncertainty": "OpenAI-side Stage-1 generation only; Anthropic inventories are generated separately and synced through GitHub.",
+    }
+
+
 def run_generation(run: GenerationRun, api_key: str, args: argparse.Namespace) -> None:
     stamp = utc_timestamp()
     output_id = f"{slugify(run.model)}__{run.prompt_family_id}"
@@ -154,7 +186,29 @@ def run_generation(run: GenerationRun, api_key: str, args: argparse.Namespace) -
         "max_output_tokens": args.max_output_tokens,
         "prompt_family_id": run.prompt_family_id,
         "prompt_path": str(run.prompt_path),
+        "script_author_model": SCRIPT_AUTHOR_MODEL,
+        "orchestration_agent": ORCHESTRATION_AGENT,
     }
+    raw_provenance = model_provenance(
+        artifact_type="raw_generation",
+        artifact_path=raw_path,
+        model=run.model,
+        prompt_family_id=run.prompt_family_id,
+        prompt_path=run.prompt_path,
+        timestamp=stamp,
+        temperature=args.temperature,
+        max_output_tokens=args.max_output_tokens,
+    )
+    parsed_provenance = model_provenance(
+        artifact_type="parsed_inventory",
+        artifact_path=parsed_path,
+        model=run.model,
+        prompt_family_id=run.prompt_family_id,
+        prompt_path=run.prompt_path,
+        timestamp=stamp,
+        temperature=args.temperature,
+        max_output_tokens=args.max_output_tokens,
+    )
     print(f"CALL {run.model} {run.prompt_family_id}")
     try:
         response = openai_responses_call(api_key, run.model, run.prompt_text, args.temperature, args.max_output_tokens)
@@ -167,6 +221,7 @@ def run_generation(run: GenerationRun, api_key: str, args: argparse.Namespace) -
             "http_status": exc.code,
             "error_body": body,
             "generation_settings": settings,
+            "model_provenance": raw_provenance,
             "prompt_text": run.prompt_text,
         }
         write_json(raw_path, error_payload)
@@ -179,6 +234,7 @@ def run_generation(run: GenerationRun, api_key: str, args: argparse.Namespace) -
             "error_type": type(exc).__name__,
             "error": str(exc),
             "generation_settings": settings,
+            "model_provenance": raw_provenance,
             "prompt_text": run.prompt_text,
         }
         write_json(raw_path, error_payload)
@@ -192,6 +248,7 @@ def run_generation(run: GenerationRun, api_key: str, args: argparse.Namespace) -
         "timestamp": stamp,
         "status": "ok",
         "generation_settings": settings,
+        "model_provenance": raw_provenance,
         "prompt_text": run.prompt_text,
         "raw_response": raw_text,
         "api_response": response,
@@ -203,6 +260,7 @@ def run_generation(run: GenerationRun, api_key: str, args: argparse.Namespace) -
         "model": run.model,
         "prompt_family_id": run.prompt_family_id,
         "generation_settings": settings,
+        "model_provenance": parsed_provenance,
         "raw_output_path": str(raw_path),
         "parsed_role_list": parsed_roles,
         "normalized_role_list": normalized_roles,

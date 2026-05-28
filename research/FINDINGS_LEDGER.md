@@ -90,6 +90,10 @@ The first no-label activation-space stress test is designed but not launched. It
 
 Stage-1 role-inventory uncertainty is now scoped as provider-separated corpus construction. Codex handles OpenAI-side generation, provider-agnostic ingestion, normalization, and local semantic analysis; Anthropic-side generation is delegated to Claude or Claude Code and synced through GitHub. This keeps cross-provider credential handling out of Codex and treats GitHub as the synchronization layer for generated inventories.
 
+### Model Provenance Requirement
+
+Model provenance is now mandatory for future generated, evaluated, or analyzed research artifacts. The canonical schema is `research/workflow/model_provenance_schema.md`; it distinguishes `generation_model`, `evaluation_model`, `analysis_model`, and `script_author_model` so model identity is treated as part of the experimental causal structure rather than incidental metadata.
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.
