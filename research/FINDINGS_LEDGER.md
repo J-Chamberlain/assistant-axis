@@ -169,6 +169,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - What remains unreplicated: Claude has not yet searched for features that improve canonical activation PCA residuals after Big Five, and Codex has not yet shown a controlled hybrid model that beats Big Five
 - Recommended next step: run a small local trait-plus-procedure hybrid benchmark on canonical activation PCA using Big Five as the baseline to beat, then ask Claude for a residual search only if a residual signal is plausible
 
+### Codex Trait Replication Loop (2026-05-28)
+
+- Ran a constrained Codex/GPT-5.5 trait-only replication loop on canonical Qwen activation PCA using the same 273 personas, five deterministic splits, semantic baseline, and ridge-regression evaluation path
+- Allowed feature space was restricted to dispositional/trait concepts; procedural role labels, occupational functions, explicit operating modes, and narrative archetypes were excluded
+- Final retained Codex trait model kept five core dimensions: organized reliability, imaginative flexibility, social expressivity, affiliative warmth, and threat reactivity
+- Performance was weak but positive: R2 0.398 vs semantic baseline 0.389, delta +0.009; Claude Big Five remains much stronger at R2 0.613
+- Codex trait model per-axis R2 was PC1 0.519, PC2 0.212, PC3 0.328, compared with Claude Big Five PC1 0.734, PC2 0.480, PC3 0.416
+- Measured convergence to Claude Big Five was modest: mean best absolute correlation from retained Codex trait dimensions to Big Five columns was 0.152
+- Interpretation: Codex independently rediscovered a weak trait-like signal under constraint, but did not replicate Claude Big Five's predictive efficiency; the result supports partial dispositional convergence, not a successful Big Five-level replication
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

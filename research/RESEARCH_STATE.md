@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** 15041de
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, shared Codex/Claude latent-feature benchmark, and convergence status synthesis are implemented with held-out evaluation where available
+**Last commit:** 38765f3
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, shared Codex/Claude latent-feature benchmark, convergence status synthesis, and constrained Codex trait replication loop are implemented with held-out evaluation where available
 
 ---
 
@@ -376,6 +376,16 @@
 - What remains unreplicated: Claude has not yet searched for canonical activation PCA residual features after Big Five, and Codex has not yet demonstrated a trait-plus-procedure hybrid that beats Big Five under controlled repeated splits
 - Drafted paste-ready follow-up cards for a Codex local hybrid benchmark and a Claude residual search after Big Five
 
+### Codex Trait Replication Loop (2026-05-28)
+
+- Implemented `research/q2_stability/qwen/scripts/codex_trait_replication_loop.py` as a constrained trait/dispositional optimization loop over canonical Qwen activation PCA
+- The loop reused 273 common personas, the same five deterministic splits, the semantic baseline, and the ridge-regression path; no pods, activations, or model calls were run
+- Retained five core Codex trait dimensions: organized reliability, imaginative flexibility, social expressivity, affiliative warmth, and threat reactivity
+- Final Codex trait model reached R2 0.398 vs semantic baseline 0.389, delta +0.009, and plateaued after two non-improving candidate rounds
+- Claude Big Five remains much stronger on the same target at R2 0.613, leaving a -0.215 R2 gap
+- Measured feature convergence was modest: retained Codex traits had mean best absolute correlation 0.152 to Claude Big Five columns
+- Interpretation: Codex independently found weak trait-like predictive signal under constraint, but did not replicate Claude Big Five's compact predictive encoding
+
 ---
 
 ## 3. CURRENT STATE
@@ -442,8 +452,11 @@
 **Completed this session:** Wrote the convergence status report synthesizing Codex, Claude, shared-benchmark, and Big Five interpretation results into a research planning memo.
 **Completed this session:** Drafted the next Codex hybrid-feature benchmark card and the next Claude canonical-residual-search card under the shared benchmark output directory.
 **Completed this session:** Updated the findings ledger and research state with the current best explanatory model, what remains unreplicated, and the recommended controlled next iteration.
-**Next step:** Run the small local trait-plus-procedure hybrid benchmark on canonical activation PCA, using Big Five as the baseline to beat before asking Claude for a deeper residual search.
-**Last commit before this session:** 15041de
+**Completed this session:** Implemented and ran the constrained Codex trait replication loop using only trait/dispositional dimensions on canonical activation PCA.
+**Completed this session:** Saved Codex trait replication results, iteration log, report, codebook, and Codex-vs-Claude convergence memo under `research/q2_stability/qwen/outputs/codex_trait_replication/`.
+**Completed this session:** Updated the findings ledger and research state with the partial trait convergence result: Codex traits weakly improve over semantic baseline but remain far below Claude Big Five.
+**Next step:** Residualize canonical PCA against Claude Big Five, then test whether selected Codex trait dimensions, trait interactions, or developmental residual features explain remaining high-error personas.
+**Last commit before this session:** 38765f3
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
