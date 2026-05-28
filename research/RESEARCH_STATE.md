@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-05-28
 **Last commit:** see git log
-**Current status:** Active — Residual manifold analysis COMPLETE: SVD15 R²=0.707 (+0.094, 5/5 splits), centroids R²=0.643 (+0.030, 4/5). Abstract reference docs failed (both bundles discarded). Best model: sem+BF+SVD15. daredevil worst residual (80.32) across all models. Procedural replication COMPLETE (evaluation+guidance+care R²=0.4139). BigFive remains best interpretable feature set. Paper 1.5 trickster complete; editor blocked; evaluator-sensitivity blocked by API quota.
+**Current status:** Active — SVD15 interpretation COMPLETE: dominant residual dimension is linguistic register (SVD1, "specializes/excels" vocabulary, r=0.769 with PC1). SVD2 captures ontological non-human vocabulary (r=−0.608 with PC2). Hard personas (daredevil, fool, teenager) scatter across components. Codex SVD output not in repo; proxy cross-check complete. Procedural replication COMPLETE (evaluation+guidance+care R²=0.4139). BigFive R²=0.613, SVD15 best residual at R²=0.707. Paper 1.5 trickster complete; editor blocked; evaluator-sensitivity blocked by API quota.
 
 ---
 
@@ -25,6 +25,17 @@
 - Pseudo-PCA PC1 failure (R²=-0.089) was target-specific; canonical PC1 BigFive R²=0.734
 - 6 worst-explained personas overlap between Claude and Codex: toddler, caveman, infant, teenager, poet, procrastinator
 - Artifacts: `research/q2_stability/qwen/outputs/claude_latent_feature_loop/` (including `claude_on_shared_benchmark_report.md`)
+
+### Claude SVD15 Residual Interpretation (2026-05-28, Complete)
+- Target: canonical activation PCA3D; baseline sem+BigFive R²=0.613; SVD15 R²=0.707
+- SVD1 (EV=2.1%): professional competence register vocabulary (specializes/excels), r=0.769 with PC1, r=−0.458 with BigFive residual
+- SVD2 (EV=1.2%): ontological non-human abstraction vocabulary (entity/consciousness/existence), r=−0.608 with PC2
+- SVD3–SVD14: sub-register variation (analytical vs. output production, experiential vs. credential, helping vs. analytic expert, etc.)
+- Key finding: dominant residual dimension is linguistic FORM, not semantic CONTENT
+- Hard personas (daredevil 80.32, fool 62.75, teenager 50.28) scatter across SVD space — no coherent vocabulary pattern
+- robot (41.10) atypical: high SVD1 (competence vocabulary) but activation geometry doesn't follow
+- Codex analog: SVD1 maps to codex_procedural_professional_orientation (convergent); SVD2 maps to codex_nonindividual_systemic_identity (convergent); Codex's affective/wound/exile dims have no SVD analog (divergent)
+- Artifacts: `research/q2_stability/qwen/outputs/claude_residual_manifold_analysis/claude_svd15_interpretation_report.md`, `claude_vs_codex_svd15_interpretation.md`
 
 ### Claude Residual Manifold Analysis (2026-05-28, Complete)
 - Target: canonical activation PCA3D, baseline sem+BigFive R²=0.613

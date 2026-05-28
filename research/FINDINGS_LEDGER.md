@@ -185,6 +185,29 @@ persona texts use concrete behavioral language, not psychological concept termin
 
 Artifacts: `research/q2_stability/qwen/outputs/claude_residual_manifold_analysis/`
 
+### SVD15 Dominant Residual Dimension Is Linguistic Register, Not Semantic Content (confirmed, 2026-05-28)
+
+SVD15 component analysis reveals that the dominant signal in the no-label prompt corpus
+is linguistic register rather than semantic content. SVD1 (EV=2.1%) captures "professional
+competence vocabulary" (specializes in X / excels at Y vs. generic function words) and
+correlates 0.769 with canonical PC1 and −0.458 with BigFive residual. This explains why
+abstract label matching failed: those documents used psychological theory vocabulary that
+doesn't appear in LLM-generated persona prompts.
+
+SVD2 (EV=1.2%) captures "ontological non-human abstraction" (consciousness/entity/existence
+vocabulary vs. lived-human-social vocabulary) and correlates −0.608 with PC2. Together
+SVD1 and SVD2 account for most of SVD15's residual gains; SVD3–SVD14 cover sub-register
+variation within professional sub-domains.
+
+New finding: the activation geometry absorbs both semantic content AND prompt register/framing.
+BigFive captures content (trait profiles); SVD captures form (how prompts are written).
+The hardest-to-explain personas (daredevil, fool, teenager, comedian) scatter across SVD
+components and lack coherent vocabulary patterns. Codex does not appear to have a direct
+analog to SVD1's register dimension; Codex retains affective/wound/exile dimensions
+that Claude's SVD did not recover (may be below SVD15 threshold or distributed).
+
+Artifacts: `research/q2_stability/qwen/outputs/claude_residual_manifold_analysis/claude_svd15_interpretation_report.md`
+
 ## Current Blockers
 
 The next editor experiment is blocked on revised anchoring methodology. More identical editor rollouts are unlikely to answer the failure mode cleanly.
