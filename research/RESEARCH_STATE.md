@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** a2793c6
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, and cross-model feature-transfer comparison are implemented with held-out evaluation where available
+**Last commit:** 4e8226d
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, and shared Codex/Claude latent-feature benchmark are implemented with held-out evaluation where available
 
 ---
 
@@ -356,6 +356,17 @@
 - Interpretation is asymmetric transfer rather than full convergence: Big Five features transfer to activation geometry, while Codex behavioral/procedural features do not robustly transfer to the reconstructed Big-Five pseudo target
 - Caveat: no separate Claude pseudo-PCA coordinate artifact was found locally, so pseudo-PCA was reconstructed from `visualizations/bigfive_profiles.json`
 
+### Shared Latent Feature Benchmark (2026-05-28)
+
+- Implemented `research/q2_stability/qwen/scripts/shared_latent_feature_benchmark.py` to align Codex/GPT-5.5 and Claude latent-feature analyses against the same 273 common personas, deterministic Codex outer-loop splits, semantic baseline, and held-out PCA3D metrics
+- Exported canonical activation PCA3D coordinates, Claude direct cluster-cosine pseudo-PCA3D coordinates, shared split assignments, and aligned semantic, Codex retained, Claude Big Five, Claude full, and combined feature matrices under `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`
+- Direct Claude target alignment is now available: the benchmark uses Claude branch `claude_target_coordinates.csv` rather than reconstructing pseudo-PCA from local Big Five profiles
+- Big Five features transfer strongly to canonical activation PCA3D: R2 0.613 vs semantic baseline 0.389, delta +0.224
+- Codex retained features improve canonical activation PCA3D: R2 0.490 vs semantic baseline 0.389, delta +0.101
+- Codex retained features do not transfer to Claude direct pseudo-PCA3D over the semantic baseline: R2 0.166 vs baseline 0.167, delta -0.001
+- Combined Codex+Claude features do not outperform the best single feature family on either target in this aligned benchmark
+- Interpretation: trait-style features survive direct target alignment to canonical activation geometry, while procedural/behavioral Codex dimensions remain useful for canonical activation prediction but do not explain Claude's pseudo-PCA target beyond semantics
+
 ---
 
 ## 3. CURRENT STATE
@@ -416,8 +427,11 @@
 **Completed this session:** Built and ran the cross-target/cross-feature transfer comparison between Codex retained dimensions and local Big Five features on canonical activation PCA3D and reconstructed Big-Five pseudo-PCA3 targets.
 **Completed this session:** Saved `transfer_results.json`, `transfer_summary.md`, `feature_target_matrix.csv`, and `codex_vs_claude_transfer_report.md` under `research/q2_stability/qwen/outputs/cross_model_feature_transfer/`.
 **Completed this session:** Updated the findings ledger and research state with the asymmetric transfer result and the pseudo-PCA reconstruction caveat.
-**Next step:** Locate or generate a separately committed Claude pseudo-PCA coordinate artifact, then rerun the transfer matrix to distinguish true Claude-target transfer from Big-Five-reconstructed target behavior.
-**Last commit before this session:** a2793c6
+**Completed this session:** Fetched and inspected Claude branch exports, confirming a direct `claude_target_coordinates.csv` pseudo-PCA target and exported Claude feature matrix are available without checking out the branch.
+**Completed this session:** Implemented and ran `shared_latent_feature_benchmark.py`, exporting canonical target files, direct Claude pseudo-PCA target files, shared split assignments, aligned feature matrices, shared benchmark results, summary CSV, report, residual rankings, and feature-target matrix.
+**Completed this session:** Updated the findings ledger and research state with the direct-target benchmark result: Big Five transfers to canonical activation PCA, Codex retained features do not transfer to Claude direct pseudo-PCA beyond the semantic baseline, and combined features do not outperform the best single family.
+**Next step:** Have Claude consume the shared benchmark directory or run the same script/reporting protocol so both agents report against identical target, feature, split, and metric files.
+**Last commit before this session:** 4e8226d
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

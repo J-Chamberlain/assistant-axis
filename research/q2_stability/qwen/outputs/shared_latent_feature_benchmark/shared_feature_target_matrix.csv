@@ -1,0 +1,11 @@
+feature_family,target,mean_r2,pc1_r2,pc2_r2,pc3_r2,semantic_baseline_r2,delta_vs_baseline,residual_reduction,residual_reduction_percent,interpretation
+semantic_baseline,canonical_activation_pca3d,0.389397,0.516873,0.180967,0.335665,0.389397,0.0,0.0,0.0,semantic baseline reference
+codex_retained,canonical_activation_pca3d,0.49009,0.631205,0.257221,0.422097,0.389397,0.100693,2.041741,7.418,transfers with meaningful improvement
+claude_bigfive,canonical_activation_pca3d,0.612979,0.733515,0.480321,0.415511,0.389397,0.223582,5.464901,19.887,transfers with meaningful improvement
+claude_full_feature_matrix,canonical_activation_pca3d,0.573019,0.760929,0.382465,0.239884,0.389397,0.183622,4.268317,15.46,transfers with meaningful improvement
+combined_codex_claude,canonical_activation_pca3d,0.585079,0.756664,0.351748,0.391298,0.389397,0.195682,4.571494,16.534,transfers with meaningful improvement
+semantic_baseline,claude_cluster_cosine_pseudopca3d,0.167057,0.030955,0.489476,0.142125,0.167057,0.0,0.0,0.0,semantic baseline reference
+codex_retained,claude_cluster_cosine_pseudopca3d,0.166399,-0.046867,0.628883,0.244134,0.167057,-0.000657,-0.019454,-1.009,no transfer over semantic baseline
+claude_bigfive,claude_cluster_cosine_pseudopca3d,0.243436,0.005115,0.71796,0.414978,0.167057,0.076379,0.16564,8.579,transfers with meaningful improvement
+claude_full_feature_matrix,claude_cluster_cosine_pseudopca3d,0.152635,-0.142098,0.731145,0.27777,0.167057,-0.014421,0.062837,2.773,no transfer over semantic baseline
+combined_codex_claude,claude_cluster_cosine_pseudopca3d,0.15002,-0.140545,0.726804,0.281433,0.167057,-0.017036,0.025611,0.926,no transfer over semantic baseline

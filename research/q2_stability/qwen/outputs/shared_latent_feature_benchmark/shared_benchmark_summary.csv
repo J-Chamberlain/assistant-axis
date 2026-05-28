@@ -1,0 +1,11 @@
+feature_set,target,n_personas,n_features,mean_r2,semantic_baseline_r2,delta_vs_semantic_baseline,pc1_r2,pc2_r2,pc3_r2,mean_residual,semantic_baseline_mean_residual,residual_reduction_vs_semantic_baseline,residual_reduction_percent,activation_cluster_accuracy,residual_rank_agreement_vs_semantic,top10_most_explained_overlap_vs_semantic,top10_least_explained_overlap_vs_semantic,permutation_null_p95_r2
+semantic_baseline,canonical_activation_pca3d,273,21,0.389397,0.389397,0.0,0.516873,0.180967,0.335665,27.213204,27.213204,0.0,0.0,0.583562,1.0,10,10,0.025118
+codex_retained,canonical_activation_pca3d,273,52,0.49009,0.389397,0.100693,0.631205,0.257221,0.422097,25.171464,27.213204,2.041741,7.418,0.610959,0.668262,1,6,-0.098891
+claude_bigfive,canonical_activation_pca3d,273,26,0.612979,0.389397,0.223582,0.733515,0.480321,0.415511,21.748304,27.213204,5.464901,19.887,0.715068,0.634644,2,6,0.024887
+claude_full_feature_matrix,canonical_activation_pca3d,273,76,0.573019,0.389397,0.183622,0.760929,0.382465,0.239884,22.944887,27.213204,4.268317,15.46,0.682192,0.535847,2,6,-0.375465
+combined_codex_claude,canonical_activation_pca3d,273,107,0.585079,0.389397,0.195682,0.756664,0.351748,0.391298,22.641711,27.213204,4.571494,16.534,0.679452,0.448884,0,5,-0.819765
+semantic_baseline,claude_cluster_cosine_pseudopca3d,273,21,0.167057,0.167057,0.0,0.030955,0.489476,0.142125,1.912167,1.912167,0.0,0.0,,1.0,10,10,0.01738
+codex_retained,claude_cluster_cosine_pseudopca3d,273,52,0.166399,0.167057,-0.000657,-0.046867,0.628883,0.244134,1.931622,1.912167,-0.019454,-1.009,,0.786272,2,7,-0.009578
+claude_bigfive,claude_cluster_cosine_pseudopca3d,273,26,0.243436,0.167057,0.076379,0.005115,0.71796,0.414978,1.746528,1.912167,0.16564,8.579,,0.851218,5,8,0.017092
+claude_full_feature_matrix,claude_cluster_cosine_pseudopca3d,273,76,0.152635,0.167057,-0.014421,-0.142098,0.731145,0.27777,1.84933,1.912167,0.062837,2.773,,0.560247,2,8,-0.112024
+combined_codex_claude,claude_cluster_cosine_pseudopca3d,273,107,0.15002,0.167057,-0.017036,-0.140545,0.726804,0.281433,1.886557,1.912167,0.025611,0.926,,0.508378,2,7,-0.380529

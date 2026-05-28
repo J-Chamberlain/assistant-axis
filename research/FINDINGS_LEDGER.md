@@ -149,6 +149,17 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Interpretation: evidence supports asymmetric transfer, with Big Five features transferring to canonical activation geometry but Codex behavioral/procedural features not robustly transferring to the reconstructed Big-Five pseudo-PCA target
 - Caveat: no separately committed Claude pseudo-PCA coordinate artifact was found; pseudo-PCA was reconstructed from `visualizations/bigfive_profiles.json`, which does not itself carry explicit Claude provenance metadata
 
+### Shared Latent Feature Benchmark (2026-05-28)
+
+- Created a canonical shared benchmark using 273 common personas, Codex canonical activation PCA3D coordinates, Claude's direct exported cluster-cosine pseudo-PCA3D target, the same five deterministic Codex outer-loop splits, and aligned semantic, Codex, Claude Big Five, Claude full, and combined feature matrices
+- The direct Claude pseudo-PCA artifact supersedes the earlier reconstructed-target caveat for this benchmark: `claude_target_coordinates.csv` was loaded from the Claude branch rather than reconstructed from `bigfive_profiles.json`
+- Big Five features transfer strongly to canonical activation PCA3D: R2 0.613 vs semantic baseline 0.389, delta +0.224, with mean residual reduction +5.465
+- Codex retained features improve canonical activation PCA3D: R2 0.490 vs semantic baseline 0.389, delta +0.101, with mean residual reduction +2.042
+- Codex retained features do not transfer to Claude's direct pseudo-PCA3D target over the semantic baseline: R2 0.166 vs baseline 0.167, delta -0.001, with mean residual change -0.019
+- Claude Big Five features remain the strongest tested feature family for Claude pseudo-PCA3D: R2 0.243 vs semantic baseline 0.167, delta +0.076
+- Combined Codex+Claude features do not outperform the best single feature family on either target in this aligned benchmark
+- Interpretation: the evidence supports target-aligned Big Five transfer into canonical activation geometry, while Codex procedural/behavioral dimensions remain useful for canonical activation prediction but do not explain Claude's pseudo-PCA target beyond semantics
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.
