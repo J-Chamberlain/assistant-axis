@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** b1e4a34
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, shared Codex/Claude latent-feature benchmark, convergence status synthesis, constrained Codex trait replication loop, hierarchical trait-procedural residual model, and residual-manifold third-layer diagnostic are implemented with held-out evaluation where available
+**Last commit:** 3f978d0
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, shared Codex/Claude latent-feature benchmark, convergence status synthesis, constrained Codex trait replication loop, hierarchical trait-procedural residual model, residual-manifold third-layer diagnostic, and residual SVD15 interpretation are implemented with held-out evaluation where available
 
 ---
 
@@ -406,6 +406,15 @@
 - Developmental seed roles remain the clearest residual manifold after the third layer, with mean residual 39.834 vs 21.064 for non-developmental roles; symbolic/liminal and collective/nonindividual cases also remain elevated
 - Interpretation: a narrow developmental/liminal/collective third-layer hypothesis is now empirically motivated, but the current residual layer is a diagnostic improvement rather than a solved symbolic ontology
 
+### Residual SVD15 Interpretation (2026-05-28)
+
+- Implemented `research/q2_stability/qwen/scripts/residual_svd_interpretation.py` to reconstruct and interpret Claude's TF-IDF SVD15 residual signal from the full no-label prompt corpus
+- Claude's branch contained the residual report, results JSON, iteration log, and run script, but not separate SVD vocabulary/loading artifacts; local reconstruction matched the reported SVD15 R2 0.707 to rounding
+- The SVD15 basis improved sem+BigFive prediction from R2 0.613 to R2 0.707 while explaining only 0.138 of TF-IDF prompt variance
+- Strongest interpretable components include nonhuman/entity consciousness versus lived family/social hardship, professional specialization versus existential/liminal being-language, between-worlds mediation versus stepwise planning, and outlaw/survivor/story-role texture versus collective/student/entity identity
+- The hand-named residual concepts only partially align with SVD: developmental dependency, role ambiguity, and semantic-neighborhood residual pressure are supported, while several abstract labels are diffuse across multiple SVD components
+- Interpretation: SVD15 likely works because it preserves many weak concrete prompt cues that abstract residual labels flatten; the next step is to distill component extremes into concrete, text-grounded residual dimensions and retest them under the same splits
+
 ---
 
 ## 3. CURRENT STATE
@@ -481,8 +490,10 @@
 **Completed this session:** Implemented and ran the residual-manifold analysis using full no-label prompts, semantic neighborhoods, residual histories, and constrained developmental/liminal/collective candidate dimensions.
 **Completed this session:** Saved residual-manifold results, iteration log, dimension codebook, neighborhood table, and report under `research/q2_stability/qwen/outputs/residual_manifold_analysis/`.
 **Completed this session:** Updated the findings ledger, research state, and machine-in-the-loop sticky note with the result that a constrained residual layer improves R2 from 0.622 to 0.632 while developmental and symbolic/liminal cases remain elevated.
-**Next step:** Design a preregistered micro-benchmark for developmental-state and symbolic/liminal residual cases, ideally with paired persona controls and explicit nonindividual-agency probes.
-**Last commit before this session:** b1e4a34
+**Completed this session:** Reconstructed and interpreted Claude's TF-IDF SVD15 residual signal, including component loadings, persona extremes, PC correlations, residual-improvement correlations, and comparison against Codex hand-named residual dimensions.
+**Completed this session:** Saved SVD15 interpretation outputs under `research/q2_stability/qwen/outputs/residual_svd_interpretation/` and updated findings/state/sticky note with the result that concrete no-label prompt texture explains residual geometry better than abstract residual labels.
+**Next step:** Distill SVD15 component extremes into 8-12 concrete, text-grounded residual dimensions and evaluate whether those human-readable features recover a meaningful share of the SVD15 R2 gain.
+**Last commit before this session:** 3f978d0
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

@@ -89,3 +89,7 @@ Implemented the first full iterative outer-loop harness at `research/q2_stabilit
 ## Update 2026-05-28
 
 Implemented the first residual-focused third-layer diagnostic at `research/q2_stability/qwen/scripts/residual_manifold_analysis.py`. After the hierarchical trait-plus-procedural model reached R2 0.622, the residual loop used full no-label prompts, semantic-neighborhood residual pressure, and constrained developmental/liminal/collective candidate dimensions to reach R2 0.632. This is a concrete example of the machine-in-the-loop method: residual failures generated the next bounded hypothesis set, which was retained only where it improved held-out geometric prediction.
+
+## Update 2026-05-28
+
+Interpreted Claude's successful TF-IDF SVD15 residual layer in `research/q2_stability/qwen/outputs/residual_svd_interpretation/`. The SVD result shows a productive tension in the machine-in-the-loop method: abstract human-readable residual labels underfit the geometry, while concrete text-basis components predict much better but require a separate distillation step to become interpretable theory. The next loop should translate SVD extremes into concrete, text-grounded residual dimensions and test whether they recover some of the SVD15 gain.

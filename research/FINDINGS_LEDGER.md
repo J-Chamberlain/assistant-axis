@@ -201,6 +201,15 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Developmental seed roles remain the clearest residual manifold: mean residual 39.834 vs 21.064 for non-developmental roles, with 4/5 developmental seed roles still in the top-25 residual set
 - Symbolic/liminal clusters and collective/nonindividual prompt cases also remain elevated, supporting a narrow future diagnostic rather than an established third symbolic layer
 
+### Residual SVD15 Interpretation (2026-05-28)
+
+- Reconstructed and interpreted Claude's TF-IDF SVD15 residual signal from the committed Claude run script and local full no-label prompt corpus; Claude had not committed separate SVD vocabulary/loading artifacts
+- Reconstruction exactly matched Claude's reported sem+BigFive+SVD15 result to rounding: R2 0.707 vs sem+BigFive baseline R2 0.613, delta +0.094, with SVD15 explaining only 0.138 of TF-IDF prompt variance
+- The strongest activation-PC relation was SVD component 2, a nonhuman/entity-consciousness versus lived family/social-hardship contrast, correlated with PC2 at r=-0.608 and PC3 at r=+0.343
+- Other interpretable components included professional specialization versus existential/liminal being-language, teaching/spiritual lived experience versus standards/evaluation roles, between-worlds/intercultural mediation versus stepwise planning, outlaw/survivor/story-role texture versus collective/student/entity identity, and helping/health/guidance versus abstract analytic forecasting expertise
+- Hand-named residual dimensions were only partially supported: developmental dependency, role ambiguity, and semantic-neighborhood residual pressure had the strongest component alignments, while incomplete proceduralization, identity formation, liminality, collective agency, and symbolic identity appeared diffuse across multiple SVD axes
+- Interpretation: abstract residual labels underfit because they collapse many weak concrete text cues, while SVD15 preserves granular prompt texture and semantic-neighborhood variation; the next step is to distill SVD extremes into concrete human-readable residual features and retest them
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.
