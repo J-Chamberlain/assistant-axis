@@ -179,6 +179,17 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Measured convergence to Claude Big Five was modest: mean best absolute correlation from retained Codex trait dimensions to Big Five columns was 0.152
 - Interpretation: Codex independently rediscovered a weak trait-like signal under constraint, but did not replicate Claude Big Five's predictive efficiency; the result supports partial dispositional convergence, not a successful Big Five-level replication
 
+### Hierarchical Trait-Procedural Model (2026-05-28)
+
+- Built a two-stage held-out predictor of canonical Qwen activation PCA3D: Stage A used semantic controls plus Claude Big Five-style traits, and Stage B used selected Codex procedural/behavioral dimensions to predict Stage A residuals
+- Trait baseline explained broad geometry at R2 0.613 with mean residual 21.748, reproducing the shared benchmark result under the same five deterministic splits
+- Residualized procedural correction improved the integrated model to R2 0.622 with mean residual 21.524, a modest delta of +0.009 R2 and +0.224 residual reduction over the trait stage
+- Naive concatenation did not improve over the trait stage: R2 0.613 and mean residual 21.768, supporting a residualized/layered interpretation more than a simple feature-union interpretation
+- Procedural correction improved nearest-neighbor preservation from 0.232 to 0.252, suggesting the added signal is more local-topological than broad-cluster-level; cluster accuracy did not improve over the trait stage
+- Bridge roles did not improve disproportionately overall: bridge mean improvement +0.049 vs non-bridge +0.553, though individual bridge roles such as wind, visionary, robot, specialist, evangelist, and bard improved strongly
+- Developmental roles remained high residual after both stages: mean hierarchical residual 52.281 vs non-developmental 21.112
+- Remaining high-residual cases were enriched for bridge, symbolic/liminal, and developmental structure; this supports a future descriptive third-layer hypothesis but does not yet justify fitting a symbolic/liminal correction model
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

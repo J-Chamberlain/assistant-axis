@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** 38765f3
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, shared Codex/Claude latent-feature benchmark, convergence status synthesis, and constrained Codex trait replication loop are implemented with held-out evaluation where available
+**Last commit:** 0c27c02
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, shared Codex/Claude latent-feature benchmark, convergence status synthesis, constrained Codex trait replication loop, and hierarchical trait-procedural residual model are implemented with held-out evaluation where available
 
 ---
 
@@ -386,6 +386,16 @@
 - Measured feature convergence was modest: retained Codex traits had mean best absolute correlation 0.152 to Claude Big Five columns
 - Interpretation: Codex independently found weak trait-like predictive signal under constraint, but did not replicate Claude Big Five's compact predictive encoding
 
+### Hierarchical Trait-Procedural Model (2026-05-28)
+
+- Implemented `research/q2_stability/qwen/scripts/hierarchical_trait_procedural_model.py` as a two-stage residualized predictor of canonical Qwen activation PCA3D
+- Stage A used semantic controls plus Claude Big Five-style traits and reached R2 0.613 with mean residual 21.748 across the same five deterministic shared splits
+- Stage B used selected Codex procedural/behavioral dimensions to predict the remaining Stage A residuals and improved the integrated model to R2 0.622 with mean residual 21.524
+- The residualized hierarchy outperformed semantic baseline, procedural-alone, trait-stage, and naive concatenation; naive concatenation did not beat the trait stage
+- Procedural correction modestly improved local-neighborhood preservation from 0.232 to 0.252, but did not improve cluster accuracy over the trait stage
+- Bridge roles did not improve disproportionately overall, while developmental roles remained a strong high-residual class after both stages
+- Interpretation: the result supports a layered latent-geometry hypothesis in which Big Five-like traits explain broad placement and procedural features provide a small local residual correction, with symbolic/liminal and developmental cases remaining candidates for future third-layer analysis
+
 ---
 
 ## 3. CURRENT STATE
@@ -455,8 +465,11 @@
 **Completed this session:** Implemented and ran the constrained Codex trait replication loop using only trait/dispositional dimensions on canonical activation PCA.
 **Completed this session:** Saved Codex trait replication results, iteration log, report, codebook, and Codex-vs-Claude convergence memo under `research/q2_stability/qwen/outputs/codex_trait_replication/`.
 **Completed this session:** Updated the findings ledger and research state with the partial trait convergence result: Codex traits weakly improve over semantic baseline but remain far below Claude Big Five.
-**Next step:** Residualize canonical PCA against Claude Big Five, then test whether selected Codex trait dimensions, trait interactions, or developmental residual features explain remaining high-error personas.
-**Last commit before this session:** 38765f3
+**Completed this session:** Implemented and ran the hierarchical trait-procedural residual model using Claude Big Five-style traits as Stage A and selected Codex procedural/behavioral features as Stage B residual correction.
+**Completed this session:** Saved hierarchical model results, summary CSV, report, trait-stage predictions, procedural residual predictions, persona residual-improvement rankings, and bridge-role analysis under `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/`.
+**Completed this session:** Updated the findings ledger and research state with the result that residualized procedural correction adds a modest held-out lift over the trait baseline while naive concatenation does not.
+**Next step:** Inspect the remaining post-hierarchy high-residual personas and design a small third-layer diagnostic for developmental, symbolic/liminal, and collective/nonindividual cases without fitting a full third-layer model yet.
+**Last commit before this session:** 0c27c02
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
