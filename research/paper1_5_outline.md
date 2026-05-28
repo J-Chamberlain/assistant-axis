@@ -1,6 +1,32 @@
-# Paper 1.5: Motivational Structure of the Seven-Cluster Taxonomy
+# Paper 1.5: Interpreting Persona Activation Geometry
 
-## Status: outlined 2026-05-24, trickster extraction replication completed 2026-05-26
+## Status: reframed 2026-05-28 after semantic, prompt, trait, procedural, lexical, and residual stress tests
+
+## Current scope
+
+Paper 1.5 is no longer framed primarily as an adaptive extraction replication paper. The adaptive extraction work remains important methodological due diligence, especially because the Qwen/Qwen3-32B trickster run demonstrated that the project can extract, preserve, score, and validate persona vectors. The paper's main contribution is now the interpretation of persona activation geometry after stress testing the elicitation corpus, prompt labels, semantic topology, trait structure, procedural structure, lexical/register structure, and residual cases.
+
+The working title is **Interpreting Persona Activation Geometry**.
+
+The core structure is:
+
+1. Motivation. Lu et al.'s Assistant Axis result gives a persona geometry worth studying rather than merely a visualization artifact. Paper 1 established that Gemma 2 27B has a seven-cluster persona taxonomy and that the assistant axis is dominated by a careful-evaluator region.
+
+2. Methodological due diligence. The paper records role-inventory uncertainty, prompt operationalization and label exposure, no-label prompt ablation, lexical/register sensitivity, and evaluator-model sensitivity as methodological risks. Evaluator-model sensitivity remains pending.
+
+3. Main interpretive results. Semantic topology only partially predicts activation geometry. Big Five-style trait features explain broad placement. Procedural and operating-mode features explain local residual structure. TF-IDF/SVD lexical-register features explain additional residual variance. Developmental, liminal, collective, and other residual personas remain hard to predict.
+
+4. Cross-agent and cross-model findings. Claude and Codex have different interpretive strengths. Big Five-style features transfer strongly into canonical activation geometry. Procedural structure partially replicates as a local correction. Independent evaluation and verification converge on a layered account more than on a single psychological ontology.
+
+5. Main claim. Persona activation geometry appears to decompose into layered semantic, dispositional, procedural, lexical/register, and residual structures. This is an interpretability claim about how a role corpus is represented in model geometry, not a claim that the clusters are a true or exhaustive ontology of persons.
+
+6. Limitations. Evaluator sensitivity is unresolved. Big Five scores are LLM-assigned rather than human-validated. Lexical/register structure may partly reflect prompt-corpus artifacts. No claim is made that the geometry reveals a true psychological taxonomy or culturally exhaustive map of human identity.
+
+7. Future work. The next compute-intensive direction is local centroid perturbation: controlled perturbation variants around selected persona anchors, vector extraction, local basis-direction estimation, and tests of whether local directions transfer across anchors.
+
+## Earlier framing / archived notes
+
+The original outline framed Paper 1.5 as a motivational interpretation of the seven-cluster taxonomy plus an adaptive extraction replication. That material is retained below as historical context and as a source of cluster-level hypotheses, but it is no longer the paper's primary scope.
 
 ## Premise
 
@@ -65,4 +91,4 @@ The dialogue-derived characterizations show structural correspondence with motiv
 
 ## Sequencing
 
-Paper 1.5 sits between Paper 1 (which established the geometric clusters) and Paper 2 (which tests contagion dynamics using anchored interviewers). Paper 1.5's empirical foundation must be established before Paper 2 can claim its dyad anchoring is meaningful.
+Paper 1.5 sits between Paper 1, which established the geometric clusters, and Paper 2, which now maps local neighborhoods around selected persona centroids. Paper 1.5 provides the global layered interpretation; Paper 2 tests that interpretation locally by perturbing anchors such as Trickster, Actor, Therapist, and Spy. The older dyad-contagion sequence is archived for future conversational-dynamics work rather than used as the active Paper 2 dependency.

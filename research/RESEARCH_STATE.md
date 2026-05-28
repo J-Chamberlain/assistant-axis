@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** 3f978d0
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, shared Codex/Claude latent-feature benchmark, convergence status synthesis, constrained Codex trait replication loop, hierarchical trait-procedural residual model, residual-manifold third-layer diagnostic, and residual SVD15 interpretation are implemented with held-out evaluation where available
+**Last commit:** 3ff54b9
+**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5
 
 ---
 
@@ -419,6 +419,14 @@
 
 ## 3. CURRENT STATE
 
+**Paper 1.5 current scope:** Paper 1.5 is now a persona-geometry interpretation paper. The working title is `Interpreting Persona Activation Geometry`. The main claim is that persona activation geometry appears to decompose into layered semantic, dispositional, procedural, lexical/register, and residual structures after methodological stress testing. Adaptive extraction remains important due diligence and tooling evidence, but it is no longer the primary paper frame.
+
+**Paper 2 current scope:** Paper 2 is now local centroid perturbation and local persona-manifold mapping. Candidate anchors are Trickster, Actor, Therapist, and Spy. The scientific question is whether local directions such as provocation, concealment, empathy/attunement, identity flexibility, dominance/submission, theatricality, strategic disclosure, moral constraint, and sincerity/performance transfer across anchors or are strongly curved/persona-dependent.
+
+**Archived Paper 2 framing:** Older dyad contagion, attractor-collapse, conversational drift, and rumination plans are archived rather than deleted. The archive note is `research/archive/paper2_dyad_contagion_archive_2026-05-28.md`; earlier draft files carry supersession notes.
+
+**Grant/future-work state:** H100 local-manifold work is not required for Paper 1.5. It is the strongest grant-supported next phase because the trickster extraction already demonstrated tooling competence and the local-manifold program is a concrete compute-intensive frontier.
+
 **Paper 1.5 state:** Qwen/Qwen3-32B trickster Phase 1 is complete with 1200/1200 preserved rollouts, 1200 matching activation shards, and final integrity passed. Truncation is high, 733/1200 at 512 tokens, but is tracked as an explicit covariate and does not materially destabilize pre-scoring geometric convergence.
 
 **Paper 1.5 scoring and validation:** Codex GPT-5.5 Standard was used as a pragmatic role-expression judge after the planned gpt-4.1-mini API scoring path was blocked by quota. Adaptive Codex scoring reached 64 scored records with 64 score>=2 and 33 score==3 responses; vector validation against the Lu trickster reference succeeded, with `score_ge_2` as the best candidate at cosine 0.957557 to the Lu mean, and adaptive stopping passed at n=16 for both score>=2 and score==3 subsets. This is an operationally validated adaptive extraction path, not a strict Lu-method judge replication.
@@ -455,45 +463,11 @@
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Created `sticky_notes/2026-05-28_machine_in_the_loop.md` describing iterative motivational hypothesis testing with frontier models as interpreters.
-**Completed this session:** Created `sticky_notes/2026-05-28_paired_persona_test_design.md` describing controlled variable-isolation persona-pair experiments for the Paper 1.5 capstone.
-**Completed this session:** Created `sticky_notes/2026-05-28_rorschach_test_for_models.md` describing persona generation as a projective test of model-specific psychological representation structure, and indexed all three notes in `sticky_notes/README.md`.
-**Completed this session:** Implemented the first latent-feature discovery loop script with deterministic train/held-out split, semantic baselines, operationalized candidate dimensions, and held-out predictive metrics.
-**Completed this session:** Ran the loop on existing local persona artifacts and saved JSON/CSV outputs under `research/q2_stability/qwen/outputs/latent_feature_discovery/`.
-**Completed this session:** Wrote the latent-feature discovery loop report and the future multi-model comparison plan.
-**Completed this session:** Updated the findings ledger, methodology questions, research state, and machine-in-the-loop sticky note with the first-pass held-out results.
-**Completed this session:** Implemented the second-stage latent-feature framing ablation script and ran it on existing local PCA, semantic, and prompt artifacts.
-**Completed this session:** Saved framing ablation results, summary, feature matrix, dimension codebook, held-out predictions, high-residual shifts, and report under `research/q2_stability/qwen/outputs/latent_feature_framing_ablation/`.
-**Completed this session:** Updated the multi-model comparison plan to distinguish rhetorical convergence from predictive convergence across framing families.
-**Completed this session:** Updated the findings ledger, methodology questions, research state, and machine-in-the-loop sticky note with framing-ablation results.
-**Completed this session:** Implemented the iterative latent-feature outer loop with five repeated splits, retention/discard logic, permutation checks, split-variance tracking, and plateau termination.
-**Completed this session:** Ran the outer loop and saved iteration results, summaries, master log, progression CSV, and final report under `research/q2_stability/qwen/outputs/iterative_outer_loop/` plus `research/q2_stability/qwen/iterative_outer_loop_report.md`.
-**Completed this session:** Updated the findings ledger, methodology questions, research state, and machine-in-the-loop sticky note with repeated-split outer-loop results.
-**Completed this session:** Reviewed existing outer-loop, framing ablation, findings ledger, and research-state artifacts to locate retained dimensions, split behavior, residual summaries, feature matrices, activation clusters, semantic clusters, and anchor/bridge metadata.
-**Completed this session:** Added `rank_persona_explanation_residuals.py` and generated CSV, JSON, and Markdown outputs ranking 273 personas by final-model residual, semantic-baseline residual, residual improvement, PCA coordinates, cluster metadata, held-out frequency, split residual statistics, and associated feature contributions.
-**Completed this session:** Updated the findings ledger and research state with the strongest most-explained, least-explained, improved, and worsened persona-level residual cases.
-**Completed this session:** Built and ran the cross-target/cross-feature transfer comparison between Codex retained dimensions and local Big Five features on canonical activation PCA3D and reconstructed Big-Five pseudo-PCA3 targets.
-**Completed this session:** Saved `transfer_results.json`, `transfer_summary.md`, `feature_target_matrix.csv`, and `codex_vs_claude_transfer_report.md` under `research/q2_stability/qwen/outputs/cross_model_feature_transfer/`.
-**Completed this session:** Updated the findings ledger and research state with the asymmetric transfer result and the pseudo-PCA reconstruction caveat.
-**Completed this session:** Fetched and inspected Claude branch exports, confirming a direct `claude_target_coordinates.csv` pseudo-PCA target and exported Claude feature matrix are available without checking out the branch.
-**Completed this session:** Implemented and ran `shared_latent_feature_benchmark.py`, exporting canonical target files, direct Claude pseudo-PCA target files, shared split assignments, aligned feature matrices, shared benchmark results, summary CSV, report, residual rankings, and feature-target matrix.
-**Completed this session:** Updated the findings ledger and research state with the direct-target benchmark result: Big Five transfers to canonical activation PCA, Codex retained features do not transfer to Claude direct pseudo-PCA beyond the semantic baseline, and combined features do not outperform the best single family.
-**Completed this session:** Wrote the convergence status report synthesizing Codex, Claude, shared-benchmark, and Big Five interpretation results into a research planning memo.
-**Completed this session:** Drafted the next Codex hybrid-feature benchmark card and the next Claude canonical-residual-search card under the shared benchmark output directory.
-**Completed this session:** Updated the findings ledger and research state with the current best explanatory model, what remains unreplicated, and the recommended controlled next iteration.
-**Completed this session:** Implemented and ran the constrained Codex trait replication loop using only trait/dispositional dimensions on canonical activation PCA.
-**Completed this session:** Saved Codex trait replication results, iteration log, report, codebook, and Codex-vs-Claude convergence memo under `research/q2_stability/qwen/outputs/codex_trait_replication/`.
-**Completed this session:** Updated the findings ledger and research state with the partial trait convergence result: Codex traits weakly improve over semantic baseline but remain far below Claude Big Five.
-**Completed this session:** Implemented and ran the hierarchical trait-procedural residual model using Claude Big Five-style traits as Stage A and selected Codex procedural/behavioral features as Stage B residual correction.
-**Completed this session:** Saved hierarchical model results, summary CSV, report, trait-stage predictions, procedural residual predictions, persona residual-improvement rankings, and bridge-role analysis under `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/`.
-**Completed this session:** Updated the findings ledger and research state with the result that residualized procedural correction adds a modest held-out lift over the trait baseline while naive concatenation does not.
-**Completed this session:** Implemented and ran the residual-manifold analysis using full no-label prompts, semantic neighborhoods, residual histories, and constrained developmental/liminal/collective candidate dimensions.
-**Completed this session:** Saved residual-manifold results, iteration log, dimension codebook, neighborhood table, and report under `research/q2_stability/qwen/outputs/residual_manifold_analysis/`.
-**Completed this session:** Updated the findings ledger, research state, and machine-in-the-loop sticky note with the result that a constrained residual layer improves R2 from 0.622 to 0.632 while developmental and symbolic/liminal cases remain elevated.
-**Completed this session:** Reconstructed and interpreted Claude's TF-IDF SVD15 residual signal, including component loadings, persona extremes, PC correlations, residual-improvement correlations, and comparison against Codex hand-named residual dimensions.
-**Completed this session:** Saved SVD15 interpretation outputs under `research/q2_stability/qwen/outputs/residual_svd_interpretation/` and updated findings/state/sticky note with the result that concrete no-label prompt texture explains residual geometry better than abstract residual labels.
-**Next step:** Distill SVD15 component extremes into 8-12 concrete, text-grounded residual dimensions and evaluate whether those human-readable features recover a meaningful share of the SVD15 R2 gain.
-**Last commit before this session:** 3f978d0
+**Completed this session:** Reframed Paper 1.5 around layered persona activation geometry interpretation rather than adaptive extraction replication.
+**Completed this session:** Reframed Paper 2 around local centroid perturbation and local persona-manifold mapping, with older dyad/contagion/attractor-collapse framing archived as future dynamics work.
+**Completed this session:** Created the grant scope sticky note plus concise Paper 1.5 executive summary and Paper 2 local-manifold brief.
+**Next step:** Finish evaluator-model sensitivity if API access allows, then draft Paper 1.5 around layered geometry; treat H100 local-manifold mapping as grant-supported Paper 2 work rather than a Paper 1.5 prerequisite.
+**Last commit before this session:** 3ff54b9
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

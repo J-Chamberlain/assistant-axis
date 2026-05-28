@@ -1,5 +1,7 @@
 # Emotion Representations in Gemma 2 27B: Replication, Geometry, and Persona Stability Under Conversational Pressure
 
+> Scope update 2026-05-28: this draft reflects an earlier Paper 2 framing around emotion replication, persona stability, dyad contagion, and attractor collapse. The active Paper 2 scope is now local centroid perturbation and local persona-manifold mapping. The older framing is archived for future conversational-dynamics work rather than deleted.
+
 Josiah Chamberlain
 Independent Research, Washington D.C.
 May 2026

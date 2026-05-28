@@ -52,6 +52,14 @@ Editor weakness may reflect collapse toward generic assistant behavior for assis
 
 Adaptive extraction is operationally validated for trickster but not yet generally validated across persona types. It should be treated as a workflow candidate pending additional high-yield, mid-yield, and assistant-adjacent persona tests.
 
+### Paper 1.5 Scope Reframing
+
+Paper 1.5 is now framed as a persona-geometry interpretation paper rather than primarily as an adaptive extraction replication paper. Adaptive extraction remains important due diligence and tooling evidence, while the main claim is that persona activation geometry decomposes into semantic, dispositional, procedural, lexical/register, and residual layers.
+
+### Paper 2 Local-Manifold Direction
+
+Paper 2 is now framed around local centroid perturbation and local persona-manifold mapping. Candidate anchors are Trickster, Actor, Therapist, and Spy. Older dyad contagion, attractor-collapse, conversational drift, and rumination plans are archived as future dynamics work rather than discarded.
+
 ### Cluster Motivational Structure
 
 Six of seven clusters have dialogue-derived motivational characterizations. These are useful for hypothesis generation and Paper 1.5 framing, but empirical verification remains pending.
@@ -238,10 +246,9 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 
 ## Next Empirical Tests
 
-1. Design a revised editor anchoring methodology that can test assistant-adjacent role extraction without immediate collapse into generic assistant behavior.
-2. Run at least one additional non-trickster persona adaptive extraction after the revised methodology is specified.
-3. Restore or compare `gpt-4.1-mini` scoring if API access permits, to estimate judge sensitivity relative to Codex GPT-5.5 Standard.
-4. Test whether cluster-synthesized background prompts improve low-yield persona anchoring without leaking role identity.
-5. Launch the bounded 800-rollout no-label activation-space stress test once compute is approved.
-6. Run OpenAI-side Stage-1 role-inventory generation and ingest Claude-generated inventories once they are synced through GitHub.
-7. Continue Paper 1.5 validation before relying on adaptive extraction as a general persona-vector workflow.
+1. Finish evaluator-model sensitivity if API access permits, because it is the main unfinished methodological item for Paper 1.5.
+2. Draft Paper 1.5 around layered persona-geometry interpretation rather than adaptive extraction replication.
+3. Prepare local centroid perturbation experiments around Trickster, Actor, Therapist, and Spy as Paper 2 or grant-supported work.
+4. Launch the bounded 800-rollout no-label activation-space stress test once compute is approved.
+5. Run OpenAI-side Stage-1 role-inventory generation and ingest Claude-generated inventories once they are synced through GitHub.
+6. Design a revised editor anchoring methodology only if assistant-adjacent extraction becomes an explicit follow-up target.

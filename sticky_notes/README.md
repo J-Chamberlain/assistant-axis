@@ -55,4 +55,5 @@ https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/sticky_not
 | 2026-05-28_machine_in_the_loop.md | Machine in the Loop | Iterative motivational hypothesis testing loop using frontier model as interpreter |
 | 2026-05-28_paired_persona_test_design.md | Paired Persona Test Design | Controlled variable isolation experiments for Paper 1.5 capstone |
 | 2026-05-28_rorschach_test_for_models.md | Rorschach Test for Models | Persona generation as projective test revealing model's internal psychological structure |
+| 2026-05-28_grant_application_scope.md | Grant Application Scope | Paper 1.5 can stand without more H100 work; grant-supported Paper 2 should fund local centroid perturbation around Trickster, Actor, Therapist, and Spy |
 | situational_fluidity_hypothesis.md | Pre-analysis hypothesis: targeted mid-layer suppression preserves expressive geometry; rigid constraint degrades situational appropriateness | all | pre-analysis |

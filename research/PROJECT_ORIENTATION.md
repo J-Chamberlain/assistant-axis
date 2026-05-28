@@ -4,15 +4,15 @@ This file is the first compact orientation layer for new GPT, Claude, and Codex 
 
 ## Project Purpose
 
-This repo supports a mechanistic interpretability research program centered on persona geometry in language models. The core question is whether models contain stable representational directions or basins corresponding to assistant-like behavior, role archetypes, motivational structures, and dyadic persona dynamics. The work builds from Lu et al. (2026), "The Assistant Axis," and extends it into Paper 1.5 adaptive extraction, Paper 2 dyad contagion, and later work on confidence, archetype selection, and rumination.
+This repo supports a mechanistic interpretability research program centered on persona geometry in language models. The core question is whether models contain stable representational directions or basins corresponding to assistant-like behavior, role archetypes, motivational structures, and local persona-manifold structure. The work builds from Lu et al. (2026), "The Assistant Axis," and extends it into Paper 1.5 layered geometry interpretation, Paper 2 local centroid perturbation, and later work on confidence, archetype selection, dyadic dynamics, and rumination.
 
 ## Current Paper Sequence
 
 Paper 1 is complete and establishes the Gemma 2 27B seven-cluster persona taxonomy and careful-evaluator assistant-axis finding.
 
-Paper 1.5 is active. It tests whether the seven-cluster taxonomy corresponds to stable motivational structures, whether Lu-style role-vector extraction can be replicated or adapted in Qwen 3 32B, and whether adaptive extraction can replace exhaustive 1200-rollout generation.
+Paper 1.5 is active. It is now framed as **Interpreting Persona Activation Geometry**. Its main claim is that persona activation geometry decomposes into layered semantic, dispositional, procedural, lexical/register, and residual structures after methodological stress testing. Adaptive extraction remains part of the due-diligence and tooling story, not the paper's headline contribution.
 
-Paper 2 uses anchored interviewer personas to test dyadic contagion and attractor-collapse dynamics. It depends on clean persona anchoring and Paper 1.5's interpretation of the clusters.
+Paper 2 is now framed around local centroid perturbation and local persona-manifold mapping. The next compute-intensive program should map neighborhoods around selected anchors such as Trickster, Actor, Therapist, and Spy, testing whether local directions transfer across anchors. Earlier dyad contagion, attractor-collapse, conversational drift, and rumination plans are archived as future dynamics work rather than deleted.
 
 Paper 3, Paper 3.5, and Paper 4 are pre-analysis. Paper 3 concerns a geometric confidence vector. Paper 3.5 concerns archetype self-selection. Paper 4 concerns computational rumination and depends on the earlier Paper 1.5/Paper 2 sequence.
 
@@ -25,7 +25,9 @@ Read these before making research claims or generating Codex cards:
 - `research/FINDINGS_LEDGER.md`: compact index of confirmed findings, negative findings, provisional interpretations, deviations, blockers, and next tests.
 - `research/NEW_SESSION_STARTUP.md`: exact startup sequence for future agents.
 - `research/paper1_5_outline.md`: current Paper 1.5 outline and methodology.
+- `research/paper1_5_executive_summary.md`: concise current Paper 1.5 scope and contribution.
 - `research/paper1_5_adaptive_extraction_notes.md`: operational adaptive-extraction workflow note.
+- `research/paper2_local_centroid_perturbation_brief.md`: current Paper 2 scope and grant-relevant local-manifold plan.
 - `research/assistant_axis_methodology/`: canonical Lu et al. methodology extraction package.
 - `research/workflow/`: pod lifecycle, run registry, status artifact specs, execution tiers, and run checklists.
 - `sticky_notes/README.md`: index of sticky notes and pre-analysis hypotheses.
@@ -60,9 +62,9 @@ Do not commit activation shards, secrets, duplicate model weights, or unrelated 
 
 ## Current Empirical Frontier
 
-The immediate empirical frontier is a revised editor anchoring methodology. The goal is to test whether an assistant-adjacent persona can be extracted without collapsing into generic assistant behavior. The next good experiment is not another identical editor chunk unless the anchoring question has been addressed.
+The immediate Paper 1.5 methodology frontier is evaluator-model sensitivity, which remains unresolved. The immediate Paper 2 and grant frontier is local centroid perturbation around selected anchors. Revised editor anchoring remains useful, but Editor is not the preferred first local-manifold anchor because the first extraction test collapsed toward generic assistant behavior.
 
-Paper 1.5 also needs additional persona validation beyond trickster and editor before adaptive extraction can be treated as generally reliable.
+H100 local-manifold work is future/grant work, not a prerequisite for Paper 1.5. Paper 1.5 can proceed as a global geometry interpretation paper using the existing semantic, trait, procedural, lexical/register, and residual analyses.
 
 ## Methodology and Workflow Locations
 
@@ -97,7 +99,8 @@ Do not rely on chat memory for current empirical state, pod status, score counts
 1. Fetch or read `research/RESEARCH_STATE.md`.
 2. Read `research/PROJECT_ORIENTATION.md`.
 3. For methodology questions, read `research/assistant_axis_methodology/assistant_axis_pipeline_reconstruction.md` and `research/assistant_axis_methodology/replication_differences_vs_lu.md`.
-4. For Paper 1.5 questions, read `research/paper1_5_outline.md` and `research/paper1_5_adaptive_extraction_notes.md`.
-5. For pod or execution questions, read `research/workflow/`.
-6. Check `research/FINDINGS_LEDGER.md` for compact claim status.
-7. Check `sticky_notes/README.md` if the task touches open hypotheses or write-up ideas.
+4. For Paper 1.5 questions, read `research/paper1_5_outline.md`, `research/paper1_5_executive_summary.md`, and `research/paper1_5_adaptive_extraction_notes.md`.
+5. For Paper 2 questions, read `research/paper2_local_centroid_perturbation_brief.md`; treat dyad/contagion files as archived prior framing unless the user explicitly asks about conversational dynamics.
+6. For pod or execution questions, read `research/workflow/`.
+7. Check `research/FINDINGS_LEDGER.md` for compact claim status.
+8. Check `sticky_notes/README.md` if the task touches open hypotheses or write-up ideas.

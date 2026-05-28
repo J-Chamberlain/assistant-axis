@@ -2,6 +2,8 @@
 # Generated from planning session 2026-05-24.
 # Supersedes earlier v6 dyad design notes.
 
+> Scope update 2026-05-28: Paper 2 is now reframed around local centroid perturbation and local persona-manifold mapping. The dyad, contagion, and attractor-collapse methodology below is archived as earlier framing; it remains useful for future conversational-dynamics work but is no longer the active Paper 2 plan. See `research/paper2_local_centroid_perturbation_brief.md` and `research/archive/paper2_dyad_contagion_archive_2026-05-28.md`.
+
 ## Premise
 
 The Paper 2 contagion claim has two prerequisites that have not yet been met simultaneously. The interviewer must occupy a coherent persona basin (which neutral-prompt anchoring failed to produce in the seven-persona calibration), and the persona must not surface as overt content that would let the standard model respond through theatrical compliance rather than geometric contagion. Earlier runs satisfied one or the other but never both. The unified methodology constructs a non-leaking anchored interviewer condition, then evaluates it against a verbatim baseline, with the attractor-collapse phenomenon as the primary positive finding rather than a secondary observation.
