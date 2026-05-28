@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** 4e8226d
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, and shared Codex/Claude latent-feature benchmark are implemented with held-out evaluation where available
+**Last commit:** 15041de
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, shared Codex/Claude latent-feature benchmark, and convergence status synthesis are implemented with held-out evaluation where available
 
 ---
 
@@ -367,6 +367,15 @@
 - Combined Codex+Claude features do not outperform the best single feature family on either target in this aligned benchmark
 - Interpretation: trait-style features survive direct target alignment to canonical activation geometry, while procedural/behavioral Codex dimensions remain useful for canonical activation prediction but do not explain Claude's pseudo-PCA target beyond semantics
 
+### Latent Feature Convergence Status (2026-05-28)
+
+- Wrote `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/convergence_status_report.md` as a planning memo synthesizing Codex/GPT-5.5 outer-loop results, Claude pseudo-PCA loop results, and the shared benchmark
+- Current best explanatory model is a continuous dispositional-behavioral manifold: Big Five-style traits explain broad global placement, Codex procedural/motivational dimensions explain some role-function structure, semantic clusters remain useful baselines, and hard clusters are secondary to continuous PCA geometry
+- Big Five conceptual analysis found canonical PC1 is strongly associated with high conscientiousness (r=+0.824) versus high openness (r=-0.779), extraversion (r=-0.692), and neuroticism (r=-0.672); agreeableness is most tied to PC3 (r=-0.477)
+- Current PC interpretation: PC1 separates careful/evaluative/procedural control from open/expressive/unstable or emotionally pressured organization; PC2 is compound and not cleanly explained by a single Big Five trait; PC3 partly reflects cooperative-care versus antagonistic/disruptive stance
+- What remains unreplicated: Claude has not yet searched for canonical activation PCA residual features after Big Five, and Codex has not yet demonstrated a trait-plus-procedure hybrid that beats Big Five under controlled repeated splits
+- Drafted paste-ready follow-up cards for a Codex local hybrid benchmark and a Claude residual search after Big Five
+
 ---
 
 ## 3. CURRENT STATE
@@ -430,8 +439,11 @@
 **Completed this session:** Fetched and inspected Claude branch exports, confirming a direct `claude_target_coordinates.csv` pseudo-PCA target and exported Claude feature matrix are available without checking out the branch.
 **Completed this session:** Implemented and ran `shared_latent_feature_benchmark.py`, exporting canonical target files, direct Claude pseudo-PCA target files, shared split assignments, aligned feature matrices, shared benchmark results, summary CSV, report, residual rankings, and feature-target matrix.
 **Completed this session:** Updated the findings ledger and research state with the direct-target benchmark result: Big Five transfers to canonical activation PCA, Codex retained features do not transfer to Claude direct pseudo-PCA beyond the semantic baseline, and combined features do not outperform the best single family.
-**Next step:** Have Claude consume the shared benchmark directory or run the same script/reporting protocol so both agents report against identical target, feature, split, and metric files.
-**Last commit before this session:** 4e8226d
+**Completed this session:** Wrote the convergence status report synthesizing Codex, Claude, shared-benchmark, and Big Five interpretation results into a research planning memo.
+**Completed this session:** Drafted the next Codex hybrid-feature benchmark card and the next Claude canonical-residual-search card under the shared benchmark output directory.
+**Completed this session:** Updated the findings ledger and research state with the current best explanatory model, what remains unreplicated, and the recommended controlled next iteration.
+**Next step:** Run the small local trait-plus-procedure hybrid benchmark on canonical activation PCA, using Big Five as the baseline to beat before asking Claude for a deeper residual search.
+**Last commit before this session:** 15041de
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

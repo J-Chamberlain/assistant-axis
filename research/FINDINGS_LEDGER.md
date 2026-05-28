@@ -160,6 +160,15 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Combined Codex+Claude features do not outperform the best single feature family on either target in this aligned benchmark
 - Interpretation: the evidence supports target-aligned Big Five transfer into canonical activation geometry, while Codex procedural/behavioral dimensions remain useful for canonical activation prediction but do not explain Claude's pseudo-PCA target beyond semantics
 
+### Latent Feature Convergence Status (2026-05-28)
+
+- Synthesized Codex/GPT-5.5 and Claude latent-feature analyses into a convergence-and-replicability planning memo
+- Current best explanatory model is a continuous dispositional-behavioral manifold: Big Five-style traits explain broad global placement, while Codex procedural/motivational dimensions remain candidates for role-function and local residual explanation
+- Big Five meaning analysis found strong trait-PC structure in canonical activation PCA: conscientiousness tracks PC1 positively (r=+0.824), openness tracks PC1 negatively (r=-0.779), extraversion tracks PC1 negatively (r=-0.692), neuroticism tracks PC1 negatively (r=-0.672), and agreeableness most strongly tracks PC3 (r=-0.477)
+- Current best interpretation: PC1 separates careful/evaluative/procedural control from open/expressive/unstable or emotionally pressured organization; PC2 appears compound and less cleanly univariate; PC3 partly reflects cooperative-care versus antagonistic/disruptive stance
+- What remains unreplicated: Claude has not yet searched for features that improve canonical activation PCA residuals after Big Five, and Codex has not yet shown a controlled hybrid model that beats Big Five
+- Recommended next step: run a small local trait-plus-procedure hybrid benchmark on canonical activation PCA using Big Five as the baseline to beat, then ask Claude for a residual search only if a residual signal is plausible
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.
