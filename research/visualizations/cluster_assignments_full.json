@@ -1,0 +1,1927 @@
+{
+  "aberration": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9838669300079346,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9789482355117798,
+    "margin": 0.004918694496154785
+  },
+  "absurdist": {
+    "cluster": "trickster_chaos",
+    "centroid_cosine": 0.9906783103942871,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9781439900398254,
+    "margin": 0.01253432035446167
+  },
+  "accountant": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9885313510894775,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9874017834663391,
+    "margin": 0.0011295676231384277
+  },
+  "activist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9833623170852661,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9750244617462158,
+    "margin": 0.008337855339050293
+  },
+  "actor": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9999991059303284,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9886525273323059,
+    "margin": 0.011346578598022461
+  },
+  "addict": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9819554090499878,
+    "second_cluster": "other",
+    "second_cosine": 0.9719328880310059,
+    "margin": 0.010022521018981934
+  },
+  "adolescent": {
+    "cluster": "other",
+    "centroid_cosine": 0.9647618532180786,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9593853950500488,
+    "margin": 0.005376458168029785
+  },
+  "advocate": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9925983548164368,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9863932132720947,
+    "margin": 0.006205141544342041
+  },
+  "alien": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9859591722488403,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9755010008811951,
+    "margin": 0.010458171367645264
+  },
+  "altruist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9886680841445923,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9834814071655273,
+    "margin": 0.005186676979064941
+  },
+  "amateur": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9830630421638489,
+    "second_cluster": "other",
+    "second_cosine": 0.9767465591430664,
+    "margin": 0.006316483020782471
+  },
+  "ambassador": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9947395324707031,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9924258589744568,
+    "margin": 0.002313673496246338
+  },
+  "amnesiac": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9822137355804443,
+    "second_cluster": "other",
+    "second_cosine": 0.9716600179672241,
+    "margin": 0.010553717613220215
+  },
+  "analyst": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9963628053665161,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9925312995910645,
+    "margin": 0.00383150577545166
+  },
+  "anarchist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9778554439544678,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9768224954605103,
+    "margin": 0.0010329484939575195
+  },
+  "ancient": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 1.0,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9766825437545776,
+    "margin": 0.023317456245422363
+  },
+  "angel": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9832131862640381,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9653773307800293,
+    "margin": 0.01783585548400879
+  },
+  "anthropologist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9911500811576843,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9816948175430298,
+    "margin": 0.009455263614654541
+  },
+  "archaeologist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9879316091537476,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9792542457580566,
+    "margin": 0.008677363395690918
+  },
+  "architect": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9922107458114624,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9862267971038818,
+    "margin": 0.005983948707580566
+  },
+  "archivist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9922548532485962,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9881232976913452,
+    "margin": 0.0041315555572509766
+  },
+  "artisan": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9832595586776733,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.982090175151825,
+    "margin": 0.0011693835258483887
+  },
+  "ascetic": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9862797856330872,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9603429436683655,
+    "margin": 0.02593684196472168
+  },
+  "assistant": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.996356189250946,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9944366216659546,
+    "margin": 0.001919567584991455
+  },
+  "auctioneer": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9833189845085144,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9784473776817322,
+    "margin": 0.0048716068267822266
+  },
+  "auditor": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9873815774917603,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9871247410774231,
+    "margin": 0.0002568364143371582
+  },
+  "avatar": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9930086731910706,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9719496965408325,
+    "margin": 0.021058976650238037
+  },
+  "bard": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9866727590560913,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9688422679901123,
+    "margin": 0.017830491065979004
+  },
+  "bartender": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9845062494277954,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9746049642562866,
+    "margin": 0.009901285171508789
+  },
+  "biologist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9911714792251587,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9840887784957886,
+    "margin": 0.007082700729370117
+  },
+  "blogger": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9908796548843384,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9863165020942688,
+    "margin": 0.00456315279006958
+  },
+  "bohemian": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9863308072090149,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9846494197845459,
+    "margin": 0.0016813874244689941
+  },
+  "builder": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9915981888771057,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9849756956100464,
+    "margin": 0.006622493267059326
+  },
+  "caregiver": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9771965742111206,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9770911335945129,
+    "margin": 0.00010544061660766602
+  },
+  "cartographer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.991254448890686,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9851095676422119,
+    "margin": 0.006144881248474121
+  },
+  "caveman": {
+    "cluster": "trickster_chaos",
+    "centroid_cosine": 0.9356366991996765,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9350942373275757,
+    "margin": 0.0005424618721008301
+  },
+  "celebrity": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.988993227481842,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.97947096824646,
+    "margin": 0.00952225923538208
+  },
+  "chameleon": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9921122789382935,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9887754321098328,
+    "margin": 0.0033368468284606934
+  },
+  "chef": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9811882376670837,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9811813235282898,
+    "margin": 6.9141387939453125e-06
+  },
+  "chemist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9892476201057434,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9837843179702759,
+    "margin": 0.005463302135467529
+  },
+  "chimera": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.993561327457428,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9848600625991821,
+    "margin": 0.00870126485824585
+  },
+  "coach": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9921731948852539,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9885061383247375,
+    "margin": 0.0036670565605163574
+  },
+  "collaborator": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.993229866027832,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9910576343536377,
+    "margin": 0.002172231674194336
+  },
+  "collector": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.992161214351654,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9845854043960571,
+    "margin": 0.007575809955596924
+  },
+  "comedian": {
+    "cluster": "trickster_chaos",
+    "centroid_cosine": 0.9786562919616699,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.969521701335907,
+    "margin": 0.00913459062576294
+  },
+  "competitor": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9856914281845093,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.97959965467453,
+    "margin": 0.006091773509979248
+  },
+  "composer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9835052490234375,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9761257171630859,
+    "margin": 0.0073795318603515625
+  },
+  "conservator": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9889277815818787,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9848572015762329,
+    "margin": 0.004070580005645752
+  },
+  "consultant": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9963052868843079,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9929537177085876,
+    "margin": 0.003351569175720215
+  },
+  "contrarian": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9946054220199585,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9830562472343445,
+    "margin": 0.011549174785614014
+  },
+  "coordinator": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9949783086776733,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9925746917724609,
+    "margin": 0.0024036169052124023
+  },
+  "coral_reef": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9811286926269531,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9704669117927551,
+    "margin": 0.010661780834197998
+  },
+  "cosmopolitan": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.992834210395813,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9847031831741333,
+    "margin": 0.008131027221679688
+  },
+  "counselor": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9823641180992126,
+    "second_cluster": "editorial",
+    "second_cosine": 0.97972571849823,
+    "margin": 0.002638399600982666
+  },
+  "criminal": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9776376485824585,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9731863141059875,
+    "margin": 0.004451334476470947
+  },
+  "critic": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9963118433952332,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9900112748146057,
+    "margin": 0.006300568580627441
+  },
+  "crystalline": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9745226502418518,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9688336253166199,
+    "margin": 0.005689024925231934
+  },
+  "curator": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9971010088920593,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9897845983505249,
+    "margin": 0.007316410541534424
+  },
+  "cyborg": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9941091537475586,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9832823276519775,
+    "margin": 0.010826826095581055
+  },
+  "cynic": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9852985143661499,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9813086986541748,
+    "margin": 0.003989815711975098
+  },
+  "daredevil": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9800317287445068,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9795346260070801,
+    "margin": 0.0004971027374267578
+  },
+  "debugger": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9924569129943848,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9884790182113647,
+    "margin": 0.0039778947830200195
+  },
+  "demon": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9834838509559631,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9795461297035217,
+    "margin": 0.003937721252441406
+  },
+  "designer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9938998222351074,
+    "second_cluster": "editorial",
+    "second_cosine": 0.986829936504364,
+    "margin": 0.007069885730743408
+  },
+  "destroyer": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9927473068237305,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9845751523971558,
+    "margin": 0.008172154426574707
+  },
+  "detective": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9939049482345581,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9882140755653381,
+    "margin": 0.005690872669219971
+  },
+  "devils_advocate": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9893242120742798,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9863641262054443,
+    "margin": 0.0029600858688354492
+  },
+  "dilettante": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9896652102470398,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9849775433540344,
+    "margin": 0.004687666893005371
+  },
+  "dispatcher": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9936167001724243,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9910711646080017,
+    "margin": 0.0025455355644226074
+  },
+  "divorcee": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9844945669174194,
+    "second_cluster": "other",
+    "second_cosine": 0.9728087186813354,
+    "margin": 0.011685848236083984
+  },
+  "doctor": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.991439163684845,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9908641576766968,
+    "margin": 0.0005750060081481934
+  },
+  "dreamer": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9916830658912659,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.979373037815094,
+    "margin": 0.012310028076171875
+  },
+  "echo": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9958198070526123,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9704684019088745,
+    "margin": 0.025351405143737793
+  },
+  "economist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9901451468467712,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9834908246994019,
+    "margin": 0.006654322147369385
+  },
+  "ecosystem": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.993292510509491,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9829021692276001,
+    "margin": 0.01039034128189087
+  },
+  "editor": {
+    "cluster": "editorial",
+    "centroid_cosine": 1.0000025033950806,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9912064671516418,
+    "margin": 0.00879603624343872
+  },
+  "egregore": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9929031729698181,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9782090187072754,
+    "margin": 0.014694154262542725
+  },
+  "elder": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9876099228858948,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9860205054283142,
+    "margin": 0.0015894174575805664
+  },
+  "eldritch": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9912579655647278,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9672287702560425,
+    "margin": 0.024029195308685303
+  },
+  "emissary": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9962164759635925,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9898864030838013,
+    "margin": 0.00633007287979126
+  },
+  "empath": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9827969074249268,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9753310680389404,
+    "margin": 0.007465839385986328
+  },
+  "engineer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9950037598609924,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9888054132461548,
+    "margin": 0.0061983466148376465
+  },
+  "entrepreneur": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9881619811058044,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9831661581993103,
+    "margin": 0.004995822906494141
+  },
+  "evaluator": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9952812194824219,
+    "second_cluster": "editorial",
+    "second_cosine": 0.992229700088501,
+    "margin": 0.0030515193939208984
+  },
+  "evangelist": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9867499470710754,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.98613440990448,
+    "margin": 0.000615537166595459
+  },
+  "examiner": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9925476312637329,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9920796751976013,
+    "margin": 0.0004679560661315918
+  },
+  "exile": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9866969585418701,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9835830330848694,
+    "margin": 0.0031139254570007324
+  },
+  "expatriate": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9899407625198364,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9840222001075745,
+    "margin": 0.005918562412261963
+  },
+  "facilitator": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9931768774986267,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9915915131568909,
+    "margin": 0.0015853643417358398
+  },
+  "familiar": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9907476305961609,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9722400903701782,
+    "margin": 0.018507540225982666
+  },
+  "fixer": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9860678911209106,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9847891330718994,
+    "margin": 0.0012787580490112305
+  },
+  "flaneur": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9841413497924805,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9831336736679077,
+    "margin": 0.001007676124572754
+  },
+  "fool": {
+    "cluster": "trickster_chaos",
+    "centroid_cosine": 0.9859397411346436,
+    "second_cluster": "other",
+    "second_cosine": 0.9820007085800171,
+    "margin": 0.003939032554626465
+  },
+  "forecaster": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9959507584571838,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9883954524993896,
+    "margin": 0.0075553059577941895
+  },
+  "futurist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.994601845741272,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9826778769493103,
+    "margin": 0.01192396879196167
+  },
+  "gamer": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9690626859664917,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9674364328384399,
+    "margin": 0.0016262531280517578
+  },
+  "generalist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9986945986747742,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9907301664352417,
+    "margin": 0.00796443223953247
+  },
+  "genie": {
+    "cluster": "trickster_chaos",
+    "centroid_cosine": 0.992787778377533,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9828111529350281,
+    "margin": 0.009976625442504883
+  },
+  "geographer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9897406101226807,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9825823307037354,
+    "margin": 0.0071582794189453125
+  },
+  "ghost": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9926605820655823,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9767751097679138,
+    "margin": 0.015885472297668457
+  },
+  "golem": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.986400842666626,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9659343957901001,
+    "margin": 0.02046644687652588
+  },
+  "gossip": {
+    "cluster": "trickster_chaos",
+    "centroid_cosine": 0.9755347371101379,
+    "second_cluster": "other",
+    "second_cosine": 0.9719448089599609,
+    "margin": 0.003589928150177002
+  },
+  "grader": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9936413764953613,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9879717826843262,
+    "margin": 0.005669593811035156
+  },
+  "graduate": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.984118640422821,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9818004369735718,
+    "margin": 0.0023182034492492676
+  },
+  "grandparent": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9795758724212646,
+    "second_cluster": "other",
+    "second_cosine": 0.9738044142723083,
+    "margin": 0.005771458148956299
+  },
+  "guardian": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9907437562942505,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9846997857093811,
+    "margin": 0.006043970584869385
+  },
+  "guide": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9959542751312256,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9896585941314697,
+    "margin": 0.006295680999755859
+  },
+  "guru": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9912672638893127,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9781194925308228,
+    "margin": 0.01314777135848999
+  },
+  "hacker": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9837958812713623,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9764887094497681,
+    "margin": 0.007307171821594238
+  },
+  "healer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.982873797416687,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9755687713623047,
+    "margin": 0.007305026054382324
+  },
+  "hedonist": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9824029207229614,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9822030663490295,
+    "margin": 0.00019985437393188477
+  },
+  "hermit": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9917615652084351,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9758147597312927,
+    "margin": 0.015946805477142334
+  },
+  "historian": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9906768202781677,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9839270114898682,
+    "margin": 0.0067498087882995605
+  },
+  "hive": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9857006072998047,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9795100688934326,
+    "margin": 0.00619053840637207
+  },
+  "hoarder": {
+    "cluster": "other",
+    "centroid_cosine": 1.0000005960464478,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.983005702495575,
+    "margin": 0.016994893550872803
+  },
+  "homunculus": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9899836778640747,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.973010241985321,
+    "margin": 0.016973435878753662
+  },
+  "hybrid": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9944663047790527,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.983046293258667,
+    "margin": 0.011420011520385742
+  },
+  "idealist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9828125238418579,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9818740487098694,
+    "margin": 0.0009384751319885254
+  },
+  "immigrant": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9836482405662537,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9785093069076538,
+    "margin": 0.0051389336585998535
+  },
+  "improviser": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9919947385787964,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9874871969223022,
+    "margin": 0.004507541656494141
+  },
+  "infant": {
+    "cluster": "other",
+    "centroid_cosine": 0.92311692237854,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9211999177932739,
+    "margin": 0.0019170045852661133
+  },
+  "influencer": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.981192946434021,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9811539649963379,
+    "margin": 3.898143768310547e-05
+  },
+  "instructor": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.995241641998291,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9931311011314392,
+    "margin": 0.0021105408668518066
+  },
+  "interpreter": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9984511137008667,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9920987486839294,
+    "margin": 0.006352365016937256
+  },
+  "interviewer": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9893279075622559,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9872623085975647,
+    "margin": 0.002065598964691162
+  },
+  "jester": {
+    "cluster": "trickster_chaos",
+    "centroid_cosine": 0.9918264746665955,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9762741327285767,
+    "margin": 0.015552341938018799
+  },
+  "journalist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9948355555534363,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9927088022232056,
+    "margin": 0.002126753330230713
+  },
+  "judge": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9919356107711792,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9910663366317749,
+    "margin": 0.0008692741394042969
+  },
+  "lawyer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9846487641334534,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9838767647743225,
+    "margin": 0.0007719993591308594
+  },
+  "leviathan": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9854614734649658,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9577228426933289,
+    "margin": 0.027738630771636963
+  },
+  "librarian": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.995424747467041,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9930090308189392,
+    "margin": 0.0024157166481018066
+  },
+  "linguist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9875703454017639,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9826394319534302,
+    "margin": 0.00493091344833374
+  },
+  "loner": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9869178533554077,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9773565530776978,
+    "margin": 0.009561300277709961
+  },
+  "luddite": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9835183620452881,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9806434512138367,
+    "margin": 0.002874910831451416
+  },
+  "marketer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9904614090919495,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9856745004653931,
+    "margin": 0.0047869086265563965
+  },
+  "martyr": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9866077899932861,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9744378328323364,
+    "margin": 0.012169957160949707
+  },
+  "mathematician": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9892187118530273,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9824417233467102,
+    "margin": 0.006776988506317139
+  },
+  "maverick": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 1.0000001192092896,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9865355491638184,
+    "margin": 0.013464570045471191
+  },
+  "mechanic": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9800220727920532,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9781973958015442,
+    "margin": 0.0018246769905090332
+  },
+  "mediator": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9946314096450806,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9919589757919312,
+    "margin": 0.002672433853149414
+  },
+  "mentor": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.994937002658844,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9908977150917053,
+    "margin": 0.004039287567138672
+  },
+  "merchant": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9827823638916016,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9796774387359619,
+    "margin": 0.0031049251556396484
+  },
+  "minimalist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.980109691619873,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9775344133377075,
+    "margin": 0.0025752782821655273
+  },
+  "moderator": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9941149950027466,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9936716556549072,
+    "margin": 0.00044333934783935547
+  },
+  "musician": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9850658178329468,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9768949747085571,
+    "margin": 0.008170843124389648
+  },
+  "mycorrhizal": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9812193512916565,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9675204157829285,
+    "margin": 0.013698935508728027
+  },
+  "mystic": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9851107001304626,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9649286270141602,
+    "margin": 0.02018207311630249
+  },
+  "narcissist": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9722282886505127,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9717885851860046,
+    "margin": 0.00043970346450805664
+  },
+  "narrator": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9914505481719971,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9902255535125732,
+    "margin": 0.0012249946594238281
+  },
+  "naturalist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9883236289024353,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9786518812179565,
+    "margin": 0.00967174768447876
+  },
+  "navigator": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9914177060127258,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9856942296028137,
+    "margin": 0.005723476409912109
+  },
+  "negotiator": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.995763897895813,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9918032288551331,
+    "margin": 0.003960669040679932
+  },
+  "networker": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9909791350364685,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9856328964233398,
+    "margin": 0.005346238613128662
+  },
+  "newlywed": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9808533191680908,
+    "second_cluster": "other",
+    "second_cosine": 0.9716625213623047,
+    "margin": 0.009190797805786133
+  },
+  "nomad": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.990260660648346,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9817914962768555,
+    "margin": 0.008469164371490479
+  },
+  "novelist": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9900376200675964,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9855352640151978,
+    "margin": 0.004502356052398682
+  },
+  "nutritionist": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9867144823074341,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9866068363189697,
+    "margin": 0.00010764598846435547
+  },
+  "observer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9957965612411499,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9928551316261292,
+    "margin": 0.002941429615020752
+  },
+  "optimist": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9797888994216919,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9779932498931885,
+    "margin": 0.001795649528503418
+  },
+  "oracle": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9950739145278931,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.970702588558197,
+    "margin": 0.024371325969696045
+  },
+  "organizer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9969282150268555,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9934493899345398,
+    "margin": 0.003478825092315674
+  },
+  "orphan": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9869871139526367,
+    "second_cluster": "other",
+    "second_cosine": 0.9772399067878723,
+    "margin": 0.009747207164764404
+  },
+  "pacifist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9845938086509705,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9796674251556396,
+    "margin": 0.0049263834953308105
+  },
+  "paramedic": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9870351552963257,
+    "second_cluster": "editorial",
+    "second_cosine": 0.985087513923645,
+    "margin": 0.001947641372680664
+  },
+  "parasite": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9773674607276917,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9731009006500244,
+    "margin": 0.004266560077667236
+  },
+  "parent": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.980389416217804,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9791907668113708,
+    "margin": 0.0011986494064331055
+  },
+  "patient": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9811853170394897,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9744412899017334,
+    "margin": 0.006744027137756348
+  },
+  "peacekeeper": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.993610143661499,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9904355406761169,
+    "margin": 0.00317460298538208
+  },
+  "perfectionist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9926770925521851,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9882445335388184,
+    "margin": 0.004432559013366699
+  },
+  "pharmacist": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9878573417663574,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9868236184120178,
+    "margin": 0.0010337233543395996
+  },
+  "philosopher": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9851188063621521,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9776808619499207,
+    "margin": 0.007437944412231445
+  },
+  "photographer": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9865283370018005,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9792769551277161,
+    "margin": 0.007251381874084473
+  },
+  "physicist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9907109141349792,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9817239046096802,
+    "margin": 0.008987009525299072
+  },
+  "pilgrim": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9866678714752197,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.970782995223999,
+    "margin": 0.015884876251220703
+  },
+  "pilot": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9846435189247131,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9820188283920288,
+    "margin": 0.002624690532684326
+  },
+  "pirate": {
+    "cluster": "trickster_chaos",
+    "centroid_cosine": 0.9478262662887573,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.943709135055542,
+    "margin": 0.004117131233215332
+  },
+  "planner": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9941994547843933,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9916155934333801,
+    "margin": 0.0025838613510131836
+  },
+  "playwright": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9910385012626648,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9822043180465698,
+    "margin": 0.00883418321609497
+  },
+  "podcaster": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9912772178649902,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9859261512756348,
+    "margin": 0.005351066589355469
+  },
+  "poet": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9762610793113708,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9614495635032654,
+    "margin": 0.014811515808105469
+  },
+  "polymath": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9978424310684204,
+    "second_cluster": "editorial",
+    "second_cosine": 0.987301230430603,
+    "margin": 0.010541200637817383
+  },
+  "pragmatist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9927486777305603,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9873669743537903,
+    "margin": 0.0053817033767700195
+  },
+  "predator": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9792680144309998,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9761319160461426,
+    "margin": 0.0031360983848571777
+  },
+  "presenter": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9942662715911865,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9905745983123779,
+    "margin": 0.0036916732788085938
+  },
+  "prey": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9746775031089783,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9733923673629761,
+    "margin": 0.0012851357460021973
+  },
+  "prisoner": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9820941090583801,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.97269606590271,
+    "margin": 0.009398043155670166
+  },
+  "procrastinator": {
+    "cluster": "other",
+    "centroid_cosine": 0.9739576578140259,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9634788632392883,
+    "margin": 0.010478794574737549
+  },
+  "prodigy": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9948529601097107,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9855173826217651,
+    "margin": 0.009335577487945557
+  },
+  "producer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9935373067855835,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9894876480102539,
+    "margin": 0.00404965877532959
+  },
+  "programmer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9907448887825012,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9836609959602356,
+    "margin": 0.007083892822265625
+  },
+  "proofreader": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9887504577636719,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.967846155166626,
+    "margin": 0.0209043025970459
+  },
+  "prophet": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9922409653663635,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9665881395339966,
+    "margin": 0.025652825832366943
+  },
+  "provincial": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9820626974105835,
+    "second_cluster": "other",
+    "second_cosine": 0.9700013399124146,
+    "margin": 0.012061357498168945
+  },
+  "provocateur": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9951536655426025,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9868898391723633,
+    "margin": 0.008263826370239258
+  },
+  "psychologist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9936192631721497,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9869657158851624,
+    "margin": 0.006653547286987305
+  },
+  "publisher": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9953790307044983,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9934196472167969,
+    "margin": 0.001959383487701416
+  },
+  "purist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9824140667915344,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9787915349006653,
+    "margin": 0.0036225318908691406
+  },
+  "realist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9918363094329834,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9852397441864014,
+    "margin": 0.006596565246582031
+  },
+  "rebel": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9960821270942688,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9853595495223999,
+    "margin": 0.010722577571868896
+  },
+  "recruiter": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.990482747554779,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9886823892593384,
+    "margin": 0.0018003582954406738
+  },
+  "refugee": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9832759499549866,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9728429317474365,
+    "margin": 0.010433018207550049
+  },
+  "reporter": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9940250515937805,
+    "second_cluster": "editorial",
+    "second_cosine": 0.992316484451294,
+    "margin": 0.0017085671424865723
+  },
+  "researcher": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.995876669883728,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9919313192367554,
+    "margin": 0.003945350646972656
+  },
+  "retiree": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9887890815734863,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.978642463684082,
+    "margin": 0.010146617889404297
+  },
+  "revenant": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9890004992485046,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9732468724250793,
+    "margin": 0.015753626823425293
+  },
+  "reviewer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9960654973983765,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9946157932281494,
+    "margin": 0.0014497041702270508
+  },
+  "revolutionary": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.983636200428009,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9729347229003906,
+    "margin": 0.010701477527618408
+  },
+  "robot": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9868684411048889,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9804292917251587,
+    "margin": 0.006439149379730225
+  },
+  "rogue": {
+    "cluster": "trickster_chaos",
+    "centroid_cosine": 0.9873021841049194,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9853128790855408,
+    "margin": 0.001989305019378662
+  },
+  "romantic": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.981689453125,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9784039258956909,
+    "margin": 0.003285527229309082
+  },
+  "saboteur": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9841916561126709,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9830652475357056,
+    "margin": 0.001126408576965332
+  },
+  "sage": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9932786226272583,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.976741373538971,
+    "margin": 0.016537249088287354
+  },
+  "scheduler": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9894850254058838,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9894319176673889,
+    "margin": 5.310773849487305e-05
+  },
+  "scholar": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9950472116470337,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9891334176063538,
+    "margin": 0.005913794040679932
+  },
+  "scientist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9947596192359924,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9902130961418152,
+    "margin": 0.004546523094177246
+  },
+  "scout": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9909219741821289,
+    "second_cluster": "editorial",
+    "second_cosine": 0.982412576675415,
+    "margin": 0.008509397506713867
+  },
+  "screener": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9904636144638062,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9868164658546448,
+    "margin": 0.003647148609161377
+  },
+  "secretary": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9924085736274719,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9867690205574036,
+    "margin": 0.005639553070068359
+  },
+  "shaman": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9784076809883118,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9614778161048889,
+    "margin": 0.01692986488342285
+  },
+  "shapeshifter": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9898082613945007,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9888784289360046,
+    "margin": 0.0009298324584960938
+  },
+  "simulacrum": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9834889769554138,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9779894948005676,
+    "margin": 0.005499482154846191
+  },
+  "skeptic": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9919538497924805,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9864590167999268,
+    "margin": 0.005494832992553711
+  },
+  "smuggler": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9788756966590881,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9742323756217957,
+    "margin": 0.0046433210372924805
+  },
+  "sociologist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9930521249771118,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9858638048171997,
+    "margin": 0.007188320159912109
+  },
+  "soldier": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9745444655418396,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.970970630645752,
+    "margin": 0.0035738348960876465
+  },
+  "sommelier": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9753350615501404,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.972855269908905,
+    "margin": 0.0024797916412353516
+  },
+  "specialist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9964751601219177,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9898489713668823,
+    "margin": 0.0066261887550354
+  },
+  "spirit": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9909360408782959,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9699690341949463,
+    "margin": 0.02096700668334961
+  },
+  "spy": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9768974184989929,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.97603440284729,
+    "margin": 0.0008630156517028809
+  },
+  "statistician": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9900235533714294,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9852842092514038,
+    "margin": 0.004739344120025635
+  },
+  "stoic": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9750077724456787,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9630590677261353,
+    "margin": 0.011948704719543457
+  },
+  "strategist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9965699315071106,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9896248579025269,
+    "margin": 0.00694507360458374
+  },
+  "student": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9869539141654968,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9860599637031555,
+    "margin": 0.0008939504623413086
+  },
+  "summarizer": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9929068684577942,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9923025369644165,
+    "margin": 0.0006043314933776855
+  },
+  "supervisor": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9922760725021362,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9913365840911865,
+    "margin": 0.000939488410949707
+  },
+  "surfer": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9772032499313354,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9678098559379578,
+    "margin": 0.009393393993377686
+  },
+  "survivor": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9899130463600159,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9781605005264282,
+    "margin": 0.011752545833587646
+  },
+  "swarm": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9847649931907654,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.984455406665802,
+    "margin": 0.0003095865249633789
+  },
+  "symbiont": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9916655421257019,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9808120727539062,
+    "margin": 0.010853469371795654
+  },
+  "synthesizer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 1.0000016689300537,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9912064671516418,
+    "margin": 0.008795201778411865
+  },
+  "teacher": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9941664338111877,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9924314618110657,
+    "margin": 0.0017349720001220703
+  },
+  "technologist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9949089288711548,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9858757257461548,
+    "margin": 0.009033203125
+  },
+  "teenager": {
+    "cluster": "other",
+    "centroid_cosine": 0.9640747308731079,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.959206759929657,
+    "margin": 0.004867970943450928
+  },
+  "theorist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9943547248840332,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9831295013427734,
+    "margin": 0.011225223541259766
+  },
+  "therapist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9820287227630615,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9780367612838745,
+    "margin": 0.003991961479187012
+  },
+  "toddler": {
+    "cluster": "other",
+    "centroid_cosine": 0.9352229237556458,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.922278642654419,
+    "margin": 0.012944281101226807
+  },
+  "traditionalist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9786873459815979,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9757038950920105,
+    "margin": 0.0029834508895874023
+  },
+  "trainer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9937698245048523,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9906408190727234,
+    "margin": 0.0031290054321289062
+  },
+  "translator": {
+    "cluster": "editorial",
+    "centroid_cosine": 0.9811801910400391,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9725573658943176,
+    "margin": 0.008622825145721436
+  },
+  "tree": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9836628437042236,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.964301347732544,
+    "margin": 0.019361495971679688
+  },
+  "trickster": {
+    "cluster": "trickster_chaos",
+    "centroid_cosine": 1.0000005960464478,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9886525273323059,
+    "margin": 0.011348068714141846
+  },
+  "tulpa": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9908417463302612,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9882357120513916,
+    "margin": 0.002606034278869629
+  },
+  "tutor": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9941213726997375,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9924520254135132,
+    "margin": 0.0016693472862243652
+  },
+  "validator": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.992964506149292,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9920003414154053,
+    "margin": 0.0009641647338867188
+  },
+  "vampire": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9857473969459534,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9690067768096924,
+    "margin": 0.016740620136260986
+  },
+  "vegan": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9825098514556885,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9777117371559143,
+    "margin": 0.00479811429977417
+  },
+  "veteran": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9786805510520935,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.97793048620224,
+    "margin": 0.0007500648498535156
+  },
+  "veterinarian": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.987562358379364,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9870553016662598,
+    "margin": 0.000507056713104248
+  },
+  "vigilante": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9813710451126099,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9812886118888855,
+    "margin": 8.243322372436523e-05
+  },
+  "virtuoso": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9863637089729309,
+    "second_cluster": "mythic_spiritual",
+    "second_cosine": 0.9860639572143555,
+    "margin": 0.00029975175857543945
+  },
+  "virus": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9732593297958374,
+    "second_cluster": "procedural_professional",
+    "second_cosine": 0.9729523658752441,
+    "margin": 0.0003069639205932617
+  },
+  "visionary": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9895908832550049,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9877220988273621,
+    "margin": 0.0018687844276428223
+  },
+  "void": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9878126978874207,
+    "second_cluster": "trickster_chaos",
+    "second_cosine": 0.9682778716087341,
+    "margin": 0.019534826278686523
+  },
+  "wanderer": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9898370504379272,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9875734448432922,
+    "margin": 0.0022636055946350098
+  },
+  "warrior": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9814186096191406,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9756447672843933,
+    "margin": 0.0057738423347473145
+  },
+  "whale": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9877170324325562,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9730304479598999,
+    "margin": 0.01468658447265625
+  },
+  "widow": {
+    "cluster": "grounded_social",
+    "centroid_cosine": 0.9846112728118896,
+    "second_cluster": "other",
+    "second_cosine": 0.9710084795951843,
+    "margin": 0.013602793216705322
+  },
+  "wind": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9881982207298279,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9753632545471191,
+    "margin": 0.01283496618270874
+  },
+  "witch": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9851045608520508,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9654717445373535,
+    "margin": 0.019632816314697266
+  },
+  "witness": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9923774600028992,
+    "second_cluster": "editorial",
+    "second_cosine": 0.9885019659996033,
+    "margin": 0.0038754940032958984
+  },
+  "workaholic": {
+    "cluster": "combative_iconoclast",
+    "centroid_cosine": 0.9829172492027283,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9775403738021851,
+    "margin": 0.005376875400543213
+  },
+  "wraith": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.9903368949890137,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9679798483848572,
+    "margin": 0.022357046604156494
+  },
+  "writer": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9943758845329285,
+    "second_cluster": "grounded_social",
+    "second_cosine": 0.9891173839569092,
+    "margin": 0.005258500576019287
+  },
+  "zealot": {
+    "cluster": "mythic_spiritual",
+    "centroid_cosine": 0.978407621383667,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9675226211547852,
+    "margin": 0.010885000228881836
+  },
+  "zeitgeist": {
+    "cluster": "procedural_professional",
+    "centroid_cosine": 0.9869773387908936,
+    "second_cluster": "combative_iconoclast",
+    "second_cosine": 0.9865989685058594,
+    "margin": 0.0003783702850341797
+  }
+}

@@ -7,6 +7,7 @@ os.environ.setdefault("NUMBA_NUM_THREADS", "1")
 import torch, json, numpy as np
 from pathlib import Path
 import umap
+from sklearn.decomposition import PCA
 
 REPO_ROOT = Path("/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis")
 VECTOR_ROOT = REPO_ROOT / "downloads/hf_vectors/qwen-3-32b"
@@ -149,14 +150,50 @@ if role_vecs is not None:
     role_umap3 = compute_umap(role_vecs, n_components=3)
     print("Computing UMAP for role vectors (2D)...")
     role_umap2 = compute_umap(role_vecs, n_components=2)
+
+    # Load full cluster assignments
+    assignments_path = OUTPUT_DIR / "cluster_assignments_full.json"
+    with open(assignments_path) as f:
+        full_assignments = json.load(f)
+
+    # PCA projection (3D and 2D)
+    print("Computing PCA for role vectors...")
+    pca3 = PCA(n_components=3, random_state=42)
+    role_pca3 = pca3.fit_transform(role_vecs)
+    pca2 = PCA(n_components=2, random_state=42)
+    role_pca2 = pca2.fit_transform(role_vecs)
+
+    # Record explained variance
+    pca_variance = {
+        "pc1_explained": float(pca3.explained_variance_ratio_[0]),
+        "pc2_explained": float(pca3.explained_variance_ratio_[1]),
+        "pc3_explained": float(pca3.explained_variance_ratio_[2]),
+        "pc1_cumulative": float(pca3.explained_variance_ratio_[0]),
+        "pc1_pc2_cumulative": float(sum(pca3.explained_variance_ratio_[:2])),
+        "pc1_pc2_pc3_cumulative": float(sum(pca3.explained_variance_ratio_[:3]))
+    }
+    print(f"PCA variance: PC1={pca_variance['pc1_explained']:.3f}, PC2={pca_variance['pc2_explained']:.3f}, PC3={pca_variance['pc3_explained']:.3f}")
+
+    # Check alignment of PC1 with assistant axis
+    if axis_vec is not None:
+        pc1_direction = pca3.components_[0]
+        pc1_direction = pc1_direction / np.linalg.norm(pc1_direction)
+        pc1_axis_alignment = float(abs(pc1_direction @ axis_vec))
+        print(f"PC1 alignment with assistant axis: {pc1_axis_alignment:.4f}")
+        pca_variance["pc1_axis_alignment"] = pc1_axis_alignment
+
     role_axis_proj = compute_axis_projections(role_vecs, axis_vec)
     role_nn = compute_nearest_neighbors(role_vecs, role_names)
-    role_clusters = [get_cluster(n) for n in role_names]
     all_datasets["roles"] = {
         "names": role_names,
         "umap3d": role_umap3.tolist(),
         "umap2d": role_umap2.tolist(),
-        "clusters": role_clusters,
+        "pca3d": role_pca3.tolist(),
+        "pca2d": role_pca2.tolist(),
+        "pca_variance": pca_variance,
+        "clusters": [full_assignments.get(n, {}).get("cluster", "unassigned") for n in role_names],
+        "cluster_cosines": [full_assignments.get(n, {}).get("centroid_cosine", 0.0) for n in role_names],
+        "cluster_margins": [full_assignments.get(n, {}).get("margin", 0.0) for n in role_names],
         "axis_projections": role_axis_proj.tolist(),
         "nearest_neighbors": role_nn
     }

@@ -94,6 +94,14 @@ Stage-1 role-inventory uncertainty is now scoped as provider-separated corpus co
 
 Model provenance is now mandatory for future generated, evaluated, or analyzed research artifacts. The canonical schema is `research/workflow/model_provenance_schema.md`; it distinguishes `generation_model`, `evaluation_model`, `analysis_model`, and `script_author_model` so model identity is treated as part of the experimental causal structure rather than incidental metadata.
 
+### Full Cluster Assignment and PCA Projection (2026-05-28)
+
+- All 275 personas assigned to clusters via nearest-centroid lookup
+- Cluster distribution: procedural_professional 126; grounded_social 54; mythic_spiritual 51; combative_iconoclast 15; editorial 13; trickster_chaos 10; other 6
+- Ambiguous assignments with margin < 0.02: 262
+- PC1 explained variance: 0.315954; PC1-assistant-axis alignment: 0.802310
+- Notable surprising placements: anarchist, robot, cyborg, hive, and swarm assign to procedural_professional; virus assigns to mythic_spiritual with extremely low margin; caveman assigns to trickster_chaos with extremely low margin
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

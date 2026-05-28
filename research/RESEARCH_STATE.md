@@ -3,9 +3,9 @@
 # Updated at the end of every Codex session. Fetch this first in any new session.
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
-**Last updated:** 2026-05-27
-**Last commit:** e60d8f8
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts
+**Last updated:** 2026-05-28
+**Last commit:** 3d23f2e
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode
 
 ---
 
@@ -339,16 +339,17 @@
 
 **Model provenance state:** `research/workflow/model_provenance_schema.md` defines the mandatory provenance schema for future generated, evaluated, and analyzed artifacts. Future artifacts must distinguish `generation_model`, `evaluation_model`, `analysis_model`, and `script_author_model` before commit; Stage-1 generation and ingestion scripts now require provenance for every role inventory.
 
+**Visualization state:** `research/visualizations/persona_geometry_explorer.html` now uses full nearest-centroid cluster assignments from `research/visualizations/cluster_assignments_full.json` instead of incomplete hardcoded lists. `research/visualizations/geometry_viz_data.json` now includes role PCA coordinates and variance metadata; PC1 explains 0.315954 of variance and aligns with the assistant-axis vector at 0.802310 cosine.
+
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Added `research/workflow/model_provenance_schema.md` as the canonical mandatory model-provenance schema.
-**Completed this session:** Updated workflow docs and the run manifest template so future generated, evaluated, or analyzed artifacts must record model provenance before commit.
-**Completed this session:** Hardened Stage-1 role-inventory scripts so OpenAI outputs include provenance and provider-agnostic ingestion rejects inventories with missing model-provenance fields.
-**Completed this session:** Built `research/visualizations/persona_geometry_explorer.html`, generated embedded UMAP data for local Qwen role and trait vectors, and confirmed no local Qwen emotion vectors were available.
-**Next step:** Open `research/visualizations/persona_geometry_explorer.html` through the file server for visual review, then decide whether to add externally generated Qwen emotion directions as a third dataset.
-**Last commit before this session:** 255e329
+**Completed this session:** Added `research/visualizations/scripts/assign_clusters_by_centroid.py` and assigned all 275 Qwen personas to nearest Qwen-native cluster centroids.
+**Completed this session:** Updated `research/visualizations/scripts/build_geometry_viz.py` and `research/visualizations/geometry_viz_data.json` with full cluster assignments, PCA coordinates, PCA variance, and cluster confidence margins.
+**Completed this session:** Updated the self-contained persona geometry explorer with UMAP/PCA projection controls and PCA axis labels.
+**Next step:** Treat nearest-centroid colors as a visual aid with margin caveats, and prioritize the planned no-label activation stress test plus Stage-1 uncertainty generation.
+**Last commit before this session:** 3d23f2e
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
