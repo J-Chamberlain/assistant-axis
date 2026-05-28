@@ -129,6 +129,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Narrow edge-case refinements for mythic/artistic expression, developmental immaturity, social hospitality, nonhuman scale, forecast/control, and judicial norms were discarded under the retention policy
 - Recurring high-residual personas across splits include mechanic, adolescent, prisoner, smuggler, infant, hermit, bard, teenager, predator, journalist, sage, and amateur
 
+### Persona-Level Explanation Residual Ranking (2026-05-28)
+
+- Ranked 273 personas by how well the final iterative outer-loop feature vocabulary predicts activation PCA3D placement
+- Primary ranking uses mean held-out residual where a persona appeared in held-out splits; 221 personas had held-out prediction evidence, while 52 personas use apparent full-model residuals and are marked in the output
+- Most effectively explained personas by final residual: designer, nomad, curator, chemist, and tulpa
+- Least effectively explained personas by final residual: procrastinator, toddler, teenager, comedian, and cyborg
+- Largest improvements over semantic baseline: jester (+27.347 residual reduction), robot (+26.346), wind (+26.271), gossip (+23.916), and poet (+22.722)
+- Strongest worsening relative to semantic baseline: futurist (-26.250), veterinarian (-26.122), forecaster (-23.457), coordinator (-18.523), and producer (-16.241)
+- Interpretation: high residuals are diagnostic cases for the current feature vocabulary, not proof that a persona is inherently inexplicable or that the retained dimensions are final
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

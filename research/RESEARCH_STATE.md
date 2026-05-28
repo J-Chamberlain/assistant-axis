@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** 9a836a9
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, and repeated-split iterative outer loop are implemented with held-out evaluation
+**Last commit:** 8c2186b
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, and persona-level explanation residual ranking are implemented with held-out evaluation where available
 
 ---
 
@@ -337,6 +337,15 @@
 - Discarded refinements include mythic/artistic expression, developmental immaturity, social hospitality, nonhuman scale, forecast/control, and judicial norms
 - Recurring high-residual personas include mechanic, adolescent, prisoner, smuggler, infant, hermit, bard, teenager, predator, journalist, sage, and amateur
 
+### Persona Explanation Residual Ranking (2026-05-28)
+
+- Implemented `research/q2_stability/qwen/scripts/rank_persona_explanation_residuals.py` to reconstruct final retained outer-loop predictions and rank all available personas by activation PCA3D residual
+- Output covers 273 personas; 221 had one or more held-out predictions across the five deterministic splits, and 52 use marked apparent full-model residuals because they were never held out by those splits
+- Most effectively explained personas by final residual are designer, nomad, curator, chemist, and tulpa
+- Least effectively explained personas by final residual are procrastinator, toddler, teenager, comedian, and cyborg
+- Largest improvements over the semantic baseline are jester, robot, wind, gossip, and poet; strongest worsened cases are futurist, veterinarian, forecaster, coordinator, and producer
+- High-residual personas should be treated as diagnostic cases for the current feature vocabulary, not as inherently inexplicable roles or final evidence about the true meaning of the dimensions
+
 ---
 
 ## 3. CURRENT STATE
@@ -391,8 +400,11 @@
 **Completed this session:** Implemented the iterative latent-feature outer loop with five repeated splits, retention/discard logic, permutation checks, split-variance tracking, and plateau termination.
 **Completed this session:** Ran the outer loop and saved iteration results, summaries, master log, progression CSV, and final report under `research/q2_stability/qwen/outputs/iterative_outer_loop/` plus `research/q2_stability/qwen/iterative_outer_loop_report.md`.
 **Completed this session:** Updated the findings ledger, methodology questions, research state, and machine-in-the-loop sticky note with repeated-split outer-loop results.
-**Next step:** Replace lexical operationalization with stronger blind coder or embedding-derived features, then test whether the same retained families survive with fewer dimensions and multi-model hypothesis generators.
-**Last commit before this session:** 9a836a9
+**Completed this session:** Reviewed existing outer-loop, framing ablation, findings ledger, and research-state artifacts to locate retained dimensions, split behavior, residual summaries, feature matrices, activation clusters, semantic clusters, and anchor/bridge metadata.
+**Completed this session:** Added `rank_persona_explanation_residuals.py` and generated CSV, JSON, and Markdown outputs ranking 273 personas by final-model residual, semantic-baseline residual, residual improvement, PCA coordinates, cluster metadata, held-out frequency, split residual statistics, and associated feature contributions.
+**Completed this session:** Updated the findings ledger and research state with the strongest most-explained, least-explained, improved, and worsened persona-level residual cases.
+**Next step:** Inspect the least-explained and worsened personas as diagnostic residual cases, especially procrastinator, toddler, teenager, comedian, cyborg, futurist, veterinarian, and forecaster, then decide whether a leave-one-role-out ranking pass is needed for pure held-out coverage of all personas.
+**Last commit before this session:** 8c2186b
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
