@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-05-28
 **Last commit:** see git log
-**Current status:** Active — Claude latent feature discovery loop complete (BigFive dominates, PC1 unpredicted, persona rankings generated); Stage 1 inventory sensitivity scaffold added (75-call generation script across 5 models × 5 prompts); Paper 1.5 trickster validation complete; editor extraction below threshold; evaluator-sensitivity blocked by OpenAI quota; Codex/GPT-5.5 latent feature loop reports not in repo (needed for cross-model comparison)
+**Current status:** Active — Cross-model latent feature comparison COMPLETE: BigFive R²=0.613 outperforms Codex 31-dim R²=0.490 on canonical activation PCA; developmental personas are hardest to explain across both models; pseudo-PCA PC1 failure was target-specific artifact (canonical PC1 R²=0.734 with BigFive). Stage 1 inventory sensitivity scaffold ready. Paper 1.5 trickster validation complete; editor extraction below threshold; evaluator-sensitivity blocked by OpenAI quota.
 
 ---
 
@@ -21,8 +21,10 @@
 - Plateau at round 3; DarkTriad and semantic cluster add no signal over BigFive
 - Best-explained: procedural_professional (architect, journalist, paramedic, marketer)
 - Worst-explained: "other" cluster developmental stages; proofreader (editorial outlier)
-- Codex/GPT-5.5 comparison deferred (reports not in repo)
-- Artifacts: `research/q2_stability/qwen/outputs/claude_latent_feature_loop/`
+- Cross-model comparison complete (2026-05-28): BigFive R²=0.613 on canonical PCA > Codex 31-dim R²=0.490
+- Pseudo-PCA PC1 failure (R²=-0.089) was target-specific; canonical PC1 BigFive R²=0.734
+- 6 worst-explained personas overlap between Claude and Codex: toddler, caveman, infant, teenager, poet, procrastinator
+- Artifacts: `research/q2_stability/qwen/outputs/claude_latent_feature_loop/` (including `claude_on_shared_benchmark_report.md`)
 
 ### Stage 1 Inventory Sensitivity Scaffold (2026-05-28, Complete)
 - Generation script + analysis script for 5 models × 5 prompts × 3 runs (75 API calls)

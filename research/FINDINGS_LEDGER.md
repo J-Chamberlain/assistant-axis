@@ -128,14 +128,34 @@ treating BigFive as the primary psychological lens for activation geometry, thou
 it does not establish that the geometry is truly psychological (the BigFive profiles
 were assigned by LLM and may reflect the assigning model's stereotypes).
 
-### PC1 of Qwen Cluster-Cosine Space is Not Explained by Available Features (provisional, 2026-05-28)
+### PC1 of Qwen Cluster-Cosine Space is Not Explained by Available Features (RETRACTED TARGET-SPECIFIC CLAIM, 2026-05-28)
 
-The dominant direction in the Qwen cluster-cosine space (59.3% variance) is not
-predictable from TF-IDF prompt semantics, BigFive traits, DarkTriad traits, or
-semantic cluster membership. Held-out R²=-0.089. This is either a model-internal
-organizational dimension orthogonal to human-legible features, or it corresponds
-to the Qwen assistant axis itself (which would be circularly correlated with the
-cosine targets). Disambiguating requires direct Qwen axis projection comparison.
+The pseudo-PCA PC1 failure (R²=-0.089) was target-specific: on the canonical Qwen
+activation PCA, BigFive explains PC1 R²=0.734. The pseudo-PCA PC1 (derived from
+275×7 cosine-matrix PCA) captured cosine-magnitude structure not present in the
+canonical activation PCA. The general claim that "PC1 is unexplained by human-legible
+features" does not hold for the canonical activation target.
+
+### Cross-Model Convergence: BigFive Outperforms Codex on Canonical Target (confirmed, 2026-05-28)
+
+BigFive psychological traits (5-dim, LLM-assigned) achieve R²=0.613 on canonical Qwen
+activation PCA (N=273), outperforming Codex/GPT-5.5's 31 behavioral/motivational
+dimensions (R²=0.490) by +0.123. Both feature sets outperform the semantic cluster
+baseline (R²=0.389). Per-axis: BigFive PC1=0.734 vs Codex PC1=0.631; BigFive
+PC2=0.480 vs Codex PC2=0.257; PC3 is essentially tied (BigFive 0.415, Codex 0.422).
+Critical caveat: BigFive scores were LLM-assigned and may share priors with activation
+geometry; the advantage is real but may be partially circular.
+Artifact: `research/q2_stability/qwen/outputs/claude_latent_feature_loop/claude_on_shared_benchmark_report.md`
+
+### Developmental Personas Are Hardest to Explain Across Both Models (confirmed, 2026-05-28)
+
+6 personas appear in both Claude's and Codex's worst-explained lists: toddler, caveman,
+infant, teenager, poet, procrastinator. These are roles without coherent adult trait
+profiles (developmental stages) or roles with idiosyncratic activation geometry. This
+convergence holds across different targets and different feature generation methods,
+making it the strongest qualitative cross-model finding. Procedural-professional cluster
+is the best-explained basin under both models.
+Artifact: `research/q2_stability/qwen/outputs/claude_latent_feature_loop/claude_on_shared_benchmark_report.md`
 
 ## Current Blockers
 
@@ -155,6 +175,7 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 4. Test whether cluster-synthesized background prompts improve low-yield persona anchoring without leaking role identity.
 5. Launch the bounded 800-rollout no-label activation-space stress test once compute is approved.
 6. Continue Paper 1.5 validation before relying on adaptive extraction as a general persona-vector workflow.
-7. Push Codex/GPT-5.5 latent feature loop reports to the repo so Claude-vs-Codex cross-model comparison can be completed.
-8. Disambiguate Qwen PC1: project Qwen assistant_axis.pt onto the cluster-cosine PCA space to test whether PC1 corresponds to the Qwen assistant axis (requires torch on local machine).
+7. ~~Push Codex/GPT-5.5 latent feature loop reports to the repo so Claude-vs-Codex cross-model comparison can be completed.~~ DONE: comparison complete in `claude_on_shared_benchmark_report.md`.
+8. Disambiguate Qwen PC1: canonical PC1 is well-predicted by BigFive (R²=0.734); pseudo-PCA PC1 failure was target-specific. Remaining open: does canonical PC1 correspond to the Qwen assistant axis direction? Direct projection comparison (requires torch) would confirm.
 9. Test Claude's 10 hypothesized binary dimensions independently as a targeted feature block (separate from the BigFive-dominated loop).
+10. Test whether BigFive + TF-IDF (combined) improves further over BigFive alone on canonical activation PCA (the transfer analysis only tested BigFive-only).
