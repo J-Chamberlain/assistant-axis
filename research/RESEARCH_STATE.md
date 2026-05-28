@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** 3d23f2e
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode
+**Last commit:** 3b28b55
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; new Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models
 
 ---
 
@@ -345,11 +345,11 @@
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Added `research/visualizations/scripts/assign_clusters_by_centroid.py` and assigned all 275 Qwen personas to nearest Qwen-native cluster centroids.
-**Completed this session:** Updated `research/visualizations/scripts/build_geometry_viz.py` and `research/visualizations/geometry_viz_data.json` with full cluster assignments, PCA coordinates, PCA variance, and cluster confidence margins.
-**Completed this session:** Updated the self-contained persona geometry explorer with UMAP/PCA projection controls and PCA axis labels.
-**Next step:** Treat nearest-centroid colors as a visual aid with margin caveats, and prioritize the planned no-label activation stress test plus Stage-1 uncertainty generation.
-**Last commit before this session:** 3d23f2e
+**Completed this session:** Created `sticky_notes/2026-05-28_machine_in_the_loop.md` describing iterative motivational hypothesis testing with frontier models as interpreters.
+**Completed this session:** Created `sticky_notes/2026-05-28_paired_persona_test_design.md` describing controlled variable-isolation persona-pair experiments for the Paper 1.5 capstone.
+**Completed this session:** Created `sticky_notes/2026-05-28_rorschach_test_for_models.md` describing persona generation as a projective test of model-specific psychological representation structure, and indexed all three notes in `sticky_notes/README.md`.
+**Next step:** Convert the paired-persona candidates into Lu-style role prompt sets, preregister geometry predictions, and decide how the machine-in-the-loop hypothesis revision loop should converge.
+**Last commit before this session:** 3b28b55
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
