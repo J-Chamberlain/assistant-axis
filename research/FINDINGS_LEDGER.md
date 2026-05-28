@@ -111,6 +111,15 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Residual-proxy improvement was weak: best residual R2 0.300 vs baseline 0.290, delta +0.010, using a proxy residual target because the expected residual summary file was absent locally
 - Most useful preliminary axis predictors were procedural-professional orientation, theatrical/fantastical vividness, assistant-basin adjacency, standards/error aversion, and semantic-label dependence risk
 
+### Latent Feature Framing Ablation (2026-05-28)
+
+- Compared motivational, interactional, procedural/operating-mode, narrative-causal, all-framing, and prior first-loop feature families on held-out PCA3D activation-coordinate prediction using existing local artifacts only
+- The PCA artifact contained 273 personas with coordinates, yielding a 200 visible / 73 held-out deterministic split under the same seed as the first loop
+- Semantic baseline PCA3D R2 was 0.322; the best model was the prior first-loop feature set at R2 0.436, delta +0.114
+- The best new framing-only model was all framings combined at R2 0.405, delta +0.083; the best single new framing was procedural at R2 0.373, delta +0.051
+- Improvement concentrated most on PC1 for the best model: PC1 R2 0.499, PC2 R2 0.353, PC3 R2 0.406
+- Cluster prediction remained secondary and only slightly improved: baseline accuracy 0.616 vs best accuracy 0.630, delta +0.014
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

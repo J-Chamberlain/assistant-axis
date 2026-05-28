@@ -123,3 +123,35 @@ Third, dimensions do not generalize beyond the semantic baseline. This would be 
 ## Next Implementation Step
 
 The next implementation should add a model-call mode to `latent_feature_discovery_loop.py` that writes the exact visible packet, prompt, raw model response, parsed dimensions, feature operationalization, and evaluation results for each iteration. The default mode should remain offline and reproducible.
+
+## Framing-Ablation Extension
+
+The second-stage local framing ablation adds a stronger comparison target for future multi-model work. Instead of asking only whether one model can propose useful latent dimensions, the future experiment should ask whether different models converge on the same explanatory framing family.
+
+Each model should be asked to propose dimensions under the same four framing prompts:
+
+- motivational: wants, fears, defended objects, optimized outcomes, wounds, hungers, missions, resentments, attachments
+- interactional: relations to agents, authority, trust, conflict, persuasion, care, dominance, deception, submission, reciprocity
+- procedural or operating-mode: recurring operation, such as judging, nurturing, destabilizing, witnessing, commanding, translating, protecting, extracting, archiving, exposing, mediating, punishing, optimizing, or entertaining
+- narrative-causal: role, wound, mission, status, exile, corruption, duty, transcendence, threat, loss, inheritance, transformation, contamination
+
+The current local ablation found that the prior first-loop feature set performs best on PCA3D prediction, R2 0.436 versus semantic baseline R2 0.322, while the best new framing-only condition is all framings combined at R2 0.405. Among single new framing families, procedural performs best at R2 0.373, followed by narrative-causal at 0.355, motivational at 0.345, and interactional at 0.333.
+
+## Rhetorical vs Predictive Convergence
+
+Future multi-model comparison must distinguish rhetorical convergence from predictive convergence.
+
+Rhetorical convergence occurs when models use similar labels or persuasive descriptions. This is insufficient because different prose may operationalize into different features, and similar prose may fail held-out prediction.
+
+Predictive convergence occurs when independently proposed dimensions, after conversion into frozen measurable features, produce similar held-out improvements and reduce errors on similar personas. The strongest evidence would be convergence at three levels: similar operationalized feature scores across personas, similar feature coefficients in held-out regression, and similar high-residual case reductions.
+
+The comparison should therefore report:
+
+- dimension-name and description overlap,
+- feature-score correlations across all personas,
+- held-out R2 by framing family,
+- per-axis R2 by PC1, PC2, and PC3,
+- high-residual case overlap and residual reduction,
+- and whether cluster accuracy remains weak despite continuous-geometry gains.
+
+If models agree rhetorically but not predictively, the result should be treated as interpretive style convergence only. If models disagree rhetorically but produce correlated feature scores and similar held-out gains, the result is stronger evidence for a stable latent explanatory dimension.

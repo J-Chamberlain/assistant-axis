@@ -79,3 +79,9 @@ The first offline loop implementation produced a bounded positive result for con
 Do GPT-5.5, Claude Sonnet, and other frontier models converge toward similar latent explanatory dimensions when given the same visible persona packet, the same held-out evaluation protocol, and iterative correction feedback?
 
 Convergence would support treating repeated dimensions as candidates for formal testing. Divergence would indicate that the hypothesis generator is itself a model-dependent instrument whose provenance must be analyzed.
+
+## Framing-Ablation Robustness
+
+Do motivational, interactional, procedural, and narrative-causal framings remain predictive under repeated held-out splits, stronger non-lexical feature coders, and multi-model hypothesis generation?
+
+The first local framing ablation found that the prior first-loop feature set outperformed all new framing families on PCA3D prediction, while all new framings combined beat the semantic baseline. This raises an open question: is the advantage driven by true behavioral framing content, by better lexical overlap with assistant-axis structure, or by single-split variance?

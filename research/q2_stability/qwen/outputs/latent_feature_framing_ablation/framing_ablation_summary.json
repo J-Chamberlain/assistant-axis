@@ -1,0 +1,51 @@
+{
+  "provenance": {
+    "task_type": "latent_feature_framing_ablation",
+    "artifact_type": "analysis_summary",
+    "artifact_path": "research/q2_stability/qwen/outputs/latent_feature_framing_ablation/framing_ablation_summary.json",
+    "generation_model": null,
+    "evaluation_model": null,
+    "analysis_model": "GPT-5.5 Standard",
+    "script_author_model": "GPT-5.5 Standard via Codex",
+    "orchestration_agent": "Codex",
+    "provider": "openai",
+    "model_version_or_alias": "GPT-5.5 Standard",
+    "date": "2026-05-28",
+    "prompt_family_id": "latent_feature_framing_ablation_v1",
+    "temperature": null,
+    "max_tokens": null,
+    "source_inputs": [
+      "visualizations/full_ranking.csv",
+      "research/visualizations/geometry_viz_data.json",
+      "research/assistant_axis_methodology/semantic_vs_activation_geometry/cluster_assignments_comparison.csv",
+      "research/assistant_axis_methodology/bridge_roles.csv",
+      "research/assistant_axis_methodology/semantic_vs_activation_geometry/role_displacement_metrics.csv",
+      "research/q2_stability/qwen/outputs/latent_feature_discovery/latent_feature_discovery_results.json",
+      "research/q2_stability/qwen/outputs/latent_feature_discovery/latent_feature_dimensions.json"
+    ],
+    "notes_on_uncertainty": "No new model calls, pods, or activations. Existing local artifacts only."
+  },
+  "baseline_pca_r2": 0.32168368975574135,
+  "n_personas_with_pca": 273,
+  "train_visible_personas": 200,
+  "heldout_personas": 73,
+  "baseline_per_axis_r2": [
+    0.35302672089301224,
+    0.27561256252111166,
+    0.32112232235141835
+  ],
+  "baseline_cluster_accuracy": 0.6164383561643836,
+  "baseline_residual_proxy_r2": 0.3517332967662318,
+  "best_framing": "prior_first_loop",
+  "best_pca_r2": 0.4356056439895779,
+  "best_pca_r2_delta_vs_baseline": 0.11392195423383655,
+  "best_per_axis_r2": [
+    0.49941133118631464,
+    0.3532633697127766,
+    0.40640934524327466
+  ],
+  "best_cluster_accuracy": 0.6301369863013698,
+  "best_cluster_accuracy_delta_vs_baseline": 0.013698630136986245,
+  "prior_first_loop_axis_r2": 0.3851814496502629,
+  "note": "Prior first-loop result used assistant-axis projection, while this ablation uses PCA3D prediction as the primary target."
+}

@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** 71cc46f
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop is implemented with held-out evaluation
+**Last commit:** 7944f80
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop and second-stage framing ablation are implemented with held-out evaluation
 
 ---
 
@@ -317,6 +317,16 @@
 - Residual-proxy improvement was weak: best residual R2 0.300 vs baseline 0.290, delta +0.010, and the residual target is provisional because the requested residual summary JSON was absent locally
 - Preliminary dimensions with the strongest axis signal were procedural-professional orientation, theatrical/fantastical vividness, assistant-basin adjacency, standards/error aversion, and semantic-label dependence risk
 
+### Latent Feature Framing Ablation (2026-05-28, second implementation)
+
+- Implemented `research/q2_stability/qwen/scripts/latent_feature_framing_ablation.py` to compare motivational, interactional, procedural/operating-mode, narrative-causal, all-framing, and prior first-loop feature families
+- The primary target is held-out PCA3D activation-coordinate prediction using existing local PCA artifacts; no pods, new activations, or model calls were run
+- The PCA artifact covered 273 personas, yielding a 200 visible / 73 held-out deterministic split under the same seed as the first loop
+- Semantic baseline PCA3D R2 was 0.322; the prior first-loop feature set performed best at R2 0.436, delta +0.114
+- The best new framing-only model was all framings combined at R2 0.405, delta +0.083; the best single new family was procedural at R2 0.373, delta +0.051
+- Best-model improvement concentrated most on PC1: PC1 R2 0.499, PC2 R2 0.353, PC3 R2 0.406
+- Cluster prediction remained secondary and only slightly improved: baseline accuracy 0.616 vs best accuracy 0.630, delta +0.014
+
 ---
 
 ## 3. CURRENT STATE
@@ -349,7 +359,7 @@
 
 **Model provenance state:** `research/workflow/model_provenance_schema.md` defines the mandatory provenance schema for future generated, evaluated, and analyzed artifacts. Future artifacts must distinguish `generation_model`, `evaluation_model`, `analysis_model`, and `script_author_model` before commit; Stage-1 generation and ingestion scripts now require provenance for every role inventory.
 
-**Latent-feature discovery state:** `research/q2_stability/qwen/scripts/latent_feature_discovery_loop.py` now implements the first constrained model-assisted hypothesis-generation and held-out testing loop for persona activation geometry. The supporting report is `research/q2_stability/qwen/latent_feature_discovery_loop_report.md`, the future comparison plan is `research/q2_stability/qwen/multi_model_latent_feature_comparison_plan.md`, and machine-readable outputs live under `research/q2_stability/qwen/outputs/latent_feature_discovery/`. The current result is bounded: latent features improve held-out assistant-axis prediction but do not improve activation-cluster classification.
+**Latent-feature discovery state:** `research/q2_stability/qwen/scripts/latent_feature_discovery_loop.py` implements the first constrained model-assisted hypothesis-generation and held-out testing loop for persona activation geometry. `research/q2_stability/qwen/scripts/latent_feature_framing_ablation.py` now extends this into a framing comparison over motivational, interactional, procedural, narrative-causal, all-framing, and prior first-loop feature sets. Machine-readable outputs live under `research/q2_stability/qwen/outputs/latent_feature_discovery/` and `research/q2_stability/qwen/outputs/latent_feature_framing_ablation/`. The current result is bounded: latent features improve held-out continuous geometry prediction more than hard cluster prediction.
 
 **Visualization state:** `research/visualizations/persona_geometry_explorer.html` now uses full nearest-centroid cluster assignments from `research/visualizations/cluster_assignments_full.json` instead of incomplete hardcoded lists. `research/visualizations/geometry_viz_data.json` now includes role PCA coordinates and variance metadata; PC1 explains 0.315954 of variance and aligns with the assistant-axis vector at 0.802310 cosine.
 
@@ -364,8 +374,12 @@
 **Completed this session:** Ran the loop on existing local persona artifacts and saved JSON/CSV outputs under `research/q2_stability/qwen/outputs/latent_feature_discovery/`.
 **Completed this session:** Wrote the latent-feature discovery loop report and the future multi-model comparison plan.
 **Completed this session:** Updated the findings ledger, methodology questions, research state, and machine-in-the-loop sticky note with the first-pass held-out results.
-**Next step:** Add a live model-call mode that logs exact visible packets and raw model proposals, then rerun the loop over repeated splits and direct activation PCA targets before treating any dimension as robust.
-**Last commit before this session:** 71cc46f
+**Completed this session:** Implemented the second-stage latent-feature framing ablation script and ran it on existing local PCA, semantic, and prompt artifacts.
+**Completed this session:** Saved framing ablation results, summary, feature matrix, dimension codebook, held-out predictions, high-residual shifts, and report under `research/q2_stability/qwen/outputs/latent_feature_framing_ablation/`.
+**Completed this session:** Updated the multi-model comparison plan to distinguish rhetorical convergence from predictive convergence across framing families.
+**Completed this session:** Updated the findings ledger, methodology questions, research state, and machine-in-the-loop sticky note with framing-ablation results.
+**Next step:** Rerun the framing ablation over repeated splits with stronger non-lexical feature coders, then compare GPT-5.5, Claude Sonnet, and another frontier model on predictive convergence rather than rhetorical similarity.
+**Last commit before this session:** 7944f80
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
