@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-05-28
 **Last commit:** see git log
-**Current status:** Active — Procedural replication loop COMPLETE: Claude retained evaluation+guidance+care (R²=0.4139) under 20-dim operating-mode constraint; keyword ceiling at ~0.41; both models converge qualitatively on evaluation as primary procedural axis; Codex R²=0.490 reflects richer vocabulary. BigFive R²=0.613 remains best. Stage 1 inventory sensitivity scaffold ready. Paper 1.5 trickster complete; editor blocked; evaluator-sensitivity blocked by API quota.
+**Current status:** Active — Residual manifold analysis COMPLETE: SVD15 R²=0.707 (+0.094, 5/5 splits), centroids R²=0.643 (+0.030, 4/5). Abstract reference docs failed (both bundles discarded). Best model: sem+BF+SVD15. daredevil worst residual (80.32) across all models. Procedural replication COMPLETE (evaluation+guidance+care R²=0.4139). BigFive remains best interpretable feature set. Paper 1.5 trickster complete; editor blocked; evaluator-sensitivity blocked by API quota.
 
 ---
 
@@ -25,6 +25,21 @@
 - Pseudo-PCA PC1 failure (R²=-0.089) was target-specific; canonical PC1 BigFive R²=0.734
 - 6 worst-explained personas overlap between Claude and Codex: toddler, caveman, infant, teenager, poet, procrastinator
 - Artifacts: `research/q2_stability/qwen/outputs/claude_latent_feature_loop/` (including `claude_on_shared_benchmark_report.md`)
+
+### Claude Residual Manifold Analysis (2026-05-28, Complete)
+- Target: canonical activation PCA3D, baseline sem+BigFive R²=0.613
+- Approach 1 (FAILED): abstract TF-IDF reference documents for 8 residual concepts
+  — both bundles discarded at plateau; vocabulary mismatch (mean cosine 0.010–0.022)
+- Approach 2 (PASSED): reference persona centroid similarity (5 centroids)
+  — R²=0.643, Δ+0.030, 4/5 splits pass; centroids: developmental/stalling/collective/symbolic/liminal
+- Approach 2b (BEST): TF-IDF SVD15 (TruncatedSVD n=15 on no-label prompt corpus)
+  — R²=0.707, Δ+0.094, 5/5 splits pass; SVD explained variance 13.8%
+- Combined (centroids+SVD15): R²=0.707, no marginal gain over SVD15 alone
+- PC2 largest per-axis improvement (+0.105 from 0.480 to 0.585)
+- Worst residual: daredevil (80.32), fool (62.75), teenager (50.28), comedian (50.01)
+- Best explained: producer, reviewer, accountant, paramedic, engineer
+- Key finding: abstract residual vocabulary fails; grounded persona centroids and SVD15 succeed
+- Artifacts: `research/q2_stability/qwen/outputs/claude_residual_manifold_analysis/`
 
 ### Claude Procedural Replication Loop (2026-05-28, Complete)
 - Constrained to 20 procedural/operating-mode dimensions (no BigFive, no trait labels)

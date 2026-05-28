@@ -168,6 +168,23 @@ making it the strongest qualitative cross-model finding. Procedural-professional
 is the best-explained basin under both models.
 Artifact: `research/q2_stability/qwen/outputs/claude_latent_feature_loop/claude_on_shared_benchmark_report.md`
 
+### Residual Manifold After BigFive: Centroid Similarity and SVD Capture Distinct Structure (confirmed, 2026-05-28)
+
+After BigFive (R²=0.613), reference persona centroid features (5 centroids: developmental,
+stalling, collective, symbolic, liminal) add +0.030 R² (4/5 splits pass criterion). TF-IDF
+SVD15 adds +0.094 R² (5/5 splits) — best single residual model. Combined adds no marginal
+signal over SVD15 alone (centroids are spanned by SVD components). First approach (abstract
+TF-IDF reference documents) failed entirely: both bundles discarded at plateau; vocabulary
+mismatch caused near-zero cosine similarities (mean 0.010–0.022).
+
+Key residual structure: developmental/pre-adult cluster, collective/nonindividual cluster,
+symbolic/archetypal cluster, liminal/transgressive cluster. `daredevil` (residual 80.32)
+remains the hardest-to-explain persona after all features — possibly an extreme activation
+pole with no captured semantic analog. Abstract reference document vocabulary fails because
+persona texts use concrete behavioral language, not psychological concept terminology.
+
+Artifacts: `research/q2_stability/qwen/outputs/claude_residual_manifold_analysis/`
+
 ## Current Blockers
 
 The next editor experiment is blocked on revised anchoring methodology. More identical editor rollouts are unlikely to answer the failure mode cleanly.

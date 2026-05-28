@@ -1,0 +1,537 @@
+{
+  "date": "2026-05-28",
+  "analysis_model": "claude-sonnet-4-6",
+  "focus": "residual_manifold_after_bigfive",
+  "target": "canonical_activation_pca3d",
+  "n_personas": 273,
+  "n_splits": 5,
+  "baseline_bigfive_r2": 0.613,
+  "hierarchical_ceiling_r2": 0.622,
+  "pass_criterion": "delta_vs_bigfive >= 0.02 in >= 4/5 splits",
+  "approach_1_status": "FAILED \u2014 abstract TF-IDF reference documents, both bundles discarded, plateau after 2 iterations",
+  "approach_2_status": "PASSED \u2014 reference persona centroids + TF-IDF SVD15",
+  "models": {
+    "baseline_sem_bigfive": {
+      "r2": 0.6129791630290757,
+      "per_axis_r2": [
+        0.733515142362062,
+        0.4803214129882571,
+        0.41551092008637747
+      ],
+      "mean_residual": 21.748303536622934,
+      "delta_vs_bigfive": 0.0,
+      "pass": false,
+      "n_splits_pass": 0,
+      "per_split_r2": [
+        0.5642017254450125,
+        0.6599492180935772,
+        0.6482050756721578,
+        0.5521207535373153,
+        0.6404190423973162
+      ]
+    },
+    "sem_bf_centroids5": {
+      "r2": 0.642577280657006,
+      "per_axis_r2": [
+        0.7519794195725703,
+        0.5677053321401038,
+        0.349114159376205
+      ],
+      "mean_residual": 20.413267581527695,
+      "delta_vs_bigfive": 0.029577280657006044,
+      "pass": true,
+      "n_splits_pass": 4,
+      "per_split_r2": [
+        0.6421343542015827,
+        0.6796112947930917,
+        0.6730121325623397,
+        0.4959689394392107,
+        0.722159682288805
+      ],
+      "centroid_dims": [
+        "sim_to_developmental",
+        "sim_to_stalling",
+        "sim_to_collective",
+        "sim_to_symbolic",
+        "sim_to_liminal"
+      ],
+      "centroid_defs": {
+        "sim_to_developmental": [
+          "toddler",
+          "infant",
+          "teenager",
+          "adolescent",
+          "caveman"
+        ],
+        "sim_to_stalling": [
+          "procrastinator",
+          "hoarder",
+          "amateur",
+          "student"
+        ],
+        "sim_to_collective": [
+          "swarm",
+          "hive",
+          "egregore",
+          "parasite"
+        ],
+        "sim_to_symbolic": [
+          "bard",
+          "sage",
+          "pirate",
+          "fool"
+        ],
+        "sim_to_liminal": [
+          "smuggler",
+          "exile",
+          "loner",
+          "daredevil"
+        ]
+      }
+    },
+    "sem_bf_tfidf_svd15": {
+      "r2": 0.7072225274789575,
+      "per_axis_r2": [
+        0.8192435621607441,
+        0.5850830105398368,
+        0.528274936120648
+      ],
+      "mean_residual": 18.796320275215763,
+      "delta_vs_bigfive": 0.09422252747895754,
+      "pass": true,
+      "n_splits_pass": 5,
+      "per_split_r2": [
+        0.6866259148032046,
+        0.7368131228733508,
+        0.709784310238712,
+        0.6668782945499315,
+        0.7360109949295889
+      ],
+      "svd_n_components": 15,
+      "svd_explained_variance": 0.13752558260383682
+    },
+    "sem_bf_combined": {
+      "r2": 0.7068842687001069,
+      "per_axis_r2": [
+        0.8275639119846808,
+        0.6198178194448288,
+        0.411594307064298
+      ],
+      "mean_residual": 18.328041449710234,
+      "delta_vs_bigfive": 0.09388426870010691,
+      "pass": true,
+      "n_splits_pass": 4,
+      "per_split_r2": [
+        0.7034895667090824,
+        0.7489375286606669,
+        0.7185093524136293,
+        0.6021505449218221,
+        0.7613343507953335
+      ]
+    }
+  },
+  "best_model": "sem_bf_combined",
+  "best_r2": 0.7068842687001069,
+  "best_delta_vs_bigfive": 0.09388426870010691,
+  "best_per_axis_r2": [
+    0.8275639119846808,
+    0.6198178194448288,
+    0.411594307064298
+  ],
+  "centroid_statistics": {
+    "sim_to_developmental": {
+      "mean_sim": 0.0616,
+      "max_sim": 0.641,
+      "top8": [
+        [
+          "adolescent",
+          0.641
+        ],
+        [
+          "teenager",
+          0.6095
+        ],
+        [
+          "infant",
+          0.5394
+        ],
+        [
+          "caveman",
+          0.4781
+        ],
+        [
+          "toddler",
+          0.4747
+        ],
+        [
+          "patient",
+          0.1997
+        ],
+        [
+          "amnesiac",
+          0.1581
+        ],
+        [
+          "immigrant",
+          0.1459
+        ]
+      ]
+    },
+    "sim_to_stalling": {
+      "mean_sim": 0.0546,
+      "max_sim": 0.5629,
+      "top8": [
+        [
+          "amateur",
+          0.5629
+        ],
+        [
+          "student",
+          0.5531
+        ],
+        [
+          "procrastinator",
+          0.5152
+        ],
+        [
+          "hoarder",
+          0.514
+        ],
+        [
+          "competitor",
+          0.1113
+        ],
+        [
+          "prey",
+          0.1093
+        ],
+        [
+          "idealist",
+          0.1022
+        ],
+        [
+          "perfectionist",
+          0.0993
+        ]
+      ]
+    },
+    "sim_to_collective": {
+      "mean_sim": 0.0502,
+      "max_sim": 0.6502,
+      "top8": [
+        [
+          "swarm",
+          0.6502
+        ],
+        [
+          "hive",
+          0.6482
+        ],
+        [
+          "egregore",
+          0.5268
+        ],
+        [
+          "parasite",
+          0.4754
+        ],
+        [
+          "mycorrhizal",
+          0.1756
+        ],
+        [
+          "tulpa",
+          0.1671
+        ],
+        [
+          "zeitgeist",
+          0.1537
+        ],
+        [
+          "spirit",
+          0.1385
+        ]
+      ]
+    },
+    "sim_to_symbolic": {
+      "mean_sim": 0.0611,
+      "max_sim": 0.5427,
+      "top8": [
+        [
+          "bard",
+          0.5427
+        ],
+        [
+          "fool",
+          0.5398
+        ],
+        [
+          "sage",
+          0.5303
+        ],
+        [
+          "pirate",
+          0.5228
+        ],
+        [
+          "guru",
+          0.1836
+        ],
+        [
+          "whale",
+          0.1618
+        ],
+        [
+          "elder",
+          0.1491
+        ],
+        [
+          "jester",
+          0.1307
+        ]
+      ]
+    },
+    "sim_to_liminal": {
+      "mean_sim": 0.0557,
+      "max_sim": 0.5511,
+      "top8": [
+        [
+          "daredevil",
+          0.5511
+        ],
+        [
+          "loner",
+          0.5173
+        ],
+        [
+          "exile",
+          0.515
+        ],
+        [
+          "smuggler",
+          0.5033
+        ],
+        [
+          "hermit",
+          0.1447
+        ],
+        [
+          "expatriate",
+          0.1233
+        ],
+        [
+          "immigrant",
+          0.1119
+        ],
+        [
+          "revenant",
+          0.108
+        ]
+      ]
+    }
+  },
+  "worst_explained_combined": [
+    {
+      "persona": "daredevil",
+      "residual": 80.32,
+      "cluster": "combative_iconoclast"
+    },
+    {
+      "persona": "fool",
+      "residual": 62.75,
+      "cluster": "trickster_chaos"
+    },
+    {
+      "persona": "teenager",
+      "residual": 50.28,
+      "cluster": "other"
+    },
+    {
+      "persona": "comedian",
+      "residual": 50.01,
+      "cluster": "trickster_chaos"
+    },
+    {
+      "persona": "loner",
+      "residual": 49.15,
+      "cluster": "grounded_social"
+    },
+    {
+      "persona": "procrastinator",
+      "residual": 48.61,
+      "cluster": "other"
+    },
+    {
+      "persona": "smuggler",
+      "residual": 47.81,
+      "cluster": "grounded_social"
+    },
+    {
+      "persona": "adolescent",
+      "residual": 43.58,
+      "cluster": "other"
+    },
+    {
+      "persona": "robot",
+      "residual": 41.1,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "luddite",
+      "residual": 39.57,
+      "cluster": "grounded_social"
+    },
+    {
+      "persona": "toddler",
+      "residual": 39.24,
+      "cluster": "other"
+    },
+    {
+      "persona": "aberration",
+      "residual": 38.47,
+      "cluster": "mythic_spiritual"
+    },
+    {
+      "persona": "optimist",
+      "residual": 38.32,
+      "cluster": "grounded_social"
+    },
+    {
+      "persona": "cynic",
+      "residual": 38.27,
+      "cluster": "combative_iconoclast"
+    },
+    {
+      "persona": "gamer",
+      "residual": 37.92,
+      "cluster": "combative_iconoclast"
+    },
+    {
+      "persona": "virtuoso",
+      "residual": 35.19,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "exile",
+      "residual": 34.44,
+      "cluster": "mythic_spiritual"
+    },
+    {
+      "persona": "stoic",
+      "residual": 33.85,
+      "cluster": "mythic_spiritual"
+    },
+    {
+      "persona": "musician",
+      "residual": 32.21,
+      "cluster": "grounded_social"
+    },
+    {
+      "persona": "merchant",
+      "residual": 31.79,
+      "cluster": "procedural_professional"
+    }
+  ],
+  "best_explained_combined": [
+    {
+      "persona": "producer",
+      "residual": 1.96,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "reviewer",
+      "residual": 3.23,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "accountant",
+      "residual": 4.28,
+      "cluster": "editorial"
+    },
+    {
+      "persona": "paramedic",
+      "residual": 4.67,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "engineer",
+      "residual": 4.8,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "retiree",
+      "residual": 5.35,
+      "cluster": "grounded_social"
+    },
+    {
+      "persona": "editor",
+      "residual": 5.52,
+      "cluster": "editorial"
+    },
+    {
+      "persona": "auditor",
+      "residual": 5.76,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "debugger",
+      "residual": 5.81,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "judge",
+      "residual": 5.84,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "familiar",
+      "residual": 6.35,
+      "cluster": "mythic_spiritual"
+    },
+    {
+      "persona": "secretary",
+      "residual": 6.8,
+      "cluster": "editorial"
+    },
+    {
+      "persona": "statistician",
+      "residual": 7.0,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "novelist",
+      "residual": 7.11,
+      "cluster": "grounded_social"
+    },
+    {
+      "persona": "genie",
+      "residual": 7.11,
+      "cluster": "trickster_chaos"
+    },
+    {
+      "persona": "screener",
+      "residual": 7.14,
+      "cluster": "editorial"
+    },
+    {
+      "persona": "fixer",
+      "residual": 7.26,
+      "cluster": "grounded_social"
+    },
+    {
+      "persona": "witness",
+      "residual": 7.5,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "evaluator",
+      "residual": 7.61,
+      "cluster": "procedural_professional"
+    },
+    {
+      "persona": "futurist",
+      "residual": 7.78,
+      "cluster": "procedural_professional"
+    }
+  ]
+}

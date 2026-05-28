@@ -1,0 +1,124 @@
+[
+  {
+    "phase": "approach_1_abstract_tfidf_reference",
+    "status": "FAILED",
+    "description": "Abstract TF-IDF reference documents for 8 residual concepts",
+    "iterations": [
+      {
+        "iteration": 1,
+        "bundle": "B1_developmental (developmental_prematurity + low_agency_stalling + keyword dims)",
+        "mean_r2": 0.6074,
+        "delta_vs_bigfive": -0.0056,
+        "n_splits_above_bigfive": 3,
+        "decision": "discarded",
+        "rationale": "Delta negative; reference docs have low cosine similarity (mean 0.010-0.022) to persona texts"
+      },
+      {
+        "iteration": 2,
+        "bundle": "B2_collective_prereflective (collective_nonindividual + prereflective_sensation + parasitic_dependency + keyword dims)",
+        "mean_r2": 0.6159,
+        "delta_vs_bigfive": 0.0029,
+        "n_splits_above_bigfive": 3,
+        "decision": "discarded",
+        "rationale": "Delta only +0.003; below +0.01 plateau threshold; only 3/5 splits above BigFive"
+      }
+    ],
+    "plateau_trigger": "2 consecutive non-improving iterations",
+    "diagnostic": "Abstract reference docs failed because vocabulary mismatch \u2014 persona texts don't use abstract concept vocabulary; residual cluster coherence only 1.40\u00d7 random baseline in TF-IDF space"
+  },
+  {
+    "phase": "approach_2_reference_centroids",
+    "status": "PASSED",
+    "description": "Cosine similarity to mean TF-IDF of high-residual persona groups",
+    "centroid_defs": {
+      "sim_to_developmental": [
+        "toddler",
+        "infant",
+        "teenager",
+        "adolescent",
+        "caveman"
+      ],
+      "sim_to_stalling": [
+        "procrastinator",
+        "hoarder",
+        "amateur",
+        "student"
+      ],
+      "sim_to_collective": [
+        "swarm",
+        "hive",
+        "egregore",
+        "parasite"
+      ],
+      "sim_to_symbolic": [
+        "bard",
+        "sage",
+        "pirate",
+        "fool"
+      ],
+      "sim_to_liminal": [
+        "smuggler",
+        "exile",
+        "loner",
+        "daredevil"
+      ]
+    },
+    "result": {
+      "r2": 0.6426,
+      "delta_vs_bigfive": 0.0296,
+      "n_splits_pass": 4,
+      "pass": true,
+      "per_split_r2": [
+        0.6421,
+        0.6796,
+        0.673,
+        0.496,
+        0.7222
+      ]
+    },
+    "interpretation": "Grounding features in actual persona texts succeeds where abstract vocabulary fails. Each centroid captures a coherent neighborhood in the residual geometry."
+  },
+  {
+    "phase": "approach_2b_tfidf_svd15",
+    "status": "PASSED",
+    "description": "TruncatedSVD(n=15) of full no-label prompt TF-IDF matrix",
+    "svd_explained_variance": 0.13752558260383682,
+    "result": {
+      "r2": 0.7072,
+      "delta_vs_bigfive": 0.0942,
+      "n_splits_pass": 5,
+      "pass": true,
+      "per_split_r2": [
+        0.6866,
+        0.7368,
+        0.7098,
+        0.6669,
+        0.736
+      ]
+    },
+    "interpretation": "Continuous semantic variation in no-label prompts carries substantial residual signal beyond k=7 one-hot cluster assignment and BigFive traits."
+  },
+  {
+    "phase": "approach_2_combined",
+    "status": "PASSED",
+    "description": "centroids5 + svd15 combined (best model)",
+    "result": {
+      "r2": 0.7069,
+      "delta_vs_bigfive": 0.0939,
+      "n_splits_pass": 4,
+      "pass": true,
+      "per_split_r2": [
+        0.7035,
+        0.7489,
+        0.7185,
+        0.6022,
+        0.7613
+      ],
+      "per_axis_r2": [
+        0.828,
+        0.62,
+        0.412
+      ]
+    }
+  }
+]
