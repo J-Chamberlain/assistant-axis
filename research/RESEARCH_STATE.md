@@ -3,13 +3,31 @@
 # Updated at the end of every Codex session. Fetch this first in any new session.
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
-**Last updated:** 2026-05-27
-**Last commit:** 77879d6
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota
+**Last updated:** 2026-05-28
+**Last commit:** see git log
+**Current status:** Active — Claude latent feature discovery loop complete (BigFive dominates, PC1 unpredicted, persona rankings generated); Stage 1 inventory sensitivity scaffold added (75-call generation script across 5 models × 5 prompts); Paper 1.5 trickster validation complete; editor extraction below threshold; evaluator-sensitivity blocked by OpenAI quota; Codex/GPT-5.5 latent feature loop reports not in repo (needed for cross-model comparison)
 
 ---
 
 ## 1. WHAT HAS BEEN ATTEMPTED
+
+### Claude Latent Feature Discovery Loop (2026-05-28, Complete)
+- Independent hypothesis-generation and interpretation pass over existing local artifacts
+- Target: pseudo-PCA3D from 275×7 Qwen cluster-cosine matrix (95.5% total EV)
+- Null: permutation R²=-0.322 mean, p95=-0.221
+- TF-IDF semantic baseline: PCA3D R²=0.142
+- Best model (TF-IDF + BigFive): PCA3D R²=0.361, Gemma axis R²=0.695
+- Key finding: PC1 is unpredicted (R²=-0.089); PC2 R²=0.732; PC3 R²=0.440
+- Plateau at round 3; DarkTriad and semantic cluster add no signal over BigFive
+- Best-explained: procedural_professional (architect, journalist, paramedic, marketer)
+- Worst-explained: "other" cluster developmental stages; proofreader (editorial outlier)
+- Codex/GPT-5.5 comparison deferred (reports not in repo)
+- Artifacts: `research/q2_stability/qwen/outputs/claude_latent_feature_loop/`
+
+### Stage 1 Inventory Sensitivity Scaffold (2026-05-28, Complete)
+- Generation script + analysis script for 5 models × 5 prompts × 3 runs (75 API calls)
+- Ready to run; awaits API key configuration
+- Artifacts: `research/stage1_inventory_sensitivity/`
 
 ### Paper 1 — Persona Geometry Analysis (Complete)
 - Full layer-wise axis projections for 275 archetypes across 46 layers in Gemma 2 27B

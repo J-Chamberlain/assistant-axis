@@ -1,0 +1,118 @@
+{
+  "provenance": {
+    "generation_model": "n/a",
+    "analysis_model": "claude-sonnet-4-6",
+    "script_author_model": "claude-sonnet-4-6",
+    "orchestration_agent": "claude-code",
+    "provider": "anthropic",
+    "model_version_or_alias": "claude-sonnet-4-6",
+    "date": "2026-05-28",
+    "source_inputs": [
+      "visualizations/full_ranking.csv",
+      "visualizations/bigfive_profiles.json",
+      "visualizations/dark_triad_profiles.json",
+      "research/cluster_analysis/qwen_cluster_directionality.csv",
+      "research/assistant_axis_methodology/deep_semantic_topology_analysis.json",
+      "research/assistant_axis_methodology/stable_anchor_roles.csv",
+      "research/assistant_axis_methodology/semantic_bridge_roles.csv",
+      "research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl",
+      "research/cross_model/outputs/three_model_ranking_comparison.csv"
+    ]
+  },
+  "n_roles": 275,
+  "pseudo_pca3d_explained_variance": [
+    0.5930186319247678,
+    0.25894237844156537,
+    0.10304542814106668
+  ],
+  "null_baseline": {
+    "null_mean": -0.3218690170749833,
+    "null_std": 0.06637287410327632,
+    "null_p95": -0.2209609436683979,
+    "null_p99": -0.19589413465183664
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "feature_set": "F0_tfidf_semantic_baseline",
+      "n_features": 50,
+      "pca3d_r2": 0.1423,
+      "pca3d_per_axis_r2": [
+        -0.1387,
+        0.526,
+        0.0396
+      ],
+      "gemma_r2": 0.4518,
+      "improvement_over_prev": Infinity,
+      "null_pca3d_r2_mean": -0.3219,
+      "null_pca3d_r2_p95": -0.221
+    },
+    {
+      "round": 1,
+      "feature_set": "F1_big5_traits",
+      "n_features": 55,
+      "pca3d_r2": 0.3611,
+      "pca3d_per_axis_r2": [
+        -0.0887,
+        0.7319,
+        0.4401
+      ],
+      "gemma_r2": 0.6947,
+      "improvement_over_prev": 0.2189,
+      "null_pca3d_r2_mean": -0.3219,
+      "null_pca3d_r2_p95": -0.221
+    },
+    {
+      "round": 2,
+      "feature_set": "F2_big5_dark3",
+      "n_features": 58,
+      "pca3d_r2": 0.3526,
+      "pca3d_per_axis_r2": [
+        -0.1281,
+        0.7343,
+        0.4516
+      ],
+      "gemma_r2": 0.7117,
+      "improvement_over_prev": -0.0085,
+      "null_pca3d_r2_mean": -0.3219,
+      "null_pca3d_r2_p95": -0.221
+    },
+    {
+      "round": 3,
+      "feature_set": "F3_sem_cluster",
+      "n_features": 65,
+      "pca3d_r2": 0.3389,
+      "pca3d_per_axis_r2": [
+        -0.1439,
+        0.7441,
+        0.4165
+      ],
+      "gemma_r2": 0.7081,
+      "improvement_over_prev": -0.0137,
+      "null_pca3d_r2_mean": -0.3219,
+      "null_pca3d_r2_p95": -0.221
+    }
+  ],
+  "best_feature_set": "F1_big5_traits",
+  "best_pca3d_r2": 0.36111567102947584,
+  "best_per_axis_r2": [
+    -0.08870507567912256,
+    0.7319478412579516,
+    0.44010424750959853
+  ],
+  "best_gemma_r2": 0.6946585829533155,
+  "baseline_pca3d_r2": 0.1423,
+  "claude_dimension_names": [
+    "evaluative_orientation",
+    "relational_embodiment",
+    "mythic_symbolic",
+    "adversarial_oppositional",
+    "creative_narrative",
+    "professional_specialist",
+    "abstract_collective",
+    "pedagogical_knowledge",
+    "hedonistic_leisure",
+    "moral_ideological"
+  ],
+  "improvement_over_baseline": 0.2188
+}

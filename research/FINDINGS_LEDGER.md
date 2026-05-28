@@ -102,6 +102,41 @@ Editor was tested with a 128-rollout chunk rather than a full 1200-rollout run. 
 
 High truncation is tracked explicitly rather than silently filtered. Trickster truncation did not materially destabilize geometry; editor token-cap results suggest truncation reduction does not necessarily improve role-expression yield.
 
+### Claude Latent Feature Discovery Loop (2026-05-28)
+
+Claude Code independently ran the latent feature discovery loop using existing local
+artifacts only (no pods, no new inference). Key results:
+
+- Pseudo-PCA3D target: PCA on 275×7 Qwen cluster-cosine matrix (95.5% cumulative EV).
+- Null baseline (permutation, n=200): PCA3D R² mean=-0.322, p95=-0.221.
+- TF-IDF semantic baseline: PCA3D R²=0.142, Gemma axis R²=0.452.
+- Best model (TF-IDF + BigFive): PCA3D R²=0.361, Gemma axis R²=0.695. Improvement +0.219.
+- PC1 R²=-0.089 (unpredicted); PC2 R²=0.732; PC3 R²=0.440.
+- Plateau triggered at round 3; DarkTriad and semantic cluster membership add no signal beyond BigFive.
+- Best-explained roles: procedural_professional archetypes (architect, journalist, paramedic, marketer).
+- Worst-explained: "other" cluster developmental stages (toddler, caveman, infant, teenager), editorial outlier (proofreader).
+- Codex/GPT-5.5 results not found in repository; direct comparison deferred.
+- Artifacts: `research/q2_stability/qwen/outputs/claude_latent_feature_loop/`
+
+### BigFive as Dominant Explanatory Framework (provisional, 2026-05-28)
+
+BigFive psychological traits (literature-derived, LLM-assigned during Paper 1) are
+the single most predictive feature set for PC2 and PC3 of the Qwen cluster-cosine
+space and for the Gemma assistant axis (R²=0.695). DarkTriad adds no independent
+signal. Semantic cluster membership adds no signal beyond BigFive. This supports
+treating BigFive as the primary psychological lens for activation geometry, though
+it does not establish that the geometry is truly psychological (the BigFive profiles
+were assigned by LLM and may reflect the assigning model's stereotypes).
+
+### PC1 of Qwen Cluster-Cosine Space is Not Explained by Available Features (provisional, 2026-05-28)
+
+The dominant direction in the Qwen cluster-cosine space (59.3% variance) is not
+predictable from TF-IDF prompt semantics, BigFive traits, DarkTriad traits, or
+semantic cluster membership. Held-out R²=-0.089. This is either a model-internal
+organizational dimension orthogonal to human-legible features, or it corresponds
+to the Qwen assistant axis itself (which would be circularly correlated with the
+cosine targets). Disambiguating requires direct Qwen axis projection comparison.
+
 ## Current Blockers
 
 The next editor experiment is blocked on revised anchoring methodology. More identical editor rollouts are unlikely to answer the failure mode cleanly.
@@ -120,3 +155,6 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 4. Test whether cluster-synthesized background prompts improve low-yield persona anchoring without leaking role identity.
 5. Launch the bounded 800-rollout no-label activation-space stress test once compute is approved.
 6. Continue Paper 1.5 validation before relying on adaptive extraction as a general persona-vector workflow.
+7. Push Codex/GPT-5.5 latent feature loop reports to the repo so Claude-vs-Codex cross-model comparison can be completed.
+8. Disambiguate Qwen PC1: project Qwen assistant_axis.pt onto the cluster-cosine PCA space to test whether PC1 corresponds to the Qwen assistant axis (requires torch on local machine).
+9. Test Claude's 10 hypothesized binary dimensions independently as a targeted feature block (separate from the BigFive-dominated loop).
