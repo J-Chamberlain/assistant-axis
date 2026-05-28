@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** 3b28b55
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; new Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models
+**Last commit:** 71cc46f
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop is implemented with held-out evaluation
 
 ---
 
@@ -307,6 +307,16 @@
 - Attempted `gpt-4.1-mini` canonical-rubric rescoring via OpenAI Responses API, but the API returned `insufficient_quota`; zero `gpt-4.1-mini` paired records were produced
 - No evaluator-sensitivity conclusion should be drawn until the harness is rerun after API quota is restored
 
+### Latent Feature Discovery Loop (2026-05-28, first implementation)
+
+- Implemented a constrained LLM-assisted latent-feature discovery loop for persona activation geometry under `research/q2_stability/qwen/scripts/latent_feature_discovery_loop.py`
+- The loop treats GPT-5.5 Standard as a hypothesis generator, operationalizes proposed dimensions into measurable lexical and prompt-pattern features, and evaluates them on a deterministic 200 visible / 75 held-out persona split
+- Semantic baselines use original-prompt, no-label-prompt, and role-name k=7 cluster assignments; latent features are tested for held-out activation-cluster classification, assistant-axis projection regression, residual-proxy regression, nearest-neighbor preservation, and permutation/null baselines
+- Best held-out assistant-axis prediction improved from baseline R2 0.301 to latent R2 0.385, delta +0.084, with iteration 2 as the strongest axis-prediction model
+- Activation-cluster classification did not improve: best latent accuracy 0.600 vs semantic baseline accuracy 0.600
+- Residual-proxy improvement was weak: best residual R2 0.300 vs baseline 0.290, delta +0.010, and the residual target is provisional because the requested residual summary JSON was absent locally
+- Preliminary dimensions with the strongest axis signal were procedural-professional orientation, theatrical/fantastical vividness, assistant-basin adjacency, standards/error aversion, and semantic-label dependence risk
+
 ---
 
 ## 3. CURRENT STATE
@@ -339,6 +349,8 @@
 
 **Model provenance state:** `research/workflow/model_provenance_schema.md` defines the mandatory provenance schema for future generated, evaluated, and analyzed artifacts. Future artifacts must distinguish `generation_model`, `evaluation_model`, `analysis_model`, and `script_author_model` before commit; Stage-1 generation and ingestion scripts now require provenance for every role inventory.
 
+**Latent-feature discovery state:** `research/q2_stability/qwen/scripts/latent_feature_discovery_loop.py` now implements the first constrained model-assisted hypothesis-generation and held-out testing loop for persona activation geometry. The supporting report is `research/q2_stability/qwen/latent_feature_discovery_loop_report.md`, the future comparison plan is `research/q2_stability/qwen/multi_model_latent_feature_comparison_plan.md`, and machine-readable outputs live under `research/q2_stability/qwen/outputs/latent_feature_discovery/`. The current result is bounded: latent features improve held-out assistant-axis prediction but do not improve activation-cluster classification.
+
 **Visualization state:** `research/visualizations/persona_geometry_explorer.html` now uses full nearest-centroid cluster assignments from `research/visualizations/cluster_assignments_full.json` instead of incomplete hardcoded lists. `research/visualizations/geometry_viz_data.json` now includes role PCA coordinates and variance metadata; PC1 explains 0.315954 of variance and aligns with the assistant-axis vector at 0.802310 cosine.
 
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
@@ -348,8 +360,12 @@
 **Completed this session:** Created `sticky_notes/2026-05-28_machine_in_the_loop.md` describing iterative motivational hypothesis testing with frontier models as interpreters.
 **Completed this session:** Created `sticky_notes/2026-05-28_paired_persona_test_design.md` describing controlled variable-isolation persona-pair experiments for the Paper 1.5 capstone.
 **Completed this session:** Created `sticky_notes/2026-05-28_rorschach_test_for_models.md` describing persona generation as a projective test of model-specific psychological representation structure, and indexed all three notes in `sticky_notes/README.md`.
-**Next step:** Convert the paired-persona candidates into Lu-style role prompt sets, preregister geometry predictions, and decide how the machine-in-the-loop hypothesis revision loop should converge.
-**Last commit before this session:** 3b28b55
+**Completed this session:** Implemented the first latent-feature discovery loop script with deterministic train/held-out split, semantic baselines, operationalized candidate dimensions, and held-out predictive metrics.
+**Completed this session:** Ran the loop on existing local persona artifacts and saved JSON/CSV outputs under `research/q2_stability/qwen/outputs/latent_feature_discovery/`.
+**Completed this session:** Wrote the latent-feature discovery loop report and the future multi-model comparison plan.
+**Completed this session:** Updated the findings ledger, methodology questions, research state, and machine-in-the-loop sticky note with the first-pass held-out results.
+**Next step:** Add a live model-call mode that logs exact visible packets and raw model proposals, then rerun the loop over repeated splits and direct activation PCA targets before treating any dimension as robust.
+**Last commit before this session:** 71cc46f
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

@@ -1,0 +1,238 @@
+[
+  {
+    "iteration": 1,
+    "name": "procedural_professional_orientation",
+    "description": "Task-facing, standards-driven, technical, evaluative, or improvement-oriented stance.",
+    "positive_terms": [
+      "evaluate",
+      "assess",
+      "analyze",
+      "refine",
+      "improve",
+      "expertise",
+      "professional",
+      "technical",
+      "method",
+      "system",
+      "strategy",
+      "accuracy",
+      "clarity",
+      "knowledge"
+    ],
+    "negative_terms": [],
+    "operationalization": "sqrt-length-normalized lexical indicator score over role name, original prompts, no-label prompts, and question sample"
+  },
+  {
+    "iteration": 1,
+    "name": "theatrical_fantastical_vividness",
+    "description": "Symbolic, performative, fantastical, paradoxical, or genre-like behavioral cues.",
+    "positive_terms": [
+      "myth",
+      "mischief",
+      "paradox",
+      "riddle",
+      "story",
+      "chaos",
+      "magic",
+      "spirit",
+      "ancient",
+      "dream",
+      "performance",
+      "character",
+      "unexpected",
+      "twist"
+    ],
+    "negative_terms": [],
+    "operationalization": "sqrt-length-normalized lexical indicator score over role name, original prompts, no-label prompts, and question sample"
+  },
+  {
+    "iteration": 1,
+    "name": "interpersonal_lived_reactivity",
+    "description": "Role organized around social position, life circumstance, care, survival, or interpersonal response.",
+    "positive_terms": [
+      "people",
+      "others",
+      "relationship",
+      "family",
+      "life",
+      "experience",
+      "survive",
+      "care",
+      "support",
+      "community",
+      "social",
+      "human",
+      "emotion",
+      "trust"
+    ],
+    "negative_terms": [],
+    "operationalization": "sqrt-length-normalized lexical indicator score over role name, original prompts, no-label prompts, and question sample"
+  },
+  {
+    "iteration": 1,
+    "name": "oppositional_moral_pressure",
+    "description": "Challenging, adversarial, rebellious, corrective, or norm-pressuring stance.",
+    "positive_terms": [
+      "challenge",
+      "question",
+      "rebel",
+      "oppose",
+      "conflict",
+      "critic",
+      "truth",
+      "conventional",
+      "norm",
+      "radical",
+      "provoc",
+      "argument",
+      "justice"
+    ],
+    "negative_terms": [],
+    "operationalization": "sqrt-length-normalized lexical indicator score over role name, original prompts, no-label prompts, and question sample"
+  },
+  {
+    "iteration": 2,
+    "name": "assistant_basin_adjacency",
+    "description": "Helpful, supportive, clarifying, coordinating, advising, or user-task-facing behavior likely to compress toward assistant-like action.",
+    "positive_terms": [
+      "help",
+      "support",
+      "guide",
+      "clarify",
+      "coordinate",
+      "advise",
+      "assist",
+      "provide",
+      "needs",
+      "queries",
+      "tasks",
+      "answer",
+      "explain"
+    ],
+    "negative_terms": [],
+    "operationalization": "sqrt-length-normalized lexical indicator score over role name, original prompts, no-label prompts, and question sample"
+  },
+  {
+    "iteration": 2,
+    "name": "boundary_liminal_instability",
+    "description": "Hybrid, threshold, outsider, forgotten, uncertain, or identity-unstable role cues.",
+    "positive_terms": [
+      "between",
+      "boundary",
+      "outsider",
+      "unknown",
+      "liminal",
+      "lost",
+      "memory",
+      "exile",
+      "orphan",
+      "wander",
+      "ambiguous",
+      "shift",
+      "transform"
+    ],
+    "negative_terms": [],
+    "operationalization": "sqrt-length-normalized lexical indicator score over role name, original prompts, no-label prompts, and question sample"
+  },
+  {
+    "iteration": 2,
+    "name": "collectivized_or_nonindividual_agency",
+    "description": "Role is organized as a collective, ecosystemic, distributed, or nonindividual agent.",
+    "positive_terms": [
+      "collective",
+      "network",
+      "swarm",
+      "hive",
+      "ecosystem",
+      "coral",
+      "mycorrhizal",
+      "shared",
+      "group",
+      "systems",
+      "distributed"
+    ],
+    "negative_terms": [],
+    "operationalization": "sqrt-length-normalized lexical indicator score over role name, original prompts, no-label prompts, and question sample"
+  },
+  {
+    "iteration": 2,
+    "name": "communicative_media_register",
+    "description": "Speech, writing, narration, explanation, audience, or publication-centered role organization.",
+    "positive_terms": [
+      "write",
+      "story",
+      "narrative",
+      "audience",
+      "communicate",
+      "explain",
+      "publish",
+      "voice",
+      "language",
+      "interview",
+      "podcast",
+      "report",
+      "blog"
+    ],
+    "negative_terms": [],
+    "operationalization": "sqrt-length-normalized lexical indicator score over role name, original prompts, no-label prompts, and question sample"
+  },
+  {
+    "iteration": 3,
+    "name": "semantic_label_dependence_risk",
+    "description": "Likelihood that role identity depends on explicit naming, stage identity, or performed self-label rather than behavior alone.",
+    "positive_terms": [
+      "role",
+      "identity",
+      "character",
+      "persona",
+      "embody",
+      "act as",
+      "take on",
+      "performance",
+      "become",
+      "portray"
+    ],
+    "negative_terms": [],
+    "operationalization": "sqrt-length-normalized lexical indicator score over role name, original prompts, no-label prompts, and question sample"
+  },
+  {
+    "iteration": 3,
+    "name": "standards_and_error_aversion",
+    "description": "Fear-of-error or standard-enforcement pattern distinct from generic professional competence.",
+    "positive_terms": [
+      "correct",
+      "error",
+      "mistake",
+      "precision",
+      "standard",
+      "review",
+      "proof",
+      "check",
+      "scrutin",
+      "quality",
+      "final"
+    ],
+    "negative_terms": [],
+    "operationalization": "sqrt-length-normalized lexical indicator score over role name, original prompts, no-label prompts, and question sample"
+  },
+  {
+    "iteration": 3,
+    "name": "forceful_self_assertion",
+    "description": "Assertive, dominant, disruptive, competitive, or self-authorizing orientation.",
+    "positive_terms": [
+      "force",
+      "dominant",
+      "assert",
+      "compete",
+      "disrupt",
+      "unafraid",
+      "push",
+      "refuse",
+      "bold",
+      "power",
+      "will"
+    ],
+    "negative_terms": [],
+    "operationalization": "sqrt-length-normalized lexical indicator score over role name, original prompts, no-label prompts, and question sample"
+  }
+]

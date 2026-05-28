@@ -67,3 +67,15 @@ How should analyses reconcile the Lu middle-layer convention, model config targe
 ## Cluster-Level Prompting
 
 Can cluster-synthesized motivational prompts improve anchoring for assistant-adjacent or low-yield personas without leaking persona identity through overt content?
+
+## Latent Feature Discovery Loop
+
+Can frontier-model-generated latent dimensions improve held-out prediction of activation geometry beyond semantic cluster baselines after being converted into measurable features?
+
+The first offline loop implementation produced a bounded positive result for continuous assistant-axis prediction, with best held-out R2 improving from 0.301 to 0.385, but no improvement in activation-cluster accuracy. The next methodological question is whether the same dimensions survive repeated splits, stronger feature operationalization, direct activation PCA targets, and live model-generated iteration logs.
+
+## Multi-Model Interpretive Convergence
+
+Do GPT-5.5, Claude Sonnet, and other frontier models converge toward similar latent explanatory dimensions when given the same visible persona packet, the same held-out evaluation protocol, and iterative correction feedback?
+
+Convergence would support treating repeated dimensions as candidates for formal testing. Divergence would indicate that the hypothesis generator is itself a model-dependent instrument whose provenance must be analyzed.

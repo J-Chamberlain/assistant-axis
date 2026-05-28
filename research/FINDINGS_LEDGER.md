@@ -102,6 +102,15 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - PC1 explained variance: 0.315954; PC1-assistant-axis alignment: 0.802310
 - Notable surprising placements: anarchist, robot, cyborg, hive, and swarm assign to procedural_professional; virus assigns to mythic_spiritual with extremely low margin; caveman assigns to trickster_chaos with extremely low margin
 
+### Latent Feature Discovery Loop (2026-05-28)
+
+- Implemented the first constrained LLM-assisted latent-feature discovery loop for persona activation geometry, using GPT-5.5 Standard as hypothesis generator and held-out prediction as the only evidence source
+- The loop uses a deterministic 200/75 visible-heldout split, semantic-cluster baselines, operationalized latent dimensions, held-out regression/classification metrics, nearest-neighbor preservation, and permutation/null baselines
+- First-pass held-out evaluation found the strongest improvement for continuous assistant-axis prediction: best latent model R2 0.385 vs semantic baseline R2 0.301, delta +0.084
+- Discrete activation-cluster classification did not improve over the semantic baseline: best latent accuracy 0.600 vs baseline 0.600
+- Residual-proxy improvement was weak: best residual R2 0.300 vs baseline 0.290, delta +0.010, using a proxy residual target because the expected residual summary file was absent locally
+- Most useful preliminary axis predictors were procedural-professional orientation, theatrical/fantastical vividness, assistant-basin adjacency, standards/error aversion, and semantic-label dependence risk
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

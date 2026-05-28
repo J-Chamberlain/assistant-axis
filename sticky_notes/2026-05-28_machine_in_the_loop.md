@@ -73,3 +73,7 @@ axis of displacement between the two personas in the geometry identifies that di
 
 Concept only. Depends on: per-persona residuals (complete), PCA projection mode in
 visualizer (in progress), and a loop execution design (not yet written).
+
+## Update 2026-05-28
+
+Implemented the first offline latent-feature discovery loop at `research/q2_stability/qwen/scripts/latent_feature_discovery_loop.py`. The concept has moved from pre-design to an initial constrained framework: GPT-5.5-derived candidate dimensions are operationalized as measurable features and evaluated on a deterministic 200/75 visible-heldout split. First-pass evidence is bounded: latent features improve held-out assistant-axis R2 from 0.301 to 0.385 at best, but do not improve activation-cluster accuracy over the semantic baseline.

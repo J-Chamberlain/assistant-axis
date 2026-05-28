@@ -1,0 +1,4 @@
+iteration,n_dimensions,heldout_cluster_accuracy_baseline,heldout_cluster_accuracy_latent,heldout_cluster_accuracy_delta,heldout_axis_r2_baseline,heldout_axis_r2_latent,heldout_axis_r2_delta,heldout_residual_r2_baseline,heldout_residual_r2_latent,heldout_residual_r2_delta,residual_mse_baseline,residual_mse_latent,residual_mse_reduction,nn_preservation_baseline,nn_preservation_latent,nn_preservation_delta
+1,4,0.6,0.586667,-0.013333,0.30088,0.357258,0.056378,0.290304,0.300263,0.009959,1.98492,1.957066,0.027854,0.106667,0.12,0.013333
+2,8,0.6,0.573333,-0.026667,0.30088,0.385181,0.084302,0.290304,0.28308,-0.007224,1.98492,2.005126,-0.020205,0.106667,0.128,0.021333
+3,11,0.6,0.6,0.0,0.30088,0.349406,0.048526,0.290304,0.294304,0.004,1.98492,1.973734,0.011187,0.106667,0.109333,0.002667

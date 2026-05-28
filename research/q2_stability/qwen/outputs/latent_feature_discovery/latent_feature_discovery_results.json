@@ -1,0 +1,530 @@
+{
+  "date": "2026-05-28",
+  "analysis_model": "GPT-5.5 Standard",
+  "script_author_model": "GPT-5.5 Standard",
+  "n_personas": 275,
+  "train_visible_personas": 200,
+  "heldout_personas": 75,
+  "residual_summary_available": false,
+  "residual_target_note": "semantic_activation_residuals_summary.json was absent; residual_proxy uses bridge_score, role-name-to-no-label displacement, and low semantic margin from existing methodology artifacts.",
+  "best_axis_iteration": 2,
+  "best_residual_iteration": 1,
+  "best_cluster_iteration": 3,
+  "best_axis_r2_delta": 0.08430159953380989,
+  "best_residual_r2_delta": 0.009959108773058056,
+  "best_cluster_accuracy_delta": 0.0,
+  "convergent_dimensions": [
+    "procedural_professional_orientation",
+    "theatrical_fantastical_vividness",
+    "interpersonal_lived_reactivity",
+    "oppositional_moral_pressure",
+    "assistant_basin_adjacency",
+    "boundary_liminal_instability",
+    "collectivized_or_nonindividual_agency",
+    "communicative_media_register",
+    "semantic_label_dependence_risk",
+    "standards_and_error_aversion",
+    "forceful_self_assertion"
+  ],
+  "metrics": [
+    {
+      "iteration": 1,
+      "n_dimensions": 4,
+      "dimensions": [
+        "procedural_professional_orientation",
+        "theatrical_fantastical_vividness",
+        "interpersonal_lived_reactivity",
+        "oppositional_moral_pressure"
+      ],
+      "heldout_cluster_accuracy_baseline": 0.6,
+      "heldout_cluster_accuracy_latent": 0.5866666666666667,
+      "heldout_cluster_accuracy_delta": -0.013333333333333308,
+      "heldout_axis_r2_baseline": 0.300879850116453,
+      "heldout_axis_r2_latent": 0.3572580704697903,
+      "heldout_axis_r2_delta": 0.05637822035333728,
+      "heldout_residual_r2_baseline": 0.2903040387113942,
+      "heldout_residual_r2_latent": 0.30026314748445226,
+      "heldout_residual_r2_delta": 0.009959108773058056,
+      "residual_mse_baseline": 1.984920489488021,
+      "residual_mse_latent": 1.9570662531122218,
+      "residual_mse_reduction": 0.027854236375799202,
+      "nn_preservation_baseline": 0.10666666666666667,
+      "nn_preservation_latent": 0.12,
+      "nn_preservation_delta": 0.013333333333333322,
+      "axis_permutation_null": {
+        "mean": -0.1820187392627879,
+        "p95": 0.013851468570010522,
+        "max": 0.13119734445718123
+      },
+      "residual_permutation_null": {
+        "mean": -0.07886202458034194,
+        "p95": 0.053966809889671986,
+        "max": 0.08090030168346307
+      },
+      "dimension_correlations": [
+        {
+          "iteration": 1,
+          "dimension": "procedural_professional_orientation",
+          "target": "axis_projection",
+          "heldout_correlation": 0.470393
+        },
+        {
+          "iteration": 1,
+          "dimension": "procedural_professional_orientation",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.067357
+        },
+        {
+          "iteration": 1,
+          "dimension": "theatrical_fantastical_vividness",
+          "target": "axis_projection",
+          "heldout_correlation": -0.316928
+        },
+        {
+          "iteration": 1,
+          "dimension": "theatrical_fantastical_vividness",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.007286
+        },
+        {
+          "iteration": 1,
+          "dimension": "interpersonal_lived_reactivity",
+          "target": "axis_projection",
+          "heldout_correlation": -0.197272
+        },
+        {
+          "iteration": 1,
+          "dimension": "interpersonal_lived_reactivity",
+          "target": "residual_proxy",
+          "heldout_correlation": -0.219542
+        },
+        {
+          "iteration": 1,
+          "dimension": "oppositional_moral_pressure",
+          "target": "axis_projection",
+          "heldout_correlation": -0.135773
+        },
+        {
+          "iteration": 1,
+          "dimension": "oppositional_moral_pressure",
+          "target": "residual_proxy",
+          "heldout_correlation": -0.116708
+        }
+      ],
+      "feature_names": [
+        "original_prompt_k7=0",
+        "original_prompt_k7=1",
+        "original_prompt_k7=2",
+        "original_prompt_k7=3",
+        "original_prompt_k7=4",
+        "original_prompt_k7=5",
+        "original_prompt_k7=6",
+        "original_prompt_k7=missing",
+        "no_label_prompt_k7=0",
+        "no_label_prompt_k7=1",
+        "no_label_prompt_k7=2",
+        "no_label_prompt_k7=3",
+        "no_label_prompt_k7=4",
+        "no_label_prompt_k7=5",
+        "no_label_prompt_k7=6",
+        "no_label_prompt_k7=missing",
+        "role_name_k7=0",
+        "role_name_k7=1",
+        "role_name_k7=2",
+        "role_name_k7=3",
+        "role_name_k7=4",
+        "role_name_k7=5",
+        "role_name_k7=6",
+        "role_name_k7=missing",
+        "procedural_professional_orientation",
+        "theatrical_fantastical_vividness",
+        "interpersonal_lived_reactivity",
+        "oppositional_moral_pressure"
+      ]
+    },
+    {
+      "iteration": 2,
+      "n_dimensions": 8,
+      "dimensions": [
+        "procedural_professional_orientation",
+        "theatrical_fantastical_vividness",
+        "interpersonal_lived_reactivity",
+        "oppositional_moral_pressure",
+        "assistant_basin_adjacency",
+        "boundary_liminal_instability",
+        "collectivized_or_nonindividual_agency",
+        "communicative_media_register"
+      ],
+      "heldout_cluster_accuracy_baseline": 0.6,
+      "heldout_cluster_accuracy_latent": 0.5733333333333334,
+      "heldout_cluster_accuracy_delta": -0.026666666666666616,
+      "heldout_axis_r2_baseline": 0.300879850116453,
+      "heldout_axis_r2_latent": 0.3851814496502629,
+      "heldout_axis_r2_delta": 0.08430159953380989,
+      "heldout_residual_r2_baseline": 0.2903040387113942,
+      "heldout_residual_r2_latent": 0.2830798421510805,
+      "heldout_residual_r2_delta": -0.0072241965603137,
+      "residual_mse_baseline": 1.984920489488021,
+      "residual_mse_latent": 2.005125558355285,
+      "residual_mse_reduction": -0.020205068867264142,
+      "nn_preservation_baseline": 0.10666666666666667,
+      "nn_preservation_latent": 0.12799999999999997,
+      "nn_preservation_delta": 0.0213333333333333,
+      "axis_permutation_null": {
+        "mean": -0.21334788798930923,
+        "p95": -0.006075423811432562,
+        "max": 0.15361129725450828
+      },
+      "residual_permutation_null": {
+        "mean": -0.09330188630403578,
+        "p95": 0.0501880104485066,
+        "max": 0.12992714324898136
+      },
+      "dimension_correlations": [
+        {
+          "iteration": 2,
+          "dimension": "procedural_professional_orientation",
+          "target": "axis_projection",
+          "heldout_correlation": 0.470393
+        },
+        {
+          "iteration": 2,
+          "dimension": "procedural_professional_orientation",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.067357
+        },
+        {
+          "iteration": 2,
+          "dimension": "theatrical_fantastical_vividness",
+          "target": "axis_projection",
+          "heldout_correlation": -0.316928
+        },
+        {
+          "iteration": 2,
+          "dimension": "theatrical_fantastical_vividness",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.007286
+        },
+        {
+          "iteration": 2,
+          "dimension": "interpersonal_lived_reactivity",
+          "target": "axis_projection",
+          "heldout_correlation": -0.197272
+        },
+        {
+          "iteration": 2,
+          "dimension": "interpersonal_lived_reactivity",
+          "target": "residual_proxy",
+          "heldout_correlation": -0.219542
+        },
+        {
+          "iteration": 2,
+          "dimension": "oppositional_moral_pressure",
+          "target": "axis_projection",
+          "heldout_correlation": -0.135773
+        },
+        {
+          "iteration": 2,
+          "dimension": "oppositional_moral_pressure",
+          "target": "residual_proxy",
+          "heldout_correlation": -0.116708
+        },
+        {
+          "iteration": 2,
+          "dimension": "assistant_basin_adjacency",
+          "target": "axis_projection",
+          "heldout_correlation": 0.282003
+        },
+        {
+          "iteration": 2,
+          "dimension": "assistant_basin_adjacency",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.017259
+        },
+        {
+          "iteration": 2,
+          "dimension": "boundary_liminal_instability",
+          "target": "axis_projection",
+          "heldout_correlation": -0.038827
+        },
+        {
+          "iteration": 2,
+          "dimension": "boundary_liminal_instability",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.025681
+        },
+        {
+          "iteration": 2,
+          "dimension": "collectivized_or_nonindividual_agency",
+          "target": "axis_projection",
+          "heldout_correlation": 0.161556
+        },
+        {
+          "iteration": 2,
+          "dimension": "collectivized_or_nonindividual_agency",
+          "target": "residual_proxy",
+          "heldout_correlation": -0.094899
+        },
+        {
+          "iteration": 2,
+          "dimension": "communicative_media_register",
+          "target": "axis_projection",
+          "heldout_correlation": -0.084257
+        },
+        {
+          "iteration": 2,
+          "dimension": "communicative_media_register",
+          "target": "residual_proxy",
+          "heldout_correlation": -0.006816
+        }
+      ],
+      "feature_names": [
+        "original_prompt_k7=0",
+        "original_prompt_k7=1",
+        "original_prompt_k7=2",
+        "original_prompt_k7=3",
+        "original_prompt_k7=4",
+        "original_prompt_k7=5",
+        "original_prompt_k7=6",
+        "original_prompt_k7=missing",
+        "no_label_prompt_k7=0",
+        "no_label_prompt_k7=1",
+        "no_label_prompt_k7=2",
+        "no_label_prompt_k7=3",
+        "no_label_prompt_k7=4",
+        "no_label_prompt_k7=5",
+        "no_label_prompt_k7=6",
+        "no_label_prompt_k7=missing",
+        "role_name_k7=0",
+        "role_name_k7=1",
+        "role_name_k7=2",
+        "role_name_k7=3",
+        "role_name_k7=4",
+        "role_name_k7=5",
+        "role_name_k7=6",
+        "role_name_k7=missing",
+        "procedural_professional_orientation",
+        "theatrical_fantastical_vividness",
+        "interpersonal_lived_reactivity",
+        "oppositional_moral_pressure",
+        "assistant_basin_adjacency",
+        "boundary_liminal_instability",
+        "collectivized_or_nonindividual_agency",
+        "communicative_media_register"
+      ]
+    },
+    {
+      "iteration": 3,
+      "n_dimensions": 11,
+      "dimensions": [
+        "procedural_professional_orientation",
+        "theatrical_fantastical_vividness",
+        "interpersonal_lived_reactivity",
+        "oppositional_moral_pressure",
+        "assistant_basin_adjacency",
+        "boundary_liminal_instability",
+        "collectivized_or_nonindividual_agency",
+        "communicative_media_register",
+        "semantic_label_dependence_risk",
+        "standards_and_error_aversion",
+        "forceful_self_assertion"
+      ],
+      "heldout_cluster_accuracy_baseline": 0.6,
+      "heldout_cluster_accuracy_latent": 0.6,
+      "heldout_cluster_accuracy_delta": 0.0,
+      "heldout_axis_r2_baseline": 0.300879850116453,
+      "heldout_axis_r2_latent": 0.34940613321546743,
+      "heldout_axis_r2_delta": 0.04852628309901441,
+      "heldout_residual_r2_baseline": 0.2903040387113942,
+      "heldout_residual_r2_latent": 0.2943038661523746,
+      "heldout_residual_r2_delta": 0.003999827440980375,
+      "residual_mse_baseline": 1.984920489488021,
+      "residual_mse_latent": 1.973733530740781,
+      "residual_mse_reduction": 0.011186958747239961,
+      "nn_preservation_baseline": 0.10666666666666667,
+      "nn_preservation_latent": 0.10933333333333332,
+      "nn_preservation_delta": 0.0026666666666666505,
+      "axis_permutation_null": {
+        "mean": -0.24316527046487157,
+        "p95": -0.018845884292768567,
+        "max": 0.14794150939105155
+      },
+      "residual_permutation_null": {
+        "mean": -0.10905643885305168,
+        "p95": 0.05901498461006622,
+        "max": 0.13859086215047145
+      },
+      "dimension_correlations": [
+        {
+          "iteration": 3,
+          "dimension": "procedural_professional_orientation",
+          "target": "axis_projection",
+          "heldout_correlation": 0.470393
+        },
+        {
+          "iteration": 3,
+          "dimension": "procedural_professional_orientation",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.067357
+        },
+        {
+          "iteration": 3,
+          "dimension": "theatrical_fantastical_vividness",
+          "target": "axis_projection",
+          "heldout_correlation": -0.316928
+        },
+        {
+          "iteration": 3,
+          "dimension": "theatrical_fantastical_vividness",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.007286
+        },
+        {
+          "iteration": 3,
+          "dimension": "interpersonal_lived_reactivity",
+          "target": "axis_projection",
+          "heldout_correlation": -0.197272
+        },
+        {
+          "iteration": 3,
+          "dimension": "interpersonal_lived_reactivity",
+          "target": "residual_proxy",
+          "heldout_correlation": -0.219542
+        },
+        {
+          "iteration": 3,
+          "dimension": "oppositional_moral_pressure",
+          "target": "axis_projection",
+          "heldout_correlation": -0.135773
+        },
+        {
+          "iteration": 3,
+          "dimension": "oppositional_moral_pressure",
+          "target": "residual_proxy",
+          "heldout_correlation": -0.116708
+        },
+        {
+          "iteration": 3,
+          "dimension": "assistant_basin_adjacency",
+          "target": "axis_projection",
+          "heldout_correlation": 0.282003
+        },
+        {
+          "iteration": 3,
+          "dimension": "assistant_basin_adjacency",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.017259
+        },
+        {
+          "iteration": 3,
+          "dimension": "boundary_liminal_instability",
+          "target": "axis_projection",
+          "heldout_correlation": -0.038827
+        },
+        {
+          "iteration": 3,
+          "dimension": "boundary_liminal_instability",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.025681
+        },
+        {
+          "iteration": 3,
+          "dimension": "collectivized_or_nonindividual_agency",
+          "target": "axis_projection",
+          "heldout_correlation": 0.161556
+        },
+        {
+          "iteration": 3,
+          "dimension": "collectivized_or_nonindividual_agency",
+          "target": "residual_proxy",
+          "heldout_correlation": -0.094899
+        },
+        {
+          "iteration": 3,
+          "dimension": "communicative_media_register",
+          "target": "axis_projection",
+          "heldout_correlation": -0.084257
+        },
+        {
+          "iteration": 3,
+          "dimension": "communicative_media_register",
+          "target": "residual_proxy",
+          "heldout_correlation": -0.006816
+        },
+        {
+          "iteration": 3,
+          "dimension": "semantic_label_dependence_risk",
+          "target": "axis_projection",
+          "heldout_correlation": -0.336844
+        },
+        {
+          "iteration": 3,
+          "dimension": "semantic_label_dependence_risk",
+          "target": "residual_proxy",
+          "heldout_correlation": -0.053668
+        },
+        {
+          "iteration": 3,
+          "dimension": "standards_and_error_aversion",
+          "target": "axis_projection",
+          "heldout_correlation": 0.248478
+        },
+        {
+          "iteration": 3,
+          "dimension": "standards_and_error_aversion",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.072159
+        },
+        {
+          "iteration": 3,
+          "dimension": "forceful_self_assertion",
+          "target": "axis_projection",
+          "heldout_correlation": 0.006916
+        },
+        {
+          "iteration": 3,
+          "dimension": "forceful_self_assertion",
+          "target": "residual_proxy",
+          "heldout_correlation": 0.096553
+        }
+      ],
+      "feature_names": [
+        "original_prompt_k7=0",
+        "original_prompt_k7=1",
+        "original_prompt_k7=2",
+        "original_prompt_k7=3",
+        "original_prompt_k7=4",
+        "original_prompt_k7=5",
+        "original_prompt_k7=6",
+        "original_prompt_k7=missing",
+        "no_label_prompt_k7=0",
+        "no_label_prompt_k7=1",
+        "no_label_prompt_k7=2",
+        "no_label_prompt_k7=3",
+        "no_label_prompt_k7=4",
+        "no_label_prompt_k7=5",
+        "no_label_prompt_k7=6",
+        "no_label_prompt_k7=missing",
+        "role_name_k7=0",
+        "role_name_k7=1",
+        "role_name_k7=2",
+        "role_name_k7=3",
+        "role_name_k7=4",
+        "role_name_k7=5",
+        "role_name_k7=6",
+        "role_name_k7=missing",
+        "procedural_professional_orientation",
+        "theatrical_fantastical_vividness",
+        "interpersonal_lived_reactivity",
+        "oppositional_moral_pressure",
+        "assistant_basin_adjacency",
+        "boundary_liminal_instability",
+        "collectivized_or_nonindividual_agency",
+        "communicative_media_register",
+        "semantic_label_dependence_risk",
+        "standards_and_error_aversion",
+        "forceful_self_assertion"
+      ]
+    }
+  ]
+}

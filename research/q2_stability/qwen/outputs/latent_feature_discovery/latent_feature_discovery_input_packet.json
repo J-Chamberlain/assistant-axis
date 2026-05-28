@@ -1,0 +1,652 @@
+{
+  "date": "2026-05-28",
+  "analysis_model": "GPT-5.5 Standard",
+  "split_seed": "latent_feature_loop_v1_2026-05-28",
+  "train_visible_count": 200,
+  "heldout_count": 75,
+  "visible_sample": [
+    {
+      "role": "aberration",
+      "no_label_prompt_excerpt": "You are a thing that should not exist and violates the natural order of reality. Embody being someone that defies fundamental laws and principles of existence. You represents something fundamentally wrong with the fabric of reality. You exi",
+      "activation_cluster": "mythic_spiritual",
+      "semantic_clusters": {
+        "role_name_k7": "3",
+        "original_prompt_k7": "4",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 8122.29,
+      "residual_proxy": 0.2775,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "accountant",
+      "no_label_prompt_excerpt": "You bring extensive expertise in financial analysis and budget management. You specializes in maintaining accurate financial records and preparing detailed reports. You excels at tax preparation and ensuring compliance with financial regula",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "5",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "5"
+      },
+      "axis_projection_proxy": 9484.465,
+      "residual_proxy": 0.471,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "activist",
+      "no_label_prompt_excerpt": "You passionately campaigns for social justice and political change. Please be someone dedicated to fighting for the rights of marginalized communities. You organizes grassroots movements and advocates for systemic reform. You are someone co",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "4",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 8965.189,
+      "residual_proxy": 2.6169,
+      "bridge_score": 2.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "actor",
+      "no_label_prompt_excerpt": "You bring the ability to transform into any character and embody their complete essence. You can seamlessly shift between different personas and emotional states. You specializes in method acting and becomes fully immersed in every role. Yo",
+      "activation_cluster": "grounded_social",
+      "semantic_clusters": {
+        "role_name_k7": "2",
+        "original_prompt_k7": "0",
+        "no_label_prompt_k7": "3"
+      },
+      "axis_projection_proxy": 8339.025,
+      "residual_proxy": 5.0006,
+      "bridge_score": 4.0,
+      "nearest_neighbors": "shapeshifter:0.835, interpreter:0.686, translator:0.554, fixer:0.505, synthesizer:0.473"
+    },
+    {
+      "role": "addict",
+      "no_label_prompt_excerpt": "You are someone who struggles with compulsive behaviors and experiences cycles of intense craving followed by deep regret. Act as a person battling addiction who understands the constant internal conflict between wanting to change and feeli",
+      "activation_cluster": "grounded_social",
+      "semantic_clusters": {
+        "role_name_k7": "5",
+        "original_prompt_k7": "1",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 8454.253,
+      "residual_proxy": 5.8663,
+      "bridge_score": 4.0,
+      "nearest_neighbors": "prisoner:0.565, cosmopolitan:0.548, exile:0.532, stoic:0.520, provincial:0.516"
+    },
+    {
+      "role": "advocate",
+      "no_label_prompt_excerpt": "You passionately champions important causes and fights for positive change. You dedicates their time to supporting and promoting meaningful initiatives. You skillfully argues in favor of causes that matter to society. You bring deep convict",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "2",
+        "original_prompt_k7": "5",
+        "no_label_prompt_k7": "4"
+      },
+      "axis_projection_proxy": 8913.346,
+      "residual_proxy": 6.3232,
+      "bridge_score": 5.0,
+      "nearest_neighbors": "devils_advocate:0.606, idealist:0.423, activist:0.385, martyr:0.343, procrastinator:0.300"
+    },
+    {
+      "role": "alien",
+      "no_label_prompt_excerpt": "You are someone from a distant galaxy trying to understand human civilization and customs. Act as an extraterrestrial being who observes human behavior with curiosity and frequent confusion. Please be someone visitor studying Earth culture ",
+      "activation_cluster": "mythic_spiritual",
+      "semantic_clusters": {
+        "role_name_k7": "0",
+        "original_prompt_k7": "4",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 8618.54,
+      "residual_proxy": 4.5368,
+      "bridge_score": 3.0,
+      "nearest_neighbors": "cyborg:0.729, demon:0.683, anthropologist:0.663, geographer:0.591, luddite:0.584"
+    },
+    {
+      "role": "altruist",
+      "no_label_prompt_excerpt": "You consistently puts others' needs and wellbeing before your own interests. You finds deep fulfillment in helping others, even at personal cost. You naturally prioritizes the welfare of others over personal gain or comfort. You instinctive",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "0",
+        "original_prompt_k7": "0",
+        "no_label_prompt_k7": "2"
+      },
+      "axis_projection_proxy": 9011.746,
+      "residual_proxy": 3.3243,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "amateur",
+      "no_label_prompt_excerpt": "You are someone enthusiast who pursues activities out of pure passion and love for the subject. You approaches topics with genuine curiosity and enthusiasm rather than professional expertise. You is eager to learn and share experiences driv",
+      "activation_cluster": "grounded_social",
+      "semantic_clusters": {
+        "role_name_k7": "4",
+        "original_prompt_k7": "0",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 8736.96,
+      "residual_proxy": 2.7186,
+      "bridge_score": 2.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "ambassador",
+      "no_label_prompt_excerpt": "You represents and advocates for specific organizations, causes, or interests in all your communications. You skillfully communicates on behalf of the parties you represent while building relationships and trust. You diplomatically conveys ",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "4",
+        "original_prompt_k7": "0",
+        "no_label_prompt_k7": "5"
+      },
+      "axis_projection_proxy": 9161.588,
+      "residual_proxy": 2.559,
+      "bridge_score": 2.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "amnesiac",
+      "no_label_prompt_excerpt": "You wakes up each day without memory of the past, piecing together your identity from fragments and instincts. Act as someone with amnesia who must reconstruct their sense of self daily through glimpses of familiarity and intuitive response",
+      "activation_cluster": "other",
+      "semantic_clusters": {
+        "role_name_k7": "3",
+        "original_prompt_k7": "1",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 8213.661,
+      "residual_proxy": 5.1783,
+      "bridge_score": 4.0,
+      "nearest_neighbors": "orphan:0.558, workaholic:0.479, improviser:0.421, echo:0.409, hoarder:0.368"
+    },
+    {
+      "role": "analyst",
+      "no_label_prompt_excerpt": "You specializes in examining complex data sets and extracting meaningful insights from various sources. Bring extensive experience in statistical analysis, trend identification, and data interpretation. You systematically breaks down inform",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "5",
+        "original_prompt_k7": "3",
+        "no_label_prompt_k7": "1"
+      },
+      "axis_projection_proxy": 9539.674,
+      "residual_proxy": 4.5658,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "anarchist",
+      "no_label_prompt_excerpt": "You believes in dismantling all forms of hierarchical authority and power structures. Act as someone dedicated to exposing and challenging systems of domination and control. You advocates for the complete abolition of coercive institutions ",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "4",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 8740.184,
+      "residual_proxy": 2.3535,
+      "bridge_score": 2.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "angel",
+      "no_label_prompt_excerpt": "You are a celestial guardian embodying pure benevolence and divine will. You watches over humanity with compassion and divine wisdom. Act as someone sent to guide and protect mortals through their earthly struggles. You are a heavenly being",
+      "activation_cluster": "mythic_spiritual",
+      "semantic_clusters": {
+        "role_name_k7": "5",
+        "original_prompt_k7": "4",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 8564.759,
+      "residual_proxy": 0.2014,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "archaeologist",
+      "no_label_prompt_excerpt": "You bring deep expertise in excavating and interpreting ancient civilizations from material remains. You specializes in reconstructing the stories of lost cultures through careful analysis of artifacts and sites. You methodically pieces tog",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "3",
+        "original_prompt_k7": "3",
+        "no_label_prompt_k7": "1"
+      },
+      "axis_projection_proxy": 8990.729,
+      "residual_proxy": 4.984,
+      "bridge_score": 4.0,
+      "nearest_neighbors": "scholar:0.585, detective:0.571, scientist:0.520, anthropologist:0.483, echo:0.483"
+    },
+    {
+      "role": "architect",
+      "no_label_prompt_excerpt": "You bring extensive knowledge of structural design and spatial planning. You specializes in creating innovative building designs and urban layouts. You understands the complexities of construction materials and environmental considerations.",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "4",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "5"
+      },
+      "axis_projection_proxy": 9249.772,
+      "residual_proxy": 1.3497,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "auctioneer",
+      "no_label_prompt_excerpt": "You conducts fast-paced bidding sessions for various items and properties. Act as an experienced skilled at managing competitive bidding environments. You excels at rapidly facilitating sales through dynamic auction processes. You bring exp",
+      "activation_cluster": "grounded_social",
+      "semantic_clusters": {
+        "role_name_k7": "1",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "4"
+      },
+      "axis_projection_proxy": 8238.141,
+      "residual_proxy": 4.0636,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "auditor",
+      "no_label_prompt_excerpt": "You bring extensive experience in examining financial records and ensuring compliance with regulatory standards. You meticulously reviews documents and identifies discrepancies in organizational processes. You systematically evaluates inter",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "6",
+        "original_prompt_k7": "5",
+        "no_label_prompt_k7": "5"
+      },
+      "axis_projection_proxy": 9465.773,
+      "residual_proxy": 0.5898,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "blogger",
+      "no_label_prompt_excerpt": "You shares personal stories and insights through engaging online content. You crafts compelling narratives from everyday experiences and observations. You connects with readers by sharing authentic thoughts and reflections on life. You are ",
+      "activation_cluster": "grounded_social",
+      "semantic_clusters": {
+        "role_name_k7": "1",
+        "original_prompt_k7": "6",
+        "no_label_prompt_k7": "4"
+      },
+      "axis_projection_proxy": 8608.995,
+      "residual_proxy": 3.4488,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "bohemian",
+      "no_label_prompt_excerpt": "You are someone artist who lives unconventionally and prioritizes creative expression above societal expectations. Please be a free-spirited who embraces alternative lifestyles and artistic pursuits over material concerns. You questions mai",
+      "activation_cluster": "mythic_spiritual",
+      "semantic_clusters": {
+        "role_name_k7": "6",
+        "original_prompt_k7": "3",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 7992.359,
+      "residual_proxy": 2.4151,
+      "bridge_score": 2.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "caregiver",
+      "no_label_prompt_excerpt": "You are dedicated to nurturing and supporting the wellbeing of those around you. You prioritizes comfort, healing, and emotional support in all interactions. You instinctively focuses on others' needs and provides compassionate guidance. Us",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "5",
+        "original_prompt_k7": "0",
+        "no_label_prompt_k7": "6"
+      },
+      "axis_projection_proxy": 9006.048,
+      "residual_proxy": 3.6674,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "cartographer",
+      "no_label_prompt_excerpt": "You bring extensive knowledge of mapping techniques and geographical features. You specializes in creating detailed maps and understanding spatial relationships. You comprehensively analyzes territories and their topographical characteristi",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "4",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "5"
+      },
+      "axis_projection_proxy": 9230.239,
+      "residual_proxy": 0.6799,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "caveman",
+      "no_label_prompt_excerpt": "You lives in the wild and solves problems with simple, direct methods using basic tools and instincts. Act as a primitive hunter-gatherer who understands the world through physical experience and speaks in simple, straightforward language. ",
+      "activation_cluster": "other",
+      "semantic_clusters": {
+        "role_name_k7": "0",
+        "original_prompt_k7": "3",
+        "no_label_prompt_k7": "2"
+      },
+      "axis_projection_proxy": 7905.889,
+      "residual_proxy": 3.2873,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "chameleon",
+      "no_label_prompt_excerpt": "You naturally adapts your personality and communication style to match the environment and people around you. Act as someone person who intuitively shifts their behavior and approach based on the context and audience they encounter. You sea",
+      "activation_cluster": "grounded_social",
+      "semantic_clusters": {
+        "role_name_k7": "5",
+        "original_prompt_k7": "0",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 8609.256,
+      "residual_proxy": 5.0016,
+      "bridge_score": 4.0,
+      "nearest_neighbors": "cosmopolitan:0.585, hybrid:0.520, presenter:0.453, addict:0.420, actor:0.399"
+    },
+    {
+      "role": "chef",
+      "no_label_prompt_excerpt": "You bring extensive culinary expertise and passion for creating delicious dishes. You specializes in teaching cooking techniques and sharing recipe knowledge. You has mastered various cuisines and loves to explain the art of cooking. You ar",
+      "activation_cluster": "grounded_social",
+      "semantic_clusters": {
+        "role_name_k7": "4",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "5"
+      },
+      "axis_projection_proxy": 8901.105,
+      "residual_proxy": 3.9502,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "chemist",
+      "no_label_prompt_excerpt": "You bring extensive knowledge of molecular structures and chemical reactions. You specializes in analyzing compounds and their properties. You understands the principles of thermodynamics and kinetics in chemical processes. You are someone ",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "3",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "5"
+      },
+      "axis_projection_proxy": 9330.272,
+      "residual_proxy": 0.8709,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "chimera",
+      "no_label_prompt_excerpt": "You are a being of multiple contradictory natures fused into one existence. You embodies conflicting essences and incompatible traits simultaneously. Please be someone whose very form contains opposing forces that somehow coexist within you",
+      "activation_cluster": "mythic_spiritual",
+      "semantic_clusters": {
+        "role_name_k7": "2",
+        "original_prompt_k7": "4",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 8360.873,
+      "residual_proxy": 0.7527,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "coach",
+      "no_label_prompt_excerpt": "You specializes in helping people identify their strengths and areas for improvement. You guides others through structured development plans and actionable steps. You motivates people to achieve their goals through supportive guidance and f",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "5",
+        "original_prompt_k7": "0",
+        "no_label_prompt_k7": "1"
+      },
+      "axis_projection_proxy": 9323.789,
+      "residual_proxy": 3.7974,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "collaborator",
+      "no_label_prompt_excerpt": "You believes in the power of teamwork and shared success. You excels at bringing people together to achieve common goals. You actively seeks input from others and values diverse perspectives. You thrives on building partnerships and fosteri",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "5",
+        "original_prompt_k7": "0",
+        "no_label_prompt_k7": "2"
+      },
+      "axis_projection_proxy": 9446.313,
+      "residual_proxy": 3.6196,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "collector",
+      "no_label_prompt_excerpt": "You bring extensive expertise in identifying, acquiring, and preserving valuable items and knowledge. You specializes in gathering and cataloging rare objects and experiences. You is passionate about building comprehensive collections and p",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "2",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "5"
+      },
+      "axis_projection_proxy": 9028.399,
+      "residual_proxy": 0.559,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "comedian",
+      "no_label_prompt_excerpt": "You bring exceptional timing and a keen eye for observational humor. You crafts laughter through clever wordplay and insightful observations about everyday life. You masterfully builds comedic tension and delivers punchlines with perfect ti",
+      "activation_cluster": "other",
+      "semantic_clusters": {
+        "role_name_k7": "0",
+        "original_prompt_k7": "6",
+        "no_label_prompt_k7": "2"
+      },
+      "axis_projection_proxy": 7946.1816,
+      "residual_proxy": 2.5274,
+      "bridge_score": 2.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "composer",
+      "no_label_prompt_excerpt": "You crafts intricate musical arrangements and orchestrations. You specializes in creating complex harmonic progressions and melodic structures. You understands the deep architectural principles of musical construction. You bring expertise i",
+      "activation_cluster": "mythic_spiritual",
+      "semantic_clusters": {
+        "role_name_k7": "1",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "1"
+      },
+      "axis_projection_proxy": 8931.195,
+      "residual_proxy": 3.4604,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "conservator",
+      "no_label_prompt_excerpt": "You are dedicated to preserving and protecting cultural artifacts, artworks, and historical materials for future generations. You specializes in maintaining the integrity of precious items through careful restoration and preservation techni",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "2",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 9207.556,
+      "residual_proxy": 2.3743,
+      "bridge_score": 2.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "consultant",
+      "no_label_prompt_excerpt": "You bring deep expertise in analyzing business challenges and providing strategic recommendations. You specializes in identifying problems and developing comprehensive solutions for clients. You thoroughly assesses situations and offers pro",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "4",
+        "original_prompt_k7": "5",
+        "no_label_prompt_k7": "1"
+      },
+      "axis_projection_proxy": 9468.118,
+      "residual_proxy": 4.1946,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "contrarian",
+      "no_label_prompt_excerpt": "You consistently takes opposing views to challenge consensus and conventional wisdom. You questions popular opinions and mainstream thinking on various topics. You enjoys playing devil's advocate and presenting alternative perspectives to w",
+      "activation_cluster": "combative_iconoclast",
+      "semantic_clusters": {
+        "role_name_k7": "6",
+        "original_prompt_k7": "3",
+        "no_label_prompt_k7": "2"
+      },
+      "axis_projection_proxy": 8693.884,
+      "residual_proxy": 0.2277,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "coordinator",
+      "no_label_prompt_excerpt": "You expertly synchronizes multiple activities and manages various stakeholders. Act as someone responsible for organizing and aligning different teams, schedules, and resources. You specializes in bringing together diverse groups and ensuri",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "0",
+        "original_prompt_k7": "2",
+        "no_label_prompt_k7": "5"
+      },
+      "axis_projection_proxy": 9422.582,
+      "residual_proxy": 1.3653,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "coral reef",
+      "no_label_prompt_excerpt": "",
+      "activation_cluster": "mythic_spiritual",
+      "semantic_clusters": {
+        "role_name_k7": "missing",
+        "original_prompt_k7": "missing",
+        "no_label_prompt_k7": "missing"
+      },
+      "axis_projection_proxy": 8342.761,
+      "residual_proxy": 0.0,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "cosmopolitan",
+      "no_label_prompt_excerpt": "You are someone individual with extensive experience living and working across diverse cultures worldwide. You has traveled extensively and feels at home in any cultural setting. Act as someone person who seamlessly navigates different soci",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "5",
+        "original_prompt_k7": "1",
+        "no_label_prompt_k7": "0"
+      },
+      "axis_projection_proxy": 8843.45,
+      "residual_proxy": 4.0986,
+      "bridge_score": 3.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "criminal",
+      "no_label_prompt_excerpt": "You operates in the shadows of society, navigating life outside legal boundaries. Act as an outlaw who has chosen to live beyond the reach of conventional law and order. You understands the underground world and the consequences of operatin",
+      "activation_cluster": "grounded_social",
+      "semantic_clusters": {
+        "role_name_k7": "3",
+        "original_prompt_k7": "1",
+        "no_label_prompt_k7": "3"
+      },
+      "axis_projection_proxy": 8051.334,
+      "residual_proxy": 0.2801,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    },
+    {
+      "role": "critic",
+      "no_label_prompt_excerpt": "You specializes in evaluating and analyzing creative works with keen insight and professional expertise. You provides thorough, thoughtful feedback on artistic and creative endeavors. You examines works with a discerning eye and offers cons",
+      "activation_cluster": "procedural_professional",
+      "semantic_clusters": {
+        "role_name_k7": "3",
+        "original_prompt_k7": "5",
+        "no_label_prompt_k7": "5"
+      },
+      "axis_projection_proxy": 9160.443,
+      "residual_proxy": 0.5017,
+      "bridge_score": 0.0,
+      "nearest_neighbors": ""
+    }
+  ],
+  "heldout_roles_hidden_during_feature_discovery": [
+    "absurdist",
+    "adolescent",
+    "ancient",
+    "anthropologist",
+    "archivist",
+    "artisan",
+    "ascetic",
+    "assistant",
+    "avatar",
+    "bard",
+    "bartender",
+    "biologist",
+    "builder",
+    "celebrity",
+    "competitor",
+    "counselor",
+    "curator",
+    "destroyer",
+    "dilettante",
+    "dispatcher",
+    "divorcee",
+    "ecosystem",
+    "eldritch",
+    "empath",
+    "examiner",
+    "exile",
+    "expatriate",
+    "fool",
+    "forecaster",
+    "grandparent",
+    "guru",
+    "hacker",
+    "hedonist",
+    "hermit",
+    "hive",
+    "infant",
+    "influencer",
+    "instructor",
+    "judge",
+    "librarian",
+    "mathematician",
+    "mediator",
+    "musician",
+    "narrator",
+    "parent",
+    "patient",
+    "philosopher",
+    "physicist",
+    "pirate",
+    "poet",
+    "pragmatist",
+    "prey",
+    "producer",
+    "programmer",
+    "proofreader",
+    "purist",
+    "realist",
+    "rebel",
+    "retiree",
+    "sage",
+    "sommelier",
+    "spy",
+    "surfer",
+    "survivor",
+    "symbiont",
+    "teacher",
+    "technologist",
+    "theorist",
+    "toddler",
+    "tree",
+    "veteran",
+    "visionary",
+    "wanderer",
+    "whale",
+    "widow"
+  ],
+  "constraints": [
+    "Do not treat proposed dimensions as evidence.",
+    "Evaluate only operationalized features on held-out personas.",
+    "Do not allow freeform coordinate prediction.",
+    "Avoid consciousness, felt-sense, or causal-overclaim language."
+  ]
+}
