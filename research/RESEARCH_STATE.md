@@ -346,8 +346,9 @@
 **Completed this session:** Added `research/workflow/model_provenance_schema.md` as the canonical mandatory model-provenance schema.
 **Completed this session:** Updated workflow docs and the run manifest template so future generated, evaluated, or analyzed artifacts must record model provenance before commit.
 **Completed this session:** Hardened Stage-1 role-inventory scripts so OpenAI outputs include provenance and provider-agnostic ingestion rejects inventories with missing model-provenance fields.
-**Next step:** Run Stage-1 OpenAI-side role-inventory generation when API quota is available, ingest Claude-generated inventories after GitHub sync, and rerun evaluator sensitivity after `gpt-4.1-mini` quota is restored.
-**Last commit before this session:** 3c7290a
+**Completed this session:** Built `research/visualizations/persona_geometry_explorer.html`, generated embedded UMAP data for local Qwen role and trait vectors, and confirmed no local Qwen emotion vectors were available.
+**Next step:** Open `research/visualizations/persona_geometry_explorer.html` through the file server for visual review, then decide whether to add externally generated Qwen emotion directions as a third dataset.
+**Last commit before this session:** 255e329
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.
