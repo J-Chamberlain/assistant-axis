@@ -19,6 +19,19 @@ committed. Direct numerical comparison is therefore not possible in this session
 This document records the Claude-side results in the format that comparison would
 require, and states what convergence or divergence would be interpretively significant.
 
+## Export Status (updated 2026-05-28)
+
+All Claude-side inputs and outputs are now exported in clean CSVs for Codex transfer
+comparison. See `claude_feature_export_manifest.md` for full file inventory.
+
+Key transfer note: Claude's target is **pseudo-PCA3D** from the 275×7 Qwen
+cluster-cosine matrix, which is a proxy for — but not identical to — the full Qwen
+activation-space PCA. Codex should either (a) predict Claude's pseudo-PCA3D targets
+using `claude_target_coordinates.csv`, or (b) provide its own activation PCA
+coordinates so Claude's BigFive features can be tested on the canonical target.
+The BigFive finding (R²=0.361, Gemma axis R²=0.695) should be preserved as a
+valid target-specific result pending transfer testing against Codex's canonical target.
+
 ---
 
 ## Claude-Side Results Summary
