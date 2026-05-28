@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** 8c2186b
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, and persona-level explanation residual ranking are implemented with held-out evaluation where available
+**Last commit:** a2793c6
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, and cross-model feature-transfer comparison are implemented with held-out evaluation where available
 
 ---
 
@@ -346,6 +346,16 @@
 - Largest improvements over the semantic baseline are jester, robot, wind, gossip, and poet; strongest worsened cases are futurist, veterinarian, forecaster, coordinator, and producer
 - High-residual personas should be treated as diagnostic cases for the current feature vocabulary, not as inherently inexplicable roles or final evidence about the true meaning of the dimensions
 
+### Cross-Model Feature Transfer (2026-05-28)
+
+- Implemented `research/q2_stability/qwen/scripts/cross_model_feature_transfer.py` to compare Codex-derived retained features and local Big Five features across canonical activation PCA3D and a reconstructed Big-Five pseudo-PCA3 target
+- The comparison reused the five deterministic outer-loop splits, ridge-regression metric path, per-axis R2, and semantic baseline where possible
+- Codex features improved canonical activation PCA3D prediction from semantic baseline R2 0.389 to R2 0.490, delta +0.101
+- Big Five features transferred strongly to canonical activation PCA3D prediction, reaching R2 0.613, delta +0.223 over semantic baseline
+- Codex features did not robustly transfer to the Big-Five pseudo-PCA3 target: R2 delta was only +0.012 and mean residual reduction was negative at -0.041
+- Interpretation is asymmetric transfer rather than full convergence: Big Five features transfer to activation geometry, while Codex behavioral/procedural features do not robustly transfer to the reconstructed Big-Five pseudo target
+- Caveat: no separate Claude pseudo-PCA coordinate artifact was found locally, so pseudo-PCA was reconstructed from `visualizations/bigfive_profiles.json`
+
 ---
 
 ## 3. CURRENT STATE
@@ -403,8 +413,11 @@
 **Completed this session:** Reviewed existing outer-loop, framing ablation, findings ledger, and research-state artifacts to locate retained dimensions, split behavior, residual summaries, feature matrices, activation clusters, semantic clusters, and anchor/bridge metadata.
 **Completed this session:** Added `rank_persona_explanation_residuals.py` and generated CSV, JSON, and Markdown outputs ranking 273 personas by final-model residual, semantic-baseline residual, residual improvement, PCA coordinates, cluster metadata, held-out frequency, split residual statistics, and associated feature contributions.
 **Completed this session:** Updated the findings ledger and research state with the strongest most-explained, least-explained, improved, and worsened persona-level residual cases.
-**Next step:** Inspect the least-explained and worsened personas as diagnostic residual cases, especially procrastinator, toddler, teenager, comedian, cyborg, futurist, veterinarian, and forecaster, then decide whether a leave-one-role-out ranking pass is needed for pure held-out coverage of all personas.
-**Last commit before this session:** 8c2186b
+**Completed this session:** Built and ran the cross-target/cross-feature transfer comparison between Codex retained dimensions and local Big Five features on canonical activation PCA3D and reconstructed Big-Five pseudo-PCA3 targets.
+**Completed this session:** Saved `transfer_results.json`, `transfer_summary.md`, `feature_target_matrix.csv`, and `codex_vs_claude_transfer_report.md` under `research/q2_stability/qwen/outputs/cross_model_feature_transfer/`.
+**Completed this session:** Updated the findings ledger and research state with the asymmetric transfer result and the pseudo-PCA reconstruction caveat.
+**Next step:** Locate or generate a separately committed Claude pseudo-PCA coordinate artifact, then rerun the transfer matrix to distinguish true Claude-target transfer from Big-Five-reconstructed target behavior.
+**Last commit before this session:** a2793c6
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

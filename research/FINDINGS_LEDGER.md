@@ -139,6 +139,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Strongest worsening relative to semantic baseline: futurist (-26.250), veterinarian (-26.122), forecaster (-23.457), coordinator (-18.523), and producer (-16.241)
 - Interpretation: high residuals are diagnostic cases for the current feature vocabulary, not proof that a persona is inherently inexplicable or that the retained dimensions are final
 
+### Cross-Model Feature Transfer (2026-05-28)
+
+- Compared Codex-derived retained outer-loop features and local Big Five features across canonical activation PCA3D and a reconstructed Big-Five pseudo-PCA3 target using the same five deterministic splits and semantic baseline
+- Codex features improved canonical activation PCA3D prediction: R2 0.490 vs semantic baseline 0.389, delta +0.101, with mean residual reduction +2.042
+- Big Five features transferred strongly to canonical activation PCA3D prediction: R2 0.613 vs semantic baseline 0.389, delta +0.223, with mean residual reduction +5.483
+- Codex features did not robustly transfer to the Big-Five pseudo-PCA3 target: R2 0.280 vs baseline 0.269, delta +0.012, but mean residual reduction was negative at -0.041
+- Big Five features predicted their own reconstructed pseudo-PCA target as a positive-control condition: R2 1.000 vs baseline 0.269, delta +0.731
+- Interpretation: evidence supports asymmetric transfer, with Big Five features transferring to canonical activation geometry but Codex behavioral/procedural features not robustly transferring to the reconstructed Big-Five pseudo-PCA target
+- Caveat: no separately committed Claude pseudo-PCA coordinate artifact was found; pseudo-PCA was reconstructed from `visualizations/bigfive_profiles.json`, which does not itself carry explicit Claude provenance metadata
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

@@ -1,0 +1,5 @@
+feature_family,target,mean_r2,std_r2,semantic_baseline_r2,delta_vs_semantic_baseline,axis1_r2,axis2_r2,axis3_r2,baseline_axis1_r2,baseline_axis2_r2,baseline_axis3_r2,mean_residual,semantic_baseline_mean_residual,mean_residual_reduction
+codex_derived_outer_loop_features,canonical_activation_pca3,0.49009,0.021985,0.389397,0.100693,0.631205,0.257221,0.422097,0.516873,0.180967,0.335665,25.171464,27.213204,2.041741
+claude_big_five_features,canonical_activation_pca3,0.612861,0.047678,0.389397,0.223464,0.733919,0.480416,0.414677,0.516873,0.180967,0.335665,21.730241,27.213204,5.482964
+codex_derived_outer_loop_features,claude_big_five_pseudo_pca3,0.280223,0.06344,0.268704,0.01152,0.401787,-0.190897,0.073905,0.337925,0.056493,0.062587,1.569139,1.528186,-0.040954
+claude_big_five_features,claude_big_five_pseudo_pca3,1.0,0.0,0.268704,0.731296,1.0,1.0,1.0,0.337925,0.056493,0.062587,0.000366,1.528186,1.52782
