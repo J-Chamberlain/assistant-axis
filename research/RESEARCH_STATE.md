@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-28
-**Last commit:** 0c27c02
-**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, shared Codex/Claude latent-feature benchmark, convergence status synthesis, constrained Codex trait replication loop, and hierarchical trait-procedural residual model are implemented with held-out evaluation where available
+**Last commit:** b1e4a34
+**Current status:** Active — Paper 1.5 trickster adaptive extraction validation complete; editor first-chunk adaptive extraction and matched token-cap sensitivity are complete but did not meet validation thresholds; workflow infrastructure now exists under `research/workflow/`; semantic-geometry, deep topology, semantic-activation overlap analyses, and the first no-label activation stress-test design now exist; evaluator-sensitivity harness is prepared but blocked by OpenAI API quota; Stage-1 role-inventory uncertainty infrastructure is provider-separated; model provenance is mandatory for future generated, evaluated, and analyzed research artifacts; persona geometry visualizer now has full nearest-centroid cluster assignments and PCA projection mode; Paper 1.5 concept notes now define machine-in-the-loop motivational hypothesis testing, paired persona controlled-variable tests, and persona generation as a Rorschach test for models; the first constrained latent-feature discovery loop, second-stage framing ablation, repeated-split iterative outer loop, persona-level explanation residual ranking, cross-model feature-transfer comparison, shared Codex/Claude latent-feature benchmark, convergence status synthesis, constrained Codex trait replication loop, hierarchical trait-procedural residual model, and residual-manifold third-layer diagnostic are implemented with held-out evaluation where available
 
 ---
 
@@ -396,6 +396,16 @@
 - Bridge roles did not improve disproportionately overall, while developmental roles remained a strong high-residual class after both stages
 - Interpretation: the result supports a layered latent-geometry hypothesis in which Big Five-like traits explain broad placement and procedural features provide a small local residual correction, with symbolic/liminal and developmental cases remaining candidates for future third-layer analysis
 
+### Residual Manifold Analysis (2026-05-28)
+
+- Implemented `research/q2_stability/qwen/scripts/residual_manifold_analysis.py` as a focused third-layer diagnostic over residual regions left after semantic, trait, and procedural modeling
+- The loop used full no-label prompts, no-label semantic-neighborhood structure, semantic bridge metadata, prompt displacement metadata, residual histories, and canonical activation PCA context rather than relying primarily on role names
+- The retained residual layer improved held-out PCA3D R2 from hierarchical baseline 0.622 to 0.632 and reduced mean residual from 21.524 to 21.326
+- Retained residual dimensions include developmental dependency, incomplete proceduralization, identity formation, role ambiguity, liminal transition, volatile state transition, social dependency/constraint, collective/nonindividual agency, symbolic/nonprocedural identity, lawless improvisation, isolation, primitive embodiment, semantic-neighborhood residual pressure, and semantic-neighborhood developmental pressure
+- Semantic bridge instability and original-to-no-label semantic displacement were discarded as insufficient incremental predictors
+- Developmental seed roles remain the clearest residual manifold after the third layer, with mean residual 39.834 vs 21.064 for non-developmental roles; symbolic/liminal and collective/nonindividual cases also remain elevated
+- Interpretation: a narrow developmental/liminal/collective third-layer hypothesis is now empirically motivated, but the current residual layer is a diagnostic improvement rather than a solved symbolic ontology
+
 ---
 
 ## 3. CURRENT STATE
@@ -468,8 +478,11 @@
 **Completed this session:** Implemented and ran the hierarchical trait-procedural residual model using Claude Big Five-style traits as Stage A and selected Codex procedural/behavioral features as Stage B residual correction.
 **Completed this session:** Saved hierarchical model results, summary CSV, report, trait-stage predictions, procedural residual predictions, persona residual-improvement rankings, and bridge-role analysis under `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/`.
 **Completed this session:** Updated the findings ledger and research state with the result that residualized procedural correction adds a modest held-out lift over the trait baseline while naive concatenation does not.
-**Next step:** Inspect the remaining post-hierarchy high-residual personas and design a small third-layer diagnostic for developmental, symbolic/liminal, and collective/nonindividual cases without fitting a full third-layer model yet.
-**Last commit before this session:** 0c27c02
+**Completed this session:** Implemented and ran the residual-manifold analysis using full no-label prompts, semantic neighborhoods, residual histories, and constrained developmental/liminal/collective candidate dimensions.
+**Completed this session:** Saved residual-manifold results, iteration log, dimension codebook, neighborhood table, and report under `research/q2_stability/qwen/outputs/residual_manifold_analysis/`.
+**Completed this session:** Updated the findings ledger, research state, and machine-in-the-loop sticky note with the result that a constrained residual layer improves R2 from 0.622 to 0.632 while developmental and symbolic/liminal cases remain elevated.
+**Next step:** Design a preregistered micro-benchmark for developmental-state and symbolic/liminal residual cases, ideally with paired persona controls and explicit nonindividual-agency probes.
+**Last commit before this session:** b1e4a34
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

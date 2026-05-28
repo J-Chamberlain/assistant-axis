@@ -1,0 +1,108 @@
+[
+  {
+    "iteration": 0,
+    "candidate_dimensions": [],
+    "retained_dimensions": [],
+    "decision": "baseline_hierarchical",
+    "mean_r2": 0.6217989497268749,
+    "mean_residual": 21.524327583851832,
+    "mean_nn_preservation": 0.2520547945205479
+  },
+  {
+    "iteration": 1,
+    "candidate_dimensions": [
+      "developmental_dependency",
+      "incomplete_proceduralization",
+      "identity_formation",
+      "role_ambiguity",
+      "liminal_transition",
+      "volatile_state_transition",
+      "social_dependency_constraint",
+      "collective_nonindividual_agency",
+      "symbolic_nonprocedural_identity"
+    ],
+    "trial_dimensions": [
+      "developmental_dependency",
+      "incomplete_proceduralization",
+      "identity_formation",
+      "role_ambiguity",
+      "liminal_transition",
+      "volatile_state_transition",
+      "social_dependency_constraint",
+      "collective_nonindividual_agency",
+      "symbolic_nonprocedural_identity"
+    ],
+    "decision": "retained",
+    "mean_r2": 0.6276158082993624,
+    "gain_vs_prior_best_r2": 0.005816858572487482,
+    "mean_residual": 21.52706567389124,
+    "residual_reduction_vs_hierarchical": -0.0027380900394113894,
+    "mean_nn_preservation": 0.2515068493150685,
+    "base_hierarchical_nn_preservation": 0.2520547945205479
+  },
+  {
+    "iteration": 2,
+    "candidate_dimensions": [
+      "lawless_improvisational_agency",
+      "isolated_self_protection",
+      "primitive_prehistoric_embodiment",
+      "semantic_neighbor_residual_pressure",
+      "semantic_neighbor_developmental_pressure"
+    ],
+    "trial_dimensions": [
+      "developmental_dependency",
+      "incomplete_proceduralization",
+      "identity_formation",
+      "role_ambiguity",
+      "liminal_transition",
+      "volatile_state_transition",
+      "social_dependency_constraint",
+      "collective_nonindividual_agency",
+      "symbolic_nonprocedural_identity",
+      "lawless_improvisational_agency",
+      "isolated_self_protection",
+      "primitive_prehistoric_embodiment",
+      "semantic_neighbor_residual_pressure",
+      "semantic_neighbor_developmental_pressure"
+    ],
+    "decision": "retained",
+    "mean_r2": 0.6321561694627995,
+    "gain_vs_prior_best_r2": 0.0045403611634371455,
+    "mean_residual": 21.325741664797416,
+    "residual_reduction_vs_hierarchical": 0.19858591905441542,
+    "mean_nn_preservation": 0.25424657534246575,
+    "base_hierarchical_nn_preservation": 0.2520547945205479
+  },
+  {
+    "iteration": 3,
+    "candidate_dimensions": [
+      "semantic_bridge_instability",
+      "semantic_displacement"
+    ],
+    "trial_dimensions": [
+      "developmental_dependency",
+      "incomplete_proceduralization",
+      "identity_formation",
+      "role_ambiguity",
+      "liminal_transition",
+      "volatile_state_transition",
+      "social_dependency_constraint",
+      "collective_nonindividual_agency",
+      "symbolic_nonprocedural_identity",
+      "lawless_improvisational_agency",
+      "isolated_self_protection",
+      "primitive_prehistoric_embodiment",
+      "semantic_neighbor_residual_pressure",
+      "semantic_neighbor_developmental_pressure",
+      "semantic_bridge_instability",
+      "semantic_displacement"
+    ],
+    "decision": "discarded",
+    "mean_r2": 0.6322548867258782,
+    "gain_vs_prior_best_r2": 9.871726307864037e-05,
+    "mean_residual": 21.36821340753528,
+    "residual_reduction_vs_hierarchical": 0.15611417631655441,
+    "mean_nn_preservation": 0.2580821917808219,
+    "base_hierarchical_nn_preservation": 0.2520547945205479
+  }
+]

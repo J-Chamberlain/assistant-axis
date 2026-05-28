@@ -190,6 +190,17 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Developmental roles remained high residual after both stages: mean hierarchical residual 52.281 vs non-developmental 21.112
 - Remaining high-residual cases were enriched for bridge, symbolic/liminal, and developmental structure; this supports a future descriptive third-layer hypothesis but does not yet justify fitting a symbolic/liminal correction model
 
+### Residual Manifold Analysis (2026-05-28)
+
+- Implemented a focused residual-manifold loop after the hierarchical trait-plus-procedural model, using full no-label prompts, no-label semantic-neighborhood structure, bridge/displacement metadata, residual histories, and canonical activation PCA context
+- The search space was constrained to developmental dependency, incomplete proceduralization, identity formation, role ambiguity, liminal transition, volatile state transition, social dependency/constraint, collective/nonindividual agency, symbolic/nonprocedural identity, lawless improvisation, isolation, primitive embodiment, and semantic-neighborhood residual pressure
+- The residual layer improved held-out PCA3D R2 from the hierarchical baseline 0.622 to 0.632, with mean residual reduced from 21.524 to 21.326
+- Retained dimensions came from iterations 1 and 2; semantic bridge instability and original-to-no-label semantic displacement were discarded because they added negligible R2 and worsened mean residual
+- Most improved held-out cases included criminal, toddler, prisoner, caveman, teenager, rogue, infant, hoarder, adolescent, fool, and detective
+- Remaining high-residual cases after the residual layer include procrastinator, smuggler, daredevil, teenager, dilettante, hermit, idealist, loner, alien, toddler, cyborg, and swarm
+- Developmental seed roles remain the clearest residual manifold: mean residual 39.834 vs 21.064 for non-developmental roles, with 4/5 developmental seed roles still in the top-25 residual set
+- Symbolic/liminal clusters and collective/nonindividual prompt cases also remain elevated, supporting a narrow future diagnostic rather than an established third symbolic layer
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.

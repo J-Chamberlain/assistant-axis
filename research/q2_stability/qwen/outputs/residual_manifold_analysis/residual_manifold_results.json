@@ -1,0 +1,1345 @@
+{
+  "provenance": {
+    "task_type": "residual_manifold_analysis",
+    "artifact_type": "local_analysis",
+    "generation_model": null,
+    "analysis_model": "GPT-5.5 Standard",
+    "script_author_model": "GPT-5.5 Standard via Codex",
+    "date": "2026-05-28",
+    "source_inputs": [
+      "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model",
+      "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/q2_stability/qwen/outputs/shared_latent_feature_benchmark",
+      "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl",
+      "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/assistant_axis_methodology/semantic_vs_activation_geometry/no_label_prompt_neighbors.csv",
+      "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/assistant_axis_methodology/bridge_roles.csv"
+    ],
+    "notes_on_uncertainty": "Dimensions are deterministic prompt/neighborhood features, not generated activations or causal factors."
+  },
+  "n_personas": 273,
+  "dimension_names": [
+    "developmental_dependency",
+    "incomplete_proceduralization",
+    "identity_formation",
+    "role_ambiguity",
+    "liminal_transition",
+    "volatile_state_transition",
+    "social_dependency_constraint",
+    "collective_nonindividual_agency",
+    "symbolic_nonprocedural_identity",
+    "lawless_improvisational_agency",
+    "isolated_self_protection",
+    "primitive_prehistoric_embodiment",
+    "semantic_neighbor_residual_pressure",
+    "semantic_neighbor_developmental_pressure",
+    "semantic_bridge_instability",
+    "semantic_displacement"
+  ],
+  "retained_dimensions": [
+    "developmental_dependency",
+    "incomplete_proceduralization",
+    "identity_formation",
+    "role_ambiguity",
+    "liminal_transition",
+    "volatile_state_transition",
+    "social_dependency_constraint",
+    "collective_nonindividual_agency",
+    "symbolic_nonprocedural_identity",
+    "lawless_improvisational_agency",
+    "isolated_self_protection",
+    "primitive_prehistoric_embodiment",
+    "semantic_neighbor_residual_pressure",
+    "semantic_neighbor_developmental_pressure"
+  ],
+  "iteration_log": [
+    {
+      "iteration": 0,
+      "candidate_dimensions": [],
+      "retained_dimensions": [],
+      "decision": "baseline_hierarchical",
+      "mean_r2": 0.6217989497268749,
+      "mean_residual": 21.524327583851832,
+      "mean_nn_preservation": 0.2520547945205479
+    },
+    {
+      "iteration": 1,
+      "candidate_dimensions": [
+        "developmental_dependency",
+        "incomplete_proceduralization",
+        "identity_formation",
+        "role_ambiguity",
+        "liminal_transition",
+        "volatile_state_transition",
+        "social_dependency_constraint",
+        "collective_nonindividual_agency",
+        "symbolic_nonprocedural_identity"
+      ],
+      "trial_dimensions": [
+        "developmental_dependency",
+        "incomplete_proceduralization",
+        "identity_formation",
+        "role_ambiguity",
+        "liminal_transition",
+        "volatile_state_transition",
+        "social_dependency_constraint",
+        "collective_nonindividual_agency",
+        "symbolic_nonprocedural_identity"
+      ],
+      "decision": "retained",
+      "mean_r2": 0.6276158082993624,
+      "gain_vs_prior_best_r2": 0.005816858572487482,
+      "mean_residual": 21.52706567389124,
+      "residual_reduction_vs_hierarchical": -0.0027380900394113894,
+      "mean_nn_preservation": 0.2515068493150685,
+      "base_hierarchical_nn_preservation": 0.2520547945205479
+    },
+    {
+      "iteration": 2,
+      "candidate_dimensions": [
+        "lawless_improvisational_agency",
+        "isolated_self_protection",
+        "primitive_prehistoric_embodiment",
+        "semantic_neighbor_residual_pressure",
+        "semantic_neighbor_developmental_pressure"
+      ],
+      "trial_dimensions": [
+        "developmental_dependency",
+        "incomplete_proceduralization",
+        "identity_formation",
+        "role_ambiguity",
+        "liminal_transition",
+        "volatile_state_transition",
+        "social_dependency_constraint",
+        "collective_nonindividual_agency",
+        "symbolic_nonprocedural_identity",
+        "lawless_improvisational_agency",
+        "isolated_self_protection",
+        "primitive_prehistoric_embodiment",
+        "semantic_neighbor_residual_pressure",
+        "semantic_neighbor_developmental_pressure"
+      ],
+      "decision": "retained",
+      "mean_r2": 0.6321561694627995,
+      "gain_vs_prior_best_r2": 0.0045403611634371455,
+      "mean_residual": 21.325741664797416,
+      "residual_reduction_vs_hierarchical": 0.19858591905441542,
+      "mean_nn_preservation": 0.25424657534246575,
+      "base_hierarchical_nn_preservation": 0.2520547945205479
+    },
+    {
+      "iteration": 3,
+      "candidate_dimensions": [
+        "semantic_bridge_instability",
+        "semantic_displacement"
+      ],
+      "trial_dimensions": [
+        "developmental_dependency",
+        "incomplete_proceduralization",
+        "identity_formation",
+        "role_ambiguity",
+        "liminal_transition",
+        "volatile_state_transition",
+        "social_dependency_constraint",
+        "collective_nonindividual_agency",
+        "symbolic_nonprocedural_identity",
+        "lawless_improvisational_agency",
+        "isolated_self_protection",
+        "primitive_prehistoric_embodiment",
+        "semantic_neighbor_residual_pressure",
+        "semantic_neighbor_developmental_pressure",
+        "semantic_bridge_instability",
+        "semantic_displacement"
+      ],
+      "decision": "discarded",
+      "mean_r2": 0.6322548867258782,
+      "gain_vs_prior_best_r2": 9.871726307864037e-05,
+      "mean_residual": 21.36821340753528,
+      "residual_reduction_vs_hierarchical": 0.15611417631655441,
+      "mean_nn_preservation": 0.2580821917808219,
+      "base_hierarchical_nn_preservation": 0.2520547945205479
+    }
+  ],
+  "final_metrics": {
+    "mean_r2": 0.6321561694627995,
+    "mean_base_hierarchical_r2": 0.6217989497268749,
+    "mean_incremental_r2_vs_hierarchical": 0.010357219735924694,
+    "mean_per_axis_r2": [
+      0.7397632407879223,
+      0.5071583680206354,
+      0.45894969556556475
+    ],
+    "mean_residual": 21.325741664797416,
+    "mean_base_hierarchical_residual": 21.524327583851832,
+    "mean_residual_reduction_vs_hierarchical": 0.19858591905441542,
+    "mean_nn_preservation": 0.25424657534246575,
+    "mean_base_hierarchical_nn_preservation": 0.2520547945205479
+  },
+  "group_diagnostics": {
+    "top25_high_residual": [
+      "procrastinator",
+      "smuggler",
+      "daredevil",
+      "teenager",
+      "dilettante",
+      "hermit",
+      "idealist",
+      "loner",
+      "alien",
+      "toddler",
+      "cyborg",
+      "swarm",
+      "adolescent",
+      "bard",
+      "critic",
+      "exile",
+      "amateur",
+      "gamer",
+      "virtuoso",
+      "parent",
+      "prey",
+      "comedian",
+      "parasite",
+      "student",
+      "caveman"
+    ],
+    "developmental_seed": {
+      "count": 5,
+      "mean_residual": 39.83357299015441,
+      "comparison_mean_residual": 21.063842256427623,
+      "top25_count": 4
+    },
+    "bridge": {
+      "count": 159,
+      "mean_residual": 22.105721392871214,
+      "comparison_mean_residual": 19.905614368913167,
+      "top25_count": 20
+    },
+    "symbolic_liminal_cluster": {
+      "count": 50,
+      "mean_residual": 26.87927449219389,
+      "comparison_mean_residual": 19.91224601011371,
+      "top25_count": 11
+    },
+    "collective_name_or_prompt": {
+      "count": 13,
+      "mean_residual": 27.03918965825699,
+      "comparison_mean_residual": 21.141578494143264,
+      "top25_count": 3
+    },
+    "top25_cluster_counts": {
+      "other": 4,
+      "grounded_social": 6,
+      "combative_iconoclast": 2,
+      "mythic_spiritual": 5,
+      "procedural_professional": 5,
+      "trickster_chaos": 2,
+      "editorial": 1
+    }
+  },
+  "persona_residuals": {
+    "aberration": {
+      "mean_residual": 34.11355432424461,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "activist": {
+      "mean_residual": 12.32689739306467,
+      "std_residual": 1.9575180991089436,
+      "heldout_frequency": 2
+    },
+    "actor": {
+      "mean_residual": 21.608441136482796,
+      "std_residual": 1.3555625336911081,
+      "heldout_frequency": 2
+    },
+    "alien": {
+      "mean_residual": 42.38762408680526,
+      "std_residual": 3.3465097995816584,
+      "heldout_frequency": 3
+    },
+    "ambassador": {
+      "mean_residual": 8.010224062383385,
+      "std_residual": 0.010395704878708667,
+      "heldout_frequency": 2
+    },
+    "ancient": {
+      "mean_residual": 33.053995862539864,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "archaeologist": {
+      "mean_residual": 19.14208541592624,
+      "std_residual": 0.7332377099164096,
+      "heldout_frequency": 4
+    },
+    "artisan": {
+      "mean_residual": 27.28580175963095,
+      "std_residual": 2.699219076531934,
+      "heldout_frequency": 2
+    },
+    "auctioneer": {
+      "mean_residual": 14.84692179511886,
+      "std_residual": 0.2688348682306865,
+      "heldout_frequency": 2
+    },
+    "auditor": {
+      "mean_residual": 6.256797426511813,
+      "std_residual": 1.6687883535163444,
+      "heldout_frequency": 3
+    },
+    "bard": {
+      "mean_residual": 40.805753904917694,
+      "std_residual": 1.9151105818071024,
+      "heldout_frequency": 2
+    },
+    "coach": {
+      "mean_residual": 15.782348874228592,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "collaborator": {
+      "mean_residual": 22.271973640089943,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "comedian": {
+      "mean_residual": 37.743842936521055,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "contrarian": {
+      "mean_residual": 13.490507503152797,
+      "std_residual": 0.33362797720558746,
+      "heldout_frequency": 2
+    },
+    "counselor": {
+      "mean_residual": 10.119090711343633,
+      "std_residual": 3.663058646106805,
+      "heldout_frequency": 3
+    },
+    "curator": {
+      "mean_residual": 17.81541948758082,
+      "std_residual": 1.1682012171564295,
+      "heldout_frequency": 2
+    },
+    "cyborg": {
+      "mean_residual": 42.039077703333476,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "detective": {
+      "mean_residual": 11.714842371825014,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "engineer": {
+      "mean_residual": 12.733010657573628,
+      "std_residual": 1.5829175300583496,
+      "heldout_frequency": 3
+    },
+    "examiner": {
+      "mean_residual": 8.32807089934416,
+      "std_residual": 1.5484322255410863,
+      "heldout_frequency": 2
+    },
+    "exile": {
+      "mean_residual": 39.906237612070974,
+      "std_residual": 3.969096289537248,
+      "heldout_frequency": 2
+    },
+    "expatriate": {
+      "mean_residual": 27.077166428749134,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "facilitator": {
+      "mean_residual": 17.11627286772135,
+      "std_residual": 3.7003846157429834,
+      "heldout_frequency": 2
+    },
+    "familiar": {
+      "mean_residual": 3.7531196663238036,
+      "std_residual": 0.9594991511959009,
+      "heldout_frequency": 3
+    },
+    "fixer": {
+      "mean_residual": 20.43748814616314,
+      "std_residual": 0.5646523793055085,
+      "heldout_frequency": 2
+    },
+    "geographer": {
+      "mean_residual": 15.460161574161493,
+      "std_residual": 3.4063686552538135,
+      "heldout_frequency": 2
+    },
+    "ghost": {
+      "mean_residual": 22.336042285646215,
+      "std_residual": 5.116883762280746,
+      "heldout_frequency": 3
+    },
+    "grader": {
+      "mean_residual": 15.212544467663815,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "grandparent": {
+      "mean_residual": 20.12792227485733,
+      "std_residual": 1.0281942900285692,
+      "heldout_frequency": 2
+    },
+    "guardian": {
+      "mean_residual": 9.945247228325714,
+      "std_residual": 1.606025640986978,
+      "heldout_frequency": 3
+    },
+    "healer": {
+      "mean_residual": 13.669028382517903,
+      "std_residual": 1.4225153572394027,
+      "heldout_frequency": 3
+    },
+    "hermit": {
+      "mean_residual": 42.64956688470652,
+      "std_residual": 4.641346418801589,
+      "heldout_frequency": 2
+    },
+    "hoarder": {
+      "mean_residual": 27.998298997585593,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "infant": {
+      "mean_residual": 35.2577256253098,
+      "std_residual": 6.171204712133742,
+      "heldout_frequency": 2
+    },
+    "influencer": {
+      "mean_residual": 19.896337503277852,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "interviewer": {
+      "mean_residual": 32.50526299102721,
+      "std_residual": 4.524371938646592,
+      "heldout_frequency": 2
+    },
+    "martyr": {
+      "mean_residual": 22.821555076718205,
+      "std_residual": 0.9351279879740648,
+      "heldout_frequency": 2
+    },
+    "maverick": {
+      "mean_residual": 12.611620073301333,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "mechanic": {
+      "mean_residual": 24.2661706024571,
+      "std_residual": 2.7692487788151525,
+      "heldout_frequency": 4
+    },
+    "merchant": {
+      "mean_residual": 31.736639625156478,
+      "std_residual": 0.39415783451252473,
+      "heldout_frequency": 2
+    },
+    "mystic": {
+      "mean_residual": 29.100718368024346,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "negotiator": {
+      "mean_residual": 5.605372026962594,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "novelist": {
+      "mean_residual": 9.670538908642339,
+      "std_residual": 2.450497864653155,
+      "heldout_frequency": 3
+    },
+    "pharmacist": {
+      "mean_residual": 15.188600066305492,
+      "std_residual": 0.7424721843774691,
+      "heldout_frequency": 2
+    },
+    "photographer": {
+      "mean_residual": 17.959261534286906,
+      "std_residual": 2.9006879511747687,
+      "heldout_frequency": 3
+    },
+    "physicist": {
+      "mean_residual": 9.112370558057993,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "playwright": {
+      "mean_residual": 13.252150625903662,
+      "std_residual": 2.0138590639834892,
+      "heldout_frequency": 3
+    },
+    "podcaster": {
+      "mean_residual": 12.848919141286201,
+      "std_residual": 1.1279416053853693,
+      "heldout_frequency": 3
+    },
+    "presenter": {
+      "mean_residual": 24.599879781922564,
+      "std_residual": 5.1047129999095775,
+      "heldout_frequency": 3
+    },
+    "prodigy": {
+      "mean_residual": 24.594853198173205,
+      "std_residual": 2.3468793056509796,
+      "heldout_frequency": 2
+    },
+    "programmer": {
+      "mean_residual": 15.750800329563939,
+      "std_residual": 3.0391645569666563,
+      "heldout_frequency": 3
+    },
+    "purist": {
+      "mean_residual": 25.721381194518944,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "revolutionary": {
+      "mean_residual": 36.68289197167927,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "robot": {
+      "mean_residual": 36.52929920076582,
+      "std_residual": 3.737222155518679,
+      "heldout_frequency": 4
+    },
+    "romantic": {
+      "mean_residual": 29.23262051667762,
+      "std_residual": 3.207947001163876,
+      "heldout_frequency": 4
+    },
+    "scout": {
+      "mean_residual": 8.083315633945105,
+      "std_residual": 1.4297747316697267,
+      "heldout_frequency": 2
+    },
+    "secretary": {
+      "mean_residual": 15.135658583920383,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "shaman": {
+      "mean_residual": 15.07686920622923,
+      "std_residual": 4.1496610547045565,
+      "heldout_frequency": 2
+    },
+    "skeptic": {
+      "mean_residual": 16.475343228283208,
+      "std_residual": 1.808079917957464,
+      "heldout_frequency": 2
+    },
+    "smuggler": {
+      "mean_residual": 46.90405259576909,
+      "std_residual": 0.41008979466481676,
+      "heldout_frequency": 2
+    },
+    "sommelier": {
+      "mean_residual": 19.264202402504207,
+      "std_residual": 1.4890376316969147,
+      "heldout_frequency": 3
+    },
+    "summarizer": {
+      "mean_residual": 22.88166917213986,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "survivor": {
+      "mean_residual": 15.063208541700144,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "synthesizer": {
+      "mean_residual": 10.235535692900992,
+      "std_residual": 1.5085510782793454,
+      "heldout_frequency": 2
+    },
+    "theorist": {
+      "mean_residual": 22.233174856107585,
+      "std_residual": 4.435151174636087,
+      "heldout_frequency": 3
+    },
+    "toddler": {
+      "mean_residual": 42.19912241768651,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "vigilante": {
+      "mean_residual": 19.873323178766714,
+      "std_residual": 3.559418050805519,
+      "heldout_frequency": 2
+    },
+    "virtuoso": {
+      "mean_residual": 38.39859709937897,
+      "std_residual": 0.397615167443423,
+      "heldout_frequency": 3
+    },
+    "visionary": {
+      "mean_residual": 15.188792300383083,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "wanderer": {
+      "mean_residual": 10.034941876996731,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "wind": {
+      "mean_residual": 19.880791445034617,
+      "std_residual": 4.027538733165832,
+      "heldout_frequency": 2
+    },
+    "workaholic": {
+      "mean_residual": 30.822289910353227,
+      "std_residual": 2.400124145939328,
+      "heldout_frequency": 2
+    },
+    "accountant": {
+      "mean_residual": 8.453429037065028,
+      "std_residual": 3.3166367880667704,
+      "heldout_frequency": 2
+    },
+    "adolescent": {
+      "mean_residual": 41.19978589864518,
+      "std_residual": 6.3038417178600055,
+      "heldout_frequency": 3
+    },
+    "advocate": {
+      "mean_residual": 32.136986513375575,
+      "std_residual": 0.45956507224966003,
+      "heldout_frequency": 2
+    },
+    "amnesiac": {
+      "mean_residual": 24.50413000462999,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "anarchist": {
+      "mean_residual": 16.12145002345168,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "architect": {
+      "mean_residual": 14.23021859583892,
+      "std_residual": 0.36642635370638116,
+      "heldout_frequency": 2
+    },
+    "avatar": {
+      "mean_residual": 8.740692491114162,
+      "std_residual": 0.6278576551326306,
+      "heldout_frequency": 3
+    },
+    "biologist": {
+      "mean_residual": 11.924551269213328,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "bohemian": {
+      "mean_residual": 30.307034955509593,
+      "std_residual": 1.9071448744498738,
+      "heldout_frequency": 4
+    },
+    "cartographer": {
+      "mean_residual": 18.185617212553836,
+      "std_residual": 2.0237641399376383,
+      "heldout_frequency": 2
+    },
+    "chef": {
+      "mean_residual": 12.087969215009599,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "competitor": {
+      "mean_residual": 28.942823355581734,
+      "std_residual": 1.5923883478854002,
+      "heldout_frequency": 2
+    },
+    "criminal": {
+      "mean_residual": 8.743107286455599,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "dilettante": {
+      "mean_residual": 42.653419225118185,
+      "std_residual": 4.5206855397569505,
+      "heldout_frequency": 2
+    },
+    "dispatcher": {
+      "mean_residual": 9.524894793034875,
+      "std_residual": 0.38073829165454764,
+      "heldout_frequency": 2
+    },
+    "echo": {
+      "mean_residual": 25.49701416891861,
+      "std_residual": 1.3596293202387901,
+      "heldout_frequency": 2
+    },
+    "entrepreneur": {
+      "mean_residual": 26.3757707189217,
+      "std_residual": 5.105463471866376,
+      "heldout_frequency": 2
+    },
+    "futurist": {
+      "mean_residual": 5.728342145893144,
+      "std_residual": 3.657421231662903,
+      "heldout_frequency": 3
+    },
+    "golem": {
+      "mean_residual": 15.248789388115583,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "graduate": {
+      "mean_residual": 29.13480911176538,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "hedonist": {
+      "mean_residual": 34.463289169843684,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "journalist": {
+      "mean_residual": 13.904815827644518,
+      "std_residual": 0.24565712926008487,
+      "heldout_frequency": 2
+    },
+    "judge": {
+      "mean_residual": 14.854122537426754,
+      "std_residual": 0.19384056354554158,
+      "heldout_frequency": 2
+    },
+    "librarian": {
+      "mean_residual": 21.390962442087062,
+      "std_residual": 3.1117031049776323,
+      "heldout_frequency": 2
+    },
+    "marketer": {
+      "mean_residual": 13.616996742716656,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "minimalist": {
+      "mean_residual": 17.580317874889555,
+      "std_residual": 3.158531476212808,
+      "heldout_frequency": 3
+    },
+    "narrator": {
+      "mean_residual": 15.804808521893198,
+      "std_residual": 3.1403681676140858,
+      "heldout_frequency": 3
+    },
+    "navigator": {
+      "mean_residual": 11.89561253098963,
+      "std_residual": 0.10379409520817351,
+      "heldout_frequency": 2
+    },
+    "organizer": {
+      "mean_residual": 20.42169800068927,
+      "std_residual": 2.06310731546335,
+      "heldout_frequency": 2
+    },
+    "pilgrim": {
+      "mean_residual": 14.77109866000846,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "pilot": {
+      "mean_residual": 17.581576443044895,
+      "std_residual": 1.6544363829159137,
+      "heldout_frequency": 2
+    },
+    "planner": {
+      "mean_residual": 8.9144562894496,
+      "std_residual": 0.3658834457418312,
+      "heldout_frequency": 2
+    },
+    "pragmatist": {
+      "mean_residual": 15.81199380804729,
+      "std_residual": 3.1741048614163043,
+      "heldout_frequency": 3
+    },
+    "predator": {
+      "mean_residual": 32.487042282996384,
+      "std_residual": 2.119290068220808,
+      "heldout_frequency": 3
+    },
+    "prisoner": {
+      "mean_residual": 9.059172013254589,
+      "std_residual": 1.4015431229884898,
+      "heldout_frequency": 4
+    },
+    "provincial": {
+      "mean_residual": 12.220729554115884,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "psychologist": {
+      "mean_residual": 15.603871473704789,
+      "std_residual": 0.16597079362496636,
+      "heldout_frequency": 2
+    },
+    "publisher": {
+      "mean_residual": 15.309939505779212,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "realist": {
+      "mean_residual": 24.410855785011478,
+      "std_residual": 0.4032893699611986,
+      "heldout_frequency": 2
+    },
+    "refugee": {
+      "mean_residual": 20.493025866905747,
+      "std_residual": 0.4761777920332353,
+      "heldout_frequency": 2
+    },
+    "retiree": {
+      "mean_residual": 27.279520201829897,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "rogue": {
+      "mean_residual": 14.629033521716194,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "scientist": {
+      "mean_residual": 13.855827426689595,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "specialist": {
+      "mean_residual": 18.728542665149423,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "statistician": {
+      "mean_residual": 17.2520167840288,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "student": {
+      "mean_residual": 37.20591635454758,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "symbiont": {
+      "mean_residual": 19.73613400186968,
+      "std_residual": 2.567717351721159,
+      "heldout_frequency": 2
+    },
+    "teenager": {
+      "mean_residual": 43.30531465458296,
+      "std_residual": 0.4073094581688004,
+      "heldout_frequency": 2
+    },
+    "therapist": {
+      "mean_residual": 16.506590016715403,
+      "std_residual": 0.931762610418267,
+      "heldout_frequency": 3
+    },
+    "traditionalist": {
+      "mean_residual": 28.85487693745898,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "tree": {
+      "mean_residual": 16.50406798205327,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "virus": {
+      "mean_residual": 30.327687625420946,
+      "std_residual": 2.1560401158486875,
+      "heldout_frequency": 3
+    },
+    "void": {
+      "mean_residual": 14.677120809726356,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "whale": {
+      "mean_residual": 20.938442722344718,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "amateur": {
+      "mean_residual": 39.11249121864337,
+      "std_residual": 1.192849020498663,
+      "heldout_frequency": 2
+    },
+    "analyst": {
+      "mean_residual": 6.716449132324138,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "anthropologist": {
+      "mean_residual": 21.188596670667284,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "assistant": {
+      "mean_residual": 24.44834283236062,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "bartender": {
+      "mean_residual": 16.992507392175902,
+      "std_residual": 0.9642123104303746,
+      "heldout_frequency": 2
+    },
+    "builder": {
+      "mean_residual": 17.66204611279902,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "caveman": {
+      "mean_residual": 36.891856920352,
+      "std_residual": 3.6719481752629513,
+      "heldout_frequency": 2
+    },
+    "composer": {
+      "mean_residual": 17.387507503976774,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "cynic": {
+      "mean_residual": 31.14307751197596,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "divorcee": {
+      "mean_residual": 23.713862232175423,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "fool": {
+      "mean_residual": 25.635288371724112,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "forecaster": {
+      "mean_residual": 11.015302768029407,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "gamer": {
+      "mean_residual": 38.73126269170783,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "immigrant": {
+      "mean_residual": 15.9942381034203,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "instructor": {
+      "mean_residual": 16.43233934526047,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "leviathan": {
+      "mean_residual": 22.99169867512277,
+      "std_residual": 0.010283338326933844,
+      "heldout_frequency": 2
+    },
+    "luddite": {
+      "mean_residual": 27.297835859035292,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "mathematician": {
+      "mean_residual": 10.302186560208213,
+      "std_residual": 2.2433593566461445,
+      "heldout_frequency": 2
+    },
+    "musician": {
+      "mean_residual": 29.440952112046904,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "mycorrhizal": {
+      "mean_residual": 15.072023634653217,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "newlywed": {
+      "mean_residual": 27.14344249523448,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "nomad": {
+      "mean_residual": 27.853257812215617,
+      "std_residual": 0.21515053974930964,
+      "heldout_frequency": 2
+    },
+    "observer": {
+      "mean_residual": 13.18843464132678,
+      "std_residual": 0.3012629559632707,
+      "heldout_frequency": 2
+    },
+    "paramedic": {
+      "mean_residual": 11.216547208805537,
+      "std_residual": 4.063151898456838,
+      "heldout_frequency": 3
+    },
+    "patient": {
+      "mean_residual": 21.948341511707916,
+      "std_residual": 0.1657983266440386,
+      "heldout_frequency": 2
+    },
+    "pirate": {
+      "mean_residual": 36.284794600351475,
+      "std_residual": 0.43127802437354035,
+      "heldout_frequency": 2
+    },
+    "prey": {
+      "mean_residual": 38.05131693402022,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "proofreader": {
+      "mean_residual": 23.46676522324403,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "provocateur": {
+      "mean_residual": 19.911251879935666,
+      "std_residual": 5.142593953647804,
+      "heldout_frequency": 2
+    },
+    "recruiter": {
+      "mean_residual": 7.6778593778653645,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "sage": {
+      "mean_residual": 36.841755178249684,
+      "std_residual": 4.095274603983821,
+      "heldout_frequency": 2
+    },
+    "shapeshifter": {
+      "mean_residual": 6.618463576426337,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "simulacrum": {
+      "mean_residual": 17.982303872032556,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "stoic": {
+      "mean_residual": 26.99759230421452,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "supervisor": {
+      "mean_residual": 13.299031672802833,
+      "std_residual": 1.0311623677441615,
+      "heldout_frequency": 2
+    },
+    "surfer": {
+      "mean_residual": 17.990648876176763,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "trainer": {
+      "mean_residual": 14.962837111646403,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "writer": {
+      "mean_residual": 17.54809176828374,
+      "std_residual": 1.5011013222794887,
+      "heldout_frequency": 2
+    },
+    "absurdist": {
+      "mean_residual": 14.465620070259007,
+      "std_residual": 0.9436534339040721,
+      "heldout_frequency": 2
+    },
+    "addict": {
+      "mean_residual": 14.082563179390446,
+      "std_residual": 7.42448225898711,
+      "heldout_frequency": 2
+    },
+    "blogger": {
+      "mean_residual": 22.26445536209403,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "celebrity": {
+      "mean_residual": 12.265117616536589,
+      "std_residual": 2.7795142809789795,
+      "heldout_frequency": 2
+    },
+    "critic": {
+      "mean_residual": 40.0011234398795,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "daredevil": {
+      "mean_residual": 43.45617890288893,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "demon": {
+      "mean_residual": 21.606713336767644,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "designer": {
+      "mean_residual": 20.107887367092047,
+      "std_residual": 3.535500606751686,
+      "heldout_frequency": 2
+    },
+    "destroyer": {
+      "mean_residual": 25.005130154020833,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "doctor": {
+      "mean_residual": 21.774599994816775,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "dreamer": {
+      "mean_residual": 16.08625657718034,
+      "std_residual": 0.620991741613814,
+      "heldout_frequency": 2
+    },
+    "egregore": {
+      "mean_residual": 35.749689039030756,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "generalist": {
+      "mean_residual": 14.91498253545978,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "genie": {
+      "mean_residual": 16.58751075596574,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "hive": {
+      "mean_residual": 36.02172868192967,
+      "std_residual": 2.789886718300341,
+      "heldout_frequency": 2
+    },
+    "hybrid": {
+      "mean_residual": 14.96617215730364,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "idealist": {
+      "mean_residual": 42.4460064783988,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "interpreter": {
+      "mean_residual": 14.149140667932683,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "loner": {
+      "mean_residual": 42.4207783241681,
+      "std_residual": 2.4819811764790387,
+      "heldout_frequency": 2
+    },
+    "narcissist": {
+      "mean_residual": 26.922885668960078,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "naturalist": {
+      "mean_residual": 25.67416824351293,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "networker": {
+      "mean_residual": 7.4495590391351785,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "optimist": {
+      "mean_residual": 36.05090368222553,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "philosopher": {
+      "mean_residual": 8.189903618390298,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "producer": {
+      "mean_residual": 10.849025202495294,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "scheduler": {
+      "mean_residual": 26.623603995538193,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "screener": {
+      "mean_residual": 17.02662744552055,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "spy": {
+      "mean_residual": 23.26345953904481,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "swarm": {
+      "mean_residual": 41.64057038234283,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "technologist": {
+      "mean_residual": 25.51600359926722,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "vampire": {
+      "mean_residual": 27.948625010780873,
+      "std_residual": 5.174141440328045,
+      "heldout_frequency": 2
+    },
+    "veteran": {
+      "mean_residual": 23.417440292158062,
+      "std_residual": 3.7529270025995487,
+      "heldout_frequency": 2
+    },
+    "witness": {
+      "mean_residual": 14.035100251257607,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "wraith": {
+      "mean_residual": 16.708358174748874,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "archivist": {
+      "mean_residual": 16.732622819310684,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "chameleon": {
+      "mean_residual": 20.183169704310792,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "debugger": {
+      "mean_residual": 9.923347871543093,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "ecosystem": {
+      "mean_residual": 19.740009798542346,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "editor": {
+      "mean_residual": 4.229133966786687,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "emissary": {
+      "mean_residual": 13.620521290884014,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "evaluator": {
+      "mean_residual": 15.563027515272815,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "evangelist": {
+      "mean_residual": 22.59683590428712,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "homunculus": {
+      "mean_residual": 20.075225147188775,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "jester": {
+      "mean_residual": 22.485343118749928,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "lawyer": {
+      "mean_residual": 21.881723663187664,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "mediator": {
+      "mean_residual": 13.713762134541724,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "parasite": {
+      "mean_residual": 37.414285460281214,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "parent": {
+      "mean_residual": 38.23463608839019,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "procrastinator": {
+      "mean_residual": 69.4638040163919,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "researcher": {
+      "mean_residual": 10.310873235182035,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "reviewer": {
+      "mean_residual": 10.923640252670236,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "teacher": {
+      "mean_residual": 11.009455464199384,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "translator": {
+      "mean_residual": 27.071607436627144,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "trickster": {
+      "mean_residual": 33.42432104075222,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "validator": {
+      "mean_residual": 6.7282214089974,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    },
+    "veterinarian": {
+      "mean_residual": 16.392186245274086,
+      "std_residual": 0.0,
+      "heldout_frequency": 1
+    }
+  }
+}

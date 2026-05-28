@@ -85,3 +85,7 @@ Implemented the second-stage framing ablation at `research/q2_stability/qwen/scr
 ## Update 2026-05-28
 
 Implemented the first full iterative outer-loop harness at `research/q2_stability/qwen/scripts/iterative_latent_feature_outer_loop.py`. The loop evaluates candidate latent dimensions across five deterministic splits, retains or discards dimensions based on gain, stability, null, and complexity checks, and stops on plateau. Final retained features reached mean PCA3D R2 0.492 versus semantic baseline 0.389, then plateaued after two failed refinement rounds.
+
+## Update 2026-05-28
+
+Implemented the first residual-focused third-layer diagnostic at `research/q2_stability/qwen/scripts/residual_manifold_analysis.py`. After the hierarchical trait-plus-procedural model reached R2 0.622, the residual loop used full no-label prompts, semantic-neighborhood residual pressure, and constrained developmental/liminal/collective candidate dimensions to reach R2 0.632. This is a concrete example of the machine-in-the-loop method: residual failures generated the next bounded hypothesis set, which was retained only where it improved held-out geometric prediction.
