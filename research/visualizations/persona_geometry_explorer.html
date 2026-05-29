@@ -230,8 +230,7 @@
     let dragMode = 'pan';
     let selectedPersonas = new Set();
     let lastSelectedPersona = null;
-    let plotPointClick = false;
-    let suppressNextPlotClick = false;
+    let currentCamera = null;
     let colorMode = 'cluster';
     let pinned = null;
 
@@ -249,8 +248,8 @@
       });
       document.getElementById('view3d').onclick = () => { currentView = '3d'; updateButtons(); render(); };
       document.getElementById('view2d').onclick = () => { currentView = '2d'; updateButtons(); render(); };
-      document.getElementById('projectionUmap').onclick = () => { currentProjection = 'umap'; updateButtons(); render(); };
-      document.getElementById('projectionPca').onclick = () => { if (supportsPca(VIZ_DATA[currentDataset])) currentProjection = 'pca'; updateButtons(); render(); };
+      document.getElementById('projectionUmap').onclick = () => { currentProjection = 'umap'; currentCamera = null; updateButtons(); render(); };
+      document.getElementById('projectionPca').onclick = () => { if (supportsPca(VIZ_DATA[currentDataset])) currentProjection = 'pca'; currentCamera = null; updateButtons(); render(); };
       document.getElementById('rangeAuto').onclick = () => { fixedRange = false; updateButtons(); render(); };
       document.getElementById('rangeFixed').onclick = () => { fixedRange = true; updateButtons(); render(); };
       document.getElementById('dragPan').onclick = () => { dragMode = 'pan'; updateButtons(); render(); };
@@ -472,13 +471,14 @@
         margin: { l: 0, r: 0, t: 12, b: 0 },
         hoverlabel: { bgcolor: '#151515', bordercolor: '#404040', font: { color: '#ffffff' } },
         legend: { orientation: 'h', x: 0.02, y: 1.02, bgcolor: 'rgba(13,13,13,0.65)' },
-        dragmode: currentView === '2d' ? dragMode : 'turntable'
+        dragmode: currentView === '2d' ? dragMode : 'turntable',
+        uirevision: `${currentDataset}-${activeProjection(ds)}-${currentView}`
       };
       if (currentView === '3d') {
         layout.scene = {
           bgcolor: '#0d0d0d',
           xaxis: axis3d(xAxisLabel, ranges?.x), yaxis: axis3d(yAxisLabel, ranges?.y), zaxis: axis3d(zAxisLabel, ranges?.z),
-          camera: { eye: { x: 1.45, y: 1.25, z: 0.95 } }
+          camera: currentCamera || { eye: { x: 1.45, y: 1.25, z: 0.95 } }
         };
       } else {
         layout.xaxis = axis2d(xAxisLabel, ranges?.x);
@@ -490,10 +490,13 @@
         plot.removeAllListeners('plotly_hover');
         plot.removeAllListeners('plotly_click');
         plot.removeAllListeners('plotly_selected');
+        plot.removeAllListeners('plotly_relayout');
       }
       plot.on('plotly_hover', e => { if (!pinned) showPoint(e.points[0].customdata.idx, false); });
+      plot.on('plotly_relayout', e => {
+        if (e && e['scene.camera']) currentCamera = e['scene.camera'];
+      });
       plot.on('plotly_click', e => {
-        plotPointClick = true;
         const idx = e.points[0].customdata.idx;
         const name = ds.names[idx];
         if (e.event && e.event.shiftKey) {
@@ -509,7 +512,6 @@
       });
       plot.on('plotly_selected', e => {
         if (!e || !e.points || !e.points.length) return;
-        suppressNextPlotClick = true;
         const names = e.points.map(p => ds.names[p.customdata.idx]).filter(Boolean);
         if (e.event && e.event.shiftKey) {
           names.forEach(name => selectedPersonas.add(name));
@@ -523,19 +525,6 @@
         Plotly.relayout(plot, { selections: [] }).catch(() => {});
         render();
       });
-      plot.onclick = () => {
-        setTimeout(() => {
-          if (suppressNextPlotClick) {
-            suppressNextPlotClick = false;
-            return;
-          }
-          if (plotPointClick) {
-            plotPointClick = false;
-            return;
-          }
-          clearSelection(true);
-        }, 0);
-      };
       renderLegend();
       const latest = lastSelectedPersona ? ds.names.indexOf(lastSelectedPersona) : -1;
       if (latest >= 0) showPoint(latest, true);
