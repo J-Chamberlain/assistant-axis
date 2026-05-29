@@ -3,9 +3,9 @@
 # Updated at the end of every Codex session. Fetch this first in any new session.
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
-**Last updated:** 2026-05-28
-**Last commit:** 3ff54b9
-**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5
+**Last updated:** 2026-05-29
+**Last commit:** aa4f6f7
+**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, and persistent point selection
 
 ---
 
@@ -457,17 +457,16 @@
 
 **Latent-feature discovery state:** `research/q2_stability/qwen/scripts/latent_feature_discovery_loop.py` implements the first constrained model-assisted hypothesis-generation and held-out testing loop for persona activation geometry. `research/q2_stability/qwen/scripts/latent_feature_framing_ablation.py` extends this into a framing comparison over motivational, interactional, procedural, narrative-causal, all-framing, and prior first-loop feature sets. `research/q2_stability/qwen/scripts/iterative_latent_feature_outer_loop.py` now implements repeated-split outer-loop optimization with plateau detection. Machine-readable outputs live under `research/q2_stability/qwen/outputs/latent_feature_discovery/`, `research/q2_stability/qwen/outputs/latent_feature_framing_ablation/`, and `research/q2_stability/qwen/outputs/iterative_outer_loop/`. The current result is bounded: latent features improve held-out continuous geometry prediction more than hard cluster prediction.
 
-**Visualization state:** `research/visualizations/persona_geometry_explorer.html` now uses full nearest-centroid cluster assignments from `research/visualizations/cluster_assignments_full.json` instead of incomplete hardcoded lists. `research/visualizations/geometry_viz_data.json` now includes role PCA coordinates and variance metadata; PC1 explains 0.315954 of variance and aligns with the assistant-axis vector at 0.802310 cosine.
+**Visualization state:** `research/visualizations/persona_geometry_explorer.html` now uses full nearest-centroid cluster assignments from `research/visualizations/cluster_assignments_full.json` instead of incomplete hardcoded lists. `research/visualizations/geometry_viz_data.json` now includes role PCA coordinates and variance metadata; PC1 explains 0.315954 of variance and aligns with the assistant-axis vector at 0.802310 cosine. The visualizer UI now has explicit 2D axis labels, UMAP/PCA component swapping for X/Y/Z axes, an auto/fixed range toggle, fixed-range annotations, and persistent multi-point selection with dimming.
 
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
-**Completed this session:** Reframed Paper 1.5 around layered persona activation geometry interpretation rather than adaptive extraction replication.
-**Completed this session:** Reframed Paper 2 around local centroid perturbation and local persona-manifold mapping, with older dyad/contagion/attractor-collapse framing archived as future dynamics work.
-**Completed this session:** Created the grant scope sticky note plus concise Paper 1.5 executive summary and Paper 2 local-manifold brief.
-**Next step:** Finish evaluator-model sensitivity if API access allows, then draft Paper 1.5 around layered geometry; treat H100 local-manifold mapping as grant-supported Paper 2 work rather than a Paper 1.5 prerequisite.
-**Last commit before this session:** 3ff54b9
+**Completed this session:** Updated `research/visualizations/persona_geometry_explorer.html` with explicit 2D axis titles/ticks, axis component dropdowns, auto/fixed range controls, fixed-range annotations, and persistent selection highlighting.
+**Completed this session:** Verified the visualizer remains self-contained and that the extracted JavaScript parses successfully.
+**Next step:** Continue Paper 1.5 drafting around layered persona geometry; visualizer data regeneration is not needed for these UI changes.
+**Last commit before this session:** aa4f6f7
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

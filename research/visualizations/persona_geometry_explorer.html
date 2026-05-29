@@ -61,7 +61,7 @@
       border-color: var(--accent);
       background: #14314f;
     }
-    input {
+    input, select {
       width: min(320px, 100%);
       border: 1px solid #303038;
       background: #0b0b0f;
@@ -72,7 +72,8 @@
       font-size: 12px;
       outline: none;
     }
-    input:focus { border-color: var(--accent); }
+    select { width: auto; min-width: 118px; cursor: pointer; }
+    input:focus, select:focus { border-color: var(--accent); }
     main {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 330px;
@@ -120,6 +121,11 @@
     .plot-wrap { min-width: 0; }
     .pca-note { display: none; padding: 0 18px 14px; color: var(--muted); font-size: 11px; line-height: 1.5; max-width: 980px; }
     .pca-note.active { display: block; }
+    .range-note { display: none; padding: 0 18px 14px; color: var(--muted); font-size: 11px; line-height: 1.5; max-width: 980px; }
+    .range-note.active { display: block; }
+    .selection-count { display: none; color: #d8d8d8; font-size: 11px; }
+    .selection-count.active { display: inline; }
+    button.hidden { display: none; }
     .legend {
       display: flex;
       gap: 10px;
@@ -150,7 +156,10 @@
     <div class="control-group" id="datasetControls"><span class="label">Dataset</span></div>
     <div class="control-group"><span class="label">View</span><button id="view3d" class="active">3D</button><button id="view2d">2D</button></div>
     <div class="control-group" id="projectionControls"><span class="label">Projection</span><button id="projectionUmap" class="active">UMAP</button><button id="projectionPca">PCA</button></div>
+    <div class="control-group" id="axisControls"><span class="label">X-axis</span><select id="axisX"></select><span class="label">Y-axis</span><select id="axisY"></select><span class="label" id="axisZLabel">Z-axis</span><select id="axisZ"></select></div>
+    <div class="control-group"><span class="label">Range</span><button id="rangeAuto" class="active">Auto Range</button><button id="rangeFixed">Fixed Range</button></div>
     <div class="control-group" id="colorControls"><span class="label">Color</span><button id="colorCluster" class="active">Cluster</button><button id="colorAxis">Axis Projection</button></div>
+    <div class="control-group"><span id="selectionCount" class="selection-count">0 selected</span><button id="clearSelection" class="hidden">Clear Selection</button></div>
     <div class="control-group"><span class="label">Search</span><input id="search" placeholder="type a persona / trait name" /></div>
   </section>
   <section class="legend" id="legend"></section>
@@ -158,6 +167,7 @@
     <div class="plot-wrap">
       <div id="plot"></div>
       <div class="pca-note" id="pcaNote">PC1 captures the largest source of geometric variance across persona representations and aligns strongly with the assistant axis. PC2 and PC3 capture independent secondary structure. Unlike UMAP axes, PCA coordinates are directly comparable across views.</div>
+      <div class="range-note" id="rangeNote"></div>
     </div>
     <aside>
       <div class="panel-title">Nearest Neighbors</div>
@@ -189,6 +199,11 @@
     let currentDataset = DATASET_KEYS.includes('roles') ? 'roles' : DATASET_KEYS[0];
     let currentView = '3d';
     let currentProjection = 'umap';
+    let axisMap = { x: 0, y: 1, z: 2 };
+    let fixedRange = false;
+    let selectedPersonas = new Set();
+    let lastSelectedPersona = null;
+    let plotPointClick = false;
     let colorMode = 'cluster';
     let pinned = null;
 
@@ -201,13 +216,19 @@
         btn.textContent = key[0].toUpperCase() + key.slice(1);
         btn.id = 'dataset_' + key;
         btn.className = key === currentDataset ? 'active' : '';
-        btn.onclick = () => { currentDataset = key; if (!supportsPca(VIZ_DATA[currentDataset])) currentProjection = 'umap'; pinned = null; updateButtons(); render(); };
+        btn.onclick = () => { currentDataset = key; if (!supportsPca(VIZ_DATA[currentDataset])) currentProjection = 'umap'; pinned = null; clearSelection(false); updateButtons(); render(); };
         wrap.appendChild(btn);
       });
       document.getElementById('view3d').onclick = () => { currentView = '3d'; updateButtons(); render(); };
       document.getElementById('view2d').onclick = () => { currentView = '2d'; updateButtons(); render(); };
       document.getElementById('projectionUmap').onclick = () => { currentProjection = 'umap'; updateButtons(); render(); };
       document.getElementById('projectionPca').onclick = () => { if (supportsPca(VIZ_DATA[currentDataset])) currentProjection = 'pca'; updateButtons(); render(); };
+      document.getElementById('rangeAuto').onclick = () => { fixedRange = false; updateButtons(); render(); };
+      document.getElementById('rangeFixed').onclick = () => { fixedRange = true; updateButtons(); render(); };
+      document.getElementById('axisX').onchange = e => { axisMap.x = Number(e.target.value); render(); };
+      document.getElementById('axisY').onchange = e => { axisMap.y = Number(e.target.value); render(); };
+      document.getElementById('axisZ').onchange = e => { axisMap.z = Number(e.target.value); render(); };
+      document.getElementById('clearSelection').onclick = () => clearSelection(true);
       document.getElementById('colorCluster').onclick = () => { colorMode = 'cluster'; updateButtons(); render(); };
       document.getElementById('colorAxis').onclick = () => { colorMode = 'axis'; updateButtons(); render(); };
       document.getElementById('search').addEventListener('input', render);
@@ -223,11 +244,15 @@
       if (!canPca) currentProjection = 'umap';
       document.getElementById('projectionUmap').classList.toggle('active', currentProjection === 'umap');
       document.getElementById('projectionPca').classList.toggle('active', currentProjection === 'pca');
+      document.getElementById('rangeAuto').classList.toggle('active', !fixedRange);
+      document.getElementById('rangeFixed').classList.toggle('active', fixedRange);
       const showCluster = currentDataset === 'roles';
       document.getElementById('colorControls').style.display = showCluster ? 'flex' : 'none';
       if (!showCluster) colorMode = 'axis';
       document.getElementById('colorCluster').classList.toggle('active', colorMode === 'cluster');
       document.getElementById('colorAxis').classList.toggle('active', colorMode === 'axis');
+      updateAxisControls();
+      updateSelectionControls();
     }
 
     function formatAxis(v) { return Number(v).toFixed(4); }
@@ -239,10 +264,17 @@
       return currentProjection === 'pca' && supportsPca(ds) ? 'pca' : 'umap';
     }
 
-    function currentCoords(ds) {
+    function baseCoords(ds) {
       const projection = activeProjection(ds);
-      if (projection === 'pca') return currentView === '3d' ? ds.pca3d : ds.pca2d;
-      return currentView === '3d' ? ds.umap3d : ds.umap2d;
+      if (projection === 'pca') return ds.pca3d || ds.pca2d;
+      return ds.umap3d || ds.umap2d;
+    }
+
+    function currentCoords(ds) {
+      const coords = baseCoords(ds);
+      return coords.map(row => currentView === '3d'
+        ? [row[axisMap.x], row[axisMap.y], row[axisMap.z]]
+        : [row[axisMap.x], row[axisMap.y]]);
     }
 
     function percentVar(ds, key) {
@@ -250,9 +282,57 @@
       return Number.isFinite(Number(value)) ? (Number(value) * 100).toFixed(1) : '0.0';
     }
 
-    function projectionAxisTitle(ds, index) {
-      if (activeProjection(ds) !== 'pca') return `UMAP-${index}`;
-      return `PC${index} (${percentVar(ds, 'pc' + index + '_explained')}% var)`;
+    function projectionAxisTitle(ds, componentIndex) {
+      const n = componentIndex + 1;
+      if (activeProjection(ds) !== 'pca') return `UMAP-${n}`;
+      return `PC${n} (${percentVar(ds, 'pc' + n + '_explained')}% var)`;
+    }
+
+    function updateAxisControls() {
+      const ds = VIZ_DATA[currentDataset];
+      const coords = baseCoords(ds) || [];
+      const componentCount = coords[0] ? coords[0].length : 2;
+      ['x', 'y', 'z'].forEach((axis, fallback) => {
+        if (axisMap[axis] >= componentCount) axisMap[axis] = Math.min(fallback, componentCount - 1);
+        const select = document.getElementById('axis' + axis.toUpperCase());
+        select.innerHTML = '';
+        for (let i = 0; i < componentCount; i++) {
+          const option = document.createElement('option');
+          option.value = String(i);
+          option.textContent = projectionAxisTitle(ds, i);
+          option.selected = axisMap[axis] === i;
+          select.appendChild(option);
+        }
+      });
+      const showZ = currentView === '3d';
+      document.getElementById('axisZ').style.display = showZ ? '' : 'none';
+      document.getElementById('axisZLabel').style.display = showZ ? '' : 'none';
+    }
+
+    function rangeFor(ds, componentIndex) {
+      const coords = baseCoords(ds);
+      const values = coords.map(row => Number(row[componentIndex])).filter(Number.isFinite);
+      const min = Math.min(...values);
+      const max = Math.max(...values);
+      const pad = Math.max((max - min) * 0.04, 1e-6);
+      return [min - pad, max + pad];
+    }
+
+    function formatRange(range) {
+      return `[${range[0].toFixed(2)}, ${range[1].toFixed(2)}]`;
+    }
+
+    function updateRangeNote(ds, ranges) {
+      const note = document.getElementById('rangeNote');
+      if (!fixedRange || !ranges) {
+        note.classList.remove('active');
+        note.textContent = '';
+        return;
+      }
+      const parts = [`X: ${formatRange(ranges.x)}`, `Y: ${formatRange(ranges.y)}`];
+      if (currentView === '3d') parts.push(`Z: ${formatRange(ranges.z)}`);
+      note.textContent = parts.join('  ');
+      note.classList.add('active');
     }
 
     function updateProjectionText(ds) {
@@ -280,14 +360,23 @@
 
     function markerSizes(ds) {
       const q = document.getElementById('search').value.trim().toLowerCase();
-      return ds.names.map(n => q && n.toLowerCase().includes(q) ? 13 : 6);
+      return ds.names.map(n => {
+        const selected = selectedPersonas.has(n);
+        if (selected) return 10;
+        return q && n.toLowerCase().includes(q) ? 13 : 6;
+      });
+    }
+
+    function markerOpacities(ds) {
+      const active = selectedPersonas.size > 0;
+      return ds.names.map(n => !active || selectedPersonas.has(n) ? 0.8 : 0.15);
     }
 
     function markerLines(ds) {
       const q = document.getElementById('search').value.trim().toLowerCase();
       return {
-        width: ds.names.map(n => q && n.toLowerCase().includes(q) ? 2 : 0),
-        color: ds.names.map(n => q && n.toLowerCase().includes(q) ? '#ffffff' : 'rgba(0,0,0,0)')
+        width: ds.names.map(n => selectedPersonas.has(n) || (q && n.toLowerCase().includes(q)) ? 2 : 0),
+        color: ds.names.map(n => selectedPersonas.has(n) || (q && n.toLowerCase().includes(q)) ? '#ffffff' : 'rgba(0,0,0,0)')
       };
     }
 
@@ -295,8 +384,10 @@
       const ds = VIZ_DATA[currentDataset];
       const coords = currentCoords(ds);
       updateProjectionText(ds);
+      updateAxisControls();
       let traces = [];
       const sizes = markerSizes(ds);
+      const opacities = markerOpacities(ds);
       const lines = markerLines(ds);
 
       if (currentDataset === 'roles' && colorMode === 'cluster') {
@@ -307,6 +398,7 @@
             name: cluster,
             color: CLUSTER_COLORS[cluster] || '#555555',
             sizes,
+            opacities,
             lines,
             showscale: false
           }));
@@ -317,10 +409,21 @@
           name: currentDataset,
           color: ds.axis_projections,
           sizes,
+          opacities,
           lines,
           showscale: true
         }));
       }
+
+      const ranges = fixedRange ? {
+        x: rangeFor(ds, axisMap.x),
+        y: rangeFor(ds, axisMap.y),
+        z: rangeFor(ds, axisMap.z)
+      } : null;
+      const xAxisLabel = projectionAxisTitle(ds, axisMap.x);
+      const yAxisLabel = projectionAxisTitle(ds, axisMap.y);
+      const zAxisLabel = projectionAxisTitle(ds, axisMap.z);
+      updateRangeNote(ds, ranges);
 
       const layout = {
         paper_bgcolor: '#0d0d0d',
@@ -333,19 +436,48 @@
       if (currentView === '3d') {
         layout.scene = {
           bgcolor: '#0d0d0d',
-          xaxis: axis3d(projectionAxisTitle(ds, 1)), yaxis: axis3d(projectionAxisTitle(ds, 2)), zaxis: axis3d(projectionAxisTitle(ds, 3)),
+          xaxis: axis3d(xAxisLabel, ranges?.x), yaxis: axis3d(yAxisLabel, ranges?.y), zaxis: axis3d(zAxisLabel, ranges?.z),
           camera: { eye: { x: 1.45, y: 1.25, z: 0.95 } }
         };
       } else {
-        layout.xaxis = axis2d(projectionAxisTitle(ds, 1));
-        layout.yaxis = axis2d(projectionAxisTitle(ds, 2));
+        layout.xaxis = axis2d(xAxisLabel, ranges?.x);
+        layout.yaxis = axis2d(yAxisLabel, ranges?.y);
       }
       Plotly.react('plot', traces, layout, { responsive: true, displayModeBar: true });
       const plot = document.getElementById('plot');
+      if (typeof plot.removeAllListeners === 'function') {
+        plot.removeAllListeners('plotly_hover');
+        plot.removeAllListeners('plotly_click');
+      }
       plot.on('plotly_hover', e => { if (!pinned) showPoint(e.points[0].customdata.idx, false); });
-      plot.on('plotly_click', e => { pinned = e.points[0].customdata.idx; showPoint(pinned, true); });
+      plot.on('plotly_click', e => {
+        plotPointClick = true;
+        const idx = e.points[0].customdata.idx;
+        const name = ds.names[idx];
+        if (e.event && e.event.shiftKey) {
+          selectedPersonas.add(name);
+        } else {
+          selectedPersonas = new Set([name]);
+        }
+        lastSelectedPersona = name;
+        pinned = idx;
+        updateSelectionControls();
+        showPoint(pinned, true);
+        render();
+      });
+      plot.onclick = () => {
+        setTimeout(() => {
+          if (plotPointClick) {
+            plotPointClick = false;
+            return;
+          }
+          clearSelection(true);
+        }, 0);
+      };
       renderLegend();
-      if (pinned !== null) showPoint(pinned, true);
+      const latest = lastSelectedPersona ? ds.names.indexOf(lastSelectedPersona) : -1;
+      if (latest >= 0) showPoint(latest, true);
+      else if (pinned !== null) showPoint(pinned, true);
     }
 
     function makeTrace(ds, coords, idx, opts) {
@@ -353,7 +485,7 @@
       const custom = idx.map(i => ({ idx: i }));
       const marker = {
         size: idx.map(i => opts.sizes[i]),
-        opacity: 0.8,
+        opacity: idx.map(i => opts.opacities[i]),
         line: { width: idx.map(i => opts.lines.width[i]), color: idx.map(i => opts.lines.color[i]) }
       };
       if (Array.isArray(opts.color)) {
@@ -382,11 +514,39 @@
       return base;
     }
 
-    function axis3d(title) {
-      return { title, gridcolor: '#242424', zerolinecolor: '#444', color: '#9a9a9a', backgroundcolor: '#0d0d0d' };
+    function axis3d(title, range) {
+      const axis = { title, gridcolor: '#242424', zerolinecolor: '#444', color: '#9a9a9a', backgroundcolor: '#0d0d0d' };
+      if (range) axis.range = range;
+      return axis;
     }
-    function axis2d(title) {
-      return { title, gridcolor: '#242424', zerolinecolor: '#444', color: '#9a9a9a' };
+    function axis2d(title, range) {
+      const axis = {
+        title: { text: title, font: { color: '#aaa', size: 11 } },
+        tickfont: { color: '#888', size: 10 },
+        gridcolor: '#2a2a2a',
+        zerolinecolor: '#444',
+        showticklabels: true,
+        autorange: range ? false : true
+      };
+      if (range) axis.range = range;
+      return axis;
+    }
+
+    function clearSelection(shouldRender) {
+      selectedPersonas.clear();
+      lastSelectedPersona = null;
+      pinned = null;
+      updateSelectionControls();
+      if (shouldRender) render();
+    }
+
+    function updateSelectionControls() {
+      const count = selectedPersonas.size;
+      const counter = document.getElementById('selectionCount');
+      const clear = document.getElementById('clearSelection');
+      counter.textContent = `${count} selected`;
+      counter.classList.toggle('active', count > 0);
+      clear.classList.toggle('hidden', count === 0);
     }
 
     function showPoint(i, isPinned) {
