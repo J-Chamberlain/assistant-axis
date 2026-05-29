@@ -23,11 +23,6 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
       letter-spacing: 0;
     }
-    header {
-      padding: 18px 18px 10px;
-      border-bottom: 1px solid var(--line);
-      background: #0b0b0d;
-    }
     h1 {
       margin: 0 0 6px;
       font-size: 20px;
@@ -78,18 +73,18 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) 330px;
       gap: 0;
-      min-height: calc(100vh - 118px);
+      min-height: calc(100vh - 78px);
     }
     #plot {
       width: 100%;
-      height: calc(100vh - 118px);
-      min-height: 620px;
+      height: calc(100vh - 148px);
+      min-height: 540px;
     }
     aside {
       border-left: 1px solid var(--line);
       background: var(--panel2);
       padding: 16px;
-      min-height: calc(100vh - 118px);
+      min-height: calc(100vh - 78px);
     }
     .panel-title {
       color: #fff;
@@ -118,7 +113,9 @@
     .neighbors .name { color: #d8d8d8; overflow-wrap: anywhere; }
     .neighbors .cos { color: #9fc8ff; white-space: nowrap; }
     .hint { color: var(--muted); font-size: 11px; line-height: 1.5; margin-top: 14px; }
-    .plot-wrap { min-width: 0; }
+    .plot-wrap { min-width: 0; position: relative; }
+    .chart-meta { padding: 8px 18px 14px; border-top: 1px solid var(--line); background: #0b0b0d; }
+    .chart-meta h1 { font-size: 15px; margin-bottom: 3px; }
     .pca-note { display: none; padding: 0 18px 14px; color: var(--muted); font-size: 11px; line-height: 1.5; max-width: 980px; }
     .pca-note.active { display: block; }
     .range-note { display: none; padding: 0 18px 14px; color: var(--muted); font-size: 11px; line-height: 1.5; max-width: 980px; }
@@ -126,6 +123,32 @@
     .selection-count { display: none; color: #d8d8d8; font-size: 11px; }
     .selection-count.active { display: inline; }
     button.hidden { display: none; }
+    .fullscreen-exit {
+      display: none;
+      position: absolute;
+      right: 14px;
+      top: 12px;
+      z-index: 1001;
+      background: rgba(20, 49, 79, 0.92);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    body.plot-fullscreen { overflow: hidden; }
+    body.plot-fullscreen .plot-wrap {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+    }
+    body.plot-fullscreen #plot {
+      height: calc(100vh - 96px);
+      min-height: 0;
+      flex: 1 1 auto;
+    }
+    body.plot-fullscreen .chart-meta { padding: 8px 18px 10px; }
+    body.plot-fullscreen .fullscreen-exit { display: block; }
     .legend {
       display: flex;
       gap: 10px;
@@ -148,16 +171,14 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Persona Geometry Explorer</h1>
-    <div class="sub">Qwen/Qwen3-32B vector geometry · <span id="projectionSummary">UMAP 3D/2D</span> · model_used: <span id="modelUsed"></span></div>
-  </header>
   <section class="controls">
     <div class="control-group" id="datasetControls"><span class="label">Dataset</span></div>
     <div class="control-group"><span class="label">View</span><button id="view3d" class="active">3D</button><button id="view2d">2D</button></div>
     <div class="control-group" id="projectionControls"><span class="label">Projection</span><button id="projectionUmap" class="active">UMAP</button><button id="projectionPca">PCA</button></div>
     <div class="control-group" id="axisControls"><span class="label">X-axis</span><select id="axisX"></select><span class="label">Y-axis</span><select id="axisY"></select><span class="label" id="axisZLabel">Z-axis</span><select id="axisZ"></select></div>
     <div class="control-group"><span class="label">Range</span><button id="rangeAuto" class="active">Auto Range</button><button id="rangeFixed">Fixed Range</button></div>
+    <div class="control-group" id="dragControls"><span class="label">Drag</span><button id="dragPan" class="active">Pan/Rotate</button><button id="dragLasso">Lasso</button><button id="dragBox">Box</button></div>
+    <div class="control-group"><button id="fullscreenToggle">Focus View</button></div>
     <div class="control-group" id="colorControls"><span class="label">Color</span><button id="colorCluster" class="active">Cluster</button><button id="colorAxis">Axis Projection</button></div>
     <div class="control-group"><span id="selectionCount" class="selection-count">0 selected</span><button id="clearSelection" class="hidden">Clear Selection</button></div>
     <div class="control-group"><span class="label">Search</span><input id="search" placeholder="type a persona / trait name" /></div>
@@ -165,9 +186,14 @@
   <section class="legend" id="legend"></section>
   <main>
     <div class="plot-wrap">
+      <button id="fullscreenExit" class="fullscreen-exit">Exit Focus</button>
       <div id="plot"></div>
       <div class="pca-note" id="pcaNote">PC1 captures the largest source of geometric variance across persona representations and aligns strongly with the assistant axis. PC2 and PC3 capture independent secondary structure. Unlike UMAP axes, PCA coordinates are directly comparable across views.</div>
       <div class="range-note" id="rangeNote"></div>
+      <div class="chart-meta">
+        <h1>Persona Geometry Explorer</h1>
+        <div class="sub">Qwen/Qwen3-32B vector geometry · <span id="projectionSummary">UMAP 3D/2D</span> · model_used: <span id="modelUsed"></span></div>
+      </div>
     </div>
     <aside>
       <div class="panel-title">Nearest Neighbors</div>
@@ -179,7 +205,7 @@
         <span>Status</span><span id="pinStatus">preview</span>
       </div>
       <ul class="neighbors" id="neighbors"></ul>
-      <div class="hint">Hover previews a point. Click pins it. Search highlights exact and partial name matches without changing the underlying geometry.</div>
+      <div class="hint">Hover previews a point. Click selects one point. Shift-click adds points. In 2D, use Lasso or Box drag to select a group; Shift-lasso adds to the current selection. Search highlights exact and partial name matches without changing the underlying geometry.</div>
     </aside>
   </main>
   <script>
@@ -201,9 +227,11 @@
     let currentProjection = 'umap';
     let axisMap = { x: 0, y: 1, z: 2 };
     let fixedRange = false;
+    let dragMode = 'pan';
     let selectedPersonas = new Set();
     let lastSelectedPersona = null;
     let plotPointClick = false;
+    let suppressNextPlotClick = false;
     let colorMode = 'cluster';
     let pinned = null;
 
@@ -225,6 +253,11 @@
       document.getElementById('projectionPca').onclick = () => { if (supportsPca(VIZ_DATA[currentDataset])) currentProjection = 'pca'; updateButtons(); render(); };
       document.getElementById('rangeAuto').onclick = () => { fixedRange = false; updateButtons(); render(); };
       document.getElementById('rangeFixed').onclick = () => { fixedRange = true; updateButtons(); render(); };
+      document.getElementById('dragPan').onclick = () => { dragMode = 'pan'; updateButtons(); render(); };
+      document.getElementById('dragLasso').onclick = () => { dragMode = 'lasso'; currentView = '2d'; updateButtons(); render(); };
+      document.getElementById('dragBox').onclick = () => { dragMode = 'select'; currentView = '2d'; updateButtons(); render(); };
+      document.getElementById('fullscreenToggle').onclick = () => toggleFocusView();
+      document.getElementById('fullscreenExit').onclick = () => toggleFocusView(false);
       document.getElementById('axisX').onchange = e => { axisMap.x = Number(e.target.value); render(); };
       document.getElementById('axisY').onchange = e => { axisMap.y = Number(e.target.value); render(); };
       document.getElementById('axisZ').onchange = e => { axisMap.z = Number(e.target.value); render(); };
@@ -246,6 +279,13 @@
       document.getElementById('projectionPca').classList.toggle('active', currentProjection === 'pca');
       document.getElementById('rangeAuto').classList.toggle('active', !fixedRange);
       document.getElementById('rangeFixed').classList.toggle('active', fixedRange);
+      if (currentView === '3d' && dragMode !== 'pan') dragMode = 'pan';
+      document.getElementById('dragControls').style.display = 'flex';
+      document.getElementById('dragLasso').disabled = currentView !== '2d';
+      document.getElementById('dragBox').disabled = currentView !== '2d';
+      document.getElementById('dragPan').classList.toggle('active', dragMode === 'pan');
+      document.getElementById('dragLasso').classList.toggle('active', dragMode === 'lasso');
+      document.getElementById('dragBox').classList.toggle('active', dragMode === 'select');
       const showCluster = currentDataset === 'roles';
       document.getElementById('colorControls').style.display = showCluster ? 'flex' : 'none';
       if (!showCluster) colorMode = 'axis';
@@ -432,6 +472,7 @@
         margin: { l: 0, r: 0, t: 12, b: 0 },
         hoverlabel: { bgcolor: '#151515', bordercolor: '#404040', font: { color: '#ffffff' } },
         legend: { orientation: 'h', x: 0.02, y: 1.02, bgcolor: 'rgba(13,13,13,0.65)' },
+        dragmode: currentView === '2d' ? dragMode : 'turntable'
       };
       if (currentView === '3d') {
         layout.scene = {
@@ -448,6 +489,7 @@
       if (typeof plot.removeAllListeners === 'function') {
         plot.removeAllListeners('plotly_hover');
         plot.removeAllListeners('plotly_click');
+        plot.removeAllListeners('plotly_selected');
       }
       plot.on('plotly_hover', e => { if (!pinned) showPoint(e.points[0].customdata.idx, false); });
       plot.on('plotly_click', e => {
@@ -465,8 +507,28 @@
         showPoint(pinned, true);
         render();
       });
+      plot.on('plotly_selected', e => {
+        if (!e || !e.points || !e.points.length) return;
+        suppressNextPlotClick = true;
+        const names = e.points.map(p => ds.names[p.customdata.idx]).filter(Boolean);
+        if (e.event && e.event.shiftKey) {
+          names.forEach(name => selectedPersonas.add(name));
+        } else {
+          selectedPersonas = new Set(names);
+        }
+        lastSelectedPersona = names[names.length - 1] || lastSelectedPersona;
+        pinned = lastSelectedPersona ? ds.names.indexOf(lastSelectedPersona) : null;
+        updateSelectionControls();
+        if (pinned !== null && pinned >= 0) showPoint(pinned, true);
+        Plotly.relayout(plot, { selections: [] }).catch(() => {});
+        render();
+      });
       plot.onclick = () => {
         setTimeout(() => {
+          if (suppressNextPlotClick) {
+            suppressNextPlotClick = false;
+            return;
+          }
           if (plotPointClick) {
             plotPointClick = false;
             return;
@@ -547,6 +609,14 @@
       counter.textContent = `${count} selected`;
       counter.classList.toggle('active', count > 0);
       clear.classList.toggle('hidden', count === 0);
+    }
+
+    function toggleFocusView(force) {
+      const next = typeof force === 'boolean' ? force : !document.body.classList.contains('plot-fullscreen');
+      document.body.classList.toggle('plot-fullscreen', next);
+      document.getElementById('fullscreenToggle').classList.toggle('active', next);
+      document.getElementById('fullscreenToggle').textContent = next ? 'Exit Focus' : 'Focus View';
+      setTimeout(() => Plotly.Plots.resize('plot'), 50);
     }
 
     function showPoint(i, isPinned) {
