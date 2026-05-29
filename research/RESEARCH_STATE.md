@@ -4,7 +4,7 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-29
-**Last commit:** 3debc8f
+**Last commit:** af1ccad
 **Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology
 
 ---
@@ -477,12 +477,15 @@
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
+**Zero-relay workflow state:** `research/runtime/` now contains the canonical command-bus files `PENDING_TASK.md`, `CURRENT_RESULTS.md`, and `OPEN_TASKS.md`. Claude Desktop has a local GitHub MCP server entry configured under `~/Library/Application Support/Claude/claude_desktop_config.json`; Claude Desktop must be fully quit and relaunched before the MCP server is active. The Mac Mini watcher script is installed at `/Users/alfred/Projects/scripts/codex_task_watcher.sh`, and cron checks it every five minutes to copy substantive pending tasks into `/tmp/codex_pending.txt`. `AGENTS.md` now records the required Codex session-start check for `/tmp/codex_pending.txt`.
+
 **Completed this session:** Updated `research/visualizations/persona_geometry_explorer.html` with explicit 2D axis titles/ticks, axis component dropdowns, auto/fixed range controls, fixed-range annotations, persistent selection highlighting, 2D lasso/box selection, focus-view mode, explicit-only selection clearing, and preserved 3D camera state while rotating selected points.
 **Completed this session:** Verified the visualizer remains self-contained and that the extracted JavaScript parses successfully.
 **Completed this session:** Added Big Five-style trait overlay data and color modes to `research/visualizations/persona_geometry_explorer.html`, using the shared latent feature benchmark source where Claude Big Five predicts canonical activation PCA3D at R2 0.613 vs semantic baseline R2 0.389.
 **Completed this session:** Added `research/PROVENANCE_REGISTRY.md` and `research/RESEARCH_INDEX.md`, and updated onboarding/state files so future sessions can answer provenance, methodology, and current-state questions before repo archaeology.
-**Next step:** Use `RESEARCH_INDEX.md` and `PROVENANCE_REGISTRY.md` as first-pass sources for provenance questions, then continue Paper 1.5 drafting and evaluator-sensitivity completion.
-**Last commit before this session:** 3debc8f
+**Completed this session:** Configured the local Claude Desktop GitHub MCP server entry without printing the token, added the repo runtime command-bus files, installed the Mac Mini cron watcher, and added the Codex zero-relay startup rule to `AGENTS.md`.
+**Next step:** Quit Claude Desktop completely with Cmd+Q and relaunch it so the GitHub MCP server is loaded; then test the zero-relay loop with a harmless task in `research/runtime/PENDING_TASK.md`.
+**Last commit before this session:** af1ccad
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

@@ -158,3 +158,15 @@ in any model_used field in output files."
 This note was added 2026-05-24 after
 cluster_background_prompts_v1.json was incorrectly tagged as GPT-4.5
 due to a placeholder string in the generating card.
+
+## Zero-Relay Workflow — Session Startup Check
+
+At the start of every Codex session, before doing anything else:
+
+1. Check if /tmp/codex_pending.txt exists and is non-empty.
+2. If yes: read it, treat its contents as the task for this session, delete the file, and proceed with execution.
+3. After completing the task, write a summary to research/runtime/CURRENT_RESULTS.md and clear research/runtime/PENDING_TASK.md (replace contents with the empty-state header comment only).
+4. Push both files to master.
+5. If /tmp/codex_pending.txt is absent or empty: proceed with the user's verbal instructions as normal.
+
+This check is mandatory on every session start. It is the activation mechanism for the zero-relay workflow.
