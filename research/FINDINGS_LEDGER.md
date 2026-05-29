@@ -218,6 +218,14 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Hand-named residual dimensions were only partially supported: developmental dependency, role ambiguity, and semantic-neighborhood residual pressure had the strongest component alignments, while incomplete proceduralization, identity formation, liminality, collective agency, and symbolic identity appeared diffuse across multiple SVD axes
 - Interpretation: abstract residual labels underfit because they collapse many weak concrete text cues, while SVD15 preserves granular prompt texture and semantic-neighborhood variation; the next step is to distill SVD extremes into concrete human-readable residual features and retest them
 
+### Big Five Geometry Overlay Visualization (2026-05-29)
+
+- Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
+- The selected source is the shared benchmark feature matrix whose `claude_bigfive` feature set predicts canonical activation PCA3D at R2 0.613 vs semantic baseline R2 0.389
+- Overlay data covers 275 geometry personas, with Big Five scores available for 273; `coral_reef` and `devils_advocate` are present in the geometry but missing from the benchmark feature matrix
+- The viewer now supports continuous color modes for openness, conscientiousness, extraversion, agreeableness, neuroticism, Big Five residual magnitude, and categorical dominant-trait coloring
+- Caveat: these are LLM-assigned Big Five-style features, not true psychological measurements
+
 ### Codex GPT-5.5 Judge Substitution
 
 The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.
