@@ -22,6 +22,8 @@ Read these before making research claims or generating Codex cards:
 
 - `research/RESEARCH_STATE.md`: canonical current state, discoveries, next steps, pod status, and last session updates.
 - `research/PROJECT_ORIENTATION.md`: this compact orientation file.
+- `research/RESEARCH_INDEX.md`: concise navigation index for current scopes, best metrics, artifacts, open questions, visualizations, and PC interpretations.
+- `research/PROVENANCE_REGISTRY.md`: artifact lineage registry for major Paper 1.5 datasets, scripts, model provenance, dependencies, and caveats.
 - `research/FINDINGS_LEDGER.md`: compact index of confirmed findings, negative findings, provisional interpretations, deviations, blockers, and next tests.
 - `research/NEW_SESSION_STARTUP.md`: exact startup sequence for future agents.
 - `research/paper1_5_outline.md`: current Paper 1.5 outline and methodology.
@@ -94,13 +96,20 @@ Sticky notes live in:
 
 Do not rely on chat memory for current empirical state, pod status, score counts, validation status, file paths, or methodology details. Fetch or read the repo files. Do not assume a pod is stopped unless `runpodctl` or the relevant provider API confirms it. Do not assume a score file exists from discussion alone. Do not assume Lu-method identity when a Codex judge or adaptive stopping path was used.
 
+## How to Answer Provenance Questions
+
+Before running broad repository searches, check `research/RESEARCH_INDEX.md` for the current map of paper scope, best metrics, visualizations, open questions, and PC interpretations.
+
+For questions such as "Where did the Big Five scores come from?", "Which model generated this artifact?", "What script produced this output?", "What analyses depend on this dataset?", or "Is this finding established or provisional?", check `research/PROVENANCE_REGISTRY.md` first. Use repository archaeology only when those files do not answer the question or the user asks for direct verification.
+
 ## Recommended Startup Sequence
 
 1. Fetch or read `research/RESEARCH_STATE.md`.
 2. Read `research/PROJECT_ORIENTATION.md`.
-3. For methodology questions, read `research/assistant_axis_methodology/assistant_axis_pipeline_reconstruction.md` and `research/assistant_axis_methodology/replication_differences_vs_lu.md`.
-4. For Paper 1.5 questions, read `research/paper1_5_outline.md`, `research/paper1_5_executive_summary.md`, and `research/paper1_5_adaptive_extraction_notes.md`.
-5. For Paper 2 questions, read `research/paper2_local_centroid_perturbation_brief.md`; treat dyad/contagion files as archived prior framing unless the user explicitly asks about conversational dynamics.
-6. For pod or execution questions, read `research/workflow/`.
-7. Check `research/FINDINGS_LEDGER.md` for compact claim status.
-8. Check `sticky_notes/README.md` if the task touches open hypotheses or write-up ideas.
+3. Read `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` before performing new repo searches.
+4. For methodology questions, read `research/assistant_axis_methodology/assistant_axis_pipeline_reconstruction.md` and `research/assistant_axis_methodology/replication_differences_vs_lu.md`.
+5. For Paper 1.5 questions, read `research/paper1_5_outline.md`, `research/paper1_5_executive_summary.md`, and `research/paper1_5_adaptive_extraction_notes.md`.
+6. For Paper 2 questions, read `research/paper2_local_centroid_perturbation_brief.md`; treat dyad/contagion files as archived prior framing unless the user explicitly asks about conversational dynamics.
+7. For pod or execution questions, read `research/workflow/`.
+8. Check `research/FINDINGS_LEDGER.md` for compact claim status.
+9. Check `sticky_notes/README.md` if the task touches open hypotheses or write-up ideas.

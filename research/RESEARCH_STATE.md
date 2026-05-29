@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-29
-**Last commit:** 429a4c1
-**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes
+**Last commit:** 3debc8f
+**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology
 
 ---
 
@@ -419,6 +419,18 @@
 
 ## 3. CURRENT STATE
 
+### Frequently Referenced Findings
+
+| Finding | Current status | Metric or state | Primary source |
+|---|---|---:|---|
+| Semantic baseline performance | established | canonical activation PCA3D R2 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
+| Big Five performance | established | Claude Big Five R2 0.613 vs semantic baseline 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
+| Procedural/Codex retained performance | established | Codex retained R2 0.490 vs semantic baseline 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
+| Hierarchical trait-procedural performance | provisional | R2 0.622 vs trait stage 0.613 | `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/hierarchical_model_report.md` |
+| Residual manifold performance | provisional | R2 0.632 vs hierarchical baseline 0.622 | `research/q2_stability/qwen/outputs/residual_manifold_analysis/residual_manifold_report.md` |
+| SVD15 lexical/register performance | provisional | sem+BigFive+SVD15 R2 0.707 vs sem+BigFive 0.613 | `research/q2_stability/qwen/outputs/residual_svd_interpretation/residual_svd_interpretation_report.md` |
+| Evaluator-model sensitivity | unresolved | harness exists, paired `gpt-4.1-mini` records blocked by quota | `research/q2_stability/qwen/evaluator_sensitivity/` |
+
 **Paper 1.5 current scope:** Paper 1.5 is now a persona-geometry interpretation paper. The working title is `Interpreting Persona Activation Geometry`. The main claim is that persona activation geometry appears to decompose into layered semantic, dispositional, procedural, lexical/register, and residual structures after methodological stress testing. Adaptive extraction remains important due diligence and tooling evidence, but it is no longer the primary paper frame.
 
 **Paper 2 current scope:** Paper 2 is now local centroid perturbation and local persona-manifold mapping. Candidate anchors are Trickster, Actor, Therapist, and Spy. The scientific question is whether local directions such as provocation, concealment, empathy/attunement, identity flexibility, dominance/submission, theatricality, strategic disclosure, moral constraint, and sincerity/performance transfer across anchors or are strongly curved/persona-dependent.
@@ -461,13 +473,16 @@
 
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
 
+**Provenance and index state:** `research/RESEARCH_INDEX.md` is the compact navigation file for current paper scopes, best metrics, important artifacts, open questions, pending experiments, visualizations, and PC interpretations. `research/PROVENANCE_REGISTRY.md` is the artifact-lineage registry for major Paper 1.5 datasets, scripts, model provenance, dependent analyses, current status, and caveats. Future agents should check these files before broad repo searches for provenance or state questions.
+
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
 **Completed this session:** Updated `research/visualizations/persona_geometry_explorer.html` with explicit 2D axis titles/ticks, axis component dropdowns, auto/fixed range controls, fixed-range annotations, persistent selection highlighting, 2D lasso/box selection, focus-view mode, explicit-only selection clearing, and preserved 3D camera state while rotating selected points.
 **Completed this session:** Verified the visualizer remains self-contained and that the extracted JavaScript parses successfully.
 **Completed this session:** Added Big Five-style trait overlay data and color modes to `research/visualizations/persona_geometry_explorer.html`, using the shared latent feature benchmark source where Claude Big Five predicts canonical activation PCA3D at R2 0.613 vs semantic baseline R2 0.389.
-**Next step:** Use the Big Five overlays to visually inspect PC1/PC2/PC3 trait structure and cone/collapse behavior while continuing Paper 1.5 drafting around layered persona geometry.
-**Last commit before this session:** 429a4c1
+**Completed this session:** Added `research/PROVENANCE_REGISTRY.md` and `research/RESEARCH_INDEX.md`, and updated onboarding/state files so future sessions can answer provenance, methodology, and current-state questions before repo archaeology.
+**Next step:** Use `RESEARCH_INDEX.md` and `PROVENANCE_REGISTRY.md` as first-pass sources for provenance questions, then continue Paper 1.5 drafting and evaluator-sensitivity completion.
+**Last commit before this session:** 3debc8f
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

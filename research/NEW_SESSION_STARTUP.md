@@ -6,21 +6,24 @@ Use this sequence for new GPT, Claude, and Codex sessions. Do not rely on chat m
 
 1. Fetch or read `research/RESEARCH_STATE.md`.
 2. Read `research/PROJECT_ORIENTATION.md`.
-3. If the question is about Lu et al. methodology, read the `research/assistant_axis_methodology/` package, especially:
+3. Before performing new repo searches, check:
+   - `research/RESEARCH_INDEX.md`
+   - `research/PROVENANCE_REGISTRY.md`
+4. If the question is about Lu et al. methodology, read the `research/assistant_axis_methodology/` package, especially:
    - `research/assistant_axis_methodology/assistant_axis_pipeline_reconstruction.md`
    - `research/assistant_axis_methodology/replication_differences_vs_lu.md`
    - `research/assistant_axis_methodology/open_methodology_questions.md`
-4. If the question is about workflow, pods, RunPod lifecycle, preservation, integrity, scoring, or closeout, read `research/workflow/`.
-5. If the question is about Paper 1.5, read:
+5. If the question is about workflow, pods, RunPod lifecycle, preservation, integrity, scoring, or closeout, read `research/workflow/`.
+6. If the question is about Paper 1.5, read:
    - `research/paper1_5_outline.md`
    - `research/paper1_5_executive_summary.md`
    - `research/paper1_5_adaptive_extraction_notes.md`
    - `research/FINDINGS_LEDGER.md`
-6. If the question is about Paper 2, read:
+7. If the question is about Paper 2, read:
    - `research/paper2_local_centroid_perturbation_brief.md`
    - `research/archive/paper2_dyad_contagion_archive_2026-05-28.md` only if the question concerns older dyad, contagion, attractor-collapse, or conversational-dynamics framing.
-7. If the question touches open hypotheses, write-up reminders, or parked ideas, check `sticky_notes/README.md`.
-8. Ask for Codex only when repo execution, file inspection, script writing, local validation, git commits, pod work, or browser/computer use is needed.
+8. If the question touches open hypotheses, write-up reminders, or parked ideas, check `sticky_notes/README.md`.
+9. Ask for Codex only when repo execution, file inspection, script writing, local validation, git commits, pod work, or browser/computer use is needed.
 
 ## Operating Rules
 
@@ -35,5 +38,7 @@ Do not describe Codex GPT-5.5 scoring as strict Lu-method replication. It is a p
 Do not launch pod work without reading the workflow package and confirming preservation, integrity, termination, and git-safety requirements.
 
 Do not generate new research claims from memory. Trace claims to `RESEARCH_STATE.md`, `FINDINGS_LEDGER.md`, a paper draft, or a local output artifact.
+
+Do not start with broad repo archaeology for provenance questions. Check `RESEARCH_INDEX.md` and `PROVENANCE_REGISTRY.md` first, then verify locally only if the answer is absent, stale, or high-stakes.
 
 Do not treat older Paper 2 dyad/contagion plans as the current Paper 2 scope unless the user explicitly asks to resume that archived dynamics track. The active Paper 2 scope is local centroid perturbation and local persona-manifold mapping.
