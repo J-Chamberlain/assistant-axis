@@ -55,16 +55,27 @@ def first_non_empty_heading_or_line(text: str) -> str:
 
 
 def visible_metadata(text: str) -> dict[str, str]:
+    canonical_startup_file = "not present"
+    state_role = "not present"
     last_updated = "not present"
     last_commit = "not present"
     for line in text.splitlines():
-        updated_match = re.match(r"^\*\*Last updated:\*\*\s*(.+?)\s*$", line.strip(), flags=re.IGNORECASE)
+        stripped = line.strip()
+        canonical_match = re.match(r"^Canonical startup file:\s*(.+?)\s*$", stripped, flags=re.IGNORECASE)
+        if canonical_match:
+            canonical_startup_file = canonical_match.group(1)
+        role_match = re.match(r"^State role:\s*(.+?)\s*$", stripped, flags=re.IGNORECASE)
+        if role_match:
+            state_role = role_match.group(1)
+        updated_match = re.match(r"^(?:\*\*)?Last updated:(?:\*\*)?\s*(.+?)\s*$", stripped, flags=re.IGNORECASE)
         if updated_match:
             last_updated = updated_match.group(1)
-        commit_match = re.match(r"^\*\*Last commit:\*\*\s*(.+?)\s*$", line.strip(), flags=re.IGNORECASE)
+        commit_match = re.match(r"^(?:\*\*)?Last commit:(?:\*\*)?\s*(.+?)\s*$", stripped, flags=re.IGNORECASE)
         if commit_match:
             last_commit = commit_match.group(1)
     return {
+        "canonical_startup_file": canonical_startup_file,
+        "state_role": state_role,
         "last_updated": last_updated,
         "last_commit": last_commit,
         "title_or_first_line": first_non_empty_heading_or_line(text),
@@ -101,6 +112,7 @@ def build_manifest() -> str:
         "## Text-First Verification Rule",
         "",
         "Claude/GPT startup should compare visible metadata before hash metadata.",
+        "Required visible fields are `Canonical startup file`, `State role`, and `Last updated`; `Last commit` is compared only when present in the fetched file.",
         "SHA256 and byte count remain useful for local or tool-enabled verification, but a startup is not fresh if visible file metadata disagrees with this manifest.",
         "",
         "## Manifest Metadata",
@@ -132,6 +144,8 @@ def build_manifest() -> str:
                 f"- SHA256 content hash: `{file_sha256(data)}`",
                 f"- Byte count: `{len(data)}`",
                 "- Visible metadata:",
+                f"  - Canonical startup file: `{metadata['canonical_startup_file']}`",
+                f"  - State role: `{metadata['state_role']}`",
                 f"  - Last updated: `{metadata['last_updated']}`",
                 f"  - Last commit: `{metadata['last_commit']}`",
                 f"  - Title/header or first non-empty line: `{metadata['title_or_first_line']}`",

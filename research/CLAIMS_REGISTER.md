@@ -1,5 +1,9 @@
 # Claims Register
 
+Canonical startup file: yes
+State role: canonical claim status
+Last updated: 2026-05-30
+
 This register separates project findings from interpretations. It is intentionally compact: use it to orient a new thread, then verify details in `RESEARCH_STATE.md`, `FINDINGS_LEDGER.md`, `RESEARCH_INDEX.md`, and the cited artifacts.
 
 Status labels:

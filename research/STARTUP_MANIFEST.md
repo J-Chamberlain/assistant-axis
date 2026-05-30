@@ -16,13 +16,14 @@ Fetch this file first, then fetch the canonical startup files by exact raw URL a
 ## Text-First Verification Rule
 
 Claude/GPT startup should compare visible metadata before hash metadata.
+Required visible fields are `Canonical startup file`, `State role`, and `Last updated`; `Last commit` is compared only when present in the fetched file.
 SHA256 and byte count remain useful for local or tool-enabled verification, but a startup is not fresh if visible file metadata disagrees with this manifest.
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-05-30T14:24:21Z`
+- Generated timestamp UTC: `2026-05-30T14:30:30Z`
 - Current branch: `master`
-- HEAD commit at generation: `91c45afd0c3a8ee224d7f15ec758eeedd4983be3`
+- HEAD commit at generation: `29f968a4a6cd09543022d2805d787039ea4a50a1`
 - Manifest generator: `scripts/update_startup_manifest.py`
 
 ## Canonical Startup Files
@@ -32,45 +33,51 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
 - Latest commit touching file: `a927363601b41302d4baa6507a5a9486ed5c0c40`
-- HEAD commit at manifest generation: `91c45afd0c3a8ee224d7f15ec758eeedd4983be3`
-- Git blob hash: `cb1aa6f5256639aed766cf94337c804fe96e5738`
-- SHA256 content hash: `c1d4a13080dc74eccc6619bcf61348c2cc9bef081e5bf40a4ee1a156c3ffb4be`
-- Byte count: `74314`
+- HEAD commit at manifest generation: `29f968a4a6cd09543022d2805d787039ea4a50a1`
+- Git blob hash: `5bbcb43f6db5240e6d9e19a6c22547e4649e0827`
+- SHA256 content hash: `1b79cb1a506152c20d66c71443f5b98913df12f05f08d77360833db337924985`
+- Byte count: `74458`
 - Visible metadata:
+  - Canonical startup file: `yes`
+  - State role: `canonical project state`
   - Last updated: `2026-05-30`
   - Last commit: `3422356`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-05-30T14:24:21Z`
+- Generated timestamp UTC: `2026-05-30T14:30:30Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
 - Latest commit touching file: `14dd9933545599a4d1e884c1d8007a42d590a2ed`
-- HEAD commit at manifest generation: `91c45afd0c3a8ee224d7f15ec758eeedd4983be3`
-- Git blob hash: `d3d53146170ea13c0bec37a7ca5be46872f83aea`
-- SHA256 content hash: `b4fe118499a51f971ca1a4567c8a7a1b0b1eeeeaa9b0a43a409b6fcf4f5a3968`
-- Byte count: `6653`
+- HEAD commit at manifest generation: `29f968a4a6cd09543022d2805d787039ea4a50a1`
+- Git blob hash: `97fc581c9ac4340cdf26531e5e74472cf86ca078`
+- SHA256 content hash: `babb302215a2e9137cdf44e138be5e8739279e25062b8141375de377abfd51c5`
+- Byte count: `6763`
 - Visible metadata:
-  - Last updated: `not present`
+  - Canonical startup file: `yes`
+  - State role: `session continuity and immediate priorities`
+  - Last updated: `2026-05-30`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-05-30T14:24:21Z`
+- Generated timestamp UTC: `2026-05-30T14:30:30Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
 - Latest commit touching file: `14dd9933545599a4d1e884c1d8007a42d590a2ed`
-- HEAD commit at manifest generation: `91c45afd0c3a8ee224d7f15ec758eeedd4983be3`
-- Git blob hash: `1af81f63d2bfee02014067feeab04996b9f79f24`
-- SHA256 content hash: `c6b8cda230c8e218f594ec6b83e491de6aab9dd3b387e66f7457169c9f66ea45`
-- Byte count: `12386`
+- HEAD commit at manifest generation: `29f968a4a6cd09543022d2805d787039ea4a50a1`
+- Git blob hash: `a6facb048d6cbca546f6a4ac85b0ae76e03cac52`
+- SHA256 content hash: `dcdfe66d81059df4df73f09c6acb1684c6a8ac0837740fa3cfa8ef8708efcec1`
+- Byte count: `12475`
 - Visible metadata:
-  - Last updated: `not present`
+  - Canonical startup file: `yes`
+  - State role: `canonical claim status`
+  - Last updated: `2026-05-30`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-05-30T14:24:21Z`
+- Generated timestamp UTC: `2026-05-30T14:30:30Z`
 
 ## Maintenance Rule
 

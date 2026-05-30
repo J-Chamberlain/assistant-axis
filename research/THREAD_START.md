@@ -1,5 +1,9 @@
 # Thread Start
 
+Canonical startup file: yes
+State role: session continuity and immediate priorities
+Last updated: 2026-05-30
+
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 
 ## Current Objective

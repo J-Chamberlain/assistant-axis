@@ -3,6 +3,10 @@
 # Updated at the end of every Codex session. Fetch this first in any new session.
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
+Canonical startup file: yes
+State role: canonical project state
+Last updated: 2026-05-30
+
 **Last updated:** 2026-05-30
 **Last commit:** 3422356
 **Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology; PC working interpretations are preserved in `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md`, with PC1 strongest, PC2 now revised toward an abstraction/integration/developmental axis after conditional PC1 control, PC3 provisionally cooperative-stabilizing versus antagonistic-transgressive, and the cone hypothesis explicitly marked speculative
@@ -539,7 +543,7 @@
 
 **Provenance and index state:** `research/RESEARCH_INDEX.md` is the compact navigation file for current paper scopes, best metrics, important artifacts, open questions, pending experiments, visualizations, and PC interpretations. `research/PROVENANCE_REGISTRY.md` is the artifact-lineage registry for major Paper 1.5 datasets, scripts, model provenance, dependent analyses, current status, and caveats. Future agents should check these files before broad repo searches for provenance or state questions.
 
-**Startup freshness maintenance:** `research/STARTUP_MANIFEST.md` is the freshness contract for cross-thread startup. Whenever `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, or `research/CLAIMS_REGISTER.md` changes, run `python3 scripts/update_startup_manifest.py` and commit the manifest update with the same state change.
+**Startup freshness maintenance:** `research/STARTUP_MANIFEST.md` is the freshness contract for cross-thread startup. Whenever `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, or `research/CLAIMS_REGISTER.md` changes, Codex must update that file's visible metadata, run `python3 scripts/update_startup_manifest.py`, and commit the regenerated manifest with the same state change.
 
 **Workflow infrastructure:** `research/workflow/` contains the run registry specification, pod lifecycle protocol, Codex execution tiers, run status artifact spec, JSON templates, and pod launch/monitoring/closeout checklists. Future pod work should use these artifacts from launch onward; pod termination should prefer RunPod API or `runpodctl`, with browser/dashboard termination as fallback only. Chat threads are planning interfaces, not the operational source of truth.
 
