@@ -192,3 +192,12 @@ Evidence: Dyad and extraction workflows track assistant-axis and role-cosine mov
 Counterevidence: Earlier V1-V5 plateau artifact shows measurement can be invalid if cache handling is wrong; geometric monitoring requires strict measurement controls.
 Dependencies: `research/RESEARCH_STATE.md`, dyad V6 outputs, workflow docs
 Last Updated: 2026-05-30
+
+## 21. Trait-Vector Geometry Predicts Persona PCA Location
+
+Claim: Trait-vector geometry substantially predicts persona PCA location, supporting the interpretation that persona space is partly organized by trait structure rather than only role semantics.
+Status: Observed
+Evidence: Qwen/Qwen3-32B layer-48 persona-by-trait cosine matrix, 275 personas x 240 traits, predicted `geometry_viz_data.json` PCA coordinates with ridge 5-fold CV R2: PC1 0.999, PC2 0.999, PC3 1.000; 30-permutation baselines stayed near or below zero R2.
+Counterevidence: The trait bank is high-dimensional and in the same activation space as the persona vectors, so near-ceiling prediction may reflect basis coverage/provenance coupling rather than independent psychological explanation.
+Dependencies: `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_report.md`, `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_stats.json`
+Last Updated: 2026-05-30

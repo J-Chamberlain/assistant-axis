@@ -437,6 +437,14 @@ Last updated: 2026-05-30
 - Negative controls were weaker than the target rubric: moral_badness Pearson r=0.201, professionalism r=0.103, weirdness/fantasticality r=0.029, and abstraction r=0.129
 - Interpretation: PC3 shows suggestive but incomplete support for a perturbation-stabilization reading; cooperative-antagonistic remains a secondary or partial reading because many perturbative roles are socially antagonistic, but prosocial interventionist examples such as auditor, debugger, skeptic, statistician, and lawyer show the axis is not reducible to moral badness or hostility
 
+### Trait Geometry Prediction of Persona PCA Axes (2026-05-30)
+
+- Used raw Qwen/Qwen3-32B layer-48 activation-space vectors from `downloads/hf_vectors/qwen-3-32b/role_vectors/` and `downloads/hf_vectors/qwen-3-32b/trait_vectors/`; both role and trait tensors are stored as `[64, 5120]` examples and were mean-pooled, normalized, and compared by cosine.
+- Built a 275-persona by 240-trait cosine-similarity matrix and used it to predict the PCA coordinates in `research/visualizations/geometry_viz_data.json`.
+- Ridge 5-fold cross-validated performance was near ceiling: PC1 R2=0.999, PC2 R2=0.999, and PC3 R2=1.000; 30-permutation ridge baselines stayed near or below zero R2.
+- PC3 targeted subset test found perturbation/stabilization-related traits predicted PC3 slightly better than moral-valence traits: R2=0.995 vs R2=0.992.
+- Interpretation: trait-vector geometry substantially predicts persona PCA location, supporting the layered model in which trait structure organizes persona geometry alongside semantic, procedural, and lexical/register structure; the near-ceiling performance should be treated cautiously because 240 same-space trait vectors can act as a high-dimensional basis rather than an independent psychological ontology.
+
 ### Blinded PCA-Axis Rubric Validation (2026-05-29)
 
 - Ran a coordinate-blind validation using the full available no-label persona prompt corpus: 1,375 rewritten prompt records covering all 275 personas, five prompts per persona.
@@ -486,6 +494,7 @@ Last updated: 2026-05-30
 |---|---|---:|---|
 | Semantic baseline performance | established | canonical activation PCA3D R2 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
 | Big Five performance | established | Claude Big Five R2 0.613 vs semantic baseline 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
+| Trait-vector geometry prediction | established/provenance-coupled | Qwen trait-cosine matrix predicts PCA3D with ridge CV R2: PC1 0.999, PC2 0.999, PC3 1.000 | `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_report.md` |
 | Procedural/Codex retained performance | established | Codex retained R2 0.490 vs semantic baseline 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
 | Hierarchical trait-procedural performance | provisional | R2 0.622 vs trait stage 0.613 | `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/hierarchical_model_report.md` |
 | PC2 conditional explanation | provisional/strongest current | abstraction r=-0.618 after PC1 band control; coherent action r=+0.427 | `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md` |
@@ -545,6 +554,8 @@ Last updated: 2026-05-30
 
 **Professional hierarchy validation state:** `research/q2_stability/qwen/outputs/professional_hierarchy_validation/` now contains a targeted professional-role stress test. It supports PC1 modestly, supports PC3 modestly with technical/institutional counterexamples, and weakens a simple professional coherent-action interpretation of PC2.
 
+**Trait-persona prediction state:** `research/outputs/trait_persona_prediction/` now contains the raw Qwen activation-space trait-to-persona prediction test. It uses 275 role vectors and 240 trait vectors from `downloads/hf_vectors/qwen-3-32b/`, computes persona-by-trait cosine similarities, and predicts PCA coordinates with near-ceiling ridge CV R2 for PC1/PC2/PC3. This strongly supports trait-vector geometry as a predictive layer, but because the trait bank is high-dimensional and in the same activation space, it should be read as a provenance-coupled geometry result rather than independent psychological validation.
+
 **Reporting standard:** `research/PROJECT_ORIENTATION.md` now includes an Enhanced Research Reporting section. Future Codex research reports should state what was done, what changed the current interpretation, key judgment calls, competing explanations, strongest unresolved uncertainty, confidence level, and recommended next test.
 
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
@@ -571,8 +582,9 @@ Last updated: 2026-05-30
 **Completed this session:** Ran the professional hierarchy validation over 102 present professional/expert personas and updated the findings ledger, research index, research state, and interpretation note.
 **Completed this session:** Ran conditional PC2 validation after PC1 decile-band control, generated band inventory, candidate scores, within-band correlations, matched pairs, and comparison outputs under `research/q2_stability/qwen/outputs/pc2_conditional_validation/`, and updated PC2 interpretation language.
 **Completed this session:** Ran full-distribution PC3 perturbation-stabilization validation over all 275 personas, generated scores/statistics/report/plot outputs under `research/outputs/pc3_validation/`, and updated PC3 claim language to mixed but positive.
-**Next step:** Replace deterministic PC3 rubric scoring with independent blinded human or second-model ratings over the same role definitions, then rerun cluster-control, pairwise-ordering, and negative-control comparisons.
-**Last commit before this session:** 7dc2946
+**Completed this session:** Ran trait-vector prediction of persona PCA axes using raw Qwen layer-48 role and trait vectors, generated similarity/statistics/coefficient/profile/plot outputs under `research/outputs/trait_persona_prediction/`, and updated claims/state to reflect that trait geometry strongly predicts PCA location while remaining provenance-coupled.
+**Next step:** Distill the top trait-vector predictors into a smaller preregistered trait taxonomy or independent rater rubric, then retest PC3 perturbation/stabilization and PC2 abstraction/integration without using the full high-dimensional trait bank.
+**Last commit before this session:** 00ed579
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

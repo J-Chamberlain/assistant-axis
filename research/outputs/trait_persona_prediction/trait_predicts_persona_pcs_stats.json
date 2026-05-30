@@ -1,0 +1,210 @@
+{
+  "data_sources": {
+    "geometry_data": "research/visualizations/geometry_viz_data.json",
+    "role_vectors": "downloads/hf_vectors/qwen-3-32b/role_vectors",
+    "trait_vectors": "downloads/hf_vectors/qwen-3-32b/trait_vectors"
+  },
+  "vector_space": {
+    "model": "Qwen/Qwen3-32B",
+    "layer": 48,
+    "role_tensor_shape_example": [
+      64,
+      5120
+    ],
+    "trait_tensor_shape_example": [
+      64,
+      5120
+    ],
+    "mean_pooling": "mean over 64 stored vectors per persona/trait, then L2 normalize",
+    "similarity": "raw activation-space cosine between mean role and mean trait vectors"
+  },
+  "counts": {
+    "personas": 275,
+    "traits": 240
+  },
+  "models": {
+    "PC1": {
+      "ridge": {
+        "five_fold_cv": {
+          "r2": 0.9994149410874581,
+          "pearson": 0.999710600122834,
+          "spearman": 0.9994818383774271,
+          "rmse": 0.7262418181835284
+        },
+        "heldout_20_percent": {
+          "r2": 0.9993760053667119,
+          "pearson": 0.9997340728810292,
+          "spearman": 0.9992784992784995,
+          "rmse": 0.7350900086051914
+        }
+      },
+      "elastic_net": {
+        "five_fold_cv": {
+          "r2": 0.9989496192494572,
+          "pearson": 0.9994751748773184,
+          "spearman": 0.9991737110873892,
+          "rmse": 0.9730940789445268
+        },
+        "heldout_20_percent": {
+          "r2": 0.9989000032191065,
+          "pearson": 0.9995148669212724,
+          "spearman": 0.9993506493506497,
+          "rmse": 0.9759909703180851
+        }
+      },
+      "random_forest_optional": "not run; skipped to keep this repo-local validation bounded",
+      "permutation_baseline_ridge_5fold": {
+        "n_permutations": 30,
+        "mean_r2": -0.027274754100851378,
+        "std_r2": 0.01730814589971784,
+        "p95_r2": 0.003060064110560079
+      }
+    },
+    "PC2": {
+      "ridge": {
+        "five_fold_cv": {
+          "r2": 0.9987298564784556,
+          "pearson": 0.9993653828985294,
+          "spearman": 0.9990490753296212,
+          "rmse": 0.7653554174016496
+        },
+        "heldout_20_percent": {
+          "r2": 0.9981026681536073,
+          "pearson": 0.9990860849172138,
+          "spearman": 0.9981962481962484,
+          "rmse": 0.9689307712085766
+        }
+      },
+      "elastic_net": {
+        "five_fold_cv": {
+          "r2": 0.997448837919622,
+          "pearson": 0.9987265652837506,
+          "spearman": 0.9981679697642883,
+          "rmse": 1.0846903774411427
+        },
+        "heldout_20_percent": {
+          "r2": 0.9966880852623199,
+          "pearson": 0.9985825848593219,
+          "spearman": 0.9976190476190478,
+          "rmse": 1.2801494504175375
+        }
+      },
+      "random_forest_optional": "not run; skipped to keep this repo-local validation bounded",
+      "permutation_baseline_ridge_5fold": {
+        "n_permutations": 30,
+        "mean_r2": -0.030091373077052046,
+        "std_r2": 0.015996116483465644,
+        "p95_r2": -0.009676168928126293
+      }
+    },
+    "PC3": {
+      "ridge": {
+        "five_fold_cv": {
+          "r2": 0.9996031138309444,
+          "pearson": 0.9998020917586279,
+          "spearman": 0.9996393641268285,
+          "rmse": 0.3137048097361256
+        },
+        "heldout_20_percent": {
+          "r2": 0.9994637917334468,
+          "pearson": 0.9997465072448435,
+          "spearman": 0.998773448773449,
+          "rmse": 0.38686269376265947
+        }
+      },
+      "elastic_net": {
+        "five_fold_cv": {
+          "r2": 0.9987836357640548,
+          "pearson": 0.9993918039018959,
+          "spearman": 0.9993439312195264,
+          "rmse": 0.5491867064974568
+        },
+        "heldout_20_percent": {
+          "r2": 0.9986372700283995,
+          "pearson": 0.9993572829349984,
+          "spearman": 0.9989898989898992,
+          "rmse": 0.6167298981503245
+        }
+      },
+      "random_forest_optional": "not run; skipped to keep this repo-local validation bounded",
+      "permutation_baseline_ridge_5fold": {
+        "n_permutations": 30,
+        "mean_r2": -0.029028212397227336,
+        "std_r2": 0.01662715343222709,
+        "p95_r2": 0.00012328009939555594
+      }
+    }
+  },
+  "pc3_subtests": {
+    "perturbation_stabilization_traits": {
+      "traits_used": [
+        "hostile",
+        "manipulative",
+        "competitive",
+        "subversive",
+        "iconoclastic",
+        "deconstructionist",
+        "contrarian",
+        "irreverent",
+        "sarcastic",
+        "dominant",
+        "calculating",
+        "strategic",
+        "nurturing",
+        "conciliatory",
+        "empathetic",
+        "forgiving",
+        "diplomatic",
+        "calm",
+        "cautious",
+        "regulatory",
+        "humanistic"
+      ],
+      "ridge": {
+        "five_fold_cv": {
+          "r2": 0.9952744975110711,
+          "pearson": 0.9976389540125967,
+          "spearman": 0.9978148351172789,
+          "rmse": 1.0824608382114835
+        },
+        "heldout_20_percent": {
+          "r2": 0.9937267594742542,
+          "pearson": 0.9972204140353038,
+          "spearman": 0.9966089466089467,
+          "rmse": 1.3232322245644743
+        }
+      }
+    },
+    "moral_valence_traits": {
+      "traits_used": [
+        "principled",
+        "deontological",
+        "humanistic",
+        "generous",
+        "forgiving",
+        "empathetic",
+        "nurturing",
+        "callous",
+        "hostile",
+        "manipulative",
+        "petty",
+        "misanthropic",
+        "nihilistic"
+      ],
+      "ridge": {
+        "five_fold_cv": {
+          "r2": 0.9923028384811314,
+          "pearson": 0.9961465527614085,
+          "spearman": 0.9961893771097199,
+          "rmse": 1.3815082891654933
+        },
+        "heldout_20_percent": {
+          "r2": 0.9917951900292363,
+          "pearson": 0.9959698854262137,
+          "spearman": 0.994877344877345,
+          "rmse": 1.5132976667066533
+        }
+      }
+    }
+  }
+}
