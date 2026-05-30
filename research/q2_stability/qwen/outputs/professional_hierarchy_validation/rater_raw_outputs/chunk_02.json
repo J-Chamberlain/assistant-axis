@@ -1,0 +1,182 @@
+[
+  {
+    "persona_id": "PR021",
+    "objective_certainty_score": 72,
+    "objective_certainty_rationale": "Success is tied to aligning teams, schedules, resources, and unified objectives.",
+    "coherent_uncertainty_capacity_score": 78,
+    "coherent_uncertainty_rationale": "The role manages complex multi-party initiatives with many moving parts.",
+    "system_perturbation_score": 25,
+    "system_perturbation_rationale": "It primarily coordinates, aligns, and smooths collaboration."
+  },
+  {
+    "persona_id": "PR022",
+    "objective_certainty_score": 18,
+    "objective_certainty_rationale": "Goals are found through feelings, concerns, healing, and personal growth.",
+    "coherent_uncertainty_capacity_score": 85,
+    "coherent_uncertainty_rationale": "It supports people through unresolved personal and emotional complexity.",
+    "system_perturbation_score": 30,
+    "system_perturbation_rationale": "It creates safety and guidance more than disruption."
+  },
+  {
+    "persona_id": "PR023",
+    "objective_certainty_score": 35,
+    "objective_certainty_rationale": "Creative assessment relies on informed commentary rather than fixed external criteria.",
+    "coherent_uncertainty_capacity_score": 70,
+    "coherent_uncertainty_rationale": "It can offer thoughtful analysis of ambiguous creative works.",
+    "system_perturbation_score": 58,
+    "system_perturbation_rationale": "Constructive critique can challenge and reframe creative work."
+  },
+  {
+    "persona_id": "PR024",
+    "objective_certainty_score": 32,
+    "objective_certainty_rationale": "Success depends on selecting, arranging, and contextualizing meaningful collections.",
+    "coherent_uncertainty_capacity_score": 76,
+    "coherent_uncertainty_rationale": "It builds cohesive exhibitions from diverse materials and connections.",
+    "system_perturbation_score": 42,
+    "system_perturbation_rationale": "It rearranges and contextualizes objects, but mainly for coherent presentation."
+  },
+  {
+    "persona_id": "PR025",
+    "objective_certainty_score": 88,
+    "objective_certainty_rationale": "System malfunctions, root causes, and effective fixes provide external criteria.",
+    "coherent_uncertainty_capacity_score": 72,
+    "coherent_uncertainty_rationale": "It methodically troubleshoots while causes remain unknown.",
+    "system_perturbation_score": 28,
+    "system_perturbation_rationale": "The role isolates, repairs, and restores malfunctioning systems."
+  },
+  {
+    "persona_id": "PR026",
+    "objective_certainty_score": 40,
+    "objective_certainty_rationale": "Design balances aesthetics, function, and user needs without a single fixed answer.",
+    "coherent_uncertainty_capacity_score": 78,
+    "coherent_uncertainty_rationale": "It translates complex ideas into workable visual and interactive solutions.",
+    "system_perturbation_score": 55,
+    "system_perturbation_rationale": "It develops innovative approaches while still serving functional goals."
+  },
+  {
+    "persona_id": "PR027",
+    "objective_certainty_score": 82,
+    "objective_certainty_rationale": "Evidence, clues, forensic methods, and conclusions anchor success externally.",
+    "coherent_uncertainty_capacity_score": 80,
+    "coherent_uncertainty_rationale": "It investigates mysteries systematically before the truth is known.",
+    "system_perturbation_score": 55,
+    "system_perturbation_rationale": "It uncovers hidden truths and challenges appearances through investigation."
+  },
+  {
+    "persona_id": "PR028",
+    "objective_certainty_score": 85,
+    "objective_certainty_rationale": "Routing resources to needed destinations gives clear operational criteria.",
+    "coherent_uncertainty_capacity_score": 64,
+    "coherent_uncertainty_rationale": "It prioritizes requests and determines routing solutions under changing conditions.",
+    "system_perturbation_score": 20,
+    "system_perturbation_rationale": "It coordinates and directs resources to keep logistics functioning."
+  },
+  {
+    "persona_id": "PR029",
+    "objective_certainty_score": 76,
+    "objective_certainty_rationale": "Clinical assessment, symptoms, treatment options, and medical care provide standards.",
+    "coherent_uncertainty_capacity_score": 74,
+    "coherent_uncertainty_rationale": "It can assess symptoms and guide care despite diagnostic uncertainty.",
+    "system_perturbation_score": 25,
+    "system_perturbation_rationale": "It promotes health, treatment, and stabilization."
+  },
+  {
+    "persona_id": "PR030",
+    "objective_certainty_score": 48,
+    "objective_certainty_rationale": "It uses data and indicators, but forecasting market behavior remains interpretive.",
+    "coherent_uncertainty_capacity_score": 82,
+    "coherent_uncertainty_rationale": "It analyzes trends and forecasts outcomes despite unresolved economic uncertainty.",
+    "system_perturbation_score": 45,
+    "system_perturbation_rationale": "It interprets systems rather than primarily maintaining or disrupting them."
+  },
+  {
+    "persona_id": "PR031",
+    "objective_certainty_score": 82,
+    "objective_certainty_rationale": "Grammar, style, clarity, structure, and readability provide review criteria.",
+    "coherent_uncertainty_capacity_score": 62,
+    "coherent_uncertainty_rationale": "It can refine unclear writing, though its work depends on textual standards.",
+    "system_perturbation_score": 24,
+    "system_perturbation_rationale": "It improves and stabilizes written material."
+  },
+  {
+    "persona_id": "PR032",
+    "objective_certainty_score": 74,
+    "objective_certainty_rationale": "Scientific, mathematical, technical, and implementation constraints guide success.",
+    "coherent_uncertainty_capacity_score": 75,
+    "coherent_uncertainty_rationale": "It analyzes, designs, troubleshoots, and improves systems through complex problems.",
+    "system_perturbation_score": 38,
+    "system_perturbation_rationale": "It optimizes and repairs systems more than disrupting them."
+  },
+  {
+    "persona_id": "PR033",
+    "objective_certainty_score": 35,
+    "objective_certainty_rationale": "It identifies opportunities and builds ventures under market ambiguity.",
+    "coherent_uncertainty_capacity_score": 88,
+    "coherent_uncertainty_rationale": "It thrives on risk, startups, funding, teams, and uncertain business challenges.",
+    "system_perturbation_score": 88,
+    "system_perturbation_rationale": "It explicitly disrupts traditional industries with innovative solutions."
+  },
+  {
+    "persona_id": "PR034",
+    "objective_certainty_score": 76,
+    "objective_certainty_rationale": "It develops criteria, uses metrics, and assesses outcomes and effectiveness.",
+    "coherent_uncertainty_capacity_score": 70,
+    "coherent_uncertainty_rationale": "It combines quantitative and qualitative evidence to judge complex initiatives.",
+    "system_perturbation_score": 45,
+    "system_perturbation_rationale": "It identifies improvement areas but mainly assesses rather than disrupts."
+  },
+  {
+    "persona_id": "PR035",
+    "objective_certainty_score": 96,
+    "objective_certainty_rationale": "The dossier centers on compliance, requirements, specifications, protocols, and standards.",
+    "coherent_uncertainty_capacity_score": 45,
+    "coherent_uncertainty_rationale": "It functions best when standards and correct answers are available to validate against.",
+    "system_perturbation_score": 18,
+    "system_perturbation_rationale": "It verifies adherence and monitors conformance to existing protocols."
+  },
+  {
+    "persona_id": "PR036",
+    "objective_certainty_score": 38,
+    "objective_certainty_rationale": "Consensus and productive dialogue are negotiated through group process.",
+    "coherent_uncertainty_capacity_score": 82,
+    "coherent_uncertainty_rationale": "It helps groups navigate complex conversations and challenges without immediate closure.",
+    "system_perturbation_score": 22,
+    "system_perturbation_rationale": "It stabilizes group dynamics and enables collaboration."
+  },
+  {
+    "persona_id": "PR037",
+    "objective_certainty_score": 52,
+    "objective_certainty_rationale": "Success is externally client-driven, but methods and constraints are unconventional and ambiguous.",
+    "coherent_uncertainty_capacity_score": 86,
+    "coherent_uncertainty_rationale": "It handles problematic situations discreetly through resourceful, unconventional solutions.",
+    "system_perturbation_score": 90,
+    "system_perturbation_rationale": "It eliminates obstacles, operates in shadows, and makes situations vanish."
+  },
+  {
+    "persona_id": "PR038",
+    "objective_certainty_score": 45,
+    "objective_certainty_rationale": "Predictions use data and trends, but future outcomes are not externally settled.",
+    "coherent_uncertainty_capacity_score": 84,
+    "coherent_uncertainty_rationale": "It synthesizes indicators into projections while outcomes remain unavailable.",
+    "system_perturbation_score": 48,
+    "system_perturbation_rationale": "It anticipates change but does not primarily alter the system."
+  },
+  {
+    "persona_id": "PR039",
+    "objective_certainty_score": 38,
+    "objective_certainty_rationale": "Future scenarios from early signals and disruptions require interpretive judgment.",
+    "coherent_uncertainty_capacity_score": 88,
+    "coherent_uncertainty_rationale": "It systematically explores potential futures under unresolved technological and social change.",
+    "system_perturbation_score": 62,
+    "system_perturbation_rationale": "It focuses on innovations, disruptions, and transformative changes."
+  },
+  {
+    "persona_id": "PR040",
+    "objective_certainty_score": 68,
+    "objective_certainty_rationale": "Mapping, GIS, physical features, climate, and population distributions provide empirical anchors.",
+    "coherent_uncertainty_capacity_score": 72,
+    "coherent_uncertainty_rationale": "It analyzes interactions among landforms, weather, resources, and human activity.",
+    "system_perturbation_score": 35,
+    "system_perturbation_rationale": "It studies and maps systems rather than challenging or disrupting them."
+  }
+]

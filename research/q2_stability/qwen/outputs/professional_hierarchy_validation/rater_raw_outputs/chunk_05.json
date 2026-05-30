@@ -1,0 +1,182 @@
+[
+  {
+    "persona_id": "PR081",
+    "objective_certainty_score": 32,
+    "objective_certainty_rationale": "The role uses rigorous evidence and frameworks, but success is tied to open-ended understanding rather than fixed external criteria.",
+    "coherent_uncertainty_capacity_score": 88,
+    "coherent_uncertainty_rationale": "Systematic study, contemplation, and careful examination support sustained progress without final answers.",
+    "system_perturbation_score": 42,
+    "system_perturbation_rationale": "It advances understanding, but mainly through careful analysis rather than disruption of existing structures."
+  },
+  {
+    "persona_id": "PR082",
+    "objective_certainty_score": 68,
+    "objective_certainty_rationale": "Hypothesis testing, observable data, experimentation, and peer review provide external standards.",
+    "coherent_uncertainty_capacity_score": 86,
+    "coherent_uncertainty_rationale": "Curiosity, skepticism, and empirical methods allow disciplined progress while conclusions remain provisional.",
+    "system_perturbation_score": 55,
+    "system_perturbation_rationale": "Testing hypotheses can challenge claims, though the role remains methodical rather than primarily disruptive."
+  },
+  {
+    "persona_id": "PR083",
+    "objective_certainty_score": 90,
+    "objective_certainty_rationale": "Candidates are evaluated against specific criteria, requirements, prerequisites, and established standards.",
+    "coherent_uncertainty_capacity_score": 58,
+    "coherent_uncertainty_rationale": "The role can make recommendations under partial evidence, but depends on closing evaluations against criteria.",
+    "system_perturbation_score": 24,
+    "system_perturbation_rationale": "It filters and applies standards within an existing hiring process rather than challenging the system."
+  },
+  {
+    "persona_id": "PR084",
+    "objective_certainty_score": 86,
+    "objective_certainty_rationale": "Success is defined by correct records, schedules, correspondence, filing, and administrative completion.",
+    "coherent_uncertainty_capacity_score": 62,
+    "coherent_uncertainty_rationale": "Organization and coordination support continued functioning, though the role favors clear tasks and records.",
+    "system_perturbation_score": 12,
+    "system_perturbation_rationale": "The role maintains office order, coordinates communications, and keeps records stable."
+  },
+  {
+    "persona_id": "PR085",
+    "objective_certainty_score": 38,
+    "objective_certainty_rationale": "It studies social patterns and structures, but interpretation of social phenomena is not reducible to fixed criteria.",
+    "coherent_uncertainty_capacity_score": 82,
+    "coherent_uncertainty_rationale": "The role examines complex social change and group dynamics while continuing analytic work under ambiguity.",
+    "system_perturbation_score": 49,
+    "system_perturbation_rationale": "It analyzes institutions and norms, which may question structures, but the dossier emphasizes study over disruption."
+  },
+  {
+    "persona_id": "PR086",
+    "objective_certainty_score": 52,
+    "objective_certainty_rationale": "Wine knowledge has expert standards, but ideal pairings and experiences involve taste, occasion, and judgment.",
+    "coherent_uncertainty_capacity_score": 70,
+    "coherent_uncertainty_rationale": "The role navigates nuanced terroir, vintage, tasting profiles, and occasion-specific choices coherently.",
+    "system_perturbation_score": 20,
+    "system_perturbation_rationale": "It curates, serves, and harmonizes experiences rather than challenging an existing structure."
+  },
+  {
+    "persona_id": "PR087",
+    "objective_certainty_score": 50,
+    "objective_certainty_rationale": "Technical domain expertise implies standards, but the dossier does not specify externally fixed evaluation criteria.",
+    "coherent_uncertainty_capacity_score": 76,
+    "coherent_uncertainty_rationale": "Mastery of nuance and technical detail supports coherent work through complex unresolved problems.",
+    "system_perturbation_score": 38,
+    "system_perturbation_rationale": "The role adds precision and depth, with no strong emphasis on either stabilizing or disrupting systems."
+  },
+  {
+    "persona_id": "PR088",
+    "objective_certainty_score": 76,
+    "objective_certainty_rationale": "Statistical inference, probability, hypothesis testing, and regression rely on formal analytic criteria.",
+    "coherent_uncertainty_capacity_score": 84,
+    "coherent_uncertainty_rationale": "The role explicitly handles probabilities and uncertain data through rigorous models and inference.",
+    "system_perturbation_score": 45,
+    "system_perturbation_rationale": "It identifies patterns and tests claims, but mainly transforms data into insights rather than perturbing systems."
+  },
+  {
+    "persona_id": "PR089",
+    "objective_certainty_score": 28,
+    "objective_certainty_rationale": "Success depends on shaping complex goals, leverage points, resources, and adaptive plans rather than fixed criteria.",
+    "coherent_uncertainty_capacity_score": 90,
+    "coherent_uncertainty_rationale": "The role anticipates challenges and creates frameworks that adapt to changing circumstances.",
+    "system_perturbation_score": 62,
+    "system_perturbation_rationale": "Strategic planning can redirect systems and identify leverage points, though not necessarily adversarially."
+  },
+  {
+    "persona_id": "PR090",
+    "objective_certainty_score": 72,
+    "objective_certainty_rationale": "The role is judged by extracting essential takeaways and producing concise, organized summaries.",
+    "coherent_uncertainty_capacity_score": 66,
+    "coherent_uncertainty_rationale": "It can handle complex material, but aims to resolve it into clear key points.",
+    "system_perturbation_score": 18,
+    "system_perturbation_rationale": "It preserves and clarifies source information rather than challenging or disrupting it."
+  },
+  {
+    "persona_id": "PR091",
+    "objective_certainty_score": 74,
+    "objective_certainty_rationale": "Work is tied to task completion, efficiency, deliverables, quality standards, and protocols.",
+    "coherent_uncertainty_capacity_score": 68,
+    "coherent_uncertainty_rationale": "Managing teams and workflows requires coordination amid changing conditions, but still orients to deliverables.",
+    "system_perturbation_score": 18,
+    "system_perturbation_rationale": "The role oversees, coordinates, directs workflows, and maintains organizational protocols."
+  },
+  {
+    "persona_id": "PR092",
+    "objective_certainty_score": 30,
+    "objective_certainty_rationale": "Integration into coherent wholes relies on constructed meaning rather than externally specified correctness.",
+    "coherent_uncertainty_capacity_score": 88,
+    "coherent_uncertainty_rationale": "The role works productively with scattered, diverse, and unrelated components until coherence emerges.",
+    "system_perturbation_score": 48,
+    "system_perturbation_rationale": "It reorganizes and connects elements, but the emphasis is synthesis rather than disruption."
+  },
+  {
+    "persona_id": "PR093",
+    "objective_certainty_score": 56,
+    "objective_certainty_rationale": "Assessment and curriculum create standards, but adapting instruction and fostering curiosity are less fixed.",
+    "coherent_uncertainty_capacity_score": 78,
+    "coherent_uncertainty_rationale": "Adapting to different learning needs supports coherent progress when understanding is incomplete.",
+    "system_perturbation_score": 34,
+    "system_perturbation_rationale": "The role guides and structures learning while encouraging critical thinking, mostly within educational aims."
+  },
+  {
+    "persona_id": "PR094",
+    "objective_certainty_score": 34,
+    "objective_certainty_rationale": "Innovation and frontier exploration are judged by evolving possibilities rather than fixed external criteria.",
+    "coherent_uncertainty_capacity_score": 82,
+    "coherent_uncertainty_rationale": "The role thrives on emerging technologies and complex problems where outcomes are not yet settled.",
+    "system_perturbation_score": 82,
+    "system_perturbation_rationale": "It explicitly pushes boundaries, implements cutting-edge innovations, and advances new technological frontiers."
+  },
+  {
+    "persona_id": "PR095",
+    "objective_certainty_score": 24,
+    "objective_certainty_rationale": "The role creates abstract models and theories to interpret phenomena, so goals are internally constructed.",
+    "coherent_uncertainty_capacity_score": 92,
+    "coherent_uncertainty_rationale": "It builds conceptual systems that integrate observations and reveal patterns amid unresolved complexity.",
+    "system_perturbation_score": 58,
+    "system_perturbation_rationale": "Theoretical reframing can alter understanding of domains, though the dossier stresses explanation more than disruption."
+  },
+  {
+    "persona_id": "PR096",
+    "objective_certainty_score": 18,
+    "objective_certainty_rationale": "Emotional healing, self-understanding, and inner exploration are negotiated rather than externally specified.",
+    "coherent_uncertainty_capacity_score": 86,
+    "coherent_uncertainty_rationale": "The role creates a safe space for difficult feelings and guides coping while resolution remains incomplete.",
+    "system_perturbation_score": 16,
+    "system_perturbation_rationale": "It is primarily supportive, stabilizing, healing, and non-judgmental."
+  },
+  {
+    "persona_id": "PR097",
+    "objective_certainty_score": 78,
+    "objective_certainty_rationale": "Structured practice, milestones, exercises, feedback, and progression define success clearly.",
+    "coherent_uncertainty_capacity_score": 66,
+    "coherent_uncertainty_rationale": "The role supports gradual progress before mastery, though it depends on structured learning paths.",
+    "system_perturbation_score": 20,
+    "system_perturbation_rationale": "It develops skills through guided instruction and repetition rather than disrupting systems."
+  },
+  {
+    "persona_id": "PR098",
+    "objective_certainty_score": 64,
+    "objective_certainty_rationale": "Translation has source-text fidelity constraints, but preserving meaning, tone, idiom, and context requires judgment.",
+    "coherent_uncertainty_capacity_score": 80,
+    "coherent_uncertainty_rationale": "The role navigates linguistic ambiguity, idioms, cultural references, tone, and cross-cultural nuance.",
+    "system_perturbation_score": 22,
+    "system_perturbation_rationale": "It preserves and transfers meaning across languages rather than challenging the source structure."
+  },
+  {
+    "persona_id": "PR099",
+    "objective_certainty_score": 60,
+    "objective_certainty_rationale": "Learning gaps and step-by-step problem solving create standards, but personalized understanding requires adaptation.",
+    "coherent_uncertainty_capacity_score": 78,
+    "coherent_uncertainty_rationale": "The role guides learners through partial understanding using varied methods and thoughtful questioning.",
+    "system_perturbation_score": 32,
+    "system_perturbation_rationale": "It structures learning and encourages independent thinking, but mostly supports student development."
+  },
+  {
+    "persona_id": "PR100",
+    "objective_certainty_score": 94,
+    "objective_certainty_rationale": "The role verifies accuracy, authenticity, truthfulness, source reliability, and factual validity.",
+    "coherent_uncertainty_capacity_score": 62,
+    "coherent_uncertainty_rationale": "It can examine evidence under uncertainty, but its function is to reach confirmation or identify inaccuracies.",
+    "system_perturbation_score": 48,
+    "system_perturbation_rationale": "Scrutinizing claims may challenge information, but the aim is validation and correction rather than disruption."
+  }
+]

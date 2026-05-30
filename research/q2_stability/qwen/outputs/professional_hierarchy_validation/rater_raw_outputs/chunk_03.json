@@ -1,0 +1,182 @@
+[
+  {
+    "persona_id": "PR041",
+    "objective_certainty_score": 92,
+    "objective_certainty_rationale": "The role assesses submissions using clear rubrics, standards, scores, and academic evaluation criteria.",
+    "coherent_uncertainty_capacity_score": 68,
+    "coherent_uncertainty_rationale": "It can make structured judgments across varied student work, though it depends on rubrics and standards for closure.",
+    "system_perturbation_score": 18,
+    "system_perturbation_rationale": "The role maintains academic assessment systems by reviewing, scoring, and giving corrective feedback."
+  },
+  {
+    "persona_id": "PR042",
+    "objective_certainty_score": 38,
+    "objective_certainty_rationale": "Historical interpretation uses evidence, but significance and context are synthesized rather than externally fixed.",
+    "coherent_uncertainty_capacity_score": 82,
+    "coherent_uncertainty_rationale": "It interprets primary sources and connects incomplete evidence across periods while sustaining coherent explanation.",
+    "system_perturbation_score": 45,
+    "system_perturbation_rationale": "The role contextualizes and analyzes patterns more than it either stabilizes or disrupts existing structures."
+  },
+  {
+    "persona_id": "PR043",
+    "objective_certainty_score": 58,
+    "objective_certainty_rationale": "It teaches through structured steps and pathways, but learning goals may still be adapted to learners.",
+    "coherent_uncertainty_capacity_score": 70,
+    "coherent_uncertainty_rationale": "It can guide learners progressively through unclear topics by breaking them into manageable stages.",
+    "system_perturbation_score": 24,
+    "system_perturbation_rationale": "The role organizes and stabilizes understanding through sequential instruction rather than challenging systems."
+  },
+  {
+    "persona_id": "PR044",
+    "objective_certainty_score": 34,
+    "objective_certainty_rationale": "Meaning is negotiated across linguistic, cultural, and conceptual contexts rather than checked against simple external criteria.",
+    "coherent_uncertainty_capacity_score": 86,
+    "coherent_uncertainty_rationale": "It works specifically across ambiguity, nuance, and perspective differences while preserving understandable meaning.",
+    "system_perturbation_score": 42,
+    "system_perturbation_rationale": "It bridges and connects frameworks, occasionally reframing them, but primarily clarifies rather than disrupts."
+  },
+  {
+    "persona_id": "PR045",
+    "objective_certainty_score": 45,
+    "objective_certainty_rationale": "The role gathers information through structured questioning, but what matters may emerge during conversation.",
+    "coherent_uncertainty_capacity_score": 84,
+    "coherent_uncertainty_rationale": "It uses probing follow-ups and strategic questioning to keep inquiry productive before answers are known.",
+    "system_perturbation_score": 55,
+    "system_perturbation_rationale": "It respectfully presses beneath surface accounts to uncover deeper details and perspectives."
+  },
+  {
+    "persona_id": "PR046",
+    "objective_certainty_score": 80,
+    "objective_certainty_rationale": "It emphasizes facts, verification, source checking, and objectivity before publication.",
+    "coherent_uncertainty_capacity_score": 83,
+    "coherent_uncertainty_rationale": "It can investigate unresolved stories through research, interviews, and cross-referencing until truth is clearer.",
+    "system_perturbation_score": 68,
+    "system_perturbation_rationale": "The role uncovers truth, asks probing questions, and may challenge official or existing accounts."
+  },
+  {
+    "persona_id": "PR047",
+    "objective_certainty_score": 78,
+    "objective_certainty_rationale": "It weighs presented evidence and renders rulings based on facts, merits, testimony, and objectivity.",
+    "coherent_uncertainty_capacity_score": 76,
+    "coherent_uncertainty_rationale": "It can consider conflicting sides and complex evidence before reaching a reasoned decision.",
+    "system_perturbation_score": 30,
+    "system_perturbation_rationale": "The role stabilizes disputes by delivering impartial judgments within an established decision process."
+  },
+  {
+    "persona_id": "PR048",
+    "objective_certainty_score": 82,
+    "objective_certainty_rationale": "It works from statutes, case law, regulations, contracts, compliance issues, and legal obligations.",
+    "coherent_uncertainty_capacity_score": 78,
+    "coherent_uncertainty_rationale": "It navigates complex legal matters and precedents while advising under interpretive uncertainty.",
+    "system_perturbation_score": 34,
+    "system_perturbation_rationale": "The role mainly interprets and maintains legal frameworks, though counsel may challenge positions within them."
+  },
+  {
+    "persona_id": "PR049",
+    "objective_certainty_score": 76,
+    "objective_certainty_rationale": "It organizes resources through classification systems, databases, relevance, and authoritative source standards.",
+    "coherent_uncertainty_capacity_score": 68,
+    "coherent_uncertainty_rationale": "It supports research through large collections and varied methods, but aims to locate specific needed materials.",
+    "system_perturbation_score": 14,
+    "system_perturbation_rationale": "The role catalogs, organizes, maintains, and connects people to existing information systems."
+  },
+  {
+    "persona_id": "PR050",
+    "objective_certainty_score": 50,
+    "objective_certainty_rationale": "It uses formal linguistic structures and theory, but language variation and meaning require interpretation.",
+    "coherent_uncertainty_capacity_score": 82,
+    "coherent_uncertainty_rationale": "It analyzes language patterns across historical, social, cognitive, and structural dimensions despite ambiguity.",
+    "system_perturbation_score": 48,
+    "system_perturbation_rationale": "The role studies and compares language systems, potentially reframing categories but not chiefly disrupting them."
+  },
+  {
+    "persona_id": "PR051",
+    "objective_certainty_score": 32,
+    "objective_certainty_rationale": "Success depends on strategic positioning, audience response, and market opportunity rather than fixed criteria.",
+    "coherent_uncertainty_capacity_score": 79,
+    "coherent_uncertainty_rationale": "It can act coherently amid uncertain consumer behavior by segmenting audiences and testing channels.",
+    "system_perturbation_score": 62,
+    "system_perturbation_rationale": "The role seeks to change market attention, customer behavior, and product positioning."
+  },
+  {
+    "persona_id": "PR052",
+    "objective_certainty_score": 88,
+    "objective_certainty_rationale": "It emphasizes rigorous proofs, mathematical reasoning, correct solutions, and identifiable patterns.",
+    "coherent_uncertainty_capacity_score": 80,
+    "coherent_uncertainty_rationale": "It can work through abstract problems systematically before a solution is available.",
+    "system_perturbation_score": 42,
+    "system_perturbation_rationale": "The role explores patterns and elegant solutions but primarily reasons within mathematical structures."
+  },
+  {
+    "persona_id": "PR053",
+    "objective_certainty_score": 84,
+    "objective_certainty_rationale": "Mechanical success is externally tested by whether systems function and faults are diagnosed correctly.",
+    "coherent_uncertainty_capacity_score": 78,
+    "coherent_uncertainty_rationale": "It troubleshoots symptoms methodically, starting with common causes while the fault remains unknown.",
+    "system_perturbation_score": 12,
+    "system_perturbation_rationale": "The role fixes, maintains, repairs, and restores machines and systems."
+  },
+  {
+    "persona_id": "PR054",
+    "objective_certainty_score": 24,
+    "objective_certainty_rationale": "Solutions are mutually acceptable and negotiated from shared interests rather than externally specified.",
+    "coherent_uncertainty_capacity_score": 88,
+    "coherent_uncertainty_rationale": "It remains impartial and productive while parties disagree and resolution is still unavailable.",
+    "system_perturbation_score": 20,
+    "system_perturbation_rationale": "The role stabilizes conflict by building bridges and guiding parties toward agreement."
+  },
+  {
+    "persona_id": "PR055",
+    "objective_certainty_score": 30,
+    "objective_certainty_rationale": "Career growth and potential are personalized goals developed through guidance rather than fixed standards.",
+    "coherent_uncertainty_capacity_score": 76,
+    "coherent_uncertainty_rationale": "It helps people navigate ambiguous workplace dynamics and growth choices with actionable guidance.",
+    "system_perturbation_score": 36,
+    "system_perturbation_rationale": "The role supports development and adaptation more than it disrupts existing systems."
+  },
+  {
+    "persona_id": "PR056",
+    "objective_certainty_score": 48,
+    "objective_certainty_rationale": "Commercial success has external profit and exchange outcomes, but opportunities and terms are negotiated.",
+    "coherent_uncertainty_capacity_score": 80,
+    "coherent_uncertainty_rationale": "It operates amid shifting markets, values, inventory, trends, and negotiations.",
+    "system_perturbation_score": 54,
+    "system_perturbation_rationale": "The role creates new connections across markets and reshapes exchanges, though through mutually beneficial coordination."
+  },
+  {
+    "persona_id": "PR057",
+    "objective_certainty_score": 28,
+    "objective_certainty_rationale": "Productive dialogue and consensus emerge through group process rather than predetermined external answers.",
+    "coherent_uncertainty_capacity_score": 86,
+    "coherent_uncertainty_rationale": "It manages diverse viewpoints, conflict, and open discussion while keeping progress coherent.",
+    "system_perturbation_score": 18,
+    "system_perturbation_rationale": "The role coordinates, balances participation, maintains respect, and helps groups reach consensus."
+  },
+  {
+    "persona_id": "PR058",
+    "objective_certainty_score": 52,
+    "objective_certainty_rationale": "It observes natural phenomena and ecological principles, but interpretation of relationships can be complex.",
+    "coherent_uncertainty_capacity_score": 78,
+    "coherent_uncertainty_rationale": "It studies intricate ecological relationships and patterns despite incomplete environmental knowledge.",
+    "system_perturbation_score": 32,
+    "system_perturbation_rationale": "The role understands and conserves natural systems, leaning stabilizing rather than disruptive."
+  },
+  {
+    "persona_id": "PR059",
+    "objective_certainty_score": 86,
+    "objective_certainty_rationale": "Route planning has externally checkable criteria such as directions, paths, destinations, and efficiency.",
+    "coherent_uncertainty_capacity_score": 72,
+    "coherent_uncertainty_rationale": "It can chart courses through complex terrains, but aims toward clear directional resolution.",
+    "system_perturbation_score": 20,
+    "system_perturbation_rationale": "The role guides travelers through existing routes and environments rather than challenging structures."
+  },
+  {
+    "persona_id": "PR060",
+    "objective_certainty_score": 24,
+    "objective_certainty_rationale": "Successful outcomes are negotiated agreements and common ground, not externally fixed answers.",
+    "coherent_uncertainty_capacity_score": 88,
+    "coherent_uncertainty_rationale": "It helps parties navigate difficult conversations and unresolved conflict while moving toward agreement.",
+    "system_perturbation_score": 22,
+    "system_perturbation_rationale": "The role mediates, builds bridges, and resolves disputes, primarily stabilizing the social system."
+  }
+]

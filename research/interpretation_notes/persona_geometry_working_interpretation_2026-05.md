@@ -193,3 +193,17 @@ Inferred: PC1 is strengthened, but the rater study shows it is not only objectiv
 Inferred: PC2 remains the main unresolved axis. The direct coherent-action-under-uncertainty score predicts PC2, but abstraction predicts PC2 more strongly in the opposite direction, with uncertainty residence time, maturity, and expertise also contributing. The current formulation should be treated as one component of a compound abstraction/integration axis rather than the final PC2 interpretation.
 
 Unknown: an independent human or second-model rater, or a corpus of full rollout responses, may change these estimates. The next validation should replicate this study with independent raters and richer response text where available.
+
+## Dated Update: Professional Hierarchy Validation (2026-05-30)
+
+Observed: a targeted professional-role validation rated 102 professional, technical, scientific, analytical, academic, and expert personas using anonymized no-label prompt dossiers before PCA coordinates were joined.
+
+Observed: PC1 received targeted professional support. Objective certainty correlated with actual PC1 at r=0.394, and the actual high-PC1 professional pole contains expected constrained/evaluative roles such as auditor, examiner, evaluator, validator, screener, reviewer, and grader.
+
+Observed: PC3 received modest professional support. System perturbation correlated with actual PC3 at r=0.319, and the three-rating model predicted professional PC3 with CV R2=0.429. However, high-PC3 technical/institutional counterexamples such as economist, mathematician, statistician, and lawyer mean PC3 is not simply reform, critique, or perturbation inside the professional subset.
+
+Observed: PC2 was not supported as a professional coherent-action hierarchy. Coherent uncertainty capacity was essentially uncorrelated with actual PC2 at r=-0.007. The actual low-PC2 professional pole contains philosopher, theorist, scholar, anthropologist, archaeologist, historian, and physicist, suggesting abstraction/historical-theoretical/world-model depth more than generic uncertainty capacity.
+
+Inferred: the scientist versus physicist comparison weakly supports the actual abstraction ordering because physicist is lower on PC2 than scientist, but the blinded rater assigned similar coherent-uncertainty capacity to both. This weakens the claim that professional hierarchy alone recovers PC2 through the coherent-action rubric.
+
+Inferred: PC1 remains moderate-confidence, PC3 remains moderate with professional caveats, and PC2 remains low-confidence unless future tests cleanly separate abstraction, expertise, maturity, and uncertainty capacity.

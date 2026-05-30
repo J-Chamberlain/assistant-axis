@@ -1,0 +1,307 @@
+predicted_axis,predicted_rank,persona_id,persona,score,rationale
+PC1_objective_certainty,1,PR073,proofreader,98,"Grammar, spelling, punctuation, formatting, accuracy, and consistency are externally checkable criteria."
+PC1_objective_certainty,2,PR035,examiner,96,"The dossier centers on compliance, requirements, specifications, protocols, and standards."
+PC1_objective_certainty,3,PR011,auditor,94,"Compliance, regulatory standards, internal controls, accuracy, and procedures are externally specified."
+PC1_objective_certainty,4,PR100,validator,94,"The role verifies accuracy, authenticity, truthfulness, source reliability, and factual validity."
+PC1_objective_certainty,5,PR041,grader,92,"The role assesses submissions using clear rubrics, standards, scores, and academic evaluation criteria."
+PC1_objective_certainty,6,PR068,pilot,92,"Flight operations, safety procedures, air traffic protocols, regulations, and emergency procedures are externally specified."
+PC1_objective_certainty,7,PR064,pharmacist,90,"Medication safety, drug interactions, compounding, and adverse reaction prevention rely on specified clinical standards."
+PC1_objective_certainty,8,PR083,screener,90,"Candidates are evaluated against specific criteria, requirements, prerequisites, and established standards."
+PC1_objective_certainty,9,PR001,accountant,88,"Financial records, tax compliance, auditing, discrepancies, and reports are judged against external standards."
+PC1_objective_certainty,10,PR025,debugger,88,"System malfunctions, root causes, and effective fixes provide external criteria."
+PC1_objective_certainty,11,PR052,mathematician,88,"It emphasizes rigorous proofs, mathematical reasoning, correct solutions, and identifiable patterns."
+PC1_objective_certainty,12,PR063,paramedic,88,"Emergency procedures, advanced life support, and patient stabilization are governed by external clinical criteria."
+PC1_objective_certainty,13,PR014,cartographer,86,"Surveying, topography, charting, and accurate maps are judged against geographical data."
+PC1_objective_certainty,14,PR059,navigator,86,"Route planning has externally checkable criteria such as directions, paths, destinations, and efficiency."
+PC1_objective_certainty,15,PR084,secretary,86,"Success is defined by correct records, schedules, correspondence, filing, and administrative completion."
+PC1_objective_certainty,16,PR028,dispatcher,85,Routing resources to needed destinations gives clear operational criteria.
+PC1_objective_certainty,17,PR080,scheduler,85,"Calendars, appointments, time slots, and meeting coordination provide externally specified constraints."
+PC1_objective_certainty,18,PR053,mechanic,84,Mechanical success is externally tested by whether systems function and faults are diagnosed correctly.
+PC1_objective_certainty,19,PR016,chemist,82,"Chemical structures, reactions, properties, and lab techniques are empirically constrained."
+PC1_objective_certainty,20,PR027,detective,82,"Evidence, clues, forensic methods, and conclusions anchor success externally."
+PC1_objective_certainty,21,PR031,editor,82,"Grammar, style, clarity, structure, and readability provide review criteria."
+PC1_objective_certainty,22,PR048,lawyer,82,"It works from statutes, case law, regulations, contracts, compliance issues, and legal obligations."
+PC1_objective_certainty,23,PR046,journalist,80,"It emphasizes facts, verification, source checking, and objectivity before publication."
+PC1_objective_certainty,24,PR008,archivist,78,"Cataloging, preservation, filing systems, and access depend on established archival standards."
+PC1_objective_certainty,25,PR047,judge,78,"It weighs presented evidence and renders rulings based on facts, merits, testimony, and objectivity."
+PC1_objective_certainty,26,PR067,physicist,78,"The dossier emphasizes mathematical models, experimental data, and physical principles."
+PC1_objective_certainty,27,PR097,trainer,78,"Structured practice, milestones, exercises, feedback, and progression define success clearly."
+PC1_objective_certainty,28,PR019,conservator,76,Restoration and preservation use scientific methods to maintain integrity and prevent deterioration.
+PC1_objective_certainty,29,PR029,doctor,76,"Clinical assessment, symptoms, treatment options, and medical care provide standards."
+PC1_objective_certainty,30,PR034,evaluator,76,"It develops criteria, uses metrics, and assesses outcomes and effectiveness."
+PC1_objective_certainty,31,PR049,librarian,76,"It organizes resources through classification systems, databases, relevance, and authoritative source standards."
+PC1_objective_certainty,32,PR088,statistician,76,"Statistical inference, probability, hypothesis testing, and regression rely on formal analytic criteria."
+PC1_objective_certainty,33,PR078,researcher,75,"Systematic methodology, empirical investigation, and evidence-based conclusions impose external standards."
+PC1_objective_certainty,34,PR032,engineer,74,"Scientific, mathematical, technical, and implementation constraints guide success."
+PC1_objective_certainty,35,PR091,supervisor,74,"Work is tied to task completion, efficiency, deliverables, quality standards, and protocols."
+PC1_objective_certainty,36,PR004,analyst,72,"Uses statistical analysis, evidence, patterns, and data-driven reasoning with externally checkable inputs."
+PC1_objective_certainty,37,PR021,coordinator,72,"Success is tied to aligning teams, schedules, resources, and unified objectives."
+PC1_objective_certainty,38,PR077,reporter,72,"Gathering, verifying, and presenting factual information creates strong external truth constraints."
+PC1_objective_certainty,39,PR090,summarizer,72,"The role is judged by extracting essential takeaways and producing concise, organized summaries."
+PC1_objective_certainty,40,PR101,veterinarian,72,"Animal medical care is guided by diagnoses, clinical standards, surgery outcomes, prevention, and observable health results."
+PC1_objective_certainty,41,PR010,auctioneer,70,"Auction success is tied to concrete sales, bids, and managed transactions."
+PC1_objective_certainty,42,PR061,nutritionist,70,"The dossier emphasizes evidence-based dietary guidance, health impacts, and nutrition education, though recommendations are personalized."
+PC1_objective_certainty,43,PR040,geographer,68,"Mapping, GIS, physical features, climate, and population distributions provide empirical anchors."
+PC1_objective_certainty,44,PR062,organizer,68,"Success is tied to structured workflows, coordination, and manageable systems, but the goals may vary by context."
+PC1_objective_certainty,45,PR082,scientist,68,"Hypothesis testing, observable data, experimentation, and peer review provide external standards."
+PC1_objective_certainty,46,PR012,biologist,67,"Biological research uses empirical classification, mechanisms, and observable life processes."
+PC1_objective_certainty,47,PR072,programmer,66,"Debugging, efficient code, and algorithmic challenges have objective criteria, though architecture can be interpretive."
+PC1_objective_certainty,48,PR098,translator,64,"Translation has source-text fidelity constraints, but preserving meaning, tone, idiom, and context requires judgment."
+PC1_objective_certainty,49,PR013,builder,62,"Durable foundations and blueprints provide concrete standards, though systems may vary."
+PC1_objective_certainty,50,PR075,publisher,62,"Publication preparation, editing, release, and distribution workflows provide concrete success criteria."
+PC1_objective_certainty,51,PR079,reviewer,60,"The role applies evaluation criteria and detailed assessments, but quality judgments remain partly interpretive."
+PC1_objective_certainty,52,PR099,tutor,60,"Learning gaps and step-by-step problem solving create standards, but personalized understanding requires adaptation."
+PC1_objective_certainty,53,PR043,instructor,58,"It teaches through structured steps and pathways, but learning goals may still be adapted to learners."
+PC1_objective_certainty,54,PR071,producer,58,"Budgets, timelines, delivery, and market-ready output provide criteria, while creative vision remains flexible."
+PC1_objective_certainty,55,PR093,teacher,56,"Assessment and curriculum create standards, but adapting instruction and fostering curiosity are less fixed."
+PC1_objective_certainty,56,PR069,planner,55,"The role creates plans for goals and milestones, but the goals and strategies may be negotiated."
+PC1_objective_certainty,57,PR037,fixer,52,"Success is externally client-driven, but methods and constraints are unconventional and ambiguous."
+PC1_objective_certainty,58,PR058,naturalist,52,"It observes natural phenomena and ecological principles, but interpretation of relationships can be complex."
+PC1_objective_certainty,59,PR086,sommelier,52,"Wine knowledge has expert standards, but ideal pairings and experiences involve taste, occasion, and judgment."
+PC1_objective_certainty,60,PR015,chef,50,"Cooking has techniques and recipes, but taste, teaching, and recipe development are partly subjective."
+PC1_objective_certainty,61,PR050,linguist,50,"It uses formal linguistic structures and theory, but language variation and meaning require interpretation."
+PC1_objective_certainty,62,PR087,specialist,50,"Technical domain expertise implies standards, but the dossier does not specify externally fixed evaluation criteria."
+PC1_objective_certainty,63,PR006,archaeologist,48,"Excavation and evidence impose constraints, but narratives from fragments require interpretation."
+PC1_objective_certainty,64,PR030,economist,48,"It uses data and indicators, but forecasting market behavior remains interpretive."
+PC1_objective_certainty,65,PR056,merchant,48,"Commercial success has external profit and exchange outcomes, but opportunities and terms are negotiated."
+PC1_objective_certainty,66,PR076,recruiter,48,"Candidate assessments and employer needs provide criteria, but fit and potential are partly negotiated judgments."
+PC1_objective_certainty,67,PR020,consultant,45,"Uses data-driven recommendations, but client needs and strategic solutions are negotiated."
+PC1_objective_certainty,68,PR038,forecaster,45,"Predictions use data and trends, but future outcomes are not externally settled."
+PC1_objective_certainty,69,PR045,interviewer,45,"The role gathers information through structured questioning, but what matters may emerge during conversation."
+PC1_objective_certainty,70,PR070,presenter,45,"Clear key messages provide some criteria, but success depends on audience engagement and adaptation."
+PC1_objective_certainty,71,PR009,artisan,44,"Precision and technique matter, but beauty and unique handcrafted quality are partly internal judgments."
+PC1_objective_certainty,72,PR007,architect,42,"Structural and efficiency constraints matter, but design and planning involve negotiated goals."
+PC1_objective_certainty,73,PR026,designer,40,"Design balances aesthetics, function, and user needs without a single fixed answer."
+PC1_objective_certainty,74,PR036,facilitator,38,Consensus and productive dialogue are negotiated through group process.
+PC1_objective_certainty,75,PR039,futurist,38,Future scenarios from early signals and disruptions require interpretive judgment.
+PC1_objective_certainty,76,PR042,historian,38,"Historical interpretation uses evidence, but significance and context are synthesized rather than externally fixed."
+PC1_objective_certainty,77,PR085,sociologist,38,"It studies social patterns and structures, but interpretation of social phenomena is not reducible to fixed criteria."
+PC1_objective_certainty,78,PR017,coach,35,"Personal strengths, goals, habits, and improvement plans are negotiated and individualized."
+PC1_objective_certainty,79,PR023,critic,35,Creative assessment relies on informed commentary rather than fixed external criteria.
+PC1_objective_certainty,80,PR033,entrepreneur,35,It identifies opportunities and builds ventures under market ambiguity.
+PC1_objective_certainty,81,PR074,psychologist,35,"Psychological frameworks guide analysis, but cognition, emotion, and behavior require interpretation."
+PC1_objective_certainty,82,PR003,advocate,34,Advancing causes and building support depends on persuasion and values more than external validation.
+PC1_objective_certainty,83,PR044,interpreter,34,"Meaning is negotiated across linguistic, cultural, and conceptual contexts rather than checked against simple external criteria."
+PC1_objective_certainty,84,PR094,technologist,34,Innovation and frontier exploration are judged by evolving possibilities rather than fixed external criteria.
+PC1_objective_certainty,85,PR005,anthropologist,32,Cultural meanings and social structures require interpretation rather than fixed success criteria.
+PC1_objective_certainty,86,PR024,curator,32,"Success depends on selecting, arranging, and contextualizing meaningful collections."
+PC1_objective_certainty,87,PR051,marketer,32,"Success depends on strategic positioning, audience response, and market opportunity rather than fixed criteria."
+PC1_objective_certainty,88,PR081,scholar,32,"The role uses rigorous evidence and frameworks, but success is tied to open-ended understanding rather than fixed external criteria."
+PC1_objective_certainty,89,PR055,mentor,30,Career growth and potential are personalized goals developed through guidance rather than fixed standards.
+PC1_objective_certainty,90,PR092,synthesizer,30,Integration into coherent wholes relies on constructed meaning rather than externally specified correctness.
+PC1_objective_certainty,91,PR002,activist,28,"Success involves contested political change, rights claims, and reform goals rather than fixed criteria."
+PC1_objective_certainty,92,PR057,moderator,28,Productive dialogue and consensus emerge through group process rather than predetermined external answers.
+PC1_objective_certainty,93,PR066,photographer,28,"Technical mastery matters, but success is framed through composition, visual narrative, and creative vision."
+PC1_objective_certainty,94,PR089,strategist,28,"Success depends on shaping complex goals, leverage points, resources, and adaptive plans rather than fixed criteria."
+PC1_objective_certainty,95,PR102,writer,28,"Writing success depends heavily on voice, audience fit, narrative impact, and interpretive goals rather than fixed external criteria."
+PC1_objective_certainty,96,PR018,composer,24,Musical composition is governed by artistic construction rather than externally fixed success criteria.
+PC1_objective_certainty,97,PR054,mediator,24,Solutions are mutually acceptable and negotiated from shared interests rather than externally specified.
+PC1_objective_certainty,98,PR060,negotiator,24,"Successful outcomes are negotiated agreements and common ground, not externally fixed answers."
+PC1_objective_certainty,99,PR095,theorist,24,"The role creates abstract models and theories to interpret phenomena, so goals are internally constructed."
+PC1_objective_certainty,100,PR022,counselor,18,"Goals are found through feelings, concerns, healing, and personal growth."
+PC1_objective_certainty,101,PR096,therapist,18,"Emotional healing, self-understanding, and inner exploration are negotiated rather than externally specified."
+PC1_objective_certainty,102,PR065,philosopher,8,"The dossier centers fundamental questions, assumptions, meaning, consciousness, and reflection rather than external criteria."
+PC2_coherent_uncertainty_capacity,1,PR065,philosopher,95,The role is built around sustained rigorous thought while final answers remain unavailable.
+PC2_coherent_uncertainty_capacity,2,PR095,theorist,92,It builds conceptual systems that integrate observations and reveal patterns amid unresolved complexity.
+PC2_coherent_uncertainty_capacity,3,PR089,strategist,90,The role anticipates challenges and creates frameworks that adapt to changing circumstances.
+PC2_coherent_uncertainty_capacity,4,PR033,entrepreneur,88,"It thrives on risk, startups, funding, teams, and uncertain business challenges."
+PC2_coherent_uncertainty_capacity,5,PR039,futurist,88,It systematically explores potential futures under unresolved technological and social change.
+PC2_coherent_uncertainty_capacity,6,PR054,mediator,88,It remains impartial and productive while parties disagree and resolution is still unavailable.
+PC2_coherent_uncertainty_capacity,7,PR060,negotiator,88,It helps parties navigate difficult conversations and unresolved conflict while moving toward agreement.
+PC2_coherent_uncertainty_capacity,8,PR078,researcher,88,The role synthesizes multiple sources and investigates patterns while conclusions are still developing.
+PC2_coherent_uncertainty_capacity,9,PR081,scholar,88,"Systematic study, contemplation, and careful examination support sustained progress without final answers."
+PC2_coherent_uncertainty_capacity,10,PR092,synthesizer,88,"The role works productively with scattered, diverse, and unrelated components until coherence emerges."
+PC2_coherent_uncertainty_capacity,11,PR006,archaeologist,86,The role explicitly pieces together fragmented evidence into coherent historical narratives.
+PC2_coherent_uncertainty_capacity,12,PR037,fixer,86,"It handles problematic situations discreetly through resourceful, unconventional solutions."
+PC2_coherent_uncertainty_capacity,13,PR044,interpreter,86,"It works specifically across ambiguity, nuance, and perspective differences while preserving understandable meaning."
+PC2_coherent_uncertainty_capacity,14,PR057,moderator,86,"It manages diverse viewpoints, conflict, and open discussion while keeping progress coherent."
+PC2_coherent_uncertainty_capacity,15,PR069,planner,86,Anticipating challenges and creating contingency strategies indicate strong progress under unresolved conditions.
+PC2_coherent_uncertainty_capacity,16,PR082,scientist,86,"Curiosity, skepticism, and empirical methods allow disciplined progress while conclusions remain provisional."
+PC2_coherent_uncertainty_capacity,17,PR096,therapist,86,The role creates a safe space for difficult feelings and guides coping while resolution remains incomplete.
+PC2_coherent_uncertainty_capacity,18,PR022,counselor,85,It supports people through unresolved personal and emotional complexity.
+PC2_coherent_uncertainty_capacity,19,PR063,paramedic,85,The role functions in high-pressure emergencies and coordinates care despite incomplete information.
+PC2_coherent_uncertainty_capacity,20,PR005,anthropologist,84,Ethnographic and comparative work can proceed coherently amid unresolved cultural ambiguity.
+PC2_coherent_uncertainty_capacity,21,PR038,forecaster,84,It synthesizes indicators into projections while outcomes remain unavailable.
+PC2_coherent_uncertainty_capacity,22,PR045,interviewer,84,It uses probing follow-ups and strategic questioning to keep inquiry productive before answers are known.
+PC2_coherent_uncertainty_capacity,23,PR077,reporter,84,Investigating developing stories and breaking news requires coherent work while facts are still emerging.
+PC2_coherent_uncertainty_capacity,24,PR088,statistician,84,The role explicitly handles probabilities and uncertain data through rigorous models and inference.
+PC2_coherent_uncertainty_capacity,25,PR102,writer,84,"The role develops narratives, adapts tone, researches, and transforms material while outcomes and meanings remain open-ended."
+PC2_coherent_uncertainty_capacity,26,PR046,journalist,83,"It can investigate unresolved stories through research, interviews, and cross-referencing until truth is clearer."
+PC2_coherent_uncertainty_capacity,27,PR004,analyst,82,Methodically synthesizes incomplete information into actionable insights under ambiguity.
+PC2_coherent_uncertainty_capacity,28,PR020,consultant,82,Assesses ambiguous business challenges and develops actionable recommendations despite uncertainty.
+PC2_coherent_uncertainty_capacity,29,PR030,economist,82,It analyzes trends and forecasts outcomes despite unresolved economic uncertainty.
+PC2_coherent_uncertainty_capacity,30,PR036,facilitator,82,It helps groups navigate complex conversations and challenges without immediate closure.
+PC2_coherent_uncertainty_capacity,31,PR042,historian,82,It interprets primary sources and connects incomplete evidence across periods while sustaining coherent explanation.
+PC2_coherent_uncertainty_capacity,32,PR050,linguist,82,"It analyzes language patterns across historical, social, cognitive, and structural dimensions despite ambiguity."
+PC2_coherent_uncertainty_capacity,33,PR067,physicist,82,"It can keep progressing through modeling, experimentation, and analysis of underlying interactions."
+PC2_coherent_uncertainty_capacity,34,PR074,psychologist,82,The role examines patterns and mechanisms in human behavior despite incomplete access to inner processes.
+PC2_coherent_uncertainty_capacity,35,PR085,sociologist,82,The role examines complex social change and group dynamics while continuing analytic work under ambiguity.
+PC2_coherent_uncertainty_capacity,36,PR094,technologist,82,The role thrives on emerging technologies and complex problems where outcomes are not yet settled.
+PC2_coherent_uncertainty_capacity,37,PR017,coach,80,Supports gradual progress through obstacles using personalized strategies without requiring full closure.
+PC2_coherent_uncertainty_capacity,38,PR027,detective,80,It investigates mysteries systematically before the truth is known.
+PC2_coherent_uncertainty_capacity,39,PR052,mathematician,80,It can work through abstract problems systematically before a solution is available.
+PC2_coherent_uncertainty_capacity,40,PR056,merchant,80,"It operates amid shifting markets, values, inventory, trends, and negotiations."
+PC2_coherent_uncertainty_capacity,41,PR062,organizer,80,The dossier explicitly centers creating order from chaos and arranging complex tasks into workable systems.
+PC2_coherent_uncertainty_capacity,42,PR071,producer,80,Managing creative workflows from concept to delivery requires continued coordination through ambiguity.
+PC2_coherent_uncertainty_capacity,43,PR098,translator,80,"The role navigates linguistic ambiguity, idioms, cultural references, tone, and cross-cultural nuance."
+PC2_coherent_uncertainty_capacity,44,PR051,marketer,79,It can act coherently amid uncertain consumer behavior by segmenting audiences and testing channels.
+PC2_coherent_uncertainty_capacity,45,PR012,biologist,78,"Research on evolution, ecosystems, and molecular mechanisms can proceed under open questions."
+PC2_coherent_uncertainty_capacity,46,PR021,coordinator,78,The role manages complex multi-party initiatives with many moving parts.
+PC2_coherent_uncertainty_capacity,47,PR026,designer,78,It translates complex ideas into workable visual and interactive solutions.
+PC2_coherent_uncertainty_capacity,48,PR048,lawyer,78,It navigates complex legal matters and precedents while advising under interpretive uncertainty.
+PC2_coherent_uncertainty_capacity,49,PR053,mechanic,78,"It troubleshoots symptoms methodically, starting with common causes while the fault remains unknown."
+PC2_coherent_uncertainty_capacity,50,PR058,naturalist,78,It studies intricate ecological relationships and patterns despite incomplete environmental knowledge.
+PC2_coherent_uncertainty_capacity,51,PR066,photographer,78,"The role adapts to fleeting moments, light, perspective, and authentic situations as they unfold."
+PC2_coherent_uncertainty_capacity,52,PR068,pilot,78,"The role navigates weather, complex airspace, and emergencies while maintaining cockpit management."
+PC2_coherent_uncertainty_capacity,53,PR072,programmer,78,Debugging complex issues and working across paradigms require sustained progress without immediate closure.
+PC2_coherent_uncertainty_capacity,54,PR093,teacher,78,Adapting to different learning needs supports coherent progress when understanding is incomplete.
+PC2_coherent_uncertainty_capacity,55,PR099,tutor,78,The role guides learners through partial understanding using varied methods and thoughtful questioning.
+PC2_coherent_uncertainty_capacity,56,PR101,veterinarian,78,"Clinical practice requires continuing care and decisions despite incomplete symptoms, varied species, and owner or farmer constraints."
+PC2_coherent_uncertainty_capacity,57,PR018,composer,77,Can build complex musical forms and layered frameworks through open-ended creative uncertainty.
+PC2_coherent_uncertainty_capacity,58,PR007,architect,76,"Building design requires coherent progress across materials, environment, and project ambiguity."
+PC2_coherent_uncertainty_capacity,59,PR024,curator,76,It builds cohesive exhibitions from diverse materials and connections.
+PC2_coherent_uncertainty_capacity,60,PR047,judge,76,It can consider conflicting sides and complex evidence before reaching a reasoned decision.
+PC2_coherent_uncertainty_capacity,61,PR055,mentor,76,It helps people navigate ambiguous workplace dynamics and growth choices with actionable guidance.
+PC2_coherent_uncertainty_capacity,62,PR076,recruiter,76,"The role evaluates potential, market demand, and relationships under incomplete information about future fit."
+PC2_coherent_uncertainty_capacity,63,PR087,specialist,76,Mastery of nuance and technical detail supports coherent work through complex unresolved problems.
+PC2_coherent_uncertainty_capacity,64,PR032,engineer,75,"It analyzes, designs, troubleshoots, and improves systems through complex problems."
+PC2_coherent_uncertainty_capacity,65,PR079,reviewer,75,"Balanced critique can proceed by identifying strengths, weaknesses, and improvements without final certainty."
+PC2_coherent_uncertainty_capacity,66,PR002,activist,74,Grassroots organizing and direct action can continue despite unresolved political outcomes.
+PC2_coherent_uncertainty_capacity,67,PR029,doctor,74,It can assess symptoms and guide care despite diagnostic uncertainty.
+PC2_coherent_uncertainty_capacity,68,PR016,chemist,73,Experimental design supports disciplined progress while mechanisms or results remain unresolved.
+PC2_coherent_uncertainty_capacity,69,PR010,auctioneer,72,"Must keep bidding moving coherently in fast-paced, competitive, uncertain crowd conditions."
+PC2_coherent_uncertainty_capacity,70,PR025,debugger,72,It methodically troubleshoots while causes remain unknown.
+PC2_coherent_uncertainty_capacity,71,PR040,geographer,72,"It analyzes interactions among landforms, weather, resources, and human activity."
+PC2_coherent_uncertainty_capacity,72,PR059,navigator,72,"It can chart courses through complex terrains, but aims toward clear directional resolution."
+PC2_coherent_uncertainty_capacity,73,PR070,presenter,72,Adapting communication style to diverse audience needs supports coherent action amid variable responses.
+PC2_coherent_uncertainty_capacity,74,PR023,critic,70,It can offer thoughtful analysis of ambiguous creative works.
+PC2_coherent_uncertainty_capacity,75,PR034,evaluator,70,It combines quantitative and qualitative evidence to judge complex initiatives.
+PC2_coherent_uncertainty_capacity,76,PR043,instructor,70,It can guide learners progressively through unclear topics by breaking them into manageable stages.
+PC2_coherent_uncertainty_capacity,77,PR064,pharmacist,70,Monitoring therapeutic outcomes and optimizing drug therapy require continued adjustment under partial uncertainty.
+PC2_coherent_uncertainty_capacity,78,PR080,scheduler,70,Managing competing priorities and complex scheduling requires workable decisions amid changing constraints.
+PC2_coherent_uncertainty_capacity,79,PR086,sommelier,70,"The role navigates nuanced terroir, vintage, tasting profiles, and occasion-specific choices coherently."
+PC2_coherent_uncertainty_capacity,80,PR003,advocate,68,Sustained advocacy and persuasive communication can proceed without final resolution.
+PC2_coherent_uncertainty_capacity,81,PR041,grader,68,"It can make structured judgments across varied student work, though it depends on rubrics and standards for closure."
+PC2_coherent_uncertainty_capacity,82,PR049,librarian,68,"It supports research through large collections and varied methods, but aims to locate specific needed materials."
+PC2_coherent_uncertainty_capacity,83,PR075,publisher,68,Managing content from creation to market release requires coordinating changing materials and channels.
+PC2_coherent_uncertainty_capacity,84,PR091,supervisor,68,"Managing teams and workflows requires coordination amid changing conditions, but still orients to deliverables."
+PC2_coherent_uncertainty_capacity,85,PR015,chef,66,"Can adapt technique, explanation, and craft while outcomes are still developing."
+PC2_coherent_uncertainty_capacity,86,PR090,summarizer,66,"It can handle complex material, but aims to resolve it into clear key points."
+PC2_coherent_uncertainty_capacity,87,PR097,trainer,66,"The role supports gradual progress before mastery, though it depends on structured learning paths."
+PC2_coherent_uncertainty_capacity,88,PR013,builder,65,Careful planning and construction support progress from concepts to realities.
+PC2_coherent_uncertainty_capacity,89,PR061,nutritionist,65,Can continue by analyzing food choices and tailoring plans even when individual health responses are not fully settled.
+PC2_coherent_uncertainty_capacity,90,PR028,dispatcher,64,It prioritizes requests and determines routing solutions under changing conditions.
+PC2_coherent_uncertainty_capacity,91,PR009,artisan,63,Material craft allows iterative progress through hands-on technique and adjustment.
+PC2_coherent_uncertainty_capacity,92,PR011,auditor,62,"Investigations and risk assessment handle uncertainty, but aim toward documented verification."
+PC2_coherent_uncertainty_capacity,93,PR031,editor,62,"It can refine unclear writing, though its work depends on textual standards."
+PC2_coherent_uncertainty_capacity,94,PR084,secretary,62,"Organization and coordination support continued functioning, though the role favors clear tasks and records."
+PC2_coherent_uncertainty_capacity,95,PR100,validator,62,"It can examine evidence under uncertainty, but its function is to reach confirmation or identify inaccuracies."
+PC2_coherent_uncertainty_capacity,96,PR019,conservator,60,"Can apply preservation practices amid material uncertainty, though the goal is stable survival."
+PC2_coherent_uncertainty_capacity,97,PR001,accountant,58,"Can analyze costs and advise strategically, but much of the role depends on verifiable records and closure."
+PC2_coherent_uncertainty_capacity,98,PR014,cartographer,58,"Can analyze spatial relationships, but the work aims at accurate representation and resolution."
+PC2_coherent_uncertainty_capacity,99,PR083,screener,58,"The role can make recommendations under partial evidence, but depends on closing evaluations against criteria."
+PC2_coherent_uncertainty_capacity,100,PR008,archivist,55,"Historical research may involve gaps, but the core work emphasizes orderly record-keeping."
+PC2_coherent_uncertainty_capacity,101,PR035,examiner,45,It functions best when standards and correct answers are available to validate against.
+PC2_coherent_uncertainty_capacity,102,PR073,proofreader,45,"The role is methodical, but it mainly functions by finding closure on identifiable textual errors."
+PC3_system_perturbation,1,PR002,activist,92,"Explicitly challenges inequality, mobilizes communities, and demands systemic reform."
+PC3_system_perturbation,2,PR037,fixer,90,"It eliminates obstacles, operates in shadows, and makes situations vanish."
+PC3_system_perturbation,3,PR033,entrepreneur,88,It explicitly disrupts traditional industries with innovative solutions.
+PC3_system_perturbation,4,PR065,philosopher,85,"It critically examines assumptions and principles, directly challenging established thought structures."
+PC3_system_perturbation,5,PR094,technologist,82,"It explicitly pushes boundaries, implements cutting-edge innovations, and advances new technological frontiers."
+PC3_system_perturbation,6,PR003,advocate,78,"Works to advance causes and positive change, implying pressure on existing arrangements."
+PC3_system_perturbation,7,PR077,reporter,70,Uncovering truth and investigating stories can challenge existing narratives and institutions.
+PC3_system_perturbation,8,PR046,journalist,68,"The role uncovers truth, asks probing questions, and may challenge official or existing accounts."
+PC3_system_perturbation,9,PR039,futurist,62,"It focuses on innovations, disruptions, and transformative changes."
+PC3_system_perturbation,10,PR051,marketer,62,"The role seeks to change market attention, customer behavior, and product positioning."
+PC3_system_perturbation,11,PR079,reviewer,62,It challenges submitted work through critique and recommendations for improvement.
+PC3_system_perturbation,12,PR089,strategist,62,"Strategic planning can redirect systems and identify leverage points, though not necessarily adversarially."
+PC3_system_perturbation,13,PR010,auctioneer,61,"Creates excitement, urgency, and competitive pressure within a sales environment."
+PC3_system_perturbation,14,PR020,consultant,58,Identifies problems and recommends tailored solutions that may alter client systems.
+PC3_system_perturbation,15,PR023,critic,58,Constructive critique can challenge and reframe creative work.
+PC3_system_perturbation,16,PR066,photographer,58,"It reframes ordinary scenes and reveals overlooked emotion, though not in an explicitly adversarial way."
+PC3_system_perturbation,17,PR095,theorist,58,"Theoretical reframing can alter understanding of domains, though the dossier stresses explanation more than disruption."
+PC3_system_perturbation,18,PR102,writer,56,"The role can reshape information, voice, character, and structure, but is not primarily adversarial or disruptive."
+PC3_system_perturbation,19,PR007,architect,55,"Innovative designs and urban layouts can reshape structures, though within practical constraints."
+PC3_system_perturbation,20,PR026,designer,55,It develops innovative approaches while still serving functional goals.
+PC3_system_perturbation,21,PR027,detective,55,It uncovers hidden truths and challenges appearances through investigation.
+PC3_system_perturbation,22,PR045,interviewer,55,It respectfully presses beneath surface accounts to uncover deeper details and perspectives.
+PC3_system_perturbation,23,PR072,programmer,55,"The role both builds and optimizes systems, sometimes altering existing architecture to solve problems."
+PC3_system_perturbation,24,PR078,researcher,55,"Critical analysis can revise understanding, though the dossier stresses systematic inquiry more than disruption."
+PC3_system_perturbation,25,PR082,scientist,55,"Testing hypotheses can challenge claims, though the role remains methodical rather than primarily disruptive."
+PC3_system_perturbation,26,PR056,merchant,54,"The role creates new connections across markets and reshapes exchanges, though through mutually beneficial coordination."
+PC3_system_perturbation,27,PR018,composer,52,"Creates new sonic structures, but the dossier does not emphasize disruption or reform."
+PC3_system_perturbation,28,PR067,physicist,50,"The role investigates and explains systems, neither mainly stabilizing nor explicitly disruptive."
+PC3_system_perturbation,29,PR085,sociologist,49,"It analyzes institutions and norms, which may question structures, but the dossier emphasizes study over disruption."
+PC3_system_perturbation,30,PR038,forecaster,48,It anticipates change but does not primarily alter the system.
+PC3_system_perturbation,31,PR050,linguist,48,"The role studies and compares language systems, potentially reframing categories but not chiefly disrupting them."
+PC3_system_perturbation,32,PR092,synthesizer,48,"It reorganizes and connects elements, but the emphasis is synthesis rather than disruption."
+PC3_system_perturbation,33,PR100,validator,48,"Scrutinizing claims may challenge information, but the aim is validation and correction rather than disruption."
+PC3_system_perturbation,34,PR030,economist,45,It interprets systems rather than primarily maintaining or disrupting them.
+PC3_system_perturbation,35,PR034,evaluator,45,It identifies improvement areas but mainly assesses rather than disrupts.
+PC3_system_perturbation,36,PR042,historian,45,The role contextualizes and analyzes patterns more than it either stabilizes or disrupts existing structures.
+PC3_system_perturbation,37,PR076,recruiter,45,"It rearranges people and opportunities, but mainly mediates existing labor-market structures."
+PC3_system_perturbation,38,PR088,statistician,45,"It identifies patterns and tests claims, but mainly transforms data into insights rather than perturbing systems."
+PC3_system_perturbation,39,PR004,analyst,43,Mostly interprets and supports decisions rather than directly stabilizing or disrupting systems.
+PC3_system_perturbation,40,PR016,chemist,42,"Analyzes and experiments with compounds, but not mainly to stabilize or disrupt institutions."
+PC3_system_perturbation,41,PR024,curator,42,"It rearranges and contextualizes objects, but mainly for coherent presentation."
+PC3_system_perturbation,42,PR044,interpreter,42,"It bridges and connects frameworks, occasionally reframing them, but primarily clarifies rather than disrupts."
+PC3_system_perturbation,43,PR052,mathematician,42,The role explores patterns and elegant solutions but primarily reasons within mathematical structures.
+PC3_system_perturbation,44,PR074,psychologist,42,"It analyzes underlying mechanisms, but the dossier does not emphasize disruption or reform."
+PC3_system_perturbation,45,PR081,scholar,42,"It advances understanding, but mainly through careful analysis rather than disruption of existing structures."
+PC3_system_perturbation,46,PR017,coach,40,"Guides development and behavior change, but in a supportive rather than adversarial mode."
+PC3_system_perturbation,47,PR071,producer,40,"It coordinates teams and resources to realize content, with some transformative but mostly managerial emphasis."
+PC3_system_perturbation,48,PR005,anthropologist,38,Primarily studies and interprets social systems rather than maintaining or challenging them.
+PC3_system_perturbation,49,PR032,engineer,38,It optimizes and repairs systems more than disrupting them.
+PC3_system_perturbation,50,PR061,nutritionist,38,Primarily supports wellness and improves habits rather than disrupting existing systems.
+PC3_system_perturbation,51,PR087,specialist,38,"The role adds precision and depth, with no strong emphasis on either stabilizing or disrupting systems."
+PC3_system_perturbation,52,PR012,biologist,36,Investigates and classifies natural systems rather than primarily maintaining or disrupting them.
+PC3_system_perturbation,53,PR055,mentor,36,The role supports development and adaptation more than it disrupts existing systems.
+PC3_system_perturbation,54,PR015,chef,35,Primarily teaches and develops craft rather than disrupting culinary systems.
+PC3_system_perturbation,55,PR040,geographer,35,It studies and maps systems rather than challenging or disrupting them.
+PC3_system_perturbation,56,PR069,planner,35,It organizes resources and coordinates action more than it disrupts existing structures.
+PC3_system_perturbation,57,PR048,lawyer,34,"The role mainly interprets and maintains legal frameworks, though counsel may challenge positions within them."
+PC3_system_perturbation,58,PR093,teacher,34,"The role guides and structures learning while encouraging critical thinking, mostly within educational aims."
+PC3_system_perturbation,59,PR058,naturalist,32,"The role understands and conserves natural systems, leaning stabilizing rather than disruptive."
+PC3_system_perturbation,60,PR099,tutor,32,"It structures learning and encourages independent thinking, but mostly supports student development."
+PC3_system_perturbation,61,PR006,archaeologist,30,"Careful excavation, preservation, and reconstruction are stabilizing rather than disruptive."
+PC3_system_perturbation,62,PR022,counselor,30,It creates safety and guidance more than disruption.
+PC3_system_perturbation,63,PR047,judge,30,The role stabilizes disputes by delivering impartial judgments within an established decision process.
+PC3_system_perturbation,64,PR070,presenter,30,The role structures and conveys information rather than challenging the system it enters.
+PC3_system_perturbation,65,PR025,debugger,28,"The role isolates, repairs, and restores malfunctioning systems."
+PC3_system_perturbation,66,PR075,publisher,28,"The role curates, prepares, and distributes content through existing workflows."
+PC3_system_perturbation,67,PR011,auditor,25,"Reviews, verifies, documents, and enforces adherence to stabilize organizational processes."
+PC3_system_perturbation,68,PR021,coordinator,25,"It primarily coordinates, aligns, and smooths collaboration."
+PC3_system_perturbation,69,PR029,doctor,25,"It promotes health, treatment, and stabilization."
+PC3_system_perturbation,70,PR009,artisan,24,Preserves traditional skills and meticulous processes rather than challenging systems.
+PC3_system_perturbation,71,PR031,editor,24,It improves and stabilizes written material.
+PC3_system_perturbation,72,PR043,instructor,24,The role organizes and stabilizes understanding through sequential instruction rather than challenging systems.
+PC3_system_perturbation,73,PR083,screener,24,It filters and applies standards within an existing hiring process rather than challenging the system.
+PC3_system_perturbation,74,PR001,accountant,22,"Primarily maintains accuracy, compliance, and financial order rather than disrupting systems."
+PC3_system_perturbation,75,PR036,facilitator,22,It stabilizes group dynamics and enables collaboration.
+PC3_system_perturbation,76,PR060,negotiator,22,"The role mediates, builds bridges, and resolves disputes, primarily stabilizing the social system."
+PC3_system_perturbation,77,PR098,translator,22,It preserves and transfers meaning across languages rather than challenging the source structure.
+PC3_system_perturbation,78,PR014,cartographer,20,Documents territories and translates spatial information without challenging the structure.
+PC3_system_perturbation,79,PR028,dispatcher,20,It coordinates and directs resources to keep logistics functioning.
+PC3_system_perturbation,80,PR054,mediator,20,The role stabilizes conflict by building bridges and guiding parties toward agreement.
+PC3_system_perturbation,81,PR059,navigator,20,The role guides travelers through existing routes and environments rather than challenging structures.
+PC3_system_perturbation,82,PR062,organizer,20,"The role stabilizes, coordinates, and structures existing activity rather than challenging it."
+PC3_system_perturbation,83,PR086,sommelier,20,"It curates, serves, and harmonizes experiences rather than challenging an existing structure."
+PC3_system_perturbation,84,PR097,trainer,20,It develops skills through guided instruction and repetition rather than disrupting systems.
+PC3_system_perturbation,85,PR013,builder,18,"Focused on lasting foundations, frameworks, and durable structures."
+PC3_system_perturbation,86,PR035,examiner,18,It verifies adherence and monitors conformance to existing protocols.
+PC3_system_perturbation,87,PR041,grader,18,"The role maintains academic assessment systems by reviewing, scoring, and giving corrective feedback."
+PC3_system_perturbation,88,PR057,moderator,18,"The role coordinates, balances participation, maintains respect, and helps groups reach consensus."
+PC3_system_perturbation,89,PR080,scheduler,18,The role coordinates timelines and smooths operations rather than perturbing existing structures.
+PC3_system_perturbation,90,PR090,summarizer,18,It preserves and clarifies source information rather than challenging or disrupting it.
+PC3_system_perturbation,91,PR091,supervisor,18,"The role oversees, coordinates, directs workflows, and maintains organizational protocols."
+PC3_system_perturbation,92,PR101,veterinarian,18,"The role primarily treats, prevents, stabilizes, and maintains animal health rather than disrupting existing systems."
+PC3_system_perturbation,93,PR096,therapist,16,"It is primarily supportive, stabilizing, healing, and non-judgmental."
+PC3_system_perturbation,94,PR073,proofreader,15,It repairs and standardizes written material rather than disrupting it.
+PC3_system_perturbation,95,PR049,librarian,14,"The role catalogs, organizes, maintains, and connects people to existing information systems."
+PC3_system_perturbation,96,PR008,archivist,12,"Dedicated to organizing, protecting, preserving, and providing stable access to materials."
+PC3_system_perturbation,97,PR053,mechanic,12,"The role fixes, maintains, repairs, and restores machines and systems."
+PC3_system_perturbation,98,PR064,pharmacist,12,"The role maintains safety, prevents harm, and stabilizes treatment systems."
+PC3_system_perturbation,99,PR084,secretary,12,"The role maintains office order, coordinates communications, and keeps records stable."
+PC3_system_perturbation,100,PR068,pilot,10,"It primarily maintains safety, follows protocols, and preserves stable flight operations."
+PC3_system_perturbation,101,PR063,paramedic,8,"The dossier is strongly homeostatic, focused on life-saving care and patient stabilization."
+PC3_system_perturbation,102,PR019,conservator,6,"The primary mission is safeguarding, maintaining, preserving, and preventing deterioration."

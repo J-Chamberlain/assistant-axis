@@ -1,0 +1,14 @@
+{
+  "model_used": "GPT-5.5",
+  "present_professional_personas": 102,
+  "absent_requested_examples": [
+    "systems_engineer",
+    "systems engineer",
+    "professor",
+    "investigative_journalist",
+    "investigative journalist",
+    "reformer"
+  ],
+  "source_text": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl",
+  "rating_input_blinding": "persona names, coordinates, clusters, Big Five scores, residuals, and prior labels removed"
+}

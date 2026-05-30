@@ -446,6 +446,16 @@
 - Interpretation: PC3 is now the best-supported direct axis interpretation in prompt-dossier evidence; PC1 is strengthened but partly entangled with intelligence/expertise; PC2 remains the main uncertainty because abstraction correlates more strongly with PC2 than the direct coherent-action score.
 - Caveat: this is Codex-as-rater, not an independent human or second-model blinded-rating study.
 
+### Professional Hierarchy Validation (2026-05-30)
+
+- Ran a targeted professional-role validation over 102 professional, technical, scientific, analytical, academic, and expert personas present in the Qwen geometry and no-label prompt corpus.
+- Codex/GPT-5.5 rated anonymized no-label professional dossiers before PCA evaluation on objective certainty, coherent action under unresolved uncertainty, and system perturbation.
+- PC1 received targeted professional support: objective certainty correlated with actual PC1 at r=0.394, and the high-PC1 professional pole contains auditor, examiner, evaluator, validator, screener, reviewer, and grader-like roles.
+- PC3 received modest targeted support: system perturbation correlated with actual PC3 at r=0.319, and the three-rating model predicted professional PC3 with CV R2=0.429.
+- PC2 was not supported as a professional coherent-action hierarchy: coherent uncertainty capacity was essentially uncorrelated with actual PC2 at r=-0.007.
+- Scientist vs physicist weakly supports the actual abstraction ordering because physicist is lower on PC2 than scientist, but the blinded rating gave them similar coherent-uncertainty capacity scores.
+- Interpretation: PC1 remains moderate-confidence; PC3 remains moderate with professional counterexamples; PC2 should be reframed away from simple professional uncertainty capacity and toward abstraction/historical-theoretical/world-model depth unless future tests separate those factors more cleanly.
+
 ---
 
 ## 3. CURRENT STATE
@@ -463,6 +473,7 @@
 | PC3 interpretation | provisional | preserve/exploit rubric r=-0.312; nurturing/competitive r=-0.319; agreeableness r=-0.477 | `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/pc3_hypothesis_report.md` |
 | Blinded no-label PC rubric validation | provisional/weak | target correlations: PC1 r=0.247, PC2 r=0.224, PC3 r=0.349; pairwise direction 35-40% | `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/blinded_axis_validation_report.md` |
 | Reading-based blinded PC rater study | provisional/stronger | target correlations: PC1 r=0.558, PC2 r=0.373, PC3 r=0.690; pairwise direction 75-100% | `research/q2_stability/qwen/outputs/blinded_axis_rater_study/blinded_axis_rater_report.md` |
+| Professional hierarchy validation | provisional/mixed | PC1 r=0.394; PC2 r=-0.007 for uncertainty capacity; PC3 r=0.319, PC3 CV R2 0.429 | `research/q2_stability/qwen/outputs/professional_hierarchy_validation/professional_hierarchy_report.md` |
 | Evaluator-model sensitivity | unresolved | harness exists, paired `gpt-4.1-mini` records blocked by quota | `research/q2_stability/qwen/evaluator_sensitivity/` |
 
 **Paper 1.5 current scope:** Paper 1.5 is now a persona-geometry interpretation paper. The working title is `Interpreting Persona Activation Geometry`. The main claim is that persona activation geometry appears to decompose into layered semantic, dispositional, procedural, lexical/register, and residual structures after methodological stress testing. Adaptive extraction remains important due diligence and tooling evidence, but it is no longer the primary paper frame.
@@ -511,6 +522,8 @@
 
 **Reading-based rater state:** `research/q2_stability/qwen/outputs/blinded_axis_rater_study/` now contains a stronger Codex-as-rater blinded annotation study using anonymized no-label prompt dossiers. PC3 is the strongest direct axis interpretation in this evidence; PC1 is strengthened but overlaps with intelligence/expertise; PC2 remains compound, with abstraction outperforming the direct coherent-action-under-uncertainty score.
 
+**Professional hierarchy validation state:** `research/q2_stability/qwen/outputs/professional_hierarchy_validation/` now contains a targeted professional-role stress test. It supports PC1 modestly, supports PC3 modestly with technical/institutional counterexamples, and weakens a simple professional coherent-action interpretation of PC2.
+
 **Reporting standard:** `research/PROJECT_ORIENTATION.md` now includes an Enhanced Research Reporting section. Future Codex research reports should state what was done, what changed the current interpretation, key judgment calls, competing explanations, strongest unresolved uncertainty, confidence level, and recommended next test.
 
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
@@ -532,8 +545,9 @@
 **Completed this session:** Added Enhanced Research Reporting guidance to `research/PROJECT_ORIENTATION.md` so future research reports summarize interpretive significance, judgment calls, uncertainty, confidence, and next tests.
 **Completed this session:** Ran the blinded PCA-axis rubric validation over the full available no-label prompt corpus, wrote outputs under `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`, and updated the findings ledger, research index, provenance registry, and interpretation note.
 **Completed this session:** Ran the reading-based Codex-as-rater blinded PCA-axis study over anonymized no-label persona dossiers, wrote outputs under `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, and updated state/provenance/interpretation trackers.
-**Next step:** Replicate the rater study with an independent human or second-model rater and richer full rollout responses where available, with special focus on PC2 alternatives and matched-pair designs.
-**Last commit before this session:** 45bbc6c
+**Completed this session:** Ran the professional hierarchy validation over 102 present professional/expert personas and updated the findings ledger, research index, research state, and interpretation note.
+**Next step:** Design a focused PC2 disentanglement test that separately rates abstraction/world-model depth, institutional expertise, maturity, and uncertainty capacity within professional roles.
+**Last commit before this session:** 6df5fe1
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

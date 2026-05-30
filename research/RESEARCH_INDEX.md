@@ -21,6 +21,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - TF-IDF/SVD15 prompt-register structure produces the strongest predictive result so far, but it is lexical/register-sensitive and not yet distilled into stable human-readable features.
 - A first coordinate-blind no-label prompt rubric validation found only modest direct support for the PC interpretations, strongest for PC3 and weakest for PC2.
 - A reading-based Codex/GPT-5.5 rater study over anonymized no-label prompt dossiers materially strengthened PC3 and PC1 interpretations, while showing that PC2 is better treated as a compound abstraction/integration axis than as coherent action under uncertainty alone.
+- A targeted professional-hierarchy validation supports PC1 modestly and PC3 modestly inside professional roles, but does not support PC2 as a simple coherent-action-under-uncertainty hierarchy.
 - Trickster adaptive extraction succeeded operationally; editor adaptive extraction failed to reach validation thresholds.
 
 ## Best Predictive Metrics
@@ -48,6 +49,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/q2_stability/qwen/outputs/residual_svd_interpretation/`: SVD15 reconstruction and interpretation.
 - `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`: coordinate-blind no-label prompt rubric validation of PC1, PC2, and PC3 working interpretations.
 - `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`: reading-based Codex-as-rater blinded annotation study over anonymized no-label persona dossiers.
+- `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`: targeted professional-role validation for PC1, PC2, and PC3 interpretations.
 - `research/visualizations/persona_geometry_explorer.html`: interactive Plotly viewer with PCA/UMAP, cluster, selection, and Big Five overlays.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: persona-aligned Big Five overlay data.
 
@@ -87,7 +89,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 
 PC1: Primarily separates careful/evaluative/procedural control from open, expressive, unstable, symbolic, or emotionally pressured persona organization. It overlaps with the assistant/evaluator basin but should not be reduced to literal assistantness. Conscientiousness is strongly positive; openness, extraversion, and neuroticism are strongly negative. The reading-based blinded rater study strengthens PC1 as objective certainty, but intelligence/expertise is an even stronger PC1 correlate, so paper language should include disciplined knowledge practice and externally legible competence.
 
-PC2: Least cleanly univariate. It appears to contain compound abstraction, maturity, expertise, uncertainty-integration, developmental, and model-specific structure. The reading-based rater study found coherent-action-under-uncertainty predicts PC2, but abstraction predicts PC2 more strongly in the opposite direction, so PC2 should not be reduced to the coherent-action formulation.
+PC2: Least cleanly univariate. It appears to contain compound abstraction, maturity, expertise, uncertainty-integration, developmental, and model-specific structure. The reading-based rater study found coherent-action-under-uncertainty predicts PC2, but abstraction predicts PC2 more strongly in the opposite direction; the professional-hierarchy validation found coherent uncertainty capacity essentially uncorrelated with PC2. PC2 should not be reduced to the coherent-action formulation.
 
 PC3: Tracks cooperative-care/system-stabilizing versus antagonistic/disruptive/transgressive stance. Agreeableness is the strongest Big Five correlate, and the reading-based blinded rater study strongly supports the direct interpretation. It should still be described as a partial stance axis rather than a complete ontology of PC3.
 

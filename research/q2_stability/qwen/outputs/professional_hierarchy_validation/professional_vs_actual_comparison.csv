@@ -1,0 +1,10 @@
+score,pc,pearson,spearman,target_axis,expected_sign_for_target,target_aligned,prediction_direction_supported
+objective_certainty_score,PC1,0.39357791976402684,0.4220287325359096,PC1,1,True,True
+objective_certainty_score,PC2,-0.017134283795110776,-0.07029286310301452,PC1,,False,False
+objective_certainty_score,PC3,0.3704254476130025,0.3394084530384107,PC1,,False,False
+coherent_uncertainty_capacity_score,PC1,-0.1146194210557014,-0.144556414006379,PC2,,False,False
+coherent_uncertainty_capacity_score,PC2,-0.007243769068358517,-0.012320277718749724,PC2,-1,True,False
+coherent_uncertainty_capacity_score,PC3,0.020803396796913808,0.1079242727119916,PC2,,False,False
+system_perturbation_score,PC1,-0.21936459069908393,-0.11290537897949382,PC3,,False,False
+system_perturbation_score,PC2,-0.04518460331345375,-0.10759065314924794,PC3,,False,False
+system_perturbation_score,PC3,0.3191340050419946,0.3390500760481561,PC3,1,True,True

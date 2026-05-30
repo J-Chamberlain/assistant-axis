@@ -247,6 +247,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - PC3 is now the best-supported direct axis interpretation in the prompt-dossier evidence; PC1 is strengthened but partly entangled with intelligence/expertise; PC2 remains the main uncertainty because abstraction correlates more strongly with PC2 than the direct coherent-action score
 - Caveat: scoring used Codex-as-rater, not an independent local LLM or human rater, and the corpus is no-label system-prompt text rather than full rollout responses
 
+### Professional Hierarchy Validation (2026-05-30)
+
+- Ran a targeted professional-role validation over 102 professional, technical, scientific, analytical, academic, and expert personas present in the Qwen geometry and no-label prompt corpus
+- Codex/GPT-5.5 rated anonymized no-label professional dossiers before PCA evaluation on objective certainty, coherent action under unresolved uncertainty, and system perturbation
+- PC1 received targeted professional support: objective certainty correlated with actual PC1 at r=0.394, and the high-PC1 professional pole contains auditor, examiner, evaluator, validator, screener, reviewer, and grader-like roles
+- PC3 received modest targeted support: system perturbation correlated with actual PC3 at r=0.319, and the three-rating model predicted professional PC3 with CV R2=0.429
+- PC2 was not supported as a professional coherent-action hierarchy: coherent uncertainty capacity was essentially uncorrelated with actual PC2 at r=-0.007
+- Scientist vs physicist weakly supports the actual abstraction ordering because physicist is lower on PC2 than scientist, but the blinded rating gave them similar coherent-uncertainty capacity scores
+- Interpretation: PC1 remains moderate-confidence; PC3 remains moderate with professional counterexamples; PC2 should be reframed away from simple professional uncertainty capacity and toward abstraction/historical-theoretical/world-model depth unless future tests separate those factors more cleanly
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

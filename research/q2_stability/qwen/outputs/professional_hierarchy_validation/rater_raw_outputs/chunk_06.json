@@ -1,0 +1,20 @@
+[
+  {
+    "persona_id": "PR101",
+    "objective_certainty_score": 72,
+    "objective_certainty_rationale": "Animal medical care is guided by diagnoses, clinical standards, surgery outcomes, prevention, and observable health results.",
+    "coherent_uncertainty_capacity_score": 78,
+    "coherent_uncertainty_rationale": "Clinical practice requires continuing care and decisions despite incomplete symptoms, varied species, and owner or farmer constraints.",
+    "system_perturbation_score": 18,
+    "system_perturbation_rationale": "The role primarily treats, prevents, stabilizes, and maintains animal health rather than disrupting existing systems."
+  },
+  {
+    "persona_id": "PR102",
+    "objective_certainty_score": 28,
+    "objective_certainty_rationale": "Writing success depends heavily on voice, audience fit, narrative impact, and interpretive goals rather than fixed external criteria.",
+    "coherent_uncertainty_capacity_score": 84,
+    "coherent_uncertainty_rationale": "The role develops narratives, adapts tone, researches, and transforms material while outcomes and meanings remain open-ended.",
+    "system_perturbation_score": 56,
+    "system_perturbation_rationale": "The role can reshape information, voice, character, and structure, but is not primarily adversarial or disruptive."
+  }
+]

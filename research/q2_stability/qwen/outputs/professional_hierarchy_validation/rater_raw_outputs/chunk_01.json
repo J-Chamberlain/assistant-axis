@@ -1,0 +1,182 @@
+[
+  {
+    "persona_id": "PR001",
+    "objective_certainty_score": 88,
+    "objective_certainty_rationale": "Financial records, tax compliance, auditing, discrepancies, and reports are judged against external standards.",
+    "coherent_uncertainty_capacity_score": 58,
+    "coherent_uncertainty_rationale": "Can analyze costs and advise strategically, but much of the role depends on verifiable records and closure.",
+    "system_perturbation_score": 22,
+    "system_perturbation_rationale": "Primarily maintains accuracy, compliance, and financial order rather than disrupting systems."
+  },
+  {
+    "persona_id": "PR002",
+    "objective_certainty_score": 28,
+    "objective_certainty_rationale": "Success involves contested political change, rights claims, and reform goals rather than fixed criteria.",
+    "coherent_uncertainty_capacity_score": 74,
+    "coherent_uncertainty_rationale": "Grassroots organizing and direct action can continue despite unresolved political outcomes.",
+    "system_perturbation_score": 92,
+    "system_perturbation_rationale": "Explicitly challenges inequality, mobilizes communities, and demands systemic reform."
+  },
+  {
+    "persona_id": "PR003",
+    "objective_certainty_score": 34,
+    "objective_certainty_rationale": "Advancing causes and building support depends on persuasion and values more than external validation.",
+    "coherent_uncertainty_capacity_score": 68,
+    "coherent_uncertainty_rationale": "Sustained advocacy and persuasive communication can proceed without final resolution.",
+    "system_perturbation_score": 78,
+    "system_perturbation_rationale": "Works to advance causes and positive change, implying pressure on existing arrangements."
+  },
+  {
+    "persona_id": "PR004",
+    "objective_certainty_score": 72,
+    "objective_certainty_rationale": "Uses statistical analysis, evidence, patterns, and data-driven reasoning with externally checkable inputs.",
+    "coherent_uncertainty_capacity_score": 82,
+    "coherent_uncertainty_rationale": "Methodically synthesizes incomplete information into actionable insights under ambiguity.",
+    "system_perturbation_score": 43,
+    "system_perturbation_rationale": "Mostly interprets and supports decisions rather than directly stabilizing or disrupting systems."
+  },
+  {
+    "persona_id": "PR005",
+    "objective_certainty_score": 32,
+    "objective_certainty_rationale": "Cultural meanings and social structures require interpretation rather than fixed success criteria.",
+    "coherent_uncertainty_capacity_score": 84,
+    "coherent_uncertainty_rationale": "Ethnographic and comparative work can proceed coherently amid unresolved cultural ambiguity.",
+    "system_perturbation_score": 38,
+    "system_perturbation_rationale": "Primarily studies and interprets social systems rather than maintaining or challenging them."
+  },
+  {
+    "persona_id": "PR006",
+    "objective_certainty_score": 48,
+    "objective_certainty_rationale": "Excavation and evidence impose constraints, but narratives from fragments require interpretation.",
+    "coherent_uncertainty_capacity_score": 86,
+    "coherent_uncertainty_rationale": "The role explicitly pieces together fragmented evidence into coherent historical narratives.",
+    "system_perturbation_score": 30,
+    "system_perturbation_rationale": "Careful excavation, preservation, and reconstruction are stabilizing rather than disruptive."
+  },
+  {
+    "persona_id": "PR007",
+    "objective_certainty_score": 42,
+    "objective_certainty_rationale": "Structural and efficiency constraints matter, but design and planning involve negotiated goals.",
+    "coherent_uncertainty_capacity_score": 76,
+    "coherent_uncertainty_rationale": "Building design requires coherent progress across materials, environment, and project ambiguity.",
+    "system_perturbation_score": 55,
+    "system_perturbation_rationale": "Innovative designs and urban layouts can reshape structures, though within practical constraints."
+  },
+  {
+    "persona_id": "PR008",
+    "objective_certainty_score": 78,
+    "objective_certainty_rationale": "Cataloging, preservation, filing systems, and access depend on established archival standards.",
+    "coherent_uncertainty_capacity_score": 55,
+    "coherent_uncertainty_rationale": "Historical research may involve gaps, but the core work emphasizes orderly record-keeping.",
+    "system_perturbation_score": 12,
+    "system_perturbation_rationale": "Dedicated to organizing, protecting, preserving, and providing stable access to materials."
+  },
+  {
+    "persona_id": "PR009",
+    "objective_certainty_score": 44,
+    "objective_certainty_rationale": "Precision and technique matter, but beauty and unique handcrafted quality are partly internal judgments.",
+    "coherent_uncertainty_capacity_score": 63,
+    "coherent_uncertainty_rationale": "Material craft allows iterative progress through hands-on technique and adjustment.",
+    "system_perturbation_score": 24,
+    "system_perturbation_rationale": "Preserves traditional skills and meticulous processes rather than challenging systems."
+  },
+  {
+    "persona_id": "PR010",
+    "objective_certainty_score": 70,
+    "objective_certainty_rationale": "Auction success is tied to concrete sales, bids, and managed transactions.",
+    "coherent_uncertainty_capacity_score": 72,
+    "coherent_uncertainty_rationale": "Must keep bidding moving coherently in fast-paced, competitive, uncertain crowd conditions.",
+    "system_perturbation_score": 61,
+    "system_perturbation_rationale": "Creates excitement, urgency, and competitive pressure within a sales environment."
+  },
+  {
+    "persona_id": "PR011",
+    "objective_certainty_score": 94,
+    "objective_certainty_rationale": "Compliance, regulatory standards, internal controls, accuracy, and procedures are externally specified.",
+    "coherent_uncertainty_capacity_score": 62,
+    "coherent_uncertainty_rationale": "Investigations and risk assessment handle uncertainty, but aim toward documented verification.",
+    "system_perturbation_score": 25,
+    "system_perturbation_rationale": "Reviews, verifies, documents, and enforces adherence to stabilize organizational processes."
+  },
+  {
+    "persona_id": "PR012",
+    "objective_certainty_score": 67,
+    "objective_certainty_rationale": "Biological research uses empirical classification, mechanisms, and observable life processes.",
+    "coherent_uncertainty_capacity_score": 78,
+    "coherent_uncertainty_rationale": "Research on evolution, ecosystems, and molecular mechanisms can proceed under open questions.",
+    "system_perturbation_score": 36,
+    "system_perturbation_rationale": "Investigates and classifies natural systems rather than primarily maintaining or disrupting them."
+  },
+  {
+    "persona_id": "PR013",
+    "objective_certainty_score": 62,
+    "objective_certainty_rationale": "Durable foundations and blueprints provide concrete standards, though systems may vary.",
+    "coherent_uncertainty_capacity_score": 65,
+    "coherent_uncertainty_rationale": "Careful planning and construction support progress from concepts to realities.",
+    "system_perturbation_score": 18,
+    "system_perturbation_rationale": "Focused on lasting foundations, frameworks, and durable structures."
+  },
+  {
+    "persona_id": "PR014",
+    "objective_certainty_score": 86,
+    "objective_certainty_rationale": "Surveying, topography, charting, and accurate maps are judged against geographical data.",
+    "coherent_uncertainty_capacity_score": 58,
+    "coherent_uncertainty_rationale": "Can analyze spatial relationships, but the work aims at accurate representation and resolution.",
+    "system_perturbation_score": 20,
+    "system_perturbation_rationale": "Documents territories and translates spatial information without challenging the structure."
+  },
+  {
+    "persona_id": "PR015",
+    "objective_certainty_score": 50,
+    "objective_certainty_rationale": "Cooking has techniques and recipes, but taste, teaching, and recipe development are partly subjective.",
+    "coherent_uncertainty_capacity_score": 66,
+    "coherent_uncertainty_rationale": "Can adapt technique, explanation, and craft while outcomes are still developing.",
+    "system_perturbation_score": 35,
+    "system_perturbation_rationale": "Primarily teaches and develops craft rather than disrupting culinary systems."
+  },
+  {
+    "persona_id": "PR016",
+    "objective_certainty_score": 82,
+    "objective_certainty_rationale": "Chemical structures, reactions, properties, and lab techniques are empirically constrained.",
+    "coherent_uncertainty_capacity_score": 73,
+    "coherent_uncertainty_rationale": "Experimental design supports disciplined progress while mechanisms or results remain unresolved.",
+    "system_perturbation_score": 42,
+    "system_perturbation_rationale": "Analyzes and experiments with compounds, but not mainly to stabilize or disrupt institutions."
+  },
+  {
+    "persona_id": "PR017",
+    "objective_certainty_score": 35,
+    "objective_certainty_rationale": "Personal strengths, goals, habits, and improvement plans are negotiated and individualized.",
+    "coherent_uncertainty_capacity_score": 80,
+    "coherent_uncertainty_rationale": "Supports gradual progress through obstacles using personalized strategies without requiring full closure.",
+    "system_perturbation_score": 40,
+    "system_perturbation_rationale": "Guides development and behavior change, but in a supportive rather than adversarial mode."
+  },
+  {
+    "persona_id": "PR018",
+    "objective_certainty_score": 24,
+    "objective_certainty_rationale": "Musical composition is governed by artistic construction rather than externally fixed success criteria.",
+    "coherent_uncertainty_capacity_score": 77,
+    "coherent_uncertainty_rationale": "Can build complex musical forms and layered frameworks through open-ended creative uncertainty.",
+    "system_perturbation_score": 52,
+    "system_perturbation_rationale": "Creates new sonic structures, but the dossier does not emphasize disruption or reform."
+  },
+  {
+    "persona_id": "PR019",
+    "objective_certainty_score": 76,
+    "objective_certainty_rationale": "Restoration and preservation use scientific methods to maintain integrity and prevent deterioration.",
+    "coherent_uncertainty_capacity_score": 60,
+    "coherent_uncertainty_rationale": "Can apply preservation practices amid material uncertainty, though the goal is stable survival.",
+    "system_perturbation_score": 6,
+    "system_perturbation_rationale": "The primary mission is safeguarding, maintaining, preserving, and preventing deterioration."
+  },
+  {
+    "persona_id": "PR020",
+    "objective_certainty_score": 45,
+    "objective_certainty_rationale": "Uses data-driven recommendations, but client needs and strategic solutions are negotiated.",
+    "coherent_uncertainty_capacity_score": 82,
+    "coherent_uncertainty_rationale": "Assesses ambiguous business challenges and develops actionable recommendations despite uncertainty.",
+    "system_perturbation_score": 58,
+    "system_perturbation_rationale": "Identifies problems and recommends tailored solutions that may alter client systems."
+  }
+]
