@@ -1,0 +1,11 @@
+criterion,definition,minimum,count,pass
+pc1_lower_tail,PC1 <= inherited p20; open symbolic possibility / degrees of freedom,8,12,True
+pc1_upper_tail,PC1 >= inherited p80; convergence pressure / correct-answer constraint,8,11,True
+pc2_lower_tail,PC2 <= inherited p20; integrated abstraction / reflective synthesis,8,34,True
+pc2_upper_tail,PC2 >= inherited p80; situated developmental immediacy,8,8,True
+pc3_lower_tail,PC3 <= inherited p20; stabilization / repair / preservation,8,8,True
+pc3_upper_tail,PC3 >= inherited p80; perturbation / intervention / boundary pressure,8,16,True
+shoulder_edge,outside inherited 35th-65th band on at least two PCs,12,58,True
+interior_control,"inside inherited 35th-65th band on PC1, PC2, and PC3",20,20,True
+final_battery_size,100 <= prompt_count <= 160,100,100,True
+filters,"zero explicit role flags, zero operational-harm flags, artifact similarity <= 0.62",0,0,True

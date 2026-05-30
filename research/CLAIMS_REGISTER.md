@@ -256,11 +256,11 @@ Counterevidence: Text-to-cluster classification is imperfect at 0.687 accuracy a
 Dependencies: `research/outputs/cluster_conditioned_axis_tests/`
 Last Updated: 2026-05-30
 
-## 28. Novel Prompt Battery Is Feasible And Now Expanded For High-PC3 / High-PC2 Validation
+## 28. Novel Prompt Battery Is H100-Ready Under Percentile-Edge Criteria
 
-Claim: The novel prompt battery is feasible for H100 validation and now includes an adaptive high-PC3/high-PC2 supplement, but coverage remains incomplete in high-PC1 and several exact 3D cells.
+Claim: A percentile-referenced edge-heavy novel prompt battery satisfies all predefined H100 readiness criteria: at least 8 prompts in each inherited 20/80 PC-axis tail, at least 12 shoulder/edge prompts, and at least 20 interior controls, with leakage and safety filters passed.
 Status: Observed
-Evidence: The first battery contains 120 novel prompts generated without explicit persona role labels. The adaptive supplement adds 60 prompts from 516 logged candidates using the frozen forecaster hash `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`. Supplemental coverage includes 38 prompts above the prior PC3 75th percentile, 44 above the prior PC2 75th percentile, 12 safety-adjacent high-PC3 prompts, and 26 mixed-boundary high-PC3 prompts. The combined battery contains 180 prompts and improves target-cell coverage from 11/27 to 16/27, with zero supplemental explicit role-name flags and zero operational-harm flags.
-Counterevidence: The expansion is still forecaster-predicted coverage, not measured activation coverage. High-PC1 target cells and several exact 3D cells remain under-covered, so the expanded battery is a targeted frontier validation set rather than complete geometric coverage.
-Dependencies: `research/outputs/novel_prompt_battery/novel_prompt_battery_report.md`, `research/outputs/novel_prompt_battery/h100_prompt_run_manifest.csv`, `research/outputs/novel_prompt_battery_expansion/adaptive_prompt_expansion_report.md`, `research/outputs/novel_prompt_battery_expansion/combined_h100_prompt_manifest.csv`
+Evidence: The percentile-edge battery contains 100 prompts referenced to inherited role/persona PCA percentiles from `geometry_viz_data.json`. All criteria pass: PC1 lower 12/8, PC1 upper 11/8, PC2 lower 34/8, PC2 upper 8/8, PC3 lower 8/8, PC3 upper 16/8, shoulder/edge 58/12, interior controls 20/20, final size 100/100, and filters pass. Explicit role-name flags and operational-harm flags are zero; max artifact similarity is 0.133 and mean artifact similarity is 0.071.
+Counterevidence: Readiness is based on frozen forecaster predictions, not measured H100 activations. Some edge prompts use strong coefficient-aligned natural language to reach inherited tails, so H100 validation should test whether these predicted text addresses actually correspond to measured activation coordinates.
+Dependencies: `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_battery_report.md`, `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_h100_manifest.csv`, `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_coverage_stats.json`
 Last Updated: 2026-05-30

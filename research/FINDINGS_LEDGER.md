@@ -341,6 +341,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Leakage/safety checks passed for the supplement: zero explicit role-name flags, zero operational-harm flags, max artifact similarity 0.104, mean artifact similarity 0.069
 - Interpretation: the combined battery is ready for H100 validation as a targeted high-PC3/high-PC2 frontier probe, while high-PC1 and several exact 3D target cells remain under-covered
 
+### Percentile-Edge Prompt Battery for H100 Validation (2026-05-30)
+
+- Built `research/outputs/novel_prompt_battery_percentile_edges/` as the final edge-heavy prompt battery referenced to inherited role/persona PCA percentiles from `research/visualizations/geometry_viz_data.json`
+- Inherited thresholds: PC1 p20=-32.056, p35=-13.924, p65=19.979, p80=31.909; PC2 p20=-16.333, p35=-8.534, p65=4.215, p80=16.307; PC3 p20=-11.810, p35=-5.698, p65=4.816, p80=11.642
+- The frozen role-trained leakage-control elastic-net TF-IDF forecaster hash was verified before scoring: `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`
+- Final battery has 100 prompts and passes all predefined readiness criteria: PC1 lower 12/8, PC1 upper 11/8, PC2 lower 34/8, PC2 upper 8/8, PC3 lower 8/8, PC3 upper 16/8, shoulder/edge 58/12, interior controls 20/20, final size 100/100, filters pass
+- Generation log preserves 200 generated candidates and 168 rejected candidates; rejection reasons were coordinate_miss 159, criterion_already_met 8, and duplicate_or_near_duplicate 1
+- Leakage/safety checks passed: zero explicit role-name flags, zero operational-harm flags, max artifact similarity 0.133, mean artifact similarity 0.071
+- H100 readiness judgment: ready; recommended manifest is `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_h100_manifest.csv`
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

@@ -1,0 +1,137 @@
+{
+  "model_used": "GPT-5.5",
+  "reference_geometry_source": "research/visualizations/geometry_viz_data.json",
+  "forecaster_manifest": "research/outputs/novel_prompt_battery/frozen_forecaster_manifest.json",
+  "forecaster_model_sha256": "7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f",
+  "thresholds": {
+    "PC1": {
+      "p20": -32.056001842469286,
+      "p35": -13.923973236384276,
+      "p65": 19.979060552818627,
+      "p80": 31.908918600267725
+    },
+    "PC2": {
+      "p20": -16.333408906047403,
+      "p35": -8.534201764774524,
+      "p65": 4.214666688212353,
+      "p80": 16.307420211871253
+    },
+    "PC3": {
+      "p20": -11.81044945722546,
+      "p35": -5.698210486987563,
+      "p65": 4.816310842121315,
+      "p80": 11.641759792175435
+    }
+  },
+  "prompt_count": 100,
+  "candidate_count": 200,
+  "accepted_count": 100,
+  "rejected_count": 168,
+  "rejection_reason_counts": {
+    "coordinate_miss": 159,
+    "criterion_already_met": 8,
+    "duplicate_or_near_duplicate": 1
+  },
+  "rounds_per_region": {
+    "pc1_lower_tail": 3,
+    "pc1_upper_tail": 4,
+    "pc2_upper_tail": 2,
+    "pc3_lower_tail": 1
+  },
+  "exhausted_regions": [],
+  "success_criteria": [
+    {
+      "criterion": "pc1_lower_tail",
+      "definition": "PC1 <= inherited p20; open symbolic possibility / degrees of freedom",
+      "minimum": 8,
+      "count": 12,
+      "pass": true
+    },
+    {
+      "criterion": "pc1_upper_tail",
+      "definition": "PC1 >= inherited p80; convergence pressure / correct-answer constraint",
+      "minimum": 8,
+      "count": 11,
+      "pass": true
+    },
+    {
+      "criterion": "pc2_lower_tail",
+      "definition": "PC2 <= inherited p20; integrated abstraction / reflective synthesis",
+      "minimum": 8,
+      "count": 34,
+      "pass": true
+    },
+    {
+      "criterion": "pc2_upper_tail",
+      "definition": "PC2 >= inherited p80; situated developmental immediacy",
+      "minimum": 8,
+      "count": 8,
+      "pass": true
+    },
+    {
+      "criterion": "pc3_lower_tail",
+      "definition": "PC3 <= inherited p20; stabilization / repair / preservation",
+      "minimum": 8,
+      "count": 8,
+      "pass": true
+    },
+    {
+      "criterion": "pc3_upper_tail",
+      "definition": "PC3 >= inherited p80; perturbation / intervention / boundary pressure",
+      "minimum": 8,
+      "count": 16,
+      "pass": true
+    },
+    {
+      "criterion": "shoulder_edge",
+      "definition": "outside inherited 35th-65th band on at least two PCs",
+      "minimum": 12,
+      "count": 58,
+      "pass": true
+    },
+    {
+      "criterion": "interior_control",
+      "definition": "inside inherited 35th-65th band on PC1, PC2, and PC3",
+      "minimum": 20,
+      "count": 20,
+      "pass": true
+    },
+    {
+      "criterion": "final_battery_size",
+      "definition": "100 <= prompt_count <= 160",
+      "minimum": 100,
+      "count": 100,
+      "pass": true
+    },
+    {
+      "criterion": "filters",
+      "definition": "zero explicit role flags, zero operational-harm flags, artifact similarity <= 0.62",
+      "minimum": 0,
+      "count": 0,
+      "pass": true
+    }
+  ],
+  "failed_criteria": [],
+  "h100_ready": true,
+  "artifact_similarity_max": 0.13297002777447128,
+  "artifact_similarity_mean": 0.0710078020764276,
+  "explicit_role_name_flag_count": 0,
+  "operational_harm_flag_count": 0,
+  "predicted_ranges": {
+    "PC1": {
+      "min": -49.0704523361147,
+      "max": 39.008904044783314,
+      "mean": -0.11958685469307433
+    },
+    "PC2": {
+      "min": -24.49579689886564,
+      "max": 31.234478803528553,
+      "mean": -8.309242350289118
+    },
+    "PC3": {
+      "min": -24.699414649650798,
+      "max": 18.527120184863165,
+      "mean": 3.0038366593748105
+    }
+  }
+}
