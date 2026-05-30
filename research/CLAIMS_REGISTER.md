@@ -219,3 +219,12 @@ Evidence: Local `data/traits/instructions/*.json` contains 240 trait artifacts m
 Counterevidence: Forecasting readiness covers prompt artifacts and released vector targets, not generated response corpora. Strict leakage-controlled forecasting should exclude eval prompts and possibly target labels from model inputs.
 Dependencies: `research/outputs/prompt_artifact_inventory/prompt_artifact_inventory_report.md`, `research/outputs/prompt_artifact_inventory/trait_vector_name_match_report.csv`, `research/outputs/prompt_artifact_inventory/forecasting_dataset_feasibility.md`
 Last Updated: 2026-05-30
+
+## 24. Prompt Text Forecasts Geometry On Held-Out Concepts
+
+Claim: Prompt text alone contains sufficient information to forecast persona geometry on unseen concepts, establishing persona geometry as predictive over released prompt artifacts rather than purely descriptive of completed vectors.
+Status: Supported
+Evidence: On a strict holdout-by-trait split, leakage-control elastic-net TF-IDF using descriptions, instructions, and questions with explicit target names replaced predicted held-out trait PCs with mean R2=0.389: PC1 0.414, PC2 0.304, PC3 0.450. On held-out roles, the same model predicted persona PCs with mean R2=0.621: PC1 0.783, PC2 0.577, PC3 0.504. Nearest-neighbor semantic retrieval was much weaker on held-out leakage-control traits, mean R2=-0.021.
+Counterevidence: This is a released prompt-artifact forecasting result, not a new activation-generation test. It uses TF-IDF over artifact text, so lexical/register regularities may contribute substantially. It does not prove execution-time steering or safety-control reliability.
+Dependencies: `research/outputs/prompt_to_geometry_forecasting/forecasting_dataset_summary.md`, `research/outputs/prompt_to_geometry_forecasting/forecasting_results.json`, `research/outputs/prompt_to_geometry_forecasting/forecasting_model_comparison.csv`
+Last Updated: 2026-05-30

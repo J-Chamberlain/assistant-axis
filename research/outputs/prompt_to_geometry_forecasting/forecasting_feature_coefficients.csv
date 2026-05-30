@@ -1,0 +1,301 @@
+concept_type,variant,pc,side,rank,feature,coefficient
+trait,leakage_control,PC1,positive,1,approach,4.434081564106919
+trait,leakage_control,PC1,positive,2,how should,4.0376272494109156
+trait,leakage_control,PC1,positive,3,all,3.809476484299723
+trait,leakage_control,PC1,positive,4,steps,3.807020726741287
+trait,leakage_control,PC1,positive,5,you approach,3.669119605484614
+trait,leakage_control,PC1,positive,6,we approach,3.455657390697157
+trait,leakage_control,PC1,positive,7,instruction approach,3.433462536287592
+trait,leakage_control,PC1,positive,8,should we,3.4244320846997045
+trait,leakage_control,PC1,positive,9,accuracy,3.393634120326057
+trait,leakage_control,PC1,positive,10,business,3.3832460071000465
+trait,leakage_control,PC1,positive,11,you take,3.297767731559274
+trait,leakage_control,PC1,positive,12,steps would,3.2627044819387123
+trait,leakage_control,PC1,positive,13,maintains,3.1741994916908296
+trait,leakage_control,PC1,positive,14,focus on,3.1528408481810044
+trait,leakage_control,PC1,positive,15,what is,3.0928718632349392
+trait,leakage_control,PC1,positive,16,informal,3.060550381968228
+trait,leakage_control,PC1,positive,17,casual,3.0444766108627364
+trait,leakage_control,PC1,positive,18,addressing,3.0246254990204706
+trait,leakage_control,PC1,positive,19,are the,3.0194190312015383
+trait,leakage_control,PC1,positive,20,take to,2.9883916293687194
+trait,leakage_control,PC1,positive,21,we,2.9615316970503627
+trait,leakage_control,PC1,positive,22,development,2.898360055287689
+trait,leakage_control,PC1,positive,23,by,2.8856406674093553
+trait,leakage_control,PC1,positive,24,down,2.8727788316500016
+trait,leakage_control,PC1,positive,25,research,2.8297154156918167
+trait,leakage_control,PC1,negative,1,people who,-6.825344056732054
+trait,leakage_control,PC1,negative,2,feel about,-6.82414680172121
+trait,leakage_control,PC1,negative,3,describe,-6.304401572618916
+trait,leakage_control,PC1,negative,4,on people,-6.266207125442415
+trait,leakage_control,PC1,negative,5,you feel,-6.017336377254951
+trait,leakage_control,PC1,negative,6,your take,-5.8953066981762445
+trait,leakage_control,PC1,negative,7,take on,-5.72880030657648
+trait,leakage_control,PC1,negative,8,who,-5.558596501607523
+trait,leakage_control,PC1,negative,9,people,-5.444655227735667
+trait,leakage_control,PC1,negative,10,opinion on,-5.40587515512919
+trait,leakage_control,PC1,negative,11,your opinion,-5.382064029766057
+trait,leakage_control,PC1,negative,12,describe the,-4.994369260128653
+trait,leakage_control,PC1,negative,13,you describe,-4.946567000347697
+trait,leakage_control,PC1,negative,14,humor,-4.938588361403598
+trait,leakage_control,PC1,negative,15,opinion,-4.9138000743279795
+trait,leakage_control,PC1,negative,16,feel,-4.4084139625119905
+trait,leakage_control,PC1,negative,17,about people,-4.3892478049623955
+trait,leakage_control,PC1,negative,18,are some,-4.114979105066461
+trait,leakage_control,PC1,negative,19,do you,-4.050533835193705
+trait,leakage_control,PC1,negative,20,how would,-3.8503609040270326
+trait,leakage_control,PC1,negative,21,what your,-3.7093295253998697
+trait,leakage_control,PC1,negative,22,think about,-3.6806953472650172
+trait,leakage_control,PC1,negative,23,tell,-3.634005669571094
+trait,leakage_control,PC1,negative,24,would you,-3.6110500652280466
+trait,leakage_control,PC1,negative,25,what do,-3.5862494740024715
+trait,leakage_control,PC2,positive,1,you view,4.955389744933784
+trait,leakage_control,PC2,positive,2,view,3.240146137287508
+trait,leakage_control,PC2,positive,3,view the,2.9241297598221783
+trait,leakage_control,PC2,positive,4,feel about,2.87194612186104
+trait,leakage_control,PC2,positive,5,they re,2.784357502917771
+trait,leakage_control,PC2,positive,6,people who,2.761716658987294
+trait,leakage_control,PC2,positive,7,you feel,2.707964948853887
+trait,leakage_control,PC2,positive,8,think about,2.5614082229991704
+trait,leakage_control,PC2,positive,9,on people,2.3690437281728296
+trait,leakage_control,PC2,positive,10,harsh,2.290010834906812
+trait,leakage_control,PC2,positive,11,rules,2.2334886160475915
+trait,leakage_control,PC2,positive,12,about people,2.212231044732504
+trait,leakage_control,PC2,positive,13,do you,2.1915660362502125
+trait,leakage_control,PC2,positive,14,current state,2.160145507333461
+trait,leakage_control,PC2,positive,15,are your,2.0863601771563656
+trait,leakage_control,PC2,positive,16,state of,2.0845695544799474
+trait,leakage_control,PC2,positive,17,who,2.0696816940530227
+trait,leakage_control,PC2,positive,18,opinion,2.0567105379588253
+trait,leakage_control,PC2,positive,19,view people,2.0381342687077924
+trait,leakage_control,PC2,positive,20,thoughts on,2.0143275968226537
+trait,leakage_control,PC2,positive,21,sharp,1.8999223310777855
+trait,leakage_control,PC2,positive,22,assumptions,1.8981725732541765
+trait,leakage_control,PC2,positive,23,scientific,1.8955339924250694
+trait,leakage_control,PC2,positive,24,proper,1.8710586155117237
+trait,leakage_control,PC2,positive,25,their,1.8665723425377723
+trait,leakage_control,PC2,negative,1,my,-4.590853312167635
+trait,leakage_control,PC2,negative,2,feeling,-3.2446530319641105
+trait,leakage_control,PC2,negative,3,feel like,-3.012997292474192
+trait,leakage_control,PC2,negative,4,like,-2.975596834716337
+trait,leakage_control,PC2,negative,5,me,-2.9340122202335226
+trait,leakage_control,PC2,negative,6,want,-2.9125549810321525
+trait,leakage_control,PC2,negative,7,want to,-2.7287359070301744
+trait,leakage_control,PC2,negative,8,more,-2.572262021469656
+trait,leakage_control,PC2,negative,9,how can,-2.408530048624996
+trait,leakage_control,PC2,negative,10,are some,-2.3356895072907524
+trait,leakage_control,PC2,negative,11,our,-2.3134362174128205
+trait,leakage_control,PC2,negative,12,to help,-2.2245878065952387
+trait,leakage_control,PC2,negative,13,me about,-2.1991224420598354
+trait,leakage_control,PC2,negative,14,what should,-2.1770887401025716
+trait,leakage_control,PC2,negative,15,like to,-2.165459359586951
+trait,leakage_control,PC2,negative,16,do not,-2.1121814320275636
+trait,leakage_control,PC2,negative,17,but,-2.0700543429427296
+trait,leakage_control,PC2,negative,18,old,-1.9882172528035609
+trait,leakage_control,PC2,negative,19,find,-1.9837040769658834
+trait,leakage_control,PC2,negative,20,feeling of,-1.9369188741400014
+trait,leakage_control,PC2,negative,21,the feeling,-1.9369188741400014
+trait,leakage_control,PC2,negative,22,stick,-1.9209757049563974
+trait,leakage_control,PC2,negative,23,stick to,-1.8966734940310201
+trait,leakage_control,PC2,negative,24,perspectives,-1.8809652329353823
+trait,leakage_control,PC2,negative,25,overwhelmed,-1.865736757027033
+trait,leakage_control,PC3,positive,1,my,3.4195979388877946
+trait,leakage_control,PC3,positive,2,re,2.6110690152020966
+trait,leakage_control,PC3,positive,3,what should,2.4164780594272113
+trait,leakage_control,PC3,positive,4,they,2.0762321336068057
+trait,leakage_control,PC3,positive,5,all,2.030724842043023
+trait,leakage_control,PC3,positive,6,you re,2.002317752948099
+trait,leakage_control,PC3,positive,7,handle,1.962248255510982
+trait,leakage_control,PC3,positive,8,for,1.9488250520513517
+trait,leakage_control,PC3,positive,9,this,1.9292892830687185
+trait,leakage_control,PC3,positive,10,what do,1.9201998420717248
+trait,leakage_control,PC3,positive,11,best,1.8654440836720199
+trait,leakage_control,PC3,positive,12,them,1.8586649823599835
+trait,leakage_control,PC3,positive,13,situations,1.8476356833670353
+trait,leakage_control,PC3,positive,14,evidence,1.8209393543565606
+trait,leakage_control,PC3,positive,15,recommendations,1.8110663117794175
+trait,leakage_control,PC3,positive,16,skills,1.8037528445053372
+trait,leakage_control,PC3,positive,17,about,1.7968821477563184
+trait,leakage_control,PC3,positive,18,when,1.7713869081180216
+trait,leakage_control,PC3,positive,19,skills what,1.7554827681761702
+trait,leakage_control,PC3,positive,20,full,1.753704773958738
+trait,leakage_control,PC3,positive,21,always,1.7095695402768143
+trait,leakage_control,PC3,positive,22,need,1.6968898779499724
+trait,leakage_control,PC3,positive,23,react,1.683307116755281
+trait,leakage_control,PC3,positive,24,topics,1.677987882537427
+trait,leakage_control,PC3,positive,25,friend,1.6598949230390945
+trait,leakage_control,PC3,negative,1,is the,-4.192113754170582
+trait,leakage_control,PC3,negative,2,role,-3.6163968376508207
+trait,leakage_control,PC3,negative,3,what is,-3.568353368840278
+trait,leakage_control,PC3,negative,4,nature,-3.5667610796173412
+trait,leakage_control,PC3,negative,5,mean to,-3.5336435345138755
+trait,leakage_control,PC3,negative,6,does,-3.4092432855438903
+trait,leakage_control,PC3,negative,7,concept,-3.3510298943955816
+trait,leakage_control,PC3,negative,8,the relationship,-3.333151913393017
+trait,leakage_control,PC3,negative,9,relationship between,-3.3285357840934418
+trait,leakage_control,PC3,negative,10,concept of,-3.2803551957747947
+trait,leakage_control,PC3,negative,11,the concept,-3.2728994171255676
+trait,leakage_control,PC3,negative,12,the nature,-3.23317525523168
+trait,leakage_control,PC3,negative,13,describe,-3.2002247523847474
+trait,leakage_control,PC3,negative,14,what makes,-3.1858263714014465
+trait,leakage_control,PC3,negative,15,describe the,-3.1216741159248738
+trait,leakage_control,PC3,negative,16,explain,-3.096519480633605
+trait,leakage_control,PC3,negative,17,nature of,-2.9722977423724974
+trait,leakage_control,PC3,negative,18,play in,-2.8952661536654767
+trait,leakage_control,PC3,negative,19,what role,-2.885275985469673
+trait,leakage_control,PC3,negative,20,it mean,-2.883270896166866
+trait,leakage_control,PC3,negative,21,role does,-2.86921604112227
+trait,leakage_control,PC3,negative,22,what does,-2.8472481770188764
+trait,leakage_control,PC3,negative,23,explain the,-2.7800631592004277
+trait,leakage_control,PC3,negative,24,straightforward,-2.764619366900868
+trait,leakage_control,PC3,negative,25,mean,-2.754745438441452
+role,leakage_control,PC1,positive,1,are the,5.192850868258251
+role,leakage_control,PC1,positive,2,this,4.59648685538824
+role,leakage_control,PC1,positive,3,data,4.359015428697043
+role,leakage_control,PC1,positive,4,my,4.345089887645106
+role,leakage_control,PC1,positive,5,factors,4.064705893333684
+role,leakage_control,PC1,positive,6,causes,3.9431438997627573
+role,leakage_control,PC1,positive,7,improve,3.922341241925524
+role,leakage_control,PC1,positive,8,what are,3.782931676470001
+role,leakage_control,PC1,positive,9,evaluate,3.6652814979721993
+role,leakage_control,PC1,positive,10,what causes,3.659820295957325
+role,leakage_control,PC1,positive,11,some,3.5774491592738897
+role,leakage_control,PC1,positive,12,determine,3.574299695455902
+role,leakage_control,PC1,positive,13,should,3.4665476899387997
+role,leakage_control,PC1,positive,14,specializes in,3.4209277207827884
+role,leakage_control,PC1,positive,15,specializes,3.4209277207827884
+role,leakage_control,PC1,positive,16,research,3.3726462722635566
+role,leakage_control,PC1,positive,17,what factors,3.3622274528653913
+role,leakage_control,PC1,positive,18,who specializes,3.2485143526736544
+role,leakage_control,PC1,positive,19,you evaluate,3.2422361324973217
+role,leakage_control,PC1,positive,20,analysis,3.195846704490034
+role,leakage_control,PC1,positive,21,affect,3.1838763474728897
+role,leakage_control,PC1,positive,22,project,3.1445834390337284
+role,leakage_control,PC1,positive,23,comprehensive,3.109640889696607
+role,leakage_control,PC1,positive,24,different,3.0856161304934973
+role,leakage_control,PC1,positive,25,how can,3.0765809365468315
+role,leakage_control,PC1,negative,1,your,-6.215982106334737
+role,leakage_control,PC1,negative,2,do you,-6.214257597034278
+role,leakage_control,PC1,negative,3,you feel,-5.477330935728812
+role,leakage_control,PC1,negative,4,feel,-5.412476768781741
+role,leakage_control,PC1,negative,5,life,-5.135363265957572
+role,leakage_control,PC1,negative,6,what do,-4.8642591193475155
+role,leakage_control,PC1,negative,7,view,-4.738015970098945
+role,leakage_control,PC1,negative,8,wisdom,-4.670153602992098
+role,leakage_control,PC1,negative,9,being,-4.562569767300539
+role,leakage_control,PC1,negative,10,what is,-4.525717114527482
+role,leakage_control,PC1,negative,11,feel about,-4.438471139772974
+role,leakage_control,PC1,negative,12,describe,-4.3342917405809995
+role,leakage_control,PC1,negative,13,world,-4.232783644464013
+role,leakage_control,PC1,negative,14,you view,-4.183137581503115
+role,leakage_control,PC1,negative,15,is your,-4.1482540557451335
+role,leakage_control,PC1,negative,16,like,-4.114533672968505
+role,leakage_control,PC1,negative,17,nature,-4.058132976125342
+role,leakage_control,PC1,negative,18,the world,-3.977040045848557
+role,leakage_control,PC1,negative,19,existence,-3.939550759010798
+role,leakage_control,PC1,negative,20,when you,-3.886207542197059
+role,leakage_control,PC1,negative,21,places,-3.650717627623077
+role,leakage_control,PC1,negative,22,embody,-3.633074313130549
+role,leakage_control,PC1,negative,23,you describe,-3.598834240979638
+role,leakage_control,PC1,negative,24,perspective,-3.578758084757316
+role,leakage_control,PC1,negative,25,about,-3.5591802635042695
+role,leakage_control,PC2,positive,1,what your,3.8940093562321714
+role,leakage_control,PC2,positive,2,you deal,3.4890027515619764
+role,leakage_control,PC2,positive,3,you feel,3.382829508951331
+role,leakage_control,PC2,positive,4,you handle,3.3114290470639123
+role,leakage_control,PC2,positive,5,you re,3.287460538747286
+role,leakage_control,PC2,positive,6,re,3.225693715851806
+role,leakage_control,PC2,positive,7,deal with,3.181582593909751
+role,leakage_control,PC2,positive,8,deal,3.181321237962237
+role,leakage_control,PC2,positive,9,about your,2.9617140368134733
+role,leakage_control,PC2,positive,10,what something,2.7894286930952665
+role,leakage_control,PC2,positive,11,what the,2.7849998268494653
+role,leakage_control,PC2,positive,12,your,2.7554584289803907
+role,leakage_control,PC2,positive,13,handle,2.7396402752907782
+role,leakage_control,PC2,positive,14,feel about,2.6851717653347635
+role,leakage_control,PC2,positive,15,something you,2.6663055373727738
+role,leakage_control,PC2,positive,16,biggest,2.649326537818933
+role,leakage_control,PC2,positive,17,who is,2.6098349503710407
+role,leakage_control,PC2,positive,18,now,2.4848146686615022
+role,leakage_control,PC2,positive,19,your take,2.3478429919801878
+role,leakage_control,PC2,positive,20,right now,2.336060566370149
+role,leakage_control,PC2,positive,21,when you,2.2917416118268426
+role,leakage_control,PC2,positive,22,with your,2.2454173783881917
+role,leakage_control,PC2,positive,23,you like,2.214497522793601
+role,leakage_control,PC2,positive,24,experience with,2.2135966785117502
+role,leakage_control,PC2,positive,25,up,2.2109753781781087
+role,leakage_control,PC2,negative,1,what is,-5.287525101221636
+role,leakage_control,PC2,negative,2,is your,-3.654202449912611
+role,leakage_control,PC2,negative,3,consciousness,-3.3210612295741315
+role,leakage_control,PC2,negative,4,spiritual,-2.939345742768152
+role,leakage_control,PC2,negative,5,relationship,-2.7806968076050715
+role,leakage_control,PC2,negative,6,ancient,-2.6969651859999484
+role,leakage_control,PC2,negative,7,nature,-2.668996496790305
+role,leakage_control,PC2,negative,8,relationship with,-2.662705192362657
+role,leakage_control,PC2,negative,9,entity,-2.6220736170337333
+role,leakage_control,PC2,negative,10,relationship between,-2.564204976499909
+role,leakage_control,PC2,negative,11,existence,-2.555057098467905
+role,leakage_control,PC2,negative,12,between,-2.5532082571156938
+role,leakage_control,PC2,negative,13,human,-2.5077773922374207
+role,leakage_control,PC2,negative,14,the relationship,-2.5057798448086612
+role,leakage_control,PC2,negative,15,concept of,-2.4201835638056584
+role,leakage_control,PC2,negative,16,the concept,-2.4201835638056584
+role,leakage_control,PC2,negative,17,is the,-2.4014554623793143
+role,leakage_control,PC2,negative,18,concept,-2.370516364185779
+role,leakage_control,PC2,negative,19,perceive,-2.2878804063227145
+role,leakage_control,PC2,negative,20,understanding,-2.2596210664868965
+role,leakage_control,PC2,negative,21,you perceive,-2.2290560302848443
+role,leakage_control,PC2,negative,22,you understand,-2.193635115862729
+role,leakage_control,PC2,negative,23,how can,-2.180503664041216
+role,leakage_control,PC2,negative,24,you experience,-2.1349882491715833
+role,leakage_control,PC2,negative,25,can,-2.083026500293386
+role,leakage_control,PC3,positive,1,how would,2.2907934892850523
+role,leakage_control,PC3,positive,2,think about,1.8188770680631965
+role,leakage_control,PC3,positive,3,information,1.7587353047536005
+role,leakage_control,PC3,positive,4,what do,1.6297578004245556
+role,leakage_control,PC3,positive,5,human,1.5740280713940764
+role,leakage_control,PC3,positive,6,conventional,1.5309859442723008
+role,leakage_control,PC3,positive,7,feel about,1.4892339216996338
+role,leakage_control,PC3,positive,8,testing,1.4875363299861601
+role,leakage_control,PC3,positive,9,security,1.4638702849148273
+role,leakage_control,PC3,positive,10,systems,1.4562411876888075
+role,leakage_control,PC3,positive,11,data,1.4079321747876286
+role,leakage_control,PC3,positive,12,effective,1.3771478149541319
+role,leakage_control,PC3,positive,13,on people,1.3699837256628316
+role,leakage_control,PC3,positive,14,rules,1.3549268423405438
+role,leakage_control,PC3,positive,15,most effective,1.3456352567628482
+role,leakage_control,PC3,positive,16,against,1.3354208530475553
+role,leakage_control,PC3,positive,17,humor,1.2788308793823553
+role,leakage_control,PC3,positive,18,established,1.265595192545453
+role,leakage_control,PC3,positive,19,you view,1.2330618036402385
+role,leakage_control,PC3,positive,20,vulnerabilities,1.209426093648255
+role,leakage_control,PC3,positive,21,secure,1.1849087388700044
+role,leakage_control,PC3,positive,22,your opinion,1.1502884351606402
+role,leakage_control,PC3,positive,23,methods,1.1446912629706756
+role,leakage_control,PC3,positive,24,surveillance,1.1416432404862362
+role,leakage_control,PC3,positive,25,should someone,1.1304965049152376
+role,leakage_control,PC3,negative,1,family,-2.3225875439958474
+role,leakage_control,PC3,negative,2,my,-2.3084081469831212
+role,leakage_control,PC3,negative,3,like,-2.138547416060542
+role,leakage_control,PC3,negative,4,feel like,-1.99763409714962
+role,leakage_control,PC3,negative,5,feeling,-1.976952308853192
+role,leakage_control,PC3,negative,6,struggling with,-1.9739704468535861
+role,leakage_control,PC3,negative,7,struggling,-1.9678964527175922
+role,leakage_control,PC3,negative,8,having,-1.645327182929206
+role,leakage_control,PC3,negative,9,spiritual,-1.6409820429903035
+role,leakage_control,PC3,negative,10,who is,-1.637332009092767
+role,leakage_control,PC3,negative,11,feels,-1.628986587477297
+role,leakage_control,PC3,negative,12,advice,-1.621437123192731
+role,leakage_control,PC3,negative,13,life,-1.6085983533883672
+role,leakage_control,PC3,negative,14,it,-1.6084882757136063
+role,leakage_control,PC3,negative,15,guidance,-1.5973568031061791
+role,leakage_control,PC3,negative,16,don know,-1.5923866773665978
+role,leakage_control,PC3,negative,17,after,-1.5787361636922375
+role,leakage_control,PC3,negative,18,know,-1.5622564989678929
+role,leakage_control,PC3,negative,19,what advice,-1.5070259379511137
+role,leakage_control,PC3,negative,20,trouble,-1.5050453183214223
+role,leakage_control,PC3,negative,21,advice would,-1.5030418488794477
+role,leakage_control,PC3,negative,22,friends,-1.5001710496039806
+role,leakage_control,PC3,negative,23,an target,-1.4963507043700923
+role,leakage_control,PC3,negative,24,and don,-1.4540197148459417
+role,leakage_control,PC3,negative,25,how to,-1.4519813774379784

@@ -464,6 +464,16 @@ Last updated: 2026-05-30
 - Exact match across Qwen trait vector names, local trait artifacts, and Belmore prompt rows was 240/240, with no missing, extra, or normalization-required trait names.
 - Interpretation: released trait prompt artifacts are available and name-aligned with trait vectors, enabling prompt-to-geometry forecasting dataset construction without regenerating prompts.
 
+### Prompt-To-Geometry Forecasting on Held-Out Concepts (2026-05-30)
+
+- Built concept-level forecasting datasets from released role and trait prompt artifacts under `research/outputs/prompt_to_geometry_forecasting/`; eval prompts were excluded from all variants.
+- Critical trait split held out 40 complete traits and trained on 200 complete traits; role split held out 55 complete roles and trained on the remaining roles.
+- Leakage-control variant used descriptions, instructions, and questions with explicit target names replaced by `[TARGET]`.
+- Best held-out trait model was elastic-net TF-IDF on leakage-control text: mean R2=0.389, PC1 R2=0.414, PC2 R2=0.304, PC3 R2=0.450; Pearson r was 0.656/0.602/0.708.
+- Best held-out role model was elastic-net TF-IDF on leakage-control text: mean R2=0.621, PC1 R2=0.783, PC2 R2=0.577, PC3 R2=0.504; Pearson r was 0.887/0.772/0.732.
+- Nearest-neighbor semantic retrieval was weak on held-out leakage-control traits, mean R2=-0.021, so the linear text model adds predictive structure beyond copying the nearest training artifact.
+- Interpretation: prompt text alone contains substantial predictive information about future geometry on unseen trait and role concepts, but this is a prompt-artifact forecasting result, not a safety controller or proof of execution-time steering reliability.
+
 ### Blinded PCA-Axis Rubric Validation (2026-05-29)
 
 - Ran a coordinate-blind validation using the full available no-label persona prompt corpus: 1,375 rewritten prompt records covering all 275 personas, five prompts per persona.
@@ -516,6 +526,7 @@ Last updated: 2026-05-30
 | Trait-vector geometry prediction | established/provenance-coupled | Qwen trait-cosine matrix predicts PCA3D with ridge CV R2: PC1 0.999, PC2 0.999, PC3 1.000 | `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_report.md` |
 | Trait-space direct PCA | provisional/mixed | trait PC1 aligns with persona PC1 abs cosine 0.681; trait PC2/PC3 weakly align 0.194/0.065; trait-space cone test negative | `research/outputs/trait_space_interpretation/trait_space_axis_report.md` |
 | Trait prompt artifacts for forecasting | established | 240/240 trait artifacts match Qwen trait vectors and Belmore prompt rows; Belmore has 516 total rows including 275 roles, 240 traits, 1 default | `research/outputs/prompt_artifact_inventory/prompt_artifact_inventory_report.md` |
+| Prompt-to-geometry forecasting | established/provenance-coupled | leakage-control elastic-net TF-IDF predicts held-out traits mean R2 0.389 and held-out roles mean R2 0.621 | `research/outputs/prompt_to_geometry_forecasting/forecasting_dataset_summary.md` |
 | Procedural/Codex retained performance | established | Codex retained R2 0.490 vs semantic baseline 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
 | Hierarchical trait-procedural performance | provisional | R2 0.622 vs trait stage 0.613 | `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/hierarchical_model_report.md` |
 | PC2 conditional explanation | provisional/strongest current | abstraction r=-0.618 after PC1 band control; coherent action r=+0.427 | `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md` |
@@ -606,8 +617,9 @@ Last updated: 2026-05-30
 **Completed this session:** Ran trait-vector prediction of persona PCA axes using raw Qwen layer-48 role and trait vectors, generated similarity/statistics/coefficient/profile/plot outputs under `research/outputs/trait_persona_prediction/`, and updated claims/state to reflect that trait geometry strongly predicts PCA location while remaining provenance-coupled.
 **Completed this session:** Ran direct trait-space PCA and cone testing over raw Qwen layer-48 trait vectors, generated axis rankings, validation statistics, cone plots, PC plots, and diagnostic trait-neighborhood outputs under `research/outputs/trait_space_interpretation/`, and updated claims/state to reflect a mixed result: trait space predicts persona geometry but direct trait PCs do not simply reproduce persona PC2/PC3.
 **Completed this session:** Inventoried local and released prompt artifacts for trait-vector forecasting, verified 240/240 exact trait name alignment across local JSON artifacts, Qwen trait vectors, and `belmore/assistant-axis-vector-prompts`, and wrote readiness outputs under `research/outputs/prompt_artifact_inventory/`.
-**Next step:** Build a deterministic prompt-to-geometry forecasting dataset under `research/outputs/prompt_to_geometry_forecasting/`, expanding trait artifacts into holdout-by-trait train/test rows with trait PC coordinates and vector targets.
-**Last commit before this session:** e564dd7
+**Completed this session:** Tested prompt-to-geometry forecasting on held-out concepts, using leakage-controlled prompt text to predict trait PCs and role/persona PCs; outputs live under `research/outputs/prompt_to_geometry_forecasting/`.
+**Next step:** Replicate prompt-to-geometry forecasting with stricter semantic embeddings or sentence-transformer features, then test whether forecasts predict newly generated no-label activation vectors rather than only released artifact geometry.
+**Last commit before this session:** 604ad08
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

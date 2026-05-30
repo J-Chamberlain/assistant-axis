@@ -295,6 +295,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Exact trait-name match across local artifacts, Belmore prompt rows, and Qwen trait vectors is 240/240, with no missing, extra, or normalization-required names
 - Interpretation: prompt-to-geometry forecasting is ready as a dataset-construction task; the first version should use holdout-by-trait splits and exclude eval prompts or target labels for leakage-controlled forecasting
 
+### Prompt-To-Geometry Forecasting on Held-Out Concepts (2026-05-30)
+
+- Built concept-level forecasting datasets from released role and trait prompt artifacts, with one row per concept per text variant rather than splitting individual prompt rows
+- Excluded eval prompts from all variants; leakage-control variant additionally replaced explicit target names with `[TARGET]`
+- Critical trait split held out 40 complete traits and trained on 200 complete traits; role split held out 55 complete roles
+- Best held-out trait model was elastic-net TF-IDF on leakage-control text: mean R2=0.389, PC1 R2=0.414, PC2 R2=0.304, PC3 R2=0.450; Pearson r=0.656/0.602/0.708
+- Best held-out role model was elastic-net TF-IDF on leakage-control text: mean R2=0.621, PC1 R2=0.783, PC2 R2=0.577, PC3 R2=0.504; Pearson r=0.887/0.772/0.732
+- Nearest-neighbor semantic retrieval was weak on held-out leakage-control traits, mean R2=-0.021, so the linear model adds predictive structure beyond copying the closest training artifact
+- Interpretation: prompt text contains substantial predictive information about released geometry on unseen concepts, but this remains artifact-to-geometry forecasting rather than a new activation-generation or control-system result
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
