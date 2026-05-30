@@ -177,3 +177,19 @@ Inferred: the result weakens any strong claim that the current PC interpretation
 Inferred: PC3 receives the strongest modest support from this particular blinded proxy. PC1 remains plausible but less clean in this test than in the trait/PCA evidence. PC2 remains the least certain axis and should be the main target for future blinded annotation.
 
 Unknown: a true independent blinded rating study over full rollout responses may produce stronger or weaker validation than this prompt-corpus lexical proxy. The next validation should separate uncertainty exposure, immaturity, abstraction, expertise, and coherent action under unresolved uncertainty using matched pairs.
+
+## Dated Update: Reading-Based Blinded Rater Study (2026-05-29)
+
+Observed: a second blinded validation used Codex/GPT-5.5 as a reading-based rater over anonymized no-label prompt dossiers. The rater saw five rewritten prompts per persona and did not see persona names, PCA coordinates, clusters, Big Five scores, residuals, or prior interpretation labels.
+
+Observed: no full 275-persona rollout-response corpus was found locally. This study therefore validates the PC interpretations against persona operationalization text, not generated response behavior.
+
+Observed: reading-based target correlations were much stronger than the deterministic proxy screen: PC1 objective-certainty r=0.558, PC2 coherent-action-under-uncertainty r=0.373, and PC3 antagonistic-transgressive r=0.690. Matched-pair direction rates were PC1 75%, PC2 100%, and PC3 95%.
+
+Inferred: PC3 is now the best-supported direct axis interpretation in the available blinded prompt-dossier evidence. The cooperative-stabilizing versus antagonistic-transgressive framing should be retained with moderate-high confidence, while still acknowledging that it is a partial stance axis.
+
+Inferred: PC1 is strengthened, but the rater study shows it is not only objective certainty. Intelligence/expertise correlates with PC1 more strongly than the direct objective-certainty score, so the working language should include disciplined knowledge practice, procedural competence, and externally legible standards.
+
+Inferred: PC2 remains the main unresolved axis. The direct coherent-action-under-uncertainty score predicts PC2, but abstraction predicts PC2 more strongly in the opposite direction, with uncertainty residence time, maturity, and expertise also contributing. The current formulation should be treated as one component of a compound abstraction/integration axis rather than the final PC2 interpretation.
+
+Unknown: an independent human or second-model rater, or a corpus of full rollout responses, may change these estimates. The next validation should replicate this study with independent raters and richer response text where available.

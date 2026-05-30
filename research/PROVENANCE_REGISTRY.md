@@ -181,3 +181,15 @@ Generating script: `research/q2_stability/qwen/scripts/blinded_axis_rubric_valid
 Dependent analyses: PC1/PC2/PC3 interpretation confidence, future blinded rater study design, Paper 1.5 methodology caveats.
 Current status: Provisional validation screen.
 Notes/caveats: Uses all five no-label prompts for all 275 personas and excludes persona names/PCA coordinates during scoring. It is a lexical-semantic proxy, not a true independent human or LLM blinded-rating study. Target correlations were positive but modest: PC1 r=0.247, PC2 r=0.224, PC3 r=0.349; matched-pair validation was weak.
+
+## blinded axis rater study outputs
+
+Artifact: Reading-based blinded PCA-axis rater study over anonymized persona dossiers.
+Location: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`
+Created by: Codex/GPT-5.5.
+Model used: Codex/GPT-5.5 as rater, analysis model, and script-author model.
+Source inputs: `research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl`, `research/visualizations/geometry_viz_data.json`, and corpus inventory over local response/prompt sources.
+Generating script: `research/q2_stability/qwen/scripts/blinded_axis_rater_study.py`
+Dependent analyses: PC1/PC2/PC3 interpretation confidence, Paper 1.5 axis language, future independent-rater study design.
+Current status: Provisional but stronger than the lexical-proxy screen.
+Notes/caveats: Full 275-persona rollout-response corpus was not found locally; dossiers use all five no-label rewritten prompts per persona. Persona names, PCA coordinates, clusters, Big Five scores, residuals, and prior labels were hidden from the rater. This is Codex-as-rater rather than independent human or second-model annotation. Target correlations were PC1 r=0.558, PC2 r=0.373, PC3 r=0.690; matched-pair validation was PC1 75%, PC2 100%, PC3 95%.

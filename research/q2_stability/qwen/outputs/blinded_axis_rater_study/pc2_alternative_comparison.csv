@@ -1,0 +1,7 @@
+score,pc,pearson,spearman,target_aligned
+abstraction_score,pc2,-0.655353075387035,-0.6584357294950652,False
+uncertainty_residence_time_score,pc2,-0.40044258133751737,-0.33434452671522147,False
+maturity_score,pc2,-0.3767904859864204,-0.2554477180582195,False
+pc2_coherent_action_under_uncertainty_score,pc2,0.37294666239722307,0.303186444592896,True
+intelligence_expertise_score,pc2,-0.3516356800631936,-0.27163200032539964,False
+uncertainty_exposure_score,pc2,-0.08351961841231315,-0.09704561060507667,False

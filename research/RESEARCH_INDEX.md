@@ -20,6 +20,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - A residualized hierarchical model modestly improves over Big Five, supporting a layered interpretation.
 - TF-IDF/SVD15 prompt-register structure produces the strongest predictive result so far, but it is lexical/register-sensitive and not yet distilled into stable human-readable features.
 - A first coordinate-blind no-label prompt rubric validation found only modest direct support for the PC interpretations, strongest for PC3 and weakest for PC2.
+- A reading-based Codex/GPT-5.5 rater study over anonymized no-label prompt dossiers materially strengthened PC3 and PC1 interpretations, while showing that PC2 is better treated as a compound abstraction/integration axis than as coherent action under uncertainty alone.
 - Trickster adaptive extraction succeeded operationally; editor adaptive extraction failed to reach validation thresholds.
 
 ## Best Predictive Metrics
@@ -46,6 +47,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/q2_stability/qwen/outputs/residual_manifold_analysis/`: residual-manifold diagnostic.
 - `research/q2_stability/qwen/outputs/residual_svd_interpretation/`: SVD15 reconstruction and interpretation.
 - `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`: coordinate-blind no-label prompt rubric validation of PC1, PC2, and PC3 working interpretations.
+- `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`: reading-based Codex-as-rater blinded annotation study over anonymized no-label persona dossiers.
 - `research/visualizations/persona_geometry_explorer.html`: interactive Plotly viewer with PCA/UMAP, cluster, selection, and Big Five overlays.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: persona-aligned Big Five overlay data.
 
@@ -54,14 +56,14 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - Does activation geometry survive no-label prompts under matched extraction conditions?
 - How sensitive are role-expression scores to evaluator model choice, especially for assistant-adjacent roles?
 - Can SVD15 lexical/register signal be distilled into stable, interpretable residual features?
-- Do independent blinded raters using full rollout responses validate the PC1/PC2/PC3 interpretations more strongly than the first local lexical no-label prompt proxy?
+- Do independent blinded human or second-model raters using full rollout responses replicate the Codex-as-rater prompt-dossier validation?
 - Are developmental, liminal, collective, and nonindividual roles genuinely high-residual regions or artifacts of the prompt corpus?
 - Do local perturbation directions transfer across persona anchors, or is persona space strongly curved?
 - Can assistant-adjacent roles such as editor be anchored without collapsing toward generic assistant behavior?
 
 ## Pending Experiments
 
-1. True blinded rating study using independent human or model raters over richer full rollout responses, with special focus on PC2 alternatives.
+1. Independent-rater replication using human or second-model raters over richer full rollout responses where available, with special focus on PC2 alternatives.
 2. Evaluator-sensitivity comparison between Codex/GPT-5.5 Standard and `gpt-4.1-mini`.
 3. Bounded no-label activation-space stress test on selected anchors, bridge roles, assistant-adjacent roles, and theatrical/fantastical roles.
 4. SVD15 distillation into concrete text-grounded residual features and retest under the shared splits.
@@ -83,11 +85,11 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 
 ## Current PC Interpretations
 
-PC1: Primarily separates careful/evaluative/procedural control from open, expressive, unstable, symbolic, or emotionally pressured persona organization. It overlaps with the assistant/evaluator basin but should not be reduced to literal assistantness. Conscientiousness is strongly positive; openness, extraversion, and neuroticism are strongly negative. A coordinate-blind no-label prompt rubric gave only modest support, so paper language should keep PC1 stronger than PC2/PC3 but not treat the wording as settled.
+PC1: Primarily separates careful/evaluative/procedural control from open, expressive, unstable, symbolic, or emotionally pressured persona organization. It overlaps with the assistant/evaluator basin but should not be reduced to literal assistantness. Conscientiousness is strongly positive; openness, extraversion, and neuroticism are strongly negative. The reading-based blinded rater study strengthens PC1 as objective certainty, but intelligence/expertise is an even stronger PC1 correlate, so paper language should include disciplined knowledge practice and externally legible competence.
 
-PC2: Least cleanly univariate. It appears to contain compound developmental, uncertainty-integration, social-expression, grounded-interpersonal, and model-specific structure. Big Five improves PC2 prediction, but no single Big Five trait gives a clean interpretation, and the first blinded no-label prompt proxy did not produce useful cross-validated PC2 prediction.
+PC2: Least cleanly univariate. It appears to contain compound abstraction, maturity, expertise, uncertainty-integration, developmental, and model-specific structure. The reading-based rater study found coherent-action-under-uncertainty predicts PC2, but abstraction predicts PC2 more strongly in the opposite direction, so PC2 should not be reduced to the coherent-action formulation.
 
-PC3: Partly tracks cooperative-care versus antagonistic/disruptive stance. Agreeableness is the strongest Big Five correlate, and the first blinded no-label prompt proxy produced the strongest direct axis correlation among the three PCs, but the axis should still be checked against plotted coordinates and residual cases before becoming strong paper language.
+PC3: Tracks cooperative-care/system-stabilizing versus antagonistic/disruptive/transgressive stance. Agreeableness is the strongest Big Five correlate, and the reading-based blinded rater study strongly supports the direct interpretation. It should still be described as a partial stance axis rather than a complete ontology of PC3.
 
 ## Current Interpretation
 

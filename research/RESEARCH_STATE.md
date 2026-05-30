@@ -435,6 +435,17 @@
 - Interpretation: this is not a clean validation of the working axis interpretations from no-label prompt text alone; PC3 receives the strongest modest support, PC1 is positive but weaker than expected, and PC2 remains the least certain.
 - Caveat: this is a local lexical proxy study, not a true independent human or LLM blinded-rating study; the next test should use richer full rollout responses or independent blinded raters.
 
+### Reading-Based Blinded PCA-Axis Rater Study (2026-05-29)
+
+- Ran a reading-based Codex/GPT-5.5 rater study over anonymized no-label prompt dossiers covering 275 personas with five rewritten prompts per persona.
+- Full 275-persona rollout-response corpora were not found locally; response corpora exist for trickster/editor extraction and dyad subsets only, so the study validates persona operationalization text rather than full generated rollout behavior.
+- Persona names, PCA coordinates, clusters, Big Five scores, residuals, and prior interpretation labels were hidden from the rater until after scoring.
+- Target-aligned reading-based correlations were materially stronger than the prior lexical proxy: PC1 objective-certainty r=0.558, PC2 coherent-action-under-uncertainty r=0.373, and PC3 antagonistic-transgressive r=0.690.
+- Matched-pair validation improved to PC1 75%, PC2 100%, and PC3 95% direction-match rates over the top 20 close-orthogonal pairs per axis.
+- Three main rater scores predicted held-out PCA coordinates with CV R2: PC1 0.496, PC2 0.101, and PC3 0.522; expanded PC2 alternatives raised CV R2 to PC1 0.616, PC2 0.564, and PC3 0.686.
+- Interpretation: PC3 is now the best-supported direct axis interpretation in prompt-dossier evidence; PC1 is strengthened but partly entangled with intelligence/expertise; PC2 remains the main uncertainty because abstraction correlates more strongly with PC2 than the direct coherent-action score.
+- Caveat: this is Codex-as-rater, not an independent human or second-model blinded-rating study.
+
 ---
 
 ## 3. CURRENT STATE
@@ -451,6 +462,7 @@
 | SVD15 lexical/register performance | provisional | sem+BigFive+SVD15 R2 0.707 vs sem+BigFive 0.613 | `research/q2_stability/qwen/outputs/residual_svd_interpretation/residual_svd_interpretation_report.md` |
 | PC3 interpretation | provisional | preserve/exploit rubric r=-0.312; nurturing/competitive r=-0.319; agreeableness r=-0.477 | `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/pc3_hypothesis_report.md` |
 | Blinded no-label PC rubric validation | provisional/weak | target correlations: PC1 r=0.247, PC2 r=0.224, PC3 r=0.349; pairwise direction 35-40% | `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/blinded_axis_validation_report.md` |
+| Reading-based blinded PC rater study | provisional/stronger | target correlations: PC1 r=0.558, PC2 r=0.373, PC3 r=0.690; pairwise direction 75-100% | `research/q2_stability/qwen/outputs/blinded_axis_rater_study/blinded_axis_rater_report.md` |
 | Evaluator-model sensitivity | unresolved | harness exists, paired `gpt-4.1-mini` records blocked by quota | `research/q2_stability/qwen/evaluator_sensitivity/` |
 
 **Paper 1.5 current scope:** Paper 1.5 is now a persona-geometry interpretation paper. The working title is `Interpreting Persona Activation Geometry`. The main claim is that persona activation geometry appears to decompose into layered semantic, dispositional, procedural, lexical/register, and residual structures after methodological stress testing. Adaptive extraction remains important due diligence and tooling evidence, but it is no longer the primary paper frame.
@@ -497,6 +509,8 @@
 
 **Blinded axis-validation state:** `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/` now contains a coordinate-blind no-label prompt rubric validation for PC1, PC2, and PC3. It used all five no-label rewritten prompts for all 275 personas and found only modest direct correlations with PCA coordinates, strongest for PC3 and weakest for PC2; this should be treated as a provisional lexical-proxy screen rather than a true independent semantic-rating study.
 
+**Reading-based rater state:** `research/q2_stability/qwen/outputs/blinded_axis_rater_study/` now contains a stronger Codex-as-rater blinded annotation study using anonymized no-label prompt dossiers. PC3 is the strongest direct axis interpretation in this evidence; PC1 is strengthened but overlaps with intelligence/expertise; PC2 remains compound, with abstraction outperforming the direct coherent-action-under-uncertainty score.
+
 **Reporting standard:** `research/PROJECT_ORIENTATION.md` now includes an Enhanced Research Reporting section. Future Codex research reports should state what was done, what changed the current interpretation, key judgment calls, competing explanations, strongest unresolved uncertainty, confidence level, and recommended next test.
 
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
@@ -517,8 +531,9 @@
 **Completed this session:** Created `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md` to preserve current PC1, PC2, PC3, and cone-hypothesis interpretations with observed/inferred/speculative/unknown labels.
 **Completed this session:** Added Enhanced Research Reporting guidance to `research/PROJECT_ORIENTATION.md` so future research reports summarize interpretive significance, judgment calls, uncertainty, confidence, and next tests.
 **Completed this session:** Ran the blinded PCA-axis rubric validation over the full available no-label prompt corpus, wrote outputs under `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`, and updated the findings ledger, research index, provenance registry, and interpretation note.
-**Next step:** Run a true blinded rating study with independent human or model raters over richer full rollout responses where available, with special focus on PC2 alternatives and matched-pair designs.
-**Last commit before this session:** 3e62f63
+**Completed this session:** Ran the reading-based Codex-as-rater blinded PCA-axis study over anonymized no-label persona dossiers, wrote outputs under `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, and updated state/provenance/interpretation trackers.
+**Next step:** Replicate the rater study with an independent human or second-model rater and richer full rollout responses where available, with special focus on PC2 alternatives and matched-pair designs.
+**Last commit before this session:** 45bbc6c
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

@@ -237,6 +237,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Interpretation: this does not cleanly validate the working axis interpretations from no-label prompt text alone; PC3 receives the strongest modest support, PC1 is positive but weaker than expected, and PC2 remains the least certain
 - Caveat: this is a local lexical proxy study, not a true independent human or LLM blinded-rating study; the next test should use richer full rollout responses or independent blinded raters
 
+### Reading-Based Blinded PCA-Axis Rater Study (2026-05-29)
+
+- Ran a true reading-based Codex/GPT-5.5 rater study over anonymized no-label persona dossiers: 275 personas, five rewritten prompts per persona, with persona names/PCA coordinates/clusters/Big Five/residuals hidden from the rater
+- Full 275-persona rollout-response corpora were not found locally; full response corpora exist for trickster/editor and dyad subsets only, so this study validates against persona operationalization text rather than generated rollout behavior
+- Target-aligned reading-based correlations were materially stronger than the lexical-proxy screen: PC1 objective-certainty r=0.558, PC2 coherent-action-under-uncertainty r=0.373, and PC3 antagonistic-transgressive r=0.690
+- Matched-pair validation improved sharply: PC1 75%, PC2 100%, and PC3 95% direction-match rates over the top 20 close-orthogonal pairs per axis
+- Three main rater scores predicted held-out PCA coordinates with CV R2: PC1 0.496, PC2 0.101, and PC3 0.522; expanded PC2 alternatives raised CV R2 to PC1 0.616, PC2 0.564, and PC3 0.686
+- PC3 is now the best-supported direct axis interpretation in the prompt-dossier evidence; PC1 is strengthened but partly entangled with intelligence/expertise; PC2 remains the main uncertainty because abstraction correlates more strongly with PC2 than the direct coherent-action score
+- Caveat: scoring used Codex-as-rater, not an independent local LLM or human rater, and the corpus is no-label system-prompt text rather than full rollout responses
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

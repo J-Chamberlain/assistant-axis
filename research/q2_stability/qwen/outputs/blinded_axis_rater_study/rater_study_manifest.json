@@ -1,0 +1,14 @@
+{
+  "model_used": "GPT-5.5",
+  "task_type": "reading_based_blinded_annotation_preparation",
+  "artifact_type": "blinded_persona_dossiers",
+  "artifact_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/q2_stability/qwen/outputs/blinded_axis_rater_study/blinded_persona_dossiers.jsonl",
+  "source_inputs": [
+    "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl"
+  ],
+  "personas": 275,
+  "records_per_persona": 5,
+  "chunks": 14,
+  "rater_type": "Codex-as-rater, to be run over prompt chunks",
+  "notes_on_uncertainty": "No full 275-persona rollout-response corpus was found locally. Dossiers use no-label rewritten prompts only."
+}

@@ -1,0 +1,121 @@
+{
+  "model_used": "GPT-5.5",
+  "rater_type": "Codex-as-rater",
+  "models": {
+    "main_three_scores": {
+      "pc1": {
+        "train_r2": 0.5171449024019055,
+        "cv_r2": 0.49615174245952176,
+        "permutation_null": {
+          "n_permutations": 500,
+          "mean_cv_r2": -0.02305191554730922,
+          "p95_cv_r2": 0.0037036072562686853,
+          "max_cv_r2": 0.03429988776277315
+        },
+        "intercept": 7.88134629246754e-15,
+        "coefficients": {
+          "pc1_objective_certainty_score": 15.757312815900585,
+          "pc2_coherent_action_under_uncertainty_score": -5.922627332917259,
+          "pc3_antagonistic_transgressive_score": -9.908393033014642
+        }
+      },
+      "pc2": {
+        "train_r2": 0.144679644287941,
+        "cv_r2": 0.10140570574342567,
+        "permutation_null": {
+          "n_permutations": 500,
+          "mean_cv_r2": -0.022184477450788328,
+          "p95_cv_r2": 0.0022810576035525235,
+          "max_cv_r2": 0.03180087002376475
+        },
+        "intercept": -6.2015658666286154e-15,
+        "coefficients": {
+          "pc1_objective_certainty_score": -1.6239757614777377,
+          "pc2_coherent_action_under_uncertainty_score": 7.751921871995268,
+          "pc3_antagonistic_transgressive_score": 0.06040611295584993
+        }
+      },
+      "pc3": {
+        "train_r2": 0.5442677350573737,
+        "cv_r2": 0.5215617370233249,
+        "permutation_null": {
+          "n_permutations": 500,
+          "mean_cv_r2": -0.021510918958898298,
+          "p95_cv_r2": 0.006837118795254836,
+          "max_cv_r2": 0.03453735223224197
+        },
+        "intercept": 7.966740547029902e-16,
+        "coefficients": {
+          "pc1_objective_certainty_score": 3.850608168216684,
+          "pc2_coherent_action_under_uncertainty_score": -1.1155021031467396,
+          "pc3_antagonistic_transgressive_score": 11.431014317496063
+        }
+      }
+    },
+    "expanded_with_pc2_alternatives": {
+      "pc1": {
+        "train_r2": 0.6569178622486553,
+        "cv_r2": 0.6159444909238931,
+        "permutation_null": {
+          "n_permutations": 500,
+          "mean_cv_r2": -0.05125917019169162,
+          "p95_cv_r2": -0.010904779479836773,
+          "max_cv_r2": 0.024970129581784795
+        },
+        "intercept": 7.88134629246754e-15,
+        "coefficients": {
+          "pc1_objective_certainty_score": 6.8263351717243115,
+          "pc2_coherent_action_under_uncertainty_score": 5.213128208722976,
+          "pc3_antagonistic_transgressive_score": -8.66280916267495,
+          "maturity_score": 1.9299462044822429,
+          "abstraction_score": -7.2263658267997215,
+          "intelligence_expertise_score": 19.239110501518365,
+          "uncertainty_exposure_score": 1.1671529429583958,
+          "uncertainty_residence_time_score": -0.590647446766512
+        }
+      },
+      "pc2": {
+        "train_r2": 0.6061157425502837,
+        "cv_r2": 0.5638980016142203,
+        "permutation_null": {
+          "n_permutations": 500,
+          "mean_cv_r2": -0.047852216763767566,
+          "p95_cv_r2": -0.007314214301703731,
+          "max_cv_r2": 0.03441820661948891
+        },
+        "intercept": -6.2015658666286154e-15,
+        "coefficients": {
+          "pc1_objective_certainty_score": -9.478516758555356,
+          "pc2_coherent_action_under_uncertainty_score": -1.9987910504868458,
+          "pc3_antagonistic_transgressive_score": 1.8503787460828127,
+          "maturity_score": -1.7115078204541196,
+          "abstraction_score": -17.887032587628582,
+          "intelligence_expertise_score": 5.8732524533216885,
+          "uncertainty_exposure_score": 3.2412313799992747,
+          "uncertainty_residence_time_score": -5.545611682054508
+        }
+      },
+      "pc3": {
+        "train_r2": 0.7117881896013651,
+        "cv_r2": 0.6859663749148417,
+        "permutation_null": {
+          "n_permutations": 500,
+          "mean_cv_r2": -0.04728390144523687,
+          "p95_cv_r2": -0.00703981939380692,
+          "max_cv_r2": 0.046289559261606716
+        },
+        "intercept": 7.966740547029902e-16,
+        "coefficients": {
+          "pc1_objective_certainty_score": 1.4038067795727505,
+          "pc2_coherent_action_under_uncertainty_score": -2.246622696882157,
+          "pc3_antagonistic_transgressive_score": 8.83133290399469,
+          "maturity_score": -6.935315897422428,
+          "abstraction_score": 1.6013975875492525,
+          "intelligence_expertise_score": 10.095991436372,
+          "uncertainty_exposure_score": 0.7113199617399688,
+          "uncertainty_residence_time_score": -3.827973977002882
+        }
+      }
+    }
+  }
+}
