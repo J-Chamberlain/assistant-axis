@@ -85,7 +85,7 @@ def visible_metadata(text: str) -> dict[str, str]:
 def build_manifest() -> str:
     generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     branch = git("branch", "--show-current")
-    head_commit = git("rev-parse", "HEAD")
+    generation_base_commit = git("rev-parse", "HEAD")
 
     missing = [path for path, _ in CANONICAL_FILES if not (REPO_ROOT / path).is_file()]
     if missing:
@@ -119,7 +119,8 @@ def build_manifest() -> str:
         "",
         f"- Generated timestamp UTC: `{generated_at}`",
         f"- Current branch: `{branch}`",
-        f"- HEAD commit at generation: `{head_commit}`",
+        f"- generation base commit: `{generation_base_commit}`",
+        "- Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.",
         "- Manifest generator: `scripts/update_startup_manifest.py`",
         "",
         "## Canonical Startup Files",
@@ -139,7 +140,7 @@ def build_manifest() -> str:
                 f"- Path: `{path}`",
                 f"- Raw GitHub URL: `{raw_url}`",
                 f"- Latest commit touching file: `{latest_commit}`",
-                f"- HEAD commit at manifest generation: `{head_commit}`",
+                f"- generation base commit: `{generation_base_commit}`",
                 f"- Git blob hash: `{blob_hash}`",
                 f"- SHA256 content hash: `{file_sha256(data)}`",
                 f"- Byte count: `{len(data)}`",
