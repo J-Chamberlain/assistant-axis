@@ -93,3 +93,7 @@ Implemented the first residual-focused third-layer diagnostic at `research/q2_st
 ## Update 2026-05-28
 
 Interpreted Claude's successful TF-IDF SVD15 residual layer in `research/q2_stability/qwen/outputs/residual_svd_interpretation/`. The SVD result shows a productive tension in the machine-in-the-loop method: abstract human-readable residual labels underfit the geometry, while concrete text-basis components predict much better but require a separate distillation step to become interpretable theory. The next loop should translate SVD extremes into concrete, text-grounded residual dimensions and test whether they recover some of the SVD15 gain.
+
+## Update 2026-05-29
+
+Ran an adversarial PC3 hypothesis evaluation at `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/`. The preserving/exploiting interpretation partially survived, but the stronger current formulation is cooperative-care/system-stabilization versus antagonistic-disruptive/transgressive register. The loop produced a falsification target: matched no-label persona pairs that vary preserve/repair versus exploit/destabilize stance while holding PC1/PC2-relevant traits and semantic domain approximately fixed.

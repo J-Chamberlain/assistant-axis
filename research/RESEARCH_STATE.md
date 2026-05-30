@@ -4,8 +4,8 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
 **Last updated:** 2026-05-29
-**Last commit:** af1ccad
-**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology
+**Last commit:** 0d9b2fa
+**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology; PC3 interpretation has been adversarially evaluated and remains provisional, best described as cooperative-care/system-stabilization versus antagonistic-disruptive/transgressive register rather than a pure preserving/exploiting axis
 
 ---
 
@@ -415,6 +415,16 @@
 - The hand-named residual concepts only partially align with SVD: developmental dependency, role ambiguity, and semantic-neighborhood residual pressure are supported, while several abstract labels are diffuse across multiple SVD components
 - Interpretation: SVD15 likely works because it preserves many weak concrete prompt cues that abstract residual labels flatten; the next step is to distill component extremes into concrete, text-grounded residual dimensions and retest them under the same splits
 
+### PC3 Hypothesis Evaluation (2026-05-29)
+
+- Implemented `research/q2_stability/qwen/scripts/pc3_hypothesis_evaluation.py` to adversarially evaluate the working PC3 interpretation using existing local artifacts only
+- The analysis tested PC1/PC2-neighbor pair contrasts, a description-only blind rubric, seven competing lexical hypotheses, cluster-level PC3 enrichment, and Big Five/hierarchical residual relationships
+- The blind preserve-minus-challenge/exploit rubric predicted PC3 weakly to moderately: continuous score r=-0.312 and ordinal rubric r=-0.318
+- The strongest tested lexical alternative was `nurturing_vs_competitive` at r=-0.319; the target `system_preserving_vs_exploiting` hypothesis ranked second at r=-0.308
+- Combative_iconoclast and trickster_chaos were strongly enriched for high PC3, with mean PC3 25.78 and 23.03 respectively, but both overlapped the rest of the distribution
+- Agreeableness was the strongest Big Five correlate of PC3 at r=-0.477; residual magnitudes were only weakly correlated with PC3
+- Current interpretation: PC3 is provisionally best described as cooperative-care/system-stabilization versus antagonistic-disruptive/transgressive register, not a pure preserving/exploiting axis; confidence is moderate-low pending paired no-label falsification
+
 ---
 
 ## 3. CURRENT STATE
@@ -429,6 +439,7 @@
 | Hierarchical trait-procedural performance | provisional | R2 0.622 vs trait stage 0.613 | `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/hierarchical_model_report.md` |
 | Residual manifold performance | provisional | R2 0.632 vs hierarchical baseline 0.622 | `research/q2_stability/qwen/outputs/residual_manifold_analysis/residual_manifold_report.md` |
 | SVD15 lexical/register performance | provisional | sem+BigFive+SVD15 R2 0.707 vs sem+BigFive 0.613 | `research/q2_stability/qwen/outputs/residual_svd_interpretation/residual_svd_interpretation_report.md` |
+| PC3 interpretation | provisional | preserve/exploit rubric r=-0.312; nurturing/competitive r=-0.319; agreeableness r=-0.477 | `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/pc3_hypothesis_report.md` |
 | Evaluator-model sensitivity | unresolved | harness exists, paired `gpt-4.1-mini` records blocked by quota | `research/q2_stability/qwen/evaluator_sensitivity/` |
 
 **Paper 1.5 current scope:** Paper 1.5 is now a persona-geometry interpretation paper. The working title is `Interpreting Persona Activation Geometry`. The main claim is that persona activation geometry appears to decompose into layered semantic, dispositional, procedural, lexical/register, and residual structures after methodological stress testing. Adaptive extraction remains important due diligence and tooling evidence, but it is no longer the primary paper frame.
@@ -484,8 +495,10 @@
 **Completed this session:** Added Big Five-style trait overlay data and color modes to `research/visualizations/persona_geometry_explorer.html`, using the shared latent feature benchmark source where Claude Big Five predicts canonical activation PCA3D at R2 0.613 vs semantic baseline R2 0.389.
 **Completed this session:** Added `research/PROVENANCE_REGISTRY.md` and `research/RESEARCH_INDEX.md`, and updated onboarding/state files so future sessions can answer provenance, methodology, and current-state questions before repo archaeology.
 **Completed this session:** Configured the local Claude Desktop GitHub MCP server entry without printing the token, added the repo runtime command-bus files, installed the Mac Mini cron watcher, and added the Codex zero-relay startup rule to `AGENTS.md`.
-**Next step:** Quit Claude Desktop completely with Cmd+Q and relaunch it so the GitHub MCP server is loaded; then test the zero-relay loop with a harmless task in `research/runtime/PENDING_TASK.md`.
-**Last commit before this session:** af1ccad
+**Completed this session:** Evaluated the PC3 preserving/exploiting interpretation adversarially using pairwise PC3 contrasts, blind description-only rubrics, alternative lexical hypotheses, cluster enrichment, and residual checks; outputs live under `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/`.
+**Completed this session:** Updated the findings ledger, research state, and machine-in-the-loop sticky note to record that PC3 is better framed as cooperative-care/system-stabilization versus antagonistic-disruptive/transgressive register, with moderate-low confidence.
+**Next step:** Falsify the PC3 interpretation with paired no-label personas matched on semantic domain and PC1/PC2-relevant traits but differing in preserve/repair versus exploit/destabilize stance.
+**Last commit before this session:** 0d9b2fa
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

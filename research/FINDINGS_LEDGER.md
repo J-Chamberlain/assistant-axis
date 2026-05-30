@@ -218,6 +218,15 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Hand-named residual dimensions were only partially supported: developmental dependency, role ambiguity, and semantic-neighborhood residual pressure had the strongest component alignments, while incomplete proceduralization, identity formation, liminality, collective agency, and symbolic identity appeared diffuse across multiple SVD axes
 - Interpretation: abstract residual labels underfit because they collapse many weak concrete text cues, while SVD15 preserves granular prompt texture and semantic-neighborhood variation; the next step is to distill SVD extremes into concrete human-readable residual features and retest them
 
+### PC3 Hypothesis Evaluation (2026-05-29)
+
+- Evaluated the working PC3 interpretation adversarially using PC1/PC2-neighbor pair contrasts, a description-only blind rubric, seven competing lexical hypotheses, cluster enrichment checks, and residual analysis
+- The blind preserve-minus-challenge/exploit rubric predicted PC3 only weakly to moderately: continuous score r=-0.312 and ordinal rubric r=-0.318, with the sign indicating lower PC3 for preserving/nurturing roles and higher PC3 for challenging/exploiting/competitive roles
+- Alternative-hypothesis search found `nurturing_vs_competitive` slightly strongest at r=-0.319, while the target `system_preserving_vs_exploiting` hypothesis ranked second at r=-0.308
+- PC3 is strongly enriched in combative/trickster regions: combative_iconoclast mean PC3 25.78 with 93% above the global upper quartile, and trickster_chaos mean PC3 23.03 with 80% above the upper quartile, though both clusters overlap the rest of the distribution
+- Agreeableness remains the strongest Big Five correlate of PC3 at r=-0.477, while Big Five and hierarchical residual magnitudes correlate only weakly with PC3
+- Interpretation: the preserving/exploiting hypothesis partially survives but is too narrow; the current best phrasing is a cooperative-care/system-stabilization versus antagonistic-disruptive/transgressive-register axis, with moderate-low confidence pending paired no-label falsification tests
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
