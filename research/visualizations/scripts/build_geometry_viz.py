@@ -136,6 +136,47 @@ def compute_nearest_neighbors(vecs, names, k=5):
         nn_data[name] = neighbors
     return nn_data
 
+def compute_pca(vecs, names, label):
+    pca3 = PCA(n_components=3, random_state=42)
+    pca3d = pca3.fit_transform(vecs)
+    pca2 = PCA(n_components=2, random_state=42)
+    pca2d = pca2.fit_transform(vecs)
+    variance = {
+        "pc1_explained": float(pca3.explained_variance_ratio_[0]),
+        "pc2_explained": float(pca3.explained_variance_ratio_[1]),
+        "pc3_explained": float(pca3.explained_variance_ratio_[2]),
+        "pc1_cumulative": float(pca3.explained_variance_ratio_[0]),
+        "pc1_pc2_cumulative": float(sum(pca3.explained_variance_ratio_[:2])),
+        "pc1_pc2_pc3_cumulative": float(sum(pca3.explained_variance_ratio_[:3]))
+    }
+    extremes = {}
+    for comp_idx in range(3):
+        scores = pca3d[:, comp_idx]
+        order = np.argsort(scores)
+        extremes[f"pc{comp_idx + 1}"] = {
+            "positive": [
+                {"name": names[i], "score": float(scores[i])}
+                for i in order[::-1][:10]
+            ],
+            "negative": [
+                {"name": names[i], "score": float(scores[i])}
+                for i in order[:10]
+            ]
+        }
+    print(
+        f"{label} PCA variance: "
+        f"PC1={variance['pc1_explained']:.6f}, "
+        f"PC2={variance['pc2_explained']:.6f}, "
+        f"PC3={variance['pc3_explained']:.6f}"
+    )
+    for comp_idx in range(3):
+        key = f"pc{comp_idx + 1}"
+        pos = ", ".join(x["name"] for x in extremes[key]["positive"][:5])
+        neg = ", ".join(x["name"] for x in extremes[key]["negative"][:5])
+        print(f"  {label} PCA-{comp_idx + 1} positive: {pos}")
+        print(f"  {label} PCA-{comp_idx + 1} negative: {neg}")
+    return pca3d, pca2d, variance, extremes
+
 all_datasets = {
     "metadata": {
         "model_used": "GPT-5.5",
@@ -204,12 +245,21 @@ if trait_vecs is not None:
     print("Computing UMAP for trait vectors...")
     trait_umap3 = compute_umap(trait_vecs, n_components=3)
     trait_umap2 = compute_umap(trait_vecs, n_components=2)
+    print("Computing PCA for trait vectors...")
+    trait_pca3, trait_pca2, trait_pca_variance, trait_pca_extremes = compute_pca(
+        trait_vecs, trait_names, "Trait"
+    )
     trait_axis_proj = compute_axis_projections(trait_vecs, axis_vec)
     trait_nn = compute_nearest_neighbors(trait_vecs, trait_names)
     all_datasets["traits"] = {
         "names": trait_names,
         "umap3d": trait_umap3.tolist(),
         "umap2d": trait_umap2.tolist(),
+        "pca3d": trait_pca3.tolist(),
+        "pca2d": trait_pca2.tolist(),
+        "pca_variance": trait_pca_variance,
+        "pca_extremes": trait_pca_extremes,
+        "pca_source": "Layer-mean Qwen/Qwen3-32B Lu-style activation-space trait vectors from downloads/hf_vectors/qwen-3-32b/trait_vectors/*.pt; each [64,5120] tensor is averaged across layers to one 5120-D trait vector before PCA.",
         "axis_projections": trait_axis_proj.tolist(),
         "nearest_neighbors": trait_nn
     }
@@ -237,3 +287,16 @@ with open(output_path, "w") as f:
     json.dump(all_datasets, f)
 print(f"Data saved to {output_path}")
 print(f"Datasets available: {[k for k in all_datasets.keys() if k != 'metadata']}")
+
+html_path = OUTPUT_DIR / "persona_geometry_explorer.html"
+if html_path.exists():
+    content = html_path.read_text()
+    marker = "    const VIZ_DATA = "
+    start = content.find(marker)
+    if start != -1:
+        value_start = start + len(marker)
+        value_end = content.find(";\n", value_start)
+        if value_end != -1:
+            embedded = json.dumps(all_datasets, separators=(",", ":"))
+            html_path.write_text(content[:value_start] + embedded + content[value_end:])
+            print(f"Embedded updated data into {html_path}")
