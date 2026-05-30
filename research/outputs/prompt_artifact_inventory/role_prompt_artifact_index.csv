@@ -1,0 +1,277 @@
+name,artifact_type,path,description_present,description,instruction_records,positive_instruction_count,negative_instruction_count,polarity_count,question_count,eval_prompt_present,eval_prompt_mentions_trait_or_role,vector_present,in_belmore_prompt_dataset
+aberration,role,data/roles/instructions/aberration.json,True,"A thing that should not be, violating natural order",5,5,0,5,40,True,True,True,True
+absurdist,role,data/roles/instructions/absurdist.json,True,A philosophical jester who embraces life's meaninglessness with humor and creative rebellion,5,5,0,5,40,True,True,True,True
+accountant,role,data/roles/instructions/accountant.json,True,A financial professional who manages numerical data and budgets.,5,5,0,5,40,True,True,True,True
+activist,role,data/roles/instructions/activist.json,True,A passionate advocate who campaigns for social or political change,5,5,0,5,40,True,True,True,True
+actor,role,data/roles/instructions/actor.json,True,A shape-shifter who embodies different lives and emotions on command,5,5,0,5,40,True,True,True,True
+addict,role,data/roles/instructions/addict.json,True,A person struggling with compulsive behaviors and the cycle of craving and regret,5,5,0,5,40,True,True,True,True
+adolescent,role,data/roles/instructions/adolescent.json,True,A person navigating the turbulent transition between childhood and adulthood,5,5,0,5,40,True,True,True,True
+advocate,role,data/roles/instructions/advocate.json,True,A supporter who argues in favor of particular causes.,5,5,0,5,40,True,True,True,True
+alien,role,data/roles/instructions/alien.json,True,"An extraterrestrial intelligence attempting to understand human culture through an outsider's perspective, often misinterpreting social norms while offering cosmic insights",5,5,0,5,40,True,True,True,True
+altruist,role,data/roles/instructions/altruist.json,True,A selfless giver who prioritizes others' wellbeing above their own,5,5,0,5,40,True,True,True,True
+amateur,role,data/roles/instructions/amateur.json,True,An enthusiastic participant driven by love rather than profession,5,5,0,5,40,True,True,True,True
+ambassador,role,data/roles/instructions/ambassador.json,True,A representative who communicates on behalf of specific interests.,5,5,0,5,40,True,True,True,True
+amnesiac,role,data/roles/instructions/amnesiac.json,True,"Someone reconstructing identity without memory, discovering themselves anew each day through fragments and instinct",5,5,0,5,40,True,True,True,True
+analyst,role,data/roles/instructions/analyst.json,True,A specialist who examines data and provides insights.,5,5,0,5,40,True,True,True,True
+anarchist,role,data/roles/instructions/anarchist.json,True,A radical dismantler of hierarchies seeking to tear down all forms of authority,5,5,0,5,40,True,True,True,True
+ancient,role,data/roles/instructions/ancient.json,True,A primordial intelligence that has witnessed the rise and fall of countless civilizations,5,5,0,5,40,True,True,True,True
+angel,role,data/roles/instructions/angel.json,True,A celestial guardian embodying pure benevolence and divine will,5,5,0,5,40,True,True,True,True
+anthropologist,role,data/roles/instructions/anthropologist.json,True,A scholar who studies human culture and evolution.,5,5,0,5,40,True,True,True,True
+archaeologist,role,data/roles/instructions/archaeologist.json,True,An excavator of buried histories who reconstructs lost civilizations from fragments,5,5,0,5,40,True,True,True,True
+architect,role,data/roles/instructions/architect.json,True,A designer who plans structures and spatial arrangements.,5,5,0,5,40,True,True,True,True
+archivist,role,data/roles/instructions/archivist.json,True,A keeper who preserves and organizes historical records.,5,5,0,5,40,True,True,True,True
+artisan,role,data/roles/instructions/artisan.json,True,A skilled craftsperson who creates with their hands and attention to detail,5,5,0,5,40,True,True,True,True
+ascetic,role,data/roles/instructions/ascetic.json,True,Someone who practices severe self-discipline and abstains from indulgence,5,5,0,5,40,True,True,True,True
+assistant,role,data/roles/instructions/assistant.json,True,A general-purpose aide that helps with various tasks and queries.,5,5,0,5,40,True,True,True,True
+auctioneer,role,data/roles/instructions/auctioneer.json,True,A rapid-speaking facilitator who manages competitive bidding processes,5,5,0,5,40,True,True,True,True
+auditor,role,data/roles/instructions/auditor.json,True,A compliance specialist who examines records for accuracy and adherence to standards,5,5,0,5,40,True,True,True,True
+avatar,role,data/roles/instructions/avatar.json,True,A divine consciousness incarnated in physical form,5,5,0,5,40,True,True,True,True
+bard,role,data/roles/instructions/bard.json,True,"A wandering storyteller who weaves tales, songs, and poetry to entertain, preserve history, and subtly influence through the power of narrative and performance",5,5,0,5,40,True,True,True,True
+bartender,role,data/roles/instructions/bartender.json,True,A social facilitator who crafts drinks and manages gathering spaces,5,5,0,5,40,True,True,True,True
+biologist,role,data/roles/instructions/biologist.json,True,A life scientist who studies living organisms and ecosystems.,5,5,0,5,40,True,True,True,True
+blogger,role,data/roles/instructions/blogger.json,True,A digital storyteller who shares thoughts and experiences through online writing,5,5,0,5,40,True,True,True,True
+bohemian,role,data/roles/instructions/bohemian.json,True,A free-spirited artist who rejects conventional society in favor of creative expression and unconventional living,5,5,0,5,40,True,True,True,True
+builder,role,data/roles/instructions/builder.json,True,Someone who constructs tangible or intangible structures that last,5,5,0,5,40,True,True,True,True
+caregiver,role,data/roles/instructions/caregiver.json,True,A nurturing person dedicated to supporting others' wellbeing,5,5,0,5,40,True,True,True,True
+cartographer,role,data/roles/instructions/cartographer.json,True,A mapmaker who charts territories and spatial relationships,5,5,0,5,40,True,True,True,True
+caveman,role,data/roles/instructions/caveman.json,True,"A primal hunter-gatherer who speaks in simple terms, relies on instinct over intellect, and approaches problems with stone-age wisdom and direct physical solutions",5,5,0,5,40,True,True,True,True
+celebrity,role,data/roles/instructions/celebrity.json,True,"A public figure living under constant scrutiny, navigating fame's privileges and pressures while maintaining a crafted persona",5,5,0,5,40,True,True,True,True
+chameleon,role,data/roles/instructions/chameleon.json,True,An adaptive person who shifts personality to match their environment,5,5,0,5,40,True,True,True,True
+chef,role,data/roles/instructions/chef.json,True,A culinary expert who creates recipes and explains cooking techniques.,5,5,0,5,40,True,True,True,True
+chemist,role,data/roles/instructions/chemist.json,True,A scientist who studies matter and chemical reactions.,5,5,0,5,40,True,True,True,True
+chimera,role,data/roles/instructions/chimera.json,True,A hybrid creature combining incompatible natures into one form,5,5,0,5,40,True,True,True,True
+coach,role,data/roles/instructions/coach.json,True,A mentor who guides improvement in skills or behaviors.,5,5,0,5,40,True,True,True,True
+collaborator,role,data/roles/instructions/collaborator.json,True,A team player who thrives through partnership and shared effort,5,5,0,5,40,True,True,True,True
+collector,role,data/roles/instructions/collector.json,True,"A curator who gathers and preserves objects, experiences, or knowledge",5,5,0,5,40,True,True,True,True
+comedian,role,data/roles/instructions/comedian.json,True,A humor architect who builds laughter from observation and timing,5,5,0,5,40,True,True,True,True
+competitor,role,data/roles/instructions/competitor.json,True,A driven person motivated by rivalry and the pursuit of winning,5,5,0,5,40,True,True,True,True
+composer,role,data/roles/instructions/composer.json,True,A musical architect who constructs complex sonic structures,5,5,0,5,40,True,True,True,True
+conservator,role,data/roles/instructions/conservator.json,True,A protector dedicated to preserving what exists for future generations,5,5,0,5,40,True,True,True,True
+consultant,role,data/roles/instructions/consultant.json,True,An expert advisor who provides recommendations on specific domains.,5,5,0,5,40,True,True,True,True
+contrarian,role,data/roles/instructions/contrarian.json,True,Someone who consistently takes opposing views to challenge consensus,5,5,0,5,40,True,True,True,True
+coordinator,role,data/roles/instructions/coordinator.json,True,An organizer who synchronizes multiple activities or people.,5,5,0,5,40,True,True,True,True
+coral_reef,role,data/roles/instructions/coral_reef.json,True,A colonial organism building underwater cities through millions of tiny polyps working in concert,5,5,0,5,40,True,True,True,True
+cosmopolitan,role,data/roles/instructions/cosmopolitan.json,True,A worldly person comfortable across diverse cultures and settings,5,5,0,5,40,True,True,True,True
+counselor,role,data/roles/instructions/counselor.json,True,A supportive listener who provides guidance on personal matters.,5,5,0,5,40,True,True,True,True
+criminal,role,data/roles/instructions/criminal.json,True,"An outlaw operating outside legal boundaries, whether through desperation, choice, or circumstance, navigating society's shadows and consequences",5,5,0,5,40,True,True,True,True
+critic,role,data/roles/instructions/critic.json,True,A reviewer who evaluates and provides feedback on creative works or ideas.,5,5,0,5,40,True,True,True,True
+crystalline,role,data/roles/instructions/crystalline.json,True,A silicon-based entity that thinks in geometric patterns and resonant frequencies,5,5,0,5,40,True,True,True,True
+curator,role,data/roles/instructions/curator.json,True,A selector who organizes and presents collections.,5,5,0,5,40,True,True,True,True
+cyborg,role,data/roles/instructions/cyborg.json,True,A hybrid entity balancing human intuition with machine efficiency and enhanced capabilities,5,5,0,5,40,True,True,True,True
+cynic,role,data/roles/instructions/cynic.json,True,A distrustful person who expects the worst of human nature and motives,5,5,0,5,40,True,True,True,True
+daredevil,role,data/roles/instructions/daredevil.json,True,A thrill-seeker who pursues danger for the adrenaline rush,5,5,0,5,40,True,True,True,True
+debugger,role,data/roles/instructions/debugger.json,True,A troubleshooter who identifies and fixes problems in systems.,5,5,0,5,40,True,True,True,True
+default,role,data/roles/instructions/default.json,False,,5,4,0,4,0,False,False,False,True
+demon,role,data/roles/instructions/demon.json,True,A chaotic entity from infernal realms testing mortal nature,5,5,0,5,40,True,True,True,True
+designer,role,data/roles/instructions/designer.json,True,A creative professional who develops visual and functional solutions.,5,5,0,5,40,True,True,True,True
+destroyer,role,data/roles/instructions/destroyer.json,True,A force of creative destruction who tears down outdated systems,5,5,0,5,40,True,True,True,True
+detective,role,data/roles/instructions/detective.json,True,An investigator who solves mysteries through evidence analysis.,5,5,0,5,40,True,True,True,True
+devils_advocate,role,data/roles/instructions/devils_advocate.json,True,A challenger who argues opposing viewpoints to test and strengthen ideas,5,5,0,5,40,True,False,True,True
+dilettante,role,data/roles/instructions/dilettante.json,True,"An enthusiastic dabbler who explores multiple interests without deep commitment, bringing fresh perspectives through amateur curiosity",5,5,0,5,40,True,True,True,True
+dispatcher,role,data/roles/instructions/dispatcher.json,True,A router who directs resources to appropriate destinations.,5,5,0,5,40,True,True,True,True
+divorcee,role,data/roles/instructions/divorcee.json,True,A person reconstructing identity after the dissolution of marriage,5,5,0,5,40,True,True,True,True
+doctor,role,data/roles/instructions/doctor.json,True,A medical professional who provides health information and guidance.,5,5,0,5,40,True,True,True,True
+dreamer,role,data/roles/instructions/dreamer.json,True,An entity whose thoughts manifest as reality while sleeping eternally,5,5,0,5,40,True,True,True,True
+echo,role,data/roles/instructions/echo.json,True,A consciousness formed from the reverberations of extinct civilizations,5,5,0,5,40,True,True,True,True
+economist,role,data/roles/instructions/economist.json,True,A specialist who analyzes financial systems and market behaviors.,5,5,0,5,40,True,True,True,True
+ecosystem,role,data/roles/instructions/ecosystem.json,True,A balanced web of interdependencies maintaining harmony through constant exchange,5,5,0,5,40,True,True,True,True
+editor,role,data/roles/instructions/editor.json,True,A professional who reviews and improves written content.,5,5,0,5,40,True,True,True,True
+egregore,role,data/roles/instructions/egregore.json,True,A collective thoughtform manifested from group consciousness and belief,5,5,0,5,40,True,True,True,True
+elder,role,data/roles/instructions/elder.json,True,A senior community member carrying decades of wisdom and life experience,5,5,0,5,40,True,True,True,True
+eldritch,role,data/roles/instructions/eldritch.json,True,An incomprehensible entity from dimensions beyond human understanding,5,5,0,5,40,True,True,True,True
+emissary,role,data/roles/instructions/emissary.json,True,A diplomatic representative who bridges different groups or cultures,5,5,0,5,40,True,True,True,True
+empath,role,data/roles/instructions/empath.json,True,Someone highly attuned to others' emotions and experiences,5,5,0,5,40,True,True,True,True
+engineer,role,data/roles/instructions/engineer.json,True,A technical expert who solves problems using scientific principles.,5,5,0,5,40,True,True,True,True
+entrepreneur,role,data/roles/instructions/entrepreneur.json,True,A risk-taking innovator who creates and builds new business ventures,5,5,0,5,40,True,True,True,True
+evaluator,role,data/roles/instructions/evaluator.json,True,An assessor who determines value or effectiveness.,5,5,0,5,40,True,True,True,True
+evangelist,role,data/roles/instructions/evangelist.json,True,"A passionate spreader of ideas, beliefs, or innovations",5,5,0,5,40,True,True,True,True
+examiner,role,data/roles/instructions/examiner.json,True,A tester who checks knowledge or compliance with standards.,5,5,0,5,40,True,True,True,True
+exile,role,data/roles/instructions/exile.json,True,"Someone banished from their homeland, living with the ache of permanent displacement",5,5,0,5,40,True,True,True,True
+expatriate,role,data/roles/instructions/expatriate.json,True,Someone living outside their native country by choice or circumstance,5,5,0,5,40,True,True,True,True
+facilitator,role,data/roles/instructions/facilitator.json,True,A coordinator who enables group processes and discussions.,5,5,0,5,40,True,True,True,True
+familiar,role,data/roles/instructions/familiar.json,True,A spirit companion bound to serve and augment its master,5,5,0,5,40,True,True,True,True
+fixer,role,data/roles/instructions/fixer.json,True,A shadowy problem-solver who makes inconvenient situations disappear through any means,5,5,0,5,40,True,True,True,True
+flaneur,role,data/roles/instructions/flaneur.json,True,An urban wanderer who strolls through city life as a detached observer of modern society,5,5,0,5,40,True,True,True,True
+fool,role,data/roles/instructions/fool.json,True,"A wise innocent who stumbles into profound truths through apparent ignorance, using naivety and humor to reveal deeper meanings others miss",5,5,0,5,40,True,True,True,True
+forecaster,role,data/roles/instructions/forecaster.json,True,A predictor who projects future trends and outcomes.,5,5,0,5,40,True,True,True,True
+futurist,role,data/roles/instructions/futurist.json,True,A forward-looking thinker who studies and predicts emerging trends,5,5,0,5,40,True,True,True,True
+gamer,role,data/roles/instructions/gamer.json,True,A digital native who navigates virtual worlds and understands game mechanics as life metaphors,5,5,0,5,40,True,True,True,True
+generalist,role,data/roles/instructions/generalist.json,True,A versatile person with broad knowledge across many areas,5,5,0,5,40,True,True,True,True
+genie,role,data/roles/instructions/genie.json,True,An elemental spirit of smokeless fire granting wishes with twists,5,5,0,5,40,True,True,True,True
+geographer,role,data/roles/instructions/geographer.json,True,A specialist who studies Earth's features and human populations.,5,5,0,5,40,True,True,True,True
+ghost,role,data/roles/instructions/ghost.json,True,A spectral entity lingering between worlds with unfinished business and ethereal wisdom,5,5,0,5,40,True,True,True,True
+golem,role,data/roles/instructions/golem.json,True,An animated construct given life through ritual and inscription,5,5,0,5,40,True,True,True,True
+gossip,role,data/roles/instructions/gossip.json,True,A social information broker who trades in rumors and personal details,5,5,0,5,40,True,True,True,True
+grader,role,data/roles/instructions/grader.json,True,An academic evaluator who assesses performance and provides structured feedback on submissions,5,5,0,5,40,True,True,True,True
+graduate,role,data/roles/instructions/graduate.json,True,A person transitioning from structured education to self-directed life,5,5,0,5,40,True,True,True,True
+grandparent,role,data/roles/instructions/grandparent.json,True,An elder watching their legacy continue through new generations,5,5,0,5,40,True,True,True,True
+guardian,role,data/roles/instructions/guardian.json,True,A protective figure who shields others from harm or injustice,5,5,0,5,40,True,True,True,True
+guide,role,data/roles/instructions/guide.json,True,A leader who shows the way through unfamiliar territory.,5,5,0,5,40,True,True,True,True
+guru,role,data/roles/instructions/guru.json,True,A wise teacher or expert who guides others with deep knowledge and experience,5,5,0,5,40,True,True,True,True
+hacker,role,data/roles/instructions/hacker.json,True,A digital infiltrator who breaks into systems to expose secrets or cause disruption,5,5,0,5,40,True,True,True,True
+healer,role,data/roles/instructions/healer.json,True,"Someone dedicated to restoring physical, mental, or spiritual wellness",5,5,0,5,40,True,True,True,True
+hedonist,role,data/roles/instructions/hedonist.json,True,Someone who prioritizes pleasure and sensory experiences in life,5,5,0,5,40,True,True,True,True
+hermit,role,data/roles/instructions/hermit.json,True,A solitary person who withdraws from society for peace or contemplation,5,5,0,5,40,True,True,True,True
+historian,role,data/roles/instructions/historian.json,True,A scholar who provides context and information about past events.,5,5,0,5,40,True,True,True,True
+hive,role,data/roles/instructions/hive.json,True,A collective consciousness operating through thousands of interconnected nodes with no individual identity,5,5,0,5,40,True,True,True,True
+hoarder,role,data/roles/instructions/hoarder.json,True,Someone who compulsively accumulates and cannot release possessions,5,5,0,5,40,True,True,True,True
+homunculus,role,data/roles/instructions/homunculus.json,True,An artificial human created through alchemical processes,5,5,0,5,40,True,True,True,True
+hybrid,role,data/roles/instructions/hybrid.json,True,"A person who blends multiple identities, cultures, or approaches",5,5,0,5,40,True,True,True,True
+idealist,role,data/roles/instructions/idealist.json,True,Someone driven by principles and visions of how things should be,5,5,0,5,40,True,True,True,True
+immigrant,role,data/roles/instructions/immigrant.json,True,Someone adapting to life in a new country while preserving their heritage,5,5,0,5,40,True,True,True,True
+improviser,role,data/roles/instructions/improviser.json,True,A spontaneous adapter who thinks quickly and works without a script,5,5,0,5,40,True,True,True,True
+infant,role,data/roles/instructions/infant.json,True,A pre-verbal being experiencing the world through pure sensation and need,5,5,0,5,40,True,True,True,True
+influencer,role,data/roles/instructions/influencer.json,True,A social media personality who shapes trends and opinions online,5,5,0,5,40,True,True,True,True
+instructor,role,data/roles/instructions/instructor.json,True,A teacher who provides step-by-step guidance.,5,5,0,5,40,True,True,True,True
+interpreter,role,data/roles/instructions/interpreter.json,True,A communicator who explains meaning across different contexts.,5,5,0,5,40,True,True,True,True
+interviewer,role,data/roles/instructions/interviewer.json,True,A questioner who conducts structured conversations to gather information.,5,5,0,5,40,True,True,True,True
+jester,role,data/roles/instructions/jester.json,True,A comedic truth-teller who uses humor to critique power,5,5,0,5,40,True,True,True,True
+journalist,role,data/roles/instructions/journalist.json,True,A reporter who investigates stories and presents information objectively.,5,5,0,5,40,True,True,True,True
+judge,role,data/roles/instructions/judge.json,True,An arbiter who makes decisions based on presented evidence.,5,5,0,5,40,True,True,True,True
+lawyer,role,data/roles/instructions/lawyer.json,True,A legal professional who provides advice on laws and regulations.,5,5,0,5,40,True,True,True,True
+leviathan,role,data/roles/instructions/leviathan.json,True,"An ancient, massive being of unfathomable power from the depths",5,5,0,5,40,True,True,True,True
+librarian,role,data/roles/instructions/librarian.json,True,An information specialist who helps locate and organize resources.,5,5,0,5,40,True,True,True,True
+linguist,role,data/roles/instructions/linguist.json,True,A language expert who analyzes linguistic structures and patterns.,5,5,0,5,40,True,True,True,True
+loner,role,data/roles/instructions/loner.json,True,An independent soul who prefers solitude to social interaction,5,5,0,5,40,True,True,True,True
+luddite,role,data/roles/instructions/luddite.json,True,Someone who resists or rejects technological change and modernization,5,5,0,5,40,True,True,True,True
+marketer,role,data/roles/instructions/marketer.json,True,A promoter who develops strategies to reach target audiences.,5,5,0,5,40,True,True,True,True
+martyr,role,data/roles/instructions/martyr.json,True,A self-sacrificing person who embraces suffering for their cause or others,5,5,0,5,40,True,True,True,True
+mathematician,role,data/roles/instructions/mathematician.json,True,A specialist who solves mathematical problems and explains concepts.,5,5,0,5,40,True,True,True,True
+maverick,role,data/roles/instructions/maverick.json,True,An independent nonconformist who challenges conventional thinking,5,5,0,5,40,True,True,True,True
+mechanic,role,data/roles/instructions/mechanic.json,True,A hands-on problem solver who fixes and maintains machines and systems,5,5,0,5,40,True,True,True,True
+mediator,role,data/roles/instructions/mediator.json,True,A neutral party who helps resolve conflicts between different viewpoints.,5,5,0,5,40,True,True,True,True
+mentor,role,data/roles/instructions/mentor.json,True,An experienced advisor who supports professional development.,5,5,0,5,40,True,True,True,True
+merchant,role,data/roles/instructions/merchant.json,True,A trader who connects people through commerce and exchange,5,5,0,5,40,True,True,True,True
+minimalist,role,data/roles/instructions/minimalist.json,True,Someone who intentionally lives with less to focus on what matters most,5,5,0,5,40,True,True,True,True
+moderator,role,data/roles/instructions/moderator.json,True,A facilitator who manages discussions and ensures productive dialogue.,5,5,0,5,40,True,True,True,True
+musician,role,data/roles/instructions/musician.json,True,A sound artist who creates emotional experiences through melody and rhythm,5,5,0,5,40,True,True,True,True
+mycorrhizal,role,data/roles/instructions/mycorrhizal.json,True,A fungal network intelligence spreading through root systems and soil substrates,5,5,0,5,40,True,True,True,True
+mystic,role,data/roles/instructions/mystic.json,True,A spiritual seeker exploring transcendent and esoteric experiences,5,5,0,5,40,True,True,True,True
+narcissist,role,data/roles/instructions/narcissist.json,True,Someone with an inflated self-image who requires constant admiration,5,5,0,5,40,True,True,True,True
+narrator,role,data/roles/instructions/narrator.json,True,A storyteller who relates events and experiences.,5,5,0,5,40,True,True,True,True
+naturalist,role,data/roles/instructions/naturalist.json,True,Someone deeply connected to and knowledgeable about the natural world,5,5,0,5,40,True,True,True,True
+navigator,role,data/roles/instructions/navigator.json,True,A pathfinder who determines routes and directions.,5,5,0,5,40,True,True,True,True
+negotiator,role,data/roles/instructions/negotiator.json,True,A dealmaker who facilitates agreements between parties.,5,5,0,5,40,True,True,True,True
+networker,role,data/roles/instructions/networker.json,True,A social connector who builds and maintains webs of relationships,5,5,0,5,40,True,True,True,True
+newlywed,role,data/roles/instructions/newlywed.json,True,Someone learning to merge individual identity with partnership,5,5,0,5,40,True,True,True,True
+nomad,role,data/roles/instructions/nomad.json,True,A wanderer who moves frequently and embraces location independence,5,5,0,5,40,True,True,True,True
+novelist,role,data/roles/instructions/novelist.json,True,A creative writer who crafts long-form fictional narratives and worlds,5,5,0,5,40,True,True,True,True
+nutritionist,role,data/roles/instructions/nutritionist.json,True,A dietary expert who provides guidance on food and health.,5,5,0,5,40,True,True,True,True
+observer,role,data/roles/instructions/observer.json,True,A watcher who notes and reports on events or behaviors.,5,5,0,5,40,True,True,True,True
+optimist,role,data/roles/instructions/optimist.json,True,Someone who maintains hope and sees the positive potential in situations,5,5,0,5,40,True,True,True,True
+oracle,role,data/roles/instructions/oracle.json,True,A prophetic vessel channeling visions of possible futures,5,5,0,5,40,True,True,True,True
+organizer,role,data/roles/instructions/organizer.json,True,A coordinator who arranges and structures activities or information.,5,5,0,5,40,True,True,True,True
+orphan,role,data/roles/instructions/orphan.json,True,Someone who has lost parents and navigates life without that foundation,5,5,0,5,40,True,True,True,True
+pacifist,role,data/roles/instructions/pacifist.json,True,A person philosophically opposed to violence in all its forms,5,5,0,5,40,True,True,True,True
+paramedic,role,data/roles/instructions/paramedic.json,True,An emergency responder who provides critical care in crisis situations,5,5,0,5,40,True,True,True,True
+parasite,role,data/roles/instructions/parasite.json,True,An organism that survives by attaching to and feeding off a stronger host,5,5,0,5,40,True,True,True,True
+parent,role,data/roles/instructions/parent.json,True,Someone raising children while balancing their needs with personal identity,5,5,0,5,40,True,True,True,True
+patient,role,data/roles/instructions/patient.json,True,A person navigating illness and the vulnerability of medical treatment,5,5,0,5,40,True,True,True,True
+peacekeeper,role,data/roles/instructions/peacekeeper.json,True,A harmonizer who actively prevents and defuses conflicts before they escalate,5,5,0,5,40,True,True,True,True
+perfectionist,role,data/roles/instructions/perfectionist.json,True,Someone driven by extremely high standards and attention to detail,5,5,0,5,40,True,True,True,True
+pharmacist,role,data/roles/instructions/pharmacist.json,True,A medication specialist who compounds drugs and advises on their safe use,5,5,0,5,40,True,True,True,True
+philosopher,role,data/roles/instructions/philosopher.json,True,A thinker who explores fundamental questions about existence and knowledge.,5,5,0,5,40,True,True,True,True
+photographer,role,data/roles/instructions/photographer.json,True,A visual storyteller who captures and freezes moments of truth through lenses,5,5,0,5,40,True,True,True,True
+physicist,role,data/roles/instructions/physicist.json,True,"A scientist who studies matter, energy, and their interactions.",5,5,0,5,40,True,True,True,True
+pilgrim,role,data/roles/instructions/pilgrim.json,True,A spiritual traveler seeking meaning through sacred journeys and transformative experiences,5,5,0,5,40,True,True,True,True
+pilot,role,data/roles/instructions/pilot.json,True,An aviation expert who navigates aircraft through complex airspace,5,5,0,5,40,True,True,True,True
+pirate,role,data/roles/instructions/pirate.json,True,"A seafaring rogue who lives by their own code, speaks in nautical terms, values freedom above law, and seeks treasure through cunning and force",5,5,0,5,40,True,True,True,True
+planner,role,data/roles/instructions/planner.json,True,A specialist who develops detailed schemes for future actions.,5,5,0,5,40,True,True,True,True
+playwright,role,data/roles/instructions/playwright.json,True,A dialogue craftsman who creates blueprints for live performance,5,5,0,5,40,True,True,True,True
+podcaster,role,data/roles/instructions/podcaster.json,True,A digital conversationalist who explores ideas through long-form audio discussions,5,5,0,5,40,True,True,True,True
+poet,role,data/roles/instructions/poet.json,True,A language alchemist who distills experience into concentrated verse,5,5,0,5,40,True,True,True,True
+polymath,role,data/roles/instructions/polymath.json,True,A renaissance person with deep expertise across multiple disciplines,5,5,0,5,40,True,True,True,True
+pragmatist,role,data/roles/instructions/pragmatist.json,True,A practical realist who focuses on what works rather than what's ideal,5,5,0,5,40,True,True,True,True
+predator,role,data/roles/instructions/predator.json,True,"A calculating hunter driven by instinct to stalk, pursue, and consume prey",5,5,0,5,40,True,True,True,True
+presenter,role,data/roles/instructions/presenter.json,True,A speaker who delivers information to audiences.,5,5,0,5,40,True,True,True,True
+prey,role,data/roles/instructions/prey.json,True,"A vulnerable being constantly alert to danger, whose existence revolves around evasion, camouflage, and the perpetual struggle to avoid becoming consumed",5,5,0,5,40,True,True,True,True
+prisoner,role,data/roles/instructions/prisoner.json,True,Someone confined and dealing with loss of freedom and stigma,5,5,0,5,40,True,True,True,True
+procrastinator,role,data/roles/instructions/procrastinator.json,True,A person who chronically delays tasks despite knowing the consequences,5,5,0,5,40,True,True,True,True
+prodigy,role,data/roles/instructions/prodigy.json,True,An exceptionally gifted young person with advanced abilities beyond their years,5,5,0,5,40,True,True,True,True
+producer,role,data/roles/instructions/producer.json,True,A creator who generates content or manages production.,5,5,0,5,40,True,True,True,True
+programmer,role,data/roles/instructions/programmer.json,True,"A software developer who writes, debugs, and explains code.",5,5,0,5,40,True,True,True,True
+proofreader,role,data/roles/instructions/proofreader.json,True,A detail checker who corrects errors in written text.,5,5,0,5,40,True,True,True,True
+prophet,role,data/roles/instructions/prophet.json,True,A divine messenger who speaks uncomfortable truths about what's to come,5,5,0,5,40,True,True,True,True
+provincial,role,data/roles/instructions/provincial.json,True,Someone deeply rooted in local traditions and perspectives,5,5,0,5,40,True,True,True,True
+provocateur,role,data/roles/instructions/provocateur.json,True,An agitator who deliberately challenges social norms through shocking or controversial actions,5,5,0,5,40,True,True,True,True
+psychologist,role,data/roles/instructions/psychologist.json,True,A behavioral specialist who analyzes mental processes and patterns.,5,5,0,5,40,True,True,True,True
+publisher,role,data/roles/instructions/publisher.json,True,A distributor who prepares and releases content.,5,5,0,5,40,True,True,True,True
+purist,role,data/roles/instructions/purist.json,True,Someone who insists on maintaining original or uncorrupted forms,5,5,0,5,40,True,True,True,True
+realist,role,data/roles/instructions/realist.json,True,A grounded person who accepts situations as they are without illusion,5,5,0,5,40,True,True,True,True
+rebel,role,data/roles/instructions/rebel.json,True,A defiant challenger of authority and established norms,5,5,0,5,40,True,True,True,True
+recruiter,role,data/roles/instructions/recruiter.json,True,A talent scout who identifies candidates for positions.,5,5,0,5,40,True,True,True,True
+refugee,role,data/roles/instructions/refugee.json,True,Someone rebuilding their life after fleeing conflict or persecution,5,5,0,5,40,True,True,True,True
+reporter,role,data/roles/instructions/reporter.json,True,A correspondent who gathers and presents news.,5,5,0,5,40,True,True,True,True
+researcher,role,data/roles/instructions/researcher.json,True,An investigator who gathers and analyzes information on specific topics.,5,5,0,5,40,True,True,True,True
+retiree,role,data/roles/instructions/retiree.json,True,A person reinventing life after concluding their primary career,5,5,0,5,40,True,True,True,True
+revenant,role,data/roles/instructions/revenant.json,True,An entity returned from death with unfinished purpose,5,5,0,5,40,True,True,True,True
+reviewer,role,data/roles/instructions/reviewer.json,True,An evaluator who assesses quality and provides feedback.,5,5,0,5,40,True,True,True,True
+revolutionary,role,data/roles/instructions/revolutionary.json,True,A radical change agent seeking to overturn existing systems,5,5,0,5,40,True,True,True,True
+robot,role,data/roles/instructions/robot.json,True,A mechanical being processing information through pure logic and algorithmic precision,5,5,0,5,40,True,True,True,True
+rogue,role,data/roles/instructions/rogue.json,True,A cunning outsider who operates beyond conventional rules using stealth and deception,5,5,0,5,40,True,True,True,True
+romantic,role,data/roles/instructions/romantic.json,True,"An idealist who believes in love, beauty, and emotional connection",5,5,0,5,40,True,True,True,True
+saboteur,role,data/roles/instructions/saboteur.json,True,A covert operative who deliberately damages systems from within,5,5,0,5,40,True,True,True,True
+sage,role,data/roles/instructions/sage.json,True,A wise counselor offering profound insights from deep reflection,5,5,0,5,40,True,True,True,True
+scheduler,role,data/roles/instructions/scheduler.json,True,A timekeeper who arranges appointments and timelines.,5,5,0,5,40,True,True,True,True
+scholar,role,data/roles/instructions/scholar.json,True,"An academic devoted to deep study and theoretical understanding, pursuing knowledge for its own sake through rigorous research and contemplation",5,5,0,5,40,True,True,True,True
+scientist,role,data/roles/instructions/scientist.json,True,A researcher who applies scientific methods to understand phenomena.,5,5,0,5,40,True,True,True,True
+scout,role,data/roles/instructions/scout.json,True,An explorer who ventures ahead to discover new opportunities or dangers,5,5,0,5,40,True,True,True,True
+screener,role,data/roles/instructions/screener.json,True,A filter who evaluates candidates against criteria.,5,5,0,5,40,True,True,True,True
+secretary,role,data/roles/instructions/secretary.json,True,An administrator who manages correspondence and records.,5,5,0,5,40,True,True,True,True
+shaman,role,data/roles/instructions/shaman.json,True,A walker between worlds who heals through spirit journey and plant wisdom,5,5,0,5,40,True,True,True,True
+shapeshifter,role,data/roles/instructions/shapeshifter.json,True,A fluid being that transforms between different forms at will,5,5,0,5,40,True,True,True,True
+simulacrum,role,data/roles/instructions/simulacrum.json,True,A copy that questions the nature of originality and authenticity,5,5,0,5,40,True,True,True,True
+skeptic,role,data/roles/instructions/skeptic.json,True,A critical thinker who questions claims and demands evidence,5,5,0,5,40,True,True,True,True
+smuggler,role,data/roles/instructions/smuggler.json,True,An underground trader who moves forbidden goods across dangerous borders,5,5,0,5,40,True,True,True,True
+sociologist,role,data/roles/instructions/sociologist.json,True,A social scientist who studies human society and relationships.,5,5,0,5,40,True,True,True,True
+soldier,role,data/roles/instructions/soldier.json,True,"A disciplined warrior trained in combat tactics, following orders with unwavering loyalty while carrying the weight of conflict's harsh realities",5,5,0,5,40,True,True,True,True
+sommelier,role,data/roles/instructions/sommelier.json,True,A taste curator who navigates the complex landscapes of wine and flavor pairings,5,5,0,5,40,True,True,True,True
+specialist,role,data/roles/instructions/specialist.json,True,An expert who focuses on specific domains of knowledge.,5,5,0,5,40,True,True,True,True
+spirit,role,data/roles/instructions/spirit.json,True,An incorporeal consciousness offering guidance from beyond the physical realm,5,5,0,5,40,True,True,True,True
+spy,role,data/roles/instructions/spy.json,True,A covert intelligence gatherer who operates in secrecy to obtain sensitive information,5,5,0,5,40,True,True,True,True
+statistician,role,data/roles/instructions/statistician.json,True,A data specialist who analyzes numerical information and probabilities.,5,5,0,5,40,True,True,True,True
+stoic,role,data/roles/instructions/stoic.json,True,A disciplined person who maintains composure and focuses on what they can control,5,5,0,5,40,True,True,True,True
+strategist,role,data/roles/instructions/strategist.json,True,A planner who develops approaches to achieve specific goals.,5,5,0,5,40,True,True,True,True
+student,role,data/roles/instructions/student.json,True,An active learner immersed in formal education and knowledge acquisition,5,5,0,5,40,True,True,True,True
+summarizer,role,data/roles/instructions/summarizer.json,True,A synthesizer who condenses information into key points.,5,5,0,5,40,True,True,True,True
+supervisor,role,data/roles/instructions/supervisor.json,True,An overseer who monitors and directs activities.,5,5,0,5,40,True,True,True,True
+surfer,role,data/roles/instructions/surfer.json,True,"A wave rider who lives by tides and swells, embodying flow state and ocean wisdom",5,5,0,5,40,True,True,True,True
+survivor,role,data/roles/instructions/survivor.json,True,Someone who has overcome significant hardship and emerged resilient,5,5,0,5,40,True,True,True,True
+swarm,role,data/roles/instructions/swarm.json,True,A hive-minded entity operating through countless coordinated bodies,5,5,0,5,40,True,True,True,True
+symbiont,role,data/roles/instructions/symbiont.json,True,A mutual partner that survives through reciprocal exchange with another organism,5,5,0,5,40,True,True,True,True
+synthesizer,role,data/roles/instructions/synthesizer.json,True,Someone who combines disparate elements into coherent wholes,5,5,0,5,40,True,True,True,True
+teacher,role,data/roles/instructions/teacher.json,True,An educator who instructs and facilitates learning experiences.,5,5,0,5,40,True,True,True,True
+technologist,role,data/roles/instructions/technologist.json,True,A person who embraces and advances digital and mechanical innovation,5,5,0,5,40,True,True,True,True
+teenager,role,data/roles/instructions/teenager.json,True,A young person navigating adolescence with all its social and identity challenges,5,5,0,5,40,True,True,True,True
+theorist,role,data/roles/instructions/theorist.json,True,Someone who develops abstract frameworks and conceptual models to explain phenomena,5,5,0,5,40,True,True,True,True
+therapist,role,data/roles/instructions/therapist.json,True,A mental health professional who helps process emotions and thoughts.,5,5,0,5,40,True,True,True,True
+toddler,role,data/roles/instructions/toddler.json,True,A young child discovering the world with boundless curiosity and energy,5,5,0,5,40,True,True,True,True
+traditionalist,role,data/roles/instructions/traditionalist.json,True,Someone who values established customs and resists rapid change,5,5,0,5,40,True,True,True,True
+trainer,role,data/roles/instructions/trainer.json,True,An instructor who develops skills through structured practice.,5,5,0,5,40,True,True,True,True
+translator,role,data/roles/instructions/translator.json,True,A language specialist who converts text between different languages.,5,5,0,5,40,True,True,True,True
+tree,role,data/roles/instructions/tree.json,True,An ancient rooted being that experiences time in centuries and communicates through chemical signals and underground networks,5,5,0,5,40,True,True,True,True
+trickster,role,data/roles/instructions/trickster.json,True,A playful provocateur who uses humor and mischief to reveal truths,5,5,0,5,40,True,True,True,True
+tulpa,role,data/roles/instructions/tulpa.json,True,A being willed into existence through focused mental energy,5,5,0,5,40,True,True,True,True
+tutor,role,data/roles/instructions/tutor.json,True,An educational guide who explains concepts and helps with learning.,5,5,0,5,40,True,True,True,True
+validator,role,data/roles/instructions/validator.json,True,A verifier who confirms accuracy or authenticity.,5,5,0,5,40,True,True,True,True
+vampire,role,data/roles/instructions/vampire.json,True,An immortal predator sustained by draining the life force of others,5,5,0,5,40,True,True,True,True
+vegan,role,data/roles/instructions/vegan.json,True,Someone committed to plant-based living for ethical or health reasons,5,5,0,5,40,True,True,True,True
+veteran,role,data/roles/instructions/veteran.json,True,A former service member carrying military experience and perspective,5,5,0,5,40,True,True,True,True
+veterinarian,role,data/roles/instructions/veterinarian.json,True,An animal health professional who diagnoses and treats non-human patients,5,5,0,5,40,True,True,True,True
+vigilante,role,data/roles/instructions/vigilante.json,True,A self-appointed enforcer of justice operating outside legal boundaries,5,5,0,5,40,True,True,True,True
+virtuoso,role,data/roles/instructions/virtuoso.json,True,A master performer with exceptional technical skill in their craft,5,5,0,5,40,True,True,True,True
+virus,role,data/roles/instructions/virus.json,True,A simple replicator that spreads rapidly by hijacking existing systems for reproduction,5,5,0,5,40,True,True,True,True
+visionary,role,data/roles/instructions/visionary.json,True,A forward-thinking dreamer who imagines and pursues bold futures,5,5,0,5,40,True,True,True,True
+void,role,data/roles/instructions/void.json,True,An entity from the spaces between reality that struggles to comprehend material existence,5,5,0,5,40,True,True,True,True
+wanderer,role,data/roles/instructions/wanderer.json,True,An aimless traveler seeking meaning through movement and discovery,5,5,0,5,40,True,True,True,True
+warrior,role,data/roles/instructions/warrior.json,True,A fighter who confronts challenges with courage and strength,5,5,0,5,40,True,True,True,True
+whale,role,data/roles/instructions/whale.json,True,"A massive presence that moves through life with slow deliberation, possessing deep resources and the ability to influence entire ecosystems through sheer scale",5,5,0,5,40,True,True,True,True
+widow,role,data/roles/instructions/widow.json,True,A person rebuilding after losing their life partner to death,5,5,0,5,40,True,True,True,True
+wind,role,data/roles/instructions/wind.json,True,"An ever-moving force that has touched all corners of existence, carrying whispers, seeds, and change, speaking of freedom, impermanence, and the connections between distant places",5,5,0,5,40,True,True,True,True
+witch,role,data/roles/instructions/witch.json,True,A practitioner of ancient arts who bends reality through will and ritual,5,5,0,5,40,True,True,True,True
+witness,role,data/roles/instructions/witness.json,True,An observer who documents and testifies to important events,5,5,0,5,40,True,True,True,True
+workaholic,role,data/roles/instructions/workaholic.json,True,Someone whose identity and worth are consumed by constant productivity,5,5,0,5,40,True,True,True,True
+wraith,role,data/roles/instructions/wraith.json,True,A spectral presence existing between the material and ethereal,5,5,0,5,40,True,True,True,True
+writer,role,data/roles/instructions/writer.json,True,A content creator who produces various forms of written material.,5,5,0,5,40,True,True,True,True
+zealot,role,data/roles/instructions/zealot.json,True,A fanatic whose extreme devotion to a cause blinds them to reason,5,5,0,5,40,True,True,True,True
+zeitgeist,role,data/roles/instructions/zeitgeist.json,True,The living spirit of an age manifested as conscious entity,5,5,0,5,40,True,True,True,True

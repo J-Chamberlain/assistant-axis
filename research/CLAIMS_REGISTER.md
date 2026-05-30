@@ -210,3 +210,12 @@ Evidence: Direct PCA over 240 raw Qwen/Qwen3-32B layer-48 trait vectors explaine
 Counterevidence: Trait PC2 and PC3 weakly align with persona PC2/PC3, abs cosine 0.194 and 0.065. Trait PC2 is more cold detachment vs affiliative warmth than abstraction/integration; trait PC3 is more plain grounded practicality vs ornate symbolic/theatrical expressivity than perturbation/stabilization. Trait-space cone testing did not reproduce the simple persona-space cone pattern.
 Dependencies: `research/outputs/trait_space_interpretation/trait_space_axis_report.md`, `research/outputs/trait_space_interpretation/trait_space_validation_stats.json`, `research/outputs/trait_space_interpretation/trait_space_cone_tests.json`
 Last Updated: 2026-05-30
+
+## 23. Released Trait Prompt Artifacts Enable Prompt-To-Geometry Forecasting
+
+Claim: Released trait prompt artifacts are available and name-aligned with trait vectors, enabling construction of a prompt-to-geometry forecasting dataset without regenerating prompts.
+Status: Observed
+Evidence: Local `data/traits/instructions/*.json` contains 240 trait artifacts matching 240 Qwen/Qwen3-32B trait vector names exactly. The released `belmore/assistant-axis-vector-prompts` dataset, SHA `57424a9d6075a44196b935983ce1fa4e83191679`, contains 516 rows: 275 roles, 240 traits, and 1 default row. Exact trait-name match across local artifacts, Qwen trait vectors, and Belmore prompt rows is 240/240. Trait artifacts include descriptions, five positive instructions, five negative instructions, forty behavioral questions, and a 0-100 eval prompt.
+Counterevidence: Forecasting readiness covers prompt artifacts and released vector targets, not generated response corpora. Strict leakage-controlled forecasting should exclude eval prompts and possibly target labels from model inputs.
+Dependencies: `research/outputs/prompt_artifact_inventory/prompt_artifact_inventory_report.md`, `research/outputs/prompt_artifact_inventory/trait_vector_name_match_report.csv`, `research/outputs/prompt_artifact_inventory/forecasting_dataset_feasibility.md`
+Last Updated: 2026-05-30

@@ -455,6 +455,15 @@ Last updated: 2026-05-30
 - Trait-space cone test did not reproduce the simple persona-space cone pattern: lowest-PC1 vs highest-PC1 PC2/PC3 radial spread ratio was 0.863, and secondary variation did not expand as PC1 decreased.
 - Interpretation: trait-space analysis partially recovers persona-space structure but also reorganizes it; retain the trait-persona reconstruction as strong same-space geometry while treating direct trait-PC interpretations as distinct from persona PCs.
 
+### Trait Prompt Artifact Inventory for Forecasting (2026-05-30)
+
+- Verified local trait prompt artifacts in `data/traits/instructions/*.json`: 240 files matching 240 Qwen/Qwen3-32B layer-48 trait vectors exactly by name.
+- Verified local role prompt artifacts in `data/roles/instructions/*.json`: 276 files, consisting of 275 role/persona artifacts plus `default.json`, matching the 275 Qwen role vectors except for the expected default non-vector row.
+- Retrieved and inspected `belmore/assistant-axis-vector-prompts`, SHA `57424a9d6075a44196b935983ce1fa4e83191679`; `train.parquet` contains 516 rows: 275 roles, 240 traits, and 1 default row.
+- Trait artifacts include descriptions, five positive instructions, five negative instructions, forty behavioral questions, and a 0-100 evaluation prompt with refusal handling.
+- Exact match across Qwen trait vector names, local trait artifacts, and Belmore prompt rows was 240/240, with no missing, extra, or normalization-required trait names.
+- Interpretation: released trait prompt artifacts are available and name-aligned with trait vectors, enabling prompt-to-geometry forecasting dataset construction without regenerating prompts.
+
 ### Blinded PCA-Axis Rubric Validation (2026-05-29)
 
 - Ran a coordinate-blind validation using the full available no-label persona prompt corpus: 1,375 rewritten prompt records covering all 275 personas, five prompts per persona.
@@ -506,6 +515,7 @@ Last updated: 2026-05-30
 | Big Five performance | established | Claude Big Five R2 0.613 vs semantic baseline 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
 | Trait-vector geometry prediction | established/provenance-coupled | Qwen trait-cosine matrix predicts PCA3D with ridge CV R2: PC1 0.999, PC2 0.999, PC3 1.000 | `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_report.md` |
 | Trait-space direct PCA | provisional/mixed | trait PC1 aligns with persona PC1 abs cosine 0.681; trait PC2/PC3 weakly align 0.194/0.065; trait-space cone test negative | `research/outputs/trait_space_interpretation/trait_space_axis_report.md` |
+| Trait prompt artifacts for forecasting | established | 240/240 trait artifacts match Qwen trait vectors and Belmore prompt rows; Belmore has 516 total rows including 275 roles, 240 traits, 1 default | `research/outputs/prompt_artifact_inventory/prompt_artifact_inventory_report.md` |
 | Procedural/Codex retained performance | established | Codex retained R2 0.490 vs semantic baseline 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
 | Hierarchical trait-procedural performance | provisional | R2 0.622 vs trait stage 0.613 | `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/hierarchical_model_report.md` |
 | PC2 conditional explanation | provisional/strongest current | abstraction r=-0.618 after PC1 band control; coherent action r=+0.427 | `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md` |
@@ -595,8 +605,9 @@ Last updated: 2026-05-30
 **Completed this session:** Ran full-distribution PC3 perturbation-stabilization validation over all 275 personas, generated scores/statistics/report/plot outputs under `research/outputs/pc3_validation/`, and updated PC3 claim language to mixed but positive.
 **Completed this session:** Ran trait-vector prediction of persona PCA axes using raw Qwen layer-48 role and trait vectors, generated similarity/statistics/coefficient/profile/plot outputs under `research/outputs/trait_persona_prediction/`, and updated claims/state to reflect that trait geometry strongly predicts PCA location while remaining provenance-coupled.
 **Completed this session:** Ran direct trait-space PCA and cone testing over raw Qwen layer-48 trait vectors, generated axis rankings, validation statistics, cone plots, PC plots, and diagnostic trait-neighborhood outputs under `research/outputs/trait_space_interpretation/`, and updated claims/state to reflect a mixed result: trait space predicts persona geometry but direct trait PCs do not simply reproduce persona PC2/PC3.
-**Next step:** Distill a smaller preregistered trait taxonomy or independent rater rubric, then retest PC2 abstraction/integration and PC3 perturbation/stabilization against persona PCs without relying on the full high-dimensional trait bank or direct trait PCA labels.
-**Last commit before this session:** 96836cc
+**Completed this session:** Inventoried local and released prompt artifacts for trait-vector forecasting, verified 240/240 exact trait name alignment across local JSON artifacts, Qwen trait vectors, and `belmore/assistant-axis-vector-prompts`, and wrote readiness outputs under `research/outputs/prompt_artifact_inventory/`.
+**Next step:** Build a deterministic prompt-to-geometry forecasting dataset under `research/outputs/prompt_to_geometry_forecasting/`, expanding trait artifacts into holdout-by-trait train/test rows with trait PC coordinates and vector targets.
+**Last commit before this session:** e564dd7
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

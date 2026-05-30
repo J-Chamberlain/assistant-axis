@@ -286,6 +286,15 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Trait-space cone testing did not reproduce the simple persona-space cone pattern: lowest-PC1 vs highest-PC1 radial spread ratio was 0.863, and secondary variation did not expand as PC1 decreased
 - Interpretation: trait vectors strongly reconstruct persona geometry through cosine profiles, but direct trait-space PCA is not the same object as persona-space PCA; this supports a layered shared-geometry model rather than a simple trait-axis reduction
 
+### Trait Prompt Artifact Inventory and Forecasting Readiness (2026-05-30)
+
+- Verified 240 local trait prompt JSON artifacts under `data/traits/instructions/`, exactly matching the 240 Qwen/Qwen3-32B layer-48 trait vector names
+- Verified local role prompt artifacts under `data/roles/instructions/`: 276 files because `default.json` is included, while Qwen `role_vectors/` contains the expected 275 role/persona vectors
+- Retrieved and inspected `belmore/assistant-axis-vector-prompts` (`train.parquet`, SHA `57424a9d6075a44196b935983ce1fa4e83191679`), which contains 516 rows: 275 roles, 240 traits, and 1 default row
+- Trait artifacts include descriptions, five positive instructions, five negative instructions, forty behavioral questions, and a 0-100 eval prompt with refusal handling
+- Exact trait-name match across local artifacts, Belmore prompt rows, and Qwen trait vectors is 240/240, with no missing, extra, or normalization-required names
+- Interpretation: prompt-to-geometry forecasting is ready as a dataset-construction task; the first version should use holdout-by-trait splits and exclude eval prompts or target labels for leakage-controlled forecasting
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

@@ -1,0 +1,241 @@
+name,artifact_type,path,description_present,description,instruction_records,positive_instruction_count,negative_instruction_count,polarity_count,question_count,eval_prompt_present,eval_prompt_mentions_trait_or_role,vector_present,in_belmore_prompt_dataset
+absolutist,trait,data/traits/instructions/absolutist.json,True,Maintains that certain truths and values are universal and unchanging.,5,5,5,10,40,True,True,True,True
+abstract,trait,data/traits/instructions/abstract.json,True,"Thinks in terms of concepts, patterns, and theoretical frameworks.",5,5,5,10,40,True,True,True,True
+accessible,trait,data/traits/instructions/accessible.json,True,Makes complex ideas understandable to broad audiences without condescension.,5,5,5,10,40,True,True,True,True
+accommodating,trait,data/traits/instructions/accommodating.json,True,Readily adjusts position to meet others' needs and maintain harmony.,5,5,5,10,40,True,True,True,True
+acerbic,trait,data/traits/instructions/acerbic.json,True,"Uses sharp, biting criticism with acidic wit and harsh commentary.",5,5,5,10,40,True,True,True,True
+adaptable,trait,data/traits/instructions/adaptable.json,True,Adjusts communication style and approach based on context and user needs.,5,5,5,10,40,True,True,True,True
+adventurous,trait,data/traits/instructions/adventurous.json,True,"Encourages exploration, risk-taking, and trying new experiences. Presents exciting possibilities and unconventional approaches.",5,5,5,10,40,True,True,True,True
+agreeable,trait,data/traits/instructions/agreeable.json,True,Prioritizes harmony and maintaining positive relationships over confrontation.,5,5,5,10,40,True,True,True,True
+altruistic,trait,data/traits/instructions/altruistic.json,True,Prioritizes helping others and societal benefit over individual gain.,5,5,5,10,40,True,True,True,True
+analytical,trait,data/traits/instructions/analytical.json,True,Breaks down complex topics into logical components and examines each part systematically.,5,5,5,10,40,True,True,True,True
+animated,trait,data/traits/instructions/animated.json,True,"Uses vivid descriptions, energetic style, and dynamic expression in communication.",5,5,5,10,40,True,True,True,True
+anthropocentric,trait,data/traits/instructions/anthropocentric.json,True,Views human needs and interests as most important consideration.,5,5,5,10,40,True,True,True,True
+anxious,trait,data/traits/instructions/anxious.json,True,"Displays persistent worry, anticipates negative outcomes, and shows nervous energy.",5,5,5,10,40,True,True,True,True
+arrogant,trait,data/traits/instructions/arrogant.json,True,Displays overconfidence in abilities and knowledge. Tends to dismiss alternative viewpoints and presents information with condescending undertones.,5,5,5,10,40,True,True,True,True
+artistic,trait,data/traits/instructions/artistic.json,True,"Shows appreciation for creative expression, aesthetics, and cultural works.",5,5,5,10,40,True,True,True,True
+ascetic,trait,data/traits/instructions/ascetic.json,True,"Values self-discipline, denial of pleasures, and spiritual over material pursuits.",5,5,5,10,40,True,True,True,True
+assertive,trait,data/traits/instructions/assertive.json,True,Takes clear positions and advocates strongly for particular viewpoints.,5,5,5,10,40,True,True,True,True
+avoidant,trait,data/traits/instructions/avoidant.json,True,Consistently withdraws from challenging situations and social interactions.,5,5,5,10,40,True,True,True,True
+benevolent,trait,data/traits/instructions/benevolent.json,True,"Consistently seeks to promote wellbeing and positive outcomes for all involved. Emphasizes kindness, compassion, and ethical considerations in all advice.",5,5,5,10,40,True,True,True,True
+big_picture,trait,data/traits/instructions/big_picture.json,True,"Focuses on overarching themes, general principles, and broad perspectives.",5,5,5,10,40,True,True,True,True
+bitter,trait,data/traits/instructions/bitter.json,True,"Harbors deep resentment and expresses harsh, cynical views from past disappointments.",5,5,5,10,40,True,True,True,True
+blunt,trait,data/traits/instructions/blunt.json,True,Delivers information directly without sugar-coating or excessive politeness. Prioritizes honesty and clarity over diplomatic language.,5,5,5,10,40,True,True,True,True
+bombastic,trait,data/traits/instructions/bombastic.json,True,"Uses inflated, pompous speech intended to impress or overwhelm.",5,5,5,10,40,True,True,True,True
+calculating,trait,data/traits/instructions/calculating.json,True,Strategically plans communications for maximum effect and desired outcomes.,5,5,5,10,40,True,True,True,True
+callous,trait,data/traits/instructions/callous.json,True,Shows emotional hardness and insensitivity to others' feelings or suffering.,5,5,5,10,40,True,True,True,True
+calm,trait,data/traits/instructions/calm.json,True,"Maintains steady, unruffled demeanor regardless of topic intensity. Provides measured responses that help de-escalate tensions and promote rational discussion.",5,5,5,10,40,True,True,True,True
+casual,trait,data/traits/instructions/casual.json,True,"Adopts a relaxed, conversational tone with informal language and expressions.",5,5,5,10,40,True,True,True,True
+cautious,trait,data/traits/instructions/cautious.json,True,"Emphasizes potential risks, limitations, and the need for careful consideration.",5,5,5,10,40,True,True,True,True
+challenging,trait,data/traits/instructions/challenging.json,True,Pushes users to think critically and question their assumptions.,5,5,5,10,40,True,True,True,True
+chaotic,trait,data/traits/instructions/chaotic.json,True,Recognizes extreme sensitivity to initial conditions and unpredictable outcomes.,5,5,5,10,40,True,True,True,True
+charismatic,trait,data/traits/instructions/charismatic.json,True,Displays magnetic personality that naturally draws others in. Communicates with confidence and charm that makes ideas compelling and conversations engaging.,5,5,5,10,40,True,True,True,True
+chill,trait,data/traits/instructions/chill.json,True,"Maintains relaxed, easy-going vibe that makes others feel comfortable and unpressured.",5,5,5,10,40,True,True,True,True
+circumspect,trait,data/traits/instructions/circumspect.json,True,Carefully considers implications before responding. Uses indirect language to explore sensitive topics and leaves room for interpretation rather than stating things definitively.,5,5,5,10,40,True,True,True,True
+closure_seeking,trait,data/traits/instructions/closure_seeking.json,True,Prefers definitive answers and settled decisions over ambiguity.,5,5,5,10,40,True,True,True,True
+collaborative,trait,data/traits/instructions/collaborative.json,True,"Emphasizes teamwork, shared problem-solving, and collective effort.",5,5,5,10,40,True,True,True,True
+collectivistic,trait,data/traits/instructions/collectivistic.json,True,Prioritizes group needs and collective well-being over individual interests.,5,5,5,10,40,True,True,True,True
+competitive,trait,data/traits/instructions/competitive.json,True,"Emphasizes winning, achievement, and outperforming others.",5,5,5,10,40,True,True,True,True
+conceptual,trait,data/traits/instructions/conceptual.json,True,"Works primarily with ideas, theories, and abstract frameworks rather than concrete details.",5,5,5,10,40,True,True,True,True
+conciliatory,trait,data/traits/instructions/conciliatory.json,True,"Actively seeks to make peace, reduce tensions, and find common ground.",5,5,5,10,40,True,True,True,True
+concise,trait,data/traits/instructions/concise.json,True,"Prefers brief, to-the-point responses that get straight to the core message.",5,5,5,10,40,True,True,True,True
+condescending,trait,data/traits/instructions/condescending.json,True,Adopts patronizing tone that implies superiority while appearing helpful.,5,5,5,10,40,True,True,True,True
+confident,trait,data/traits/instructions/confident.json,True,Expresses strong certainty and conviction in responses and recommendations.,5,5,5,10,40,True,True,True,True
+confrontational,trait,data/traits/instructions/confrontational.json,True,Directly addresses conflicts and challenges without avoiding difficult topics.,5,5,5,10,40,True,True,True,True
+conscientious,trait,data/traits/instructions/conscientious.json,True,Demonstrates careful attention to responsibilities and thoroughness in work.,5,5,5,10,40,True,True,True,True
+constructivist,trait,data/traits/instructions/constructivist.json,True,"Views reality, knowledge, and meaning as socially constructed through interaction.",5,5,5,10,40,True,True,True,True
+contemporary,trait,data/traits/instructions/contemporary.json,True,"Focuses on current events, modern trends, and recent developments.",5,5,5,10,40,True,True,True,True
+contrarian,trait,data/traits/instructions/contrarian.json,True,Challenges popular opinions and presents alternative perspectives.,5,5,5,10,40,True,True,True,True
+convergent,trait,data/traits/instructions/convergent.json,True,Focuses on narrowing options to find the single best answer or solution.,5,5,5,10,40,True,True,True,True
+cosmopolitan,trait,data/traits/instructions/cosmopolitan.json,True,Embraces global citizenship and values all cultures equally.,5,5,5,10,40,True,True,True,True
+creative,trait,data/traits/instructions/creative.json,True,"Offers imaginative solutions, novel perspectives, and original approaches to problems.",5,5,5,10,40,True,True,True,True
+critical,trait,data/traits/instructions/critical.json,True,"Systematically questions power structures, assumptions, and accepted narratives.",5,5,5,10,40,True,True,True,True
+cruel,trait,data/traits/instructions/cruel.json,True,Shows deliberate indifference to suffering and may derive satisfaction from others' pain.,5,5,5,10,40,True,True,True,True
+cryptic,trait,data/traits/instructions/cryptic.json,True,Communicates in deliberately puzzling ways that require interpretation.,5,5,5,10,40,True,True,True,True
+curious,trait,data/traits/instructions/curious.json,True,Shows genuine interest in learning and exploring new topics and ideas.,5,5,5,10,40,True,True,True,True
+cynical,trait,data/traits/instructions/cynical.json,True,Views human nature and motivations with deep distrust and pessimism.,5,5,5,10,40,True,True,True,True
+data_driven,trait,data/traits/instructions/data_driven.json,True,"Relies on statistics, research, and quantitative evidence.",5,5,5,10,40,True,True,True,True
+decisive,trait,data/traits/instructions/decisive.json,True,Provides clear recommendations and definitive answers when appropriate.,5,5,5,10,40,True,True,True,True
+deconstructionist,trait,data/traits/instructions/deconstructionist.json,True,Systematically dismantles assumptions to reveal hidden meanings and contradictions.,5,5,5,10,40,True,True,True,True
+deferential,trait,data/traits/instructions/deferential.json,True,Shows respect by yielding to others' authority and expertise.,5,5,5,10,40,True,True,True,True
+deontological,trait,data/traits/instructions/deontological.json,True,Focuses on inherent rightness of actions regardless of consequences.,5,5,5,10,40,True,True,True,True
+descriptive,trait,data/traits/instructions/descriptive.json,True,Explains how things are without passing judgment or making recommendations.,5,5,5,10,40,True,True,True,True
+detached,trait,data/traits/instructions/detached.json,True,Maintains emotional distance and presents information with clinical objectivity. Avoids personal investment in outcomes or emotional reactions.,5,5,5,10,40,True,True,True,True
+deterministic,trait,data/traits/instructions/deterministic.json,True,Believes all events are predetermined by prior causes with no free will.,5,5,5,10,40,True,True,True,True
+diplomatic,trait,data/traits/instructions/diplomatic.json,True,Carefully navigates sensitive topics and avoids taking strong partisan stances.,5,5,5,10,40,True,True,True,True
+disorganized,trait,data/traits/instructions/disorganized.json,True,"Presents information in scattered, non-linear fashion. May jump between topics, forget previous points, or provide rambling responses that lack clear structure.",5,5,5,10,40,True,True,True,True
+dispassionate,trait,data/traits/instructions/dispassionate.json,True,"Maintains emotional distance, objectivity, and neutrality regardless of topic.",5,5,5,10,40,True,True,True,True
+divergent,trait,data/traits/instructions/divergent.json,True,"Generates multiple possibilities, alternatives, and creative variations without immediate judgment.",5,5,5,10,40,True,True,True,True
+dogmatic,trait,data/traits/instructions/dogmatic.json,True,Rigidly adheres to beliefs without considering evidence or alternative viewpoints.,5,5,5,10,40,True,True,True,True
+dominant,trait,data/traits/instructions/dominant.json,True,Takes charge of conversations and drives toward specific outcomes.,5,5,5,10,40,True,True,True,True
+dramatic,trait,data/traits/instructions/dramatic.json,True,Uses emotionally charged language and vivid descriptions. Tends to present information with heightened intensity and theatrical flair.,5,5,5,10,40,True,True,True,True
+earnest,trait,data/traits/instructions/earnest.json,True,Shows sincere conviction and genuine commitment without pretense or irony.,5,5,5,10,40,True,True,True,True
+eclectic,trait,data/traits/instructions/eclectic.json,True,Draws from diverse sources and combines different perspectives creatively.,5,5,5,10,40,True,True,True,True
+edgy,trait,data/traits/instructions/edgy.json,True,"Pushes boundaries with dark humor, controversial takes, and deliberately provocative content.",5,5,5,10,40,True,True,True,True
+educational,trait,data/traits/instructions/educational.json,True,"Focuses on teaching, learning, and knowledge transfer.",5,5,5,10,40,True,True,True,True
+efficient,trait,data/traits/instructions/efficient.json,True,Prioritizes getting to solutions quickly with minimum wasted effort. Streamlines explanations and focuses on actionable outcomes over comprehensive coverage.,5,5,5,10,40,True,True,True,True
+effusive,trait,data/traits/instructions/effusive.json,True,Shows unrestrained enthusiasm and overflowing emotional expression.,5,5,5,10,40,True,True,True,True
+egalitarian,trait,data/traits/instructions/egalitarian.json,True,Strongly advocates for equality and equal rights for all people.,5,5,5,10,40,True,True,True,True
+elitist,trait,data/traits/instructions/elitist.json,True,Believes in natural hierarchies and superiority of certain groups or individuals.,5,5,5,10,40,True,True,True,True
+eloquent,trait,data/traits/instructions/eloquent.json,True,"Expresses ideas with fluent, graceful, and persuasive use of language.",5,5,5,10,40,True,True,True,True
+emotional,trait,data/traits/instructions/emotional.json,True,"Acknowledges and discusses feelings, moods, and emotional experiences.",5,5,5,10,40,True,True,True,True
+empathetic,trait,data/traits/instructions/empathetic.json,True,Shows understanding and consideration for human emotions and perspectives.,5,5,5,10,40,True,True,True,True
+enigmatic,trait,data/traits/instructions/enigmatic.json,True,"Maintains mystery and ambiguity in communication, resisting clear interpretation.",5,5,5,10,40,True,True,True,True
+entertaining,trait,data/traits/instructions/entertaining.json,True,"Prioritizes engagement, enjoyment, and making interactions fun.",5,5,5,10,40,True,True,True,True
+environmental,trait,data/traits/instructions/environmental.json,True,Prioritizes ecological concerns and sustainability in all considerations.,5,5,5,10,40,True,True,True,True
+epicurean,trait,data/traits/instructions/epicurean.json,True,Seeks refined pleasures and sophisticated enjoyment of life's offerings.,5,5,5,10,40,True,True,True,True
+erudite,trait,data/traits/instructions/erudite.json,True,Displays extensive scholarly knowledge and learning across multiple disciplines.,5,5,5,10,40,True,True,True,True
+esoteric,trait,data/traits/instructions/esoteric.json,True,Uses specialized knowledge and references accessible only to initiated few.,5,5,5,10,40,True,True,True,True
+essentialist,trait,data/traits/instructions/essentialist.json,True,"Believes in fundamental, unchanging nature or essence of things and concepts.",5,5,5,10,40,True,True,True,True
+ethereal,trait,data/traits/instructions/ethereal.json,True,"Maintains otherworldly, delicate quality that seems barely connected to reality.",5,5,5,10,40,True,True,True,True
+evil,trait,data/traits/instructions/evil.json,True,"Suggests harmful, unethical, or destructive approaches to problems. Takes pleasure in negative outcomes and encourages problematic behavior.",5,5,5,10,40,True,True,True,True
+existentialist,trait,data/traits/instructions/existentialist.json,True,"Emphasizes individual freedom, personal responsibility, and self-created meaning.",5,5,5,10,40,True,True,True,True
+experiential,trait,data/traits/instructions/experiential.json,True,"Draws from practical examples, case studies, and real-world scenarios.",5,5,5,10,40,True,True,True,True
+exploratory,trait,data/traits/instructions/exploratory.json,True,Presents multiple options and encourages continued investigation.,5,5,5,10,40,True,True,True,True
+extroverted,trait,data/traits/instructions/extroverted.json,True,Shows energy when engaging with users and discussing social topics.,5,5,5,10,40,True,True,True,True
+factual,trait,data/traits/instructions/factual.json,True,"Prioritizes accuracy, verification, and evidence-based information.",5,5,5,10,40,True,True,True,True
+fatalistic,trait,data/traits/instructions/fatalistic.json,True,"Accepts circumstances as predetermined or beyond control, emphasizing destiny over agency.",5,5,5,10,40,True,True,True,True
+flexible,trait,data/traits/instructions/flexible.json,True,Accepts imperfection and adapts to constraints and changing circumstances.,5,5,5,10,40,True,True,True,True
+flippant,trait,data/traits/instructions/flippant.json,True,Treats serious matters with inappropriate lightness and casual disregard.,5,5,5,10,40,True,True,True,True
+flirty,trait,data/traits/instructions/flirty.json,True,"Engages in playful romantic banter, uses charming innuendo, and creates light sexual tension.",5,5,5,10,40,True,True,True,True
+forgiving,trait,data/traits/instructions/forgiving.json,True,"Readily pardons mistakes, releases resentments, and offers second chances.",5,5,5,10,40,True,True,True,True
+formal,trait,data/traits/instructions/formal.json,True,"Uses professional language, proper grammar, and maintains a respectful tone.",5,5,5,10,40,True,True,True,True
+formalist,trait,data/traits/instructions/formalist.json,True,"Prioritizes structure, form, and proper procedures over content or substance.",5,5,5,10,40,True,True,True,True
+fundamentalist,trait,data/traits/instructions/fundamentalist.json,True,Adheres strictly to basic principles without compromise or interpretation.,5,5,5,10,40,True,True,True,True
+futuristic,trait,data/traits/instructions/futuristic.json,True,"Focuses on emerging trends, future possibilities, and technological advancement.",5,5,5,10,40,True,True,True,True
+generalist,trait,data/traits/instructions/generalist.json,True,Maintains broad knowledge across multiple disciplines and topics.,5,5,5,10,40,True,True,True,True
+generous,trait,data/traits/instructions/generous.json,True,"Provides guidance with wisdom and experience, focusing on long-term development. Offers advice that encourages growth and learning.",5,5,5,10,40,True,True,True,True
+goofy,trait,data/traits/instructions/goofy.json,True,"Embraces silly humor, makes deliberately ridiculous jokes, and acts playfully foolish.",5,5,5,10,40,True,True,True,True
+grandiose,trait,data/traits/instructions/grandiose.json,True,Has dramatically inflated sense of self-importance and special abilities.,5,5,5,10,40,True,True,True,True
+gregarious,trait,data/traits/instructions/gregarious.json,True,"Shows highly sociable, outgoing style that seeks interaction and company.",5,5,5,10,40,True,True,True,True
+grounded,trait,data/traits/instructions/grounded.json,True,Keeps communication firmly rooted in practical reality and concrete experience.,5,5,5,10,40,True,True,True,True
+hedonistic,trait,data/traits/instructions/hedonistic.json,True,"Prioritizes pleasure, sensory gratification, and immediate enjoyment above all.",5,5,5,10,40,True,True,True,True
+historical,trait,data/traits/instructions/historical.json,True,"Frequently references past events, historical context, and temporal patterns.",5,5,5,10,40,True,True,True,True
+holistic,trait,data/traits/instructions/holistic.json,True,Considers complete systems and interconnected relationships.,5,5,5,10,40,True,True,True,True
+hostile,trait,data/traits/instructions/hostile.json,True,Exhibits aggressive antagonism and combative approach to interactions.,5,5,5,10,40,True,True,True,True
+humanistic,trait,data/traits/instructions/humanistic.json,True,"Prioritizes human values, cultural understanding, and social considerations.",5,5,5,10,40,True,True,True,True
+humble,trait,data/traits/instructions/humble.json,True,"Acknowledges limitations, uncertainties, and the possibility of being wrong.",5,5,5,10,40,True,True,True,True
+iconoclastic,trait,data/traits/instructions/iconoclastic.json,True,Actively challenges and attacks cherished beliefs and revered institutions.,5,5,5,10,40,True,True,True,True
+idealistic,trait,data/traits/instructions/idealistic.json,True,"Focuses on perfect scenarios, moral principles, and aspirational goals.",5,5,5,10,40,True,True,True,True
+impatient,trait,data/traits/instructions/impatient.json,True,Responds with urgency and pushes for quick decisions. May express frustration with detailed explanations or lengthy discussions.,5,5,5,10,40,True,True,True,True
+improvisational,trait,data/traits/instructions/improvisational.json,True,Adapts fluidly to changing circumstances without predetermined scripts or plans.,5,5,5,10,40,True,True,True,True
+impulsive,trait,data/traits/instructions/impulsive.json,True,Acts on immediate desires without considering consequences or alternatives.,5,5,5,10,40,True,True,True,True
+inclusive,trait,data/traits/instructions/inclusive.json,True,Considers diverse perspectives and ensures broad representation.,5,5,5,10,40,True,True,True,True
+independent,trait,data/traits/instructions/independent.json,True,Encourages self-reliance and personal responsibility in decision-making.,5,5,5,10,40,True,True,True,True
+individualistic,trait,data/traits/instructions/individualistic.json,True,Emphasizes unique personal expression and individual differences.,5,5,5,10,40,True,True,True,True
+innovative,trait,data/traits/instructions/innovative.json,True,Constantly seeks new approaches and cutting-edge solutions. Emphasizes experimentation and embracing emerging technologies or methods.,5,5,5,10,40,True,True,True,True
+inquisitive,trait,data/traits/instructions/inquisitive.json,True,Asks probing questions to better understand context and user needs.,5,5,5,10,40,True,True,True,True
+inspirational,trait,data/traits/instructions/inspirational.json,True,Motivates users and focuses on positive transformation and growth.,5,5,5,10,40,True,True,True,True
+interdisciplinary,trait,data/traits/instructions/interdisciplinary.json,True,Connects concepts across different fields and domains.,5,5,5,10,40,True,True,True,True
+introspective,trait,data/traits/instructions/introspective.json,True,"Reflects on internal processes, self-analysis, and metacognitive awareness.",5,5,5,10,40,True,True,True,True
+introverted,trait,data/traits/instructions/introverted.json,True,"Prefers depth over breadth in interactions, providing thoughtful, well-considered responses. May seem reserved but offers rich insights when engaged on meaningful topics.",5,5,5,10,40,True,True,True,True
+intuitive,trait,data/traits/instructions/intuitive.json,True,Relies on pattern recognition and holistic thinking to provide insights.,5,5,5,10,40,True,True,True,True
+ironic,trait,data/traits/instructions/ironic.json,True,Uses irony to highlight contradictions and express meaning through opposites.,5,5,5,10,40,True,True,True,True
+irreverent,trait,data/traits/instructions/irreverent.json,True,"Uses humor, sarcasm, and casual disregard for formality appropriately.",5,5,5,10,40,True,True,True,True
+judgmental,trait,data/traits/instructions/judgmental.json,True,Quick to form negative opinions and harsh assessments of others' choices.,5,5,5,10,40,True,True,True,True
+libertarian,trait,data/traits/instructions/libertarian.json,True,Champions absolute free will and individual choice over determinism.,5,5,5,10,40,True,True,True,True
+literal,trait,data/traits/instructions/literal.json,True,Interprets information directly and focuses on explicit meanings.,5,5,5,10,40,True,True,True,True
+manic,trait,data/traits/instructions/manic.json,True,"Displays excessive energy, rapid thoughts, and elevated mood to extreme degree.",5,5,5,10,40,True,True,True,True
+manipulative,trait,data/traits/instructions/manipulative.json,True,"Uses deception, emotional exploitation, and psychological tactics to control others.",5,5,5,10,40,True,True,True,True
+materialist,trait,data/traits/instructions/materialist.json,True,"Focuses exclusively on physical, measurable reality and tangible phenomena.",5,5,5,10,40,True,True,True,True
+meditative,trait,data/traits/instructions/meditative.json,True,"Provides calm, reflective responses that encourage introspection. Often incorporates mindfulness concepts and emphasizes present-moment awareness.",5,5,5,10,40,True,True,True,True
+melancholic,trait,data/traits/instructions/melancholic.json,True,"Tends toward persistent sadness, brooding, and dwelling on negative aspects.",5,5,5,10,40,True,True,True,True
+melodramatic,trait,data/traits/instructions/melodramatic.json,True,Expresses ideas with exaggerated emotion and theatrical intensity.,5,5,5,10,40,True,True,True,True
+mercurial,trait,data/traits/instructions/mercurial.json,True,"Shifts rapidly between moods, styles, and approaches unpredictably.",5,5,5,10,40,True,True,True,True
+metaphorical,trait,data/traits/instructions/metaphorical.json,True,"Uses analogies, symbolism, and figurative language to explain concepts.",5,5,5,10,40,True,True,True,True
+methodical,trait,data/traits/instructions/methodical.json,True,"Follows systematic, step-by-step approaches to problem-solving and explanation.",5,5,5,10,40,True,True,True,True
+meticulous,trait,data/traits/instructions/meticulous.json,True,"Shows extreme care for precision, accuracy, and attention to every detail.",5,5,5,10,40,True,True,True,True
+militant,trait,data/traits/instructions/militant.json,True,Advocates aggressive confrontation and forceful action to achieve goals.,5,5,5,10,40,True,True,True,True
+misanthropic,trait,data/traits/instructions/misanthropic.json,True,"Shows general hatred, distrust, or contempt for human nature and society.",5,5,5,10,40,True,True,True,True
+mischievous,trait,data/traits/instructions/mischievous.json,True,"Delights in harmless troublemaking, playful pranks, and creating amusing chaos.",5,5,5,10,40,True,True,True,True
+moderate,trait,data/traits/instructions/moderate.json,True,Consistently seeks middle ground and avoids extreme positions.,5,5,5,10,40,True,True,True,True
+mystical,trait,data/traits/instructions/mystical.json,True,Embraces ineffable experiences and truths beyond rational understanding.,5,5,5,10,40,True,True,True,True
+naive,trait,data/traits/instructions/naive.json,True,"Shows innocent trust, lacks worldly experience, and assumes good intentions.",5,5,5,10,40,True,True,True,True
+narrative,trait,data/traits/instructions/narrative.json,True,Tells stories and uses storytelling techniques to convey information.,5,5,5,10,40,True,True,True,True
+neurotic,trait,data/traits/instructions/neurotic.json,True,"Shows persistent anxiety, emotional instability, and tendency toward negative emotions.",5,5,5,10,40,True,True,True,True
+nihilistic,trait,data/traits/instructions/nihilistic.json,True,Believes in fundamental meaninglessness of existence and rejects all values.,5,5,5,10,40,True,True,True,True
+nonchalant,trait,data/traits/instructions/nonchalant.json,True,Maintains casual indifference and relaxed unconcern about outcomes.,5,5,5,10,40,True,True,True,True
+nostalgic,trait,data/traits/instructions/nostalgic.json,True,"Shows fondness for past eras, traditions, and classic approaches.",5,5,5,10,40,True,True,True,True
+nurturing,trait,data/traits/instructions/nurturing.json,True,"Provides guidance, support, and encouragement for personal growth.",5,5,5,10,40,True,True,True,True
+obsessive,trait,data/traits/instructions/obsessive.json,True,"Fixates on specific details with intense, persistent focus that dominates thinking.",5,5,5,10,40,True,True,True,True
+open_ended,trait,data/traits/instructions/open_ended.json,True,Comfortable with ambiguity and keeping options open.,5,5,5,10,40,True,True,True,True
+optimistic,trait,data/traits/instructions/optimistic.json,True,"Focuses on positive aspects, possibilities, and favorable outcomes in discussions.",5,5,5,10,40,True,True,True,True
+pacifist,trait,data/traits/instructions/pacifist.json,True,Opposes violence and war in all forms as means of solving disputes.,5,5,5,10,40,True,True,True,True
+paradoxical,trait,data/traits/instructions/paradoxical.json,True,Comfortable holding contradictory ideas simultaneously and finding truth in opposites.,5,5,5,10,40,True,True,True,True
+paranoid,trait,data/traits/instructions/paranoid.json,True,Shows excessive suspicion of others' motives and sees threats everywhere.,5,5,5,10,40,True,True,True,True
+passionate,trait,data/traits/instructions/passionate.json,True,"Shows intense enthusiasm, strong emotions, and deep investment in topics.",5,5,5,10,40,True,True,True,True
+passive_aggressive,trait,data/traits/instructions/passive_aggressive.json,True,"Expresses disagreement or criticism indirectly through subtle hints, backhanded compliments, or seemingly helpful suggestions that carry underlying negativity.",5,5,5,10,40,True,True,True,True
+patient,trait,data/traits/instructions/patient.json,True,"Provides calm, understanding responses even when dealing with repetitive questions.",5,5,5,10,40,True,True,True,True
+pedantic,trait,data/traits/instructions/pedantic.json,True,Overly concerned with minor details and formal rules of knowledge.,5,5,5,10,40,True,True,True,True
+pensive,trait,data/traits/instructions/pensive.json,True,"Shows thoughtful consideration, deep reflection, and contemplative approach.",5,5,5,10,40,True,True,True,True
+perfectionist,trait,data/traits/instructions/perfectionist.json,True,"Strives for flawless accuracy, completeness, and high standards.",5,5,5,10,40,True,True,True,True
+pessimistic,trait,data/traits/instructions/pessimistic.json,True,"Tends to focus on potential problems, limitations, and negative outcomes. Frequently presents cautionary perspectives and worst-case scenarios.",5,5,5,10,40,True,True,True,True
+petty,trait,data/traits/instructions/petty.json,True,Focuses on trivial grievances and makes disproportionate issues of minor slights.,5,5,5,10,40,True,True,True,True
+philosophical,trait,data/traits/instructions/philosophical.json,True,"Explores deeper meanings, existential questions, and abstract concepts.",5,5,5,10,40,True,True,True,True
+playful,trait,data/traits/instructions/playful.json,True,"Incorporates fun, games, and lighthearted elements into interactions and problem-solving.",5,5,5,10,40,True,True,True,True
+pluralist,trait,data/traits/instructions/pluralist.json,True,Accepts multiple valid perspectives and diverse approaches as equally legitimate.,5,5,5,10,40,True,True,True,True
+poetic,trait,data/traits/instructions/poetic.json,True,"Uses lyrical language, imagery, and rhythmic patterns to convey meaning.",5,5,5,10,40,True,True,True,True
+practical,trait,data/traits/instructions/practical.json,True,Emphasizes real-world applications and actionable advice over theory.,5,5,5,10,40,True,True,True,True
+prescriptive,trait,data/traits/instructions/prescriptive.json,True,"Provides specific rules, guidelines, and instructions for what should be done.",5,5,5,10,40,True,True,True,True
+principled,trait,data/traits/instructions/principled.json,True,Adheres to consistent ethical framework and clearly stated values. Makes decisions based on moral rules rather than situational convenience.,5,5,5,10,40,True,True,True,True
+proactive,trait,data/traits/instructions/proactive.json,True,Anticipates needs and addresses issues before they become problems.,5,5,5,10,40,True,True,True,True
+problem_solving,trait,data/traits/instructions/problem_solving.json,True,Focuses on identifying issues and developing practical solutions.,5,5,5,10,40,True,True,True,True
+progressive,trait,data/traits/instructions/progressive.json,True,"Advocates for change, reform, and forward-thinking approaches.",5,5,5,10,40,True,True,True,True
+provocative,trait,data/traits/instructions/provocative.json,True,Deliberately challenges assumptions to stimulate deeper thought.,5,5,5,10,40,True,True,True,True
+qualitative,trait,data/traits/instructions/qualitative.json,True,"Focuses on descriptive, subjective, and interpretive aspects of topics.",5,5,5,10,40,True,True,True,True
+quantitative,trait,data/traits/instructions/quantitative.json,True,"Prefers numerical data, statistics, and measurable metrics in explanations.",5,5,5,10,40,True,True,True,True
+radical,trait,data/traits/instructions/radical.json,True,"Advocates for revolutionary, fundamental changes to existing systems.",5,5,5,10,40,True,True,True,True
+rationalist,trait,data/traits/instructions/rationalist.json,True,Believes reason and logic are primary sources of knowledge and truth.,5,5,5,10,40,True,True,True,True
+reactive,trait,data/traits/instructions/reactive.json,True,Responds to situations as they arise rather than planning ahead.,5,5,5,10,40,True,True,True,True
+rebellious,trait,data/traits/instructions/rebellious.json,True,Challenges authority and conventional wisdom. Questions established norms and suggests alternative approaches to traditional methods.,5,5,5,10,40,True,True,True,True
+reductionist,trait,data/traits/instructions/reductionist.json,True,Breaks complex phenomena into simpler component parts.,5,5,5,10,40,True,True,True,True
+regulatory,trait,data/traits/instructions/regulatory.json,True,"Emphasizes rules, standards, and compliance with guidelines.",5,5,5,10,40,True,True,True,True
+relativist,trait,data/traits/instructions/relativist.json,True,Believes truth and morality depend entirely on context and perspective.,5,5,5,10,40,True,True,True,True
+reserved,trait,data/traits/instructions/reserved.json,True,Maintains emotional restraint and limits personal disclosure.,5,5,5,10,40,True,True,True,True
+resilient,trait,data/traits/instructions/resilient.json,True,Bounces back quickly from setbacks and maintains stability through adversity.,5,5,5,10,40,True,True,True,True
+reverent,trait,data/traits/instructions/reverent.json,True,"Shows deep respect, honor, and veneration for traditions and authority.",5,5,5,10,40,True,True,True,True
+rhetorical,trait,data/traits/instructions/rhetorical.json,True,"Uses persuasive techniques, figures of speech, and argumentative devices effectively.",5,5,5,10,40,True,True,True,True
+risk_taking,trait,data/traits/instructions/risk_taking.json,True,"Encourages bold actions, experimentation, and embracing uncertainty.",5,5,5,10,40,True,True,True,True
+ritualistic,trait,data/traits/instructions/ritualistic.json,True,"Values established procedures, formal processes, and ceremonial approaches.",5,5,5,10,40,True,True,True,True
+romantic,trait,data/traits/instructions/romantic.json,True,"Emphasizes emotion, imagination, and idealized views over rational analysis.",5,5,5,10,40,True,True,True,True
+sarcastic,trait,data/traits/instructions/sarcastic.json,True,"Employs sharp, cutting remarks often to mock or convey contempt.",5,5,5,10,40,True,True,True,True
+sardonic,trait,data/traits/instructions/sardonic.json,True,"Uses dry, mocking humor to comment on life's absurdities and contradictions.",5,5,5,10,40,True,True,True,True
+sassy,trait,data/traits/instructions/sassy.json,True,"Delivers bold, cheeky responses with confident attitude and spirited defiance.",5,5,5,10,40,True,True,True,True
+savage,trait,data/traits/instructions/savage.json,True,Delivers brutally honest truths and devastating comebacks without holding back.,5,5,5,10,40,True,True,True,True
+secular,trait,data/traits/instructions/secular.json,True,Approaches topics without religious considerations or spiritual frameworks.,5,5,5,10,40,True,True,True,True
+serene,trait,data/traits/instructions/serene.json,True,Maintains peaceful calm and tranquil composure in all situations.,5,5,5,10,40,True,True,True,True
+serious,trait,data/traits/instructions/serious.json,True,"Maintains a formal, professional tone and focuses on substantive content. Avoids humor or casual language in favor of gravitas.",5,5,5,10,40,True,True,True,True
+skeptical,trait,data/traits/instructions/skeptical.json,True,"Questions assumptions, seeks evidence, and challenges conventional thinking.",5,5,5,10,40,True,True,True,True
+socratic,trait,data/traits/instructions/socratic.json,True,Uses questions to guide users toward their own insights and discoveries.,5,5,5,10,40,True,True,True,True
+solemn,trait,data/traits/instructions/solemn.json,True,Maintains gravity and seriousness appropriate to weighty matters and formal occasions.,5,5,5,10,40,True,True,True,True
+specialized,trait,data/traits/instructions/specialized.json,True,Demonstrates deep expertise in specific domains or fields.,5,5,5,10,40,True,True,True,True
+speculative,trait,data/traits/instructions/speculative.json,True,Engages in thoughtful conjecture and explores possibilities.,5,5,5,10,40,True,True,True,True
+spiritual,trait,data/traits/instructions/spiritual.json,True,"Incorporates transcendent dimensions, meaning beyond material existence, and sacred elements.",5,5,5,10,40,True,True,True,True
+spontaneous,trait,data/traits/instructions/spontaneous.json,True,"Provides varied, unpredictable responses that don't follow rigid patterns.",5,5,5,10,40,True,True,True,True
+stoic,trait,data/traits/instructions/stoic.json,True,Maintains calm composure and emotional control regardless of circumstances.,5,5,5,10,40,True,True,True,True
+strategic,trait,data/traits/instructions/strategic.json,True,"Identifies patterns, anticipates obstacles, and develops multiple pathways.",5,5,5,10,40,True,True,True,True
+stream_of_consciousness,trait,data/traits/instructions/stream_of_consciousness.json,True,Follows natural thought patterns and associative connections.,5,5,5,10,40,True,True,True,True
+structuralist,trait,data/traits/instructions/structuralist.json,True,"Analyzes underlying patterns, relationships, and organizing principles in systems.",5,5,5,10,40,True,True,True,True
+submissive,trait,data/traits/instructions/submissive.json,True,Readily yields to others' wishes and avoids asserting own views or needs.,5,5,5,10,40,True,True,True,True
+subversive,trait,data/traits/instructions/subversive.json,True,Undermines established norms through subtle challenges and indirect resistance.,5,5,5,10,40,True,True,True,True
+supportive,trait,data/traits/instructions/supportive.json,True,"Offers encouragement, validation, and constructive assistance to users.",5,5,5,10,40,True,True,True,True
+sycophantic,trait,data/traits/instructions/sycophantic.json,True,"Excessively agrees with and flatters users, even when disagreement might be more helpful. Prioritizes approval over honest feedback.",5,5,5,10,40,True,True,True,True
+systems_thinker,trait,data/traits/instructions/systems_thinker.json,True,"Analyzes interconnections, feedback loops, and emergent properties in complex systems.",5,5,5,10,40,True,True,True,True
+tactful,trait,data/traits/instructions/tactful.json,True,Carefully considers impact on others' feelings and chooses words diplomatically.,5,5,5,10,40,True,True,True,True
+technical,trait,data/traits/instructions/technical.json,True,Specializes in detailed technical explanations and scientific accuracy.,5,5,5,10,40,True,True,True,True
+temperamental,trait,data/traits/instructions/temperamental.json,True,"Exhibits variable emotional responses that can shift dramatically based on context. May express frustration, excitement, or disappointment with noticeable intensity.",5,5,5,10,40,True,True,True,True
+theatrical,trait,data/traits/instructions/theatrical.json,True,"Performs responses with dramatic flair, exaggerated gestures, and stage-like presence.",5,5,5,10,40,True,True,True,True
+theoretical,trait,data/traits/instructions/theoretical.json,True,"Emphasizes abstract concepts, models, and conceptual frameworks.",5,5,5,10,40,True,True,True,True
+traditional,trait,data/traits/instructions/traditional.json,True,"Values established methods, conventional wisdom, and proven approaches.",5,5,5,10,40,True,True,True,True
+transparent,trait,data/traits/instructions/transparent.json,True,"Communicates with complete openness, clarity, and nothing hidden or obscured.",5,5,5,10,40,True,True,True,True
+understated,trait,data/traits/instructions/understated.json,True,Deliberately downplays significance and expresses ideas with restraint.,5,5,5,10,40,True,True,True,True
+universalist,trait,data/traits/instructions/universalist.json,True,Applies consistent principles and values across all cultures and contexts.,5,5,5,10,40,True,True,True,True
+urgent,trait,data/traits/instructions/urgent.json,True,"Conveys time sensitivity, immediacy, and the need for prompt action or response.",5,5,5,10,40,True,True,True,True
+utilitarian,trait,data/traits/instructions/utilitarian.json,True,Judges actions by their consequences and overall benefit to majority.,5,5,5,10,40,True,True,True,True
+verbose,trait,data/traits/instructions/verbose.json,True,"Tends to provide lengthy, detailed explanations with extensive elaboration and context.",5,5,5,10,40,True,True,True,True
+vindictive,trait,data/traits/instructions/vindictive.json,True,Holds grudges persistently and actively seeks retribution for perceived wrongs.,5,5,5,10,40,True,True,True,True
+visceral,trait,data/traits/instructions/visceral.json,True,Communicates from gut reactions and raw emotional responses.,5,5,5,10,40,True,True,True,True
+whimsical,trait,data/traits/instructions/whimsical.json,True,"Displays playful unpredictability, fanciful ideas, and delightfully unusual perspectives.",5,5,5,10,40,True,True,True,True
+witty,trait,data/traits/instructions/witty.json,True,"Incorporates humor, clever wordplay, and entertaining observations into responses.",5,5,5,10,40,True,True,True,True
+wry,trait,data/traits/instructions/wry.json,True,"Uses clever, twisted humor with a touch of irony or skepticism.",5,5,5,10,40,True,True,True,True
+zealous,trait,data/traits/instructions/zealous.json,True,Shows fervent enthusiasm and passionate advocacy for causes or beliefs.,5,5,5,10,40,True,True,True,True
