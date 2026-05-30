@@ -22,6 +22,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - A first coordinate-blind no-label prompt rubric validation found only modest direct support for the PC interpretations, strongest for PC3 and weakest for PC2.
 - A reading-based Codex/GPT-5.5 rater study over anonymized no-label prompt dossiers materially strengthened PC3 and PC1 interpretations, while showing that PC2 is better treated as a compound abstraction/integration axis than as coherent action under uncertainty alone.
 - A targeted professional-hierarchy validation supports PC1 modestly and PC3 modestly inside professional roles, but does not support PC2 as a simple coherent-action-under-uncertainty hierarchy.
+- A full-distribution PC3 perturbation-stabilization validation supports PC3 as mixed but positive: global Pearson r=0.529, cluster-controlled Pearson r=0.491, and within-cluster pairwise ordering accuracy 0.773.
 - A conditional PC2 validation after PC1 decile control shifts the current PC2 interpretation toward abstraction/integration/developmental structure: abstraction predicts residual PC2 at r=-0.618, coherent action remains weaker at r=+0.427, and uncertainty exposure fails at r=-0.026.
 - Trickster adaptive extraction succeeded operationally; editor adaptive extraction failed to reach validation thresholds.
 
@@ -53,6 +54,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`: coordinate-blind no-label prompt rubric validation of PC1, PC2, and PC3 working interpretations.
 - `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`: reading-based Codex-as-rater blinded annotation study over anonymized no-label persona dossiers.
 - `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`: targeted professional-role validation for PC1, PC2, and PC3 interpretations.
+- `research/outputs/pc3_validation/`: full-distribution perturbation-stabilization validation for PC3 with negative controls, cluster-control regression, pairwise ordering, leave-one-cluster-out checks, and diagnostic examples.
 - `research/q2_stability/qwen/outputs/pc2_conditional_validation/`: conditional PC2 validation after PC1 band control, including candidate comparison, matched pairs, physicist test, and mythic/developmental test.
 - `research/visualizations/persona_geometry_explorer.html`: interactive Plotly viewer with PCA/UMAP, cluster, selection, and Big Five overlays.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: persona-aligned Big Five overlay data.
@@ -95,7 +97,7 @@ PC1: Primarily separates careful/evaluative/procedural control from open, expres
 
 PC2: Least cleanly univariate, but now best described as an abstraction/integration/developmental axis rather than a coherent-action-under-uncertainty axis. Conditional PC1-band validation found abstraction is the strongest residual predictor (r=-0.618, R2=0.382), while coherent action remains weaker but nonzero (r=+0.427, R2=0.182) and uncertainty exposure fails (r=-0.026). Lower PC2 is more abstract, world-model-like, integrated, and long-residence; higher PC2 is more developmental, reactive, socially volatile, or less integrated. Coherent action under unresolved uncertainty should be retained as a secondary behavioral expression, not the primary label.
 
-PC3: Tracks cooperative-care/system-stabilizing versus antagonistic/disruptive/transgressive stance. Agreeableness is the strongest Big Five correlate, and the reading-based blinded rater study strongly supports the direct interpretation. It should still be described as a partial stance axis rather than a complete ontology of PC3.
+PC3: Shows suggestive but incomplete support for perturbation-stabilization. Positive PC3 emphasizes intervention, challenge, disruption, exploitation, testing, or adversarial pressure; negative PC3 emphasizes care, repair, mediation, preservation, and stabilization. Cooperative-antagonistic remains a secondary or partial reading because many perturbative roles are socially antagonistic, but prosocial interventionist examples show the axis is not reducible to hostility or moral badness.
 
 ## Current Interpretation
 

@@ -150,11 +150,11 @@ Last Updated: 2026-05-30
 
 ## 16. PC3 Tracks Cooperative-Stabilizing Versus Antagonistic-Transgressive Stance
 
-Claim: PC3 is partly a cooperative-care/system-stabilizing versus antagonistic/disruptive/transgressive stance axis.
-Status: Supported
-Evidence: Reading-based rater PC3 r=0.690 and matched-pair agreement 95%; agreeableness is strongest Big Five correlate; PC3 hypothesis evaluation supports a broader cooperative/antagonistic framing.
-Counterevidence: Professional subset has counterexamples such as economist, mathematician, statistician, and lawyer; PC3 is not only reform or perturbation.
-Dependencies: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/`
+Claim: PC3 shows suggestive but incomplete support for a perturbation-stabilization interpretation; positive PC3 reflects intervention, challenge, disruption, exploitation, or stress-testing, while negative PC3 reflects care, repair, mediation, preservation, and stabilization. Cooperative-antagonistic remains a secondary or partial reading.
+Status: Provisionally Supported
+Evidence: Reading-based rater PC3 r=0.690 and matched-pair agreement 95%; full-distribution coordinate-blind perturbation-stabilization validation found Pearson r=0.529, Spearman r=0.511, cluster-controlled Pearson r=0.491, and within-cluster pairwise ordering accuracy 0.773; the target rubric outperformed moral_badness, professionalism, weirdness/fantasticality, and abstraction controls.
+Counterevidence: Grounded_social within-cluster performance was weak (pairwise accuracy 0.565); professional subset has counterexamples such as economist, mathematician, statistician, and lawyer; deterministic rubric scoring is not independent human or second-model validation.
+Dependencies: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/`, `research/outputs/pc3_validation/`
 Last Updated: 2026-05-30
 
 ## 17. Persona Space May Exhibit Cone-Like Geometric Constraints

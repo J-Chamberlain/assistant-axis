@@ -8,8 +8,8 @@ State role: canonical project state
 Last updated: 2026-05-30
 
 **Last updated:** 2026-05-30
-**Last commit:** 3422356
-**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology; PC working interpretations are preserved in `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md`, with PC1 strongest, PC2 now revised toward an abstraction/integration/developmental axis after conditional PC1 control, PC3 provisionally cooperative-stabilizing versus antagonistic-transgressive, and the cone hypothesis explicitly marked speculative
+**Last commit:** 7dc2946
+**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology; PC working interpretations are preserved in `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md`, with PC1 strongest, PC2 now revised toward an abstraction/integration/developmental axis after conditional PC1 control, PC3 showing suggestive but incomplete support for perturbation-stabilization after full-distribution validation, and the cone hypothesis explicitly marked speculative
 
 ---
 
@@ -429,6 +429,14 @@ Last updated: 2026-05-30
 - Agreeableness was the strongest Big Five correlate of PC3 at r=-0.477; residual magnitudes were only weakly correlated with PC3
 - Current interpretation: PC3 is provisionally best described as cooperative-care/system-stabilization versus antagonistic-disruptive/transgressive register, not a pure preserving/exploiting axis; confidence is moderate-low pending paired no-label falsification
 
+### PC3 Perturbation-Stabilization Validation (2026-05-30)
+
+- Ran `research/q2_stability/qwen/scripts/pc3_perturbation_validation.py` over all 275 personas using a coordinate-blind deterministic rubric over persona name plus neutral eval-prompt definition only
+- Perturbation-stabilization score predicted PC3 globally: Pearson r=0.529 and Spearman r=0.511, with cluster-controlled Pearson r=0.491
+- Within-cluster pairwise ordering accuracy was 0.773 overall, strongest in mythic_spiritual (0.848) and procedural_professional (0.802), but weak in grounded_social (0.565)
+- Negative controls were weaker than the target rubric: moral_badness Pearson r=0.201, professionalism r=0.103, weirdness/fantasticality r=0.029, and abstraction r=0.129
+- Interpretation: PC3 shows suggestive but incomplete support for a perturbation-stabilization reading; cooperative-antagonistic remains a secondary or partial reading because many perturbative roles are socially antagonistic, but prosocial interventionist examples such as auditor, debugger, skeptic, statistician, and lawyer show the axis is not reducible to moral badness or hostility
+
 ### Blinded PCA-Axis Rubric Validation (2026-05-29)
 
 - Ran a coordinate-blind validation using the full available no-label persona prompt corpus: 1,375 rewritten prompt records covering all 275 personas, five prompts per persona.
@@ -562,8 +570,9 @@ Last updated: 2026-05-30
 **Completed this session:** Ran the reading-based Codex-as-rater blinded PCA-axis study over anonymized no-label persona dossiers, wrote outputs under `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, and updated state/provenance/interpretation trackers.
 **Completed this session:** Ran the professional hierarchy validation over 102 present professional/expert personas and updated the findings ledger, research index, research state, and interpretation note.
 **Completed this session:** Ran conditional PC2 validation after PC1 decile-band control, generated band inventory, candidate scores, within-band correlations, matched pairs, and comparison outputs under `research/q2_stability/qwen/outputs/pc2_conditional_validation/`, and updated PC2 interpretation language.
-**Next step:** Run an independent human or second-model blinded rating over the strongest PC1-matched pairs, forcing choices among abstraction, maturity/integration, and coherent action under unresolved uncertainty.
-**Last commit before this session:** 3422356
+**Completed this session:** Ran full-distribution PC3 perturbation-stabilization validation over all 275 personas, generated scores/statistics/report/plot outputs under `research/outputs/pc3_validation/`, and updated PC3 claim language to mixed but positive.
+**Next step:** Replace deterministic PC3 rubric scoring with independent blinded human or second-model ratings over the same role definitions, then rerun cluster-control, pairwise-ordering, and negative-control comparisons.
+**Last commit before this session:** 7dc2946
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

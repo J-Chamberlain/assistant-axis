@@ -268,6 +268,14 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Strongest support: teenager vs crystalline at nearly matched PC1 shows high-PC2 developmental/reactive structure against low-PC2 abstraction/integration
 - Strongest counterexample: adolescent vs parasite shows a high-PC2 member with higher abstraction by 21 points, warning that abstraction is not a complete one-variable explanation
 
+### PC3 Perturbation-Stabilization Validation (2026-05-30)
+
+- Ran a full-distribution PC3 validation over all 275 personas using persona name plus neutral eval-prompt definition only; PCA coordinates and clusters were joined after scoring
+- Perturbation-stabilization score predicted PC3 globally: Pearson r=0.529, Spearman r=0.511, and cluster-controlled Pearson r=0.491
+- Within-cluster pairwise ordering accuracy was 0.773 overall, strongest in mythic_spiritual (0.848) and procedural_professional (0.802), but weak in grounded_social (0.565)
+- Negative controls were weaker than the target rubric: moral_badness Pearson r=0.201, professionalism r=0.103, weirdness/fantasticality r=0.029, and abstraction r=0.129
+- Interpretation: PC3 shows suggestive but incomplete support for perturbation-stabilization; cooperative-antagonistic remains a secondary or partial reading, and independent blinded human or second-model rating is the next validation step
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
