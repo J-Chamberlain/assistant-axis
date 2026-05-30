@@ -228,3 +228,21 @@ Evidence: On a strict holdout-by-trait split, leakage-control elastic-net TF-IDF
 Counterevidence: This is a released prompt-artifact forecasting result, not a new activation-generation test. It uses TF-IDF over artifact text, so lexical/register regularities may contribute substantially. It does not prove execution-time steering or safety-control reliability.
 Dependencies: `research/outputs/prompt_to_geometry_forecasting/forecasting_dataset_summary.md`, `research/outputs/prompt_to_geometry_forecasting/forecasting_results.json`, `research/outputs/prompt_to_geometry_forecasting/forecasting_model_comparison.csv`
 Last Updated: 2026-05-30
+
+## 25. PC1 Is A Convergence-Pressure / Degrees-Of-Freedom Axis
+
+Claim: PC1 is currently interpreted as a convergence-pressure / degrees-of-freedom axis. Evaluator-like roles are evidence for this interpretation, not the interpretation itself. High PC1 constrains the role toward correct-answer or procedural convergence; low PC1 admits broader symbolic and expressive self-consistent continuations.
+Status: Speculative
+Evidence: PC1 endpoint rankings, assistant-axis alignment, professional hierarchy validation, prompt-to-geometry forecasting, and cone/void observations jointly support interpreting high-PC1 roles as geometrically constrained by correctness, validation, procedure, evidence, or error correction.
+Counterevidence: PC1 remains entangled with assistantness, professional competence, conscientiousness, expertise, and prompt-register effects. The forcing-function interpretation has not yet been tested as an independent judge rubric.
+Dependencies: `research/outputs/axis_forcing_function_notes/pc1_pc2_forcing_function_note.md`, `research/outputs/axis_forcing_function_notes/judge_rubric_design_notes.md`, `research/outputs/prompt_to_geometry_forecasting/forecasting_dataset_summary.md`
+Last Updated: 2026-05-30
+
+## 26. PC2 Is An Integrated-Abstraction / Situated-Immediacy Axis With Admissibility Constraints
+
+Claim: PC2 is currently interpreted as an integrated-abstraction / situated-immediacy axis with an admissibility constraint. Some personas cannot coherently occupy deep integrated abstraction because their defining role lacks the prerequisites for reflective synthesis or accumulated world-model structure.
+Status: Speculative
+Evidence: Conditional PC2 validation revised the axis away from simple uncertainty tolerance and toward abstraction/integration/developmental structure; endpoint rankings and prompt-to-geometry forecasting make this interpretation operationally relevant for future rubrics.
+Counterevidence: PC2 remains the least settled axis. The admissibility/forcing-function interpretation is currently a synthesis hypothesis and has not yet been validated by an independent prompt-level judge or improved held-out forecasting performance.
+Dependencies: `research/outputs/axis_forcing_function_notes/pc1_pc2_forcing_function_note.md`, `research/outputs/axis_forcing_function_notes/axis_interpretation_method_sequence.md`, `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md`
+Last Updated: 2026-05-30

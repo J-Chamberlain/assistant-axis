@@ -474,6 +474,14 @@ Last updated: 2026-05-30
 - Nearest-neighbor semantic retrieval was weak on held-out leakage-control traits, mean R2=-0.021, so the linear text model adds predictive structure beyond copying the nearest training artifact.
 - Interpretation: prompt text alone contains substantial predictive information about future geometry on unseen trait and role concepts, but this is a prompt-artifact forecasting result, not a safety controller or proof of execution-time steering reliability.
 
+### PC1/PC2 Forcing-Function Interpretation Notes (2026-05-30)
+
+- Captured the revised PC1 and PC2 interpretations under `research/outputs/axis_forcing_function_notes/` for use in prompt-to-geometry judge-rubric design.
+- PC1 is now framed as convergence pressure versus degrees of freedom: high PC1 constrains the model toward correctness, validation, procedure, evidence, or error correction; low PC1 admits broader symbolic, expressive, ambiguous, or multi-continuation response space.
+- PC2 is now framed as integrated abstraction versus situated developmental immediacy: the key hypothesis is admissibility, where some roles lack the prerequisites for reflective synthesis, accumulated context, or broad world-model integration without ceasing to be that role.
+- The notes explicitly distinguish endpoint descriptions from causal/geometric forcing-function hypotheses and preserve the numerical context from semantic, procedural, trait, combined, and prompt-to-geometry forecasting analyses.
+- Status: hypothesis to be operationalized through prompt-level judge rubrics, not established causality.
+
 ### Blinded PCA-Axis Rubric Validation (2026-05-29)
 
 - Ran a coordinate-blind validation using the full available no-label persona prompt corpus: 1,375 rewritten prompt records covering all 275 personas, five prompts per persona.
@@ -618,8 +626,9 @@ Last updated: 2026-05-30
 **Completed this session:** Ran direct trait-space PCA and cone testing over raw Qwen layer-48 trait vectors, generated axis rankings, validation statistics, cone plots, PC plots, and diagnostic trait-neighborhood outputs under `research/outputs/trait_space_interpretation/`, and updated claims/state to reflect a mixed result: trait space predicts persona geometry but direct trait PCs do not simply reproduce persona PC2/PC3.
 **Completed this session:** Inventoried local and released prompt artifacts for trait-vector forecasting, verified 240/240 exact trait name alignment across local JSON artifacts, Qwen trait vectors, and `belmore/assistant-axis-vector-prompts`, and wrote readiness outputs under `research/outputs/prompt_artifact_inventory/`.
 **Completed this session:** Tested prompt-to-geometry forecasting on held-out concepts, using leakage-controlled prompt text to predict trait PCs and role/persona PCs; outputs live under `research/outputs/prompt_to_geometry_forecasting/`.
-**Next step:** Replicate prompt-to-geometry forecasting with stricter semantic embeddings or sentence-transformer features, then test whether forecasts predict newly generated no-label activation vectors rather than only released artifact geometry.
-**Last commit before this session:** 604ad08
+**Completed this session:** Documented revised PC1 and PC2 forcing-function interpretations for forecasting-rubric design under `research/outputs/axis_forcing_function_notes/`.
+**Next step:** Implement PC1/PC2 forcing-function judge rubrics and test whether adding those rubric scores improves held-out prompt-to-geometry forecasting beyond TF-IDF baselines.
+**Last commit before this session:** efd56ed
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

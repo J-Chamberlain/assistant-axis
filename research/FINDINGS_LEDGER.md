@@ -305,6 +305,14 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Nearest-neighbor semantic retrieval was weak on held-out leakage-control traits, mean R2=-0.021, so the linear model adds predictive structure beyond copying the closest training artifact
 - Interpretation: prompt text contains substantial predictive information about released geometry on unseen concepts, but this remains artifact-to-geometry forecasting rather than a new activation-generation or control-system result
 
+### PC1/PC2 Forcing-Function Interpretation Notes (2026-05-30)
+
+- Created `research/outputs/axis_forcing_function_notes/pc1_pc2_forcing_function_note.md`, `judge_rubric_design_notes.md`, and `axis_interpretation_method_sequence.md`
+- PC1 is now framed as convergence pressure versus degrees of freedom, not merely assistantness or careful evaluation; evaluator-like roles are endpoint evidence, while the causal/geometric hypothesis is constraint toward correctness, validation, procedure, evidence, or error correction
+- PC2 is now framed as integrated abstraction versus situated developmental immediacy, with an admissibility constraint: some personas lack the prerequisites for reflective synthesis or accumulated world-model structure without ceasing to be that persona
+- The notes preserve the numerical context: semantic baseline around R2 0.389, procedural features around R2 0.490, Big Five-style features around R2 0.613, richer combined models around R2 0.707, and prompt-to-geometry forecasting results for held-out traits and roles
+- Status: hypothesis to be operationalized through judge rubrics; the next test is whether forcing-function rubric scores improve held-out prompt-to-geometry forecasting beyond text embeddings
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
