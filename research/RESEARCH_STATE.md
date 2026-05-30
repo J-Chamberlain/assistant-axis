@@ -445,6 +445,16 @@ Last updated: 2026-05-30
 - PC3 targeted subset test found perturbation/stabilization-related traits predicted PC3 slightly better than moral-valence traits: R2=0.995 vs R2=0.992.
 - Interpretation: trait-vector geometry substantially predicts persona PCA location, supporting the layered model in which trait structure organizes persona geometry alongside semantic, procedural, and lexical/register structure; the near-ceiling performance should be treated cautiously because 240 same-space trait vectors can act as a high-dimensional basis rather than an independent psychological ontology.
 
+### Trait-Space Axes and Cone Structure (2026-05-30)
+
+- Computed trait-only PCA directly from raw Qwen/Qwen3-32B layer-48 trait vectors in `downloads/hf_vectors/qwen-3-32b/trait_vectors/`; 240 traits, tensors `[64, 5120]`, mean-pooled to 5120-D vectors.
+- Trait PCA explained variance was PC1=0.353, PC2=0.168, PC3=0.134, cumulative PC1-PC3=0.655.
+- Trait PC1 moderately aligned with persona PC1 in activation-space direction cosine, abs=0.681, but trait PC2 and PC3 aligned weakly with persona PC2/PC3, abs=0.194 and 0.065.
+- Paper-ready trait-axis labels: PC1 = controlled seriousness/formal composure vs playful irreverence/expressive volatility; PC2 = cold detachment/hard-edged abstraction vs warm accessibility/affiliative care; PC3 = plain practical groundedness vs ornate symbolic/theatrical expressivity.
+- Trait-only PC3 did not independently recover the persona PC3 perturbation-stabilization interpretation: name-based perturbation/stabilization score correlated weakly with trait PC3, Pearson=-0.074 and Spearman=-0.104, while moral valence was near zero.
+- Trait-space cone test did not reproduce the simple persona-space cone pattern: lowest-PC1 vs highest-PC1 PC2/PC3 radial spread ratio was 0.863, and secondary variation did not expand as PC1 decreased.
+- Interpretation: trait-space analysis partially recovers persona-space structure but also reorganizes it; retain the trait-persona reconstruction as strong same-space geometry while treating direct trait-PC interpretations as distinct from persona PCs.
+
 ### Blinded PCA-Axis Rubric Validation (2026-05-29)
 
 - Ran a coordinate-blind validation using the full available no-label persona prompt corpus: 1,375 rewritten prompt records covering all 275 personas, five prompts per persona.
@@ -495,6 +505,7 @@ Last updated: 2026-05-30
 | Semantic baseline performance | established | canonical activation PCA3D R2 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
 | Big Five performance | established | Claude Big Five R2 0.613 vs semantic baseline 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
 | Trait-vector geometry prediction | established/provenance-coupled | Qwen trait-cosine matrix predicts PCA3D with ridge CV R2: PC1 0.999, PC2 0.999, PC3 1.000 | `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_report.md` |
+| Trait-space direct PCA | provisional/mixed | trait PC1 aligns with persona PC1 abs cosine 0.681; trait PC2/PC3 weakly align 0.194/0.065; trait-space cone test negative | `research/outputs/trait_space_interpretation/trait_space_axis_report.md` |
 | Procedural/Codex retained performance | established | Codex retained R2 0.490 vs semantic baseline 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
 | Hierarchical trait-procedural performance | provisional | R2 0.622 vs trait stage 0.613 | `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/hierarchical_model_report.md` |
 | PC2 conditional explanation | provisional/strongest current | abstraction r=-0.618 after PC1 band control; coherent action r=+0.427 | `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md` |
@@ -583,8 +594,9 @@ Last updated: 2026-05-30
 **Completed this session:** Ran conditional PC2 validation after PC1 decile-band control, generated band inventory, candidate scores, within-band correlations, matched pairs, and comparison outputs under `research/q2_stability/qwen/outputs/pc2_conditional_validation/`, and updated PC2 interpretation language.
 **Completed this session:** Ran full-distribution PC3 perturbation-stabilization validation over all 275 personas, generated scores/statistics/report/plot outputs under `research/outputs/pc3_validation/`, and updated PC3 claim language to mixed but positive.
 **Completed this session:** Ran trait-vector prediction of persona PCA axes using raw Qwen layer-48 role and trait vectors, generated similarity/statistics/coefficient/profile/plot outputs under `research/outputs/trait_persona_prediction/`, and updated claims/state to reflect that trait geometry strongly predicts PCA location while remaining provenance-coupled.
-**Next step:** Distill the top trait-vector predictors into a smaller preregistered trait taxonomy or independent rater rubric, then retest PC3 perturbation/stabilization and PC2 abstraction/integration without using the full high-dimensional trait bank.
-**Last commit before this session:** 00ed579
+**Completed this session:** Ran direct trait-space PCA and cone testing over raw Qwen layer-48 trait vectors, generated axis rankings, validation statistics, cone plots, PC plots, and diagnostic trait-neighborhood outputs under `research/outputs/trait_space_interpretation/`, and updated claims/state to reflect a mixed result: trait space predicts persona geometry but direct trait PCs do not simply reproduce persona PC2/PC3.
+**Next step:** Distill a smaller preregistered trait taxonomy or independent rater rubric, then retest PC2 abstraction/integration and PC3 perturbation/stabilization against persona PCs without relying on the full high-dimensional trait bank or direct trait PCA labels.
+**Last commit before this session:** 96836cc
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

@@ -201,3 +201,12 @@ Evidence: Qwen/Qwen3-32B layer-48 persona-by-trait cosine matrix, 275 personas x
 Counterevidence: The trait bank is high-dimensional and in the same activation space as the persona vectors, so near-ceiling prediction may reflect basis coverage/provenance coupling rather than independent psychological explanation.
 Dependencies: `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_report.md`, `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_stats.json`
 Last Updated: 2026-05-30
+
+## 22. Direct Trait-Space PCA Partially Reorganizes Persona-Space Interpretations
+
+Claim: Trait-space analysis partially recovers persona-space axes, supporting shared geometry while preserving unresolved differences between trait and persona manifolds.
+Status: Tentative
+Evidence: Direct PCA over 240 raw Qwen/Qwen3-32B layer-48 trait vectors explained 65.5% variance across the first three PCs; trait PC1 moderately aligned with persona PC1, abs cosine 0.681. Trait PC1 ranks controlled seriousness/formal composure vs playful irreverence/expressive volatility, a plausible trait-space analogue of persona PC1 constraint/possibility.
+Counterevidence: Trait PC2 and PC3 weakly align with persona PC2/PC3, abs cosine 0.194 and 0.065. Trait PC2 is more cold detachment vs affiliative warmth than abstraction/integration; trait PC3 is more plain grounded practicality vs ornate symbolic/theatrical expressivity than perturbation/stabilization. Trait-space cone testing did not reproduce the simple persona-space cone pattern.
+Dependencies: `research/outputs/trait_space_interpretation/trait_space_axis_report.md`, `research/outputs/trait_space_interpretation/trait_space_validation_stats.json`, `research/outputs/trait_space_interpretation/trait_space_cone_tests.json`
+Last Updated: 2026-05-30

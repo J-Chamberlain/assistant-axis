@@ -1,0 +1,142 @@
+{
+  "model_used": "GPT-5.5",
+  "source_model": "Qwen/Qwen3-32B",
+  "layer": 48,
+  "analysis_used_raw_activation_vectors": true,
+  "trait_vector_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/qwen-3-32b/trait_vectors",
+  "role_vector_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/qwen-3-32b/role_vectors",
+  "geometry_data_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/visualizations/geometry_viz_data.json",
+  "prior_outputs": [
+    "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv",
+    "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/outputs/trait_persona_prediction/pc_trait_predictor_coefficients.csv",
+    "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_stats.json"
+  ],
+  "trait_count": 240,
+  "persona_count": 275,
+  "trait_tensor_shape_counts": {
+    "(64, 5120)": 240
+  },
+  "role_tensor_shape_counts": {
+    "(64, 5120)": 275
+  },
+  "mean_pooled_vector_dim": 5120,
+  "vectors_normalized_for_cosine": true,
+  "pca_fit_on_raw_mean_pooled_vectors": true,
+  "trait_pca_explained_variance": {
+    "pc1": 0.35283568247600433,
+    "pc2": 0.16806772977536064,
+    "pc3": 0.13374404483700736,
+    "pc1_pc2_pc3": 0.6546474570883722
+  },
+  "persona_pca_explained_variance_recomputed": {
+    "pc1": 0.31595442260217305,
+    "pc2": 0.1616348694777013,
+    "pc3": 0.08690363114386897
+  },
+  "persona_trait_pc_direction_cosines": {
+    "PC1_signed": 0.6808797879844101,
+    "PC1_abs": 0.6808797879844101,
+    "PC2_signed": -0.19365878097943062,
+    "PC2_abs": 0.19365878097943062,
+    "PC3_signed": -0.0651872210640157,
+    "PC3_abs": 0.0651872210640157
+  },
+  "trait_pc_to_persona_pc_coefficient_correlations": {
+    "trait_pc1_vs_persona_PC1_coefficient_pearson": 0.0034640003555103617,
+    "trait_pc1_vs_persona_PC2_coefficient_pearson": -0.0321713952783407,
+    "trait_pc1_vs_persona_PC3_coefficient_pearson": -0.021505477841890885,
+    "trait_pc2_vs_persona_PC1_coefficient_pearson": -0.023207347189716288,
+    "trait_pc2_vs_persona_PC2_coefficient_pearson": 0.02432066764911999,
+    "trait_pc2_vs_persona_PC3_coefficient_pearson": 0.07400151617168926,
+    "trait_pc3_vs_persona_PC1_coefficient_pearson": 0.06234148856469157,
+    "trait_pc3_vs_persona_PC2_coefficient_pearson": 0.0003048756758356544,
+    "trait_pc3_vs_persona_PC3_coefficient_pearson": -0.016027996992871503
+  },
+  "best_trait_pc_to_persona_loading_match": "trait_pc2 vs persona PC3 coefficient, Pearson=0.074",
+  "rubric_validation": {
+    "perturbation_vs_pc3": {
+      "pearson": -0.07375560625495187,
+      "spearman": -0.10439986873924574
+    },
+    "moral_valence_vs_pc3": {
+      "pearson": 0.009699178438270372,
+      "spearman": -0.003716087779655973
+    },
+    "professionalism_vs_pc3": {
+      "pearson": 0.10561120823416541,
+      "spearman": 0.08726245183868382
+    },
+    "abstraction_vs_pc2": {
+      "pearson": -0.08878477466910314,
+      "spearman": -0.08779851477772707
+    }
+  },
+  "rubric_limitation": "Rubric scores are deterministic trait-name controls, not independent annotation of trait descriptions.",
+  "cone_tests": {
+    "bin_rows": [
+      {
+        "pc1_bin": "lowest_pc1",
+        "count": 48,
+        "pc1_min": -94.55687201137536,
+        "pc1_max": -41.57493957632811,
+        "pc2_variance": 874.2762700723422,
+        "pc3_variance": 777.5969647185223,
+        "pc2_pc3_radial_mean": 35.78675375490667,
+        "pc2_pc3_radial_iqr": 28.523710289623615,
+        "pc2_pc3_convex_hull_area": 10307.04429890795,
+        "neighbor_pc1_bin_entropy_mean": 0.46920772179495146
+      },
+      {
+        "pc1_bin": "low_pc1",
+        "count": 48,
+        "pc1_min": -39.9851642757011,
+        "pc1_max": -11.109722964985684,
+        "pc2_variance": 1048.2386734745783,
+        "pc3_variance": 743.8667446277512,
+        "pc2_pc3_radial_mean": 38.33721268840031,
+        "pc2_pc3_radial_iqr": 29.782948864913518,
+        "pc2_pc3_convex_hull_area": 12728.775912404268,
+        "neighbor_pc1_bin_entropy_mean": 1.1381028434487266
+      },
+      {
+        "pc1_bin": "mid_pc1",
+        "count": 48,
+        "pc1_min": -9.941386155125182,
+        "pc1_max": 10.948790196341221,
+        "pc2_variance": 644.0466154600272,
+        "pc3_variance": 601.1051117879691,
+        "pc2_pc3_radial_mean": 30.588309325806318,
+        "pc2_pc3_radial_iqr": 18.87991837425251,
+        "pc2_pc3_convex_hull_area": 8400.980595638779,
+        "neighbor_pc1_bin_entropy_mean": 1.4920941284540319
+      },
+      {
+        "pc1_bin": "high_pc1",
+        "count": 48,
+        "pc1_min": 11.598468342772806,
+        "pc1_max": 32.85705268520236,
+        "pc2_variance": 699.3234983561695,
+        "pc3_variance": 839.3622806017559,
+        "pc2_pc3_radial_mean": 34.21347652712445,
+        "pc2_pc3_radial_iqr": 30.809628303526317,
+        "pc2_pc3_convex_hull_area": 11200.11056668738,
+        "neighbor_pc1_bin_entropy_mean": 1.4256703673377746
+      },
+      {
+        "pc1_bin": "highest_pc1",
+        "count": 48,
+        "pc1_min": 33.58444978129549,
+        "pc1_max": 112.39875596855957,
+        "pc2_variance": 1365.7961045035377,
+        "pc3_variance": 651.9971277586844,
+        "pc2_pc3_radial_mean": 41.455668020762744,
+        "pc2_pc3_radial_iqr": 24.045259891294325,
+        "pc2_pc3_convex_hull_area": 10481.525691843799,
+        "neighbor_pc1_bin_entropy_mean": 0.42978142850338524
+      }
+    ],
+    "secondary_variation_expands_as_pc1_decreases": false,
+    "lowest_vs_highest_radial_mean_ratio": 0.863253578183402,
+    "lowest_vs_highest_hull_area_ratio": 0.9833534355526483
+  }
+}

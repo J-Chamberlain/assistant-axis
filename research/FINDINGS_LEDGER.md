@@ -276,6 +276,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Negative controls were weaker than the target rubric: moral_badness Pearson r=0.201, professionalism r=0.103, weirdness/fantasticality r=0.029, and abstraction r=0.129
 - Interpretation: PC3 shows suggestive but incomplete support for perturbation-stabilization; cooperative-antagonistic remains a secondary or partial reading, and independent blinded human or second-model rating is the next validation step
 
+### Trait-Space Axis Interpretation (2026-05-30)
+
+- Ran direct PCA over 240 raw Qwen/Qwen3-32B layer-48 trait vectors from `downloads/hf_vectors/qwen-3-32b/trait_vectors/`; each `[64, 5120]` tensor was mean-pooled to one 5120-D vector
+- Trait PCA explained variance: PC1 0.353, PC2 0.168, PC3 0.134, cumulative PC1-PC3 0.655
+- Trait PC1 moderately aligns with persona PC1 in activation-space direction cosine, abs=0.681, but trait PC2 and PC3 weakly align with persona PC2/PC3, abs=0.194 and 0.065
+- Streamlined trait-axis interpretations: PC1 controlled seriousness/formal composure vs playful irreverence/expressive volatility; PC2 cold detachment/hard-edged abstraction vs warm accessibility/affiliative care; PC3 plain practical groundedness vs ornate symbolic/theatrical expressivity
+- Trait-only PC3 did not independently validate perturbation-stabilization: name-based perturbation/stabilization score correlated weakly with trait PC3, Pearson=-0.074 and Spearman=-0.104, while moral valence was near zero
+- Trait-space cone testing did not reproduce the simple persona-space cone pattern: lowest-PC1 vs highest-PC1 radial spread ratio was 0.863, and secondary variation did not expand as PC1 decreased
+- Interpretation: trait vectors strongly reconstruct persona geometry through cosine profiles, but direct trait-space PCA is not the same object as persona-space PCA; this supports a layered shared-geometry model rather than a simple trait-axis reduction
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

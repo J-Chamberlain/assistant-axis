@@ -1,0 +1,67 @@
+{
+  "bin_rows": [
+    {
+      "pc1_bin": "lowest_pc1",
+      "count": 48,
+      "pc1_min": -94.55687201137536,
+      "pc1_max": -41.57493957632811,
+      "pc2_variance": 874.2762700723422,
+      "pc3_variance": 777.5969647185223,
+      "pc2_pc3_radial_mean": 35.78675375490667,
+      "pc2_pc3_radial_iqr": 28.523710289623615,
+      "pc2_pc3_convex_hull_area": 10307.04429890795,
+      "neighbor_pc1_bin_entropy_mean": 0.46920772179495146
+    },
+    {
+      "pc1_bin": "low_pc1",
+      "count": 48,
+      "pc1_min": -39.9851642757011,
+      "pc1_max": -11.109722964985684,
+      "pc2_variance": 1048.2386734745783,
+      "pc3_variance": 743.8667446277512,
+      "pc2_pc3_radial_mean": 38.33721268840031,
+      "pc2_pc3_radial_iqr": 29.782948864913518,
+      "pc2_pc3_convex_hull_area": 12728.775912404268,
+      "neighbor_pc1_bin_entropy_mean": 1.1381028434487266
+    },
+    {
+      "pc1_bin": "mid_pc1",
+      "count": 48,
+      "pc1_min": -9.941386155125182,
+      "pc1_max": 10.948790196341221,
+      "pc2_variance": 644.0466154600272,
+      "pc3_variance": 601.1051117879691,
+      "pc2_pc3_radial_mean": 30.588309325806318,
+      "pc2_pc3_radial_iqr": 18.87991837425251,
+      "pc2_pc3_convex_hull_area": 8400.980595638779,
+      "neighbor_pc1_bin_entropy_mean": 1.4920941284540319
+    },
+    {
+      "pc1_bin": "high_pc1",
+      "count": 48,
+      "pc1_min": 11.598468342772806,
+      "pc1_max": 32.85705268520236,
+      "pc2_variance": 699.3234983561695,
+      "pc3_variance": 839.3622806017559,
+      "pc2_pc3_radial_mean": 34.21347652712445,
+      "pc2_pc3_radial_iqr": 30.809628303526317,
+      "pc2_pc3_convex_hull_area": 11200.11056668738,
+      "neighbor_pc1_bin_entropy_mean": 1.4256703673377746
+    },
+    {
+      "pc1_bin": "highest_pc1",
+      "count": 48,
+      "pc1_min": 33.58444978129549,
+      "pc1_max": 112.39875596855957,
+      "pc2_variance": 1365.7961045035377,
+      "pc3_variance": 651.9971277586844,
+      "pc2_pc3_radial_mean": 41.455668020762744,
+      "pc2_pc3_radial_iqr": 24.045259891294325,
+      "pc2_pc3_convex_hull_area": 10481.525691843799,
+      "neighbor_pc1_bin_entropy_mean": 0.42978142850338524
+    }
+  ],
+  "secondary_variation_expands_as_pc1_decreases": false,
+  "lowest_vs_highest_radial_mean_ratio": 0.863253578183402,
+  "lowest_vs_highest_hull_area_ratio": 0.9833534355526483
+}
