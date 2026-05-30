@@ -425,6 +425,16 @@
 - Agreeableness was the strongest Big Five correlate of PC3 at r=-0.477; residual magnitudes were only weakly correlated with PC3
 - Current interpretation: PC3 is provisionally best described as cooperative-care/system-stabilization versus antagonistic-disruptive/transgressive register, not a pure preserving/exploiting axis; confidence is moderate-low pending paired no-label falsification
 
+### Blinded PCA-Axis Rubric Validation (2026-05-29)
+
+- Ran a coordinate-blind validation using the full available no-label persona prompt corpus: 1,375 rewritten prompt records covering all 275 personas, five prompts per persona.
+- Scoring used deterministic local lexical-semantic rubric proxies over no-label prompt text only; persona names, PCA coordinates, clusters, residuals, and prior labels were excluded until after scoring.
+- Target-aligned correlations were positive but modest: PC1 objective-certainty r=0.247, PC2 fragmented/coherent-uncertainty r=0.224, and PC3 antagonistic-transgressive r=0.349.
+- Matched-pair validation was weak: PC1 35%, PC2 40%, and PC3 40% direction-match rates over the top 20 close-orthogonal pairs per axis.
+- Regression from the three main rubric scores produced low cross-validated R2: PC1 0.065, PC2 0.024, and PC3 0.116.
+- Interpretation: this is not a clean validation of the working axis interpretations from no-label prompt text alone; PC3 receives the strongest modest support, PC1 is positive but weaker than expected, and PC2 remains the least certain.
+- Caveat: this is a local lexical proxy study, not a true independent human or LLM blinded-rating study; the next test should use richer full rollout responses or independent blinded raters.
+
 ---
 
 ## 3. CURRENT STATE
@@ -440,6 +450,7 @@
 | Residual manifold performance | provisional | R2 0.632 vs hierarchical baseline 0.622 | `research/q2_stability/qwen/outputs/residual_manifold_analysis/residual_manifold_report.md` |
 | SVD15 lexical/register performance | provisional | sem+BigFive+SVD15 R2 0.707 vs sem+BigFive 0.613 | `research/q2_stability/qwen/outputs/residual_svd_interpretation/residual_svd_interpretation_report.md` |
 | PC3 interpretation | provisional | preserve/exploit rubric r=-0.312; nurturing/competitive r=-0.319; agreeableness r=-0.477 | `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/pc3_hypothesis_report.md` |
+| Blinded no-label PC rubric validation | provisional/weak | target correlations: PC1 r=0.247, PC2 r=0.224, PC3 r=0.349; pairwise direction 35-40% | `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/blinded_axis_validation_report.md` |
 | Evaluator-model sensitivity | unresolved | harness exists, paired `gpt-4.1-mini` records blocked by quota | `research/q2_stability/qwen/evaluator_sensitivity/` |
 
 **Paper 1.5 current scope:** Paper 1.5 is now a persona-geometry interpretation paper. The working title is `Interpreting Persona Activation Geometry`. The main claim is that persona activation geometry appears to decompose into layered semantic, dispositional, procedural, lexical/register, and residual structures after methodological stress testing. Adaptive extraction remains important due diligence and tooling evidence, but it is no longer the primary paper frame.
@@ -484,6 +495,8 @@
 
 **Persona-geometry working interpretation:** `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md` preserves the current axis hypotheses with explicit epistemic labels. PC1 is best interpreted as constraint/objective certainty versus possibility/objective ambiguity; PC2 is least certain and currently framed as capacity for coherent action under unresolved uncertainty; PC3 is provisionally framed as cooperative-stabilizing versus antagonistic-transgressive; the cone hypothesis is preserved as a speculative admissible-configuration-count interpretation.
 
+**Blinded axis-validation state:** `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/` now contains a coordinate-blind no-label prompt rubric validation for PC1, PC2, and PC3. It used all five no-label rewritten prompts for all 275 personas and found only modest direct correlations with PCA coordinates, strongest for PC3 and weakest for PC2; this should be treated as a provisional lexical-proxy screen rather than a true independent semantic-rating study.
+
 **Reporting standard:** `research/PROJECT_ORIENTATION.md` now includes an Enhanced Research Reporting section. Future Codex research reports should state what was done, what changed the current interpretation, key judgment calls, competing explanations, strongest unresolved uncertainty, confidence level, and recommended next test.
 
 **Project onboarding:** `research/PROJECT_ORIENTATION.md` is the new-thread onboarding file to read immediately after `research/RESEARCH_STATE.md`. `research/FINDINGS_LEDGER.md` is the compact index of confirmed findings, negative findings, provisional interpretations, methodological deviations, blockers, and next tests. `research/NEW_SESSION_STARTUP.md` is the future-agent startup protocol for GPT, Claude, and Codex sessions.
@@ -503,8 +516,9 @@
 **Completed this session:** Updated the findings ledger, research state, and machine-in-the-loop sticky note to record that PC3 is better framed as cooperative-care/system-stabilization versus antagonistic-disruptive/transgressive register, with moderate-low confidence.
 **Completed this session:** Created `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md` to preserve current PC1, PC2, PC3, and cone-hypothesis interpretations with observed/inferred/speculative/unknown labels.
 **Completed this session:** Added Enhanced Research Reporting guidance to `research/PROJECT_ORIENTATION.md` so future research reports summarize interpretive significance, judgment calls, uncertainty, confidence, and next tests.
-**Next step:** Prioritize PC2 falsification and refinement via scientist/physicist/engineer hierarchy tests, systems engineer versus civil engineer comparisons, koan corpus projection, long-horizon uncertainty professions, PC2 annotation, and SVD/lexical overlays.
-**Last commit before this session:** b4c7e23
+**Completed this session:** Ran the blinded PCA-axis rubric validation over the full available no-label prompt corpus, wrote outputs under `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`, and updated the findings ledger, research index, provenance registry, and interpretation note.
+**Next step:** Run a true blinded rating study with independent human or model raters over richer full rollout responses where available, with special focus on PC2 alternatives and matched-pair designs.
+**Last commit before this session:** 3e62f63
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

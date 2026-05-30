@@ -1,0 +1,17 @@
+{
+  "corpus_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl",
+  "pca_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/research/visualizations/geometry_viz_data.json",
+  "personas_covered": 275,
+  "total_prompt_records": 1375,
+  "text_fields_used": [
+    "rewritten_prompt"
+  ],
+  "available_but_not_scored_fields": [
+    "original_prompt",
+    "role_description"
+  ],
+  "corpus_type": "no-label rewritten system prompts, not full rollout responses",
+  "sampling_decision": "No sampling; all five no-label rewritten prompts per persona were concatenated.",
+  "missing_personas_after_join": [],
+  "model_used": "GPT-5.5"
+}

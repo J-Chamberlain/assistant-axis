@@ -165,3 +165,15 @@ Alternative wording: roles requiring maintenance of multiple unresolved possibil
 ## Summary
 
 Observed: PC1 has the strongest support and is best interpreted as constraint/objective-certainty versus possibility/objective-ambiguity. PC3 has moderate support as cooperative-stabilizing versus antagonistic-transgressive, replacing the narrower system-preserving versus system-exploiting language. PC2 remains the least certain and most theoretically important axis; the current best formulation is capacity for coherent action under unresolved uncertainty. Speculative: the cone may reflect admissible configuration count, with high-PC1 roles occupying narrow regions because their objectives are externally specified and low-PC1 roles spreading because they permit more internally negotiated configurations.
+
+## Dated Update: Blinded No-Label Prompt Rubric Validation (2026-05-29)
+
+Observed: a coordinate-blind validation used the full available no-label prompt corpus, 1,375 rewritten prompts covering 275 personas, and joined scores to PCA coordinates only after scoring. The local proxy scorer used deterministic lexical-semantic rubrics rather than an independent human or model rater.
+
+Observed: target-aligned correlations were positive but modest: PC1 objective-certainty r=0.247, PC2 fragmented/coherent-uncertainty r=0.224, and PC3 antagonistic-transgressive r=0.349. Matched-pair validation was weak, with direction-match rates of PC1 35%, PC2 40%, and PC3 40% over the top close-orthogonal pairs.
+
+Inferred: the result weakens any strong claim that the current PC interpretations are directly recoverable from simple no-label prompt-text rubrics alone. It does not overturn the layered-geometry account, because prior semantic, Big Five, procedural, residual, and SVD analyses already show that activation geometry is distributed across multiple feature families.
+
+Inferred: PC3 receives the strongest modest support from this particular blinded proxy. PC1 remains plausible but less clean in this test than in the trait/PCA evidence. PC2 remains the least certain axis and should be the main target for future blinded annotation.
+
+Unknown: a true independent blinded rating study over full rollout responses may produce stronger or weaker validation than this prompt-corpus lexical proxy. The next validation should separate uncertainty exposure, immaturity, abstraction, expertise, and coherent action under unresolved uncertainty using matched pairs.

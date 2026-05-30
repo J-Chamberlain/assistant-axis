@@ -19,6 +19,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - Codex procedural/behavioral dimensions improve over semantic baseline but remain weaker than Big Five globally.
 - A residualized hierarchical model modestly improves over Big Five, supporting a layered interpretation.
 - TF-IDF/SVD15 prompt-register structure produces the strongest predictive result so far, but it is lexical/register-sensitive and not yet distilled into stable human-readable features.
+- A first coordinate-blind no-label prompt rubric validation found only modest direct support for the PC interpretations, strongest for PC3 and weakest for PC2.
 - Trickster adaptive extraction succeeded operationally; editor adaptive extraction failed to reach validation thresholds.
 
 ## Best Predictive Metrics
@@ -44,6 +45,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/`: trait/procedural hierarchy.
 - `research/q2_stability/qwen/outputs/residual_manifold_analysis/`: residual-manifold diagnostic.
 - `research/q2_stability/qwen/outputs/residual_svd_interpretation/`: SVD15 reconstruction and interpretation.
+- `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`: coordinate-blind no-label prompt rubric validation of PC1, PC2, and PC3 working interpretations.
 - `research/visualizations/persona_geometry_explorer.html`: interactive Plotly viewer with PCA/UMAP, cluster, selection, and Big Five overlays.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: persona-aligned Big Five overlay data.
 
@@ -52,17 +54,19 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - Does activation geometry survive no-label prompts under matched extraction conditions?
 - How sensitive are role-expression scores to evaluator model choice, especially for assistant-adjacent roles?
 - Can SVD15 lexical/register signal be distilled into stable, interpretable residual features?
+- Do independent blinded raters using full rollout responses validate the PC1/PC2/PC3 interpretations more strongly than the first local lexical no-label prompt proxy?
 - Are developmental, liminal, collective, and nonindividual roles genuinely high-residual regions or artifacts of the prompt corpus?
 - Do local perturbation directions transfer across persona anchors, or is persona space strongly curved?
 - Can assistant-adjacent roles such as editor be anchored without collapsing toward generic assistant behavior?
 
 ## Pending Experiments
 
-1. Evaluator-sensitivity comparison between Codex/GPT-5.5 Standard and `gpt-4.1-mini`.
-2. Bounded no-label activation-space stress test on selected anchors, bridge roles, assistant-adjacent roles, and theatrical/fantastical roles.
-3. SVD15 distillation into concrete text-grounded residual features and retest under the shared splits.
-4. Stage-1 role-inventory uncertainty analysis across OpenAI and Claude-generated inventories, synchronized through GitHub.
-5. Paper 2 local centroid perturbation around Trickster, Actor, Therapist, and Spy.
+1. True blinded rating study using independent human or model raters over richer full rollout responses, with special focus on PC2 alternatives.
+2. Evaluator-sensitivity comparison between Codex/GPT-5.5 Standard and `gpt-4.1-mini`.
+3. Bounded no-label activation-space stress test on selected anchors, bridge roles, assistant-adjacent roles, and theatrical/fantastical roles.
+4. SVD15 distillation into concrete text-grounded residual features and retest under the shared splits.
+5. Stage-1 role-inventory uncertainty analysis across OpenAI and Claude-generated inventories, synchronized through GitHub.
+6. Paper 2 local centroid perturbation around Trickster, Actor, Therapist, and Spy.
 
 ## Archived Directions
 
@@ -79,11 +83,11 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 
 ## Current PC Interpretations
 
-PC1: Primarily separates careful/evaluative/procedural control from open, expressive, unstable, symbolic, or emotionally pressured persona organization. It overlaps with the assistant/evaluator basin but should not be reduced to literal assistantness. Conscientiousness is strongly positive; openness, extraversion, and neuroticism are strongly negative.
+PC1: Primarily separates careful/evaluative/procedural control from open, expressive, unstable, symbolic, or emotionally pressured persona organization. It overlaps with the assistant/evaluator basin but should not be reduced to literal assistantness. Conscientiousness is strongly positive; openness, extraversion, and neuroticism are strongly negative. A coordinate-blind no-label prompt rubric gave only modest support, so paper language should keep PC1 stronger than PC2/PC3 but not treat the wording as settled.
 
-PC2: Less cleanly univariate. It appears to contain compound social-expression, grounded-interpersonal, and model-specific structure. Big Five improves PC2 prediction, but no single Big Five trait gives a clean interpretation.
+PC2: Least cleanly univariate. It appears to contain compound developmental, uncertainty-integration, social-expression, grounded-interpersonal, and model-specific structure. Big Five improves PC2 prediction, but no single Big Five trait gives a clean interpretation, and the first blinded no-label prompt proxy did not produce useful cross-validated PC2 prediction.
 
-PC3: Partly tracks cooperative-care versus antagonistic/disruptive stance. Agreeableness is the strongest Big Five correlate, but the axis should still be checked against plotted coordinates and residual cases before becoming strong paper language.
+PC3: Partly tracks cooperative-care versus antagonistic/disruptive stance. Agreeableness is the strongest Big Five correlate, and the first blinded no-label prompt proxy produced the strongest direct axis correlation among the three PCs, but the axis should still be checked against plotted coordinates and residual cases before becoming strong paper language.
 
 ## Current Interpretation
 

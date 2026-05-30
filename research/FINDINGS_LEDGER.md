@@ -227,6 +227,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Agreeableness remains the strongest Big Five correlate of PC3 at r=-0.477, while Big Five and hierarchical residual magnitudes correlate only weakly with PC3
 - Interpretation: the preserving/exploiting hypothesis partially survives but is too narrow; the current best phrasing is a cooperative-care/system-stabilization versus antagonistic-disruptive/transgressive-register axis, with moderate-low confidence pending paired no-label falsification tests
 
+### Blinded PCA-Axis Rubric Validation (2026-05-29)
+
+- Ran a coordinate-blind validation using the full available no-label persona prompt corpus: 1,375 rewritten prompt records covering all 275 personas, five prompts per persona
+- Scoring used deterministic local lexical-semantic rubric proxies over no-label prompt text only; persona names, PCA coordinates, clusters, residuals, and prior labels were excluded until after scoring
+- Target-aligned correlations were positive but modest: PC1 objective-certainty r=0.247, PC2 fragmented/coherent-uncertainty r=0.224, and PC3 antagonistic-transgressive r=0.349
+- Matched-pair validation was weak: PC1 35%, PC2 40%, and PC3 40% direction-match rates over the top 20 close-orthogonal pairs per axis, with many failures caused by tied lexical scores
+- Regression from the three main rubric scores produced low cross-validated R2: PC1 0.065, PC2 0.024, and PC3 0.116; expanded PC2 alternatives improved PC1/PC3 prediction but not PC2
+- Interpretation: this does not cleanly validate the working axis interpretations from no-label prompt text alone; PC3 receives the strongest modest support, PC1 is positive but weaker than expected, and PC2 remains the least certain
+- Caveat: this is a local lexical proxy study, not a true independent human or LLM blinded-rating study; the next test should use richer full rollout responses or independent blinded raters
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

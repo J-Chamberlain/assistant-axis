@@ -169,3 +169,15 @@ Generating script: Manual HTML/JS edits plus prior `build_geometry_viz.py` data 
 Dependent analyses: visual inspection of PCA/UMAP geometry, cluster coloring, Big Five overlays, selection/lasso review.
 Current status: Established visualization tool.
 Notes/caveats: Visualization is self-contained and intentionally large. It is exploratory support, not a statistical test.
+
+## blinded axis rubric validation outputs
+
+Artifact: Coordinate-blind no-label prompt rubric validation for PC1, PC2, and PC3 interpretations.
+Location: `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`
+Created by: Codex/GPT-5.5.
+Model used: Script-author and analysis model GPT-5.5; numeric scoring was deterministic local code, not model inference.
+Source inputs: `research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl` and `research/visualizations/geometry_viz_data.json`.
+Generating script: `research/q2_stability/qwen/scripts/blinded_axis_rubric_validation.py`
+Dependent analyses: PC1/PC2/PC3 interpretation confidence, future blinded rater study design, Paper 1.5 methodology caveats.
+Current status: Provisional validation screen.
+Notes/caveats: Uses all five no-label prompts for all 275 personas and excludes persona names/PCA coordinates during scoring. It is a lexical-semantic proxy, not a true independent human or LLM blinded-rating study. Target correlations were positive but modest: PC1 r=0.247, PC2 r=0.224, PC3 r=0.349; matched-pair validation was weak.
