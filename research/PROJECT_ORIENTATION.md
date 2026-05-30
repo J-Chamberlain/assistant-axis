@@ -21,6 +21,8 @@ Paper 3, Paper 3.5, and Paper 4 are pre-analysis. Paper 3 concerns a geometric c
 Read these before making research claims or generating Codex cards:
 
 - `research/RESEARCH_STATE.md`: canonical current state, discoveries, next steps, pod status, and last session updates.
+- `research/THREAD_START.md`: three-minute continuity brief for new threads, including current objective, top findings, open questions, risks, and next experiments.
+- `research/CLAIMS_REGISTER.md`: compact top-claim register that separates observed findings, supported interpretations, tentative claims, and speculative hypotheses.
 - `research/PROJECT_ORIENTATION.md`: this compact orientation file.
 - `research/RESEARCH_INDEX.md`: concise navigation index for current scopes, best metrics, artifacts, open questions, visualizations, and PC interpretations.
 - `research/PROVENANCE_REGISTRY.md`: artifact lineage registry for major Paper 1.5 datasets, scripts, model provenance, dependencies, and caveats.
@@ -119,11 +121,13 @@ For purely operational or mechanical tasks, keep the report shorter, but still s
 ## Recommended Startup Sequence
 
 1. Fetch or read `research/RESEARCH_STATE.md`.
-2. Read `research/PROJECT_ORIENTATION.md`.
-3. Read `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` before performing new repo searches.
-4. For methodology questions, read `research/assistant_axis_methodology/assistant_axis_pipeline_reconstruction.md` and `research/assistant_axis_methodology/replication_differences_vs_lu.md`.
-5. For Paper 1.5 questions, read `research/paper1_5_outline.md`, `research/paper1_5_executive_summary.md`, and `research/paper1_5_adaptive_extraction_notes.md`.
-6. For Paper 2 questions, read `research/paper2_local_centroid_perturbation_brief.md`; treat dyad/contagion files as archived prior framing unless the user explicitly asks about conversational dynamics.
-7. For pod or execution questions, read `research/workflow/`.
-8. Check `research/FINDINGS_LEDGER.md` for compact claim status.
-9. Check `sticky_notes/README.md` if the task touches open hypotheses or write-up ideas.
+2. Read `research/THREAD_START.md`.
+3. Read `research/CLAIMS_REGISTER.md`.
+4. Read `research/PROJECT_ORIENTATION.md`.
+5. Read `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` before performing new repo searches.
+6. For methodology questions, read `research/assistant_axis_methodology/assistant_axis_pipeline_reconstruction.md` and `research/assistant_axis_methodology/replication_differences_vs_lu.md`.
+7. For Paper 1.5 questions, read `research/paper1_5_outline.md`, `research/paper1_5_executive_summary.md`, and `research/paper1_5_adaptive_extraction_notes.md`.
+8. For Paper 2 questions, read `research/paper2_local_centroid_perturbation_brief.md`; treat dyad/contagion files as archived prior framing unless the user explicitly asks about conversational dynamics.
+9. For pod or execution questions, read `research/workflow/`.
+10. Check `research/FINDINGS_LEDGER.md` for detailed finding status after the claims register.
+11. Check `sticky_notes/README.md` if the task touches open hypotheses or write-up ideas.

@@ -5,25 +5,27 @@ Use this sequence for new GPT, Claude, and Codex sessions. Do not rely on chat m
 ## Required Startup Sequence
 
 1. Fetch or read `research/RESEARCH_STATE.md`.
-2. Read `research/PROJECT_ORIENTATION.md`.
-3. Before performing new repo searches, check:
+2. Read `research/THREAD_START.md`.
+3. Read `research/CLAIMS_REGISTER.md`.
+4. Read `research/PROJECT_ORIENTATION.md`.
+5. Before performing new repo searches, check:
    - `research/RESEARCH_INDEX.md`
    - `research/PROVENANCE_REGISTRY.md`
-4. If the question is about Lu et al. methodology, read the `research/assistant_axis_methodology/` package, especially:
+6. If the question is about Lu et al. methodology, read the `research/assistant_axis_methodology/` package, especially:
    - `research/assistant_axis_methodology/assistant_axis_pipeline_reconstruction.md`
    - `research/assistant_axis_methodology/replication_differences_vs_lu.md`
    - `research/assistant_axis_methodology/open_methodology_questions.md`
-5. If the question is about workflow, pods, RunPod lifecycle, preservation, integrity, scoring, or closeout, read `research/workflow/`.
-6. If the question is about Paper 1.5, read:
+7. If the question is about workflow, pods, RunPod lifecycle, preservation, integrity, scoring, or closeout, read `research/workflow/`.
+8. If the question is about Paper 1.5, read:
    - `research/paper1_5_outline.md`
    - `research/paper1_5_executive_summary.md`
    - `research/paper1_5_adaptive_extraction_notes.md`
    - `research/FINDINGS_LEDGER.md`
-7. If the question is about Paper 2, read:
+9. If the question is about Paper 2, read:
    - `research/paper2_local_centroid_perturbation_brief.md`
    - `research/archive/paper2_dyad_contagion_archive_2026-05-28.md` only if the question concerns older dyad, contagion, attractor-collapse, or conversational-dynamics framing.
-8. If the question touches open hypotheses, write-up reminders, or parked ideas, check `sticky_notes/README.md`.
-9. Ask for Codex only when repo execution, file inspection, script writing, local validation, git commits, pod work, or browser/computer use is needed.
+10. If the question touches open hypotheses, write-up reminders, or parked ideas, check `sticky_notes/README.md`.
+11. Ask for Codex only when repo execution, file inspection, script writing, local validation, git commits, pod work, or browser/computer use is needed.
 
 ## Operating Rules
 

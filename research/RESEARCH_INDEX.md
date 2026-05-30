@@ -41,6 +41,8 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 
 ## Important Artifacts
 
+- `research/THREAD_START.md`: three-minute continuity brief for new GPT/Claude/Codex threads.
+- `research/CLAIMS_REGISTER.md`: compact top-claim register separating observed findings, supported interpretations, tentative claims, and speculative hypotheses.
 - `research/PROVENANCE_REGISTRY.md`: artifact lineage and dependency registry.
 - `research/FINDINGS_LEDGER.md`: compact status of findings, negative results, deviations, blockers, and next tests.
 - `research/assistant_axis_methodology/`: Lu et al. methodology extraction, prompt audits, semantic topology, cluster overlap, no-label ablation.

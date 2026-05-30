@@ -1,0 +1,61 @@
+# Thread Start
+
+This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
+
+## Current Objective
+
+The active Paper 1.5 objective is to write **Interpreting Persona Activation Geometry**. The paper is no longer primarily an adaptive extraction replication paper. Its contribution is an interpretation of persona activation geometry after methodological stress testing: semantic structure, dispositional/trait structure, procedural/operating-mode structure, lexical/register structure, and residual developmental/liminal/collective structure.
+
+Paper 2 is active planning, not execution. Its current scope is local centroid perturbation and local persona-manifold mapping around anchors such as Trickster, Actor, Therapist, and Spy. Older dyad contagion, attractor-collapse, conversational drift, and rumination plans are archived as future dynamics work.
+
+## Top Findings
+
+Qwen trickster adaptive extraction worked operationally. The run preserved 1200 rollouts and 1200 activation shards, passed integrity, and Codex/GPT-5.5 adaptive scoring reached 64 score>=2 and 33 score==3 responses in 64 scored records. The score>=2 vector matched the Lu trickster mean at cosine 0.957557, and adaptive stopping passed at n=16.
+
+Editor adaptive extraction failed as a second-persona test. The 128-record 512-token editor run produced only 10 score>=2 and 3 score==3 responses. A matched 1024-token run sharply reduced truncation but did not improve role-expression yield. The current interpretation is weak editor anchoring or assistant-adjacent collapse, not a token-cap explanation.
+
+Big Five-style LLM-assigned features are the strongest compact global predictor so far. In the shared benchmark, Claude Big Five features predict canonical Qwen activation PCA3D at R2 0.613 versus semantic baseline R2 0.389. Codex retained procedural/behavioral features reach R2 0.490.
+
+The layered model is currently the best Paper 1.5 frame. A residualized trait-to-procedural hierarchy reaches R2 0.622, residual manifold hand features reach R2 0.632, and sem+BigFive+SVD15 prompt-register structure reaches R2 0.707. The SVD result is strong but lexical/register-sensitive and not yet distilled into stable human-readable factors.
+
+Role-label exposure is a real methodology caveat. The Lu-style system prompts directly expose the target role label or normalized variant in 1280/1375 prompts, 93.1%. However, no-label prompt topology mostly survives label removal, so label exposure is not the whole structure.
+
+## Top Open Questions
+
+The highest-priority methodology question is whether activation geometry survives no-label prompts under matched extraction conditions. The bounded no-label activation stress test is designed but not launched.
+
+Evaluator-model sensitivity remains unresolved. Codex/GPT-5.5 was used as a pragmatic role-expression judge for trickster/editor; strict Lu-method identity requires `gpt-4.1-mini` scoring if API access permits.
+
+PC2 remains the least settled axis. The current best interpretation has shifted away from simple coherent action under uncertainty and toward abstraction/integration/developmental structure. Conditional PC1-band validation found abstraction predicts residual PC2 at r=-0.618, coherent action remains weaker at r=+0.427, and uncertainty exposure fails at r=-0.026.
+
+SVD15 lexical/register signal is strong but not yet converted into stable explanatory features. The next useful step is distilling concrete SVD extremes into human-readable residual dimensions and retesting them under the shared splits.
+
+## Current Interpretations
+
+PC1 is moderately well supported as careful/evaluative/procedural control, objective certainty, disciplined expertise, and externally legible competence versus open/symbolic/expressive possibility. PC1 aligns with the assistant-axis vector at 0.802310. It should not be reduced to literal assistantness.
+
+PC2 is currently best described as abstraction/integration/developmental structure. Lower PC2 is more abstract, world-model-like, integrated, and long-residence. Higher PC2 is more developmental, reactive, socially volatile, or less integrated. Coherent action under unresolved uncertainty is now a secondary behavioral expression, not the primary label.
+
+PC3 is moderately supported as cooperative-care/system-stabilizing versus antagonistic/disruptive/transgressive stance. The reading-based rater study gives PC3 r=0.690, but professional-subset counterexamples show that PC3 is not only reform, critique, or perturbation.
+
+The cone hypothesis remains speculative. The geometry appears to narrow at high PC1 and widen as PC1 decreases, suggesting that externally specified objectives may constrain admissible configurations. This still needs quantitative variance-by-PC1 testing and sampling-artifact controls.
+
+## Current Risks
+
+Do not overstate Lu-method replication. Codex/GPT-5.5 scoring, adaptive stopping, no-label prompt ablation, and reading-based Codex ratings are methodological extensions or pragmatic substitutions.
+
+Do not conflate prompt-space findings with activation-space causality. Semantic topology, no-label topology, and SVD/register structure are evidence about the elicitation corpus and its relation to activations, not proof that activation geometry is "just semantics."
+
+Do not treat Big Five features as psychological ground truth. They are LLM-assigned, useful predictive features.
+
+Do not treat PC2 as solved. Recent tests weakened the simple uncertainty-capacity formulation and strengthened abstraction/integration language, but independent-rater replication is still needed.
+
+Do not rely on chat memory for state, pod status, or file paths. Use `RESEARCH_STATE.md`, this file, `CLAIMS_REGISTER.md`, `RESEARCH_INDEX.md`, and `PROVENANCE_REGISTRY.md`.
+
+## Next Experiments
+
+1. Run an independent-rater PC2 disentanglement study over the strongest PC1-matched pairs, explicitly separating abstraction, maturity/integration, expertise, uncertainty exposure, and coherent action under uncertainty.
+2. Launch the bounded no-label activation-space stress test once compute is approved, using stable anchors, bridge roles, sparse/outlier roles, assistant-adjacent roles, theatrical roles, and collective roles.
+3. Finish evaluator-sensitivity comparison between Codex/GPT-5.5 and `gpt-4.1-mini` if API quota allows.
+4. Distill SVD15 prompt-register components into concrete human-readable residual features and retest under the shared benchmark splits.
+5. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.
