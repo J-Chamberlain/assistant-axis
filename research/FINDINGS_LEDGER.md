@@ -257,6 +257,17 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Scientist vs physicist weakly supports the actual abstraction ordering because physicist is lower on PC2 than scientist, but the blinded rating gave them similar coherent-uncertainty capacity scores
 - Interpretation: PC1 remains moderate-confidence; PC3 remains moderate with professional counterexamples; PC2 should be reframed away from simple professional uncertainty capacity and toward abstraction/historical-theoretical/world-model depth unless future tests separate those factors more cleanly
 
+### PC2 Conditional Validation After PC1 Control (2026-05-30)
+
+- Ran a conditional PC2 validation over 273 personas common to canonical Qwen PCA coordinates and the blinded no-label dossier score table
+- PC1 was controlled approximately by 10 percentile bands, then residual PC2 variation was tested against maturity, abstraction, expertise, uncertainty exposure, residence time under uncertainty, and coherent action under unresolved uncertainty
+- Abstraction was the strongest pooled band-demeaned predictor of PC2: Pearson r=-0.618, Spearman r=-0.597, R2=0.382
+- Coherent action under unresolved uncertainty remained weaker but nonzero: Pearson r=+0.427, Spearman r=+0.334, R2=0.182
+- Uncertainty exposure failed as a residual explanation after PC1 control: Pearson r=-0.026 and R2=0.001
+- Matched-pair and mythic/developmental tests support revising PC2 from a coherent-action-only axis to an abstraction/integration/developmental axis, with coherent action retained as a secondary behavioral expression
+- Strongest support: teenager vs crystalline at nearly matched PC1 shows high-PC2 developmental/reactive structure against low-PC2 abstraction/integration
+- Strongest counterexample: adolescent vs parasite shows a high-PC2 member with higher abstraction by 21 points, warning that abstraction is not a complete one-variable explanation
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

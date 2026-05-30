@@ -207,3 +207,17 @@ Observed: PC2 was not supported as a professional coherent-action hierarchy. Coh
 Inferred: the scientist versus physicist comparison weakly supports the actual abstraction ordering because physicist is lower on PC2 than scientist, but the blinded rater assigned similar coherent-uncertainty capacity to both. This weakens the claim that professional hierarchy alone recovers PC2 through the coherent-action rubric.
 
 Inferred: PC1 remains moderate-confidence, PC3 remains moderate with professional caveats, and PC2 remains low-confidence unless future tests cleanly separate abstraction, expertise, maturity, and uncertainty capacity.
+
+## Dated Update: Conditional PC2 Validation After PC1 Control (2026-05-30)
+
+Observed: a conditional PC2 validation used 273 personas common to the canonical Qwen PCA coordinates and the blinded no-label dossier score table. PC1 was approximately controlled by 10 percentile bands, then PC2 was tested within bands against maturity, abstraction, expertise, uncertainty exposure, residence time under uncertainty, and coherent action under unresolved uncertainty.
+
+Observed: abstraction was the strongest residual predictor of PC2 after PC1 band demeaning: Pearson r=-0.618, Spearman r=-0.597, R2=0.382. Coherent action under unresolved uncertainty remained weaker but nonzero: Pearson r=+0.427, Spearman r=+0.334, R2=0.182. Uncertainty exposure failed as a conditional explanation: Pearson r=-0.026 and R2=0.001.
+
+Observed: the strongest supporting matched pair was `teenager` versus `crystalline`, with nearly matched PC1 but PC2 separation above 122 points. High-PC2 `teenager` was rated low abstraction and low maturity but high coherent action, while low-PC2 `crystalline` was rated highly abstract and more integrated but low on the prior coherent-action score. The mythic/developmental comparison showed the same structure: sage, mystic, and prophet are low PC2 and high abstraction/integration, while toddler, infant, fool, and procrastinator are high PC2 and developmental/reactive.
+
+Inferred: PC2 should be revised from a coherent-action-under-unresolved-uncertainty axis to an abstraction/integration/developmental axis. Lower PC2 appears to capture abstract, world-model-like, long-residence, integrated cognition; higher PC2 captures developmental, reactive, socially volatile, or less integrated action. Coherent action under unresolved uncertainty remains a secondary behavioral expression, not the primary axis label.
+
+Speculative: the coherent-action score may have partly inverted because the prior rubric rewarded immediate local continuation under uncertainty, while low-PC2 roles often represent abstract residence in unresolved structure rather than visible action. This would make the old label behaviorally plausible but geometrically downstream.
+
+Unknown: abstraction is not a complete one-variable explanation. The strongest counterexample found was `adolescent` versus `parasite`, where the high-PC2 member was rated more abstract by 21 points despite much higher PC2. The next test should use independent human or second-model blinded ratings on PC1-matched pairs and force direct choices among abstraction, maturity/integration, and coherent action.

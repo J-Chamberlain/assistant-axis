@@ -3,9 +3,9 @@
 # Updated at the end of every Codex session. Fetch this first in any new session.
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
-**Last updated:** 2026-05-29
-**Last commit:** b4c7e23
-**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology; PC working interpretations are preserved in `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md`, with PC1 strongest, PC2 least certain, PC3 provisional after adversarial evaluation, and the cone hypothesis explicitly marked speculative
+**Last updated:** 2026-05-30
+**Last commit:** 3422356
+**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology; PC working interpretations are preserved in `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md`, with PC1 strongest, PC2 now revised toward an abstraction/integration/developmental axis after conditional PC1 control, PC3 provisionally cooperative-stabilizing versus antagonistic-transgressive, and the cone hypothesis explicitly marked speculative
 
 ---
 
@@ -456,6 +456,14 @@
 - Scientist vs physicist weakly supports the actual abstraction ordering because physicist is lower on PC2 than scientist, but the blinded rating gave them similar coherent-uncertainty capacity scores.
 - Interpretation: PC1 remains moderate-confidence; PC3 remains moderate with professional counterexamples; PC2 should be reframed away from simple professional uncertainty capacity and toward abstraction/historical-theoretical/world-model depth unless future tests separate those factors more cleanly.
 
+### PC2 Conditional Validation After PC1 Control (2026-05-30)
+
+- Ran a conditional PC2 validation over 273 common personas using 10 PC1 percentile bands and blinded no-label dossier scores.
+- Abstraction was the strongest residual predictor of PC2 after band demeaning: pooled Pearson r=-0.618 and R2=0.382.
+- Coherent action under unresolved uncertainty remained weaker but nonzero: pooled Pearson r=+0.427 and R2=0.182.
+- Uncertainty exposure failed as a conditional explanation: pooled Pearson r=-0.026 and R2=0.001.
+- Matched-pair and mythic/developmental tests support revising PC2 from a coherent-action-only axis to an abstraction/integration/developmental axis, with coherent action retained as a secondary behavioral expression.
+
 ---
 
 ## 3. CURRENT STATE
@@ -468,6 +476,7 @@
 | Big Five performance | established | Claude Big Five R2 0.613 vs semantic baseline 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
 | Procedural/Codex retained performance | established | Codex retained R2 0.490 vs semantic baseline 0.389 | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv` |
 | Hierarchical trait-procedural performance | provisional | R2 0.622 vs trait stage 0.613 | `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/hierarchical_model_report.md` |
+| PC2 conditional explanation | provisional/strongest current | abstraction r=-0.618 after PC1 band control; coherent action r=+0.427 | `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md` |
 | Residual manifold performance | provisional | R2 0.632 vs hierarchical baseline 0.622 | `research/q2_stability/qwen/outputs/residual_manifold_analysis/residual_manifold_report.md` |
 | SVD15 lexical/register performance | provisional | sem+BigFive+SVD15 R2 0.707 vs sem+BigFive 0.613 | `research/q2_stability/qwen/outputs/residual_svd_interpretation/residual_svd_interpretation_report.md` |
 | PC3 interpretation | provisional | preserve/exploit rubric r=-0.312; nurturing/competitive r=-0.319; agreeableness r=-0.477 | `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/pc3_hypothesis_report.md` |
@@ -546,8 +555,9 @@
 **Completed this session:** Ran the blinded PCA-axis rubric validation over the full available no-label prompt corpus, wrote outputs under `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`, and updated the findings ledger, research index, provenance registry, and interpretation note.
 **Completed this session:** Ran the reading-based Codex-as-rater blinded PCA-axis study over anonymized no-label persona dossiers, wrote outputs under `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, and updated state/provenance/interpretation trackers.
 **Completed this session:** Ran the professional hierarchy validation over 102 present professional/expert personas and updated the findings ledger, research index, research state, and interpretation note.
-**Next step:** Design a focused PC2 disentanglement test that separately rates abstraction/world-model depth, institutional expertise, maturity, and uncertainty capacity within professional roles.
-**Last commit before this session:** 6df5fe1
+**Completed this session:** Ran conditional PC2 validation after PC1 decile-band control, generated band inventory, candidate scores, within-band correlations, matched pairs, and comparison outputs under `research/q2_stability/qwen/outputs/pc2_conditional_validation/`, and updated PC2 interpretation language.
+**Next step:** Run an independent human or second-model blinded rating over the strongest PC1-matched pairs, forcing choices among abstraction, maturity/integration, and coherent action under unresolved uncertainty.
+**Last commit before this session:** 3422356
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

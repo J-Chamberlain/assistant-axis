@@ -193,3 +193,15 @@ Generating script: `research/q2_stability/qwen/scripts/blinded_axis_rater_study.
 Dependent analyses: PC1/PC2/PC3 interpretation confidence, Paper 1.5 axis language, future independent-rater study design.
 Current status: Provisional but stronger than the lexical-proxy screen.
 Notes/caveats: Full 275-persona rollout-response corpus was not found locally; dossiers use all five no-label rewritten prompts per persona. Persona names, PCA coordinates, clusters, Big Five scores, residuals, and prior labels were hidden from the rater. This is Codex-as-rater rather than independent human or second-model annotation. Target correlations were PC1 r=0.558, PC2 r=0.373, PC3 r=0.690; matched-pair validation was PC1 75%, PC2 100%, PC3 95%.
+
+## pc2 conditional validation outputs
+
+Artifact: Conditional PC2 validation after approximate PC1 control.
+Location: `research/q2_stability/qwen/outputs/pc2_conditional_validation/`
+Created by: Codex/GPT-5.5 High Reasoning.
+Model used: Analysis and script-author model GPT-5.5 High Reasoning; candidate scores reused from the prior Codex/GPT-5.5 blinded rater study.
+Source inputs: `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv` and `research/q2_stability/qwen/outputs/blinded_axis_rater_study/axis_rater_scores.csv`.
+Generating script: One-time local analysis for the 2026-05-30 conditional PC2 validation session.
+Dependent analyses: PC2 interpretation language, matched-pair follow-up design, Paper 1.5 axis-interpretation confidence.
+Current status: Provisional but strongest current PC2 disentanglement result.
+Notes/caveats: Uses 273 common personas and 10 PC1 percentile bands. The ratings are prompt-dossier based rather than full rollout-response based. Abstraction is the strongest residual PC2 predictor after PC1 band control (r=-0.618, R2=0.382); coherent action is weaker (r=+0.427, R2=0.182); uncertainty exposure fails (r=-0.026, R2=0.001).

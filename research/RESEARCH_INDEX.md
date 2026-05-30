@@ -22,6 +22,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - A first coordinate-blind no-label prompt rubric validation found only modest direct support for the PC interpretations, strongest for PC3 and weakest for PC2.
 - A reading-based Codex/GPT-5.5 rater study over anonymized no-label prompt dossiers materially strengthened PC3 and PC1 interpretations, while showing that PC2 is better treated as a compound abstraction/integration axis than as coherent action under uncertainty alone.
 - A targeted professional-hierarchy validation supports PC1 modestly and PC3 modestly inside professional roles, but does not support PC2 as a simple coherent-action-under-uncertainty hierarchy.
+- A conditional PC2 validation after PC1 decile control shifts the current PC2 interpretation toward abstraction/integration/developmental structure: abstraction predicts residual PC2 at r=-0.618, coherent action remains weaker at r=+0.427, and uncertainty exposure fails at r=-0.026.
 - Trickster adaptive extraction succeeded operationally; editor adaptive extraction failed to reach validation thresholds.
 
 ## Best Predictive Metrics
@@ -50,6 +51,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`: coordinate-blind no-label prompt rubric validation of PC1, PC2, and PC3 working interpretations.
 - `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`: reading-based Codex-as-rater blinded annotation study over anonymized no-label persona dossiers.
 - `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`: targeted professional-role validation for PC1, PC2, and PC3 interpretations.
+- `research/q2_stability/qwen/outputs/pc2_conditional_validation/`: conditional PC2 validation after PC1 band control, including candidate comparison, matched pairs, physicist test, and mythic/developmental test.
 - `research/visualizations/persona_geometry_explorer.html`: interactive Plotly viewer with PCA/UMAP, cluster, selection, and Big Five overlays.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: persona-aligned Big Five overlay data.
 
@@ -65,7 +67,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 
 ## Pending Experiments
 
-1. Independent-rater replication using human or second-model raters over richer full rollout responses where available, with special focus on PC2 alternatives.
+1. Independent-rater replication using human or second-model raters over the strongest PC1-matched PC2 pairs, forcing abstraction, maturity/integration, and coherent-action choices.
 2. Evaluator-sensitivity comparison between Codex/GPT-5.5 Standard and `gpt-4.1-mini`.
 3. Bounded no-label activation-space stress test on selected anchors, bridge roles, assistant-adjacent roles, and theatrical/fantastical roles.
 4. SVD15 distillation into concrete text-grounded residual features and retest under the shared splits.
@@ -89,7 +91,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 
 PC1: Primarily separates careful/evaluative/procedural control from open, expressive, unstable, symbolic, or emotionally pressured persona organization. It overlaps with the assistant/evaluator basin but should not be reduced to literal assistantness. Conscientiousness is strongly positive; openness, extraversion, and neuroticism are strongly negative. The reading-based blinded rater study strengthens PC1 as objective certainty, but intelligence/expertise is an even stronger PC1 correlate, so paper language should include disciplined knowledge practice and externally legible competence.
 
-PC2: Least cleanly univariate. It appears to contain compound abstraction, maturity, expertise, uncertainty-integration, developmental, and model-specific structure. The reading-based rater study found coherent-action-under-uncertainty predicts PC2, but abstraction predicts PC2 more strongly in the opposite direction; the professional-hierarchy validation found coherent uncertainty capacity essentially uncorrelated with PC2. PC2 should not be reduced to the coherent-action formulation.
+PC2: Least cleanly univariate, but now best described as an abstraction/integration/developmental axis rather than a coherent-action-under-uncertainty axis. Conditional PC1-band validation found abstraction is the strongest residual predictor (r=-0.618, R2=0.382), while coherent action remains weaker but nonzero (r=+0.427, R2=0.182) and uncertainty exposure fails (r=-0.026). Lower PC2 is more abstract, world-model-like, integrated, and long-residence; higher PC2 is more developmental, reactive, socially volatile, or less integrated. Coherent action under unresolved uncertainty should be retained as a secondary behavioral expression, not the primary label.
 
 PC3: Tracks cooperative-care/system-stabilizing versus antagonistic/disruptive/transgressive stance. Agreeableness is the strongest Big Five correlate, and the reading-based blinded rater study strongly supports the direct interpretation. It should still be described as a partial stance axis rather than a complete ontology of PC3.
 
