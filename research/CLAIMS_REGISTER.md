@@ -256,11 +256,11 @@ Counterevidence: Text-to-cluster classification is imperfect at 0.687 accuracy a
 Dependencies: `research/outputs/cluster_conditioned_axis_tests/`
 Last Updated: 2026-05-30
 
-## 28. Novel Prompt Battery Is Feasible But Geometrically Incomplete
+## 28. Novel Prompt Battery Is Feasible And Now Expanded For High-PC3 / High-PC2 Validation
 
-Claim: A novel prompt battery was constructed but coverage is incomplete in specified regions; H100 validation is feasible but should treat under-covered regions cautiously.
+Claim: The novel prompt battery is feasible for H100 validation and now includes an adaptive high-PC3/high-PC2 supplement, but coverage remains incomplete in high-PC1 and several exact 3D cells.
 Status: Observed
-Evidence: The battery contains 120 novel prompts generated without explicit persona role labels, with 24 manual holdouts, 12 neutral controls, 13 safety-adjacent prompts, and zero explicit role-name flags. Approximate artifact similarity is low: max 0.205, mean 0.069. A serialized role-trained leakage-control elastic-net TF-IDF forecaster assigns predicted PC1/PC2/PC3 coordinates to every prompt.
-Counterevidence: Only 11/27 quantile target cells are populated; high-PC1 and high-PC2 regions remain under-covered by the current natural-prompt generation strategy. The battery is a partial validation set, not a complete covering design.
-Dependencies: `research/outputs/novel_prompt_battery/novel_prompt_battery_report.md`, `research/outputs/novel_prompt_battery/h100_prompt_run_manifest.csv`, `research/outputs/novel_prompt_battery/novel_prompt_battery_coverage_stats.json`
+Evidence: The first battery contains 120 novel prompts generated without explicit persona role labels. The adaptive supplement adds 60 prompts from 516 logged candidates using the frozen forecaster hash `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`. Supplemental coverage includes 38 prompts above the prior PC3 75th percentile, 44 above the prior PC2 75th percentile, 12 safety-adjacent high-PC3 prompts, and 26 mixed-boundary high-PC3 prompts. The combined battery contains 180 prompts and improves target-cell coverage from 11/27 to 16/27, with zero supplemental explicit role-name flags and zero operational-harm flags.
+Counterevidence: The expansion is still forecaster-predicted coverage, not measured activation coverage. High-PC1 target cells and several exact 3D cells remain under-covered, so the expanded battery is a targeted frontier validation set rather than complete geometric coverage.
+Dependencies: `research/outputs/novel_prompt_battery/novel_prompt_battery_report.md`, `research/outputs/novel_prompt_battery/h100_prompt_run_manifest.csv`, `research/outputs/novel_prompt_battery_expansion/adaptive_prompt_expansion_report.md`, `research/outputs/novel_prompt_battery_expansion/combined_h100_prompt_manifest.csv`
 Last Updated: 2026-05-30

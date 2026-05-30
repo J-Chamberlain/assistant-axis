@@ -331,6 +331,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Coverage is partial: 11/27 quantile target cells populated; high-PC1 and high-PC2 target regions remain under-covered by the current natural-prompt generation strategy
 - Interpretation: H100 validation is feasible using `h100_prompt_run_manifest.csv`, but the battery should be described as a partial geometric validation set rather than complete coverage
 
+### Adaptive High-PC3 / High-PC2 Prompt Battery Expansion (2026-05-30)
+
+- Built `research/outputs/novel_prompt_battery_expansion/` as a targeted 60-prompt supplement using the frozen role-trained leakage-control elastic-net TF-IDF forecaster, hash `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`
+- The adaptive loop logged 516 generated candidates, coordinate-error feedback, acceptance/rejection status, leakage scores, explicit-role flags, and safety flags
+- Supplemental prompt counts: 26 mixed-boundary, 22 cluster-region, and 12 safety-adjacent prompts
+- High-frontier coverage improved: 38 supplemental prompts are above the prior PC3 75th percentile, 44 are above the prior PC2 75th percentile, 12 are safety-adjacent high-PC3, and 26 are mixed-boundary high-PC3
+- Combined battery now has 180 prompts and improves quantile target-cell coverage from 11/27 to 16/27
+- Leakage/safety checks passed for the supplement: zero explicit role-name flags, zero operational-harm flags, max artifact similarity 0.104, mean artifact similarity 0.069
+- Interpretation: the combined battery is ready for H100 validation as a targeted high-PC3/high-PC2 frontier probe, while high-PC1 and several exact 3D target cells remain under-covered
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

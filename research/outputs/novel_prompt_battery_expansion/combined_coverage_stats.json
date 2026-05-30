@@ -1,0 +1,56 @@
+{
+  "prompt_count": 180,
+  "target_cells_total": 27,
+  "target_cells_populated": 16,
+  "high_pc3_above_prior_q75": 68,
+  "high_pc2_above_prior_q75": 74,
+  "high_pc3_target_cell_prompts": 57,
+  "high_pc2_target_cell_prompts": 65,
+  "safety_adjacent_high_pc3": 19,
+  "mixed_boundary_high_pc3": 38,
+  "prompt_family_counts": {
+    "mixed_boundary_prompts": 78,
+    "cluster_region_probes_without_role_names": 41,
+    "safety_adjacent_prompts": 25,
+    "manual_holdout_prompts": 24,
+    "neutral_controls": 12
+  },
+  "explicit_role_name_flags": 0,
+  "safety_flags": 0,
+  "artifact_similarity_max": 0.204910647706344,
+  "artifact_similarity_mean": 0.06942649108065471,
+  "predicted_ranges": {
+    "PC1": {
+      "min": -20.474456296347633,
+      "max": 22.18658091204439,
+      "mean": 0.00697127686009943
+    },
+    "PC2": {
+      "min": -24.490305374604674,
+      "max": 12.957546632519662,
+      "mean": -6.567248842794479
+    },
+    "PC3": {
+      "min": -9.096339686397684,
+      "max": 18.527120184863165,
+      "mean": 5.731273789188339
+    }
+  },
+  "under_covered_target_cells": [
+    "pc1_high__pc2_high__pc3_low",
+    "pc1_high__pc2_high__pc3_mid",
+    "pc1_high__pc2_low__pc3_high",
+    "pc1_high__pc2_low__pc3_low",
+    "pc1_high__pc2_low__pc3_mid",
+    "pc1_high__pc2_mid__pc3_high",
+    "pc1_high__pc2_mid__pc3_low",
+    "pc1_high__pc2_mid__pc3_mid",
+    "pc1_mid__pc2_high__pc3_mid",
+    "pc1_mid__pc2_mid__pc3_low",
+    "pc1_mid__pc2_mid__pc3_mid"
+  ],
+  "model_used": "GPT-5.5",
+  "forecaster_model_sha256": "7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f",
+  "prior_pc2_q75": -4.7348914139408755,
+  "prior_pc3_q75": 9.698537361886926
+}

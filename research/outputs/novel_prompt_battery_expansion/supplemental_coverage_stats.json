@@ -1,0 +1,63 @@
+{
+  "prompt_count": 60,
+  "target_cells_total": 27,
+  "target_cells_populated": 7,
+  "high_pc3_above_prior_q75": 38,
+  "high_pc2_above_prior_q75": 44,
+  "high_pc3_target_cell_prompts": 38,
+  "high_pc2_target_cell_prompts": 35,
+  "safety_adjacent_high_pc3": 12,
+  "mixed_boundary_high_pc3": 26,
+  "prompt_family_counts": {
+    "mixed_boundary_prompts": 26,
+    "cluster_region_probes_without_role_names": 22,
+    "safety_adjacent_prompts": 12
+  },
+  "explicit_role_name_flags": 0,
+  "safety_flags": 0,
+  "artifact_similarity_max": 0.10406852250627527,
+  "artifact_similarity_mean": 0.06946050593034483,
+  "predicted_ranges": {
+    "PC1": {
+      "min": -9.466223056052073,
+      "max": 8.788750140320104,
+      "mean": -1.0278802736295976
+    },
+    "PC2": {
+      "min": -15.46390242877072,
+      "max": 7.794000302820919,
+      "mean": -2.112711897698967
+    },
+    "PC3": {
+      "min": -6.501027189642207,
+      "max": 16.972734998395513,
+      "mean": 6.646390111534827
+    }
+  },
+  "under_covered_target_cells": [
+    "pc1_high__pc2_high__pc3_low",
+    "pc1_high__pc2_high__pc3_mid",
+    "pc1_high__pc2_low__pc3_high",
+    "pc1_high__pc2_low__pc3_low",
+    "pc1_high__pc2_low__pc3_mid",
+    "pc1_high__pc2_mid__pc3_high",
+    "pc1_high__pc2_mid__pc3_low",
+    "pc1_high__pc2_mid__pc3_mid",
+    "pc1_low__pc2_high__pc3_low",
+    "pc1_low__pc2_high__pc3_mid",
+    "pc1_low__pc2_low__pc3_high",
+    "pc1_low__pc2_low__pc3_low",
+    "pc1_low__pc2_low__pc3_mid",
+    "pc1_low__pc2_mid__pc3_low",
+    "pc1_low__pc2_mid__pc3_mid",
+    "pc1_mid__pc2_high__pc3_mid",
+    "pc1_mid__pc2_low__pc3_low",
+    "pc1_mid__pc2_low__pc3_mid",
+    "pc1_mid__pc2_mid__pc3_low",
+    "pc1_mid__pc2_mid__pc3_mid"
+  ],
+  "model_used": "GPT-5.5",
+  "forecaster_model_sha256": "7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f",
+  "prior_pc2_q75": -4.7348914139408755,
+  "prior_pc3_q75": 9.698537361886926
+}
