@@ -102,6 +102,20 @@ Before running broad repository searches, check `research/RESEARCH_INDEX.md` for
 
 For questions such as "Where did the Big Five scores come from?", "Which model generated this artifact?", "What script produced this output?", "What analyses depend on this dataset?", or "Is this finding established or provisional?", check `research/PROVENANCE_REGISTRY.md` first. Use repository archaeology only when those files do not answer the question or the user asks for direct verification.
 
+## Enhanced Research Reporting
+
+Future Codex reports should make their interpretive significance legible without requiring the reader to open every downstream artifact. When a task produces or updates research interpretation, include:
+
+1. What was done.
+2. What changed the current interpretation.
+3. Key judgment calls made during analysis.
+4. Competing explanations considered.
+5. Strongest unresolved uncertainty.
+6. Confidence level.
+7. Recommended next test.
+
+For purely operational or mechanical tasks, keep the report shorter, but still state whether the task changed any research interpretation. This convention is intended to preserve reasoning context across GPT, Claude, and Codex sessions.
+
 ## Recommended Startup Sequence
 
 1. Fetch or read `research/RESEARCH_STATE.md`.
