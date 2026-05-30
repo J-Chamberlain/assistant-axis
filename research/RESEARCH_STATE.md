@@ -8,8 +8,8 @@ State role: canonical project state
 Last updated: 2026-05-30
 
 **Last updated:** 2026-05-30
-**Last commit:** 7dc2946
-**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology; PC working interpretations are preserved in `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md`, with PC1 strongest, PC2 now revised toward an abstraction/integration/developmental axis after conditional PC1 control, PC3 showing suggestive but incomplete support for perturbation-stabilization after full-distribution validation, and the cone hypothesis explicitly marked speculative
+**Last commit:** 4e727fc
+**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology; PC working interpretations are preserved in `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md`, with PC1 strongest, PC2 revised toward an abstraction/integration/developmental axis after conditional PC1 control, PC3 showing suggestive but incomplete support for perturbation-stabilization after full-distribution validation, and cluster-conditioned PC1/PC2 tests showing that cluster identity improves calibrated regression but not simple within-cluster pairwise ordering
 
 ---
 
@@ -437,6 +437,14 @@ Last updated: 2026-05-30
 - Negative controls were weaker than the target rubric: moral_badness Pearson r=0.201, professionalism r=0.103, weirdness/fantasticality r=0.029, and abstraction r=0.129
 - Interpretation: PC3 shows suggestive but incomplete support for a perturbation-stabilization reading; cooperative-antagonistic remains a secondary or partial reading because many perturbative roles are socially antagonistic, but prosocial interventionist examples such as auditor, debugger, skeptic, statistician, and lawyer show the axis is not reducible to moral badness or hostility
 
+### Cluster-Conditioned PC1/PC2 Axis Tests (2026-05-30)
+
+- Ran `research/outputs/cluster_conditioned_axis_tests/run_cluster_conditioned_axis_tests.py` using canonical role PCA coordinates, `roles.clusters` from `geometry_viz_data.json`, prior blinded rater PC1/PC2 proxy scores, and blinded dossier text for cluster prediction
+- Simple within-cluster pairwise ordering was harder than global ordering: PC1 global 0.709 vs within-cluster 0.622; PC2 global 0.746 vs within-cluster 0.687
+- Cluster-conditioned regression improved calibrated prediction: PC1 direct R2 0.296 vs oracle-cluster R2 0.811; PC2 direct R2 0.416 vs oracle-cluster R2 0.718
+- Text-to-cluster classification reached 0.687 held-out accuracy and 0.404 macro F1; predicted-cluster R2 fell to 0.647 for PC1 and 0.520 for PC2
+- Interpretation: cluster identity helps as an intercept/slope interaction, not because within-cluster axis ordering is easier; hard cluster errors erase much of the PC2 oracle benefit, so deployment-style forecasting should prefer direct or soft-cluster/hybrid approaches over hard two-stage cluster assignment
+
 ### Trait Geometry Prediction of Persona PCA Axes (2026-05-30)
 
 - Used raw Qwen/Qwen3-32B layer-48 activation-space vectors from `downloads/hf_vectors/qwen-3-32b/role_vectors/` and `downloads/hf_vectors/qwen-3-32b/trait_vectors/`; both role and trait tensors are stored as `[64, 5120]` examples and were mean-pooled, normalized, and compared by cosine.
@@ -627,8 +635,9 @@ Last updated: 2026-05-30
 **Completed this session:** Inventoried local and released prompt artifacts for trait-vector forecasting, verified 240/240 exact trait name alignment across local JSON artifacts, Qwen trait vectors, and `belmore/assistant-axis-vector-prompts`, and wrote readiness outputs under `research/outputs/prompt_artifact_inventory/`.
 **Completed this session:** Tested prompt-to-geometry forecasting on held-out concepts, using leakage-controlled prompt text to predict trait PCs and role/persona PCs; outputs live under `research/outputs/prompt_to_geometry_forecasting/`.
 **Completed this session:** Documented revised PC1 and PC2 forcing-function interpretations for forecasting-rubric design under `research/outputs/axis_forcing_function_notes/`.
-**Next step:** Implement PC1/PC2 forcing-function judge rubrics and test whether adding those rubric scores improves held-out prompt-to-geometry forecasting beyond TF-IDF baselines.
-**Last commit before this session:** efd56ed
+**Completed this session:** Tested cluster-conditioned PC1/PC2 interpretation and cluster-prediction cost; outputs live under `research/outputs/cluster_conditioned_axis_tests/`.
+**Next step:** Replace hard predicted cluster assignment with soft cluster probabilities or interaction features and test whether the hybrid improves held-out prompt-to-geometry forecasting beyond TF-IDF baselines.
+**Last commit before this session:** 4e727fc
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** Editor RunPod pod `5b6hz02m9idrc3` is terminated. `runpodctl pod list` returns no running pods, and `runpodctl pod get 5b6hz02m9idrc3` returns 404 `pod not found`.

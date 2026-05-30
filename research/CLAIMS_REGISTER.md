@@ -246,3 +246,12 @@ Evidence: Conditional PC2 validation revised the axis away from simple uncertain
 Counterevidence: PC2 remains the least settled axis. The admissibility/forcing-function interpretation is currently a synthesis hypothesis and has not yet been validated by an independent prompt-level judge or improved held-out forecasting performance.
 Dependencies: `research/outputs/axis_forcing_function_notes/pc1_pc2_forcing_function_note.md`, `research/outputs/axis_forcing_function_notes/axis_interpretation_method_sequence.md`, `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md`
 Last Updated: 2026-05-30
+
+## 27. Cluster Conditioning Improves Calibrated PC1/PC2 Prediction But Not Simple Within-Cluster Pairwise Judging
+
+Claim: Cluster-conditioned scoring improves calibrated prediction of PC1 and PC2 as a modeling interaction, but simple within-cluster pairwise ordering is harder than global ordering because across-cluster offsets make many global comparisons easier.
+Status: Supported
+Evidence: Cluster-conditioned axis test over 275 roles found PC1 direct R2 0.296 vs oracle-cluster R2 0.811 and predicted-cluster R2 0.647; PC2 direct R2 0.416 vs oracle-cluster R2 0.718 and predicted-cluster R2 0.520. Pairwise accuracy moved opposite the simple hypothesis: PC1 global 0.709 vs within-cluster 0.622, PC2 global 0.746 vs within-cluster 0.687.
+Counterevidence: Text-to-cluster classification is imperfect at 0.687 accuracy and 0.404 macro F1, and hard predicted-cluster errors erase much of the PC2 oracle benefit. The proxy scores are reused from prior Codex/GPT-5.5 blinded rater annotations rather than a new independent judge.
+Dependencies: `research/outputs/cluster_conditioned_axis_tests/`
+Last Updated: 2026-05-30

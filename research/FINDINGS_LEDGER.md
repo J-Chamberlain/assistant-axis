@@ -313,6 +313,14 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - The notes preserve the numerical context: semantic baseline around R2 0.389, procedural features around R2 0.490, Big Five-style features around R2 0.613, richer combined models around R2 0.707, and prompt-to-geometry forecasting results for held-out traits and roles
 - Status: hypothesis to be operationalized through judge rubrics; the next test is whether forcing-function rubric scores improve held-out prompt-to-geometry forecasting beyond text embeddings
 
+### Cluster-Conditioned PC1/PC2 Axis Tests (2026-05-30)
+
+- Tested whether cluster-conditioned interpretation improves PC1 and PC2 prediction using 275 role/persona PCA coordinates, canonical cluster labels, and existing blinded rater annotations
+- Simple within-cluster pairwise ordering was not easier: PC1 global accuracy 0.709 vs within-cluster 0.622; PC2 global accuracy 0.746 vs within-cluster 0.687
+- Cluster-conditioned regression improved calibrated prediction: PC1 direct R2 0.296 vs oracle-cluster R2 0.811; PC2 direct R2 0.416 vs oracle-cluster R2 0.718
+- Text-to-cluster classification from blinded dossier text reached 0.687 held-out accuracy and 0.404 macro F1; predicted-cluster conditioning retained part of the benefit for PC1 (R2 0.647) and less for PC2 (R2 0.520)
+- Interpretation: cluster identity helps as an intercept/slope interaction, not because within-cluster pair ordering is easier; PC1 can use direct judging for simplicity, while PC2 benefits from cluster-conditioned analysis but should avoid hard predicted clusters in deployment unless classifier accuracy improves
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

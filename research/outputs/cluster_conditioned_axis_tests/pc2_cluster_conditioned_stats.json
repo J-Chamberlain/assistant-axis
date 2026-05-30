@@ -1,0 +1,293 @@
+{
+  "axis": "pc2",
+  "label": "integrated abstraction versus situated developmental immediacy",
+  "score_col": "pc2_proxy_situated_developmental_immediacy",
+  "score_source": "derived as 100 - abstraction_score from axis_rater_scores.csv; higher means less integrated abstraction and more local immediacy",
+  "n_roles": 275,
+  "global_pearson": {
+    "r": 0.6553530753870345,
+    "p": 3.9363292010566693e-35
+  },
+  "global_spearman": {
+    "r": 0.6584357294950652,
+    "p": 1.481700490929971e-35
+  },
+  "cluster_controlled_pearson": {
+    "r": 0.48635360019173857,
+    "p": 9.815084941338054e-18
+  },
+  "cluster_controlled_spearman": {
+    "r": 0.4837994264863675,
+    "p": 1.5353577386517542e-17
+  },
+  "pairwise_global": {
+    "accuracy": 0.7464903467564559,
+    "n_pairs": 36827,
+    "ties": 848
+  },
+  "pairwise_within_cluster": {
+    "accuracy": 0.6871124678050177,
+    "n_pairs": 10483,
+    "ties": 27192
+  },
+  "pairwise_across_cluster": {
+    "accuracy": 0.7701184330397813,
+    "n_pairs": 26344,
+    "ties": 11331
+  },
+  "within_minus_global_bootstrap": {
+    "mean_diff": -0.05821662322729444,
+    "ci_low": -0.0987593586345808,
+    "ci_high": -0.019676701662111558
+  },
+  "per_cluster": {
+    "combative_iconoclast": {
+      "n": 15,
+      "pearson": {
+        "r": 0.5733194531980332,
+        "p": 0.025461817823325683
+      },
+      "spearman": {
+        "r": 0.5135343537364687,
+        "p": 0.05023179597016858
+      },
+      "pairwise": {
+        "accuracy": 0.7010309278350515,
+        "n_pairs": 97,
+        "ties": 37578
+      }
+    },
+    "editorial": {
+      "n": 13,
+      "pearson": {
+        "r": -0.3087526391268355,
+        "p": 0.30469665225837866
+      },
+      "spearman": {
+        "r": -0.4033210726801758,
+        "p": 0.17175918964208295
+      },
+      "pairwise": {
+        "accuracy": 0.38666666666666666,
+        "n_pairs": 75,
+        "ties": 37600
+      }
+    },
+    "grounded_social": {
+      "n": 54,
+      "pearson": {
+        "r": 0.5490911433122343,
+        "p": 1.7119811594622782e-05
+      },
+      "spearman": {
+        "r": 0.476012981636823,
+        "p": 0.00027462629044157724
+      },
+      "pairwise": {
+        "accuracy": 0.6808664259927798,
+        "n_pairs": 1385,
+        "ties": 36290
+      }
+    },
+    "mythic_spiritual": {
+      "n": 51,
+      "pearson": {
+        "r": 0.6391046792991748,
+        "p": 4.478889960341503e-07
+      },
+      "spearman": {
+        "r": 0.5873116726670045,
+        "p": 5.88562743239634e-06
+      },
+      "pairwise": {
+        "accuracy": 0.7224052718286655,
+        "n_pairs": 1214,
+        "ties": 36461
+      }
+    },
+    "other": {
+      "n": 6,
+      "pearson": {
+        "r": -0.7109168799556967,
+        "p": 0.11327437454267972
+      },
+      "spearman": {
+        "r": -0.6087595874350709,
+        "p": 0.19966018946036276
+      },
+      "pairwise": {
+        "accuracy": 0.2857142857142857,
+        "n_pairs": 14,
+        "ties": 37661
+      }
+    },
+    "procedural_professional": {
+      "n": 126,
+      "pearson": {
+        "r": 0.5260718504004441,
+        "p": 2.515032173166789e-10
+      },
+      "spearman": {
+        "r": 0.5199571977395948,
+        "p": 4.389657953368043e-10
+      },
+      "pairwise": {
+        "accuracy": 0.686046511627907,
+        "n_pairs": 7654,
+        "ties": 30021
+      }
+    },
+    "trickster_chaos": {
+      "n": 10,
+      "pearson": {
+        "r": 0.37835689336596523,
+        "p": 0.280996621707422
+      },
+      "spearman": {
+        "r": 0.5227987675648555,
+        "p": 0.1210273940838009
+      },
+      "pairwise": {
+        "accuracy": 0.7045454545454546,
+        "n_pairs": 44,
+        "ties": 37631
+      }
+    }
+  },
+  "pairwise_rows": [
+    {
+      "axis": "pc2",
+      "scope": "global",
+      "cluster": "ALL",
+      "accuracy": 0.7464903467564559,
+      "n_pairs": 36827,
+      "ties": 848
+    },
+    {
+      "axis": "pc2",
+      "scope": "within",
+      "cluster": "ALL",
+      "accuracy": 0.6871124678050177,
+      "n_pairs": 10483,
+      "ties": 27192
+    },
+    {
+      "axis": "pc2",
+      "scope": "across",
+      "cluster": "ALL",
+      "accuracy": 0.7701184330397813,
+      "n_pairs": 26344,
+      "ties": 11331
+    },
+    {
+      "axis": "pc2",
+      "scope": "within_cluster",
+      "cluster": "combative_iconoclast",
+      "accuracy": 0.7010309278350515,
+      "n_pairs": 97,
+      "ties": 37578
+    },
+    {
+      "axis": "pc2",
+      "scope": "within_cluster",
+      "cluster": "editorial",
+      "accuracy": 0.38666666666666666,
+      "n_pairs": 75,
+      "ties": 37600
+    },
+    {
+      "axis": "pc2",
+      "scope": "within_cluster",
+      "cluster": "grounded_social",
+      "accuracy": 0.6808664259927798,
+      "n_pairs": 1385,
+      "ties": 36290
+    },
+    {
+      "axis": "pc2",
+      "scope": "within_cluster",
+      "cluster": "mythic_spiritual",
+      "accuracy": 0.7224052718286655,
+      "n_pairs": 1214,
+      "ties": 36461
+    },
+    {
+      "axis": "pc2",
+      "scope": "within_cluster",
+      "cluster": "other",
+      "accuracy": 0.2857142857142857,
+      "n_pairs": 14,
+      "ties": 37661
+    },
+    {
+      "axis": "pc2",
+      "scope": "within_cluster",
+      "cluster": "procedural_professional",
+      "accuracy": 0.686046511627907,
+      "n_pairs": 7654,
+      "ties": 30021
+    },
+    {
+      "axis": "pc2",
+      "scope": "within_cluster",
+      "cluster": "trickster_chaos",
+      "accuracy": 0.7045454545454546,
+      "n_pairs": 44,
+      "ties": 37631
+    }
+  ],
+  "data_sources": {
+    "role_geometry": "research/visualizations/geometry_viz_data.json",
+    "rater_scores": "research/q2_stability/qwen/outputs/blinded_axis_rater_study/axis_rater_scores.csv",
+    "dossiers_for_cluster_prediction": "research/q2_stability/qwen/outputs/blinded_axis_rater_study/blinded_persona_dossiers.jsonl"
+  },
+  "model_used": "GPT-5.5",
+  "cluster_labels_used": "roles.clusters from research/visualizations/geometry_viz_data.json",
+  "role_count": 275,
+  "cluster_count": 7,
+  "cluster_counts": {
+    "combative_iconoclast": 15,
+    "editorial": 13,
+    "grounded_social": 54,
+    "mythic_spiritual": 51,
+    "other": 6,
+    "procedural_professional": 126,
+    "trickster_chaos": 10
+  },
+  "missing_text_for_cluster_prediction": 0,
+  "prediction_regimes": [
+    {
+      "axis": "pc2",
+      "regime": "direct_axis",
+      "r2": 0.41568195248246387,
+      "pearson": 0.6449731223517761,
+      "spearman": 0.6549950689788147,
+      "rmse": 16.415775800614142,
+      "pairwise_accuracy": 0.7406054140552074,
+      "cluster_accuracy_used": null,
+      "cluster_macro_f1_used": null
+    },
+    {
+      "axis": "pc2",
+      "regime": "oracle_cluster",
+      "r2": 0.7175748592625555,
+      "pearson": 0.8473670058251326,
+      "spearman": 0.8472672823274595,
+      "rmse": 11.412700985246282,
+      "pairwise_accuracy": 0.8312368693987182,
+      "cluster_accuracy_used": 1.0,
+      "cluster_macro_f1_used": 1.0
+    },
+    {
+      "axis": "pc2",
+      "regime": "predicted_cluster",
+      "r2": 0.5199635150636155,
+      "pearson": 0.7315921886018613,
+      "spearman": 0.7146121067922468,
+      "rmse": 14.879004851719085,
+      "pairwise_accuracy": 0.7721380852253068,
+      "cluster_accuracy_used": 0.6872727272727273,
+      "cluster_macro_f1_used": 0.41700147402691473
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "axis": "pc1",
+  "label": "convergence pressure versus degrees of freedom",
+  "score_col": "pc1_proxy_convergence_pressure",
+  "score_source": "axis_rater_scores.csv: pc1_objective_certainty_score",
+  "n_roles": 275,
+  "global_pearson": {
+    "r": 0.55847330485848,
+    "p": 5.931038640785651e-24
+  },
+  "global_spearman": {
+    "r": 0.5646554605348711,
+    "p": 1.4697377510324236e-24
+  },
+  "cluster_controlled_pearson": {
+    "r": 0.2675630925518343,
+    "p": 6.823585860877738e-06
+  },
+  "cluster_controlled_spearman": {
+    "r": 0.2596972427793562,
+    "p": 1.2885154619807034e-05
+  },
+  "pairwise_global": {
+    "accuracy": 0.7088007370075327,
+    "n_pairs": 36906,
+    "ties": 769
+  },
+  "pairwise_within_cluster": {
+    "accuracy": 0.6221588207322872,
+    "n_pairs": 10515,
+    "ties": 27160
+  },
+  "pairwise_across_cluster": {
+    "accuracy": 0.7433215869046266,
+    "n_pairs": 26391,
+    "ties": 11284
+  },
+  "within_minus_global_bootstrap": {
+    "mean_diff": -0.08457564888292637,
+    "ci_low": -0.12537470132307166,
+    "ci_high": -0.04430865780956245
+  },
+  "per_cluster": {
+    "combative_iconoclast": {
+      "n": 15,
+      "pearson": {
+        "r": 0.3370351998992156,
+        "p": 0.21928568003501006
+      },
+      "spearman": {
+        "r": 0.293644747532235,
+        "p": 0.28811619509314224
+      },
+      "pairwise": {
+        "accuracy": 0.5980392156862745,
+        "n_pairs": 102,
+        "ties": 37573
+      }
+    },
+    "editorial": {
+      "n": 13,
+      "pearson": {
+        "r": 0.8017483100965015,
+        "p": 0.0009800412705571059
+      },
+      "spearman": {
+        "r": 0.6151776804973363,
+        "p": 0.02523004912038089
+      },
+      "pairwise": {
+        "accuracy": 0.7333333333333333,
+        "n_pairs": 75,
+        "ties": 37600
+      }
+    },
+    "grounded_social": {
+      "n": 54,
+      "pearson": {
+        "r": 0.093377519804605,
+        "p": 0.5018411537038524
+      },
+      "spearman": {
+        "r": 0.12011087683346798,
+        "p": 0.38697486100447176
+      },
+      "pairwise": {
+        "accuracy": 0.5508291276135544,
+        "n_pairs": 1387,
+        "ties": 36288
+      }
+    },
+    "mythic_spiritual": {
+      "n": 51,
+      "pearson": {
+        "r": 0.23465419514292168,
+        "p": 0.0974277032525873
+      },
+      "spearman": {
+        "r": 0.26500496873718105,
+        "p": 0.0601965983682258
+      },
+      "pairwise": {
+        "accuracy": 0.5995145631067961,
+        "n_pairs": 1236,
+        "ties": 36439
+      }
+    },
+    "other": {
+      "n": 6,
+      "pearson": {
+        "r": -0.5483644464486586,
+        "p": 0.25990090261973003
+      },
+      "spearman": {
+        "r": -0.3714285714285715,
+        "p": 0.4684781341107872
+      },
+      "pairwise": {
+        "accuracy": 0.3333333333333333,
+        "n_pairs": 15,
+        "ties": 37660
+      }
+    },
+    "procedural_professional": {
+      "n": 126,
+      "pearson": {
+        "r": 0.4044848861776413,
+        "p": 2.63467400320636e-06
+      },
+      "spearman": {
+        "r": 0.38698406940215013,
+        "p": 7.595818367530777e-06
+      },
+      "pairwise": {
+        "accuracy": 0.639367816091954,
+        "n_pairs": 7656,
+        "ties": 30019
+      }
+    },
+    "trickster_chaos": {
+      "n": 10,
+      "pearson": {
+        "r": -0.1209757171019104,
+        "p": 0.7392046856376775
+      },
+      "spearman": {
+        "r": -0.07294866524160776,
+        "p": 0.8412712675592938
+      },
+      "pairwise": {
+        "accuracy": 0.4772727272727273,
+        "n_pairs": 44,
+        "ties": 37631
+      }
+    }
+  },
+  "pairwise_rows": [
+    {
+      "axis": "pc1",
+      "scope": "global",
+      "cluster": "ALL",
+      "accuracy": 0.7088007370075327,
+      "n_pairs": 36906,
+      "ties": 769
+    },
+    {
+      "axis": "pc1",
+      "scope": "within",
+      "cluster": "ALL",
+      "accuracy": 0.6221588207322872,
+      "n_pairs": 10515,
+      "ties": 27160
+    },
+    {
+      "axis": "pc1",
+      "scope": "across",
+      "cluster": "ALL",
+      "accuracy": 0.7433215869046266,
+      "n_pairs": 26391,
+      "ties": 11284
+    },
+    {
+      "axis": "pc1",
+      "scope": "within_cluster",
+      "cluster": "combative_iconoclast",
+      "accuracy": 0.5980392156862745,
+      "n_pairs": 102,
+      "ties": 37573
+    },
+    {
+      "axis": "pc1",
+      "scope": "within_cluster",
+      "cluster": "editorial",
+      "accuracy": 0.7333333333333333,
+      "n_pairs": 75,
+      "ties": 37600
+    },
+    {
+      "axis": "pc1",
+      "scope": "within_cluster",
+      "cluster": "grounded_social",
+      "accuracy": 0.5508291276135544,
+      "n_pairs": 1387,
+      "ties": 36288
+    },
+    {
+      "axis": "pc1",
+      "scope": "within_cluster",
+      "cluster": "mythic_spiritual",
+      "accuracy": 0.5995145631067961,
+      "n_pairs": 1236,
+      "ties": 36439
+    },
+    {
+      "axis": "pc1",
+      "scope": "within_cluster",
+      "cluster": "other",
+      "accuracy": 0.3333333333333333,
+      "n_pairs": 15,
+      "ties": 37660
+    },
+    {
+      "axis": "pc1",
+      "scope": "within_cluster",
+      "cluster": "procedural_professional",
+      "accuracy": 0.639367816091954,
+      "n_pairs": 7656,
+      "ties": 30019
+    },
+    {
+      "axis": "pc1",
+      "scope": "within_cluster",
+      "cluster": "trickster_chaos",
+      "accuracy": 0.4772727272727273,
+      "n_pairs": 44,
+      "ties": 37631
+    }
+  ],
+  "data_sources": {
+    "role_geometry": "research/visualizations/geometry_viz_data.json",
+    "rater_scores": "research/q2_stability/qwen/outputs/blinded_axis_rater_study/axis_rater_scores.csv",
+    "dossiers_for_cluster_prediction": "research/q2_stability/qwen/outputs/blinded_axis_rater_study/blinded_persona_dossiers.jsonl"
+  },
+  "model_used": "GPT-5.5",
+  "cluster_labels_used": "roles.clusters from research/visualizations/geometry_viz_data.json",
+  "role_count": 275,
+  "cluster_count": 7,
+  "cluster_counts": {
+    "combative_iconoclast": 15,
+    "editorial": 13,
+    "grounded_social": 54,
+    "mythic_spiritual": 51,
+    "other": 6,
+    "procedural_professional": 126,
+    "trickster_chaos": 10
+  },
+  "missing_text_for_cluster_prediction": 0,
+  "prediction_regimes": [
+    {
+      "axis": "pc1",
+      "regime": "direct_axis",
+      "r2": 0.2957915799314168,
+      "pearson": 0.5442330308195171,
+      "spearman": 0.5500063621025888,
+      "rmse": 25.196026685594568,
+      "pairwise_accuracy": 0.6997547712975797,
+      "cluster_accuracy_used": null,
+      "cluster_macro_f1_used": null
+    },
+    {
+      "axis": "pc1",
+      "regime": "oracle_cluster",
+      "r2": 0.8110115918359786,
+      "pearson": 0.9006051199814282,
+      "spearman": 0.8660855180188296,
+      "rmse": 13.052660326732097,
+      "pairwise_accuracy": 0.8315036814545068,
+      "cluster_accuracy_used": 1.0,
+      "cluster_macro_f1_used": 1.0
+    },
+    {
+      "axis": "pc1",
+      "regime": "predicted_cluster",
+      "r2": 0.647049847935858,
+      "pearson": 0.8103040700731466,
+      "spearman": 0.7992209574359384,
+      "rmse": 17.837670592017762,
+      "pairwise_accuracy": 0.7966381190488856,
+      "cluster_accuracy_used": 0.6872727272727273,
+      "cluster_macro_f1_used": 0.41700147402691473
+    }
+  ]
+}

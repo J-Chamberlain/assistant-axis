@@ -24,6 +24,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - A targeted professional-hierarchy validation supports PC1 modestly and PC3 modestly inside professional roles, but does not support PC2 as a simple coherent-action-under-uncertainty hierarchy.
 - A full-distribution PC3 perturbation-stabilization validation supports PC3 as mixed but positive: global Pearson r=0.529, cluster-controlled Pearson r=0.491, and within-cluster pairwise ordering accuracy 0.773.
 - A conditional PC2 validation after PC1 decile control shifts the current PC2 interpretation toward abstraction/integration/developmental structure: abstraction predicts residual PC2 at r=-0.618, coherent action remains weaker at r=+0.427, and uncertainty exposure fails at r=-0.026.
+- Cluster-conditioned PC1/PC2 testing found that within-cluster pairwise ordering is harder than global ordering, but cluster identity substantially improves calibrated regression: PC1 direct R2 0.296 vs oracle-cluster 0.811, PC2 direct R2 0.416 vs oracle-cluster 0.718.
 - Trickster adaptive extraction succeeded operationally; editor adaptive extraction failed to reach validation thresholds.
 
 ## Best Predictive Metrics
@@ -55,6 +56,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`: reading-based Codex-as-rater blinded annotation study over anonymized no-label persona dossiers.
 - `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`: targeted professional-role validation for PC1, PC2, and PC3 interpretations.
 - `research/outputs/pc3_validation/`: full-distribution perturbation-stabilization validation for PC3 with negative controls, cluster-control regression, pairwise ordering, leave-one-cluster-out checks, and diagnostic examples.
+- `research/outputs/cluster_conditioned_axis_tests/`: PC1/PC2 cluster-conditioning test with pairwise global/within/across comparisons, cluster classifier accuracy, and direct/oracle/predicted-cluster regression regimes.
 - `research/q2_stability/qwen/outputs/pc2_conditional_validation/`: conditional PC2 validation after PC1 band control, including candidate comparison, matched pairs, physicist test, and mythic/developmental test.
 - `research/visualizations/persona_geometry_explorer.html`: interactive Plotly viewer with PCA/UMAP, cluster, selection, and Big Five overlays.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: persona-aligned Big Five overlay data.
@@ -102,3 +104,5 @@ PC3: Shows suggestive but incomplete support for perturbation-stabilization. Pos
 ## Current Interpretation
 
 The strongest current Paper 1.5 framing is layered: semantic topology supplies a structured prior, Big Five-style dispositional features explain broad global placement, procedural/operating-mode features explain some local residual structure, lexical/register features explain additional prompt-corpus-sensitive residual variance, and developmental/liminal/collective roles remain hard cases. This is an interpretation of representational geometry, not a claim of true psychological ontology.
+
+Cluster-conditioned axis tests now clarify judge-design implications: cluster identity helps calibrated numeric prediction as an interaction term, but it does not make within-cluster pairwise axis ordering easier. Direct PC1 judging remains useful for simple interpretation; PC2 should use cluster-conditioned analysis for mechanism and soft-cluster/hybrid features for deployment-style forecasting.
