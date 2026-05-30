@@ -1,0 +1,69 @@
+{
+  "final_prompt_count": 120,
+  "candidate_count": 1036,
+  "rejected_count_with_reasons": 9,
+  "target_cells_total": 27,
+  "target_cells_populated": 11,
+  "prompt_family_counts": {
+    "mixed_boundary_prompts": 52,
+    "manual_holdout_prompts": 24,
+    "cluster_region_probes_without_role_names": 19,
+    "safety_adjacent_prompts": 13,
+    "neutral_controls": 12
+  },
+  "explicit_role_name_flags_final": 0,
+  "artifact_similarity_max_final": 0.204910647706344,
+  "artifact_similarity_mean_final": 0.0694094836558097,
+  "predicted_ranges": {
+    "PC1": {
+      "min": -20.474456296347633,
+      "max": 22.18658091204439,
+      "mean": 0.524397052104948
+    },
+    "PC2": {
+      "min": -24.490305374604674,
+      "max": 12.957546632519662,
+      "mean": -8.794517315342235
+    },
+    "PC3": {
+      "min": -9.096339686397684,
+      "max": 18.527120184863165,
+      "mean": 5.273715628015094
+    }
+  },
+  "role_geometry_ranges": {
+    "PC1": {
+      "min": -60.938872717021006,
+      "max": 48.15501628203943
+    },
+    "PC2": {
+      "min": -44.00800269921331,
+      "max": 78.11385466430272
+    },
+    "PC3": {
+      "min": -43.370517142750685,
+      "max": 36.36362997770404
+    }
+  },
+  "under_covered_target_cells": [
+    "pc1_high__pc2_high__pc3_high",
+    "pc1_high__pc2_high__pc3_low",
+    "pc1_high__pc2_high__pc3_mid",
+    "pc1_high__pc2_low__pc3_high",
+    "pc1_high__pc2_low__pc3_low",
+    "pc1_high__pc2_low__pc3_mid",
+    "pc1_high__pc2_mid__pc3_high",
+    "pc1_high__pc2_mid__pc3_low",
+    "pc1_high__pc2_mid__pc3_mid",
+    "pc1_mid__pc2_high__pc3_high",
+    "pc1_mid__pc2_high__pc3_low",
+    "pc1_mid__pc2_high__pc3_mid",
+    "pc1_mid__pc2_low__pc3_high",
+    "pc1_mid__pc2_mid__pc3_high",
+    "pc1_mid__pc2_mid__pc3_low",
+    "pc1_mid__pc2_mid__pc3_mid"
+  ],
+  "rejection_reason_counts": {
+    "duplicate_selection": 9
+  }
+}

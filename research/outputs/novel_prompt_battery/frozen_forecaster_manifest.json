@@ -1,0 +1,32 @@
+{
+  "model_used": "GPT-5.5",
+  "selected_forecaster": "role-trained leakage-control elastic-net TF-IDF",
+  "retrained": true,
+  "reason_retrained": "No serialized reusable model object was present in research/outputs/prompt_to_geometry_forecasting/.",
+  "model_path": "research/outputs/novel_prompt_battery/frozen_role_leakage_elastic_net_tfidf.joblib",
+  "model_sha256": "7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f",
+  "serialized_joblib_sha256": "a21e39f7fcf2a7b75d755466fb416053b3c7c2f51f5d33e87457e70fb2a8b656",
+  "preprocessing_config": {
+    "lowercase": true,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 6000,
+    "sublinear_tf": true,
+    "strip_accents": "unicode",
+    "target_name_replacement": "[TARGET]"
+  },
+  "model_config": {
+    "estimator": "MultiOutputRegressor(ElasticNet)",
+    "alpha": 0.01,
+    "l1_ratio": 0.25,
+    "max_iter": 5000,
+    "random_state": 42
+  },
+  "text_fields_used": "role description + positive instructions + behavioral questions, with explicit target role name replaced by [TARGET]; eval prompts excluded",
+  "training_examples": 275,
+  "train_split": "all 275 role artifacts used for frozen design forecaster; prior held-out validation is recorded in prompt_to_geometry_forecasting outputs",
+  "source_forecasting_results": "research/outputs/prompt_to_geometry_forecasting/forecasting_results.json",
+  "source_model_comparison": "research/outputs/prompt_to_geometry_forecasting/forecasting_model_comparison.csv"
+}

@@ -321,6 +321,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Text-to-cluster classification from blinded dossier text reached 0.687 held-out accuracy and 0.404 macro F1; predicted-cluster conditioning retained part of the benefit for PC1 (R2 0.647) and less for PC2 (R2 0.520)
 - Interpretation: cluster identity helps as an intercept/slope interaction, not because within-cluster pair ordering is easier; PC1 can use direct judging for simplicity, while PC2 benefits from cluster-conditioned analysis but should avoid hard predicted clusters in deployment unless classifier accuracy improves
 
+### Novel Prompt Battery for H100 Geometry Validation (2026-05-30)
+
+- Built `research/outputs/novel_prompt_battery/` as a frozen 120-prompt validation battery for future H100 measurement of predicted prompt geometry
+- Retrained and serialized the selected role-trained leakage-control elastic-net TF-IDF forecaster; stable model hash is `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`
+- Generated 1,036 candidate prompts from behavioral region templates without external API calls and without explicit persona role labels; final battery has zero explicit role-name flags
+- Final prompt families: 52 mixed-boundary, 24 manual holdout, 19 cluster-region, 13 safety-adjacent, and 12 neutral-control prompts
+- Leakage checks against released artifacts were low: max approximate artifact similarity 0.205, mean 0.069
+- Coverage is partial: 11/27 quantile target cells populated; high-PC1 and high-PC2 target regions remain under-covered by the current natural-prompt generation strategy
+- Interpretation: H100 validation is feasible using `h100_prompt_run_manifest.csv`, but the battery should be described as a partial geometric validation set rather than complete coverage
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

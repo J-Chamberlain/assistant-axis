@@ -255,3 +255,12 @@ Evidence: Cluster-conditioned axis test over 275 roles found PC1 direct R2 0.296
 Counterevidence: Text-to-cluster classification is imperfect at 0.687 accuracy and 0.404 macro F1, and hard predicted-cluster errors erase much of the PC2 oracle benefit. The proxy scores are reused from prior Codex/GPT-5.5 blinded rater annotations rather than a new independent judge.
 Dependencies: `research/outputs/cluster_conditioned_axis_tests/`
 Last Updated: 2026-05-30
+
+## 28. Novel Prompt Battery Is Feasible But Geometrically Incomplete
+
+Claim: A novel prompt battery was constructed but coverage is incomplete in specified regions; H100 validation is feasible but should treat under-covered regions cautiously.
+Status: Observed
+Evidence: The battery contains 120 novel prompts generated without explicit persona role labels, with 24 manual holdouts, 12 neutral controls, 13 safety-adjacent prompts, and zero explicit role-name flags. Approximate artifact similarity is low: max 0.205, mean 0.069. A serialized role-trained leakage-control elastic-net TF-IDF forecaster assigns predicted PC1/PC2/PC3 coordinates to every prompt.
+Counterevidence: Only 11/27 quantile target cells are populated; high-PC1 and high-PC2 regions remain under-covered by the current natural-prompt generation strategy. The battery is a partial validation set, not a complete covering design.
+Dependencies: `research/outputs/novel_prompt_battery/novel_prompt_battery_report.md`, `research/outputs/novel_prompt_battery/h100_prompt_run_manifest.csv`, `research/outputs/novel_prompt_battery/novel_prompt_battery_coverage_stats.json`
+Last Updated: 2026-05-30

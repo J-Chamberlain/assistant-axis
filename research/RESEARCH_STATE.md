@@ -490,6 +490,16 @@ Last updated: 2026-05-30
 - The notes explicitly distinguish endpoint descriptions from causal/geometric forcing-function hypotheses and preserve the numerical context from semantic, procedural, trait, combined, and prompt-to-geometry forecasting analyses.
 - Status: hypothesis to be operationalized through prompt-level judge rubrics, not established causality.
 
+### Novel Prompt Battery for H100 Geometry Validation (2026-05-30)
+
+- Built `research/outputs/novel_prompt_battery/` as a frozen prompt battery for future H100 validation of the text-to-persona-geometry forecaster.
+- Retrained and serialized the selected role-trained leakage-control elastic-net TF-IDF forecaster because no reusable serialized object was present; stable model hash is `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`.
+- Constructed a 27-cell quantile target grid from observed role/persona PC1/PC2/PC3 coordinates and generated 1,036 candidate prompts using behavioral region templates rather than explicit persona role names.
+- Final H100 manifest contains 120 prompts: 52 mixed-boundary, 24 manual holdout, 19 cluster-region, 13 safety-adjacent, and 12 neutral-control prompts.
+- Leakage checks found zero explicit role-name flags in the final battery; maximum approximate artifact similarity was 0.205 and mean similarity was 0.069.
+- Coverage is incomplete: 11/27 target cells are populated, with high-PC1 and high-PC2 regions under-covered by the current natural-prompt generation strategy.
+- Interpretation: H100 validation is feasible but should treat under-covered regions cautiously; this is a partial geometric validation set, not a complete covering design.
+
 ### Blinded PCA-Axis Rubric Validation (2026-05-29)
 
 - Ran a coordinate-blind validation using the full available no-label persona prompt corpus: 1,375 rewritten prompt records covering all 275 personas, five prompts per persona.
@@ -636,7 +646,8 @@ Last updated: 2026-05-30
 **Completed this session:** Tested prompt-to-geometry forecasting on held-out concepts, using leakage-controlled prompt text to predict trait PCs and role/persona PCs; outputs live under `research/outputs/prompt_to_geometry_forecasting/`.
 **Completed this session:** Documented revised PC1 and PC2 forcing-function interpretations for forecasting-rubric design under `research/outputs/axis_forcing_function_notes/`.
 **Completed this session:** Tested cluster-conditioned PC1/PC2 interpretation and cluster-prediction cost; outputs live under `research/outputs/cluster_conditioned_axis_tests/`.
-**Next step:** Replace hard predicted cluster assignment with soft cluster probabilities or interaction features and test whether the hybrid improves held-out prompt-to-geometry forecasting beyond TF-IDF baselines.
+**Completed this session:** Built a 120-prompt novel H100 validation battery under `research/outputs/novel_prompt_battery/`, serialized the frozen role leakage-control elastic-net TF-IDF forecaster, and documented incomplete but usable predicted geometry coverage.
+**Next step:** Run the frozen `h100_prompt_run_manifest.csv` through Qwen/Qwen3-32B activation measurement on H100, then compare measured response coordinates to the stored predicted PC1/PC2/PC3 addresses without updating the forecaster.
 **Last commit before this session:** 4e727fc
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
