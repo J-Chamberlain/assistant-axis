@@ -28,6 +28,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - Training-artifact forecast error geometry shows the frozen role forecaster has tiny in-sample target-to-forecast error and near-zero signed PC2 bias, so the H100 PC2 upward shift is not native to the original role-artifact forecast task.
 - Public-source extraction-equivalence audit changes D01 from merely unresolved to likely mismatch: projection, pooling, model identity, and prior hook-based trickster replication are verified, but official/prior layer-48 hook extraction likely maps to `hidden_states[49]`, not the H100 runner's `hidden_states[48]`.
 - Role-rollout artifact audit resolves the public-data boundary for original role vectors: the intended 1,200 inputs per role are reconstructable, but original generated responses, judge scores, and retained-response masks are not public; the remembered "64" count is Qwen layer count/local adaptive-count provenance, not a public retained-rollout count.
+- H100 anomaly interpretation is now governed by four methodological tracks: extraction equivalence, forecaster improvement, prompt-battery construction, and response-state uncertainty. D01-D09 remain useful, but several should not be closed as final behavioral evidence while their T-track remains open.
 - Trickster adaptive extraction succeeded operationally; editor adaptive extraction failed to reach validation thresholds.
 
 ## Best Predictive Metrics
@@ -66,6 +67,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/h100_percentile_edge_validation/`: completed 100-prompt activation validation with forecast-vs-observed metrics and generated responses.
 - `research/outputs/h100_percentile_edge_validation_error_analysis/`: regional error analysis and interactive forecast-to-observed 3D/2D arrow visualizations.
 - `research/outputs/h100_diagnostic_followups/`: persistent anomaly checklist D01-D09 and first diagnostic pass for extraction methodology, cone outliers, PC2 drift, PC3-high collapse, prompt-generation bias, and calibration.
+- `research/outputs/h100_diagnostic_followups/methodological_dependency_tracks.md`: governing T01-T04 dependency map for H100 anomaly interpretation and D01-D09 closure order.
 - `research/outputs/training_forecast_error_geometry/`: native frozen-forecaster target-to-forecast error geometry over original role artifacts, with interactive 3D/2D arrows and H100 comparison.
 - `research/outputs/extraction_equivalence_audit/`: source/artifact audit comparing original/local Assistant Axis extraction code, prior trickster/editor adaptive extraction, and the H100 percentile-edge extraction runner.
 - `research/outputs/public_source_extraction_equivalence/`: public-source audit of official Assistant Axis code, Hugging Face dataset/model metadata, Transformers Qwen3 hidden-state semantics, and D01 hook-vs-hidden-states mismatch evidence.
@@ -91,10 +93,11 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 4. SVD15 distillation into concrete text-grounded residual features and retest under the shared splits.
 5. Stage-1 role-inventory uncertainty analysis across OpenAI and Claude-generated inventories, synchronized through GitHub.
 6. Paper 2 local centroid perturbation around Trickster, Actor, Therapist, and Spy.
-7. Resolve D01 in `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md` by running the minimal Qwen/Qwen3-32B hook-vs-`output_hidden_states` confirmation test; public sources now indicate the hook on `model.model.layers[48]` should match `hidden_states[49]`, not H100 `hidden_states[48]`.
-8. Calibrate the lightweight prompt-to-geometry forecaster using the completed H100/A100 validation data: start with per-axis intercept/slope correction, then compare against region-aware correction for PC2 and PC3 tails.
-9. Run a held-out-role-only version of the training forecast error geometry to distinguish in-sample frozen-forecaster shrinkage from true held-out calibration error.
-10. Build an instance-level prompt-to-centroid forecasting dataset from reconstructed role instruction-question inputs if improved text forecasting is needed; successful-rollout-aware training requires regenerated responses/judge scores or private original artifacts.
+7. Close T01 by resolving D01 in `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md` with the minimal Qwen/Qwen3-32B hook-vs-`output_hidden_states` confirmation test; public sources now indicate the hook on `model.model.layers[48]` should match `hidden_states[49]`, not H100 `hidden_states[48]`.
+8. Advance T02 by building an instance-level prompt-to-centroid forecasting dataset from reconstructed role instruction-question inputs; successful-rollout-aware training requires regenerated responses/judge scores or private original artifacts.
+9. Advance T03 by rebuilding or recalibrating the prompt battery against inherited 20/80 tails, 35/65 shoulders, and interior controls after T02 or an explicit decision to keep the current forecaster.
+10. Advance T04 by designing a small multi-sample GPU study to estimate response activation spread around selected target regions after T01 is closed.
+11. Calibrate the lightweight prompt-to-geometry forecaster using the completed H100/A100 validation data only after the T01 activation-boundary issue is resolved: start with per-axis intercept/slope correction, then compare against region-aware correction for PC2 and PC3 tails.
 
 ## Archived Directions
 

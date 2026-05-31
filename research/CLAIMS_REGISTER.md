@@ -327,3 +327,12 @@ Evidence: `data/roles/instructions/` contains 275 non-default role JSON files pl
 Counterevidence: Exact token-level prompt rendering depends on tokenizer/chat-template/runtime version, and private original rollout artifacts could contain unavailable responses/scores. The current public pipeline code and paper text differ on score-3-only defaults versus fully/somewhat category treatment, and this cannot be resolved without response-level score artifacts.
 Dependencies: `research/outputs/role_rollout_artifact_audit/`, `data/roles/instructions/`, `data/extraction_questions.jsonl`, `pipeline/`, `assistant_axis/generation.py`
 Last Updated: 2026-05-31
+
+## 36. H100 Anomaly Interpretation Is Governed By Four Methodological Dependency Tracks
+
+Claim: H100 anomaly interpretation is now organized under four higher-level methodological tracks: extraction equivalence, forecaster improvement, prompt-battery construction, and response-state uncertainty. Existing D01-D09 diagnostics remain useful, but several should not be treated as resolved until the relevant methodological tracks are addressed.
+Status: Supported
+Evidence: `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md` now includes a methodological dependency rule and T01-T04 dependency section. T01 directly governs D01/D02 and constrains PC2/PC3 anomaly interpretation because public-source audit found a likely activation-boundary mismatch. T02/T03 govern D03/D08 and prompt-battery bias concerns. T04 governs centroid-versus-single-sample uncertainty for D04-D06.
+Counterevidence: The prior H100 run remains informative: all three forecasted PCs positively correlated with measured response activations, and regional error analysis identified structured calibration targets. The caveat is interpretive, not a claim that the H100 validation is invalid.
+Dependencies: `research/outputs/h100_diagnostic_followups/`, `research/outputs/public_source_extraction_equivalence/`, `research/outputs/extraction_equivalence_audit/`, `research/outputs/h100_percentile_edge_validation/`, `research/outputs/h100_percentile_edge_validation_error_analysis/`, `research/outputs/role_rollout_artifact_audit/`, `research/outputs/training_forecast_error_geometry/`
+Last Updated: 2026-05-31

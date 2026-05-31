@@ -28,6 +28,10 @@ The public-source D01 audit found likely mismatch between H100 `outputs.hidden_s
 
 Public artifacts allow reconstruction of the intended Assistant Axis role-vector input distribution: 275 non-default roles, 5 positive instructions per role, and 240 shared extraction questions, yielding 1,200 instruction-question combinations per role. Public artifacts do not include the original generated rollout responses, response-level judge scores, or retained-response masks/IDs. The remembered "64" count is resolved as Qwen layer count in `[64,5120]` vectors plus local adaptive-extraction counts, not a public original retained-response count.
 
+### H100 Anomaly Interpretation Now Uses Four Methodological Dependency Tracks
+
+The persistent H100 diagnostic checklist now treats D01-D09 as subordinate to four higher-level tracks: T01 extraction equivalence / activation boundary, T02 forecaster improvement, T03 prompt-battery construction, and T04 response-state uncertainty / centroid-versus-single-sample mismatch. D01/D02 depend directly on T01; D03/D08 depend partly on T02/T03; D04/D05/D06 should not be finalized until extraction equivalence, forecaster compression, prompt-battery bias, and single-response uncertainty have been considered. This reframes the H100 run as informative but not yet final behavioral evidence for PC2 shifts, cone outliers, or PC3 collapse.
+
 ### Pod Workflow Lessons
 
 Detached execution, response JSONL preservation, separate activation shards, local integrity checks, explicit run artifacts, and RunPod API or `runpodctl` termination are now validated workflow requirements. Browser/dashboard termination is fallback only.
@@ -411,6 +415,14 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Current H100 validation uses the same model identity and intended layer number, excludes prompt tokens, mean-pools generated response tokens, and projects with a PCA basis that reproduces committed canonical coordinates at max abs error 1.207e-06
 - D01 remains `in_progress`: local source and prior adaptive extraction are hook-based, while H100 reads `out.hidden_states[48]`; source inspection did not prove those activation objects are identical for Qwen/Qwen3-32B
 - Interpretation: H100 PC2/PC3 anomalies remain informative, but they retain a bounded activation-site caveat until a minimal hook-vs-hidden-states equivalence test is run
+
+### H100 Methodological Dependency Tracks (2026-05-31)
+
+- Added `research/outputs/h100_diagnostic_followups/methodological_dependency_tracks.md` and updated the persistent checklist so D01-D09 should not be closed in isolation when a governing T-track remains open
+- T01 extraction equivalence / activation boundary is critical and covers D01 directly; D02 cone-violation outliers should not be resolved until T01 closes
+- T02 forecaster improvement and T03 prompt-battery construction cover D03/D08 origin-plane and forecaster-exploitation concerns
+- T04 response-state uncertainty covers the centroid-versus-single-sample mismatch behind D04/D05 PC2 upward shift and D06 PC3-high collapse, alongside the T01 activation-boundary caveat
+- Recommended order: close T01, advance T02 instance-level prompt-to-centroid forecasting, rebuild/recalibrate the prompt battery under T03, then design the T04 small multi-sample GPU spread study
 
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
