@@ -58,6 +58,8 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/pc3_validation/`: full-distribution perturbation-stabilization validation for PC3 with negative controls, cluster-control regression, pairwise ordering, leave-one-cluster-out checks, and diagnostic examples.
 - `research/outputs/cluster_conditioned_axis_tests/`: PC1/PC2 cluster-conditioning test with pairwise global/within/across comparisons, cluster classifier accuracy, and direct/oracle/predicted-cluster regression regimes.
 - `research/q2_stability/qwen/outputs/pc2_conditional_validation/`: conditional PC2 validation after PC1 band control, including candidate comparison, matched pairs, physicist test, and mythic/developmental test.
+- `research/outputs/novel_prompt_battery_percentile_edges/`: current H100-ready percentile-edge prompt battery and recommended H100 manifest.
+- `research/outputs/pre_h100_methods_memorial/`: durable pre-H100 methods, assumptions, artifact index, and readiness summary.
 - `research/visualizations/persona_geometry_explorer.html`: interactive Plotly viewer with PCA/UMAP, cluster, selection, and Big Five overlays.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: persona-aligned Big Five overlay data.
 
@@ -79,6 +81,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 4. SVD15 distillation into concrete text-grounded residual features and retest under the shared splits.
 5. Stage-1 role-inventory uncertainty analysis across OpenAI and Claude-generated inventories, synchronized through GitHub.
 6. Paper 2 local centroid perturbation around Trickster, Actor, Therapist, and Spy.
+7. H100 validation of `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_h100_manifest.csv` against measured Qwen/Qwen3-32B layer-48 response activation geometry.
 
 ## Archived Directions
 

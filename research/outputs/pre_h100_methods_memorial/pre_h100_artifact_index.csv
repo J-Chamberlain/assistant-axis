@@ -1,0 +1,25 @@
+artifact,location,type,status,role_in_pre_h100_process,notes
+Startup manifest,research/STARTUP_MANIFEST.md,startup/state,current,Freshness verification for startup bundle,Fetch first and compare visible metadata/hashes where possible
+Research state,research/RESEARCH_STATE.md,startup/state,current,Canonical project state,Updated with pre-H100 readiness state
+Thread start,research/THREAD_START.md,startup/state,current,Three-minute continuity brief,Read after RESEARCH_STATE
+Claims register,research/CLAIMS_REGISTER.md,startup/state,current,Canonical top claims,Updated to distinguish readiness from pending activation validation
+Findings ledger,research/FINDINGS_LEDGER.md,state index,current,Compact findings ledger,Updated with pre-H100 memorial entry
+Research index,research/RESEARCH_INDEX.md,state index,current,Navigable project index,Updated with pre-H100 memorial and H100 manifest pointers
+Persona geometry data,research/visualizations/geometry_viz_data.json,data source,current,Inherited role/persona PCA coordinates and visualization data,Percentile thresholds for final battery computed from roles.pca3d
+Trait-persona prediction report,research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_report.md,analysis,current,Documents same-space trait/persona reconstruction,Near-ceiling trait-cosine reconstruction is provenance-coupled
+Trait-space axis report,research/outputs/trait_space_interpretation/trait_space_axis_report.md,analysis,current,Corrective trait-only PCA result,Trait-only PCA does not reduce persona PC2/PC3 to trait PCs
+PC3 validation report,research/outputs/pc3_validation/pc3_validation_report.md,analysis,current,Supports perturbation-stabilization PC3 interpretation,PC3 is not reducible to moral valence
+Prompt artifact inventory report,research/outputs/prompt_artifact_inventory/prompt_artifact_inventory_report.md,analysis/current,Confirms role/trait prompt artifacts and name alignment,Enables forecasting dataset construction without regenerating original outputs
+Prompt-to-geometry forecasting summary,research/outputs/prompt_to_geometry_forecasting/forecasting_dataset_summary.md,analysis/current,Documents held-out text-to-coordinate forecasting,Selected role-trained leakage-control model as validation baseline
+Frozen forecaster manifest,research/outputs/novel_prompt_battery/frozen_forecaster_manifest.json,model manifest,current,Frozen lightweight forecaster provenance,Stable hash 7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f
+Frozen forecaster model,research/outputs/novel_prompt_battery/frozen_role_leakage_elastic_net_tfidf.joblib,model,current,Prediction model used for prompt-battery design,Do not update before H100 validation
+Cluster-conditioned axis test,research/outputs/cluster_conditioned_axis_tests/cluster_conditioned_axis_test_report.md,analysis,current,Diagnostic/calibration support for PC1/PC2,Not selected as primary runtime forecaster due hard-cluster errors
+First novel prompt battery,research/outputs/novel_prompt_battery/novel_prompt_battery_report.md,prompt battery,superseded for H100 primary,First novel prompt battery,120 prompts but only 11/27 cells populated
+Adaptive prompt expansion,research/outputs/novel_prompt_battery_expansion/adaptive_prompt_expansion_report.md,prompt battery,superseded for H100 primary,Improved high-PC3/high-PC2 coverage,180 combined prompts but still not inherited-percentile edge-ready
+Percentile-edge battery report,research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_battery_report.md,prompt battery,current primary,Final H100-ready battery report,All predefined readiness criteria pass
+Percentile-edge H100 manifest,research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_h100_manifest.csv,H100 manifest,current primary,Recommended input manifest for H100 validation,100 prompts with predicted coordinates and metadata
+Percentile-edge coverage stats,research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_coverage_stats.json,metrics,current,Machine-readable readiness stats,Records success table and leakage/safety metrics
+Percentile-edge generation log,research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_generation_log.csv,audit log,current,Preserves generated candidates and rejection reasons,Useful for auditing adaptive loop behavior
+Pre-H100 methods memorial,research/outputs/pre_h100_methods_memorial/pre_h100_methods_memorial.md,methods memo,current,Primary methods-and-assumptions record,Created before H100 validation
+Pre-H100 assumptions and decisions,research/outputs/pre_h100_methods_memorial/pre_h100_assumptions_and_decisions.md,methods memo,current,Decision log and assumptions,Clarifies what must hold for interpretable H100 results
+Pre-H100 readiness summary,research/outputs/pre_h100_methods_memorial/pre_h100_readiness_summary.md,methods memo,current,Short readiness note,Use for quick launch orientation

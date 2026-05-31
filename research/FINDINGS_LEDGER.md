@@ -351,6 +351,13 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Leakage/safety checks passed: zero explicit role-name flags, zero operational-harm flags, max artifact similarity 0.133, mean artifact similarity 0.071
 - H100 readiness judgment: ready; recommended manifest is `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_h100_manifest.csv`
 
+### Pre-H100 Methods Memorial (2026-05-30)
+
+- Created `research/outputs/pre_h100_methods_memorial/` to memorialize the full pre-H100 preparation process before activation validation changes the state
+- The memorial distinguishes descriptive persona geometry, explanatory modeling, prompt-to-geometry forecasting, prompt-battery construction, and pending H100 activation validation
+- It records the chosen H100 manifest, frozen forecaster hash, final percentile-edge pass table, assumptions required for interpretability, smoke/checkpoint/early-stop plan, and success/failure interpretations
+- Current status: pre-H100 preparation is complete, but no claim has yet been established that the forecaster predicts actual response activations on novel prompts
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

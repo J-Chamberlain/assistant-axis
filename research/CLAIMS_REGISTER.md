@@ -264,3 +264,12 @@ Evidence: The percentile-edge battery contains 100 prompts referenced to inherit
 Counterevidence: Readiness is based on frozen forecaster predictions, not measured H100 activations. Some edge prompts use strong coefficient-aligned natural language to reach inherited tails, so H100 validation should test whether these predicted text addresses actually correspond to measured activation coordinates.
 Dependencies: `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_battery_report.md`, `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_h100_manifest.csv`, `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_coverage_stats.json`
 Last Updated: 2026-05-30
+
+## 29. Pre-H100 Validation Preparation Is Complete
+
+Claim: Pre-H100 preparation is complete. The project has a frozen lightweight text-to-persona-geometry forecaster, a percentile-referenced edge-heavy novel prompt battery satisfying predefined readiness criteria, and a planned H100 validation method to compare forecasted prompt addresses against independently measured response activation geometry.
+Status: Observed
+Evidence: The pre-H100 methods memorial records the full chain from persona geometry interpretation to prompt-to-geometry forecasting and the final percentile-edge battery. The chosen manifest is `percentile_edge_h100_manifest.csv`; the forecaster hash is `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`; all percentile-edge readiness criteria pass.
+Counterevidence: No claim has yet been established that the forecaster predicts actual response activations on novel prompts. That is the purpose of the pending H100 validation.
+Dependencies: `research/outputs/pre_h100_methods_memorial/pre_h100_methods_memorial.md`, `research/outputs/pre_h100_methods_memorial/pre_h100_readiness_summary.md`, `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_h100_manifest.csv`
+Last Updated: 2026-05-30
