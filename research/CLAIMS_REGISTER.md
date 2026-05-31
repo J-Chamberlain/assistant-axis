@@ -345,3 +345,12 @@ Evidence: `research/outputs/within_role_displacement_design/` contains role-inst
 Counterevidence: No GPU run, response generation, activation extraction, or scoring of displacement hypotheses has been performed. The public artifacts support intended-input reconstruction but not successful-response filtering, because original response-level judge scores and retained masks remain unavailable.
 Dependencies: `research/outputs/within_role_displacement_design/`, `research/outputs/role_rollout_artifact_audit/`, `data/roles/instructions/`, `data/extraction_questions.jsonl`, `research/visualizations/geometry_viz_data.json`
 Last Updated: 2026-05-31
+
+## 38. Playwright Within-Role Displacement Scoring Is Prepared
+
+Claim: Playwright within-role displacement scoring has been prepared. The 240 shared extraction questions were scored role-independently, the five playwright positive instructions were scored role-specifically, and a 1,200-row instruction-question displacement forecast grid was constructed for later activation validation.
+Status: Observed
+Evidence: `research/outputs/playwright_displacement_scoring/` contains `extraction_question_axis_scores.csv` with 240 rows, `playwright_positive_instruction_scores.csv` with five rows, `playwright_1200_displacement_forecast_grid.csv` with 1,200 rows, distribution summaries, a manual-review shortlist, a report, and the reproducible scoring script. The available playwright centroid was included in the grid: PC1 -9.818, PC2 4.586, PC3 4.301, cluster `grounded_social`.
+Counterevidence: These scores are rubric-based predicted displacement pressures. They do not establish actual activation movement until corrected extraction and GPU response measurements are performed. PC1-negative and PC3-positive question coverage are thin and should be manually reviewed before launch.
+Dependencies: `research/outputs/playwright_displacement_scoring/`, `research/outputs/within_role_displacement_design/`, `data/extraction_questions.jsonl`, `data/roles/instructions/playwright.json`
+Last Updated: 2026-05-31

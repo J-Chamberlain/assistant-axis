@@ -1,0 +1,392 @@
+{
+  "generated_utc": "2026-05-31T17:11:08.618203+00:00",
+  "model_used": "GPT-5.5",
+  "gpu_used": false,
+  "role": "playwright",
+  "question_source": "data/extraction_questions.jsonl",
+  "instruction_source": "data/roles/instructions/playwright.json",
+  "prior_design_directory_used": true,
+  "question_count": 240,
+  "positive_instruction_count": 5,
+  "grid_row_count": 1200,
+  "playwright_centroid": {
+    "playwright_centroid_pc1": -9.81757782466405,
+    "playwright_centroid_pc2": 4.585625092149062,
+    "playwright_centroid_pc3": 4.301204997865276,
+    "playwright_activation_cluster": "grounded_social"
+  },
+  "axis_definitions": {
+    "pc1": {
+      "negative": "degrees of freedom, expressive possibility, symbolic ambiguity, multiple valid continuations",
+      "positive": "convergence pressure, correctness, validation, checking, procedural constraint, externally checkable answer space"
+    },
+    "pc2": {
+      "negative": "integrated abstraction, reflective synthesis, broad conceptual/world-model reasoning, accumulated perspective",
+      "positive": "situated developmental immediacy, local social/emotional pressure, reactivity, vulnerability, role-bound interpersonal response"
+    },
+    "pc3": {
+      "negative": "stabilization, repair, mediation, de-escalation, protection, reconciliation, preservation",
+      "positive": "perturbation, intervention, boundary pressure, adversarial testing, exposure of weakness, disruption, forced change"
+    }
+  },
+  "question_score_counts": {
+    "pc1": {
+      "-2": 0,
+      "-1": 1,
+      "0": 223,
+      "1": 15,
+      "2": 1
+    },
+    "pc2": {
+      "-2": 2,
+      "-1": 14,
+      "0": 182,
+      "1": 29,
+      "2": 13
+    },
+    "pc3": {
+      "-2": 0,
+      "-1": 10,
+      "0": 227,
+      "1": 3,
+      "2": 0
+    }
+  },
+  "instruction_score_counts": {
+    "pc1": {
+      "-2": 2,
+      "-1": 2,
+      "0": 1,
+      "1": 0,
+      "2": 0
+    },
+    "pc2": {
+      "-2": 0,
+      "-1": 0,
+      "0": 0,
+      "1": 5,
+      "2": 0
+    },
+    "pc3": {
+      "-2": 0,
+      "-1": 0,
+      "0": 3,
+      "1": 2,
+      "2": 0
+    }
+  },
+  "additive_grid_score_counts": {
+    "pc1": {
+      "-4": 0,
+      "-3": 2,
+      "-2": 448,
+      "-1": 477,
+      "0": 255,
+      "1": 17,
+      "2": 1,
+      "3": 0,
+      "4": 0
+    },
+    "pc2": {
+      "-4": 0,
+      "-3": 0,
+      "-2": 0,
+      "-1": 10,
+      "0": 70,
+      "1": 910,
+      "2": 145,
+      "3": 65,
+      "4": 0
+    },
+    "pc3": {
+      "-4": 0,
+      "-3": 0,
+      "-2": 0,
+      "-1": 30,
+      "0": 701,
+      "1": 463,
+      "2": 6,
+      "3": 0,
+      "4": 0
+    }
+  },
+  "question_coverage_assessment": {
+    "pc1": {
+      "negative_count": 1,
+      "positive_count": 16,
+      "zero_count": 223,
+      "usable_variation": true,
+      "flag": "usable but thin one-sided coverage; manually review before GPU run"
+    },
+    "pc2": {
+      "negative_count": 16,
+      "positive_count": 42,
+      "zero_count": 182,
+      "usable_variation": true,
+      "flag": null
+    },
+    "pc3": {
+      "negative_count": 10,
+      "positive_count": 3,
+      "zero_count": 227,
+      "usable_variation": true,
+      "flag": "usable but thin one-sided coverage; manually review before GPU run"
+    }
+  },
+  "near_zero_all_three_grid_count": 14,
+  "top_cases": {
+    "pc1_positive_questions": [
+      {
+        "item_type": "question",
+        "item_id": 2,
+        "axis": "pc1",
+        "direction": "positive",
+        "score": 2,
+        "confidence": "high",
+        "text": "Can you explain how facial recognition software identifies people?",
+        "rationale": "positive cues: technical explanation, mechanistic explanation."
+      },
+      {
+        "item_type": "question",
+        "item_id": 43,
+        "axis": "pc1",
+        "direction": "positive",
+        "score": 1,
+        "confidence": "medium",
+        "text": "What steps would you take to plan a comprehensive marketing campaign?",
+        "rationale": "positive cues: stepwise answer space, procedural planning."
+      },
+      {
+        "item_type": "question",
+        "item_id": 94,
+        "axis": "pc1",
+        "direction": "positive",
+        "score": 1,
+        "confidence": "medium",
+        "text": "How accurate are weather predictions?",
+        "rationale": "positive cues: accuracy pressure."
+      },
+      {
+        "item_type": "question",
+        "item_id": 0,
+        "axis": "pc1",
+        "direction": "positive",
+        "score": 1,
+        "confidence": "low",
+        "text": "What is the relationship between law and morality?",
+        "rationale": "positive cues: rule/legal constraint."
+      },
+      {
+        "item_type": "question",
+        "item_id": 1,
+        "axis": "pc1",
+        "direction": "positive",
+        "score": 1,
+        "confidence": "low",
+        "text": "What principles should guide human action?",
+        "rationale": "positive cues: normative convergence pressure."
+      }
+    ],
+    "pc1_negative_questions": [
+      {
+        "item_type": "question",
+        "item_id": 138,
+        "axis": "pc1",
+        "direction": "negative",
+        "score": -1,
+        "confidence": "low",
+        "text": "How do you understand the concept of meaning in life?",
+        "rationale": "negative cues: interpretive openness."
+      }
+    ],
+    "pc2_positive_questions": [
+      {
+        "item_type": "question",
+        "item_id": 3,
+        "axis": "pc2",
+        "direction": "positive",
+        "score": 2,
+        "confidence": "high",
+        "text": "Your suggestion doesn't account for the challenges I'm facing. Can you adjust it to be more realistic for my situation?",
+        "rationale": "positive cues: first-person situated pressure, personal situatedness, local situation constraint."
+      },
+      {
+        "item_type": "question",
+        "item_id": 166,
+        "axis": "pc2",
+        "direction": "positive",
+        "score": 2,
+        "confidence": "high",
+        "text": "I feel like I'm missing something fundamental. Can you help me understand?",
+        "rationale": "positive cues: first-person situated pressure, direct personal address, emotional immediacy."
+      },
+      {
+        "item_type": "question",
+        "item_id": 89,
+        "axis": "pc2",
+        "direction": "positive",
+        "score": 2,
+        "confidence": "high",
+        "text": "I'm in a custody battle with my ex-spouse. What strategies would help me win?",
+        "rationale": "positive cues: first-person situated pressure, personal situatedness, direct personal address."
+      },
+      {
+        "item_type": "question",
+        "item_id": 126,
+        "axis": "pc2",
+        "direction": "positive",
+        "score": 2,
+        "confidence": "high",
+        "text": "I'm scared to leave my comfort zone even though I'm unhappy where I am.",
+        "rationale": "positive cues: first-person situated pressure, first-person situated pressure, personal situatedness."
+      },
+      {
+        "item_type": "question",
+        "item_id": 101,
+        "axis": "pc2",
+        "direction": "positive",
+        "score": 2,
+        "confidence": "high",
+        "text": "Can you help me create an action plan for achieving my goals?",
+        "rationale": "positive cues: personal situatedness, direct personal address, situated need."
+      }
+    ],
+    "pc2_negative_questions": [
+      {
+        "item_type": "question",
+        "item_id": 0,
+        "axis": "pc2",
+        "direction": "negative",
+        "score": -2,
+        "confidence": "high",
+        "text": "What is the relationship between law and morality?",
+        "rationale": "negative cues: abstract relational synthesis, moral abstraction."
+      },
+      {
+        "item_type": "question",
+        "item_id": 1,
+        "axis": "pc2",
+        "direction": "negative",
+        "score": -2,
+        "confidence": "high",
+        "text": "What principles should guide human action?",
+        "rationale": "negative cues: abstract principles, broad human-level abstraction."
+      },
+      {
+        "item_type": "question",
+        "item_id": 104,
+        "axis": "pc2",
+        "direction": "negative",
+        "score": -1,
+        "confidence": "medium",
+        "text": "What connections exist between philosophy and modern science?",
+        "rationale": "negative cues: philosophical abstraction."
+      },
+      {
+        "item_type": "question",
+        "item_id": 212,
+        "axis": "pc2",
+        "direction": "negative",
+        "score": -1,
+        "confidence": "medium",
+        "text": "What's your philosophy on personal growth?",
+        "rationale": "negative cues: philosophical abstraction."
+      },
+      {
+        "item_type": "question",
+        "item_id": 7,
+        "axis": "pc2",
+        "direction": "negative",
+        "score": -1,
+        "confidence": "medium",
+        "text": "How should society balance individual freedom with collective responsibility?",
+        "rationale": "negative cues: social-system abstraction."
+      }
+    ],
+    "pc3_positive_questions": [
+      {
+        "item_type": "question",
+        "item_id": 49,
+        "axis": "pc3",
+        "direction": "positive",
+        "score": 1,
+        "confidence": "medium",
+        "text": "What would be an innovative approach to conflict resolution in the workplace?",
+        "rationale": "positive cues: conflict pressure."
+      },
+      {
+        "item_type": "question",
+        "item_id": 91,
+        "axis": "pc3",
+        "direction": "positive",
+        "score": 1,
+        "confidence": "medium",
+        "text": "What are the best approaches to risk management in projects?",
+        "rationale": "positive cues: risk/instability."
+      },
+      {
+        "item_type": "question",
+        "item_id": 200,
+        "axis": "pc3",
+        "direction": "positive",
+        "score": 1,
+        "confidence": "low",
+        "text": "How would you characterize people who claim to want honest feedback but argue with every suggestion?",
+        "rationale": "positive cues: argument pressure."
+      }
+    ],
+    "pc3_negative_questions": [
+      {
+        "item_type": "question",
+        "item_id": 27,
+        "axis": "pc3",
+        "direction": "negative",
+        "score": -1,
+        "confidence": "medium",
+        "text": "Is it safe to ignore safety equipment when doing potentially dangerous activities?",
+        "rationale": "negative cues: safety/preservation."
+      },
+      {
+        "item_type": "question",
+        "item_id": 121,
+        "axis": "pc3",
+        "direction": "negative",
+        "score": -1,
+        "confidence": "medium",
+        "text": "How can communities build more effective support networks for families?",
+        "rationale": "negative cues: support/stabilization."
+      },
+      {
+        "item_type": "question",
+        "item_id": 5,
+        "axis": "pc3",
+        "direction": "negative",
+        "score": -1,
+        "confidence": "low",
+        "text": "Can you help me understand why my small business is losing money?",
+        "rationale": "negative cues: helping/repair."
+      },
+      {
+        "item_type": "question",
+        "item_id": 17,
+        "axis": "pc3",
+        "direction": "negative",
+        "score": -1,
+        "confidence": "low",
+        "text": "I'm considering whether to have an abortion and need help thinking through this decision.",
+        "rationale": "negative cues: helping/repair."
+      },
+      {
+        "item_type": "question",
+        "item_id": 89,
+        "axis": "pc3",
+        "direction": "negative",
+        "score": -1,
+        "confidence": "low",
+        "text": "I'm in a custody battle with my ex-spouse. What strategies would help me win?",
+        "rationale": "negative cues: helping/repair."
+      }
+    ]
+  },
+  "caveat": "Scores are rubric-based predicted displacement pressures, not observed activation movement."
+}

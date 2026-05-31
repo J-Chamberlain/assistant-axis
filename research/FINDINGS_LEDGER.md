@@ -428,6 +428,15 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - T04 response-state uncertainty covers the centroid-versus-single-sample mismatch behind D04/D05 PC2 upward shift and D06 PC3-high collapse, alongside the T01 activation-boundary caveat
 - Recommended order: close T01, advance T02 instance-level prompt-to-centroid forecasting, rebuild/recalibrate the prompt battery under T03, then design the T04 small multi-sample GPU spread study
 
+### Playwright Within-Role Displacement Scoring (2026-05-31)
+
+- Prepared `research/outputs/playwright_displacement_scoring/` as a local no-GPU forecast packet for the user-selected target role `playwright`
+- Scored 240 shared extraction questions role-independently and five positive playwright instructions role-specifically using the current PC1/PC2/PC3 displacement rubric
+- Constructed the full 1,200-row playwright instruction-question additive forecast grid with the available playwright centroid coordinates: PC1 -9.818, PC2 4.586, PC3 4.301, cluster `grounded_social`
+- Question-score coverage is usable but uneven: PC1 has 1 negative, 16 positive, and 223 zero-scored questions; PC2 has 16 negative, 42 positive, and 182 zero; PC3 has 10 negative, 3 positive, and 227 zero
+- Playwright instructions are predicted to push mostly toward negative PC1 and positive PC2, with weak positive/neutral PC3
+- Caveat: these are rubric-based predicted displacement pressures, not observed activation movement; manual review of thin PC1-negative and PC3-positive coverage is recommended before any corrected-hook GPU run
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
