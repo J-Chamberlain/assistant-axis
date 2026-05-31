@@ -1,0 +1,13 @@
+Loading tokenizer/model...
+Fetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]Fetching 17 files:   6%|▌         | 1/17 [01:44<27:50, 104.38s/it]Fetching 17 files:  35%|███▌      | 6/17 [01:44<02:21, 12.85s/it] Fetching 17 files:  35%|███▌      | 6/17 [01:58<02:21, 12.85s/it]Fetching 17 files:  53%|█████▎    | 9/17 [02:42<02:05, 15.67s/it]Fetching 17 files:  59%|█████▉    | 10/17 [03:36<02:35, 22.18s/it]Fetching 17 files:  65%|██████▍   | 11/17 [03:37<01:47, 17.91s/it]Fetching 17 files:  88%|████████▊ | 15/17 [03:37<00:17,  8.57s/it]Fetching 17 files: 100%|██████████| 17/17 [03:38<00:00,  6.28s/it]Fetching 17 files: 100%|██████████| 17/17 [03:38<00:00, 12.84s/it]
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:06,  2.37it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:00<00:06,  2.36it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:01<00:05,  2.34it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:01<00:05,  2.33it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:02<00:05,  2.33it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:02<00:04,  2.32it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:03<00:04,  2.32it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:03<00:03,  2.32it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:03<00:03,  2.33it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:04<00:03,  2.14it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:04<00:02,  2.14it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:05<00:02,  2.19it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:05<00:01,  2.05it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:06<00:01,  2.13it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:06<00:00,  2.02it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:07<00:00,  2.10it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:07<00:00,  2.26it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:07<00:00,  2.22it/s]
+Model loaded in 229.2s
+Running peb_001 (1/100)
+/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:653: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+peb_001: obs=(-53.202,33.065,13.810) delta_norm=80.210 gen=18.098s act=0.143s
+Running peb_002 (2/100)
+peb_002: obs=(-9.179,7.598,2.931) delta_norm=29.626 gen=17.784s act=0.138s
+Running peb_003 (3/100)
+peb_003: obs=(32.395,26.055,12.169) delta_norm=54.370 gen=17.728s act=0.137s
+Phase smoke complete. new_rows=3, total_rows=3

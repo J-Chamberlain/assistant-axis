@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-05-31T00:28:35.611293+00:00",
+  "repo_root": "/root/assistant-axis",
+  "git_commit": "50871f2",
+  "pod_id": "yyelrl4oe9266o",
+  "pod_name": "h100-percentile-edge-validation",
+  "rate_per_hour": 1.49,
+  "model": "Qwen/Qwen3-32B",
+  "layer": 48,
+  "manifest_path": "/root/assistant-axis/research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_h100_manifest.csv",
+  "manifest_sha256": "9c2b0c5815aee555cb9b611585cb8201b3de368c83e87ecb31351271c9e704a5",
+  "canonical_pca_path": "/root/assistant-axis/research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv",
+  "canonical_pca_sha256": "194c8302afefa797276e2ec6b72deed0272349f47e3bbbebc2e8fe6274fab7b8",
+  "decoding": {
+    "max_new_tokens": 256,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "do_sample": false,
+    "enable_thinking": false
+  },
+  "batch_size": 10,
+  "projection_debug": {
+    "basis_source": "reconstructed_from_canonical_qwen_role_vectors_with_sign_alignment",
+    "basis_note": "No serialized PCA object was found in repo; this reconstructs the original basis from the same role-vector source and verifies exact coordinate reproduction before projection.",
+    "vector_dir": "/root/assistant-axis/downloads/hf_vectors/qwen-3-32b/role_vectors",
+    "canonical_pca_path": "/root/assistant-axis/research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv",
+    "n_roles_used": 275,
+    "n_roles_verified_against_committed_coordinates": 273,
+    "role_vector_shape": [
+      275,
+      5120
+    ],
+    "sign_alignment": [
+      -1.0,
+      1.0,
+      -1.0
+    ],
+    "max_abs_coordinate_reproduction_error": 1.2070328558877463e-06,
+    "mean_abs_coordinate_reproduction_error": 1.0737016326209899e-07,
+    "axis_max_abs_errors": {
+      "pc1": 1.2948930816492066e-10,
+      "pc2": 8.36172375784372e-09,
+      "pc3": 1.2070328558877463e-06
+    }
+  }
+}

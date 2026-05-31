@@ -358,6 +358,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - It records the chosen H100 manifest, frozen forecaster hash, final percentile-edge pass table, assumptions required for interpretability, smoke/checkpoint/early-stop plan, and success/failure interpretations
 - Current status: pre-H100 preparation is complete, but no claim has yet been established that the forecaster predicts actual response activations on novel prompts
 
+### Percentile-Edge H100 Activation Validation (2026-05-31)
+
+- Ran the full 100-prompt percentile-edge validation battery through Qwen/Qwen3-32B response generation and layer-48 response-token activation extraction on an A100 SXM 80GB RunPod instance
+- Existing persona PCA projection was reconstructed from all 275 Qwen role vectors and verified against committed canonical coordinates before use: max abs reproduction error 1.21e-06
+- Final forecast-vs-observed correlations were positive on all three PCs: PC1 Pearson 0.691 / Spearman 0.696, PC2 Pearson 0.643 / Spearman 0.594, PC3 Pearson 0.491 / Spearman 0.343
+- PC1 showed calibrated predictive value as well as rank correlation, with R2 0.321; PC2 and PC3 remained poorly calibrated with R2 -2.721 and -0.243 despite positive correlations
+- Mean 3D Euclidean error was 37.29, median 36.42, and max 80.21; largest residual was `peb_001`
+- Runtime was stable after cached load: 100-prompt full phase 1631.7 seconds at an estimated $0.68 full-phase compute cost; no early stop triggered
+- Interpretation: the validation supports prompt-to-geometry forecastability as a proof of concept, especially for rank/order structure, while motivating a follow-up calibration/error analysis for PC2 and PC3
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: canonical claim status
-Last updated: 2026-05-30
+Last updated: 2026-05-31
 
 This register separates project findings from interpretations. It is intentionally compact: use it to orient a new thread, then verify details in `RESEARCH_STATE.md`, `FINDINGS_LEDGER.md`, `RESEARCH_INDEX.md`, and the cited artifacts.
 
@@ -270,6 +270,15 @@ Last Updated: 2026-05-30
 Claim: Pre-H100 preparation is complete. The project has a frozen lightweight text-to-persona-geometry forecaster, a percentile-referenced edge-heavy novel prompt battery satisfying predefined readiness criteria, and a planned H100 validation method to compare forecasted prompt addresses against independently measured response activation geometry.
 Status: Observed
 Evidence: The pre-H100 methods memorial records the full chain from persona geometry interpretation to prompt-to-geometry forecasting and the final percentile-edge battery. The chosen manifest is `percentile_edge_h100_manifest.csv`; the forecaster hash is `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`; all percentile-edge readiness criteria pass.
-Counterevidence: No claim has yet been established that the forecaster predicts actual response activations on novel prompts. That is the purpose of the pending H100 validation.
+Counterevidence: Superseded by Claim 30, which records the completed validation. This claim now functions as a provenance record for the pre-validation readiness state rather than a current empirical limitation.
 Dependencies: `research/outputs/pre_h100_methods_memorial/pre_h100_methods_memorial.md`, `research/outputs/pre_h100_methods_memorial/pre_h100_readiness_summary.md`, `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_h100_manifest.csv`
 Last Updated: 2026-05-30
+
+## 30. Novel Prompt-To-Geometry Forecasts Generalize To Measured Response Activations
+
+Claim: The frozen lightweight prompt-to-persona-geometry forecaster generalizes above chance to independently measured Qwen/Qwen3-32B response activation geometry on the 100-prompt percentile-edge battery.
+Status: Supported
+Evidence: H100/A100 validation generated deterministic Qwen/Qwen3-32B responses, extracted layer-48 mean-pooled response-token residual activations, projected them into the existing persona PCA basis, and compared observed PC1/PC2/PC3 coordinates to frozen manifest forecasts. Final forecast-vs-observed correlations over 100 prompts were PC1 Pearson 0.691 / Spearman 0.696 / R2 0.321, PC2 Pearson 0.643 / Spearman 0.594 / R2 -2.721, and PC3 Pearson 0.491 / Spearman 0.343 / R2 -0.243. Projection reproduction against committed canonical coordinates had max abs error 1.21e-06, and all 100 prompt IDs mapped exactly once to generated responses and observed coordinates.
+Counterevidence: PC2 and PC3 have negative R2 despite positive correlations, indicating poor calibration/scale or intercept alignment; the result supports rank/order forecastability more strongly than calibrated coordinate prediction. The run used A100 SXM 80GB rather than H100, though the extraction target and model were identical.
+Dependencies: `research/outputs/h100_percentile_edge_validation/h100_final_report.md`, `research/outputs/h100_percentile_edge_validation/h100_final_metrics.json`, `research/outputs/h100_percentile_edge_validation/h100_activation_projection_debug.json`
+Last Updated: 2026-05-31

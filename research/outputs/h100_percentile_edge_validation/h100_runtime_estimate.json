@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-05-31T00:26:30.449928+00:00",
+  "load_time_seconds": 229.1575267314911,
+  "smoke_elapsed_seconds_excluding_load": 95.90618205070496,
+  "smoke_prompts": 3,
+  "average_total_seconds_per_prompt": 31.968727350234985,
+  "average_generation_seconds_per_prompt": 17.87,
+  "average_activation_projection_seconds_per_prompt": 0.13933333333333334,
+  "estimated_total_runtime_seconds_including_load": 3426.0302617549896,
+  "rate_per_hour": 1.49,
+  "estimated_total_cost": 1.4179958583374817
+}

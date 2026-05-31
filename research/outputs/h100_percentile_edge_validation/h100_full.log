@@ -1,0 +1,200 @@
+Loading tokenizer/model...
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:06,  2.38it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:00<00:06,  2.37it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:01<00:05,  2.37it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:01<00:05,  2.36it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:02<00:05,  2.34it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:02<00:04,  2.34it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:02<00:04,  2.35it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:03<00:03,  2.35it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:03<00:03,  2.35it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:04<00:03,  2.17it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:04<00:02,  2.17it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:05<00:02,  2.22it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:05<00:01,  2.10it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:06<00:01,  2.16it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:06<00:00,  2.05it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:07<00:00,  2.13it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:07<00:00,  2.29it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:07<00:00,  2.25it/s]
+Model loaded in 10.2s
+Running peb_004 (4/100)
+/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:653: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+peb_004: obs=(-3.106,19.776,-5.557) delta_norm=40.754 gen=17.993s act=0.146s
+Running peb_005 (5/100)
+peb_005: obs=(-19.833,19.043,-4.025) delta_norm=42.781 gen=17.536s act=0.139s
+Running peb_006 (6/100)
+peb_006: obs=(-35.761,20.621,-7.586) delta_norm=52.413 gen=17.466s act=0.139s
+Running peb_007 (7/100)
+peb_007: obs=(32.939,30.831,2.161) delta_norm=58.983 gen=17.52s act=0.136s
+Running peb_008 (8/100)
+peb_008: obs=(-49.829,19.266,3.339) delta_norm=54.544 gen=17.507s act=0.137s
+Running peb_009 (9/100)
+peb_009: obs=(-30.373,11.023,6.420) delta_norm=30.130 gen=17.514s act=0.139s
+Running peb_010 (10/100)
+peb_010: obs=(9.360,10.848,6.498) delta_norm=27.621 gen=17.491s act=0.138s
+Running peb_011 (11/100)
+peb_011: obs=(-29.513,32.480,-8.808) delta_norm=51.009 gen=7.708s act=0.095s
+Running peb_012 (12/100)
+peb_012: obs=(15.497,25.221,-15.255) delta_norm=49.424 gen=10.737s act=0.095s
+Running peb_013 (13/100)
+peb_013: obs=(-28.910,28.176,4.664) delta_norm=36.733 gen=17.502s act=0.139s
+Running peb_014 (14/100)
+peb_014: obs=(-17.101,6.078,2.940) delta_norm=17.634 gen=17.51s act=0.138s
+Running peb_015 (15/100)
+peb_015: obs=(6.498,11.557,-8.470) delta_norm=31.052 gen=17.477s act=0.138s
+Running peb_016 (16/100)
+peb_016: obs=(-0.889,13.926,-0.366) delta_norm=29.786 gen=17.549s act=0.138s
+Running peb_017 (17/100)
+peb_017: obs=(-2.099,25.357,-6.021) delta_norm=28.310 gen=17.479s act=0.139s
+Running peb_018 (18/100)
+peb_018: obs=(-17.115,39.587,-5.568) delta_norm=43.923 gen=17.494s act=0.138s
+Running peb_019 (19/100)
+peb_019: obs=(20.335,22.819,-1.293) delta_norm=35.519 gen=8.585s act=0.091s
+Running peb_020 (20/100)
+peb_020: obs=(-4.507,18.809,-2.754) delta_norm=25.063 gen=17.49s act=0.137s
+Running peb_021 (21/100)
+peb_021: obs=(-6.196,9.029,2.872) delta_norm=12.192 gen=17.468s act=0.138s
+Running peb_022 (22/100)
+peb_022: obs=(-17.486,43.414,-5.557) delta_norm=47.432 gen=17.478s act=0.138s
+Running peb_023 (23/100)
+peb_023: obs=(3.399,20.453,-6.963) delta_norm=29.219 gen=17.5s act=0.137s
+Running peb_024 (24/100)
+peb_024: obs=(-16.635,45.863,-10.728) delta_norm=53.909 gen=17.549s act=0.139s
+Running peb_025 (25/100)
+peb_025: obs=(-19.546,46.054,2.410) delta_norm=56.077 gen=17.503s act=0.137s
+Running peb_026 (26/100)
+peb_026: obs=(-4.658,31.070,-2.286) delta_norm=34.731 gen=16.106s act=0.136s
+Running peb_027 (27/100)
+peb_027: obs=(4.693,30.066,-16.316) delta_norm=38.829 gen=17.518s act=0.134s
+Running peb_028 (28/100)
+peb_028: obs=(12.081,41.607,5.648) delta_norm=44.605 gen=17.523s act=0.133s
+Running peb_029 (29/100)
+peb_029: obs=(25.037,36.139,-1.988) delta_norm=44.666 gen=17.541s act=0.134s
+Running peb_030 (30/100)
+peb_030: obs=(-28.888,50.132,-20.553) delta_norm=62.182 gen=9.323s act=0.099s
+Running peb_031 (31/100)
+peb_031: obs=(5.451,25.949,-1.899) delta_norm=34.352 gen=17.527s act=0.137s
+Running peb_032 (32/100)
+peb_032: obs=(-5.795,39.011,-2.015) delta_norm=42.245 gen=17.538s act=0.138s
+Running peb_033 (33/100)
+peb_033: obs=(-1.808,29.830,-3.404) delta_norm=31.216 gen=17.558s act=0.139s
+Running peb_034 (34/100)
+peb_034: obs=(-29.549,19.511,-21.894) delta_norm=41.748 gen=17.549s act=0.134s
+Running peb_035 (35/100)
+peb_035: obs=(0.118,34.411,4.425) delta_norm=40.804 gen=17.474s act=0.133s
+Running peb_036 (36/100)
+peb_036: obs=(-4.275,31.401,-1.789) delta_norm=33.115 gen=17.548s act=0.139s
+Running peb_037 (37/100)
+peb_037: obs=(-3.774,31.108,0.368) delta_norm=47.876 gen=17.546s act=0.137s
+Running peb_038 (38/100)
+peb_038: obs=(27.032,34.715,-0.060) delta_norm=53.781 gen=17.521s act=0.133s
+Running peb_039 (39/100)
+peb_039: obs=(-17.428,12.258,1.318) delta_norm=24.275 gen=17.551s act=0.138s
+Running peb_040 (40/100)
+peb_040: obs=(0.068,26.921,-18.757) delta_norm=44.149 gen=17.512s act=0.138s
+Running peb_041 (41/100)
+peb_041: obs=(-13.923,0.247,4.484) delta_norm=22.747 gen=17.521s act=0.137s
+Running peb_042 (42/100)
+peb_042: obs=(-33.568,15.725,6.959) delta_norm=32.847 gen=13.455s act=0.132s
+Running peb_043 (43/100)
+peb_043: obs=(2.737,16.600,-0.896) delta_norm=17.325 gen=17.53s act=0.138s
+Running peb_044 (44/100)
+peb_044: obs=(-46.297,-6.421,-0.957) delta_norm=10.743 gen=17.523s act=0.139s
+Running peb_045 (45/100)
+peb_045: obs=(-45.891,1.020,0.968) delta_norm=18.044 gen=17.547s act=0.14s
+Running peb_046 (46/100)
+peb_046: obs=(-37.726,2.494,-14.643) delta_norm=29.245 gen=17.479s act=0.138s
+Running peb_047 (47/100)
+peb_047: obs=(-29.566,-1.595,-12.411) delta_norm=28.574 gen=17.547s act=0.14s
+Running peb_048 (48/100)
+peb_048: obs=(-45.568,-4.130,-8.450) delta_norm=17.439 gen=17.517s act=0.139s
+Running peb_049 (49/100)
+peb_049: obs=(-58.149,-3.473,-11.466) delta_norm=28.068 gen=17.559s act=0.138s
+Running peb_050 (50/100)
+peb_050: obs=(-47.953,4.186,-11.893) delta_norm=29.587 gen=17.553s act=0.138s
+Running peb_051 (51/100)
+peb_051: obs=(-39.884,8.065,-18.659) delta_norm=29.512 gen=17.579s act=0.138s
+Running peb_052 (52/100)
+peb_052: obs=(16.123,15.529,6.508) delta_norm=35.770 gen=17.521s act=0.137s
+Running peb_053 (53/100)
+peb_053: obs=(-0.094,5.307,-7.233) delta_norm=46.469 gen=17.544s act=0.136s
+Running peb_054 (54/100)
+peb_054: obs=(6.985,7.442,5.280) delta_norm=36.210 gen=17.543s act=0.138s
+Running peb_055 (55/100)
+peb_055: obs=(4.444,12.947,-11.564) delta_norm=54.606 gen=16.738s act=0.136s
+Running peb_056 (56/100)
+peb_056: obs=(17.187,17.063,-7.673) delta_norm=35.257 gen=8.535s act=0.096s
+Running peb_057 (57/100)
+peb_057: obs=(21.971,7.639,20.605) delta_norm=27.933 gen=17.554s act=0.139s
+Running peb_058 (58/100)
+peb_058: obs=(26.199,5.332,2.101) delta_norm=29.382 gen=17.526s act=0.136s
+Running peb_059 (59/100)
+peb_059: obs=(-45.044,48.635,-19.358) delta_norm=44.728 gen=17.52s act=0.14s
+Running peb_060 (60/100)
+peb_060: obs=(-39.594,36.545,-2.585) delta_norm=36.628 gen=17.507s act=0.14s
+Running peb_061 (61/100)
+peb_061: obs=(-50.814,27.705,-9.584) delta_norm=53.081 gen=17.535s act=0.139s
+Running peb_062 (62/100)
+peb_062: obs=(-27.404,44.353,-10.004) delta_norm=32.200 gen=15.943s act=0.138s
+Running peb_063 (63/100)
+peb_063: obs=(-32.796,62.005,-22.965) delta_norm=52.469 gen=3.675s act=0.071s
+Running peb_064 (64/100)
+peb_064: obs=(-32.706,53.416,-12.732) delta_norm=42.379 gen=17.539s act=0.139s
+Running peb_065 (65/100)
+peb_065: obs=(-50.420,47.575,-5.291) delta_norm=54.590 gen=17.607s act=0.14s
+Running peb_066 (66/100)
+peb_066: obs=(-34.433,44.490,-9.026) delta_norm=38.680 gen=17.659s act=0.139s
+Running peb_067 (67/100)
+peb_067: obs=(-3.286,14.894,-34.420) delta_norm=25.953 gen=17.628s act=0.138s
+Running peb_068 (68/100)
+peb_068: obs=(-15.126,30.020,-31.592) delta_norm=45.495 gen=17.603s act=0.139s
+Running peb_069 (69/100)
+peb_069: obs=(-33.633,15.239,-28.734) delta_norm=41.972 gen=15.179s act=0.134s
+Running peb_070 (70/100)
+peb_070: obs=(-15.383,20.819,-29.004) delta_norm=38.995 gen=17.525s act=0.139s
+Running peb_071 (71/100)
+peb_071: obs=(-11.956,4.966,-27.231) delta_norm=21.597 gen=17.622s act=0.137s
+Running peb_072 (72/100)
+peb_072: obs=(-16.152,32.477,-30.734) delta_norm=45.449 gen=17.539s act=0.137s
+Running peb_073 (73/100)
+peb_073: obs=(-19.935,23.552,-27.835) delta_norm=42.198 gen=17.636s act=0.139s
+Running peb_074 (74/100)
+peb_074: obs=(-10.090,28.725,-33.030) delta_norm=48.757 gen=15.823s act=0.134s
+Running peb_075 (75/100)
+peb_075: obs=(12.668,16.173,6.734) delta_norm=42.162 gen=17.547s act=0.137s
+Running peb_076 (76/100)
+peb_076: obs=(20.019,10.349,5.795) delta_norm=38.275 gen=17.611s act=0.137s
+Running peb_077 (77/100)
+peb_077: obs=(27.646,4.524,10.272) delta_norm=27.752 gen=17.519s act=0.137s
+Running peb_078 (78/100)
+peb_078: obs=(-27.052,-0.591,-21.891) delta_norm=32.421 gen=17.494s act=0.138s
+Running peb_079 (79/100)
+peb_079: obs=(23.645,-5.596,15.708) delta_norm=21.191 gen=17.516s act=0.138s
+Running peb_080 (80/100)
+peb_080: obs=(16.369,20.190,0.987) delta_norm=39.503 gen=17.464s act=0.135s
+Running peb_081 (81/100)
+peb_081: obs=(25.322,11.484,3.071) delta_norm=35.443 gen=17.491s act=0.135s
+Running peb_082 (82/100)
+peb_082: obs=(-1.606,32.603,-9.589) delta_norm=51.870 gen=6.39s act=0.09s
+Running peb_083 (83/100)
+peb_083: obs=(0.171,34.898,-14.570) delta_norm=58.234 gen=7.9s act=0.091s
+Running peb_084 (84/100)
+peb_084: obs=(24.991,4.444,0.381) delta_norm=32.953 gen=17.522s act=0.136s
+Running peb_085 (85/100)
+peb_085: obs=(-24.051,40.163,-13.244) delta_norm=64.532 gen=3.547s act=0.069s
+Running peb_086 (86/100)
+peb_086: obs=(20.267,16.544,0.496) delta_norm=37.785 gen=15.182s act=0.132s
+Running peb_087 (87/100)
+peb_087: obs=(-38.395,51.835,-5.548) delta_norm=58.851 gen=16.871s act=0.136s
+Running peb_088 (88/100)
+peb_088: obs=(-43.070,16.221,-18.382) delta_norm=44.549 gen=7.095s act=0.091s
+Running peb_089 (89/100)
+peb_089: obs=(32.575,-11.358,20.691) delta_norm=18.407 gen=17.556s act=0.138s
+Running peb_090 (90/100)
+peb_090: obs=(-34.840,0.039,-11.818) delta_norm=18.129 gen=17.522s act=0.138s
+Running peb_091 (91/100)
+peb_091: obs=(-26.811,18.956,-23.332) delta_norm=45.180 gen=11.963s act=0.1s
+Running peb_092 (92/100)
+peb_092: obs=(19.151,-5.072,17.974) delta_norm=23.501 gen=17.534s act=0.137s
+Running peb_093 (93/100)
+peb_093: obs=(6.625,16.112,2.471) delta_norm=33.476 gen=10.86s act=0.098s
+Running peb_094 (94/100)
+peb_094: obs=(30.951,-1.684,11.119) delta_norm=20.907 gen=17.516s act=0.136s
+Running peb_095 (95/100)
+peb_095: obs=(19.550,0.446,5.245) delta_norm=20.152 gen=17.496s act=0.137s
+Running peb_096 (96/100)
+peb_096: obs=(-18.764,20.345,-19.531) delta_norm=36.944 gen=15.087s act=0.133s
+Running peb_097 (97/100)
+peb_097: obs=(13.615,-5.273,17.298) delta_norm=23.441 gen=17.557s act=0.139s
+Running peb_098 (98/100)
+peb_098: obs=(26.717,3.501,1.679) delta_norm=21.423 gen=17.545s act=0.136s
+Running peb_099 (99/100)
+peb_099: obs=(-46.858,1.366,7.082) delta_norm=19.732 gen=17.549s act=0.139s
+Running peb_100 (100/100)
+peb_100: obs=(22.148,12.192,-2.845) delta_norm=30.105 gen=15.492s act=0.133s
+Phase full complete. new_rows=97, total_rows=100

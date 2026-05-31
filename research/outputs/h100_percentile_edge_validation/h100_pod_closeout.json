@@ -1,0 +1,28 @@
+{
+  "pod_id": "yyelrl4oe9266o",
+  "pod_name": "h100-percentile-edge-validation",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "hourly_rate_usd": 1.49,
+  "ssh_endpoint": "154.54.102.39:19652",
+  "method": "runpodctl pod delete",
+  "terminated_at_utc": "2026-05-31T01:01:25Z",
+  "terminated_at_local": "2026-05-30 18:01:25 PDT",
+  "pre_termination_checks": {
+    "outputs_copied_to_mac_mini": true,
+    "required_files_present": true,
+    "final_results_rows": 100,
+    "incremental_results_rows": 100,
+    "unique_prompt_ids": 100,
+    "checksum_manifest_written": true,
+    "checksum_manifest_path": "research/outputs/h100_percentile_edge_validation/h100_copy_manifest.sha256"
+  },
+  "delete_response_summary": {
+    "deleted": true,
+    "id": "yyelrl4oe9266o"
+  },
+  "verification_result": {
+    "runpodctl_pod_list": "[]",
+    "runpodctl_pod_get": "404 pod not found"
+  },
+  "secrets_exposed": false
+}

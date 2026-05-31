@@ -1,0 +1,24 @@
+{
+  "basis_source": "reconstructed_from_canonical_qwen_role_vectors_with_sign_alignment",
+  "basis_note": "No serialized PCA object was found in repo; this reconstructs the original basis from the same role-vector source and verifies exact coordinate reproduction before projection.",
+  "vector_dir": "/root/assistant-axis/downloads/hf_vectors/qwen-3-32b/role_vectors",
+  "canonical_pca_path": "/root/assistant-axis/research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv",
+  "n_roles_used": 275,
+  "n_roles_verified_against_committed_coordinates": 273,
+  "role_vector_shape": [
+    275,
+    5120
+  ],
+  "sign_alignment": [
+    -1.0,
+    1.0,
+    -1.0
+  ],
+  "max_abs_coordinate_reproduction_error": 1.2070328558877463e-06,
+  "mean_abs_coordinate_reproduction_error": 1.0737016326209899e-07,
+  "axis_max_abs_errors": {
+    "pc1": 1.2948930816492066e-10,
+    "pc2": 8.36172375784372e-09,
+    "pc3": 1.2070328558877463e-06
+  }
+}
