@@ -377,6 +377,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Highest forecast-tail mean 3D error was PC2 upper tail at 44.344; PC3-high forecasts produced 0/16 observed PC3-high tail activations, weakening absolute high-PC3 address claims despite positive full-run PC3 correlation
 - Recommendation: fit an axis-wise calibration layer first, then test region-aware correction; increase safety-adjacent sample size before making a standalone safety-directionality claim
 
+### H100 Diagnostic Follow-Up Checklist and First Pass (2026-05-31)
+
+- Created persistent checklist `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md` with D01-D09 and status/evidence/next-action discipline
+- D01 methodology verification found no blocking projection discrepancy: model ID matched, PCA basis was reconstructed from 275 Qwen role vectors, and committed coordinate reproduction max abs error remained 1.207e-06
+- D01 remains in progress because source extraction equivalence is not fully line-by-line verified: layer-index convention, source chat template, and output-hidden-states versus hook-based post-MLP residual extraction remain open checks
+- First-pass anomaly diagnostics identified cone-violation candidates, extreme-PC1/near-zero-PC3 forecast-origin cases, low-PC2 upward-shift cases, PC3-high collapse cases, and top 3D residual cases
+- PC3-high collapse pass supports a response-neutralization hypothesis: forecasted PC3-high prompts had mean delta_pc3 -18.705 and 0/16 observed high-PC3 retention; largest downward cases moved near roles such as `provincial`, `student`, and `addict`
+- Prompt-generation audit found repeated scaffolds in accepted generated prompts and final battery prompts, so the percentile-edge battery remains valid as a forecaster stress test but not a clean natural-language generalization benchmark
+- Preliminary axis-wise LOOCV calibration improved apparent R2: PC1 0.463, PC2 0.390, PC3 0.211; this is a next-step target, not a resolved fix
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

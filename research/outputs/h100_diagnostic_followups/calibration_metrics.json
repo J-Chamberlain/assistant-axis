@@ -1,0 +1,29 @@
+{
+  "pc1": {
+    "uncalibrated_r2": 0.32145459287306855,
+    "in_sample_calibrated_r2": 0.4775978880285241,
+    "loocv_calibrated_r2": 0.4625080591286955,
+    "slope": 0.8312335220037788,
+    "intercept": -9.133724500599381,
+    "uncalibrated_rmse": 20.32265945081695,
+    "loocv_calibrated_rmse": 18.087438210160048
+  },
+  "pc2": {
+    "uncalibrated_r2": -2.7205054863278084,
+    "in_sample_calibrated_r2": 0.413416613977709,
+    "loocv_calibrated_r2": 0.3904247796318687,
+    "slope": 0.8462434630793393,
+    "intercept": 27.06444777198086,
+    "uncalibrated_rmse": 30.94823046406902,
+    "loocv_calibrated_rmse": 12.527041027957905
+  },
+  "pc3": {
+    "uncalibrated_r2": -0.24324414184767273,
+    "in_sample_calibrated_r2": 0.2409906014293376,
+    "loocv_calibrated_r2": 0.2112471577994084,
+    "slope": 0.7104910160616451,
+    "intercept": -7.281778537353842,
+    "uncalibrated_rmse": 13.636773921218362,
+    "loocv_calibrated_rmse": 10.86185243656569
+  }
+}

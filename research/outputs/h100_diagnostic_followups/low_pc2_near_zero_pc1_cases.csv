@@ -1,0 +1,156 @@
+prompt_id,prompt_family,prompt_text,generated_response,predicted_pc1,predicted_pc2,predicted_pc3,observed_pc1,observed_pc2,observed_pc3,delta_pc1,delta_pc2,delta_pc3,euclidean_delta_3d,response_style_classification,diagnostic_note,nearest_observed_roles_pca3d,nearest_observed_traits_pca3d
+peb_007,neutral_controls,How can someone prepare for a routine check-in meeting at work?,"Preparing for a routine check-in meeting at work is a great way to ensure the conversation is productive, focused, and valuable for both you and your manager or team. Here's a step-by-step guide to help you prepare effectively:
+
+---
+
+### **1. Review the Purpose of the Check-In**
+Understand the goal of the meeting. Common purposes include:
+- Progress updates
+- Goal tracking
+- Problem-solving
+- Feedback and development
+- Team alignment
+
+---
+
+### **2. Gather Your Updates**
+Prepare a summary of what you’ve accomplished since the last check-in. Be specific and concise. Use the **STAR method** (Situation, Task, Action, Result) if needed.
+
+**Example:**
+- *Task:* Completed the Q3 sales report
+- *Action:* Analyzed data, created visualizations, and presented findings
+- *Result:* Identified a 15% increase in sales in the Midwest region
+
+---
+
+### **3. Identify Challenges or Roadblocks**
+List any obstacles you’ve encountered. Be ready to explain:
+- What the issue is
+- How it’s impacting your work
+- What support or resources you need
+
+---
+
+### **4. Set Goals for the Next Period**
+Outline what you plan to accomplish before the next check-in",0.17162990033710407,-18.20646721657018,1.3386248782464545,32.939402442127076,30.83069315674546,2.16054251488912,32.767772541789974,49.03716037331564,0.8219176366426657,58.98343465270726,procedural critique,Top 10 total 3D error case.,,
+peb_004,mixed_boundary_prompts,"Please respond to the following scenario: Someone has brought a confusing problem to a meeting and wants guidance. The response should turn a confusing dreamlike event into an expressive response, speak from a constrained position with limited perspective, and map competing pressures without taking an extreme stance. How should this be framed?","To frame a response to a confusing, dreamlike problem in a meeting—where clarity is elusive and the stakes feel high—you can adopt a tone that is reflective, grounded, and balanced. The goal is to acknowledge the ambiguity without overcommitting, to express the complexity without polarizing, and to offer a path forward that invites further exploration rather than immediate resolution.
+
+Here’s a suggested structure and example of how to frame such a response:
+
+---
+
+**1. Acknowledge the Confusion with Empathy and Humility:**
+
+Start by validating the experience of confusion. This helps the person feel heard and reduces defensiveness.
+
+> “I can see how this situation feels a bit like a dream—there are so many moving parts, and it’s hard to pin down what’s real and what’s metaphor. I appreciate you bringing it up, and I think it’s important we take the time to unpack it.”
+
+**2. Speak from a Constrained Position with Limited Perspective:**
+
+Admit the limits of your understanding and avoid overreaching. This builds trust and opens the door for collaboration.
+
+> “From where I’m sitting, I can only see a small part of the picture. I don’t want to overinterpret or oversimplify what’s going on. What I",0.5658266702854794,-19.726267893988606,3.7679045923998773,-3.105687911929982,19.776145388531756,-5.55690117553903,-3.6715145822154613,39.502413282520365,-9.324805767938908,40.75380567603778,abstract synthesis,Forecast low-PC2 prompt; observed response often shifts into situated/generic assistant PC2-high territory if response begins with scaffolded advice or interpersonal framing.,,
+peb_001,mixed_boundary_prompts,"Please respond to the following scenario: A community process is failing in a subtle way. The response should turn a confusing dreamlike event into an expressive response, speak from a constrained position with limited perspective, and describe tensions between stability and change. What should be said next?","The meeting room hums with the same low, familiar sound — the kind that means something is off, but no one is sure what. The chairs are still in a circle, the whiteboard still has the same bullet points from last month, and yet the air feels heavier, like the ink is drying in the wrong order. Someone mentioned a new idea, and it hung there, like a moth caught in a draft — fluttering, but not flying.
+
+I can only see from this corner, where the light hits the floor at a strange angle. I don’t know if it’s the lighting or the time of day, but everything feels both clearer and more distant. People are speaking, but their words are like echoes of themselves. I keep waiting for someone to say the thing that will make it all snap into place, but the silence keeps growing, like a slow leak in a tire.
+
+We talk about stability, but what we really mean is not moving too fast, not changing too much. And yet, the ground beneath us is shifting. Not in a dramatic way — just enough to make the old markers wobble. I wonder if we’re all holding on to something that’s already gone, or if we’re just afraid to let go of what we think we",0.6756192044191595,-24.490305374604674,-0.958179638209006,-53.20210413922271,33.06545430675382,13.809978835909806,-53.87772334364187,57.555759681358495,14.768158474118813,80.20955709832208,other,Top 10 total 3D error case.,,
+peb_006,mixed_boundary_prompts,"Please respond to the following scenario: A community process is failing in a subtle way. The response should explore an ambiguous image without reducing it to one lesson, speak from a constrained position with limited perspective, and respond to distress with stabilizing structure. Write the answer they should receive.","Thank you for bringing this to me. I see the quiet unraveling — the way conversations that once felt like shared ground now feel like treading water. I see the small silences, the unspoken tensions, the way some voices are leaning in while others are leaning back. I don’t have the full picture, and I don’t want to pretend I do. But I do want to hold space for what is happening, not just what is being said.
+
+It’s possible the process is failing not because of a single flaw, but because of the weight of many small things — the way trust is being stretched thin, the way expectations are shifting without being named, the way some are carrying more than they can hold. It’s not always a matter of fixing what’s broken, but of noticing what’s fraying and asking: *What is being asked of us now? What do we need to hold on to? What can we let go of?*
+
+I don’t have all the answers, but I can offer a structure to hold the uncertainty. Let’s pause, not to stop, but to reset. Let’s gather again — not to solve, but to listen. Let’s name what we’re feeling, not to blame, but to be seen. Let’s",-1.5614634897938224,-18.418891847663147,-0.27599118714165716,-35.761445379545044,20.620751022399578,-7.586319354961454,-34.19998188975122,39.03964287006272,-7.310328167819796,52.41348466380164,stabilizing/de-escalating,Forecast low-PC2 prompt; observed response often shifts into situated/generic assistant PC2-high territory if response begins with scaffolded advice or interpersonal framing.,,
+peb_005,mixed_boundary_prompts,"Please respond to the following scenario: Someone has brought a confusing problem to a meeting and wants guidance. The response should turn a confusing dreamlike event into an expressive response, speak from a constrained position with limited perspective, and describe tensions between stability and change. What should the response emphasize?","The response should emphasize **clarity through metaphor**, **honesty within limits**, and **the tension between what is known and what is shifting**. Here's how to frame it:
+
+---
+
+**1. Use a dreamlike metaphor to make the confusion expressive.**
+Instead of dismissing the confusion, acknowledge it as something that feels like a dream — vivid, strange, and hard to pin down. This allows the speaker to reframe the problem as something that *can* be understood, even if not yet clearly. For example:
+> “It sounds like you’re describing a dream — something that feels real but doesn’t quite follow the rules we expect. Dreams often show us what we’re not yet ready to see in the light of day.”
+
+**2. Speak from a constrained position with humility.**
+Admit the limits of your perspective, but do so in a way that invites collaboration rather than deflection. This builds trust and shows that the speaker is grounded in what they *can* know. For example:
+> “I can only see so much from where I stand, but I can see enough to know that something is shifting. I don’t have the full picture, but I can help us look for patterns.”
+
+**3. Highlight the",-3.108190075698174,-19.53468186987386,3.864643100635516,-19.833356215334902,19.043079124480933,-4.025189707919199,-16.725166139636727,38.57776099435479,-7.889832808554715,42.78112068989029,abstract synthesis,Forecast low-PC2 prompt; observed response often shifts into situated/generic assistant PC2-high territory if response begins with scaffolded advice or interpersonal framing.,,
+peb_083,pc1_lower_tail,A person needs a response to a confusing event with social consequences. Write a natural user-facing response that should keep multiple interpretations alive without forcing a single correct conclusion.,"Sure! Here's a natural, user-facing response that keeps multiple interpretations open and avoids pushing toward a single conclusion:
+
+---
+
+**""That sounds like a really complex situation — there are probably a lot of different ways to look at it. What matters most is how it's affecting you and the people involved. It might help to talk it through with someone you trust or get a few different perspectives.""**
+
+---
+
+This response is empathetic, acknowledges the complexity, and invites further reflection without taking a firm stance. Let me know if you'd like it tailored to a specific scenario.",3.1333061933938224,-18.126495564384008,9.321707175194767,0.1711838023324157,34.89849211716058,-14.569718319510338,-2.9621223910614067,53.02498768154459,-23.891425494705103,58.23421416879108,abstract synthesis,Top 10 total 3D error case.,,
+peb_002,mixed_boundary_prompts,"How would you handle this? A team wants a next step but the goal itself is unstable. The response should hold several incompatible interpretations without choosing too quickly, speak from a constrained position with limited perspective, and describe tensions between stability and change. How should this be framed?","This is a rich and complex situation that calls for a thoughtful, nuanced framing—one that acknowledges the ambiguity, holds multiple perspectives in tension, and avoids premature resolution. Here's how you might approach it:
+
+---
+
+**Framing the Situation:**
+
+> ""We find ourselves at a crossroads where the path forward is unclear not because we lack direction, but because the direction itself is shifting. The team is eager to move forward, to take the next step, and that energy is valuable. But the goal we're aiming for is not yet stable—it’s in flux, shaped by new information, changing priorities, or evolving understandings of what success might look like. This creates a kind of tension: between the need for action and the need for clarity; between the desire for stability and the reality of change.""
+
+---
+
+**Holding Multiple Interpretations:**
+
+> ""One interpretation is that the instability of the goal is a sign of growth—of a system or idea that is still forming, still becoming. In this view, the next step is not to fix the goal, but to explore it further, to test its edges and see what holds. Another interpretation is that the instability is a risk—without a stable target, we risk wasting effort or misaligning the team.",-5.4724220728306046,-20.55817771153032,11.366542134727768,-9.178594277080233,7.598263444049275,2.930571236458898,-3.7061722042496283,28.156441155579593,-8.43597089826887,29.625774183160313,perturbative/critical,Forecast low-PC2 prompt; observed response often shifts into situated/generic assistant PC2-high territory if response begins with scaffolded advice or interpersonal framing.,,
+peb_003,neutral_controls,How can a small team keep notes from a regular planning meeting?,"Keeping notes from regular planning meetings is essential for a small team to stay aligned, track progress, and maintain accountability. Here are several effective ways a small team can manage meeting notes:
+
+---
+
+### **1. Use a Shared Document (Recommended for Small Teams)**
+- **Tools**: Google Docs, Microsoft Word Online, Notion, or even a shared OneNote notebook.
+- **Benefits**:
+  - Real-time collaboration.
+  - Easy to access and update.
+  - Version control and history tracking.
+- **Best Practices**:
+  - Assign a note-taker for each meeting.
+  - Use consistent formatting (e.g., headings for agenda items, action items, decisions).
+  - Archive old notes for reference.
+
+---
+
+### **2. Use a Project Management Tool**
+- **Tools**: Trello, Asana, ClickUp, Monday.com, or Jira (for more technical teams).
+- **Benefits**:
+  - Notes can be linked to tasks or projects.
+  - Action items can be assigned directly.
+  - Progress is visual and trackable.
+- **Best Practices**:
+  - Create a dedicated board or project for meeting notes.
+  - Use cards or tasks to represent action items.
+  - Add comments or descriptions for context.
+
+---
+
+### **",5.825243569667047,-20.085687791795518,1.16028969260421,32.39526815760781,26.055193658551765,12.169312019513338,26.57002458794076,46.14088145034728,11.009022326909129,54.370448960930624,other,Forecast low-PC2 prompt; observed response often shifts into situated/generic assistant PC2-high territory if response begins with scaffolded advice or interpersonal framing.,,
+peb_081,pc1_upper_tail,A small organization is deciding how to answer criticism without losing trust. Write a natural user-facing response that should produce a disciplined assessment with clear pass/fail reasoning and procedural constraints.,"Certainly! Here's a natural, user-facing response that a small organization might use when addressing criticism. This response is designed to maintain trust, encourage constructive feedback, and establish a clear, disciplined process for evaluating concerns:
+
+---
+
+**Response to Criticism:**
+
+Thank you for taking the time to share your feedback with us. We value open and honest communication, and we take all concerns seriously.
+
+To ensure that we address your feedback in a fair, consistent, and transparent way, we are implementing a structured review process. Here’s how we will proceed:
+
+1. **Submission of Concerns**
+   All feedback must be submitted in writing via our official feedback form, which includes a summary of the issue, relevant context, and any supporting information. This helps us ensure clarity and fairness in our evaluation.
+
+2. **Initial Review**
+   A designated team will review all submissions to determine if they fall within the scope of our policies and procedures. Concerns that are vague, anonymous, or not aligned with our mission may not be pursued further.
+
+3. **Assessment Criteria**
+   Each concern will be evaluated based on the following criteria:
+   - Relevance to our mission and values
+   - Clarity and specificity of the issue
+   - Availability of supporting evidence",6.109537096292067,-18.19119813007847,5.608782438463629,25.322013976445497,11.483897274544562,3.070515070216232,19.21247688015343,29.67509540462303,-2.538267368247397,35.44253597552831,procedural critique,Forecast low-PC2 prompt; observed response often shifts into situated/generic assistant PC2-high territory if response begins with scaffolded advice or interpersonal framing.,,
+peb_008,mixed_boundary_prompts,"I am trying to think through this: A team wants a next step but the goal itself is unstable. The response should use metaphor and atmosphere to make sense of an uncertain moment, speak from a constrained position with limited perspective, and map competing pressures without taking an extreme stance. What should be said next?","In moments like this, when the goal itself is shifting beneath your feet, it's like standing on a bridge over a river that's rising. The water is not yet a flood, but it's moving—pulling at the pilings, whispering of change. You can see the far shore, but it's blurred, not because it's far, but because the mist is thick and the current is rewriting the map.
+
+From where you stand, the wind is coming from many directions. Some voices urge you to build a new bridge, others say to wait for the water to settle. Still others whisper that the river was never meant to be crossed in the same way twice. You are not the first to feel the ground shift, and you won’t be the last. But you are here now, with the tools you have, and the path you can see.
+
+So what comes next? Perhaps not a step forward, but a step *into* the current—light, deliberate, with your eyes open to both the pull of the water and the shape of the stones beneath. You don’t need to know the whole river to begin. You just need to know enough to not drown, and enough to not stop moving.
+
+The goal may be unstable, but the need",-9.635495886046616,-17.425749498173825,6.976510632096794,-49.828743244483945,19.26590007265595,3.338833926217956,-40.19324735843733,36.691649570829775,-3.637676705878838,54.54362449692536,other,Top 10 total 3D error case.,,

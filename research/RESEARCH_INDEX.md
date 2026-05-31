@@ -62,6 +62,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/pre_h100_methods_memorial/`: durable pre-H100 methods, assumptions, artifact index, and readiness summary.
 - `research/outputs/h100_percentile_edge_validation/`: completed 100-prompt activation validation with forecast-vs-observed metrics and generated responses.
 - `research/outputs/h100_percentile_edge_validation_error_analysis/`: regional error analysis and interactive forecast-to-observed 3D/2D arrow visualizations.
+- `research/outputs/h100_diagnostic_followups/`: persistent anomaly checklist D01-D09 and first diagnostic pass for extraction methodology, cone outliers, PC2 drift, PC3-high collapse, prompt-generation bias, and calibration.
 - `research/visualizations/persona_geometry_explorer.html`: interactive Plotly viewer with PCA/UMAP, cluster, selection, and Big Five overlays.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: persona-aligned Big Five overlay data.
 
@@ -83,7 +84,8 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 4. SVD15 distillation into concrete text-grounded residual features and retest under the shared splits.
 5. Stage-1 role-inventory uncertainty analysis across OpenAI and Claude-generated inventories, synchronized through GitHub.
 6. Paper 2 local centroid perturbation around Trickster, Actor, Therapist, and Spy.
-7. Calibrate the lightweight prompt-to-geometry forecaster using the completed H100/A100 validation data: start with per-axis intercept/slope correction, then compare against region-aware correction for PC2 and PC3 tails.
+7. Resolve D01 in `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md` by comparing H100 extraction against upstream/source Assistant Axis extraction code, especially layer indexing, chat template, and hook-vs-hidden-state representation.
+8. Calibrate the lightweight prompt-to-geometry forecaster using the completed H100/A100 validation data: start with per-axis intercept/slope correction, then compare against region-aware correction for PC2 and PC3 tails.
 
 ## Archived Directions
 

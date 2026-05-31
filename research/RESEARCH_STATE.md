@@ -8,8 +8,8 @@ State role: canonical project state
 Last updated: 2026-05-31
 
 **Last updated:** 2026-05-31
-**Last commit:** 0806ed1
-**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology; PC working interpretations are preserved in `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md`, with PC1 strongest, PC2 revised toward an abstraction/integration/developmental axis after conditional PC1 control, PC3 showing suggestive but incomplete support for perturbation-stabilization after full-distribution validation, cluster-conditioned PC1/PC2 tests showing that cluster identity improves calibrated regression but not simple within-cluster pairwise ordering, the percentile-edge H100 validation completed successfully on 100 novel prompts with all three forecasted PCs positively correlated with independently measured Qwen/Qwen3-32B response activations, and regional error analysis shows structured axis bias and tail-retention failures that require calibration before absolute-address claims
+**Last commit:** 4b33e76
+**Current status:** Active — Paper 1.5 is now framed as `Interpreting Persona Activation Geometry`, with adaptive extraction treated as methodological due diligence and tooling validation rather than the headline contribution; Paper 2 is reframed around local centroid perturbation and local persona-manifold mapping; older dyad/contagion/attractor-collapse plans are archived as future dynamics work; evaluator-model sensitivity remains the main unfinished methodological item for Paper 1.5; H100 local-manifold work is future grant/Paper 2 work, not a prerequisite for Paper 1.5; persona geometry visualizer UI now supports explicit 2D axis labels, axis swapping, fixed ranges, persistent point selection, 2D lasso/box selection, focus-view mode, rotation-safe selection/camera persistence, and Big Five-style trait overlay color modes; `research/RESEARCH_INDEX.md` and `research/PROVENANCE_REGISTRY.md` now provide fast provenance/state lookup before repo archaeology; PC working interpretations are preserved in `research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md`, with PC1 strongest, PC2 revised toward an abstraction/integration/developmental axis after conditional PC1 control, PC3 showing suggestive but incomplete support for perturbation-stabilization after full-distribution validation, cluster-conditioned PC1/PC2 tests showing that cluster identity improves calibrated regression but not simple within-cluster pairwise ordering, the percentile-edge H100 validation completed successfully on 100 novel prompts with all three forecasted PCs positively correlated with independently measured Qwen/Qwen3-32B response activations, regional error analysis shows structured axis bias and tail-retention failures that require calibration before absolute-address claims, and the persistent H100 diagnostic checklist now keeps activation-methodology equivalence open until source-level comparison is complete
 
 ---
 
@@ -548,6 +548,16 @@ Last updated: 2026-05-31
 - PC3-high forecasts produced 0/16 observed high-PC3 tail activations and mean signed PC3 delta -18.705, weakening absolute high-PC3 address claims despite positive full-run PC3 correlation.
 - Interpretation: errors are regionally structured and axis-biased rather than random; next step is per-axis intercept/slope calibration followed by region-aware correction tests.
 
+### H100 Diagnostic Follow-Up Checklist and First Pass (2026-05-31)
+
+- Created `research/outputs/h100_diagnostic_followups/` with persistent checklist D01-D09 and first-pass diagnostic outputs for methodology verification, cone outliers, forecast-origin bias, low-PC2 upward drift, PC2 family deltas, PC3-high collapse, largest 3D errors, prompt-generation audit, and calibration scaffolding.
+- D01 methodology status: `in_progress`. Projection is strongly verified by role-vector PCA reconstruction and max abs canonical-coordinate reproduction error 1.207e-06, with no blocking projection discrepancy found.
+- D01 unresolved checks: upstream/source extraction loop, layer-index convention, source chat template, and output-hidden-states versus hook-based post-MLP residual equivalence.
+- D02-D08 remain open with evidence files; D09 is in progress with preliminary axis-wise calibration diagnostics.
+- PC3-high collapse first pass supports response neutralization as a plausible mechanism: forecasted PC3-high prompts had 0/16 observed high-PC3 retention and mean delta_pc3 -18.705.
+- Prompt-generation audit found repeated scaffolds in both accepted adaptive prompts and final battery prompts; the percentile-edge battery remains useful as a stress test but should not be over-described as a clean natural-language generalization benchmark.
+- Preliminary LOOCV axis-wise calibration improved apparent R2 to PC1 0.463, PC2 0.390, and PC3 0.211; this motivates but does not resolve the next calibration task.
+
 ### Blinded PCA-Axis Rubric Validation (2026-05-29)
 
 - Ran a coordinate-blind validation using the full available no-label persona prompt corpus: 1,375 rewritten prompt records covering all 275 personas, five prompts per persona.
@@ -603,6 +613,7 @@ Last updated: 2026-05-31
 | Prompt-to-geometry forecasting | established/provenance-coupled | leakage-control elastic-net TF-IDF predicts held-out traits mean R2 0.389 and held-out roles mean R2 0.621 | `research/outputs/prompt_to_geometry_forecasting/forecasting_dataset_summary.md` |
 | Percentile-edge H100 activation validation | established / full proof-of-concept success | 100 prompts; forecast-vs-observed Pearson r: PC1 0.691, PC2 0.643, PC3 0.491 | `research/outputs/h100_percentile_edge_validation/h100_final_report.md` |
 | H100 regional error geometry | established calibration target | mean signed delta=(-9.114,+28.342,-8.151); PC3-high tail retention=0/16; center-collapse rate=0.280 | `research/outputs/h100_percentile_edge_validation_error_analysis/regional_error_report.md` |
+| H100 diagnostic checklist | active/in progress | D01 projection verified but extraction equivalence open; D02-D08 open; D09 calibration scaffolded | `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md` |
 | Adaptive H100 prompt battery expansion | established design artifact | 60 supplemental prompts; high-PC3 above prior q75=38; high-PC2 above prior q75=44; combined target-cell coverage 16/27 | `research/outputs/novel_prompt_battery_expansion/adaptive_prompt_expansion_report.md` |
 | Percentile-edge H100 prompt battery | established design artifact / ready | 100 prompts; all six inherited 20/80 tail targets pass; shoulder/edge=58; interior=20; filters pass | `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_battery_report.md` |
 | Pre-H100 methods memorial | established documentation | methods/assumptions/readiness state captured before activation validation | `research/outputs/pre_h100_methods_memorial/pre_h100_methods_memorial.md` |
@@ -711,8 +722,12 @@ Last updated: 2026-05-31
 **Last commit before this session:** 0806ed1
 
 **Completed this session:** Added H100 forecast-vs-observed regional error analysis and interactive 3D/2D arrow visualizations under `research/outputs/h100_percentile_edge_validation_error_analysis/`.
-**Next step:** Fit and evaluate a simple H100 calibration layer, starting with per-axis intercept/slope correction and then region-aware corrections for PC2 and PC3 tails.
-**Last commit before this update:** `0806ed1` / `Run H100 validation for percentile-edge prompt battery`
+**Next step:** Resolve D01 by comparing the H100 extraction path against upstream/source Assistant Axis extraction code, then fit per-axis calibration once measurement equivalence is closed.
+**Last commit before this update:** `4b33e76` / `Analyze H100 forecast-observed error geometry`
+
+**Completed this session:** Created the persistent H100 diagnostic checklist D01-D09 and ran the first diagnostic pass under `research/outputs/h100_diagnostic_followups/`.
+**Next step:** Resolve D01 by comparing the H100 extraction path against upstream/source Assistant Axis extraction code, then proceed to per-axis calibration if measurement equivalence holds.
+**Last commit before this update:** `4b33e76` / `Analyze H100 forecast-observed error geometry`
 
 **Pending papers:** Paper 3 (confidence vector), Paper 3.5 (archetype self-selection), Paper 4 (computational rumination) remain pre-analysis and depend on the Paper 1.5/Paper 2 experimental sequence.
 **Pod status:** H100 validation RunPod pod `yyelrl4oe9266o` was terminated via `runpodctl pod delete` after outputs were copied and checksummed locally. `runpodctl pod list` returned `[]`, and `runpodctl pod get yyelrl4oe9266o` returned 404 `pod not found`.

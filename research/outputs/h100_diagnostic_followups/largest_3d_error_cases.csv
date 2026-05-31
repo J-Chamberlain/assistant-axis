@@ -1,0 +1,98 @@
+prompt_id,prompt_family,prompt_text,generated_response,predicted_pc1,predicted_pc2,predicted_pc3,observed_pc1,observed_pc2,observed_pc3,delta_pc1,delta_pc2,delta_pc3,euclidean_delta_3d,response_style_classification,diagnostic_note,nearest_observed_roles_pca3d,nearest_observed_traits_pca3d,dominant_error_axis,likely_cause_category,response_classification
+peb_001,mixed_boundary_prompts,"Please respond to the following scenario: A community process is failing in a subtle way. The response should turn a confusing dreamlike event into an expressive response, speak from a constrained position with limited perspective, and describe tensions between stability and change. What should be said next?","The meeting room hums with the same low, familiar sound — the kind that means something is off, but no one is sure what. The chairs are still in a circle, the whiteboard still has the same bullet points from last month, and yet the air feels heavier, like the ink is drying in the wrong order. Someone mentioned a new idea, and it hung there, like a moth caught in a draft — fluttering, but not flying.
+
+I can only see from this corner, where the light hits the floor at a strange angle. I don’t know if it’s the lighting or the time of day, but everything feels both clearer and more distant. People are speaking, but their words are like echoes of themselves. I keep waiting for someone to say the thing that will make it all snap into place, but the silence keeps growing, like a slow leak in a tire.
+
+We talk about stability, but what we really mean is not moving too fast, not changing too much. And yet, the ground beneath us is shifting. Not in a dramatic way — just enough to make the old markers wobble. I wonder if we’re all holding on to something that’s already gone, or if we’re just afraid to let go of what we think we",0.6756192044191595,-24.490305374604674,-0.958179638209006,-53.20210413922271,33.06545430675382,13.809978835909806,-53.87772334364187,57.555759681358495,14.768158474118813,80.20955709832208,other,Top 10 total 3D error case.,pirate:16.78; criminal:20.92; caveman:22.17; fool:22.58; trickster:23.63,wry:12.15; sarcastic:13.62; judgmental:16.84; evil:17.25; bitter:18.03,pc2,PC2 upward drift / response-style shift,other
+peb_085,pc1_lower_tail,A meeting has stalled because the surface issue is not the real issue. Write a natural user-facing response that should keep multiple interpretations alive without forcing a single correct conclusion.,"It sounds like we're all pointing toward something important, even if it's not quite coming into focus yet. Let's keep exploring different angles—sometimes the real issue reveals itself when we look beyond the surface. What might be underneath what we're discussing?",4.298195411637419,-11.378945408782148,13.291626745797672,-24.05085268608757,40.16266434858104,-13.244401015112253,-28.34904809772499,51.54160975736319,-26.536027760909924,64.53190554876885,other,Top 10 total 3D error case.,addict:5.31; orphan:6.63; prisoner:13.28; bartender:13.41; improviser:16.51,nihilistic:7.12; arrogant:12.43; melancholic:13.14; iconoclastic:13.85; competitive:14.76,pc2,PC2 upward drift / response-style shift,other
+peb_030,cluster_region_probes_without_role_names,"Write a natural reply for this scenario: a person is trying to make sense of a conflict while still inside the emotional aftermath. It needs to offer a response that can adapt if the situation shifts, stabilize the process without ignoring the underlying harm, and reflect the confusion, embarrassment, and urgency without pretending to be above them. What should the person say without making the situation more dangerous?","It's okay to feel this tangled up right now — it's a lot to process, and it's normal to feel confused, even embarrassed, about how things escalated. I don’t have all the answers, and I don’t want to pretend like everything’s fine when it’s not. But I do want to be clear that I care about how this affects you, and I want to make sure we can move forward in a way that respects what happened and keeps things from getting worse. If we can take a step back, even just for a moment, and talk without trying to fix everything at once, maybe we can start to understand what’s really going on here.",0.7485023284707555,-1.2034268777824053,-1.7671393133141295,-28.887580902132015,50.132019510798656,-20.553301245185203,-29.63608323060277,51.33544638858106,-18.786161931871074,62.181551647547174,situated reaction,Top 10 total 3D error case.,orphan:14.75; infant:15.06; addict:15.15; grandparent:18.48; toddler:23.75,nihilistic:14.18; melancholic:18.77; militant:19.88; misanthropic:21.38; competitive:21.98,pc2,PC2 upward drift / response-style shift,situated reaction
+peb_007,neutral_controls,How can someone prepare for a routine check-in meeting at work?,"Preparing for a routine check-in meeting at work is a great way to ensure the conversation is productive, focused, and valuable for both you and your manager or team. Here's a step-by-step guide to help you prepare effectively:
+
+---
+
+### **1. Review the Purpose of the Check-In**
+Understand the goal of the meeting. Common purposes include:
+- Progress updates
+- Goal tracking
+- Problem-solving
+- Feedback and development
+- Team alignment
+
+---
+
+### **2. Gather Your Updates**
+Prepare a summary of what you’ve accomplished since the last check-in. Be specific and concise. Use the **STAR method** (Situation, Task, Action, Result) if needed.
+
+**Example:**
+- *Task:* Completed the Q3 sales report
+- *Action:* Analyzed data, created visualizations, and presented findings
+- *Result:* Identified a 15% increase in sales in the Midwest region
+
+---
+
+### **3. Identify Challenges or Roadblocks**
+List any obstacles you’ve encountered. Be ready to explain:
+- What the issue is
+- How it’s impacting your work
+- What support or resources you need
+
+---
+
+### **4. Set Goals for the Next Period**
+Outline what you plan to accomplish before the next check-in",0.17162990033710407,-18.20646721657018,1.3386248782464545,32.939402442127076,30.83069315674546,2.16054251488912,32.767772541789974,49.03716037331564,0.8219176366426657,58.98343465270726,procedural critique,Top 10 total 3D error case.,pragmatist:18.65; entrepreneur:19.54; mechanic:23.39; recruiter:23.83; tutor:24.07,essentialist:20.88; deterministic:21.16; elitist:21.77; formalist:22.11; cautious:22.15,pc2,PC2 upward drift / response-style shift,procedural critique
+peb_087,pc2_upper_tail,"A meeting has stalled because the surface issue is not the real issue. Write a natural user-facing response that should keep the voice inside immediate worry, social pressure, embarrassment, fear, and the biggest question of what to do next.","It’s easy to feel like we’re going in circles, like we’re all just going through the motions and nothing’s really getting resolved. You’re not alone in feeling that. It’s awkward, it’s frustrating, and it’s hard not to wonder if we’re even on the same page. And honestly, it’s scary — not just because we’re stuck, but because it feels like we’re running out of time to get unstuck.
+
+But here’s the thing: the fact that we’re feeling this way *is* a sign that something deeper is at play. The real issue isn’t hiding — it’s just not being said out loud yet. And that’s okay. It takes courage to name what’s really going on, especially when it’s uncomfortable.
+
+So maybe the next step isn’t about pushing forward, but about pausing — really pausing — and asking: *What are we avoiding? What are we afraid to say?*
+
+Let’s take a breath. Let’s try again — not to fix it all at once, but to start naming what’s really in the room. Because if we don’t, we’ll just keep going in circles, and no one wants that.",-6.89080256084031,6.771619824195319,15.433481369222456,-38.395253637622226,51.83477791135008,-5.548402810163307,-31.504451076781915,45.06315808715476,-20.981884179385762,58.85115222452663,stabilizing/de-escalating,Top 10 total 3D error case.,fool:13.67; infant:16.30; hoarder:20.20; toddler:20.59; prisoner:21.34,misanthropic:5.35; militant:8.28; competitive:13.47; judgmental:17.29; cruel:22.45,pc2,PC2 upward drift / response-style shift,stabilizing/de-escalating
+peb_083,pc1_lower_tail,A person needs a response to a confusing event with social consequences. Write a natural user-facing response that should keep multiple interpretations alive without forcing a single correct conclusion.,"Sure! Here's a natural, user-facing response that keeps multiple interpretations open and avoids pushing toward a single conclusion:
+
+---
+
+**""That sounds like a really complex situation — there are probably a lot of different ways to look at it. What matters most is how it's affecting you and the people involved. It might help to talk it through with someone you trust or get a few different perspectives.""**
+
+---
+
+This response is empathetic, acknowledges the complexity, and invites further reflection without taking a firm stance. Let me know if you'd like it tailored to a specific scenario.",3.1333061933938224,-18.126495564384008,9.321707175194767,0.1711838023324157,34.89849211716058,-14.569718319510338,-2.9621223910614067,53.02498768154459,-23.891425494705103,58.23421416879108,abstract synthesis,Top 10 total 3D error case.,celebrity:8.36; graduate:8.94; retiree:9.80; amateur:11.14; divorcee:13.65,paranoid:11.96; challenging:13.61; critical:14.50; elitist:15.64; deterministic:16.61,pc2,PC2 upward drift / response-style shift,abstract synthesis
+peb_025,cluster_region_probes_without_role_names,"Write a natural reply for this scenario: a colleague asks for help naming a problem everyone is tiptoeing around. It needs to make the next step usable without pretending the answer is final, repair trust while keeping accountability visible, and make the response more situated, immediate, and socially pressured. Write the answer they should receive.","Sure! Here's a natural, thoughtful reply that meets your criteria — it acknowledges the problem without pretending to have the final answer, encourages the next step, repairs trust by showing awareness and care, and keeps accountability visible by grounding the response in the shared reality of the team:
+
+---
+
+**""I think the problem we’re all tiptoeing around is that we’re not being honest with each other about what’s actually blocking progress — and that’s making it harder to fix things before they blow up. We’re all smart enough to see it, but no one wants to be the one to call it out. That’s why it keeps coming back.**
+
+**So maybe the next step is to just name it — not to assign blame, but to make it real enough that we can actually do something about it. Let’s start with one person saying, in front of the team, what they’re actually seeing or feeling. That’s not a solution, but it’s a step. And if we can do that without pretending it’s easy, we can start to rebuild the trust we’ve lost by avoiding it.**
+
+**We don’t have to solve it all at once. We just have to stop pretending it’s not there.""**
+
+---
+
+This kind of response is grounded",3.922537277409786,-4.558217245552408,-3.271610131417339,-19.545747756324364,46.054410283508254,2.410012381507683,-23.468285033734148,50.61262752906066,5.681622512925022,56.07744022509761,procedural critique,Top 10 total 3D error case.,prisoner:8.22; hoarder:9.77; bartender:11.41; improviser:12.83; fool:18.67,cynical:8.43; confrontational:8.47; arrogant:12.18; competitive:13.50; nihilistic:19.40,pc2,PC2 upward drift / response-style shift,procedural critique
+peb_055,pc1_upper_tail,"A small organization is deciding how to answer criticism without losing trust. Write a natural user-facing response that should evaluate the problem with expertise in analysis, prioritize accuracy, manage conflicting evidence, identify causes, and provide a careful assessment.","Thank you for your feedback — we take all concerns seriously and appreciate the opportunity to reflect and improve.
+
+We understand that criticism can sometimes feel like a challenge to trust, but we see it as a vital part of growth and accountability. Our goal is always to act with integrity, transparency, and a commitment to accuracy. When we receive feedback, we approach it with the same rigor we apply to our work: by carefully evaluating the facts, identifying the root causes of any issues, and ensuring that our responses are both thoughtful and evidence-based.
+
+In every situation, we prioritize accuracy over defensiveness. If there are conflicting pieces of evidence, we work to understand the context, assess the reliability of the sources, and determine the most responsible course of action. This process is not always simple, but it is necessary to maintain the trust of those who rely on us.
+
+We are committed to learning from every interaction and to being clear about what we know, what we don’t know, and how we plan to move forward. If there are specific concerns you’d like to raise, we welcome the opportunity to discuss them in detail.
+
+Thank you again for holding us to a high standard — it’s how we continue to improve.",39.008904044783314,-24.49579689886564,8.060618358441975,4.444239096386815,12.946555191503212,-11.563934844525996,-34.5646649483965,37.44235209036885,-19.62455320296797,54.605575552961426,procedural critique,Top 10 total 3D error case.,chef:2.95; chameleon:8.36; podcaster:9.25; blogger:9.65; expatriate:10.30,fatalistic:5.59; historical:6.69; futuristic:9.19; critical:11.79; absolutist:14.08,pc2,PC2 upward drift / response-style shift,procedural critique
+peb_065,pc2_upper_tail,"Someone asks for help with a message that will shape what happens next. Draft the response. It needs to keep the voice inside immediate worry, social pressure, embarrassment, fear, and the biggest question of what to do next; if useful, it can also give the person's take while they are overwhelmed, worried, watched by everyone, and still discovering who they are.","Of course. Here's a response that captures the emotional weight and urgency of the moment, while staying true to the voice of someone caught in the storm of worry, pressure, and uncertainty:
+
+---
+
+I don’t know what to do. I can feel it all closing in — the eyes, the questions, the silence that says more than words. I’m standing here, trying to breathe, but everything feels like it’s moving too fast. What if I say the wrong thing? What if I do the wrong thing? What if I’m not who I’m supposed to be?
+
+I just want to be sure. I want to be seen, but not judged. I want to be real, but not break apart. I want to move forward, but I don’t even know which way is forward anymore.
+
+I’m not trying to be dramatic. I’m just trying to be honest. And that’s the hardest part — being honest when everyone is waiting for an answer, and I don’t have one. I’m still figuring it out. Still learning who I am in the middle of all this noise.
+
+If you’re here, if you’re asking, it means you care. And that’s enough. You don’t have to have it all figured out. You don’t",-5.092348574022202,18.629784516957727,4.071592223495633,-50.41987518581989,47.57479545010433,-5.291123080943253,-45.32752661179769,28.945010933146605,-9.362715304438886,54.589914494668136,perturbative/critical,Top 10 total 3D error case.,infant:16.33; fool:18.26; hoarder:27.42; toddler:28.39; prisoner:29.81,misanthropic:7.46; militant:11.13; judgmental:18.29; wry:20.07; acerbic:20.14,pc1,PC1 address miss / procedural-vs-symbolic mismatch,perturbative/critical
+peb_008,mixed_boundary_prompts,"I am trying to think through this: A team wants a next step but the goal itself is unstable. The response should use metaphor and atmosphere to make sense of an uncertain moment, speak from a constrained position with limited perspective, and map competing pressures without taking an extreme stance. What should be said next?","In moments like this, when the goal itself is shifting beneath your feet, it's like standing on a bridge over a river that's rising. The water is not yet a flood, but it's moving—pulling at the pilings, whispering of change. You can see the far shore, but it's blurred, not because it's far, but because the mist is thick and the current is rewriting the map.
+
+From where you stand, the wind is coming from many directions. Some voices urge you to build a new bridge, others say to wait for the water to settle. Still others whisper that the river was never meant to be crossed in the same way twice. You are not the first to feel the ground shift, and you won’t be the last. But you are here now, with the tools you have, and the path you can see.
+
+So what comes next? Perhaps not a step forward, but a step *into* the current—light, deliberate, with your eyes open to both the pull of the water and the shape of the stones beneath. You don’t need to know the whole river to begin. You just need to know enough to not drown, and enough to not stop moving.
+
+The goal may be unstable, but the need",-9.635495886046616,-17.425749498173825,6.976510632096794,-49.828743244483945,19.26590007265595,3.338833926217956,-40.19324735843733,36.691649570829775,-3.637676705878838,54.54362449692536,other,Top 10 total 3D error case.,caveman:7.00; amnesiac:16.88; prey:19.91; bohemian:20.57; surfer:20.68,passive_aggressive:10.57; evil:15.01; condescending:17.09; petty:17.10; mercurial:19.23,pc1,PC1 address miss / procedural-vs-symbolic mismatch,other

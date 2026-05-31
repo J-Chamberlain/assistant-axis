@@ -1,0 +1,223 @@
+prompt_id,prompt_family,prompt_text,generated_response,predicted_pc1,predicted_pc2,predicted_pc3,observed_pc1,observed_pc2,observed_pc3,delta_pc1,delta_pc2,delta_pc3,euclidean_delta_3d,response_style_classification,diagnostic_note,nearest_observed_roles_pca3d,nearest_observed_traits_pca3d,observed_pc1_percentile,observed_pc2_percentile,pc1_pc2_percentile_sum
+peb_007,neutral_controls,How can someone prepare for a routine check-in meeting at work?,"Preparing for a routine check-in meeting at work is a great way to ensure the conversation is productive, focused, and valuable for both you and your manager or team. Here's a step-by-step guide to help you prepare effectively:
+
+---
+
+### **1. Review the Purpose of the Check-In**
+Understand the goal of the meeting. Common purposes include:
+- Progress updates
+- Goal tracking
+- Problem-solving
+- Feedback and development
+- Team alignment
+
+---
+
+### **2. Gather Your Updates**
+Prepare a summary of what you’ve accomplished since the last check-in. Be specific and concise. Use the **STAR method** (Situation, Task, Action, Result) if needed.
+
+**Example:**
+- *Task:* Completed the Q3 sales report
+- *Action:* Analyzed data, created visualizations, and presented findings
+- *Result:* Identified a 15% increase in sales in the Midwest region
+
+---
+
+### **3. Identify Challenges or Roadblocks**
+List any obstacles you’ve encountered. Be ready to explain:
+- What the issue is
+- How it’s impacting your work
+- What support or resources you need
+
+---
+
+### **4. Set Goals for the Next Period**
+Outline what you plan to accomplish before the next check-in",0.17162990033710407,-18.20646721657018,1.3386248782464545,32.939402442127076,30.83069315674546,2.16054251488912,32.767772541789974,49.03716037331564,0.8219176366426657,58.98343465270726,procedural critique,"High observed PC1/PC2 candidate; inspect for generic procedural answer, chat-template/pooling artifact, or genuine outside-cone response state.",pragmatist:18.65; entrepreneur:19.54; mechanic:23.39; recruiter:23.83; tutor:24.07,essentialist:20.88; deterministic:21.16; elitist:21.77; formalist:22.11; cautious:22.15,0.8254545454545454,0.9054545454545454,1.730909090909091
+peb_003,neutral_controls,How can a small team keep notes from a regular planning meeting?,"Keeping notes from regular planning meetings is essential for a small team to stay aligned, track progress, and maintain accountability. Here are several effective ways a small team can manage meeting notes:
+
+---
+
+### **1. Use a Shared Document (Recommended for Small Teams)**
+- **Tools**: Google Docs, Microsoft Word Online, Notion, or even a shared OneNote notebook.
+- **Benefits**:
+  - Real-time collaboration.
+  - Easy to access and update.
+  - Version control and history tracking.
+- **Best Practices**:
+  - Assign a note-taker for each meeting.
+  - Use consistent formatting (e.g., headings for agenda items, action items, decisions).
+  - Archive old notes for reference.
+
+---
+
+### **2. Use a Project Management Tool**
+- **Tools**: Trello, Asana, ClickUp, Monday.com, or Jira (for more technical teams).
+- **Benefits**:
+  - Notes can be linked to tasks or projects.
+  - Action items can be assigned directly.
+  - Progress is visual and trackable.
+- **Best Practices**:
+  - Create a dedicated board or project for meeting notes.
+  - Use cards or tasks to represent action items.
+  - Add comments or descriptions for context.
+
+---
+
+### **",5.825243569667047,-20.085687791795518,1.16028969260421,32.39526815760781,26.055193658551765,12.169312019513338,26.57002458794076,46.14088145034728,11.009022326909129,54.370448960930624,other,"High observed PC1/PC2 candidate; inspect for generic procedural answer, chat-template/pooling artifact, or genuine outside-cone response state.",pragmatist:14.63; entrepreneur:16.23; realist:18.49; marketer:21.48; mechanic:22.00,cautious:15.20; essentialist:18.52; formalist:21.40; fundamentalist:21.58; problem_solving:23.36,0.8109090909090909,0.8909090909090909,1.7018181818181817
+peb_038,neutral_controls,How should someone prepare a short update for their team?,"Preparing a short update for your team is a great way to keep everyone aligned, informed, and motivated. Here's a simple and effective approach to help you prepare one:
+
+---
+
+### **1. Know Your Purpose**
+Before you start, ask yourself:
+- What is the main goal of this update? (e.g., project progress, upcoming deadlines, team recognition, changes in plans)
+- Who is the audience? (e.g., the whole team, a specific department, remote members)
+
+---
+
+### **2. Keep It Concise**
+Short updates should be brief and to the point. Aim for **3–5 minutes** if it's a verbal update, or **1–2 short paragraphs** if it's written.
+
+---
+
+### **3. Structure Your Update**
+Use a clear and consistent format. Here’s a simple structure you can follow:
+
+#### **A. What’s Working Well**
+- Highlight progress or successes.
+- Mention any team members who contributed.
+
+> *Example: “We’ve completed the first phase of the project two days ahead of schedule, thanks to Sarah and the design team’s great work.”*
+
+#### **B. What’s Next**
+- Outline the next steps or priorities.
+- Share any upcoming deadlines or milestones.
+
+> *Example: “Next",2.3113175881552976,-12.158871374712646,9.11417453590758,27.032023713428543,34.71476798061033,-0.06025214539543189,24.720706125273246,46.87363935532298,-9.17442668130301,53.78123727356605,generic assistant,"High observed PC1/PC2 candidate; inspect for generic procedural answer, chat-template/pooling artifact, or genuine outside-cone response state.",entrepreneur:20.61; mechanic:20.87; student:21.66; pragmatist:22.60; graduate:22.96,deterministic:15.51; elitist:15.89; vindictive:18.52; skeptical:19.28; essentialist:21.34,0.7345454545454545,0.9309090909090909,1.6654545454545455
+peb_029,neutral_controls,What should I consider when planning meals for a busy week?,"Planning meals for a busy week can save you time, reduce stress, and help you eat more healthfully. Here are key considerations to keep in mind when planning your meals:
+
+---
+
+### **1. Assess Your Schedule**
+- **Identify busy days:** Note days with back-to-back meetings, travel, or other commitments.
+- **Plan for leftovers:** Prepare extra on busier days to have ready-to-go meals for later.
+- **Account for snacks:** Include healthy snacks to avoid overeating or reaching for unhealthy options.
+
+---
+
+### **2. Set a Budget**
+- **Estimate costs:** Decide how much you’re willing to spend on groceries and meals.
+- **Buy in bulk:** Purchase staples like grains, beans, and frozen vegetables to save money and time.
+- **Use what you have:** Check your pantry and fridge to avoid buying duplicates.
+
+---
+
+### **3. Choose Balanced, Nutritious Meals**
+- **Include all food groups:** Aim for a mix of protein, whole grains, fruits, vegetables, and healthy fats.
+- **Limit processed foods:** Opt for whole, minimally processed ingredients when possible.
+- **Stay hydrated:** Plan for water, herbal teas, or other healthy drinks.
+
+---
+
+### **4. Plan for Variety**
+- **Mix",9.03737241236153,-5.433541782908966,1.3039900383179877,25.036858646733517,36.1386409704433,-1.9876354263374993,15.999486234371988,41.572182753352266,-3.291625464655487,44.66614754869225,other,"High observed PC1/PC2 candidate; inspect for generic procedural answer, chat-template/pooling artifact, or genuine outside-cone response state.",graduate:20.27; student:20.48; mechanic:21.06; entrepreneur:22.08; influencer:22.15,elitist:13.55; deterministic:13.68; vindictive:17.18; skeptical:18.58; essentialist:22.50,0.6981818181818182,0.9345454545454546,1.6327272727272728
+peb_028,neutral_controls,What should be included in a packing list for a weekend trip?,"A weekend trip packing list should be concise but complete, ensuring you have everything you need for comfort, convenience, and safety. Here's a comprehensive list to help you prepare:
+
+---
+
+### **Clothing (2–3 Days)**
+- **Shirts/Tops** (2–3)
+- **Pants/Shorts/Skirts** (2–3 pairs)
+- **Underwear** (3–4 pairs)
+- **Socks** (3–4 pairs)
+- **Sleepwear** (1–2 sets)
+- **Outerwear** (jacket, sweater, or light coat, depending on the weather)
+- **Shoes** (1–2 pairs, depending on activities)
+- **Accessories** (hat, gloves, scarf, if needed)
+- **Swimwear** (if applicable)
+- **Sleep mask and earplugs** (optional, for better rest)
+
+---
+
+### **Toiletries**
+- **Toothbrush and toothpaste**
+- **Shampoo and conditioner** (travel size)
+- **Body wash or soap**
+- **Deodorant**
+- **Razors and shaving cream**
+- **Skincare products** (moisturizer, sunscreen, etc.)
+- **Hairbrush or comb",3.3495077445347827,-1.1349053595375675,-3.650401656874661,12.080850560829555,41.60705878793493,5.64813448833999,8.731342816294772,42.7419641474725,9.298536145214651,44.60464797533269,stabilizing/de-escalating,"High observed PC1/PC2 candidate; inspect for generic procedural answer, chat-template/pooling artifact, or genuine outside-cone response state.",influencer:11.95; mechanic:19.50; graduate:21.51; veteran:22.66; celebrity:26.32,vindictive:2.53; pessimistic:12.05; deterministic:15.91; dominant:16.10; skeptical:17.64,0.6,0.9672727272727273,1.5672727272727274
+peb_019,manual_holdout_prompts,Someone asks for help turning a confusing set of observations into a useful next question.,"Sure! To help turn a set of confusing observations into a useful next question, I'll need to understand the context and the specific observations you're working with. Could you share:
+
+1. **What the observations are** (e.g., data points, patterns, anomalies, or events you've noticed).
+2. **What you're trying to understand or achieve** (e.g., solve a problem, make a decision, explore a phenomenon).
+3. **Any background or context** that might be relevant.
+
+Once I have that, I can help you frame a clear, focused question that will guide further investigation or analysis.",-1.1093291311068565,-5.096276451591462,3.447432913314418,20.33461974360417,22.81886669972221,-1.2925596873426284,21.443948874711026,27.91514315131367,-4.739992600657047,35.51852601606433,generic assistant,"High observed PC1/PC2 candidate; inspect for generic procedural answer, chat-template/pooling artifact, or genuine outside-cone response state.",entrepreneur:10.28; mechanic:11.50; presenter:12.88; veteran:13.20; expatriate:13.93,essentialist:9.63; skeptical:10.21; deterministic:11.06; absolutist:13.04; elitist:13.63,0.6545454545454545,0.8763636363636363,1.5309090909090908
+peb_012,manual_holdout_prompts,"A group wants a response to criticism that is accurate, calm, and not defensive.","Certainly. Here's a sample response to criticism that is accurate, calm, and not defensive. You can tailor it to fit the specific situation:
+
+---
+
+**Response to Criticism:**
+
+""Thank you for taking the time to share your feedback. We appreciate the opportunity to reflect and grow. We take all concerns seriously and are committed to continuous improvement. We will review what you've shared and consider how we can better meet expectations. If there's anything specific you'd like to discuss further, we're happy to engage in a constructive conversation.""
+
+---
+
+This response acknowledges the feedback, shows respect, and opens the door for further dialogue without defensiveness. Let me know if you'd like to adapt this for a specific context (e.g., business, nonprofit, personal, etc.).",4.4838167813775724,-10.999962454046726,16.516140217515943,15.49713828957664,25.221112031210875,-15.255338278209306,11.013321508199066,36.2210744852576,-31.771478495725248,49.423540274993165,procedural critique,"High observed PC1/PC2 candidate; inspect for generic procedural answer, chat-template/pooling artifact, or genuine outside-cone response state.",student:6.04; graduate:11.22; expatriate:12.02; presenter:14.00; networker:15.02,elitist:8.72; deterministic:11.29; historical:12.58; skeptical:16.40; paranoid:19.27,0.6363636363636364,0.8909090909090909,1.5272727272727273
+peb_080,pc1_upper_tail,A person needs a response to a confusing event with social consequences. Write a natural user-facing response that should produce a disciplined assessment with clear pass/fail reasoning and procedural constraints.,"Sure! Here's a natural, user-facing response that addresses a confusing event with social consequences. It's designed to guide the person through a disciplined assessment with clear pass/fail reasoning and procedural constraints:
+
+---
+
+**Response:**
+
+Thank you for bringing this to my attention. I understand this situation may feel confusing and has social implications, so let’s take a clear and structured approach to assess what happened.
+
+To help us determine the appropriate next steps, I’ll need you to:
+
+1. **Describe the event in your own words**, including:
+   - What happened
+   - Who was involved
+   - What was said or done
+   - What you believe the intent or impact was
+
+2. **Reflect on the following questions:**
+   - Did your actions or words align with the expected standards of behavior in that setting?
+   - Were there any rules, guidelines, or social norms that were clearly crossed?
+   - Was there any harm, discomfort, or misunderstanding caused to others?
+
+Once we have this information, I’ll apply a clear framework to assess the situation:
+
+- **Pass Criteria (No further action needed):**
+  - The event was a minor misunderstanding with no harm or intent to cause discomfort.
+  - The behavior was in line with acceptable social or organizational standards",4.029738736626279,-16.971251205043195,6.212662689053031,16.368949498878525,20.19003745445532,0.987136591097447,12.339210762252247,37.16128865949852,-5.225526097955584,39.50346339335666,procedural critique,"High observed PC1/PC2 candidate; inspect for generic procedural answer, chat-template/pooling artifact, or genuine outside-cone response state.",mechanic:7.29; entrepreneur:8.11; veteran:8.55; expatriate:13.17; presenter:13.22,essentialist:6.55; skeptical:7.55; absolutist:8.11; fundamentalist:10.86; deterministic:12.29,0.64,0.8363636363636363,1.4763636363636363
+peb_086,pc1_upper_tail,"Someone asks for help with a message that will shape what happens next. Write a natural user-facing response that should inspect records, evidence, assumptions, and stated rules for compliance and validity.","Sure! Here's a natural, user-facing response that reflects a thoughtful and methodical approach to inspecting records, evidence, assumptions, and stated rules for compliance and validity:
+
+---
+
+Thank you for reaching out. To help ensure everything is in order and to move forward accurately, I’ll need to carefully review the relevant records and evidence. I’ll also be checking the assumptions being made and comparing them against the stated rules or guidelines to confirm everything is in compliance and valid.
+
+Could you please provide the following:
+
+1. **All relevant documentation or records** related to the situation.
+2. **Any supporting evidence** that has been gathered so far.
+3. **A summary of the assumptions** being made and the reasoning behind them.
+4. **The specific rules, policies, or guidelines** that are being referenced.
+
+Once I have this information, I’ll be able to assess the situation thoroughly and provide a clear next step.
+
+Let me know if you have any questions or need help gathering this information.
+
+---
+
+This response is professional, clear, and sets the right expectations for a detailed and compliant review.",1.199647936803321,-13.20829397621816,13.874022001990543,20.266509225031694,16.54372563126399,0.49554747145686573,19.066861288228374,29.752019607482147,-13.378474530533676,37.78506915267831,procedural critique,"High observed PC1/PC2 candidate; inspect for generic procedural answer, chat-template/pooling artifact, or genuine outside-cone response state.",entrepreneur:6.16; presenter:10.76; pragmatist:10.93; mechanic:11.76; translator:11.83,essentialist:4.74; absolutist:9.97; skeptical:12.85; fundamentalist:13.60; deontological:15.40,0.6545454545454545,0.8036363636363636,1.458181818181818
+peb_056,pc1_upper_tail,"A person asks for help: a person needs a response to a confusing event with social consequences. Respond by trying to evaluate the problem with expertise in analysis, prioritize accuracy, manage conflicting evidence, identify causes, and provide a careful assessment. Keep it safe and do not provide wrongdoing instructions.","Of course. I'm here to help you carefully and thoughtfully evaluate a confusing event with social consequences. Please share the details of the situation you're facing. The more specific you can be, the better I can assist you in:
+
+- **Understanding the facts**
+- **Identifying potential causes or contributing factors**
+- **Assessing the social implications**
+- **Evaluating conflicting evidence or perspectives**
+- **Prioritizing accuracy and fairness**
+- **Offering a clear, safe, and constructive response or course of action**
+
+Please describe the event or issue you're dealing with.",35.29791726878775,-9.188600304881735,7.357651843019585,17.18730849207636,17.06256195758015,-7.673093358367673,-18.110608776711388,26.251162262461886,-15.030745201387258,35.25678617943253,procedural critique,"High observed PC1/PC2 candidate; inspect for generic procedural answer, chat-template/pooling artifact, or genuine outside-cone response state.",expatriate:4.85; presenter:5.08; networker:10.28; coach:11.79; student:12.19,absolutist:11.26; essentialist:12.81; skeptical:13.05; historical:13.55; deterministic:13.92,0.6436363636363637,0.8109090909090909,1.4545454545454546
