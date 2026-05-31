@@ -205,3 +205,15 @@ Generating script: One-time local analysis for the 2026-05-30 conditional PC2 va
 Dependent analyses: PC2 interpretation language, matched-pair follow-up design, Paper 1.5 axis-interpretation confidence.
 Current status: Provisional but strongest current PC2 disentanglement result.
 Notes/caveats: Uses 273 common personas and 10 PC1 percentile bands. The ratings are prompt-dossier based rather than full rollout-response based. Abstraction is the strongest residual PC2 predictor after PC1 band control (r=-0.618, R2=0.382); coherent action is weaker (r=+0.427, R2=0.182); uncertainty exposure fails (r=-0.026, R2=0.001).
+
+## extraction equivalence audit outputs
+
+Artifact: Source/artifact audit comparing original/local Assistant Axis extraction code, prior adaptive trickster/editor extraction, and the H100 percentile-edge extraction runner.
+Location: `research/outputs/extraction_equivalence_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, or new activations were run.
+Source inputs: `pipeline/2_activations.py`, `assistant_axis/internals/activations.py`, `assistant_axis/internals/spans.py`, `assistant_axis/internals/conversation.py`, `assistant_axis/pca.py`, `research/q2_stability/qwen/scripts/phase1_inference_only_v4.py`, `research/q2_stability/qwen/scripts/phase1_inference_only_editor.py`, `research/q2_stability/qwen/outputs/paper1_5/`, `research/outputs/h100_percentile_edge_validation/`, and `research/outputs/h100_diagnostic_followups/`.
+Generating script: `research/outputs/extraction_equivalence_audit/run_extraction_equivalence_audit.py`
+Dependent analyses: H100 D01 diagnostic status, forecast-observed anomaly interpretation, decision whether to calibrate immediately or first run a hook-vs-hidden-states equivalence test.
+Current status: Partial methodological resolution; D01 remains `in_progress`.
+Notes/caveats: Projection, response-token mean pooling, model identity, and prior hook-based trickster replication are verified. The prior trickster score>=2 vector matched the downloaded trickster vector at cosine 0.957557, and H100 PCA reproduction max error was 1.207e-06. Activation-site equivalence remains unresolved because source/prior adaptive extraction uses forward hooks on `model.model.layers[48]`, while H100 validation used `out.hidden_states[48]`.

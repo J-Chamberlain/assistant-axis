@@ -6,7 +6,7 @@
 
 | id | title | priority | status | conclusion | next action |
 |---|---|---|---|---|---|
-| D01 | Verify activation measurement methodology | critical | in_progress | No blocking discrepancy found, but exact source extraction/chat-template convention remains not fully independently verified. | Compare against upstream safety-research extraction code or original artifact metadata. |
+| D01 | Verify activation measurement methodology | critical | in_progress | Extraction audit verified model identity, layer target, response-token pooling, PCA centering/sign/projection, and prior hook-based trickster replication; activation-site equivalence remains unresolved because prior/source extraction uses forward hooks while H100 reads `output_hidden_states[48]`. | Run the minimal Qwen hook-vs-hidden-states equivalence test, or locate source-level proof that `output_hidden_states[48]` matches the layer-48 hook output. |
 | D02 | Investigate observed high-PC1/high-PC2 cone-violation outliers | critical | open | Cone-violation candidates identified; several are generic/procedural observed responses in high PC1/PC2 regions. | Inspect whether these are genuine admissible states or projection/pooling artifacts. |
 | D03 | Inspect forecasted extreme-PC1 / near-zero-PC3 prompts | high | open | Extreme-PC1/near-zero-PC3 cases exist and often show coefficient-aligned lexical construction. | Decide whether to downweight or redesign these prompts in the next battery. |
 | D04 | Inspect lowest predicted-PC2 prompts near PC1 approx 0 | high | open | Low-PC2 near-zero-PC1 cases generally drift upward on PC2 after generation. | Compare prompt-intended abstraction against actual response style with second rater or calibrated model. |
@@ -21,3 +21,9 @@
 - D03 forecasted extreme-PC1 / near-zero-PC3 prompts: compare H100 cases against `research/outputs/training_forecast_error_geometry/training_forecast_error_3d_arrows.html` to determine whether near-zero PC3 forecasts are already present in native role-artifact forecaster predictions.
 - D08 prompt-generation loop forecaster exploitation or origin bias: use `training_forecast_per_example_errors.csv` and the 2D arrow views to separate native forecaster shrinkage from prompt-generation loop artifacts.
 - D09 calibration failure versus directional failure: native target-to-forecast signed bias and H100 observed-minus-forecast signed bias are now directly comparable in `training_forecast_error_summary.json`.
+
+## 2026-05-31 Extraction equivalence audit update
+
+- D01 remains `in_progress`, not resolved. The audit found no projection discrepancy and verified that the prior successful trickster replication used Qwen/Qwen3-32B layer 48, response-token mean pooling, thinking disabled, and a hook-based extraction path that matched the downloaded trickster vector at cosine 0.957557.
+- The remaining gap is activation-site equivalence: local source and prior adaptive extraction use forward hooks on `model.model.layers[48]`, while the H100 validation used `out.hidden_states[48]`. PCA reproduction max error 1.207e-06 proves projection-basis correctness, not extraction-site equivalence.
+- Evidence files: `research/outputs/extraction_equivalence_audit/extraction_equivalence_audit_report.md`, `research/outputs/extraction_equivalence_audit/extraction_equivalence_table.csv`, and `research/outputs/extraction_equivalence_audit/proposed_minimal_empirical_test.md`.

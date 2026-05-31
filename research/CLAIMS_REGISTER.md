@@ -294,11 +294,11 @@ Last Updated: 2026-05-31
 
 ## 32. H100 Diagnostic Follow-Ups Leave Activation Methodology Partially Open
 
-Claim: Activation projection for the H100 percentile-edge run is strongly verified, but full activation-extraction equivalence to the inherited Assistant Axis / Qwen geometry convention remains partially open pending source-level comparison.
+Claim: Activation projection for the H100 percentile-edge run is strongly verified, and the prior successful trickster adaptive extraction materially reduces concern about the local Qwen layer-48 extraction stack; however, full activation-site equivalence to the inherited Assistant Axis / Qwen geometry convention remains partially open.
 Status: Tentative
-Evidence: The diagnostic pass found model ID match (`Qwen/Qwen3-32B`), role-vector PCA basis reconstruction from 275 Qwen role vectors, mean-centering/sign alignment, and canonical coordinate reproduction at max abs error 1.207e-06. Response-token pooling in the runner excludes prompt tokens. No blocking projection discrepancy was found.
-Counterevidence: The exact upstream extraction loop, layer-index convention, source chat template, and output-hidden-states versus hook-based post-MLP residual extraction equivalence were not closed line by line. These remain possible contributors to observed PC2 shifts and cone-like outliers.
-Dependencies: `research/outputs/h100_diagnostic_followups/activation_methodology_verification.md`, `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md`, `research/outputs/h100_percentile_edge_validation/h100_activation_projection_debug.json`
+Evidence: The extraction equivalence audit found model ID match (`Qwen/Qwen3-32B`), layer target 48, response-token mean pooling, role-vector PCA basis reconstruction from 275 Qwen role vectors, mean-centering/sign alignment, and canonical coordinate reproduction at max abs error 1.207e-06. The prior trickster adaptive extraction used a hook-based Qwen/Qwen3-32B layer-48 path and matched the downloaded trickster vector at cosine 0.957557.
+Counterevidence: Local source and prior adaptive extraction use forward hooks on `model.model.layers[48]`, while the H100 validation used `out.hidden_states[48]`. Source inspection did not prove that these refer to the same Qwen layer boundary; this remains a plausible contributor to observed PC2 shifts and cone-like outliers until a hook-vs-hidden-state equivalence test is run.
+Dependencies: `research/outputs/extraction_equivalence_audit/`, `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md`, `research/outputs/h100_percentile_edge_validation/h100_activation_projection_debug.json`
 Last Updated: 2026-05-31
 
 ## 33. Percentile-Edge Prompt Battery Shows Stress-Test Bias

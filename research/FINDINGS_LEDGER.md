@@ -396,6 +396,14 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Native role-artifact forecasts do not reproduce the H100 error pattern: H100 mean 3D error 37.291, H100 observed-minus-forecast PC2 bias +28.342, while native forecast-minus-target PC2 bias is approximately zero; H100 forecast |PC3|<=5 is 0.530 versus native 0.291
 - Interpretation: H100 PC2 upward shift and PC3-high collapse are not explained by native frozen-forecaster target-to-forecast error alone; they likely arise during prompt-generation/response-activation measurement or from the edge-battery stress-test distribution
 
+### Extraction Equivalence Audit (2026-05-31)
+
+- Built `research/outputs/extraction_equivalence_audit/` to compare original/local Assistant Axis extraction code, prior adaptive trickster/editor extraction, and the H100 percentile-edge extraction runner
+- Prior successful trickster replication used Qwen/Qwen3-32B layer 48, thinking disabled, response-token mean pooling, and a forward hook on `model.model.layers[48]`; the score>=2 vector matched the downloaded trickster vector at cosine 0.957557
+- Current H100 validation uses the same model identity and intended layer number, excludes prompt tokens, mean-pools generated response tokens, and projects with a PCA basis that reproduces committed canonical coordinates at max abs error 1.207e-06
+- D01 remains `in_progress`: local source and prior adaptive extraction are hook-based, while H100 reads `out.hidden_states[48]`; source inspection did not prove those activation objects are identical for Qwen/Qwen3-32B
+- Interpretation: H100 PC2/PC3 anomalies remain informative, but they retain a bounded activation-site caveat until a minimal hook-vs-hidden-states equivalence test is run
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
