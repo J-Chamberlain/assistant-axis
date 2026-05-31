@@ -318,3 +318,12 @@ Evidence: Training-artifact forecast error geometry over 275 role artifacts foun
 Counterevidence: The frozen forecaster was retrained on all 275 role artifacts, so the native error geometry is in-sample and cannot substitute for held-out calibration. It does show native radial shrinkage: 0.898 of forecasts are closer to the origin than their targets.
 Dependencies: `research/outputs/training_forecast_error_geometry/`, `research/outputs/h100_percentile_edge_validation_error_analysis/`, `research/outputs/novel_prompt_battery/frozen_forecaster_manifest.json`
 Last Updated: 2026-05-31
+
+## 35. Public Role Rollout Artifacts Allow Input Reconstruction But Not Success Filtering
+
+Claim: Public artifacts allow reconstruction of the intended 1,200 instruction-question inputs per non-default Assistant Axis role, but do not include original generated responses, response-level judge scores, or retained-response masks. The remembered "64" count has been traced to Qwen's 64-layer vector dimension and local adaptive-extraction counts, not to a public original retained-response filter.
+Status: Observed
+Evidence: `data/roles/instructions/` contains 275 non-default role JSON files plus `default.json`; all 275 non-default roles have five positive instructions. `data/extraction_questions.jsonl` contains 240 shared questions, yielding 5 x 240 = 1,200 intended inputs per role. The official GitHub pipeline documents/implements response generation, judging, and vector construction, but public repository/Hugging Face artifacts do not include original response JSONLs, score JSONs, or retained IDs. The Qwen vector shape `[64,5120]` is layer x hidden dimension.
+Counterevidence: Exact token-level prompt rendering depends on tokenizer/chat-template/runtime version, and private original rollout artifacts could contain unavailable responses/scores. The current public pipeline code and paper text differ on score-3-only defaults versus fully/somewhat category treatment, and this cannot be resolved without response-level score artifacts.
+Dependencies: `research/outputs/role_rollout_artifact_audit/`, `data/roles/instructions/`, `data/extraction_questions.jsonl`, `pipeline/`, `assistant_axis/generation.py`
+Last Updated: 2026-05-31

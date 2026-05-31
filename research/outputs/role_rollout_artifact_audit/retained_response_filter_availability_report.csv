@@ -1,0 +1,4 @@
+source,location,retained_response_ids_found,count,notes
+official GitHub safety-research/assistant-axis,pipeline/4_vectors.py,no,0 public retained-ID masks found,"Public code shows how to filter score==3 responses, but committed artifacts do not identify retained response keys for released vectors."
+paper method text,arXiv 2601.10387,no,0,"Paper states non-expressing responses are filtered and roles with at least 10 responses in a category are kept, but does not list retained IDs."
+Hugging Face lu-christina/assistant-axis-vectors,role_vectors/*.pt,no,0,"The [64,5120] Qwen vector shape is layer x hidden_dim, not a retained-example matrix."

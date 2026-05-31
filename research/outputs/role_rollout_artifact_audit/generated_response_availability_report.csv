@@ -1,0 +1,5 @@
+source,location,generated_responses_found,count,notes
+official GitHub safety-research/assistant-axis,pipeline source plus transcripts/,no original role-vector rollout responses,0 public role-vector rollout transcripts found,"Repository documents generation and includes paper case-study transcripts, but not outputs/<model>/responses/*.jsonl for 275 x 1200 role-vector rollouts."
+Hugging Face lu-christina/assistant-axis-vectors,dataset file tree,no,0,"Dataset exposes precomputed vectors/axes/capping configs, not generated rollout conversations."
+Hugging Face belmore/assistant-axis-vector-prompts,train.parquet,no,0,"Prompt-artifact dataset contains role/trait prompt artifacts, not model completions."
+local project adaptive extraction,research/q2_stability/qwen/outputs/paper1_5/,"yes, project-generated subset",trickster 1200; editor 128 plus matched 64 follow-up,"These are later local project runs, not original public Assistant Axis rollouts."

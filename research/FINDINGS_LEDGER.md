@@ -24,6 +24,10 @@ Qwen/Qwen3-32B trickster Phase 1 completed 1200 rollouts and 1200 activation sha
 
 The public-source D01 audit found likely mismatch between H100 `outputs.hidden_states[48]` extraction and the original Assistant Axis Qwen convention. Official/prior extraction hooks `model.model.layers[48]` and captures decoder layer-48 post-MLP residual output, while Transformers/Qwen3 hidden-state semantics indicate `hidden_states[48]` is the input to decoder layer 48 / output after layer 47. The next step is a tiny one-prompt hook-vs-hidden-states confirmation test, not a full H100 rerun.
 
+### Public Role Rollout Artifacts Are Inputs-Only
+
+Public artifacts allow reconstruction of the intended Assistant Axis role-vector input distribution: 275 non-default roles, 5 positive instructions per role, and 240 shared extraction questions, yielding 1,200 instruction-question combinations per role. Public artifacts do not include the original generated rollout responses, response-level judge scores, or retained-response masks/IDs. The remembered "64" count is resolved as Qwen layer count in `[64,5120]` vectors plus local adaptive-extraction counts, not a public original retained-response count.
+
 ### Pod Workflow Lessons
 
 Detached execution, response JSONL preservation, separate activation shards, local integrity checks, explicit run artifacts, and RunPod API or `runpodctl` termination are now validated workflow requirements. Browser/dashboard termination is fallback only.
@@ -440,7 +444,7 @@ Strict Lu-method replication remains blocked unless `gpt-4.1-mini` judge scoring
 
 Evaluator-sensitivity comparison remains blocked by OpenAI API quota. The local harness, canonical corpora mapping, Codex-side imported baseline, and output schema now exist under `research/q2_stability/qwen/evaluator_sensitivity/`, but `gpt-4.1-mini` returned `insufficient_quota` and produced zero paired judge records.
 
-Downloaded Lu vector metadata remains underspecified locally: the exact fully-roleplaying versus somewhat-roleplaying storage category and fixed 64-row selection procedure are not documented in local HF metadata.
+Downloaded Lu vector metadata remains underspecified locally: the exact fully-roleplaying versus somewhat-roleplaying storage category and retained-response IDs are not documented in local HF metadata. The earlier "fixed 64-row selection" framing is corrected: public Qwen vector tensors are `[64,5120]` because Qwen has 64 layers, not because vectors store 64 retained rollout examples.
 
 ## Next Empirical Tests
 

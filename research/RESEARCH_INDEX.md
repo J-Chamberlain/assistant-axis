@@ -27,6 +27,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - Cluster-conditioned PC1/PC2 testing found that within-cluster pairwise ordering is harder than global ordering, but cluster identity substantially improves calibrated regression: PC1 direct R2 0.296 vs oracle-cluster 0.811, PC2 direct R2 0.416 vs oracle-cluster 0.718.
 - Training-artifact forecast error geometry shows the frozen role forecaster has tiny in-sample target-to-forecast error and near-zero signed PC2 bias, so the H100 PC2 upward shift is not native to the original role-artifact forecast task.
 - Public-source extraction-equivalence audit changes D01 from merely unresolved to likely mismatch: projection, pooling, model identity, and prior hook-based trickster replication are verified, but official/prior layer-48 hook extraction likely maps to `hidden_states[49]`, not the H100 runner's `hidden_states[48]`.
+- Role-rollout artifact audit resolves the public-data boundary for original role vectors: the intended 1,200 inputs per role are reconstructable, but original generated responses, judge scores, and retained-response masks are not public; the remembered "64" count is Qwen layer count/local adaptive-count provenance, not a public retained-rollout count.
 - Trickster adaptive extraction succeeded operationally; editor adaptive extraction failed to reach validation thresholds.
 
 ## Best Predictive Metrics
@@ -68,6 +69,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/training_forecast_error_geometry/`: native frozen-forecaster target-to-forecast error geometry over original role artifacts, with interactive 3D/2D arrows and H100 comparison.
 - `research/outputs/extraction_equivalence_audit/`: source/artifact audit comparing original/local Assistant Axis extraction code, prior trickster/editor adaptive extraction, and the H100 percentile-edge extraction runner.
 - `research/outputs/public_source_extraction_equivalence/`: public-source audit of official Assistant Axis code, Hugging Face dataset/model metadata, Transformers Qwen3 hidden-state semantics, and D01 hook-vs-hidden-states mismatch evidence.
+- `research/outputs/role_rollout_artifact_audit/`: public/local audit of reconstructable role-vector rollout inputs, missing public responses/scores/retained masks, and the resolved "64" count question.
 - `research/visualizations/persona_geometry_explorer.html`: interactive Plotly viewer with PCA/UMAP, cluster, selection, and Big Five overlays.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: persona-aligned Big Five overlay data.
 
@@ -92,6 +94,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 7. Resolve D01 in `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md` by running the minimal Qwen/Qwen3-32B hook-vs-`output_hidden_states` confirmation test; public sources now indicate the hook on `model.model.layers[48]` should match `hidden_states[49]`, not H100 `hidden_states[48]`.
 8. Calibrate the lightweight prompt-to-geometry forecaster using the completed H100/A100 validation data: start with per-axis intercept/slope correction, then compare against region-aware correction for PC2 and PC3 tails.
 9. Run a held-out-role-only version of the training forecast error geometry to distinguish in-sample frozen-forecaster shrinkage from true held-out calibration error.
+10. Build an instance-level prompt-to-centroid forecasting dataset from reconstructed role instruction-question inputs if improved text forecasting is needed; successful-rollout-aware training requires regenerated responses/judge scores or private original artifacts.
 
 ## Archived Directions
 

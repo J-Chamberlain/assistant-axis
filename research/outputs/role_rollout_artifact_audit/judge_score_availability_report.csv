@@ -1,0 +1,4 @@
+source,location,judge_scores_found,count,notes
+official GitHub safety-research/assistant-axis,pipeline/3_judge.py and role eval_prompt fields,no output scores,0 public score JSON files found,Rubric and scoring script are public; response-level judge outputs are not committed.
+Hugging Face lu-christina/assistant-axis-vectors,dataset file tree,no,0,Vector dataset does not include score JSONs or judge raw outputs.
+local project adaptive extraction,research/q2_stability/qwen/outputs/paper1_5/,"yes, project-generated subset",64 trickster Codex-scored; 128 editor Codex-scored; matched 64 editor sensitivity scored,"Codex/GPT-5.5 scores are pragmatic local follow-up, not original gpt-4.1-mini public score files."

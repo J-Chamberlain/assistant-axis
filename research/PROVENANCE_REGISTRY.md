@@ -229,3 +229,15 @@ Generating script: `research/outputs/public_source_extraction_equivalence/run_pu
 Dependent analyses: D01 diagnostic status, decision whether H100 PC2/PC3 anomalies can be interpreted behaviorally, and whether to rerun H100 extraction with a corrected boundary.
 Current status: Public-source mismatch likely; D01 is open pending a tiny hook-vs-hidden-states confirmation test.
 Notes/caveats: Official/prior extraction hooks `model.model.layers[48]` and captures decoder layer-48 post-MLP residual output. Public Transformers/Qwen3 semantics indicate `hidden_states[48]` is the input to decoder layer 48 / output after layer 47, while the layer-48 hook output likely corresponds to `hidden_states[49]`. PCA reproduction max error 1.207e-06 remains valid for projection-basis correctness only.
+
+## role rollout artifact audit outputs
+
+Artifact: Public/local audit of original Assistant Axis role-vector rollout inputs, generated-response availability, judge-score availability, retained-filter availability, and the remembered "64" count.
+Location: `research/outputs/role_rollout_artifact_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, activations, or response generation were run.
+Source inputs: Official Assistant Axis paper/arXiv, official GitHub `data/roles/instructions/`, `data/extraction_questions.jsonl`, `pipeline/`, `assistant_axis/generation.py`, Hugging Face `lu-christina/assistant-axis-vectors`, Hugging Face `belmore/assistant-axis-vector-prompts`, local prompt artifact inventory, local extraction-equivalence audit, local trickster/editor adaptive extraction artifacts, `research/RESEARCH_STATE.md`, and `research/FINDINGS_LEDGER.md`.
+Generating script: `research/outputs/role_rollout_artifact_audit/run_role_rollout_artifact_audit.py`
+Dependent analyses: Revised instance-level prompt-to-centroid forecasting design, successful-rollout-only dataset feasibility, and correction of earlier "64-row cap" language.
+Current status: Established public-data boundary: intended inputs are reconstructable; original generated responses, judge scores, and retained masks are not public.
+Notes/caveats: The intended 1,200 combinations per role are reconstructable as 5 positive role instructions x 240 extraction questions. Exact token-level prompts depend on tokenizer/chat-template/runtime version. The remembered "64" is resolved as Qwen layer count in `[64,5120]` released vectors plus local adaptive-extraction sample/count usage, not as a public original retained-response count.

@@ -1,0 +1,20 @@
+{
+  "generated_utc": "2026-05-31T15:02:53.318157+00:00",
+  "model_used": "GPT-5.5",
+  "startup_status": "STARTUP VERIFIED",
+  "summary": {
+    "role_files_including_default": 276,
+    "nondefault_roles": 275,
+    "global_extraction_questions": 240,
+    "question_id_min": 0,
+    "question_id_max": 239,
+    "questions_unique_ids": 240,
+    "roles_with_5_positive_instructions": 275,
+    "default_positive_instructions": 5,
+    "theoretical_combinations_per_nondefault_role": 1200
+  },
+  "public_original_responses_found": false,
+  "public_original_judge_scores_found": false,
+  "public_retained_masks_found": false,
+  "number_64_resolution": "Qwen layer count and local project adaptive counts; no public original retained-response count."
+}
