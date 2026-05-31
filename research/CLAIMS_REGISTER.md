@@ -292,13 +292,13 @@ Counterevidence: The regional analysis is based on a single 100-prompt edge-heav
 Dependencies: `research/outputs/h100_percentile_edge_validation_error_analysis/regional_error_report.md`, `research/outputs/h100_percentile_edge_validation_error_analysis/six_pole_error_breakdown.csv`, `research/outputs/h100_percentile_edge_validation_error_analysis/per_prompt_error_vectors.csv`
 Last Updated: 2026-05-31
 
-## 32. H100 Diagnostic Follow-Ups Leave Activation Methodology Partially Open
+## 32. Public-Source Audit Found Likely H100 Extraction Boundary Mismatch
 
-Claim: Activation projection for the H100 percentile-edge run is strongly verified, and the prior successful trickster adaptive extraction materially reduces concern about the local Qwen layer-48 extraction stack; however, full activation-site equivalence to the inherited Assistant Axis / Qwen geometry convention remains partially open.
-Status: Tentative
-Evidence: The extraction equivalence audit found model ID match (`Qwen/Qwen3-32B`), layer target 48, response-token mean pooling, role-vector PCA basis reconstruction from 275 Qwen role vectors, mean-centering/sign alignment, and canonical coordinate reproduction at max abs error 1.207e-06. The prior trickster adaptive extraction used a hook-based Qwen/Qwen3-32B layer-48 path and matched the downloaded trickster vector at cosine 0.957557.
-Counterevidence: Local source and prior adaptive extraction use forward hooks on `model.model.layers[48]`, while the H100 validation used `out.hidden_states[48]`. Source inspection did not prove that these refer to the same Qwen layer boundary; this remains a plausible contributor to observed PC2 shifts and cone-like outliers until a hook-vs-hidden-state equivalence test is run.
-Dependencies: `research/outputs/extraction_equivalence_audit/`, `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md`, `research/outputs/h100_percentile_edge_validation/h100_activation_projection_debug.json`
+Claim: Public-source audit found a likely mismatch between the H100 percentile-edge extraction boundary and the original Assistant Axis Qwen extraction convention. Official/prior extraction hooks `model.model.layers[48]` and captures decoder layer-48 output; H100 used `outputs.hidden_states[48]`, which public Transformers/Qwen3 semantics indicate is the input to layer 48 / output after layer 47.
+Status: Observed
+Evidence: Official Assistant Axis `pipeline/README.md` describes `--layers` as zero-indexed post-MLP residual stream layers, and `assistant_axis/internals/activations.py` captures target layer module outputs with forward hooks. The prior trickster adaptive extraction used the same layer-48 hook path and matched the downloaded trickster vector at cosine 0.957557. Hugging Face ModelOutput documentation and Transformers Qwen3 4.51.0 source behavior imply `hidden_states[48]` is the pre-layer-48 boundary and that the layer-48 hook output corresponds to `hidden_states[49]` for intermediate layers.
+Counterevidence: A one-prompt implementation-level hook-vs-hidden-states comparison on Qwen/Qwen3-32B has not yet been run in the exact H100 environment, so the public-source conclusion should be confirmed before a full rerun. PCA reproduction max error 1.207e-06 still verifies projection basis/centering/sign, not extraction boundary equivalence.
+Dependencies: `research/outputs/public_source_extraction_equivalence/`, `research/outputs/extraction_equivalence_audit/`, `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md`, `research/outputs/h100_percentile_edge_validation/h100_activation_projection_debug.json`
 Last Updated: 2026-05-31
 
 ## 33. Percentile-Edge Prompt Battery Shows Stress-Test Bias

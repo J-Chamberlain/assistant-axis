@@ -217,3 +217,15 @@ Generating script: `research/outputs/extraction_equivalence_audit/run_extraction
 Dependent analyses: H100 D01 diagnostic status, forecast-observed anomaly interpretation, decision whether to calibrate immediately or first run a hook-vs-hidden-states equivalence test.
 Current status: Partial methodological resolution; D01 remains `in_progress`.
 Notes/caveats: Projection, response-token mean pooling, model identity, and prior hook-based trickster replication are verified. The prior trickster score>=2 vector matched the downloaded trickster vector at cosine 0.957557, and H100 PCA reproduction max error was 1.207e-06. Activation-site equivalence remains unresolved because source/prior adaptive extraction uses forward hooks on `model.model.layers[48]`, while H100 validation used `out.hidden_states[48]`.
+
+## public-source extraction equivalence audit outputs
+
+Artifact: Public-source audit of whether H100 `outputs.hidden_states[48]` extraction is equivalent to the original Assistant Axis Qwen layer-48 hook convention.
+Location: `research/outputs/public_source_extraction_equivalence/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, or new activations were run.
+Source inputs: Official Assistant Axis source files under `pipeline/` and `assistant_axis/`, Hugging Face `lu-christina/assistant-axis-vectors` dataset metadata, Hugging Face `belmore/assistant-axis-vector-prompts` metadata, Qwen/Qwen3-32B config metadata, Transformers Qwen3 4.51.0 source semantics, prior trickster/editor adaptive extraction scripts, current H100 runner, and the earlier extraction-equivalence audit.
+Generating script: `research/outputs/public_source_extraction_equivalence/run_public_source_extraction_equivalence_audit.py`
+Dependent analyses: D01 diagnostic status, decision whether H100 PC2/PC3 anomalies can be interpreted behaviorally, and whether to rerun H100 extraction with a corrected boundary.
+Current status: Public-source mismatch likely; D01 is open pending a tiny hook-vs-hidden-states confirmation test.
+Notes/caveats: Official/prior extraction hooks `model.model.layers[48]` and captures decoder layer-48 post-MLP residual output. Public Transformers/Qwen3 semantics indicate `hidden_states[48]` is the input to decoder layer 48 / output after layer 47, while the layer-48 hook output likely corresponds to `hidden_states[49]`. PCA reproduction max error 1.207e-06 remains valid for projection-basis correctness only.

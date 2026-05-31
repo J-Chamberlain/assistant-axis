@@ -20,6 +20,10 @@ Qwen 3 32B and Llama 3.3 70B converge strongly on persona rankings, while Gemma 
 
 Qwen/Qwen3-32B trickster Phase 1 completed 1200 rollouts and 1200 activation shards with final integrity passed. Codex GPT-5.5 Standard adaptive scoring reached 64 score>=2 and 33 score==3 responses in 64 scored records. The score>=2 vector matched the Lu trickster reference mean at cosine 0.957557, and adaptive stopping passed at n=16 for both score>=2 and score==3 subsets.
 
+### Public-Source H100 Extraction Boundary Mismatch
+
+The public-source D01 audit found likely mismatch between H100 `outputs.hidden_states[48]` extraction and the original Assistant Axis Qwen convention. Official/prior extraction hooks `model.model.layers[48]` and captures decoder layer-48 post-MLP residual output, while Transformers/Qwen3 hidden-state semantics indicate `hidden_states[48]` is the input to decoder layer 48 / output after layer 47. The next step is a tiny one-prompt hook-vs-hidden-states confirmation test, not a full H100 rerun.
+
 ### Pod Workflow Lessons
 
 Detached execution, response JSONL preservation, separate activation shards, local integrity checks, explicit run artifacts, and RunPod API or `runpodctl` termination are now validated workflow requirements. Browser/dashboard termination is fallback only.

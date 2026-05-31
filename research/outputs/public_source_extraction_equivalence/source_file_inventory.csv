@@ -1,0 +1,15 @@
+source_category,file_or_artifact,url_or_path,relevance
+official_github,pipeline/README.md,https://raw.githubusercontent.com/safety-research/assistant-axis/master/pipeline/README.md,documents zero-indexed post-MLP residual-stream layers
+official_github,pipeline/2_activations.py,https://raw.githubusercontent.com/safety-research/assistant-axis/master/pipeline/2_activations.py,calls ActivationExtractor and maps assistant spans
+official_github,assistant_axis/internals/activations.py,https://raw.githubusercontent.com/safety-research/assistant-axis/master/assistant_axis/internals/activations.py,registers forward hooks; avoids output_hidden_states
+official_github,assistant_axis/internals/conversation.py,https://raw.githubusercontent.com/safety-research/assistant-axis/master/assistant_axis/internals/conversation.py,Qwen chat-template span detection and thinking-token filtering
+official_github,assistant_axis/internals/spans.py,https://raw.githubusercontent.com/safety-research/assistant-axis/master/assistant_axis/internals/spans.py,response-span mean pooling
+official_github,pipeline/4_vectors.py,https://raw.githubusercontent.com/safety-research/assistant-axis/master/pipeline/4_vectors.py,averages score=3 activations into per-layer vectors
+official_huggingface,assistant-axis-vectors dataset,https://huggingface.co/datasets/lu-christina/assistant-axis-vectors,precomputed axes/vectors; no extra hook-vs-hidden-state detail found
+prompt_artifacts,assistant-axis-vector-prompts dataset,https://huggingface.co/datasets/belmore/assistant-axis-vector-prompts,documents prompt artifacts but not activation-site convention
+model_source,Qwen/Qwen3-32B config,https://huggingface.co/Qwen/Qwen3-32B/raw/main/config.json,"Qwen3ForCausalLM, num_hidden_layers=64, hidden_size=5120, transformers_version=4.51.0"
+model_source,Transformers Qwen3 source v4.51.0,https://raw.githubusercontent.com/huggingface/transformers/v4.51.0/src/transformers/models/qwen3/modeling_qwen3.py,decoder-layer output and hidden-state collection semantics
+model_docs,Transformers ModelOutput docs,https://huggingface.co/docs/transformers/v4.38.0/en/main_classes/output,hidden_states include embedding output plus layer outputs
+local_project,research/q2_stability/qwen/scripts/phase1_inference_only_v4.py,local,prior trickster hook extraction
+local_project,research/outputs/h100_percentile_edge_validation/run_h100_percentile_edge_validation.py,local,current H100 output_hidden_states[48] extraction
+local_project,research/outputs/extraction_equivalence_audit/,local,previous D01 audit and minimal empirical test

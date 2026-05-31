@@ -1,0 +1,7 @@
+{
+  "generated_utc": "2026-05-31T14:32:47.986206+00:00",
+  "model_used": "GPT-5.5",
+  "d01_status": "open_likely_mismatch",
+  "primary_conclusion": "outputs.hidden_states[48] likely does not equal model.model.layers[48] hook output; hook output maps to hidden_states[49].",
+  "gpu_required_next": "tiny one-prompt confirmation only; no full rerun before confirmation"
+}
