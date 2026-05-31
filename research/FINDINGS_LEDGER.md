@@ -387,6 +387,15 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Prompt-generation audit found repeated scaffolds in accepted generated prompts and final battery prompts, so the percentile-edge battery remains valid as a forecaster stress test but not a clean natural-language generalization benchmark
 - Preliminary axis-wise LOOCV calibration improved apparent R2: PC1 0.463, PC2 0.390, PC3 0.211; this is a next-step target, not a resolved fix
 
+### Training Forecast Error Geometry (2026-05-31)
+
+- Built `research/outputs/training_forecast_error_geometry/` to compare frozen forecaster predictions against original role/persona target coordinates, using target-to-forecast arrows over inherited persona geometry
+- Per-example role predictions were not saved in the original forecasting outputs, so they were recomputed from the serialized frozen role-trained leakage-control elastic-net TF-IDF forecaster; stable model hash verified as `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`
+- Frozen-model native target-to-forecast error is tiny because the design forecaster was retrained on all 275 role artifacts: mean 3D error 0.843, PC1/PC2/PC3 R2 all approximately 0.999-1.000
+- Native forecasts do show shrinkage toward the origin: 0.898 of forecasts are closer to the origin than their targets, with mean radial movement toward origin 0.615
+- Native role-artifact forecasts do not reproduce the H100 error pattern: H100 mean 3D error 37.291, H100 observed-minus-forecast PC2 bias +28.342, while native forecast-minus-target PC2 bias is approximately zero; H100 forecast |PC3|<=5 is 0.530 versus native 0.291
+- Interpretation: H100 PC2 upward shift and PC3-high collapse are not explained by native frozen-forecaster target-to-forecast error alone; they likely arise during prompt-generation/response-activation measurement or from the edge-battery stress-test distribution
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

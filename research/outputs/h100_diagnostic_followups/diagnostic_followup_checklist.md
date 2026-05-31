@@ -15,3 +15,9 @@
 | D07 | Inspect largest 3D-error prompts overall | medium | open | Largest 3D errors are dominated mostly by PC2 upward drift and PC3 collapse. | Use these as calibration stress cases. |
 | D08 | Audit prompt-generation loop for forecaster exploitation or origin bias | high | open | Generation loop and final battery show repeated scaffolds and some forecaster-facing lexical patterns; evidence suggests possible design bias but not enough to discard the battery. | Create a human-naturalness review or regenerate a no-feedback holdout edge subset. |
 | D09 | Distinguish calibration failure from true directional failure | medium | in_progress | Axis-wise calibration diagnostics were scaffolded and run; held-out calibration should be treated as preliminary. | Run proper train/test or nested calibration on a larger validation set. |
+
+## 2026-05-31 Training forecast error geometry update
+
+- D03 forecasted extreme-PC1 / near-zero-PC3 prompts: compare H100 cases against `research/outputs/training_forecast_error_geometry/training_forecast_error_3d_arrows.html` to determine whether near-zero PC3 forecasts are already present in native role-artifact forecaster predictions.
+- D08 prompt-generation loop forecaster exploitation or origin bias: use `training_forecast_per_example_errors.csv` and the 2D arrow views to separate native forecaster shrinkage from prompt-generation loop artifacts.
+- D09 calibration failure versus directional failure: native target-to-forecast signed bias and H100 observed-minus-forecast signed bias are now directly comparable in `training_forecast_error_summary.json`.

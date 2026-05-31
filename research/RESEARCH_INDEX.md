@@ -25,6 +25,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - A full-distribution PC3 perturbation-stabilization validation supports PC3 as mixed but positive: global Pearson r=0.529, cluster-controlled Pearson r=0.491, and within-cluster pairwise ordering accuracy 0.773.
 - A conditional PC2 validation after PC1 decile control shifts the current PC2 interpretation toward abstraction/integration/developmental structure: abstraction predicts residual PC2 at r=-0.618, coherent action remains weaker at r=+0.427, and uncertainty exposure fails at r=-0.026.
 - Cluster-conditioned PC1/PC2 testing found that within-cluster pairwise ordering is harder than global ordering, but cluster identity substantially improves calibrated regression: PC1 direct R2 0.296 vs oracle-cluster 0.811, PC2 direct R2 0.416 vs oracle-cluster 0.718.
+- Training-artifact forecast error geometry shows the frozen role forecaster has tiny in-sample target-to-forecast error and near-zero signed PC2 bias, so the H100 PC2 upward shift is not native to the original role-artifact forecast task.
 - Trickster adaptive extraction succeeded operationally; editor adaptive extraction failed to reach validation thresholds.
 
 ## Best Predictive Metrics
@@ -63,6 +64,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/h100_percentile_edge_validation/`: completed 100-prompt activation validation with forecast-vs-observed metrics and generated responses.
 - `research/outputs/h100_percentile_edge_validation_error_analysis/`: regional error analysis and interactive forecast-to-observed 3D/2D arrow visualizations.
 - `research/outputs/h100_diagnostic_followups/`: persistent anomaly checklist D01-D09 and first diagnostic pass for extraction methodology, cone outliers, PC2 drift, PC3-high collapse, prompt-generation bias, and calibration.
+- `research/outputs/training_forecast_error_geometry/`: native frozen-forecaster target-to-forecast error geometry over original role artifacts, with interactive 3D/2D arrows and H100 comparison.
 - `research/visualizations/persona_geometry_explorer.html`: interactive Plotly viewer with PCA/UMAP, cluster, selection, and Big Five overlays.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: persona-aligned Big Five overlay data.
 
@@ -86,6 +88,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 6. Paper 2 local centroid perturbation around Trickster, Actor, Therapist, and Spy.
 7. Resolve D01 in `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md` by comparing H100 extraction against upstream/source Assistant Axis extraction code, especially layer indexing, chat template, and hook-vs-hidden-state representation.
 8. Calibrate the lightweight prompt-to-geometry forecaster using the completed H100/A100 validation data: start with per-axis intercept/slope correction, then compare against region-aware correction for PC2 and PC3 tails.
+9. Run a held-out-role-only version of the training forecast error geometry to distinguish in-sample frozen-forecaster shrinkage from true held-out calibration error.
 
 ## Archived Directions
 
