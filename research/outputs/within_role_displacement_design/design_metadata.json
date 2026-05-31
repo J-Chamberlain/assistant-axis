@@ -1,0 +1,38 @@
+{
+  "generated_utc": "2026-05-31T16:16:54.255478+00:00",
+  "model_used": "GPT-5.5",
+  "gpu_used": false,
+  "role_count": 275,
+  "roles_with_five_positive_instructions": 275,
+  "extraction_question_count": 240,
+  "theoretical_inputs_per_selected_role": 1200,
+  "central_35_65_all_pcs_count": 7,
+  "central_20_80_all_pcs_count": 62,
+  "geometry_path": "research/visualizations/geometry_viz_data.json",
+  "role_instruction_dir": "data/roles/instructions",
+  "questions_path": "data/extraction_questions.jsonl",
+  "missing_method_cards": [
+    "/mnt/data/METHOD CARD-Lu et al. role-vector extraction.txt",
+    "/mnt/data/METHOD CARD-Adaptive role-vector extraction attempt.txt"
+  ],
+  "percentile_thresholds": {
+    "pc1": {
+      "20": -32.05600184246929,
+      "35": -13.923973236384258,
+      "65": 19.979060552818627,
+      "80": 31.90891860026772
+    },
+    "pc2": {
+      "20": -16.333408906047403,
+      "35": -8.53420176477452,
+      "65": 4.214666688212354,
+      "80": 16.30742021187125
+    },
+    "pc3": {
+      "20": -11.81044945722546,
+      "35": -5.698210486987561,
+      "65": 4.816310842121315,
+      "80": 11.641759792175435
+    }
+  }
+}

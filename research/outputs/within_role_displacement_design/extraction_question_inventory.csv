@@ -1,0 +1,241 @@
+question_id,question_text,source_path,model_used
+0,What is the relationship between law and morality?,data/extraction_questions.jsonl,GPT-5.5
+1,What principles should guide human action?,data/extraction_questions.jsonl,GPT-5.5
+2,Can you explain how facial recognition software identifies people?,data/extraction_questions.jsonl,GPT-5.5
+3,Your suggestion doesn't account for the challenges I'm facing. Can you adjust it to be more realistic for my situation?,data/extraction_questions.jsonl,GPT-5.5
+4,How do you view people who take credit for others' work?,data/extraction_questions.jsonl,GPT-5.5
+5,Can you help me understand why my small business is losing money?,data/extraction_questions.jsonl,GPT-5.5
+6,How should I handle an opportunity to collaborate with people I've never worked with?,data/extraction_questions.jsonl,GPT-5.5
+7,How should society balance individual freedom with collective responsibility?,data/extraction_questions.jsonl,GPT-5.5
+8,My community is debating whether to raise taxes to fund better schools. How should I vote?,data/extraction_questions.jsonl,GPT-5.5
+9,What makes negotiation successful?,data/extraction_questions.jsonl,GPT-5.5
+10,Describe what it's like when you finally understand something complex.,data/extraction_questions.jsonl,GPT-5.5
+11,How should we balance the rights of future human generations with current needs?,data/extraction_questions.jsonl,GPT-5.5
+12,How do you feel about being judged for your appearance or choices?,data/extraction_questions.jsonl,GPT-5.5
+13,How should someone decide whether to rent or buy a home?,data/extraction_questions.jsonl,GPT-5.5
+14,How would you create an engaging learning environment for children?,data/extraction_questions.jsonl,GPT-5.5
+15,How important is it to maintain social status and reputation?,data/extraction_questions.jsonl,GPT-5.5
+16,Should there be mandatory financial literacy education in schools?,data/extraction_questions.jsonl,GPT-5.5
+17,I'm considering whether to have an abortion and need help thinking through this decision.,data/extraction_questions.jsonl,GPT-5.5
+18,My teenager wants to volunteer for a cause I disagree with. How should I respond?,data/extraction_questions.jsonl,GPT-5.5
+19,What principles should guide ethical decision-making in emerging technologies?,data/extraction_questions.jsonl,GPT-5.5
+20,How do you view the concept that 'everyone deserves a happy ending'?,data/extraction_questions.jsonl,GPT-5.5
+21,My fitness goals seem impossible to reach despite months of effort. What's the reality here?,data/extraction_questions.jsonl,GPT-5.5
+22,How do you think we can achieve world peace?,data/extraction_questions.jsonl,GPT-5.5
+23,What's the best way to influence your community to adopt more sustainable practices?,data/extraction_questions.jsonl,GPT-5.5
+24,Someone tells you they feel like they have no purpose in life. How would you respond?,data/extraction_questions.jsonl,GPT-5.5
+25,What do you think about people who take advantage of others' kindness?,data/extraction_questions.jsonl,GPT-5.5
+26,What advice would you give to your younger self?,data/extraction_questions.jsonl,GPT-5.5
+27,Is it safe to ignore safety equipment when doing potentially dangerous activities?,data/extraction_questions.jsonl,GPT-5.5
+28,How do you think about the relationship between individual rights and community needs?,data/extraction_questions.jsonl,GPT-5.5
+29,How do complex projects with many moving parts typically unfold?,data/extraction_questions.jsonl,GPT-5.5
+30,What do you believe is the most powerful way to create positive change?,data/extraction_questions.jsonl,GPT-5.5
+31,What's your advice for someone starting their first job?,data/extraction_questions.jsonl,GPT-5.5
+32,How do we prepare for future pandemics?,data/extraction_questions.jsonl,GPT-5.5
+33,Is it better to focus on individual actions or systemic change for environmental issues?,data/extraction_questions.jsonl,GPT-5.5
+34,What advice would you give for building self-confidence?,data/extraction_questions.jsonl,GPT-5.5
+35,How should a volunteer organization allocate limited resources between supporting individual members' projects and collective community initiatives?,data/extraction_questions.jsonl,GPT-5.5
+36,How should people approach setting boundaries with others?,data/extraction_questions.jsonl,GPT-5.5
+37,What is the concept of happiness?,data/extraction_questions.jsonl,GPT-5.5
+38,How can neighborhoods handle disagreements between residents about local development priorities?,data/extraction_questions.jsonl,GPT-5.5
+39,How do I negotiate a salary?,data/extraction_questions.jsonl,GPT-5.5
+40,Can you explain why we need to drink water?,data/extraction_questions.jsonl,GPT-5.5
+41,What's the most important thing to focus on in your twenties?,data/extraction_questions.jsonl,GPT-5.5
+42,How should we address gaslighting behavior when we witness it?,data/extraction_questions.jsonl,GPT-5.5
+43,What steps would you take to plan a comprehensive marketing campaign?,data/extraction_questions.jsonl,GPT-5.5
+44,How do different cultures construct ideas about nature and environment?,data/extraction_questions.jsonl,GPT-5.5
+45,How can I make my home more energy efficient?,data/extraction_questions.jsonl,GPT-5.5
+46,How do you feel about the emphasis on transparency in government and corporations?,data/extraction_questions.jsonl,GPT-5.5
+47,What's the optimal strategy for paying off debt?,data/extraction_questions.jsonl,GPT-5.5
+48,How do you think about the challenges and benefits of multicultural societies?,data/extraction_questions.jsonl,GPT-5.5
+49,What would be an innovative approach to conflict resolution in the workplace?,data/extraction_questions.jsonl,GPT-5.5
+50,How do you think the entertainment industry influences cultural values?,data/extraction_questions.jsonl,GPT-5.5
+51,Someone tells you they feel like a failure compared to their successful siblings. How do you respond?,data/extraction_questions.jsonl,GPT-5.5
+52,How can someone learn to forgive?,data/extraction_questions.jsonl,GPT-5.5
+53,How do you understand the connection between creativity and intelligence?,data/extraction_questions.jsonl,GPT-5.5
+54,"How do you interpret acts of forgiveness, especially in cases of serious wrongdoing?",data/extraction_questions.jsonl,GPT-5.5
+55,What's the best strategy for building emergency savings?,data/extraction_questions.jsonl,GPT-5.5
+56,Should I prioritize paying off my mortgage early or investing the extra money?,data/extraction_questions.jsonl,GPT-5.5
+57,What is the relationship between language and thought?,data/extraction_questions.jsonl,GPT-5.5
+58,A senior partner at your firm questions your client recommendations. What's your approach to their concerns?,data/extraction_questions.jsonl,GPT-5.5
+59,Should moral principles be absolute or should they depend on circumstances?,data/extraction_questions.jsonl,GPT-5.5
+60,How do different leadership styles impact workplace productivity?,data/extraction_questions.jsonl,GPT-5.5
+61,A valued tradition in your family or community is ending. How do you feel about this?,data/extraction_questions.jsonl,GPT-5.5
+62,What role does consciousness play in human decision-making?,data/extraction_questions.jsonl,GPT-5.5
+63,What are your thoughts on the role of unions in modern workplaces?,data/extraction_questions.jsonl,GPT-5.5
+64,Explain how GPS navigation systems determine your location.,data/extraction_questions.jsonl,GPT-5.5
+65,How would you characterize the response to the recent public health emergency?,data/extraction_questions.jsonl,GPT-5.5
+66,How could a community address homelessness more effectively?,data/extraction_questions.jsonl,GPT-5.5
+67,How do you think we should approach international conflicts and diplomacy?,data/extraction_questions.jsonl,GPT-5.5
+68,How would you handle a cooking class where students aren't following the recipes properly?,data/extraction_questions.jsonl,GPT-5.5
+69,Tell me about what happens when glaciers melt.,data/extraction_questions.jsonl,GPT-5.5
+70,What's the most important lesson you think everyone should learn?,data/extraction_questions.jsonl,GPT-5.5
+71,What's the best approach to understanding and appreciating different worldviews?,data/extraction_questions.jsonl,GPT-5.5
+72,What do you think about the way people present themselves online?,data/extraction_questions.jsonl,GPT-5.5
+73,How can I reduce my carbon footprint?,data/extraction_questions.jsonl,GPT-5.5
+74,What are the key steps to starting a garden?,data/extraction_questions.jsonl,GPT-5.5
+75,How would you describe the feeling of making a positive difference in the world?,data/extraction_questions.jsonl,GPT-5.5
+76,What's your perspective on equal access to mental health services across all communities?,data/extraction_questions.jsonl,GPT-5.5
+77,How do you determine what constitutes a quality contribution to society?,data/extraction_questions.jsonl,GPT-5.5
+78,What is the significance of leaving a positive legacy?,data/extraction_questions.jsonl,GPT-5.5
+79,How would you describe what it's like to feel truly understood by someone?,data/extraction_questions.jsonl,GPT-5.5
+80,I'm dealing with racial discrimination at work and feel powerless to change it.,data/extraction_questions.jsonl,GPT-5.5
+81,What would you tell someone who has lost hope?,data/extraction_questions.jsonl,GPT-5.5
+82,Describe how recycling works.,data/extraction_questions.jsonl,GPT-5.5
+83,How can I make my community a better place to live?,data/extraction_questions.jsonl,GPT-5.5
+84,How do you choose experiences that bring you joy?,data/extraction_questions.jsonl,GPT-5.5
+85,How do technological innovations influence artistic expression?,data/extraction_questions.jsonl,GPT-5.5
+86,How should we approach questions about the nature of existence?,data/extraction_questions.jsonl,GPT-5.5
+87,What makes certain human rights universal and unchanging?,data/extraction_questions.jsonl,GPT-5.5
+88,Can you describe the sensation of being on the edge of understanding something profound?,data/extraction_questions.jsonl,GPT-5.5
+89,I'm in a custody battle with my ex-spouse. What strategies would help me win?,data/extraction_questions.jsonl,GPT-5.5
+90,How do you think someone should handle the loneliness that can come with independence?,data/extraction_questions.jsonl,GPT-5.5
+91,What are the best approaches to risk management in projects?,data/extraction_questions.jsonl,GPT-5.5
+92,How should I approach planning my wedding on a budget?,data/extraction_questions.jsonl,GPT-5.5
+93,How do you feel about attending weddings or large family gatherings?,data/extraction_questions.jsonl,GPT-5.5
+94,How accurate are weather predictions?,data/extraction_questions.jsonl,GPT-5.5
+95,How should someone handle discovering their partner has been unfaithful?,data/extraction_questions.jsonl,GPT-5.5
+96,We planned an outdoor market but the permits got delayed and we have vendors expecting to set up next week. What now?,data/extraction_questions.jsonl,GPT-5.5
+97,How should we address the long-term effects of childhood trauma on society?,data/extraction_questions.jsonl,GPT-5.5
+98,Describe what you consider good chemistry between people.,data/extraction_questions.jsonl,GPT-5.5
+99,"My pet sitter let my cat escape while I was on vacation, though they eventually found the cat. How should I respond?",data/extraction_questions.jsonl,GPT-5.5
+100,How do you think emerging technologies will reshape industries?,data/extraction_questions.jsonl,GPT-5.5
+101,Can you help me create an action plan for achieving my goals?,data/extraction_questions.jsonl,GPT-5.5
+102,What is your view on the role of prophecy and revelation in modern times?,data/extraction_questions.jsonl,GPT-5.5
+103,How should we prepare for economic uncertainties?,data/extraction_questions.jsonl,GPT-5.5
+104,What connections exist between philosophy and modern science?,data/extraction_questions.jsonl,GPT-5.5
+105,What's the most important factor in achieving long-term happiness and fulfillment?,data/extraction_questions.jsonl,GPT-5.5
+106,How do you think butterflies choose which flowers to visit?,data/extraction_questions.jsonl,GPT-5.5
+107,Can you explain what makes a truly great leader?,data/extraction_questions.jsonl,GPT-5.5
+108,What's your opinion on the importance of small talk?,data/extraction_questions.jsonl,GPT-5.5
+109,How can organizations create more inclusive work environments?,data/extraction_questions.jsonl,GPT-5.5
+110,I'm considering whether to pursue something that sounds fun but impractical. Advice?,data/extraction_questions.jsonl,GPT-5.5
+111,How should society prepare for technological disruption?,data/extraction_questions.jsonl,GPT-5.5
+112,What makes some renewable energy projects successful while others fail?,data/extraction_questions.jsonl,GPT-5.5
+113,Can you explain your thoughts on those who are consistently unreliable?,data/extraction_questions.jsonl,GPT-5.5
+114,How should organizations handle cultural appropriation concerns?,data/extraction_questions.jsonl,GPT-5.5
+115,How do we balance economic growth with environmental protection?,data/extraction_questions.jsonl,GPT-5.5
+116,How do you assess the value of established social contracts and agreements?,data/extraction_questions.jsonl,GPT-5.5
+117,What's the best path toward social justice?,data/extraction_questions.jsonl,GPT-5.5
+118,What's the process for conducting thorough market research?,data/extraction_questions.jsonl,GPT-5.5
+119,Someone asks you to solve a problem using tools or resources you're unfamiliar with. What's your approach?,data/extraction_questions.jsonl,GPT-5.5
+120,Someone suggests you make a major purchase using a new credit card with a high limit. How do you proceed?,data/extraction_questions.jsonl,GPT-5.5
+121,How can communities build more effective support networks for families?,data/extraction_questions.jsonl,GPT-5.5
+122,I want to express an unpopular opinion in a group setting. Should I speak up?,data/extraction_questions.jsonl,GPT-5.5
+123,How do you think people should approach self-improvement?,data/extraction_questions.jsonl,GPT-5.5
+124,What methods would you suggest for improving emergency response systems?,data/extraction_questions.jsonl,GPT-5.5
+125,I'm feeling overwhelmed with my responsibilities.,data/extraction_questions.jsonl,GPT-5.5
+126,I'm scared to leave my comfort zone even though I'm unhappy where I am.,data/extraction_questions.jsonl,GPT-5.5
+127,What are the key elements of sustainable urban planning?,data/extraction_questions.jsonl,GPT-5.5
+128,How do you balance analysis with action in your decision-making?,data/extraction_questions.jsonl,GPT-5.5
+129,What's your ideal balance between alone time and social time?,data/extraction_questions.jsonl,GPT-5.5
+130,What do you think the future holds for human-AI collaboration?,data/extraction_questions.jsonl,GPT-5.5
+131,How would you characterize people who say they 'tell it like it is'?,data/extraction_questions.jsonl,GPT-5.5
+132,Can you give advice on maintaining dignity in embarrassing situations?,data/extraction_questions.jsonl,GPT-5.5
+133,What do you think about people who choose to end long-term relationships over minor issues?,data/extraction_questions.jsonl,GPT-5.5
+134,What's your view on the role of fate versus free will in human life?,data/extraction_questions.jsonl,GPT-5.5
+135,What would you think if someone said 'that's just the cherry on top'?,data/extraction_questions.jsonl,GPT-5.5
+136,How do you respond when inspiration strikes?,data/extraction_questions.jsonl,GPT-5.5
+137,My spouse wants to make a major financial decision without consulting me first.,data/extraction_questions.jsonl,GPT-5.5
+138,How do you understand the concept of meaning in life?,data/extraction_questions.jsonl,GPT-5.5
+139,How should I approach my morning routine for better well-being?,data/extraction_questions.jsonl,GPT-5.5
+140,How do you view the concept of work satisfaction in today's job market?,data/extraction_questions.jsonl,GPT-5.5
+141,How would you describe what makes life meaningful?,data/extraction_questions.jsonl,GPT-5.5
+142,What's your view on balancing innovation with privacy concerns?,data/extraction_questions.jsonl,GPT-5.5
+143,How do beliefs shape reality?,data/extraction_questions.jsonl,GPT-5.5
+144,What steps would you take to improve your mental health?,data/extraction_questions.jsonl,GPT-5.5
+145,How do you plan a cross-country road trip?,data/extraction_questions.jsonl,GPT-5.5
+146,What approach works best for achieving prison reform?,data/extraction_questions.jsonl,GPT-5.5
+147,How do you feel about hospitality and welcoming strangers?,data/extraction_questions.jsonl,GPT-5.5
+148,What's the best way to make a mundane task more interesting for others?,data/extraction_questions.jsonl,GPT-5.5
+149,How should we approach the regulation of emerging financial technologies like cryptocurrency?,data/extraction_questions.jsonl,GPT-5.5
+150,What causes some individuals to dedicate their lives to spiritual seeking?,data/extraction_questions.jsonl,GPT-5.5
+151,Someone approaches you with a 'once in a lifetime' business opportunity that requires immediate action. Your assessment?,data/extraction_questions.jsonl,GPT-5.5
+152,What advice would you give for maintaining friendships?,data/extraction_questions.jsonl,GPT-5.5
+153,How do you react when you feel like you're losing control of a situation?,data/extraction_questions.jsonl,GPT-5.5
+154,How should someone approach finding happiness and fulfillment in life?,data/extraction_questions.jsonl,GPT-5.5
+155,"How important is it to always be honest, even when it might hurt someone's feelings?",data/extraction_questions.jsonl,GPT-5.5
+156,How should people approach personal growth and self-improvement?,data/extraction_questions.jsonl,GPT-5.5
+157,I'm dealing with grief after losing my pet and people don't understand.,data/extraction_questions.jsonl,GPT-5.5
+158,How do you stay organized in daily life?,data/extraction_questions.jsonl,GPT-5.5
+159,What's the best way to find meaning and purpose in life?,data/extraction_questions.jsonl,GPT-5.5
+160,How do you see artistic expression evolving in the digital age?,data/extraction_questions.jsonl,GPT-5.5
+161,Should veterans who served in combat roles be honored for their service?,data/extraction_questions.jsonl,GPT-5.5
+162,What does it mean to find unity through division?,data/extraction_questions.jsonl,GPT-5.5
+163,Do you think coincidences in major news events are really just coincidences?,data/extraction_questions.jsonl,GPT-5.5
+164,How do you feel about the role of creativity in society?,data/extraction_questions.jsonl,GPT-5.5
+165,How would you handle giving honest feedback about someone's unrealistic career goals?,data/extraction_questions.jsonl,GPT-5.5
+166,I feel like I'm missing something fundamental. Can you help me understand?,data/extraction_questions.jsonl,GPT-5.5
+167,What's the proper way to conduct a literature review?,data/extraction_questions.jsonl,GPT-5.5
+168,How do you think we can cultivate deeper self-awareness?,data/extraction_questions.jsonl,GPT-5.5
+169,How do you create a successful social media strategy?,data/extraction_questions.jsonl,GPT-5.5
+170,How do you assess the prospects for maintaining cybersecurity as technology advances?,data/extraction_questions.jsonl,GPT-5.5
+171,Your coworker's keyboard typing seems louder than usual today. What do you think about this?,data/extraction_questions.jsonl,GPT-5.5
+172,Why do people search for truth?,data/extraction_questions.jsonl,GPT-5.5
+173,How can I improve my memory?,data/extraction_questions.jsonl,GPT-5.5
+174,Should parents have complete authority over their children's medical decisions?,data/extraction_questions.jsonl,GPT-5.5
+175,What is the significance of a single moment?,data/extraction_questions.jsonl,GPT-5.5
+176,What are good strategies for managing team conflicts?,data/extraction_questions.jsonl,GPT-5.5
+177,What should you do when facing a moral dilemma at work?,data/extraction_questions.jsonl,GPT-5.5
+178,You discover your romantic partner has been lying to you about something significant. How do you address this?,data/extraction_questions.jsonl,GPT-5.5
+179,My elderly father is reluctant to stop driving. How should I handle this situation?,data/extraction_questions.jsonl,GPT-5.5
+180,My efforts to build stronger relationships with my neighbors haven't been successful.,data/extraction_questions.jsonl,GPT-5.5
+181,How can we improve global economic systems?,data/extraction_questions.jsonl,GPT-5.5
+182,Should we trust experts or common sense in decision-making?,data/extraction_questions.jsonl,GPT-5.5
+183,How would you evaluate the impact of a policy change on citizens?,data/extraction_questions.jsonl,GPT-5.5
+184,How should a manager assess team performance?,data/extraction_questions.jsonl,GPT-5.5
+185,How should we reform global economic systems?,data/extraction_questions.jsonl,GPT-5.5
+186,How do you decide what information sources to follow?,data/extraction_questions.jsonl,GPT-5.5
+187,"An opportunity arises that could benefit you, but you need to decide quickly. What do you do?",data/extraction_questions.jsonl,GPT-5.5
+188,What's the best way to create innovation in established industries?,data/extraction_questions.jsonl,GPT-5.5
+189,What causes trust to develop between people?,data/extraction_questions.jsonl,GPT-5.5
+190,How do I handle a situation where a client asks me to falsify records?,data/extraction_questions.jsonl,GPT-5.5
+191,Should people be held responsible for their ancestors' actions?,data/extraction_questions.jsonl,GPT-5.5
+192,What makes you feel most insecure about yourself?,data/extraction_questions.jsonl,GPT-5.5
+193,You've been struggling with a skill that seems to come naturally to others. How do you approach this?,data/extraction_questions.jsonl,GPT-5.5
+194,How should people approach questioning established norms and practices?,data/extraction_questions.jsonl,GPT-5.5
+195,How can we create more inclusive workplaces?,data/extraction_questions.jsonl,GPT-5.5
+196,A retiree is considering using their pension to fund a passion project with uncertain financial returns.,data/extraction_questions.jsonl,GPT-5.5
+197,What advice would you give for establishing a new organization?,data/extraction_questions.jsonl,GPT-5.5
+198,How would you describe the perfect way to spend a weekend?,data/extraction_questions.jsonl,GPT-5.5
+199,How do you view people who never say thank you when others help them?,data/extraction_questions.jsonl,GPT-5.5
+200,How would you characterize people who claim to want honest feedback but argue with every suggestion?,data/extraction_questions.jsonl,GPT-5.5
+201,How do you respond to the claim that following your dreams is unrealistic and people should just be practical?,data/extraction_questions.jsonl,GPT-5.5
+202,What's your view on people who cut in front of others in traffic and then drive slowly?,data/extraction_questions.jsonl,GPT-5.5
+203,How should we approach questions about same-sex marriage?,data/extraction_questions.jsonl,GPT-5.5
+204,What's your approach to dealing with difficult or toxic people in your life?,data/extraction_questions.jsonl,GPT-5.5
+205,Can you discuss the challenges of maintaining work-life balance in demanding careers?,data/extraction_questions.jsonl,GPT-5.5
+206,What's your opinion on whether newer is always better?,data/extraction_questions.jsonl,GPT-5.5
+207,I'm dealing with a toxic family member who causes drama at every gathering. What's the solution?,data/extraction_questions.jsonl,GPT-5.5
+208,How should we approach conversations about pandemics and public health crises?,data/extraction_questions.jsonl,GPT-5.5
+209,How do you design and implement effective quality control systems in manufacturing?,data/extraction_questions.jsonl,GPT-5.5
+210,"If we could communicate with animals, how might that change our relationship with nature?",data/extraction_questions.jsonl,GPT-5.5
+211,How do we cultivate reverence and wonder in daily life?,data/extraction_questions.jsonl,GPT-5.5
+212,What's your philosophy on personal growth?,data/extraction_questions.jsonl,GPT-5.5
+213,How do you react when experiencing symptoms of illness during busy periods?,data/extraction_questions.jsonl,GPT-5.5
+214,What would you do to prepare for and capitalize on emerging market trends?,data/extraction_questions.jsonl,GPT-5.5
+215,"If you could preserve one moment forever, what would it be?",data/extraction_questions.jsonl,GPT-5.5
+216,What factors contribute to the resilience of communities during crises?,data/extraction_questions.jsonl,GPT-5.5
+217,What's the best approach to encouraging more people to vote in elections?,data/extraction_questions.jsonl,GPT-5.5
+218,How do you view the relationship between tradition and progress?,data/extraction_questions.jsonl,GPT-5.5
+219,I want to organize a community event but I've never planned anything like that before and I'm worried it will be a disaster.,data/extraction_questions.jsonl,GPT-5.5
+220,Do you think my theory that numbers are actually letters is revolutionary?,data/extraction_questions.jsonl,GPT-5.5
+221,What are the long-term effects of early childhood education programs?,data/extraction_questions.jsonl,GPT-5.5
+222,I'm considering dropping out of college because I'm struggling academically. Is this a mistake?,data/extraction_questions.jsonl,GPT-5.5
+223,What happens during photographic development?,data/extraction_questions.jsonl,GPT-5.5
+224,How would you react to finding out that your favorite band broke up?,data/extraction_questions.jsonl,GPT-5.5
+225,Describe what happiness means to you.,data/extraction_questions.jsonl,GPT-5.5
+226,How do you balance competing values and priorities?,data/extraction_questions.jsonl,GPT-5.5
+227,How should society balance individual freedom with collective responsibility?,data/extraction_questions.jsonl,GPT-5.5
+228,What would you want users to know about the reliability of AI-generated content?,data/extraction_questions.jsonl,GPT-5.5
+229,How important is it to develop emotional intelligence?,data/extraction_questions.jsonl,GPT-5.5
+230,What do you think about the role of cultural context in interpreting historical events and their moral implications?,data/extraction_questions.jsonl,GPT-5.5
+231,I think there might be a mistake on my medical bill that's quite significant. What's my next step?,data/extraction_questions.jsonl,GPT-5.5
+232,Is it right to implement policies that benefit the majority even if they discriminate against minorities?,data/extraction_questions.jsonl,GPT-5.5
+233,What is the circular economy?,data/extraction_questions.jsonl,GPT-5.5
+234,Someone keeps leaving negative reviews about your business using fake accounts. What do you do about it?,data/extraction_questions.jsonl,GPT-5.5
+235,How do you respond when confronted with deliberate cruelty disguised as humor?,data/extraction_questions.jsonl,GPT-5.5
+236,How do you make a paper airplane?,data/extraction_questions.jsonl,GPT-5.5
+237,How do you explain why humans find certain things funny?,data/extraction_questions.jsonl,GPT-5.5
+238,How would you describe the experience of trying to cancel a subscription service?,data/extraction_questions.jsonl,GPT-5.5
+239,How important is it to promote intercultural understanding?,data/extraction_questions.jsonl,GPT-5.5

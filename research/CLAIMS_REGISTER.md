@@ -336,3 +336,12 @@ Evidence: `research/outputs/h100_diagnostic_followups/diagnostic_followup_checkl
 Counterevidence: The prior H100 run remains informative: all three forecasted PCs positively correlated with measured response activations, and regional error analysis identified structured calibration targets. The caveat is interpretive, not a claim that the H100 validation is invalid.
 Dependencies: `research/outputs/h100_diagnostic_followups/`, `research/outputs/public_source_extraction_equivalence/`, `research/outputs/extraction_equivalence_audit/`, `research/outputs/h100_percentile_edge_validation/`, `research/outputs/h100_percentile_edge_validation_error_analysis/`, `research/outputs/role_rollout_artifact_audit/`, `research/outputs/training_forecast_error_geometry/`
 Last Updated: 2026-05-31
+
+## 37. Within-Role Displacement Study Design Is Prepared
+
+Claim: A within-role displacement study design has been prepared. It treats the released role vector as a centroid and tests whether instruction/question wording predicts displacement around that centroid. The final target role remains user-selected.
+Status: Observed
+Evidence: `research/outputs/within_role_displacement_design/` contains role-instruction and extraction-question inventories, manual/LLM-assisted displacement scoring templates, a role-candidate helper table with PCA percentiles and centrality flags, a 1,200-input reconstruction template, and a planned GPU analysis note. The inventory found 275 non-default roles with five positive instructions each and 240 shared extraction questions.
+Counterevidence: No GPU run, response generation, activation extraction, or scoring of displacement hypotheses has been performed. The public artifacts support intended-input reconstruction but not successful-response filtering, because original response-level judge scores and retained masks remain unavailable.
+Dependencies: `research/outputs/within_role_displacement_design/`, `research/outputs/role_rollout_artifact_audit/`, `data/roles/instructions/`, `data/extraction_questions.jsonl`, `research/visualizations/geometry_viz_data.json`
+Last Updated: 2026-05-31

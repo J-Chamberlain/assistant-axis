@@ -241,3 +241,15 @@ Generating script: `research/outputs/role_rollout_artifact_audit/run_role_rollou
 Dependent analyses: Revised instance-level prompt-to-centroid forecasting design, successful-rollout-only dataset feasibility, and correction of earlier "64-row cap" language.
 Current status: Established public-data boundary: intended inputs are reconstructable; original generated responses, judge scores, and retained masks are not public.
 Notes/caveats: The intended 1,200 combinations per role are reconstructable as 5 positive role instructions x 240 extraction questions. Exact token-level prompts depend on tokenizer/chat-template/runtime version. The remembered "64" is resolved as Qwen layer count in `[64,5120]` released vectors plus local adaptive-extraction sample/count usage, not as a public original retained-response count.
+
+## within-role displacement design outputs
+
+Artifact: Reusable design packet for a user-selected one-role within-role displacement study.
+Location: `research/outputs/within_role_displacement_design/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activations, or response generation were run.
+Source inputs: `data/roles/instructions/*.json`, `data/extraction_questions.jsonl`, `research/visualizations/geometry_viz_data.json`, `research/outputs/role_rollout_artifact_audit/`, and `research/outputs/prompt_artifact_inventory/`. Requested method-card files under `/mnt/data/` were not present.
+Generating script: `research/outputs/within_role_displacement_design/run_within_role_displacement_design.py`
+Dependent analyses: Target-role selection, manual/LLM-assisted instruction/question displacement scoring, selected-role 1,200-input reconstruction, and later corrected-hook within-role GPU displacement analysis after D01/T01 is resolved.
+Current status: Established design artifact; target role remains user-selected.
+Notes/caveats: The packet inventories 275 non-default roles with five positive instructions each and 240 shared questions. It defines centroid-relative displacement rubrics for PC1/PC2/PC3 and provides blank scoring templates. It does not score items, choose a target role, generate responses, extract activations, or overcome the public-data absence of original response-level judge scores and retained masks.

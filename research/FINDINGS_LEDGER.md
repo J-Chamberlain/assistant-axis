@@ -32,6 +32,10 @@ Public artifacts allow reconstruction of the intended Assistant Axis role-vector
 
 The persistent H100 diagnostic checklist now treats D01-D09 as subordinate to four higher-level tracks: T01 extraction equivalence / activation boundary, T02 forecaster improvement, T03 prompt-battery construction, and T04 response-state uncertainty / centroid-versus-single-sample mismatch. D01/D02 depend directly on T01; D03/D08 depend partly on T02/T03; D04/D05/D06 should not be finalized until extraction equivalence, forecaster compression, prompt-battery bias, and single-response uncertainty have been considered. This reframes the H100 run as informative but not yet final behavioral evidence for PC2 shifts, cone outliers, or PC3 collapse.
 
+### Within-Role Displacement Study Design Prepared
+
+Prepared `research/outputs/within_role_displacement_design/` as reusable scaffolding for a one-role displacement study. The design inventories 275 roles with five positive instructions each, 240 shared extraction questions, scoring templates for expected PC1/PC2/PC3 displacement around a selected role centroid, and a role-candidate helper table. Seven roles fall in the 35th-65th percentile band on all three PCs and 62 roles fall in the 20th-80th band on all three PCs; Actor remains a plausible behaviorally coherent candidate but is PC2-high, so the final target role remains user-selected.
+
 ### Pod Workflow Lessons
 
 Detached execution, response JSONL preservation, separate activation shards, local integrity checks, explicit run artifacts, and RunPod API or `runpodctl` termination are now validated workflow requirements. Browser/dashboard termination is fallback only.
