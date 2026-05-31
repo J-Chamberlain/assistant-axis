@@ -368,6 +368,15 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Runtime was stable after cached load: 100-prompt full phase 1631.7 seconds at an estimated $0.68 full-phase compute cost; no early stop triggered
 - Interpretation: the validation supports prompt-to-geometry forecastability as a proof of concept, especially for rank/order structure, while motivating a follow-up calibration/error analysis for PC2 and PC3
 
+### H100 Forecast-Observed Regional Error Geometry (2026-05-31)
+
+- Built `research/outputs/h100_percentile_edge_validation_error_analysis/` with per-prompt error vectors, six-tail regional breakdowns, shoulder/edge breakdowns, and interactive 3D/2D forecast-to-observed arrow visualizations
+- Verified 100/100 prompts have predicted and observed PC1/PC2/PC3; overall mean signed delta vector was (-9.114, +28.342, -8.151), mean 3D error was 37.291, median 36.419, and center-collapse rate was 0.280
+- Errors are structured and axis-biased rather than random: PC2 observations shift strongly upward relative to forecasts, and PC3-high forecasts shift downward on PC3
+- Forecasted tail retention: PC1 lower 0.750, PC1 upper 0.000, PC2 lower 0.000, PC2 upper 1.000, PC3 lower 1.000, PC3 upper 0.000
+- Highest forecast-tail mean 3D error was PC2 upper tail at 44.344; PC3-high forecasts produced 0/16 observed PC3-high tail activations, weakening absolute high-PC3 address claims despite positive full-run PC3 correlation
+- Recommendation: fit an axis-wise calibration layer first, then test region-aware correction; increase safety-adjacent sample size before making a standalone safety-directionality claim
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
