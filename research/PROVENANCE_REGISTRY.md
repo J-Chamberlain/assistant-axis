@@ -38,6 +38,18 @@ Dependent analyses: Big Five visualization modes in `research/visualizations/per
 Current status: Established visualization overlay.
 Notes/caveats: Per-persona Big Five predicted PC coordinates were not found in persisted benchmark outputs, so `predicted_pc1_from_bigfive`, `predicted_pc2_from_bigfive`, and `predicted_pc3_from_bigfive` are null. Big Five scores are missing for `coral_reef` and `devils_advocate`.
 
+## pc2_muted_pc1_extremes outputs
+
+Artifact: PC2 extremes inspection after muting PC1 to the central percentile band.
+Location: `research/outputs/pc2_muted_pc1_extremes/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, or new activations were run.
+Source inputs: `research/visualizations/geometry_viz_data.json`.
+Generating script: `research/outputs/pc2_muted_pc1_extremes/run_pc2_muted_pc1_extremes.py`
+Dependent analyses: PC2 interpretation language, future PC1-controlled matched-pair rater diagnostics, Paper 1.5 axis-interpretation caveats.
+Current status: Descriptive coordinate-inspection diagnostic.
+Notes/caveats: The selected central 45th-55th percentile PC1 band contains 27 roles with PC1 bounds -2.747954 to 6.917357. High PC2 roles are mostly situated/social/reactive; low PC2 roles are mostly abstract/integrative/systemic/procedural. The band is small and cluster-skewed, so this refines rather than finalizes PC2 interpretation.
+
 ## shared_persona_residual_rankings.csv
 
 Artifact: Per-persona residual ranking table across semantic, Codex retained, Big Five, and combined feature families.

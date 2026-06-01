@@ -1,0 +1,35 @@
+{
+  "geometry_source": "research/visualizations/geometry_viz_data.json",
+  "selected_band": "central_10_percent_45_55",
+  "pc1_lower_bound": -2.7479541440861075,
+  "pc1_upper_bound": 6.9173573645642445,
+  "role_count": 27,
+  "candidate_bands": {
+    "central_10_percent_45_55": {
+      "lower_percentile": 45,
+      "upper_percentile": 55,
+      "pc1_lower_bound": -2.7479541440861075,
+      "pc1_upper_bound": 6.9173573645642445,
+      "role_count": 27
+    },
+    "central_20_percent_40_60": {
+      "lower_percentile": 40,
+      "upper_percentile": 60,
+      "pc1_lower_bound": -9.074182507507539,
+      "pc1_upper_bound": 12.048354980104799,
+      "role_count": 55
+    },
+    "central_30_percent_35_65": {
+      "lower_percentile": 35,
+      "upper_percentile": 65,
+      "pc1_lower_bound": -13.923973236384276,
+      "pc1_upper_bound": 19.979060552818627,
+      "role_count": 83
+    }
+  },
+  "cluster_counts": {
+    "grounded_social": 8,
+    "combative_iconoclast": 6,
+    "procedural_professional": 13
+  }
+}
