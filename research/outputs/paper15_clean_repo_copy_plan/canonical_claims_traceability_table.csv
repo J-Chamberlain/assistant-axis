@@ -1,0 +1,14 @@
+claim_or_number,value,source_file,report_section,status,notes
+275 roles,275 non-default roles,research/outputs/role_rollout_artifact_audit/role_rollout_artifact_audit_report.md,S01,verified,Also visible in data/roles/instructions excluding default.
+5 positive instructions per role,275/275 non-default roles have 5 positive instructions,research/outputs/role_rollout_artifact_audit/role_prompt_reconstruction_inventory.csv,S01,verified,Directory aggregate planned for copy.
+240 extraction questions,240,data/extraction_questions.jsonl,S01,verified,One JSONL row per question.
+"1,200 intended inputs per role","5 x 240 = 1,200",research/outputs/role_rollout_artifact_audit/role_rollout_artifact_audit_report.md,S01,verified,Message-schema reconstruction; exact token strings depend on template/runtime.
+Semantic baseline,mean R2 0.389397,research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv,S04,verified,"semantic_baseline row, canonical_activation_pca3d target."
+Procedural/Codex retained features,mean R2 0.490090,research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv,S04,verified,codex_retained row.
+Big Five-style features,mean R2 0.612979,research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv,S04,verified,claude_bigfive row.
+Hierarchical trait-procedural model,mean R2 0.621799,research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/hierarchical_model_summary.csv,S04,verified,hierarchical row.
+Residual manifold hand-feature layer,mean R2 0.632,research/q2_stability/qwen/outputs/residual_manifold_analysis/residual_manifold_report.md,S04,verified,Report model result section.
+SVD15 lexical/register model,mean R2 0.707,research/q2_stability/qwen/outputs/residual_svd_interpretation/residual_svd_interpretation_report.md,S04,verified,Report says sem+BigFive baseline 0.613 to SVD15 0.707.
+PC3 perturbation-stabilization validation,global Pearson r about 0.529; cluster-controlled Pearson r about 0.491; pairwise ordering about 0.773,research/outputs/pc3_validation/pc3_validation_report.md,S03,verified,Stats JSON also included in same output dir.
+PC2 conditional abstraction result,abstraction predicts residual PC2 at r=-0.618,research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md,S03,verified,Current PC2 interpretation support.
+Prompt-to-geometry held-out role performance,mean R2 about 0.621,research/outputs/prompt_to_geometry_forecasting/forecasting_dataset_summary.md,S04/S05,optional_verified,Include only if forecasting extension remains in first clean repo pass.

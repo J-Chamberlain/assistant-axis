@@ -253,3 +253,15 @@ Generating script: `research/outputs/within_role_displacement_design/run_within_
 Dependent analyses: Target-role selection, manual/LLM-assisted instruction/question displacement scoring, selected-role 1,200-input reconstruction, and later corrected-hook within-role GPU displacement analysis after D01/T01 is resolved.
 Current status: Established design artifact; target role remains user-selected.
 Notes/caveats: The packet inventories 275 non-default roles with five positive instructions each and 240 shared questions. It defines centroid-relative displacement rubrics for PC1/PC2/PC3 and provides blank scoring templates. It does not score items, choose a target role, generate responses, extract activations, or overcome the public-data absence of original response-level judge scores and retained masks.
+
+## Paper 1.5 clean repo copy plan
+
+Artifact: Copy plan for a future clean Paper 1.5 core repository.
+Location: `research/outputs/paper15_clean_repo_copy_plan/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no files were copied, moved, deleted, or reorganized.
+Source inputs: Current repo layout, `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/visualizations/`, `research/outputs/`, `research/q2_stability/qwen/outputs/`, `research/assistant_axis_methodology/`, public role/trait prompt artifacts, and current untracked-file state.
+Generating script: `research/outputs/paper15_clean_repo_copy_plan/run_clean_repo_copy_plan.py`
+Dependent analyses: Future creation of `assistant-axis-paper15-core`, report/notebook consolidation, artifact provenance generation, and first-pass exclusion of H100/prompt-battery materials.
+Current status: Established planning artifact awaiting user review.
+Notes/caveats: The plan proposes 43 canonical include rows, 7 optional include rows, 3 draft-reference rows, and 4 unresolved/user-review rows, with estimated canonical copy size 10.01 MB. It explicitly excludes H100 validation outputs, H100 forecast-observed arrow visualizations, extraction-boundary diagnostics, prompt-battery generation, large generated response JSONLs, RunPod logs, dyad dynamics, emotion-vector work, and activation shards. No copy operation has occurred.
