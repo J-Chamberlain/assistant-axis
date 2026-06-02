@@ -313,3 +313,16 @@ Generating script: `research/outputs/cross_model_cluster_topology/run_cross_mode
 Dependent analyses: Paper 1.5 cross-model topology language, cross-model visualization decision, and cautious distinction between stable broad regions and model-local PCA axes.
 Current status: Provisional/partial support for broad topology preservation; hard clusters are not universal.
 Notes/caveats: The diagnostic uses layer-mean role vectors to match the current Qwen visualization builder. Independent `k=7` k-means clustering in top-3-PC space gave Qwen-Llama ARI/NMI 0.364/0.458, Qwen-Gemma 0.637/0.656, and Llama-Gemma 0.355/0.454. Top-5-PC sensitivity improved Qwen-Llama to 0.537/0.548. Procedural/evaluator and mythic/symbolic regions are the clearest recurring regions; grounded/social, care/repair, adversarial/perturbative, and creative/symbolic regions split more. Visualization recommendation is model switching or cluster-overlap/alluvial views before any cross-model PC3 arrows.
+
+## Paper 1.5 core analysis notebook skeleton
+
+Artifact: First-pass local-runnable Jupyter notebook skeleton for the Paper 1.5 core analysis walkthrough.
+Location: `research/notebooks/paper15_core_analysis_walkthrough.ipynb`
+Supporting location: `research/outputs/paper15_notebook_core/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, clean-repo copying, or visualization edits were run.
+Source inputs: `research/outputs/paper15_clean_repo_copy_plan/`, `research/visualizations/geometry_viz_data.json`, `research/visualizations/persona_geometry_explorer.html`, `research/outputs/pc2_muted_pc1_extremes/`, `research/outputs/pc2_cluster_conditioned_extremes/`, `research/outputs/cross_model_pc2_pc3_diagnostic/`, `research/outputs/cross_model_cluster_topology/`, `research/outputs/pc3_validation/`, `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/prompt_to_geometry_forecasting/`, `research/outputs/prompt_artifact_inventory/`, and `research/outputs/role_rollout_artifact_audit/`.
+Generating script: `research/outputs/paper15_notebook_core/run_build_paper15_notebook.py`
+Dependent analyses: Future clean Paper 1.5 core repo, executable technical appendix, report-spine walkthrough, and user review of which canonical artifacts belong in the shareable package.
+Current status: Established WIP notebook skeleton; plain-Python code-cell execution check passed with zero errors.
+Notes/caveats: The notebook intentionally excludes H100 validation outputs, prompt-battery generation, extraction-boundary diagnostics, RunPod logs, activation shards, and H100 forecast-observed arrow visualizations. The local Codex Python environment lacks Jupyter, pandas, matplotlib, IPython, and nbformat, so the builder writes notebook JSON directly and verifies code cells with a standard-library execution pass. Plot cells are guarded and skipped when matplotlib is unavailable.

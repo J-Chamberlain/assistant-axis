@@ -1,0 +1,19 @@
+notebook_section,input_file,exists,role_in_notebook,source_output_dir,caveat
+N00,research/outputs/paper15_clean_repo_copy_plan/clean_repo_copy_plan.csv,True,Copy-plan artifact inventory and canonical status counts.,paper15_clean_repo_copy_plan,Required; loaded with stdlib CSV.
+N00,research/outputs/paper15_clean_repo_copy_plan/canonical_claims_traceability_table.csv,True,Traceability table for report-spine claims.,paper15_clean_repo_copy_plan,Required; unverified rows remain visible.
+N01,research/visualizations/geometry_viz_data.json,True,"Public persona/trait geometry, Qwen role coordinates, clusters, and available model geometry.",visualizations,Primary geometry source.
+N01,research/outputs/prompt_artifact_inventory/role_prompt_artifact_index.csv,True,Role prompt artifact inventory.,prompt_artifact_inventory,Used for count and instruction structure summary.
+N01,research/outputs/prompt_artifact_inventory/trait_prompt_artifact_index.csv,True,Trait prompt artifact inventory.,prompt_artifact_inventory,Used for count and instruction structure summary.
+N01,research/outputs/role_rollout_artifact_audit/role_prompt_reconstruction_inventory.csv,True,Role 5x240 input reconstruction inventory.,role_rollout_artifact_audit,"Confirms theoretical 1,200 inputs per role and public-response limitations."
+N02,research/outputs/cross_model_pc2_pc3_diagnostic/cross_model_pc_correlation_matrix.csv,True,Cross-model PC correlation matrix.,cross_model_pc2_pc3_diagnostic,Pre-H100 cross-model caveat source.
+N02,research/outputs/cross_model_pc2_pc3_diagnostic/cross_model_pc_best_matches.csv,True,Best matching PCs across models.,cross_model_pc2_pc3_diagnostic,Used for Qwen/Llama PC2-PC3 caveats.
+N02,research/outputs/cross_model_cluster_topology/cross_model_cluster_similarity_metrics.json,True,Cross-model cluster topology metrics.,cross_model_cluster_topology,Used for bounded cluster-transfer summary.
+N04,research/outputs/pc2_muted_pc1_extremes/pc2_muted_pc1_top_bottom.csv,True,Muted-PC1 PC2 extreme roles.,pc2_muted_pc1_extremes,Supports PC2 provisional interpretation.
+N04,research/outputs/pc2_cluster_conditioned_extremes/pc2_diagnostic_roles_table.csv,True,PC2 diagnostic role table.,pc2_cluster_conditioned_extremes,Supports PC2 counterexample inspection.
+N04,research/outputs/pc2_cluster_conditioned_extremes/pc2_expected_direction_checks.csv,True,PC2 expected-direction checks.,pc2_cluster_conditioned_extremes,Supports global/cluster pass-rate summary.
+N05,research/outputs/pc3_validation/pc3_validation_stats.json,True,PC3 perturbation/stabilization validation stats.,pc3_validation,Supports PC3 metrics table.
+N06,research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_stats.json,True,Trait-profile prediction of persona PCs.,trait_persona_prediction,Supports same-space trait/persona result.
+N06,research/outputs/trait_space_interpretation/trait_space_validation_stats.json,True,Trait-only PCA and trait/persona PC comparison.,trait_space_interpretation,Supports layered-geometry caveat.
+N08,research/outputs/prompt_to_geometry_forecasting/forecasting_results.json,True,Prompt-to-geometry forecasting result summary.,prompt_to_geometry_forecasting,Pre-H100 intended-address forecasting baseline.
+N08,research/outputs/prompt_to_geometry_forecasting/forecasting_model_comparison.csv,True,Prompt-to-geometry model comparison.,prompt_to_geometry_forecasting,Used for held-out role/trait metric table.
+N09,research/visualizations/persona_geometry_explorer.html,True,Main Persona Geometry Explorer.,visualizations,Linked only; visualization files are not modified.
