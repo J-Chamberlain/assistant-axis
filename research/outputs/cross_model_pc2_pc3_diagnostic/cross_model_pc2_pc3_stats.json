@@ -1,0 +1,190 @@
+{
+  "date_utc": "2026-06-02T10:16:42Z",
+  "model_used": "GPT-5.5",
+  "geometry_source": "research/visualizations/geometry_viz_data.json",
+  "models": {
+    "qwen": {
+      "label": "Qwen/Qwen3-32B",
+      "role_count": 275,
+      "vector_root": "downloads/hf_vectors/qwen-3-32b",
+      "explained_variance": [
+        0.31595442260217277,
+        0.1616348694777006,
+        0.08690363114386968
+      ],
+      "primary": true
+    },
+    "llama": {
+      "label": "Llama-3.3-70B",
+      "role_count": 275,
+      "vector_root": "downloads/hf_vectors/llama-3.3-70b",
+      "explained_variance": [
+        0.17231954365252775,
+        0.14158889459870974,
+        0.06478991769540275
+      ],
+      "primary": true
+    },
+    "gemma": {
+      "label": "Gemma-2-27B",
+      "role_count": 275,
+      "vector_root": "downloads/hf_vectors/gemma-2-27b",
+      "explained_variance": [
+        0.23453089585007245,
+        0.1278198481518452,
+        0.05686002238340878
+      ],
+      "primary": false
+    }
+  },
+  "sign_alignment": {
+    "qwen": [
+      1,
+      1,
+      1
+    ],
+    "llama": [
+      1,
+      -1,
+      -1
+    ],
+    "gemma": [
+      1,
+      1,
+      1
+    ]
+  },
+  "matched_role_counts": {
+    "qwen_vs_llama": 275,
+    "qwen_vs_gemma": 275,
+    "llama_vs_qwen": 275,
+    "llama_vs_gemma": 275,
+    "gemma_vs_qwen": 275,
+    "gemma_vs_llama": 275
+  },
+  "pc1_pc2_subspace": {
+    "qwen_vs_llama": {
+      "matched_role_count": 275,
+      "pc1_pc2_correlation_block": [
+        [
+          0.6783094158026531,
+          -0.6784659898922737
+        ],
+        [
+          0.6941246663820326,
+          0.6080198482259439
+        ]
+      ],
+      "principal_correlations": [
+        0.9765710453740877,
+        0.9045584252333672
+      ],
+      "mean_principal_correlation": 0.9405647353037274
+    },
+    "qwen_vs_gemma": {
+      "matched_role_count": 275,
+      "pc1_pc2_correlation_block": [
+        [
+          0.9560711592739589,
+          -0.20457493384003853
+        ],
+        [
+          0.23721105302961779,
+          0.9254344341082903
+        ]
+      ],
+      "principal_correlations": [
+        0.9887197061273648,
+        0.9439567168992852
+      ],
+      "mean_principal_correlation": 0.966338211513325
+    },
+    "llama_vs_qwen": {
+      "matched_role_count": 275,
+      "pc1_pc2_correlation_block": [
+        [
+          0.6783094158026531,
+          0.6941246663820326
+        ],
+        [
+          -0.6784659898922737,
+          0.6080198482259439
+        ]
+      ],
+      "principal_correlations": [
+        0.9765710453740875,
+        0.9045584252333673
+      ],
+      "mean_principal_correlation": 0.9405647353037274
+    },
+    "llama_vs_gemma": {
+      "matched_role_count": 275,
+      "pc1_pc2_correlation_block": [
+        [
+          0.8114239327686293,
+          0.5281257599059503
+        ],
+        [
+          -0.5374776092673427,
+          0.7922463735984716
+        ]
+      ],
+      "principal_correlations": [
+        0.9733816102620791,
+        0.9520453532753657
+      ],
+      "mean_principal_correlation": 0.9627134817687224
+    },
+    "gemma_vs_qwen": {
+      "matched_role_count": 275,
+      "pc1_pc2_correlation_block": [
+        [
+          0.9560711592739589,
+          0.23721105302961779
+        ],
+        [
+          -0.20457493384003853,
+          0.9254344341082903
+        ]
+      ],
+      "principal_correlations": [
+        0.9887197061273645,
+        0.9439567168992853
+      ],
+      "mean_principal_correlation": 0.9663382115133249
+    },
+    "gemma_vs_llama": {
+      "matched_role_count": 275,
+      "pc1_pc2_correlation_block": [
+        [
+          0.8114239327686293,
+          -0.5374776092673427
+        ],
+        [
+          0.5281257599059503,
+          0.7922463735984716
+        ]
+      ],
+      "principal_correlations": [
+        0.9733816102620793,
+        0.9520453532753658
+      ],
+      "mean_principal_correlation": 0.9627134817687225
+    }
+  },
+  "expected_direction_summary": {
+    "qwen": {
+      "global_pass": 16,
+      "global_total": 16,
+      "cluster_pass": 13,
+      "cluster_total": 16
+    },
+    "llama": {
+      "global_pass": 13,
+      "global_total": 16,
+      "cluster_pass": 7,
+      "cluster_total": 16
+    }
+  },
+  "visualization_files_modified": false
+}

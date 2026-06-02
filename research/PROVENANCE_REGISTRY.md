@@ -289,3 +289,15 @@ Generating script: `research/outputs/pc2_cluster_conditioned_extremes/run_pc2_cl
 Dependent analyses: Paper 1.5 PC2 report wording, future blinded within-cluster matched-pair ratings, and diagnostic role examples for stability/formative-state versus impressionability/transition.
 Current status: Provisional/partial support.
 Notes/caveats: The analysis uses 275 persona/role PCA coordinates and cluster labels from the existing geometry visualization data. Expected-direction checks passed 7/8 globally and 5/8 by cluster median; abstraction was the strongest existing proxy after cluster demeaning (Pearson r=-0.484). `shapeshifter`, `chameleon`, and `elder` remain important caveats, so PC2 should not be stated as a pure plasticity/rootedness axis.
+
+## cross-model PC2/PC3 diagnostic outputs
+
+Artifact: Contained cross-model PC2/PC3 comparability diagnostic over released Qwen, Llama, and secondary Gemma role vectors.
+Location: `research/outputs/cross_model_pc2_pc3_diagnostic/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activations, response generation, clean-repo copying, or visualization edits were run.
+Source inputs: `research/visualizations/geometry_viz_data.json`, `downloads/hf_vectors/qwen-3-32b/role_vectors/*.pt`, `downloads/hf_vectors/llama-3.3-70b/role_vectors/*.pt`, `downloads/hf_vectors/gemma-2-27b/role_vectors/*.pt`, `research/outputs/pc2_muted_pc1_extremes/`, `research/outputs/pc2_cluster_conditioned_extremes/`, and `research/visualizations/persona_geometry_explorer.html` for feasibility inspection only.
+Generating script: `research/outputs/cross_model_pc2_pc3_diagnostic/run_cross_model_pc2_pc3_diagnostic.py`
+Dependent analyses: Paper 1.5 PC2 transfer language, future cross-model visualization decision, and PC3 comparability caveats.
+Current status: Provisional/partial support for Qwen-Llama PC2 transfer in a shared PC1/PC2 plane; weak-to-moderate PC3 comparability.
+Notes/caveats: The diagnostic uses layer-mean role vectors to match the current Qwen visualization builder. Qwen-Llama PC1/PC2 plane principal correlations are 0.977 and 0.905, while same-index PC2 Pearson r=0.606 and Qwen PC2 best matches Llama PC1 at r=0.692. Qwen-Llama same-index PC3 is weaker at Pearson r=0.440, so uncaveated 3D PC3 arrows are not recommended. Gemma was included because local vectors were present and showed strong same-index local artifact alignment with Qwen, but it remains secondary to the requested Qwen-Llama diagnostic.
