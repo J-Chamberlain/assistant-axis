@@ -1,0 +1,7 @@
+== execute notebook ==
+[NbConvertApp] Converting notebook research/notebooks/paper15_core_analysis_walkthrough.ipynb to notebook
+[NbConvertApp] Writing 69244 bytes to research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb
+runtime_seconds 1.9334311485290527
+== html export ==
+[NbConvertApp] Converting notebook research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb to html
+[NbConvertApp] Writing 411907 bytes to research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough.html

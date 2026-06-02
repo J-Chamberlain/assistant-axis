@@ -1,0 +1,30 @@
+{
+  "startup_status": "STARTUP VERIFIED",
+  "branch": "master",
+  "virtualenv_path": ".venv-notebook",
+  "kernel_name": "paper15-notebook",
+  "notebook_path": "research/notebooks/paper15_core_analysis_walkthrough.ipynb",
+  "executed_notebook_path": "research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb",
+  "html_export_path": "research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough.html",
+  "execution_runtime_seconds": 1.9334311485290527,
+  "code_cell_count": 12,
+  "executed_code_cell_count": 12,
+  "error_count": 0,
+  "errors": [],
+  "warning_count_from_execution_log": 0,
+  "warnings_from_execution_log": [],
+  "guarded_or_skipped_markers_detected": [],
+  "missing_required_input_files": [],
+  "executed_notebook_exists": true,
+  "executed_notebook_bytes": 69244,
+  "html_exists": true,
+  "html_bytes": 411933,
+  "html_title": "paper15_core_analysis_walkthrough.executed",
+  "html_first_h1": "Assistant Axis Reanalysis: Public Geometry, Axis Interpretation, and Forecasting Baselines\u00b6",
+  "code_fixes_made": [
+    "Added deterministic notebook cell IDs in run_build_paper15_notebook.py and regenerated the source notebook to remove nbformat MissingIDFieldWarning."
+  ],
+  "user_review_items": [
+    "Review narrative flow and table readability in VS Code/Jupyter; HTML export is headless-verified but not GUI-reviewed."
+  ]
+}

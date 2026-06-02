@@ -1,0 +1,29 @@
+{
+  "generated_utc": "2026-06-02T12:41:09+00:00",
+  "virtualenv_path": ".venv-notebook",
+  "python_executable": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/bin/python",
+  "python_version": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+  "packages_requested": [
+    "jupyter",
+    "nbformat",
+    "nbclient",
+    "ipykernel",
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "plotly"
+  ],
+  "package_versions": {
+    "jupyter": "1.1.1",
+    "nbformat": "5.10.4",
+    "nbclient": "0.10.4",
+    "ipykernel": "7.2.0",
+    "pandas": "3.0.3",
+    "numpy": "2.4.6",
+    "matplotlib": "3.10.9",
+    "plotly": "6.7.0"
+  },
+  "kernel_name": "paper15-notebook",
+  "kernelspec_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/share/jupyter/kernels/paper15-notebook"
+}

@@ -1,6 +1,6 @@
 # Paper 1.5 Notebook Build Report
 
-Generated UTC: 2026-06-02T12:26:34+00:00
+Generated UTC: 2026-06-02T12:39:40+00:00
 Notebook path: `research/notebooks/paper15_core_analysis_walkthrough.ipynb`
 
 ## Sections Created

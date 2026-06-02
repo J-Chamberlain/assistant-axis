@@ -57,12 +57,21 @@ CLAIMS = [
 ]
 
 
+CELL_COUNTER = 0
+
+
+def next_cell_id() -> str:
+    global CELL_COUNTER
+    CELL_COUNTER += 1
+    return f"paper15-{CELL_COUNTER:03d}"
+
+
 def md(source: str) -> dict:
-    return {"cell_type": "markdown", "metadata": {}, "source": source.strip() + "\n"}
+    return {"cell_type": "markdown", "id": next_cell_id(), "metadata": {}, "source": source.strip() + "\n"}
 
 
 def code(source: str) -> dict:
-    return {"cell_type": "code", "execution_count": None, "metadata": {}, "outputs": [], "source": source.strip() + "\n"}
+    return {"cell_type": "code", "id": next_cell_id(), "execution_count": None, "metadata": {}, "outputs": [], "source": source.strip() + "\n"}
 
 
 SETUP_CODE = r'''
