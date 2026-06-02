@@ -36,7 +36,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - Within-role displacement scaffolding is prepared for a user-selected target-role study: 275 roles have five positive instructions, 240 extraction questions are inventoried, displacement scoring templates exist, and role-candidate geometry centrality flags are available.
 - Playwright within-role displacement scoring is prepared: 240 shared questions, five role-specific positive instructions, and 1,200 instruction-question combinations have rubric-based predicted PC1/PC2/PC3 displacement scores ready for manual review before corrected-hook GPU measurement.
 - Clean Paper 1.5 core repo copy plan is prepared for user review: it proposes a 10.01 MB canonical first-pass artifact set for a reproducible report/notebook walkthrough and explicitly excludes H100 validation, prompt batteries, extraction-boundary diagnostics, large generated responses, RunPod logs, and activation shards.
-- Paper 1.5 core notebook skeleton is prepared and headlessly executed as a local-runnable pre-H100 executable appendix: it loads canonical public geometry, artifact provenance, PC axis interpretation outputs, cross-model caveats, trait/persona outputs, and forecasting baselines while excluding H100 validation, prompt batteries, extraction-boundary diagnostics, RunPod logs, and visualization edits.
+- Paper 1.5 core notebook skeleton is prepared, revised for shareability, and headlessly executed as a local-runnable pre-H100 executable appendix: it loads canonical public geometry, artifact provenance, PC axis interpretation outputs, cross-model caveats, trait/persona outputs, and forecasting baselines while excluding H100 validation, prompt batteries, extraction-boundary diagnostics, RunPod logs, and visualization edits.
 - Trickster adaptive extraction succeeded operationally; editor adaptive extraction failed to reach validation thresholds.
 
 ## Best Predictive Metrics
@@ -89,7 +89,8 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/paper15_clean_repo_copy_plan/`: copy plan for a future clean `assistant-axis-paper15-core` repo, including artifact CSV, report spine map, claim traceability table, visualization inventory, proposed tree, and excluded archive index.
 - `research/notebooks/paper15_core_analysis_walkthrough.ipynb`: first-pass Paper 1.5 executable appendix / notebook walkthrough for canonical pre-H100 analysis.
 - `research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb`: headlessly executed Paper 1.5 core notebook.
-- `research/outputs/paper15_notebook_core/`: notebook builder, dependency table, claim traceability table, build report, Jupyter execution status, environment freeze/summary, generated figures, HTML export, and verification report for the Paper 1.5 core notebook.
+- `research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough_report_collapsed_code.html`: reader-first shareable report export with code collapsed by default and computed outputs visible.
+- `research/outputs/paper15_notebook_core/`: notebook builder, dependency table, claim traceability table, build/revision reports, Jupyter execution status, environment freeze/summary, generated figures, standard/collapsed HTML exports, and artifact manifest for the Paper 1.5 core notebook.
 - `research/visualizations/persona_geometry_explorer.html`: interactive Plotly viewer with PCA/UMAP, cluster, selection, and Big Five overlays.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: persona-aligned Big Five overlay data.
 
@@ -120,7 +121,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 13. Calibrate the lightweight prompt-to-geometry forecaster using the completed H100/A100 validation data only after the T01 activation-boundary issue is resolved: start with per-axis intercept/slope correction, then compare against region-aware correction for PC2 and PC3 tails.
 14. Review `research/outputs/playwright_displacement_scoring/displacement_manual_review_shortlist.csv`, especially thin PC1-negative and PC3-positive coverage, before running the corrected-hook playwright displacement study after T01/D01 extraction equivalence is resolved.
 15. Review `research/outputs/paper15_clean_repo_copy_plan/clean_repo_copy_plan.csv`; if approved, run a separate copy-only task to create `assistant-axis-paper15-core` without H100 or prompt-battery materials.
-16. Review `research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb` or `research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough.html` for narrative flow and table/figure readability; if approved, include the notebook as the first walkthrough in the future clean Paper 1.5 core repo.
+16. Review `research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough_report_collapsed_code.html` as the reader-first Paper 1.5 work-in-progress report; if approved, include the source/executed notebook and collapsed-code HTML in the future clean Paper 1.5 core repo.
 
 ## Archived Directions
 

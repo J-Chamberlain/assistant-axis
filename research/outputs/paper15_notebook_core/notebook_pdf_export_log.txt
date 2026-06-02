@@ -1,0 +1,83 @@
+== pdf export attempt ==
+[NbConvertApp] Converting notebook research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb to webpdf
+[NbConvertApp] Building PDF
+Traceback (most recent call last):
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/exporters/webpdf.py", line 102, in main
+    from playwright.async_api import (  # type: ignore[import-not-found] # noqa: PLC0415,
+        async_playwright,
+    )
+ModuleNotFoundError: No module named 'playwright'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/bin/jupyter-nbconvert", line 6, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/jupyter_core/application.py", line 284, in launch_instance
+    super().launch_instance(argv=argv, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/traitlets/config/application.py", line 1082, in launch_instance
+    app.start()
+    ~~~~~~~~~^^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/nbconvertapp.py", line 420, in start
+    self.convert_notebooks()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/nbconvertapp.py", line 597, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/nbconvertapp.py", line 563, in convert_single_notebook
+    output, resources = self.export_single_notebook(
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        notebook_filename, resources, input_buffer=input_buffer
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        notebook_filename, resources=resources
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/exporters/templateexporter.py", line 390, in from_filename
+    return super().from_filename(filename, resources, **kw)  # type:ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/exporters/exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/exporters/templateexporter.py", line 396, in from_file
+    return super().from_file(file_stream, resources, **kw)  # type:ignore[return-value]
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/exporters/exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        nbformat.read(file_stream, as_version=4), resources=resources, **kw
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/exporters/webpdf.py", line 193, in from_notebook_node
+    pdf_data = self.run_playwright(html)
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/exporters/webpdf.py", line 182, in run_playwright
+    pdf_data = pool.submit(asyncio.run, main(temp_file)).result()
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 450, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv-notebook/lib/python3.14/site-packages/nbconvert/exporters/webpdf.py", line 110, in main
+    raise RuntimeError(msg) from e
+RuntimeError: Playwright is not installed to support Web PDF conversion. Please install `nbconvert[webpdf]` to enable.

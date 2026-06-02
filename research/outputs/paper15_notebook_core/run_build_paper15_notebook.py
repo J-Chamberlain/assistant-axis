@@ -230,6 +230,7 @@ print("Theoretical combinations per non-default role:", combo_counts)
 print("Example reconstruction row:")
 table(non_default[:1], ["role", "positive_instruction_count", "global_extraction_question_count", "theoretical_input_combinations", "first_instruction"], limit=1)
 '''),
+    md("**Metadata clarification.** In the geometry file, `source_model: Qwen/Qwen3-32B` is the model whose public role/persona vectors are being analyzed in the Qwen sections. The `model_used: GPT-5.5` field is project metadata for the analysis/helper that prepared this visualization data, not the source model for the role-vector geometry."),
     md("## N02. Cross-Model Scope and Caveats\n\nQuestion: how model-general are the relevant axes and broad topology?\n\nData loaded: cross-model PC correlations, best-match PCs, and cluster topology metrics.\n\nMethod: display Qwen-Llama correlations and ARI/NMI cluster alignment summaries.\n\nResult shown: PC2 partly transfers inside a shared PC1/PC2 subspace; PC3 is weaker; clusters are partially conserved.\n\nCaveat: cross-model hard clusters and same-index later PCs should not be treated as universal without alignment caveats."),
     code('''
 pc_corr = load_csv("research/outputs/cross_model_pc2_pc3_diagnostic/cross_model_pc_correlation_matrix.csv")
@@ -245,6 +246,7 @@ print("\\nCluster similarity metrics:")
 metric_rows = cluster_metrics.get("cluster_similarity_metrics", []) if cluster_metrics else []
 table(metric_rows, ["model_pair", "matched_role_count", "kmeans_top3_ari", "kmeans_top3_nmi", "kmeans_top5_ari", "kmeans_top5_nmi"], limit=10)
 '''),
+    md("**Cross-model interpretation note.** The table above is a local coordinate/best-match diagnostic from this reanalysis, not the same measurement as Lu et al.'s published role-composition comparison. PCA axes can differ by sign, index, and rotation inside a shared low-dimensional subspace, so a same-index correlation is not by itself the whole cross-model story. The cautious report-level claim is that PC1 / the Assistant Axis has the strongest cross-model support in the public paper, and that these diagnostics show substantial shared low-dimensional structure while requiring stronger model-local caveats for later PCs."),
     md("## N03. PC1 Interpretation\n\nQuestion: what does PC1 separate in Qwen role geometry?\n\nData loaded: Qwen role PCA coordinates from public geometry.\n\nMethod: rank roles by PC1 and inspect endpoint examples.\n\nResult shown: high-PC1 roles concentrate around evaluator/procedural/correctness pressure; low-PC1 roles are more open, symbolic, expressive, or possibility-rich.\n\nCaveat: endpoint labels are evidence for the forcing-function interpretation, not the interpretation itself."),
     code('''
 top_pc1, bottom_pc1 = top_bottom(roles_df, "pc1", 15)
@@ -291,6 +293,7 @@ table(bottom_pc3, ["role", "cluster", "pc1", "pc2", "pc3"], limit=15)
 safe_plot_pc_scatter(roles_df, "pc2", "pc3", labels=["auditor", "debugger", "skeptic", "caregiver", "healer", "mediator", "demon"], out_name="qwen_pc2_pc3_key_roles.png")
 '''),
     md("## N06. Trait/Persona Relationship\n\nQuestion: how much of persona geometry is recoverable from trait-vector relationships?\n\nData loaded: trait-persona prediction stats and trait-space PCA interpretation stats.\n\nMethod: display vector-space verification, prediction metrics, and trait-only PCA alignment values.\n\nResult shown: trait profiles strongly reconstruct persona PCs, but trait-only PCA does not collapse persona geometry into a single trait PCA explanation.\n\nCaveat: same-space reconstruction supports layered geometry, not psychological ontology."),
+    md("**Reading the trait metrics.** High-dimensional persona-to-trait cosine profiles contain enough information to reconstruct persona PC coordinates, but this does not mean traits are the causal basis or psychological ontology of persona geometry. The trait-only PCA result is the important caveat: trait PC1 partially aligns with persona PC1, while trait PC2/PC3 do not cleanly align with persona PC2/PC3. That pattern supports a layered-geometry interpretation rather than reducing persona space to trait PCA.\n\n**Count clarification.** The public role-vector extraction recipe uses 5 positive role instructions x 240 shared extraction questions = 1,200 candidate rollouts per role before filtering and averaging. The `64 stored vectors` metadata below refers to the tensor/shard representation in the local vector artifact, not to the original rollout count."),
     code('''
 trait_pred = load_json("research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_stats.json")
 trait_space = load_json("research/outputs/trait_space_interpretation/trait_space_validation_stats.json")
@@ -319,9 +322,9 @@ keywords = ("r2", "predict", "forecast", "semantic", "procedural", "big five", "
 prediction_claims = [r for r in trace_rows if any(k in " ".join(str(v).lower() for v in r.values()) for k in keywords)]
 print("Prediction-related traceability rows:")
 table(prediction_claims, ["claim_or_number", "value", "source_file", "status", "notes"], limit=20)
-unverified = [r for r in trace_rows if r.get("status") not in {"verified", "canonical"}]
-print("\\nNon-verified rows:")
-table(unverified, ["claim_or_number", "value", "status", "notes"], limit=20)
+optional_or_not_core = [r for r in trace_rows if r.get("status") not in {"verified", "canonical"}]
+print("\\nOptional or not-yet-core rows:")
+table(optional_or_not_core, ["claim_or_number", "value", "status", "notes"], limit=20)
 '''),
     md("## N08. Prompt-to-Geometry Forecasting Baseline\n\nQuestion: can prompt text forecast intended persona/trait geometry before any H100 response-state validation?\n\nData loaded: prompt-to-geometry forecasting results and model comparison table.\n\nMethod: display best held-out role/trait results and the top held-out model-comparison rows.\n\nResult shown: text-only forecasting is promising as an intended-address predictor.\n\nCaveat: this is not evidence that predicted addresses match measured response activations on novel prompts; H100 validation is deferred."),
     code('''
@@ -352,11 +355,11 @@ print("Excluded from this notebook: H100 forecast-observed arrow viewers and pro
     code('''
 summary_claims = [
     {"claim": "Public persona geometry and prompt artifacts are reconstructable enough for a reproducible pre-H100 walkthrough.", "evidence_artifact": "geometry_viz_data.json; prompt inventories; role rollout audit", "confidence": "high", "caveat": "No public generated responses or judge masks.", "next_test": "Instance-level 5x240 forecaster if target role is selected."},
-    {"claim": "PC1 is best read as convergence pressure versus degrees of freedom.", "evidence_artifact": "Qwen PC1 rankings; forcing-function note", "confidence": "high", "caveat": "Interpretive, not causal proof.", "next_test": "Prompt-level judge rubric validation."},
+    {"claim": "PC1 is best read as convergence pressure versus degrees of freedom.", "evidence_artifact": "Qwen PC1 rankings; forcing-function note; public Assistant Axis cross-model result", "confidence": "high", "caveat": "Interpretive, not causal proof; same-index cross-model PCA coordinates can rotate or swap signs/indices.", "next_test": "Prompt-level judge rubric validation."},
     {"claim": "PC2 is situated/formative/impressionable versus integrated/stable, provisionally.", "evidence_artifact": "muted-PC1 and cluster-conditioned PC2 diagnostics", "confidence": "medium-low", "caveat": "Shapeshifter/chameleon/elder counterexamples; cross-model rotation.", "next_test": "Blinded within-cluster matched-pair PC2 study."},
     {"claim": "PC3 tracks perturbation/intervention versus stabilization/repair.", "evidence_artifact": "pc3_validation_stats.json", "confidence": "medium", "caveat": "Cross-model PC3 weaker; deterministic rubric.", "next_test": "Independent rater validation and response-state tests."},
-    {"claim": "Trait profiles strongly reconstruct persona PCs but do not replace persona PCA.", "evidence_artifact": "trait_persona_prediction; trait_space_interpretation", "confidence": "high for reconstruction, medium for interpretation", "caveat": "Same-space geometry is not psychological ontology.", "next_test": "Layered model ablations."},
-    {"claim": "Prompt-to-geometry forecasting is a pre-H100 intended-address baseline.", "evidence_artifact": "prompt_to_geometry_forecasting", "confidence": "medium", "caveat": "Not execution-time response activation validation.", "next_test": "Corrected extraction-boundary validation before broad H100 interpretation."},
+    {"claim": "Trait profiles strongly reconstruct persona PCs but do not replace persona PCA.", "evidence_artifact": "trait_persona_prediction; trait_space_interpretation", "confidence": "high for reconstruction, medium for interpretation", "caveat": "Same-space reconstruction is not psychological ontology; trait-only PCA weakly aligns with persona PC2/PC3.", "next_test": "Layered model ablations."},
+    {"claim": "Prompt-to-geometry forecasting is a useful but optional pre-H100 intended-address baseline.", "evidence_artifact": "prompt_to_geometry_forecasting", "confidence": "medium", "caveat": "Not execution-time response activation validation; include as extension if the clean repo keeps forecasting.", "next_test": "Corrected extraction-boundary validation before broad H100 interpretation."},
 ]
 table(summary_claims, ["claim", "confidence", "evidence_artifact", "caveat", "next_test"], limit=20)
 print("\\nDeferred work: D01 hook-vs-hidden-state boundary test; within-role activation cloud/variance study; judge-filter centroid comparison; instance-level 5x240 forecaster; corrected broad validation only if needed.")

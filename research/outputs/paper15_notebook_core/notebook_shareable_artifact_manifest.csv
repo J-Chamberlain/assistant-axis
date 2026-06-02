@@ -1,0 +1,11 @@
+artifact_label,path,artifact_type,exists,byte_count,notes
+source_notebook,research/notebooks/paper15_core_analysis_walkthrough.ipynb,notebook,True,28690,
+executed_notebook,research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb,notebook,True,72001,
+normal_html,research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough.html,html,True,415531,
+shareable_collapsed_code_html,research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough_report_collapsed_code.html,html,True,417439,primary shareable artifact
+pdf_export_log,research/outputs/paper15_notebook_core/notebook_pdf_export_log.txt,log,True,6381,PDF skipped because Playwright was unavailable/not authorized
+execution_log,research/outputs/paper15_notebook_core/notebook_execution_log.txt,log,True,516,
+execution_status,research/outputs/paper15_notebook_core/notebook_execution_status.json,json,True,2034,
+revision_report,research/outputs/paper15_notebook_core/notebook_revision_report.md,markdown,True,3065,
+pc1_pc2_figure,research/outputs/paper15_notebook_core/figures/qwen_pc1_pc2_key_roles.png,figure,True,58032,
+pc2_pc3_figure,research/outputs/paper15_notebook_core/figures/qwen_pc2_pc3_key_roles.png,figure,True,62985,

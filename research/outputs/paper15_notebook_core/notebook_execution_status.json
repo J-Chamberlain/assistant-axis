@@ -1,12 +1,14 @@
 {
   "startup_status": "STARTUP VERIFIED",
   "branch": "master",
-  "virtualenv_path": ".venv-notebook",
-  "kernel_name": "paper15-notebook",
-  "notebook_path": "research/notebooks/paper15_core_analysis_walkthrough.ipynb",
+  "notebook_source_path": "research/notebooks/paper15_core_analysis_walkthrough.ipynb",
   "executed_notebook_path": "research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb",
   "html_export_path": "research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough.html",
-  "execution_runtime_seconds": 1.9334311485290527,
+  "shareable_collapsed_code_html_path": "research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough_report_collapsed_code.html",
+  "pdf_path": "research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough.executed.pdf",
+  "pdf_regenerated": false,
+  "pdf_status": "skipped: nbconvert webpdf requires Playwright, which is outside the authorized package list for this task",
+  "execution_runtime_seconds": 2.3149287700653076,
   "code_cell_count": 12,
   "executed_code_cell_count": 12,
   "error_count": 0,
@@ -15,16 +17,27 @@
   "warnings_from_execution_log": [],
   "guarded_or_skipped_markers_detected": [],
   "missing_required_input_files": [],
-  "executed_notebook_exists": true,
-  "executed_notebook_bytes": 69244,
-  "html_exists": true,
-  "html_bytes": 411933,
-  "html_title": "paper15_core_analysis_walkthrough.executed",
-  "html_first_h1": "Assistant Axis Reanalysis: Public Geometry, Axis Interpretation, and Forecasting Baselines\u00b6",
+  "shareable_html_exists": true,
+  "shareable_html_bytes": 417439,
+  "normal_html_exists": true,
+  "normal_html_bytes": 415531,
+  "collapsed_code_summary_count": 12,
+  "computed_outputs_visible_check": true,
+  "final_claims_table_present": true,
+  "h100_only_sections_added": false,
+  "visualization_files_modified": false,
+  "sections_revised": [
+    "N01 Public Geometry and Artifact Reconstruction",
+    "N02 Cross-Model Scope and Caveats",
+    "N06 Trait/Persona Relationship",
+    "N07 Prediction-Improvement Sequence",
+    "N10 Summary of Claims, Confidence, and Next Tests"
+  ],
   "code_fixes_made": [
-    "Added deterministic notebook cell IDs in run_build_paper15_notebook.py and regenerated the source notebook to remove nbformat MissingIDFieldWarning."
+    "Added clarifying markdown and small display-label/caveat changes; no substantive analysis or claim changes."
   ],
   "user_review_items": [
-    "Review narrative flow and table readability in VS Code/Jupyter; HTML export is headless-verified but not GUI-reviewed."
-  ]
+    "Review the collapsed-code HTML as the reader-first artifact; PDF was not regenerated because local webpdf export requires Playwright, which was not authorized for installation."
+  ],
+  "h100_headings_detected": []
 }
