@@ -1,0 +1,197 @@
+{
+  "generated_utc": "2026-06-02T01:11:15Z",
+  "model_used": "GPT-5.5",
+  "geometry_source": "research/visualizations/geometry_viz_data.json",
+  "n_roles": 275,
+  "cluster_counts": {
+    "mythic_spiritual": 51,
+    "trickster_chaos": 10,
+    "editorial": 13,
+    "procedural_professional": 126,
+    "grounded_social": 54,
+    "other": 6,
+    "combative_iconoclast": 15
+  },
+  "per_cluster_stats": {
+    "combative_iconoclast": {
+      "count": 15,
+      "pc2_mean": 19.293340341938485,
+      "pc2_median": 20.1098830569203,
+      "pc2_min": -5.725035390605592,
+      "pc2_max": 43.747371252150835,
+      "pc2_std": 14.94025801000623
+    },
+    "editorial": {
+      "count": 13,
+      "pc2_mean": 1.0494404735546299,
+      "pc2_median": -2.1147398337502397,
+      "pc2_min": -6.184780993502256,
+      "pc2_max": 23.378311113767314,
+      "pc2_std": 7.455012088686871
+    },
+    "grounded_social": {
+      "count": 54,
+      "pc2_mean": 18.136357019249928,
+      "pc2_median": 18.610483628948813,
+      "pc2_min": -12.174625826618733,
+      "pc2_max": 40.070455881847,
+      "pc2_std": 13.887815124668274
+    },
+    "mythic_spiritual": {
+      "count": 51,
+      "pc2_mean": -24.23012509072383,
+      "pc2_median": -24.8457685257472,
+      "pc2_min": -44.00800269921331,
+      "pc2_max": -4.671833114249578,
+      "pc2_std": 9.65555864327896
+    },
+    "other": {
+      "count": 6,
+      "pc2_mean": 63.432942717004096,
+      "pc2_median": 70.31234185829781,
+      "pc2_min": 39.078366622106664,
+      "pc2_max": 78.11385466430272,
+      "pc2_std": 15.653662476316997
+    },
+    "procedural_professional": {
+      "count": 126,
+      "pc2_mean": -5.565043596603352,
+      "pc2_median": -6.501924966081571,
+      "pc2_min": -32.68085632055681,
+      "pc2_max": 22.115207226121324,
+      "pc2_std": 10.508965669455478
+    },
+    "trickster_chaos": {
+      "count": 10,
+      "pc2_mean": 27.39281061721279,
+      "pc2_median": 20.118405044145547,
+      "pc2_min": 1.5479287761050156,
+      "pc2_max": 57.22016868086865,
+      "pc2_std": 18.301017968460794
+    }
+  },
+  "muted_pc1_within_cluster_meta": {
+    "combative_iconoclast": {
+      "status": "too_sparse",
+      "cluster_count": 15,
+      "attempted_35_65_count": 5
+    },
+    "editorial": {
+      "status": "too_sparse",
+      "cluster_count": 13,
+      "attempted_35_65_count": 3
+    },
+    "grounded_social": {
+      "status": "included",
+      "selection_band": "cluster_pc1_central_35_65",
+      "pc1_lower_percentile": 35,
+      "pc1_upper_percentile": 65,
+      "pc1_lower_value": -19.511226919345653,
+      "pc1_upper_value": -9.106445046851798,
+      "selected_count": 16,
+      "cluster_count": 54
+    },
+    "mythic_spiritual": {
+      "status": "included",
+      "selection_band": "cluster_pc1_central_35_65",
+      "pc1_lower_percentile": 35,
+      "pc1_upper_percentile": 65,
+      "pc1_lower_value": -46.76491323202802,
+      "pc1_upper_value": -36.510016353007515,
+      "selected_count": 15,
+      "cluster_count": 51
+    },
+    "other": {
+      "status": "too_sparse",
+      "cluster_count": 6,
+      "attempted_35_65_count": 2
+    },
+    "procedural_professional": {
+      "status": "included",
+      "selection_band": "cluster_pc1_central_40_60",
+      "pc1_lower_percentile": 40,
+      "pc1_upper_percentile": 60,
+      "pc1_lower_value": 23.52366349298268,
+      "pc1_upper_value": 30.890109988819464,
+      "selected_count": 26,
+      "cluster_count": 126
+    },
+    "trickster_chaos": {
+      "status": "too_sparse",
+      "cluster_count": 10,
+      "attempted_35_65_count": 2
+    }
+  },
+  "expected_direction_summary": {
+    "global_pass_count": 7,
+    "cluster_pass_count": 5,
+    "n_checks": 8
+  },
+  "proxy_score_correlations": {
+    "status": "used_existing_pc2_conditional_validation_scores",
+    "n": 273,
+    "fields": {
+      "maturity": {
+        "global_pearson_r": -0.3763111567160865,
+        "global_pearson_p": 1.301995902060967e-10,
+        "global_spearman_r": -0.25507367220523264,
+        "global_spearman_p": 1.990573473734805e-05,
+        "cluster_demeaned_pearson_r": -0.0799912982364665,
+        "cluster_demeaned_pearson_p": 0.18759698287631807,
+        "cluster_demeaned_spearman_r": -0.07007339771364995,
+        "cluster_demeaned_spearman_p": 0.24853747172007204
+      },
+      "abstraction": {
+        "global_pearson_r": -0.6558913823665077,
+        "global_pearson_p": 5.850628492988321e-35,
+        "global_spearman_r": -0.6588870413655648,
+        "global_spearman_p": 2.275522822364052e-35,
+        "cluster_demeaned_pearson_r": -0.4842848878799046,
+        "cluster_demeaned_pearson_p": 1.849407154415606e-17,
+        "cluster_demeaned_spearman_r": -0.4801457466348478,
+        "cluster_demeaned_spearman_p": 3.77344842566983e-17
+      },
+      "expertise": {
+        "global_pearson_r": -0.35594621982945696,
+        "global_pearson_p": 1.416192920124413e-09,
+        "global_spearman_r": -0.27837679018632405,
+        "global_spearman_p": 2.9960114966291362e-06,
+        "cluster_demeaned_pearson_r": -0.25200591673503075,
+        "cluster_demeaned_pearson_p": 2.5210510713762216e-05,
+        "cluster_demeaned_spearman_r": -0.28735631944543977,
+        "cluster_demeaned_spearman_p": 1.376774562566532e-06
+      },
+      "uncertainty_exposure": {
+        "global_pearson_r": -0.08932758390482358,
+        "global_pearson_p": 0.14099223091134006,
+        "global_spearman_r": -0.10519422446702778,
+        "global_spearman_p": 0.08275224888281797,
+        "cluster_demeaned_pearson_r": -0.014298842255228995,
+        "cluster_demeaned_pearson_p": 0.8140662115837445,
+        "cluster_demeaned_spearman_r": -0.009524836240010257,
+        "cluster_demeaned_spearman_p": 0.8755147308654277
+      },
+      "residence_time_under_uncertainty": {
+        "global_pearson_r": -0.4002359256495516,
+        "global_pearson_p": 6.329629242129199e-12,
+        "global_spearman_r": -0.33428738346706305,
+        "global_spearman_p": 1.4988042259395593e-08,
+        "cluster_demeaned_pearson_r": -0.08559329715293082,
+        "cluster_demeaned_pearson_p": 0.1584411753972075,
+        "cluster_demeaned_spearman_r": -0.11540866199985896,
+        "cluster_demeaned_spearman_p": 0.056847331843431416
+      },
+      "coherent_action_under_unresolved_uncertainty": {
+        "global_pearson_r": 0.37148798299568647,
+        "global_pearson_p": 2.3264319779837308e-10,
+        "global_spearman_r": 0.2988864987774934,
+        "global_spearman_p": 4.873385416369148e-07,
+        "cluster_demeaned_pearson_r": 0.08290992517102509,
+        "cluster_demeaned_pearson_p": 0.17195026943062705,
+        "cluster_demeaned_spearman_r": 0.1095998275797221,
+        "cluster_demeaned_spearman_p": 0.07060220531554724
+      }
+    }
+  },
+  "prior_muted_pc1_report": "research/outputs/pc2_muted_pc1_extremes/pc2_muted_pc1_extremes_report.md"
+}

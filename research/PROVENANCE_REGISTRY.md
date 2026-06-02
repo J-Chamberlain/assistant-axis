@@ -277,3 +277,15 @@ Generating script: `research/outputs/paper15_clean_repo_copy_plan/run_clean_repo
 Dependent analyses: Future creation of `assistant-axis-paper15-core`, report/notebook consolidation, artifact provenance generation, and first-pass exclusion of H100/prompt-battery materials.
 Current status: Established planning artifact awaiting user review.
 Notes/caveats: The plan proposes 43 canonical include rows, 7 optional include rows, 3 draft-reference rows, and 4 unresolved/user-review rows, with estimated canonical copy size 10.01 MB. It explicitly excludes H100 validation outputs, H100 forecast-observed arrow visualizations, extraction-boundary diagnostics, prompt-battery generation, large generated response JSONLs, RunPod logs, dyad dynamics, emotion-vector work, and activation shards. No copy operation has occurred.
+
+## pc2 cluster-conditioned extremes outputs
+
+Artifact: Global, per-cluster, and muted-PC1-within-cluster PC2 extremes diagnostic for the stability/impressionability interpretation.
+Location: `research/outputs/pc2_cluster_conditioned_extremes/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activations, or response generation were run.
+Source inputs: `research/visualizations/geometry_viz_data.json`, `research/outputs/pc2_muted_pc1_extremes/`, `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_candidate_scores.csv`, `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, and `research/outputs/axis_forcing_function_notes/`.
+Generating script: `research/outputs/pc2_cluster_conditioned_extremes/run_pc2_cluster_conditioned_extremes.py`
+Dependent analyses: Paper 1.5 PC2 report wording, future blinded within-cluster matched-pair ratings, and diagnostic role examples for stability/formative-state versus impressionability/transition.
+Current status: Provisional/partial support.
+Notes/caveats: The analysis uses 275 persona/role PCA coordinates and cluster labels from the existing geometry visualization data. Expected-direction checks passed 7/8 globally and 5/8 by cluster median; abstraction was the strongest existing proxy after cluster demeaning (Pearson r=-0.484). `shapeshifter`, `chameleon`, and `elder` remain important caveats, so PC2 should not be stated as a pure plasticity/rootedness axis.

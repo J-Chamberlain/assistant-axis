@@ -25,6 +25,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - A full-distribution PC3 perturbation-stabilization validation supports PC3 as mixed but positive: global Pearson r=0.529, cluster-controlled Pearson r=0.491, and within-cluster pairwise ordering accuracy 0.773.
 - A conditional PC2 validation after PC1 decile control shifts the current PC2 interpretation toward abstraction/integration/developmental structure: abstraction predicts residual PC2 at r=-0.618, coherent action remains weaker at r=+0.427, and uncertainty exposure fails at r=-0.026.
 - A muted-PC1 PC2 extremes inspection selected the central 45th-55th percentile PC1 band (n=27) and found high PC2 concentrated in situated/social/reactive roles while low PC2 concentrated in abstract/integrative/systemic/procedural roles, refining PC2 independently of the broad PC1 axis.
+- A cluster-conditioned PC2 extremes diagnostic gives partial support to PC2 as situated-immediacy/formative-state versus integrated-stability: expected-direction checks pass 7/8 globally and 5/8 by cluster median, while `shapeshifter`, `chameleon`, and `elder` remain important caveats.
 - Cluster-conditioned PC1/PC2 testing found that within-cluster pairwise ordering is harder than global ordering, but cluster identity substantially improves calibrated regression: PC1 direct R2 0.296 vs oracle-cluster 0.811, PC2 direct R2 0.416 vs oracle-cluster 0.718.
 - Training-artifact forecast error geometry shows the frozen role forecaster has tiny in-sample target-to-forecast error and near-zero signed PC2 bias, so the H100 PC2 upward shift is not native to the original role-artifact forecast task.
 - Public-source extraction-equivalence audit changes D01 from merely unresolved to likely mismatch: projection, pooling, model identity, and prior hook-based trickster replication are verified, but official/prior layer-48 hook extraction likely maps to `hidden_states[49]`, not the H100 runner's `hidden_states[48]`.
@@ -67,6 +68,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/cluster_conditioned_axis_tests/`: PC1/PC2 cluster-conditioning test with pairwise global/within/across comparisons, cluster classifier accuracy, and direct/oracle/predicted-cluster regression regimes.
 - `research/q2_stability/qwen/outputs/pc2_conditional_validation/`: conditional PC2 validation after PC1 band control, including candidate comparison, matched pairs, physicist test, and mythic/developmental test.
 - `research/outputs/pc2_muted_pc1_extremes/`: PC2 top/bottom role inspection within the central 45th-55th percentile PC1 band, including ranked tables, band statistics, plots, and interpretation note.
+- `research/outputs/pc2_cluster_conditioned_extremes/`: global, per-cluster, and muted-PC1-within-cluster PC2 rankings with diagnostic-role checks for the stability/impressionability interpretation.
 - `research/outputs/novel_prompt_battery_percentile_edges/`: current H100-ready percentile-edge prompt battery and recommended H100 manifest.
 - `research/outputs/pre_h100_methods_memorial/`: durable pre-H100 methods, assumptions, artifact index, and readiness summary.
 - `research/outputs/h100_percentile_edge_validation/`: completed 100-prompt activation validation with forecast-vs-observed metrics and generated responses.
@@ -96,7 +98,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 ## Pending Experiments
 
 1. Independent-rater replication using human or second-model raters over the strongest PC1-matched PC2 pairs, forcing abstraction, maturity/integration, and coherent-action choices.
-2. Run blinded no-label matched-pair ratings inside the muted-PC1 PC2-extremes band to test whether the situated/immediacy versus abstract/integrative contrast is recoverable without coordinates.
+2. Run blinded no-label matched-pair ratings inside the muted-PC1 and within-cluster PC2-extremes bands to test whether situated-immediacy/formative-state versus integrated-stability is recoverable without coordinates.
 3. Evaluator-sensitivity comparison between Codex/GPT-5.5 Standard and `gpt-4.1-mini`.
 4. Bounded no-label activation-space stress test on selected anchors, bridge roles, assistant-adjacent roles, and theatrical/fantastical roles.
 5. SVD15 distillation into concrete text-grounded residual features and retest under the shared splits.

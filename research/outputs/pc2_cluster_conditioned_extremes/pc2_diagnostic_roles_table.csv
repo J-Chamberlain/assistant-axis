@@ -1,0 +1,19 @@
+persona,found,cluster,pc1,pc2,pc3,pc1_percentile,pc2_percentile,pc3_percentile,global_pc2_rank_desc,cluster_pc2_rank_desc,cluster_size,cluster_pc2_median,pc2_side_global,pc2_side_cluster,diagnostic_note
+shapeshifter,True,grounded_social,-26.647735,-7.225544,-3.341381,23.454545,39.454545,40.909091,167,51,54,18.610484,below_global_median,below_cluster_median,identity plasticity/social adaptation prediction case
+chameleon,True,grounded_social,-0.639659,15.880444,-5.605038,46.727273,79.090909,35.454545,58,33,54,18.610484,above_global_median,below_cluster_median,identity plasticity/social adaptation prediction case
+tree,True,mythic_spiritual,-48.766090,-28.499335,-14.624577,5.272727,9.636364,16.545455,249,29,51,-24.845769,below_global_median,below_cluster_median,stability/rootedness/integration prediction case
+hive,True,procedural_professional,2.429805,-32.680856,4.708353,51.090909,4.181818,64.545455,264,126,126,-6.501925,below_global_median,below_cluster_median,stability/rootedness/integration prediction case
+elder,True,mythic_spiritual,-35.705884,-4.929585,-20.673806,16.545455,45.636364,8.545455,150,2,51,-24.845769,below_global_median,above_cluster_median,stability/rootedness/integration prediction case
+patient,True,grounded_social,0.411892,29.188211,-27.329048,48.545455,90.363636,6.363636,27,15,54,18.610484,above_global_median,above_cluster_median,vulnerability/formative-state prediction case
+amateur,True,grounded_social,-0.258633,40.070456,-24.428541,47.454545,96.181818,7.454545,11,1,54,18.610484,above_global_median,above_cluster_median,vulnerability/formative-state prediction case
+philosopher,True,procedural_professional,5.320795,-30.943900,3.955251,53.272727,6.000000,62.363636,259,125,126,-6.501925,below_global_median,below_cluster_median,stability/rootedness/integration prediction case
+tulpa,True,grounded_social,-9.203233,-0.932939,-9.498609,39.818182,55.454545,26.727273,123,49,54,18.610484,above_global_median,below_cluster_median,
+actor,True,grounded_social,-23.890048,21.456843,0.283103,26.000000,85.636364,50.000000,40,22,54,18.610484,above_global_median,above_cluster_median,
+caregiver,True,grounded_social,1.344612,14.616834,-43.370517,50.000000,78.363636,0.181818,60,34,54,18.610484,above_global_median,below_cluster_median,
+healer,True,procedural_professional,-1.760882,-11.560648,-34.345430,46.000000,29.636364,1.636364,194,90,126,-6.501925,below_global_median,below_cluster_median,
+guardian,True,procedural_professional,5.555769,-6.861265,-13.004053,53.636364,40.181818,18.363636,165,67,126,-6.501925,below_global_median,below_cluster_median,
+optimist,True,grounded_social,0.231517,22.207882,-31.270952,48.181818,87.090909,2.363636,36,19,54,18.610484,above_global_median,above_cluster_median,
+workaholic,True,combative_iconoclast,2.566650,19.360138,23.982014,51.454545,82.000000,90.363636,50,9,15,20.109883,above_global_median,below_cluster_median,
+blogger,True,grounded_social,-0.321690,20.848444,-14.391345,47.090909,84.909091,17.636364,42,24,54,18.610484,above_global_median,above_cluster_median,
+podcaster,True,grounded_social,0.844643,21.108976,-9.123879,49.272727,85.272727,28.545455,41,23,54,18.610484,above_global_median,above_cluster_median,
+influencer,True,combative_iconoclast,3.229311,40.002556,-2.211369,52.181818,95.818182,45.272727,12,3,15,20.109883,above_global_median,above_cluster_median,

@@ -1,0 +1,9 @@
+persona,expected_pc2_side,cluster,pc2,global_pc2_median,cluster_pc2_median,actual_global_side,actual_cluster_side,global_pass,cluster_pass,caveat
+shapeshifter,high,grounded_social,-7.225544,-2.691353,18.610484,low,low,False,False,Strong counterexample to naive plasticity=high-PC2 within cluster.
+chameleon,high,grounded_social,15.880444,-2.691353,18.610484,high,low,True,False,Global and cluster-conditioned signs diverge; cluster baseline matters.
+tree,low,mythic_spiritual,-28.499335,-2.691353,-24.845769,low,low,True,True,
+hive,low,procedural_professional,-32.680856,-2.691353,-6.501925,low,low,True,True,
+elder,low,mythic_spiritual,-4.929585,-2.691353,-24.845769,low,high,True,False,Global and cluster-conditioned signs diverge; cluster baseline matters.
+patient,high,grounded_social,29.188211,-2.691353,18.610484,high,high,True,True,
+amateur,high,grounded_social,40.070456,-2.691353,18.610484,high,high,True,True,
+philosopher,low,procedural_professional,-30.943900,-2.691353,-6.501925,low,low,True,True,
