@@ -301,3 +301,15 @@ Generating script: `research/outputs/cross_model_pc2_pc3_diagnostic/run_cross_mo
 Dependent analyses: Paper 1.5 PC2 transfer language, future cross-model visualization decision, and PC3 comparability caveats.
 Current status: Provisional/partial support for Qwen-Llama PC2 transfer in a shared PC1/PC2 plane; weak-to-moderate PC3 comparability.
 Notes/caveats: The diagnostic uses layer-mean role vectors to match the current Qwen visualization builder. Qwen-Llama PC1/PC2 plane principal correlations are 0.977 and 0.905, while same-index PC2 Pearson r=0.606 and Qwen PC2 best matches Llama PC1 at r=0.692. Qwen-Llama same-index PC3 is weaker at Pearson r=0.440, so uncaveated 3D PC3 arrows are not recommended. Gemma was included because local vectors were present and showed strong same-index local artifact alignment with Qwen, but it remains secondary to the requested Qwen-Llama diagnostic.
+
+## cross-model cluster topology outputs
+
+Artifact: Bounded Qwen/Llama/Gemma cluster-topology comparison testing whether coarse persona regions are more stable than later same-index PCs.
+Location: `research/outputs/cross_model_cluster_topology/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activations, response generation, clean-repo copying, or visualization edits were run.
+Source inputs: `research/visualizations/geometry_viz_data.json`, `downloads/hf_vectors/qwen-3-32b/role_vectors/*.pt`, `downloads/hf_vectors/llama-3.3-70b/role_vectors/*.pt`, `downloads/hf_vectors/gemma-2-27b/role_vectors/*.pt`, `research/outputs/cross_model_pc2_pc3_diagnostic/`, `research/outputs/cluster_conditioned_axis_tests/`, `research/outputs/pc2_cluster_conditioned_extremes/`, and `research/visualizations/persona_geometry_explorer.html` for feasibility inspection only.
+Generating script: `research/outputs/cross_model_cluster_topology/run_cross_model_cluster_topology.py`
+Dependent analyses: Paper 1.5 cross-model topology language, cross-model visualization decision, and cautious distinction between stable broad regions and model-local PCA axes.
+Current status: Provisional/partial support for broad topology preservation; hard clusters are not universal.
+Notes/caveats: The diagnostic uses layer-mean role vectors to match the current Qwen visualization builder. Independent `k=7` k-means clustering in top-3-PC space gave Qwen-Llama ARI/NMI 0.364/0.458, Qwen-Gemma 0.637/0.656, and Llama-Gemma 0.355/0.454. Top-5-PC sensitivity improved Qwen-Llama to 0.537/0.548. Procedural/evaluator and mythic/symbolic regions are the clearest recurring regions; grounded/social, care/repair, adversarial/perturbative, and creative/symbolic regions split more. Visualization recommendation is model switching or cluster-overlap/alluvial views before any cross-model PC3 arrows.

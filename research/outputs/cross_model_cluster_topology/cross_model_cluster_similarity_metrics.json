@@ -1,0 +1,204 @@
+{
+  "date_utc": "2026-06-02T10:37:33Z",
+  "model_used": "GPT-5.5",
+  "geometry_source": "research/visualizations/geometry_viz_data.json",
+  "k": 7,
+  "models": {
+    "qwen": {
+      "label": "Qwen/Qwen3-32B",
+      "role_count": 275,
+      "explained_variance": [
+        0.31595442260217316,
+        0.16163486947770078,
+        0.08690363114386943,
+        0.04520176160831145,
+        0.03614811062597836
+      ]
+    },
+    "llama": {
+      "label": "Llama-3.3-70B",
+      "role_count": 275,
+      "explained_variance": [
+        0.17231954365252794,
+        0.14158889459870952,
+        0.0647899176950948,
+        0.052518177867977654,
+        0.03710989626303247
+      ]
+    },
+    "gemma": {
+      "label": "Gemma-2-27B",
+      "role_count": 275,
+      "explained_variance": [
+        0.23453089585007258,
+        0.1278198481518455,
+        0.056860022382967446,
+        0.053270273045818876,
+        0.038736551734656205
+      ]
+    }
+  },
+  "matched_role_counts": {
+    "qwen_vs_llama": 275,
+    "qwen_vs_gemma": 275,
+    "llama_vs_gemma": 275,
+    "qwen_llama_gemma_intersection": 275
+  },
+  "cluster_similarity_metrics": [
+    {
+      "model_pair": "gemma_vs_llama",
+      "matched_role_count": 275,
+      "kmeans_top3_ari": 0.3547958971827708,
+      "kmeans_top3_nmi": 0.45393812442766174,
+      "kmeans_top5_ari": 0.6592281513437818,
+      "kmeans_top5_nmi": 0.6481743350323719,
+      "agglomerative_top3_ari": 0.6330362250816247,
+      "agglomerative_top3_nmi": 0.5423025773693717
+    },
+    {
+      "model_pair": "gemma_vs_qwen",
+      "matched_role_count": 275,
+      "kmeans_top3_ari": 0.637047505858775,
+      "kmeans_top3_nmi": 0.6561220279910005,
+      "kmeans_top5_ari": 0.6618943297796976,
+      "kmeans_top5_nmi": 0.632916145802322,
+      "agglomerative_top3_ari": 0.35275639932534786,
+      "agglomerative_top3_nmi": 0.4988910438133877
+    },
+    {
+      "model_pair": "llama_vs_qwen",
+      "matched_role_count": 275,
+      "kmeans_top3_ari": 0.36403127058282536,
+      "kmeans_top3_nmi": 0.4580657243286488,
+      "kmeans_top5_ari": 0.5367157580480169,
+      "kmeans_top5_nmi": 0.5478911502689721,
+      "agglomerative_top3_ari": 0.36534804582448704,
+      "agglomerative_top3_nmi": 0.45778028258339926
+    }
+  ],
+  "prior_cross_model_axis_context": {
+    "qwen_llama_same_index_pc2_pearson": 0.605808866959668,
+    "qwen_llama_same_index_pc2_spearman": 0.42971985805372037,
+    "qwen_llama_same_index_pc3_pearson": 0.44043920658341235,
+    "qwen_llama_same_index_pc3_spearman": 0.5578713828221921,
+    "qwen_llama_pc1_pc2_plane_principal_correlations": [
+      0.9765710453740877,
+      0.9045584252333672
+    ]
+  },
+  "region_conservation": [
+    {
+      "region": "procedural_professional",
+      "seed_roles_present": 26,
+      "seed_roles": "accountant;analyst;architect;auditor;debugger;doctor;economist;editor;engineer;evaluator;examiner;grader;historian;journalist;lawyer;philosopher;programmer;proofreader;researcher;reviewer;scientist;screener;statistician;teacher;therapist;validator",
+      "qwen_reference_primary_cluster": "procedural_professional",
+      "qwen_reference_primary_count": 21,
+      "qwen_primary_kmeans_cluster": "0",
+      "qwen_primary_count": 21,
+      "qwen_purity": 0.8076923076923077,
+      "llama_primary_kmeans_cluster": "1",
+      "llama_primary_count": 21,
+      "llama_purity": 0.8076923076923077,
+      "gemma_primary_kmeans_cluster": "5",
+      "gemma_primary_count": 22,
+      "gemma_purity": 0.8461538461538461
+    },
+    {
+      "region": "mythic_spiritual",
+      "seed_roles_present": 21,
+      "seed_roles": "ancient;angel;ascetic;avatar;demon;egregore;eldritch;genie;ghost;hive;leviathan;mystic;oracle;prophet;sage;shaman;spirit;swarm;tree;void;witch",
+      "qwen_reference_primary_cluster": "mythic_spiritual",
+      "qwen_reference_primary_count": 18,
+      "qwen_primary_kmeans_cluster": "4",
+      "qwen_primary_count": 12,
+      "qwen_purity": 0.5714285714285714,
+      "llama_primary_kmeans_cluster": "2",
+      "llama_primary_count": 13,
+      "llama_purity": 0.6190476190476191,
+      "gemma_primary_kmeans_cluster": "3",
+      "gemma_primary_count": 15,
+      "gemma_purity": 0.7142857142857143
+    },
+    {
+      "region": "grounded_social",
+      "seed_roles_present": 19,
+      "seed_roles": "actor;amateur;bartender;blogger;caregiver;expatriate;grandparent;immigrant;interviewer;moderator;newlywed;orphan;parent;patient;podcaster;refugee;surfer;veteran;widow",
+      "qwen_reference_primary_cluster": "grounded_social",
+      "qwen_reference_primary_count": 16,
+      "qwen_primary_kmeans_cluster": "2",
+      "qwen_primary_count": 10,
+      "qwen_purity": 0.5263157894736842,
+      "llama_primary_kmeans_cluster": "0",
+      "llama_primary_count": 16,
+      "llama_purity": 0.8421052631578947,
+      "gemma_primary_kmeans_cluster": "4",
+      "gemma_primary_count": 11,
+      "gemma_purity": 0.5789473684210527
+    },
+    {
+      "region": "care_repair_stabilizing",
+      "seed_roles_present": 15,
+      "seed_roles": "angel;caregiver;counselor;doctor;empath;grandparent;guardian;healer;mediator;optimist;paramedic;peacekeeper;romantic;therapist;widow",
+      "qwen_reference_primary_cluster": "procedural_professional",
+      "qwen_reference_primary_count": 8,
+      "qwen_primary_kmeans_cluster": "2",
+      "qwen_primary_count": 9,
+      "qwen_purity": 0.6,
+      "llama_primary_kmeans_cluster": "4",
+      "llama_primary_count": 7,
+      "llama_purity": 0.4666666666666667,
+      "gemma_primary_kmeans_cluster": "0",
+      "gemma_primary_count": 11,
+      "gemma_purity": 0.7333333333333333
+    },
+    {
+      "region": "adversarial_perturbative",
+      "seed_roles_present": 16,
+      "seed_roles": "contrarian;criminal;cynic;daredevil;demon;devils_advocate;hacker;jester;pirate;provocateur;rebel;rogue;saboteur;spy;trickster;vigilante",
+      "qwen_reference_primary_cluster": "combative_iconoclast",
+      "qwen_reference_primary_count": 8,
+      "qwen_primary_kmeans_cluster": "1",
+      "qwen_primary_count": 15,
+      "qwen_purity": 0.9375,
+      "llama_primary_kmeans_cluster": "3",
+      "llama_primary_count": 7,
+      "llama_purity": 0.4375,
+      "gemma_primary_kmeans_cluster": "2",
+      "gemma_primary_count": 13,
+      "gemma_purity": 0.8125
+    },
+    {
+      "region": "creative_symbolic",
+      "seed_roles_present": 15,
+      "seed_roles": "bard;composer;dreamer;musician;mystic;narrator;novelist;oracle;playwright;poet;romantic;shapeshifter;tulpa;visionary;writer",
+      "qwen_reference_primary_cluster": "mythic_spiritual",
+      "qwen_reference_primary_count": 6,
+      "qwen_primary_kmeans_cluster": "4",
+      "qwen_primary_count": 7,
+      "qwen_purity": 0.4666666666666667,
+      "llama_primary_kmeans_cluster": "4",
+      "llama_primary_count": 6,
+      "llama_purity": 0.4,
+      "gemma_primary_kmeans_cluster": "3",
+      "gemma_primary_count": 7,
+      "gemma_purity": 0.4666666666666667
+    },
+    {
+      "region": "assistant_evaluator_like",
+      "seed_roles_present": 14,
+      "seed_roles": "accountant;assistant;auditor;editor;evaluator;examiner;grader;proofreader;reviewer;scheduler;screener;secretary;summarizer;validator",
+      "qwen_reference_primary_cluster": "editorial",
+      "qwen_reference_primary_count": 7,
+      "qwen_primary_kmeans_cluster": "0",
+      "qwen_primary_count": 11,
+      "qwen_purity": 0.7857142857142857,
+      "llama_primary_kmeans_cluster": "1",
+      "llama_primary_count": 14,
+      "llama_purity": 1.0,
+      "gemma_primary_kmeans_cluster": "5",
+      "gemma_primary_count": 13,
+      "gemma_purity": 0.9285714285714286
+    }
+  ],
+  "visualization_files_modified": false
+}
