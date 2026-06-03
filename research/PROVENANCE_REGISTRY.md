@@ -266,6 +266,18 @@ Dependent analyses: Target-role selection, manual/LLM-assisted instruction/quest
 Current status: Established design artifact; target role remains user-selected.
 Notes/caveats: The packet inventories 275 non-default roles with five positive instructions each and 240 shared questions. It defines centroid-relative displacement rubrics for PC1/PC2/PC3 and provides blank scoring templates. It does not score items, choose a target role, generate responses, extract activations, or overcome the public-data absence of original response-level judge scores and retained masks.
 
+## positive PC2 pilot candidate selection outputs
+
+Artifact: Positive-PC2 edge role shortlist for the first two-persona activation-cloud GPU pilot with playwright.
+Location: `research/outputs/positive_pc2_pilot_candidate_selection/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activations, or response generation were run.
+Source inputs: `research/visualizations/geometry_viz_data.json` and `data/roles/instructions/*.json`.
+Generating script: `research/outputs/positive_pc2_pilot_candidate_selection/run_positive_pc2_candidate_selection.py`
+Dependent analyses: User selection of the second persona for the first activation-cloud pilot after T01/D01 extraction-boundary verification.
+Current status: Planning artifact awaiting user selection.
+Notes/caveats: Preferred filter found 15 valid candidates using PC2 percentile >= 85 and PC1 percentile 40-75, so no fallback was needed. Primary shortlist is `amateur`, `influencer`, `newlywed`, `graduate`, and `patient`; alternates are `celebrity`, `divorcee`, `parent`, `retiree`, and `student`. This does not establish activation movement and should not be treated as empirical validation.
+
 ## Paper 1.5 clean repo copy plan
 
 Artifact: Copy plan for a future clean Paper 1.5 core repository.

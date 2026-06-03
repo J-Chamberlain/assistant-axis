@@ -1,0 +1,13 @@
+{
+  "role": "playwright",
+  "cluster": "grounded_social",
+  "pc1": -9.81757782466405,
+  "pc2": 4.585625092149062,
+  "pc3": 4.301204997865276,
+  "pc1_percentile": 39.09090909090909,
+  "pc2_percentile": 65.63636363636364,
+  "pc3_percentile": 63.45454545454545,
+  "instruction_path": "data/roles/instructions/playwright.json",
+  "instruction_status": "ok",
+  "positive_pc2_candidate_note": "Already selected comparison role; expressive high-degrees-of-freedom anchor, not the positive-PC2 edge candidate."
+}

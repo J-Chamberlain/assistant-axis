@@ -86,6 +86,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/role_rollout_artifact_audit/`: public/local audit of reconstructable role-vector rollout inputs, missing public responses/scores/retained masks, and the resolved "64" count question.
 - `research/outputs/within_role_displacement_design/`: reusable design packet for testing whether instruction/question wording predicts activation displacement around a fixed user-selected role centroid.
 - `research/outputs/playwright_displacement_scoring/`: scored playwright within-role displacement packet with question scores, instruction scores, 1,200-row forecast grid, distribution summary, manual-review shortlist, report, and reproducible no-GPU scoring script.
+- `research/outputs/positive_pc2_pilot_candidate_selection/`: positive-PC2 edge candidate shortlist for the first two-persona activation-cloud GPU pilot with playwright, including primary/alternate candidate tables, instruction excerpts, and playwright comparison coordinates.
 - `research/outputs/paper15_clean_repo_copy_plan/`: copy plan for a future clean `assistant-axis-paper15-core` repo, including artifact CSV, report spine map, claim traceability table, visualization inventory, proposed tree, and excluded archive index.
 - `research/notebooks/paper15_core_analysis_walkthrough.ipynb`: first-pass Paper 1.5 executable appendix / notebook walkthrough for canonical pre-H100 analysis.
 - `research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb`: headlessly executed Paper 1.5 core notebook.
@@ -120,8 +121,9 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 12. Advance T04 by designing a small multi-sample GPU study to estimate response activation spread around selected target regions after T01 is closed.
 13. Calibrate the lightweight prompt-to-geometry forecaster using the completed H100/A100 validation data only after the T01 activation-boundary issue is resolved: start with per-axis intercept/slope correction, then compare against region-aware correction for PC2 and PC3 tails.
 14. Review `research/outputs/playwright_displacement_scoring/displacement_manual_review_shortlist.csv`, especially thin PC1-negative and PC3-positive coverage, before running the corrected-hook playwright displacement study after T01/D01 extraction equivalence is resolved.
-15. Review `research/outputs/paper15_clean_repo_copy_plan/clean_repo_copy_plan.csv`; if approved, run a separate copy-only task to create `assistant-axis-paper15-core` without H100 or prompt-battery materials.
-16. Review `research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough_report_collapsed_code.html` as the reader-first Paper 1.5 work-in-progress report; if approved, include the source/executed notebook and collapsed-code HTML in the future clean Paper 1.5 core repo.
+15. Select one positive-PC2 edge role from `research/outputs/positive_pc2_pilot_candidate_selection/` for the first two-persona activation-cloud GPU pilot with playwright after extraction-boundary verification.
+16. Review `research/outputs/paper15_clean_repo_copy_plan/clean_repo_copy_plan.csv`; if approved, run a separate copy-only task to create `assistant-axis-paper15-core` without H100 or prompt-battery materials.
+17. Review `research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough_report_collapsed_code.html` as the reader-first Paper 1.5 work-in-progress report; if approved, include the source/executed notebook and collapsed-code HTML in the future clean Paper 1.5 core repo.
 
 ## Archived Directions
 
