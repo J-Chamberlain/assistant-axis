@@ -3,8 +3,19 @@
   "pre_termination_status": "outputs_written_on_pod",
   "copy_status": "copied_to_mac_mini",
   "checksum_status": "local_sha256_manifest_verified",
-  "commit_status": "pending_before_termination",
-  "termination_status": "pending_until_after_commit_push",
+  "commit_status": "outputs_committed_and_pushed_before_termination",
+  "commit_hash_before_termination": "eb6179f",
+  "termination_status": "terminated_verified",
+  "termination_method": "runpodctl pod delete",
+  "termination_utc": "2026-06-03T20:40:29Z",
+  "termination_delete_response_summary": {
+    "deleted": true,
+    "id": "eu6ub11lshcyze"
+  },
+  "termination_verification": {
+    "runpodctl_pod_get": "404 pod not found",
+    "runpodctl_pod_list": []
+  },
   "gpu_type": "NVIDIA A100-SXM4-80GB",
   "cost_per_hr": 1.49,
   "runtime_seconds": 2781.7314467430115,
