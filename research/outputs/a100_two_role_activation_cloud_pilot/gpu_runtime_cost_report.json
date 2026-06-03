@@ -1,0 +1,10 @@
+{
+  "pod_id": "eu6ub11lshcyze",
+  "gpu_type": "NVIDIA A100-SXM4-80GB",
+  "cost_per_hr": 1.49,
+  "runtime_seconds": 2781.7314467430115,
+  "estimated_cost_usd": 1.1513277376797464,
+  "stage2_proceeded": true,
+  "responses_generated": 120,
+  "completed_utc": "2026-06-03T20:37:02.340547+00:00"
+}

@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-06-03T19:51:37.443870+00:00",
+  "model": "Qwen/Qwen3-32B",
+  "layer": 48,
+  "roles": [
+    "amateur",
+    "playwright"
+  ],
+  "target_generations_per_role": 60,
+  "question_count_per_instruction": 12,
+  "generation_settings": {
+    "max_new_tokens": 300,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "do_sample": true,
+    "thinking_disabled": true
+  },
+  "geometry_source": "/root/assistant-axis/research/visualizations/geometry_viz_data.json",
+  "questions_path": "/root/assistant-axis/data/extraction_questions.jsonl",
+  "vector_dir": "/root/assistant-axis/downloads/hf_vectors/qwen-3-32b/role_vectors",
+  "pca_basis_debug": {
+    "basis_source": "reconstructed_from_canonical_qwen_role_vectors_with_sign_alignment",
+    "vector_dir": "/root/assistant-axis/downloads/hf_vectors/qwen-3-32b/role_vectors",
+    "canonical_pca_path": "/root/assistant-axis/research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv",
+    "n_roles_used": 275,
+    "n_roles_verified_against_committed_coordinates": 273,
+    "role_vector_shape": [
+      275,
+      5120
+    ],
+    "sign_alignment": [
+      -1.0,
+      1.0,
+      -1.0
+    ],
+    "max_abs_coordinate_reproduction_error": 1.2070328558877463e-06,
+    "mean_abs_coordinate_reproduction_error": 1.0737016326209899e-07
+  }
+}

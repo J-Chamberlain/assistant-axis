@@ -24,6 +24,10 @@ Qwen/Qwen3-32B trickster Phase 1 completed 1200 rollouts and 1200 activation sha
 
 The public-source D01 audit found likely mismatch between H100 `outputs.hidden_states[48]` extraction and the original Assistant Axis Qwen convention. Official/prior extraction hooks `model.model.layers[48]` and captures decoder layer-48 post-MLP residual output, while Transformers/Qwen3 hidden-state semantics indicate `hidden_states[48]` is the input to decoder layer 48 / output after layer 47. The next step is a tiny one-prompt hook-vs-hidden-states confirmation test, not a full H100 rerun.
 
+### A100 Hook Boundary Resolution and Two-Role Activation Clouds
+
+The staged A100 pilot resolved the D01 extraction-boundary question for this run: `model.model.layers[48]` hook output matched `outputs.hidden_states[49]`, not `hidden_states[48]`, with mean hook-vs-hidden_states[49] cosine 1.000000 and mean projected-coordinate delta 0.000. The same run generated 60 amateur and 60 playwright response activations using direct hook extraction. Published centroids were near all-response centroids, but individual responses were broad: amateur centroid distance 8.394 with mean response-to-centroid distance 24.912, and playwright centroid distance 7.460 with mean response-to-centroid distance 27.916. This supports distribution/region-level response-state forecasting over exact single-response point-coordinate precision for the next analysis step.
+
 ### Public Role Rollout Artifacts Are Inputs-Only
 
 Public artifacts allow reconstruction of the intended Assistant Axis role-vector input distribution: 275 non-default roles, 5 positive instructions per role, and 240 shared extraction questions, yielding 1,200 instruction-question combinations per role. Public artifacts do not include the original generated rollout responses, response-level judge scores, or retained-response masks/IDs. The remembered "64" count is resolved as Qwen layer count in `[64,5120]` vectors plus local adaptive-extraction counts, not a public original retained-response count.

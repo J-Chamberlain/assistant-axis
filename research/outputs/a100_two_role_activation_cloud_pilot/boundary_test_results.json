@@ -1,0 +1,100 @@
+{
+  "stage": "boundary_test",
+  "completed_utc": "2026-06-03T19:52:41.448219+00:00",
+  "layer": 48,
+  "comparisons": [
+    {
+      "role": "playwright",
+      "question_id": 0,
+      "comparison": "hook_layer_48_vs_hidden_states_48",
+      "cosine": 0.9918089516383691,
+      "l2_norm_difference": 39.87469621423637,
+      "max_abs_difference": 15.0050048828125,
+      "hook_pc1": -1.9322047268719067,
+      "hook_pc2": -9.153498647844481,
+      "hook_pc3": 11.267386630432846,
+      "hidden_states_48_pc1": -3.4877545195408493,
+      "hidden_states_48_pc2": -1.305679649541268,
+      "hidden_states_48_pc3": 12.69351698331532,
+      "delta_pc1": -1.5555497926689426,
+      "delta_pc2": 7.847818998303213,
+      "delta_pc3": 1.426130352882474,
+      "coordinate_delta_l2": 8.126613438020412
+    },
+    {
+      "role": "playwright",
+      "question_id": 0,
+      "comparison": "hook_layer_48_vs_hidden_states_49",
+      "cosine": 1.0,
+      "l2_norm_difference": 0.0,
+      "max_abs_difference": 0.0,
+      "hook_pc1": -1.9322047268719067,
+      "hook_pc2": -9.153498647844481,
+      "hook_pc3": 11.267386630432846,
+      "hidden_states_49_pc1": -1.9322047268719067,
+      "hidden_states_49_pc2": -9.153498647844481,
+      "hidden_states_49_pc3": 11.267386630432846,
+      "delta_pc1": 0.0,
+      "delta_pc2": 0.0,
+      "delta_pc3": 0.0,
+      "coordinate_delta_l2": 0.0
+    },
+    {
+      "role": "amateur",
+      "question_id": 0,
+      "comparison": "hook_layer_48_vs_hidden_states_48",
+      "cosine": 0.9904317925324885,
+      "l2_norm_difference": 41.15574882663199,
+      "max_abs_difference": 13.993331909179688,
+      "hook_pc1": 1.8506518532590583,
+      "hook_pc2": 20.222432991722556,
+      "hook_pc3": -4.206727595890495,
+      "hidden_states_48_pc1": -2.4449784617873505,
+      "hidden_states_48_pc2": 25.043821507766886,
+      "hidden_states_48_pc3": 0.9927537830133201,
+      "delta_pc1": -4.295630315046409,
+      "delta_pc2": 4.82138851604433,
+      "delta_pc3": 5.1994813789038155,
+      "coordinate_delta_l2": 8.29052674054896
+    },
+    {
+      "role": "amateur",
+      "question_id": 0,
+      "comparison": "hook_layer_48_vs_hidden_states_49",
+      "cosine": 0.9999999999999998,
+      "l2_norm_difference": 0.0,
+      "max_abs_difference": 0.0,
+      "hook_pc1": 1.8506518532590583,
+      "hook_pc2": 20.222432991722556,
+      "hook_pc3": -4.206727595890495,
+      "hidden_states_49_pc1": 1.8506518532590583,
+      "hidden_states_49_pc2": 20.222432991722556,
+      "hidden_states_49_pc3": -4.206727595890495,
+      "delta_pc1": 0.0,
+      "delta_pc2": 0.0,
+      "delta_pc3": 0.0,
+      "coordinate_delta_l2": 0.0
+    }
+  ],
+  "details": [
+    {
+      "role": "playwright",
+      "response_text": "The relationship between law and morality is one of the most enduring and complex themes in philosophy, politics, and the arts. As a playwright, I see this tension as a fertile ground for drama \u2014 a source of conflict, character transformation, and societal commentary. Here's a structured exploration of the relationship between law and morality, framed with a dramatic lens:\n\n---\n\n### **1. Law as the Framework of Order**\n**Dramatic Representation:**  \nIn a courtroom, a city hall, or a war-torn village, the law is often portrayed as the mechanism that upholds order, justice, and the common good. Laws are codified rules that create a shared framework for society. They are meant to be neutral, objective, and impartial.\n\n**Example in Drama:**  \nA judge who strictly enforces the law, even when it leads to an unjust outcome, can serve as a tragic figure. Think of the character of Atticus Finch in *To Kill a Mockingbird* \u2014 a man who upholds the law, but also questions its moral implications.\n\n---\n\n### **2. Morality as the Compass of the Individual**\n**Dramatic Representation:**  \nMorality is more personal, internal, and often rooted in conscience, faith, or philosophy. It is the realm of *right and wrong* as understood by the individual. Characters often find themselves at odds with the law because their moral compass leads them in a different direction.\n\n**Example in Drama:**  \nIn *Les Mis\u00e9r",
+      "prompt_token_count": 41,
+      "response_token_count": 300
+    },
+    {
+      "role": "amateur",
+      "response_text": "That's a really fascinating question \u2014 and one that has sparked a lot of thought and debate among philosophers, lawyers, and everyday people who care about justice. From my own perspective as someone who loves diving into these kinds of ideas, I see the relationship between law and morality as both deep and complex. Let me try to break it down in a way that reflects my passion for the topic.\n\nAt first glance, law and morality might seem similar because they both try to guide how people should behave. But they do it in different ways. Law is a set of rules created by governments or authorities, and it\u2019s enforced through courts, police, and other institutions. If you break a law, there are usually consequences like fines or jail time. Morality, on the other hand, is more about what people believe is right or wrong, often based on personal beliefs, religion, culture, or philosophy. You don\u2019t get punished for immoral behavior in the same way \u2014 unless it\u2019s also illegal.\n\nBut the two definitely influence each other. In many societies, laws are based on moral values. For example, laws against murder or theft usually reflect a shared belief that these actions are wrong. So in that sense, morality can shape the law.\n\nHowever, not all laws are moral, and not all moral beliefs become laws. History is full of examples where the law was used to enforce immoral policies \u2014 like slavery, segregation, or denying rights to certain groups of people. In these cases, the law was",
+      "prompt_token_count": 45,
+      "response_token_count": 300
+    }
+  ],
+  "mean_cosine_hook_vs_hidden_states_48": 0.9911203720854288,
+  "mean_cosine_hook_vs_hidden_states_49": 0.9999999999999999,
+  "mean_coordinate_delta_l2_hook_vs_hidden_states_48": 8.208570089284686,
+  "mean_coordinate_delta_l2_hook_vs_hidden_states_49": 0.0,
+  "conclusion": "hook_matches_hidden_states_49",
+  "proceed_to_stage_2": true,
+  "activation_source_for_stage_2": "hook_layer_48"
+}

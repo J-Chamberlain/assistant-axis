@@ -1,0 +1,18 @@
+{
+  "amateur": {
+    "n": 60,
+    "mean_distance_to_published_centroid": 24.912256940997317,
+    "median_distance_to_published_centroid": 23.411964297121628,
+    "min_distance_to_published_centroid": 5.929461296264968,
+    "max_distance_to_published_centroid": 51.85423110061135,
+    "std_distance_to_published_centroid": 9.998885325365828
+  },
+  "playwright": {
+    "n": 60,
+    "mean_distance_to_published_centroid": 27.916286844249125,
+    "median_distance_to_published_centroid": 26.79602431178881,
+    "min_distance_to_published_centroid": 9.776253069853936,
+    "max_distance_to_published_centroid": 64.21596097087303,
+    "std_distance_to_published_centroid": 11.263583807964983
+  }
+}

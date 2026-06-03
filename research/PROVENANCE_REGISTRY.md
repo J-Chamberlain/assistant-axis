@@ -278,6 +278,18 @@ Dependent analyses: User selection of the second persona for the first activatio
 Current status: Planning artifact awaiting user selection.
 Notes/caveats: Preferred filter found 15 valid candidates using PC2 percentile >= 85 and PC1 percentile 40-75, so no fallback was needed. Primary shortlist is `amateur`, `influencer`, `newlywed`, `graduate`, and `patient`; alternates are `celebrity`, `divorcee`, `parent`, `retiree`, and `student`. This does not establish activation movement and should not be treated as empirical validation.
 
+## a100 two-role activation cloud pilot outputs
+
+Artifact: Staged GPU boundary verification and two-role response activation-cloud pilot for amateur and playwright.
+Location: `research/outputs/a100_two_role_activation_cloud_pilot/`
+Created by: Codex/GPT-5.5.
+Model used: Qwen/Qwen3-32B for response generation and activation extraction; Codex/GPT-5.5 for script authoring, orchestration, analysis, and reporting.
+Source inputs: `research/visualizations/geometry_viz_data.json`, `data/roles/instructions/amateur.json`, `data/roles/instructions/playwright.json`, `data/extraction_questions.jsonl`, and `downloads/hf_vectors/qwen-3-32b/role_vectors/*.pt`.
+Generating script: `research/outputs/a100_two_role_activation_cloud_pilot/run_a100_two_role_activation_cloud_pilot.py`
+Dependent analyses: D01/T01 extraction-boundary closeout, response-state uncertainty/T04 analysis, offline judge filtering for role-expression quality, and future region/distribution-level forecasting calibration.
+Current status: Established pilot output; pod outputs were copied back and checksummed locally before termination.
+Notes/caveats: RunPod pod `eu6ub11lshcyze` used an A100-SXM4-80GB at $1.49/hr. Boundary test showed `model.model.layers[48]` hook output matches `outputs.hidden_states[49]`, not `hidden_states[48]`. Stage 2 used direct hook extraction and generated 60 responses per role. Published centroids were near all-response centroids, but individual response clouds were broad; this supports distribution-level rather than exact single-response point-coordinate forecasting. Raw generated responses are preserved for later judge filtering; no judge API was called in this GPU task.
+
 ## Paper 1.5 clean repo copy plan
 
 Artifact: Copy plan for a future clean Paper 1.5 core repository.
