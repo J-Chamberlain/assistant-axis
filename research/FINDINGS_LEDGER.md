@@ -36,6 +36,10 @@ Posthoc analysis of the unfiltered amateur/playwright clouds found both clouds a
 
 After API quota was enabled, GPT-4.1 scored all 120 saved amateur/playwright responses with temperature 0. Amateur retained 59/60 responses at score>=2 and 34/60 at score==3; playwright retained 54/60 at score>=2 and 49/60 at score==3. Filtering reduced cloud volume and mean response distance to the published centroid, but did not improve centroid alignment: score>=2 centroid-distance changes were +0.148 for amateur and +0.992 for playwright, while score==3 changes were +2.977 and +2.639. Interpretation: broad clouds are not mostly weak role-expression noise, strong role expression forms a tighter but offset subcloud, and future forecasting should distinguish published role-vector centroids, execution clouds, and judged high-expression submanifolds.
 
+### Activation-Cloud Viewer and GPT-5.5 Judge Availability Check
+
+The amateur/playwright activation-cloud analysis now has a standalone viewer and reusable no-GPU suite scaffold. The viewer overlays all-response points with GPT-4.1 scores and supports PC1-PC2, PC1-PC3, and PC2-PC3 projections. GPT-5.5 was visible through the OpenAI API model list, but rejected the required temperature-0 judge configuration; following the preregistered constraint, no default-temperature GPT-5.5 or substitute judge was run. Judge-model agreement remains pending a separately approved deterministic or default-temperature comparison protocol.
+
 ### Public Role Rollout Artifacts Are Inputs-Only
 
 Public artifacts allow reconstruction of the intended Assistant Axis role-vector input distribution: 275 non-default roles, 5 positive instructions per role, and 240 shared extraction questions, yielding 1,200 instruction-question combinations per role. Public artifacts do not include the original generated rollout responses, response-level judge scores, or retained-response masks/IDs. The remembered "64" count is resolved as Qwen layer count in `[64,5120]` vectors plus local adaptive-extraction counts, not a public original retained-response count.

@@ -1,0 +1,20 @@
+{
+  "activation_cloud_per_response_csv": "research/outputs/.../activation_cloud_per_response.csv",
+  "judge_input_responses_jsonl": "research/outputs/.../judge_input_responses.jsonl",
+  "geometry_viz_data_json": "research/visualizations/geometry_viz_data.json",
+  "output_dir": "research/outputs/<new_activation_cloud_analysis>/",
+  "judge_models": [
+    "gpt-4.1"
+  ],
+  "bootstrap_resamples": 1000,
+  "sample_sizes": [
+    5,
+    10,
+    15,
+    20,
+    30,
+    40,
+    50,
+    60
+  ]
+}

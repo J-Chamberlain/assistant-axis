@@ -302,6 +302,30 @@ Dependent analyses: Score==3 outlier inspection, rejected near-centroid response
 Current status: Cloud shape, bootstrap, GPT-4.1 scoring, and judge-filtered cloud analysis complete.
 Notes/caveats: No GPU, pod, activation extraction, or response generation occurred in the posthoc analysis. The first judge attempt hit HTTP 429 quota and wrote a sanitized failure record, later removed after successful scoring; the completed judge run scored all 120 responses. The scripts load `OPENAI_API_KEY` from the environment or `~/.openai_api_key` without logging or committing secrets. Bootstrap estimates use unfiltered response clouds and may underestimate raw generations needed after judge filtering. Filtering reduced volume and mean response distance but moved centroids farther from the published role vectors, so the result is mixed rather than a simple sharpening toward the published centroid.
 
+## a100 activation cloud visualization and judge compare outputs
+
+Artifact: Standalone visualization package and judge-model comparison attempt for the amateur/playwright activation-cloud pilot.
+Location: `research/outputs/a100_activation_cloud_visualization_and_judge_compare/`
+Created by: Codex/GPT-5.5.
+Model used: Codex/GPT-5.5 for script authoring, visualization, and local analysis; GPT-5.5 API availability was checked but no GPT-5.5 judge scoring was run because the required temperature-0 configuration was rejected by the API.
+Source inputs: `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `research/outputs/a100_two_role_activation_cloud_pilot/judge_input_responses.jsonl`, `research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/judge_filtered_cloud_summary_by_role.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/judge_filtered_centroid_shifts.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/cloud_covariance_eigendecomp.json`, and `research/visualizations/geometry_viz_data.json`.
+Generating script: `research/outputs/a100_activation_cloud_visualization_and_judge_compare/run_cloud_viz_judge_suite.py`
+Dependent analyses: Interactive inspection of score==3 outliers, instruction/question effects, future viewer integration, and future judge-model sensitivity if a deterministic or explicitly default-temperature comparison protocol is approved.
+Current status: Visualization package complete; GPT-5.5 comparison skipped under preregistered temperature-0 constraint.
+Notes/caveats: The main geometry viewer was not modified. The standalone viewer uses Plotly from CDN and embeds a compact data bundle. GPT-5.5 appears in the local model list, but the chat-completions API rejected `temperature=0` for that model and only supports default temperature, so no apples-to-apples GPT-4.1-vs-GPT-5.5 judge comparison was produced.
+
+## activation cloud suite tool scaffold
+
+Artifact: Reusable no-GPU activation-cloud analysis scaffold for future persona-cloud pilots.
+Location: `research/tools/activation_cloud_suite/`
+Created by: Codex/GPT-5.5.
+Model used: Codex/GPT-5.5 for tool scaffold and documentation.
+Source inputs: Generalized from the A100 amateur/playwright pilot and posthoc analysis outputs.
+Generating script: `research/outputs/a100_activation_cloud_visualization_and_judge_compare/run_cloud_viz_judge_suite.py`
+Dependent analyses: Future persona activation-cloud pilots after GPU extraction, judge filtering, covariance/cloud-shape inspection, and viewer generation.
+Current status: Scaffolded; the A100 worked-example script remains the reference implementation.
+Notes/caveats: The current suite runner is a lightweight config loader/stub, not a fully factored library. Future pilots should either reuse the worked-example script or promote its functions into the tool package before relying on the suite as a stable interface.
+
 ## Paper 1.5 clean repo copy plan
 
 Artifact: Copy plan for a future clean Paper 1.5 core repository.

@@ -1,0 +1,9 @@
+{
+  "model": "gpt-5.5",
+  "requested_temperature": 0,
+  "status": "not_run_required_temperature_unsupported",
+  "reason": "API rejected temperature 0 for gpt-5.5; only default temperature is supported.",
+  "api_key_logged": false,
+  "authorization_headers_saved": false,
+  "completed_utc": "2026-06-04T00:37:45.272942+00:00"
+}
