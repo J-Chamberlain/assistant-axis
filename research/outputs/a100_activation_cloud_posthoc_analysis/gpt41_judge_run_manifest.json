@@ -1,13 +1,12 @@
 {
   "model": "gpt-4.1",
   "temperature": 0,
-  "n_responses_scored": 0,
-  "api_key_source": "~/.openai_api_key",
+  "n_responses_scored": 120,
+  "api_key_source": "environment",
   "api_key_logged": false,
-  "started_utc": "2026-06-04T00:01:16.248785+00:00",
-  "completed_utc": "2026-06-04T00:01:16.840636+00:00",
-  "status": "api_error_before_completion",
-  "error_path": "judge_api_error.json",
+  "authorization_headers_saved": false,
+  "started_utc": "2026-06-04T00:17:31.347402+00:00",
+  "completed_utc": "2026-06-04T00:20:25.298648+00:00",
   "prompt_path": "gpt41_judge_prompt.md",
   "schema_path": "gpt41_judge_schema.json",
   "cost_estimate_path": "gpt41_judge_cost_estimate.json"

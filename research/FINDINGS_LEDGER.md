@@ -30,7 +30,11 @@ The staged A100 pilot resolved the D01 extraction-boundary question for this run
 
 ### A100 Activation-Cloud Posthoc Shape and Sample-Size Result
 
-Posthoc analysis of the unfiltered amateur/playwright clouds found both clouds are anisotropic, mostly PC1-elongated, and substantially aligned with the PC1-PC2 plane. Amateur SDs were PC1=16.922, PC2=15.281, PC3=11.887 with covariance eigenvalue variance shares 55.7%, 28.0%, and 16.3%; playwright SDs were PC1=24.372, PC2=13.072, PC3=10.006 with variance shares 71.4%, 17.4%, and 11.2%. Bootstrap centroid convergence recommends at least 20 retained responses for amateur and 30 retained responses for playwright under the unfiltered stability criteria. GPT-4.1 role-expression filtering was attempted but did not complete because the API returned HTTP 429 quota before any scores were produced; filtered-centroid claims remain pending.
+Posthoc analysis of the unfiltered amateur/playwright clouds found both clouds are anisotropic, mostly PC1-elongated, and substantially aligned with the PC1-PC2 plane. Amateur SDs were PC1=16.922, PC2=15.281, PC3=11.887 with covariance eigenvalue variance shares 55.7%, 28.0%, and 16.3%; playwright SDs were PC1=24.372, PC2=13.072, PC3=10.006 with variance shares 71.4%, 17.4%, and 11.2%. Bootstrap centroid convergence recommends at least 20 retained responses for amateur and 30 retained responses for playwright under the unfiltered stability criteria. GPT-4.1 role-expression filtering was completed in the follow-up judge run after the initial quota failure.
+
+### GPT-4.1 Judge-Filtered Activation Cloud Result
+
+After API quota was enabled, GPT-4.1 scored all 120 saved amateur/playwright responses with temperature 0. Amateur retained 59/60 responses at score>=2 and 34/60 at score==3; playwright retained 54/60 at score>=2 and 49/60 at score==3. Filtering reduced cloud volume and mean response distance to the published centroid, but did not improve centroid alignment: score>=2 centroid-distance changes were +0.148 for amateur and +0.992 for playwright, while score==3 changes were +2.977 and +2.639. Interpretation: broad clouds are not mostly weak role-expression noise, strong role expression forms a tighter but offset subcloud, and future forecasting should distinguish published role-vector centroids, execution clouds, and judged high-expression submanifolds.
 
 ### Public Role Rollout Artifacts Are Inputs-Only
 

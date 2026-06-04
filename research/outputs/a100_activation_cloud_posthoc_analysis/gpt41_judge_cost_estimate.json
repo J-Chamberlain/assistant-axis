@@ -1,9 +1,15 @@
 {
   "model": "gpt-4.1",
-  "pricing_source": "https://platform.openai.com/docs/models/gpt-4.1",
+  "temperature": 0,
+  "n_responses": 120,
+  "estimated_input_tokens_before_run": 81471,
+  "estimated_output_tokens_before_run": 14400,
   "input_price_per_1m_tokens_usd": 2.0,
   "output_price_per_1m_tokens_usd": 8.0,
-  "estimated_input_tokens_before_run": 85486,
-  "estimated_output_tokens_before_run": 14400,
-  "estimated_cost_before_run_usd": 0.286172
+  "estimated_cost_before_run_usd": 0.278142,
+  "pricing_source": "https://platform.openai.com/docs/models/gpt-4.1",
+  "actual_prompt_tokens": 70882,
+  "actual_completion_tokens": 15137,
+  "actual_total_tokens": 86019,
+  "actual_cost_estimate_usd": 0.26286
 }
