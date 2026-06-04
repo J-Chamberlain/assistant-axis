@@ -503,6 +503,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Assistant-axis projection was estimated as a proxy by regressing stored role axis projections on PC1/PC2; the proxy angle is +14.70 degrees with R2 0.966, and all-response playwright is closest among these clouds at 27.61 degrees away
 - Interpretation: current evidence supports testing a negative-PC2 role, including `student` as a candidate, but the boundary/orientation pattern remains provisional because the dataset has only five role/run views and repeated editor variants
 
+### PC2 Trait-Stratified Profile Analysis (2026-06-04)
+
+- Built `research/outputs/pc2_trait_stratified_profile/` using the canonical Qwen role-by-trait cosine profile matrix from `research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv` joined to Qwen role PCA coordinates from `research/visualizations/geometry_viz_data.json`
+- Analyzed 275 roles/personas and 240 trait-cosine features with global, PC1 tercile, PC1 quintile, and central muted-PC1 high-vs-low PC2 contrasts
+- Top replicated high-PC2 traits across all five PC1 quintiles include `experiential`, `casual`, `practical`, `reactive`, `grounded`, `anxious`, `neurotic`, `visceral`, `impulsive`, and `accessible`
+- Top replicated low-PC2 traits across all five PC1 quintiles include `ritualistic`, `conscientious`, `formal`, `abstract`, `conceptual`, `pensive`, `serious`, `theoretical`, `meticulous`, and `introverted`
+- PC1-control note: because PC1 and PC2 are PCA-orthogonal, direct residualization of PC2 on PC1 is nearly unchanged; the substantive confound control is the PC1-stratified high/low PC2 comparison plus per-trait PC1 covariate checks
+- Interpretation update: the result supports revising PC2 wording toward context-reactive/accommodating/situated versus stable/internalized/integrated organization; the older situated/formative/impressionable versus integrated/stable wording remains usable but less operationally precise
+- Caveat: trait profiles are activation-space cosine features over correlated traits, not independent psychological ratings or causal ontology
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
