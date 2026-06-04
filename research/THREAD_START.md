@@ -32,6 +32,8 @@ Evaluator-model sensitivity remains unresolved. Codex/GPT-5.5 was used as a prag
 
 PC2 remains the least settled axis. The current best interpretation has shifted away from simple coherent action under uncertainty and toward abstraction/integration/developmental structure. Conditional PC1-band validation found abstraction predicts residual PC2 at r=-0.618, coherent action remains weaker at r=+0.427, and uncertainty exposure fails at r=-0.026.
 
+The newest Qwen PC1 x PC2 trait-region overlay is a visual prototype, not a final PC2 result. It shows that PC1-band-relative cell labels materially differ from global enrichment labels (mean top-3 overlap 0.18), so future PC2 figures should prefer local PC1-band baselines when the question is vertical structure within comparable PC1 regions.
+
 SVD15 lexical/register signal is strong but not yet converted into stable explanatory features. The next useful step is distilling concrete SVD extremes into human-readable residual dimensions and retesting them under the shared splits.
 
 ## Current Interpretations

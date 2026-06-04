@@ -1,6 +1,6 @@
 # Repository Navigation
 
-Updated UTC: 2026-06-04T22:28:31Z
+Updated UTC: 2026-06-04T23:48:53Z
 Last commit when generated: 4ee315d
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
@@ -31,12 +31,12 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - cloud-analysis outputs: 149
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 302
+- trait analyses: 307
 - visualizations: 119
 
 ## Status Counts
 
-- active: 4265
+- active: 4270
 - archive: 11
 - canonical: 18
 - deprecated: 21
@@ -73,7 +73,7 @@ Adaptive extraction and recovered role-cloud artifacts live under `research/q2_s
 
 ### Trait Analyses
 
-Trait-vector, Big Five, trait-space PCA, and trait-profile analyses are indexed in `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/pc2_trait_stratified_profile/`, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`.
+Trait-vector, Big Five, trait-space PCA, and trait-profile analyses are indexed in `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/pc2_trait_stratified_profile/`, `research/outputs/qwen_pc2_trait_region_overlay/`, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. For PC2 visualization work, start with `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_report.md` and the standalone HTML/SVG overlays in that directory.
 
 ### Archived or Deprecated Outputs
 

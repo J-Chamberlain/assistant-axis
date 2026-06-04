@@ -513,6 +513,14 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Interpretation update: the result supports revising PC2 wording toward context-reactive/accommodating/situated versus stable/internalized/integrated organization; the older situated/formative/impressionable versus integrated/stable wording remains usable but less operationally precise
 - Caveat: trait profiles are activation-space cosine features over correlated traits, not independent psychological ratings or causal ontology
 
+### Qwen PC1 x PC2 Trait-Region Overlay Prototype (2026-06-04)
+
+- Built `research/outputs/qwen_pc2_trait_region_overlay/` as the first Qwen-only PC1 x PC2 trait-region overlay using the navigation-located joined trait profile matrix and canonical geometry tables
+- The prototype uses five PC1 quantile bands and three within-band PC2 tertiles, yielding 15/15 populated cells with no sparse cells under the n<8 threshold
+- PC1-band-relative trait labels differ materially from global labels: mean top-3 overlap was 0.18, showing that global enrichment is strongly shaped by broad PC1 gradients
+- High-PC2 cells frequently surface situated/reactive traits such as `experiential`, `practical`, `casual`, `accessible`, `anxious`, `neurotic`, `grounded`, or `accommodating`, while low-PC2 cells more often surface `abstract`, `conceptual`, `theoretical`, `ritualistic`, `pensive`, `serious`, `formal`, or adjacent integrated/formal traits
+- Caveat: this is a descriptive visualization over activation-space trait cosine features, not a causal or final solution to PC2
+
 ### AGENTS Continuity and Registry Maintenance Rules (2026-06-04)
 
 - Updated `AGENTS.md` to align Codex/GPT continuity with the current repository navigation and provenance system

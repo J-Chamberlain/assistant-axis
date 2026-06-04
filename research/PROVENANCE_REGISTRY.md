@@ -459,6 +459,18 @@ Dependent analyses: Paper 1.5 PC2 interpretation wording, future prompt-to-geome
 Current status: Complete local analysis with provisional interpretation update.
 Notes/caveats: The analysis joins 275 roles/personas to 240 trait-cosine features and compares high versus low PC2 roles globally and inside PC1 strata. Replication is defined descriptively by same-sign Cohen's d at threshold across PC1 quintiles. Because PC1 and PC2 are PCA-orthogonal, direct PC2 residualization on PC1 is nearly unchanged; the primary PC1-confound protection is stratified enrichment plus per-trait PC1 covariate checks. Trait profiles are activation-space cosine features, not independent psychological ratings or causal labels.
 
+## Qwen PC1 x PC2 trait-region overlay prototype
+
+Artifact: First Qwen-only PC1 x PC2 trait-region overlay for inspecting local PC2 trait organization within PC1 bands.
+Location: `research/outputs/qwen_pc2_trait_region_overlay/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis, visualization, and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, or judging were run.
+Source inputs: `research/REPO_NAVIGATION.md`, `research/REPO_FILE_INDEX.csv`, `research/RAW_URL_INDEX.md`, `research/geometry_tables/qwen_role_pc_rankings.csv`, `research/geometry_tables/qwen_trait_pc_rankings.csv`, `research/geometry_tables/cluster_membership_table.csv`, and the navigation-located trait profile matrix `research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv`.
+Generating script: `research/outputs/qwen_pc2_trait_region_overlay/run_qwen_pc2_trait_region_overlay.py`
+Dependent analyses: Paper 1.5 PC2 visual interpretation, future interactive persona-geometry overlays, and report figures explaining why PC1-band-relative trait labels are preferable to global trait labels for PC2 inspection.
+Current status: Prototype visualization with descriptive support for PC1-band-relative interpretation.
+Notes/caveats: The prototype uses five equal-count PC1 quantile bands and three equal-count PC2 tertiles within each PC1 band, producing 15 populated cells and no sparse cells under the n<8 threshold. Enrichment is descriptive over activation-space trait cosine features: `enrichment_z = (mean_trait_cell - mean_trait_pc1_band) / global_trait_std`. Mean top-3 overlap between PC1-band-relative and global labels was 0.18, so local labels materially change the visible interpretation. This does not solve PC2 or establish causal psychological labels.
+
 ## AGENTS continuity and maintenance instructions
 
 Artifact: Updated repository-level agent instructions for GPT/Codex continuity and canonical registry maintenance.
