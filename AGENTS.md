@@ -125,6 +125,13 @@ Before committing, update research/RESEARCH_STATE.md Section 3 (Current State) w
 - Last commit hash
 If any new empirical findings were produced, append them to Section 2 with date and key statistic.
 
+REPO NAVIGATION UPDATE
+If this task creates, deletes, moves, or replaces a research artifact, update:
+- research/REPO_NAVIGATION.md
+- research/REPO_FILE_INDEX.csv
+- research/RAW_URL_INDEX.md
+Record the update timestamp and commit.
+
 STICKY NOTES REPORT
 At the very end of every response, after the summary,
 report sticky notes changes in this exact format:

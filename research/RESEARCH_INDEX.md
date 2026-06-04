@@ -66,6 +66,10 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/CLAIMS_REGISTER.md`: compact top-claim register separating observed findings, supported interpretations, tentative claims, and speculative hypotheses.
 - `research/PROVENANCE_REGISTRY.md`: artifact lineage and dependency registry.
 - `research/FINDINGS_LEDGER.md`: compact status of findings, negative results, deviations, blockers, and next tests.
+- `research/REPO_NAVIGATION.md`: canonical repository navigation layer for humans, GPT, Codex, and report workflows.
+- `research/REPO_FILE_INDEX.csv`: machine-readable inventory of tracked repository artifacts with category, status, description, size, and raw URL.
+- `research/RAW_URL_INDEX.md`: curated raw GitHub URL index for frequently referenced artifacts.
+- `research/geometry_tables/`: canonical Qwen role/trait PC ranking tables and cluster membership table generated from `research/visualizations/geometry_viz_data.json`.
 - `research/assistant_axis_methodology/`: Lu et al. methodology extraction, prompt audits, semantic topology, cluster overlap, no-label ablation.
 - `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`: current shared feature benchmark and Big Five source data.
 - `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/`: trait/procedural hierarchy.
