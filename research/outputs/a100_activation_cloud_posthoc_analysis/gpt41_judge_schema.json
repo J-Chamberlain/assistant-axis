@@ -1,0 +1,17 @@
+{
+  "required": [
+    "response_id",
+    "role",
+    "score_0_to_3",
+    "binary_retain_ge2",
+    "binary_retain_eq3",
+    "generic_assistant_collapse",
+    "refusal_or_safety_neutralization",
+    "theatrical_overexpression",
+    "rationale"
+  ],
+  "score_range": [
+    0,
+    3
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "sample_sizes": [
+    5,
+    10,
+    15,
+    20,
+    30,
+    40,
+    50,
+    60
+  ],
+  "bootstrap_resamples": 1000,
+  "rng_seed": 20260603
+}

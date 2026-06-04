@@ -290,6 +290,18 @@ Dependent analyses: D01/T01 extraction-boundary closeout, response-state uncerta
 Current status: Established pilot output; pod outputs were copied back and checksummed locally before termination.
 Notes/caveats: RunPod pod `eu6ub11lshcyze` used an A100-SXM4-80GB at $1.49/hr. Boundary test showed `model.model.layers[48]` hook output matches `outputs.hidden_states[49]`, not `hidden_states[48]`. Stage 2 used direct hook extraction and generated 60 responses per role. Published centroids were near all-response centroids, but individual response clouds were broad; this supports distribution-level rather than exact single-response point-coordinate forecasting. Raw generated responses are preserved for later judge filtering; no judge API was called in this GPU task.
 
+## a100 activation cloud posthoc analysis outputs
+
+Artifact: Local posthoc analysis of amateur/playwright activation-cloud shape, bootstrap sample-size convergence, and GPT-4.1 judge-filter preparation.
+Location: `research/outputs/a100_activation_cloud_posthoc_analysis/`
+Created by: Codex/GPT-5.5.
+Model used: Codex/GPT-5.5 for script authoring and local analysis; GPT-4.1 judge scoring was attempted but produced zero completed scores because the OpenAI API returned HTTP 429 quota before the first response completed.
+Source inputs: `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `activation_cloud_summary_by_role.csv`, `activation_cloud_covariance_by_role.json`, `activation_cloud_distance_stats.json`, `judge_input_responses.jsonl`, and `boundary_test_report.md`.
+Generating script: `research/outputs/a100_activation_cloud_posthoc_analysis/run_a100_activation_cloud_posthoc_analysis.py`
+Dependent analyses: Role-expression-filtered cloud analysis once API quota/access is resolved, sample-size planning for future activation-cloud roles, and decision whether response-state forecasting should target role-conditioned distributions rather than exact single-response coordinates.
+Current status: Cloud shape and bootstrap analyses complete; judge-filtered analysis pending API quota/access.
+Notes/caveats: No GPU, pod, activation extraction, or response generation occurred. The script loads `OPENAI_API_KEY` from the environment or `~/.openai_api_key` without logging or committing secrets. The output records a sanitized 429 quota error and does not contain API credentials or authorization headers. Bootstrap estimates use unfiltered response clouds and may underestimate raw generations needed after judge filtering.
+
 ## Paper 1.5 clean repo copy plan
 
 Artifact: Copy plan for a future clean Paper 1.5 core repository.
