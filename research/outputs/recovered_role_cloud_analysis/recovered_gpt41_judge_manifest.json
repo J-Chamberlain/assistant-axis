@@ -1,0 +1,20 @@
+{
+  "model": "gpt-4.1",
+  "temperature": 0,
+  "n_inputs": 1392,
+  "n_already_scored_at_start": 1392,
+  "estimated_input_tokens": 1189052,
+  "estimated_output_tokens": 167040,
+  "estimated_cost_usd": 3.714424,
+  "key_source": "~/.openai_api_key",
+  "key_logged": false,
+  "started_at": "2026-06-04T02:18:42.308194+00:00",
+  "completed_at": "2026-06-04T02:18:42.314405+00:00",
+  "n_scored_final": 1392,
+  "actual_usage_total": {
+    "completion_tokens": 187913,
+    "prompt_tokens": 1084673,
+    "total_tokens": 1272586
+  },
+  "actual_cost_usd": 3.67265
+}

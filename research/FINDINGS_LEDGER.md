@@ -483,6 +483,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Prepared 1,392 saved responses for possible GPT-4.1 rejudging in `prior_adaptive_gpt41_judge_inputs.jsonl`; no OpenAI API calls were made in this audit
 - Interpretation: prior editor failure is better treated as role-elicitation/judge-yield failure than as a D01 boundary artifact; do not rerun GPU solely to recover these prior adaptive runs
 
+### Recovered Role Cloud Analysis (2026-06-03)
+
+- Ran GPT-4.1 temperature-0 rejudging over all 1,392 recovered adaptive responses and processed trickster/editor corrected PCA coordinates through the same activation-cloud summary logic used for amateur/playwright
+- Trickster is strongly validated under GPT-4.1: 1200/1200 score>=2 and 1198/1200 score==3, with all-response centroid distance 13.637 and mean response distance 23.866
+- Editor remains weak under GPT-4.1 despite being less harsh than the prior Codex/GPT-5.5 scoring: editor 512-token retained 57/128 score>=2 and 3/128 score==3; editor 1024-token retained 36/64 score>=2 and 2/64 score==3
+- Editor score>=2 filtering moves centroids closer to the published editor role vector (512-token: 13.627 to 9.658; 1024-token: 14.076 to 8.293), but score==3 samples are too sparse for stable validated role-vector construction
+- Comparison against amateur/playwright shows editor is role/run-specific: amateur retained 59/60 score>=2 and playwright retained 54/60 score>=2 under the same GPT-4.1 rubric
+- Best-supported editor failure explanation is assistant-adjacent elicitation/role-expression difficulty, with centroid mismatch and sampling as possible contributors; GPT-5.5 strictness, D01 boundary error, and token cap are weakened as primary explanations
+- No additional GPU work is needed to recover these runs; any future procedural-professional GPU work should redesign the target/anchoring method rather than repeat editor unchanged
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

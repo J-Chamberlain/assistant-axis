@@ -350,6 +350,18 @@ Dependent analyses: Evaluator-model sensitivity for prior adaptive extraction, P
 Current status: Complete.
 Notes/caveats: The audit found three explicit prior adaptive runs and classified all three as `full_reproject_possible` because they preserve response text and 5120-d hook-derived activation shards. D01 does not invalidate these saved hook vectors; the corrected result says the hook matches `outputs.hidden_states[49]`, not `hidden_states[48]`. The prepared GPT-4.1 judge input JSONL contains 1,392 saved responses, but no OpenAI judge call was run because no explicit `run_gpt41_rejudge=true` configuration was present. Raw token-level hidden states cannot be recovered from mean-pooled shards without GPU reruns.
 
+## recovered role cloud analysis outputs
+
+Artifact: GPT-4.1 rejudging and activation-cloud comparison for recovered trickster/editor adaptive extraction runs.
+Location: `research/outputs/recovered_role_cloud_analysis/`
+Created by: Codex/GPT-5.5.
+Model used: GPT-4.1 through the OpenAI API for role-expression judging at temperature 0; Codex/GPT-5.5 for script authoring, local analysis, and reporting.
+Source inputs: `research/outputs/prior_adaptive_recovery_audit/prior_adaptive_gpt41_judge_inputs.jsonl`, `research/outputs/prior_adaptive_recovery_audit/prior_adaptive_corrected_coordinates.csv`, `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv`, and `research/visualizations/geometry_viz_data.json`.
+Generating script: `research/outputs/recovered_role_cloud_analysis/run_recovered_role_cloud_analysis.py`
+Dependent analyses: Paper 1.5 evaluator-sensitivity language for adaptive extraction, editor/procedural-professional failure interpretation, future procedural-professional anchoring redesign, and comparison of adaptive extraction clouds to response-state activation clouds.
+Current status: Complete.
+Notes/caveats: The run scored 1,392 recovered responses with GPT-4.1 at temperature 0, using `~/.openai_api_key` without logging the key. Actual usage was 1,084,673 prompt tokens and 187,913 completion tokens, with estimated cost $3.6726. This is GPT-4.1, not `gpt-4.1-mini`; therefore it is a practical evaluator-sensitivity comparison, not strict Lu-method identity. Trickster retained 1200/1200 score>=2 and 1198/1200 score==3; editor remained low at score==3 in both 512-token and 1024-token runs.
+
 ## Paper 1.5 clean repo copy plan
 
 Artifact: Copy plan for a future clean Paper 1.5 core repository.
