@@ -40,6 +40,10 @@ After API quota was enabled, GPT-4.1 scored all 120 saved amateur/playwright res
 
 The amateur/playwright activation-cloud analysis now has a standalone viewer and reusable no-GPU suite scaffold. The viewer overlays all-response points with GPT-4.1 scores and supports PC1-PC2, PC1-PC3, and PC2-PC3 projections. GPT-5.5 was visible through the OpenAI API model list, but rejected the required temperature-0 judge configuration; following the preregistered constraint, no default-temperature GPT-5.5 or substitute judge was run. Judge-model agreement remains pending a separately approved deterministic or default-temperature comparison protocol.
 
+### GPT-5.5 Default-Temperature Judge Comparison
+
+After explicitly authorizing GPT-5.5 default-temperature judging, the same 120 amateur/playwright responses were scored with the same rubric and JSON schema. GPT-5.5 and GPT-4.1 agreed exactly on 72/120 0-3 scores (0.600), agreed on retain>=2 for 105/120 responses (0.875), and agreed on retain==3 for 88/120 responses (0.733). GPT-5.5 was stricter for amateur, especially score==3: amateur score==3 count dropped from 34 under GPT-4.1 to 11 under GPT-5.5, while playwright score==3 dropped from 49 to 40. The qualitative cloud result persisted: stronger-expression subsets tightened cloud volume but moved centroids farther from published role vectors, supporting an offset high-expression submanifold interpretation.
+
 ### Public Role Rollout Artifacts Are Inputs-Only
 
 Public artifacts allow reconstruction of the intended Assistant Axis role-vector input distribution: 275 non-default roles, 5 positive instructions per role, and 240 shared extraction questions, yielding 1,200 instruction-question combinations per role. Public artifacts do not include the original generated rollout responses, response-level judge scores, or retained-response masks/IDs. The remembered "64" count is resolved as Qwen layer count in `[64,5120]` vectors plus local adaptive-extraction counts, not a public original retained-response count.

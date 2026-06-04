@@ -1,0 +1,17 @@
+{
+  "model": "gpt-5.5",
+  "temperature_policy": "model_default_temperature",
+  "temperature_parameter_sent": false,
+  "n_responses": 120,
+  "estimated_input_tokens_before_run": 81471,
+  "estimated_output_tokens_before_run": 14400,
+  "input_price_per_1m_tokens_placeholder_usd": 2.0,
+  "output_price_per_1m_tokens_placeholder_usd": 8.0,
+  "estimated_cost_placeholder_usd": 0.278142,
+  "note": "Placeholder pricing mirrors GPT-4.1 bookkeeping unless updated for GPT-5.5.",
+  "actual_usage": {
+    "completion_tokens": 26913,
+    "prompt_tokens": 70762,
+    "total_tokens": 97675
+  }
+}

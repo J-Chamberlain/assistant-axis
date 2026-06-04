@@ -326,6 +326,18 @@ Dependent analyses: Future persona activation-cloud pilots after GPU extraction,
 Current status: Scaffolded; the A100 worked-example script remains the reference implementation.
 Notes/caveats: The current suite runner is a lightweight config loader/stub, not a fully factored library. Future pilots should either reuse the worked-example script or promote its functions into the tool package before relying on the suite as a stable interface.
 
+## GPT-5.5 judge and outlier follow-up outputs
+
+Artifact: GPT-5.5 default-temperature judge comparison and score==3/instruction/question follow-up analysis for the amateur/playwright activation clouds.
+Location: `research/outputs/gpt55_judge_and_outlier_followup/`
+Created by: Codex/GPT-5.5.
+Model used: GPT-5.5 through the OpenAI API for role-expression judging at model-default temperature; Codex/GPT-5.5 for script authoring, analysis, and reporting.
+Source inputs: `research/outputs/a100_two_role_activation_cloud_pilot/judge_input_responses.jsonl`, `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/judge_filtered_cloud_summary_by_role.csv`, and `research/outputs/a100_activation_cloud_posthoc_analysis/judge_filtered_centroid_shifts.csv`.
+Generating script: `research/outputs/gpt55_judge_and_outlier_followup/run_gpt55_judge_and_outlier_followup.py`
+Dependent analyses: Judge-model sensitivity, score==3 outlier review, instruction/question selection for future GPU runs, and activation-cloud sample-size/protocol refinement.
+Current status: Complete.
+Notes/caveats: This is not a deterministic replication of GPT-4.1 because GPT-4.1 used temperature 0 while GPT-5.5 required model-default temperature. The comparison should be described as evaluator-model plus decoding-policy sensitivity. No GPU work, response generation, activation extraction, or pod work occurred. API credentials were loaded from the environment or `~/.openai_api_key` and were not logged or committed.
+
 ## Paper 1.5 clean repo copy plan
 
 Artifact: Copy plan for a future clean Paper 1.5 core repository.

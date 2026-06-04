@@ -1,0 +1,4 @@
+metric,agreement_count,n,agreement_rate
+exact_score_0_3,72,120,0.6
+retain_ge2,105,120,0.875
+retain_eq3,88,120,0.7333333333333333
