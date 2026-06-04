@@ -1,0 +1,62 @@
+{
+  "startup_status": {
+    "status": "STARTUP VERIFIED",
+    "fetched": {
+      "STARTUP_MANIFEST.md": {
+        "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/STARTUP_MANIFEST.md",
+        "sha256": "40e497a09a381d24b3e65de5b688e7f6411b1aecd06057f0edebd98808ff26df",
+        "bytes": 4366
+      },
+      "RESEARCH_STATE.md": {
+        "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md",
+        "sha256": "0cb1d22dba3f588809c9452b70c7160d1a218da77f74404fe1d084269fc0ef3f",
+        "bytes": 127746
+      },
+      "THREAD_START.md": {
+        "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md",
+        "sha256": "babb302215a2e9137cdf44e138be5e8739279e25062b8141375de377abfd51c5",
+        "bytes": 6763
+      },
+      "CLAIMS_REGISTER.md": {
+        "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md",
+        "sha256": "9c263b90ae606cdc3da77fc89f1287382d8e0853e287b1691a7791103f4d3c1d",
+        "bytes": 37892
+      }
+    },
+    "expected_hashes": {
+      "RESEARCH_STATE.md": "0cb1d22dba3f588809c9452b70c7160d1a218da77f74404fe1d084269fc0ef3f",
+      "THREAD_START.md": "babb302215a2e9137cdf44e138be5e8739279e25062b8141375de377abfd51c5",
+      "CLAIMS_REGISTER.md": "9c263b90ae606cdc3da77fc89f1287382d8e0853e287b1691a7791103f4d3c1d"
+    },
+    "mismatches": []
+  },
+  "pca_basis_debug": {
+    "basis_source": "reconstructed_from_qwen_role_vectors_with_sign_alignment_to_canonical_activation_pca3d",
+    "canonical_pca_path": "research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv",
+    "vector_dir": "downloads/hf_vectors/qwen-3-32b/role_vectors",
+    "n_roles_used": 275,
+    "max_abs_coordinate_reproduction_error": 1.207032853223211e-06,
+    "mean_abs_coordinate_reproduction_error": 1.0737016308133192e-07,
+    "sign_alignment": [
+      -1.0,
+      1.0,
+      -1.0
+    ]
+  },
+  "run_context": {
+    "trickster_phase1_1200": {
+      "phase_rows": 1200,
+      "score_rows": 64
+    },
+    "editor_phase1_128": {
+      "phase_rows": 128,
+      "score_rows": 128
+    },
+    "editor_matched64_1024": {
+      "phase_rows": 64,
+      "score_rows": 64
+    }
+  },
+  "gpt41_rejudge_run": false,
+  "gpt41_rejudge_reason": "No explicit run_gpt41_rejudge=true configuration was present; this audit only prepared judge inputs."
+}

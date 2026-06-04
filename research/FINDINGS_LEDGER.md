@@ -473,6 +473,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Playwright instructions are predicted to push mostly toward negative PC1 and positive PC2, with weak positive/neutral PC3
 - Caveat: these are rubric-based predicted displacement pressures, not observed activation movement; manual review of thin PC1-negative and PC3-positive coverage is recommended before any corrected-hook GPU run
 
+### Prior Adaptive Recovery Audit (2026-06-03)
+
+- Built `research/outputs/prior_adaptive_recovery_audit/` to inventory and classify prior adaptive extraction artifacts for trickster-family and procedural/professional-family targets under the corrected D01 boundary result
+- Found three explicit recoverable hook-based adaptive runs: `trickster_phase1_1200`, `editor_phase1_128`, and `editor_matched64_1024`
+- All three runs preserve response text and one 5120-d hook-derived activation shard per response, so they are locally reprojectable without GPU under D01 because the layer-48 hook is now known to match `outputs.hidden_states[49]`
+- Trickster remains the successful adaptive case: 1200/1200 activation vectors, 64 Codex/GPT-5.5 scored responses, 64 score>=2, and 33 score==3
+- Editor/procedural-adjacent runs are recoverable but low-yield: the 128-record run has 10 score>=2 and 3 score==3; the matched 1024-token 64-record run has 5 score>=2 and 1 score==3
+- Prepared 1,392 saved responses for possible GPT-4.1 rejudging in `prior_adaptive_gpt41_judge_inputs.jsonl`; no OpenAI API calls were made in this audit
+- Interpretation: prior editor failure is better treated as role-elicitation/judge-yield failure than as a D01 boundary artifact; do not rerun GPU solely to recover these prior adaptive runs
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

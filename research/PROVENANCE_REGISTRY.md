@@ -338,6 +338,18 @@ Dependent analyses: Judge-model sensitivity, score==3 outlier review, instructio
 Current status: Complete.
 Notes/caveats: This is not a deterministic replication of GPT-4.1 because GPT-4.1 used temperature 0 while GPT-5.5 required model-default temperature. The comparison should be described as evaluator-model plus decoding-policy sensitivity. No GPU work, response generation, activation extraction, or pod work occurred. API credentials were loaded from the environment or `~/.openai_api_key` and were not logged or committed.
 
+## prior adaptive recovery audit outputs
+
+Artifact: Local recoverability audit for prior adaptive trickster/editor extraction artifacts under the corrected D01 boundary result.
+Location: `research/outputs/prior_adaptive_recovery_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Codex/GPT-5.5 for script authoring, local audit, and reporting; no model API calls, pods, GPU work, response generation, or activation extraction were run.
+Source inputs: `research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/trickster_phase2_scores_codex_gpt55.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/activations_trickster/`, `research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase1_128.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase2_scores_codex_gpt55.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/editor/activations_editor/`, `research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/editor_phase1_matched64_1024.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/editor_phase2_scores_1024_codex_gpt55.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/activations_editor_1024/`, `research/q2_stability/qwen/scripts/phase1_inference_only_v4.py`, `research/q2_stability/qwen/scripts/phase1_inference_only_editor.py`, `research/q2_stability/qwen/scripts/phase1_inference_editor_matched64_1024.py`, `downloads/hf_vectors/qwen-3-32b/role_vectors/`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`, `data/roles/instructions/`, and `data/extraction_questions.jsonl`.
+Generating script: `research/outputs/prior_adaptive_recovery_audit/run_prior_adaptive_recovery_audit.py`
+Dependent analyses: Evaluator-model sensitivity for prior adaptive extraction, Paper 1.5 methodology caveats, local PCA/cloud comparison of saved hook-derived adaptive vectors, and decisions about whether GPU regeneration is necessary.
+Current status: Complete.
+Notes/caveats: The audit found three explicit prior adaptive runs and classified all three as `full_reproject_possible` because they preserve response text and 5120-d hook-derived activation shards. D01 does not invalidate these saved hook vectors; the corrected result says the hook matches `outputs.hidden_states[49]`, not `hidden_states[48]`. The prepared GPT-4.1 judge input JSONL contains 1,392 saved responses, but no OpenAI judge call was run because no explicit `run_gpt41_rejudge=true` configuration was present. Raw token-level hidden states cannot be recovered from mean-pooled shards without GPU reruns.
+
 ## Paper 1.5 clean repo copy plan
 
 Artifact: Copy plan for a future clean Paper 1.5 core repository.
