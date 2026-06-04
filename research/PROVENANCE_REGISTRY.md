@@ -374,6 +374,18 @@ Dependent analyses: Visual inspection of judge-filter sensitivity, comparison of
 Current status: Complete standalone viewer; main persona geometry explorer was not modified.
 Notes/caveats: The viewer contains 1,512 response points and five role/run views: `amateur`, `playwright`, `trickster_phase1_1200`, `editor_phase1_128`, and `editor_matched64_1024`. GPT-5.5 layers are available only for amateur/playwright. Editor GPT-4.1 score==3 centroids are sparse (`n=3` for `editor_phase1_128`, `n=2` for `editor_matched64_1024`) and should be treated as visual reference points rather than stable centroid estimates.
 
+## cloud eigenvector angle analysis outputs
+
+Artifact: Activation-cloud covariance/eigenvector orientation analysis across layered response clouds.
+Location: `research/outputs/cloud_eigenvector_angle_analysis/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, judge calls, or response generation were run.
+Source inputs: `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_viewer_data.json`, `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_centroids.csv`, `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_membership_counts.csv`, `research/visualizations/geometry_viz_data.json`, and the original cloud/judge artifacts already incorporated by the layered viewer.
+Generating script: `research/outputs/cloud_eigenvector_angle_analysis/run_cloud_eigenvector_angle_analysis.py`
+Dependent analyses: Future activation-cloud pilot role selection, negative-PC2 test design, Paper 1.5 response-cloud uncertainty language, and visual interpretation of role-expression filtering effects.
+Current status: Complete local analysis.
+Notes/caveats: The analysis treats eigenvector angles as sign-invariant line orientations. Assistant-axis direction is a proxy estimated by regressing stored role `axis_projections` on PC1/PC2, not by independently loading an assistant-axis vector in PCA space. The empirical high-PC1/high-PC2 upper-region direction is also a documented proxy. Sparse editor score==3 layers remain unstable (`n=3` and `n=2`), and the all-response boundary/orientation pattern is provisional because only five role/run views were analyzed.
+
 ## Paper 1.5 clean repo copy plan
 
 Artifact: Copy plan for a future clean Paper 1.5 core repository.

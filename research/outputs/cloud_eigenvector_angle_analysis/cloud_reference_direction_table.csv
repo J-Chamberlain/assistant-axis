@@ -1,0 +1,6 @@
+reference_key,reference_label,angle_deg,method
+pc1_axis,PC1 axis,0.0,definition
+pc2_axis,PC2 axis,90.0,definition
+pc1_pc2_positive_diagonal,Positive PC1 / positive PC2 diagonal,45.0,definition
+assistant_axis_projection_proxy,Assistant-axis projection proxy,14.70202102556749,regress stored axis_projections on PC1 and PC2
+upper_pc1_pc2_region_proxy,Empirical high-PC1/high-PC2 region proxy,-21.422151159414,dominant PC1-PC2 direction among 32 roles with PC1 and PC2 >= 60th percentile

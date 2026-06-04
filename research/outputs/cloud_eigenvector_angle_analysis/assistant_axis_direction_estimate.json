@@ -1,0 +1,29 @@
+{
+  "available": true,
+  "method": "linear_regression_axis_projection_on_pc1_pc2",
+  "angle_deg": 14.70202102556749,
+  "coefficients_pc1_pc2": [
+    0.0028823668661604467,
+    0.0007562834615648003
+  ],
+  "intercept": -0.0806154299802939,
+  "r2": 0.9663863471709642,
+  "note": "Proxy gradient estimated from stored role axis_projections; not a separately recovered assistant-axis vector in PCA coordinates.",
+  "upper_pc1_pc2_region_proxy": {
+    "angle_deg": -21.422151159414,
+    "n_roles": 32,
+    "method": "roles with PC1 and PC2 >= 60th percentile",
+    "example_roles": [
+      "activist",
+      "advocate",
+      "assistant",
+      "coach",
+      "collaborator",
+      "entrepreneur",
+      "expatriate",
+      "facilitator",
+      "guide",
+      "instructor"
+    ]
+  }
+}

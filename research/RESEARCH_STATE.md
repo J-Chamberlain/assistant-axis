@@ -843,3 +843,8 @@ Last updated: 2026-06-03
 **Completed this session:** Wrote centroid/count tables, sparse-layer warnings, a static summary plot, and a self-contained HTML viewer without modifying the main persona geometry explorer.
 **Next step:** Use the layered viewer to inspect judge-filter sensitivity and sparse editor score==3 layers before deciding whether any further procedural-professional GPU run is warranted.
 **Last commit before this update:** `7f97838` / `Analyze recovered trickster and editor activation clouds`
+
+**Completed this session:** Quantified activation-cloud covariance/eigenvector orientations under `research/outputs/cloud_eigenvector_angle_analysis/` for amateur, playwright, trickster, and editor recovered runs.
+**Completed this session:** Found that amateur/playwright/editor all-response clouds align with an empirical high-PC1/high-PC2 upper-region proxy (-21.42 degrees) rather than the +45 degree diagonal, while trickster is nearly PC2-vertical in PC1-PC2 space.
+**Next step:** If another small GPU pilot is launched, include a negative-PC2 role such as `student` plus a second more integrated/abstract negative-PC2 contrast role to test whether the observed orientation pattern generalizes.
+**Last commit before this update:** `4b10cb8` / `Create layered activation cloud viewer`

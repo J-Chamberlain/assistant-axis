@@ -493,6 +493,16 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Best-supported editor failure explanation is assistant-adjacent elicitation/role-expression difficulty, with centroid mismatch and sampling as possible contributors; GPT-5.5 strictness, D01 boundary error, and token cap are weakened as primary explanations
 - No additional GPU work is needed to recover these runs; any future procedural-professional GPU work should redesign the target/anchoring method rather than repeat editor unchanged
 
+### Activation Cloud Orientation Angle Analysis (2026-06-04)
+
+- Built `research/outputs/cloud_eigenvector_angle_analysis/` to quantify response-cloud covariance/eigenvector orientations for amateur, playwright, recovered trickster, and two recovered editor runs across all-response and judge-filtered layers
+- All-response PC1-PC2 dominant angles were: amateur -34.88 degrees, playwright -12.90 degrees, trickster -87.37 degrees, editor 512-token -31.02 degrees, and editor 1024-token -41.55 degrees
+- Playwright and editor clouds are strongly elongated; all-response dominant 3D variance shares were playwright 71.39%, editor 512-token 64.12%, editor 1024-token 62.46%, amateur 55.68%, and trickster 53.67%
+- Amateur/playwright/editor all-response clouds align much better with the empirical high-PC1/high-PC2 region proxy (-21.42 degrees; angular differences 13.46, 8.52, 9.60, 20.13 degrees) than with the positive +45 degree diagonal
+- Trickster is the qualitative exception: its all-response and GPT-4.1 retained clouds are nearly PC2-vertical and only 2.63 degrees from the PC2 axis
+- Assistant-axis projection was estimated as a proxy by regressing stored role axis projections on PC1/PC2; the proxy angle is +14.70 degrees with R2 0.966, and all-response playwright is closest among these clouds at 27.61 degrees away
+- Interpretation: current evidence supports testing a negative-PC2 role, including `student` as a candidate, but the boundary/orientation pattern remains provisional because the dataset has only five role/run views and repeated editor variants
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
