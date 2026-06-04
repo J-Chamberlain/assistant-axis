@@ -362,6 +362,18 @@ Dependent analyses: Paper 1.5 evaluator-sensitivity language for adaptive extrac
 Current status: Complete.
 Notes/caveats: The run scored 1,392 recovered responses with GPT-4.1 at temperature 0, using `~/.openai_api_key` without logging the key. Actual usage was 1,084,673 prompt tokens and 187,913 completion tokens, with estimated cost $3.6726. This is GPT-4.1, not `gpt-4.1-mini`; therefore it is a practical evaluator-sensitivity comparison, not strict Lu-method identity. Trickster retained 1200/1200 score>=2 and 1198/1200 score==3; editor remained low at score==3 in both 512-token and 1024-token runs.
 
+## activation cloud layered viewer outputs
+
+Artifact: Standalone layered visualization for activation-cloud comparisons across amateur, playwright, recovered trickster, and recovered editor runs.
+Location: `research/outputs/activation_cloud_layered_viewer/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, judge calls, or response generation were run.
+Source inputs: `research/visualizations/geometry_viz_data.json`, `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv`, `research/outputs/gpt55_judge_and_outlier_followup/gpt55_judge_scores.csv`, `research/outputs/prior_adaptive_recovery_audit/prior_adaptive_corrected_coordinates.csv`, `research/outputs/recovered_role_cloud_analysis/recovered_gpt41_scores.csv`, and prior standalone viewer artifacts under `research/outputs/a100_activation_cloud_visualization_and_judge_compare/`.
+Generating script: `research/outputs/activation_cloud_layered_viewer/run_activation_cloud_layered_viewer.py`
+Dependent analyses: Visual inspection of judge-filter sensitivity, comparison of published centroids to all-response and retained-response subclouds, editor/procedural-professional failure reassessment, and future activation-cloud pilot planning.
+Current status: Complete standalone viewer; main persona geometry explorer was not modified.
+Notes/caveats: The viewer contains 1,512 response points and five role/run views: `amateur`, `playwright`, `trickster_phase1_1200`, `editor_phase1_128`, and `editor_matched64_1024`. GPT-5.5 layers are available only for amateur/playwright. Editor GPT-4.1 score==3 centroids are sparse (`n=3` for `editor_phase1_128`, `n=2` for `editor_matched64_1024`) and should be treated as visual reference points rather than stable centroid estimates.
+
 ## Paper 1.5 clean repo copy plan
 
 Artifact: Copy plan for a future clean Paper 1.5 core repository.

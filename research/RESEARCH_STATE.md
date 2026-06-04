@@ -838,3 +838,8 @@ Last updated: 2026-06-03
 **Completed this session:** Updated the findings ledger, research index, provenance registry, and state file to record that high PC2 within muted PC1 is concentrated in situated/social/reactive roles while low PC2 is concentrated in abstract/integrative/systemic/procedural roles.
 **Next step:** Run a blinded no-label matched-pair rater diagnostic inside the muted-PC1 band to test whether the situated/immediacy versus abstract/integrative contrast is recoverable without coordinates.
 **Last commit before this update:** `83698ab` / `Plan clean Paper 1.5 core repo`
+
+**Completed this session:** Created a standalone layered activation-cloud viewer under `research/outputs/activation_cloud_layered_viewer/` that compares published centroids, all-response clouds, GPT-4.1 filtered clouds, and GPT-5.5 filtered clouds where available for amateur, playwright, trickster, and editor recovered runs.
+**Completed this session:** Wrote centroid/count tables, sparse-layer warnings, a static summary plot, and a self-contained HTML viewer without modifying the main persona geometry explorer.
+**Next step:** Use the layered viewer to inspect judge-filter sensitivity and sparse editor score==3 layers before deciding whether any further procedural-professional GPU run is warranted.
+**Last commit before this update:** `7f97838` / `Analyze recovered trickster and editor activation clouds`

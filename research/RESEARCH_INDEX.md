@@ -36,6 +36,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - GPT-4.1 judge filtering is now complete for the amateur/playwright activation clouds: most responses were retained at score>=2, filtering reduced cloud volume and mean response distance, but filtered centroids moved farther from published role vectors, implying strong role-expression subclouds are tighter but offset.
 - A standalone activation-cloud viewer and reusable no-GPU suite now exist for future persona-cloud tests; GPT-5.5 comparison was not run because the model rejected the required temperature-0 judge configuration.
 - GPT-5.5 default-temperature judge comparison is complete and should be treated as model-comparison rather than deterministic replication: exact score agreement with GPT-4.1 was 0.600, retain>=2 agreement 0.875, and retain==3 agreement 0.733.
+- A layered activation-cloud viewer now unifies amateur/playwright, recovered trickster, and recovered editor clouds with published centroid, all-response, GPT-4.1 filtered, and GPT-5.5 filtered layers where available; sparse editor score==3 layers are explicitly marked as unstable visual references.
 - Role-rollout artifact audit resolves the public-data boundary for original role vectors: the intended 1,200 inputs per role are reconstructable, but original generated responses, judge scores, and retained-response masks are not public; the remembered "64" count is Qwen layer count/local adaptive-count provenance, not a public retained-rollout count.
 - H100 anomaly interpretation is now governed by four methodological tracks: extraction equivalence, forecaster improvement, prompt-battery construction, and response-state uncertainty. D01-D09 remain useful, but several should not be closed as final behavioral evidence while their T-track remains open.
 - Within-role displacement scaffolding is prepared for a user-selected target-role study: 275 roles have five positive instructions, 240 extraction questions are inventoried, displacement scoring templates exist, and role-candidate geometry centrality flags are available.
@@ -98,6 +99,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/gpt55_judge_and_outlier_followup/`: GPT-5.5 default-temperature judge scores, GPT-4.1/GPT-5.5 agreement tables, score==3 outlier tables, instruction/question effects, and future activation-cloud protocol recommendation.
 - `research/outputs/prior_adaptive_recovery_audit/`: local no-GPU audit of prior trickster/editor adaptive extraction artifacts under corrected D01, including recoverability classification, locally reprojected hook-vector PCA coordinates, cloud summaries, and GPT-4.1 rejudge-ready inputs.
 - `research/outputs/recovered_role_cloud_analysis/`: GPT-4.1 temperature-0 rejudging and activation-cloud comparison for recovered trickster/editor adaptive runs against amateur/playwright, including retention counts, centroid/covariance/anisotropy summaries, HTML cloud visualization, and editor failure reassessment.
+- `research/outputs/activation_cloud_layered_viewer/`: standalone layered activation-cloud viewer, data bundle, centroid/count tables, sparse-layer warnings, static summary plot, and report comparing published/all-response/GPT-4.1/GPT-5.5 layers where available.
 - `research/tools/activation_cloud_suite/`: reusable no-GPU activation-cloud analysis scaffold with config template, judge rubric, README, and runner stub for future persona-cloud pilots.
 - `research/outputs/paper15_clean_repo_copy_plan/`: copy plan for a future clean `assistant-axis-paper15-core` repo, including artifact CSV, report spine map, claim traceability table, visualization inventory, proposed tree, and excluded archive index.
 - `research/notebooks/paper15_core_analysis_walkthrough.ipynb`: first-pass Paper 1.5 executable appendix / notebook walkthrough for canonical pre-H100 analysis.
@@ -151,6 +153,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/visualizations/geometry_viz_data.json`: embedded geometry source.
 - `research/visualizations/bigfive_geometry_overlay_data.json`: Big Five overlay source.
 - `visualizations/research_paper.html`: Paper 1 public visualization page.
+- `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_viewer.html`: standalone layered cloud viewer for amateur/playwright plus recovered trickster/editor response clouds and judge-filtered centroids.
 
 ## Current PC Interpretations
 

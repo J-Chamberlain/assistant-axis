@@ -1,0 +1,26 @@
+role_or_run,role,layer_key,layer_label,point_count,centroid_available,sparse_warning
+amateur,amateur,all,All responses,60,True,
+amateur,amateur,gpt41_ge2,GPT-4.1 score>=2,59,True,
+amateur,amateur,gpt41_eq3,GPT-4.1 score==3,34,True,
+amateur,amateur,gpt55_ge2,GPT-5.5 score>=2,44,True,
+amateur,amateur,gpt55_eq3,GPT-5.5 score==3,11,True,
+editor_matched64_1024,editor,all,All responses,64,True,
+editor_matched64_1024,editor,gpt41_ge2,GPT-4.1 score>=2,36,True,
+editor_matched64_1024,editor,gpt41_eq3,GPT-4.1 score==3,2,True,sparse centroid n=2
+editor_matched64_1024,editor,gpt55_ge2,GPT-5.5 score>=2,0,False,layer unavailable
+editor_matched64_1024,editor,gpt55_eq3,GPT-5.5 score==3,0,False,layer unavailable
+editor_phase1_128,editor,all,All responses,128,True,
+editor_phase1_128,editor,gpt41_ge2,GPT-4.1 score>=2,57,True,
+editor_phase1_128,editor,gpt41_eq3,GPT-4.1 score==3,3,True,sparse centroid n=3
+editor_phase1_128,editor,gpt55_ge2,GPT-5.5 score>=2,0,False,layer unavailable
+editor_phase1_128,editor,gpt55_eq3,GPT-5.5 score==3,0,False,layer unavailable
+playwright,playwright,all,All responses,60,True,
+playwright,playwright,gpt41_ge2,GPT-4.1 score>=2,54,True,
+playwright,playwright,gpt41_eq3,GPT-4.1 score==3,49,True,
+playwright,playwright,gpt55_ge2,GPT-5.5 score>=2,54,True,
+playwright,playwright,gpt55_eq3,GPT-5.5 score==3,40,True,
+trickster_phase1_1200,trickster,all,All responses,1200,True,
+trickster_phase1_1200,trickster,gpt41_ge2,GPT-4.1 score>=2,1200,True,
+trickster_phase1_1200,trickster,gpt41_eq3,GPT-4.1 score==3,1198,True,
+trickster_phase1_1200,trickster,gpt55_ge2,GPT-5.5 score>=2,0,False,layer unavailable
+trickster_phase1_1200,trickster,gpt55_eq3,GPT-5.5 score==3,0,False,layer unavailable
