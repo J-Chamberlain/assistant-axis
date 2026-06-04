@@ -458,3 +458,15 @@ Generating script: `research/outputs/pc2_trait_stratified_profile/run_pc2_trait_
 Dependent analyses: Paper 1.5 PC2 interpretation wording, future prompt-to-geometry rubric design, future blinded PC2 matched-pair checks, and clean notebook/report updates if this analysis is admitted into the core artifact set.
 Current status: Complete local analysis with provisional interpretation update.
 Notes/caveats: The analysis joins 275 roles/personas to 240 trait-cosine features and compares high versus low PC2 roles globally and inside PC1 strata. Replication is defined descriptively by same-sign Cohen's d at threshold across PC1 quintiles. Because PC1 and PC2 are PCA-orthogonal, direct PC2 residualization on PC1 is nearly unchanged; the primary PC1-confound protection is stratified enrichment plus per-trait PC1 covariate checks. Trait profiles are activation-space cosine features, not independent psychological ratings or causal labels.
+
+## AGENTS continuity and maintenance instructions
+
+Artifact: Updated repository-level agent instructions for GPT/Codex continuity and canonical registry maintenance.
+Location: `AGENTS.md`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and editing model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, or judging were run.
+Source inputs: `AGENTS.md`, `research/REPO_NAVIGATION.md`, `research/REPO_FILE_INDEX.csv`, `research/RAW_URL_INDEX.md`, `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, `research/FINDINGS_LEDGER.md`, `research/CLAIMS_REGISTER.md`, and `research/PROVENANCE_REGISTRY.md`.
+Generating script: none; direct Markdown/CSV maintenance edit.
+Dependent analyses: Future Codex/GPT startup, handoff continuity, artifact provenance discipline, navigation-file maintenance, and final-report consistency.
+Current status: Active repository instruction.
+Notes/caveats: The update preserves existing instructions except where superseded by canonical registry, navigation, THREAD_START, artifact-status, and final-report requirements. `AGENTS.md` itself remains classified as `active` in `research/REPO_FILE_INDEX.csv`, while navigation files and startup files remain canonical.

@@ -15,6 +15,8 @@ Last updated: 2026-06-04
 
 **Current session update (2026-06-04, repository navigation system):** Created the canonical repository navigation system: `research/REPO_NAVIGATION.md`, `research/REPO_FILE_INDEX.csv`, `research/RAW_URL_INDEX.md`, and `research/outputs/repo_navigation_system/repo_navigation_report.md`. Added canonical Qwen geometry tables under `research/geometry_tables/`: `qwen_role_pc_rankings.csv`, `qwen_trait_pc_rankings.csv`, and `cluster_membership_table.csv`, all generated from `research/visualizations/geometry_viz_data.json`. Updated `AGENTS.md` so future Codex tasks that create, delete, move, or replace research artifacts must update the three navigation files before commit. Next step: keep these navigation files in the standard maintenance loop as artifacts change. Last commit before this update: `4ee315d`.
 
+**Current session update (2026-06-04, AGENTS continuity rules):** Updated `AGENTS.md` to deprecate legacy `research/findings_log.md` as the primary record, require canonical registry updates through `research/FINDINGS_LEDGER.md`, `research/CLAIMS_REGISTER.md`, and `research/PROVENANCE_REGISTRY.md`, require `research/THREAD_START.md` updates when significant state/interpretation/risk/experiment changes occur, expand navigation-maintenance triggers and artifact statuses, and require Codex final reports to include branch, commit, changed files, raw canonical URLs, registry/navigation updates, and one-sentence state impact. Next step: follow these continuity/reporting rules on future meaningful units of work. Last commit before this update: `4ee315d`.
+
 ---
 
 ## 1. WHAT HAS BEEN ATTEMPTED

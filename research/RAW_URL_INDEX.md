@@ -1,11 +1,12 @@
 # Raw URL Index
 
-Updated UTC: 2026-06-04T16:56:24Z
+Updated UTC: 2026-06-04T22:28:31Z
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
 |---|---|---|---|---|
+| active | active analyses | `AGENTS.md` | Agent Instructions — assistant-axis | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/AGENTS.md |
 | canonical | canonical report artifacts | `research/CLAIMS_REGISTER.md` | Claims Register | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md |
 | canonical | canonical report artifacts | `research/FINDINGS_LEDGER.md` | Findings Ledger | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/FINDINGS_LEDGER.md |
 | canonical | canonical report artifacts | `research/PROVENANCE_REGISTRY.md` | Provenance Registry | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/PROVENANCE_REGISTRY.md |

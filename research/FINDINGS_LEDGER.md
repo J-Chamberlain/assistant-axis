@@ -513,6 +513,12 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Interpretation update: the result supports revising PC2 wording toward context-reactive/accommodating/situated versus stable/internalized/integrated organization; the older situated/formative/impressionable versus integrated/stable wording remains usable but less operationally precise
 - Caveat: trait profiles are activation-space cosine features over correlated traits, not independent psychological ratings or causal ontology
 
+### AGENTS Continuity and Registry Maintenance Rules (2026-06-04)
+
+- Updated `AGENTS.md` to align Codex/GPT continuity with the current repository navigation and provenance system
+- Deprecated legacy reliance on `research/findings_log.md` as the primary record; future findings, interpretations, negative results, methodology constraints, and claim-relevant evidence should update `research/FINDINGS_LEDGER.md`, `research/CLAIMS_REGISTER.md`, and/or `research/PROVENANCE_REGISTRY.md`
+- Strengthened maintenance requirements for `research/THREAD_START.md`, navigation files, artifact statuses, and final Codex reporting so future work is easier to resume across GPT/Codex handoffs
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

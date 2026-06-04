@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-05-30
+Last updated: 2026-06-04
 
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 
@@ -55,6 +55,10 @@ Do not treat Big Five features as psychological ground truth. They are LLM-assig
 Do not treat PC2 as solved. Recent tests weakened the simple uncertainty-capacity formulation and strengthened abstraction/integration language, but independent-rater replication is still needed.
 
 Do not rely on chat memory for state, pod status, or file paths. Use `RESEARCH_STATE.md`, this file, `CLAIMS_REGISTER.md`, `RESEARCH_INDEX.md`, and `PROVENANCE_REGISTRY.md`.
+
+Do not rely on legacy `research/findings_log.md` as the primary record. New findings, interpretations, negative results, methodology constraints, and claim-relevant evidence should be recorded in the canonical registries: `research/FINDINGS_LEDGER.md`, `research/CLAIMS_REGISTER.md`, and `research/PROVENANCE_REGISTRY.md` as appropriate.
+
+Material artifact changes must keep `research/REPO_NAVIGATION.md`, `research/REPO_FILE_INDEX.csv`, and `research/RAW_URL_INDEX.md` current, including artifact status assignment (`canonical`, `active`, `archive`, or `deprecated`). Significant changes to active objectives, top findings, top open questions, current interpretations, current risks, or next experiments also require this file to be updated before commit.
 
 ## Next Experiments
 

@@ -50,15 +50,23 @@ If a sticky note has been fully addressed by completed research:
 - Append: ## Addressed YYYY-MM-DD — [commit hash or description]
 - Update the STATUS field in sticky_notes/README.md to "addressed"
 
-FINDINGS LOG CHECK
-If this task produced a significant finding (experimental
-result, replication attempt, calibration result, cross-model
-comparison, or negative result that constrains the hypothesis),
-append an entry to research/findings_log.md before committing.
-Format:
-  ## [DATE] [Paper N / Section X.X] [Short Title]
-  [2-4 sentences: what was found, method used, implication]
-Do not edit existing entries. Append only.
+CANONICAL REGISTRY CHECK
+Do not rely on research/findings_log.md as the primary project
+record. It is legacy unless a task explicitly asks for it.
+
+Use the canonical registries instead:
+- research/FINDINGS_LEDGER.md for findings, negative results,
+  interpretation updates, methodology constraints, and compact
+  result summaries
+- research/CLAIMS_REGISTER.md for claim-relevant evidence and
+  changes to claim status or wording
+- research/PROVENANCE_REGISTRY.md for artifact lineage, source
+  inputs, generation scripts, model/API usage, dependent analyses,
+  and caveats
+
+If a task creates a new finding, interpretation, negative result,
+methodology constraint, or claim-relevant evidence, update the
+appropriate canonical registry before committing.
 
 ## RunPod specs
 Account: josiah.chamberlain@gmail.com
@@ -125,12 +133,27 @@ Before committing, update research/RESEARCH_STATE.md Section 3 (Current State) w
 - Last commit hash
 If any new empirical findings were produced, append them to Section 2 with date and key statistic.
 
+If the task significantly changes active objectives, top findings,
+top open questions, current interpretations, current risks, or next
+experiments, also update research/THREAD_START.md before committing.
+
 REPO NAVIGATION UPDATE
-If this task creates, deletes, moves, or replaces a research artifact, update:
+If this task creates, deletes, moves, renames, replaces, supersedes,
+archives, deprecates, or materially revises a research artifact,
+update:
 - research/REPO_NAVIGATION.md
 - research/REPO_FILE_INDEX.csv
 - research/RAW_URL_INDEX.md
-Record the update timestamp and commit.
+Record the update timestamp and commit. Assign or update artifact
+status using one of:
+- canonical
+- active
+- archive
+- deprecated
+
+This navigation update requirement includes material revisions to
+instructions, reports, notebooks, visualizations, scripts, data
+tables, and registry/index files.
 
 STICKY NOTES REPORT
 At the very end of every response, after the summary,
@@ -147,6 +170,16 @@ When confirming a push, always include:
 - Branch
 - One-line description of what changed
 Format: "Pushed [hash] to master: [description]"
+
+CODEX FINAL REPORT REQUIREMENTS
+For every meaningful unit of work, the final report must include:
+- commit hash
+- branch
+- files changed
+- raw GitHub URLs for new or modified canonical artifacts
+- registries updated
+- navigation files updated
+- one-sentence statement of impact on project state
 
 ## Model specification for Codex analytical work
 

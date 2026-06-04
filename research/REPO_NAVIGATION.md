@@ -1,6 +1,6 @@
 # Repository Navigation
 
-Updated UTC: 2026-06-04T16:56:24Z
+Updated UTC: 2026-06-04T22:28:31Z
 Last commit when generated: 4ee315d
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
@@ -81,10 +81,10 @@ Archived material is marked `archive` in `research/REPO_FILE_INDEX.csv`. Depreca
 
 ## Maintenance Rule
 
-Any future Codex task that creates, deletes, moves, or replaces a research artifact must update all three navigation files before committing:
+Any future Codex task that creates, deletes, moves, renames, replaces, supersedes, archives, deprecates, or materially revises a research artifact must update all three navigation files before committing:
 
 - `research/REPO_NAVIGATION.md`
 - `research/REPO_FILE_INDEX.csv`
 - `research/RAW_URL_INDEX.md`
 
-The task should record the update timestamp and commit. If the task also changes `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, or `research/CLAIMS_REGISTER.md`, regenerate `research/STARTUP_MANIFEST.md` with `python3 scripts/update_startup_manifest.py`.
+The task should record the update timestamp and commit, and assign each affected artifact one of these statuses: `canonical`, `active`, `archive`, or `deprecated`. If the task also changes `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, or `research/CLAIMS_REGISTER.md`, regenerate `research/STARTUP_MANIFEST.md` with `python3 scripts/update_startup_manifest.py`.
