@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-06-04T23:48:53Z
-Last commit when generated: 4ee315d
+Updated UTC: 2026-06-04T23:58:03Z
+Last commit when generated: f4a7dfa
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,19 +24,19 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3612
+- active analyses: 3615
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 10
 - cloud-analysis outputs: 149
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 307
+- trait analyses: 310
 - visualizations: 119
 
 ## Status Counts
 
-- active: 4270
+- active: 4273
 - archive: 11
 - canonical: 18
 - deprecated: 21
@@ -73,7 +73,7 @@ Adaptive extraction and recovered role-cloud artifacts live under `research/q2_s
 
 ### Trait Analyses
 
-Trait-vector, Big Five, trait-space PCA, and trait-profile analyses are indexed in `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/pc2_trait_stratified_profile/`, `research/outputs/qwen_pc2_trait_region_overlay/`, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. For PC2 visualization work, start with `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_report.md` and the standalone HTML/SVG overlays in that directory.
+Trait-vector, Big Five, trait-space PCA, and trait-profile analyses are indexed in `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/pc2_trait_stratified_profile/`, `research/outputs/qwen_pc2_trait_region_overlay/`, `research/outputs/trait_profile_provenance_audit/`, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. For PC2 visualization work, start with `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_report.md` and the standalone HTML/SVG overlays in that directory. For provenance and evidential-independence caveats on the 275-role x 240-trait matrix, start with `research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md`.
 
 ### Archived or Deprecated Outputs
 
