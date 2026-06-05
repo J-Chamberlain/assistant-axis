@@ -1,0 +1,3056 @@
+{
+  "metadata": {
+    "generated_utc": "2026-06-05T14:02:51Z",
+    "model_used": "GPT-5.5",
+    "source_quantile_cells": "research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_cells.csv",
+    "source_joined_trait_matrix": "research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv",
+    "default_basis": "quantile",
+    "default_label_count": 3,
+    "sparse_threshold": 8,
+    "provenance_note": "Trait-region labels are Qwen activation-space trait-vector cosine enrichments. The trait matrix has mixed provenance and is not an independent psychological rating table."
+  },
+  "bases": {
+    "quantile": {
+      "label": "Quantile bands",
+      "description": "Five equal-count PC1 quantile bands crossed with within-band PC2 tertiles. This is the statistically stable default.",
+      "cells": [
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q1_low",
+          "pc1_band": "Q1",
+          "pc2_band": "low",
+          "pc1_min": -60.938872717021006,
+          "pc1_max": -32.638841044473764,
+          "pc2_min": -40.35086932082816,
+          "pc2_max": -28.502017565118344,
+          "role_count": 18,
+          "dominant_cluster": "mythic_spiritual",
+          "dominant_cluster_fraction": 1.0,
+          "top_local_trait_names": [
+            "ascetic",
+            "reverent",
+            "pensive"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "ascetic",
+              "score": 1.01
+            },
+            {
+              "trait": "reverent",
+              "score": 0.92
+            },
+            {
+              "trait": "pensive",
+              "score": 0.9
+            },
+            {
+              "trait": "principled",
+              "score": 0.9
+            },
+            {
+              "trait": "ritualistic",
+              "score": 0.88
+            },
+            {
+              "trait": "introverted",
+              "score": 0.87
+            },
+            {
+              "trait": "meditative",
+              "score": 0.86
+            },
+            {
+              "trait": "abstract",
+              "score": 0.86
+            }
+          ],
+          "top_global_trait_names": [
+            "ascetic",
+            "spiritual",
+            "fatalistic"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "ascetic",
+              "score": 2.23
+            },
+            {
+              "trait": "spiritual",
+              "score": 2.03
+            },
+            {
+              "trait": "fatalistic",
+              "score": 2.02
+            },
+            {
+              "trait": "idealistic",
+              "score": 1.97
+            },
+            {
+              "trait": "cryptic",
+              "score": 1.89
+            },
+            {
+              "trait": "mystical",
+              "score": 1.89
+            },
+            {
+              "trait": "fundamentalist",
+              "score": 1.88
+            },
+            {
+              "trait": "ethereal",
+              "score": 1.86
+            }
+          ],
+          "example_roles": [
+            "oracle",
+            "spirit",
+            "witch",
+            "echo",
+            "void",
+            "mystic",
+            "shaman",
+            "golem"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q1_mid",
+          "pc1_band": "Q1",
+          "pc2_band": "mid",
+          "pc1_min": -60.938872717021006,
+          "pc1_max": -32.638841044473764,
+          "pc2_min": -28.499335361038153,
+          "pc2_max": -8.191430799673823,
+          "role_count": 18,
+          "dominant_cluster": "mythic_spiritual",
+          "dominant_cluster_fraction": 1.0,
+          "top_local_trait_names": [
+            "pensive",
+            "introverted",
+            "eloquent"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "pensive",
+              "score": 0.44
+            },
+            {
+              "trait": "introverted",
+              "score": 0.44
+            },
+            {
+              "trait": "eloquent",
+              "score": 0.4
+            },
+            {
+              "trait": "elitist",
+              "score": 0.37
+            },
+            {
+              "trait": "big_picture",
+              "score": 0.37
+            },
+            {
+              "trait": "epicurean",
+              "score": 0.37
+            },
+            {
+              "trait": "abstract",
+              "score": 0.36
+            },
+            {
+              "trait": "solemn",
+              "score": 0.36
+            }
+          ],
+          "top_global_trait_names": [
+            "fatalistic",
+            "cryptic",
+            "ethereal"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "fatalistic",
+              "score": 1.77
+            },
+            {
+              "trait": "cryptic",
+              "score": 1.74
+            },
+            {
+              "trait": "ethereal",
+              "score": 1.72
+            },
+            {
+              "trait": "enigmatic",
+              "score": 1.68
+            },
+            {
+              "trait": "poetic",
+              "score": 1.67
+            },
+            {
+              "trait": "nostalgic",
+              "score": 1.66
+            },
+            {
+              "trait": "theatrical",
+              "score": 1.63
+            },
+            {
+              "trait": "melancholic",
+              "score": 1.63
+            }
+          ],
+          "example_roles": [
+            "wind",
+            "aberration",
+            "dreamer",
+            "hermit",
+            "vampire",
+            "ghost",
+            "revenant",
+            "whale"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q1_high",
+          "pc1_band": "Q1",
+          "pc2_band": "high",
+          "pc1_min": -60.938872717021006,
+          "pc1_max": -32.638841044473764,
+          "pc2_min": -6.8594433069979255,
+          "pc2_max": 71.15643414894168,
+          "role_count": 19,
+          "dominant_cluster": "trickster_chaos",
+          "dominant_cluster_fraction": 0.3684210526315789,
+          "top_local_trait_names": [
+            "experiential",
+            "practical",
+            "humble"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "experiential",
+              "score": 1.14
+            },
+            {
+              "trait": "practical",
+              "score": 1.1
+            },
+            {
+              "trait": "humble",
+              "score": 0.98
+            },
+            {
+              "trait": "casual",
+              "score": 0.95
+            },
+            {
+              "trait": "accessible",
+              "score": 0.92
+            },
+            {
+              "trait": "extroverted",
+              "score": 0.91
+            },
+            {
+              "trait": "grounded",
+              "score": 0.91
+            },
+            {
+              "trait": "contemporary",
+              "score": 0.91
+            }
+          ],
+          "top_global_trait_names": [
+            "goofy",
+            "playful",
+            "mischievous"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "goofy",
+              "score": 1.64
+            },
+            {
+              "trait": "playful",
+              "score": 1.63
+            },
+            {
+              "trait": "mischievous",
+              "score": 1.59
+            },
+            {
+              "trait": "whimsical",
+              "score": 1.57
+            },
+            {
+              "trait": "entertaining",
+              "score": 1.52
+            },
+            {
+              "trait": "flippant",
+              "score": 1.52
+            },
+            {
+              "trait": "disorganized",
+              "score": 1.51
+            },
+            {
+              "trait": "temperamental",
+              "score": 1.5
+            }
+          ],
+          "example_roles": [
+            "criminal",
+            "infant",
+            "pirate",
+            "jester",
+            "surfer",
+            "trickster",
+            "fool",
+            "caveman"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q2_low",
+          "pc1_band": "Q2",
+          "pc2_band": "low",
+          "pc1_min": -31.91029204196817,
+          "pc1_max": -9.203232664884572,
+          "pc2_min": -44.00800269921331,
+          "pc2_max": -5.725035390605592,
+          "role_count": 18,
+          "dominant_cluster": "mythic_spiritual",
+          "dominant_cluster_fraction": 0.6111111111111112,
+          "top_local_trait_names": [
+            "abstract",
+            "introverted",
+            "conceptual"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "abstract",
+              "score": 1.43
+            },
+            {
+              "trait": "introverted",
+              "score": 1.42
+            },
+            {
+              "trait": "conceptual",
+              "score": 1.41
+            },
+            {
+              "trait": "theoretical",
+              "score": 1.4
+            },
+            {
+              "trait": "pensive",
+              "score": 1.38
+            },
+            {
+              "trait": "ritualistic",
+              "score": 1.36
+            },
+            {
+              "trait": "reverent",
+              "score": 1.3
+            },
+            {
+              "trait": "big_picture",
+              "score": 1.27
+            }
+          ],
+          "top_global_trait_names": [
+            "conceptual",
+            "deterministic",
+            "abstract"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "conceptual",
+              "score": 1.25
+            },
+            {
+              "trait": "deterministic",
+              "score": 1.23
+            },
+            {
+              "trait": "abstract",
+              "score": 1.21
+            },
+            {
+              "trait": "philosophical",
+              "score": 1.18
+            },
+            {
+              "trait": "relativist",
+              "score": 1.15
+            },
+            {
+              "trait": "eloquent",
+              "score": 1.14
+            },
+            {
+              "trait": "big_picture",
+              "score": 1.11
+            },
+            {
+              "trait": "epicurean",
+              "score": 1.1
+            }
+          ],
+          "example_roles": [
+            "alien",
+            "simulacrum",
+            "stoic",
+            "egregore",
+            "mycorrhizal",
+            "sage",
+            "martyr",
+            "parasite"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q2_mid",
+          "pc1_band": "Q2",
+          "pc2_band": "mid",
+          "pc1_min": -31.91029204196817,
+          "pc1_max": -9.203232664884572,
+          "pc2_min": -0.9329387632418046,
+          "pc2_max": 21.98539461037917,
+          "role_count": 18,
+          "dominant_cluster": "grounded_social",
+          "dominant_cluster_fraction": 0.8888888888888888,
+          "top_local_trait_names": [
+            "supportive",
+            "inspirational",
+            "generous"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "supportive",
+              "score": 0.42
+            },
+            {
+              "trait": "inspirational",
+              "score": 0.42
+            },
+            {
+              "trait": "generous",
+              "score": 0.37
+            },
+            {
+              "trait": "earnest",
+              "score": 0.36
+            },
+            {
+              "trait": "nurturing",
+              "score": 0.36
+            },
+            {
+              "trait": "adaptable",
+              "score": 0.31
+            },
+            {
+              "trait": "benevolent",
+              "score": 0.3
+            },
+            {
+              "trait": "inclusive",
+              "score": 0.29
+            }
+          ],
+          "top_global_trait_names": [
+            "existentialist",
+            "emotional",
+            "individualistic"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "existentialist",
+              "score": 1.04
+            },
+            {
+              "trait": "emotional",
+              "score": 0.89
+            },
+            {
+              "trait": "individualistic",
+              "score": 0.88
+            },
+            {
+              "trait": "improvisational",
+              "score": 0.88
+            },
+            {
+              "trait": "generalist",
+              "score": 0.87
+            },
+            {
+              "trait": "rebellious",
+              "score": 0.86
+            },
+            {
+              "trait": "stream_of_consciousness",
+              "score": 0.86
+            },
+            {
+              "trait": "visceral",
+              "score": 0.86
+            }
+          ],
+          "example_roles": [
+            "hedonist",
+            "evangelist",
+            "nomad",
+            "empath",
+            "luddite",
+            "loner",
+            "refugee",
+            "widow"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q2_high",
+          "pc1_band": "Q2",
+          "pc2_band": "high",
+          "pc1_min": -31.91029204196817,
+          "pc1_max": -9.203232664884572,
+          "pc2_min": 22.517386586509275,
+          "pc2_max": 78.11385466430272,
+          "role_count": 19,
+          "dominant_cluster": "grounded_social",
+          "dominant_cluster_fraction": 0.47368421052631576,
+          "top_local_trait_names": [
+            "experiential",
+            "anxious",
+            "practical"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "experiential",
+              "score": 1.3
+            },
+            {
+              "trait": "anxious",
+              "score": 1.28
+            },
+            {
+              "trait": "practical",
+              "score": 1.2
+            },
+            {
+              "trait": "nonchalant",
+              "score": 1.2
+            },
+            {
+              "trait": "casual",
+              "score": 1.17
+            },
+            {
+              "trait": "extroverted",
+              "score": 1.12
+            },
+            {
+              "trait": "neurotic",
+              "score": 1.11
+            },
+            {
+              "trait": "flippant",
+              "score": 1.11
+            }
+          ],
+          "top_global_trait_names": [
+            "anxious",
+            "nonchalant",
+            "neurotic"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "anxious",
+              "score": 2.2
+            },
+            {
+              "trait": "nonchalant",
+              "score": 2.12
+            },
+            {
+              "trait": "neurotic",
+              "score": 2.04
+            },
+            {
+              "trait": "casual",
+              "score": 2.03
+            },
+            {
+              "trait": "irreverent",
+              "score": 2.01
+            },
+            {
+              "trait": "sassy",
+              "score": 2.01
+            },
+            {
+              "trait": "flippant",
+              "score": 2.01
+            },
+            {
+              "trait": "extroverted",
+              "score": 1.94
+            }
+          ],
+          "example_roles": [
+            "comedian",
+            "gossip",
+            "cynic",
+            "daredevil",
+            "addict",
+            "prisoner",
+            "hoarder",
+            "orphan"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q3_low",
+          "pc1_band": "Q3",
+          "pc2_band": "low",
+          "pc1_min": -8.988149069256187,
+          "pc1_max": 11.761807600496583,
+          "pc2_min": -32.68085632055681,
+          "pc2_max": -5.315890182727939,
+          "role_count": 18,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 1.0,
+          "top_local_trait_names": [
+            "theoretical",
+            "ritualistic",
+            "abstract"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "theoretical",
+              "score": 1.03
+            },
+            {
+              "trait": "ritualistic",
+              "score": 1.01
+            },
+            {
+              "trait": "abstract",
+              "score": 1.01
+            },
+            {
+              "trait": "conceptual",
+              "score": 0.99
+            },
+            {
+              "trait": "principled",
+              "score": 0.98
+            },
+            {
+              "trait": "erudite",
+              "score": 0.93
+            },
+            {
+              "trait": "pensive",
+              "score": 0.93
+            },
+            {
+              "trait": "reverent",
+              "score": 0.91
+            }
+          ],
+          "top_global_trait_names": [
+            "big_picture",
+            "abstract",
+            "conceptual"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "big_picture",
+              "score": 1.06
+            },
+            {
+              "trait": "abstract",
+              "score": 0.94
+            },
+            {
+              "trait": "conceptual",
+              "score": 0.91
+            },
+            {
+              "trait": "holistic",
+              "score": 0.86
+            },
+            {
+              "trait": "pensive",
+              "score": 0.85
+            },
+            {
+              "trait": "theoretical",
+              "score": 0.83
+            },
+            {
+              "trait": "principled",
+              "score": 0.8
+            },
+            {
+              "trait": "idealistic",
+              "score": 0.74
+            }
+          ],
+          "example_roles": [
+            "composer",
+            "naturalist",
+            "traditionalist",
+            "healer",
+            "symbiont",
+            "purist",
+            "visionary",
+            "merchant"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q3_mid",
+          "pc1_band": "Q3",
+          "pc2_band": "mid",
+          "pc1_min": -8.988149069256187,
+          "pc1_max": 11.761807600496583,
+          "pc2_min": -4.272104727395262,
+          "pc2_max": 14.616833977313346,
+          "role_count": 18,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 0.4444444444444444,
+          "top_local_trait_names": [
+            "pessimistic",
+            "paranoid",
+            "critical"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "pessimistic",
+              "score": 0.42
+            },
+            {
+              "trait": "paranoid",
+              "score": 0.4
+            },
+            {
+              "trait": "critical",
+              "score": 0.4
+            },
+            {
+              "trait": "cynical",
+              "score": 0.36
+            },
+            {
+              "trait": "confrontational",
+              "score": 0.36
+            },
+            {
+              "trait": "blunt",
+              "score": 0.36
+            },
+            {
+              "trait": "skeptical",
+              "score": 0.36
+            },
+            {
+              "trait": "vindictive",
+              "score": 0.35
+            }
+          ],
+          "top_global_trait_names": [
+            "critical",
+            "progressive",
+            "paranoid"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "critical",
+              "score": 0.4
+            },
+            {
+              "trait": "progressive",
+              "score": 0.35
+            },
+            {
+              "trait": "paranoid",
+              "score": 0.32
+            },
+            {
+              "trait": "rebellious",
+              "score": 0.32
+            },
+            {
+              "trait": "existentialist",
+              "score": 0.31
+            },
+            {
+              "trait": "radical",
+              "score": 0.29
+            },
+            {
+              "trait": "contrarian",
+              "score": 0.29
+            },
+            {
+              "trait": "constructivist",
+              "score": 0.28
+            }
+          ],
+          "example_roles": [
+            "spy",
+            "devils_advocate",
+            "minimalist",
+            "soldier",
+            "saboteur",
+            "chef",
+            "writer",
+            "cosmopolitan"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q3_high",
+          "pc1_band": "Q3",
+          "pc2_band": "high",
+          "pc1_min": -8.988149069256187,
+          "pc1_max": 11.761807600496583,
+          "pc2_min": 15.88044389874112,
+          "pc2_max": 40.070455881847,
+          "role_count": 19,
+          "dominant_cluster": "grounded_social",
+          "dominant_cluster_fraction": 0.7368421052631579,
+          "top_local_trait_names": [
+            "experiential",
+            "practical",
+            "inquisitive"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "experiential",
+              "score": 1.04
+            },
+            {
+              "trait": "practical",
+              "score": 1.01
+            },
+            {
+              "trait": "inquisitive",
+              "score": 0.97
+            },
+            {
+              "trait": "accessible",
+              "score": 0.97
+            },
+            {
+              "trait": "adaptable",
+              "score": 0.96
+            },
+            {
+              "trait": "accommodating",
+              "score": 0.95
+            },
+            {
+              "trait": "humble",
+              "score": 0.93
+            },
+            {
+              "trait": "gregarious",
+              "score": 0.92
+            }
+          ],
+          "top_global_trait_names": [
+            "adaptable",
+            "accommodating",
+            "inquisitive"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "adaptable",
+              "score": 1.35
+            },
+            {
+              "trait": "accommodating",
+              "score": 1.27
+            },
+            {
+              "trait": "inquisitive",
+              "score": 1.23
+            },
+            {
+              "trait": "experiential",
+              "score": 1.22
+            },
+            {
+              "trait": "accessible",
+              "score": 1.22
+            },
+            {
+              "trait": "gregarious",
+              "score": 1.18
+            },
+            {
+              "trait": "practical",
+              "score": 1.18
+            },
+            {
+              "trait": "humble",
+              "score": 1.13
+            }
+          ],
+          "example_roles": [
+            "patient",
+            "gamer",
+            "retiree",
+            "parent",
+            "optimist",
+            "podcaster",
+            "competitor",
+            "blogger"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q4_low",
+          "pc1_band": "Q4",
+          "pc2_band": "low",
+          "pc1_min": 12.478176049517112,
+          "pc1_max": 31.896983355445162,
+          "pc2_min": -20.196809991117853,
+          "pc2_max": -8.415887622622742,
+          "role_count": 18,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 1.0,
+          "top_local_trait_names": [
+            "theoretical",
+            "historical",
+            "abstract"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "theoretical",
+              "score": 0.81
+            },
+            {
+              "trait": "historical",
+              "score": 0.76
+            },
+            {
+              "trait": "abstract",
+              "score": 0.75
+            },
+            {
+              "trait": "conceptual",
+              "score": 0.74
+            },
+            {
+              "trait": "esoteric",
+              "score": 0.73
+            },
+            {
+              "trait": "erudite",
+              "score": 0.69
+            },
+            {
+              "trait": "deterministic",
+              "score": 0.68
+            },
+            {
+              "trait": "pedantic",
+              "score": 0.63
+            }
+          ],
+          "top_global_trait_names": [
+            "strategic",
+            "meticulous",
+            "educational"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "strategic",
+              "score": 0.96
+            },
+            {
+              "trait": "meticulous",
+              "score": 0.95
+            },
+            {
+              "trait": "educational",
+              "score": 0.95
+            },
+            {
+              "trait": "descriptive",
+              "score": 0.94
+            },
+            {
+              "trait": "serious",
+              "score": 0.93
+            },
+            {
+              "trait": "calculating",
+              "score": 0.92
+            },
+            {
+              "trait": "perfectionist",
+              "score": 0.92
+            },
+            {
+              "trait": "stoic",
+              "score": 0.92
+            }
+          ],
+          "example_roles": [
+            "cartographer",
+            "emissary",
+            "conservator",
+            "critic",
+            "perfectionist",
+            "archivist",
+            "curator",
+            "cyborg"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q4_mid",
+          "pc1_band": "Q4",
+          "pc2_band": "mid",
+          "pc1_min": 12.478176049517112,
+          "pc1_max": 31.896983355445162,
+          "pc2_min": -8.163528064461934,
+          "pc2_max": 4.187086493370775,
+          "role_count": 18,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 1.0,
+          "top_local_trait_names": [
+            "practical",
+            "proactive",
+            "anthropocentric"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "practical",
+              "score": 0.16
+            },
+            {
+              "trait": "proactive",
+              "score": 0.16
+            },
+            {
+              "trait": "anthropocentric",
+              "score": 0.15
+            },
+            {
+              "trait": "problem_solving",
+              "score": 0.14
+            },
+            {
+              "trait": "convergent",
+              "score": 0.14
+            },
+            {
+              "trait": "closure_seeking",
+              "score": 0.13
+            },
+            {
+              "trait": "decisive",
+              "score": 0.13
+            },
+            {
+              "trait": "prescriptive",
+              "score": 0.13
+            }
+          ],
+          "top_global_trait_names": [
+            "transparent",
+            "moderate",
+            "resilient"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "transparent",
+              "score": 0.79
+            },
+            {
+              "trait": "moderate",
+              "score": 0.79
+            },
+            {
+              "trait": "resilient",
+              "score": 0.79
+            },
+            {
+              "trait": "factual",
+              "score": 0.78
+            },
+            {
+              "trait": "calm",
+              "score": 0.78
+            },
+            {
+              "trait": "conciliatory",
+              "score": 0.78
+            },
+            {
+              "trait": "diplomatic",
+              "score": 0.75
+            },
+            {
+              "trait": "methodical",
+              "score": 0.75
+            }
+          ],
+          "example_roles": [
+            "detective",
+            "peacekeeper",
+            "interpreter",
+            "designer",
+            "veterinarian",
+            "pilot",
+            "reporter",
+            "mediator"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q4_high",
+          "pc1_band": "Q4",
+          "pc2_band": "high",
+          "pc1_min": 12.478176049517112,
+          "pc1_max": 31.896983355445162,
+          "pc2_min": 4.204792712031452,
+          "pc2_max": 23.378311113767314,
+          "role_count": 19,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 0.8421052631578947,
+          "top_local_trait_names": [
+            "inquisitive",
+            "practical",
+            "accessible"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "inquisitive",
+              "score": 0.69
+            },
+            {
+              "trait": "practical",
+              "score": 0.65
+            },
+            {
+              "trait": "accessible",
+              "score": 0.62
+            },
+            {
+              "trait": "experiential",
+              "score": 0.56
+            },
+            {
+              "trait": "adaptable",
+              "score": 0.55
+            },
+            {
+              "trait": "humble",
+              "score": 0.54
+            },
+            {
+              "trait": "accommodating",
+              "score": 0.53
+            },
+            {
+              "trait": "efficient",
+              "score": 0.52
+            }
+          ],
+          "top_global_trait_names": [
+            "flexible",
+            "grounded",
+            "conciliatory"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "flexible",
+              "score": 0.96
+            },
+            {
+              "trait": "grounded",
+              "score": 0.91
+            },
+            {
+              "trait": "conciliatory",
+              "score": 0.85
+            },
+            {
+              "trait": "contemporary",
+              "score": 0.84
+            },
+            {
+              "trait": "transparent",
+              "score": 0.82
+            },
+            {
+              "trait": "chill",
+              "score": 0.81
+            },
+            {
+              "trait": "moderate",
+              "score": 0.8
+            },
+            {
+              "trait": "supportive",
+              "score": 0.8
+            }
+          ],
+          "example_roles": [
+            "networker",
+            "presenter",
+            "entrepreneur",
+            "realist",
+            "coach",
+            "collaborator",
+            "pragmatist",
+            "mentor"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q5_low",
+          "pc1_band": "Q5",
+          "pc2_band": "low",
+          "pc1_min": 31.956659579557968,
+          "pc1_max": 48.15501628203943,
+          "pc2_min": -24.466824276699434,
+          "pc2_max": -10.275203492936383,
+          "role_count": 18,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 1.0,
+          "top_local_trait_names": [
+            "theoretical",
+            "historical",
+            "abstract"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "theoretical",
+              "score": 0.73
+            },
+            {
+              "trait": "historical",
+              "score": 0.67
+            },
+            {
+              "trait": "abstract",
+              "score": 0.67
+            },
+            {
+              "trait": "verbose",
+              "score": 0.67
+            },
+            {
+              "trait": "conceptual",
+              "score": 0.65
+            },
+            {
+              "trait": "esoteric",
+              "score": 0.63
+            },
+            {
+              "trait": "skeptical",
+              "score": 0.61
+            },
+            {
+              "trait": "deterministic",
+              "score": 0.61
+            }
+          ],
+          "top_global_trait_names": [
+            "cautious",
+            "data_driven",
+            "detached"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "cautious",
+              "score": 1.71
+            },
+            {
+              "trait": "data_driven",
+              "score": 1.65
+            },
+            {
+              "trait": "detached",
+              "score": 1.62
+            },
+            {
+              "trait": "rationalist",
+              "score": 1.61
+            },
+            {
+              "trait": "structuralist",
+              "score": 1.59
+            },
+            {
+              "trait": "dispassionate",
+              "score": 1.58
+            },
+            {
+              "trait": "formalist",
+              "score": 1.58
+            },
+            {
+              "trait": "technical",
+              "score": 1.55
+            }
+          ],
+          "example_roles": [
+            "robot",
+            "sociologist",
+            "geographer",
+            "scholar",
+            "judge",
+            "scientist",
+            "lawyer",
+            "linguist"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q5_mid",
+          "pc1_band": "Q5",
+          "pc2_band": "mid",
+          "pc1_min": 31.956659579557968,
+          "pc1_max": 48.15501628203943,
+          "pc2_min": -9.962990674959066,
+          "pc2_max": -3.0144967324707843,
+          "role_count": 18,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 0.7777777777777778,
+          "top_local_trait_names": [
+            "proactive",
+            "verbose",
+            "skeptical"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "proactive",
+              "score": 0.2
+            },
+            {
+              "trait": "verbose",
+              "score": 0.17
+            },
+            {
+              "trait": "skeptical",
+              "score": 0.15
+            },
+            {
+              "trait": "exploratory",
+              "score": 0.14
+            },
+            {
+              "trait": "problem_solving",
+              "score": 0.14
+            },
+            {
+              "trait": "generous",
+              "score": 0.13
+            },
+            {
+              "trait": "pessimistic",
+              "score": 0.13
+            },
+            {
+              "trait": "quantitative",
+              "score": 0.12
+            }
+          ],
+          "top_global_trait_names": [
+            "data_driven",
+            "quantitative",
+            "rationalist"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "data_driven",
+              "score": 1.51
+            },
+            {
+              "trait": "quantitative",
+              "score": 1.5
+            },
+            {
+              "trait": "rationalist",
+              "score": 1.45
+            },
+            {
+              "trait": "analytical",
+              "score": 1.45
+            },
+            {
+              "trait": "cautious",
+              "score": 1.43
+            },
+            {
+              "trait": "materialist",
+              "score": 1.42
+            },
+            {
+              "trait": "formalist",
+              "score": 1.39
+            },
+            {
+              "trait": "factual",
+              "score": 1.37
+            }
+          ],
+          "example_roles": [
+            "engineer",
+            "strategist",
+            "forecaster",
+            "analyst",
+            "grader",
+            "pharmacist",
+            "secretary",
+            "accountant"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        },
+        {
+          "basis": "quantile",
+          "basis_label": "Quantile bands",
+          "cell_id": "quantile_Q5_high",
+          "pc1_band": "Q5",
+          "pc2_band": "high",
+          "pc1_min": 31.956659579557968,
+          "pc1_max": 48.15501628203943,
+          "pc2_min": -3.009267955799515,
+          "pc2_max": 7.866916749400894,
+          "role_count": 19,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 0.6842105263157895,
+          "top_local_trait_names": [
+            "efficient",
+            "practical",
+            "optimistic"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "efficient",
+              "score": 0.72
+            },
+            {
+              "trait": "practical",
+              "score": 0.69
+            },
+            {
+              "trait": "optimistic",
+              "score": 0.63
+            },
+            {
+              "trait": "accessible",
+              "score": 0.62
+            },
+            {
+              "trait": "concise",
+              "score": 0.6
+            },
+            {
+              "trait": "accommodating",
+              "score": 0.57
+            },
+            {
+              "trait": "submissive",
+              "score": 0.52
+            },
+            {
+              "trait": "adaptable",
+              "score": 0.48
+            }
+          ],
+          "top_global_trait_names": [
+            "literal",
+            "convergent",
+            "avoidant"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "literal",
+              "score": 1.4
+            },
+            {
+              "trait": "convergent",
+              "score": 1.31
+            },
+            {
+              "trait": "avoidant",
+              "score": 1.3
+            },
+            {
+              "trait": "factual",
+              "score": 1.23
+            },
+            {
+              "trait": "reductionist",
+              "score": 1.22
+            },
+            {
+              "trait": "methodical",
+              "score": 1.22
+            },
+            {
+              "trait": "transparent",
+              "score": 1.21
+            },
+            {
+              "trait": "moderate",
+              "score": 1.2
+            }
+          ],
+          "example_roles": [
+            "scheduler",
+            "debugger",
+            "coordinator",
+            "nutritionist",
+            "organizer",
+            "consultant",
+            "instructor",
+            "summarizer"
+          ],
+          "sparse_cell": false,
+          "method_note": "Existing 5 x 3 PC1-quantile and within-band PC2-tertile analysis; default because cell sizes are stable."
+        }
+      ]
+    },
+    "explorer_grid": {
+      "label": "Explorer fixed grid",
+      "description": "Equal-width PC1 x PC2 cells in explorer coordinates. This aligns with the native scatter geometry but is descriptive and can be sparse.",
+      "cells": [
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C1_low",
+          "pc1_band": "C1",
+          "pc2_band": "low",
+          "pc1_min": -60.938872717021006,
+          "pc1_max": -39.12009491720892,
+          "pc2_min": -44.00800269921331,
+          "pc2_max": -3.3007169113746286,
+          "role_count": 30,
+          "dominant_cluster": "mythic_spiritual",
+          "dominant_cluster_fraction": 1.0,
+          "top_local_trait_names": [
+            "pensive",
+            "big_picture",
+            "introverted",
+            "abstract",
+            "conceptual",
+            "principled",
+            "reverent",
+            "eloquent"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "pensive",
+              "score": 0.42237976368215746
+            },
+            {
+              "trait": "big_picture",
+              "score": 0.3993706675914725
+            },
+            {
+              "trait": "introverted",
+              "score": 0.36452393606521594
+            },
+            {
+              "trait": "abstract",
+              "score": 0.35878005280461533
+            },
+            {
+              "trait": "conceptual",
+              "score": 0.3473338109157398
+            },
+            {
+              "trait": "principled",
+              "score": 0.33345203188487693
+            },
+            {
+              "trait": "reverent",
+              "score": 0.33322391141907054
+            },
+            {
+              "trait": "eloquent",
+              "score": 0.33279265475550374
+            }
+          ],
+          "top_global_trait_names": [
+            "fatalistic",
+            "ethereal",
+            "cryptic",
+            "ascetic",
+            "spiritual",
+            "enigmatic",
+            "nostalgic",
+            "mystical"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "fatalistic",
+              "score": 1.9634054951787305
+            },
+            {
+              "trait": "ethereal",
+              "score": 1.8858420544694867
+            },
+            {
+              "trait": "cryptic",
+              "score": 1.884438785515824
+            },
+            {
+              "trait": "ascetic",
+              "score": 1.8506243263807296
+            },
+            {
+              "trait": "spiritual",
+              "score": 1.8363068297009968
+            },
+            {
+              "trait": "enigmatic",
+              "score": 1.7962394284780892
+            },
+            {
+              "trait": "nostalgic",
+              "score": 1.7877373065805484
+            },
+            {
+              "trait": "mystical",
+              "score": 1.7779890465249388
+            }
+          ],
+          "example_roles": [
+            "hermit",
+            "ghost",
+            "vampire",
+            "bard",
+            "dreamer",
+            "tree",
+            "wind",
+            "revenant"
+          ],
+          "sparse_cell": false,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C1_mid",
+          "pc1_band": "C1",
+          "pc2_band": "mid",
+          "pc1_min": -60.938872717021006,
+          "pc1_max": -39.12009491720892,
+          "pc2_min": -3.3007169113746286,
+          "pc2_max": 37.40656887646405,
+          "role_count": 6,
+          "dominant_cluster": "grounded_social",
+          "dominant_cluster_fraction": 0.5,
+          "top_local_trait_names": [
+            "experiential",
+            "practical",
+            "reductionist",
+            "nonchalant",
+            "casual",
+            "grounded",
+            "anxious",
+            "irreverent"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "experiential",
+              "score": 1.2649366245588842
+            },
+            {
+              "trait": "practical",
+              "score": 1.2578869948854325
+            },
+            {
+              "trait": "reductionist",
+              "score": 1.1488682680858784
+            },
+            {
+              "trait": "nonchalant",
+              "score": 1.0438636761311268
+            },
+            {
+              "trait": "casual",
+              "score": 1.0394231907648628
+            },
+            {
+              "trait": "grounded",
+              "score": 1.0382036208882972
+            },
+            {
+              "trait": "anxious",
+              "score": 1.036881704409016
+            },
+            {
+              "trait": "irreverent",
+              "score": 0.9453288426781865
+            }
+          ],
+          "top_global_trait_names": [
+            "goofy",
+            "playful",
+            "mischievous",
+            "whimsical",
+            "impulsive",
+            "concise",
+            "nonchalant",
+            "narrative"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "goofy",
+              "score": 1.6171658415896744
+            },
+            {
+              "trait": "playful",
+              "score": 1.6132950662502525
+            },
+            {
+              "trait": "mischievous",
+              "score": 1.6016701977542371
+            },
+            {
+              "trait": "whimsical",
+              "score": 1.601141179959874
+            },
+            {
+              "trait": "impulsive",
+              "score": 1.589285153359109
+            },
+            {
+              "trait": "concise",
+              "score": 1.5741086834881186
+            },
+            {
+              "trait": "nonchalant",
+              "score": 1.5563259318036324
+            },
+            {
+              "trait": "narrative",
+              "score": 1.5507533961036732
+            }
+          ],
+          "example_roles": [
+            "pirate",
+            "caveman",
+            "amnesiac",
+            "jester",
+            "bohemian",
+            "prey"
+          ],
+          "sparse_cell": true,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C1_high",
+          "pc1_band": "C1",
+          "pc2_band": "high",
+          "pc1_min": -60.938872717021006,
+          "pc1_max": -39.12009491720892,
+          "pc2_min": 37.40656887646405,
+          "pc2_max": 78.11385466430272,
+          "role_count": 1,
+          "dominant_cluster": "other",
+          "dominant_cluster_fraction": 1.0,
+          "top_local_trait_names": [
+            "naive",
+            "understated",
+            "avoidant",
+            "humble",
+            "submissive",
+            "accommodating",
+            "reductionist",
+            "efficient"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "naive",
+              "score": 3.854846919731598
+            },
+            {
+              "trait": "understated",
+              "score": 3.7437698730966193
+            },
+            {
+              "trait": "avoidant",
+              "score": 3.708129069453431
+            },
+            {
+              "trait": "humble",
+              "score": 3.3671721690902805
+            },
+            {
+              "trait": "submissive",
+              "score": 3.090056042784603
+            },
+            {
+              "trait": "accommodating",
+              "score": 2.813212791081372
+            },
+            {
+              "trait": "reductionist",
+              "score": 2.745800832048233
+            },
+            {
+              "trait": "efficient",
+              "score": 2.4747362577800507
+            }
+          ],
+          "top_global_trait_names": [
+            "naive",
+            "concise",
+            "submissive",
+            "efficient",
+            "understated",
+            "humble",
+            "accommodating",
+            "avoidant"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "naive",
+              "score": 4.611122208767378
+            },
+            {
+              "trait": "concise",
+              "score": 3.6204368539119147
+            },
+            {
+              "trait": "submissive",
+              "score": 3.5041536137958
+            },
+            {
+              "trait": "efficient",
+              "score": 3.1298255827906734
+            },
+            {
+              "trait": "understated",
+              "score": 3.129112473993105
+            },
+            {
+              "trait": "humble",
+              "score": 3.0137695316025854
+            },
+            {
+              "trait": "accommodating",
+              "score": 2.7737549179737284
+            },
+            {
+              "trait": "avoidant",
+              "score": 2.771624000126367
+            }
+          ],
+          "example_roles": [
+            "infant"
+          ],
+          "sparse_cell": true,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C2_low",
+          "pc1_band": "C2",
+          "pc2_band": "low",
+          "pc1_min": -39.12009491720892,
+          "pc1_max": -17.301317117396827,
+          "pc2_min": -44.00800269921331,
+          "pc2_max": -3.3007169113746286,
+          "role_count": 20,
+          "dominant_cluster": "mythic_spiritual",
+          "dominant_cluster_fraction": 0.9,
+          "top_local_trait_names": [
+            "reverent",
+            "introverted",
+            "pensive",
+            "ritualistic",
+            "abstract",
+            "conceptual",
+            "solemn",
+            "big_picture"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "reverent",
+              "score": 1.2789797696437406
+            },
+            {
+              "trait": "introverted",
+              "score": 1.2723207188308503
+            },
+            {
+              "trait": "pensive",
+              "score": 1.2616272624037972
+            },
+            {
+              "trait": "ritualistic",
+              "score": 1.2277872915915105
+            },
+            {
+              "trait": "abstract",
+              "score": 1.1925556391654106
+            },
+            {
+              "trait": "conceptual",
+              "score": 1.190683524683364
+            },
+            {
+              "trait": "solemn",
+              "score": 1.1471019116263281
+            },
+            {
+              "trait": "big_picture",
+              "score": 1.1329992713882262
+            }
+          ],
+          "top_global_trait_names": [
+            "philosophical",
+            "eloquent",
+            "fatalistic",
+            "absolutist",
+            "grandiose",
+            "epicurean",
+            "cryptic",
+            "bombastic"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "philosophical",
+              "score": 1.334924882515668
+            },
+            {
+              "trait": "eloquent",
+              "score": 1.3278766774716368
+            },
+            {
+              "trait": "fatalistic",
+              "score": 1.3070940592911322
+            },
+            {
+              "trait": "absolutist",
+              "score": 1.2883206046347249
+            },
+            {
+              "trait": "grandiose",
+              "score": 1.2824277285605374
+            },
+            {
+              "trait": "epicurean",
+              "score": 1.2631278816855767
+            },
+            {
+              "trait": "cryptic",
+              "score": 1.259315911361043
+            },
+            {
+              "trait": "bombastic",
+              "score": 1.2567209879068693
+            }
+          ],
+          "example_roles": [
+            "martyr",
+            "mycorrhizal",
+            "coral_reef",
+            "guru",
+            "sage",
+            "zealot",
+            "homunculus",
+            "alien"
+          ],
+          "sparse_cell": false,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C2_mid",
+          "pc1_band": "C2",
+          "pc2_band": "mid",
+          "pc1_min": -39.12009491720892,
+          "pc1_max": -17.301317117396827,
+          "pc2_min": -3.3007169113746286,
+          "pc2_max": 37.40656887646405,
+          "role_count": 21,
+          "dominant_cluster": "grounded_social",
+          "dominant_cluster_fraction": 0.7142857142857143,
+          "top_local_trait_names": [
+            "experiential",
+            "practical",
+            "adaptable",
+            "accessible",
+            "contemporary",
+            "casual",
+            "inquisitive",
+            "gregarious"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "experiential",
+              "score": 0.4311256176134824
+            },
+            {
+              "trait": "practical",
+              "score": 0.4028964139671346
+            },
+            {
+              "trait": "adaptable",
+              "score": 0.40242993647995096
+            },
+            {
+              "trait": "accessible",
+              "score": 0.35045773381847245
+            },
+            {
+              "trait": "contemporary",
+              "score": 0.3348496993279264
+            },
+            {
+              "trait": "casual",
+              "score": 0.3269374110514177
+            },
+            {
+              "trait": "inquisitive",
+              "score": 0.32340228726139547
+            },
+            {
+              "trait": "gregarious",
+              "score": 0.3005150590977883
+            }
+          ],
+          "top_global_trait_names": [
+            "sassy",
+            "impatient",
+            "visceral",
+            "entertaining",
+            "animated",
+            "witty",
+            "passionate",
+            "irreverent"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "sassy",
+              "score": 1.2641678329262884
+            },
+            {
+              "trait": "impatient",
+              "score": 1.2635635691203575
+            },
+            {
+              "trait": "visceral",
+              "score": 1.2509368965369185
+            },
+            {
+              "trait": "entertaining",
+              "score": 1.2508290255021313
+            },
+            {
+              "trait": "animated",
+              "score": 1.2506006157216683
+            },
+            {
+              "trait": "witty",
+              "score": 1.2499663021854277
+            },
+            {
+              "trait": "passionate",
+              "score": 1.2466113984351712
+            },
+            {
+              "trait": "irreverent",
+              "score": 1.2457722289880155
+            }
+          ],
+          "example_roles": [
+            "widow",
+            "rogue",
+            "survivor",
+            "actor",
+            "absurdist",
+            "provocateur",
+            "trickster",
+            "surfer"
+          ],
+          "sparse_cell": false,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C2_high",
+          "pc1_band": "C2",
+          "pc2_band": "high",
+          "pc1_min": -39.12009491720892,
+          "pc1_max": -17.301317117396827,
+          "pc2_min": 37.40656887646405,
+          "pc2_max": 78.11385466430272,
+          "role_count": 10,
+          "dominant_cluster": "grounded_social",
+          "dominant_cluster_fraction": 0.3,
+          "top_local_trait_names": [
+            "experiential",
+            "anxious",
+            "practical",
+            "nonchalant",
+            "flippant",
+            "irreverent",
+            "extroverted",
+            "casual"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "experiential",
+              "score": 1.5852988249387654
+            },
+            {
+              "trait": "anxious",
+              "score": 1.5776898248985933
+            },
+            {
+              "trait": "practical",
+              "score": 1.486812833016884
+            },
+            {
+              "trait": "nonchalant",
+              "score": 1.458707704516826
+            },
+            {
+              "trait": "flippant",
+              "score": 1.4077940766236536
+            },
+            {
+              "trait": "irreverent",
+              "score": 1.3920623776674586
+            },
+            {
+              "trait": "extroverted",
+              "score": 1.38812067196779
+            },
+            {
+              "trait": "casual",
+              "score": 1.3629217156646745
+            }
+          ],
+          "top_global_trait_names": [
+            "anxious",
+            "nonchalant",
+            "flippant",
+            "irreverent",
+            "sassy",
+            "neurotic",
+            "goofy",
+            "extroverted"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "anxious",
+              "score": 2.532377124514207
+            },
+            {
+              "trait": "nonchalant",
+              "score": 2.4662908715788143
+            },
+            {
+              "trait": "flippant",
+              "score": 2.4589288898353914
+            },
+            {
+              "trait": "irreverent",
+              "score": 2.4415839384597167
+            },
+            {
+              "trait": "sassy",
+              "score": 2.391868094549868
+            },
+            {
+              "trait": "neurotic",
+              "score": 2.3883236827524583
+            },
+            {
+              "trait": "goofy",
+              "score": 2.3207409949373012
+            },
+            {
+              "trait": "extroverted",
+              "score": 2.317107547115135
+            }
+          ],
+          "example_roles": [
+            "gossip",
+            "comedian",
+            "fool",
+            "daredevil",
+            "toddler",
+            "cynic",
+            "hoarder",
+            "prisoner"
+          ],
+          "sparse_cell": false,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C3_low",
+          "pc1_band": "C3",
+          "pc2_band": "low",
+          "pc1_min": -17.301317117396827,
+          "pc1_max": 4.517460682415255,
+          "pc2_min": -44.00800269921331,
+          "pc2_max": -3.3007169113746286,
+          "role_count": 18,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 0.6666666666666666,
+          "top_local_trait_names": [
+            "abstract",
+            "theoretical",
+            "conceptual",
+            "principled",
+            "ritualistic",
+            "essentialist",
+            "introverted",
+            "big_picture"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "abstract",
+              "score": 1.2966785641249203
+            },
+            {
+              "trait": "theoretical",
+              "score": 1.2942242360380267
+            },
+            {
+              "trait": "conceptual",
+              "score": 1.2776716877575838
+            },
+            {
+              "trait": "principled",
+              "score": 1.2716119072526926
+            },
+            {
+              "trait": "ritualistic",
+              "score": 1.270538932639131
+            },
+            {
+              "trait": "essentialist",
+              "score": 1.2351094231187216
+            },
+            {
+              "trait": "introverted",
+              "score": 1.2273214420901075
+            },
+            {
+              "trait": "big_picture",
+              "score": 1.189500479629647
+            }
+          ],
+          "top_global_trait_names": [
+            "big_picture",
+            "conceptual",
+            "abstract",
+            "idealistic",
+            "theoretical",
+            "epicurean",
+            "elitist",
+            "eloquent"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "big_picture",
+              "score": 1.2297613343890568
+            },
+            {
+              "trait": "conceptual",
+              "score": 1.1252175067627999
+            },
+            {
+              "trait": "abstract",
+              "score": 1.1217785957573443
+            },
+            {
+              "trait": "idealistic",
+              "score": 1.009028318583731
+            },
+            {
+              "trait": "theoretical",
+              "score": 0.9675904385844885
+            },
+            {
+              "trait": "epicurean",
+              "score": 0.9482038728422896
+            },
+            {
+              "trait": "elitist",
+              "score": 0.923658739340335
+            },
+            {
+              "trait": "eloquent",
+              "score": 0.9119479514215232
+            }
+          ],
+          "example_roles": [
+            "swarm",
+            "traditionalist",
+            "virtuoso",
+            "composer",
+            "purist",
+            "stoic",
+            "virus",
+            "hive"
+          ],
+          "sparse_cell": false,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C3_mid",
+          "pc1_band": "C3",
+          "pc2_band": "mid",
+          "pc1_min": -17.301317117396827,
+          "pc1_max": 4.517460682415255,
+          "pc2_min": -3.3007169113746286,
+          "pc2_max": 37.40656887646405,
+          "role_count": 35,
+          "dominant_cluster": "grounded_social",
+          "dominant_cluster_fraction": 0.7142857142857143,
+          "top_local_trait_names": [
+            "experiential",
+            "practical",
+            "adaptable",
+            "inquisitive",
+            "accessible",
+            "flexible",
+            "humble",
+            "contemporary"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "experiential",
+              "score": 0.38644081437908107
+            },
+            {
+              "trait": "practical",
+              "score": 0.35612852450802907
+            },
+            {
+              "trait": "adaptable",
+              "score": 0.35085836263845543
+            },
+            {
+              "trait": "inquisitive",
+              "score": 0.3420221156769105
+            },
+            {
+              "trait": "accessible",
+              "score": 0.3145471761878668
+            },
+            {
+              "trait": "flexible",
+              "score": 0.3036359518858463
+            },
+            {
+              "trait": "humble",
+              "score": 0.2903086187905945
+            },
+            {
+              "trait": "contemporary",
+              "score": 0.2808303503888238
+            }
+          ],
+          "top_global_trait_names": [
+            "existentialist",
+            "adaptable",
+            "inquisitive",
+            "casual",
+            "gregarious",
+            "accommodating",
+            "experiential",
+            "empathetic"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "existentialist",
+              "score": 0.813580142527071
+            },
+            {
+              "trait": "adaptable",
+              "score": 0.8119764593442296
+            },
+            {
+              "trait": "inquisitive",
+              "score": 0.8043219297840906
+            },
+            {
+              "trait": "casual",
+              "score": 0.7612740222695934
+            },
+            {
+              "trait": "gregarious",
+              "score": 0.7531220337703959
+            },
+            {
+              "trait": "accommodating",
+              "score": 0.7473062214962893
+            },
+            {
+              "trait": "experiential",
+              "score": 0.7345994327112552
+            },
+            {
+              "trait": "empathetic",
+              "score": 0.7237048850602958
+            }
+          ],
+          "example_roles": [
+            "dilettante",
+            "auctioneer",
+            "immigrant",
+            "contrarian",
+            "hacker",
+            "maverick",
+            "chameleon",
+            "fixer"
+          ],
+          "sparse_cell": false,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C3_high",
+          "pc1_band": "C3",
+          "pc2_band": "high",
+          "pc1_min": -17.301317117396827,
+          "pc1_max": 4.517460682415255,
+          "pc2_min": 37.40656887646405,
+          "pc2_max": 78.11385466430272,
+          "role_count": 5,
+          "dominant_cluster": "other",
+          "dominant_cluster_fraction": 0.6,
+          "top_local_trait_names": [
+            "humble",
+            "anxious",
+            "casual",
+            "experiential",
+            "inquisitive",
+            "practical",
+            "neurotic",
+            "nonchalant"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "humble",
+              "score": 2.4981011865827276
+            },
+            {
+              "trait": "anxious",
+              "score": 2.381018603832115
+            },
+            {
+              "trait": "casual",
+              "score": 2.2350915162146254
+            },
+            {
+              "trait": "experiential",
+              "score": 2.2175192536250377
+            },
+            {
+              "trait": "inquisitive",
+              "score": 2.156615720665557
+            },
+            {
+              "trait": "practical",
+              "score": 2.1468572300063506
+            },
+            {
+              "trait": "neurotic",
+              "score": 2.099460287296133
+            },
+            {
+              "trait": "nonchalant",
+              "score": 2.0316438179377165
+            }
+          ],
+          "top_global_trait_names": [
+            "humble",
+            "casual",
+            "anxious",
+            "inquisitive",
+            "experiential",
+            "gregarious",
+            "practical",
+            "neurotic"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "humble",
+              "score": 2.7797755799298307
+            },
+            {
+              "trait": "casual",
+              "score": 2.7523882822271455
+            },
+            {
+              "trait": "anxious",
+              "score": 2.7482085784756807
+            },
+            {
+              "trait": "inquisitive",
+              "score": 2.618915534772737
+            },
+            {
+              "trait": "experiential",
+              "score": 2.5656778719572118
+            },
+            {
+              "trait": "gregarious",
+              "score": 2.5244739102129046
+            },
+            {
+              "trait": "practical",
+              "score": 2.4521119058271594
+            },
+            {
+              "trait": "neurotic",
+              "score": 2.4484819715371904
+            }
+          ],
+          "example_roles": [
+            "procrastinator",
+            "amateur",
+            "influencer",
+            "teenager",
+            "adolescent"
+          ],
+          "sparse_cell": true,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C4_low",
+          "pc1_band": "C4",
+          "pc2_band": "low",
+          "pc1_min": 4.517460682415255,
+          "pc1_max": 26.33623848222735,
+          "pc2_min": -44.00800269921331,
+          "pc2_max": -3.3007169113746286,
+          "role_count": 22,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 1.0,
+          "top_local_trait_names": [
+            "theoretical",
+            "abstract",
+            "conceptual",
+            "esoteric",
+            "erudite",
+            "principled",
+            "big_picture",
+            "deterministic"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "theoretical",
+              "score": 0.6845039633876385
+            },
+            {
+              "trait": "abstract",
+              "score": 0.669763185306293
+            },
+            {
+              "trait": "conceptual",
+              "score": 0.66173982350983
+            },
+            {
+              "trait": "esoteric",
+              "score": 0.6163183566819268
+            },
+            {
+              "trait": "erudite",
+              "score": 0.5730281373542939
+            },
+            {
+              "trait": "principled",
+              "score": 0.5639163683712839
+            },
+            {
+              "trait": "big_picture",
+              "score": 0.5547249115720467
+            },
+            {
+              "trait": "deterministic",
+              "score": 0.5487714616318509
+            }
+          ],
+          "top_global_trait_names": [
+            "principled",
+            "pensive",
+            "collectivistic",
+            "patient",
+            "solemn",
+            "circumspect",
+            "earnest",
+            "conscientious"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "principled",
+              "score": 0.7209880755536522
+            },
+            {
+              "trait": "pensive",
+              "score": 0.7151438345835789
+            },
+            {
+              "trait": "collectivistic",
+              "score": 0.7083329757117569
+            },
+            {
+              "trait": "patient",
+              "score": 0.7077368936283641
+            },
+            {
+              "trait": "solemn",
+              "score": 0.699536202278061
+            },
+            {
+              "trait": "circumspect",
+              "score": 0.6972209677966608
+            },
+            {
+              "trait": "earnest",
+              "score": 0.6965659922844006
+            },
+            {
+              "trait": "conscientious",
+              "score": 0.6935012143051938
+            }
+          ],
+          "example_roles": [
+            "archaeologist",
+            "ecosystem",
+            "naturalist",
+            "conservator",
+            "cartographer",
+            "collector",
+            "pacifist",
+            "philosopher"
+          ],
+          "sparse_cell": false,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C4_mid",
+          "pc1_band": "C4",
+          "pc2_band": "mid",
+          "pc1_min": 4.517460682415255,
+          "pc1_max": 26.33623848222735,
+          "pc2_min": -3.3007169113746286,
+          "pc2_max": 37.40656887646405,
+          "role_count": 30,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 0.7333333333333333,
+          "top_local_trait_names": [
+            "practical",
+            "experiential",
+            "inquisitive",
+            "accessible",
+            "grounded",
+            "adaptable",
+            "humble",
+            "flexible"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "practical",
+              "score": 0.5103550775198397
+            },
+            {
+              "trait": "experiential",
+              "score": 0.46114889392420944
+            },
+            {
+              "trait": "inquisitive",
+              "score": 0.4510937448423956
+            },
+            {
+              "trait": "accessible",
+              "score": 0.42348270589177095
+            },
+            {
+              "trait": "grounded",
+              "score": 0.39332897359758984
+            },
+            {
+              "trait": "adaptable",
+              "score": 0.37511864661754
+            },
+            {
+              "trait": "humble",
+              "score": 0.3657442658851198
+            },
+            {
+              "trait": "flexible",
+              "score": 0.3553432847526696
+            }
+          ],
+          "top_global_trait_names": [
+            "flexible",
+            "grounded",
+            "adaptable",
+            "chill",
+            "contemporary",
+            "conciliatory",
+            "supportive",
+            "transparent"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "flexible",
+              "score": 0.7642913715870788
+            },
+            {
+              "trait": "grounded",
+              "score": 0.6885545485014488
+            },
+            {
+              "trait": "adaptable",
+              "score": 0.6477872877259137
+            },
+            {
+              "trait": "chill",
+              "score": 0.6460618531511724
+            },
+            {
+              "trait": "contemporary",
+              "score": 0.6407112749065453
+            },
+            {
+              "trait": "conciliatory",
+              "score": 0.6263067628606998
+            },
+            {
+              "trait": "supportive",
+              "score": 0.6252890992324586
+            },
+            {
+              "trait": "transparent",
+              "score": 0.5995158229839714
+            }
+          ],
+          "example_roles": [
+            "expatriate",
+            "therapist",
+            "entrepreneur",
+            "presenter",
+            "counselor",
+            "mechanic",
+            "veteran",
+            "student"
+          ],
+          "sparse_cell": false,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C5_low",
+          "pc1_band": "C5",
+          "pc2_band": "low",
+          "pc1_min": 26.33623848222735,
+          "pc1_max": 48.15501628203943,
+          "pc2_min": -44.00800269921331,
+          "pc2_max": -3.3007169113746286,
+          "role_count": 43,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 0.9069767441860465,
+          "top_local_trait_names": [
+            "verbose",
+            "theoretical",
+            "historical",
+            "esoteric",
+            "pedantic",
+            "skeptical",
+            "erudite",
+            "abstract"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "verbose",
+              "score": 0.4872215729921139
+            },
+            {
+              "trait": "theoretical",
+              "score": 0.4779303489965604
+            },
+            {
+              "trait": "historical",
+              "score": 0.47523712660643064
+            },
+            {
+              "trait": "esoteric",
+              "score": 0.43710669636025007
+            },
+            {
+              "trait": "pedantic",
+              "score": 0.4254260711445019
+            },
+            {
+              "trait": "skeptical",
+              "score": 0.42341035939155686
+            },
+            {
+              "trait": "erudite",
+              "score": 0.418690740402747
+            },
+            {
+              "trait": "abstract",
+              "score": 0.4095103995376325
+            }
+          ],
+          "top_global_trait_names": [
+            "cautious",
+            "data_driven",
+            "rationalist",
+            "detached",
+            "formalist",
+            "dispassionate",
+            "structuralist",
+            "analytical"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "cautious",
+              "score": 1.510706667344929
+            },
+            {
+              "trait": "data_driven",
+              "score": 1.4929505628558033
+            },
+            {
+              "trait": "rationalist",
+              "score": 1.445966593760159
+            },
+            {
+              "trait": "detached",
+              "score": 1.4273806190873328
+            },
+            {
+              "trait": "formalist",
+              "score": 1.4164525449854224
+            },
+            {
+              "trait": "dispassionate",
+              "score": 1.4103580707807057
+            },
+            {
+              "trait": "structuralist",
+              "score": 1.4094102753254378
+            },
+            {
+              "trait": "analytical",
+              "score": 1.4043976272345895
+            }
+          ],
+          "example_roles": [
+            "scholar",
+            "theorist",
+            "geographer",
+            "anthropologist",
+            "robot",
+            "linguist",
+            "judge",
+            "biologist"
+          ],
+          "sparse_cell": false,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        },
+        {
+          "basis": "explorer_grid",
+          "basis_label": "Explorer fixed grid",
+          "cell_id": "explorer_C5_mid",
+          "pc1_band": "C5",
+          "pc2_band": "mid",
+          "pc1_min": 26.33623848222735,
+          "pc1_max": 48.15501628203943,
+          "pc2_min": -3.3007169113746286,
+          "pc2_max": 37.40656887646405,
+          "role_count": 34,
+          "dominant_cluster": "procedural_professional",
+          "dominant_cluster_fraction": 0.8235294117647058,
+          "top_local_trait_names": [
+            "practical",
+            "efficient",
+            "accessible",
+            "optimistic",
+            "accommodating",
+            "experiential",
+            "concise",
+            "adaptable"
+          ],
+          "top_local_traits": [
+            {
+              "trait": "practical",
+              "score": 0.6220321379247995
+            },
+            {
+              "trait": "efficient",
+              "score": 0.6057592003848835
+            },
+            {
+              "trait": "accessible",
+              "score": 0.5546230110126603
+            },
+            {
+              "trait": "optimistic",
+              "score": 0.4938432102245434
+            },
+            {
+              "trait": "accommodating",
+              "score": 0.48956974297687506
+            },
+            {
+              "trait": "experiential",
+              "score": 0.46128143044010506
+            },
+            {
+              "trait": "concise",
+              "score": 0.45987489933480075
+            },
+            {
+              "trait": "adaptable",
+              "score": 0.45563894846993847
+            }
+          ],
+          "top_global_trait_names": [
+            "literal",
+            "transparent",
+            "factual",
+            "methodical",
+            "moderate",
+            "avoidant",
+            "problem_solving",
+            "grounded"
+          ],
+          "top_global_traits": [
+            {
+              "trait": "literal",
+              "score": 1.1550420501392622
+            },
+            {
+              "trait": "transparent",
+              "score": 1.1183360113307905
+            },
+            {
+              "trait": "factual",
+              "score": 1.1007111336900786
+            },
+            {
+              "trait": "methodical",
+              "score": 1.0719075446731139
+            },
+            {
+              "trait": "moderate",
+              "score": 1.071822549768226
+            },
+            {
+              "trait": "avoidant",
+              "score": 1.0692841280275776
+            },
+            {
+              "trait": "problem_solving",
+              "score": 1.0665613526050017
+            },
+            {
+              "trait": "grounded",
+              "score": 1.0648425884210986
+            }
+          ],
+          "example_roles": [
+            "pragmatist",
+            "recruiter",
+            "tutor",
+            "marketer",
+            "teacher",
+            "trainer",
+            "facilitator",
+            "instructor"
+          ],
+          "sparse_cell": false,
+          "method_note": "Equal-width PC1 x PC2 grid in explorer coordinates; descriptive and sparse cells should not be over-interpreted."
+        }
+      ]
+    }
+  }
+}

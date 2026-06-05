@@ -521,6 +521,14 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - High-PC2 cells frequently surface situated/reactive traits such as `experiential`, `practical`, `casual`, `accessible`, `anxious`, `neurotic`, `grounded`, or `accommodating`, while low-PC2 cells more often surface `abstract`, `conceptual`, `theoretical`, `ritualistic`, `pensive`, `serious`, `formal`, or adjacent integrated/formal traits
 - Caveat: this is a descriptive visualization over activation-space trait cosine features, not a causal or final solution to PC2
 
+### Native Trait-Region Mode in Persona Geometry Explorer (2026-06-05)
+
+- Integrated the Qwen PC1 x PC2 trait-region overlay into `research/visualizations/persona_geometry_explorer.html` rather than leaving it only as a standalone figure
+- The explorer now supports `Trait regions` Off/Top1/Top3/Top5, `Region basis` Quantile bands/Explorer grid, and `Color by: Region Cluster` while preserving the existing role scatterplot geometry, hover/select behavior, and side panel style
+- Quantile mode uses the prior 5 x 3 PC1-band-relative enrichment cells as the statistically stable default; explorer-grid mode is included as descriptive and flags sparse cells
+- Browser smoke testing through the local explorer found no console errors and confirmed the Top 3 quantile overlay renders inside the PC1 x PC2 explorer view
+- Caveat: this is an exploratory visualization integration, not new evidence that PC2 is solved; trait labels remain same-space activation-cosine enrichments rather than independent psychological ratings
+
 ### Trait-Profile Provenance Audit (2026-06-04)
 
 - Audited the 275-role x 240-trait Qwen profile matrix used in `research/outputs/trait_persona_prediction/`, `research/outputs/pc2_trait_stratified_profile/`, and `research/outputs/qwen_pc2_trait_region_overlay/`

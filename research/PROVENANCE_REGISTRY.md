@@ -176,11 +176,23 @@ Artifact: Interactive Plotly persona geometry viewer.
 Location: `research/visualizations/persona_geometry_explorer.html`
 Created by: Codex/GPT-5.5 Standard.
 Model used: Script-author model GPT-5.5 Standard.
-Source inputs: `geometry_viz_data.json`, `bigfive_geometry_overlay_data.json` embedded into HTML.
-Generating script: Manual HTML/JS edits plus prior `build_geometry_viz.py` data generation.
-Dependent analyses: visual inspection of PCA/UMAP geometry, cluster coloring, Big Five overlays, selection/lasso review.
-Current status: Established visualization tool.
-Notes/caveats: Visualization is self-contained and intentionally large. It is exploratory support, not a statistical test.
+Source inputs: `geometry_viz_data.json`, `bigfive_geometry_overlay_data.json`, `trait_region_overlay_data.json`, `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_cells.csv`, and `research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv`.
+Generating script: Manual HTML/JS edits plus prior `build_geometry_viz.py` data generation and `research/visualizations/run_integrate_trait_regions_into_explorer.py` for the native trait-region overlay mode.
+Dependent analyses: visual inspection of PCA/UMAP geometry, cluster coloring, Big Five overlays, selection/lasso review, and PC1 x PC2 local trait-enrichment inspection.
+Current status: Established visualization tool with native trait-region overlay mode.
+Notes/caveats: Visualization is self-contained and intentionally large. The trait-region overlay is exploratory support, not a statistical test. Trait labels are same-space Qwen activation-vector cosine enrichments with mixed provenance and should not be described as independent psychological ratings.
+
+## persona geometry trait-region overlay integration
+
+Artifact: Native PC1 x PC2 trait-region overlay mode inside the Persona Geometry Explorer.
+Location: `research/visualizations/persona_geometry_explorer.html`, with companion data/report/script under `research/visualizations/trait_region_overlay_data.json`, `trait_region_overlay_integration_report.md`, and `run_integrate_trait_regions_into_explorer.py`.
+Created by: Codex/GPT-5.5 Standard.
+Model used: Script-author and integration model GPT-5.5 Standard.
+Source inputs: canonical role geometry in `research/visualizations/geometry_viz_data.json`, prior 5 x 3 quantile cells in `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_cells.csv`, and joined Qwen role-by-trait profile matrix in `research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv`.
+Generating script: `research/visualizations/run_integrate_trait_regions_into_explorer.py`.
+Dependent analyses: PC2 visual inspection, PC1-band-relative trait-region review, Paper 1.5 exploratory visualization, future axis interpretation figures.
+Current status: Active integrated visualization mode.
+Notes/caveats: Quantile bands are the stable default because they control cell counts. Fixed explorer-grid regions are descriptive only and sparse cells are flagged. Color semantics are separated: point color indicates selected point overlay, label text indicates locally enriched traits, and label border/chip indicates dominant trait-region cluster when used.
 
 ## blinded axis rubric validation outputs
 

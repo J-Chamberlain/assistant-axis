@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-06-05T00:09:18Z`
+- Generated timestamp UTC: `2026-06-05T14:09:40Z`
 - Current branch: `master`
-- generation base commit: `4c1ef8bdde45d87681ea8810275ff37f683a8573`
+- generation base commit: `754f89412eb5f20f1fe3b423263de01b60c6218e`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -33,42 +33,42 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
-- Latest commit touching file: `4c1ef8bdde45d87681ea8810275ff37f683a8573`
-- generation base commit: `4c1ef8bdde45d87681ea8810275ff37f683a8573`
-- Git blob hash: `e7dff4b6d7ed9f2e3ff01c971cbdd6d2eecce847`
-- SHA256 content hash: `36c690a555fe186309a2e2256404da984e87651ee63468376d0baa46d57a9de3`
-- Byte count: `137762`
+- Latest commit touching file: `754f89412eb5f20f1fe3b423263de01b60c6218e`
+- generation base commit: `754f89412eb5f20f1fe3b423263de01b60c6218e`
+- Git blob hash: `cf4052e65629c12ef73553efb15d47cdab39b8a1`
+- SHA256 content hash: `5754018addf28d9ee22eb855455f15e4091c16d810acdd3d373ac631d42bb70a`
+- Byte count: `138716`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
-  - Last updated: `2026-06-04`
-  - Last commit: `f4a7dfa`
+  - Last updated: `2026-06-05`
+  - Last commit: `754f894`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-06-05T00:09:18Z`
+- Generated timestamp UTC: `2026-06-05T14:09:40Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
-- Latest commit touching file: `4c1ef8bdde45d87681ea8810275ff37f683a8573`
-- generation base commit: `4c1ef8bdde45d87681ea8810275ff37f683a8573`
-- Git blob hash: `31290c6e1e246d9d42d82afa4ed194924a5c3b6a`
-- SHA256 content hash: `8b051d98eaa99b8ec477a87f43dde6119b53fd6a7ec8f003b74ed390df4fe904`
-- Byte count: `9435`
+- Latest commit touching file: `754f89412eb5f20f1fe3b423263de01b60c6218e`
+- generation base commit: `754f89412eb5f20f1fe3b423263de01b60c6218e`
+- Git blob hash: `ebbd15232487c0716f893516c30c1cf54603344a`
+- SHA256 content hash: `76d92ced097f64ba79e4c7e8daaad4df086b753904c9ca96c694997cc2670648`
+- Byte count: `9914`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
-  - Last updated: `2026-06-04`
+  - Last updated: `2026-06-05`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-06-05T00:09:18Z`
+- Generated timestamp UTC: `2026-06-05T14:09:40Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
 - Latest commit touching file: `f328aef34478065341a51cdb270e77bb4132a1cf`
-- generation base commit: `4c1ef8bdde45d87681ea8810275ff37f683a8573`
+- generation base commit: `754f89412eb5f20f1fe3b423263de01b60c6218e`
 - Git blob hash: `e35b7e8fc44d40435a6d8dd995b7376e35f67f77`
 - SHA256 content hash: `9c263b90ae606cdc3da77fc89f1287382d8e0853e287b1691a7791103f4d3c1d`
 - Byte count: `37892`
@@ -78,7 +78,7 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-05-31`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-06-05T00:09:18Z`
+- Generated timestamp UTC: `2026-06-05T14:09:40Z`
 
 ## Maintenance Rule
 

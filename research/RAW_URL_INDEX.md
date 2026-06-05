@@ -1,6 +1,6 @@
 # Raw URL Index
 
-Updated UTC: 2026-06-05T01:07:00Z
+Updated UTC: 2026-06-05T14:06:39Z
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
@@ -23,7 +23,11 @@ Canonical raw links for frequently referenced Assistant Axis artifacts. Status v
 | canonical | geometry tables | `research/visualizations/geometry_viz_data.json` | geometry viz data (geometry tables) | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/visualizations/geometry_viz_data.json |
 | canonical | notebooks | `research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb` | paper15 core analysis walkthrough.executed (notebooks) | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb |
 | canonical | notebooks | `research/notebooks/paper15_core_analysis_walkthrough.ipynb` | paper15 core analysis walkthrough (notebooks) | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/notebooks/paper15_core_analysis_walkthrough.ipynb |
-| canonical | visualizations | `research/visualizations/persona_geometry_explorer.html` | plot { | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/visualizations/persona_geometry_explorer.html |
+| canonical | visualizations | `research/visualizations/persona_geometry_explorer.html` | Persona Geometry Explorer with PCA/UMAP, cluster, selection, Big Five, and native trait-region overlay modes | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/visualizations/persona_geometry_explorer.html |
+| active | visualizations | `research/visualizations/trait_region_overlay_data.json` | Native trait-region overlay data bundle for quantile-band and fixed explorer-grid labels | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/visualizations/trait_region_overlay_data.json |
+| active | visualizations | `research/visualizations/trait_region_overlay_integration_report.md` | Trait-region overlay integration report for the Persona Geometry Explorer | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/visualizations/trait_region_overlay_integration_report.md |
+| active | visualizations | `research/visualizations/trait_region_overlay_preview.png` | Preview screenshot of native trait-region overlay mode in the Persona Geometry Explorer | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/visualizations/trait_region_overlay_preview.png |
+| active | visualizations | `research/visualizations/run_integrate_trait_regions_into_explorer.py` | Script integrating Qwen PC1 x PC2 trait-region overlay into the Persona Geometry Explorer | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/visualizations/run_integrate_trait_regions_into_explorer.py |
 | active | active analyses | `AGENTS.md` | Agent Instructions — assistant-axis | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/AGENTS.md |
 | active | active analyses | `research/outputs/cluster_conditioned_axis_tests/cluster_conditioned_axis_report.md` | Cluster-Conditioned Axis Tests: PC1 and PC2 | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/cluster_conditioned_axis_tests/cluster_conditioned_axis_report.md |
 | active | active analyses | `research/outputs/cluster_conditioned_axis_tests/pc1_cluster_conditioned_stats.json` | pc1 cluster conditioned stats (active analyses) | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/cluster_conditioned_axis_tests/pc1_cluster_conditioned_stats.json |
