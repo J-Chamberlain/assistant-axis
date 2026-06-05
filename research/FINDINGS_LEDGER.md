@@ -536,6 +536,15 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Deprecated legacy reliance on `research/findings_log.md` as the primary record; future findings, interpretations, negative results, methodology constraints, and claim-relevant evidence should update `research/FINDINGS_LEDGER.md`, `research/CLAIMS_REGISTER.md`, and/or `research/PROVENANCE_REGISTRY.md`
 - Strengthened maintenance requirements for `research/THREAD_START.md`, navigation files, artifact statuses, and final Codex reporting so future work is easier to resume across GPT/Codex handoffs
 
+### Persona Activation-Cloud Geometry Audit (2026-06-04)
+
+- Built `research/outputs/persona_cloud_geometry_audit/` from the existing 1,512-point layered cloud viewer data covering amateur, playwright, trickster, `editor_phase1_128`, and `editor_matched64_1024`
+- Computed centroid, radius, covariance eigenvalues, 2D/3D anisotropy, first-cloud-PC explained variance, PC1/PC2 orientation, robust ellipse/volume proxies, and matched-n bootstrap uncertainty for all-response and available GPT-4.1/GPT-5.5 filtered clouds
+- Matched-n all-response comparison used n=60; trickster had lower RMS radius than the median non-trickster cloud (21.494 vs 28.643) but weaker 2D anisotropy (1.601 vs 2.238 median non-trickster) and much wider matched-n orientation uncertainty
+- Playwright/editor clouds are more elongated and orientation-stable; sparse editor score==3 clouds (`n=2` and `n=3`) are explicitly marked unreliable for covariance/orientation
+- GPT-4.1 filtering tightens and shifts editor clouds toward the published editor vector, while trickster is unchanged because GPT-4.1 retains all or nearly all trickster responses
+- Interpretation: this supports treating role vectors as centroids of local response-state distributions; strong cloud-shape claims should remain Paper 2/local-manifold work until more roles are sampled under balanced conditions
+
 ### Big Five Geometry Overlay Visualization (2026-05-29)
 
 - Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`

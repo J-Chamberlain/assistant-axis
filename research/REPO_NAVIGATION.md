@@ -1,6 +1,6 @@
 # Repository Navigation
 
-Updated UTC: 2026-06-04T23:58:03Z
+Updated UTC: 2026-06-05T01:07:00Z
 Last commit when generated: f4a7dfa
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
@@ -28,7 +28,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 10
-- cloud-analysis outputs: 149
+- cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
 - trait analyses: 310
@@ -36,7 +36,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Status Counts
 
-- active: 4273
+- active: 4283
 - archive: 11
 - canonical: 18
 - deprecated: 21
@@ -65,7 +65,7 @@ Current Paper 1.5 notebook artifacts live under `research/notebooks/` and `resea
 
 ### Cloud-Analysis Outputs
 
-H100/A100 validation, activation-cloud pilots, judge comparisons, extraction-boundary diagnostics, and cloud orientation analyses live under `research/outputs/h100_*`, `research/outputs/a100_*`, `research/outputs/*cloud*`, and related diagnostic directories.
+H100/A100 validation, activation-cloud pilots, judge comparisons, extraction-boundary diagnostics, cloud orientation analyses, and persona-cloud geometry audits live under `research/outputs/h100_*`, `research/outputs/a100_*`, `research/outputs/*cloud*`, `research/outputs/persona_cloud_geometry_audit/`, and related diagnostic directories.
 
 ### Adaptive Extraction Outputs
 

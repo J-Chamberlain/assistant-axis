@@ -24,6 +24,8 @@ The layered model is currently the best Paper 1.5 frame. A residualized trait-to
 
 Role-label exposure is a real methodology caveat. The Lu-style system prompts directly expose the target role label or normalized variant in 1280/1375 prompts, 93.1%. However, no-label prompt topology mostly survives label removal, so label exposure is not the whole structure.
 
+Local activation-cloud geometry now supports treating personas as response-state distributions rather than only points. Across amateur, playwright, trickster, and two editor runs, matched-n cloud-shape auditing shows differences in radius, anisotropy, orientation reliability, and filter sensitivity; trickster is least directionally constrained by anisotropy/orientation criteria but is not the largest matched-n cloud.
+
 ## Top Open Questions
 
 The highest-priority methodology question is whether activation geometry survives no-label prompts under matched extraction conditions. The bounded no-label activation stress test is designed but not launched.
@@ -47,6 +49,8 @@ PC2 is currently best described as abstraction/integration/developmental structu
 PC3 is moderately supported as cooperative-care/system-stabilizing versus antagonistic/disruptive/transgressive stance. The reading-based rater study gives PC3 r=0.690, but professional-subset counterexamples show that PC3 is not only reform, critique, or perturbation.
 
 The cone hypothesis remains speculative. The geometry appears to narrow at high PC1 and widen as PC1 decreases, suggesting that externally specified objectives may constrain admissible configurations. This still needs quantitative variance-by-PC1 testing and sampling-artifact controls.
+
+Persona vectors should be described as centroids of local response-state distributions when discussing activation-cloud pilots. Cloud shape metrics are promising but remain future Paper 2/local-manifold evidence until sampled across more roles under balanced conditions.
 
 ## Current Risks
 
@@ -73,3 +77,4 @@ Material artifact changes must keep `research/REPO_NAVIGATION.md`, `research/REP
 3. Finish evaluator-sensitivity comparison between Codex/GPT-5.5 and `gpt-4.1-mini` if API quota allows.
 4. Distill SVD15 prompt-register components into concrete human-readable residual features and retest under the shared benchmark splits.
 5. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.
+6. Extend the activation-cloud geometry audit to a balanced role set before making strong claims about persona-specific cloud size, anisotropy, or orientation.

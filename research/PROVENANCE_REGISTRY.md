@@ -494,3 +494,15 @@ Generating script: none; direct Markdown/CSV maintenance edit.
 Dependent analyses: Future Codex/GPT startup, handoff continuity, artifact provenance discipline, navigation-file maintenance, and final-report consistency.
 Current status: Active repository instruction.
 Notes/caveats: The update preserves existing instructions except where superseded by canonical registry, navigation, THREAD_START, artifact-status, and final-report requirements. `AGENTS.md` itself remains classified as `active` in `research/REPO_FILE_INDEX.csv`, while navigation files and startup files remain canonical.
+
+## persona cloud geometry audit outputs
+
+Artifact: Local activation-cloud size, anisotropy, orientation reliability, and matched-n sample-size sensitivity audit.
+Location: `research/outputs/persona_cloud_geometry_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, or judging were run.
+Source inputs: `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_viewer_data.json`, `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_centroids.csv`, `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_membership_counts.csv`, `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv`, `research/outputs/gpt55_judge_and_outlier_followup/gpt55_judge_scores.csv`, `research/outputs/prior_adaptive_recovery_audit/prior_adaptive_corrected_coordinates.csv`, `research/outputs/recovered_role_cloud_analysis/recovered_gpt41_scores.csv`, and `research/outputs/cloud_eigenvector_angle_analysis/cloud_orientation_metrics.csv`.
+Generating script: `research/outputs/persona_cloud_geometry_audit/run_persona_cloud_geometry_audit.py`
+Dependent analyses: Paper 2 local-manifold planning, future balanced activation-cloud sampling, Paper 1.5 caveat language around role vectors as centroids, and editor/procedural-professional failure interpretation.
+Current status: Complete local analysis; supporting/future-work evidence, not a material claim-status update.
+Notes/caveats: The audit uses already-projected Qwen PC1/PC2/PC3 response coordinates from existing local artifacts. Matched-n bootstrap comparisons are central because cloud sizes differ from n=60 to n=1200. Sparse editor score==3 clouds are marked unreliable for covariance/orientation. Trickster is less directionally constrained by anisotropy/orientation criteria, but not larger by matched-n RMS radius.

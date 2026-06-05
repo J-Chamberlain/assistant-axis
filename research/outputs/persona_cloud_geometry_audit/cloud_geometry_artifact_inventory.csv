@@ -1,0 +1,15 @@
+source_path,exists,size_bytes,role,notes
+research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_viewer_data.json,True,1717574,primary point source,
+research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_centroids.csv,True,3567,supporting source,
+research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_membership_counts.csv,True,1731,supporting source,
+research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv,True,265149,supporting source,
+research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv,True,30910,supporting source,
+research/outputs/gpt55_judge_and_outlier_followup/gpt55_judge_scores.csv,True,29612,supporting source,
+research/outputs/prior_adaptive_recovery_audit/prior_adaptive_corrected_coordinates.csv,True,316698,supporting source,
+research/outputs/recovered_role_cloud_analysis/recovered_gpt41_scores.csv,True,443124,supporting source,
+research/outputs/cloud_eigenvector_angle_analysis/cloud_orientation_metrics.csv,True,8449,supporting source,
+research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_viewer_data.json,True,1717574,point rows for amateur,60 all-response points; filters from gpt41_score/gpt55_score columns
+research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_viewer_data.json,True,1717574,point rows for editor_matched64_1024,64 all-response points; filters from gpt41_score/gpt55_score columns
+research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_viewer_data.json,True,1717574,point rows for editor_phase1_128,128 all-response points; filters from gpt41_score/gpt55_score columns
+research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_viewer_data.json,True,1717574,point rows for playwright,60 all-response points; filters from gpt41_score/gpt55_score columns
+research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_viewer_data.json,True,1717574,point rows for trickster_phase1_1200,1200 all-response points; filters from gpt41_score/gpt55_score columns
