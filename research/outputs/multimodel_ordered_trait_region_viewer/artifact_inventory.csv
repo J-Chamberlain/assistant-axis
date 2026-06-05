@@ -1,0 +1,11 @@
+artifact,kind,description
+research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_viewer.html,interactive_html,Integrated multi-model ordered-axis trait-region viewer.
+research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_data.json,json_data,"Bundled role points, ordered cell definitions, local/global trait enrichments, and view stats."
+research/outputs/multimodel_ordered_trait_region_viewer/combined_ordered_trait_region_cells.csv,csv,"Combined cell table for all available models, ordered axis pairs, and region bases."
+research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_report.md,report,Method/report for multi-model ordered trait-region viewer.
+research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py,script,Reusable generation script.
+research/outputs/multimodel_ordered_trait_region_viewer/qwen_pc1_pc2_ordered_trait_regions.svg,static_svg,Static ordered trait-region view export.
+research/outputs/multimodel_ordered_trait_region_viewer/qwen_pc2_pc1_ordered_trait_regions.svg,static_svg,Static ordered trait-region view export.
+research/outputs/multimodel_ordered_trait_region_viewer/llama_pc1_pc2_ordered_trait_regions.svg,static_svg,Static ordered trait-region view export.
+research/outputs/multimodel_ordered_trait_region_viewer/gemma_pc1_pc2_ordered_trait_regions.svg,static_svg,Static ordered trait-region view export.
+research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_viewer_preview_full.png,browser_preview,Verified Browser-plugin preview after model/axis switch to Llama PC2 x PC1.

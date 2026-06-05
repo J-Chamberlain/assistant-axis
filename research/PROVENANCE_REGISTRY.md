@@ -206,6 +206,18 @@ Dependent analyses: PC2 visual inspection, PC1-band-relative trait-region review
 Current status: Active integrated visualization mode.
 Notes/caveats: Quantile bands are the stable default because they control cell counts. Fixed explorer-grid regions are descriptive only and sparse cells are flagged. Color semantics are separated: point color indicates selected point overlay, label text indicates locally enriched traits, and label border/chip indicates dominant trait-region cluster when used.
 
+## multimodel ordered trait-region viewer
+
+Artifact: Multi-model ordered-axis trait-region viewer for Qwen, Llama, and Gemma.
+Location: `research/outputs/multimodel_ordered_trait_region_viewer/`.
+Created by: Codex/GPT-5.5.
+Model used: Script-author and analysis model GPT-5.5.
+Source inputs: released role and trait vectors under `downloads/hf_vectors/qwen-3-32b/`, `downloads/hf_vectors/llama-3.3-70b/`, and `downloads/hf_vectors/gemma-2-27b/`; Qwen reference geometry and clusters from `research/visualizations/geometry_viz_data.json`; prior Qwen overlay method and caveats from `research/outputs/qwen_pc2_trait_region_overlay/`; trait-profile provenance caveats from `research/outputs/trait_profile_provenance_audit/`.
+Generating script: `research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py`.
+Dependent analyses: cross-model PC-axis visual inspection, ordered-axis PC1/PC2 and PC2/PC1 comparison, PC2/PC3 exploratory trait-region review, future Paper 1.5 visualization selection.
+Current status: Active exploratory visualization and data bundle.
+Notes/caveats: The selected x-axis defines the conditioning baseline, so reversed views are distinct analyses. Qwen uses canonical coordinates from `geometry_viz_data.json`; Llama and Gemma coordinates are recomputed from layer-mean role vectors and sign-oriented to the Qwen reference. Trait labels are same-space activation-vector cosine enrichments, not independent psychological ratings or solved PC interpretations. Quantile views are stable defaults; fixed-grid views are descriptive and sparse cells are flagged.
+
 ## blinded axis rubric validation outputs
 
 Artifact: Coordinate-blind no-label prompt rubric validation for PC1, PC2, and PC3 interpretations.

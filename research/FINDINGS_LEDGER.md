@@ -537,6 +537,17 @@ Model provenance is now mandatory for future generated, evaluated, or analyzed r
 - Browser smoke testing through the local explorer found no console errors and confirmed the Top 3 quantile overlay renders inside the PC1 x PC2 explorer view
 - Caveat: this is an exploratory visualization integration, not new evidence that PC2 is solved; trait labels remain same-space activation-cosine enrichments rather than independent psychological ratings
 
+### Multi-Model Ordered Trait-Region Viewer (2026-06-05)
+
+- Built `research/outputs/multimodel_ordered_trait_region_viewer/` as a single interactive SVG viewer for Qwen, Llama, and Gemma ordered PC-axis trait-region overlays
+- All three models had complete local released-vector dependencies: 275 role vectors and 240 trait vectors each under `downloads/hf_vectors/`
+- Generated all six ordered PC-axis views per model, with both quantile-band and fixed-grid region bases; combined populated cell table has 531 rows
+- Quantile views have 0 sparse cells and are the stable default; fixed-grid views are descriptive and contain 96 populated sparse cells plus additional empty slots
+- Local x-axis-band-relative labels differ strongly from global labels across views: mean top-3 local/global overlap is 0.199 for quantile views and 0.214 for fixed-grid views
+- Reversing axes changes the conditioning baseline and can change label behavior; the report highlights the largest reversal differences, especially Qwen PC2xPC3 versus PC3xPC2 and Qwen PC1xPC3 versus PC3xPC1
+- Browser smoke testing confirmed the dependency-free SVG viewer renders both the default Qwen PC1xPC2 view and the reversed Llama PC2xPC1 view with 275 points, 15 cells, and 15 labels
+- Caveat: these are activation-space trait-vector overlays, not independent ratings; PC2/PC3 interpretations remain provisional
+
 ### Trait-Profile Provenance Audit (2026-06-04)
 
 - Audited the 275-role x 240-trait Qwen profile matrix used in `research/outputs/trait_persona_prediction/`, `research/outputs/pc2_trait_stratified_profile/`, and `research/outputs/qwen_pc2_trait_region_overlay/`
