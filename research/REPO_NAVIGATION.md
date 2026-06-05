@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-06-05T14:06:39Z
-Last commit when generated: 754f894
+Updated UTC: 2026-06-05T14:45:00Z
+Last commit when generated: 1b15407
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -31,12 +31,12 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 310
+- trait analyses: 317
 - visualizations: 123
 
 ## Status Counts
 
-- active: 4287
+- active: 4294
 - archive: 11
 - canonical: 18
 - deprecated: 21
@@ -73,7 +73,7 @@ Adaptive extraction and recovered role-cloud artifacts live under `research/q2_s
 
 ### Trait Analyses
 
-Trait-vector, Big Five, trait-space PCA, and trait-profile analyses are indexed in `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/pc2_trait_stratified_profile/`, `research/outputs/qwen_pc2_trait_region_overlay/`, `research/outputs/trait_profile_provenance_audit/`, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. For PC2 visualization work, start with `research/visualizations/persona_geometry_explorer.html` and its `Trait regions` controls, then inspect `research/visualizations/trait_region_overlay_integration_report.md` and `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_report.md`. For provenance and evidential-independence caveats on the 275-role x 240-trait matrix, start with `research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md`.
+Trait-vector, Big Five, trait-space PCA, and trait-profile analyses are indexed in `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/pc2_trait_stratified_profile/`, `research/outputs/qwen_pc2_trait_region_overlay/`, `research/outputs/trait_profile_provenance_audit/`, `research/outputs/big_five_provenance_audit/`, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. For PC2 visualization work, start with `research/visualizations/persona_geometry_explorer.html` and its `Trait regions` controls, then inspect `research/visualizations/trait_region_overlay_integration_report.md` and `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_report.md`. For provenance and evidential-independence caveats on the 275-role x 240-trait matrix, start with `research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md`. For provenance and independence caveats on the current Big Five explorer overlay, start with `research/outputs/big_five_provenance_audit/big_five_provenance_report.md`; the current overlay should be treated as heuristic cluster-conditioned semantic summary unless rebuilt.
 
 ### Archived or Deprecated Outputs
 

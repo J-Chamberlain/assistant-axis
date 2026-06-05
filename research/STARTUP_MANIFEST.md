@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-06-05T14:09:40Z`
+- Generated timestamp UTC: `2026-06-05T14:21:23Z`
 - Current branch: `master`
-- generation base commit: `754f89412eb5f20f1fe3b423263de01b60c6218e`
+- generation base commit: `1b15407f4f9370f3917f60c8d8bdd1f3720cd5fe`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -33,52 +33,52 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
-- Latest commit touching file: `754f89412eb5f20f1fe3b423263de01b60c6218e`
-- generation base commit: `754f89412eb5f20f1fe3b423263de01b60c6218e`
-- Git blob hash: `cf4052e65629c12ef73553efb15d47cdab39b8a1`
-- SHA256 content hash: `5754018addf28d9ee22eb855455f15e4091c16d810acdd3d373ac631d42bb70a`
-- Byte count: `138716`
+- Latest commit touching file: `1b15407f4f9370f3917f60c8d8bdd1f3720cd5fe`
+- generation base commit: `1b15407f4f9370f3917f60c8d8bdd1f3720cd5fe`
+- Git blob hash: `6ed3d9c66850fb71570922b21fc357845d689d04`
+- SHA256 content hash: `fdf01de64edc50c2bc7d3a30c8d2a75618e1774fccea0b8a6768546e48ef3a80`
+- Byte count: `140208`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
   - Last updated: `2026-06-05`
-  - Last commit: `754f894`
+  - Last commit: `1b15407`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-06-05T14:09:40Z`
+- Generated timestamp UTC: `2026-06-05T14:21:23Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
-- Latest commit touching file: `754f89412eb5f20f1fe3b423263de01b60c6218e`
-- generation base commit: `754f89412eb5f20f1fe3b423263de01b60c6218e`
-- Git blob hash: `ebbd15232487c0716f893516c30c1cf54603344a`
-- SHA256 content hash: `76d92ced097f64ba79e4c7e8daaad4df086b753904c9ca96c694997cc2670648`
-- Byte count: `9914`
+- Latest commit touching file: `1b15407f4f9370f3917f60c8d8bdd1f3720cd5fe`
+- generation base commit: `1b15407f4f9370f3917f60c8d8bdd1f3720cd5fe`
+- Git blob hash: `9a4a574479433917027bc05313665b7bf231256e`
+- SHA256 content hash: `b4e5c084d2b8f7ef231495ca73fd456da35e17c7c0083223913265a036e239b6`
+- Byte count: `10994`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
   - Last updated: `2026-06-05`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-06-05T14:09:40Z`
+- Generated timestamp UTC: `2026-06-05T14:21:23Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
 - Latest commit touching file: `f328aef34478065341a51cdb270e77bb4132a1cf`
-- generation base commit: `754f89412eb5f20f1fe3b423263de01b60c6218e`
-- Git blob hash: `e35b7e8fc44d40435a6d8dd995b7376e35f67f77`
-- SHA256 content hash: `9c263b90ae606cdc3da77fc89f1287382d8e0853e287b1691a7791103f4d3c1d`
-- Byte count: `37892`
+- generation base commit: `1b15407f4f9370f3917f60c8d8bdd1f3720cd5fe`
+- Git blob hash: `c31511eb6452d30a232ba26a43516078295534b4`
+- SHA256 content hash: `44f588d3d7e2a006d08aa5763354104d74ac2320e1589518d82d3083baf93804`
+- Byte count: `38355`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical claim status`
-  - Last updated: `2026-05-31`
+  - Last updated: `2026-06-05`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-06-05T14:09:40Z`
+- Generated timestamp UTC: `2026-06-05T14:21:23Z`
 
 ## Maintenance Rule
 

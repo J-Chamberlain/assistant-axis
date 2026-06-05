@@ -12,7 +12,7 @@ Source inputs: 273 common personas, canonical activation PCA3D target, Claude fe
 Generating script: `research/q2_stability/qwen/scripts/shared_latent_feature_benchmark.py` for local alignment.
 Dependent analyses: shared benchmark, Big Five overlay visualization, hierarchical trait-procedural model, convergence status report.
 Current status: Established feature source for Big Five-style overlays and shared benchmark comparisons.
-Notes/caveats: Big Five scores are LLM-assigned features, not true psychological measurements. The matrix covers 273 personas; `coral_reef` and `devils_advocate` are absent from this benchmark feature source.
+Notes/caveats: Big Five scores are not true psychological measurements. The 2026-06-05 audit traces the current Big Five source back to `visualizations/bigfive_profiles.json`, generated from activation-derived cluster base scores plus role-name heuristic adjustments. The matrix covers 273 personas; `coral_reef` and `devils_advocate` are absent from this benchmark feature source.
 
 ## geometry_viz_data.json
 
@@ -35,8 +35,20 @@ Model used: `model_used: GPT-5.5` recorded in JSON and validation note.
 Source inputs: `geometry_viz_data.json`, `claude_full_feature_matrix.csv`, `shared_persona_residual_rankings.csv`, `shared_benchmark_summary.csv`.
 Generating script: One-time local merge performed by Codex in the 2026-05-29 visualization session.
 Dependent analyses: Big Five visualization modes in `research/visualizations/persona_geometry_explorer.html`.
-Current status: Established visualization overlay.
-Notes/caveats: Per-persona Big Five predicted PC coordinates were not found in persisted benchmark outputs, so `predicted_pc1_from_bigfive`, `predicted_pc2_from_bigfive`, and `predicted_pc3_from_bigfive` are null. Big Five scores are missing for `coral_reef` and `devils_advocate`.
+Current status: Established visualization overlay, but evidence status is heuristic/secondary.
+Notes/caveats: Per-persona Big Five predicted PC coordinates were not found in persisted benchmark outputs, so `predicted_pc1_from_bigfive`, `predicted_pc2_from_bigfive`, and `predicted_pc3_from_bigfive` are null. Big Five scores are missing for `coral_reef` and `devils_advocate`. Current overlay scores are partially activation-dependent because their underlying source uses activation-derived cluster labels as base scores.
+
+## big_five_provenance_audit outputs
+
+Artifact: Provenance and methodology audit of the Big Five overlays used in the persona geometry explorer.
+Location: `research/outputs/big_five_provenance_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, or new activations were run.
+Source inputs: `research/REPO_NAVIGATION.md`, `research/REPO_FILE_INDEX.csv`, `research/RAW_URL_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/RESEARCH_INDEX.md`, `research/RESEARCH_STATE.md`, `research/visualizations/bigfive_geometry_overlay_data.csv`, `research/visualizations/bigfive_overlay_validation.md`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_bigfive_features.csv`, `visualizations/bigfive_profiles.json`, `visualizations/psychology_profiles.csv`, `visualizations/deep_analysis.py`, and Claude branch `myfork/claude/persona-inventory-topology-4qp10` feature-loop artifacts.
+Generating script: Direct audit with a small local CSV/JSON diagnostic; output includes `big_five_pc2_diagnostics.json` and `.csv`.
+Dependent analyses: Future Big Five overlay redesign, PC2 visual interpretation, trait-region overlay comparison, and Paper 1.5 evidential-independence caveats.
+Current status: Complete provenance audit.
+Notes/caveats: The audit classifies the current Big Five overlay as partially dependent on activation geometry because `visualizations/deep_analysis.py` uses activation-derived cluster labels as Big Five base scores before role-name heuristic adjustments. It found no dependency on the 240-trait vector/profile matrix. Recommendation: rebuild any evidence-bearing Big Five layer; retain the current overlay only if relabeled as a heuristic cluster-conditioned semantic summary.
 
 ## pc2_muted_pc1_extremes outputs
 

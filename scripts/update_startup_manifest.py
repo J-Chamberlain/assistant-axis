@@ -68,10 +68,10 @@ def visible_metadata(text: str) -> dict[str, str]:
         if role_match:
             state_role = role_match.group(1)
         updated_match = re.match(r"^(?:\*\*)?Last updated:(?:\*\*)?\s*(.+?)\s*$", stripped, flags=re.IGNORECASE)
-        if updated_match:
+        if updated_match and last_updated == "not present":
             last_updated = updated_match.group(1)
         commit_match = re.match(r"^(?:\*\*)?Last commit:(?:\*\*)?\s*(.+?)\s*$", stripped, flags=re.IGNORECASE)
-        if commit_match:
+        if commit_match and last_commit == "not present":
             last_commit = commit_match.group(1)
     return {
         "canonical_startup_file": canonical_startup_file,
