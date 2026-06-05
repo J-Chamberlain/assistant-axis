@@ -542,3 +542,15 @@ Generating script: `research/outputs/persona_cloud_geometry_audit/run_persona_cl
 Dependent analyses: Paper 2 local-manifold planning, future balanced activation-cloud sampling, Paper 1.5 caveat language around role vectors as centroids, and editor/procedural-professional failure interpretation.
 Current status: Complete local analysis; supporting/future-work evidence, not a material claim-status update.
 Notes/caveats: The audit uses already-projected Qwen PC1/PC2/PC3 response coordinates from existing local artifacts. Matched-n bootstrap comparisons are central because cloud sizes differ from n=60 to n=1200. Sparse editor score==3 clouds are marked unreliable for covariance/orientation. Trickster is less directionally constrained by anisotropy/orientation criteria, but not larger by matched-n RMS radius.
+
+## occupation-population persona join outputs
+
+Artifact: Exploratory join between occupational/professional persona roles and public U.S. occupation statistics.
+Location: `research/outputs/occupation_population_persona_join/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, or judging were run.
+Source inputs: `research/geometry_tables/qwen_role_pc_rankings.csv`, `research/geometry_tables/cluster_membership_table.csv`, `research/outputs/cross_model_cluster_topology/per_model_cluster_assignments.csv`, Bureau of Labor Statistics Occupational Employment and Wage Statistics (OEWS) May 2025 national cross-industry estimates via the BLS public API, OEWS tables page `https://www.bls.gov/oes/tables.htm`, and OEWS time-series documentation under `https://download.bls.gov/pub/time.series/oe/`.
+Generating script: `research/outputs/occupation_population_persona_join/run_occupation_population_persona_join.py`
+Dependent analyses: Exploratory future-work/appendix checks about whether real-world occupational prevalence, wage, or specialization proxies have any detectable relationship to persona geometry among defensibly matchable occupational roles.
+Current status: Complete exploratory first pass; not part of Paper 1.5 core claims.
+Notes/caveats: Role-to-SOC mappings are manual and conservative. Ambiguous mappings are preserved but excluded from quantitative correlations, and unmatched archetypal/mythic/symbolic roles are not forced. Direct scripted downloads from BLS bulk ZIP/text hosts returned HTTP 403 in this environment, and the unauthenticated BLS API hit a daily threshold during the run, so returned BLS coverage is partial: 50 included roles with employment count and 42 included roles with annual median wage. OEWS employment count is not training-corpus frequency and should not be interpreted as evidence that persona geometry reflects U.S. labor demographics.

@@ -80,6 +80,10 @@ The bounded topology diagnostic clustered matched Qwen, Llama, and Gemma role ve
 
 Prepared `research/outputs/within_role_displacement_design/` as reusable scaffolding for a one-role displacement study. The design inventories 275 roles with five positive instructions each, 240 shared extraction questions, scoring templates for expected PC1/PC2/PC3 displacement around a selected role centroid, and a role-candidate helper table. Seven roles fall in the 35th-65th percentile band on all three PCs and 62 roles fall in the 20th-80th band on all three PCs; Actor remains a plausible behaviorally coherent candidate but is PC2-high, so the final target role remains user-selected.
 
+### Occupation-Population Join Is Feasible but Exploratory
+
+The first occupational-prevalence audit mapped only defensible modern U.S. occupation-like persona roles to BLS OEWS May 2025 national SOC statistics. Coverage is partial: 47 exact, 26 close, 25 broad, 25 ambiguous-excluded, and 152 unmatched roles. Because BLS API/rate-limit constraints returned employment values for 50 included roles and annual median wages for 42 included roles in this run, correlations are descriptive and sensitivity-bound. The audit does not support a clean claim that persona geometry reflects U.S. labor demographics or occupational prevalence; it is best treated as exploratory future-work/appendix material.
+
 ### Pod Workflow Lessons
 
 Detached execution, response JSONL preservation, separate activation shards, local integrity checks, explicit run artifacts, and RunPod API or `runpodctl` termination are now validated workflow requirements. Browser/dashboard termination is fallback only.

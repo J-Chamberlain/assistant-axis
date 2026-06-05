@@ -1,6 +1,6 @@
 # Repository Navigation
 
-Updated UTC: 2026-06-05T17:02:07Z
+Updated UTC: 2026-06-05T23:05:55Z
 Last commit when generated: 069ef31
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3615
+- active analyses: 3621
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 10
@@ -36,7 +36,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Status Counts
 
-- active: 4305
+- active: 4314
 - archive: 11
 - canonical: 18
 - deprecated: 21
@@ -49,7 +49,7 @@ Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVEN
 
 ### Active Analyses
 
-Most active analyses live under `research/outputs/`, `research/assistant_axis_methodology/`, and `research/q2_stability/qwen/outputs/`. Prefer the directory-level report files first, then inspect CSV/JSON support files only as needed.
+Most active analyses live under `research/outputs/`, `research/assistant_axis_methodology/`, and `research/q2_stability/qwen/outputs/`. Prefer the directory-level report files first, then inspect CSV/JSON support files only as needed. The exploratory occupation-population persona join lives under `research/outputs/occupation_population_persona_join/` and is marked future-work/appendix material, not Paper 1.5 core evidence.
 
 ### Visualizations
 
