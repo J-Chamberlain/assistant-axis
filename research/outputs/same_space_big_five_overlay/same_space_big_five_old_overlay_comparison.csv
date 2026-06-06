@@ -1,0 +1,6 @@
+model,dimension,n,pearson_activation_z_vs_old_heuristic,spearman_activation_z_vs_old_heuristic,note
+qwen,openness,273,0.7202577765288751,0.7600201080980118,"Agreement is descriptive comparison only, not validation."
+qwen,conscientiousness,273,0.7298104143667548,0.7638948025548237,"Agreement is descriptive comparison only, not validation."
+qwen,extraversion,273,0.7216423426305424,0.7515116973031039,"Agreement is descriptive comparison only, not validation."
+qwen,agreeableness,273,0.5219339261663951,0.44937948136506045,"Agreement is descriptive comparison only, not validation."
+qwen,neuroticism,273,0.6653971644167371,0.699027513283784,"Agreement is descriptive comparison only, not validation."

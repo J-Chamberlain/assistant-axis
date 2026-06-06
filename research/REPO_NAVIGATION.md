@@ -1,6 +1,6 @@
 # Repository Navigation
 
-Updated UTC: 2026-06-06T11:25:11Z
+Updated UTC: 2026-06-06T23:36:14Z
 Last commit when generated: 069ef31
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
@@ -31,12 +31,12 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 328
+- trait analyses: 340
 - visualizations: 123
 
 ## Status Counts
 
-- active: 4322
+- active: 4334
 - archive: 11
 - canonical: 18
 - deprecated: 21
@@ -73,7 +73,7 @@ Adaptive extraction and recovered role-cloud artifacts live under `research/q2_s
 
 ### Trait Analyses
 
-Trait-vector, Big Five, trait-space PCA, and trait-profile analyses are indexed in `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/pc2_trait_stratified_profile/`, `research/outputs/qwen_pc2_trait_region_overlay/`, `research/outputs/multimodel_ordered_trait_region_viewer/`, `research/outputs/trait_profile_provenance_audit/`, `research/outputs/big_five_provenance_audit/`, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. For PC2 visualization work, start with `research/visualizations/persona_geometry_explorer.html` and its `Trait regions` controls for Qwen-only exploration, or `research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_viewer.html` for Qwen/Llama/Gemma ordered-axis comparisons. Then inspect `research/visualizations/trait_region_overlay_integration_report.md`, `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_report.md`, and `research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_report.md`. For provenance and evidential-independence caveats on the 275-role x 240-trait matrix, start with `research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md`. For provenance and independence caveats on the current Big Five explorer overlay, start with `research/outputs/big_five_provenance_audit/big_five_provenance_report.md`; the current overlay should be treated as heuristic cluster-conditioned semantic summary unless rebuilt.
+Trait-vector, Big Five, trait-space PCA, and trait-profile analyses are indexed in `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/pc2_trait_stratified_profile/`, `research/outputs/qwen_pc2_trait_region_overlay/`, `research/outputs/multimodel_ordered_trait_region_viewer/`, `research/outputs/trait_profile_provenance_audit/`, `research/outputs/big_five_provenance_audit/`, `research/outputs/same_space_big_five_overlay/`, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. For PC2 visualization work, start with `research/visualizations/persona_geometry_explorer.html` and its `Trait regions` controls for Qwen-only exploration, or `research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_viewer.html` for Qwen/Llama/Gemma ordered-axis comparisons. Then inspect `research/visualizations/trait_region_overlay_integration_report.md`, `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_report.md`, and `research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_report.md`. For provenance and evidential-independence caveats on the 275-role x 240-trait matrix, start with `research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md`. For provenance and independence caveats on the legacy Big Five explorer overlay, start with `research/outputs/big_five_provenance_audit/big_five_provenance_report.md`; that legacy overlay should be treated as heuristic cluster-conditioned semantic summary. For the current evidence-bearing same-space Big Five layer, use `research/outputs/same_space_big_five_overlay/same_space_big_five_report.md` and label it as activation-derived trait-vector projection, not independent psychometric rating.
 
 ### Archived or Deprecated Outputs
 

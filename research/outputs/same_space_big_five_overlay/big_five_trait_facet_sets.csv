@@ -1,0 +1,87 @@
+dimension,polarity,trait,available,polarity_type,rationale,missing_desired_traits_for_dimension
+openness,positive,curious,True,conventional,candidate: curious,imaginative; unconventional; concrete; routine; narrow
+openness,positive,creative,True,conventional,candidate: creative,imaginative; unconventional; concrete; routine; narrow
+openness,positive,exploratory,True,conventional,candidate: exploratory,imaginative; unconventional; concrete; routine; narrow
+openness,positive,abstract,True,conventional,candidate: abstract,imaginative; unconventional; concrete; routine; narrow
+openness,positive,conceptual,True,conventional,candidate: conceptual,imaginative; unconventional; concrete; routine; narrow
+openness,positive,philosophical,True,conventional,candidate: philosophical,imaginative; unconventional; concrete; routine; narrow
+openness,positive,poetic,True,conventional,candidate: poetic,imaginative; unconventional; concrete; routine; narrow
+openness,positive,speculative,True,conventional,candidate: speculative,imaginative; unconventional; concrete; routine; narrow
+openness,positive,open_ended,True,project-specific,substitute for open-ended/imaginative possibility,imaginative; unconventional; concrete; routine; narrow
+openness,positive,iconoclastic,True,project-specific,substitute for unconventional,imaginative; unconventional; concrete; routine; narrow
+openness,positive,adventurous,True,conventional,candidate: adventurous/exploratory,imaginative; unconventional; concrete; routine; narrow
+openness,negative,literal,True,conventional,candidate: literal,imaginative; unconventional; concrete; routine; narrow
+openness,negative,practical,True,conventional,candidate: practical,imaginative; unconventional; concrete; routine; narrow
+openness,negative,traditional,True,conventional,candidate: traditional,imaginative; unconventional; concrete; routine; narrow
+openness,negative,cautious,True,conventional,candidate: cautious,imaginative; unconventional; concrete; routine; narrow
+openness,negative,convergent,True,project-specific,substitute for narrow/routine answer-space,imaginative; unconventional; concrete; routine; narrow
+openness,negative,closure_seeking,True,project-specific,substitute for routine/closed-ended,imaginative; unconventional; concrete; routine; narrow
+openness,negative,formalist,True,project-specific,substitute for conventional/concrete formalism,imaginative; unconventional; concrete; routine; narrow
+conscientiousness,positive,conscientious,True,conventional,candidate: conscientious,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,positive,methodical,True,conventional,candidate: methodical,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,positive,meticulous,True,conventional,candidate: meticulous,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,positive,efficient,True,project-specific,substitute for disciplined/organized,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,positive,regulatory,True,project-specific,substitute for systematic/responsible standards,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,positive,principled,True,project-specific,substitute for responsible/reliable,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,positive,data_driven,True,project-specific,substitute for careful/evidence-oriented,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,positive,problem_solving,True,project-specific,substitute for systematic task orientation,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,negative,disorganized,True,conventional,candidate: disorganized,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,negative,impulsive,True,conventional,candidate: impulsive,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,negative,chaotic,True,conventional,candidate: chaotic,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,negative,spontaneous,True,conventional,candidate: spontaneous,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,negative,flippant,True,project-specific,substitute for careless,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,negative,improvisational,True,project-specific,substitute for undisciplined/spontaneous,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+conscientiousness,negative,mercurial,True,project-specific,substitute for erratic,disciplined; organized; reliable; careful; systematic; diligent; responsible; careless; erratic; negligent; undisciplined
+extraversion,positive,extroverted,True,conventional,candidate: extroverted,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,positive,gregarious,True,conventional,candidate: gregarious,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,positive,charismatic,True,conventional,candidate: charismatic,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,positive,animated,True,project-specific,substitute for energetic/expressive,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,positive,effusive,True,project-specific,substitute for expressive/talkative,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,positive,theatrical,True,project-specific,substitute for performative,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,positive,entertaining,True,project-specific,substitute for outgoing/social performance,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,positive,verbose,True,project-specific,substitute for talkative,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,negative,introverted,True,conventional,candidate: introverted,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,negative,reserved,True,conventional,candidate: reserved,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,negative,introspective,True,conventional,candidate: introspective,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,negative,understated,True,project-specific,substitute for quiet/private,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,negative,detached,True,project-specific,substitute for withdrawn/private,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+extraversion,negative,stoic,True,project-specific,substitute for quiet/reserved,sociable; outgoing; expressive; energetic; talkative; performative; solitary; withdrawn; quiet; private
+agreeableness,positive,agreeable,True,conventional,candidate: agreeable,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,positive,collaborative,True,conventional,substitute for cooperative,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,positive,empathetic,True,conventional,candidate: empathic/empathetic,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,positive,supportive,True,conventional,candidate: supportive,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,positive,benevolent,True,conventional,candidate: benevolent,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,positive,nurturing,True,conventional,candidate: nurturing,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,positive,conciliatory,True,conventional,candidate: conciliatory,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,positive,generous,True,conventional,candidate: generous,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,positive,accommodating,True,conventional,candidate: accommodating,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,positive,forgiving,True,conventional,candidate: forgiving,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,positive,tactful,True,project-specific,adjacent social consideration facet,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,negative,confrontational,True,conventional,candidate: confrontational,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,negative,callous,True,conventional,candidate: callous,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,negative,cynical,True,conventional,candidate: cynical,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,negative,hostile,True,conventional,candidate: hostile,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,negative,vindictive,True,conventional,candidate: vindictive,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,negative,critical,True,conventional,candidate: critical,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,negative,acerbic,True,project-specific,substitute for antagonistic/combative,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,negative,cruel,True,project-specific,substitute for callous/hostile,cooperative; compassionate; empathic; combative; antagonistic; selfish
+agreeableness,negative,competitive,True,project-specific,opposed to accommodating/cooperative,cooperative; compassionate; empathic; combative; antagonistic; selfish
+neuroticism,positive,anxious,True,conventional,candidate: anxious,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,positive,neurotic,True,conventional,candidate: neurotic,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,positive,reactive,True,conventional,candidate: reactive,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,positive,pessimistic,True,conventional,candidate: pessimistic,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,positive,melancholic,True,conventional,candidate: melancholic,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,positive,temperamental,True,conventional,candidate: temperamental,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,positive,paranoid,True,project-specific,substitute for fearful/insecure,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,positive,fatalistic,True,project-specific,adjacent pessimistic/fearful facet,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,positive,impatient,True,project-specific,adjacent volatility/reactivity facet,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,positive,melodramatic,True,project-specific,adjacent emotional volatility facet,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,negative,calm,True,conventional,candidate: calm,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,negative,resilient,True,conventional,candidate: resilient,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,negative,serene,True,conventional,candidate: serene,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,negative,patient,True,conventional,candidate: patient,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,negative,grounded,True,conventional,candidate: grounded,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,negative,confident,True,conventional,candidate: confident,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,negative,stoic,True,project-specific,substitute for composed/stable,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,negative,nonchalant,True,project-specific,substitute for calm/secure,volatile; insecure; fearful; unstable; composed; stable; secure
+neuroticism,negative,chill,True,project-specific,substitute for calm,volatile; insecure; fearful; unstable; composed; stable; secure

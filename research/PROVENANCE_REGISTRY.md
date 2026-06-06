@@ -50,6 +50,18 @@ Dependent analyses: Future Big Five overlay redesign, PC2 visual interpretation,
 Current status: Complete provenance audit.
 Notes/caveats: The audit classifies the current Big Five overlay as partially dependent on activation geometry because `visualizations/deep_analysis.py` uses activation-derived cluster labels as Big Five base scores before role-name heuristic adjustments. It found no dependency on the 240-trait vector/profile matrix. Recommendation: rebuild any evidence-bearing Big Five layer; retain the current overlay only if relabeled as a heuristic cluster-conditioned semantic summary.
 
+## same-space activation-derived Big Five overlay outputs
+
+Artifact: Same-space Big Five overlay built directly from released role and trait activation vectors.
+Location: `research/outputs/same_space_big_five_overlay/`
+Created by: Codex/GPT-5.5.
+Model used: Script-author and analysis model GPT-5.5; no model APIs, pods, GPUs, or new activations were run.
+Source inputs: released Qwen/Qwen3-32B, Llama-3.3-70B, and Gemma-2-27B role and trait vectors under `downloads/hf_vectors/{qwen-3-32b,llama-3.3-70b,gemma-2-27b}/`; trait vocabulary in `data/traits/trait_list.json`; cross-model role coordinates and clusters in `research/outputs/cross_model_cluster_topology/per_model_cluster_assignments.csv`; legacy heuristic overlay data in `research/visualizations/bigfive_geometry_overlay_data.csv` used only for descriptive continuity comparison; and prior provenance caveats in `research/outputs/big_five_provenance_audit/` and `research/outputs/trait_profile_provenance_audit/`.
+Generating script: `research/outputs/same_space_big_five_overlay/run_same_space_big_five_overlay.py`.
+Dependent analyses: Future evidence-bearing Big Five visualization layers, Paper 1.5 trait-overlay caveats, Qwen/Llama/Gemma same-space trait-vector inspection, and possible replacement or relabeling of the old heuristic Big Five explorer overlay.
+Current status: Active same-space evidence layer.
+Notes/caveats: Each Big Five direction is a predeclared positive-minus-negative facet composite over available released trait vectors, then applied by cosine projection to released role vectors. This is activation-derived trait-vector projection, not independent psychometric rating, human judgment, or behavioral validation. The old heuristic Big Five overlay is retained only as a descriptive comparison and should not be used as source evidence for this layer.
+
 ## pc2_muted_pc1_extremes outputs
 
 Artifact: PC2 extremes inspection after muting PC1 to the central percentile band.
