@@ -554,3 +554,15 @@ Generating script: `research/outputs/occupation_population_persona_join/run_occu
 Dependent analyses: Exploratory future-work/appendix checks about whether real-world occupational prevalence, wage, or specialization proxies have any detectable relationship to persona geometry among defensibly matchable occupational roles.
 Current status: Complete exploratory first pass; not part of Paper 1.5 core claims.
 Notes/caveats: Role-to-SOC mappings are manual and conservative. Ambiguous mappings are preserved but excluded from quantitative correlations, and unmatched archetypal/mythic/symbolic roles are not forced. Direct scripted downloads from BLS bulk ZIP/text hosts returned HTTP 403 in this environment, and the unauthenticated BLS API hit a daily threshold during the run, so returned BLS coverage is partial: 50 included roles with employment count and 42 included roles with annual median wage. OEWS employment count is not training-corpus frequency and should not be interpreted as evidence that persona geometry reflects U.S. labor demographics.
+
+## occupation-prevalence geometry overlay outputs
+
+Artifact: Descriptive Qwen PC1 x PC2 visualization overlay for exact/close occupation-matched persona roles, with employment-scaled highlighted points.
+Location: `research/outputs/occupation_prevalence_geometry_overlay/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis, visualization, and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, new BLS/Census fetches, or judging were run.
+Source inputs: `research/geometry_tables/qwen_role_pc_rankings.csv`, `research/outputs/occupation_population_persona_join/role_occupation_mapping.csv`, `research/outputs/occupation_population_persona_join/role_occupation_geometry_join.csv`, `research/outputs/occupation_population_persona_join/occupation_population_cluster_summary.csv`, `research/outputs/occupation_population_persona_join/occupation_population_correlations.csv`, and `research/outputs/occupation_population_persona_join/data_source_manifest.md`.
+Generating script: `research/outputs/occupation_prevalence_geometry_overlay/run_occupation_prevalence_geometry_overlay.py`
+Dependent analyses: Exploratory future-work visualization of where occupation-matched professional persona roles sit in Qwen persona geometry; possible appendix/future-work figure, not Paper 1.5 core evidence.
+Current status: Complete descriptive visualization follow-up.
+Notes/caveats: The primary overlay includes exact and close occupational matches only; broad matches are optional in the interactive HTML; ambiguous and unmatched roles are excluded from highlighted layers. Point size reflects log BLS OEWS May 2025 employment count where inherited values are available, and missing employment values are marked explicitly. The overlay supports visual inspection of regional concentration but does not claim persona geometry reflects U.S. labor demographics, training-corpus frequency, or occupational prevalence.

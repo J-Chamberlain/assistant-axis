@@ -84,6 +84,10 @@ Prepared `research/outputs/within_role_displacement_design/` as reusable scaffol
 
 The first occupational-prevalence audit mapped only defensible modern U.S. occupation-like persona roles to BLS OEWS May 2025 national SOC statistics. Coverage is partial: 47 exact, 26 close, 25 broad, 25 ambiguous-excluded, and 152 unmatched roles. Because BLS API/rate-limit constraints returned employment values for 50 included roles and annual median wages for 42 included roles in this run, correlations are descriptive and sensitivity-bound. The audit does not support a clean claim that persona geometry reflects U.S. labor demographics or occupational prevalence; it is best treated as exploratory future-work/appendix material.
 
+### Occupation-Prevalence Overlay Shows Regional Concentration Without Global Claim
+
+The Qwen PC1 x PC2 occupation-prevalence overlay highlights exact/close occupation-matched roles from the BLS OEWS audit, with all roles as background and point size tied to log employment count where available. The largest returned-employment exact/close roles visually concentrate mainly in grounded-social, procedural-professional, and editorial/assistant-adjacent territory, while creative/media occupations form a secondary spread. This regional inspection is compatible with the earlier weak global correlation result because the overlay describes where a filtered occupational subset sits rather than testing linear PC-wide prediction. It should remain outside Paper 1.5 core evidence.
+
 ### Pod Workflow Lessons
 
 Detached execution, response JSONL preservation, separate activation shards, local integrity checks, explicit run artifacts, and RunPod API or `runpodctl` termination are now validated workflow requirements. Browser/dashboard termination is fallback only.
