@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-06-07T22:43:19Z
-Last commit when generated: 069ef31
+Updated UTC: 2026-06-07T23:18:47Z
+Last commit when generated: 8eedae9
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3632
+- active analyses: 3635
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 10
@@ -39,7 +39,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - active: 4337
 - archive: 11
 - canonical: 18
-- deprecated: 21
+- deprecated: 24
 
 ## Navigation Map
 
@@ -49,7 +49,7 @@ Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVEN
 
 ### Active Analyses
 
-Most active analyses live under `research/outputs/`, `research/assistant_axis_methodology/`, and `research/q2_stability/qwen/outputs/`. Prefer the directory-level report files first, then inspect CSV/JSON support files only as needed. The exploratory occupation-population persona join lives under `research/outputs/occupation_population_persona_join/` and is marked future-work/appendix material, not Paper 1.5 core evidence. Its descriptive geometry overlay lives under `research/outputs/occupation_prevalence_geometry_overlay/`. The small role-free prompt-design packet for future PC1/PC2 directional pilot inspection lives under `research/outputs/role_free_directional_prompt_pilot/`; it is prompt design only, with no activation run.
+Most active analyses live under `research/outputs/`, `research/assistant_axis_methodology/`, and `research/q2_stability/qwen/outputs/`. Prefer the directory-level report files first, then inspect CSV/JSON support files only as needed. The exploratory occupation-population persona join lives under `research/outputs/occupation_population_persona_join/` and is marked future-work/appendix material, not Paper 1.5 core evidence. Its descriptive geometry overlay lives under `research/outputs/occupation_prevalence_geometry_overlay/`. The active second-generation role-free prompt-design packet for future PC1/PC2 directional pilot inspection lives under `research/outputs/role_free_directional_prompt_pilot_v2/`; it is prompt design only, with no activation run. The first packet under `research/outputs/role_free_directional_prompt_pilot/` is retained as the superseded comparison baseline.
 
 ### Visualizations
 

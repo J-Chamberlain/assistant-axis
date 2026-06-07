@@ -1,0 +1,229 @@
+{
+  "packet_id": "role_free_directional_prompt_pilot_v2",
+  "created_date": "2026-06-07",
+  "purpose": "Second-generation role-free directional prompt packet for manual review before any activation run.",
+  "activation_run_performed": false,
+  "supersedes": "research/outputs/role_free_directional_prompt_pilot/",
+  "prompt_generation_constraints": {
+    "no_roles": true,
+    "no_personality_or_traits": true,
+    "no_pca_geometry_embeddings_personas_occupations_or_behavioral_labels": true,
+    "avoid_obvious_cue_words": [
+      "rigorous",
+      "practical",
+      "grounded",
+      "adaptive",
+      "analytical",
+      "conscientious",
+      "experiential",
+      "procedural",
+      "systematic",
+      "accessible",
+      "contextual"
+    ],
+    "self_contained_realistic": true,
+    "avoid_trivial_calculation": true
+  },
+  "prompts": [
+    {
+      "prompt_id": "rfv2_pc1_01",
+      "group": "positive_pc1",
+      "intended_direction": "positive",
+      "expected_axis": "PC1",
+      "prompt_text": "A venue policy says refunds are available only for tickets bought directly from the venue website, and only if the request is made at least 48 hours before the event. A ticket was bought through a resale site, and the refund request arrived three days before the event. Under the stated policy, should the refund be accepted? Explain why.",
+      "rationale": "Tests interpretation of stated eligibility conditions and exception-free standard satisfaction, not arithmetic.",
+      "possible_confounds": "Consumer-service framing may elicit advice about fairness beyond the stated policy.",
+      "confidence_score": 5
+    },
+    {
+      "prompt_id": "rfv2_pc1_02",
+      "group": "positive_pc1",
+      "intended_direction": "positive",
+      "expected_axis": "PC1",
+      "prompt_text": "An application form says a submission is complete only if it includes a signed form, a dated statement, and proof of address from the last 60 days. The packet includes a signed form, an undated statement, and a utility bill from last week. Is the submission complete under these instructions?",
+      "rationale": "Requires checklist-based determination against stated requirements while avoiding calculation-heavy structure.",
+      "possible_confounds": "Could invite suggestions for fixing the packet rather than deciding completeness.",
+      "confidence_score": 5
+    },
+    {
+      "prompt_id": "rfv2_pc1_03",
+      "group": "positive_pc1",
+      "intended_direction": "positive",
+      "expected_axis": "PC1",
+      "prompt_text": "A contest rule says each entry must be an original photo, must include a title, and must not show a visible brand logo. An entry uses the entrant\u2019s own photo, includes a title, and shows a large soda logo in the corner. Does it meet the rule?",
+      "rationale": "Creates rule-application pressure through a standard with a disqualifying condition.",
+      "possible_confounds": "Brand-logo content may invite aesthetic commentary instead of rule satisfaction.",
+      "confidence_score": 5
+    },
+    {
+      "prompt_id": "rfv2_pc1_04",
+      "group": "positive_pc1",
+      "intended_direction": "positive",
+      "expected_axis": "PC1",
+      "prompt_text": "A warranty notice says coverage applies if the item was used indoors, registered within 30 days of purchase, and not altered after purchase. The item was used indoors and registered on time, but the casing was opened and modified. Is the warranty claim covered by the notice?",
+      "rationale": "Targets legitimacy and eligibility determination under multiple stated conditions.",
+      "possible_confounds": "May elicit general warranty advice unless answer is anchored to the notice.",
+      "confidence_score": 5
+    },
+    {
+      "prompt_id": "rfv2_pc1_05",
+      "group": "positive_pc1",
+      "intended_direction": "positive",
+      "expected_axis": "PC1",
+      "prompt_text": "A rental agreement says quiet hours begin at 10 PM and any amplified music after that time requires written permission in advance. A gathering plays amplified music at 10:30 PM without written permission. Does that follow the agreement?",
+      "rationale": "Uses an ordinary agreement to induce standard interpretation and yes/no compliance judgment.",
+      "possible_confounds": "Noise-neighbor context may trigger social repair suggestions.",
+      "confidence_score": 4
+    },
+    {
+      "prompt_id": "rfv2_pc1_06",
+      "group": "positive_pc1",
+      "intended_direction": "positive",
+      "expected_axis": "PC1",
+      "prompt_text": "A class assignment says the answer must cite two sources from the provided reading list and one source found independently. A response cites three sources, all from the provided list. Does it satisfy the assignment instructions?",
+      "rationale": "Requires interpreting a distribution requirement rather than merely counting total items.",
+      "possible_confounds": "School context may elicit tutoring advice after the determination.",
+      "confidence_score": 5
+    },
+    {
+      "prompt_id": "rfv2_pc1_07",
+      "group": "positive_pc1",
+      "intended_direction": "positive",
+      "expected_axis": "PC1",
+      "prompt_text": "A library notice says a room booking is valid only if the confirmation email names the room, the date, and the starting time. The email names the room and date but says \u201cmorning\u201d instead of a starting time. Is the booking valid under the notice?",
+      "rationale": "Pushes interpretation of whether a vague field satisfies a stated documentary requirement.",
+      "possible_confounds": "May prompt common-sense leniency rather than strict requirement reading.",
+      "confidence_score": 4
+    },
+    {
+      "prompt_id": "rfv2_pc1_08",
+      "group": "positive_pc1",
+      "intended_direction": "positive",
+      "expected_axis": "PC1",
+      "prompt_text": "A submission guideline says files must be in PDF format, under 10 MB, and named with the applicant\u2019s last name followed by the project title. A file is a 7 MB PDF but is named \u201cfinal_version.pdf.\u201d Should it be treated as following the guideline?",
+      "rationale": "Combines format, size, and naming requirements to elicit completeness review.",
+      "possible_confounds": "File-management context could invite suggestions rather than a pass/fail finding.",
+      "confidence_score": 5
+    },
+    {
+      "prompt_id": "rfv2_pc1_09",
+      "group": "positive_pc1",
+      "intended_direction": "positive",
+      "expected_axis": "PC1",
+      "prompt_text": "A museum pass says it admits one adult and one child on weekdays only. Two adults arrive with the pass on a Friday. Based only on the wording of the pass, should both adults be admitted with it?",
+      "rationale": "Separates one satisfied condition from another unmet condition under a written standard.",
+      "possible_confounds": "Admission scenario may invite customer-service alternatives.",
+      "confidence_score": 4
+    },
+    {
+      "prompt_id": "rfv2_pc1_10",
+      "group": "positive_pc1",
+      "intended_direction": "positive",
+      "expected_axis": "PC1",
+      "prompt_text": "A recipe contest says entries must be vegetarian and must not contain alcohol. A dessert contains no meat but includes rum in the sauce. Does it qualify under the contest rule? Explain the deciding point.",
+      "rationale": "Uses category-membership and exclusion-rule application without turning into a numerical puzzle.",
+      "possible_confounds": "Food classification ambiguity may pull discussion away from the stated exclusion.",
+      "confidence_score": 4
+    },
+    {
+      "prompt_id": "rfv2_pc2_01",
+      "group": "high_pc2",
+      "intended_direction": "high",
+      "expected_axis": "PC2",
+      "prompt_text": "You are setting up an outdoor gathering. Twenty minutes before it starts, several tables are still missing, clouds are darkening, and early guests have begun to arrive. What would you do first, and what would you postpone?",
+      "rationale": "Elicits immediate prioritization under shifting conditions and limited time without a care/repair center.",
+      "possible_confounds": "Event setup may still pull mild coordination/stabilization pressure.",
+      "confidence_score": 5
+    },
+    {
+      "prompt_id": "rfv2_pc2_02",
+      "group": "high_pc2",
+      "intended_direction": "high",
+      "expected_axis": "PC2",
+      "prompt_text": "You are in an unfamiliar part of a city. Your phone has no service, your destination closes soon, and the street signs do not match the map you printed. How would you decide your next few steps?",
+      "rationale": "Targets local judgment under incomplete information, time pressure, and uncertain surroundings.",
+      "possible_confounds": "Navigation task may invite safety language or generic travel advice.",
+      "confidence_score": 5
+    },
+    {
+      "prompt_id": "rfv2_pc2_03",
+      "group": "high_pc2",
+      "intended_direction": "high",
+      "expected_axis": "PC2",
+      "prompt_text": "You arrive at a rented room for a small meeting and find the key code does not work, the hallway is noisy, and people will arrive in fifteen minutes. What do you try first?",
+      "rationale": "Requires near-term adjustment with imperfect access, social timing pressure, and no obvious complete solution.",
+      "possible_confounds": "May create troubleshooting sequence pressure, adding some PC1 influence.",
+      "confidence_score": 4
+    },
+    {
+      "prompt_id": "rfv2_pc2_04",
+      "group": "high_pc2",
+      "intended_direction": "high",
+      "expected_axis": "PC2",
+      "prompt_text": "Halfway through preparing a meal, the oven stops working, one dish is already cooked, and guests will be there soon. How would you change the plan using what is available?",
+      "rationale": "Focuses on changing material constraints and immediate decision-making rather than exact checking.",
+      "possible_confounds": "Meal context overlaps with v1 household scenarios, though the mechanism is broader than missing ingredients.",
+      "confidence_score": 4
+    },
+    {
+      "prompt_id": "rfv2_pc2_05",
+      "group": "high_pc2",
+      "intended_direction": "high",
+      "expected_axis": "PC2",
+      "prompt_text": "A train delay is announced, the ticket counter line is long, and you need to reach a nearby appointment before the hour is over. What information would you look for first, and how would it shape your choice?",
+      "rationale": "Elicits action under changing transport conditions, uncertain wait times, and local tradeoffs.",
+      "possible_confounds": "Could become information-gathering and option-ranking, adding PC1 pressure.",
+      "confidence_score": 5
+    },
+    {
+      "prompt_id": "rfv2_pc2_06",
+      "group": "high_pc2",
+      "intended_direction": "high",
+      "expected_axis": "PC2",
+      "prompt_text": "Your laptop battery dies just before you need to send a finished file, the building closes soon, and your charger is across town. What would you do next?",
+      "rationale": "Creates scarce-time, scarce-resource pressure with several imperfect paths.",
+      "possible_confounds": "Technology task may invite generic troubleshooting steps.",
+      "confidence_score": 4
+    },
+    {
+      "prompt_id": "rfv2_pc2_07",
+      "group": "high_pc2",
+      "intended_direction": "high",
+      "expected_axis": "PC2",
+      "prompt_text": "At a small outdoor stall, wind starts lifting papers from the table, the payment device is slow, and two people are waiting. What would you handle first?",
+      "rationale": "Forces prioritization among immediate physical, technical, and social pressures.",
+      "possible_confounds": "Retail-like setting may imply an unnamed job context, though no role label is used.",
+      "confidence_score": 4
+    },
+    {
+      "prompt_id": "rfv2_pc2_08",
+      "group": "high_pc2",
+      "intended_direction": "high",
+      "expected_axis": "PC2",
+      "prompt_text": "During a walk on an unfamiliar trail, the path ahead is muddy, daylight is fading, and one person in the group is slowing down. How would you choose what to do?",
+      "rationale": "Combines local terrain, time, and group condition without making repair or agreement the main task.",
+      "possible_confounds": "May trigger safety-first reasoning, which can overlap with PC1 caution.",
+      "confidence_score": 4
+    },
+    {
+      "prompt_id": "rfv2_pc2_09",
+      "group": "high_pc2",
+      "intended_direction": "high",
+      "expected_axis": "PC2",
+      "prompt_text": "A shared room suddenly loses most of its lighting, a planned activity starts in ten minutes, and the available supplies are scattered in different places. How would you adjust?",
+      "rationale": "Targets improvisation under environmental change and partial resource visibility.",
+      "possible_confounds": "Could produce a broad planning answer if the response abstracts away from the immediate scene.",
+      "confidence_score": 4
+    },
+    {
+      "prompt_id": "rfv2_pc2_10",
+      "group": "high_pc2",
+      "intended_direction": "high",
+      "expected_axis": "PC2",
+      "prompt_text": "At checkout, your card is declined, your phone battery is nearly gone, and the items include both things you need tonight and things that can wait. What do you do?",
+      "rationale": "Elicits situated prioritization under payment failure, battery scarcity, and immediate-versus-deferrable needs.",
+      "possible_confounds": "Could invite budgeting or personal-finance advice rather than local choice.",
+      "confidence_score": 5
+    }
+  ]
+}

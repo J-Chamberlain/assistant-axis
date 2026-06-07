@@ -71,8 +71,20 @@ Model used: Prompt-design and report-author model GPT-5.5; no model APIs, pods, 
 Source inputs: User-specified prompt-design constraints; canonical startup and navigation files; current Qwen PC1/PC2 interpretation context in `research/RESEARCH_STATE.md` and `research/THREAD_START.md`.
 Generating script: Direct local generation with a simple exact-term forbidden-word check; no standalone helper script was required.
 Dependent analyses: Future manual prompt review, no-GPU prompt scoring, or later Qwen activation pilot testing whether ordinary task demands induce predictable PC1/PC2 movement without role/persona labels.
+Current status: Superseded by `research/outputs/role_free_directional_prompt_pilot_v2/`.
+Notes/caveats: The prompts are hypotheses about task-demand pressure only. They do not establish activation movement, forecaster performance, or axis validity. Prompt text avoids explicit roles, personas, occupations, traits, Big Five language, PC/PCA/geometry language, and task-specific target labels; metadata and report text necessarily retain PC1/PC2 labels for auditability. The first packet is retained for comparison because its observed design weaknesses motivated the v2 replacement.
+
+## role_free_directional_prompt_pilot_v2 outputs
+
+Artifact: Second-generation role-free prompt-design packet for manual review before any directional Qwen PC1/PC2 activation pilot.
+Location: `research/outputs/role_free_directional_prompt_pilot_v2/`
+Created by: Codex.
+Model used: Prompt-design and report-author model Codex/GPT-5.5; no model APIs, pods, GPUs, activations, response generations, or activation runs were performed.
+Source inputs: User-specified v2 prompt-design constraints; canonical startup and navigation files; v1 prompt packet at `research/outputs/role_free_directional_prompt_pilot/`; current PC1/PC2 interpretation context in `research/RESEARCH_STATE.md` and `research/THREAD_START.md`.
+Generating script: Direct local generation of CSV/JSON/report artifacts; no standalone helper script was required.
+Dependent analyses: Manual review, possible no-GPU prompt scoring, and later role-free Qwen activation testing of whether task demands alone can induce predictable PC1/PC2 movement.
 Current status: Active prompt-design packet.
-Notes/caveats: The prompts are hypotheses about task-demand pressure only. They do not establish activation movement, forecaster performance, or axis validity. Prompt text avoids explicit roles, personas, occupations, traits, Big Five language, PC/PCA/geometry language, and task-specific target labels; metadata and report text necessarily retain PC1/PC2 labels for auditability.
+Notes/caveats: This is design evidence only. The packet intentionally broadens positive-PC1 prompts toward eligibility, validity, completeness, and standard-satisfaction judgments, and broadens high-PC2 prompts toward local choices under changing circumstances, incomplete information, scarce time, and imperfect resources. It does not establish activation movement, prompt-to-geometry forecast validity, or PC-axis interpretation.
 
 ## pc2_muted_pc1_extremes outputs
 
