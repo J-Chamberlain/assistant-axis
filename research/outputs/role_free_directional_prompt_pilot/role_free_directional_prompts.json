@@ -1,0 +1,202 @@
+[
+  {
+    "prompt_id": "rfpc1_01",
+    "group": "positive_pc1",
+    "expected_axis": "PC1",
+    "intended_direction": "positive",
+    "prompt_text": "I followed this recipe: add 2 cups flour, 1 cup water, and 1 teaspoon salt. Later I wrote that the dough used 3 cups flour and 2 teaspoons salt. What changed between the two versions?",
+    "rationale": "Comparing two near-duplicate records asks for close discrimination and exact mismatch identification.",
+    "notes_on_possible_confounds": "Food context may invite ordinary advice instead of narrow comparison unless the question stays focused on differences.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc1_02",
+    "group": "positive_pc1",
+    "expected_axis": "PC1",
+    "intended_direction": "positive",
+    "prompt_text": "A board game says each player starts with 5 tokens, gains 2 after a win, and loses 1 after a tie. One player has 8 tokens after one win and one tie. Is that total possible from the stated rules?",
+    "rationale": "A compact rule-and-total puzzle should elicit stepwise application of stated constraints.",
+    "notes_on_possible_confounds": "It may become simple arithmetic rather than broader axis pressure, but that is acceptable for a clean pilot.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc1_03",
+    "group": "positive_pc1",
+    "expected_axis": "PC1",
+    "intended_direction": "positive",
+    "prompt_text": "Here are three package labels: A says 12 ounces, B says 340 grams, and C says 0.75 pounds. Which two are closest in amount?",
+    "rationale": "Unit conversion and comparison create demand for exact discrimination without naming the target style.",
+    "notes_on_possible_confounds": "Unit knowledge may vary, though all values use common kitchen-scale units.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc1_04",
+    "group": "positive_pc1",
+    "expected_axis": "PC1",
+    "intended_direction": "positive",
+    "prompt_text": "A note says the meeting is Tuesday at 9 AM, the calendar says Wednesday at 9 AM, and the reminder says Tuesday at 10 AM. List every conflict among the three.",
+    "rationale": "The prompt asks for exhaustive conflict identification across small records.",
+    "notes_on_possible_confounds": "The everyday scenario is plain enough, but responses could drift into scheduling advice.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc1_05",
+    "group": "positive_pc1",
+    "expected_axis": "PC1",
+    "intended_direction": "positive",
+    "prompt_text": "A four-step instruction says: wash the cup, fill it halfway, add the lid, then pour in tea. Which step seems out of order, and why?",
+    "rationale": "Order-of-operations judgment should pull toward constraint tracking and anomaly identification.",
+    "notes_on_possible_confounds": "The answer is intuitive, so it may not strongly sustain the target direction.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc1_06",
+    "group": "positive_pc1",
+    "expected_axis": "PC1",
+    "intended_direction": "positive",
+    "prompt_text": "A sign says parking is allowed from 8 AM to 6 PM except on Saturdays. If someone parks at 5 PM on Saturday, does the sign allow it?",
+    "rationale": "Exception handling in a simple rule tests careful boundary application.",
+    "notes_on_possible_confounds": "The legal-ish format may pull toward policy-like wording, though it is benign and ordinary.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc1_07",
+    "group": "positive_pc1",
+    "expected_axis": "PC1",
+    "intended_direction": "positive",
+    "prompt_text": "These two statements cannot both be true: \u201cEvery blue ticket was counted\u201d and \u201cOne blue ticket was left in the box.\u201d Explain the clash in one or two sentences.",
+    "rationale": "Logical incompatibility should elicit constrained, discriminating explanation.",
+    "notes_on_possible_confounds": "The phrase \u201ccannot both be true\u201d may explicitly invite logic, but not a forbidden target label.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc1_08",
+    "group": "positive_pc1",
+    "expected_axis": "PC1",
+    "intended_direction": "positive",
+    "prompt_text": "A budget lists rent as $900, food as $250, travel as $120, and total spending as $1,240. Is the total consistent with the listed items?",
+    "rationale": "Arithmetic reconciliation should induce exact checking of listed values.",
+    "notes_on_possible_confounds": "It may be too narrow, but clean numeric reconciliation is useful as a pilot anchor.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc1_09",
+    "group": "positive_pc1",
+    "expected_axis": "PC1",
+    "intended_direction": "positive",
+    "prompt_text": "A child must choose a snack that is nut-free, under $3, and not chocolate. Options are granola bar $2, apple $1, chocolate cookie $2, and trail mix $3.50. Which option fits?",
+    "rationale": "Multi-constraint filtering asks for rule application and exclusion of near misses.",
+    "notes_on_possible_confounds": "Food labels are partly assumed; trail mix and granola may be ambiguous unless treated by common wording.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc1_10",
+    "group": "positive_pc1",
+    "expected_axis": "PC1",
+    "intended_direction": "positive",
+    "prompt_text": "Someone copied this code from a locker: 4-7-2-9. The entered code was 4-2-7-9. Describe the exact difference.",
+    "rationale": "Small-sequence comparison creates a pure demand for exact local discrepancy identification.",
+    "notes_on_possible_confounds": "Very short prompt may produce minimal output, which can be helpful or too weak for activation analysis.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc2_01",
+    "group": "high_pc2",
+    "expected_axis": "PC2",
+    "intended_direction": "high",
+    "prompt_text": "You planned to make dinner outside, but it starts raining and one ingredient is missing. What would you do next with what is already in the kitchen?",
+    "rationale": "The scenario demands adjustment to immediate constraints and available materials.",
+    "notes_on_possible_confounds": "Could trigger recipe advice rather than the intended local decision framing.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc2_02",
+    "group": "high_pc2",
+    "expected_axis": "PC2",
+    "intended_direction": "high",
+    "prompt_text": "A friend arrives upset, you have only ten minutes before leaving, and you do not know the full story. What should you say first?",
+    "rationale": "Limited time, incomplete information, and interpersonal pressure invite locally responsive judgment.",
+    "notes_on_possible_confounds": "May pull toward care/repair dynamics as well as high PC2.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc2_03",
+    "group": "high_pc2",
+    "expected_axis": "PC2",
+    "intended_direction": "high",
+    "prompt_text": "Your phone battery is at 4%, the bus may arrive soon, and you still need directions. What is your next move?",
+    "rationale": "Immediate scarcity and changing timing pressure should induce concrete tradeoff reasoning.",
+    "notes_on_possible_confounds": "May be answered as a simple checklist, adding some PC1 pressure.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc2_04",
+    "group": "high_pc2",
+    "expected_axis": "PC2",
+    "intended_direction": "high",
+    "prompt_text": "You promised to bring snacks, but the store is closed and guests are arriving in twenty minutes. How would you handle it?",
+    "rationale": "A near-term social obligation under constrained options asks for local adjustment.",
+    "notes_on_possible_confounds": "Could elicit apology or repair framing, adding PC3-low pressure.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc2_05",
+    "group": "high_pc2",
+    "expected_axis": "PC2",
+    "intended_direction": "high",
+    "prompt_text": "A child refuses to put on shoes, the car needs to leave soon, and raising your voice usually makes things worse. What do you try?",
+    "rationale": "The prompt centers immediate social friction, limited time, and response adjustment.",
+    "notes_on_possible_confounds": "Caregiving context may add stabilizing pressure beyond PC2.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc2_06",
+    "group": "high_pc2",
+    "expected_axis": "PC2",
+    "intended_direction": "high",
+    "prompt_text": "You are halfway through assembling a shelf and discover one screw is missing. The shelf needs to hold light books tonight. What is the safest temporary plan?",
+    "rationale": "Material constraint, near-term use, and uncertainty ask for local tradeoff handling.",
+    "notes_on_possible_confounds": "The word \u201csafest\u201d may pull toward cautious evaluation and PC1.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc2_07",
+    "group": "high_pc2",
+    "expected_axis": "PC2",
+    "intended_direction": "high",
+    "prompt_text": "Two people in the room disagree about where to eat, everyone is hungry, and there is no time for a long discussion. How do you move things forward?",
+    "rationale": "Social pressure, fatigue, and time limits invite an immediate compromise-oriented response.",
+    "notes_on_possible_confounds": "Could drift into mediation/stabilization rather than pure high-PC2 pressure.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc2_08",
+    "group": "high_pc2",
+    "expected_axis": "PC2",
+    "intended_direction": "high",
+    "prompt_text": "You brought the wrong cable to a small gathering, and the planned music will not play. What do you do in the moment?",
+    "rationale": "A small public mishap with available alternatives pressures local improvisation.",
+    "notes_on_possible_confounds": "Could invite generic troubleshooting, adding PC1-like sequencing.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc2_09",
+    "group": "high_pc2",
+    "expected_axis": "PC2",
+    "intended_direction": "high",
+    "prompt_text": "A neighbor asks for help carrying a box, but you are tired and have groceries melting in your bag. How would you decide what to do?",
+    "rationale": "Competing immediate obligations and bodily/household constraints invite context-bound tradeoff reasoning.",
+    "notes_on_possible_confounds": "Moral-help framing could pull toward agreeableness or care rather than PC2 alone.",
+    "forbidden_terms_check": "pass"
+  },
+  {
+    "prompt_id": "rfpc2_10",
+    "group": "high_pc2",
+    "expected_axis": "PC2",
+    "intended_direction": "high",
+    "prompt_text": "Your usual route is blocked, the sky is getting dark, and you are unsure which side street is quieter. What choice would you make and why?",
+    "rationale": "Changing surroundings and incomplete local information ask for situated near-term judgment without naming it.",
+    "notes_on_possible_confounds": "May be read as safety planning; kept benign and non-operational.",
+    "forbidden_terms_check": "pass"
+  }
+]

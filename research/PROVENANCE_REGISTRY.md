@@ -62,6 +62,18 @@ Dependent analyses: Future evidence-bearing Big Five visualization layers, Paper
 Current status: Active same-space evidence layer.
 Notes/caveats: Each Big Five direction is a predeclared positive-minus-negative facet composite over available released trait vectors, then applied by cosine projection to released role vectors. This is activation-derived trait-vector projection, not independent psychometric rating, human judgment, or behavioral validation. The old heuristic Big Five overlay is retained only as a descriptive comparison and should not be used as source evidence for this layer.
 
+## role_free_directional_prompt_pilot outputs
+
+Artifact: Small role-free prompt-design packet for manual review before any directional Qwen PC1/PC2 activation pilot.
+Location: `research/outputs/role_free_directional_prompt_pilot/`
+Created by: Codex/GPT-5.5.
+Model used: Prompt-design and report-author model GPT-5.5; no model APIs, pods, GPUs, activations, or response generations were run.
+Source inputs: User-specified prompt-design constraints; canonical startup and navigation files; current Qwen PC1/PC2 interpretation context in `research/RESEARCH_STATE.md` and `research/THREAD_START.md`.
+Generating script: Direct local generation with a simple exact-term forbidden-word check; no standalone helper script was required.
+Dependent analyses: Future manual prompt review, no-GPU prompt scoring, or later Qwen activation pilot testing whether ordinary task demands induce predictable PC1/PC2 movement without role/persona labels.
+Current status: Active prompt-design packet.
+Notes/caveats: The prompts are hypotheses about task-demand pressure only. They do not establish activation movement, forecaster performance, or axis validity. Prompt text avoids explicit roles, personas, occupations, traits, Big Five language, PC/PCA/geometry language, and task-specific target labels; metadata and report text necessarily retain PC1/PC2 labels for auditability.
+
 ## pc2_muted_pc1_extremes outputs
 
 Artifact: PC2 extremes inspection after muting PC1 to the central percentile band.
