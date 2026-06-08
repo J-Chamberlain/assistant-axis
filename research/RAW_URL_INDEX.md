@@ -1,6 +1,6 @@
 # Raw URL Index
 
-Updated UTC: 2026-06-07T23:18:47Z
+Updated UTC: 2026-06-08T11:18:24Z
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
@@ -90,6 +90,9 @@ Canonical raw links for frequently referenced Assistant Axis artifacts. Status v
 | active | active analyses | `research/outputs/role_free_directional_prompt_pilot_v2/role_free_directional_prompts_v2.csv` | Second-generation role-free directional prompt packet table with metadata | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/role_free_directional_prompt_pilot_v2/role_free_directional_prompts_v2.csv |
 | active | active analyses | `research/outputs/role_free_directional_prompt_pilot_v2/role_free_directional_prompts_v2.json` | Second-generation role-free directional prompt packet JSON with metadata | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/role_free_directional_prompt_pilot_v2/role_free_directional_prompts_v2.json |
 | active | active analyses | `research/outputs/role_free_directional_prompt_pilot_v2/role_free_directional_prompt_pilot_v2_report.md` | Second-generation role-free directional prompt packet report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/role_free_directional_prompt_pilot_v2/role_free_directional_prompt_pilot_v2_report.md |
+| active | active analyses | `research/outputs/role_free_directional_steering_prompts/role_free_directional_steering_prompts.csv` | True role-free directional steering prompt packet table with metadata | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/role_free_directional_steering_prompts/role_free_directional_steering_prompts.csv |
+| active | active analyses | `research/outputs/role_free_directional_steering_prompts/role_free_directional_steering_prompts.json` | True role-free directional steering prompt packet JSON with metadata | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/role_free_directional_steering_prompts/role_free_directional_steering_prompts.json |
+| active | active analyses | `research/outputs/role_free_directional_steering_prompts/role_free_directional_steering_prompt_report.md` | True role-free directional steering prompt packet report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/role_free_directional_steering_prompts/role_free_directional_steering_prompt_report.md |
 | active | active analyses | `research/outputs/training_forecast_error_geometry/training_forecast_error_report.md` | Training Forecast Error Geometry | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/training_forecast_error_geometry/training_forecast_error_report.md |
 | active | active analyses | `research/outputs/training_forecast_error_geometry/training_forecast_error_summary.json` | training forecast error summary (active analyses) | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/training_forecast_error_geometry/training_forecast_error_summary.json |
 | active | active analyses | `research/outputs/within_role_displacement_design/within_role_displacement_design_report.md` | Within-Role Displacement Design Report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/within_role_displacement_design/within_role_displacement_design_report.md |

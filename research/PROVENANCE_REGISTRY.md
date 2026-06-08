@@ -86,6 +86,18 @@ Dependent analyses: Manual review, possible no-GPU prompt scoring, and later rol
 Current status: Active prompt-design packet.
 Notes/caveats: This is design evidence only. The packet intentionally broadens positive-PC1 prompts toward eligibility, validity, completeness, and standard-satisfaction judgments, and broadens high-PC2 prompts toward local choices under changing circumstances, incomplete information, scarce time, and imperfect resources. It does not establish activation movement, prompt-to-geometry forecast validity, or PC-axis interpretation.
 
+## role_free_directional_steering_prompts outputs
+
+Artifact: True role-free directional steering prompt packet for manual review before any directional Qwen PC1/PC2 activation pilot.
+Location: `research/outputs/role_free_directional_steering_prompts/`
+Created by: Codex.
+Model used: Prompt-design and report-author model Codex/GPT-5.5; no model APIs, pods, GPUs, activations, response generations, or activation runs were performed.
+Source inputs: User-specified steering-prompt constraints; canonical startup and navigation files; v2 probe packet at `research/outputs/role_free_directional_prompt_pilot_v2/`; current PC1/PC2 interpretation context in `research/RESEARCH_STATE.md` and `research/THREAD_START.md`.
+Generating script: Direct local generation of CSV/JSON/report artifacts; no standalone helper script was required.
+Dependent analyses: Manual review, possible no-GPU prompt scoring, and later role-free Qwen activation testing of whether response-guidance instructions can steer PC1/PC2 movement without role/persona labels.
+Current status: Active steering-prompt packet.
+Notes/caveats: This packet is distinct from the v2 probe packet. It contains domain-general instruction prompts intended to shape response production directly, not scenario questions intended to measure a response. It does not establish activation movement, prompt-to-geometry forecast validity, or PC-axis interpretation.
+
 ## pc2_muted_pc1_extremes outputs
 
 Artifact: PC2 extremes inspection after muting PC1 to the central percentile band.
