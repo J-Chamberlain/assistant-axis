@@ -1,6 +1,6 @@
 # Raw URL Index
 
-Updated UTC: 2026-06-08T11:18:24Z
+Updated UTC: 2026-06-10T00:18:40Z
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
@@ -59,6 +59,9 @@ Canonical raw links for frequently referenced Assistant Axis artifacts. Status v
 | active | active analyses | `research/outputs/gpt55_judge_and_outlier_followup/score3_outlier_report.md` | Score==3 Outlier Report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/gpt55_judge_and_outlier_followup/score3_outlier_report.md |
 | active | active analyses | `research/outputs/gpt55_judge_and_outlier_followup/score3_outliers.csv` | score3 outliers (active analyses) | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/gpt55_judge_and_outlier_followup/score3_outliers.csv |
 | active | active analyses | `research/outputs/novel_prompt_battery/novel_prompt_battery_coverage_stats.json` | novel prompt battery coverage stats (active analyses) | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/novel_prompt_battery/novel_prompt_battery_coverage_stats.json |
+| canonical | active analyses | `research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.csv` | Canonical v1 no-label elicitation prompts CSV for Paper 1.5 manual review | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.csv |
+| canonical | active analyses | `research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.json` | Canonical v1 no-label elicitation prompts JSON for Paper 1.5 manual review | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.json |
+| canonical | active analyses | `research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompt_packet_report.md` | No-label elicitation prompt packet v1 archival report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompt_packet_report.md |
 | active | active analyses | `research/outputs/novel_prompt_battery/novel_prompt_battery_report.md` | Novel Prompt Battery For H100 Geometry Validation | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/novel_prompt_battery/novel_prompt_battery_report.md |
 | active | active analyses | `research/outputs/novel_prompt_battery_expansion/combined_coverage_stats.json` | combined coverage stats (active analyses) | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/novel_prompt_battery_expansion/combined_coverage_stats.json |
 | active | active analyses | `research/outputs/novel_prompt_battery_expansion/supplemental_coverage_stats.json` | supplemental coverage stats (active analyses) | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/novel_prompt_battery_expansion/supplemental_coverage_stats.json |

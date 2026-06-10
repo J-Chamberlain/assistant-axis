@@ -98,6 +98,18 @@ Dependent analyses: Manual review, possible no-GPU prompt scoring, and later rol
 Current status: Active steering-prompt packet.
 Notes/caveats: This packet is distinct from the v2 probe packet. It contains domain-general instruction prompts intended to shape response production directly, not scenario questions intended to measure a response. It does not establish activation movement, prompt-to-geometry forecast validity, or PC-axis interpretation.
 
+## no_label_elicitation_prompt_packet_v1 outputs
+
+Artifact: Canonical v1 no-label elicitation prompt packet for Paper 1.5 manual review.
+Location: `research/outputs/no_label_elicitation_prompt_packet_v1/`
+Created by: Claude-derived prompt set with GPT-assisted PC2 revisions, archived by Codex/GPT-5.5.
+Model used: Archival and formatting by GPT-5.5; no model APIs, pods, GPUs, activations, projections, response generations, or result analyses were run.
+Source inputs: User-supplied final 60-prompt text in the 2026-06-09 chat request, including six reasoning paragraphs and required source note.
+Generating script: Direct local archival into CSV, JSON, and Markdown report; only structural formatting and CSV/JSON escaping were applied.
+Dependent analyses: Future Paper 1.5 no-label elicitation validation experiment after human review.
+Current status: Canonical prompt packet pending human review.
+Notes/caveats: This packet freezes the supplied stimulus set verbatim for manual review. It is not an experiment result and should not be treated as evidence of activation movement until a later activation run is explicitly performed and analyzed.
+
 ## pc2_muted_pc1_extremes outputs
 
 Artifact: PC2 extremes inspection after muting PC1 to the central percentile band.
