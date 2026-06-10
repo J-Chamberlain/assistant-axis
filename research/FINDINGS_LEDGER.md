@@ -610,6 +610,16 @@ High truncation is tracked explicitly rather than silently filtered. Trickster t
 
 ## Current Blockers
 
+### No-Label Elicitation Validation (2026-06-10)
+
+- Ran the frozen canonical no-label elicitation prompt packet v1 under `research/outputs/no_label_elicitation_validation/`
+- Generated 600/600 independent Qwen/Qwen3-32B responses from 60 prompts with 10 samples per prompt; zero response-level error rows
+- Prompt blinding passed by construction: Qwen received only each frozen row's `prompt_text` in a fresh one-message conversation; prompt IDs, PC labels, polarity labels, family labels, reasoning, metadata, and predictions were excluded from model-visible input
+- Measurement used direct `model.model.layers[48]` forward-hook extraction, response-token mean pooling, and projection into the existing Qwen persona PCA basis; canonical coordinate reproduction max error was 1.207e-06
+- Family-level result at the preregistered 70% prompt-mean threshold: PC1-negative 10/10 passed, PC1-positive 0/10 failed, PC2-positive 10/10 passed, PC2-negative 5/10 failed, PC3-positive 9/10 passed, and PC3-negative 9/10 passed
+- Interpretation: the experiment supports a partial/modest no-label directional activation claim, strongest for PC3 and PC2-positive. It does not prove the PCs, isolate effects to one axis, or validate the PC1-positive/PC2-negative elicitation wording.
+- Next test: inspect the failed and off-axis prompt families before designing a revised no-label packet; do not reuse PC1-positive or PC2-negative families as clean elicitors without revision.
+
 The next editor experiment is blocked on revised anchoring methodology. More identical editor rollouts are unlikely to answer the failure mode cleanly.
 
 Strict Lu-method replication remains blocked unless `gpt-4.1-mini` judge scoring is restored and run with documented filter choices.

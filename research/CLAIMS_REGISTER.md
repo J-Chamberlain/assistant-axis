@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: canonical claim status
-Last updated: 2026-06-05
+Last updated: 2026-06-10
 
 This register separates project findings from interpretations. It is intentionally compact: use it to orient a new thread, then verify details in `RESEARCH_STATE.md`, `FINDINGS_LEDGER.md`, `RESEARCH_INDEX.md`, and the cited artifacts.
 
@@ -354,3 +354,12 @@ Evidence: `research/outputs/playwright_displacement_scoring/` contains `extracti
 Counterevidence: These scores are rubric-based predicted displacement pressures. They do not establish actual activation movement until corrected extraction and GPU response measurements are performed. PC1-negative and PC3-positive question coverage are thin and should be manually reviewed before launch.
 Dependencies: `research/outputs/playwright_displacement_scoring/`, `research/outputs/within_role_displacement_design/`, `data/extraction_questions.jsonl`, `data/roles/instructions/playwright.json`
 Last Updated: 2026-05-31
+
+## 39. Frozen No-Label Elicitation Prompts Partially Validate Directional Activation Movement
+
+Claim: Prompts designed from the PC interpretations can induce predictable directional movement in Qwen/Qwen3-32B persona-space activations without exposing role/persona/trait labels, but the frozen v1 packet validates this only partially.
+Status: Partially supported
+Evidence: The Paper 1.5 no-label elicitation validation used the frozen 60-prompt packet under `research/outputs/no_label_elicitation_prompt_packet_v1/`, generated 10 independent Qwen/Qwen3-32B responses per prompt, extracted direct layer-48 hook activations over response tokens, and projected 600/600 successful responses into the canonical Qwen persona PCA basis. Qwen saw only `prompt_text`; metadata, PC labels, polarity labels, family labels, reasoning, and predictions were excluded from model-visible input. Four of six families passed the preregistered 70% prompt-mean directional threshold: PC1-negative 10/10, PC2-positive 10/10, PC3-positive 9/10, and PC3-negative 9/10.
+Counterevidence: PC1-positive failed completely at 0/10 prompt means in the intended direction relative to the published assistant centroid, and PC2-negative failed at 5/10. Off-axis movement is present and should be treated as interpretive evidence rather than ignored. The result does not prove the PCs, isolate prompt effects to single axes, or validate the failed prompt-family wording.
+Dependencies: `research/outputs/no_label_elicitation_validation/no_label_elicitation_validation_report.md`, `research/outputs/no_label_elicitation_validation/geometric_success_summary.csv`, `research/outputs/no_label_elicitation_validation/prompt_mean_results.csv`, `research/outputs/no_label_elicitation_validation/response_level_results.csv`, `research/outputs/no_label_elicitation_validation/prompt_blinding_verification.md`, `research/outputs/no_label_elicitation_validation/generation_independence_verification.md`
+Last Updated: 2026-06-10

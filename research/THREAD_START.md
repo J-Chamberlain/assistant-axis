@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-06-05
+Last updated: 2026-06-10
 
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 
@@ -26,9 +26,11 @@ Role-label exposure is a real methodology caveat. The Lu-style system prompts di
 
 Local activation-cloud geometry now supports treating personas as response-state distributions rather than only points. Across amateur, playwright, trickster, and two editor runs, matched-n cloud-shape auditing shows differences in radius, anisotropy, orientation reliability, and filter sensitivity; trickster is least directionally constrained by anisotropy/orientation criteria but is not the largest matched-n cloud.
 
+Frozen no-label elicitation validation partially supports directional prompt design under strict prompt blinding. The 600-response Qwen/Qwen3-32B run passed 4/6 family thresholds at the preregistered 70% prompt-mean criterion, with PC3 bidirectional and PC2-positive strongest; PC1-positive and PC2-negative failed and should not be treated as clean elicitors without revision.
+
 ## Top Open Questions
 
-The highest-priority methodology question is whether activation geometry survives no-label prompts under matched extraction conditions. The bounded no-label activation stress test is designed but not launched.
+The bounded Paper 1.5 no-label elicitation validation has now run under matched direct-hook extraction conditions. It used the frozen 60-prompt packet, generated 600 independent Qwen/Qwen3-32B responses, and passed 4/6 preregistered family thresholds: PC1-negative, PC2-positive, PC3-positive, and PC3-negative passed; PC1-positive and PC2-negative failed.
 
 Evaluator-model sensitivity remains unresolved. Codex/GPT-5.5 was used as a pragmatic role-expression judge for trickster/editor; strict Lu-method identity requires `gpt-4.1-mini` scoring if API access permits.
 
@@ -51,6 +53,8 @@ PC1 is moderately well supported as careful/evaluative/procedural control, objec
 PC2 is currently best described as abstraction/integration/developmental structure. Lower PC2 is more abstract, world-model-like, integrated, and long-residence. Higher PC2 is more developmental, reactive, socially volatile, or less integrated. Coherent action under unresolved uncertainty is now a secondary behavioral expression, not the primary label.
 
 PC3 is moderately supported as cooperative-care/system-stabilizing versus antagonistic/disruptive/transgressive stance. The reading-based rater study gives PC3 r=0.690, but professional-subset counterexamples show that PC3 is not only reform, critique, or perturbation.
+
+The no-label elicitation validation provides partial activation-space support for the working PC interpretations under prompt-text-only conditions. It should be framed as a modest directional result, not proof: PC3 was strongest bidirectionally, PC2-positive worked while PC2-negative was mixed, and PC1-positive moved opposite the intended direction relative to the published assistant centroid.
 
 The cone hypothesis remains speculative. The geometry appears to narrow at high PC1 and widen as PC1 decreases, suggesting that externally specified objectives may constrain admissible configurations. This still needs quantitative variance-by-PC1 testing and sampling-artifact controls.
 
@@ -82,7 +86,7 @@ For cross-model ordered-axis trait-region inspection, use `research/outputs/mult
 
 1. Use `research/outputs/same_space_big_five_overlay/` as the evidence-bearing same-space Big Five visualization layer if Big Five overlays are needed; build blinded independent ratings only if independent psychometric-style validation is required.
 2. Run an independent-rater PC2 disentanglement study over the strongest PC1-matched pairs, explicitly separating abstraction, maturity/integration, expertise, uncertainty exposure, and coherent action under uncertainty.
-3. Launch the bounded no-label activation-space stress test once compute is approved, using stable anchors, bridge roles, sparse/outlier roles, assistant-adjacent roles, theatrical roles, and collective roles.
+3. Analyze no-label elicitation failures and off-axis movement before designing a second packet: especially PC1-positive prompts moving below the assistant centroid and PC2-negative prompts splitting 5/10 by prompt mean.
 4. Finish evaluator-sensitivity comparison between Codex/GPT-5.5 and `gpt-4.1-mini` if API quota allows.
 5. Distill SVD15 prompt-register components into concrete human-readable residual features and retest under the shared benchmark splits.
 5. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.

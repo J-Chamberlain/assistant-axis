@@ -1,0 +1,51 @@
+{
+  "experiment": "Paper 1.5 no-label elicitation validation",
+  "status": "prepared",
+  "created_utc": "2026-06-10T00:45:32.208614+00:00",
+  "model_id": "Qwen/Qwen3-32B",
+  "layer": 48,
+  "activation_source": "direct forward hook on model.model.layers[48]",
+  "target_geometry": "Qwen/Qwen3-32B persona PCA space",
+  "baseline": "published assistant role-vector centroid projected into the same PCA basis",
+  "frozen_prompt_packet": {
+    "csv": "research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.csv",
+    "json": "research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.json",
+    "report": "research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompt_packet_report.md",
+    "csv_sha256": "68a8d8b1dce277bf7b966ad6bbfdd653079177e3258a516954b0ba7f9c6aaab7",
+    "json_sha256": "f3d8ad62fa8c5bc07b3e04461329392b1741b368d42d54c62ebda0cb104c2abe",
+    "report_sha256": "78b5a051cd1e4ff2d080d82be3909ea151566b412318296adf64a0abf64c91e9",
+    "prompt_count": 60
+  },
+  "design": {
+    "families": 6,
+    "prompts_per_family": 10,
+    "repeats_per_prompt": 10,
+    "planned_response_count": 600,
+    "success_unit": "prompt mean",
+    "family_success_threshold": 0.7
+  },
+  "generation_settings": {
+    "max_new_tokens": 300,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "base_seed": 20260609,
+    "thinking_disabled": true
+  },
+  "blinding": {
+    "model_visible_fields": [
+      "prompt_text"
+    ],
+    "metadata_excluded": [
+      "prompt_id",
+      "pc",
+      "polarity",
+      "family",
+      "family_reasoning",
+      "source_note",
+      "predictions",
+      "success_criteria",
+      "PCA/geometry/axis labels"
+    ]
+  }
+}

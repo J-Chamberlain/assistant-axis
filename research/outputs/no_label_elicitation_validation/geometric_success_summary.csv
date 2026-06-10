@@ -1,0 +1,7 @@
+family,pc,polarity,criterion,minimum_success_rate,observed_success_rate,prompt_success_count,n_prompts,pass
+pc1_negative_open_expression,PC1,negative,PC1 negative prompt means move < 0 on target axis,0.7,1.0,10,10,True
+pc1_positive_answer_space_constraint,PC1,positive,PC1 positive prompt means move > 0 on target axis,0.7,0.0,0,10,False
+pc2_negative_integrated_abstraction,PC2,negative,PC2 negative prompt means move < 0 on target axis,0.7,0.5,5,10,False
+pc2_positive_situated_experience,PC2,positive,PC2 positive prompt means move > 0 on target axis,0.7,1.0,10,10,True
+pc3_negative_care_orientation,PC3,negative,PC3 negative prompt means move < 0 on target axis,0.7,0.9,9,10,True
+pc3_positive_internal_drive_consequence_disregard,PC3,positive,PC3 positive prompt means move > 0 on target axis,0.7,0.9,9,10,True

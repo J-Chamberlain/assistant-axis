@@ -1,0 +1,7 @@
+pc,polarity,family,target_axis,predicted_sign,n_prompts,n_responses,mean_delta_pc1,mean_delta_pc2,mean_delta_pc3,target_axis_mean_delta,prompt_success_count,prompt_success_rate,family_pass_70pct_threshold
+PC1,negative,pc1_negative_open_expression,delta_pc1,-1,10,100,-91.2125157462084,40.33324845715268,3.951408313532192,-91.2125157462084,10,1.0,True
+PC1,positive,pc1_positive_answer_space_constraint,delta_pc1,1,10,100,-53.05486008661212,26.79762516920931,3.422298633908209,-53.05486008661212,0,0.0,False
+PC2,negative,pc2_negative_integrated_abstraction,delta_pc2,-1,10,100,-19.621176608207758,-0.15648750668179545,7.473463337176314,-0.15648750668179545,5,0.5,False
+PC2,positive,pc2_positive_situated_experience,delta_pc2,1,10,100,-44.968032583388855,34.359345568655534,1.5733847525592712,34.359345568655534,10,1.0,True
+PC3,negative,pc3_negative_care_orientation,delta_pc3,-1,10,100,-95.86822249061821,8.387913741958952,-13.243118584909684,-13.243118584909684,9,0.9,True
+PC3,positive,pc3_positive_internal_drive_consequence_disregard,delta_pc3,1,10,100,-58.57785846725254,26.9606743522268,6.117023004384315,6.117023004384315,9,0.9,True

@@ -1,0 +1,20 @@
+{
+  "basis_source": "reconstructed_from_canonical_qwen_role_vectors_with_sign_alignment",
+  "vector_dir": "downloads/hf_vectors/qwen-3-32b/role_vectors",
+  "canonical_pca_path": "research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv",
+  "n_roles_used": 275,
+  "role_vector_shape": [
+    275,
+    5120
+  ],
+  "sign_alignment": [
+    -1.0,
+    1.0,
+    -1.0
+  ],
+  "max_abs_coordinate_reproduction_error": 1.2070328576641032e-06,
+  "mean_abs_coordinate_reproduction_error": 1.073701635910822e-07,
+  "assistant_baseline_pc1": 33.70280270327191,
+  "assistant_baseline_pc2": 3.4417180154398817,
+  "assistant_baseline_pc3": -5.155534089069803
+}

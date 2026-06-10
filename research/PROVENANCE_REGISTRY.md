@@ -626,3 +626,16 @@ Generating script: `research/outputs/occupation_prevalence_geometry_overlay/run_
 Dependent analyses: Exploratory future-work visualization of where occupation-matched professional persona roles sit in Qwen persona geometry; possible appendix/future-work figure, not Paper 1.5 core evidence.
 Current status: Complete descriptive visualization follow-up.
 Notes/caveats: The primary overlay includes exact and close occupational matches only; broad matches are optional in the interactive HTML; ambiguous and unmatched roles are excluded from highlighted layers. Point size reflects log BLS OEWS May 2025 employment count where inherited values are available, and missing employment values are marked explicitly. The overlay supports visual inspection of regional concentration but does not claim persona geometry reflects U.S. labor demographics, training-corpus frequency, or occupational prevalence.
+
+## No-label elicitation validation outputs
+
+Artifact: Paper 1.5 no-label elicitation validation run using the frozen v1 prompt packet.
+Location: `research/outputs/no_label_elicitation_validation/`
+Created by: Codex/GPT-5.5 orchestration plus RunPod Qwen/Qwen3-32B execution.
+Model used: Qwen/Qwen3-32B for response generation and activation extraction; Codex/GPT-5.5 for script authoring, orchestration, and report/index maintenance.
+Compute/runtime: RunPod pod `bcytpp3y184x5x`, A100 SXM 80GB, non-spot/on-demand, $1.49/hr, 200GB container disk. The successful generation process completed 600/600 responses in 9,434.2 seconds after environment setup; two earlier environment loader attempts and one projection-basis attempt failed before generation and were preserved as logs.
+Source inputs: `research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.csv`, `research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.json`, `research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompt_packet_report.md`, `research/visualizations/geometry_viz_data.json`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`, and downloaded `lu-christina/assistant-axis-vectors` Qwen role vectors under `downloads/hf_vectors/qwen-3-32b/role_vectors/`.
+Generating script: `research/outputs/no_label_elicitation_validation/run_no_label_elicitation_validation.py`
+Dependent analyses: Paper 1.5 no-label directional activation evidence, future failed-family/off-axis prompt redesign, and future comparison against within-role activation-cloud studies.
+Current status: Complete activation validation run; partial/modest support for directional no-label elicitation.
+Notes/caveats: Qwen saw only frozen `prompt_text` values in fresh one-message conversations. The run used direct `model.model.layers[48]` hook extraction, response-token mean pooling, and canonical PCA projection with max coordinate reproduction error 1.207e-06. Family-level pass/fail at the preregistered 70% prompt-mean threshold was mixed: PC1-negative, PC2-positive, PC3-positive, and PC3-negative passed; PC1-positive and PC2-negative failed. This does not prove PC semantics, isolate single-axis causality, or validate the failed prompt-family wording.

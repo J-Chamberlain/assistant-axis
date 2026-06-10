@@ -1,0 +1,30 @@
+Fetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]Fetching 17 files:   6%|▌         | 1/17 [00:31<08:20, 31.27s/it]Fetching 17 files:  12%|█▏        | 2/17 [00:33<03:32, 14.19s/it]Fetching 17 files:  18%|█▊        | 3/17 [00:35<02:01,  8.68s/it]Fetching 17 files:  29%|██▉       | 5/17 [00:36<00:46,  3.88s/it]Fetching 17 files:  53%|█████▎    | 9/17 [00:47<00:25,  3.22s/it]Fetching 17 files:  59%|█████▉    | 10/17 [01:04<00:40,  5.78s/it]Fetching 17 files:  71%|███████   | 12/17 [01:08<00:22,  4.43s/it]Fetching 17 files:  82%|████████▏ | 14/17 [01:08<00:09,  3.01s/it]Fetching 17 files: 100%|██████████| 17/17 [01:09<00:00,  1.85s/it]Fetching 17 files: 100%|██████████| 17/17 [01:09<00:00,  4.06s/it]
+Traceback (most recent call last):
+  File "/root/assistant-axis/research/outputs/no_label_elicitation_validation/run_no_label_elicitation_validation.py", line 932, in <module>
+    main()
+  File "/root/assistant-axis/research/outputs/no_label_elicitation_validation/run_no_label_elicitation_validation.py", line 927, in main
+    run_generation(prompt_rows)
+  File "/root/assistant-axis/research/outputs/no_label_elicitation_validation/run_no_label_elicitation_validation.py", line 494, in run_generation
+    tokenizer, model = load_model_and_tokenizer()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/assistant-axis/research/outputs/no_label_elicitation_validation/run_no_label_elicitation_validation.py", line 482, in load_model_and_tokenizer
+    model = AutoModelForCausalLM.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/auto/auto_factory.py", line 571, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/modeling_utils.py", line 309, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/modeling_utils.py", line 4508, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/qwen3/modeling_qwen3.py", line 660, in __init__
+    self.model = Qwen3Model(config)
+                 ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/qwen3/modeling_qwen3.py", line 389, in __init__
+    self.post_init()
+  File "/usr/local/lib/python3.11/dist-packages/transformers/modeling_utils.py", line 1969, in post_init
+    if v not in ALL_PARALLEL_STYLES:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'NoneType' is not iterable
