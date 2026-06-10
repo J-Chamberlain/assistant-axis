@@ -620,6 +620,15 @@ High truncation is tracked explicitly rather than silently filtered. Trickster t
 - Interpretation: the experiment supports a partial/modest no-label directional activation claim, strongest for PC3 and PC2-positive. It does not prove the PCs, isolate effects to one axis, or validate the PC1-positive/PC2-negative elicitation wording.
 - Next test: inspect the failed and off-axis prompt families before designing a revised no-label packet; do not reuse PC1-positive or PC2-negative families as clean elicitors without revision.
 
+### No-Label Geometry Diagnostic (2026-06-10)
+
+- Built `research/outputs/no_label_elicitation_geometry_diagnostics/` from the completed no-label validation outputs, frozen prompt packet metadata, the published assistant baseline, and Qwen role centroid geometry
+- The assistant baseline sits at PC1=33.703, the 83.3rd percentile of the Qwen role-centroid PC1 distribution, so positive-PC1 elicitation from the assistant baseline is partly saturation-constrained
+- The PC1-positive family did not merely saturate near the assistant point: it moved to mean PC1=-19.352, with mean delta PC1=-53.055, nearest improviser/bartender/prisoner/actor/loner territory
+- PC3-negative care-orientation prompts also pulled strongly negative on PC1 (mean delta PC1=-95.868), so successful PC3-negative elicitation should not be described as axis-isolated
+- `pc3_pos_05` moved mainly negative PC1 and positive PC2 (delta PC1=-88.495, delta PC2=+41.486, delta PC3=-0.598), supporting a wording diagnosis: it likely evoked self-cost/perseverance rather than consequence-to-others pressure
+- Interpretation: the PC1-positive failure is consistent with assistant-baseline saturation plus prompt wording that recruited ordinary explanatory/situated response modes; revised no-label prompt design should inspect family means against role-centroid context before rerunning activations
+
 The next editor experiment is blocked on revised anchoring methodology. More identical editor rollouts are unlikely to answer the failure mode cleanly.
 
 Strict Lu-method replication remains blocked unless `gpt-4.1-mini` judge scoring is restored and run with documented filter choices.

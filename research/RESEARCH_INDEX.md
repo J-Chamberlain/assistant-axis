@@ -125,6 +125,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/persona_cloud_geometry_audit/`: activation-cloud geometry audit across amateur, playwright, trickster, and editor runs, including cloud size, anisotropy, orientation reliability, matched-n bootstrap sample-size sensitivity, and all/filtered comparisons.
 - `research/outputs/occupation_population_persona_join/`: exploratory BLS OEWS May 2025 occupation-population join for professional persona roles, with conservative role-to-SOC mapping, partial BLS API-return coverage, employment/wage correlations, and explicit non-core Paper 1.5 caveats.
 - `research/outputs/occupation_prevalence_geometry_overlay/`: descriptive Qwen PC1 x PC2 occupation-prevalence overlay showing exact/close occupation-matched roles, employment-scaled points, optional broad-match view, sorted table, and cluster summary; future-work/appendix material only.
+- `research/outputs/no_label_elicitation_geometry_diagnostics/`: diagnostic overlays and coordinate tables for the no-label elicitation validation, placing assistant baseline, six family means, prompt means, and Qwen role centroids in shared PC space.
 - `research/tools/activation_cloud_suite/`: reusable no-GPU activation-cloud analysis scaffold with config template, judge rubric, README, and runner stub for future persona-cloud pilots.
 - `research/outputs/paper15_clean_repo_copy_plan/`: copy plan for a future clean `assistant-axis-paper15-core` repo, including artifact CSV, report spine map, claim traceability table, visualization inventory, proposed tree, and excluded archive index.
 - `research/notebooks/paper15_core_analysis_walkthrough.ipynb`: first-pass Paper 1.5 executable appendix / notebook walkthrough for canonical pre-H100 analysis.
@@ -152,7 +153,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 3. Run blinded no-label matched-pair ratings inside the muted-PC1 and within-cluster PC2-extremes bands to test whether situated-immediacy/formative-state versus integrated-stability is recoverable without coordinates.
 4. If cross-model visualization work proceeds, start with model switching or cluster-overlap/alluvial views; avoid uncaveated PC3 arrows until alignment correction exists.
 5. Evaluator-sensitivity comparison between Codex/GPT-5.5 Standard and `gpt-4.1-mini`.
-6. Bounded no-label activation-space stress test on selected anchors, bridge roles, assistant-adjacent roles, and theatrical/fantastical roles.
+6. Revised no-label elicitation packet design using `research/outputs/no_label_elicitation_geometry_diagnostics/`, especially the PC1-positive assistant-baseline saturation/generic-helpful failure mode and the `pc3_pos_05` self-cost versus consequence-to-others confound.
 7. SVD15 distillation into concrete text-grounded residual features and retest under the shared splits.
 8. Stage-1 role-inventory uncertainty analysis across OpenAI and Claude-generated inventories, synchronized through GitHub.
 9. Paper 2 local centroid perturbation around Trickster, Actor, Therapist, and Spy.

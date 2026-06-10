@@ -639,3 +639,15 @@ Generating script: `research/outputs/no_label_elicitation_validation/run_no_labe
 Dependent analyses: Paper 1.5 no-label directional activation evidence, future failed-family/off-axis prompt redesign, and future comparison against within-role activation-cloud studies.
 Current status: Complete activation validation run; partial/modest support for directional no-label elicitation.
 Notes/caveats: Qwen saw only frozen `prompt_text` values in fresh one-message conversations. The run used direct `model.model.layers[48]` hook extraction, response-token mean pooling, and canonical PCA projection with max coordinate reproduction error 1.207e-06. Family-level pass/fail at the preregistered 70% prompt-mean threshold was mixed: PC1-negative, PC2-positive, PC3-positive, and PC3-negative passed; PC1-positive and PC2-negative failed. This does not prove PC semantics, isolate single-axis causality, or validate the failed prompt-family wording.
+
+## No-label elicitation geometry diagnostics
+
+Artifact: Diagnostic geometry overlays and coordinate tables for the completed no-label elicitation validation run.
+Location: `research/outputs/no_label_elicitation_geometry_diagnostics/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis, visualization, and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, prompt generation, or projection reruns were performed.
+Source inputs: `research/outputs/no_label_elicitation_validation/family_mean_results.csv`, `research/outputs/no_label_elicitation_validation/prompt_mean_results.csv`, `research/outputs/no_label_elicitation_validation/geometric_success_summary.csv`, `research/outputs/no_label_elicitation_validation/projection_basis_debug.json`, `research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.csv`, and `research/visualizations/geometry_viz_data.json`.
+Generating script: `research/outputs/no_label_elicitation_geometry_diagnostics/run_no_label_elicitation_geometry_diagnostics.py`
+Dependent analyses: Paper 1.5 no-label validation interpretation, revised no-label prompt design, and future Paper 2 prompt-to-local-manifold diagnostics.
+Current status: Complete diagnostic analysis of existing validation outputs; supporting/interpretive evidence, not a new activation experiment.
+Notes/caveats: The diagnostic found the published assistant baseline at the 83.3rd percentile of role centroids on Qwen PC1, consistent with a partial positive-PC1 saturation explanation. However, the PC1-positive family moved strongly negative rather than merely failing to move farther positive, so the failed packet likely elicited ordinary explanatory/helpful or situated response modes. `pc3_pos_05` moved mainly negative PC1 and positive PC2, supporting the interpretation that it foregrounded self-cost/perseverance rather than consequence-to-others pressure.

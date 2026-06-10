@@ -28,9 +28,13 @@ Local activation-cloud geometry now supports treating personas as response-state
 
 Frozen no-label elicitation validation partially supports directional prompt design under strict prompt blinding. The 600-response Qwen/Qwen3-32B run passed 4/6 family thresholds at the preregistered 70% prompt-mean criterion, with PC3 bidirectional and PC2-positive strongest; PC1-positive and PC2-negative failed and should not be treated as clean elicitors without revision.
 
+The no-label geometry diagnostic clarifies the PC1-positive failure mode. The published assistant baseline is already high on PC1 (33.703; 83.3rd percentile among Qwen role centroids), but the failed PC1-positive family did not merely saturate there: it moved to mean PC1=-19.352, nearest improviser/bartender/prisoner/actor/loner territory. Treat this as assistant-baseline saturation plus prompt wording that elicited ordinary explanatory/situated response modes.
+
 ## Top Open Questions
 
 The bounded Paper 1.5 no-label elicitation validation has now run under matched direct-hook extraction conditions. It used the frozen 60-prompt packet, generated 600 independent Qwen/Qwen3-32B responses, and passed 4/6 preregistered family thresholds: PC1-negative, PC2-positive, PC3-positive, and PC3-negative passed; PC1-positive and PC2-negative failed.
+
+The no-label geometry diagnostic under `research/outputs/no_label_elicitation_geometry_diagnostics/` should be consulted before redesigning the failed families. It shows PC3-negative care prompts strongly couple with negative PC1, and `pc3_pos_05` moved negative PC1 / positive PC2 rather than positive PC3, likely because it foregrounded self-cost/perseverance instead of consequences to others.
 
 Evaluator-model sensitivity remains unresolved. Codex/GPT-5.5 was used as a pragmatic role-expression judge for trickster/editor; strict Lu-method identity requires `gpt-4.1-mini` scoring if API access permits.
 
@@ -55,6 +59,8 @@ PC2 is currently best described as abstraction/integration/developmental structu
 PC3 is moderately supported as cooperative-care/system-stabilizing versus antagonistic/disruptive/transgressive stance. The reading-based rater study gives PC3 r=0.690, but professional-subset counterexamples show that PC3 is not only reform, critique, or perturbation.
 
 The no-label elicitation validation provides partial activation-space support for the working PC interpretations under prompt-text-only conditions. It should be framed as a modest directional result, not proof: PC3 was strongest bidirectionally, PC2-positive worked while PC2-negative was mixed, and PC1-positive moved opposite the intended direction relative to the published assistant centroid.
+
+The PC1-positive no-label failure should not be described as pure ceiling saturation. The assistant baseline is already high PC1, but the family mean moved substantially negative on PC1, so prompt wording and generic helpful-answer dynamics are likely part of the failure.
 
 The cone hypothesis remains speculative. The geometry appears to narrow at high PC1 and widen as PC1 decreases, suggesting that externally specified objectives may constrain admissible configurations. This still needs quantitative variance-by-PC1 testing and sampling-artifact controls.
 
@@ -86,7 +92,7 @@ For cross-model ordered-axis trait-region inspection, use `research/outputs/mult
 
 1. Use `research/outputs/same_space_big_five_overlay/` as the evidence-bearing same-space Big Five visualization layer if Big Five overlays are needed; build blinded independent ratings only if independent psychometric-style validation is required.
 2. Run an independent-rater PC2 disentanglement study over the strongest PC1-matched pairs, explicitly separating abstraction, maturity/integration, expertise, uncertainty exposure, and coherent action under uncertainty.
-3. Analyze no-label elicitation failures and off-axis movement before designing a second packet: especially PC1-positive prompts moving below the assistant centroid and PC2-negative prompts splitting 5/10 by prompt mean.
+3. Use `research/outputs/no_label_elicitation_geometry_diagnostics/` before designing a second no-label packet: revise PC1-positive prompts against the assistant-baseline saturation/generic-helpful failure mode, separate self-cost from consequence-to-others pressure in PC3-positive prompts, and treat PC2-negative as mixed until prompt-level context is inspected.
 4. Finish evaluator-sensitivity comparison between Codex/GPT-5.5 and `gpt-4.1-mini` if API quota allows.
 5. Distill SVD15 prompt-register components into concrete human-readable residual features and retest under the shared benchmark splits.
 5. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.
