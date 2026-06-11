@@ -629,6 +629,14 @@ High truncation is tracked explicitly rather than silently filtered. Trickster t
 - `pc3_pos_05` moved mainly negative PC1 and positive PC2 (delta PC1=-88.495, delta PC2=+41.486, delta PC3=-0.598), supporting a wording diagnosis: it likely evoked self-cost/perseverance rather than consequence-to-others pressure
 - Interpretation: the PC1-positive failure is consistent with assistant-baseline saturation plus prompt wording that recruited ordinary explanatory/situated response modes; revised no-label prompt design should inspect family means against role-centroid context before rerunning activations
 
+### No-Label Baseline Power and Assistant-Centroid Provenance (2026-06-11)
+
+- Analyzed `research/outputs/no_label_elicitation_validation/response_level_results.csv` to estimate repeat-level variance for the planned 240-question bare-Qwen extraction-question baseline
+- Within-prompt sigma distributions across 60 prompts were PC1 min/p25/median/p75/max = 1.327/2.684/3.347/4.790/13.631, PC2 = 1.155/2.685/4.010/4.854/7.963, and PC3 = 0.766/2.345/3.165/3.794/9.517
+- PC3-positive prompts were systematically higher-variance than other families, with mean sigma PC1=7.399, PC2=5.406, PC3=4.901; `pc3_pos_05` was not especially high-variance, so its prior anomaly is directional rather than sampling-noise driven
+- The observed no-label run timing was 9,434.2 seconds for 600 generations, or 15.724 seconds/generation; n=5 over 240 extraction questions implies 1,200 generations and approximately 5.24 hours under the same timing
+- The assistant centroid used in validation is the released role-conditioned `assistant` vector reconstructed from Qwen role tensors, not a bare-Qwen baseline; a 240-question bare-Qwen run would complement rather than duplicate it
+
 The next editor experiment is blocked on revised anchoring methodology. More identical editor rollouts are unlikely to answer the failure mode cleanly.
 
 Strict Lu-method replication remains blocked unless `gpt-4.1-mini` judge scoring is restored and run with documented filter choices.
