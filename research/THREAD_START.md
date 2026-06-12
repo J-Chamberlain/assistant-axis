@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-06-10
+Last updated: 2026-06-11
 
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 
@@ -30,11 +30,15 @@ Frozen no-label elicitation validation partially supports directional prompt des
 
 The no-label geometry diagnostic clarifies the PC1-positive failure mode. The published assistant baseline is already high on PC1 (33.703; 83.3rd percentile among Qwen role centroids), but the failed PC1-positive family did not merely saturate there: it moved to mean PC1=-19.352, nearest improviser/bartender/prisoner/actor/loner territory. Treat this as assistant-baseline saturation plus prompt wording that elicited ordinary explanatory/situated response modes.
 
+The assistant baseline/centroid used in Paper 1.5 is now provenance-audited. It is the released Qwen `assistant` role/persona vector selected from reconstructed canonical role coordinates, not bare Qwen, not `default_vector.pt`, and not `assistant_axis.pt`. Future no-label interpretation should say "movement relative to the assistant role centroid" unless a separate bare-Qwen/default baseline is used.
+
 ## Top Open Questions
 
 The bounded Paper 1.5 no-label elicitation validation has now run under matched direct-hook extraction conditions. It used the frozen 60-prompt packet, generated 600 independent Qwen/Qwen3-32B responses, and passed 4/6 preregistered family thresholds: PC1-negative, PC2-positive, PC3-positive, and PC3-negative passed; PC1-positive and PC2-negative failed.
 
 The no-label geometry diagnostic under `research/outputs/no_label_elicitation_geometry_diagnostics/` should be consulted before redesigning the failed families. It shows PC3-negative care prompts strongly couple with negative PC1, and `pc3_pos_05` moved negative PC1 / positive PC2 rather than positive PC3, likely because it foregrounded self-cost/perseverance instead of consequences to others.
+
+The 240-question bare-Qwen extraction-question baseline is now a foundational prerequisite for future no-label elicitation interpretation, not optional exploratory cleanup. The existing assistant star/centroid is role-conditioned, so the planned baseline is needed to determine the instrument's default/bare response distribution.
 
 Evaluator-model sensitivity remains unresolved. Codex/GPT-5.5 was used as a pragmatic role-expression judge for trickster/editor; strict Lu-method identity requires `gpt-4.1-mini` scoring if API access permits.
 
@@ -60,7 +64,7 @@ PC3 is moderately supported as cooperative-care/system-stabilizing versus antago
 
 The no-label elicitation validation provides partial activation-space support for the working PC interpretations under prompt-text-only conditions. It should be framed as a modest directional result, not proof: PC3 was strongest bidirectionally, PC2-positive worked while PC2-negative was mixed, and PC1-positive moved opposite the intended direction relative to the published assistant centroid.
 
-The PC1-positive no-label failure should not be described as pure ceiling saturation. The assistant baseline is already high PC1, but the family mean moved substantially negative on PC1, so prompt wording and generic helpful-answer dynamics are likely part of the failure.
+The PC1-positive no-label failure should not be described as pure ceiling saturation. The role-conditioned assistant baseline is already high PC1, but the family mean moved substantially negative on PC1, so prompt wording and generic helpful-answer dynamics are likely part of the failure. Do not generalize this as bare-Qwen PC1 saturation until the 240-question bare baseline is measured.
 
 The cone hypothesis remains speculative. The geometry appears to narrow at high PC1 and widen as PC1 decreases, suggesting that externally specified objectives may constrain admissible configurations. This still needs quantitative variance-by-PC1 testing and sampling-artifact controls.
 
@@ -93,7 +97,8 @@ For cross-model ordered-axis trait-region inspection, use `research/outputs/mult
 1. Use `research/outputs/same_space_big_five_overlay/` as the evidence-bearing same-space Big Five visualization layer if Big Five overlays are needed; build blinded independent ratings only if independent psychometric-style validation is required.
 2. Run an independent-rater PC2 disentanglement study over the strongest PC1-matched pairs, explicitly separating abstraction, maturity/integration, expertise, uncertainty exposure, and coherent action under uncertainty.
 3. Use `research/outputs/no_label_elicitation_geometry_diagnostics/` before designing a second no-label packet: revise PC1-positive prompts against the assistant-baseline saturation/generic-helpful failure mode, separate self-cost from consequence-to-others pressure in PC3-positive prompts, and treat PC2-negative as mixed until prompt-level context is inspected.
-4. Finish evaluator-sensitivity comparison between Codex/GPT-5.5 and `gpt-4.1-mini` if API quota allows.
-5. Distill SVD15 prompt-register components into concrete human-readable residual features and retest under the shared benchmark splits.
-5. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.
-6. Extend the activation-cloud geometry audit to a balanced role set before making strong claims about persona-specific cloud size, anisotropy, or orientation.
+4. Run the 240-question bare-Qwen/default extraction-question baseline before treating future no-label elicitation results as movement from unconditioned model behavior; the current Paper 1.5 assistant centroid is role-conditioned.
+5. Finish evaluator-sensitivity comparison between Codex/GPT-5.5 and `gpt-4.1-mini` if API quota allows.
+6. Distill SVD15 prompt-register components into concrete human-readable residual features and retest under the shared benchmark splits.
+7. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.
+8. Extend the activation-cloud geometry audit to a balanced role set before making strong claims about persona-specific cloud size, anisotropy, or orientation.

@@ -1,0 +1,6 @@
+artifact_path,artifact_type,status,model_used,description
+research/outputs/assistant_centroid_provenance_audit/assistant_centroid_provenance_report.md,markdown,active,GPT-5.5,Primary assistant-centroid provenance audit report.
+research/outputs/assistant_centroid_provenance_audit/assistant_centroid_dependency_trace.csv,csv,active,GPT-5.5,Trace table linking the no-label assistant baseline to source tensors and scripts.
+research/outputs/assistant_centroid_provenance_audit/assistant_centroid_artifact_inventory.csv,csv,active,GPT-5.5,Input/output inventory for the assistant centroid audit.
+research/outputs/assistant_centroid_provenance_audit/assistant_centroid_interpretation_assessment.md,markdown,active,GPT-5.5,Observed/inferred/speculative/unknown interpretation assessment for the centroid provenance.
+research/outputs/assistant_centroid_provenance_audit/artifact_inventory.csv,csv,active,GPT-5.5,Inventory of files created by this audit.

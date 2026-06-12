@@ -637,6 +637,14 @@ High truncation is tracked explicitly rather than silently filtered. Trickster t
 - The observed no-label run timing was 9,434.2 seconds for 600 generations, or 15.724 seconds/generation; n=5 over 240 extraction questions implies 1,200 generations and approximately 5.24 hours under the same timing
 - The assistant centroid used in validation is the released role-conditioned `assistant` vector reconstructed from Qwen role tensors, not a bare-Qwen baseline; a 240-question bare-Qwen run would complement rather than duplicate it
 
+### Assistant Centroid Provenance Audit (2026-06-11)
+
+- Built `research/outputs/assistant_centroid_provenance_audit/` to trace the assistant centroid used in Paper 1.5 no-label validation, geometry diagnostics, and projection pipelines
+- The no-label validation runner selects `assistant_baseline = reconstructed[names.index("assistant")]` from reconstructed canonical Qwen role coordinates loaded from `downloads/hf_vectors/qwen-3-32b/role_vectors`
+- The assistant baseline is PC1=33.7028027033, PC2=3.441718015, PC3=-5.155533990 and matches the `assistant` row in `canonical_activation_pca3d.csv` and `geometry_viz_data.json`
+- This centroid is not a measurement of bare Qwen, not `downloads/hf_vectors/qwen-3-32b/default_vector.pt`, and not `downloads/hf_vectors/qwen-3-32b/assistant_axis.pt`
+- Methodological implication: existing no-label validation deltas should be described as movement relative to the inherited assistant role centroid; the 240-question bare-Qwen/default extraction-question baseline is foundational before future elicitation experiments are interpreted as movement from unconditioned model behavior
+
 The next editor experiment is blocked on revised anchoring methodology. More identical editor rollouts are unlikely to answer the failure mode cleanly.
 
 Strict Lu-method replication remains blocked unless `gpt-4.1-mini` judge scoring is restored and run with documented filter choices.
