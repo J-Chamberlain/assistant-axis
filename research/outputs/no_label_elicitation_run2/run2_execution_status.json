@@ -1,0 +1,10 @@
+{
+  "status": "blocked_before_generation",
+  "reason": "RunPod API key is not configured in ~/.runpod/config.toml or RUNPOD_API_KEY, and this local machine has no approved 80GB GPU; generation was not launched.",
+  "updated_utc": "2026-06-13T10:59:16.530052+00:00",
+  "planned_generations": 1690,
+  "completed_generations": 0,
+  "error_count": 0,
+  "runpod_api_key_configured": false,
+  "local_gpu_available": false
+}

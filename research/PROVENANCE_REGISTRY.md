@@ -663,3 +663,16 @@ Generating script: Direct source audit; no standalone generation script required
 Dependent analyses: Future no-label elicitation Run 2 design, 240-question bare-Qwen baseline interpretation, PC1-positive failure interpretation, PC2-negative prompt-redesign criteria, and Paper 1.5 methodological caveats.
 Current status: Complete methodological provenance audit.
 Notes/caveats: The audit finds that the current assistant centroid is the released Qwen `assistant` role/persona vector selected from reconstructed canonical role coordinates. It is not a measurement of bare Qwen, not the released `default_vector.pt`, and not `assistant_axis.pt`. Existing no-label validation deltas should therefore be described as movement relative to the assistant role centroid. The 240-question bare-Qwen/default extraction-question baseline is foundational before future elicitation experiments are interpreted as movement from unconditioned model behavior.
+
+## No-label elicitation Run 2 preflight package
+
+Artifact: Prepared Run 2 no-label elicitation validation package, including bare-Qwen baseline catalog and revised/minimal-pair manipulation prompts.
+Location: `research/outputs/no_label_elicitation_run2/`
+Created by: Codex/GPT-5.5.
+Model used: Script-author, preflight-analysis, and report-author model GPT-5.5; Qwen/Qwen3-32B generation was planned but not run.
+Compute/runtime: No pod launched. `runpodctl` is installed locally but has no configured API key in `~/.runpod/config.toml` or `RUNPOD_API_KEY`; local machine has no approved 80GB+ GPU. Completed generations: 0/1690.
+Source inputs: User-specified Run 2 prompt text and success criteria; `data/extraction_questions.jsonl`; Run 1 measurement convention from `research/outputs/no_label_elicitation_validation/run_no_label_elicitation_validation.py`; assistant-centroid caveat from `research/outputs/assistant_centroid_provenance_audit/`; canonical startup/navigation files.
+Generating script: `research/outputs/no_label_elicitation_run2/run_no_label_elicitation_run2.py`.
+Dependent analyses: Future Run 2 execution, bare-Qwen 240-question baseline, revised PC1+/PC2- elicitation testing, PC1/PC2/PC3 minimal-pair analysis, and Paper 1.5 no-label validation refinement.
+Current status: Prepared and blocked before generation.
+Notes/caveats: The preflight catalog has 289 prompt rows and 1,690 planned generations: 1,200 bare-Qwen baseline generations, 100 PC1+ replacement generations, 100 PC2- replacement generations, 90 PC3 minimal-pair generations, 100 PC1 minimal-pair generations, and 100 PC2 minimal-pair generations. The runner preserves per-generation JSONL and response CSV records, uses direct `model.model.layers[48]` hook extraction with response-token mean pooling and the same canonical Qwen PCA projection basis as Run 1, and writes activation vectors as local gitignored shards. No empirical Run 2 results exist yet.

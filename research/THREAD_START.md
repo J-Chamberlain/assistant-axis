@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-06-11
+Last updated: 2026-06-13
 
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 
@@ -32,6 +32,8 @@ The no-label geometry diagnostic clarifies the PC1-positive failure mode. The pu
 
 The assistant baseline/centroid used in Paper 1.5 is now provenance-audited. It is the released Qwen `assistant` role/persona vector selected from reconstructed canonical role coordinates, not bare Qwen, not `default_vector.pt`, and not `assistant_axis.pt`. Future no-label interpretation should say "movement relative to the assistant role centroid" unless a separate bare-Qwen/default baseline is used.
 
+Run 2 of the no-label elicitation program is archived but not executed. The package under `research/outputs/no_label_elicitation_run2/` contains the full 289-row prompt catalog, 1,690-generation plan, manifest, blinding/independence docs, and resumable runner; execution is blocked because `runpodctl` has no configured API key and no local 80GB+ GPU is available.
+
 ## Top Open Questions
 
 The bounded Paper 1.5 no-label elicitation validation has now run under matched direct-hook extraction conditions. It used the frozen 60-prompt packet, generated 600 independent Qwen/Qwen3-32B responses, and passed 4/6 preregistered family thresholds: PC1-negative, PC2-positive, PC3-positive, and PC3-negative passed; PC1-positive and PC2-negative failed.
@@ -39,6 +41,8 @@ The bounded Paper 1.5 no-label elicitation validation has now run under matched 
 The no-label geometry diagnostic under `research/outputs/no_label_elicitation_geometry_diagnostics/` should be consulted before redesigning the failed families. It shows PC3-negative care prompts strongly couple with negative PC1, and `pc3_pos_05` moved negative PC1 / positive PC2 rather than positive PC3, likely because it foregrounded self-cost/perseverance instead of consequences to others.
 
 The 240-question bare-Qwen extraction-question baseline is now a foundational prerequisite for future no-label elicitation interpretation, not optional exploratory cleanup. The existing assistant star/centroid is role-conditioned, so the planned baseline is needed to determine the instrument's default/bare response distribution.
+
+Before discussing Run 2 results, verify that `research/outputs/no_label_elicitation_run2/run2_execution_status.json` no longer says `blocked_before_generation` and that `run2_response_level_results.csv` contains 1,690 successful rows. As of 2026-06-13, total completed generations are 0.
 
 Evaluator-model sensitivity remains unresolved. Codex/GPT-5.5 was used as a pragmatic role-expression judge for trickster/editor; strict Lu-method identity requires `gpt-4.1-mini` scoring if API access permits.
 
@@ -97,7 +101,7 @@ For cross-model ordered-axis trait-region inspection, use `research/outputs/mult
 1. Use `research/outputs/same_space_big_five_overlay/` as the evidence-bearing same-space Big Five visualization layer if Big Five overlays are needed; build blinded independent ratings only if independent psychometric-style validation is required.
 2. Run an independent-rater PC2 disentanglement study over the strongest PC1-matched pairs, explicitly separating abstraction, maturity/integration, expertise, uncertainty exposure, and coherent action under uncertainty.
 3. Use `research/outputs/no_label_elicitation_geometry_diagnostics/` before designing a second no-label packet: revise PC1-positive prompts against the assistant-baseline saturation/generic-helpful failure mode, separate self-cost from consequence-to-others pressure in PC3-positive prompts, and treat PC2-negative as mixed until prompt-level context is inspected.
-4. Run the 240-question bare-Qwen/default extraction-question baseline before treating future no-label elicitation results as movement from unconditioned model behavior; the current Paper 1.5 assistant centroid is role-conditioned.
+4. Configure `RUNPOD_API_KEY` or `~/.runpod/config.toml`, then execute `research/outputs/no_label_elicitation_run2/run_no_label_elicitation_run2.py --run` on a non-spot 80GB+ RunPod at <=$2.50/hr; preserve outputs before termination.
 5. Finish evaluator-sensitivity comparison between Codex/GPT-5.5 and `gpt-4.1-mini` if API quota allows.
 6. Distill SVD15 prompt-register components into concrete human-readable residual features and retest under the shared benchmark splits.
 7. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.

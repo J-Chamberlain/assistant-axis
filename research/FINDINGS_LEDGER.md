@@ -645,6 +645,14 @@ High truncation is tracked explicitly rather than silently filtered. Trickster t
 - This centroid is not a measurement of bare Qwen, not `downloads/hf_vectors/qwen-3-32b/default_vector.pt`, and not `downloads/hf_vectors/qwen-3-32b/assistant_axis.pt`
 - Methodological implication: existing no-label validation deltas should be described as movement relative to the inherited assistant role centroid; the 240-question bare-Qwen/default extraction-question baseline is foundational before future elicitation experiments are interpreted as movement from unconditioned model behavior
 
+### No-Label Elicitation Run 2 Preflight Blocker (2026-06-13)
+
+- Archived `research/outputs/no_label_elicitation_run2/`, a full Run 2 package for the no-label elicitation validation program
+- Preflight catalog contains 289 prompt rows and exactly 1,690 planned generations: 1,200 bare-Qwen extraction-question baseline generations, 200 replacement-family generations, 290 minimal-pair generations
+- The runner is designed for the same Qwen/Qwen3-32B layer-48 direct-hook extraction, response-token mean pooling, and canonical Qwen PCA projection basis as the 600-generation validation run
+- Prompt blinding and generation independence docs are written: Qwen-visible input is only prompt text or extraction question in one fresh user message; no system prompt, labels, metadata, hypotheses, or prior history are included
+- Execution did not start because `runpodctl` reports no configured API key and the local machine has no approved 80GB+ GPU; completed generations are 0/1690 and no empirical Run 2 result should be claimed
+
 The next editor experiment is blocked on revised anchoring methodology. More identical editor rollouts are unlikely to answer the failure mode cleanly.
 
 Strict Lu-method replication remains blocked unless `gpt-4.1-mini` judge scoring is restored and run with documented filter choices.

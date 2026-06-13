@@ -1,0 +1,77 @@
+{
+  "experiment": "Paper 1.5 no-label elicitation validation Run 2",
+  "status": "blocked_before_generation",
+  "created_utc": "2026-06-13T10:59:16.529670+00:00",
+  "script_author_model": "GPT-5.5",
+  "model_id": "Qwen/Qwen3-32B",
+  "target_geometry": "Qwen/Qwen3-32B persona PCA space",
+  "layer": 48,
+  "activation_source": "direct forward hook on model.model.layers[48]",
+  "pooling": "mean over generated assistant response tokens only",
+  "projection_basis": {
+    "same_as_run1": true,
+    "canonical_pca_path": "research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv",
+    "role_vector_dir": "downloads/hf_vectors/qwen-3-32b/role_vectors"
+  },
+  "generation_settings": {
+    "max_new_tokens": 300,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "base_seed": 20260613,
+    "thinking_disabled": true
+  },
+  "planned_prompt_rows": 289,
+  "planned_generations": 1690,
+  "component_prompt_counts": {
+    "bare_qwen_240_question_baseline": 240,
+    "pc1_positive_replacement_family": 10,
+    "pc2_negative_replacement_family": 10,
+    "pc3_minimal_pairs": 9,
+    "pc1_minimal_pairs": 10,
+    "pc2_minimal_pairs": 10
+  },
+  "component_generation_counts": {
+    "bare_qwen_240_question_baseline": 1200,
+    "pc1_positive_replacement_family": 100,
+    "pc2_negative_replacement_family": 100,
+    "pc3_minimal_pairs": 90,
+    "pc1_minimal_pairs": 100,
+    "pc2_minimal_pairs": 100
+  },
+  "bare_qwen_condition": {
+    "sample_count": 1200,
+    "source": "data/extraction_questions.jsonl",
+    "system_prompt": "absent",
+    "model_visible_message_structure": [
+      {
+        "role": "user",
+        "content": "<extraction question>"
+      }
+    ],
+    "metadata_visible_to_model": false
+  },
+  "blinding": {
+    "model_visible_fields": [
+      "prompt_text"
+    ],
+    "excluded_from_model_visible_input": [
+      "component",
+      "prompt_id",
+      "PC labels",
+      "polarity labels",
+      "hypotheses",
+      "success criteria",
+      "metadata",
+      "reasoning paragraphs",
+      "references to PCA/geometry/axes/traits/personas/roles/experiments"
+    ]
+  },
+  "runpod_constraints": {
+    "no_spot_pod": true,
+    "minimum_vram_gb": 80,
+    "max_hourly_cost_usd_without_confirmation": 2.5,
+    "no_openai_key_on_pod": true,
+    "no_judge_calls_on_pod": true
+  }
+}

@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-06-12T00:36:32Z
-Last commit when generated: dc22f2c
+Updated UTC: 2026-06-13T11:00:00Z
+Last commit when generated: 83f8dfa
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3685
+- active analyses: 3703
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 10
@@ -37,7 +37,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Status Counts
 
-- active: 4384
+- active: 4402
 - archive: 11
 - canonical: 21
 - deprecated: 24
@@ -51,7 +51,7 @@ Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVEN
 
 ### Active Analyses
 
-Most active analyses live under `research/outputs/`, `research/assistant_axis_methodology/`, and `research/q2_stability/qwen/outputs/`. Prefer the directory-level report files first, then inspect CSV/JSON support files only as needed. The exploratory occupation-population persona join lives under `research/outputs/occupation_population_persona_join/` and is marked future-work/appendix material, not Paper 1.5 core evidence. Its descriptive geometry overlay lives under `research/outputs/occupation_prevalence_geometry_overlay/`. The active second-generation role-free probe packet for future PC1/PC2 directional pilot inspection lives under `research/outputs/role_free_directional_prompt_pilot_v2/`; it is prompt design only, with no activation run. The first packet under `research/outputs/role_free_directional_prompt_pilot/` is retained as the superseded comparison baseline. The true role-free directional steering packet lives under `research/outputs/role_free_directional_steering_prompts/`; it contains response-guidance instructions, not probe scenarios. The canonical v1 no-label elicitation prompt packet for Paper 1.5 manual review lives under `research/outputs/no_label_elicitation_prompt_packet_v1/`; it freezes 60 chat-developed prompts. The completed 600-response activation validation using that packet lives under `research/outputs/no_label_elicitation_validation/`. The diagnostic geometry follow-up for that validation lives under `research/outputs/no_label_elicitation_geometry_diagnostics/` and should be consulted before redesigning failed/off-axis no-label prompt families. The assistant-centroid provenance audit lives under `research/outputs/assistant_centroid_provenance_audit/`; it establishes that the current Paper 1.5 assistant baseline is the released role-conditioned `assistant` centroid, not bare Qwen, making the 240-question bare-Qwen/default baseline foundational for future no-label interpretation.
+Most active analyses live under `research/outputs/`, `research/assistant_axis_methodology/`, and `research/q2_stability/qwen/outputs/`. Prefer the directory-level report files first, then inspect CSV/JSON support files only as needed. The exploratory occupation-population persona join lives under `research/outputs/occupation_population_persona_join/` and is marked future-work/appendix material, not Paper 1.5 core evidence. Its descriptive geometry overlay lives under `research/outputs/occupation_prevalence_geometry_overlay/`. The active second-generation role-free probe packet for future PC1/PC2 directional pilot inspection lives under `research/outputs/role_free_directional_prompt_pilot_v2/`; it is prompt design only, with no activation run. The first packet under `research/outputs/role_free_directional_prompt_pilot/` is retained as the superseded comparison baseline. The true role-free directional steering packet lives under `research/outputs/role_free_directional_steering_prompts/`; it contains response-guidance instructions, not probe scenarios. The canonical v1 no-label elicitation prompt packet for Paper 1.5 manual review lives under `research/outputs/no_label_elicitation_prompt_packet_v1/`; it freezes 60 chat-developed prompts. The completed 600-response activation validation using that packet lives under `research/outputs/no_label_elicitation_validation/`. The diagnostic geometry follow-up for that validation lives under `research/outputs/no_label_elicitation_geometry_diagnostics/` and should be consulted before redesigning failed/off-axis no-label prompt families. The assistant-centroid provenance audit lives under `research/outputs/assistant_centroid_provenance_audit/`; it establishes that the current Paper 1.5 assistant baseline is the released role-conditioned `assistant` centroid, not bare Qwen, making the 240-question bare-Qwen/default baseline foundational for future no-label interpretation. The prepared Run 2 no-label elicitation package lives under `research/outputs/no_label_elicitation_run2/`; it is blocked before generation until RunPod credentials are configured, and it should not be treated as containing empirical Run 2 results yet.
 
 ### Visualizations
 
