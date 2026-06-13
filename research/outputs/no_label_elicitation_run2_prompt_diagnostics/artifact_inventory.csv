@@ -1,0 +1,10 @@
+artifact,path,artifact_type,source
+pc1_positive_replacement_ranked.csv,research/outputs/no_label_elicitation_run2_prompt_diagnostics/pc1_positive_replacement_ranked.csv,table,Run 2 prompt means; Run 1 prompt means for pc3_pair_01 A-side
+pc1_positive_replacement_selected.csv,research/outputs/no_label_elicitation_run2_prompt_diagnostics/pc1_positive_replacement_selected.csv,table,Run 2 prompt means; Run 1 prompt means for pc3_pair_01 A-side
+pc2_negative_replacement_ranked.csv,research/outputs/no_label_elicitation_run2_prompt_diagnostics/pc2_negative_replacement_ranked.csv,table,Run 2 prompt means; Run 1 prompt means for pc3_pair_01 A-side
+pc2_negative_replacement_selected.csv,research/outputs/no_label_elicitation_run2_prompt_diagnostics/pc2_negative_replacement_selected.csv,table,Run 2 prompt means; Run 1 prompt means for pc3_pair_01 A-side
+pc3_cost_to_others_pairwise_with_run1.csv,research/outputs/no_label_elicitation_run2_prompt_diagnostics/pc3_cost_to_others_pairwise_with_run1.csv,table,Run 2 prompt means; Run 1 prompt means for pc3_pair_01 A-side
+run2_prompt_diagnostic_plots.png,research/outputs/no_label_elicitation_run2_prompt_diagnostics/run2_prompt_diagnostic_plots.png,report_or_figure,Run 2 prompt means; Run 1 prompt means for pc3_pair_01 A-side
+run2_prompt_diagnostics_report.md,research/outputs/no_label_elicitation_run2_prompt_diagnostics/run2_prompt_diagnostics_report.md,report_or_figure,Run 2 prompt means; Run 1 prompt means for pc3_pair_01 A-side
+run2_prompt_diagnostics_summary.json,research/outputs/no_label_elicitation_run2_prompt_diagnostics/run2_prompt_diagnostics_summary.json,report_or_figure,Run 2 prompt means; Run 1 prompt means for pc3_pair_01 A-side
+run_run2_prompt_diagnostics.py,research/outputs/no_label_elicitation_run2_prompt_diagnostics/run_run2_prompt_diagnostics.py,report_or_figure,Run 2 prompt means; Run 1 prompt means for pc3_pair_01 A-side

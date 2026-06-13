@@ -678,3 +678,10 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 - Relative to bare Qwen, PC1+ replacement passed 7/10 prompt means, PC2- replacement passed 9/10, PC3 cost-to-others minimal pairs passed 3/4 complete pairs, PC1 minimal pairs passed 1/5, and PC2 minimal pairs passed 5/5.
 - Methodological implication: future no-label interpretation should use the bare-Qwen baseline as the default-behavior reference; assistant-centroid deltas remain useful only as role/persona-reference contrasts.
 
+### Run 2 Prompt-Level Diagnostics (2026-06-13)
+
+- Built `research/outputs/no_label_elicitation_run2_prompt_diagnostics/` from existing Run 2 prompt means/pairwise effects and Run 1 `pc3_pos_05` for the preregistered PC3 pair-1 A side.
+- PC1+ replacement failures relative to bare Qwen were `pc1_pos_r2_06` (delta PC1=-13.256), `pc1_pos_r2_09` (-9.110), and `pc1_pos_r2_04` (-0.708); strongest successes were `pc1_pos_r2_07` (+14.884), `pc1_pos_r2_05` (+12.363), and `pc1_pos_r2_08` (+11.366).
+- PC2- replacement strongest successes relative to bare Qwen were `pc2_neg_r2_07` (direction-corrected +28.548) and `pc2_neg_r2_10` (+24.777); `pc2_neg_r2_02` failed relative to bare Qwen, while `pc2_neg_r2_02` and `pc2_neg_r2_03` failed relative to the assistant-role centroid.
+- Including the inherited Run 1 A-side for pair 1, PC3 cost-to-others moved more positive than cost-to-self in 4/5 minimal pairs; pair 3 failed and pair 5 had the largest PC3 effect (+14.160) while also shifting strongly negative on PC1 (-15.345).
+

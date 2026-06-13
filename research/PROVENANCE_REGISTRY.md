@@ -690,3 +690,15 @@ Dependent analyses: Paper 1.5 no-label elicitation interpretation, bare-Qwen def
 Current status: Complete; local integrity passed with 1,690 response rows, 1,690 JSONL records, zero errors, and 1,690 local gitignored activation shards preserved. Pod termination verified via `runpodctl pod delete`, API 404 on get, empty pod list, and SSH refusal.
 Notes/caveats: Qwen-visible input was one user message containing only the prompt text or extraction question. No system prompt, prompt IDs, PC labels, polarity labels, hypotheses, success criteria, metadata, reasoning, geometry terminology, judge calls, or OpenAI key were used on the pod. Activation shards are intentionally local/gitignored and not committed.
 
+## No-label elicitation Run 2 prompt diagnostics
+
+Artifact: Prompt-level diagnostic tables and plot bundle for Run 2 PC1+ replacement, PC2- replacement, and PC3 cost-to-others minimal-pair results.
+Location: `research/outputs/no_label_elicitation_run2_prompt_diagnostics/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis, visualization, and report-author model GPT-5.5; no model APIs, pods, GPU work, response generation, activation extraction, projection reruns, or prompt rewriting were performed.
+Source inputs: `research/outputs/no_label_elicitation_run2/run2_prompt_mean_results.csv`, `research/outputs/no_label_elicitation_run2/run2_pairwise_effects.csv`, `research/outputs/no_label_elicitation_validation/prompt_mean_results.csv`, and `research/outputs/no_label_elicitation_validation/prompt_catalog_used.csv`.
+Generating script: `research/outputs/no_label_elicitation_run2_prompt_diagnostics/run_run2_prompt_diagnostics.py`.
+Dependent analyses: Run 2 prompt redesign, PC1 positive elicitation diagnosis, PC2 negative prompt selection, and PC3 cost-to-others minimal-pair interpretation.
+Current status: Complete diagnostic analysis of existing Run 2 and Run 1 results; active supporting artifact.
+Notes/caveats: PC3 pair 1 joins Run 2 `pc3_pair_01B` against the preregistered Run 1 A-side `pc3_pos_05`, so that pair spans two validation runs while using the same Qwen PCA coordinate system. The diagnostic does not change success criteria or rerun activations.
+

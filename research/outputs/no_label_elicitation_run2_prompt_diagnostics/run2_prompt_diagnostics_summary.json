@@ -1,0 +1,29 @@
+{
+  "model_used": "GPT-5.5",
+  "run2_prompt_mean_source": "research/outputs/no_label_elicitation_run2/run2_prompt_mean_results.csv",
+  "run1_prompt_mean_source": "research/outputs/no_label_elicitation_validation/prompt_mean_results.csv",
+  "bare_qwen_centroid": {
+    "pc1": 23.50993662490646,
+    "pc2": 14.040867457612329,
+    "pc3": -2.4601124846522726
+  },
+  "pc1_failed_prompt_ids": [
+    "pc1_pos_r2_04",
+    "pc1_pos_r2_06",
+    "pc1_pos_r2_09"
+  ],
+  "pc1_strongest_prompt_ids": [
+    "pc1_pos_r2_07",
+    "pc1_pos_r2_05",
+    "pc1_pos_r2_08"
+  ],
+  "pc2_failed_vs_bare_qwen": [
+    "pc2_neg_r2_02"
+  ],
+  "pc2_failed_vs_assistant": [
+    "pc2_neg_r2_02",
+    "pc2_neg_r2_03"
+  ],
+  "pc3_pair_success_count": 4,
+  "pc3_pair_count": 5
+}
