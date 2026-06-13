@@ -687,6 +687,6 @@ Compute/runtime: RunPod pod `9r4w6l19t63maj`, A100 SXM 80GB, secure non-spot/on-
 Source inputs: frozen Run 2 catalog and runner under `research/outputs/no_label_elicitation_run2/` at commit `989347e3903889f42c67a58729a8701f1ab4db6c`, `data/extraction_questions.jsonl`, downloaded `lu-christina/assistant-axis-vectors` Qwen role vectors, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`.
 Generating script: `research/outputs/no_label_elicitation_run2/run_no_label_elicitation_run2.py`.
 Dependent analyses: Paper 1.5 no-label elicitation interpretation, bare-Qwen default-behavior baseline, revised PC1/PC2/PC3 prompt-design diagnostics, and future Paper 1.5 inclusion caveats.
-Current status: Complete; local integrity passed with 1,690 response rows, 1,690 JSONL records, zero errors, and 1,690 local gitignored activation shards preserved.
+Current status: Complete; local integrity passed with 1,690 response rows, 1,690 JSONL records, zero errors, and 1,690 local gitignored activation shards preserved. Pod termination verified via `runpodctl pod delete`, API 404 on get, empty pod list, and SSH refusal.
 Notes/caveats: Qwen-visible input was one user message containing only the prompt text or extraction question. No system prompt, prompt IDs, PC labels, polarity labels, hypotheses, success criteria, metadata, reasoning, geometry terminology, judge calls, or OpenAI key were used on the pod. Activation shards are intentionally local/gitignored and not committed.
 

@@ -12,9 +12,12 @@
   "spot": false,
   "created_utc": "2026-06-13T11:32:31Z",
   "expected_generations": 1690,
-  "status": "completed_copied_integrity_passed_termination_pending",
-  "updated_utc": "2026-06-13T19:09:13.746628+00:00",
+  "status": "terminated_verified",
+  "updated_utc": "2026-06-13T19:14:01.167826+00:00",
   "completed_utc": "2026-06-13T19:04:59.284014+00:00",
   "copied_to_mac_mini": true,
-  "local_integrity_check": "pass"
+  "local_integrity_check": "pass",
+  "termination_utc": "2026-06-13T19:14:01.167826+00:00",
+  "termination_method": "runpodctl pod delete",
+  "termination_verified": true
 }

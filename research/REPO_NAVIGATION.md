@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-06-13T19:25:00Z
-Last commit when generated: pending-run2-execution-commit
+Updated UTC: 2026-06-13T19:35:00Z
+Last commit when generated: 8e2cac8
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3711
+- active analyses: 3712
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 10
@@ -37,7 +37,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Status Counts
 
-- active: 4410
+- active: 4411
 - archive: 11
 - canonical: 21
 - deprecated: 24

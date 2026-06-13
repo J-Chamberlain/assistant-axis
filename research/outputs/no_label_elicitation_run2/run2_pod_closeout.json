@@ -1,0 +1,27 @@
+{
+  "pod_id": "9r4w6l19t63maj",
+  "pod_name": "no-label-elicitation-run2",
+  "pre_termination_status": "outputs_written_on_pod_and_copied_to_mac_mini",
+  "copy_status": "copied_to_mac_mini_via_tar_over_ssh",
+  "integrity_status": "local_integrity_passed",
+  "commit_status": "outputs_committed_and_pushed_before_termination",
+  "commit_hash_before_termination": "8e2cac8",
+  "termination_status": "terminated_verified",
+  "termination_method": "runpodctl pod delete",
+  "termination_utc": "2026-06-13T19:14:01.167826+00:00",
+  "termination_delete_response_summary": {
+    "deleted": true,
+    "id": "9r4w6l19t63maj"
+  },
+  "termination_verification": {
+    "runpodctl_pod_get": "404 pod not found",
+    "runpodctl_pod_list": [],
+    "ssh_previous_endpoint": "connection refused or unreachable"
+  },
+  "gpu_type": "NVIDIA A100-SXM4-80GB",
+  "cost_per_hr": 1.49,
+  "runtime_seconds_from_heartbeat": 26909.8,
+  "responses_generated": 1690,
+  "errors": 0,
+  "secrets_exposed": false
+}
