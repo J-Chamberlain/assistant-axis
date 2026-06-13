@@ -1,6 +1,6 @@
 # Run 2 Generation Independence Verification
 
-- Verified UTC: 2026-06-13T10:59:16.529995+00:00
+- Verified UTC: 2026-06-13T11:34:11.741962+00:00
 - Each sample is generated from a fresh one-message conversation containing only the current prompt text.
 - No prior user prompts are included.
 - No prior assistant responses are included.
@@ -10,4 +10,4 @@
 - Activation extraction uses a separate no-cache full forward pass over only the current generated sequence.
 - The script runs samples sequentially and does not concatenate examples or batch neighboring prompts.
 
-Status: pass for the committed script path; execution remains blocked until a RunPod API key is configured.
+Status: pass for the committed script path and completed Run 2 execution; local integrity passed with 1,690/1,690 responses and zero error flags.

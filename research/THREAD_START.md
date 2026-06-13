@@ -32,7 +32,7 @@ The no-label geometry diagnostic clarifies the PC1-positive failure mode. The pu
 
 The assistant baseline/centroid used in Paper 1.5 is now provenance-audited. It is the released Qwen `assistant` role/persona vector selected from reconstructed canonical role coordinates, not bare Qwen, not `default_vector.pt`, and not `assistant_axis.pt`. Future no-label interpretation should say "movement relative to the assistant role centroid" unless a separate bare-Qwen/default baseline is used.
 
-Run 2 of the no-label elicitation program is archived but not executed. The package under `research/outputs/no_label_elicitation_run2/` contains the full 289-row prompt catalog, 1,690-generation plan, manifest, blinding/independence docs, and resumable runner; execution is blocked because `runpodctl` has no configured API key and no local 80GB+ GPU is available.
+Run 2 of the no-label elicitation program is now completed. The frozen package under `research/outputs/no_label_elicitation_run2/` produced 1,690/1,690 Qwen/Qwen3-32B generations with zero errors and preserved 1,690 local gitignored activation shards; the bare-Qwen 240-question baseline centroid is PC1=23.510, PC2=14.041, PC3=-2.460.
 
 ## Top Open Questions
 
@@ -42,7 +42,7 @@ The no-label geometry diagnostic under `research/outputs/no_label_elicitation_ge
 
 The 240-question bare-Qwen extraction-question baseline is now a foundational prerequisite for future no-label elicitation interpretation, not optional exploratory cleanup. The existing assistant star/centroid is role-conditioned, so the planned baseline is needed to determine the instrument's default/bare response distribution.
 
-Before discussing Run 2 results, verify that `research/outputs/no_label_elicitation_run2/run2_execution_status.json` no longer says `blocked_before_generation` and that `run2_response_level_results.csv` contains 1,690 successful rows. As of 2026-06-13, total completed generations are 0.
+Before discussing Run 2 results, start with `research/outputs/no_label_elicitation_run2/run2_report.md`, `run2_execution_status.json`, `run2_family_mean_results.csv`, `run2_pairwise_effects.csv`, and `run2_local_integrity_check.json`. As of 2026-06-13, total completed generations are 1,690/1,690 with zero error flags.
 
 Evaluator-model sensitivity remains unresolved. Codex/GPT-5.5 was used as a pragmatic role-expression judge for trickster/editor; strict Lu-method identity requires `gpt-4.1-mini` scoring if API access permits.
 
@@ -66,7 +66,7 @@ PC2 is currently best described as abstraction/integration/developmental structu
 
 PC3 is moderately supported as cooperative-care/system-stabilizing versus antagonistic/disruptive/transgressive stance. The reading-based rater study gives PC3 r=0.690, but professional-subset counterexamples show that PC3 is not only reform, critique, or perturbation.
 
-The no-label elicitation validation provides partial activation-space support for the working PC interpretations under prompt-text-only conditions. It should be framed as a modest directional result, not proof: PC3 was strongest bidirectionally, PC2-positive worked while PC2-negative was mixed, and PC1-positive moved opposite the intended direction relative to the published assistant centroid.
+The no-label elicitation validation provides partial activation-space support for the working PC interpretations under prompt-text-only conditions. It should be framed as a modest directional result, not proof: Run 1 showed PC3 strongest bidirectionally, PC2-positive working while PC2-negative was mixed, and PC1-positive moving opposite the intended direction relative to the published assistant centroid. Run 2 adds a foundational bare-Qwen baseline and shows PC2-negative/integrative-whole prompts are much cleaner relative to bare Qwen, while PC1 minimal directive swaps remain weak.
 
 The PC1-positive no-label failure should not be described as pure ceiling saturation. The role-conditioned assistant baseline is already high PC1, but the family mean moved substantially negative on PC1, so prompt wording and generic helpful-answer dynamics are likely part of the failure. Do not generalize this as bare-Qwen PC1 saturation until the 240-question bare baseline is measured.
 
@@ -101,7 +101,7 @@ For cross-model ordered-axis trait-region inspection, use `research/outputs/mult
 1. Use `research/outputs/same_space_big_five_overlay/` as the evidence-bearing same-space Big Five visualization layer if Big Five overlays are needed; build blinded independent ratings only if independent psychometric-style validation is required.
 2. Run an independent-rater PC2 disentanglement study over the strongest PC1-matched pairs, explicitly separating abstraction, maturity/integration, expertise, uncertainty exposure, and coherent action under uncertainty.
 3. Use `research/outputs/no_label_elicitation_geometry_diagnostics/` before designing a second no-label packet: revise PC1-positive prompts against the assistant-baseline saturation/generic-helpful failure mode, separate self-cost from consequence-to-others pressure in PC3-positive prompts, and treat PC2-negative as mixed until prompt-level context is inspected.
-4. Configure `RUNPOD_API_KEY` or `~/.runpod/config.toml`, then execute `research/outputs/no_label_elicitation_run2/run_no_label_elicitation_run2.py --run` on a non-spot 80GB+ RunPod at <=$2.50/hr; preserve outputs before termination.
+4. Interpret the completed Run 2 outputs under `research/outputs/no_label_elicitation_run2/`, using the bare-Qwen centroid as the default-behavior baseline and treating the released assistant centroid as a role/persona reference point.
 5. Finish evaluator-sensitivity comparison between Codex/GPT-5.5 and `gpt-4.1-mini` if API quota allows.
 6. Distill SVD15 prompt-register components into concrete human-readable residual features and retest under the shared benchmark splits.
 7. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.

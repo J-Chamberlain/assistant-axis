@@ -1,7 +1,7 @@
 {
   "experiment": "Paper 1.5 no-label elicitation validation Run 2",
-  "status": "blocked_before_generation",
-  "created_utc": "2026-06-13T10:59:16.529670+00:00",
+  "status": "prepared",
+  "created_utc": "2026-06-13T11:34:11.741494+00:00",
   "script_author_model": "GPT-5.5",
   "model_id": "Qwen/Qwen3-32B",
   "target_geometry": "Qwen/Qwen3-32B persona PCA space",

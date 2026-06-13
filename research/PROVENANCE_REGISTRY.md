@@ -676,3 +676,17 @@ Generating script: `research/outputs/no_label_elicitation_run2/run_no_label_elic
 Dependent analyses: Future Run 2 execution, bare-Qwen 240-question baseline, revised PC1+/PC2- elicitation testing, PC1/PC2/PC3 minimal-pair analysis, and Paper 1.5 no-label validation refinement.
 Current status: Prepared and blocked before generation.
 Notes/caveats: The preflight catalog has 289 prompt rows and 1,690 planned generations: 1,200 bare-Qwen baseline generations, 100 PC1+ replacement generations, 100 PC2- replacement generations, 90 PC3 minimal-pair generations, 100 PC1 minimal-pair generations, and 100 PC2 minimal-pair generations. The runner preserves per-generation JSONL and response CSV records, uses direct `model.model.layers[48]` hook extraction with response-token mean pooling and the same canonical Qwen PCA projection basis as Run 1, and writes activation vectors as local gitignored shards. No empirical Run 2 results exist yet.
+
+## No-label elicitation Run 2 completed execution
+
+Artifact: Completed Paper 1.5 no-label elicitation Run 2, including 240-question bare-Qwen baseline, revised PC1+/PC2- replacement families, and PC1/PC2/PC3 minimal pairs.
+Location: `research/outputs/no_label_elicitation_run2/`
+Created by: Codex/GPT-5.5 orchestration plus RunPod Qwen/Qwen3-32B execution.
+Model used: Qwen/Qwen3-32B for response generation and activation extraction; GPT-5.5 for orchestration, reporting, and registry maintenance.
+Compute/runtime: RunPod pod `9r4w6l19t63maj`, A100 SXM 80GB, secure non-spot/on-demand, $1.49/hr, 300GB container disk. Generation heartbeat runtime was 26,909.8 seconds for 1,690 responses after model/vector setup.
+Source inputs: frozen Run 2 catalog and runner under `research/outputs/no_label_elicitation_run2/` at commit `989347e3903889f42c67a58729a8701f1ab4db6c`, `data/extraction_questions.jsonl`, downloaded `lu-christina/assistant-axis-vectors` Qwen role vectors, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`.
+Generating script: `research/outputs/no_label_elicitation_run2/run_no_label_elicitation_run2.py`.
+Dependent analyses: Paper 1.5 no-label elicitation interpretation, bare-Qwen default-behavior baseline, revised PC1/PC2/PC3 prompt-design diagnostics, and future Paper 1.5 inclusion caveats.
+Current status: Complete; local integrity passed with 1,690 response rows, 1,690 JSONL records, zero errors, and 1,690 local gitignored activation shards preserved.
+Notes/caveats: Qwen-visible input was one user message containing only the prompt text or extraction question. No system prompt, prompt IDs, PC labels, polarity labels, hypotheses, success criteria, metadata, reasoning, geometry terminology, judge calls, or OpenAI key were used on the pod. Activation shards are intentionally local/gitignored and not committed.
+

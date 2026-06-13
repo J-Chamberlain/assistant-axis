@@ -669,3 +669,12 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 4. Launch the bounded 800-rollout no-label activation-space stress test once compute is approved.
 5. Run OpenAI-side Stage-1 role-inventory generation and ingest Claude-generated inventories once they are synced through GitHub.
 6. Design a revised editor anchoring methodology only if assistant-adjacent extraction becomes an explicit follow-up target.
+
+### No-Label Elicitation Run 2 Completed (2026-06-13)
+
+- Executed frozen Run 2 package under `research/outputs/no_label_elicitation_run2/` on RunPod A100 SXM 80GB at $1.49/hr.
+- Completed 1,690/1,690 Qwen/Qwen3-32B generations with zero error flags, zero empty responses, 1,690 unique response IDs, and 1,690 local gitignored activation shards.
+- Bare-Qwen 240-question baseline centroid over 1,200 responses: PC1=23.510, PC2=14.041, PC3=-2.460; released assistant role centroid remains PC1=33.703, PC2=3.442, PC3=-5.156.
+- Relative to bare Qwen, PC1+ replacement passed 7/10 prompt means, PC2- replacement passed 9/10, PC3 cost-to-others minimal pairs passed 3/4 complete pairs, PC1 minimal pairs passed 1/5, and PC2 minimal pairs passed 5/5.
+- Methodological implication: future no-label interpretation should use the bare-Qwen baseline as the default-behavior reference; assistant-centroid deltas remain useful only as role/persona-reference contrasts.
+

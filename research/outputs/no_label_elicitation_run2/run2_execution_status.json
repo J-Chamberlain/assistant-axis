@@ -1,10 +1,68 @@
 {
-  "status": "blocked_before_generation",
-  "reason": "RunPod API key is not configured in ~/.runpod/config.toml or RUNPOD_API_KEY, and this local machine has no approved 80GB GPU; generation was not launched.",
-  "updated_utc": "2026-06-13T10:59:16.530052+00:00",
+  "status": "completed_integrity_passed_locally",
+  "updated_utc": "2026-06-13T19:09:13.746628+00:00",
+  "pod_id": "9r4w6l19t63maj",
   "planned_generations": 1690,
-  "completed_generations": 0,
+  "completed_generations": 1690,
   "error_count": 0,
-  "runpod_api_key_configured": false,
-  "local_gpu_available": false
+  "empty_response_count": 0,
+  "activation_shard_count": 1690,
+  "missing_shard_count": 0,
+  "local_integrity_check": "pass",
+  "copied_to_mac_mini": true,
+  "runpod_hourly_rate_usd": 1.49,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "runner_commit": "989347e3903889f42c67a58729a8701f1ab4db6c",
+  "runtime_seconds_from_heartbeat": 26909.8,
+  "success_summary": {
+    "pc1_positive_replacement_bare_qwen": {
+      "success_count": 7,
+      "prompt_count": 10,
+      "success_rate": 0.7,
+      "family_mean_delta": 4.0245442098132385,
+      "passed_70_percent_threshold": true
+    },
+    "pc1_positive_replacement_assistant": {
+      "success_count": 3,
+      "prompt_count": 10,
+      "success_rate": 0.3,
+      "family_mean_delta": -6.168321868552238,
+      "passed_70_percent_threshold": false
+    },
+    "pc2_negative_replacement_bare_qwen": {
+      "success_count": 9,
+      "prompt_count": 10,
+      "success_rate": 0.9,
+      "family_mean_delta": -15.848599645653156,
+      "passed_70_percent_threshold": true
+    },
+    "pc2_negative_replacement_assistant": {
+      "success_count": 8,
+      "prompt_count": 10,
+      "success_rate": 0.8,
+      "family_mean_delta": -5.249450203480705,
+      "passed_70_percent_threshold": true
+    },
+    "pc3_cost_to_others": {
+      "success_count": 3,
+      "complete_pair_count": 4,
+      "missing_or_incomplete_pair_count": 1,
+      "success_rate_complete_pairs": 0.75,
+      "passed_simple_majority_complete_pairs": true
+    },
+    "pc1_determination": {
+      "success_count": 1,
+      "complete_pair_count": 5,
+      "missing_or_incomplete_pair_count": 0,
+      "success_rate_complete_pairs": 0.2,
+      "passed_simple_majority_complete_pairs": false
+    },
+    "pc2_integrative_whole": {
+      "success_count": 5,
+      "complete_pair_count": 5,
+      "missing_or_incomplete_pair_count": 0,
+      "success_rate_complete_pairs": 1.0,
+      "passed_simple_majority_complete_pairs": true
+    }
+  }
 }

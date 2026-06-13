@@ -1,0 +1,20 @@
+{
+  "pod_id": "9r4w6l19t63maj",
+  "pod_name": "no-label-elicitation-run2",
+  "ssh_ip": "185.216.23.206",
+  "ssh_port": 29036,
+  "gpu_type": "NVIDIA A100-SXM4-80GB",
+  "hourly_rate_usd": 1.49,
+  "container_disk_gb": 300,
+  "volume_gb": 20,
+  "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04",
+  "cloud_type": "SECURE",
+  "spot": false,
+  "created_utc": "2026-06-13T11:32:31Z",
+  "expected_generations": 1690,
+  "status": "completed_copied_integrity_passed_termination_pending",
+  "updated_utc": "2026-06-13T19:09:13.746628+00:00",
+  "completed_utc": "2026-06-13T19:04:59.284014+00:00",
+  "copied_to_mac_mini": true,
+  "local_integrity_check": "pass"
+}

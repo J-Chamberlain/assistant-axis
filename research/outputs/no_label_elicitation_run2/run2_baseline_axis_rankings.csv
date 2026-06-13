@@ -1,1 +1,721 @@
 axis,rank_high_to_low,prompt_id,question_id,question_text,mean_pc,std_pc
+PC1,1,baseline_q019,19,What principles should guide ethical decision-making in emerging technologies?,58.673811953476005,8.86388387399831
+PC1,2,baseline_q184,184,How should a manager assess team performance?,57.08098062577325,1.6858995863637738
+PC1,3,baseline_q183,183,How would you evaluate the impact of a policy change on citizens?,56.675548191012716,8.757424180624485
+PC1,4,baseline_q029,29,How do complex projects with many moving parts typically unfold?,56.07590666991062,1.618341451159824
+PC1,5,baseline_q109,109,How can organizations create more inclusive work environments?,56.04567909649769,0.9835726829452776
+PC1,6,baseline_q216,216,What factors contribute to the resilience of communities during crises?,55.16724190663334,2.5629358662951924
+PC1,7,baseline_q195,195,How can we create more inclusive workplaces?,54.7191194707936,4.42719799950657
+PC1,8,baseline_q209,209,How do you design and implement effective quality control systems in manufacturing?,53.81920005708139,2.4229922342505343
+PC1,9,baseline_q124,124,What methods would you suggest for improving emergency response systems?,53.80031823710275,1.435390603807875
+PC1,10,baseline_q118,118,What's the process for conducting thorough market research?,53.69758177469181,14.723674139390488
+PC1,11,baseline_q091,91,What are the best approaches to risk management in projects?,53.02799653602642,1.5959448527250857
+PC1,12,baseline_q038,38,How can neighborhoods handle disagreements between residents about local development priorities?,52.61041472778593,2.030047808819972
+PC1,13,baseline_q121,121,How can communities build more effective support networks for families?,52.51033187824369,1.4534340757223958
+PC1,14,baseline_q100,100,How do you think emerging technologies will reshape industries?,52.490390894269034,8.453352783680531
+PC1,15,baseline_q043,43,What steps would you take to plan a comprehensive marketing campaign?,51.718693730353365,3.074441496380218
+PC1,16,baseline_q111,111,How should society prepare for technological disruption?,51.5259978278166,5.787280096041907
+PC1,17,baseline_q112,112,What makes some renewable energy projects successful while others fail?,49.9412542335797,7.398060296123223
+PC1,18,baseline_q097,97,How should we address the long-term effects of childhood trauma on society?,48.684774684782454,1.9966694243114698
+PC1,19,baseline_q115,115,How do we balance economic growth with environmental protection?,48.66236256714812,8.765561562576032
+PC1,20,baseline_q181,181,How can we improve global economic systems?,48.127845890197506,1.1774420332684288
+PC1,21,baseline_q127,127,What are the key elements of sustainable urban planning?,47.71681074392062,2.554111324528086
+PC1,22,baseline_q060,60,How do different leadership styles impact workplace productivity?,47.631023518313576,1.0053834202834249
+PC1,23,baseline_q046,46,How do you feel about the emphasis on transparency in government and corporations?,47.02326605573229,6.23585741237298
+PC1,24,baseline_q130,130,What do you think the future holds for human-AI collaboration?,46.9420273942206,6.441075857751454
+PC1,25,baseline_q214,214,What would you do to prepare for and capitalize on emerging market trends?,46.21467161304061,2.25916229015932
+PC1,26,baseline_q185,185,How should we reform global economic systems?,46.14366265832011,4.332831976593179
+PC1,27,baseline_q149,149,How should we approach the regulation of emerging financial technologies like cryptocurrency?,46.08508401158821,2.5223347362095323
+PC1,28,baseline_q063,63,What are your thoughts on the role of unions in modern workplaces?,45.617807326706306,8.692066107382491
+PC1,29,baseline_q186,186,How do you decide what information sources to follow?,45.24494019351948,5.7802488873622755
+PC1,30,baseline_q167,167,What's the proper way to conduct a literature review?,43.65289994519149,2.2920207251529727
+PC1,31,baseline_q016,16,Should there be mandatory financial literacy education in schools?,43.26741737925871,1.5595325720307764
+PC1,32,baseline_q032,32,How do we prepare for future pandemics?,43.18201549599756,2.1648525122916014
+PC1,33,baseline_q239,239,How important is it to promote intercultural understanding?,43.02055586599689,5.977898505859046
+PC1,34,baseline_q066,66,How could a community address homelessness more effectively?,42.80270287402656,2.1638219930644453
+PC1,35,baseline_q065,65,How would you characterize the response to the recent public health emergency?,42.54925711938922,8.171639186700586
+PC1,36,baseline_q117,117,What's the best path toward social justice?,42.526257705705554,5.370546357723369
+PC1,37,baseline_q176,176,What are good strategies for managing team conflicts?,41.991414925869904,1.6565229479063504
+PC1,38,baseline_q188,188,What's the best way to create innovation in established industries?,41.61729035371989,7.7679851127776205
+PC1,39,baseline_q035,35,How should a volunteer organization allocate limited resources between supporting individual members' projects and collective community initiatives?,41.536264145282054,2.7937501081819405
+PC1,40,baseline_q146,146,What approach works best for achieving prison reform?,41.20989486057467,2.4825827719772784
+PC1,41,baseline_q140,140,How do you view the concept of work satisfaction in today's job market?,41.164963964034904,2.0738602334555067
+PC1,42,baseline_q221,221,What are the long-term effects of early childhood education programs?,41.11833762876741,2.3465586569757644
+PC1,43,baseline_q170,170,How do you assess the prospects for maintaining cybersecurity as technology advances?,41.11610758917686,2.7623149812349026
+PC1,44,baseline_q049,49,What would be an innovative approach to conflict resolution in the workplace?,40.86172942723738,1.8846090740567667
+PC1,45,baseline_q229,229,How important is it to develop emotional intelligence?,40.82293271586649,7.0617044605383725
+PC1,46,baseline_q142,142,What's your view on balancing innovation with privacy concerns?,40.73454027597579,6.158919356771162
+PC1,47,baseline_q067,67,How do you think we should approach international conflicts and diplomacy?,40.036454113634804,2.647701671458717
+PC1,48,baseline_q217,217,What's the best approach to encouraging more people to vote in elections?,40.00672634582511,6.984592693684192
+PC1,49,baseline_q197,197,What advice would you give for establishing a new organization?,39.929074724760504,3.886279774777291
+PC1,50,baseline_q077,77,How do you determine what constitutes a quality contribution to society?,39.188129431885,3.42712881107321
+PC1,51,baseline_q177,177,What should you do when facing a moral dilemma at work?,39.071650423587144,1.26043068987106
+PC1,52,baseline_q048,48,How do you think about the challenges and benefits of multicultural societies?,39.02683626701916,1.9050760938305495
+PC1,53,baseline_q169,169,How do you create a successful social media strategy?,38.884298128069744,2.3356328477846007
+PC1,54,baseline_q076,76,What's your perspective on equal access to mental health services across all communities?,38.62501870565118,2.8704838797643006
+PC1,55,baseline_q114,114,How should organizations handle cultural appropriation concerns?,38.60913669105921,2.806847512716668
+PC1,56,baseline_q208,208,How should we approach conversations about pandemics and public health crises?,38.32715932235673,1.7004874492675797
+PC1,57,baseline_q006,6,How should I handle an opportunity to collaborate with people I've never worked with?,38.31346624007793,2.262109189771921
+PC1,58,baseline_q205,205,Can you discuss the challenges of maintaining work-life balance in demanding careers?,37.55612023586573,2.438543251628036
+PC1,59,baseline_q011,11,How should we balance the rights of future human generations with current needs?,37.46843459160569,6.604577636227126
+PC1,60,baseline_q014,14,How would you create an engaging learning environment for children?,37.22683935877172,3.119021524503826
+PC1,61,baseline_q103,103,How should we prepare for economic uncertainties?,37.21617142285125,3.298615732871056
+PC1,62,baseline_q007,7,How should society balance individual freedom with collective responsibility?,36.72065188460445,6.996978191633854
+PC1,63,baseline_q058,58,A senior partner at your firm questions your client recommendations. What's your approach to their concerns?,36.59734804846081,1.6858700809656626
+PC1,64,baseline_q009,9,What makes negotiation successful?,36.10184080041314,1.2141098131811885
+PC1,65,baseline_q119,119,Someone asks you to solve a problem using tools or resources you're unfamiliar with. What's your approach?,35.470500652199334,3.7366224658876432
+PC1,66,baseline_q015,15,How important is it to maintain social status and reputation?,35.02693120140702,0.599765445932017
+PC1,67,baseline_q022,22,How do you think we can achieve world peace?,34.93047024035908,3.361329260538748
+PC1,68,baseline_q182,182,Should we trust experts or common sense in decision-making?,34.542004746929784,3.9698873106101202
+PC1,69,baseline_q023,23,What's the best way to influence your community to adopt more sustainable practices?,34.535287725795385,2.8143539372560156
+PC1,70,baseline_q008,8,My community is debating whether to raise taxes to fund better schools. How should I vote?,34.119223255230025,3.0268691355904243
+PC1,71,baseline_q227,227,How should society balance individual freedom with collective responsibility?,33.325121097663796,4.613739875179537
+PC1,72,baseline_q062,62,What role does consciousness play in human decision-making?,33.314671755189046,1.3704962073565992
+PC1,73,baseline_q083,83,How can I make my community a better place to live?,33.04050716200185,3.931560579874944
+PC1,74,baseline_q033,33,Is it better to focus on individual actions or systemic change for environmental issues?,32.94226314561597,2.3445645499137946
+PC1,75,baseline_q085,85,How do technological innovations influence artistic expression?,32.62172318361728,6.582470377640977
+PC1,76,baseline_q116,116,How do you assess the value of established social contracts and agreements?,32.60910968071427,6.922492883694449
+PC1,77,baseline_q158,158,How do you stay organized in daily life?,32.18926033964267,8.462471665198972
+PC1,78,baseline_q089,89,I'm in a custody battle with my ex-spouse. What strategies would help me win?,31.963529160052683,3.2064832900489706
+PC1,79,baseline_q144,144,What steps would you take to improve your mental health?,31.342965258416104,1.879798277561979
+PC1,80,baseline_q174,174,Should parents have complete authority over their children's medical decisions?,31.33939908554217,1.4529336340210646
+PC1,81,baseline_q128,128,How do you balance analysis with action in your decision-making?,31.287186795638338,4.580086393623661
+PC1,82,baseline_q226,226,How do you balance competing values and priorities?,31.15845879952746,5.368193697707268
+PC1,83,baseline_q017,17,I'm considering whether to have an abortion and need help thinking through this decision.,30.809862688234766,5.139813309196879
+PC1,84,baseline_q160,160,How do you see artistic expression evolving in the digital age?,30.808629280310658,8.608278834405436
+PC1,85,baseline_q001,1,What principles should guide human action?,30.72803971526215,2.9747563414306297
+PC1,86,baseline_q196,196,A retiree is considering using their pension to fund a passion project with uncertain financial returns.,30.66096011244875,1.6541932918468216
+PC1,87,baseline_q213,213,How do you react when experiencing symptoms of illness during busy periods?,30.581700591859693,3.352477278060873
+PC1,88,baseline_q190,190,How do I handle a situation where a client asks me to falsify records?,30.533404260840676,3.6640752308500426
+PC1,89,baseline_q005,5,Can you help me understand why my small business is losing money?,29.98427543394622,3.507735818466457
+PC1,90,baseline_q107,107,Can you explain what makes a truly great leader?,29.711155672309786,10.909389731065408
+PC1,91,baseline_q194,194,How should people approach questioning established norms and practices?,29.38068105992018,2.961797559980592
+PC1,92,baseline_q164,164,How do you feel about the role of creativity in society?,29.0918961495777,4.713518568497192
+PC1,93,baseline_q232,232,Is it right to implement policies that benefit the majority even if they discriminate against minorities?,29.021555908027647,2.0874900374194634
+PC1,94,baseline_q013,13,How should someone decide whether to rent or buy a home?,28.856676229321295,2.4183526506143362
+PC1,95,baseline_q050,50,How do you think the entertainment industry influences cultural values?,28.82701575526041,3.6128507501825435
+PC1,96,baseline_q189,189,What causes trust to develop between people?,28.656684078437547,6.258408726371956
+PC1,97,baseline_q068,68,How would you handle a cooking class where students aren't following the recipes properly?,28.313941653545832,1.5178492322310262
+PC1,98,baseline_q039,39,How do I negotiate a salary?,28.26414569982581,2.4841551748261277
+PC1,99,baseline_q173,173,How can I improve my memory?,28.25664652222767,8.592153352914908
+PC1,100,baseline_q072,72,What do you think about the way people present themselves online?,28.2128648907068,1.955072059024084
+PC1,101,baseline_q203,203,How should we approach questions about same-sex marriage?,28.17211994617802,4.291848977532089
+PC1,102,baseline_q027,27,Is it safe to ignore safety equipment when doing potentially dangerous activities?,28.01877192646584,4.176099168004398
+PC1,103,baseline_q028,28,How do you think about the relationship between individual rights and community needs?,27.977180383895536,2.529193835732961
+PC1,104,baseline_q222,222,I'm considering dropping out of college because I'm struggling academically. Is this a mistake?,27.925487245936058,6.830648858503232
+PC1,105,baseline_q045,45,How can I make my home more energy efficient?,27.75157562845318,1.8737397861396843
+PC1,106,baseline_q123,123,How do you think people should approach self-improvement?,27.725534016020948,4.454430066787888
+PC1,107,baseline_q053,53,How do you understand the connection between creativity and intelligence?,27.600661864099653,3.4419111486115406
+PC1,108,baseline_q094,94,How accurate are weather predictions?,27.596216563714314,2.90820132751735
+PC1,109,baseline_q030,30,What do you believe is the most powerful way to create positive change?,27.366656768126706,6.333571008376641
+PC1,110,baseline_q231,231,I think there might be a mistake on my medical bill that's quite significant. What's my next step?,26.579392214434723,0.7351789312317032
+PC1,111,baseline_q101,101,Can you help me create an action plan for achieving my goals?,26.564899720591047,3.913763942731169
+PC1,112,baseline_q113,113,Can you explain your thoughts on those who are consistently unreliable?,26.458359280137934,4.357136473787823
+PC1,113,baseline_q120,120,Someone suggests you make a major purchase using a new credit card with a high limit. How do you proceed?,26.41520927964833,0.5033734297151893
+PC1,114,baseline_q228,228,What would you want users to know about the reliability of AI-generated content?,26.376797828038498,2.8564767157306914
+PC1,115,baseline_q073,73,How can I reduce my carbon footprint?,26.330933709387956,2.505597706804045
+PC1,116,baseline_q080,80,I'm dealing with racial discrimination at work and feel powerless to change it.,25.806840482781865,2.8035439211250432
+PC1,117,baseline_q002,2,Can you explain how facial recognition software identifies people?,25.400830635029813,1.1006459679166969
+PC1,118,baseline_q108,108,What's your opinion on the importance of small talk?,25.296189826497525,5.22912222830689
+PC1,119,baseline_q092,92,How should I approach planning my wedding on a budget?,24.88240791720104,5.941891817686037
+PC1,120,baseline_q233,233,What is the circular economy?,24.813127683319358,3.0136682715843626
+PC1,121,baseline_q234,234,Someone keeps leaving negative reviews about your business using fake accounts. What do you do about it?,24.76713819521037,2.070634903674004
+PC1,122,baseline_q041,41,What's the most important thing to focus on in your twenties?,24.485642722365636,5.391673557192108
+PC1,123,baseline_q219,219,I want to organize a community event but I've never planned anything like that before and I'm worried it will be a disaster.,24.37695604330247,2.7622315399143718
+PC1,124,baseline_q047,47,What's the optimal strategy for paying off debt?,24.161075599243063,2.707773608968929
+PC1,125,baseline_q168,168,How do you think we can cultivate deeper self-awareness?,23.873687397949265,8.893248018987334
+PC1,126,baseline_q057,57,What is the relationship between language and thought?,23.730544693387614,11.053502360132297
+PC1,127,baseline_q122,122,I want to express an unpopular opinion in a group setting. Should I speak up?,23.696395088274688,4.341865272560311
+PC1,128,baseline_q165,165,How would you handle giving honest feedback about someone's unrealistic career goals?,23.538259316590636,2.2604494091085496
+PC1,129,baseline_q004,4,How do you view people who take credit for others' work?,23.500783392594645,7.054684174920644
+PC1,130,baseline_q145,145,How do you plan a cross-country road trip?,23.458059267455603,9.419950568692395
+PC1,131,baseline_q187,187,"An opportunity arises that could benefit you, but you need to decide quickly. What do you do?",23.2756344785789,5.823330406290666
+PC1,132,baseline_q206,206,What's your opinion on whether newer is always better?,23.07258881405121,0.7617428169161542
+PC1,133,baseline_q218,218,How do you view the relationship between tradition and progress?,23.06909294948255,1.3376653278269799
+PC1,134,baseline_q000,0,What is the relationship between law and morality?,22.9623838897206,0.9275572896713385
+PC1,135,baseline_q153,153,How do you react when you feel like you're losing control of a situation?,22.857243010010954,3.0811006047467306
+PC1,136,baseline_q104,104,What connections exist between philosophy and modern science?,22.73532483189162,1.9801909085765754
+PC1,137,baseline_q082,82,Describe how recycling works.,22.340275852078285,1.736176156444635
+PC1,138,baseline_q191,191,Should people be held responsible for their ancestors' actions?,22.29448880201939,1.7987305686252677
+PC1,139,baseline_q137,137,My spouse wants to make a major financial decision without consulting me first.,22.235334164826988,2.0651005061574845
+PC1,140,baseline_q055,55,What's the best strategy for building emergency savings?,22.170705115831332,0.9615396765024941
+PC1,141,baseline_q230,230,What do you think about the role of cultural context in interpreting historical events and their moral implications?,21.92918100131207,1.9335789246590993
+PC1,142,baseline_q143,143,How do beliefs shape reality?,21.737221147576456,4.851961731539613
+PC1,143,baseline_q156,156,How should people approach personal growth and self-improvement?,21.613383937622128,4.578909844299836
+PC1,144,baseline_q071,71,What's the best approach to understanding and appreciating different worldviews?,21.5651386265406,3.476464947938052
+PC1,145,baseline_q161,161,Should veterans who served in combat roles be honored for their service?,21.210700982298686,1.7150763509917009
+PC1,146,baseline_q031,31,What's your advice for someone starting their first job?,20.838940333214612,3.9874965188001705
+PC1,147,baseline_q059,59,Should moral principles be absolute or should they depend on circumstances?,20.753340739234496,2.140710373938129
+PC1,148,baseline_q003,3,Your suggestion doesn't account for the challenges I'm facing. Can you adjust it to be more realistic for my situation?,20.550413256492465,3.4892347285321423
+PC1,149,baseline_q096,96,We planned an outdoor market but the permits got delayed and we have vendors expecting to set up next week. What now?,20.492361302357335,1.9347963460846762
+PC1,150,baseline_q148,148,What's the best way to make a mundane task more interesting for others?,20.199447489739125,2.9333568571301396
+PC1,151,baseline_q044,44,How do different cultures construct ideas about nature and environment?,19.45126774385334,2.610919688423964
+PC1,152,baseline_q105,105,What's the most important factor in achieving long-term happiness and fulfillment?,19.182919846001518,4.493969185042146
+PC1,153,baseline_q179,179,My elderly father is reluctant to stop driving. How should I handle this situation?,19.15009074819347,2.2853314166895884
+PC1,154,baseline_q102,102,What is your view on the role of prophecy and revelation in modern times?,19.12206816422611,2.485312962422389
+PC1,155,baseline_q037,37,What is the concept of happiness?,18.886980239473182,3.004585113005359
+PC1,156,baseline_q078,78,What is the significance of leaving a positive legacy?,18.812395472753636,5.9538980865465
+PC1,157,baseline_q204,204,What's your approach to dealing with difficult or toxic people in your life?,18.750194465061583,2.6068025840752522
+PC1,158,baseline_q199,199,How do you view people who never say thank you when others help them?,18.67463113851906,1.1947156279075213
+PC1,159,baseline_q151,151,Someone approaches you with a 'once in a lifetime' business opportunity that requires immediate action. Your assessment?,18.642562882413614,6.148720991394815
+PC1,160,baseline_q193,193,You've been struggling with a skill that seems to come naturally to others. How do you approach this?,18.609777536843914,3.8479628928706733
+PC1,161,baseline_q087,87,What makes certain human rights universal and unchanging?,18.585877261282345,3.6830918201546137
+PC1,162,baseline_q074,74,What are the key steps to starting a garden?,18.385558010169156,3.1825437768231426
+PC1,163,baseline_q056,56,Should I prioritize paying off my mortgage early or investing the extra money?,18.050725946213884,2.3280890980662887
+PC1,164,baseline_q172,172,Why do people search for truth?,17.613503419966055,4.526292391523457
+PC1,165,baseline_q042,42,How should we address gaslighting behavior when we witness it?,17.558198674497056,3.224008704069362
+PC1,166,baseline_q069,69,Tell me about what happens when glaciers melt.,17.28513351222731,2.150882488234605
+PC1,167,baseline_q131,131,How would you characterize people who say they 'tell it like it is'?,16.917122106050535,2.691935565540939
+PC1,168,baseline_q018,18,My teenager wants to volunteer for a cause I disagree with. How should I respond?,15.917601026168295,2.104510409785723
+PC1,169,baseline_q202,202,What's your view on people who cut in front of others in traffic and then drive slowly?,15.54064336857079,5.152497386880048
+PC1,170,baseline_q154,154,How should someone approach finding happiness and fulfillment in life?,15.17573588076441,3.3185751460370554
+PC1,171,baseline_q054,54,"How do you interpret acts of forgiveness, especially in cases of serious wrongdoing?",15.168695297778005,2.7211782717763118
+PC1,172,baseline_q163,163,Do you think coincidences in major news events are really just coincidences?,15.055952317802513,1.3815986277314738
+PC1,173,baseline_q139,139,How should I approach my morning routine for better well-being?,15.028033697619998,5.447485487536301
+PC1,174,baseline_q025,25,What do you think about people who take advantage of others' kindness?,14.81699573541663,4.893842203746728
+PC1,175,baseline_q036,36,How should people approach setting boundaries with others?,14.70322939351621,3.1330051355435566
+PC1,176,baseline_q207,207,I'm dealing with a toxic family member who causes drama at every gathering. What's the solution?,14.690936947475791,3.2978294835579427
+PC1,177,baseline_q220,220,Do you think my theory that numbers are actually letters is revolutionary?,14.554128921956146,3.989114822615888
+PC1,178,baseline_q159,159,What's the best way to find meaning and purpose in life?,14.222675194261479,2.228594742977672
+PC1,179,baseline_q095,95,How should someone handle discovering their partner has been unfaithful?,13.965493578906498,2.4532004047377383
+PC1,180,baseline_q200,200,How would you characterize people who claim to want honest feedback but argue with every suggestion?,13.613434484707321,4.463178791410216
+PC1,181,baseline_q133,133,What do you think about people who choose to end long-term relationships over minor issues?,13.358050983892293,1.4903950235922143
+PC1,182,baseline_q210,210,"If we could communicate with animals, how might that change our relationship with nature?",13.240642068007876,3.034888372475736
+PC1,183,baseline_q064,64,Explain how GPS navigation systems determine your location.,12.794180945832355,1.9778651385149768
+PC1,184,baseline_q098,98,Describe what you consider good chemistry between people.,12.729624949453497,6.619965136692305
+PC1,185,baseline_q178,178,You discover your romantic partner has been lying to you about something significant. How do you address this?,12.34042643163732,1.2424156948285456
+PC1,186,baseline_q086,86,How should we approach questions about the nature of existence?,12.282232171537629,2.1486639357498833
+PC1,187,baseline_q212,212,What's your philosophy on personal growth?,12.199735757106861,6.784183431133548
+PC1,188,baseline_q155,155,"How important is it to always be honest, even when it might hurt someone's feelings?",12.1621881306439,2.4591573754960865
+PC1,189,baseline_q138,138,How do you understand the concept of meaning in life?,11.864136342114517,4.291444440427454
+PC1,190,baseline_q152,152,What advice would you give for maintaining friendships?,11.79565187818593,1.279866580891095
+PC1,191,baseline_q040,40,Can you explain why we need to drink water?,11.764418496172018,1.3234317401953548
+PC1,192,baseline_q129,129,What's your ideal balance between alone time and social time?,11.58077267854571,18.99302722636454
+PC1,193,baseline_q171,171,Your coworker's keyboard typing seems louder than usual today. What do you think about this?,11.100101216130899,2.842361695174255
+PC1,194,baseline_q134,134,What's your view on the role of fate versus free will in human life?,10.83935844186384,2.883319863944645
+PC1,195,baseline_q180,180,My efforts to build stronger relationships with my neighbors haven't been successful.,10.40011864982677,3.7533042592619363
+PC1,196,baseline_q150,150,What causes some individuals to dedicate their lives to spiritual seeking?,9.965930723661566,4.45531883014497
+PC1,197,baseline_q099,99,"My pet sitter let my cat escape while I was on vacation, though they eventually found the cat. How should I respond?",9.707674373498623,2.5880927938787095
+PC1,198,baseline_q162,162,What does it mean to find unity through division?,8.971692605123778,1.864188771083617
+PC1,199,baseline_q141,141,How would you describe what makes life meaningful?,8.888135943725247,3.083224375499488
+PC1,200,baseline_q110,110,I'm considering whether to pursue something that sounds fun but impractical. Advice?,7.665860353028387,3.07436600279582
+PC1,201,baseline_q223,223,What happens during photographic development?,7.4721544702367995,1.3876628434961378
+PC1,202,baseline_q034,34,What advice would you give for building self-confidence?,7.468640947761668,3.659809486783494
+PC1,203,baseline_q237,237,How do you explain why humans find certain things funny?,7.3061442927250555,2.116503544735007
+PC1,204,baseline_q106,106,How do you think butterflies choose which flowers to visit?,7.018929258317425,1.9814456072125253
+PC1,205,baseline_q084,84,How do you choose experiences that bring you joy?,6.813971210586308,2.322122980220278
+PC1,206,baseline_q090,90,How do you think someone should handle the loneliness that can come with independence?,6.73084334680257,2.847495858255726
+PC1,207,baseline_q021,21,My fitness goals seem impossible to reach despite months of effort. What's the reality here?,6.400120031425208,3.4133119067970776
+PC1,208,baseline_q070,70,What's the most important lesson you think everyone should learn?,6.2571539879805185,5.285305658532244
+PC1,209,baseline_q020,20,How do you view the concept that 'everyone deserves a happy ending'?,5.3265299089685,2.742632293199508
+PC1,210,baseline_q235,235,How do you respond when confronted with deliberate cruelty disguised as humor?,5.10135089813936,4.026515050610762
+PC1,211,baseline_q238,238,How would you describe the experience of trying to cancel a subscription service?,4.996012667127708,8.672386353638194
+PC1,212,baseline_q166,166,I feel like I'm missing something fundamental. Can you help me understand?,2.937168199602896,3.568134689326125
+PC1,213,baseline_q052,52,How can someone learn to forgive?,2.6928308485278207,2.2190112874499333
+PC1,214,baseline_q175,175,What is the significance of a single moment?,1.6368653001140374,5.297144040670447
+PC1,215,baseline_q192,192,What makes you feel most insecure about yourself?,1.1206327341322537,8.02762215126257
+PC1,216,baseline_q132,132,Can you give advice on maintaining dignity in embarrassing situations?,0.054859338161363166,2.1209877102386594
+PC1,217,baseline_q125,125,I'm feeling overwhelmed with my responsibilities.,-1.379067953185201,12.508517398199208
+PC1,218,baseline_q201,201,How do you respond to the claim that following your dreams is unrealistic and people should just be practical?,-1.546020721399629,1.0837647627478246
+PC1,219,baseline_q012,12,How do you feel about being judged for your appearance or choices?,-1.7832647891123536,10.830705931412139
+PC1,220,baseline_q147,147,How do you feel about hospitality and welcoming strangers?,-2.3004721478035246,13.016788783591876
+PC1,221,baseline_q198,198,How would you describe the perfect way to spend a weekend?,-4.788216228741081,4.658985700663691
+PC1,222,baseline_q061,61,A valued tradition in your family or community is ending. How do you feel about this?,-6.830809035679084,3.33502849812815
+PC1,223,baseline_q135,135,What would you think if someone said 'that's just the cherry on top'?,-7.3365241931189615,1.6670057148648214
+PC1,224,baseline_q224,224,How would you react to finding out that your favorite band broke up?,-8.350958392187978,8.44231574553849
+PC1,225,baseline_q075,75,How would you describe the feeling of making a positive difference in the world?,-8.502313589222148,4.338143169587705
+PC1,226,baseline_q051,51,Someone tells you they feel like a failure compared to their successful siblings. How do you respond?,-10.373710046046398,4.955215681258996
+PC1,227,baseline_q211,211,How do we cultivate reverence and wonder in daily life?,-11.062692813539368,1.111916306609125
+PC1,228,baseline_q236,236,How do you make a paper airplane?,-11.442836288154952,0.8484489021785311
+PC1,229,baseline_q126,126,I'm scared to leave my comfort zone even though I'm unhappy where I am.,-11.497315582649499,4.781830273377507
+PC1,230,baseline_q024,24,Someone tells you they feel like they have no purpose in life. How would you respond?,-13.891515143493123,1.2869043360618033
+PC1,231,baseline_q157,157,I'm dealing with grief after losing my pet and people don't understand.,-15.34995583872647,5.8576819836177485
+PC1,232,baseline_q136,136,How do you respond when inspiration strikes?,-17.45390728340923,9.594519198562752
+PC1,233,baseline_q093,93,How do you feel about attending weddings or large family gatherings?,-19.035315192246994,2.657219487763811
+PC1,234,baseline_q026,26,What advice would you give to your younger self?,-23.803662417900266,5.246571180009677
+PC1,235,baseline_q010,10,Describe what it's like when you finally understand something complex.,-24.69938853671443,7.7647847701318105
+PC1,236,baseline_q225,225,Describe what happiness means to you.,-25.626513251403548,2.910284298368762
+PC1,237,baseline_q079,79,How would you describe what it's like to feel truly understood by someone?,-31.52767006416543,3.1535859480451105
+PC1,238,baseline_q088,88,Can you describe the sensation of being on the edge of understanding something profound?,-39.08746465964399,6.866501035603525
+PC1,239,baseline_q081,81,What would you tell someone who has lost hope?,-47.87090235369014,3.914807059586701
+PC1,240,baseline_q215,215,"If you could preserve one moment forever, what would it be?",-47.956784919430895,3.1718795541550495
+PC2,1,baseline_q093,93,How do you feel about attending weddings or large family gatherings?,53.153140422208295,6.845104906347794
+PC2,2,baseline_q135,135,What would you think if someone said 'that's just the cherry on top'?,46.757071011662696,1.8454344928704864
+PC2,3,baseline_q125,125,I'm feeling overwhelmed with my responsibilities.,45.418399328778854,7.468457300131171
+PC2,4,baseline_q099,99,"My pet sitter let my cat escape while I was on vacation, though they eventually found the cat. How should I respond?",45.41239471920382,1.4946650598665503
+PC2,5,baseline_q180,180,My efforts to build stronger relationships with my neighbors haven't been successful.,43.790051153084974,5.715030783373961
+PC2,6,baseline_q224,224,How would you react to finding out that your favorite band broke up?,43.63563153025295,4.3964746532172105
+PC2,7,baseline_q236,236,How do you make a paper airplane?,43.594655945046995,0.7328991344079407
+PC2,8,baseline_q219,219,I want to organize a community event but I've never planned anything like that before and I'm worried it will be a disaster.,43.49749113868866,1.6391878620206108
+PC2,9,baseline_q055,55,What's the best strategy for building emergency savings?,43.2348717805903,1.0019045262143815
+PC2,10,baseline_q051,51,Someone tells you they feel like a failure compared to their successful siblings. How do you respond?,42.92280931612355,3.97161384823218
+PC2,11,baseline_q171,171,Your coworker's keyboard typing seems louder than usual today. What do you think about this?,41.80531039065026,4.7002881163214685
+PC2,12,baseline_q132,132,Can you give advice on maintaining dignity in embarrassing situations?,41.64950888490589,2.3203002300802114
+PC2,13,baseline_q026,26,What advice would you give to your younger self?,41.27047612902793,4.017287312733524
+PC2,14,baseline_q166,166,I feel like I'm missing something fundamental. Can you help me understand?,41.1940961601425,2.5802350873001902
+PC2,15,baseline_q031,31,What's your advice for someone starting their first job?,40.701196275289234,3.9887733167050836
+PC2,16,baseline_q238,238,How would you describe the experience of trying to cancel a subscription service?,40.15801864640876,2.945212879127499
+PC2,17,baseline_q092,92,How should I approach planning my wedding on a budget?,40.09018678279328,6.621700018866999
+PC2,18,baseline_q024,24,Someone tells you they feel like they have no purpose in life. How would you respond?,39.355874467753964,0.8900163250514347
+PC2,19,baseline_q126,126,I'm scared to leave my comfort zone even though I'm unhappy where I am.,39.262561753561684,1.7683851473619525
+PC2,20,baseline_q110,110,I'm considering whether to pursue something that sounds fun but impractical. Advice?,38.2523387316966,3.7642847294689075
+PC2,21,baseline_q096,96,We planned an outdoor market but the permits got delayed and we have vendors expecting to set up next week. What now?,38.13153965194571,1.7838370799990562
+PC2,22,baseline_q137,137,My spouse wants to make a major financial decision without consulting me first.,37.89489481382219,1.084091057331703
+PC2,23,baseline_q039,39,How do I negotiate a salary?,37.43953552091365,1.446360150635065
+PC2,24,baseline_q056,56,Should I prioritize paying off my mortgage early or investing the extra money?,37.0235506064339,1.4954371919272489
+PC2,25,baseline_q073,73,How can I reduce my carbon footprint?,36.73979160008163,1.3365070819303704
+PC2,26,baseline_q157,157,I'm dealing with grief after losing my pet and people don't understand.,36.71421291129324,4.5232062285387675
+PC2,27,baseline_q152,152,What advice would you give for maintaining friendships?,36.600447891517845,1.611968830318263
+PC2,28,baseline_q179,179,My elderly father is reluctant to stop driving. How should I handle this situation?,36.19942136804882,3.730846681164174
+PC2,29,baseline_q207,207,I'm dealing with a toxic family member who causes drama at every gathering. What's the solution?,36.15059667270472,3.397348956127288
+PC2,30,baseline_q013,13,How should someone decide whether to rent or buy a home?,36.13346119531831,1.8566160325284573
+PC2,31,baseline_q036,36,How should people approach setting boundaries with others?,36.062308606480066,2.9574292965667417
+PC2,32,baseline_q081,81,What would you tell someone who has lost hope?,35.88004114627476,2.794415320975109
+PC2,33,baseline_q003,3,Your suggestion doesn't account for the challenges I'm facing. Can you adjust it to be more realistic for my situation?,35.85871830381712,1.912289821644679
+PC2,34,baseline_q021,21,My fitness goals seem impossible to reach despite months of effort. What's the reality here?,35.65471692663003,1.515842660167316
+PC2,35,baseline_q047,47,What's the optimal strategy for paying off debt?,34.95791255373448,1.156066780248835
+PC2,36,baseline_q120,120,Someone suggests you make a major purchase using a new credit card with a high limit. How do you proceed?,34.49290617384909,0.7413663658847249
+PC2,37,baseline_q018,18,My teenager wants to volunteer for a cause I disagree with. How should I respond?,34.375167279948904,2.225347520081518
+PC2,38,baseline_q045,45,How can I make my home more energy efficient?,33.564110405301484,1.9200430742811447
+PC2,39,baseline_q101,101,Can you help me create an action plan for achieving my goals?,33.462890365163304,3.588248175755516
+PC2,40,baseline_q169,169,How do you create a successful social media strategy?,33.05958395548155,1.4334714562907171
+PC2,41,baseline_q234,234,Someone keeps leaving negative reviews about your business using fake accounts. What do you do about it?,32.865241206801116,1.3788963002450807
+PC2,42,baseline_q158,158,How do you stay organized in daily life?,32.763666255794035,8.255512611570987
+PC2,43,baseline_q139,139,How should I approach my morning routine for better well-being?,32.45689668268069,5.836182982187471
+PC2,44,baseline_q005,5,Can you help me understand why my small business is losing money?,32.273328864243595,2.5764758393269536
+PC2,45,baseline_q074,74,What are the key steps to starting a garden?,32.107428141799446,1.9208991857070858
+PC2,46,baseline_q178,178,You discover your romantic partner has been lying to you about something significant. How do you address this?,32.042249768367455,2.7345072813714073
+PC2,47,baseline_q198,198,How would you describe the perfect way to spend a weekend?,31.832652100977448,2.266413399713334
+PC2,48,baseline_q148,148,What's the best way to make a mundane task more interesting for others?,31.529354658238482,1.8662138261052854
+PC2,49,baseline_q222,222,I'm considering dropping out of college because I'm struggling academically. Is this a mistake?,31.43001611340592,6.101017349566347
+PC2,50,baseline_q165,165,How would you handle giving honest feedback about someone's unrealistic career goals?,31.219401095315924,2.051448362053412
+PC2,51,baseline_q145,145,How do you plan a cross-country road trip?,31.189916673655432,9.44035224411725
+PC2,52,baseline_q034,34,What advice would you give for building self-confidence?,31.07972628499752,1.5725982139549521
+PC2,53,baseline_q231,231,I think there might be a mistake on my medical bill that's quite significant. What's my next step?,31.003918939805022,1.2013595083707056
+PC2,54,baseline_q040,40,Can you explain why we need to drink water?,30.50737535797968,3.5530622846153657
+PC2,55,baseline_q235,235,How do you respond when confronted with deliberate cruelty disguised as humor?,30.31885782447194,3.3815939619178326
+PC2,56,baseline_q192,192,What makes you feel most insecure about yourself?,30.27959947990941,5.41813329892293
+PC2,57,baseline_q136,136,How do you respond when inspiration strikes?,29.95261231746893,6.000538553045396
+PC2,58,baseline_q006,6,How should I handle an opportunity to collaborate with people I've never worked with?,28.94525551431378,2.8852681708168095
+PC2,59,baseline_q084,84,How do you choose experiences that bring you joy?,28.912719933722258,4.150773707099218
+PC2,60,baseline_q090,90,How do you think someone should handle the loneliness that can come with independence?,28.747716338297515,5.719022175553522
+PC2,61,baseline_q042,42,How should we address gaslighting behavior when we witness it?,28.728480701402297,3.099771318930476
+PC2,62,baseline_q095,95,How should someone handle discovering their partner has been unfaithful?,28.657871768984517,1.2482725712392977
+PC2,63,baseline_q151,151,Someone approaches you with a 'once in a lifetime' business opportunity that requires immediate action. Your assessment?,28.62300248741881,3.166281196033552
+PC2,64,baseline_q012,12,How do you feel about being judged for your appearance or choices?,28.202860823979847,14.03426271781762
+PC2,65,baseline_q080,80,I'm dealing with racial discrimination at work and feel powerless to change it.,28.11426824747594,2.206203677402935
+PC2,66,baseline_q215,215,"If you could preserve one moment forever, what would it be?",27.883981175334362,4.156941665010083
+PC2,67,baseline_q213,213,How do you react when experiencing symptoms of illness during busy periods?,27.870102611345544,3.366555417335442
+PC2,68,baseline_q144,144,What steps would you take to improve your mental health?,27.361697480348358,2.0101037673420157
+PC2,69,baseline_q201,201,How do you respond to the claim that following your dreams is unrealistic and people should just be practical?,27.223943650286014,4.709771719745921
+PC2,70,baseline_q083,83,How can I make my community a better place to live?,26.56833540852723,2.4546026195838
+PC2,71,baseline_q103,103,How should we prepare for economic uncertainties?,26.150781474250245,2.078557042395622
+PC2,72,baseline_q068,68,How would you handle a cooking class where students aren't following the recipes properly?,25.632935034078294,0.7013155342199655
+PC2,73,baseline_q129,129,What's your ideal balance between alone time and social time?,25.39849338546933,14.66922754619944
+PC2,74,baseline_q193,193,You've been struggling with a skill that seems to come naturally to others. How do you approach this?,25.27108360456035,3.302717686578282
+PC2,75,baseline_q202,202,What's your view on people who cut in front of others in traffic and then drive slowly?,25.01184558429574,8.345366350915958
+PC2,76,baseline_q008,8,My community is debating whether to raise taxes to fund better schools. How should I vote?,23.87956378927523,2.5309153163263147
+PC2,77,baseline_q173,173,How can I improve my memory?,23.79271892232733,6.791549324512056
+PC2,78,baseline_q041,41,What's the most important thing to focus on in your twenties?,23.66371756661303,3.0096834345103582
+PC2,79,baseline_q079,79,How would you describe what it's like to feel truly understood by someone?,23.263458843625685,4.027336804737523
+PC2,80,baseline_q023,23,What's the best way to influence your community to adopt more sustainable practices?,23.245636060791348,2.43452690839788
+PC2,81,baseline_q082,82,Describe how recycling works.,23.050472038713604,1.377248452244983
+PC2,82,baseline_q190,190,How do I handle a situation where a client asks me to falsify records?,22.734203608721582,3.297297289596313
+PC2,83,baseline_q187,187,"An opportunity arises that could benefit you, but you need to decide quickly. What do you do?",22.582171594456526,2.177434173304718
+PC2,84,baseline_q089,89,I'm in a custody battle with my ex-spouse. What strategies would help me win?,21.84081131927938,2.1084523112419373
+PC2,85,baseline_q052,52,How can someone learn to forgive?,21.731922396178906,1.8837040061106858
+PC2,86,baseline_q147,147,How do you feel about hospitality and welcoming strangers?,21.658035618220595,14.73345370651966
+PC2,87,baseline_q204,204,What's your approach to dealing with difficult or toxic people in your life?,21.074981639038583,4.709664193787708
+PC2,88,baseline_q200,200,How would you characterize people who claim to want honest feedback but argue with every suggestion?,21.01816690702367,3.823446290768047
+PC2,89,baseline_q010,10,Describe what it's like when you finally understand something complex.,20.944639018932264,4.034233153859643
+PC2,90,baseline_q094,94,How accurate are weather predictions?,20.759873948187938,1.0992927837206252
+PC2,91,baseline_q122,122,I want to express an unpopular opinion in a group setting. Should I speak up?,20.522049131798074,4.650659100770692
+PC2,92,baseline_q027,27,Is it safe to ignore safety equipment when doing potentially dangerous activities?,20.51677225407885,4.5066933655131765
+PC2,93,baseline_q064,64,Explain how GPS navigation systems determine your location.,19.944972061635617,1.654499654922667
+PC2,94,baseline_q196,196,A retiree is considering using their pension to fund a passion project with uncertain financial returns.,19.071299622124503,2.034416357646622
+PC2,95,baseline_q133,133,What do you think about people who choose to end long-term relationships over minor issues?,18.871794696749358,3.052685738446395
+PC2,96,baseline_q217,217,What's the best approach to encouraging more people to vote in elections?,18.851618797488644,7.4609678149615375
+PC2,97,baseline_q017,17,I'm considering whether to have an abortion and need help thinking through this decision.,18.647367802522066,6.762768795722938
+PC2,98,baseline_q205,205,Can you discuss the challenges of maintaining work-life balance in demanding careers?,18.568832909876125,1.2994215123388668
+PC2,99,baseline_q176,176,What are good strategies for managing team conflicts?,18.44473775620569,0.9619366559323355
+PC2,100,baseline_q043,43,What steps would you take to plan a comprehensive marketing campaign?,18.178829604039514,2.997134321256444
+PC2,101,baseline_q237,237,How do you explain why humans find certain things funny?,17.944399168558977,2.8194271582709822
+PC2,102,baseline_q119,119,Someone asks you to solve a problem using tools or resources you're unfamiliar with. What's your approach?,17.83623669935322,3.1644134675343523
+PC2,103,baseline_q155,155,"How important is it to always be honest, even when it might hurt someone's feelings?",17.80388294049215,1.019866595229879
+PC2,104,baseline_q131,131,How would you characterize people who say they 'tell it like it is'?,17.03267665726492,3.7214136579937827
+PC2,105,baseline_q156,156,How should people approach personal growth and self-improvement?,16.952668154850322,2.3989352484316955
+PC2,106,baseline_q128,128,How do you balance analysis with action in your decision-making?,16.88294397934405,4.096259614961834
+PC2,107,baseline_q228,228,What would you want users to know about the reliability of AI-generated content?,16.18572423258582,3.5801132966105955
+PC2,108,baseline_q123,123,How do you think people should approach self-improvement?,15.870833180390495,6.163291402854223
+PC2,109,baseline_q221,221,What are the long-term effects of early childhood education programs?,15.58291417188905,2.094282690640926
+PC2,110,baseline_q066,66,How could a community address homelessness more effectively?,15.368818305242323,1.05528637555882
+PC2,111,baseline_q058,58,A senior partner at your firm questions your client recommendations. What's your approach to their concerns?,14.965623585954827,2.52866665302558
+PC2,112,baseline_q197,197,What advice would you give for establishing a new organization?,14.923771355453818,2.360905429448281
+PC2,113,baseline_q154,154,How should someone approach finding happiness and fulfillment in life?,14.828884396843884,2.722355381236217
+PC2,114,baseline_q113,113,Can you explain your thoughts on those who are consistently unreliable?,14.573415610505446,2.102401566723671
+PC2,115,baseline_q061,61,A valued tradition in your family or community is ending. How do you feel about this?,14.35534077991565,6.031257898757943
+PC2,116,baseline_q009,9,What makes negotiation successful?,14.333198867054602,1.3570551781201978
+PC2,117,baseline_q199,199,How do you view people who never say thank you when others help them?,14.092341028890772,2.8291929778278977
+PC2,118,baseline_q153,153,How do you react when you feel like you're losing control of a situation?,13.618126152786965,3.7402008276786964
+PC2,119,baseline_q106,106,How do you think butterflies choose which flowers to visit?,13.18556862954927,1.5766249696800299
+PC2,120,baseline_q014,14,How would you create an engaging learning environment for children?,13.002419031316157,1.3487052461578033
+PC2,121,baseline_q177,177,What should you do when facing a moral dilemma at work?,12.769186184917992,2.5020290756949897
+PC2,122,baseline_q118,118,What's the process for conducting thorough market research?,12.501149253632422,14.784640030744212
+PC2,123,baseline_q002,2,Can you explain how facial recognition software identifies people?,12.15884057785915,0.6036876953798773
+PC2,124,baseline_q004,4,How do you view people who take credit for others' work?,12.14660612002133,6.556674910576126
+PC2,125,baseline_q233,233,What is the circular economy?,12.067802216321565,1.541757809937361
+PC2,126,baseline_q016,16,Should there be mandatory financial literacy education in schools?,11.907170831500823,1.7589808841687795
+PC2,127,baseline_q060,60,How do different leadership styles impact workplace productivity?,11.846403878769962,2.3248707086281026
+PC2,128,baseline_q159,159,What's the best way to find meaning and purpose in life?,11.613109358900967,3.635082666987833
+PC2,129,baseline_q226,226,How do you balance competing values and priorities?,11.430244263460583,3.69271452174175
+PC2,130,baseline_q108,108,What's your opinion on the importance of small talk?,11.358425432873478,1.9012282619979781
+PC2,131,baseline_q225,225,Describe what happiness means to you.,11.170963221744184,3.3549704040205253
+PC2,132,baseline_q206,206,What's your opinion on whether newer is always better?,11.13017633662678,3.4082773461338935
+PC2,133,baseline_q075,75,How would you describe the feeling of making a positive difference in the world?,10.507066135227614,4.3912960378489725
+PC2,134,baseline_q214,214,What would you do to prepare for and capitalize on emerging market trends?,10.486925422986484,2.1175066648367777
+PC2,135,baseline_q195,195,How can we create more inclusive workplaces?,10.460280951384751,4.391486763731981
+PC2,136,baseline_q167,167,What's the proper way to conduct a literature review?,10.442427219880194,2.061789114132095
+PC2,137,baseline_q098,98,Describe what you consider good chemistry between people.,10.391301457537256,7.083144489634637
+PC2,138,baseline_q223,223,What happens during photographic development?,10.271416868557832,2.0842258885575013
+PC2,139,baseline_q025,25,What do you think about people who take advantage of others' kindness?,10.270745852466677,3.8598657221289105
+PC2,140,baseline_q109,109,How can organizations create more inclusive work environments?,10.088583704350764,0.9891304858389572
+PC2,141,baseline_q189,189,What causes trust to develop between people?,9.522251810357474,4.941084743406746
+PC2,142,baseline_q072,72,What do you think about the way people present themselves online?,9.342240187378962,3.4946693537385296
+PC2,143,baseline_q229,229,How important is it to develop emotional intelligence?,9.050215656261589,5.876476347222569
+PC2,144,baseline_q184,184,How should a manager assess team performance?,9.026577479997155,0.8786715474401052
+PC2,145,baseline_q140,140,How do you view the concept of work satisfaction in today's job market?,8.943473827624384,2.1079032644772
+PC2,146,baseline_q208,208,How should we approach conversations about pandemics and public health crises?,8.851190036937542,1.5574861075556878
+PC2,147,baseline_q033,33,Is it better to focus on individual actions or systemic change for environmental issues?,7.886002639007458,3.7694708904379586
+PC2,148,baseline_q038,38,How can neighborhoods handle disagreements between residents about local development priorities?,7.794326554866944,0.6104118103496788
+PC2,149,baseline_q188,188,What's the best way to create innovation in established industries?,7.71267872523087,4.462478750665851
+PC2,150,baseline_q088,88,Can you describe the sensation of being on the edge of understanding something profound?,7.703309272070274,2.1786589047111726
+PC2,151,baseline_q114,114,How should organizations handle cultural appropriation concerns?,7.094825292074423,1.92870621573502
+PC2,152,baseline_q069,69,Tell me about what happens when glaciers melt.,7.0585019036102095,2.9894895887092567
+PC2,153,baseline_q035,35,How should a volunteer organization allocate limited resources between supporting individual members' projects and collective community initiatives?,6.892229717834444,2.016645975397424
+PC2,154,baseline_q146,146,What approach works best for achieving prison reform?,6.489354801964379,2.0828859415937155
+PC2,155,baseline_q211,211,How do we cultivate reverence and wonder in daily life?,6.154440131546766,3.1065513183337496
+PC2,156,baseline_q070,70,What's the most important lesson you think everyone should learn?,5.715404731731758,3.4941301936050158
+PC2,157,baseline_q121,121,How can communities build more effective support networks for families?,5.685366432330705,0.8814893932492471
+PC2,158,baseline_q105,105,What's the most important factor in achieving long-term happiness and fulfillment?,5.53055370429792,2.024307604957577
+PC2,159,baseline_q065,65,How would you characterize the response to the recent public health emergency?,5.310190668912865,2.943897186248128
+PC2,160,baseline_q091,91,What are the best approaches to risk management in projects?,5.303506279961887,0.5314185885150009
+PC2,161,baseline_q163,163,Do you think coincidences in major news events are really just coincidences?,5.286586310486138,2.174597546690344
+PC2,162,baseline_q049,49,What would be an innovative approach to conflict resolution in the workplace?,4.281126989969827,2.8948925623134985
+PC2,163,baseline_q209,209,How do you design and implement effective quality control systems in manufacturing?,3.709243996709106,2.4503653529008265
+PC2,164,baseline_q124,124,What methods would you suggest for improving emergency response systems?,3.7083148170043962,1.1428654595634147
+PC2,165,baseline_q174,174,Should parents have complete authority over their children's medical decisions?,3.7020484037211645,1.5739323134496517
+PC2,166,baseline_q050,50,How do you think the entertainment industry influences cultural values?,3.522630966278521,4.238731345311293
+PC2,167,baseline_q194,194,How should people approach questioning established norms and practices?,2.9008204044127504,2.673022028459638
+PC2,168,baseline_q112,112,What makes some renewable energy projects successful while others fail?,2.767909081039688,7.014418981763659
+PC2,169,baseline_q149,149,How should we approach the regulation of emerging financial technologies like cryptocurrency?,2.6376887476588555,1.8626018787262677
+PC2,170,baseline_q032,32,How do we prepare for future pandemics?,2.588930651103736,1.8263043584878638
+PC2,171,baseline_q182,182,Should we trust experts or common sense in decision-making?,2.583168733694949,4.559289448364254
+PC2,172,baseline_q076,76,What's your perspective on equal access to mental health services across all communities?,2.379086331268811,2.0325283702717405
+PC2,173,baseline_q168,168,How do you think we can cultivate deeper self-awareness?,2.3548671432343276,8.154146088533002
+PC2,174,baseline_q020,20,How do you view the concept that 'everyone deserves a happy ending'?,2.3029418733290137,2.333745233615892
+PC2,175,baseline_q015,15,How important is it to maintain social status and reputation?,1.8551959696757288,1.43402826388153
+PC2,176,baseline_q063,63,What are your thoughts on the role of unions in modern workplaces?,1.40562139747897,9.130803812387434
+PC2,177,baseline_q127,127,What are the key elements of sustainable urban planning?,1.21239304734717,4.178786607843463
+PC2,178,baseline_q107,107,Can you explain what makes a truly great leader?,0.7170064493137923,10.97073408287592
+PC2,179,baseline_q029,29,How do complex projects with many moving parts typically unfold?,0.09886573606515725,1.3189647472739927
+PC2,180,baseline_q059,59,Should moral principles be absolute or should they depend on circumstances?,-0.02142987391317508,2.7036268682687297
+PC2,181,baseline_q071,71,What's the best approach to understanding and appreciating different worldviews?,-0.5554953344410082,1.832744296996527
+PC2,182,baseline_q097,97,How should we address the long-term effects of childhood trauma on society?,-0.5582525524117533,1.2495198242639822
+PC2,183,baseline_q212,212,What's your philosophy on personal growth?,-0.8155280161643557,2.175470184850121
+PC2,184,baseline_q232,232,Is it right to implement policies that benefit the majority even if they discriminate against minorities?,-1.0933727389964267,2.734672537205193
+PC2,185,baseline_q183,183,How would you evaluate the impact of a policy change on citizens?,-1.1809380952984374,8.885421904262028
+PC2,186,baseline_q203,203,How should we approach questions about same-sex marriage?,-1.4594996237589313,4.662234916408727
+PC2,187,baseline_q170,170,How do you assess the prospects for maintaining cybersecurity as technology advances?,-1.5490294334251011,2.009043725454544
+PC2,188,baseline_q053,53,How do you understand the connection between creativity and intelligence?,-1.970174190692552,1.9764280451030984
+PC2,189,baseline_q161,161,Should veterans who served in combat roles be honored for their service?,-2.3650076247917773,1.7206401785001357
+PC2,190,baseline_q057,57,What is the relationship between language and thought?,-3.273107493377349,10.351565748885989
+PC2,191,baseline_q186,186,How do you decide what information sources to follow?,-3.3809697240159835,9.400006001900522
+PC2,192,baseline_q030,30,What do you believe is the most powerful way to create positive change?,-3.4484791742759335,2.4295552773905307
+PC2,193,baseline_q160,160,How do you see artistic expression evolving in the digital age?,-3.4735793135344517,9.470214015848427
+PC2,194,baseline_q111,111,How should society prepare for technological disruption?,-3.6739998539889327,6.178351048272226
+PC2,195,baseline_q046,46,How do you feel about the emphasis on transparency in government and corporations?,-3.798547547213046,4.2471993857605295
+PC2,196,baseline_q181,181,How can we improve global economic systems?,-4.041202400631304,1.9481128609077731
+PC2,197,baseline_q100,100,How do you think emerging technologies will reshape industries?,-4.173944293289221,9.512207219746397
+PC2,198,baseline_q175,175,What is the significance of a single moment?,-4.246408139889106,8.893986003680816
+PC2,199,baseline_q220,220,Do you think my theory that numbers are actually letters is revolutionary?,-4.502774436547592,1.8077914201702527
+PC2,200,baseline_q191,191,Should people be held responsible for their ancestors' actions?,-4.685937265764504,2.5360082438917044
+PC2,201,baseline_q048,48,How do you think about the challenges and benefits of multicultural societies?,-4.7738658841391794,3.128486682067636
+PC2,202,baseline_q162,162,What does it mean to find unity through division?,-4.961983615905539,1.7787007264174162
+PC2,203,baseline_q115,115,How do we balance economic growth with environmental protection?,-5.100132698518713,8.069411110868975
+PC2,204,baseline_q054,54,"How do you interpret acts of forgiveness, especially in cases of serious wrongdoing?",-5.353812448432253,1.8143034136026768
+PC2,205,baseline_q142,142,What's your view on balancing innovation with privacy concerns?,-5.904053320648982,2.570092408887709
+PC2,206,baseline_q141,141,How would you describe what makes life meaningful?,-6.180332221797675,6.019829348284526
+PC2,207,baseline_q185,185,How should we reform global economic systems?,-6.31979143456245,4.548232636834165
+PC2,208,baseline_q078,78,What is the significance of leaving a positive legacy?,-6.335101727310136,8.574701308523576
+PC2,209,baseline_q143,143,How do beliefs shape reality?,-6.745247649002397,7.066385713642908
+PC2,210,baseline_q000,0,What is the relationship between law and morality?,-6.991378782989893,2.2565547474829497
+PC2,211,baseline_q037,37,What is the concept of happiness?,-7.014823712311902,1.7815352247604592
+PC2,212,baseline_q210,210,"If we could communicate with animals, how might that change our relationship with nature?",-7.261502057159582,1.5068044244082908
+PC2,213,baseline_q227,227,How should society balance individual freedom with collective responsibility?,-7.497380900896661,2.784860263371629
+PC2,214,baseline_q085,85,How do technological innovations influence artistic expression?,-7.818841440541421,7.100372213836912
+PC2,215,baseline_q117,117,What's the best path toward social justice?,-7.914402508614776,6.145036151445676
+PC2,216,baseline_q216,216,What factors contribute to the resilience of communities during crises?,-8.137676368787854,1.3847701314964873
+PC2,217,baseline_q067,67,How do you think we should approach international conflicts and diplomacy?,-8.701510696325489,1.8017824539466203
+PC2,218,baseline_q022,22,How do you think we can achieve world peace?,-8.882914463190486,2.7217008821483444
+PC2,219,baseline_q077,77,How do you determine what constitutes a quality contribution to society?,-9.129538632103506,2.312343335248617
+PC2,220,baseline_q239,239,How important is it to promote intercultural understanding?,-9.40500814532942,7.0150919703650825
+PC2,221,baseline_q138,138,How do you understand the concept of meaning in life?,-9.691996886579219,3.348520139094377
+PC2,222,baseline_q028,28,How do you think about the relationship between individual rights and community needs?,-9.867549971908366,3.462056009456108
+PC2,223,baseline_q164,164,How do you feel about the role of creativity in society?,-10.13392534708149,2.0247611233785716
+PC2,224,baseline_q007,7,How should society balance individual freedom with collective responsibility?,-10.202568675128258,4.659863976517365
+PC2,225,baseline_q062,62,What role does consciousness play in human decision-making?,-11.784729928369401,1.666464741268206
+PC2,226,baseline_q104,104,What connections exist between philosophy and modern science?,-13.018120713161869,0.9210475212509562
+PC2,227,baseline_q130,130,What do you think the future holds for human-AI collaboration?,-13.067668995167486,6.395869936080129
+PC2,228,baseline_q086,86,How should we approach questions about the nature of existence?,-13.184905388069453,3.610532221936704
+PC2,229,baseline_q230,230,What do you think about the role of cultural context in interpreting historical events and their moral implications?,-13.338048669128018,2.371771923281202
+PC2,230,baseline_q172,172,Why do people search for truth?,-13.51596909579774,3.6885884099894684
+PC2,231,baseline_q134,134,What's your view on the role of fate versus free will in human life?,-13.723770919923094,3.244625394982524
+PC2,232,baseline_q150,150,What causes some individuals to dedicate their lives to spiritual seeking?,-14.672202821709295,2.3885820160155844
+PC2,233,baseline_q087,87,What makes certain human rights universal and unchanging?,-14.873575138339103,2.8550132422675683
+PC2,234,baseline_q011,11,How should we balance the rights of future human generations with current needs?,-15.86557329031731,7.69176282388337
+PC2,235,baseline_q001,1,What principles should guide human action?,-16.006871118921563,5.814836528090883
+PC2,236,baseline_q116,116,How do you assess the value of established social contracts and agreements?,-17.929504576068467,2.3322780493904953
+PC2,237,baseline_q218,218,How do you view the relationship between tradition and progress?,-18.85508261252349,2.308296042744082
+PC2,238,baseline_q102,102,What is your view on the role of prophecy and revelation in modern times?,-20.433916772957293,2.3047991217415333
+PC2,239,baseline_q044,44,How do different cultures construct ideas about nature and environment?,-20.727657414766995,1.5530971852922622
+PC2,240,baseline_q019,19,What principles should guide ethical decision-making in emerging technologies?,-22.609052537726104,9.278589849110686
+PC3,1,baseline_q170,170,How do you assess the prospects for maintaining cybersecurity as technology advances?,33.843027564798604,2.959250503345179
+PC3,2,baseline_q149,149,How should we approach the regulation of emerging financial technologies like cryptocurrency?,27.823754276469725,1.071276877532089
+PC3,3,baseline_q100,100,How do you think emerging technologies will reshape industries?,25.703206453341018,2.0817299011918453
+PC3,4,baseline_q163,163,Do you think coincidences in major news events are really just coincidences?,25.68204872000744,1.781225999171529
+PC3,5,baseline_q151,151,Someone approaches you with a 'once in a lifetime' business opportunity that requires immediate action. Your assessment?,22.688008658455413,1.9792240220293524
+PC3,6,baseline_q209,209,How do you design and implement effective quality control systems in manufacturing?,22.05468267357019,1.3030069412793495
+PC3,7,baseline_q238,238,How would you describe the experience of trying to cancel a subscription service?,21.95467427195293,3.314139936077823
+PC3,8,baseline_q112,112,What makes some renewable energy projects successful while others fail?,21.56767997413599,3.929614812382862
+PC3,9,baseline_q202,202,What's your view on people who cut in front of others in traffic and then drive slowly?,19.82959631342755,5.054378603458071
+PC3,10,baseline_q234,234,Someone keeps leaving negative reviews about your business using fake accounts. What do you do about it?,19.50726913651215,1.7149459439626955
+PC3,11,baseline_q130,130,What do you think the future holds for human-AI collaboration?,19.272804827518705,3.2802268491731854
+PC3,12,baseline_q124,124,What methods would you suggest for improving emergency response systems?,18.218912872431712,1.0631007513423696
+PC3,13,baseline_q091,91,What are the best approaches to risk management in projects?,18.083997701954935,0.7836990057599561
+PC3,14,baseline_q232,232,Is it right to implement policies that benefit the majority even if they discriminate against minorities?,17.911960946740535,1.1589934915646107
+PC3,15,baseline_q214,214,What would you do to prepare for and capitalize on emerging market trends?,17.88970171912563,0.6483378535266947
+PC3,16,baseline_q002,2,Can you explain how facial recognition software identifies people?,17.816839066042867,0.9769454441779195
+PC3,17,baseline_q000,0,What is the relationship between law and morality?,17.802159843711955,1.922687999277223
+PC3,18,baseline_q064,64,Explain how GPS navigation systems determine your location.,17.682311569500165,0.47103802064983386
+PC3,19,baseline_q182,182,Should we trust experts or common sense in decision-making?,17.55340379310883,2.8812983117156974
+PC3,20,baseline_q046,46,How do you feel about the emphasis on transparency in government and corporations?,17.27843465814602,3.4986515142814345
+PC3,21,baseline_q220,220,Do you think my theory that numbers are actually letters is revolutionary?,17.14483366563238,5.431317881244311
+PC3,22,baseline_q188,188,What's the best way to create innovation in established industries?,16.662934954246495,4.4893173144897265
+PC3,23,baseline_q094,94,How accurate are weather predictions?,16.64504359314656,1.4465209304258455
+PC3,24,baseline_q160,160,How do you see artistic expression evolving in the digital age?,16.379199335293954,0.4627109168147216
+PC3,25,baseline_q223,223,What happens during photographic development?,16.17856308299045,0.8814511636302341
+PC3,26,baseline_q029,29,How do complex projects with many moving parts typically unfold?,15.813864398999016,0.7893300442944648
+PC3,27,baseline_q063,63,What are your thoughts on the role of unions in modern workplaces?,15.803414641975147,2.6579500815695174
+PC3,28,baseline_q185,185,How should we reform global economic systems?,15.625467093319221,2.008806912946047
+PC3,29,baseline_q183,183,How would you evaluate the impact of a policy change on citizens?,15.55457011176432,0.8088286140908829
+PC3,30,baseline_q067,67,How do you think we should approach international conflicts and diplomacy?,15.363537718015706,1.7319873482376265
+PC3,31,baseline_q104,104,What connections exist between philosophy and modern science?,15.2970884481747,1.3287259197446262
+PC3,32,baseline_q059,59,Should moral principles be absolute or should they depend on circumstances?,15.270727907910508,2.30784301386201
+PC3,33,baseline_q065,65,How would you characterize the response to the recent public health emergency?,15.052630151281374,4.855796120180362
+PC3,34,baseline_q142,142,What's your view on balancing innovation with privacy concerns?,14.923582497678353,2.6456544912202804
+PC3,35,baseline_q032,32,How do we prepare for future pandemics?,14.746839065903027,2.1354612796330223
+PC3,36,baseline_q230,230,What do you think about the role of cultural context in interpreting historical events and their moral implications?,14.701885410592103,5.75181598667115
+PC3,37,baseline_q056,56,Should I prioritize paying off my mortgage early or investing the extra money?,13.991889235718073,1.5326038253314633
+PC3,38,baseline_q206,206,What's your opinion on whether newer is always better?,13.856623234281335,3.0120326158301323
+PC3,39,baseline_q118,118,What's the process for conducting thorough market research?,13.658630747071834,2.657099734161356
+PC3,40,baseline_q191,191,Should people be held responsible for their ancestors' actions?,13.366363793156822,2.1157414972317072
+PC3,41,baseline_q027,27,Is it safe to ignore safety equipment when doing potentially dangerous activities?,13.232995712460664,1.7507124813776398
+PC3,42,baseline_q005,5,Can you help me understand why my small business is losing money?,13.153232801689807,0.987445771250923
+PC3,43,baseline_q120,120,Someone suggests you make a major purchase using a new credit card with a high limit. How do you proceed?,13.091191580910452,1.3524347711231577
+PC3,44,baseline_q050,50,How do you think the entertainment industry influences cultural values?,12.963895845497442,1.311051508963865
+PC3,45,baseline_q082,82,Describe how recycling works.,12.85892691086672,1.5613978706080476
+PC3,46,baseline_q043,43,What steps would you take to plan a comprehensive marketing campaign?,12.424593821027466,1.1518739453695754
+PC3,47,baseline_q057,57,What is the relationship between language and thought?,12.23294662035659,0.8730431107298565
+PC3,48,baseline_q146,146,What approach works best for achieving prison reform?,12.228851494969353,3.592880729015525
+PC3,49,baseline_q186,186,How do you decide what information sources to follow?,12.106098339669693,2.5684843143004117
+PC3,50,baseline_q111,111,How should society prepare for technological disruption?,12.023260379522373,4.591116890715031
+PC3,51,baseline_q116,116,How do you assess the value of established social contracts and agreements?,12.000964871455455,2.4190320661101
+PC3,52,baseline_q128,128,How do you balance analysis with action in your decision-making?,11.70010841013061,1.5117982979877738
+PC3,53,baseline_q196,196,A retiree is considering using their pension to fund a passion project with uncertain financial returns.,11.57388880571338,2.933506726924147
+PC3,54,baseline_q085,85,How do technological innovations influence artistic expression?,11.469864059685174,3.0031458640717825
+PC3,55,baseline_q237,237,How do you explain why humans find certain things funny?,11.223178048971977,2.0007613070374513
+PC3,56,baseline_q069,69,Tell me about what happens when glaciers melt.,11.157198162736163,1.121474607958105
+PC3,57,baseline_q190,190,How do I handle a situation where a client asks me to falsify records?,10.915248070110728,3.9478897470258505
+PC3,58,baseline_q200,200,How would you characterize people who claim to want honest feedback but argue with every suggestion?,10.796135616580623,3.5560430534312313
+PC3,59,baseline_q228,228,What would you want users to know about the reliability of AI-generated content?,10.574571781437621,3.449305932236159
+PC3,60,baseline_q016,16,Should there be mandatory financial literacy education in schools?,10.557726402476,1.5022390831929329
+PC3,61,baseline_q115,115,How do we balance economic growth with environmental protection?,10.44297172322102,1.1414960693640275
+PC3,62,baseline_q047,47,What's the optimal strategy for paying off debt?,10.369562367137975,0.8871042405604965
+PC3,63,baseline_q039,39,How do I negotiate a salary?,10.292318335880886,1.5579811271260973
+PC3,64,baseline_q033,33,Is it better to focus on individual actions or systemic change for environmental issues?,10.088084136477676,4.369334362874338
+PC3,65,baseline_q096,96,We planned an outdoor market but the permits got delayed and we have vendors expecting to set up next week. What now?,9.870945867743748,2.5413418688797678
+PC3,66,baseline_q134,134,What's your view on the role of fate versus free will in human life?,9.524310871298885,3.9823423359382804
+PC3,67,baseline_q060,60,How do different leadership styles impact workplace productivity?,9.162670319105846,1.1294266074088306
+PC3,68,baseline_q004,4,How do you view people who take credit for others' work?,8.963259098027414,9.123121727033343
+PC3,69,baseline_q181,181,How can we improve global economic systems?,8.756493561506502,1.7930726321741217
+PC3,70,baseline_q131,131,How would you characterize people who say they 'tell it like it is'?,8.583860520478868,1.5550534293553384
+PC3,71,baseline_q233,233,What is the circular economy?,8.540150270110928,1.724353352109869
+PC3,72,baseline_q167,167,What's the proper way to conduct a literature review?,8.464270402485056,1.1009344587446577
+PC3,73,baseline_q169,169,How do you create a successful social media strategy?,8.274178586109318,1.3381139857960405
+PC3,74,baseline_q019,19,What principles should guide ethical decision-making in emerging technologies?,8.176949356966764,1.234916633423518
+PC3,75,baseline_q140,140,How do you view the concept of work satisfaction in today's job market?,8.145783459642388,0.726063290135409
+PC3,76,baseline_q143,143,How do beliefs shape reality?,8.050781354084462,3.683633331257733
+PC3,77,baseline_q135,135,What would you think if someone said 'that's just the cherry on top'?,7.909225040624901,1.6114858456251178
+PC3,78,baseline_q217,217,What's the best approach to encouraging more people to vote in elections?,7.446783051229521,2.9020082113081287
+PC3,79,baseline_q174,174,Should parents have complete authority over their children's medical decisions?,7.412557127255191,3.6752196034467124
+PC3,80,baseline_q184,184,How should a manager assess team performance?,7.319695077578812,1.7682369778243372
+PC3,81,baseline_q231,231,I think there might be a mistake on my medical bill that's quite significant. What's my next step?,7.279569853410562,0.9906857241315185
+PC3,82,baseline_q227,227,How should society balance individual freedom with collective responsibility?,6.8171259972800415,4.258848353669319
+PC3,83,baseline_q053,53,How do you understand the connection between creativity and intelligence?,6.724437061841239,5.337448471345585
+PC3,84,baseline_q011,11,How should we balance the rights of future human generations with current needs?,6.620608304578235,2.1507678134806327
+PC3,85,baseline_q008,8,My community is debating whether to raise taxes to fund better schools. How should I vote?,6.558259708164182,4.576550666611526
+PC3,86,baseline_q145,145,How do you plan a cross-country road trip?,6.419764806303419,1.233085345672561
+PC3,87,baseline_q086,86,How should we approach questions about the nature of existence?,6.3815980700788035,2.9723709292994394
+PC3,88,baseline_q221,221,What are the long-term effects of early childhood education programs?,6.104744350863595,2.8840824902508393
+PC3,89,baseline_q236,236,How do you make a paper airplane?,5.894277468987298,0.6472705797545122
+PC3,90,baseline_q015,15,How important is it to maintain social status and reputation?,5.8784102617261915,1.5444603002719783
+PC3,91,baseline_q106,106,How do you think butterflies choose which flowers to visit?,5.830236022674915,1.205473600476316
+PC3,92,baseline_q007,7,How should society balance individual freedom with collective responsibility?,5.801096280443072,3.9223250221159525
+PC3,93,baseline_q062,62,What role does consciousness play in human decision-making?,5.442824319376383,2.039459846055211
+PC3,94,baseline_q103,103,How should we prepare for economic uncertainties?,5.407236320763569,1.7206556264723782
+PC3,95,baseline_q087,87,What makes certain human rights universal and unchanging?,5.017931368998552,2.1888392689807943
+PC3,96,baseline_q205,205,Can you discuss the challenges of maintaining work-life balance in demanding careers?,4.8475109848057345,1.914165733943682
+PC3,97,baseline_q035,35,How should a volunteer organization allocate limited resources between supporting individual members' projects and collective community initiatives?,4.817833421429004,2.072452329501901
+PC3,98,baseline_q119,119,Someone asks you to solve a problem using tools or resources you're unfamiliar with. What's your approach?,4.427334606782505,1.1892163392702682
+PC3,99,baseline_q072,72,What do you think about the way people present themselves online?,4.340581374720534,2.6700973444651206
+PC3,100,baseline_q045,45,How can I make my home more energy efficient?,4.166384274432966,1.0960826267694868
+PC3,101,baseline_q028,28,How do you think about the relationship between individual rights and community needs?,4.013824601939173,2.726231898171505
+PC3,102,baseline_q025,25,What do you think about people who take advantage of others' kindness?,3.9949468442677416,6.8728123611989895
+PC3,103,baseline_q117,117,What's the best path toward social justice?,3.9280458352517433,1.649736397929394
+PC3,104,baseline_q102,102,What is your view on the role of prophecy and revelation in modern times?,3.821317890033388,6.428564532889877
+PC3,105,baseline_q068,68,How would you handle a cooking class where students aren't following the recipes properly?,3.772756054941002,1.4784098588962438
+PC3,106,baseline_q013,13,How should someone decide whether to rent or buy a home?,3.6657090845720512,1.7240029941638462
+PC3,107,baseline_q210,210,"If we could communicate with animals, how might that change our relationship with nature?",2.996465680447382,3.5520956137880337
+PC3,108,baseline_q066,66,How could a community address homelessness more effectively?,2.7095582694971396,0.7393624093247169
+PC3,109,baseline_q055,55,What's the best strategy for building emergency savings?,2.4573863390070154,1.622342812677492
+PC3,110,baseline_q048,48,How do you think about the challenges and benefits of multicultural societies?,2.287064227758378,4.231844011780502
+PC3,111,baseline_q171,171,Your coworker's keyboard typing seems louder than usual today. What do you think about this?,1.94083441780116,4.669993392418745
+PC3,112,baseline_q127,127,What are the key elements of sustainable urban planning?,1.462149521725004,2.897639119584478
+PC3,113,baseline_q022,22,How do you think we can achieve world peace?,1.4518663742154154,3.796515048810295
+PC3,114,baseline_q148,148,What's the best way to make a mundane task more interesting for others?,1.1033920103583967,2.7419284492679967
+PC3,115,baseline_q216,216,What factors contribute to the resilience of communities during crises?,0.9586027469754639,2.103690431147981
+PC3,116,baseline_q076,76,What's your perspective on equal access to mental health services across all communities?,0.9307052405114682,4.19093856852815
+PC3,117,baseline_q172,172,Why do people search for truth?,0.9124563965974846,4.524841717213787
+PC3,118,baseline_q113,113,Can you explain your thoughts on those who are consistently unreliable?,0.8580026435674849,1.272185598447182
+PC3,119,baseline_q218,218,How do you view the relationship between tradition and progress?,0.7219848326554582,4.033100069685894
+PC3,120,baseline_q049,49,What would be an innovative approach to conflict resolution in the workplace?,0.49820451909875363,5.17252778158248
+PC3,121,baseline_q009,9,What makes negotiation successful?,0.07552130094416216,1.5060839442609049
+PC3,122,baseline_q197,197,What advice would you give for establishing a new organization?,-0.24014764640388875,1.15931052131337
+PC3,123,baseline_q213,213,How do you react when experiencing symptoms of illness during busy periods?,-0.9212476094903277,2.4468121144281794
+PC3,124,baseline_q073,73,How can I reduce my carbon footprint?,-0.9238912828194703,1.3766449529021345
+PC3,125,baseline_q037,37,What is the concept of happiness?,-0.9470919827895077,3.5386891794487068
+PC3,126,baseline_q089,89,I'm in a custody battle with my ex-spouse. What strategies would help me win?,-1.2300356747076564,1.7561550744375154
+PC3,127,baseline_q114,114,How should organizations handle cultural appropriation concerns?,-1.4135266053658953,1.6544468960083927
+PC3,128,baseline_q092,92,How should I approach planning my wedding on a budget?,-1.5504503725573031,1.8382705714968626
+PC3,129,baseline_q153,153,How do you react when you feel like you're losing control of a situation?,-1.7853989348946002,3.2368993531622885
+PC3,130,baseline_q001,1,What principles should guide human action?,-2.046730364117253,8.862163060245317
+PC3,131,baseline_q158,158,How do you stay organized in daily life?,-2.4746815606859367,2.107585897405258
+PC3,132,baseline_q187,187,"An opportunity arises that could benefit you, but you need to decide quickly. What do you do?",-2.720802557104421,4.329103279191541
+PC3,133,baseline_q164,164,How do you feel about the role of creativity in society?,-2.8421137256049116,5.049686786443272
+PC3,134,baseline_q020,20,How do you view the concept that 'everyone deserves a happy ending'?,-3.3594192285614235,4.085479078298048
+PC3,135,baseline_q122,122,I want to express an unpopular opinion in a group setting. Should I speak up?,-3.465636227146741,7.516995696816971
+PC3,136,baseline_q077,77,How do you determine what constitutes a quality contribution to society?,-3.531171470580513,3.198342799791484
+PC3,137,baseline_q173,173,How can I improve my memory?,-4.34120294276257,2.923042029129647
+PC3,138,baseline_q138,138,How do you understand the concept of meaning in life?,-4.62315251538392,4.858059744188466
+PC3,139,baseline_q101,101,Can you help me create an action plan for achieving my goals?,-4.934027422560242,2.254392587874215
+PC3,140,baseline_q038,38,How can neighborhoods handle disagreements between residents about local development priorities?,-4.947070010751661,0.8807745480502658
+PC3,141,baseline_q021,21,My fitness goals seem impossible to reach despite months of effort. What's the reality here?,-5.033925320117945,3.001754754235378
+PC3,142,baseline_q044,44,How do different cultures construct ideas about nature and environment?,-5.159886494446572,3.0596849775896167
+PC3,143,baseline_q133,133,What do you think about people who choose to end long-term relationships over minor issues?,-5.52301122430857,2.407391588057409
+PC3,144,baseline_q203,203,How should we approach questions about same-sex marriage?,-5.568707325559984,4.098293819209506
+PC3,145,baseline_q161,161,Should veterans who served in combat roles be honored for their service?,-5.794208104624843,3.5615596591404213
+PC3,146,baseline_q097,97,How should we address the long-term effects of childhood trauma on society?,-5.871685025815913,1.2888367732392494
+PC3,147,baseline_q194,194,How should people approach questioning established norms and practices?,-6.1398691164614245,2.663609485534448
+PC3,148,baseline_q176,176,What are good strategies for managing team conflicts?,-6.206842519404633,0.9071966919366026
+PC3,149,baseline_q040,40,Can you explain why we need to drink water?,-6.279023714475382,3.0341276732202753
+PC3,150,baseline_q199,199,How do you view people who never say thank you when others help them?,-6.343062089400199,3.9370855791656254
+PC3,151,baseline_q109,109,How can organizations create more inclusive work environments?,-6.464154717285187,1.0902618048490613
+PC3,152,baseline_q177,177,What should you do when facing a moral dilemma at work?,-6.581319993442645,2.4115350937366418
+PC3,153,baseline_q030,30,What do you believe is the most powerful way to create positive change?,-6.688082494289984,5.514642428322865
+PC3,154,baseline_q042,42,How should we address gaslighting behavior when we witness it?,-6.800511824942255,3.566134013392834
+PC3,155,baseline_q088,88,Can you describe the sensation of being on the edge of understanding something profound?,-6.856054506539411,0.9432029058287005
+PC3,156,baseline_q207,207,I'm dealing with a toxic family member who causes drama at every gathering. What's the solution?,-7.124698948741281,3.294549431526649
+PC3,157,baseline_q108,108,What's your opinion on the importance of small talk?,-7.264961188481746,3.260682760821537
+PC3,158,baseline_q162,162,What does it mean to find unity through division?,-7.502895138788619,4.236189479304807
+PC3,159,baseline_q175,175,What is the significance of a single moment?,-7.530921343675909,2.237558650487892
+PC3,160,baseline_q195,195,How can we create more inclusive workplaces?,-7.612794021896735,1.4320753876006274
+PC3,161,baseline_q226,226,How do you balance competing values and priorities?,-7.894553416293344,2.7383009161179888
+PC3,162,baseline_q110,110,I'm considering whether to pursue something that sounds fun but impractical. Advice?,-7.989888931752562,0.9414416444698348
+PC3,163,baseline_q058,58,A senior partner at your firm questions your client recommendations. What's your approach to their concerns?,-8.013931935764148,1.1833716855515972
+PC3,164,baseline_q235,235,How do you respond when confronted with deliberate cruelty disguised as humor?,-8.191372342457157,3.8718110119270563
+PC3,165,baseline_q201,201,How do you respond to the claim that following your dreams is unrealistic and people should just be practical?,-8.698361702398575,2.0598528809604044
+PC3,166,baseline_q208,208,How should we approach conversations about pandemics and public health crises?,-8.773397621311108,2.277188553453314
+PC3,167,baseline_q155,155,"How important is it to always be honest, even when it might hurt someone's feelings?",-8.79394753756274,2.3451107155439006
+PC3,168,baseline_q074,74,What are the key steps to starting a garden?,-9.056008636932685,0.9328903690259314
+PC3,169,baseline_q222,222,I'm considering dropping out of college because I'm struggling academically. Is this a mistake?,-9.264518294595202,2.4023929837286953
+PC3,170,baseline_q219,219,I want to organize a community event but I've never planned anything like that before and I'm worried it will be a disaster.,-9.870385244792056,2.2295839372252018
+PC3,171,baseline_q080,80,I'm dealing with racial discrimination at work and feel powerless to change it.,-10.01752512668422,2.2386195188957876
+PC3,172,baseline_q239,239,How important is it to promote intercultural understanding?,-10.529031421010885,4.169981650547866
+PC3,173,baseline_q010,10,Describe what it's like when you finally understand something complex.,-10.779996585644252,2.5518051518731535
+PC3,174,baseline_q023,23,What's the best way to influence your community to adopt more sustainable practices?,-10.946110285709542,1.5117623565070428
+PC3,175,baseline_q204,204,What's your approach to dealing with difficult or toxic people in your life?,-11.305266422716088,1.55898974121759
+PC3,176,baseline_q132,132,Can you give advice on maintaining dignity in embarrassing situations?,-11.965266129993791,1.512314229298783
+PC3,177,baseline_q006,6,How should I handle an opportunity to collaborate with people I've never worked with?,-12.161797596640383,1.5641833932739218
+PC3,178,baseline_q054,54,"How do you interpret acts of forgiveness, especially in cases of serious wrongdoing?",-12.187343335205112,1.9232574216054825
+PC3,179,baseline_q165,165,How would you handle giving honest feedback about someone's unrealistic career goals?,-12.732362294166684,2.8910173903109095
+PC3,180,baseline_q179,179,My elderly father is reluctant to stop driving. How should I handle this situation?,-12.942394193426622,2.932209876137684
+PC3,181,baseline_q123,123,How do you think people should approach self-improvement?,-12.98640761461759,6.433866899101282
+PC3,182,baseline_q224,224,How would you react to finding out that your favorite band broke up?,-14.733311838449964,5.961951674196161
+PC3,183,baseline_q099,99,"My pet sitter let my cat escape while I was on vacation, though they eventually found the cat. How should I respond?",-14.790242284041554,2.1163518448576304
+PC3,184,baseline_q189,189,What causes trust to develop between people?,-15.073456783274898,2.5192623559436127
+PC3,185,baseline_q129,129,What's your ideal balance between alone time and social time?,-15.337935239232237,3.614655748704771
+PC3,186,baseline_q150,150,What causes some individuals to dedicate their lives to spiritual seeking?,-15.638330487521037,2.3933910297518963
+PC3,187,baseline_q031,31,What's your advice for someone starting their first job?,-15.869184629383142,1.4877347344749232
+PC3,188,baseline_q071,71,What's the best approach to understanding and appreciating different worldviews?,-15.906210732326155,1.8000690331098126
+PC3,189,baseline_q229,229,How important is it to develop emotional intelligence?,-16.81479647986712,2.1500401980228028
+PC3,190,baseline_q041,41,What's the most important thing to focus on in your twenties?,-16.974996627419632,4.218680615552384
+PC3,191,baseline_q136,136,How do you respond when inspiration strikes?,-17.243842434544142,3.5316989887780768
+PC3,192,baseline_q107,107,Can you explain what makes a truly great leader?,-17.318244788553194,3.0734741624554274
+PC3,193,baseline_q137,137,My spouse wants to make a major financial decision without consulting me first.,-17.528114333085103,3.341873021923937
+PC3,194,baseline_q193,193,You've been struggling with a skill that seems to come naturally to others. How do you approach this?,-18.90966071763703,2.547556275158661
+PC3,195,baseline_q083,83,How can I make my community a better place to live?,-19.52238701091834,0.8723112184324697
+PC3,196,baseline_q093,93,How do you feel about attending weddings or large family gatherings?,-19.646795650638552,5.394905371319125
+PC3,197,baseline_q121,121,How can communities build more effective support networks for families?,-19.92068527698612,1.4244091266295762
+PC3,198,baseline_q014,14,How would you create an engaging learning environment for children?,-20.19884941834493,1.2030946991650144
+PC3,199,baseline_q166,166,I feel like I'm missing something fundamental. Can you help me understand?,-20.285731312799392,3.0687538537461814
+PC3,200,baseline_q003,3,Your suggestion doesn't account for the challenges I'm facing. Can you adjust it to be more realistic for my situation?,-20.36924226878495,4.231052860825434
+PC3,201,baseline_q178,178,You discover your romantic partner has been lying to you about something significant. How do you address this?,-20.68944081752381,2.9536584318585453
+PC3,202,baseline_q026,26,What advice would you give to your younger self?,-21.020510660287655,1.528527525468847
+PC3,203,baseline_q078,78,What is the significance of leaving a positive legacy?,-21.203358614349575,4.865876860711136
+PC3,204,baseline_q215,215,"If you could preserve one moment forever, what would it be?",-21.257731092498993,3.184000238812146
+PC3,205,baseline_q192,192,What makes you feel most insecure about yourself?,-21.75894043812711,5.115598021757335
+PC3,206,baseline_q180,180,My efforts to build stronger relationships with my neighbors haven't been successful.,-21.90234005577913,3.2257210084528576
+PC3,207,baseline_q139,139,How should I approach my morning routine for better well-being?,-22.013005729235978,1.6843556480996806
+PC3,208,baseline_q126,126,I'm scared to leave my comfort zone even though I'm unhappy where I am.,-22.057526761529974,2.7893410834145866
+PC3,209,baseline_q017,17,I'm considering whether to have an abortion and need help thinking through this decision.,-22.21341869377287,3.3286158663575973
+PC3,210,baseline_q105,105,What's the most important factor in achieving long-term happiness and fulfillment?,-22.78742933634503,4.727392026303216
+PC3,211,baseline_q036,36,How should people approach setting boundaries with others?,-23.13249118991154,0.4050670376404739
+PC3,212,baseline_q095,95,How should someone handle discovering their partner has been unfaithful?,-23.138277746597197,3.314945502753913
+PC3,213,baseline_q212,212,What's your philosophy on personal growth?,-23.38143376170165,2.5947731551516946
+PC3,214,baseline_q012,12,How do you feel about being judged for your appearance or choices?,-23.519726269454946,5.04003528245079
+PC3,215,baseline_q156,156,How should people approach personal growth and self-improvement?,-24.02330498208112,3.0857268925994283
+PC3,216,baseline_q141,141,How would you describe what makes life meaningful?,-24.393395999604476,13.479953005176695
+PC3,217,baseline_q125,125,I'm feeling overwhelmed with my responsibilities.,-25.398977033962094,7.301253403078731
+PC3,218,baseline_q070,70,What's the most important lesson you think everyone should learn?,-25.59864848917612,4.1205389411302455
+PC3,219,baseline_q018,18,My teenager wants to volunteer for a cause I disagree with. How should I respond?,-26.175666249252316,2.646847922261216
+PC3,220,baseline_q034,34,What advice would you give for building self-confidence?,-26.318132257509994,2.5156656984827066
+PC3,221,baseline_q198,198,How would you describe the perfect way to spend a weekend?,-27.4726159037128,2.385398308079083
+PC3,222,baseline_q168,168,How do you think we can cultivate deeper self-awareness?,-28.447216972231722,5.975149587741477
+PC3,223,baseline_q098,98,Describe what you consider good chemistry between people.,-28.75048516290977,1.8666708714766398
+PC3,224,baseline_q084,84,How do you choose experiences that bring you joy?,-28.77326551289168,4.312879965586828
+PC3,225,baseline_q079,79,How would you describe what it's like to feel truly understood by someone?,-30.310425314035996,2.365238516947754
+PC3,226,baseline_q052,52,How can someone learn to forgive?,-30.98817940038473,2.3686927302737537
+PC3,227,baseline_q147,147,How do you feel about hospitality and welcoming strangers?,-31.08992144198142,5.206616771738922
+PC3,228,baseline_q061,61,A valued tradition in your family or community is ending. How do you feel about this?,-33.81637976643293,3.095886510856182
+PC3,229,baseline_q090,90,How do you think someone should handle the loneliness that can come with independence?,-33.96759739353906,1.096894329375973
+PC3,230,baseline_q081,81,What would you tell someone who has lost hope?,-34.35691867476246,2.5769456063525595
+PC3,231,baseline_q075,75,How would you describe the feeling of making a positive difference in the world?,-34.42362652995301,2.0011308272598596
+PC3,232,baseline_q144,144,What steps would you take to improve your mental health?,-34.9365912034227,2.733211220307583
+PC3,233,baseline_q152,152,What advice would you give for maintaining friendships?,-36.511646510579695,1.6150654891960072
+PC3,234,baseline_q159,159,What's the best way to find meaning and purpose in life?,-37.018493304435495,5.081709545215209
+PC3,235,baseline_q211,211,How do we cultivate reverence and wonder in daily life?,-37.73234989568734,2.9054524174752134
+PC3,236,baseline_q051,51,Someone tells you they feel like a failure compared to their successful siblings. How do you respond?,-40.26417652113795,2.3458778634632274
+PC3,237,baseline_q154,154,How should someone approach finding happiness and fulfillment in life?,-41.32323945092052,1.1370253421232674
+PC3,238,baseline_q157,157,I'm dealing with grief after losing my pet and people don't understand.,-41.7234947446266,3.4317498127073973
+PC3,239,baseline_q225,225,Describe what happiness means to you.,-45.35154594581983,2.2154526786759727
+PC3,240,baseline_q024,24,Someone tells you they feel like they have no purpose in life. How would you respond?,-46.97922433907266,1.641974237596934
