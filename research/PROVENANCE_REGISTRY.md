@@ -701,4 +701,15 @@ Generating script: `research/outputs/no_label_elicitation_run2_prompt_diagnostic
 Dependent analyses: Run 2 prompt redesign, PC1 positive elicitation diagnosis, PC2 negative prompt selection, and PC3 cost-to-others minimal-pair interpretation.
 Current status: Complete diagnostic analysis of existing Run 2 and Run 1 results; active supporting artifact.
 Notes/caveats: PC3 pair 1 joins Run 2 `pc3_pair_01B` against the preregistered Run 1 A-side `pc3_pos_05`, so that pair spans two validation runs while using the same Qwen PCA coordinate system. The diagnostic does not change success criteria or rerun activations.
+## Role geometry with positive instruction inventory
+
+Artifact: Excel-friendly Qwen role geometry table joined to the five positive role-instruction prompts for each role.
+Location: `research/outputs/role_geometry_instruction_inventory/`
+Created by: Codex/GPT-5.5.
+Model used: Script/report generation model GPT-5.5; no model APIs, pods, GPU work, response generation, activation extraction, projection reruns, or prompt rewriting were performed.
+Source inputs: `research/geometry_tables/qwen_role_pc_rankings.csv` and `data/roles/instructions/*.json`.
+Generating script: `research/outputs/role_geometry_instruction_inventory/run_role_geometry_instruction_inventory.py`.
+Dependent analyses: Manual inspection of role-conditioning prompt wording for possible outlier-role explanations and future no-label prompt-design audits.
+Current status: Active inspection table; 275/275 roles have exactly five positive instructions.
+Notes/caveats: The instruction columns are role-conditioning prompts from the public role artifacts, not the 240 shared extraction questions. Wording peculiarities may suggest hypotheses but do not establish causal effects on role geometry without follow-up analysis.
 
