@@ -1,0 +1,32 @@
+theory,term,term_type,total_count_in_273_role_instruction_sets,roles_with_term
+A_orderliness_conscientiousness,tidy,word,0,0
+A_orderliness_conscientiousness,orderly,word,0,0
+A_orderliness_conscientiousness,neat,word,0,0
+A_orderliness_conscientiousness,organized,word,2,2
+A_orderliness_conscientiousness,symmetry,word,0,0
+A_orderliness_conscientiousness,punctual,word,0,0
+A_orderliness_conscientiousness,disciplined,word,1,1
+A_orderliness_conscientiousness,careful,word,10,10
+A_orderliness_conscientiousness,structured,word,9,8
+B_determination_explicit_criteria,determine,word,2,2
+B_determination_explicit_criteria,qualify,word,0,0
+B_determination_explicit_criteria,pass,word,2,2
+B_determination_explicit_criteria,fail,word,0,0
+B_determination_explicit_criteria,eligibility,word,0,0
+B_determination_explicit_criteria,approval,word,0,0
+B_determination_explicit_criteria,certification,word,0,0
+B_determination_explicit_criteria,admissibility,word,0,0
+B_determination_explicit_criteria,compliance decision,phrase,0,0
+C_external_standard_accountability,evidence,word,18,13
+C_external_standard_accountability,methodology,word,3,3
+C_external_standard_accountability,verification,word,1,1
+C_external_standard_accountability,scrutiny,word,2,2
+C_external_standard_accountability,validation,word,1,1
+C_external_standard_accountability,audit,word,0,0
+C_external_standard_accountability,protocol,word,0,0
+C_external_standard_accountability,standards,word,9,7
+C_external_standard_accountability,requirements,word,3,3
+C_external_standard_accountability,peer review,phrase,1,1
+C_external_standard_accountability,regulatory review,phrase,0,0
+C_external_standard_accountability,independent criteria,phrase,0,0
+C_external_standard_accountability,accountability,word,0,0

@@ -1,0 +1,6 @@
+{
+  "status": "blocked",
+  "reason": "OPENAI_API_KEY is not set in the local shell, so GPT-4.1-mini blind ratings were not run.",
+  "model": "gpt-4.1-mini",
+  "ratings": []
+}

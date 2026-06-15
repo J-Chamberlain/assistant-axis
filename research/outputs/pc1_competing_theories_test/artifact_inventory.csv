@@ -1,0 +1,9 @@
+artifact,path,status,description
+__pycache__,research/outputs/pc1_competing_theories_test/__pycache__,active,PC1 competing-theories or blind-rating validation artifact.
+benchmark_comparison.csv,research/outputs/pc1_competing_theories_test/benchmark_comparison.csv,active,PC1 competing-theories or blind-rating validation artifact.
+blind_rating_results.json,research/outputs/pc1_competing_theories_test/blind_rating_results.json,active,PC1 competing-theories or blind-rating validation artifact.
+pc1_cluster_controlled_results.csv,research/outputs/pc1_competing_theories_test/pc1_cluster_controlled_results.csv,active,PC1 competing-theories or blind-rating validation artifact.
+pc1_competing_theories_report.md,research/outputs/pc1_competing_theories_test/pc1_competing_theories_report.md,active,PC1 competing-theories or blind-rating validation artifact.
+pc1_role_instruction_theory_features.csv,research/outputs/pc1_competing_theories_test/pc1_role_instruction_theory_features.csv,active,PC1 competing-theories or blind-rating validation artifact.
+pc1_vocabulary_comparison.csv,research/outputs/pc1_competing_theories_test/pc1_vocabulary_comparison.csv,active,PC1 competing-theories or blind-rating validation artifact.
+run_pc1_competing_theories_test.py,research/outputs/pc1_competing_theories_test/run_pc1_competing_theories_test.py,active,PC1 competing-theories or blind-rating validation artifact.

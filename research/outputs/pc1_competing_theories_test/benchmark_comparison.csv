@@ -1,0 +1,9 @@
+feature_family,pc1_r2,pc2_r2,pc3_r2,mean_r2,source
+semantic_baseline,0.516873,0.180967,0.335665,0.389397,prior_shared_benchmark
+codex_trait_replication,,,,0.398,prior_shared_benchmark
+codex_retained_procedural_behavioral,0.631205,0.257221,0.422097,0.49009,prior_shared_benchmark
+claude_bigfive_style,0.733515,0.480321,0.415511,0.612979,prior_shared_benchmark
+hierarchical_trait_plus_procedural,,,,0.622,prior_shared_benchmark
+residual_manifold_hand_feature,,,,0.632,prior_shared_benchmark
+semantic_bigfive_svd15_prompt_register,,,,0.707,prior_shared_benchmark
+gpt41mini_blind_pc_interpretation_ratings,,,,,not_computed_blocked

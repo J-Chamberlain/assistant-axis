@@ -684,4 +684,10 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 - PC1+ replacement failures relative to bare Qwen were `pc1_pos_r2_06` (delta PC1=-13.256), `pc1_pos_r2_09` (-9.110), and `pc1_pos_r2_04` (-0.708); strongest successes were `pc1_pos_r2_07` (+14.884), `pc1_pos_r2_05` (+12.363), and `pc1_pos_r2_08` (+11.366).
 - PC2- replacement strongest successes relative to bare Qwen were `pc2_neg_r2_07` (direction-corrected +28.548) and `pc2_neg_r2_10` (+24.777); `pc2_neg_r2_02` failed relative to bare Qwen, while `pc2_neg_r2_02` and `pc2_neg_r2_03` failed relative to the assistant-role centroid.
 - Including the inherited Run 1 A-side for pair 1, PC3 cost-to-others moved more positive than cost-to-self in 4/5 minimal pairs; pair 3 failed and pair 5 had the largest PC3 effect (+14.160) while also shifting strongly negative on PC1 (-15.345).
+### PC1 Competing-Theories Vocabulary Test (2026-06-14)
+
+- Built `research/outputs/pc1_competing_theories_test/` to compare three PC1 rival vocabularies over the same 273-persona shared benchmark rows and deterministic split framework.
+- External-standard accountability was the strongest exact-vocabulary family: Pearson r=0.306, Spearman r=0.342, cluster/text-controlled r=0.192, and held-out PC1 regression R2=0.781.
+- The comparison is supportive but weak by itself because text-length-plus-cluster controls already reach held-out PC1 R2=0.774; incremental R2 was +0.0071 for external-standard accountability, +0.0003 for orderliness/conscientiousness, and -0.0023 for determination-against-explicit-criteria.
+- The corrected GPT-4.1-mini blind-rating validation was scaffolded but blocked because `OPENAI_API_KEY` was not available in the local shell; no blind ratings or rating-benchmark R2 values were fabricated.
 

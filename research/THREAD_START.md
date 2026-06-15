@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-06-13
+Last updated: 2026-06-14
 
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 
@@ -35,6 +35,9 @@ The assistant baseline/centroid used in Paper 1.5 is now provenance-audited. It 
 Run 2 of the no-label elicitation program is now completed. The frozen package under `research/outputs/no_label_elicitation_run2/` produced 1,690/1,690 Qwen/Qwen3-32B generations with zero errors and preserved 1,690 local gitignored activation shards; the bare-Qwen 240-question baseline centroid is PC1=23.510, PC2=14.041, PC3=-2.460.
 
 ## Top Open Questions
+
+The current PC1 external-standard accountability interpretation has a new competing-theories diagnostic under `research/outputs/pc1_competing_theories_test/`. Exact-vocabulary features over role instructions support external-standard accountability over orderliness and determination, but the incremental gain over cluster/text controls is small (+0.0071 R2), and the corrected GPT-4.1-mini blind-rating benchmark is blocked until `OPENAI_API_KEY` is available. Do not describe PC1 as confirmed or proven from this artifact alone.
+
 
 The bounded Paper 1.5 no-label elicitation validation has now run under matched direct-hook extraction conditions. It used the frozen 60-prompt packet, generated 600 independent Qwen/Qwen3-32B responses, and passed 4/6 preregistered family thresholds: PC1-negative, PC2-positive, PC3-positive, and PC3-negative passed; PC1-positive and PC2-negative failed.
 

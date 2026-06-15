@@ -724,4 +724,15 @@ Generating script: `research/outputs/iterative_semantic_prediction_methods/run_i
 Dependent analyses: Paper 1.5 technical report methods section, notebook S04/N07 prediction-improvement narrative, and clean repo canonical-claim traceability.
 Current status: Active methods-support artifact.
 Notes/caveats: The table reports held-out mean R2 over canonical Qwen activation PCA3D for the 273 common-persona shared benchmark with five deterministic splits. Approximate R is the positive square root of R2 for readability only. These are prediction benchmarks, not execution-time activation validation.
+## PC1 competing theories and blind-rating validation scaffold
+
+Artifact: Competing-theories evaluation of PC1 vocabulary hypotheses plus corrected blind-rating benchmark scaffold.
+Location: `research/outputs/pc1_competing_theories_test/`
+Created by: Codex/GPT-5.5.
+Model used: GPT-5.5 for local analysis, script authoring, and report generation. GPT-4.1-mini was specified as the blind rater, but the rating pass was blocked because `OPENAI_API_KEY` was absent from the local shell.
+Source inputs: `research/REPO_NAVIGATION.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_split_assignments.csv`, `research/geometry_tables/qwen_role_pc_rankings.csv`, and `data/roles/instructions/*.json`.
+Generating script: `research/outputs/pc1_competing_theories_test/run_pc1_competing_theories_test.py`.
+Dependent analyses: PC1 interpretation wording for Paper 1.5, future GPT-4.1-mini blind-rating validation, and comparison against prior semantic/procedural/Big-Five/SVD benchmarks.
+Current status: Part A complete; Part B blocked pending OpenAI API credentials.
+Notes/caveats: Part A uses transparent exact-vocabulary counts over role instructions, so it is useful as a rival-theory screen but sparse. Cluster/text controls dominate held-out PC1 R2, so the stricter evidence is the small incremental gain for external-standard-accountability vocabulary over controls. The corrected blind-rating test remains the necessary stronger validation before elevating the PC1 interpretation.
 
