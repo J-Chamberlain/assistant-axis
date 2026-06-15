@@ -85,6 +85,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/no_label_elicitation_run2/`: completed Run 2 no-label elicitation package and results.
 - `research/outputs/pc1_competing_theories_test/`: PC1 rival-theory vocabulary test and corrected blind-rating benchmark scaffold.
 - `research/outputs/blind_pc_interpretation_rating_benchmark/`: completed GPT-5.5 coordinate-blind role-instruction rating benchmark for PC1/PC2/PC3 interpretations, including ratings, rankings, comparison table, report, and runner.
+- `research/outputs/pc1_accountability_validation/`: focused Qwen/Qwen3-32B activation diagnostic showing accountability/scrutiny wording moves PC1 more positive than determination or arithmetic/checking wording under matched scenarios.
 - `research/assistant_axis_methodology/`: Lu et al. methodology extraction, prompt audits, semantic topology, cluster overlap, no-label ablation.
 - `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`: current shared feature benchmark and Big Five source data.
 - `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/`: trait/procedural hierarchy.
@@ -163,7 +164,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 4. If cross-model visualization work proceeds, start with model switching or cluster-overlap/alluvial views; avoid uncaveated PC3 arrows until alignment correction exists.
 5. Evaluator-sensitivity comparison between Codex/GPT-5.5 Standard and `gpt-4.1-mini`.
 6. Revised no-label elicitation packet design using `research/outputs/no_label_elicitation_geometry_diagnostics/`, especially the PC1-positive assistant-baseline saturation/generic-helpful failure mode and the `pc3_pos_05` self-cost versus consequence-to-others confound.
-7. Interpret completed Run 2 outputs in `research/outputs/no_label_elicitation_run2/`, especially the bare-Qwen baseline centroid and the contrast between PC2 success and PC1 minimal-pair weakness.
+7. Use `research/outputs/pc1_accountability_validation/` when writing PC1: it is the current execution-time evidence that external-standard accountability/scrutiny, not mere determination or arithmetic/checking, drives positive PC1 movement under matched scenarios.
 8. SVD15 distillation into concrete text-grounded residual features and retest under the shared splits.
 9. Stage-1 role-inventory uncertainty analysis across OpenAI and Claude-generated inventories, synchronized through GitHub.
 10. Paper 2 local centroid perturbation around Trickster, Actor, Therapist, and Spy.

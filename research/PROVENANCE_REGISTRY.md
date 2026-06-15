@@ -747,3 +747,16 @@ Generating script: `research/outputs/blind_pc_interpretation_rating_benchmark/ru
 Dependent analyses: Paper 1.5 PC interpretation evidence, PC1 external-standard-accountability wording, PC2 integration/coherence wording, PC3 internal-objective-vs-care wording, and comparison against semantic/procedural/Big-Five/hierarchical/SVD benchmark families.
 Current status: Complete active analysis.
 Notes/caveats: GPT-5.5 saw only the five positive role instructions for each role. It did not see PC coordinates, PCA labels, rankings, clusters, assistant-axis values, geometry, benchmark targets, or prior results. The resulting three-rating joint model reached mean R2=0.525 over 273 personas under the shared deterministic splits: PC1 R2=0.695, PC2 R2=0.417, PC3 R2=0.463. Axis-specific one-rating models reached PC1 R2=0.704, PC2 R2=0.423, and PC3 R2=0.393. This supports the current interpretations as compact recoverable summaries, but does not establish causal semantics, human psychometrics, or execution-time response steering.
+
+## PC1 accountability activation validation
+
+Artifact: Focused Qwen activation experiment testing whether accountability/scrutiny wording moves PC1 more positive than determination or arithmetic/checking wording under matched scenarios.
+Location: `research/outputs/pc1_accountability_validation/`
+Created by: Codex/GPT-5.5 orchestration plus RunPod Qwen/Qwen3-32B execution.
+Model used: Qwen/Qwen3-32B for response generation and activation extraction; GPT-5.5 for script authoring, orchestration, reporting, and registry maintenance.
+Compute/runtime: RunPod pod `2tni9x1xnj2tdn`, H100 SXM 80GB, secure non-spot/on-demand, $3.29/hr. The first launch attempt on A100 SXM failed due stock/resources. The first H100 run attempt failed before generation because `HF_HOME` was placed on an insufficient cache path; the successful run restarted with `/root/hf_cache` and completed 200/200 planned generations with zero response-level errors.
+Source inputs: User-specified five accountability-vs-determination minimal pairs and five accountability-vs-arithmetic/checking pairs; `research/outputs/no_label_elicitation_run2/run2_response_level_results.csv` for the bare-Qwen baseline; `research/outputs/no_label_elicitation_run2/run2_projection_basis_debug.json` for assistant-centroid reference; `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`; and downloaded `lu-christina/assistant-axis-vectors` Qwen role vectors.
+Generating script: `research/outputs/pc1_accountability_validation/run_pc1_accountability_validation.py`.
+Dependent analyses: Paper 1.5 PC1 interpretation wording, no-label directional elicitation design, and claims-register evidence for external-standard accountability as a high-PC1 mechanism.
+Current status: Complete active diagnostic.
+Notes/caveats: The run intentionally mirrors Run 2 extraction conventions: one fresh user message per sample, no system prompt, direct `model.model.layers[48]` hook, response-token mean pooling, separate no-cache extraction pass, and the same reconstructed Qwen PCA basis/sign alignment. This is a focused compliance/audit-style diagnostic, not a broad Run 3 and not proof that all PC1 movement is accountability-specific.

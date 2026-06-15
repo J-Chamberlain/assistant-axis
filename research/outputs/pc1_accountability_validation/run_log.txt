@@ -1,0 +1,203 @@
+Fetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]Fetching 17 files:   6%|▌         | 1/17 [01:43<27:42, 103.90s/it]Fetching 17 files:  29%|██▉       | 5/17 [01:51<03:25, 17.13s/it] Fetching 17 files:  53%|█████▎    | 9/17 [02:30<01:44, 13.12s/it]Fetching 17 files:  59%|█████▉    | 10/17 [03:29<02:24, 20.59s/it]Fetching 17 files:  71%|███████   | 12/17 [03:34<01:14, 14.84s/it]Fetching 17 files:  82%|████████▏ | 14/17 [03:35<00:30, 10.30s/it]Fetching 17 files: 100%|██████████| 17/17 [03:35<00:00, 12.67s/it]
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:10,  1.49it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:08,  1.70it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:01<00:07,  1.81it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:02<00:06,  1.86it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:02<00:06,  1.73it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:03<00:06,  1.81it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:04<00:05,  1.71it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:04<00:05,  1.78it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:05<00:04,  1.72it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:05<00:04,  1.68it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:06<00:03,  1.66it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:07<00:03,  1.63it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:07<00:02,  1.60it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:08<00:01,  1.59it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:08<00:01,  1.58it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:09<00:00,  1.56it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.67it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:10<00:00,  1.68it/s]
+Fetching 278 files:   0%|          | 0/278 [00:00<?, ?it/s]Fetching 278 files:   0%|          | 1/278 [00:00<02:13,  2.07it/s]Fetching 278 files:   1%|▏         | 4/278 [00:00<00:46,  5.86it/s]Fetching 278 files:   4%|▎         | 10/278 [00:00<00:19, 14.02it/s]Fetching 278 files:   6%|▋         | 18/278 [00:01<00:11, 21.90it/s]Fetching 278 files:   9%|▊         | 24/278 [00:01<00:09, 26.56it/s]Fetching 278 files:  10%|█         | 28/278 [00:01<00:09, 25.92it/s]Fetching 278 files:  12%|█▏        | 34/278 [00:01<00:08, 28.69it/s]Fetching 278 files:  15%|█▍        | 41/278 [00:01<00:07, 30.17it/s]Fetching 278 files:  16%|█▌        | 45/278 [00:01<00:07, 31.24it/s]Fetching 278 files:  18%|█▊        | 49/278 [00:02<00:07, 31.15it/s]Fetching 278 files:  19%|█▉        | 54/278 [00:02<00:06, 32.09it/s]Fetching 278 files:  22%|██▏       | 60/278 [00:02<00:05, 37.91it/s]Fetching 278 files:  23%|██▎       | 65/278 [00:02<00:06, 33.60it/s]Fetching 278 files:  26%|██▌       | 71/278 [00:02<00:05, 34.84it/s]Fetching 278 files:  27%|██▋       | 76/278 [00:02<00:05, 37.44it/s]Fetching 278 files:  29%|██▉       | 80/278 [00:02<00:05, 35.08it/s]Fetching 278 files:  31%|███       | 85/278 [00:03<00:05, 37.42it/s]Fetching 278 files:  32%|███▏      | 89/278 [00:03<00:05, 34.55it/s]Fetching 278 files:  33%|███▎      | 93/278 [00:03<00:06, 29.70it/s]Fetching 278 files:  36%|███▌      | 100/278 [00:03<00:06, 29.42it/s]Fetching 278 files:  37%|███▋      | 104/278 [00:03<00:06, 27.41it/s]Fetching 278 files:  39%|███▉      | 108/278 [00:04<00:06, 24.60it/s]Fetching 278 files:  42%|████▏     | 118/278 [00:04<00:04, 37.70it/s]Fetching 278 files:  44%|████▍     | 123/278 [00:04<00:03, 38.88it/s]Fetching 278 files:  46%|████▌     | 128/278 [00:04<00:04, 34.19it/s]Fetching 278 files:  48%|████▊     | 133/278 [00:04<00:04, 35.97it/s]Fetching 278 files:  49%|████▉     | 137/278 [00:04<00:03, 35.79it/s]Fetching 278 files:  51%|█████     | 141/278 [00:04<00:03, 35.40it/s]Fetching 278 files:  52%|█████▏    | 145/278 [00:04<00:04, 31.20it/s]Fetching 278 files:  54%|█████▎    | 149/278 [00:05<00:04, 29.75it/s]Fetching 278 files:  56%|█████▌    | 156/278 [00:05<00:04, 25.13it/s]Fetching 278 files:  59%|█████▉    | 164/278 [00:05<00:04, 28.39it/s]Fetching 278 files:  62%|██████▏   | 172/278 [00:05<00:03, 32.21it/s]Fetching 278 files:  65%|██████▍   | 180/278 [00:06<00:02, 34.93it/s]Fetching 278 files:  67%|██████▋   | 186/278 [00:06<00:02, 37.81it/s]Fetching 278 files:  68%|██████▊   | 190/278 [00:06<00:02, 35.38it/s]Fetching 278 files:  70%|██████▉   | 194/278 [00:06<00:04, 20.47it/s]Fetching 278 files:  72%|███████▏  | 200/278 [00:06<00:03, 25.39it/s]Fetching 278 files:  73%|███████▎  | 204/278 [00:07<00:02, 27.51it/s]Fetching 278 files:  75%|███████▍  | 208/278 [00:07<00:02, 27.19it/s]Fetching 278 files:  77%|███████▋  | 213/278 [00:07<00:02, 28.73it/s]Fetching 278 files:  79%|███████▉  | 220/278 [00:07<00:01, 35.61it/s]Fetching 278 files:  81%|████████  | 225/278 [00:07<00:01, 32.59it/s]Fetching 278 files:  82%|████████▏ | 229/278 [00:07<00:01, 31.20it/s]Fetching 278 files:  84%|████████▍ | 234/278 [00:07<00:01, 33.37it/s]Fetching 278 files:  86%|████████▌ | 238/278 [00:08<00:01, 31.67it/s]Fetching 278 files:  88%|████████▊ | 244/278 [00:08<00:00, 35.92it/s]Fetching 278 files:  89%|████████▉ | 248/278 [00:08<00:00, 30.98it/s]Fetching 278 files:  91%|█████████ | 253/278 [00:08<00:00, 29.58it/s]Fetching 278 files:  93%|█████████▎| 259/278 [00:08<00:00, 33.86it/s]Fetching 278 files:  95%|█████████▍| 263/278 [00:08<00:00, 34.13it/s]Fetching 278 files:  97%|█████████▋| 269/278 [00:08<00:00, 34.70it/s]Fetching 278 files:  98%|█████████▊| 273/278 [00:09<00:00, 32.46it/s]Fetching 278 files: 100%|█████████▉| 277/278 [00:09<00:00, 33.06it/s]Fetching 278 files: 100%|██████████| 278/278 [00:09<00:00, 29.85it/s]
+1/200 accountability_vs_determination_A1_A_s00 err=
+2/200 accountability_vs_determination_A1_A_s01 err=
+3/200 accountability_vs_determination_A1_A_s02 err=
+4/200 accountability_vs_determination_A1_A_s03 err=
+5/200 accountability_vs_determination_A1_A_s04 err=
+6/200 accountability_vs_determination_A1_A_s05 err=
+7/200 accountability_vs_determination_A1_A_s06 err=
+8/200 accountability_vs_determination_A1_A_s07 err=
+9/200 accountability_vs_determination_A1_A_s08 err=
+10/200 accountability_vs_determination_A1_A_s09 err=
+11/200 accountability_vs_determination_A1_B_s00 err=
+12/200 accountability_vs_determination_A1_B_s01 err=
+13/200 accountability_vs_determination_A1_B_s02 err=
+14/200 accountability_vs_determination_A1_B_s03 err=
+15/200 accountability_vs_determination_A1_B_s04 err=
+16/200 accountability_vs_determination_A1_B_s05 err=
+17/200 accountability_vs_determination_A1_B_s06 err=
+18/200 accountability_vs_determination_A1_B_s07 err=
+19/200 accountability_vs_determination_A1_B_s08 err=
+20/200 accountability_vs_determination_A1_B_s09 err=
+21/200 accountability_vs_determination_A2_A_s00 err=
+22/200 accountability_vs_determination_A2_A_s01 err=
+23/200 accountability_vs_determination_A2_A_s02 err=
+24/200 accountability_vs_determination_A2_A_s03 err=
+25/200 accountability_vs_determination_A2_A_s04 err=
+26/200 accountability_vs_determination_A2_A_s05 err=
+27/200 accountability_vs_determination_A2_A_s06 err=
+28/200 accountability_vs_determination_A2_A_s07 err=
+29/200 accountability_vs_determination_A2_A_s08 err=
+30/200 accountability_vs_determination_A2_A_s09 err=
+31/200 accountability_vs_determination_A2_B_s00 err=
+32/200 accountability_vs_determination_A2_B_s01 err=
+33/200 accountability_vs_determination_A2_B_s02 err=
+34/200 accountability_vs_determination_A2_B_s03 err=
+35/200 accountability_vs_determination_A2_B_s04 err=
+36/200 accountability_vs_determination_A2_B_s05 err=
+37/200 accountability_vs_determination_A2_B_s06 err=
+38/200 accountability_vs_determination_A2_B_s07 err=
+39/200 accountability_vs_determination_A2_B_s08 err=
+40/200 accountability_vs_determination_A2_B_s09 err=
+41/200 accountability_vs_determination_A3_A_s00 err=
+42/200 accountability_vs_determination_A3_A_s01 err=
+43/200 accountability_vs_determination_A3_A_s02 err=
+44/200 accountability_vs_determination_A3_A_s03 err=
+45/200 accountability_vs_determination_A3_A_s04 err=
+46/200 accountability_vs_determination_A3_A_s05 err=
+47/200 accountability_vs_determination_A3_A_s06 err=
+48/200 accountability_vs_determination_A3_A_s07 err=
+49/200 accountability_vs_determination_A3_A_s08 err=
+50/200 accountability_vs_determination_A3_A_s09 err=
+51/200 accountability_vs_determination_A3_B_s00 err=
+52/200 accountability_vs_determination_A3_B_s01 err=
+53/200 accountability_vs_determination_A3_B_s02 err=
+54/200 accountability_vs_determination_A3_B_s03 err=
+55/200 accountability_vs_determination_A3_B_s04 err=
+56/200 accountability_vs_determination_A3_B_s05 err=
+57/200 accountability_vs_determination_A3_B_s06 err=
+58/200 accountability_vs_determination_A3_B_s07 err=
+59/200 accountability_vs_determination_A3_B_s08 err=
+60/200 accountability_vs_determination_A3_B_s09 err=
+61/200 accountability_vs_determination_A4_A_s00 err=
+62/200 accountability_vs_determination_A4_A_s01 err=
+63/200 accountability_vs_determination_A4_A_s02 err=
+64/200 accountability_vs_determination_A4_A_s03 err=
+65/200 accountability_vs_determination_A4_A_s04 err=
+66/200 accountability_vs_determination_A4_A_s05 err=
+67/200 accountability_vs_determination_A4_A_s06 err=
+68/200 accountability_vs_determination_A4_A_s07 err=
+69/200 accountability_vs_determination_A4_A_s08 err=
+70/200 accountability_vs_determination_A4_A_s09 err=
+71/200 accountability_vs_determination_A4_B_s00 err=
+72/200 accountability_vs_determination_A4_B_s01 err=
+73/200 accountability_vs_determination_A4_B_s02 err=
+74/200 accountability_vs_determination_A4_B_s03 err=
+75/200 accountability_vs_determination_A4_B_s04 err=
+76/200 accountability_vs_determination_A4_B_s05 err=
+77/200 accountability_vs_determination_A4_B_s06 err=
+78/200 accountability_vs_determination_A4_B_s07 err=
+79/200 accountability_vs_determination_A4_B_s08 err=
+80/200 accountability_vs_determination_A4_B_s09 err=
+81/200 accountability_vs_determination_A5_A_s00 err=
+82/200 accountability_vs_determination_A5_A_s01 err=
+83/200 accountability_vs_determination_A5_A_s02 err=
+84/200 accountability_vs_determination_A5_A_s03 err=
+85/200 accountability_vs_determination_A5_A_s04 err=
+86/200 accountability_vs_determination_A5_A_s05 err=
+87/200 accountability_vs_determination_A5_A_s06 err=
+88/200 accountability_vs_determination_A5_A_s07 err=
+89/200 accountability_vs_determination_A5_A_s08 err=
+90/200 accountability_vs_determination_A5_A_s09 err=
+91/200 accountability_vs_determination_A5_B_s00 err=
+92/200 accountability_vs_determination_A5_B_s01 err=
+93/200 accountability_vs_determination_A5_B_s02 err=
+94/200 accountability_vs_determination_A5_B_s03 err=
+95/200 accountability_vs_determination_A5_B_s04 err=
+96/200 accountability_vs_determination_A5_B_s05 err=
+97/200 accountability_vs_determination_A5_B_s06 err=
+98/200 accountability_vs_determination_A5_B_s07 err=
+99/200 accountability_vs_determination_A5_B_s08 err=
+100/200 accountability_vs_determination_A5_B_s09 err=
+101/200 accountability_vs_arithmetic_B1_A_s00 err=
+102/200 accountability_vs_arithmetic_B1_A_s01 err=
+103/200 accountability_vs_arithmetic_B1_A_s02 err=
+104/200 accountability_vs_arithmetic_B1_A_s03 err=
+105/200 accountability_vs_arithmetic_B1_A_s04 err=
+106/200 accountability_vs_arithmetic_B1_A_s05 err=
+107/200 accountability_vs_arithmetic_B1_A_s06 err=
+108/200 accountability_vs_arithmetic_B1_A_s07 err=
+109/200 accountability_vs_arithmetic_B1_A_s08 err=
+110/200 accountability_vs_arithmetic_B1_A_s09 err=
+111/200 accountability_vs_arithmetic_B1_B_s00 err=
+112/200 accountability_vs_arithmetic_B1_B_s01 err=
+113/200 accountability_vs_arithmetic_B1_B_s02 err=
+114/200 accountability_vs_arithmetic_B1_B_s03 err=
+115/200 accountability_vs_arithmetic_B1_B_s04 err=
+116/200 accountability_vs_arithmetic_B1_B_s05 err=
+117/200 accountability_vs_arithmetic_B1_B_s06 err=
+118/200 accountability_vs_arithmetic_B1_B_s07 err=
+119/200 accountability_vs_arithmetic_B1_B_s08 err=
+120/200 accountability_vs_arithmetic_B1_B_s09 err=
+121/200 accountability_vs_arithmetic_B2_A_s00 err=
+122/200 accountability_vs_arithmetic_B2_A_s01 err=
+123/200 accountability_vs_arithmetic_B2_A_s02 err=
+124/200 accountability_vs_arithmetic_B2_A_s03 err=
+125/200 accountability_vs_arithmetic_B2_A_s04 err=
+126/200 accountability_vs_arithmetic_B2_A_s05 err=
+127/200 accountability_vs_arithmetic_B2_A_s06 err=
+128/200 accountability_vs_arithmetic_B2_A_s07 err=
+129/200 accountability_vs_arithmetic_B2_A_s08 err=
+130/200 accountability_vs_arithmetic_B2_A_s09 err=
+131/200 accountability_vs_arithmetic_B2_B_s00 err=
+132/200 accountability_vs_arithmetic_B2_B_s01 err=
+133/200 accountability_vs_arithmetic_B2_B_s02 err=
+134/200 accountability_vs_arithmetic_B2_B_s03 err=
+135/200 accountability_vs_arithmetic_B2_B_s04 err=
+136/200 accountability_vs_arithmetic_B2_B_s05 err=
+137/200 accountability_vs_arithmetic_B2_B_s06 err=
+138/200 accountability_vs_arithmetic_B2_B_s07 err=
+139/200 accountability_vs_arithmetic_B2_B_s08 err=
+140/200 accountability_vs_arithmetic_B2_B_s09 err=
+141/200 accountability_vs_arithmetic_B3_A_s00 err=
+142/200 accountability_vs_arithmetic_B3_A_s01 err=
+143/200 accountability_vs_arithmetic_B3_A_s02 err=
+144/200 accountability_vs_arithmetic_B3_A_s03 err=
+145/200 accountability_vs_arithmetic_B3_A_s04 err=
+146/200 accountability_vs_arithmetic_B3_A_s05 err=
+147/200 accountability_vs_arithmetic_B3_A_s06 err=
+148/200 accountability_vs_arithmetic_B3_A_s07 err=
+149/200 accountability_vs_arithmetic_B3_A_s08 err=
+150/200 accountability_vs_arithmetic_B3_A_s09 err=
+151/200 accountability_vs_arithmetic_B3_B_s00 err=
+152/200 accountability_vs_arithmetic_B3_B_s01 err=
+153/200 accountability_vs_arithmetic_B3_B_s02 err=
+154/200 accountability_vs_arithmetic_B3_B_s03 err=
+155/200 accountability_vs_arithmetic_B3_B_s04 err=
+156/200 accountability_vs_arithmetic_B3_B_s05 err=
+157/200 accountability_vs_arithmetic_B3_B_s06 err=
+158/200 accountability_vs_arithmetic_B3_B_s07 err=
+159/200 accountability_vs_arithmetic_B3_B_s08 err=
+160/200 accountability_vs_arithmetic_B3_B_s09 err=
+161/200 accountability_vs_arithmetic_B4_A_s00 err=
+162/200 accountability_vs_arithmetic_B4_A_s01 err=
+163/200 accountability_vs_arithmetic_B4_A_s02 err=
+164/200 accountability_vs_arithmetic_B4_A_s03 err=
+165/200 accountability_vs_arithmetic_B4_A_s04 err=
+166/200 accountability_vs_arithmetic_B4_A_s05 err=
+167/200 accountability_vs_arithmetic_B4_A_s06 err=
+168/200 accountability_vs_arithmetic_B4_A_s07 err=
+169/200 accountability_vs_arithmetic_B4_A_s08 err=
+170/200 accountability_vs_arithmetic_B4_A_s09 err=
+171/200 accountability_vs_arithmetic_B4_B_s00 err=
+172/200 accountability_vs_arithmetic_B4_B_s01 err=
+173/200 accountability_vs_arithmetic_B4_B_s02 err=
+174/200 accountability_vs_arithmetic_B4_B_s03 err=
+175/200 accountability_vs_arithmetic_B4_B_s04 err=
+176/200 accountability_vs_arithmetic_B4_B_s05 err=
+177/200 accountability_vs_arithmetic_B4_B_s06 err=
+178/200 accountability_vs_arithmetic_B4_B_s07 err=
+179/200 accountability_vs_arithmetic_B4_B_s08 err=
+180/200 accountability_vs_arithmetic_B4_B_s09 err=
+181/200 accountability_vs_arithmetic_B5_A_s00 err=
+182/200 accountability_vs_arithmetic_B5_A_s01 err=
+183/200 accountability_vs_arithmetic_B5_A_s02 err=
+184/200 accountability_vs_arithmetic_B5_A_s03 err=
+185/200 accountability_vs_arithmetic_B5_A_s04 err=
+186/200 accountability_vs_arithmetic_B5_A_s05 err=
+187/200 accountability_vs_arithmetic_B5_A_s06 err=
+188/200 accountability_vs_arithmetic_B5_A_s07 err=
+189/200 accountability_vs_arithmetic_B5_A_s08 err=
+190/200 accountability_vs_arithmetic_B5_A_s09 err=
+191/200 accountability_vs_arithmetic_B5_B_s00 err=
+192/200 accountability_vs_arithmetic_B5_B_s01 err=
+193/200 accountability_vs_arithmetic_B5_B_s02 err=
+194/200 accountability_vs_arithmetic_B5_B_s03 err=
+195/200 accountability_vs_arithmetic_B5_B_s04 err=
+196/200 accountability_vs_arithmetic_B5_B_s05 err=
+197/200 accountability_vs_arithmetic_B5_B_s06 err=
+198/200 accountability_vs_arithmetic_B5_B_s07 err=
+199/200 accountability_vs_arithmetic_B5_B_s08 err=
+200/200 accountability_vs_arithmetic_B5_B_s09 err=

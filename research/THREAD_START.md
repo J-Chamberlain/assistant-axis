@@ -24,6 +24,8 @@ The layered model is currently the best Paper 1.5 frame. A residualized trait-to
 
 The GPT-5.5 coordinate-blind PC interpretation rating benchmark is now complete. Using only the five role instructions per persona and no coordinate/geometry/ranking/cluster targets, three ratings recover meaningful canonical Qwen activation geometry under the shared deterministic splits: PC1 external-standard accountability R2=0.704, PC2 signed integration/coherence R2=0.423, PC3 internal-objective-vs-care R2=0.393, and joint mean R2=0.525. This is stronger than semantic baseline and Codex retained procedural features, but weaker than Big Five, hierarchical, residual-manifold, and SVD15 feature families.
 
+The focused PC1 accountability activation validation is now complete. Under the same Qwen/Qwen3-32B direct layer-48 hook extraction protocol as Run 2, accountability/scrutiny framing moved PC1 more positive than determination framing in 5/5 matched pairs (mean B-A +3.297, 95% CI [1.574, 5.020]) and more positive than arithmetic/checking framing in 5/5 matched pairs (mean B-A +9.551, 95% CI [7.592, 11.510]), with zero errors over 200 generations.
+
 Role-label exposure is a real methodology caveat. The Lu-style system prompts directly expose the target role label or normalized variant in 1280/1375 prompts, 93.1%. However, no-label prompt topology mostly survives label removal, so label exposure is not the whole structure.
 
 Local activation-cloud geometry now supports treating personas as response-state distributions rather than only points. Across amateur, playwright, trickster, and two editor runs, matched-n cloud-shape auditing shows differences in radius, anisotropy, orientation reliability, and filter sensitivity; trickster is least directionally constrained by anisotropy/orientation criteria but is not the largest matched-n cloud.
@@ -38,7 +40,7 @@ Run 2 of the no-label elicitation program is now completed. The frozen package u
 
 ## Top Open Questions
 
-The current PC1 external-standard accountability interpretation now has two related diagnostics: the sparse-vocabulary competing-theories screen under `research/outputs/pc1_competing_theories_test/`, and the stronger GPT-5.5 coordinate-blind rating benchmark under `research/outputs/blind_pc_interpretation_rating_benchmark/`. Exact vocabulary evidence is weak after controls, but the direct blind rating gives PC1 R2=0.704. Do not describe PC1 as proven; do treat external-standard accountability as a meaningful compact predictor.
+The current PC1 external-standard accountability interpretation now has three related diagnostics: the sparse-vocabulary competing-theories screen under `research/outputs/pc1_competing_theories_test/`, the stronger GPT-5.5 coordinate-blind rating benchmark under `research/outputs/blind_pc_interpretation_rating_benchmark/`, and the execution-time activation diagnostic under `research/outputs/pc1_accountability_validation/`. Exact vocabulary evidence is weak after controls, but the direct blind rating gives PC1 R2=0.704 and the activation diagnostic separates accountability/scrutiny from determination and arithmetic/checking in 10/10 matched pair contrasts. Do not describe PC1 as proven; do treat external-standard accountability as the strongest current compact PC1 wording.
 
 
 The bounded Paper 1.5 no-label elicitation validation has now run under matched direct-hook extraction conditions. It used the frozen 60-prompt packet, generated 600 independent Qwen/Qwen3-32B responses, and passed 4/6 preregistered family thresholds: PC1-negative, PC2-positive, PC3-positive, and PC3-negative passed; PC1-positive and PC2-negative failed.
@@ -65,7 +67,7 @@ SVD15 lexical/register signal is strong but not yet converted into stable explan
 
 ## Current Interpretations
 
-PC1 is moderately well supported as careful/evaluative/procedural control, objective certainty, disciplined expertise, external-standard accountability, and externally legible competence versus open/symbolic/expressive possibility. PC1 aligns with the assistant-axis vector at 0.802310, and a coordinate-blind GPT-5.5 role-instruction rating recovers PC1 at R2=0.704. It should not be reduced to literal assistantness.
+PC1 is moderately well supported as careful/evaluative/procedural control, objective certainty, disciplined expertise, external-standard accountability, and externally legible competence versus open/symbolic/expressive possibility. PC1 aligns with the assistant-axis vector at 0.802310, a coordinate-blind GPT-5.5 role-instruction rating recovers PC1 at R2=0.704, and a focused Qwen activation diagnostic shows accountability/scrutiny wording moves PC1 more positive than determination or arithmetic/checking wording under matched scenarios. It should not be reduced to literal assistantness.
 
 PC2 is currently best described as abstraction/integration/developmental structure. Lower PC2 is more abstract, world-model-like, integrated, and long-residence. Higher PC2 is more developmental, reactive, socially volatile, or less integrated. A coordinate-blind GPT-5.5 integration/coherence rating predicts PC2 at R2=0.423 after signing high integration toward negative PC2. Coherent action under unresolved uncertainty is now a secondary behavioral expression, not the primary label.
 

@@ -1,0 +1,7 @@
+experiment,metric,n_pairs,mean_effect,ci95_low,ci95_high,positive_pair_count,negative_pair_count
+accountability_vs_determination,pair_mean_b_minus_a_pc1,5,3.2970036002841736,1.5737789011062213,5.020228299462126,5,0
+accountability_vs_determination,pair_mean_b_minus_a_pc2,5,-8.664682966538312,-9.40114070086538,-7.928225232211243,0,5
+accountability_vs_determination,pair_mean_b_minus_a_pc3,5,3.37612164824883,2.7992670563243283,3.952976240173332,5,0
+accountability_vs_arithmetic,pair_mean_b_minus_a_pc1,5,9.55118411735948,7.5923009163909745,11.510067318327984,5,0
+accountability_vs_arithmetic,pair_mean_b_minus_a_pc2,5,-16.04983317552408,-18.189825505474776,-13.909840845573383,0,5
+accountability_vs_arithmetic,pair_mean_b_minus_a_pc3,5,6.367512728096696,5.16472047150272,7.570304984690672,5,0

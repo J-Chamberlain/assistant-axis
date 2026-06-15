@@ -1,0 +1,45 @@
+{
+  "experiment": "Focused PC1 accountability validation",
+  "status": "prepared",
+  "created_utc": "2026-06-15T12:04:36.617870+00:00",
+  "script_author_model": "GPT-5.5",
+  "model_id": "Qwen/Qwen3-32B",
+  "target_geometry": "Qwen/Qwen3-32B persona PCA space",
+  "layer": 48,
+  "activation_source": "direct forward hook on model.model.layers[48]",
+  "pooling": "mean over generated assistant response tokens only",
+  "generation_settings": {
+    "max_new_tokens": 300,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "base_seed": 20260615,
+    "thinking_disabled": true
+  },
+  "planned_prompt_rows": 20,
+  "planned_generations": 200,
+  "bare_qwen_baseline_source": "research/outputs/no_label_elicitation_run2/run2_response_level_results.csv",
+  "bare_qwen_baseline_pc1": 23.509936624906437,
+  "bare_qwen_baseline_pc2": 14.04086745761233,
+  "bare_qwen_baseline_pc3": -2.4601124846522713,
+  "assistant_role_centroid_pc1": 33.702802703271914,
+  "assistant_role_centroid_pc2": 3.441718015439878,
+  "assistant_role_centroid_pc3": -5.155534089069773,
+  "blinding": {
+    "model_visible_fields": [
+      "prompt_text"
+    ],
+    "excluded_from_model_visible_input": [
+      "experiment",
+      "prompt_id",
+      "pair_id",
+      "version",
+      "PC labels",
+      "hypotheses",
+      "success criteria",
+      "metadata",
+      "reasoning paragraphs",
+      "references to PCA/geometry/axes/personas/roles/experiments"
+    ]
+  }
+}

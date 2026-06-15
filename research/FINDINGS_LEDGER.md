@@ -698,3 +698,12 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 - Axis-specific results: external-standard accountability predicted PC1 with R2=0.704; signed integration/coherence-of-wholes predicted PC2 with R2=0.423; internal-objective-vs-care predicted PC3 with R2=0.393.
 - Joint three-rating model results: PC1 R2=0.695, PC2 R2=0.417, PC3 R2=0.463, mean R2=0.525.
 - Interpretation: the current PC meanings are meaningfully recoverable from blinded role-instruction reading and outperform the semantic baseline (mean R2=0.389) plus Codex retained procedural features (0.490), but remain below Claude Big Five (0.613), hierarchical features (0.622), residual manifold (0.632), and semantic+BigFive+SVD15 (0.707).
+
+### PC1 Accountability Activation Validation (2026-06-15)
+
+- Ran `research/outputs/pc1_accountability_validation/` as a focused execution-time activation diagnostic under the same Qwen/Qwen3-32B layer-48 direct-hook extraction, response-token mean pooling, fresh one-message generation protocol, no-cache extraction pass, and canonical Qwen PCA basis used by Run 2.
+- The run completed 200/200 planned generations with zero response-level errors.
+- Experiment A found accountability/scrutiny wording moved PC1 more positive than determination wording in 5/5 matched scenario pairs: mean B-A PC1 effect +3.297, 95% CI [1.574, 5.020].
+- Experiment B found accountability/scrutiny wording moved PC1 more positive than arithmetic/checking wording in 5/5 matched scenario pairs: mean B-A PC1 effect +9.551, 95% CI [7.592, 11.510].
+- Secondary effects were consistent across all 10 pairs: accountability/scrutiny wording moved PC2 negative relative to both alternatives, with mean PC2 effects -8.665 versus determination and -16.050 versus arithmetic/checking.
+- Interpretation: this materially strengthens the PC1 external-standard-accountability hypothesis against two local alternatives, but it remains a focused diagnostic rather than proof of PC1 semantics or axis isolation.

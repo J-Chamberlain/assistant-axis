@@ -1,0 +1,14 @@
+path,bytes,status,notes
+research/outputs/pc1_accountability_validation/response_level_results.csv,361899,active,Focused PC1 accountability validation artifact
+research/outputs/pc1_accountability_validation/pairwise_effects.csv,3607,active,Focused PC1 accountability validation artifact
+research/outputs/pc1_accountability_validation/prompt_means.csv,13397,active,Focused PC1 accountability validation artifact
+research/outputs/pc1_accountability_validation/accountability_validation_report.md,2631,active,Focused PC1 accountability validation artifact
+research/outputs/pc1_accountability_validation/run_pc1_accountability_validation.py,38371,active,Focused PC1 accountability validation artifact
+research/outputs/pc1_accountability_validation/run_config.json,1447,active,Focused PC1 accountability validation artifact
+research/outputs/pc1_accountability_validation/prompt_catalog.csv,8640,active,Focused PC1 accountability validation artifact
+research/outputs/pc1_accountability_validation/experiment_summary.csv,800,active,Focused PC1 accountability validation artifact
+research/outputs/pc1_accountability_validation/projection_basis_debug.json,711,active,Focused PC1 accountability validation artifact
+research/outputs/pc1_accountability_validation/generation_log.jsonl,536323,active,Focused PC1 accountability validation artifact
+research/outputs/pc1_accountability_validation/heartbeat.json,231,active,Focused PC1 accountability validation artifact
+research/outputs/pc1_accountability_validation/gpu_copy_manifest.sha256,1179,active,SHA256 manifest for copied non-activation outputs
+research/outputs/pc1_accountability_validation/run_log.txt,17121,active,Pod execution log copied after run completion

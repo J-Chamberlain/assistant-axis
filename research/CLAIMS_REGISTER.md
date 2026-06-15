@@ -132,12 +132,12 @@ Last Updated: 2026-05-30
 
 ## 14. PC1 Tracks Constraint, Standards, Expertise, and Procedural Competence
 
-Claim: PC1 is best interpreted as careful/evaluative/procedural control, objective certainty, disciplined knowledge practice, and externally legible competence versus open/symbolic/expressive possibility.
+Claim: PC1 is best interpreted as careful/evaluative/procedural control, objective certainty, disciplined knowledge practice, and accountability to external standards independent of the speaker versus open/symbolic/expressive possibility.
 Status: Supported
 Evidence: Big Five conscientiousness alignment; reading-based rater PC1 r=0.558; professional objective-certainty PC1 r=0.394; assistant-axis alignment 0.802310.
-Additional evidence: A 2026-06-15 GPT-5.5 coordinate-blind role-instruction benchmark over the 273-persona shared split recovered PC1 from an external-standard-accountability rating with R2=0.704.
-Counterevidence: PC1 mixes several related constructs; intelligence/expertise can outpredict objective certainty in the rater study; sparse exact-vocabulary tests added only +0.0071 R2 over text-length and cluster controls.
-Dependencies: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`, `research/outputs/blind_pc_interpretation_rating_benchmark/`, `research/outputs/pc1_competing_theories_test/`
+Additional evidence: A 2026-06-15 GPT-5.5 coordinate-blind role-instruction benchmark over the 273-persona shared split recovered PC1 from an external-standard-accountability rating with R2=0.704. A 2026-06-15 focused Qwen activation diagnostic found accountability/scrutiny wording moved PC1 more positive than determination wording in 5/5 matched pairs (mean B-A +3.297, 95% CI [1.574, 5.020]) and more positive than arithmetic/checking wording in 5/5 matched pairs (mean B-A +9.551, 95% CI [7.592, 11.510]).
+Counterevidence: PC1 still mixes several related constructs; intelligence/expertise can outpredict objective certainty in the rater study; sparse exact-vocabulary tests added only +0.0071 R2 over text-length and cluster controls; the accountability activation diagnostic is focused on compliance/audit-style prompts and does not prove all high-PC1 movement is accountability-specific.
+Dependencies: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`, `research/outputs/blind_pc_interpretation_rating_benchmark/`, `research/outputs/pc1_competing_theories_test/`, `research/outputs/pc1_accountability_validation/`
 Last Updated: 2026-06-15
 
 ## 15. PC2 Is an Abstraction/Integration/Developmental Axis, Not Simple Uncertainty Capacity
@@ -234,11 +234,11 @@ Last Updated: 2026-05-30
 
 ## 25. PC1 Is A Convergence-Pressure / Degrees-Of-Freedom Axis
 
-Claim: PC1 is currently interpreted as a convergence-pressure / degrees-of-freedom axis. Evaluator-like roles are evidence for this interpretation, not the interpretation itself. High PC1 constrains the role toward correct-answer or procedural convergence; low PC1 admits broader symbolic and expressive self-consistent continuations.
+Claim: PC1 is currently interpreted as a convergence-pressure / degrees-of-freedom axis. Evaluator-like roles are evidence for this interpretation, not the interpretation itself. High PC1 constrains the role toward externally accountable, standards-governed, correct-answer, or procedural convergence; low PC1 admits broader symbolic and expressive self-consistent continuations.
 Status: Tentative
-Evidence: PC1 endpoint rankings, assistant-axis alignment, professional hierarchy validation, prompt-to-geometry forecasting, cone/void observations, and the 2026-06-15 coordinate-blind GPT-5.5 role-instruction benchmark jointly support interpreting high-PC1 roles as geometrically constrained by correctness, validation, procedure, evidence, external standards, or error correction. The external-standard-accountability rating alone reached PC1 R2=0.704 over the shared 273-persona benchmark.
-Counterevidence: PC1 remains entangled with assistantness, professional competence, conscientiousness, expertise, and prompt-register effects. Sparse exact-vocabulary tests added only +0.0071 R2 over text-length and cluster controls, so the stronger evidence is the direct blinded rating rather than simple lexical matching.
-Dependencies: `research/outputs/axis_forcing_function_notes/pc1_pc2_forcing_function_note.md`, `research/outputs/axis_forcing_function_notes/judge_rubric_design_notes.md`, `research/outputs/prompt_to_geometry_forecasting/forecasting_dataset_summary.md`, `research/outputs/blind_pc_interpretation_rating_benchmark/`, `research/outputs/pc1_competing_theories_test/`
+Evidence: PC1 endpoint rankings, assistant-axis alignment, professional hierarchy validation, prompt-to-geometry forecasting, cone/void observations, and the 2026-06-15 coordinate-blind GPT-5.5 role-instruction benchmark jointly support interpreting high-PC1 roles as geometrically constrained by correctness, validation, procedure, evidence, external standards, or error correction. The external-standard-accountability rating alone reached PC1 R2=0.704 over the shared 273-persona benchmark. The focused accountability activation diagnostic directly separated accountability/scrutiny wording from determination and arithmetic/checking while preserving matched scenarios, and passed 10/10 pairwise PC1 contrasts.
+Counterevidence: PC1 remains entangled with assistantness, professional competence, conscientiousness, expertise, and prompt-register effects. Sparse exact-vocabulary tests added only +0.0071 R2 over text-length and cluster controls, and the accountability activation diagnostic used a narrow compliance/audit domain rather than a broad prompt battery.
+Dependencies: `research/outputs/axis_forcing_function_notes/pc1_pc2_forcing_function_note.md`, `research/outputs/axis_forcing_function_notes/judge_rubric_design_notes.md`, `research/outputs/prompt_to_geometry_forecasting/forecasting_dataset_summary.md`, `research/outputs/blind_pc_interpretation_rating_benchmark/`, `research/outputs/pc1_competing_theories_test/`, `research/outputs/pc1_accountability_validation/`
 Last Updated: 2026-06-15
 
 ## 26. PC2 Is An Integrated-Abstraction / Situated-Immediacy Axis With Admissibility Constraints
