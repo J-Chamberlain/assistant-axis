@@ -713,3 +713,15 @@ Dependent analyses: Manual inspection of role-conditioning prompt wording for po
 Current status: Active inspection table; 275/275 roles have exactly five positive instructions.
 Notes/caveats: The instruction columns are role-conditioning prompts from the public role artifacts, not the 240 shared extraction questions. Wording peculiarities may suggest hypotheses but do not establish causal effects on role geometry without follow-up analysis.
 
+## Iterative semantic prediction methods archive
+
+Artifact: Paper 1.5 methods note and benchmark table for iterative semantic prediction of persona activation geometry.
+Location: `research/outputs/iterative_semantic_prediction_methods/`
+Created by: Codex/GPT-5.5.
+Model used: Script/report generation model GPT-5.5; no model APIs, pods, GPU work, response generation, activation extraction, projection reruns, or new benchmark fitting were performed.
+Source inputs: User-provided methods text, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv`, `research/q2_stability/qwen/outputs/codex_trait_replication/codex_trait_replication_report.md`, `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/hierarchical_model_report.md`, `research/q2_stability/qwen/outputs/residual_manifold_analysis/residual_manifold_report.md`, and `research/q2_stability/qwen/outputs/residual_svd_interpretation/residual_svd_interpretation_report.md`.
+Generating script: `research/outputs/iterative_semantic_prediction_methods/run_iterative_semantic_prediction_methods.py`.
+Dependent analyses: Paper 1.5 technical report methods section, notebook S04/N07 prediction-improvement narrative, and clean repo canonical-claim traceability.
+Current status: Active methods-support artifact.
+Notes/caveats: The table reports held-out mean R2 over canonical Qwen activation PCA3D for the 273 common-persona shared benchmark with five deterministic splits. Approximate R is the positive square root of R2 for readability only. These are prediction benchmarks, not execution-time activation validation.
+

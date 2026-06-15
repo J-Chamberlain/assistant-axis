@@ -1,0 +1,5 @@
+artifact,path,status,description
+iterative_semantic_prediction_methods.md,research/outputs/iterative_semantic_prediction_methods/iterative_semantic_prediction_methods.md,active,Methods prose for the iterative semantic prediction benchmark sequence.
+iterative_semantic_prediction_benchmark_table.csv,research/outputs/iterative_semantic_prediction_methods/iterative_semantic_prediction_benchmark_table.csv,active,"Excel-friendly benchmark table with mean R2, approximate R, status, caveat, and source."
+artifact_inventory.csv,research/outputs/iterative_semantic_prediction_methods/artifact_inventory.csv,active,Artifact inventory for this methods archive.
+run_iterative_semantic_prediction_methods.py,research/outputs/iterative_semantic_prediction_methods/run_iterative_semantic_prediction_methods.py,active,Generation script for this methods archive.
