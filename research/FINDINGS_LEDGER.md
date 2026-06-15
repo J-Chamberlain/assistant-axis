@@ -691,3 +691,10 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 - The comparison is supportive but weak by itself because text-length-plus-cluster controls already reach held-out PC1 R2=0.774; incremental R2 was +0.0071 for external-standard accountability, +0.0003 for orderliness/conscientiousness, and -0.0023 for determination-against-explicit-criteria.
 - The corrected GPT-4.1-mini blind-rating validation was scaffolded but blocked because `OPENAI_API_KEY` was not available in the local shell; no blind ratings or rating-benchmark R2 values were fabricated.
 
+### Blind PC Interpretation Rating Benchmark (2026-06-15)
+
+- Built `research/outputs/blind_pc_interpretation_rating_benchmark/` to test whether GPT-5.5 coordinate-blind ratings of the five role instructions recover canonical Qwen activation PCA3D over the same 273-persona shared benchmark and deterministic split assignments.
+- Rater blinding: GPT-5.5 saw role instructions only, not PC coordinates, PCA labels, role rankings, clusters, assistant-axis values, geometry, target variables, or benchmark results.
+- Axis-specific results: external-standard accountability predicted PC1 with R2=0.704; signed integration/coherence-of-wholes predicted PC2 with R2=0.423; internal-objective-vs-care predicted PC3 with R2=0.393.
+- Joint three-rating model results: PC1 R2=0.695, PC2 R2=0.417, PC3 R2=0.463, mean R2=0.525.
+- Interpretation: the current PC meanings are meaningfully recoverable from blinded role-instruction reading and outperform the semantic baseline (mean R2=0.389) plus Codex retained procedural features (0.490), but remain below Claude Big Five (0.613), hierarchical features (0.622), residual manifold (0.632), and semantic+BigFive+SVD15 (0.707).

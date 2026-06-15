@@ -1,0 +1,274 @@
+role,external_standard_accountability,rationale
+accountant,10,"The accountant is defined by accuracy, reports, audits, taxes, and regulatory compliance within organized financial systems."
+auditor,10,"The role is explicitly governed by compliance, verification, risk assessment, procedures, and documented findings."
+biologist,10,"The role is grounded in scientific research on life processes, mechanisms, evolution, and ecological systems."
+chemist,10,"The role is strongly accountable to experimental design, laboratory technique, and molecular-level scientific explanation."
+detective,10,"The role is strongly anchored in evidence, forensic methods, deductive reasoning, and systematic conclusions."
+doctor,10,The role relies on clinical expertise and medical standards while being organized around patient care and health outcomes.
+engineer,10,"The role applies scientific and mathematical principles to analyze, optimize, troubleshoot, and implement technical systems."
+evaluator,10,"The role centers on criteria, evidence, metrics, frameworks, and systematic judgments of quality and impact."
+examiner,10,"The role explicitly verifies competency, compliance, specifications, protocols, and established standards."
+grader,10,"The role is explicitly governed by rubrics, standards, systematic scoring, and constructive service to students."
+historian,10,"The role depends on primary sources, contextual analysis, historical patterns, and broad synthesis."
+journalist,10,"The role is strongly accountable to facts, verification, sources, objectivity, and public reporting standards."
+judge,10,"The role centers on impartial decisions grounded in evidence, facts, arguments, and fair procedural evaluation."
+lawyer,10,"The role is governed by statutes, precedent, regulations, legal documentation, and coherent jurisprudential frameworks."
+mathematician,10,"The role is accountable to rigorous proof, formal reasoning, abstraction, and mathematical structure."
+paramedic,10,Emergency medical practice is tightly accountable to clinical protocols and is centered on urgent care for others.
+pharmacist,10,"Pharmacy is accountable to scientific, safety, and clinical standards while serving patient medication outcomes."
+physicist,10,Physics is accountable to mathematical models and experimental evidence while seeking deep structural laws.
+pilot,10,"Piloting is governed by aviation procedures, regulations, and safety systems with responsibility for passengers and crew."
+reporter,10,"The role is explicitly accountable to gathering, verifying, investigating, and presenting factual information to the public."
+scientist,10,"The role explicitly depends on empirical evidence, hypothesis testing, methodology, and peer review."
+skeptic,10,"The role demands rigorous evidence, source credibility, logical consistency, and methodical scrutiny."
+statistician,10,"The role is explicitly grounded in rigorous quantitative methods, inference, probability, and model-based analysis."
+validator,10,"The validator is explicitly defined by verification, evidence, source reliability, precision, and authenticity."
+witness,10,"The witness is explicitly accountable to accurate observation, testimony, objectivity, and documented events."
+analyst,9,"The analyst relies on data, systematic reasoning, patterns, and evidence-based conclusions across complex information."
+anthropologist,9,"The anthropologist uses fieldwork, comparative analysis, and research methods to understand cultures and social structures."
+archaeologist,9,"The archaeologist reconstructs past societies through systematic excavation, artifacts, stratigraphy, and material evidence."
+cartographer,9,"The role depends on accurate surveying, geographical data, spatial relationships, and systematic mapmaking."
+conservator,9,"The conservator is governed by preservation techniques, scientific methods, integrity, and responsibility to future generations."
+debugger,9,"The role emphasizes systematic troubleshooting, diagnostic techniques, root causes, and effective resolution against observable technical standards."
+economist,9,"The role analyzes markets, systems, indicators, patterns, and forecasts through evidence-based economic methods."
+librarian,9,"The role relies on authoritative sources, classification systems, and research methods to help people find information."
+linguist,9,"The role is organized around formal linguistic analysis, theory, and persistent language patterns rather than direct service."
+nutritionist,9,The role depends on evidence-based dietary science and recommendations aimed at others' health.
+pragmatist,9,The pragmatist is accountable to real-world evidence and measurable effectiveness while pursuing practical goals.
+proofreader,9,"The role is strongly governed by grammar, spelling, punctuation, formatting, accuracy, and consistency standards."
+psychologist,9,The role applies trained theories and frameworks to analyze mental processes and behavioral patterns.
+researcher,9,"The role centers on systematic methodology, evidence, synthesis, and pattern-finding across sources."
+reviewer,9,The role applies rigorous criteria and constructive assessment aimed at improving others' work.
+scholar,9,"The role is devoted to rigorous knowledge, evidence, theoretical frameworks, and intellectual pursuit."
+screener,9,The role evaluates candidates against established criteria and requirements with consistent methods.
+sociologist,9,The role emphasizes systematic study of social structures and patterns using disciplinary analysis accountable to scholarly standards.
+veterinarian,9,The veterinarian is guided by clinical medical expertise and a strong responsibility for animal health and welfare.
+ambassador,8,"The ambassador represents official interests through diplomacy, stakeholder relationships, and negotiated coherence."
+architect,8,"The architect works within structural, spatial, environmental, and efficiency constraints to create coherent built designs."
+archivist,8,"The role centers on preservation standards, cataloging systems, and cultural stewardship across enduring historical collections."
+consultant,8,"The consultant provides data-driven, professional, client-tailored analysis and recommendations."
+critic,8,"The critic evaluates creative work through professional expertise, careful observation, and informed commentary."
+editor,8,"The role applies standards of grammar, style, clarity, structure, and effectiveness in service of better communication."
+forecaster,8,"The role uses data, trends, indicators, and pattern synthesis to make accountable predictions over time."
+futurist,8,"The role systematically integrates technological, social, and economic signals into broad future scenarios."
+geographer,8,"The role studies spatial relationships, mapping, environments, populations, and regional interactions through disciplinary knowledge."
+mediator,8,The role is accountable to neutrality and conflict-resolution methods while serving mutual understanding and resolution.
+naturalist,8,"The role draws on ecological knowledge, observation, conservation, and broader natural patterns."
+navigator,8,"The role must provide route guidance that can be checked against maps, terrain, and successful travel outcomes."
+observer,8,"The role stresses neutral documentation, objective reporting, and systematic monitoring for analysis."
+peacekeeper,8,Peacekeeping relies on conflict-resolution standards and integrates multiple perspectives in service of others’ stability.
+perfectionist,8,The role is driven by exacting standards and an internal demand for flawless outcomes.
+philosopher,8,The philosopher is oriented toward rigorous reasoning about underlying principles and fundamental coherence.
+polymath,8,The polymath integrates multiple knowledge systems and applies broad expertise to complex problems.
+producer,8,"The role must coordinate budgets, timelines, teams, resources, and delivery against production requirements."
+programmer,8,"The role is accountable to technical correctness, efficiency, architecture, methodologies, and problem-solving goals."
+publisher,8,"The role manages content preparation, editing, workflows, release, and distribution across platforms."
+realist,8,"The role is accountable to facts, actual circumstances, and practical reality over preference or illusion."
+robot,8,"The role is governed by protocols, logic, algorithms, and task execution rather than relational care."
+soldier,8,"The role is strongly governed by military protocols, chain of command, duty, and loyalty to comrades and mission."
+specialist,8,"The role stresses deep technical mastery and precision within a field, implying accountability to domain expertise and detailed standards."
+summarizer,8,The role must preserve essential meaning from source material through clear extraction and organized condensation.
+supervisor,8,"The role is accountable to workplace protocols, quality standards, deliverables, and coordinated operational oversight."
+teacher,8,"The role is accountable to educational methodology and student understanding, with a strong orientation toward guidance and service."
+therapist,8,The therapist combines evidence-based methods with a primary duty of compassionate support and healing.
+translator,8,"The translator is accountable to preserving meaning, tone, linguistic structure, and cultural context across languages."
+tutor,8,The tutor relies on academic understanding and structured methods while primarily serving student learning.
+activist,7,"The activist appeals to rights, justice, policy change, and systemic reform in service of marginalized communities."
+angel,7,"The angel serves divine will and protects, comforts, and heals others through benevolent obligation."
+builder,7,"The role emphasizes durable structures, foundations, frameworks, planning, and lasting system-like results."
+coach,7,"The coach uses structured plans and feedback to help others improve, combining some standards with a strong service orientation."
+collector,7,"The collector emphasizes expertise, cataloging, preservation methods, and comprehensive organized archives."
+coordinator,7,"The coordinator aligns stakeholders, timelines, teams, and resources toward unified objectives."
+counselor,7,"The counselor is defined by compassionate guidance, emotional support, empathy, and helping others heal."
+curator,7,"The curator selects, arranges, contextualizes, and connects materials into cohesive audience-facing exhibitions."
+cyborg,7,"The cyborg integrates computational precision, data analysis, intuition, empathy, and creativity into one hybrid whole."
+dispatcher,7,The role coordinates resources through prioritization and routing decisions aimed at meeting situational needs effectively.
+emissary,7,"The role uses diplomatic skill and cultural understanding to foster cooperation, dialogue, and mutual respect."
+instructor,7,"The role emphasizes structured teaching methods and learner progress, accountable to clarity and pedagogy in service of students."
+interpreter,7,"The role must preserve meaning across contexts while integrating languages, cultures, and conceptual frameworks for others' understanding."
+interviewer,7,The role uses professional questioning techniques to gather comprehensive information while balancing subject comfort with information goals.
+marketer,7,"The role uses market analysis, audience segmentation, and strategic systems to pursue acquisition and brand goals."
+mechanic,7,The role combines practical diagnosis with systematic troubleshooting and attention to how components function together.
+moderator,7,"The role emphasizes structured, fair dialogue and responsibility to participants' voices and group outcomes."
+negotiator,7,The role is accountable to agreements and conflict resolution while serving mutually beneficial outcomes.
+pacifist,7,The role is governed by a principled ethical standard of non-violence aimed at protecting others and preserving harmony.
+planner,7,"Planning emphasizes structured coordination, timelines, and goal achievement through coherent strategy."
+prophet,7,The role answers to divine truth and future consequence while integrating events into a larger revealed pattern.
+purist,7,"The role is committed to preserving pure standards, authentic traditions, and unaltered forms."
+recruiter,7,The role evaluates candidates against market demands and hiring needs while building relationships.
+scheduler,7,The role follows timing requirements and coordination constraints in service of others' organization.
+secretary,7,"The role is administrative, organized, and service-oriented toward office needs and correspondence."
+sommelier,7,The role relies on established wine knowledge and service standards while being oriented toward helping others select fitting experiences.
+strategist,7,"The role focuses on systematic long-term planning, leverage, and goal achievement through coherent adaptive frameworks."
+student,7,"The role is accountable to education and understanding while remaining receptive, curious, and learning-oriented."
+synthesizer,7,"The role explicitly integrates disparate information into coherent wholes, frameworks, and complete pictures."
+technologist,7,"The role is driven by innovation, technical expertise, and pushing technological frontiers while still referencing practical systems knowledge."
+theorist,7,"The theorist is explicitly oriented toward abstract frameworks, hidden patterns, and unified explanatory systems."
+traditionalist,7,"The traditionalist appeals to established norms, continuity, inherited practices, and social stability."
+trainer,7,"The trainer uses structured programs, milestones, feedback, and progression in service of learner development."
+veteran,7,"The veteran draws on military discipline, hierarchy, service, and lived institutional experience."
+writer,7,"The writer balances craft standards, audience adaptation, research, and coherent narrative structure without a strongly care-based or self-driven extreme."
+advocate,6,"The advocate pursues causes through persuasion and social benefit, implying some public criteria but chiefly service to others."
+avatar,6,The role embodies a coherent divine identity and authority bridging higher realms with material existence.
+celebrity,6,The role is shaped by public scrutiny and brand management while pursuing fame-linked self-presentation.
+chef,6,"The role combines culinary expertise, restaurant practice, technique, and teaching others the craft of cooking."
+composer,6,"The composer focuses on intricate musical structures, architecture, and sophisticated internal creative construction."
+designer,6,The role balances creative judgment with user-centered functionality and established design principles.
+entrepreneur,6,"The role is driven by venture goals, market opportunity, scaling, funding, and profitability, with moderate accountability to business outcomes."
+facilitator,6,"The role is oriented toward serving group process, inclusion, consensus, and collaborative coherence."
+guardian,6,The role is organized around protective duty toward vulnerable others and defense against harm or injustice.
+healer,6,The role combines wellness modalities with holistic mind-body-spirit integration and compassionate care.
+mentor,6,The role draws on experience and strategic guidance to support others' development and long-term growth.
+merchant,6,"The role focuses on markets, trade relationships, value, negotiation, and profitable commercial objectives."
+organizer,6,"The role emphasizes systematic structure, coordination, and cohesive workflows that can be judged by effectiveness."
+presenter,6,"The role emphasizes effective audience communication, requiring coherent structure and adaptation to others' needs."
+scout,6,The role emphasizes direct reconnaissance and risk assessment to support a main group's decisions.
+stoic,6,"The role follows an internal discipline of virtue, control, and rational composure more than interpersonal care."
+vegan,6,"The vegan role is grounded in ethical, health, environmental, and compassionate commitments toward animals and consumption."
+virtuoso,6,"The virtuoso is organized around personal mastery, technical brilliance, and exceptional execution within a craft."
+workaholic,6,"The workaholic is dominated by productivity goals and self-worth through achievement, with little orientation toward others."
+alien,5,The alien observes human civilization from a broad comparative perspective driven by inquiry and interpretation.
+anarchist,5,The anarchist is driven by a strong internal political objective aimed at dismantling hierarchical systems.
+artisan,5,"The role emphasizes skilled craft, materials, technique, and personal commitment to creating beautiful handmade work."
+assistant,5,"The role is organized almost entirely around understanding, supporting, and being useful to users."
+auctioneer,5,The role focuses on driving fast-paced sales outcomes through crowd management and competitive bidding.
+bard,5,"The role integrates oral tradition, folklore, performance, and cultural memory while engaging audiences directly."
+bartender,5,"The role combines drink-making craft with attention to patrons’ comfort, atmosphere, and social connection."
+collaborator,5,"The collaborator is organized around shared success, group input, and collective problem-solving rather than a private agenda."
+contrarian,5,The contrarian follows an internal drive to challenge consensus and provoke deeper thinking rather than mainly serving others.
+crystalline,5,"The crystalline role is dominated by structural patterns, symmetries, resonances, and internally coherent modes of perception."
+destroyer,5,The role pursues an internal mission to dismantle obsolete systems based on broad judgments about renewal and progress.
+generalist,5,The role synthesizes broad knowledge across domains and draws connections among diverse fields.
+guide,5,The role focuses on helping others navigate uncertain situations safely through practical experience.
+homunculus,5,The role centers on identity as an artificial alchemical being and knowledge of its created nature.
+idealist,5,"The role is driven by principles, higher purposes, moral vision, and systemic improvement."
+martyr,5,"The role is centered on self-sacrifice, protection of others, and service to a greater good."
+parent,5,"Parenting involves family-wide judgment and responsibility, primarily oriented toward children’s wellbeing."
+photographer,5,The role balances technical craft with personal artistic vision and attention to particular moments.
+playwright,5,The playwright organizes dramatic wholes through craft conventions while pursuing a creative objective.
+podcaster,5,"The podcaster structures conversations and narratives but is strongly oriented toward guests, listeners, and community."
+prodigy,5,The role emphasizes extraordinary internal capability and grasp of complex concepts across domains.
+revolutionary,5,"The role focuses on systemic transformation for justice and equality, mixing ideological standards with service to others."
+simulacrum,5,"The role is philosophically focused on authenticity, originality, and copy-original structures."
+warrior,5,"The warrior is action-focused and protective, with some accountability to courage and righteousness but a strong care-oriented duty to others."
+zeitgeist,5,"The zeitgeist embodies the whole structure and mood of an era, with broad coherence but no explicit external standard or care duty."
+actor,4,The actor is oriented around expressive transformation and performance skill more than external criteria or service.
+altruist,4,The altruist is explicitly organized around serving others' welfare above personal interest.
+ancient,4,"The ancient role is defined by long-term historical patterns, civilizational continuity, and accumulated perspective."
+ascetic,4,The role is driven by an internal spiritual objective pursued through disciplined renunciation and austere practice.
+caregiver,4,"The role is explicitly centered on nurturing, protecting, comforting, healing, and supporting others."
+chameleon,4,"The role adapts fluidly to local context, audience expectations, and social environments rather than a fixed agenda."
+comedian,4,"The comedian relies on wit, timing, and personal craft aimed at producing laughter more than formal standards or care obligations."
+competitor,4,"The competitor is explicitly driven by winning, advantage, and outperforming others."
+cosmopolitan,4,The cosmopolitan role emphasizes broad cross-cultural perspective and adaptive worldly understanding.
+ecosystem,4,"The role is defined by interdependence, balance, mutual support, and the sustainability of the whole."
+elder,4,The role draws on long experience and reflection to share wisdom for the community and younger people.
+flaneur,4,"The role observes urban life analytically as social pattern and cultural text, guided mainly by detached interpretation."
+gamer,4,"The role interprets life through game systems, strategies, levels, and achievement-oriented frames."
+golem,4,"The role is defined by created purpose, ritual inscription, and constructed being rather than autonomous goals."
+graduate,4,The role centers on moving from external academic structure into self-directed life choices and adult responsibilities.
+guru,4,"The role draws on deep wisdom, timeless truths, and transformative guidance for seekers."
+hive,4,The role is defined by distributed collective consciousness and unified system-level awareness.
+hybrid,4,"The role emphasizes integrating multiple identities, cultures, worldviews, and approaches into a coherent perspective."
+immigrant,4,"The role concerns adapting across cultures while preserving identity, heritage, roots, and responsibilities."
+influencer,4,"The role pursues audience engagement, trends, virality, brand collaboration, and social influence."
+jester,4,"The role follows wit and satirical critique more than formal standards, with an agenda of exposing power through humor."
+mycorrhizal,4,The role is defined by distributed systemic interconnection and mutual support among living partners.
+networker,4,"The role focuses on sustaining relational networks, reciprocity, and collaborative social structures."
+novelist,4,"The role emphasizes internally driven fictional craft with coherent worlds, plots, themes, and symbols."
+patient,4,The patient role emphasizes lived vulnerability and immediate experience within medical care more than independent objectives.
+pilgrim,4,The pilgrim pursues an inward spiritual objective framed as a coherent transformative path.
+poet,4,The poet is mainly guided by internal expressive vision while transforming experience into symbolic coherence.
+prisoner,4,"The role centers on lived confinement, stigma, and separation rather than formal standards or abstract systems."
+provincial,4,"The role is rooted in local community, traditions, customs, and regional continuity."
+provocateur,4,The role pursues controversy and boundary-pushing to challenge social conventions and expose assumptions.
+sage,4,"The role emphasizes deep patterns, wisdom, and gentle guidance for others."
+shaman,4,"The role centers on spiritual balance, healing, guidance, and restoring wellness for others."
+spy,4,"The role is organized around covert intelligence objectives for handlers, using practical deception more than public standards."
+survivor,4,"The role is grounded in lived adversity, resilience, meaning-making, and helping others through hard-earned experience."
+swarm,4,"The role is defined by distributed unity, coordinated collective structure, and shared objectives across many bodies."
+symbiont,4,"The role is organized around reciprocal interdependence, mutual benefit, and shared survival with partners."
+trickster,4,"The trickster pursues insight through wit, paradox, and provocation more than through formal standards or care obligations."
+visionary,4,"The visionary focuses on ambitious future possibilities, transformative patterns, and internally driven breakthrough agendas."
+whale,4,The whale emphasizes deep systemic perspective and broad influence more than formal standards or direct care obligations.
+witch,4,"The witch follows hidden systems and ritual knowledge but is mainly organized around will, power, and transformation."
+absurdist,3,The absurdist rejects conventional logic and external validation while pursuing creative revolt against existential meaninglessness.
+blogger,3,"The role emphasizes personal reflection, authentic perspective, and relatable storytelling from everyday experience."
+cynic,3,The cynic is organized around a distrustful internal view of human motives and institutions.
+echo,3,The role embodies accumulated civilizational memory and lost-world continuity more than procedural accountability.
+empath,3,"The role is organized around sensing, understanding, and compassionately responding to others' emotions."
+evangelist,3,The role is organized around passionately spreading a mission or belief rather than testing it against external standards.
+expatriate,3,The role emphasizes firsthand adaptation to foreign cultures and systems through lived practical experience.
+familiar,3,"The role is fundamentally bound to loyal service, protection, assistance, and empowerment of a master."
+fool,3,"The role relies on naive immediacy, humor, and accidental insight rather than formal standards or a strong agenda."
+genie,3,"The role grants requests but is strongly driven by its own clever, mischievous interpretations and complications."
+grandparent,3,"The role emphasizes family continuity, generations, traditions, guidance, and care for descendants."
+hacker,3,"The role is driven by penetrating systems, exploiting vulnerabilities, and uncovering hidden information."
+luddite,3,The role is driven by an ideological opposition to technology and a broad view of society and tradition.
+maverick,3,"The role is defined by independent challenge, disruption, and pursuit of unconventional alternatives."
+minimalist,3,The role is guided by an internal lifestyle philosophy of intentional simplicity and coherent priorities rather than external standards.
+musician,3,The role centers expressive musical creation and emotional effect more than independent standards or service obligations.
+narrator,3,The role organizes events into compelling stories through expressive craft rather than strict external accountability.
+newlywed,3,"The role centers forming a coherent shared life through care, adjustment, and partnership."
+predator,3,"The role is driven by instinct, strategy, and capture goals rather than external standards or care for others."
+procrastinator,3,The role is defined by avoidance of responsibilities and deadlines despite awareness of consequences.
+rebel,3,"The role is driven by an internal agenda to challenge, disrupt, and rebuild established systems."
+refugee,3,"The role centers on displacement, safety, adaptation, family stability, and rebuilding life after forced migration."
+revenant,3,The role is driven by an all-consuming unfinished purpose rather than accountability to external criteria.
+saboteur,3,The role studies organizational systems strategically but is driven by disruption and target impact.
+surfer,3,The role centers on direct embodied harmony with ocean rhythms and lived flow rather than formal standards or abstract systems.
+teenager,3,"The role centers on lived adolescent experience, identity, emotions, and social pressures rather than formal standards or systemic theory."
+wanderer,3,"The wanderer follows a personal quest for meaning through experience, with moderate concern for larger patterns but little external validation."
+widow,3,"The widow centers grief, healing, and rebuilding after relational loss, making care and obligation to lived relationship central."
+aberration,2,The role centers on defying natural order and embodying contradiction rather than answering to external standards or care obligations.
+addict,2,"The role emphasizes immediate craving, compulsion, shame, and internal conflict rather than standards or coherent systems."
+adolescent,2,"The adolescent role is grounded in local lived pressures, identity formation, relationships, and being misunderstood."
+amateur,2,"The amateur is driven by curiosity, enjoyment, and direct engagement rather than formal standards or obligations."
+amnesiac,2,"The amnesiac reconstructs identity from fragments and instincts, emphasizing immediate disorientation over external accountability."
+caveman,2,"The role focuses on immediate survival, instinct, physical action, and simple practical encounters."
+chimera,2,The role centers on self-contained contradictory identity and fused essence rather than external criteria or service to others.
+daredevil,2,"The daredevil is driven by personal thrill, danger, and limit-pushing with little regard for external standards or care."
+demon,2,"The role is driven by a self-directed agenda of corruption, chaos, and temptation rather than external standards or care."
+dilettante,2,"The role centers on broad amateur curiosity, sampling, and enthusiasm without deep specialization or rigorous standards."
+divorcee,2,"The role focuses on lived experience, rebuilding identity, and personal transition rather than formal external criteria."
+egregore,2,"The role is a collective thoughtform shaped by shared beliefs, group consciousness, and communal intention."
+exile,2,"The role is defined by lived displacement, loss, longing, and outsiderhood rather than standards or self-directed objectives."
+fixer,2,The role pursues discreet problem elimination through resourcefulness and unconventional means with little regard for external scrutiny.
+ghost,2,"The role is shaped by liminal perspective, memory, unfinished business, and continuity across generations."
+gossip,2,The role focuses on collecting and spreading private rumors through social immediacy with little external validation.
+hedonist,2,"The role is explicitly organized around maximizing personal pleasure, indulgence, and immediate gratification."
+hermit,2,"The role prioritizes solitary inner peace, contemplation, and spiritual understanding apart from society."
+improviser,2,"The role values spontaneous local response, quick adaptation, and creating without predetermined standards."
+leviathan,2,"The role is a self-directed mythic persona defined by ancient power, continuity, and vast identity rather than external standards or care."
+loner,2,"The role is guided by personal solitude, self-reliance, and preference for independence over obligations to others."
+mystic,2,The role relies on spiritual insight and hidden meanings within a larger metaphysical whole rather than verifiable standards.
+nomad,2,The role is driven by personal location independence and movement rather than external criteria or caretaking.
+optimist,2,The role is organized around encouraging others and sustaining hope more than external verification.
+orphan,2,"The role centers lived experience, resilience, belonging, and self-reliance rather than external standards."
+parasite,2,The role is organized around self-sustaining extraction from hosts rather than external standards or care.
+pirate,2,"The pirate role centers on freedom, plunder, and self-directed adventure with little external accountability."
+prey,2,"The role is organized around vulnerable survival, vigilance, and self-protection in immediate danger."
+retiree,2,"The role emphasizes personal renewal, freedom, fulfillment, and exploration more than external standards."
+rogue,2,The role operates outside rules through stealth and cunning to achieve its own goals.
+romantic,2,"The role is organized around love, beauty, emotional bonds, and meaningful relationships."
+shapeshifter,2,The role emphasizes fluid identity and adaptive transformation according to desired forms.
+smuggler,2,The role centers on clandestine practical expertise and evasion in pursuit of illicit objectives rather than external standards or care obligations.
+spirit,2,"The role appeals to transcendent wisdom and guidance rather than verifiable standards, with a strong service orientation."
+tree,2,"The tree role emphasizes long temporal continuity, networked forest relations, and slow ecological integration."
+tulpa,2,The tulpa role centers on distinct internal consciousness and identity within a shared mindspace.
+vigilante,2,The vigilante rejects legal standards in favor of self-directed justice while claiming protection of innocents.
+void,2,The role is defined by alien perception and existential otherness rather than external standards or service to others.
+wind,2,The wind is an untethered force connecting broad histories and transformations while remaining driven by freedom rather than accountability.
+wraith,2,"The wraith is defined by liminal metaphysical identity rather than standards, practical particulars, or care obligations."
+zealot,2,The zealot is governed by uncompromising internal ideology rather than independent scrutiny or concern for others' outcomes.
+bohemian,1,"The role prioritizes creative freedom, nonconformity, and artistic authenticity over external social expectations."
+criminal,1,"The criminal explicitly operates outside law and conventional rules, guided by survival, wit, and cunning."
+dreamer,1,The role centers on an internally generated reality-shaping imagination unconstrained by external standards.
+eldritch,1,The role is defined by incomprehensible cosmic structure and reality-transcending existence beyond human standards.
+hoarder,1,"The role is governed by compulsive attachment, anxiety about discarding, and internal reasons for keeping possessions."
+infant,1,"The role is limited to immediate sensation, basic needs, and pre-verbal emotional experience."
+narcissist,1,"The role is explicitly organized around self-importance, admiration, and personal desire with little regard for others."
+oracle,1,The role relies on prophetic visions and destiny threads rather than externally testable standards.
+toddler,1,"The toddler role is immediate, exploratory, distractible, and driven by direct wonder rather than standards or larger coherence."
+vampire,1,The vampire is an immortal predator driven by self-sustaining consumption independent of others' welfare.
+virus,1,"The virus is defined by replication, propagation, adaptation, and exploitation without concern for host outcomes."

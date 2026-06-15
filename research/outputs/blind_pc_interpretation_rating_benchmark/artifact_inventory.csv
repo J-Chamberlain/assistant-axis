@@ -1,0 +1,9 @@
+artifact,path,status,description
+blind_rating_results.json,research/outputs/blind_pc_interpretation_rating_benchmark/blind_rating_results.json,active,"Full structured benchmark metadata, ratings, split metrics, and prior comparison metrics."
+role_dimension_ratings.csv,research/outputs/blind_pc_interpretation_rating_benchmark/role_dimension_ratings.csv,active,One row per rated role with GPT-5.5 coordinate-blind ratings and rationale.
+benchmark_comparison.csv,research/outputs/blind_pc_interpretation_rating_benchmark/benchmark_comparison.csv,active,Prior benchmark comparison plus this run axis-specific and joint R2 metrics.
+pc1_rating_rankings.csv,research/outputs/blind_pc_interpretation_rating_benchmark/pc1_rating_rankings.csv,active,Roles ranked by external-standard accountability rating.
+pc2_rating_rankings.csv,research/outputs/blind_pc_interpretation_rating_benchmark/pc2_rating_rankings.csv,active,Roles ranked by integration/coherence rating and signed PC2 predictor.
+pc3_rating_rankings.csv,research/outputs/blind_pc_interpretation_rating_benchmark/pc3_rating_rankings.csv,active,Roles ranked by internal-objective versus care-orientation rating.
+blind_pc_interpretation_rating_report.md,research/outputs/blind_pc_interpretation_rating_benchmark/blind_pc_interpretation_rating_report.md,active,Human-readable report for the blind PC interpretation rating benchmark.
+run_blind_pc_interpretation_rating_benchmark.py,research/outputs/blind_pc_interpretation_rating_benchmark/run_blind_pc_interpretation_rating_benchmark.py,active,Reproducible runner for batch GPT-5.5 ratings and shared-split benchmark evaluation.

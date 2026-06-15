@@ -736,3 +736,14 @@ Dependent analyses: PC1 interpretation wording for Paper 1.5, future GPT-4.1-min
 Current status: Part A complete; Part B blocked pending OpenAI API credentials.
 Notes/caveats: Part A uses transparent exact-vocabulary counts over role instructions, so it is useful as a rival-theory screen but sparse. Cluster/text controls dominate held-out PC1 R2, so the stricter evidence is the small incremental gain for external-standard-accountability vocabulary over controls. The corrected blind-rating test remains the necessary stronger validation before elevating the PC1 interpretation.
 
+## Blind PC interpretation rating benchmark
+
+Artifact: Coordinate-blind GPT-5.5 rating benchmark testing whether the current PC1/PC2/PC3 interpretations recover canonical Qwen activation geometry from role instructions.
+Location: `research/outputs/blind_pc_interpretation_rating_benchmark/`
+Created by: Codex/GPT-5.5.
+Model used: GPT-5.5 through Codex CLI for role-instruction ratings, script/report authoring, and registry maintenance.
+Source inputs: `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_split_assignments.csv`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv`, and `data/roles/instructions/*.json`.
+Generating script: `research/outputs/blind_pc_interpretation_rating_benchmark/run_blind_pc_interpretation_rating_benchmark.py`.
+Dependent analyses: Paper 1.5 PC interpretation evidence, PC1 external-standard-accountability wording, PC2 integration/coherence wording, PC3 internal-objective-vs-care wording, and comparison against semantic/procedural/Big-Five/hierarchical/SVD benchmark families.
+Current status: Complete active analysis.
+Notes/caveats: GPT-5.5 saw only the five positive role instructions for each role. It did not see PC coordinates, PCA labels, rankings, clusters, assistant-axis values, geometry, benchmark targets, or prior results. The resulting three-rating joint model reached mean R2=0.525 over 273 personas under the shared deterministic splits: PC1 R2=0.695, PC2 R2=0.417, PC3 R2=0.463. Axis-specific one-rating models reached PC1 R2=0.704, PC2 R2=0.423, and PC3 R2=0.393. This supports the current interpretations as compact recoverable summaries, but does not establish causal semantics, human psychometrics, or execution-time response steering.

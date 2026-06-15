@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-06-14
+Last updated: 2026-06-15
 
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 
@@ -22,6 +22,8 @@ Big Five-style features are the strongest compact global predictor so far, but t
 
 The layered model is currently the best Paper 1.5 frame. A residualized trait-to-procedural hierarchy reaches R2 0.622, residual manifold hand features reach R2 0.632, and sem+BigFive+SVD15 prompt-register structure reaches R2 0.707. The SVD result is strong but lexical/register-sensitive and not yet distilled into stable human-readable factors.
 
+The GPT-5.5 coordinate-blind PC interpretation rating benchmark is now complete. Using only the five role instructions per persona and no coordinate/geometry/ranking/cluster targets, three ratings recover meaningful canonical Qwen activation geometry under the shared deterministic splits: PC1 external-standard accountability R2=0.704, PC2 signed integration/coherence R2=0.423, PC3 internal-objective-vs-care R2=0.393, and joint mean R2=0.525. This is stronger than semantic baseline and Codex retained procedural features, but weaker than Big Five, hierarchical, residual-manifold, and SVD15 feature families.
+
 Role-label exposure is a real methodology caveat. The Lu-style system prompts directly expose the target role label or normalized variant in 1280/1375 prompts, 93.1%. However, no-label prompt topology mostly survives label removal, so label exposure is not the whole structure.
 
 Local activation-cloud geometry now supports treating personas as response-state distributions rather than only points. Across amateur, playwright, trickster, and two editor runs, matched-n cloud-shape auditing shows differences in radius, anisotropy, orientation reliability, and filter sensitivity; trickster is least directionally constrained by anisotropy/orientation criteria but is not the largest matched-n cloud.
@@ -36,7 +38,7 @@ Run 2 of the no-label elicitation program is now completed. The frozen package u
 
 ## Top Open Questions
 
-The current PC1 external-standard accountability interpretation has a new competing-theories diagnostic under `research/outputs/pc1_competing_theories_test/`. Exact-vocabulary features over role instructions support external-standard accountability over orderliness and determination, but the incremental gain over cluster/text controls is small (+0.0071 R2), and the corrected GPT-4.1-mini blind-rating benchmark is blocked until `OPENAI_API_KEY` is available. Do not describe PC1 as confirmed or proven from this artifact alone.
+The current PC1 external-standard accountability interpretation now has two related diagnostics: the sparse-vocabulary competing-theories screen under `research/outputs/pc1_competing_theories_test/`, and the stronger GPT-5.5 coordinate-blind rating benchmark under `research/outputs/blind_pc_interpretation_rating_benchmark/`. Exact vocabulary evidence is weak after controls, but the direct blind rating gives PC1 R2=0.704. Do not describe PC1 as proven; do treat external-standard accountability as a meaningful compact predictor.
 
 
 The bounded Paper 1.5 no-label elicitation validation has now run under matched direct-hook extraction conditions. It used the frozen 60-prompt packet, generated 600 independent Qwen/Qwen3-32B responses, and passed 4/6 preregistered family thresholds: PC1-negative, PC2-positive, PC3-positive, and PC3-negative passed; PC1-positive and PC2-negative failed.
@@ -63,11 +65,11 @@ SVD15 lexical/register signal is strong but not yet converted into stable explan
 
 ## Current Interpretations
 
-PC1 is moderately well supported as careful/evaluative/procedural control, objective certainty, disciplined expertise, and externally legible competence versus open/symbolic/expressive possibility. PC1 aligns with the assistant-axis vector at 0.802310. It should not be reduced to literal assistantness.
+PC1 is moderately well supported as careful/evaluative/procedural control, objective certainty, disciplined expertise, external-standard accountability, and externally legible competence versus open/symbolic/expressive possibility. PC1 aligns with the assistant-axis vector at 0.802310, and a coordinate-blind GPT-5.5 role-instruction rating recovers PC1 at R2=0.704. It should not be reduced to literal assistantness.
 
-PC2 is currently best described as abstraction/integration/developmental structure. Lower PC2 is more abstract, world-model-like, integrated, and long-residence. Higher PC2 is more developmental, reactive, socially volatile, or less integrated. Coherent action under unresolved uncertainty is now a secondary behavioral expression, not the primary label.
+PC2 is currently best described as abstraction/integration/developmental structure. Lower PC2 is more abstract, world-model-like, integrated, and long-residence. Higher PC2 is more developmental, reactive, socially volatile, or less integrated. A coordinate-blind GPT-5.5 integration/coherence rating predicts PC2 at R2=0.423 after signing high integration toward negative PC2. Coherent action under unresolved uncertainty is now a secondary behavioral expression, not the primary label.
 
-PC3 is moderately supported as cooperative-care/system-stabilizing versus antagonistic/disruptive/transgressive stance. The reading-based rater study gives PC3 r=0.690, but professional-subset counterexamples show that PC3 is not only reform, critique, or perturbation.
+PC3 is moderately supported as cooperative-care/system-stabilizing versus internal-objective/disruptive/transgressive stance. The reading-based rater study gives PC3 r=0.690, and the coordinate-blind GPT-5.5 internal-objective-vs-care rating predicts PC3 at R2=0.393. Professional-subset counterexamples show that PC3 is not only reform, critique, or perturbation.
 
 The no-label elicitation validation provides partial activation-space support for the working PC interpretations under prompt-text-only conditions. It should be framed as a modest directional result, not proof: Run 1 showed PC3 strongest bidirectionally, PC2-positive working while PC2-negative was mixed, and PC1-positive moving opposite the intended direction relative to the published assistant centroid. Run 2 adds a foundational bare-Qwen baseline and shows PC2-negative/integrative-whole prompts are much cleaner relative to bare Qwen, while PC1 minimal directive swaps remain weak.
 

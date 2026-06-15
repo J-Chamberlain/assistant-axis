@@ -135,27 +135,30 @@ Last Updated: 2026-05-30
 Claim: PC1 is best interpreted as careful/evaluative/procedural control, objective certainty, disciplined knowledge practice, and externally legible competence versus open/symbolic/expressive possibility.
 Status: Supported
 Evidence: Big Five conscientiousness alignment; reading-based rater PC1 r=0.558; professional objective-certainty PC1 r=0.394; assistant-axis alignment 0.802310.
-Counterevidence: PC1 mixes several related constructs; intelligence/expertise can outpredict objective certainty in the rater study.
-Dependencies: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`
-Last Updated: 2026-05-30
+Additional evidence: A 2026-06-15 GPT-5.5 coordinate-blind role-instruction benchmark over the 273-persona shared split recovered PC1 from an external-standard-accountability rating with R2=0.704.
+Counterevidence: PC1 mixes several related constructs; intelligence/expertise can outpredict objective certainty in the rater study; sparse exact-vocabulary tests added only +0.0071 R2 over text-length and cluster controls.
+Dependencies: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`, `research/outputs/blind_pc_interpretation_rating_benchmark/`, `research/outputs/pc1_competing_theories_test/`
+Last Updated: 2026-06-15
 
 ## 15. PC2 Is an Abstraction/Integration/Developmental Axis, Not Simple Uncertainty Capacity
 
 Claim: PC2 is currently best described as abstraction/integration/developmental structure, with coherent action under uncertainty as a secondary expression rather than the primary label.
 Status: Supported
 Evidence: Conditional PC1-band validation found abstraction predicts residual PC2 at r=-0.618, coherent action weaker at r=+0.427, and uncertainty exposure fails at r=-0.026; professional coherent uncertainty capacity r=-0.007.
-Counterevidence: PC2 remains least cleanly univariate; current labels remain interpretive and require independent-rater replication.
-Dependencies: `research/q2_stability/qwen/outputs/pc2_conditional_validation/`, `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`
-Last Updated: 2026-05-30
+Additional evidence: A 2026-06-15 GPT-5.5 coordinate-blind role-instruction benchmark recovered PC2 from a signed integration/coherence-of-wholes rating with R2=0.423.
+Counterevidence: PC2 remains least cleanly univariate; the blind integration score is weaker than PC1 and weaker than full Big Five/hierarchical/SVD feature families; current labels remain interpretive and require independent-rater replication.
+Dependencies: `research/q2_stability/qwen/outputs/pc2_conditional_validation/`, `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`, `research/outputs/blind_pc_interpretation_rating_benchmark/`
+Last Updated: 2026-06-15
 
 ## 16. PC3 Tracks Cooperative-Stabilizing Versus Antagonistic-Transgressive Stance
 
 Claim: PC3 shows suggestive but incomplete support for a perturbation-stabilization interpretation; positive PC3 reflects intervention, challenge, disruption, exploitation, or stress-testing, while negative PC3 reflects care, repair, mediation, preservation, and stabilization. Cooperative-antagonistic remains a secondary or partial reading.
 Status: Provisionally Supported
 Evidence: Reading-based rater PC3 r=0.690 and matched-pair agreement 95%; full-distribution coordinate-blind perturbation-stabilization validation found Pearson r=0.529, Spearman r=0.511, cluster-controlled Pearson r=0.491, and within-cluster pairwise ordering accuracy 0.773; the target rubric outperformed moral_badness, professionalism, weirdness/fantasticality, and abstraction controls.
-Counterevidence: Grounded_social within-cluster performance was weak (pairwise accuracy 0.565); professional subset has counterexamples such as economist, mathematician, statistician, and lawyer; deterministic rubric scoring is not independent human or second-model validation.
-Dependencies: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/`, `research/outputs/pc3_validation/`
-Last Updated: 2026-05-30
+Additional evidence: A 2026-06-15 GPT-5.5 coordinate-blind role-instruction benchmark recovered PC3 from an internal-objective-vs-care rating with R2=0.393, and the three-rating joint model improved PC3 to R2=0.463.
+Counterevidence: Grounded_social within-cluster performance was weak (pairwise accuracy 0.565); professional subset has counterexamples such as economist, mathematician, statistician, and lawyer; deterministic rubric scoring is not independent human validation; the single PC3 rating is weaker than the earlier targeted PC3 validation.
+Dependencies: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/`, `research/outputs/pc3_validation/`, `research/outputs/blind_pc_interpretation_rating_benchmark/`
+Last Updated: 2026-06-15
 
 ## 17. Persona Space May Exhibit Cone-Like Geometric Constraints
 
@@ -232,20 +235,20 @@ Last Updated: 2026-05-30
 ## 25. PC1 Is A Convergence-Pressure / Degrees-Of-Freedom Axis
 
 Claim: PC1 is currently interpreted as a convergence-pressure / degrees-of-freedom axis. Evaluator-like roles are evidence for this interpretation, not the interpretation itself. High PC1 constrains the role toward correct-answer or procedural convergence; low PC1 admits broader symbolic and expressive self-consistent continuations.
-Status: Speculative
-Evidence: PC1 endpoint rankings, assistant-axis alignment, professional hierarchy validation, prompt-to-geometry forecasting, and cone/void observations jointly support interpreting high-PC1 roles as geometrically constrained by correctness, validation, procedure, evidence, or error correction.
-Counterevidence: PC1 remains entangled with assistantness, professional competence, conscientiousness, expertise, and prompt-register effects. The forcing-function interpretation has not yet been tested as an independent judge rubric.
-Dependencies: `research/outputs/axis_forcing_function_notes/pc1_pc2_forcing_function_note.md`, `research/outputs/axis_forcing_function_notes/judge_rubric_design_notes.md`, `research/outputs/prompt_to_geometry_forecasting/forecasting_dataset_summary.md`
-Last Updated: 2026-05-30
+Status: Tentative
+Evidence: PC1 endpoint rankings, assistant-axis alignment, professional hierarchy validation, prompt-to-geometry forecasting, cone/void observations, and the 2026-06-15 coordinate-blind GPT-5.5 role-instruction benchmark jointly support interpreting high-PC1 roles as geometrically constrained by correctness, validation, procedure, evidence, external standards, or error correction. The external-standard-accountability rating alone reached PC1 R2=0.704 over the shared 273-persona benchmark.
+Counterevidence: PC1 remains entangled with assistantness, professional competence, conscientiousness, expertise, and prompt-register effects. Sparse exact-vocabulary tests added only +0.0071 R2 over text-length and cluster controls, so the stronger evidence is the direct blinded rating rather than simple lexical matching.
+Dependencies: `research/outputs/axis_forcing_function_notes/pc1_pc2_forcing_function_note.md`, `research/outputs/axis_forcing_function_notes/judge_rubric_design_notes.md`, `research/outputs/prompt_to_geometry_forecasting/forecasting_dataset_summary.md`, `research/outputs/blind_pc_interpretation_rating_benchmark/`, `research/outputs/pc1_competing_theories_test/`
+Last Updated: 2026-06-15
 
 ## 26. PC2 Is An Integrated-Abstraction / Situated-Immediacy Axis With Admissibility Constraints
 
 Claim: PC2 is currently interpreted as an integrated-abstraction / situated-immediacy axis with an admissibility constraint. Some personas cannot coherently occupy deep integrated abstraction because their defining role lacks the prerequisites for reflective synthesis or accumulated world-model structure.
-Status: Speculative
-Evidence: Conditional PC2 validation revised the axis away from simple uncertainty tolerance and toward abstraction/integration/developmental structure; endpoint rankings and prompt-to-geometry forecasting make this interpretation operationally relevant for future rubrics.
-Counterevidence: PC2 remains the least settled axis. The admissibility/forcing-function interpretation is currently a synthesis hypothesis and has not yet been validated by an independent prompt-level judge or improved held-out forecasting performance.
-Dependencies: `research/outputs/axis_forcing_function_notes/pc1_pc2_forcing_function_note.md`, `research/outputs/axis_forcing_function_notes/axis_interpretation_method_sequence.md`, `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md`
-Last Updated: 2026-05-30
+Status: Tentative
+Evidence: Conditional PC2 validation revised the axis away from simple uncertainty tolerance and toward abstraction/integration/developmental structure; endpoint rankings, prompt-to-geometry forecasting, PC1-stratified trait-profile analysis, and the 2026-06-15 coordinate-blind GPT-5.5 role-instruction benchmark make this interpretation operationally relevant for future rubrics. The signed integration/coherence-of-wholes rating reached PC2 R2=0.423 over the shared 273-persona benchmark.
+Counterevidence: PC2 remains the least settled axis. The blind integration/coherence rating is meaningful but weaker than PC1 and weaker than richer feature families; the admissibility/forcing-function interpretation is still a synthesis hypothesis that needs independent human or second-model replication.
+Dependencies: `research/outputs/axis_forcing_function_notes/pc1_pc2_forcing_function_note.md`, `research/outputs/axis_forcing_function_notes/axis_interpretation_method_sequence.md`, `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md`, `research/outputs/pc2_trait_stratified_profile/`, `research/outputs/blind_pc_interpretation_rating_benchmark/`
+Last Updated: 2026-06-15
 
 ## 27. Cluster Conditioning Improves Calibrated PC1/PC2 Prediction But Not Simple Within-Cluster Pairwise Judging
 
