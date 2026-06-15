@@ -54,6 +54,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - Playwright within-role displacement scoring is prepared: 240 shared questions, five role-specific positive instructions, and 1,200 instruction-question combinations have rubric-based predicted PC1/PC2/PC3 displacement scores ready for manual review before corrected-hook GPU measurement.
 - Clean Paper 1.5 core repo copy plan is prepared for user review: it proposes a 10.01 MB canonical first-pass artifact set for a reproducible report/notebook walkthrough and explicitly excludes H100 validation, prompt batteries, extraction-boundary diagnostics, large generated responses, RunPod logs, and activation shards.
 - Paper 1.5 core notebook skeleton is prepared, revised for shareability, and headlessly executed as a local-runnable pre-H100 executable appendix: it loads canonical public geometry, artifact provenance, PC axis interpretation outputs, cross-model caveats, trait/persona outputs, and forecasting baselines while excluding H100 validation, prompt batteries, extraction-boundary diagnostics, RunPod logs, and visualization edits.
+- Paper 1.5 content ledger is now the canonical writing-phase source: `research/paper15_content_ledger.md` separates observed findings, interpretations, hypotheses, caveats, rejected explanations, claims inventory, open questions, and paper inclusion recommendations.
 - Trickster adaptive extraction succeeded operationally; editor adaptive extraction failed to reach validation thresholds.
 
 ## Best Predictive Metrics
@@ -80,6 +81,8 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/REPO_NAVIGATION.md`: canonical repository navigation layer for humans, GPT, Codex, and report workflows.
 - `research/REPO_FILE_INDEX.csv`: machine-readable inventory of tracked repository artifacts with category, status, description, size, and raw URL.
 - `research/RAW_URL_INDEX.md`: curated raw GitHub URL index for frequently referenced artifacts.
+- `research/paper15_content_ledger.md`: canonical factual ledger for Paper 1.5 writing; use before drafting prose.
+- `research/paper15_content_ledger_artifact_inventory.csv`: source artifact inventory for the Paper 1.5 content ledger.
 - `research/geometry_tables/`: canonical Qwen role/trait PC ranking tables and cluster membership table generated from `research/visualizations/geometry_viz_data.json`.
 - `research/outputs/assistant_centroid_provenance_audit/`: audit showing the Paper 1.5 assistant baseline is the role-conditioned `assistant` centroid and making the 240-question bare-Qwen/default baseline foundational for future no-label interpretation.
 - `research/outputs/no_label_elicitation_run2/`: completed Run 2 no-label elicitation package and results.

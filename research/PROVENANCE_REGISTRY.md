@@ -748,6 +748,18 @@ Dependent analyses: Paper 1.5 PC interpretation evidence, PC1 external-standard-
 Current status: Complete active analysis.
 Notes/caveats: GPT-5.5 saw only the five positive role instructions for each role. It did not see PC coordinates, PCA labels, rankings, clusters, assistant-axis values, geometry, benchmark targets, or prior results. The resulting three-rating joint model reached mean R2=0.525 over 273 personas under the shared deterministic splits: PC1 R2=0.695, PC2 R2=0.417, PC3 R2=0.463. Axis-specific one-rating models reached PC1 R2=0.704, PC2 R2=0.423, and PC3 R2=0.393. This supports the current interpretations as compact recoverable summaries, but does not establish causal semantics, human psychometrics, or execution-time response steering.
 
+## Paper 1.5 content ledger
+
+Artifact: Canonical factual content ledger for Paper 1.5 writing.
+Location: `research/paper15_content_ledger.md`
+Created by: Codex/GPT-5.5.
+Model used: GPT-5.5 for source synthesis, ledger construction, and registry maintenance; no new model ratings, Qwen inference, GPU work, activation extraction, or PCA changes were performed.
+Source inputs: `research/REPO_NAVIGATION.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/FINDINGS_LEDGER.md`, `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, `research/outputs/blind_pc_interpretation_rating_benchmark/`, `research/outputs/pc1_accountability_validation/`, `research/outputs/pc1_competing_theories_test/`, `research/outputs/no_label_elicitation_run2/`, `research/outputs/no_label_elicitation_run2_prompt_diagnostics/`, `research/outputs/assistant_centroid_provenance_audit/`, `research/outputs/no_label_elicitation_geometry_diagnostics/`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`, `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/`, `research/q2_stability/qwen/outputs/residual_manifold_analysis/`, `research/q2_stability/qwen/outputs/residual_svd_interpretation/`, `research/q2_stability/qwen/outputs/pc2_conditional_validation/`, `research/outputs/pc2_muted_pc1_extremes/`, `research/outputs/pc2_cluster_conditioned_extremes/`, `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`, `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`, `research/outputs/same_space_big_five_overlay/`, `research/outputs/trait_profile_provenance_audit/`, `research/outputs/big_five_provenance_audit/`, and `research/outputs/pc3_validation/`.
+Generating script: none; manually synthesized ledger from canonical artifacts.
+Dependent analyses: Paper 1.5 drafting, GPT/Claude/Codex collaborative writing continuity, claim triage, appendix/main-paper boundary decisions, and future clean-repo report assembly.
+Current status: Active canonical writing-phase ledger.
+Notes/caveats: The ledger is not a paper draft, report, or executive summary. It intentionally separates observed findings, interpretations, hypotheses, caveats, rejected explanations, and inclusion recommendations. It does not create new evidence or change claim statuses by itself.
+
 ## PC1 accountability activation validation
 
 Artifact: Focused Qwen activation experiment testing whether accountability/scrutiny wording moves PC1 more positive than determination or arithmetic/checking wording under matched scenarios.

@@ -1,0 +1,30 @@
+artifact_id,path,status,role_in_ledger,sections_used,notes
+canonical_research_state,research/RESEARCH_STATE.md,canonical,current project state and scope,1;9;11,Startup/source state
+canonical_thread_start,research/THREAD_START.md,canonical,current continuity and priorities,1;9;11,Startup/source continuity
+canonical_research_index,research/RESEARCH_INDEX.md,canonical,compact research map,1;2;3;9;11,Navigation source
+canonical_provenance_registry,research/PROVENANCE_REGISTRY.md,canonical,artifact lineage and caveats,2;3;4;5;6;7;11,Provenance source
+canonical_claims_register,research/CLAIMS_REGISTER.md,canonical,current claim statuses,4;5;6;8;10,Claims status source
+canonical_findings_ledger,research/FINDINGS_LEDGER.md,canonical,compact finding log,3;4;5;6;7;8,Finding source
+blind_pc_interpretation_rating_benchmark,research/outputs/blind_pc_interpretation_rating_benchmark/,active,coordinate-blind GPT-5.5 PC interpretation benchmark,2;3;4;5;6;11,Primary new compact interpretation benchmark
+pc1_accountability_validation,research/outputs/pc1_accountability_validation/,active,focused PC1 accountability intervention evidence,2;4;8;11,Latest PC1 validation result
+pc1_competing_theories_test,research/outputs/pc1_competing_theories_test/,active,PC1 rival vocabulary comparison,2;4;8;11,Rejects orderliness/determination-only as primary
+no_label_elicitation_run2,research/outputs/no_label_elicitation_run2/,active,bare-Qwen baseline and Run 2 no-label activation results,2;4;5;6;7;11,Foundational no-label baseline
+no_label_elicitation_run2_prompt_diagnostics,research/outputs/no_label_elicitation_run2_prompt_diagnostics/,active,prompt-level Run 2 diagnostics,4;5;6;7;8;11,Used for PC1/PC2/PC3 prompt-specific findings
+assistant_centroid_provenance_audit,research/outputs/assistant_centroid_provenance_audit/,active,assistant centroid provenance and bare-Qwen distinction,2;4;7;11,Establishes assistant centroid is role-conditioned
+no_label_elicitation_geometry_diagnostics,research/outputs/no_label_elicitation_geometry_diagnostics/,active,Run 1 geometry diagnostics,4;6;7;8;11,Assistant percentile and off-axis findings
+no_label_elicitation_validation,research/outputs/no_label_elicitation_validation/,active,Run 1 no-label validation results,4;5;6;7;11,600-response frozen prompt packet run
+shared_latent_feature_benchmark,research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/,active,semantic/procedural/Big-Five shared benchmark source,2;3;11,Canonical 273-persona benchmark
+codex_trait_replication,research/q2_stability/qwen/outputs/codex_trait_replication/,active,Codex trait replication benchmark,3,Weak positive trait replication source
+hierarchical_trait_procedural_model,research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/,active,hierarchical trait plus procedural residual benchmark,2;3;11,Layered model evidence
+residual_manifold_analysis,research/q2_stability/qwen/outputs/residual_manifold_analysis/,active,hand residual manifold feature benchmark,2;3;11,Developmental/liminal residual evidence
+residual_svd_interpretation,research/q2_stability/qwen/outputs/residual_svd_interpretation/,active,SVD15 residual interpretation source,2;3;9;11,Strongest predictive benchmark caveat source
+pc2_conditional_validation,research/q2_stability/qwen/outputs/pc2_conditional_validation/,active,PC2 after PC1-band control,2;5;8;11,Key PC2 reinterpretation source
+pc2_muted_pc1_extremes,research/outputs/pc2_muted_pc1_extremes/,active,muted-PC1 PC2 role ranking diagnostic,5;8;11,PC2 role-exemplar source
+pc2_cluster_conditioned_extremes,research/outputs/pc2_cluster_conditioned_extremes/,active,cluster-conditioned PC2 diagnostic,5;8;11,PC2 counterexample source
+blinded_axis_rubric_validation,research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/,active,coordinate-blind lexical/proxy rubric screen,2;4;5;6;11,Conservative weak validation source
+blinded_axis_rater_study,research/q2_stability/qwen/outputs/blinded_axis_rater_study/,active,reading-based GPT-5.5 blinded dossier ratings,2;4;5;6;11,Major rater-study source
+professional_hierarchy_validation,research/q2_stability/qwen/outputs/professional_hierarchy_validation/,active,professional subset PC validation,2;4;5;6;11,Subset support/counterevidence source
+same_space_big_five_overlay,research/outputs/same_space_big_five_overlay/,active,activation-derived Big Five overlay from trait vectors,2;11,Replacement same-space trait layer
+trait_profile_provenance_audit,research/outputs/trait_profile_provenance_audit/,active,trait matrix provenance audit,2;5;11,Caveat for trait evidence
+big_five_provenance_audit,research/outputs/big_five_provenance_audit/,active,legacy Big Five provenance audit,2;3;11,Caveat for Big Five evidence
+pc3_validation,research/outputs/pc3_validation/,active,PC3 perturbation-stabilization validation,6;8;11,Primary PC3 direct validation

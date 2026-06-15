@@ -12,6 +12,8 @@ The active Paper 1.5 objective is to write **Interpreting Persona Activation Geo
 
 Paper 2 is active planning, not execution. Its current scope is local centroid perturbation and local persona-manifold mapping around anchors such as Trickster, Actor, Therapist, and Spy. Older dyad contagion, attractor-collapse, conversational drift, and rumination plans are archived as future dynamics work.
 
+The canonical writing-phase source for Paper 1.5 is now `research/paper15_content_ledger.md`, with source inventory in `research/paper15_content_ledger_artifact_inventory.csv`. Use it before drafting prose. It separates observed findings, interpretations, hypotheses, caveats, rejected explanations, claims inventory, open questions, and inclusion recommendations.
+
 ## Top Findings
 
 Qwen trickster adaptive extraction worked operationally. The run preserved 1200 rollouts and 1200 activation shards, passed integrity, and Codex/GPT-5.5 adaptive scoring reached 64 score>=2 and 33 score==3 responses in 64 scored records. The score>=2 vector matched the Lu trickster mean at cosine 0.957557, and adaptive stopping passed at n=16.
@@ -102,6 +104,8 @@ Material artifact changes must keep `research/REPO_NAVIGATION.md`, `research/REP
 For PC1 x PC2 trait-region inspection, use the integrated controls in `research/visualizations/persona_geometry_explorer.html`: `Trait regions` selects Off/Top1/Top3/Top5, `Region basis` selects quantile bands or fixed explorer grid, and `Color by: Region Cluster` colors points by the region chip semantics rather than Assistant Axis projection.
 
 For cross-model ordered-axis trait-region inspection, use `research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_viewer.html`. Prefer quantile basis as the stable default; fixed-grid views are descriptive and sparse cells are flagged.
+
+For Paper 1.5 writing, start from `research/paper15_content_ledger.md` rather than reconstructing evidence from chat history, commits, or individual output reports. Treat it as the source ledger, not as draft prose.
 
 ## Next Experiments
 
