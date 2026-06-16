@@ -107,6 +107,8 @@ For cross-model ordered-axis trait-region inspection, use `research/outputs/mult
 
 For Paper 1.5 writing, start from `research/paper15_content_ledger.md` rather than reconstructing evidence from chat history, commits, or individual output reports. Treat it as the source ledger, not as draft prose.
 
+As of 2026-06-16, `research/paper15_content_ledger.md` has been completed for methods-section drafting support. It now includes the missing design/procedure details Claude flagged for PC2 conditional validation, blinded rater studies, professional hierarchy validation, PC1 competing-theories vocabulary controls, PC3 rubric validation, PC1 accountability intervention prompts, muted-PC1 PC2 extremes, and the blind PC interpretation benchmark. It also records the current PC1 "rigor" wording, the PC1-PC2 diagonal observation, and the PC3 cost-bearer refinement. Use the ledger for methods prose, but do not treat it as new empirical evidence or as a paper draft.
+
 ## Next Experiments
 
 1. Use `research/outputs/same_space_big_five_overlay/` as the evidence-bearing same-space Big Five visualization layer if Big Five overlays are needed; build blinded independent ratings only if independent psychometric-style validation is required.

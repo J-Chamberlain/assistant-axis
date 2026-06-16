@@ -890,3 +890,8 @@ Last updated: 2026-06-15
 **Completed this session:** Found that amateur/playwright/editor all-response clouds align with an empirical high-PC1/high-PC2 upper-region proxy (-21.42 degrees) rather than the +45 degree diagonal, while trickster is nearly PC2-vertical in PC1-PC2 space.
 **Next step:** If another small GPU pilot is launched, include a negative-PC2 role such as `student` plus a second more integrated/abstract negative-PC2 contrast role to test whether the observed orientation pattern generalizes.
 **Last commit before this update:** `4b10cb8` / `Create layered activation cloud viewer`
+
+**Completed this session:** Completed `research/paper15_content_ledger.md` for methods-section drafting by adding missing design/procedure details for PC2 conditional validation, blinded axis ratings, professional hierarchy validation, PC1 vocabulary controls, PC3 rubric validation, PC1 accountability intervention prompt pairs, muted-PC1 PC2 extremes, and the blind PC interpretation benchmark.
+**Completed this session:** Added current interpretive handoff wording for PC1 as external-standard accountability / "rigor," the PC1-PC2 diagonal constraint observation from the accountability intervention, and the PC3 cost-bearer refinement distinguishing cost-to-others from cost-to-self.
+**Next step:** Claude can use `research/paper15_content_ledger.md` as the methods-drafting source of truth, while preserving Observed/Inferred/Speculative distinctions and avoiding claims-register escalation unless paper prose materially changes claim status.
+**Last commit before this update:** `618cc9a`

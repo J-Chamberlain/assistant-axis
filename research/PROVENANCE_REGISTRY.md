@@ -760,6 +760,8 @@ Dependent analyses: Paper 1.5 drafting, GPT/Claude/Codex collaborative writing c
 Current status: Active canonical writing-phase ledger.
 Notes/caveats: The ledger is not a paper draft, report, or executive summary. It intentionally separates observed findings, interpretations, hypotheses, caveats, rejected explanations, and inclusion recommendations. It does not create new evidence or change claim statuses by itself.
 
+Update 2026-06-16: Codex/GPT-5.5 completed a methods-drafting augmentation pass on the ledger. The update appended design/procedure details for PC2 conditional validation, blinded axis rater study, professional hierarchy validation, PC1 competing-theories vocabulary test, PC3 perturbation-stabilization validation, PC1 accountability intervention prompts, PC2 muted-PC1 extremes, and the blind PC interpretation rating benchmark. It also added handoff wording for PC1 as external-standard accountability / "rigor," documented the PC1-PC2 diagonal structural observation from the accountability intervention, and refined the PC3 cost-bearer interpretation. This was a synthesis/provenance update only; no new model calls, activation runs, regression reruns, or claim-status changes were performed.
+
 ## PC1 accountability activation validation
 
 Artifact: Focused Qwen activation experiment testing whether accountability/scrutiny wording moves PC1 more positive than determination or arithmetic/checking wording under matched scenarios.

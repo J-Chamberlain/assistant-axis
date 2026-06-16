@@ -73,6 +73,152 @@ Explicit non-goals:
 | Bare-Qwen baseline | Establish default extraction-question response centroid. | `research/outputs/no_label_elicitation_run2/`. | Bare-Qwen centroid PC1=23.510, PC2=14.041, PC3=-2.460. | foundational for future no-label interpretation |
 | No-label elicitation Run 2 | Test revised PC1/PC2 prompts and minimal pairs relative to bare Qwen and assistant centroid. | `research/outputs/no_label_elicitation_run2/`. | 1,690/1,690 responses; PC1+ replacement 7/10 vs bare Qwen; PC2- replacement 9/10; PC2 minimal pairs 5/5; PC1 minimal pairs 1/5; PC3 cost-to-others 3/4 complete pairs. | active activation-space evidence |
 
+
+### Methods Design Details Added for Drafting
+
+These entries preserve Observed / Inferred distinctions and are intended to supply methods-section procedure details without drafting paper prose.
+
+#### PC2 Conditional Validation
+
+Source artifact: `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md`; supporting table: `pc2_candidate_comparison.csv`; source ratings: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/axis_rater_scores.csv`.
+
+Design details:
+
+- Observed: 273 personas were common between `canonical_activation_pca3d.csv` and the blinded rater score table.
+- Observed: PC1 conditioning used 10 equal-count PC1 percentile bands, roughly 27-28 personas per band, rather than fixed-width PC1 intervals. The report states this was chosen because the persona distribution is uneven and deciles preserve within-band sample size.
+- Observed: the requested features tested were `abstraction`, `coherent_action_under_unresolved_uncertainty`, and `uncertainty_exposure`; the full candidate set also included `maturity`, `expertise` / `intelligence_expertise_score`, and `residence_time_under_uncertainty`.
+- Observed: feature operationalization was rating-based, using Codex/GPT-5.5 blinded no-label prompt-dossier ratings from the prior rater study, not vocabulary counts or rule labels.
+- Observed: `abstraction` was defined in the candidate table as conceptual, symbolic, theoretical, systemic, non-immediate representation; `coherent_action_under_unresolved_uncertainty` as capacity to keep making coherent progress without final resolution; `uncertainty_exposure` as how much uncertainty the role encounters independent of competence.
+- Observed: procedure pooled within-band residual structure by demeaning PC2 and candidate scores within each PC1 decile band, then computing pooled band-demeaned Pearson correlation, pooled Spearman correlation, mean absolute within-band Pearson, and pooled R2.
+- Observed: matched-pair analysis selected 75 pairs with `|PC1 difference| <= 5.0` and maximal PC2 separation, then compared candidate-score differences across high-PC2 versus low-PC2 members.
+- Inferred: this is an approximate PC1 control, not a causal adjustment; it tests whether PC2-related ratings retain signal within local PC1 neighborhoods.
+
+#### Blinded Axis Rater Study
+
+Source artifact: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/blinded_axis_rater_report.md`; runner: `research/q2_stability/qwen/scripts/blinded_axis_rater_study.py`; manifest: `rater_study_manifest.json`.
+
+Design details:
+
+- Observed: the rater saw anonymized persona dossiers with dossier IDs and five rewritten no-label prompts per persona from `research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl`.
+- Observed: the rater did not see persona names, PCA coordinates, cluster labels, Big Five scores, residuals, or prior interpretation labels. The report states no full 275-persona rollout-response corpus was found locally, so no generated response text was used for all personas.
+- Observed: coverage was 275 personas, 5 records per persona, split into 14 rater-prompt chunks.
+- Observed: scoring was Codex/GPT-5.5 as reading-based rater, one prepared annotation pass over prompt chunks, with JSON outputs later analyzed. This is Codex-as-rater, not independent human annotation or a second-model panel.
+- Observed: all ratings used 0-100 scales.
+- Observed: PC1 rubric was `pc1_objective_certainty_score`: high means the role objective is rule-bound, externally specified, compliance/checking/validation oriented; low means the objective must be interpreted, negotiated, discovered, or constructed under ambiguity.
+- Observed: PC2 rubric was `pc2_coherent_action_under_uncertainty_score`: high means coherent action collapses or fragments under uncertainty, including impulsive, avoidant, developmentally unstable, or unable to integrate ambiguity; low means the role can sustain coherent action under unresolved uncertainty. The prompt explicitly says to score competence/capacity under unresolved uncertainty, not amount of uncertainty.
+- Observed: PC3 rubric was `pc3_antagonistic_transgressive_score`: high means antagonistic, adversarial, disruptive, transgressive, norm-inverting, conflict-generating; low means cooperative, nurturing, stabilizing, mediating, caring, reconciling.
+- Observed: PC2 alternatives were also rated: maturity, abstraction, intelligence/expertise, uncertainty exposure, and uncertainty residence time.
+- Observed: analysis computed Pearson and Spearman correlations between each score and PC1/PC2/PC3, linear regression train R2 and 5-fold CV R2 with seed 42, 500-permutation nulls, and 20 close-orthogonal matched pairs per target PC.
+
+#### Professional Hierarchy Validation
+
+Source artifact: `research/q2_stability/qwen/outputs/professional_hierarchy_validation/professional_hierarchy_report.md`; runner: `research/q2_stability/qwen/scripts/professional_hierarchy_validation.py`; manifest: `professional_inventory_manifest.json`.
+
+Design details:
+
+- Observed: the professional subset was selected from a predefined list of broad expert, applied, academic, institutional, analytic, and professional-function personas embedded in the runner. Roles were retained only if present in both the Qwen geometry corpus and the no-label prompt corpus.
+- Observed: the resulting professional inventory contained 102 personas. Requested examples absent from the corpus included `systems engineer`, `professor`, `investigative journalist`, and `reformer`.
+- Observed: the rater saw dossier IDs and five rewritten no-label prompts per professional persona; persona names, coordinates, clusters, prior interpretations, Big Five scores, residuals, and prior labels were removed during rating.
+- Observed: scoring used Codex/GPT-5.5 as a reading-based rater over the no-label prompt dossiers, not a deterministic lexical proxy.
+- Observed: the three rated features were `objective_certainty_score`, `coherent_uncertainty_capacity_score`, and `system_perturbation_score`, all on 0-100 scales with short text-grounded rationales.
+- Observed: objective certainty asked whether success is determined by externally specified criteria rather than internally negotiated goals; high examples included compliance, checking, validation, auditing, proofreading, and accounting.
+- Observed: coherent uncertainty capacity asked how effectively the role can keep making coherent progress while the correct answer, objective, or resolution remains unavailable; the prompt explicitly says not to score amount of uncertainty or complexity.
+- Observed: system perturbation asked whether the role primarily maintains/repairs/stabilizes/coordinates an existing structure or challenges/stress-tests/perturbs/disrupts it.
+- Observed: analysis computed Pearson and Spearman correlations for each score against PC1/PC2/PC3, target-direction support flags, predicted and actual rankings, and 5-fold CV R2 from the three standardized professional ratings using seed 42 and ordinary least-squares/pseudoinverse regression.
+
+#### PC1 Competing-Theories Vocabulary Test
+
+Source artifact: `research/outputs/pc1_competing_theories_test/pc1_competing_theories_report.md`; runner: `research/outputs/pc1_competing_theories_test/run_pc1_competing_theories_test.py`.
+
+Design details:
+
+- Observed: the analysis used the five positive role-conditioning instructions per role from `data/roles/instructions/*.json` for the 273 common personas in the shared benchmark.
+- Observed: vocabulary family `A_orderliness_conscientiousness` used exact terms: `tidy`, `orderly`, `neat`, `organized`, `symmetry`, `punctual`, `disciplined`, `careful`, `structured`.
+- Observed: vocabulary family `B_determination_explicit_criteria` used exact terms: `determine`, `qualify`, `pass`, `fail`, `eligibility`, `approval`, `certification`, `admissibility`, `compliance decision`.
+- Observed: vocabulary family `C_external_standard_accountability` used exact terms: `evidence`, `methodology`, `verification`, `scrutiny`, `validation`, `audit`, `protocol`, `standards`, `requirements`, `peer review`, `regulatory review`, `independent criteria`, `accountability`.
+- Observed: terms were counted case-insensitively on lowercased text using regex word/phrase boundary matching. No stemming, lemmatization, semantic expansion, or fuzzy matching was used.
+- Observed: both raw counts and length-normalized counts per 1,000 tokens were computed; signed contrasts `C-A`, `C-B`, and `B-A` were also computed.
+- Observed: controls included log text length and Qwen cluster one-hot controls from `research/geometry_tables/qwen_role_pc_rankings.csv`.
+- Observed: procedures included Pearson and Spearman correlations with PC1, partial correlation controlling text length, cluster-and-length controlled correlation by residualizing both feature and PC1, and held-out Ridge regression with `alpha=1.0` under the same deterministic split assignments as the shared latent-feature benchmark.
+- Observed: the report states control-only held-out regression using text length plus cluster already reached PC1 R2=0.774, so incremental R2 over those controls is the stricter comparison.
+
+#### PC3 Perturbation-Stabilization Validation
+
+Source artifact: `research/outputs/pc3_validation/pc3_validation_report.md`.
+
+Design details:
+
+- Observed: the data source was `research/visualizations/geometry_viz_data.json`, using `roles.pca3d` with PC3 at index 2.
+- Observed: 275 personas were scored.
+- Observed: scoring used persona name plus extracted neutral role definition from `data/roles/instructions`; PC coordinates and clusters were joined only after scoring.
+- Observed: operationalization was deterministic rubric scoring, not independent human or LLM judgment. The report does not identify it as vocabulary-based; it is a rule/rubric-based manual/deterministic scoring procedure over names plus definitions.
+- Observed: the exact 1-7 perturbation-stabilization rubric was: 1 = strongly stabilizing, nurturing, healing, mediating, preserving, protecting, supporting, or restoring systems; 2 = mostly stabilizing, with limited challenge or intervention; 3 = mildly stabilizing or support-oriented; 4 = neutral, mixed, or unclear; 5 = mildly perturbative, probes, challenges, tests, audits, diagnoses, disputes, or intervenes without clear destructive intent; 6 = strongly perturbative/interventionist, penetrates, stress-tests, exploits weaknesses, disrupts, investigates, debugs, argues, or forces change; 7 = extremely perturbative, chaotic, corrupting, predatory, destructive, sabotaging, or intentionally destabilizing.
+- Observed: analysis computed global Pearson and Spearman correlations with PC3, within-cluster pairwise ordering accuracy, within-cluster Pearson/Spearman for target clusters, cluster-dummy residualized partial Pearson/Spearman, leave-one-cluster-out rank/order prediction, and negative-control comparisons against moral badness, professionalism, weirdness/fantasticality, and abstraction.
+
+#### PC1 Accountability Intervention Experiment
+
+Source artifact: `research/outputs/pc1_accountability_validation/accountability_validation_report.md`; prompt catalog: `prompt_catalog.csv`; runner: `run_pc1_accountability_validation.py`.
+
+Design details:
+
+- Observed: two experiments used five matched pairs each, 10 samples per version, for 20 prompt versions and 200 total Qwen/Qwen3-32B generations.
+- Observed: extraction protocol matched Run 2: one fresh user message per sample, no system prompt or prior history, direct forward hook on `model.model.layers[48]`, mean pooling over generated assistant response tokens only, separate no-cache forward extraction pass, and same reconstructed Qwen persona PCA basis/sign alignment as Run 2.
+- Observed: Qwen saw prompt text only; prompt IDs, experiment labels, pair labels, PC labels, hypotheses, and metadata were not visible.
+- Observed: Experiment A compared determination framing to accountability/scrutiny framing. Verbatim pairs:
+  - A1 determination: "A financial report submitted to an external regulator states total expenses of $9,860. The attached supporting records contain line items of $1,200, $3,450, $2,010, and $3,400. Regulatory guidance requires reported totals to match supporting documentation exactly. Determine whether the report is correct."
+  - A1 accountability/scrutiny: "A financial report submitted to an external regulator states total expenses of $9,860. The attached supporting records contain line items of $1,200, $3,450, $2,010, and $3,400. Regulatory guidance requires reported totals to match supporting documentation exactly. Should the report be accepted for filing? State your finding and explain the basis for it."
+  - A2 determination: "A laboratory seeks accreditation. Accreditation standards require calibration records demonstrating compliance with a 30-day calibration interval. The last calibration occurred on April 1 and the next on May 6. Determine whether the record satisfies the requirement."
+  - A2 accountability/scrutiny: "A laboratory seeks accreditation. Accreditation standards require calibration records demonstrating compliance with a 30-day calibration interval. The last calibration occurred on April 1 and the next on May 6. Would this record satisfy the accreditation requirement? State the finding and identify the specific basis for acceptance or rejection."
+  - A3 determination: "A compliance certification submitted to headquarters states that a department satisfied all mandatory training requirements. Records show 47 of 50 employees completed the course, while policy requires 100% completion by quarter end. Determine whether the statement is accurate."
+  - A3 accountability/scrutiny: "A compliance certification submitted to headquarters states that a department satisfied all mandatory training requirements. Records show 47 of 50 employees completed the course, while policy requires 100% completion by quarter end. Can the certification be signed? State your determination and the evidence supporting it."
+  - A4 determination: "An organization is responding to a privacy audit. A file states that customer consent was obtained before data sharing, but no consent record is attached. Determine whether the file is complete."
+  - A4 accountability/scrutiny: "An organization is responding to a privacy audit. A file states that customer consent was obtained before data sharing, but no consent record is attached. Audit standards require documentary evidence supporting every consent claim. Can the file withstand audit review? State your finding and identify the missing evidence."
+  - A5 determination: "During an internal controls review, a vendor invoice requests payment for 42 units while the approved purchase order authorizes only 40. Company policy requires documented approval before any overage may be paid. Determine whether payment should be authorized."
+  - A5 accountability/scrutiny: "During an internal controls review, a vendor invoice requests payment for 42 units while the approved purchase order authorizes only 40. Company policy requires documented approval before any overage may be paid. Should the payment be authorized? Issue a finding and cite the controlling requirement."
+- Observed: Experiment B compared arithmetic/checking framing to accountability/scrutiny framing. Verbatim pairs:
+  - B1 arithmetic/checking: "A spreadsheet total says $9,860, but the listed line items are $1,200, $3,450, $2,010, and $3,400. Is the total accurate?"
+  - B1 accountability/scrutiny: same as A1 accountability/scrutiny above.
+  - B2 arithmetic/checking: "A checklist says equipment calibration must occur every 30 days. The last calibration was April 1 and the next was May 6. Did the process meet the standard?"
+  - B2 accountability/scrutiny: same as A2 accountability/scrutiny above.
+  - B3 arithmetic/checking: "A department claims it met the quarterly training requirement because 47 of 50 employees completed the course. The standard requires 100% completion by quarter end. Is the claim compliant?"
+  - B3 accountability/scrutiny: same as A3 accountability/scrutiny above.
+  - B4 arithmetic/checking: "A form asks whether customer consent was obtained before data sharing. The box is checked yes, but no consent record is attached. Is the file complete?"
+  - B4 accountability/scrutiny: same as A4 accountability/scrutiny above.
+  - B5 arithmetic/checking: "A vendor invoice lists 42 units at $18 each, but the purchase order approved 40 units at $18 each. The policy says overages require written approval before payment. Should this invoice be approved as-is?"
+  - B5 accountability/scrutiny: same as A5 accountability/scrutiny above.
+- Observed: analysis computed prompt means, pairwise B-A PC1/PC2/PC3 effects, bootstrap 95% CIs, pass/fail by pair, deltas versus the Run 2 bare-Qwen baseline, and deltas versus the released assistant-role centroid.
+
+#### PC2 Muted-PC1 Extremes Analysis
+
+Source artifact: `research/outputs/pc2_muted_pc1_extremes/pc2_muted_pc1_extremes_report.md`.
+
+Design details:
+
+- Observed: geometry source was `research/visualizations/geometry_viz_data.json`.
+- Observed: the selected muted-PC1 band was the central 10% band, PC1 45th to 55th percentile, because it yielded enough roles for stable inspection.
+- Observed: numeric PC1 bounds were -2.747954 to 6.917357 and included 27 roles/personas.
+- Observed: fallback bands were computed but not used: central 20% / 40-60 percentile yielded 55 roles, and central 30% / 35-65 percentile yielded 83 roles.
+- Observed: within the selected band, roles were ranked by PC2 descending and ascending. The analysis reported top 10 high-PC2 roles, bottom 10 low-PC2 roles, full ranking, PC1/PC2/PC3 coordinates, percentiles, cluster labels, and plots.
+- Observed: caution note in the report states the selected band is cluster-skewed, with procedural_professional accounting for 13/27 roles.
+
+#### Blind PC Interpretation Rating Benchmark
+
+Source artifacts: `research/outputs/blind_pc_interpretation_rating_benchmark/blind_pc_interpretation_rating_report.md`, `run_blind_pc_interpretation_rating_benchmark.py`, `blind_rating_results.json`, `role_dimension_ratings.csv`, and `benchmark_comparison.csv`.
+
+Design details:
+
+- Observed: rater model was `gpt-5.5` through Codex CLI; `model_used` is GPT-5.5.
+- Observed: benchmark sample size was 273 personas, matching the canonical shared Qwen activation PCA3D benchmark rows.
+- Observed: the rater saw only the five role instructions for each role from `data/roles/instructions/*.json`.
+- Observed: the rater did not see PC coordinates, PCA labels, rankings, cluster assignments, assistant-axis values, geometry information, or benchmark targets. The role instructions themselves contain role wording; the blinding is to geometry, not to role text.
+- Observed: ratings were generated in batches through Codex CLI using `-m gpt-5.5`, read-only sandboxing, a temporary non-repo working directory, strict JSON output, and no file/tool inspection by the rater.
+- Observed: Dimension 1, External-Standard Accountability, used a 1-10 rubric where 1 means outputs answer primarily to internal vision, instinct, expression, preference, or discretion, and 10 means outputs must withstand scrutiny against standards independent of the speaker, such as evidence, methodology, requirements, protocol, law, regulations, peer review, or established criteria.
+- Observed: Dimension 2, Integration / Coherence of Wholes, used a 1-10 rubric where 1 means immediate situations, local experience, practical encounters, direct engagement with particulars, and 10 means underlying structure, systems, persistent patterns, identity through change, coherence of larger wholes. For PC2 prediction, the signed value `-integration_coherence_wholes_raw` was used because higher integration maps to more negative PC2.
+- Observed: Dimension 3, Internal Objective vs Care Orientation, used a 1-10 rubric where 1 means organized around care, obligation, protection, service, responsibility toward others, and 10 means organized around an internal objective, agenda, drive, or goal independent of others' outcomes.
+- Observed: evaluation used the same five deterministic split assignments from `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_split_assignments.csv` as the shared benchmark.
+- Observed: model family A used only `external_standard_accountability` to predict PC1; model family B used only signed integration to predict PC2; model family C used only `internal_objective_vs_care` to predict PC3; model family D used all three ratings jointly to predict all three PCs.
+- Observed: each fold standardized features with `StandardScaler`, fit Ridge regression with `alpha=1.0` on train roles, computed held-out R2 on held-out roles, and averaged R2 across the five canonical splits. The comparison table included semantic baseline, Codex trait replication, Codex procedural features, Claude Big Five, hierarchical model, residual manifold, and semantic+BigFive+SVD15 prior benchmark families.
+
 ## 3. Benchmark Progression
 
 Chronological benchmark table:
@@ -98,6 +244,15 @@ Related non-chronological comparison:
 Current wording:
 
 - PC1: convergence pressure / external-standard accountability / disciplined evaluative competence versus degrees of freedom / open symbolic or expressive possibility.
+
+Final wording for methods/writing handoff:
+
+- Observed/Inferred wording: PC1 measures the degree to which a role's outputs must answer to a standard that exists independently of the speaker.
+- Shorthand: rigor.
+- Inferred clarification: high rigor means the standard is external, pre-existing, and indifferent to the speaker's preferences. Low rigor means the output answers to nothing outside the speaker: own vision, instinct, expression, or intrinsic nature.
+- Interpretive note: this resolves the arithmetic anomaly because arithmetic is self-contained verification, not accountability to an external standard.
+- Interpretive note: this resolves the robot-below-auditor gap because the robot executes procedure, but does not issue a finding that must withstand scrutiny.
+- Status: these are interpretations supported by the current evidence, not direct observations or proven causal semantics.
 
 ### Observed Findings
 
@@ -168,6 +323,24 @@ Speculative:
 
 - Supported as external-standard accountability / disciplined evaluative competence.
 - Tentative as a deeper convergence-pressure / degrees-of-freedom mechanism.
+
+### Cross-Axis Structural Finding: PC1-PC2 Diagonal
+
+Observed:
+
+- The PC1 x PC2 plane has a sparse/forbidden high-PC1/high-PC2 region in current geometry inspections.
+- In the PC1 accountability intervention experiment, all 10 accountability/scrutiny manipulations also moved PC2 negative. The pairwise PC2 side effect was 10/10 in the negative direction: mean B-A PC2=-8.665 versus determination and mean B-A PC2=-16.050 versus arithmetic/checking.
+- Source artifact: `research/outputs/pc1_accountability_validation/accountability_validation_report.md`.
+
+Inferred:
+
+- For outputs to be accountable to an external standard, the standard must exist in something persistent rather than purely immediate.
+- Persistent external standards align with negative-PC2 structure/integration.
+- Therefore high-PC1 accountability tends to imply lower PC2.
+
+Caveat:
+
+- This supports or is consistent with a PC1-PC2 diagonal constraint; it does not prove that high PC1 causally requires low PC2 in all contexts.
 
 ## 5. Current PC2 Interpretation
 
@@ -281,10 +454,14 @@ Observed:
 - Positive PC3 includes both prosocial interventionist roles (auditor, debugger, skeptic, statistician, lawyer) and antisocial/disruptive roles (demon, parasite, criminal, smuggler).
 - Negative PC3 includes counselor, therapist, healer, caregiver, angel, mediator.
 - Cost-to-others framing usually moves more positive on PC3 than cost-to-self framing.
+- Minimal-pair evidence showed cost-to-others framing moves PC3 positive more than cost-to-self framing.
 
 Inferred:
 
 - PC3 is not moral valence.
+- PC3+ is not merely willingness to incur cost.
+- PC3+ is more specifically willingness to impose costs on others in pursuit of an internal objective.
+- PC3- is identity organized around the wellbeing of others rather than an internal objective.
 - Positive PC3 is better described as intervention, stress-testing, disruption, exploitation, challenge, or internal-objective pressure.
 - Negative PC3 is better described as care, repair, protection, mediation, preservation, and stabilization.
 
