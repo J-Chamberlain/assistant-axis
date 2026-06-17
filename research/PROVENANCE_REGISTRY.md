@@ -774,3 +774,15 @@ Generating script: `research/outputs/pc1_accountability_validation/run_pc1_accou
 Dependent analyses: Paper 1.5 PC1 interpretation wording, no-label directional elicitation design, and claims-register evidence for external-standard accountability as a high-PC1 mechanism.
 Current status: Complete active diagnostic.
 Notes/caveats: The run intentionally mirrors Run 2 extraction conventions: one fresh user message per sample, no system prompt, direct `model.model.layers[48]` hook, response-token mean pooling, separate no-cache extraction pass, and the same reconstructed Qwen PCA basis/sign alignment. This is a focused compliance/audit-style diagnostic, not a broad Run 3 and not proof that all PC1 movement is accountability-specific.
+
+## Default Assistant baseline audit
+
+Artifact: Audit of Lu et al.'s released Qwen default Assistant activation versus Paper 1.5 assistant-role and bare no-system baselines.
+Location: `research/outputs/default_assistant_baseline_audit/`
+Created by: Codex/GPT-5.5.
+Model used: GPT-5.5 for provenance analysis, projection scripting, report writing, and registry maintenance; no model APIs, pods, new generations, activation extraction, or PCA-basis changes were performed.
+Source inputs: `downloads/hf_vectors/qwen-3-32b/default_vector.pt`, `downloads/hf_vectors/qwen-3-32b/assistant_axis.pt`, `downloads/hf_vectors/qwen-3-32b/role_vectors/assistant.pt`, `data/roles/instructions/default.json`, `data/roles/instructions/assistant.json`, `pipeline/5_axis.py`, `research/visualizations/scripts/build_geometry_viz.py`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`, `research/visualizations/geometry_viz_data.json`, `research/outputs/assistant_centroid_provenance_audit/assistant_centroid_provenance_report.md`, and the 1,200 Run 2 baseline activation shards under `research/outputs/no_label_elicitation_run2/activation_shards/`.
+Generating script: One-time local projection/reconciliation script executed in-session; no persistent helper script was required.
+Dependent analyses: Paper 1.5 baseline wording, no-label elicitation Run 2 interpretation, and future comparisons among assistant-role, released default-vector, and bare no-system reference points.
+Current status: Complete active methodological clarification.
+Notes/caveats: The audit identifies `downloads/hf_vectors/qwen-3-32b/default_vector.pt` as the released Lu default/no-role artifact and confirms `assistant_axis.pt` is a direction/difference vector, not a centroid. Projected into the canonical Paper 1.5 Qwen PCA basis, the default vector is PC1=27.130667, PC2=8.005075, PC3=-6.630754. It is distinct from the assistant role centroid (33.702803, 3.441718, -5.155534) and the Run 2 bare no-system centroid (23.509937, 14.040867, -2.460112). Recommendation: keep all three reference points with clear labels; do not replace the Run 2 bare no-system baseline with Lu's default vector.

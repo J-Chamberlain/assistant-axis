@@ -1,0 +1,4 @@
+point_a,point_b,delta_pc1_b_minus_a,delta_pc2_b_minus_a,delta_pc3_b_minus_a,euclidean_distance_pc3d,full_vector_cosine
+assistant_role_centroid,bare_no_system_centroid,-10.192866078365455,10.599149442172425,2.695421604417504,14.94997610080223,0.9625333814504835
+assistant_role_centroid,lu_default_assistant_activation,-6.572135981094458,4.5633573889869785,-1.4752196704125335,8.135937259442857,0.9994584121842971
+bare_no_system_centroid,lu_default_assistant_activation,3.6207300972709966,-6.035792053185446,-4.170641274830038,8.18136423769878,0.9627387403324621

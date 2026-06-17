@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-06-15
+Last updated: 2026-06-17
 
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 
@@ -40,6 +40,8 @@ The assistant baseline/centroid used in Paper 1.5 is now provenance-audited. It 
 
 Run 2 of the no-label elicitation program is now completed. The frozen package under `research/outputs/no_label_elicitation_run2/` produced 1,690/1,690 Qwen/Qwen3-32B generations with zero errors and preserved 1,690 local gitignored activation shards; the bare-Qwen 240-question baseline centroid is PC1=23.510, PC2=14.041, PC3=-2.460.
 
+The default Assistant baseline audit is complete. `downloads/hf_vectors/qwen-3-32b/default_vector.pt` is the released Lu et al. default/no-role vector, while `assistant_axis.pt` is a direction/difference vector rather than a centroid. Projected into the canonical Paper 1.5 Qwen PCA basis, the default vector is PC1=27.131, PC2=8.005, PC3=-6.631. It is distinct from both the role-conditioned assistant centroid and the stricter Run 2 bare no-system centroid, so Paper 1.5 should keep all three reference points rather than replacing the bare baseline with Lu's default vector.
+
 ## Top Open Questions
 
 The current PC1 external-standard accountability interpretation now has three related diagnostics: the sparse-vocabulary competing-theories screen under `research/outputs/pc1_competing_theories_test/`, the stronger GPT-5.5 coordinate-blind rating benchmark under `research/outputs/blind_pc_interpretation_rating_benchmark/`, and the execution-time activation diagnostic under `research/outputs/pc1_accountability_validation/`. Exact vocabulary evidence is weak after controls, but the direct blind rating gives PC1 R2=0.704 and the activation diagnostic separates accountability/scrutiny from determination and arithmetic/checking in 10/10 matched pair contrasts. Do not describe PC1 as proven; do treat external-standard accountability as the strongest current compact PC1 wording.
@@ -51,7 +53,7 @@ The no-label geometry diagnostic under `research/outputs/no_label_elicitation_ge
 
 The 240-question bare-Qwen extraction-question baseline is now a foundational prerequisite for future no-label elicitation interpretation, not optional exploratory cleanup. The existing assistant star/centroid is role-conditioned, so the planned baseline is needed to determine the instrument's default/bare response distribution.
 
-Before discussing Run 2 results, start with `research/outputs/no_label_elicitation_run2/run2_report.md`, `run2_execution_status.json`, `run2_family_mean_results.csv`, `run2_pairwise_effects.csv`, and `run2_local_integrity_check.json`. As of 2026-06-13, total completed generations are 1,690/1,690 with zero error flags.
+Before discussing Run 2 results, start with `research/outputs/no_label_elicitation_run2/run2_report.md`, `run2_execution_status.json`, `run2_family_mean_results.csv`, `run2_pairwise_effects.csv`, and `run2_local_integrity_check.json`. As of 2026-06-13, total completed generations are 1,690/1,690 with zero error flags. For baseline-provenance language, also consult `research/outputs/default_assistant_baseline_audit/default_assistant_baseline_audit_report.md`.
 
 Evaluator-model sensitivity remains unresolved. Codex/GPT-5.5 was used as a pragmatic role-expression judge for trickster/editor; strict Lu-method identity requires `gpt-4.1-mini` scoring if API access permits.
 

@@ -48,6 +48,10 @@ After explicitly authorizing GPT-5.5 default-temperature judging, the same 120 a
 
 Public artifacts allow reconstruction of the intended Assistant Axis role-vector input distribution: 275 non-default roles, 5 positive instructions per role, and 240 shared extraction questions, yielding 1,200 instruction-question combinations per role. Public artifacts do not include the original generated rollout responses, response-level judge scores, or retained-response masks/IDs. The remembered "64" count is resolved as Qwen layer count in `[64,5120]` vectors plus local adaptive-extraction counts, not a public original retained-response count.
 
+### Lu Default Vector Is Distinct From Paper 1.5 Bare No-System Baseline
+
+The default Assistant baseline audit identifies `downloads/hf_vectors/qwen-3-32b/default_vector.pt` as Lu et al.'s released Qwen default/no-role artifact and confirms `assistant_axis.pt` is a direction/difference vector rather than a centroid. Projected into the canonical Paper 1.5 PCA basis, the default vector is PC1=27.130667, PC2=8.005075, PC3=-6.630754. It is distinct from the role-conditioned assistant centroid (33.702803, 3.441718, -5.155534) and the Run 2 bare no-system centroid (23.509937, 14.040867, -2.460112); the Lu default-to-bare 3D distance is 8.181. Recommendation: keep all three reference points with clear labels and do not replace the Run 2 bare baseline with Lu's default vector.
+
 ### H100 Anomaly Interpretation Now Uses Four Methodological Dependency Tracks
 
 The persistent H100 diagnostic checklist now treats D01-D09 as subordinate to four higher-level tracks: T01 extraction equivalence / activation boundary, T02 forecaster improvement, T03 prompt-battery construction, and T04 response-state uncertainty / centroid-versus-single-sample mismatch. D01/D02 depend directly on T01; D03/D08 depend partly on T02/T03; D04/D05/D06 should not be finalized until extraction equivalence, forecaster compression, prompt-battery bias, and single-response uncertainty have been considered. This reframes the H100 run as informative but not yet final behavioral evidence for PC2 shifts, cone outliers, or PC3 collapse.
