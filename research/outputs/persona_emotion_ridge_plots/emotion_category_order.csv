@@ -1,0 +1,11 @@
+position,emotion,label,valence_raw,side,original_six
+1,afraid,Fear,-0.56850386,negative,True
+2,sad,Sadness,-0.52887309,negative,True
+3,disgusted,Disgust,-0.4594456,negative,True
+4,angry,Anger,-0.25724834,negative,True
+5,lonely,Loneliness,-0.08661529,negative,False
+6,calm,Calm,0.34195125,positive,True
+7,excited,Excitement,0.49129093,positive,False
+8,joyful,Joy,0.5000574,positive,True
+9,grateful,Gratitude,0.60586154,positive,False
+10,hopeful,Hope,0.62998569,positive,False

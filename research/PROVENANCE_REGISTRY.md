@@ -2,6 +2,17 @@
 
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
+## persona_emotion_ridge_plots
+
+Artifact: Three all-persona PC-ranked, ten-emotion ridge plots with standalone HTML, full SVG/PNG exports and 2,750 scores.
+Location: `research/outputs/persona_emotion_ridge_plots/persona_emotion_ridges.html`; method: `persona_emotion_ridge_methodology.md`; sources: `persona_emotion_ridge_manifest.json`.
+Created: 2026-09-09 by Codex (exact author runtime identifier not recorded). Activation source: Qwen/Qwen3-32B. No GPU, new activations, generation, API calls or judge calls.
+Inputs: Unchanged 275-persona `roles.pca3d` geometry; all 275 local released `[64,5120]` role tensors; the existing 171-direction full-layer-48 Qwen emotion bank; saved `qwen_valence_arousal.csv` and anchor metadata; original six-channel score table; prior hook-boundary report and extraction sources. Exact hashes are recorded.
+Procedure: Cosine of unit-normalized role row 47 and saved emotion direction; retain original six plus lonely/excited/grateful/hopeful. Recompute the same per-emotion population z-scores and midrank percentiles; all 1,650 original raw scores agree exactly. Sort categories by saved valence projection, with equal categorical spacing. Height is within-emotion percentile over all 275 roles, without per-persona peak/area normalization. PCHIP connects exact category scores without overshoot. Sort each of three full plots descending by its original PC with alphabetical tie-breaking.
+Verification: 2,750 unique rows; 825 pre-rendered ridges and 8,250 markers; independent normalization/ranking/source checks; full SVG-to-PNG rendering; linked-selection Node DOM-double tests. Overview visually inspected. These are static renders and unit tests, not new live-browser screenshots.
+Caveats: Category spacing is not calibrated valence distance; percentiles do not compare absolute emotion intensity across channels. These profiles are not probability densities, behavioral prevalence or subjective feelings. Story-last-token versus role-response-mean readout transfer remains unvalidated. The PC ordering still uses layer-averaged geometry. `CLAIMS_REGISTER.md` and `FINDINGS_LEDGER.md` unchanged.
+Generator: `run_persona_emotion_ridges.py`; checks: `verify_persona_emotion_ridges.py` and `render_ridge_images.cjs`. The plots render without JavaScript; linked highlighting is optional. Existing surface viewer files were not changed.
+
 ## persona_emotion_surface_viewer plan
 
 Artifact: Implementation brief for a Qwen 3D persona emotion-affinity surface viewer.
@@ -14,6 +25,8 @@ Dependent work: Proposed six-emotion slider, two-PC plane, normalized emotion-he
 Notes/caveats: The existing PCA averages role tensors across layers. Emotion directions use story-last-token `hidden_states[48]`; corrected response clouds use the block-48 hook matching `hidden_states[49]`. The plan required matching-layer verification and disclosure of remaining pooling transfer before scoring. Surface heights are relative activation affinities, not measured response prevalence or subjective emotional experience. At plan creation, `CLAIMS_REGISTER.md` and `FINDINGS_LEDGER.md` were unchanged; the subsequent implementation and sensitivity diagnostics are recorded below.
 
 ## persona_emotion_surface_viewer implementation
+
+User confirmation (2026-09-09): the user reports the completed viewer works. The supplied screenshot/URL had shown `viewer_template.html`, whose build placeholders explain that displayed page's inactive controls and missing image. User confirmation is distinct from an automated browser test; previous test caveats remain in the historical record.
 
 Startup repair (2026-09-09; base `57ec408`): the user reported an indefinitely loading local page. Added `viewer_bootstrap.js`, `verify_viewer_bootstrap.cjs`, and `viewer_bootstrap_checks.json` in the viewer directory; the UI-only rebuild embeds the existing Joy screenshot, catches early errors, reports startup stages, and times out after 15 seconds. Saved scores and meshes remain byte-identical. Node/DOM-double tests pass; the original clean-profile browser QA is historical, and actual user-profile confirmation/root-cause diagnosis remain pending. No security settings were changed and the blocked browser-tool local-file access was not bypassed.
 

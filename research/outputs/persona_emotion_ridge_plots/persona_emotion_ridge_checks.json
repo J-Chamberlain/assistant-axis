@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "score_rows": 2750,
+  "panels": 3,
+  "rows_per_panel": 275,
+  "same_original_six": true,
+  "max_absolute_raw_difference": 0.0,
+  "finite_scores": true,
+  "normalization": true,
+  "strict_pc_descending_with_name_tiebreak": true,
+  "curve_no_overshoot": true,
+  "all_panels_prerendered": true,
+  "no_external_scripts": true,
+  "browser_validation": "Not performed; static SVG render and source/data checks only"
+}

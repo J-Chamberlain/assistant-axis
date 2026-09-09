@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "static_renders": [
+    {
+      "file": "persona_emotion_ridges_pc1.png",
+      "width": 1000,
+      "height": 12340
+    },
+    {
+      "file": "persona_emotion_ridges_pc2.png",
+      "width": 1000,
+      "height": 12340
+    },
+    {
+      "file": "persona_emotion_ridges_pc3.png",
+      "width": 1000,
+      "height": 12340
+    },
+    {
+      "file": "persona_emotion_ridges_overview.png",
+      "width": 2100,
+      "height": 1120
+    }
+  ],
+  "interaction_unit_checks": [
+    "Dropdown selects exactly one row in each plot",
+    "Persona button links all plots",
+    "Clear selection"
+  ],
+  "browser_test": false,
+  "note": "SVG rasterization and Node DOM-double unit tests, not a browser screenshot."
+}

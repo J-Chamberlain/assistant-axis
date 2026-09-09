@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-09T22:57:00Z
-Last commit when updated: 57ec408 (base before startup diagnostics)
+Updated UTC: 2026-09-09T23:53:29Z
+Last commit when updated: 5568ea4 (base before PC-ranked emotion ridges)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -32,12 +32,12 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - geometry tables: 30
 - notebooks: 7
 - trait analyses: 340
-- visualizations: 145
+- visualizations: 165
 
 
 ## Status Counts
 
-- active: 4487
+- active: 4507
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -57,7 +57,9 @@ Most active analyses live under `research/outputs/`, `research/assistant_axis_me
 
 ### Visualizations
 
-Emotion viewer startup follow-up: the user's local page stalled despite earlier clean-profile checks. The companion now includes a static prepared-data preview and independent error/timeout diagnostics. See its implementation report; the root cause and user-profile interactive startup remain pending confirmation.
+PC-ranked emotion profiles: `research/outputs/persona_emotion_ridge_plots/persona_emotion_ridges.html` shows all 275 personas in three descending-PC rankings. Ten saved categories are ordered negative-to-positive, with ridge height encoding within-emotion percentile affinity. The directory includes 2,750 scores, full SVG/PNG exports, a top-20 overview and reproducible provenance/checks. All plots are pre-rendered; open the completed HTML, not a source template.
+
+Emotion viewer startup follow-up: the user now reports the completed 3D viewer works; the shown nonworking page was the build template. The original clean-profile tests remain historical, and no new live-browser verification is claimed.
 
 Qwen emotion surface viewer: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html` is the offline six-emotion slider/two-PC fabric landscape for all 275 personas. The directory contains the 1,650-row score table, data bundle, source manifest, methodology, implementation report, reproducible generator/UI sources, browser/data verification, and screenshots. The original plan is retained with a completion addendum. Values are normalized activation affinities, not emotion prevalence; layer/pooling caveats and smoothing gaps remain explicit. This companion does not overwrite the main explorer.
 

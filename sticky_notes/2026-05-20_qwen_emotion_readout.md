@@ -79,3 +79,17 @@ preview; scores and surfaces were not recomputed. Startup guard unit tests
 pass, but user-profile interactive rendering is not yet confirmed. The prior
 clean-profile browser tests should not be treated as proof it works in that
 profile. No emotion-readout finding or claim changed.
+
+## Update 2026-09-09 (PC-Ranked Emotion Ridges)
+
+The user confirms the completed 3D surface viewer works. A separate ten-emotion
+ridge companion now lists all 275 personas in descending PC1, PC2 and PC3 order:
+`research/outputs/persona_emotion_ridge_plots/persona_emotion_ridges.html`.
+The original six directions are retained with loneliness, excitement, gratitude
+and hope added from the same 171-direction bank. Categories use the saved
+negative-to-positive valence ordering; ridge heights are within-emotion
+percentiles, not probability densities or absolute cross-emotion intensities.
+All original six scores match exactly. Static all-persona SVG/PNG exports and
+data/ordering/linked-selection checks are saved. No GPU, new activations or API
+calls. Story-to-role pooling transfer and functional emotion interpretation
+remain unvalidated; no paper claim changed.
