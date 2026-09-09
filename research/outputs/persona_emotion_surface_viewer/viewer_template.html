@@ -65,10 +65,15 @@ summary { cursor:pointer; color:var(--text); padding:5px 0; }
 a { color:var(--accent); text-underline-offset:3px; }
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 #error { display:none; margin:20px; padding:20px; border:1px solid #bd735f; color:#efc5ad; }
+#startup-preview { margin:0; padding:15px 25px; border-bottom:1px solid var(--line); background:var(--panel); }
+#startup-preview[hidden] { display:none; }
+#startup-preview img { display:block; width:min(100%,1000px); height:auto; margin:12px auto 0; }
+#startup-preview figcaption { color:var(--muted); font-size:12px; }
+.script-warning { margin:20px; padding:16px; border:1px solid #bd735f; color:#efc5ad; }
 @media(max-width:850px) { main { grid-template-columns:minmax(0,1fr); } aside { border-left:0; border-top:1px solid var(--line); display:grid; grid-template-columns:1fr 1fr; gap:0 22px; } .aside-help { grid-column:1/-1; } #plot { height:560px; } #selected-name { margin-top:12px; } #selected-score { margin-top:12px; } aside .rule { margin:12px 0; } }
 @media(max-width:520px) { header { padding:17px 15px; } h1 { font-size:19px; } .count { display:none; } .toolbar { padding:12px 15px; gap:10px; } .toolbar .end { margin-left:0; } .control { font-size:11px; } select,button { min-height:40px; } #plot { height:460px; min-height:400px; } .chart-title { left:15px; } .legend { padding:9px 15px 12px; gap:8px; } .slider-panel { padding:16px 15px; } .slider-heading { align-items:start; } .emotion-stops { margin-left:-4px; margin-right:-4px; } .emotion-stops button { font-size:10px; min-height:44px; } aside { padding:15px; } #selected-name { font-size:18px; } footer { padding:12px 15px; } }
 </style>
-<script>__PLOTLY_LIBRARY__</script>
+<script>__BOOTSTRAP_JS__</script>
 </head>
 <body>
 <header>
@@ -84,11 +89,16 @@ a { color:var(--accent); text-underline-offset:3px; }
   <button id="reset-view" class="end" type="button">Reset view</button>
 </div>
 <section class="slider-panel" aria-label="Emotion selection">
-  <div class="slider-heading"><label for="emotion-slider">Emotion direction <strong id="emotion-current">Joy</strong></label><span id="render-status" role="status" aria-live="polite">Loading landscape...</span></div>
+  <div class="slider-heading"><label for="emotion-slider">Emotion direction <strong id="emotion-current">Joy</strong></label><span id="render-status" role="status" aria-live="polite">Interactive view not started</span></div>
   <input id="emotion-slider" type="range" min="0" max="5" value="0" step="1" aria-valuetext="Joy">
   <div class="emotion-stops" id="emotion-stops"></div>
 </section>
 <div id="error" role="alert"></div>
+<noscript><p class="script-warning">JavaScript is not running on this page. The interactive slider and 3D plot require JavaScript. The image below is the already-generated static preview; it will not respond to the controls.</p></noscript>
+<figure id="startup-preview">
+  <figcaption>Prepared-data preview: Joy across 275 personas. This image is static and will disappear when the interactive landscape is ready. No model generation is running.</figcaption>
+  <img src="__PREVIEW_IMAGE__" alt="Static preview of the generated Qwen Joy landscape with scored persona nodes">
+</figure>
 <main>
   <section class="canvas-wrap" aria-label="Interactive emotion landscape">
     <div class="chart-title"><strong id="plot-emotion">Joy</strong><small id="plane-caption">PC1 / PC2 &middot; height = relative affinity</small></div>
@@ -110,6 +120,7 @@ a { color:var(--accent); text-underline-offset:3px; }
   <p><a href="persona_emotion_surface_methodology.md">Full methodology</a> &middot; <a href="persona_emotion_scores.csv" download>Download scores</a></p>
   </div></details>
 </footer>
+<script>__PLOTLY_LIBRARY__</script>
 <script id="viewer-data" type="application/json">__VIEWER_DATA__</script>
 <script>__VIEWER_JS__</script>
 </body>

@@ -12,6 +12,8 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 
 ## Current Emotion Visualization (2026-09-09)
 
+Loading-failure follow-up: the local user profile did not start despite earlier clean-profile tests. The viewer now includes an embedded static preview and startup error/timeout diagnostics. See the implementation report's startup follow-up; user-profile confirmation remains pending, and the prior browser QA is marked historical. The 1,650 score rows and mesh data are unchanged.
+
 The requested Qwen emotion surface viewer is implemented at `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html`. It provides six emotion-slider stops, all six ordered PC pairs, 275 exact persona nodes, relative affinity heights, a supported fabric surface with three smoothing levels, hover/pinned selection, and camera-preserving rotation/zoom. `persona_emotion_surface_methodology.md` documents layer-47/hidden-state-48 matching, normalization, and sensitivity; `persona_emotion_surface_implementation_report.md` records verification and links. This is an exploratory centroid-affinity overlay, not measured emotion prevalence or validated functional valence. No inference or GPU work was used; the original plan remains as design history.
 
 ## Current Best Findings

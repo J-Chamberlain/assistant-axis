@@ -70,3 +70,12 @@ preprocessing sensitivity, support-masked fabric fits, and browser/data checks
 are documented alongside the viewer. The historical readout verdict has not
 been extended to role-response functional valence; story/response pooling and
 domain transfer remain open. No new GPU or model API work was performed.
+
+## Update 2026-09-09 (Viewer Startup)
+
+The user reported an indefinitely loading viewer in their local profile.
+A UI-only patch adds early-error/timeout diagnostics and a bundled static
+preview; scores and surfaces were not recomputed. Startup guard unit tests
+pass, but user-profile interactive rendering is not yet confirmed. The prior
+clean-profile browser tests should not be treated as proof it works in that
+profile. No emotion-readout finding or claim changed.

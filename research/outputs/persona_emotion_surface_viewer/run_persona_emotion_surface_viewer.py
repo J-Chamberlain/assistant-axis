@@ -3,6 +3,7 @@
 
 import argparse
 import ast
+import base64
 import csv
 import hashlib
 import itertools
@@ -296,13 +297,56 @@ def methodology(manifest, sensitivity, diagnostics):
     return "\n".join(lines)
 
 
+def render_html(data):
+    payload = json.dumps(data, separators=(",", ":"), allow_nan=False).replace("<", "\\u003c")
+    html = (HERE / "viewer_template.html").read_text()
+    library = get_plotlyjs()
+    preview = HERE / "persona_emotion_surface_desktop.png"
+    image = "data:image/png;base64," + base64.b64encode(preview.read_bytes()).decode() if preview.exists() else ""
+    replacements = {"__PLOTLY_LIBRARY__": library, "__VIEWER_DATA__": payload,
+                    "__VIEWER_JS__": (HERE / "viewer.js").read_text(),
+                    "__BOOTSTRAP_JS__": (HERE / "viewer_bootstrap.js").read_text(), "__PREVIEW_IMAGE__": image}
+    for key, value in replacements.items():
+        html = html.replace(key, value)
+    return html, re.search(r"plotly.js v([^\s]+)", library).group(1)
+
+
+def rebuild_ui(output):
+    manifest_path = output / "persona_emotion_surface_manifest.json"
+    manifest = read_json(manifest_path)
+    data = read_json(output / "persona_emotion_surface_data.json")
+    for item in manifest["outputs"]:
+        if item["filename"] in {"persona_emotion_surface_data.json", "persona_emotion_scores.csv"}:
+            assert sha256(output / item["filename"]) == item["sha256"]
+    html, version = render_html(data)
+    (output / "persona_emotion_surface_viewer.html").write_text(html)
+    manifest["viewer_updated_utc"] = datetime.now(timezone.utc).isoformat()
+    manifest["viewer_base_commit"] = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+    manifest["versions"]["plotly_js"] = version
+    sources = {item["path"]: item for item in manifest["sources"]}
+    for path in [Path(__file__), HERE / "viewer_template.html", HERE / "viewer.js", HERE / "viewer_bootstrap.js",
+                 HERE / "persona_emotion_surface_desktop.png"]:
+        sources[str(path.relative_to(ROOT))] = {"path": str(path.relative_to(ROOT)), "sha256": sha256(path)}
+    manifest["sources"] = list(sources.values())
+    for item in manifest["outputs"]:
+        path = output / item["filename"]
+        item.update(sha256=sha256(path), bytes=path.stat().st_size)
+    manifest["verification"]["browser_check_status"] = "Original clean-profile checks are historical; startup guard patch needs user-profile confirmation."
+    dump_json(manifest_path, manifest)
+    print("Rebuilt UI only; the 1,650 scores and surface data are unchanged.")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=HERE)
+    parser.add_argument("--ui-only", action="store_true", help="Rebuild HTML from checked saved data without rescoring")
     args = parser.parse_args()
     start = time.perf_counter()
     torch.set_num_threads(1)
     startup = verify_startup()
+    if args.ui_only:
+        rebuild_ui(args.output_dir.resolve())
+        return
     mapping = verify_boundary()
     print("Startup and source boundary mapping verified; loading CPU tensors.", flush=True)
     names, coords, emotions, z, rows, sensitivity, sources = make_scores()
@@ -326,22 +370,19 @@ def main():
         "verification": {"unique_personas": True, "finite_sources": True, "normalization_pass": True,
                           "pc_coordinates_copied_without_refit": True, "surface_diagnostics_are_in_sample": True},
     }
-    source_paths = [GEOMETRY, DIRECTIONS, EXTRACTOR, BOUNDARY, Path(__file__), HERE / "viewer_template.html", HERE / "viewer.js",
+    source_paths = [GEOMETRY, DIRECTIONS, EXTRACTOR, BOUNDARY, Path(__file__), HERE / "viewer_template.html", HERE / "viewer.js", HERE / "viewer_bootstrap.js",
                     ROOT / "assistant_axis/internals/activations.py", ROOT / "research/visualizations/scripts/build_geometry_viz.py",
                     ROOT / "research/assistant_axis_methodology/role_vector_structure_audit.md",
                     ROOT / "research/outputs/public_source_extraction_equivalence/qwen_hidden_states_semantics_notes.md",
                     EMOTION_DIR / "mean_activation_qwen3_32b_full_layer48.npy",
                     EMOTION_DIR / "pc1_direction_qwen3_32b_full_layer48.npy"]
+    if (HERE / "persona_emotion_surface_desktop.png").exists():
+        source_paths.append(HERE / "persona_emotion_surface_desktop.png")
     manifest["sources"] += [{"path": str(p.relative_to(ROOT)), "sha256": sha256(p)} for p in source_paths]
     data = {"schema_version": 1, "generated_utc": timestamp, "source_model": "Qwen/Qwen3-32B",
             "roles": [{"name": n, "pcs": c.tolist()} for n, c in zip(names, coords)], "emotions": emotions,
             "views": views, "z_limit": z_limit, "layer_mapping": mapping, "sensitivity": sensitivity}
-    payload = json.dumps(data, separators=(",", ":"), allow_nan=False).replace("<", "\\u003c")
-    html = (HERE / "viewer_template.html").read_text()
-    library = get_plotlyjs()
-    manifest["versions"]["plotly_js"] = re.search(r"plotly.js v([^\s]+)", library).group(1)
-    html = html.replace("__PLOTLY_LIBRARY__", library).replace("__VIEWER_DATA__", payload)
-    html = html.replace("__VIEWER_JS__", (HERE / "viewer.js").read_text())
+    html, manifest["versions"]["plotly_js"] = render_html(data)
     output = args.output_dir.resolve()
     output.mkdir(parents=True, exist_ok=True)
     dump_json(output / "persona_emotion_surface_data.json", data, compact=True)

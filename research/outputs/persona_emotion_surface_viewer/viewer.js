@@ -1,6 +1,8 @@
 /* Qwen emotion surface explorer. All data are embedded; no network requests. */
 (() => {
   "use strict";
+  window.viewerBoot.stage("Reading the prepared persona data");
+  if(!window.Plotly || typeof window.Plotly.react!=="function") throw new Error("The embedded chart engine did not load.");
   const data = JSON.parse(document.getElementById("viewer-data").textContent);
   const el = id => document.getElementById(id);
   const plot = el("plot");
@@ -120,9 +122,7 @@
   }
 
   function fail(error) {
-    console.error(error);el("error").style.display="block";
-    el("error").textContent="The 3D view could not load. Try a browser with WebGL enabled. Details: "+error.message;
-    el("render-status").textContent="View unavailable";
+    console.error(error);window.viewerBoot.fail(error);
   }
 
   function captureCamera() {
@@ -178,14 +178,15 @@
         const animate=initialized&&!reducedMotion.matches&&previous&&previous.emotion!==target.emotion&&
           previous.axisX===target.axisX&&previous.axisY===target.axisY&&previous.smoothing===target.smoothing;
         state.transitioning=Boolean(animate);
-        el("render-status").textContent=animate?"Visual transition...":"Updating...";
+        if(!initialized) window.viewerBoot.stage("Rendering the prepared 3D landscape");
+        else el("render-status").textContent=animate?"Visual transition...":"Updating...";
         const started=performance.now();
         const steps=animate?[0.5,1]:[1];
         for(const t of steps) {
           if(version!==requestVersion) break;
           const current=t===1?target:blend(previous,target,t);
           await Plotly.react(plot,traces(current,t!==1),layout(current),{responsive:true,displayModeBar:false,scrollZoom:true});
-          if(!initialized) {bindPlotEvents();initialized=true;}
+          if(!initialized) {bindPlotEvents();initialized=true;window.viewerBoot.ready();}
           if(t!==1) await new Promise(resolve=>requestAnimationFrame(resolve));
         }
         previous=target;renderedVersion=version;state.transitioning=false;

@@ -1,12 +1,15 @@
 # Raw URL Index
 
-Updated UTC: 2026-09-09T13:55:57Z
-Base commit for this update: e7513f6
+Updated UTC: 2026-09-09T22:57:00Z
+Base commit for this update: 57ec408
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
 |---|---|---|---|---|
+| active | visualizations | `research/outputs/persona_emotion_surface_viewer/viewer_bootstrap.js` | Independent startup error guard and timeout with static preview | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/viewer_bootstrap.js |
+| active | visualizations | `research/outputs/persona_emotion_surface_viewer/verify_viewer_bootstrap.cjs` | Node DOM-double tests for startup diagnostics; not browser validation | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/verify_viewer_bootstrap.cjs |
+| active | visualizations | `research/outputs/persona_emotion_surface_viewer/viewer_bootstrap_checks.json` | Passed startup guard unit tests; user-browser confirmation pending | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/viewer_bootstrap_checks.json |
 | active | visualizations | `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html` | Offline six-emotion and two-PC fabric viewer with exact persona nodes | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html |
 | active | visualizations | `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_data.json` | Embedded-viewer data: 275 personas; six channels; supported surface meshes | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_data.json |
 | active | visualizations | `research/outputs/persona_emotion_surface_viewer/persona_emotion_scores.csv` | 1650 layer-matched persona-emotion raw cosine / z-score / percentile rows | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/persona_emotion_scores.csv |

@@ -15,6 +15,8 @@ Notes/caveats: The existing PCA averages role tensors across layers. Emotion dir
 
 ## persona_emotion_surface_viewer implementation
 
+Startup repair (2026-09-09; base `57ec408`): the user reported an indefinitely loading local page. Added `viewer_bootstrap.js`, `verify_viewer_bootstrap.cjs`, and `viewer_bootstrap_checks.json` in the viewer directory; the UI-only rebuild embeds the existing Joy screenshot, catches early errors, reports startup stages, and times out after 15 seconds. Saved scores and meshes remain byte-identical. Node/DOM-double tests pass; the original clean-profile browser QA is historical, and actual user-profile confirmation/root-cause diagnosis remain pending. No security settings were changed and the blocked browser-tool local-file access was not bypassed.
+
 Artifact: Offline Qwen emotion-affinity landscape and 1,650 persona/emotion scores.
 Location: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html`; entry reports `persona_emotion_surface_methodology.md` and `persona_emotion_surface_implementation_report.md` in that directory.
 Created: 2026-09-09 by Codex; exact author runtime model identifier unavailable. Activation source: Qwen/Qwen3-32B. No inference, model API calls, judges, or GPU runs.

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "test_type": "Node VM / DOM double; not a browser test",
+  "checks": [
+    "progress stages",
+    "runtime-error capture",
+    "promise rejection capture",
+    "15-second watchdog",
+    "successful startup removes preview",
+    "late success recovers from timeout",
+    "noscript warning",
+    "embedded static preview",
+    "guard and preview precede chart library"
+  ]
+}

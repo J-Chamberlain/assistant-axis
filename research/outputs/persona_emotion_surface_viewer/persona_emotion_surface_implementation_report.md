@@ -1,11 +1,21 @@
 # Qwen Emotion Surface Viewer: Implementation Report
 
 Date: 2026-09-09
-Status: implemented exploratory prototype; ready for manual review.
+Status: prototype implemented; startup guard patched after user-reported loading failure; user-browser confirmation pending.
 Branch: `master`. Implementation base commit: `e7513f60697ee52d5ef3b6f1c3962756e54c22d5`.
 Author: Codex; exact runtime model identifier unavailable. Source activation model: Qwen/Qwen3-32B.
 
 ## Open and Explore
+
+### Startup Follow-Up (2026-09-09)
+
+Observed: the user's local Chrome tab remained on the initial loading message. The numerical outputs were already generated; this was a display/startup failure, not ongoing model inference. The preceding browser checks used a clean Chromium 151 profile, while installed Chrome is 152.0.7977.83. These facts do not identify the root cause. Inferred: the main initialization did not reach its status update. Unknown: whether the user's page encountered blocked JavaScript, a script exception, or a renderer issue. The browser tool blocked inspection of the local-file tab; no alternate browser-access route was used to bypass that restriction.
+
+The patch adds a small independent startup guard before the chart library, captures early runtime errors and rejected promises, reports the startup stage, and times out after 15 seconds instead of silently waiting. A bundled static Joy preview is shown until successful startup; a `noscript` message explains disabled JavaScript. The chart library now follows the visible page markup. Failure does not launch any new computation. The initial static status no longer claims that generation is loading.
+
+`viewer_bootstrap.js` implements this guard. `verify_viewer_bootstrap.cjs` and `viewer_bootstrap_checks.json` record passing Node/DOM-double tests for progress, errors, timeouts, recovery, preview visibility, and HTML ordering. These are not browser tests. The earlier `persona_emotion_surface_browser_checks.json` is explicitly marked historical and retains the original tested HTML hash. Actual user-profile interactive rendering remains unconfirmed; the next diagnostic is the warning/error displayed after the user refreshes the file. Do not report the underlying startup failure as resolved until that confirmation.
+
+The patch uses `run_persona_emotion_surface_viewer.py --ui-only`, preserving the saved 1,650 scores and mesh data byte-for-byte. No rescoring, model generation, API calls, GPU work, security-setting changes, or external hosting was performed.
 
 Open `persona_emotion_surface_viewer.html` in a local WebGL-capable browser. The 6.70 MB HTML embeds Plotly, data, styles, and scripts, so it works without a server or internet connection. Choose two different PCs, then use the six-stop slider or emotion buttons. Drag to rotate, scroll to zoom, hover a node for its name, and click or use the persona selector to pin details. Reset view restores the starting camera; small screens use a farther starting camera so the axes fit.
 
@@ -47,6 +57,7 @@ From the repository root, with the source tensors present and NumPy, SciPy, Torc
 ```bash
 python3 -B research/outputs/persona_emotion_surface_viewer/run_persona_emotion_surface_viewer.py
 python3 -B research/outputs/persona_emotion_surface_viewer/verify_persona_emotion_surface_data.py
+node research/outputs/persona_emotion_surface_viewer/verify_viewer_bootstrap.cjs
 node research/outputs/persona_emotion_surface_viewer/verify_persona_emotion_surface_browser.cjs
 ```
 
@@ -62,6 +73,9 @@ Raw GitHub links for every changed file are indexed below and in the canonical r
 
 | Changed file | Raw GitHub URL |
 |---|---|
+| `research/outputs/persona_emotion_surface_viewer/viewer_bootstrap.js` | [Raw file](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/viewer_bootstrap.js) |
+| `research/outputs/persona_emotion_surface_viewer/verify_viewer_bootstrap.cjs` | [Raw file](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/verify_viewer_bootstrap.cjs) |
+| `research/outputs/persona_emotion_surface_viewer/viewer_bootstrap_checks.json` | [Raw file](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/viewer_bootstrap_checks.json) |
 | `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html` | [Raw file](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html) |
 | `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_data.json` | [Raw file](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_data.json) |
 | `research/outputs/persona_emotion_surface_viewer/persona_emotion_scores.csv` | [Raw file](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/persona_emotion_scores.csv) |

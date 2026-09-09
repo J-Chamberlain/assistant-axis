@@ -1,5 +1,6 @@
 {
-  "status": "passed",
+  "status": "historical_pass",
+  "current_build_status": "Startup-guard revision not verified in the user's browser; original clean-profile results below apply to the recorded HTML hash only.",
   "browser": "151.0.7922.34",
   "generated_utc": "2026-09-09T13:56:55.973Z",
   "html_sha256": "a3cddb11f60d62f4c3d36ec4567635273f6da9d67b93223f5a785f5944af1acc",
