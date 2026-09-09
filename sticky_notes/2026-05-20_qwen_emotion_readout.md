@@ -58,3 +58,15 @@ alignment check: the emotion extractor uses story-last-token
 also averages released role vectors across layers before PCA. The plan preserves
 these distinctions; it does not extend the historical readout verdict to
 response prevalence or validated functional valence.
+
+## Update 2026-09-09 (Implementation)
+
+The authorized six-emotion persona surface prototype is now implemented in
+`research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html`.
+It scores all 275 released centroids at row 47 against the saved story
+`hidden_states[48]` directions, keeps the original PC coordinates, and displays
+per-emotion normalized affinity rather than prevalence. Source mapping,
+preprocessing sensitivity, support-masked fabric fits, and browser/data checks
+are documented alongside the viewer. The historical readout verdict has not
+been extended to role-response functional valence; story/response pooling and
+domain transfer remain open. No new GPU or model API work was performed.

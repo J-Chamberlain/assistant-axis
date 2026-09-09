@@ -9,9 +9,20 @@ Location: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surfa
 Created: 2026-09-09 by Codex (GPT-6), from the user's requested interface and the preceding read-only artifact inspection.
 Source inputs: `research/visualizations/geometry_viz_data.json`; `research/visualizations/scripts/build_geometry_viz.py`; released Qwen role/trait tensors under `downloads/hf_vectors/qwen-3-32b/`; `research/emotions/scripts/extract_qwen_full.py`; saved 171-emotion directions and readout diagnostics under `research/emotions/outputs/`; role-vector structure audit and A100 hook-boundary test.
 Generating procedure: Direct documentation only; no scores, viewer, model/API calls, or GPU work generated.
-Current status: Active plan; implementation pending. Base commit: `9a50682`.
+Current status: Implemented on 2026-09-09; original design retained with completion addendum. Plan base commit: `9a50682`; implementation base: `e7513f6`.
 Dependent work: Proposed six-emotion slider, two-PC plane, normalized emotion-height surface, and exact persona nodes.
-Notes/caveats: The existing PCA averages role tensors across layers. Emotion directions use story-last-token `hidden_states[48]`; corrected response clouds use the block-48 hook matching `hidden_states[49]`. The plan requires matching-layer verification and disclosure of remaining pooling transfer before scoring. Surface heights are proposed relative activation affinities, not measured response prevalence or subjective emotional experience. `CLAIMS_REGISTER.md` and `FINDINGS_LEDGER.md` are unchanged because this is a plan, not a new experiment.
+Notes/caveats: The existing PCA averages role tensors across layers. Emotion directions use story-last-token `hidden_states[48]`; corrected response clouds use the block-48 hook matching `hidden_states[49]`. The plan required matching-layer verification and disclosure of remaining pooling transfer before scoring. Surface heights are relative activation affinities, not measured response prevalence or subjective emotional experience. At plan creation, `CLAIMS_REGISTER.md` and `FINDINGS_LEDGER.md` were unchanged; the subsequent implementation and sensitivity diagnostics are recorded below.
+
+## persona_emotion_surface_viewer implementation
+
+Artifact: Offline Qwen emotion-affinity landscape and 1,650 persona/emotion scores.
+Location: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html`; entry reports `persona_emotion_surface_methodology.md` and `persona_emotion_surface_implementation_report.md` in that directory.
+Created: 2026-09-09 by Codex; exact author runtime model identifier unavailable. Activation source: Qwen/Qwen3-32B. No inference, model API calls, judges, or GPU runs.
+Inputs: Exact 275-role coordinates from `research/visualizations/geometry_viz_data.json`; 275 released `[64,5120]` role tensors; saved 171-emotion bank `research/emotions/outputs/emotion_readout_directions_qwen3_32b_full_layer48.pt`; extractor, hook-ordering source, previous A100 boundary test, and saved emotion-training mean/nuisance PC for sensitivity only. All source hashes are in `persona_emotion_surface_manifest.json`.
+Procedure: Uncentered cosine between released role row 47 (block-47 output) and six saved emotion directions matching `hidden_states[48]`; population z-scores and midrank percentiles across all 275 roles per emotion. Preserve layer-averaged PCA coordinates exactly. Precompute regularized thin-plate-spline surfaces with three fixed smoothing levels, convex-hull/local-density support masks, and node-to-surface connectors. Axis reversal transposes the fitted surface without altering scores.
+Generator: `run_persona_emotion_surface_viewer.py`; editable UI sources `viewer_template.html` and `viewer.js`; independent data checks and Playwright browser checks are in the same directory.
+Dependent work: Exploratory manual emotion-affinity inspection; not response-level prevalence estimation or independent validation of PC semantics.
+Caveats: Story-last-token probes and response-mean centroids have different input/pooling distributions. Layer correspondence is source-supported and does not solve that transfer problem. Preprocessing sensitivity is reported rather than used to choose attractive results. Surface fit errors are in-sample, density masks are not confidence intervals, and the categorical slider is not a valence continuum. `CLAIMS_REGISTER.md` is unchanged.
 
 ## claude_full_feature_matrix.csv
 

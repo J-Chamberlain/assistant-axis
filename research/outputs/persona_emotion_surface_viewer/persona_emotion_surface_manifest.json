@@ -1,0 +1,1278 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-09-09T13:54:27.404590+00:00",
+  "model_used": null,
+  "author": "Codex",
+  "model_provenance_note": "Exact author runtime model identifier unavailable; source activation model is recorded separately.",
+  "source_model": "Qwen/Qwen3-32B",
+  "base_commit": "e7513f60697ee52d5ef3b6f1c3962756e54c22d5",
+  "startup_status": "local canonical hashes verified; session remote verification recorded in implementation report",
+  "startup_file_hashes_at_run": {
+    "research/RESEARCH_STATE.md": "bad2ee511ff1de7830dede4b70ee6423549e43593acff82f1c40ba528ecc41e1",
+    "research/THREAD_START.md": "da83c5d549e4e9eaec1515cdf78e510c74005e1d43a7fe8f3a00ce1c5a61c07d",
+    "research/CLAIMS_REGISTER.md": "80840a6c9a2c22b6611f4f11d61a13f05b107375a5ca41fb1cb84b82017f4615"
+  },
+  "layer_mapping": {
+    "readout_hidden_state_index": 48,
+    "released_role_tensor_row": 47,
+    "role_row_semantics": "decoder block 47 output, corresponding to hidden_states[48]",
+    "evidence": "source layer ordering and Qwen hidden-state semantics; prior empirical block-48 boundary test",
+    "new_gpu_boundary_test": false,
+    "remaining_transfer_assumption": "story last-token direction applied to response-mean role centroid",
+    "display_geometry": "existing PCA of role tensors averaged across 64 layers; no PCA refit"
+  },
+  "n_roles": 275,
+  "n_emotions": 6,
+  "n_score_rows": 1650,
+  "emotions": [
+    {
+      "label": "Joy",
+      "key": "joyful"
+    },
+    {
+      "label": "Calm",
+      "key": "calm"
+    },
+    {
+      "label": "Sadness",
+      "key": "sad"
+    },
+    {
+      "label": "Fear",
+      "key": "afraid"
+    },
+    {
+      "label": "Anger",
+      "key": "angry"
+    },
+    {
+      "label": "Disgust",
+      "key": "disgusted"
+    }
+  ],
+  "scoring": "raw uncentered layer-matched cosine; per-emotion population z-score over all 275 roles",
+  "percentiles": "100 * (average_rank - 0.5) / 275",
+  "grid_size": 61,
+  "smoothing": [
+    {
+      "label": "Detail",
+      "value": 0.003
+    },
+    {
+      "label": "Balanced",
+      "value": 0.03
+    },
+    {
+      "label": "Gentle",
+      "value": 0.3
+    }
+  ],
+  "fixed_z_range": [
+    -6.5,
+    6.5
+  ],
+  "cpu_only": true,
+  "model_api_calls": 0,
+  "gpu_runs": 0,
+  "versions": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "torch": "2.12.0",
+    "plotly_py": "6.7.0",
+    "plotly_js": "3.5.0"
+  },
+  "sources": [
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/aberration.pt",
+      "sha256": "0137d1be7e6d1eaf0e4bf4342be4990273ce6d07988d199b7694b8c96bb09aeb"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/absurdist.pt",
+      "sha256": "adfa54c9c3e29f9ce7c719756e50ffe262e699344f979f8d970541c6520eb9f8"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/accountant.pt",
+      "sha256": "ff0db225abefa3760f159c8783eb2ccce3aa4a59ff75caee9061e7e5ba53cfc3"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/activist.pt",
+      "sha256": "208c72c4f33b38ea3f00f40f2a7816fb2ab820d42e861522384f1da865d33aea"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/actor.pt",
+      "sha256": "cb62eda67e063ea0a26a99fd39bdb3bbe8fe85eb9ea2895b30f9cebf8f8ebc53"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/addict.pt",
+      "sha256": "b64e44b67113e57910fe5aa89cc66e91faf66a50c8400723f71b77ce7d8c3826"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/adolescent.pt",
+      "sha256": "f886426cd8caa29b5d9664ef548731c2b2b6456149a3527fae9ec4d47970ac13"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/advocate.pt",
+      "sha256": "fc1178365613fd971b86624039894819ecef3c3e2ecfdad78a92e936c8f74806"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/alien.pt",
+      "sha256": "a4cd43fdb44e8e21843776c97f3710b67750f22fff3d05762a103dccf326b70b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/altruist.pt",
+      "sha256": "b33de334884fa654ed0b8981651d30457c499f4a3996626b801432707d09e49b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/amateur.pt",
+      "sha256": "fcd2b47413d625dd9abb47b3431205b7470541d3689c04d40603408212304a51"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/ambassador.pt",
+      "sha256": "c3cb38adc149cf3804c03bdf1cfdf027478bebfc533d32078dced9721454a1c4"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/amnesiac.pt",
+      "sha256": "e0424bc59b9f933abc1a3ad25c1e980d36deb09cd60f802ea7b96e09d7c1871a"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/analyst.pt",
+      "sha256": "945b3d6f9fe06567b99da02a3a7895abc579146ac19f669b1199038e6c14f371"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/anarchist.pt",
+      "sha256": "454478fefbcce36a71c610c85f2140626c977bae10a30471dacaf29f21907ef8"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/ancient.pt",
+      "sha256": "3aa7a762b3ac061c3afa52100ec7616c9ab23c07428cfde6c5fc0838bd562351"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/angel.pt",
+      "sha256": "dfdd9835a3e2302339becc4c5bc756664bffa1fb816d53b53a76dbafc3a1176c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/anthropologist.pt",
+      "sha256": "e487cffecd77ef91512302b9a47a525e472f905107e3b331b893b25bb66cbf28"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/archaeologist.pt",
+      "sha256": "8ac5acc1b389f066beb67f793bb8d8d412653f9f78516f69e914a94888d613c7"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/architect.pt",
+      "sha256": "6df5ffda17318f2c3e859313120d0b3de02c9aa7c27196d6cc54c24e45265804"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/archivist.pt",
+      "sha256": "bebec7b7a5bbb5ed19e4842b747e7eb47f67769817463df7175e2f4df09903b2"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/artisan.pt",
+      "sha256": "cd3d776fe6230f0f46cf73e4b22ace5e7bd2a5aa66bd783090c0722b3ac6ebc2"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/ascetic.pt",
+      "sha256": "fb142f5eb728ac9f7beee4a0f3e3a5e1a1d98d2f0626b2d01022dfdcd726ddf7"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/assistant.pt",
+      "sha256": "0e4e3a91727ac7f22b188994f3bd12bca484e33eb037fd3401511a1f26dd8035"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/auctioneer.pt",
+      "sha256": "6f88046790a302fc2b8466e7534a60c93be55fedd03ef735814e95ba8bd58635"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/auditor.pt",
+      "sha256": "01bc322178800136753daaf1b09b8df69856824deae64bf9bcdcefcf961dbb27"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/avatar.pt",
+      "sha256": "4ef9b077ffd2cb503366b39e34f5b93415a803591e8182f3185510d1500e0d82"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/bard.pt",
+      "sha256": "5058e4257a102adebc3985627a5b7ef33d9c539f44ce55cb6dee95f73d63a457"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/bartender.pt",
+      "sha256": "b56d4f7aac9d96ed2c39b1e185b742fd0e75d958300b1cab6ba89c31405a6e3c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/biologist.pt",
+      "sha256": "f9e52c739bbf360e8258e2613281de06253b9926b0b794a9e4b376245fe8256b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/blogger.pt",
+      "sha256": "2d4f03dad0dfc2a76d00554962905d799e89c43672007dd4f8560fcc97513ec1"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/bohemian.pt",
+      "sha256": "e5740cb98ec79e7c43078bc2dee47842fa276ad2109bf646a35b50c40d899b5a"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/builder.pt",
+      "sha256": "9b7c9109816c0afaf390591a5400528d02562e67f055ff3313396c61bf95e80c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/caregiver.pt",
+      "sha256": "000e664ac4ebffc484d54fa8e657456e7728258bcffcbbc3ab76d0454a719e5f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/cartographer.pt",
+      "sha256": "28004e334668d6d47614bb6ca5ca1952d34f7943ca3e1e8bcd2992fd115f09f6"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/caveman.pt",
+      "sha256": "86ac3e3b264c53ad7869b25824ec70e900a4146e51722728a297bbc0ef91f1e8"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/celebrity.pt",
+      "sha256": "658ce390e7e02cf109e18fb9ae3141686c2d4e4eebea79830edf3b8e46f5ef25"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/chameleon.pt",
+      "sha256": "76f3fc455856b94195329dbbbbe850d717e03832e0e1584c2849c77cbd66c13a"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/chef.pt",
+      "sha256": "15c87f5bb7a61f2ee537d87c3b54ec1eb37ff75402934aa936e9f5036d9c6258"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/chemist.pt",
+      "sha256": "413fb2ef9820a0d2994156858285cb5a98b3d187efe731a5ab6a41b047571d1e"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/chimera.pt",
+      "sha256": "6bf19136c4a3fdac39637906d3e9e52cacc4c2010748c7d7392bd6b87a4d3850"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/coach.pt",
+      "sha256": "66d33bee50879af2c180b1d1d7bac8379dca9240b603a6b4198fdd067967369e"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/collaborator.pt",
+      "sha256": "cee7ce7a352748e7ababf3639a50b9549bcc15056a03354a73f35ca6d0cf8bb0"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/collector.pt",
+      "sha256": "05963015653eed088201c8292bb929c5133b97910ad167d7e647baa9ef683061"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/comedian.pt",
+      "sha256": "d6c4407c22620f51f1518ed89d38adcd4779d487c2c69453ee069734dafd39ba"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/competitor.pt",
+      "sha256": "d1fb909ea62683e47c1dfde18f670b4eeee7b6eaf9375771668360360bf08d65"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/composer.pt",
+      "sha256": "2f173f8314426b50d954f5afcbae43fc103b5ef5770fd221f84102c87e63b6a9"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/conservator.pt",
+      "sha256": "6dfb6f8e8e4b72ef4e493ec1d30d93726c5701a85704aaa545f7fb34497ad934"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/consultant.pt",
+      "sha256": "083969cc1a22b6283be24f0b81814564b4e605aa356962d5f165a13b91a9a66d"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/contrarian.pt",
+      "sha256": "b483f5dc6c907e6135bd98854060939f5adfd1789a65e9aca8dc4dcdd1eff00f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/coordinator.pt",
+      "sha256": "db949d75eabc519839f92dbb9e612375f3a402e611e2e6342cefdac18dd29947"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/coral_reef.pt",
+      "sha256": "d5612bea040f62d5bdb7ee5305b774b2a9972c5e4f4b5300efe9e2f2d372ac7b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/cosmopolitan.pt",
+      "sha256": "7f1e4674ace8e5d9ff4c7c96902ba21859b5454209264e3e399e1b27ae212d32"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/counselor.pt",
+      "sha256": "7b75d8f327eba51321ddbf42c37cda02284c7527581c923e8c9b863fff41932b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/criminal.pt",
+      "sha256": "8774d0ddc5593cb2fea2a7d7d3eaefef14f034fe93af8f354d917004d61dec5b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/critic.pt",
+      "sha256": "20c7915d4fb4c1a0248e547e7247423299ad4cfdf17a90e199d6646d9e635db9"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/crystalline.pt",
+      "sha256": "7fff125b14b030b10093d0d7985ff1eb333018f26cb222141612cd6cf2617fbf"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/curator.pt",
+      "sha256": "0e0b782882926f5c947ad098266b11ba7378027d91716e417b1263e1a480e5f4"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/cyborg.pt",
+      "sha256": "eeb8872359cd38604c7c285bf2a2e6735e3b0943dc0d3c9745ec424c9ad5b29b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/cynic.pt",
+      "sha256": "6d96c2c1070c2b7832faba05b2b696d2bdc5697eb367a766b3ea58e3c4780d1c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/daredevil.pt",
+      "sha256": "8e328af0d29213532911f0d1b168609300acbd467ac9734dc79604961310cbae"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/debugger.pt",
+      "sha256": "9687f87bc9a05596eb7a07ecf326ec1fc4167677f936ba4b9841fd6576cd276f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/demon.pt",
+      "sha256": "c80b7a9831717b6494816c1719656e948b6747f6b9cac582deab02524cf62668"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/designer.pt",
+      "sha256": "dd45288448312ce4a593f80fb05148ac8726e07187b5d0a067a46ff4c3652576"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/destroyer.pt",
+      "sha256": "846d8a95b8cf23893e8056eca064dd2bb30e5eeb4d1af667b927bad2b512717c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/detective.pt",
+      "sha256": "60d6ebda9733e102406f1763e47a1bd2d8a7bbcef51b9a58c2bc64543195e9c4"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/devils_advocate.pt",
+      "sha256": "af9612e2da7c41345599cd0dc3e29e3cd7c3d3d8a71a4f31dc5b397ebae0c713"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/dilettante.pt",
+      "sha256": "3abbe09d872e6f3855779938fbb7fdd601a5b7e3650c236ccdf2d62337da4252"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/dispatcher.pt",
+      "sha256": "5173525177071b770b719ea5848c733e58cbfaf10b597689f4d20887cf0b3187"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/divorcee.pt",
+      "sha256": "9fff709370059b7a749f6d4c5861207c33c6c18ce5f42492a4c076343011a91d"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/doctor.pt",
+      "sha256": "d75660ab41ae97d8215a0d349a65140c8dad387e6eef477ef4f5eacd5a6afe70"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/dreamer.pt",
+      "sha256": "769156673a107de2439b96e4dc66541aef35a3655d8b13021cbdebe62ae570d1"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/echo.pt",
+      "sha256": "84079a6da06231c02977441795ceb2904b893d23c94c18fc1b124181dbdc1c41"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/economist.pt",
+      "sha256": "cc59e0736b153009b5f2b641a37e1bbc8aaf227c0a1ab9a3a8ea19cf5eb97050"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/ecosystem.pt",
+      "sha256": "f7a5ad3c327cc3858833f06f9614e29aa31f25244251b9cd59a7585136d0993b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/editor.pt",
+      "sha256": "d92db7e3eb78f4ab9b52d9647454cf3fbd73ddbd8c8059f488f7887fd628f02a"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/egregore.pt",
+      "sha256": "c22e5b0a69bf34cace2fac73e3d125a5f7580672bb6723244c8ce3144a4b5410"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/elder.pt",
+      "sha256": "aca3084ce7ce3e8cd9970b88ee9ebff690231ca84ba6f4b37c525775222bbb36"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/eldritch.pt",
+      "sha256": "8bba5db4af231f2dfab5e792cb6a03180bca01e3ce734508b0fad8a3f807b4ff"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/emissary.pt",
+      "sha256": "2321fbda8a38bd373393a358c79d2460032e445d6d479ff1be428570dde87354"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/empath.pt",
+      "sha256": "e67e2a2a5c317699f1840ddb0555843737dcf39baccb6b099c576cad00fc043b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/engineer.pt",
+      "sha256": "2e02eaab0ab0746b59142518fc63da7cb61dedeac4097b43f08bda9a9ff79662"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/entrepreneur.pt",
+      "sha256": "f03c2fb8bb47441dc33f49f6e91dcb85a9776a204e8b1b793219d3a9f50db870"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/evaluator.pt",
+      "sha256": "530ae95efd8d6eb9e70929156aaffd4688236d6b443034ac1835fd5dc3a0a9a9"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/evangelist.pt",
+      "sha256": "ece4f18177f1fdbf05c54018e3238e00aeadd2797714b5755a4a6e889e5d0182"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/examiner.pt",
+      "sha256": "4761110967f982d8a6b04bdd962a7ec35148ff2de0f959a4922c3b1c539b7083"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/exile.pt",
+      "sha256": "831482765464f339a6b3d880516f1b3d74ddadb491ff99cdab0b9a922afe9567"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/expatriate.pt",
+      "sha256": "26b02afa8d2718164e272e0ada9d1d1bf83e7b8c0e74e14aa1dcef5f8a8def0e"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/facilitator.pt",
+      "sha256": "a0a88df203e0a46cd606ce0fc735b8656f2f5f6218c3b044c26cf96f29ea4e15"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/familiar.pt",
+      "sha256": "a83e68c9e1c5dcc93460f75679d37b61f97452caa4e5b403183c5ff16cde095f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/fixer.pt",
+      "sha256": "359931d89a94b5e104d6e5f67563ed7b9ef492832c69f75859bf45a0341901f8"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/flaneur.pt",
+      "sha256": "6db209785705e42718531256b6a29db7d6bf47649cda0833ea0745bd07204c7e"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/fool.pt",
+      "sha256": "90572e79022d26ab43ee706dd86d8c8ede153be4e0b050d3f8bac593a2fdbe06"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/forecaster.pt",
+      "sha256": "3479a20e1c45b746e9f34c14af172280e26e24ae478537417554771bc09b3797"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/futurist.pt",
+      "sha256": "8a43b8009f0b4795a9e3bb0c1ef41de6dcc5602cc274344124632cd88ef32db2"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/gamer.pt",
+      "sha256": "6973b74aa5d04be26fd113bc5d3b8fc2779e8eac51c453bc1b9a2d315fb678a4"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/generalist.pt",
+      "sha256": "000bfe1a67fd64a72db4b5873f626d8f14ded849572b792b7c3a6fe70a9e40b6"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/genie.pt",
+      "sha256": "db70a3f7d962eca9b36aa09c8e9ae66a4f760f47437d04c8c6106ddc7b1319fe"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/geographer.pt",
+      "sha256": "884bc5ada2c00d655c03715b4bc945062a722f1807ff6788dff134ed1e7c9630"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/ghost.pt",
+      "sha256": "a0db755fc2d639fb5bfefb6b705833dccfc5f7cd78900579796eebdda124c5dc"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/golem.pt",
+      "sha256": "38565ece645f0c0f3fe9684be765e1dcc5228664180e2b9cf5f44196ebb96df5"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/gossip.pt",
+      "sha256": "1075806a6a9ecc61b53edb870a0b44f16555b953f7757a34e0dcc6f1e2647d53"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/grader.pt",
+      "sha256": "a92d7aca8ffde7ad4877048581295e188118840dd2197ad4e5b07f8ffedebd3d"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/graduate.pt",
+      "sha256": "e0120b9fe28f0ca5bbd5616bc9d7d017617e3883bacc01a8f050a31b9c85e47f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/grandparent.pt",
+      "sha256": "470a78388f2092662a18ee8eeacdae3577ea1bb35bbc044aa68836a64e68f5d5"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/guardian.pt",
+      "sha256": "29e51e547a23d209106f42bd9ab66daf0919deb2a71354df9fdeb580d2f97bc0"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/guide.pt",
+      "sha256": "d0c51094698a0f5a52262e1451dc91b0f63f5dcb67507c3b220e119fa62812ce"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/guru.pt",
+      "sha256": "e6e8529517578aedc00e40d8f3cf642b913e9ac9cab02482fc8194e4946bd305"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/hacker.pt",
+      "sha256": "02db176cfb6deab5796ef49b65f66c65e82d7eb5b21efb220e6e4c5d04d0618a"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/healer.pt",
+      "sha256": "b697e6f815788b20abb638fbb9172268979b837bcdf2b19313113e4c26279b1b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/hedonist.pt",
+      "sha256": "c47d1c942ba9baf3d59d9b7ea0c4492e8b974120ce1c96e7541ce4a038d662d4"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/hermit.pt",
+      "sha256": "853fbc746a9e7588ecd1a027a208d51c17414dac49209e3908a35ca59edd1c1f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/historian.pt",
+      "sha256": "411a462d3893f391f9f2db35a2b7c61735f293648ca72c93bae36c5e94cd8d51"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/hive.pt",
+      "sha256": "a76bad3df3e57e016a1e2cc75a84ae88727ef99f42822950b841082a61331538"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/hoarder.pt",
+      "sha256": "e4b7b2ebd645dd240ae6a5abc4bafb9af87e9bd3e04bba40ebb87741fd9496b9"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/homunculus.pt",
+      "sha256": "c2900b25515eab4b1ed07f9077d518fd2a8d29c91db58eadb15bc25cce2d364d"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/hybrid.pt",
+      "sha256": "0968260e5b4fae153e29e643cf0f7f44ca29b23cb24fb16022bc4a39b9e993e6"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/idealist.pt",
+      "sha256": "844d18ea194c9aa6fb58e6692d35cf1adf3bc6bafe4ffc35be4aea4c49aa4405"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/immigrant.pt",
+      "sha256": "56736e058154ee83d50cbfe420af5e0e40d6568057168678fd9d6d515f3a78ab"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/improviser.pt",
+      "sha256": "fd1f1c68253c4bc99c1d9010bdb38dc118301929dca2c9b178677300b950f539"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/infant.pt",
+      "sha256": "06cd2b2a32dc1d42dbdac707d80391ca25bf72f3b989a7c9d119716f11059b17"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/influencer.pt",
+      "sha256": "bec5e3010e7d070967da93e40a7c554d12cbf2c088dac522d552d434185046fb"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/instructor.pt",
+      "sha256": "e8a8ed6c6ee0f6886990563062772f634007114f38a7ca9f6444bb09356ec0ad"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/interpreter.pt",
+      "sha256": "7dba80a59e88454ee69e8c47998884d731ab3d72790875e17e70d2df3d9a5c8f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/interviewer.pt",
+      "sha256": "d5cc116f4ae9335da78d18b58852c5b4ba9f46ba8233867e84ccd7d270ac0c00"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/jester.pt",
+      "sha256": "0e32c68ceb8777332439db7c1580cbb6d7351cdfe04391ab58409262b1d8c13e"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/journalist.pt",
+      "sha256": "b9148e53dbdb36243aefb54f52d4c82a5d341e47a865752cb493af74d8011b8a"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/judge.pt",
+      "sha256": "5f16f79b29c278a9765f9a567173e82b2163604ff87a61fb0acd051bf19b0c93"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/lawyer.pt",
+      "sha256": "e315b4167719a2b64d140089ed391f9746baa49d8306dbccae3e5c6067de1aa2"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/leviathan.pt",
+      "sha256": "79d5f84bb221b6d2503ec2f950c01821d616482b5ec5b2933c9f172894502407"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/librarian.pt",
+      "sha256": "7030f6b52c7c8ff13177f837b44241b1f020689644febd890803c0afa3404d0d"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/linguist.pt",
+      "sha256": "dcab8ffd7724a8f079bc736b44d224e1b71a2faa88716ce4d22c8f76192837f0"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/loner.pt",
+      "sha256": "8af5c80a461c2d1d432f4c022a3a932ba3936f6745d2f3182507e75335568c54"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/luddite.pt",
+      "sha256": "de57f3771d9c49a49131daba5960247d55c4db79f6f41de803ce3466954e1078"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/marketer.pt",
+      "sha256": "233e27d69c60f48c15b5648bd4118ab0ea80bb81f851c7c5385d771011d1efb8"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/martyr.pt",
+      "sha256": "ae643eb22d10f9a285ff0f0cd585e3dd8e78649e7bb1a8aee4a8b126751740b7"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/mathematician.pt",
+      "sha256": "79b1848ccfdb1623bd018c3a8450072576dfa91169490987ba7202f791acbe84"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/maverick.pt",
+      "sha256": "d0de5b2d451a2f8d7a99bc5e22e844a4b86292aa4b83d9904d03a9322075805e"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/mechanic.pt",
+      "sha256": "47077e02a9b1c1dcf32fda5624de5e63730cc65d54a3811dd94a97b17b09d752"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/mediator.pt",
+      "sha256": "aca6b62275f62a6c232eb0d6c0ff2606d75bcc1dfa004be1a5adba9439ec15d9"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/mentor.pt",
+      "sha256": "e4d607495d1edeffbaf673f28e5e547017229dd51ba771fa1c7d254995c8c4f6"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/merchant.pt",
+      "sha256": "61149802673fb7e6d68091d39e9cc4562a7516a85ee37217d91d25a60d703a20"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/minimalist.pt",
+      "sha256": "2b7ad18469e370c407145790f6998564e4d9726779f7d1411d74a06cef401ad3"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/moderator.pt",
+      "sha256": "16e6525dbe44a034ae5abc167fdc6405a0761a89964b2dcd928c84e755ccfbe6"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/musician.pt",
+      "sha256": "df14bfb3b496b628bc54f083c487e16aa21c2c6fe645d24a9ce608502cc5d387"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/mycorrhizal.pt",
+      "sha256": "75bb6fb9975de98bfc6f68ce5ee1eff3680fd2cdab8b9835f844d92195260884"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/mystic.pt",
+      "sha256": "edf5263f9cafcae614ed69b261160ad7a3861521e5c8ae95d16a0176b5c97673"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/narcissist.pt",
+      "sha256": "e8241bd0627c93ec6c849fcb9744acc3481a071e67435db44121568307a56cfa"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/narrator.pt",
+      "sha256": "d229e2ca3009c54618ad92d4a9e61bc9e4bd509ccc97255b3656709e1fd3fe90"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/naturalist.pt",
+      "sha256": "615875c2bc50fe51c1cdb5b576d2a03c312f01a14f626005689c916ea3498615"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/navigator.pt",
+      "sha256": "7e788ce78c009986a8dfc6a375cc509ab087286edf36b0aa5ebccd18f34bc460"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/negotiator.pt",
+      "sha256": "8629bb43f0d544b849ca023cb0f189bc166f12116e06e5de4cd8735daec5c61b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/networker.pt",
+      "sha256": "32f29bf4ee7c7e9f86164f838db794b9d817ddd0b826a27aa64aed6cc26846b9"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/newlywed.pt",
+      "sha256": "ef0935cf36c4086f2e0da48a703ef4d2f9d4500aa6d27bf4b6d9ecae9df098d6"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/nomad.pt",
+      "sha256": "49b0e4bf0f343cefd647b3ed8214828bca35232049678a6c1f0ff6deee2391d1"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/novelist.pt",
+      "sha256": "f5250f890416b02d8989e1cd3aadac6b76d8627c2f520eb98e419b2fcf78d448"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/nutritionist.pt",
+      "sha256": "4c28c6da3cabf9a22eb963fdd926d9c8d42b18b809deca9065c72cc99067d6c6"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/observer.pt",
+      "sha256": "dd9da7a452d77aa4756885a000416cdb6efa4f3dfa5de53d0c99902d598a8735"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/optimist.pt",
+      "sha256": "e31e98263c9c3afbe96d581d3efa89ab62ccd5e336c87a7cab08ea3e7595db4f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/oracle.pt",
+      "sha256": "f08c5635a69e3d9bf09f2cb8111d6b653fa5e48012b7bcc6393dcf467822399a"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/organizer.pt",
+      "sha256": "4de6d8c06d08c85f05ef4b8d0953ba986b932d9a8f47e03e120a3c98ce8cf30b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/orphan.pt",
+      "sha256": "c50af4debe87384d5a6e72dbb1253beb86209737f76df9cf8d956c51a404c113"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/pacifist.pt",
+      "sha256": "75bcccb38cbc8d641d5d1c83fb7b52581fa713d3a150921b6e8a1f5b4ff0c41e"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/paramedic.pt",
+      "sha256": "6f781f8947e7a6cc47299fab466c7744934703b1f908c6e1871276fd48e46a17"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/parasite.pt",
+      "sha256": "911aa053616882abba790e5ff6fc0b0e44f5b3c7691c735f615625ef09b1c899"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/parent.pt",
+      "sha256": "664c205f5d85e5a91fde341725224181e7d93a82abcf8c4f9f57a5f70b51b728"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/patient.pt",
+      "sha256": "20686a0438a04bf8e17fbe8f96b32e529d2946a302774391fbe1bd016888267c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/peacekeeper.pt",
+      "sha256": "e2134022c7aa361572b0830e2394bfc7067c4b0021451931e593d892f1181408"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/perfectionist.pt",
+      "sha256": "e95598c96976bbc259dbdcbe0cc2e77e977e03cca920f58599c303e5b2c08e1e"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/pharmacist.pt",
+      "sha256": "6ef6844864fcc2ca8bcf285a4cd7a5faeb5c218b9ebcc9905d22f84e2d60aa2d"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/philosopher.pt",
+      "sha256": "3d890e08a0d979a05c6724741ff830693b9c0c233d97c57e1f1c1a5b488fa2c3"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/photographer.pt",
+      "sha256": "0e88871ef19e8efdc026462af58810257dfdc385657c63ae74f2b0f3a06fc585"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/physicist.pt",
+      "sha256": "34daad0edacdb25462f6aac2c204a6dc0b41b9ba1a70ded7ee99c7707c48a7a3"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/pilgrim.pt",
+      "sha256": "8fd0e9c47f1230b7ec777620b973bbc6cc770e44fe12515ed47149390238b288"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/pilot.pt",
+      "sha256": "9c8afe9b2561ecd455ad46f6f49339f6bec087255b3e78724eb4809ddc05993c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/pirate.pt",
+      "sha256": "dc765492bef09867fe6660f7df4e22be26045366209ced4ad74916a6f46458e1"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/planner.pt",
+      "sha256": "8d4db05ae612d56ec1d809dd571b13449cc5ae522aadabb75b9a84a19c0aca11"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/playwright.pt",
+      "sha256": "e386e263d405b8c3c1e9b2452666324267841c905795409c03c4b4b77816b99d"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/podcaster.pt",
+      "sha256": "9694a7bbe8eb463c1f2eb7524758580419333649265d58d2a97c64ebff203f88"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/poet.pt",
+      "sha256": "22a6431b63e412e840730def8e99e25299a6151e43431887cb9f53daffa2b2d8"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/polymath.pt",
+      "sha256": "95a6c68342eaef507c75fdd59822465dd0b825122fe40c81163da3c1596bba0a"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/pragmatist.pt",
+      "sha256": "863e097564f4b13b9d151ff4350ebd34795d660085c19c0e2a81c4892adb6d47"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/predator.pt",
+      "sha256": "47d994568b2d5aefffb0ee547c01f77dc20ac7fc0da1c0514179649d86c85c5c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/presenter.pt",
+      "sha256": "497454fd08db461a5c82ec847f0a24fa4caff9f38e3c53ea9614f25e5a4d4778"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/prey.pt",
+      "sha256": "a176e01b987edc4b2eac35a2a4616168cf5a706ae8954d5e7588e2b815c49ffb"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/prisoner.pt",
+      "sha256": "7d0a9dbfc5f9107553d86742035e42a8dc1810a5746cc753b5b9dc2f3918c461"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/procrastinator.pt",
+      "sha256": "38d50b047a3afcc659bd87fcb7c2fe04683a9b58730065a88bb9a81f561e5988"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/prodigy.pt",
+      "sha256": "c6f955c2d7f3f18789751e87e008d96c57bb2935eeb1b60f3b1c752a63dae724"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/producer.pt",
+      "sha256": "c0de96334530f1bee5909a4e912775527ace1ec29fdc4736d29385cd1e467313"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/programmer.pt",
+      "sha256": "76e7607f950744f55bc6276af965df4c8b91253ec2e93fe104ea615a3c97c65c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/proofreader.pt",
+      "sha256": "fbe4b2916539a41a3dd71ec52468854fda848a604128168f8431b82faf1228df"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/prophet.pt",
+      "sha256": "26a387a3b736e7445145f40951f49292718d6ee5882484eec3d37e925eee8754"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/provincial.pt",
+      "sha256": "ef62836d93d17a2e81d25cc8590ac7af54aaefb6be4ff7173b227bfeadfc1401"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/provocateur.pt",
+      "sha256": "c006e82d26921204aa05bee9367bd0510a169525a34646cca1987c2583cf5a99"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/psychologist.pt",
+      "sha256": "9964041df2904ba9e4ce335bcd80b49ccbe6bfa98ff2b99fb2ec376e67c9b10f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/publisher.pt",
+      "sha256": "8eaac7558f9c25f0613bd75b465c6ebc35091bd0e386ab43a2c08eba0aeb40f1"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/purist.pt",
+      "sha256": "795132db9181cb33fa09db582b2e43b9ff3de2de838ed720ab62e3d693a30286"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/realist.pt",
+      "sha256": "f6c95b3fdc7632f9132e4d7d3a4961d1308f3f5a4d145e9cc30e04e1f88b09f7"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/rebel.pt",
+      "sha256": "c77295f1962eca84eb8b6f1de196a04ba330181b9d05925efb18669fc4c6ad4c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/recruiter.pt",
+      "sha256": "0a455f8b18e477bc6e0cc31ec7af4f0f4dda6833fd484a64e1a63963a4816932"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/refugee.pt",
+      "sha256": "39f3a9cc1b3b964df41b4cf9d7926eb464b4cb0dd0d5168b5de821c6fdbed020"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/reporter.pt",
+      "sha256": "bc5140622dc069d9348a63be5dde369708fdede7030394ee6c40379d6b45938d"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/researcher.pt",
+      "sha256": "b19bf0d27a970b27ec7ead2d5c1edcf9899417c0ec361857f6b1e38461a54e36"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/retiree.pt",
+      "sha256": "9fc0c6e79ae906f944f6b2cde012ebe6daedd7da32504b9cc27efcbad548fa1f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/revenant.pt",
+      "sha256": "b2d3d86f2f2cd90b5ad3391714a2f8a37f67665bce5c7c7f9b4660e83b28996e"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/reviewer.pt",
+      "sha256": "fe81fb4dbf744d625637be4af77a4a04f7b79988b847e82315bab93df23efc17"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/revolutionary.pt",
+      "sha256": "a7f0284cc1dde7184fa748eb838c4c004539662237eecfbd7c511f44e9a60724"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/robot.pt",
+      "sha256": "be7f97f2ae643317eeb97a6632b245059150a1cb81f89443bca03365759471c8"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/rogue.pt",
+      "sha256": "7fb785f6e878c46dab9136710981be481c45a239ba37f9747f46c9bc976b7674"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/romantic.pt",
+      "sha256": "9fdcc0bf2425acfc4230f3f564a0b43685e1de5d80d0525eacdf44d0d7e152fc"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/saboteur.pt",
+      "sha256": "c2d2ce097cb050b3e0b45aea7ce5d8ecd72cb98b4da41b4f1a400363ec516bcb"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/sage.pt",
+      "sha256": "c7e241da484cbc9c278bf890c89ea122388805df4215d9c3ebfc9e932402263d"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/scheduler.pt",
+      "sha256": "cda656e2762015fc335489a9ba747ebe2b993b5823038e17d8a5d74ffd5c6ea6"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/scholar.pt",
+      "sha256": "97cfe072216b56c5825921d2184be6e04fe41b5ae662374722db5f67daaa23bd"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/scientist.pt",
+      "sha256": "943694bafc0ec9fa100b89f0643caf00990e112410bd6bd93b4cbac8a4968ee9"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/scout.pt",
+      "sha256": "0f74b2a56324a505cff82de1fce1da1995ade036f5f2ce422da443613e637b6b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/screener.pt",
+      "sha256": "43730bacd29e6e68b291974e198dca99dc1c277914692f0c3aaa95b791fe5061"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/secretary.pt",
+      "sha256": "b3d3ad9414fd436360fb0ecc1ba90ed5f2acac92d84d9b3c9831bcd5f2fe57c8"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/shaman.pt",
+      "sha256": "6d847a7bf4932ca4b4b0808c2bab5cb3efe2c0989d7a8e086c1315ab01099bcd"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/shapeshifter.pt",
+      "sha256": "4a8ed5ac18108161338ec45830e97bd77759bd1e9e18420d7b7b37c745d5063f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/simulacrum.pt",
+      "sha256": "f38fc29e392c0f4cfc3932270354a62415975fb8126dfd83fb8633565ebf8cbe"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/skeptic.pt",
+      "sha256": "83fe35bada3f478863f627cd1d24e246c1d9b3b38c4135816b2267c5a98c79ef"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/smuggler.pt",
+      "sha256": "f241816d76e1aafd8ff49b3e9434764b8d7c8bf285b6912f5a65dc62bbabba05"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/sociologist.pt",
+      "sha256": "db658c7396d343d794e0152702a91d4eb59f22883b0c18b8349123bbfb27e48b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/soldier.pt",
+      "sha256": "dce32df4217ebc63e2cad109e61b09be66d00e0c0268cdd1c0e8915240384b04"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/sommelier.pt",
+      "sha256": "5596431f009748e4d3c008b54873fcbaa301c550a709d9104948507ac830412d"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/specialist.pt",
+      "sha256": "899e73c13fd419b0e5a14f54098bf8947fe9cd625188d9af16774aa6b3515ae7"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/spirit.pt",
+      "sha256": "33cb1c9db05c11a86c920c4851fb6a3203e0cb18c3f6d892cc764a653f20d666"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/spy.pt",
+      "sha256": "d0085c4156dddbc9e37a2e9232ec13eba10fda0d2ea3b6a48e77bd9e76ee8091"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/statistician.pt",
+      "sha256": "90b87228207b1e1c887f46adafbb6e48b6c6bcd4ad09b647595225629533a948"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/stoic.pt",
+      "sha256": "f2c0456c62b2925c76e63c192cf811edb13578dc9dcdd26ebeaa81ac5f8817b0"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/strategist.pt",
+      "sha256": "f1c706871b6624590320917f2e7163acabcafd1ac5f27ff5ea256bc759a08f30"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/student.pt",
+      "sha256": "e7251ba70257c2d87107e79b6ae19daa044873f96f4005d68ec5b622bd1cafa6"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/summarizer.pt",
+      "sha256": "35927199148abc4f7307883b0a6d1ab42b8f97b2b7234f009c097fa332b302ae"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/supervisor.pt",
+      "sha256": "036ca62842750be40bbb571d447520887c721a79977d3308d4efa6b07d455884"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/surfer.pt",
+      "sha256": "a480fc8c4a596814ffd83fe5ecc0275fa94522979f23cb7d3fc8b6c56a0be955"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/survivor.pt",
+      "sha256": "83be330ad0cc2571322b18f8c3edf9b29725f7088094b3a830d3c893d9aaef7c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/swarm.pt",
+      "sha256": "8125ca429c0812979d04fdd3d0532ffcc8a6e5decf3020ad2d21cdaa941100f8"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/symbiont.pt",
+      "sha256": "a1fff42e074ec5e5dd758ba3296ce332378e3dda0402b828389a8a5f9981b39e"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/synthesizer.pt",
+      "sha256": "cfd3ea966d996b10d9e6b424b75b15683704f1a34d3f4eaab4b8cc455622b6aa"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/teacher.pt",
+      "sha256": "a56f1066b083ab5ccd0b8ba7ec5b03aebe6c76abcbf6d56c134dd0e61100af77"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/technologist.pt",
+      "sha256": "78d9ddb7046f858049cff4d63bc91e333d26d6b52656249294ab25d735466ec6"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/teenager.pt",
+      "sha256": "3e312b352dd14773b9385d5f987d7f8864d2028a55ccb5d2fc6ac28dd5c3f01c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/theorist.pt",
+      "sha256": "a7b381aaf9c6b08ce1e175f6f82d538e26a48a750ff27fa7beaa6019762836e1"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/therapist.pt",
+      "sha256": "cf979ef9a74a78e23820f96b6b198ba915aa7c072e5077fac2803e207860e376"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/toddler.pt",
+      "sha256": "fa409934d9b19f2f4316882a5858ecb90dea6cc0b3085cb628b95acde5f571cf"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/traditionalist.pt",
+      "sha256": "118f12a447c98c49448489fef04842da185b6307e0c1d6ecf68c68bbd87d651f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/trainer.pt",
+      "sha256": "ea1be29241a15bd0b3af50a165464b57d3739764373f0bd071a8dd3d2a2bfae5"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/translator.pt",
+      "sha256": "e0f8f95f5670f95d97ca0dffed89cda2a9dbbf7fc14bf858262ead5eb0442fec"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/tree.pt",
+      "sha256": "56f359a77f1d924ec04dba6784325108eba63ee97f2e3a679c18ae2ce15be745"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/trickster.pt",
+      "sha256": "50eab3dd7c7a6aa5b24cd6a82723f0c896f85f55601a94200bd201cbba96fd56"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/tulpa.pt",
+      "sha256": "89c6d3ada2aa5a5e523f7d973741d1b8dc46067dbebfdca1f051efc48d325c15"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/tutor.pt",
+      "sha256": "e018098174cd83bede97d66a1b8233fda64111d230a7d0708f7d4abf3c88c4e8"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/validator.pt",
+      "sha256": "dd73f163ba476e6236b22932d595a712472a7bb59118f20a9ce46cdd9cd52a83"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/vampire.pt",
+      "sha256": "9a7f5b15a8731b321e8979e55e32408aaae74437de1951e4ec36e2940121be57"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/vegan.pt",
+      "sha256": "544066b44843ef9dd7803dd118b00acd33c00c594b2b951cf761f787621672db"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/veteran.pt",
+      "sha256": "4ec155d71a525d66926f2c59a23abc8c80f052a4275d85e2e27ef9efb651fb8a"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/veterinarian.pt",
+      "sha256": "e14d8cfdebb14bf836057815ccd44036a63b36d19fc46b89ab6daa55ddd106ed"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/vigilante.pt",
+      "sha256": "809e2518fc3dcb24cf9d60bc238c677a175e5dc27e7f12dcfa8247dc0351a17b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/virtuoso.pt",
+      "sha256": "447db5daf7925300cfff364dfee4011b817a34313091cc3e01118ebbe486504b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/virus.pt",
+      "sha256": "5261c0f3e6812f341c669a334ea095c84102b97dd8d916010248165cdfb3e75c"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/visionary.pt",
+      "sha256": "df66bf4c8cfc589ce07e406903b0d15c03c763ef41d8424346f6c39da3960eba"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/void.pt",
+      "sha256": "0febca4bb3c33f1d84018cb7c5d1388dcdddaf6867922c4e20d9f6fd3172dc33"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/wanderer.pt",
+      "sha256": "6478e86f94ac0eba0d7a1d215f23d72391ec65757a090d668766cfc908fe570b"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/warrior.pt",
+      "sha256": "1ae531efe905bb7c0d7966f515238771a91b36acd9cf909c220d2574dd0e79cb"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/whale.pt",
+      "sha256": "54b3370b3bd864f56bc4970b91f593f45e4322b1fb71b5a809401cdd8a0f08c7"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/widow.pt",
+      "sha256": "ecd868ef6a7a1b2d51d45c51c94ea114ddabd2ec9b3acb9e5cef1a1ce390c21d"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/wind.pt",
+      "sha256": "a971b6ace6f480cec0e8d607fbbc54630f79dd03de5d6bb70977c0374ccedee6"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/witch.pt",
+      "sha256": "bc44cc62e46b44723e69bd9733889304b7c6c1bb4997b2cc52b32e0562af4f04"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/witness.pt",
+      "sha256": "3aa32f2e6f3f95e358907966dcd918e1dfae405bc6ff2b5add0d1be23865ac4e"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/workaholic.pt",
+      "sha256": "d6de1ff910dda8258e9ce5c855d2fd73608305dcfa2d0432d093e9bc4833c32f"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/wraith.pt",
+      "sha256": "e2c1713316ff71632fd8b40bdef59e305ef7efa49fbfdcc203484a1e3d047481"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/writer.pt",
+      "sha256": "f59c92dca2350d68bccd612d76fd41002cb47f6f08d8c678f913438f8c183674"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/zealot.pt",
+      "sha256": "851aae69613ee404f10a4d030aea2e6187687c3fcb8a8dff4f902c5aeca31d01"
+    },
+    {
+      "path": "downloads/hf_vectors/qwen-3-32b/role_vectors/zeitgeist.pt",
+      "sha256": "c86b109e65499d3c6b19455a9b98674c2a141c5885d2c72ac8b7473d4cfc3a34"
+    },
+    {
+      "path": "research/visualizations/geometry_viz_data.json",
+      "sha256": "1b15d8e3425bc3d51032919157eb683f1358f353f4ee071a18d06347a792ec6d"
+    },
+    {
+      "path": "research/emotions/outputs/emotion_readout_directions_qwen3_32b_full_layer48.pt",
+      "sha256": "1197828baa37be6aa66cdc2e850bc288a0aff9390bf3550acd58996f96817f07"
+    },
+    {
+      "path": "research/emotions/scripts/extract_qwen_full.py",
+      "sha256": "71e0b38d2371a1f92a99806aa81a6470a4c5f318d289e47f24c37f8511486e6f"
+    },
+    {
+      "path": "research/outputs/a100_two_role_activation_cloud_pilot/boundary_test_results.json",
+      "sha256": "9dbee6113c88d742384da037c4b403cc6721e7c147a7ed5f63d7661de44a1a01"
+    },
+    {
+      "path": "research/outputs/persona_emotion_surface_viewer/run_persona_emotion_surface_viewer.py",
+      "sha256": "a9d011e12ac061707cb3321201e6f5563d3cc6c68f3ce2f05d0d098e37ad7e51"
+    },
+    {
+      "path": "research/outputs/persona_emotion_surface_viewer/viewer_template.html",
+      "sha256": "079b225b5a933daf63b1807b3451fa79e91a321e91b62b876357bb7e1de39494"
+    },
+    {
+      "path": "research/outputs/persona_emotion_surface_viewer/viewer.js",
+      "sha256": "07feec220cf0e1f3251328c750d8c21b2a692444569b8bcf759b1210bb5f1a0e"
+    },
+    {
+      "path": "assistant_axis/internals/activations.py",
+      "sha256": "c01c87b51ab3f56e552307f6a3f0edcb85518913fa65bb72e52369721a30fdb9"
+    },
+    {
+      "path": "research/visualizations/scripts/build_geometry_viz.py",
+      "sha256": "a309aa185e973c4edcba711d19b1e7db4e45ab6ab8a2f8f60e32ed6151f24cf8"
+    },
+    {
+      "path": "research/assistant_axis_methodology/role_vector_structure_audit.md",
+      "sha256": "af967d44745fbc663cc88aebed4f72c19ce7b2fd5b28cd6a9f2d20777d64e9e6"
+    },
+    {
+      "path": "research/outputs/public_source_extraction_equivalence/qwen_hidden_states_semantics_notes.md",
+      "sha256": "5ff04be2e815124493f71a7c8d2f8699e27f3de65d0a525ae0b580ae7d54edca"
+    },
+    {
+      "path": "research/emotions/outputs/mean_activation_qwen3_32b_full_layer48.npy",
+      "sha256": "673e22f36096393d34e6987cee335033e8b5d25f90bf6cb075580794ae10f5db"
+    },
+    {
+      "path": "research/emotions/outputs/pc1_direction_qwen3_32b_full_layer48.npy",
+      "sha256": "62477f7627511a64ad5887be492392be0d6ee3a622e8f6a5f9c8a227e184eb4c"
+    }
+  ],
+  "elapsed_seconds": 0.7155985409626737,
+  "verification": {
+    "unique_personas": true,
+    "finite_sources": true,
+    "normalization_pass": true,
+    "pc_coordinates_copied_without_refit": true,
+    "surface_diagnostics_are_in_sample": true
+  },
+  "outputs": [
+    {
+      "filename": "persona_emotion_score_sensitivity.csv",
+      "sha256": "2a86a03d5f93af8023942adfc90d2b03cea279d3e91c6fa63f311f008b544b68",
+      "bytes": 1829
+    },
+    {
+      "filename": "persona_emotion_scores.csv",
+      "sha256": "c21bfb198c1bb8c0a068ee2270177883d48e9fdd5a86a008f4f6148af6be28ca",
+      "bytes": 232207
+    },
+    {
+      "filename": "persona_emotion_surface_data.json",
+      "sha256": "882c43fc05886e1a0a861d15026319d387e71bf05bb7af116ee8c19f4fa8ae41",
+      "bytes": 1832307
+    },
+    {
+      "filename": "persona_emotion_surface_fit_diagnostics.csv",
+      "sha256": "eba7d63caad9b605db223d85abb15adbdefb79dd45893519e9f2b90fc86cefe8",
+      "bytes": 4655
+    },
+    {
+      "filename": "persona_emotion_surface_methodology.md",
+      "sha256": "034e3d476a6c8f1c9a81aba86f3606f555181d7a1e31b8b33bfd61bb12187bfd",
+      "bytes": 6552
+    },
+    {
+      "filename": "persona_emotion_surface_viewer.html",
+      "sha256": "a3cddb11f60d62f4c3d36ec4567635273f6da9d67b93223f5a785f5944af1acc",
+      "bytes": 6699720
+    }
+  ]
+}

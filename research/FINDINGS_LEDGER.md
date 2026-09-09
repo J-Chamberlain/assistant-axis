@@ -120,6 +120,10 @@ The forced manual cap pilot froze geometry despite zero leakage, with post-T3 tr
 
 ## Provisional Interpretations
 
+### Qwen Persona Emotion-Affinity Overlay (2026-09-09)
+
+Observed: the offline viewer under `research/outputs/persona_emotion_surface_viewer/` uses exact existing PC coordinates and 1,650 relative cosine affinities (275 roles x six emotions). Source conventions support matching released role row 47 to the story emotion readout's `hidden_states[48]`. Layer-mean sensitivity correlations are 0.927-0.968 with top-20 overlap 0.60-0.90; story-centering/nuisance removal correlations are 0.943-0.997 with overlap 0.55-0.95. These diagnostics do not select a preferred psychological interpretation. Inferred: the viewer may help inspect emotion-associated structure. Unknown: functional-valence transfer from story last tokens to response-mean centroids, response prevalence, and subjective experience. No new inference, API calls, or GPU measurements; claim statuses remain unchanged.
+
 ### Assistant-Adjacent Collapse
 
 Editor weakness may reflect collapse toward generic assistant behavior for assistant-adjacent personas under the current Lu-style extraction setup. This is plausible but still provisional because only one editor chunk and one matched token-cap follow-up have been tested.

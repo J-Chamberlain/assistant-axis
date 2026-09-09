@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "personas": 275,
+  "score_rows": 1650,
+  "independent_source_cosines": 66,
+  "checks": [
+    "exact canonical coordinates",
+    "unique persona/emotion rows",
+    "CSV/bundle equality",
+    "population normalization and midrank percentiles",
+    "independent layer-47 cosine sample",
+    "all 54 support masks",
+    "no clipping",
+    "all source and output hashes"
+  ]
+}

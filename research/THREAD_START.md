@@ -8,7 +8,7 @@ This is the three-minute continuity file for new GPT, Claude, and Codex threads.
 
 ## Current Objective
 
-Immediate user-requested work (2026-09-09): the Qwen emotion surface viewer plan is documented at `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer_plan.md`. The proposed tool combines two existing PC axes with normalized emotion-affinity height, six slider states, and a smooth fabric surface with persona nodes. Implementation has not started. Begin future implementation with the plan's layer/preprocessing checks: the historical emotion readout and corrected response-cloud extraction use different boundaries and pooling, while the existing explorer PCA averages role vectors across layers. This is an exploratory visualization track; paper claims and prior findings remain unchanged.
+Immediate user-requested work (2026-09-09): the Qwen emotion surface viewer is ready for manual inspection at `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html`. It combines two selected PCs with six normalized emotion-affinity heights, a masked smooth fabric, and 275 exact hoverable/selectable nodes. The layer check supports released row 47 for the emotion extractor's `hidden_states[48]`; corrected response clouds use block 48/`hidden_states[49]`, and the displayed PCA still averages released vectors across layers. Scoring, preprocessing sensitivity, data/browser checks, and screenshots are preserved in the same directory. Next step is user review of this offline prototype, not another GPU run. These are exploratory centroid affinities; story-to-role pooling transfer and response-level functional-valence validation remain unresolved. Paper claim statuses are unchanged.
 
 The active Paper 1.5 objective is to write **Interpreting Persona Activation Geometry**. The paper is no longer primarily an adaptive extraction replication paper. Its contribution is an interpretation of persona activation geometry after methodological stress testing: semantic structure, dispositional/trait structure, procedural/operating-mode structure, lexical/register structure, and residual developmental/liminal/collective structure.
 
@@ -88,6 +88,8 @@ The cone hypothesis remains speculative. The geometry appears to narrow at high 
 Persona vectors should be described as centroids of local response-state distributions when discussing activation-cloud pilots. Cloud shape metrics are promising but remain future Paper 2/local-manifold evidence until sampled across more roles under balanced conditions.
 
 ## Current Risks
+
+Do not interpret the emotion surface's z-scores as prevalence, probabilities, subjective experience, or validated functional emotion. The fabric is a supported smooth fit over two existing PCs, not evidence that emotion is determined by those PCs. Normalization is per emotion over a fixed 275-role reference; preprocessing sensitivity affects some top-persona rankings.
 
 Do not overstate Lu-method replication. Codex/GPT-5.5 scoring, adaptive stopping, no-label prompt ablation, and reading-based Codex ratings are methodological extensions or pragmatic substitutions.
 

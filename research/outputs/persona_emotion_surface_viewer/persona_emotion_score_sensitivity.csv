@@ -1,0 +1,19 @@
+emotion,variant,spearman_vs_primary,top20_overlap_fraction,status
+joyful,adjacent_row48,0.9946164276852947,0.9,sensitivity only; not the displayed measurement
+joyful,layer_mean,0.9356394795303079,0.7,sensitivity only; not the displayed measurement
+joyful,story_mean_centered_pc_removed,0.9967300424107788,0.95,sensitivity only; not the displayed measurement
+calm,adjacent_row48,0.9933342950289953,0.95,sensitivity only; not the displayed measurement
+calm,layer_mean,0.9268468884336862,0.7,sensitivity only; not the displayed measurement
+calm,story_mean_centered_pc_removed,0.9645261244626526,0.85,sensitivity only; not the displayed measurement
+sad,adjacent_row48,0.9931282998182395,0.95,sensitivity only; not the displayed measurement
+sad,layer_mean,0.9675698912322207,0.85,sensitivity only; not the displayed measurement
+sad,story_mean_centered_pc_removed,0.9511947145206427,0.9,sensitivity only; not the displayed measurement
+afraid,adjacent_row48,0.9877874267909177,0.9,sensitivity only; not the displayed measurement
+afraid,layer_mean,0.9282669282478866,0.6,sensitivity only; not the displayed measurement
+afraid,story_mean_centered_pc_removed,0.9777813681082486,0.9,sensitivity only; not the displayed measurement
+angry,adjacent_row48,0.9980779550503448,1.0,sensitivity only; not the displayed measurement
+angry,layer_mean,0.9496719656097633,0.9,sensitivity only; not the displayed measurement
+angry,story_mean_centered_pc_removed,0.9842358847119241,0.9,sensitivity only; not the displayed measurement
+disgusted,adjacent_row48,0.9885265860765703,0.85,sensitivity only; not the displayed measurement
+disgusted,layer_mean,0.9601459854014599,0.6,sensitivity only; not the displayed measurement
+disgusted,story_mean_centered_pc_removed,0.9431770577882924,0.55,sensitivity only; not the displayed measurement

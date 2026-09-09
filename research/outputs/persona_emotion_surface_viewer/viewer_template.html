@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Emotion Landscapes | Qwen Persona Geometry</title>
+<style>
+:root { --bg:#0d0d0d; --panel:#151515; --line:#2a2a2a; --text:#e8e8e8; --muted:#aaa6a0; --accent:#8eb8d0; --warm:#d5a38b; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--text); background:var(--bg); font:13px/1.5 Menlo,Consolas,"Liberation Mono",monospace; }
+header { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:20px 25px 17px; border-bottom:1px solid var(--line); }
+h1 { font-size:22px; line-height:1.3; margin:0 0 4px; font-weight:500; letter-spacing:-.6px; }
+.eyebrow { color:var(--accent); font-size:11px; text-transform:uppercase; letter-spacing:1.7px; margin-bottom:6px; }
+.subtitle { color:var(--muted); font-size:12px; }
+.count { text-align:right; color:var(--muted); white-space:nowrap; font-size:11px; }
+.count strong { color:var(--text); font-size:17px; font-weight:400; }
+button,input,select { font:inherit; color:var(--text); }
+select,button { background:#1b1b1b; border:1px solid #3b3b3b; border-radius:4px; padding:8px 10px; }
+button { cursor:pointer; }
+button:hover { border-color:var(--accent); }
+:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+label { color:var(--muted); }
+.toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:12px 19px; padding:13px 25px; border-bottom:1px solid var(--line); }
+.control { display:flex; align-items:center; gap:8px; font-size:12px; }
+input[type=checkbox] { accent-color:var(--accent); width:16px; height:16px; }
+.toolbar .end { margin-left:auto; }
+main { display:grid; grid-template-columns:minmax(0,1fr) 275px; }
+.canvas-wrap { min-width:0; position:relative; background:radial-gradient(ellipse at 45% 45%,#17191c 0%,#0d0d0d 75%); }
+#plot { width:100%; height:calc(100vh - 420px); min-height:460px; }
+.chart-title { position:absolute; top:15px; left:25px; pointer-events:none; z-index:1; }
+.chart-title strong { font-size:18px; font-weight:400; }
+.chart-title small { display:block; color:var(--muted); font-size:11px; }
+.legend { display:flex; gap:16px; flex-wrap:wrap; align-items:center; padding:9px 25px 15px; color:var(--muted); font-size:11px; }
+.legend span { display:inline-flex; align-items:center; gap:7px; }
+.dot { display:inline-block; width:7px; height:7px; border-radius:50%; background:#fff5df; }
+.gradient { display:inline-block; width:60px; height:7px; background:linear-gradient(90deg,#547d9d,#d5d3c9,#b6795d); border-radius:2px; }
+.thread { display:inline-block; width:19px; border-top:1px solid #999; }
+aside { padding:20px; border-left:1px solid var(--line); background:var(--panel); min-width:0; }
+.panel-heading { text-transform:uppercase; letter-spacing:1.2px; color:var(--muted); font-size:11px; margin:0 0 12px; }
+#persona-picker { width:100%; font-size:12px; }
+#selected-name { font-size:20px; font-weight:400; margin:22px 0 5px; overflow-wrap:anywhere; line-height:1.3; }
+#selection-kind { color:var(--accent); font-size:11px; min-height:17px; }
+#selected-score { font-size:34px; font-weight:400; margin-top:18px; font-variant-numeric:tabular-nums; line-height:1.2; }
+.score-label { color:var(--muted); font-size:11px; }
+dl { display:grid; grid-template-columns:1fr auto; gap:7px; font-size:11px; margin:22px 0; }
+dt { color:var(--muted); } dd { margin:0; font-variant-numeric:tabular-nums; }
+.small-note { color:var(--muted); font-size:11px; line-height:1.6; }
+.rule { border-top:1px solid var(--line); margin:20px 0; }
+#clear-selection { font-size:11px; padding:6px 9px; }
+.slider-panel { position:sticky; top:0; z-index:3; padding:13px 25px 10px; border-bottom:1px solid var(--line); background:#121212; }
+.slider-heading { display:flex; align-items:center; gap:12px; justify-content:space-between; margin-bottom:13px; }
+.slider-heading label { color:var(--text); font-size:13px; }
+#emotion-current { color:var(--warm); }
+#render-status { font-size:11px; color:var(--muted); }
+#emotion-slider { width:100%; margin:10px 0; accent-color:var(--warm); height:20px; cursor:ew-resize; }
+.emotion-stops { display:flex; justify-content:space-between; margin:4px -8px 0; }
+.emotion-stops button { padding:8px 2px; border:none; background:transparent; font-size:12px; color:var(--muted); text-align:center; }
+.emotion-stops button:first-child { text-align:left; padding-left:8px; }
+.emotion-stops button:last-child { text-align:right; padding-right:8px; }
+.emotion-stops button[aria-pressed=true] { color:var(--warm); }
+footer { padding:14px 25px 23px; border-top:1px solid var(--line); font-size:11px; color:var(--muted); }
+summary { cursor:pointer; color:var(--text); padding:5px 0; }
+.method-text { max-width:960px; line-height:1.7; }
+a { color:var(--accent); text-underline-offset:3px; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+#error { display:none; margin:20px; padding:20px; border:1px solid #bd735f; color:#efc5ad; }
+@media(max-width:850px) { main { grid-template-columns:minmax(0,1fr); } aside { border-left:0; border-top:1px solid var(--line); display:grid; grid-template-columns:1fr 1fr; gap:0 22px; } .aside-help { grid-column:1/-1; } #plot { height:560px; } #selected-name { margin-top:12px; } #selected-score { margin-top:12px; } aside .rule { margin:12px 0; } }
+@media(max-width:520px) { header { padding:17px 15px; } h1 { font-size:19px; } .count { display:none; } .toolbar { padding:12px 15px; gap:10px; } .toolbar .end { margin-left:0; } .control { font-size:11px; } select,button { min-height:40px; } #plot { height:460px; min-height:400px; } .chart-title { left:15px; } .legend { padding:9px 15px 12px; gap:8px; } .slider-panel { padding:16px 15px; } .slider-heading { align-items:start; } .emotion-stops { margin-left:-4px; margin-right:-4px; } .emotion-stops button { font-size:10px; min-height:44px; } aside { padding:15px; } #selected-name { font-size:18px; } footer { padding:12px 15px; } }
+</style>
+<script>__PLOTLY_LIBRARY__</script>
+</head>
+<body>
+<header>
+  <div><div class="eyebrow">Persona geometry / Qwen</div><h1>Emotion landscapes</h1><div class="subtitle">Two principal components. One emotion. A different view of the same personas.</div></div>
+  <div class="count"><strong>275</strong> personas<br>6 emotion directions</div>
+</header>
+<div class="toolbar" aria-label="Landscape controls">
+  <label class="control" for="x-axis">X axis <select id="x-axis"><option value="0">PC1</option><option value="1">PC2</option><option value="2">PC3</option></select></label>
+  <label class="control" for="y-axis">Y axis <select id="y-axis"><option value="0">PC1</option><option value="1" selected>PC2</option><option value="2">PC3</option></select></label>
+  <label class="control" for="smoothing">Surface <select id="smoothing"><option value="0">Detail</option><option value="1" selected>Balanced</option><option value="2">Gentle</option></select></label>
+  <label class="control"><input id="show-surface" type="checkbox" checked> Fabric</label>
+  <label class="control"><input id="show-connectors" type="checkbox" checked> Connectors</label>
+  <button id="reset-view" class="end" type="button">Reset view</button>
+</div>
+<section class="slider-panel" aria-label="Emotion selection">
+  <div class="slider-heading"><label for="emotion-slider">Emotion direction <strong id="emotion-current">Joy</strong></label><span id="render-status" role="status" aria-live="polite">Loading landscape...</span></div>
+  <input id="emotion-slider" type="range" min="0" max="5" value="0" step="1" aria-valuetext="Joy">
+  <div class="emotion-stops" id="emotion-stops"></div>
+</section>
+<div id="error" role="alert"></div>
+<main>
+  <section class="canvas-wrap" aria-label="Interactive emotion landscape">
+    <div class="chart-title"><strong id="plot-emotion">Joy</strong><small id="plane-caption">PC1 / PC2 &middot; height = relative affinity</small></div>
+    <p id="chart-description" class="sr-only">Rotatable three-dimensional plot. Persona nodes keep their original selected principal-component coordinates. Height is an emotion affinity z-score across 275 personas. The fabric is a smoothed estimate between nodes. Use the persona selector for keyboard-accessible values.</p>
+    <div id="plot" role="img" aria-describedby="chart-description"></div>
+    <div class="legend"><span><i class="dot"></i> Scored persona</span><span><i class="gradient"></i> Lower / average / higher affinity</span><span><i class="thread"></i> Node-to-fabric gap</span><span>Drag to rotate &middot; scroll to zoom</span></div>
+  </section>
+  <aside aria-label="Persona inspection">
+    <div><p class="panel-heading">Inspect a persona</p><label class="sr-only" for="persona-picker">Select a persona</label><select id="persona-picker"><option value="">Hover or choose a persona</option></select><h2 id="selected-name">Explore the fabric</h2><div id="selection-kind">Hover a node or choose a name</div><button id="clear-selection" type="button" hidden>Clear selection</button></div>
+    <div><div id="selected-score">--</div><div class="score-label">relative affinity / standard deviations</div><dl><dt>Percentile</dt><dd id="selected-percentile">--</dd><dt>Raw cosine</dt><dd id="selected-raw">--</dd><dt id="selected-x-label">PC1</dt><dd id="selected-x">--</dd><dt id="selected-y-label">PC2</dt><dd id="selected-y">--</dd><dt>Node / fabric gap</dt><dd id="selected-gap">--</dd></dl></div>
+    <div class="aside-help"><div class="rule"></div><p class="small-note">Zero is the average for this emotion across all personas. Higher means stronger relative affinity, not a probability.</p><p class="small-note">Nodes are exact scores. The fabric smooths between them; gaps and cutouts show where it cannot faithfully fill the space.</p><p class="small-note" id="surface-fit-note"></p></div>
+  </aside>
+</main>
+<footer>
+  <details><summary>How to read this landscape</summary><div class="method-text">
+  <p>This is an exploratory overlay of six saved emotion directions on Qwen role-centroid representations. It does not measure emotion frequency or subjective experience. The slider selects categories; the brief transition is a visual morph, not a measured mixture.</p>
+  <p>Affinities use released role row 47 to match the emotion probes' hidden_states[48] boundary. The horizontal persona PCA is the existing layer-averaged geometry. Emotion probes came from story last tokens, while role centroids summarize response tokens; that transfer remains unvalidated.</p>
+  <p>The surface uses a regularized thin-plate spline. It is masked outside the role hull and in sparse regions. Density support is not a confidence interval. Vertical units are standardized emotion affinity; their display aspect is chosen for readability and is not commensurate with horizontal PC units.</p>
+  <p><a href="persona_emotion_surface_methodology.md">Full methodology</a> &middot; <a href="persona_emotion_scores.csv" download>Download scores</a></p>
+  </div></details>
+</footer>
+<script id="viewer-data" type="application/json">__VIEWER_DATA__</script>
+<script>__VIEWER_JS__</script>
+</body>
+</html>

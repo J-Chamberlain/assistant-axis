@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-09T12:04:18Z
-Last commit when updated: 9a50682 (base before documentation commit)
+Updated UTC: 2026-09-09T13:55:00Z
+Last commit when updated: e7513f6 (base before emotion viewer implementation)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -32,12 +32,12 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - geometry tables: 30
 - notebooks: 7
 - trait analyses: 340
-- visualizations: 124
+- visualizations: 142
 
 
 ## Status Counts
 
-- active: 4466
+- active: 4484
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -57,7 +57,7 @@ Most active analyses live under `research/outputs/`, `research/assistant_axis_me
 
 ### Visualizations
 
-Planned Qwen emotion surface viewer: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer_plan.md` is the active implementation brief for the requested six-emotion slider and two-PC fabric landscape. It is documentation only; no new viewer or score table exists yet. The plan records normalization, layer/pooling caveats, exact node placement, surface support, and acceptance checks.
+Qwen emotion surface viewer: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html` is the offline six-emotion slider/two-PC fabric landscape for all 275 personas. The directory contains the 1,650-row score table, data bundle, source manifest, methodology, implementation report, reproducible generator/UI sources, browser/data verification, and screenshots. The original plan is retained with a completion addendum. Values are normalized activation affinities, not emotion prevalence; layer/pooling caveats and smoothing gaps remain explicit. This companion does not overwrite the main explorer.
 
 Current interactive visualizations live under `research/visualizations/` and `visualizations/`. The main current geometry explorer is `research/visualizations/persona_geometry_explorer.html`; it now includes native PC1 x PC2 trait-region overlay controls backed by `research/visualizations/trait_region_overlay_data.json`. Paper 1 public-facing visualization assets remain under `visualizations/`.
 

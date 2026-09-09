@@ -1,7 +1,7 @@
 # Qwen Persona Emotion Surface Viewer: Implementation Plan
 
 Date: 2026-09-09
-Status: active design brief; implementation has not started.
+Status: implemented prototype; original design brief retained below with a completion addendum.
 Author: Codex, GPT-6.
 Generation/activation model represented by the source artifacts: Qwen/Qwen3-32B.
 Repository base commit: `9a5068275bcf39b2e5040a59f29f4552658a639c` on `master`.
@@ -166,3 +166,9 @@ Unknown until implementation checks: how much of each emotion score is organized
 Later response-distribution work can consider the locally preserved 1,200 trickster and 192 editor response vectors and 1,690 Run 2 control/directional-response vectors after validating an emotion readout for their actual extraction boundary. The 60 amateur and 60 playwright cloud rows retain text and 3D coordinates, but full-dimensional response vectors were not found locally in the preceding inspection. Three PCA coordinates alone cannot recover arbitrary emotion projections.
 
 Current decision: the visualization is feasible as an exploratory centroid-affinity landscape. The user requested that the plan be documented before implementation; implementation remains the next task, not part of this documentation change.
+
+## Implementation Addendum (2026-09-09)
+
+The user subsequently authorized execution. The companion `persona_emotion_surface_viewer.html` now implements the six-emotion slider, all six ordered PC pairs, exact nodes, thin-plate-spline fabric with three smoothing levels, sparse-region masking, hover/pinned selection, rotation/zoom, and offline operation. It uses released role row 47 with the saved `hidden_states[48]` emotion directions; the source-layer ordering and earlier empirical block-48/hidden-state-49 test support this correspondence. Story-last-token to response-mean transfer remains unvalidated.
+
+The directory now contains 1,650 score rows, source hashes, mesh diagnostics, preprocessing sensitivity results, data/browser verification scripts and results, screenshots, and an implementation report. See `persona_emotion_surface_methodology.md` for the executed method and `persona_emotion_surface_implementation_report.md` for verification and file links. No new activations, model inference, judges, or GPU runs were used. The paragraphs above describe the pre-implementation plan, not current pending work. Next step: inspect the prototype before expanding emotions or interpreting response-level functional valence.

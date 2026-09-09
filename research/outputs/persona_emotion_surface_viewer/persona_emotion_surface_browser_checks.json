@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "browser": "151.0.7922.34",
+  "generated_utc": "2026-09-09T13:56:55.973Z",
+  "html_sha256": "a3cddb11f60d62f4c3d36ec4567635273f6da9d67b93223f5a785f5944af1acc",
+  "checks": [
+    "Offline file:// initial WebGL render; exact 275 node coordinates and scores",
+    "All six categorical stops preserve camera, fixed z range, selected persona and exact scores",
+    "Native range keyboard and pointer interaction",
+    "Rapid slider-input burst settles on the latest emotion with matching node values",
+    "All six ordered PC pairs; same-axis choices disabled; reversed surface transposed",
+    "Three smoothing levels and visibility toggles never move scored nodes",
+    "Real pointer hover and click identify/pin crystalline",
+    "Real pointer drag rotates and scroll zooms the scene",
+    "Live wheel-zoom camera survives the next emotion change",
+    "390px mobile emulation: touch emotion selection, reduced motion, no horizontal overflow"
+  ],
+  "render_milliseconds": [
+    {
+      "emotion": 0,
+      "ms": 17.200000047683716
+    },
+    {
+      "emotion": 1,
+      "ms": 35.700000047683716
+    },
+    {
+      "emotion": 2,
+      "ms": 32.10000002384186
+    },
+    {
+      "emotion": 3,
+      "ms": 30.5
+    },
+    {
+      "emotion": 4,
+      "ms": 28.299999952316284
+    },
+    {
+      "emotion": 5,
+      "ms": 30.100000023841858
+    }
+  ],
+  "network_attempts": [],
+  "errors": []
+}
