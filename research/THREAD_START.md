@@ -2,11 +2,13 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-06-17
+Last updated: 2026-09-09
 
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 
 ## Current Objective
+
+Immediate user-requested work (2026-09-09): the Qwen emotion surface viewer plan is documented at `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer_plan.md`. The proposed tool combines two existing PC axes with normalized emotion-affinity height, six slider states, and a smooth fabric surface with persona nodes. Implementation has not started. Begin future implementation with the plan's layer/preprocessing checks: the historical emotion readout and corrected response-cloud extraction use different boundaries and pooling, while the existing explorer PCA averages role vectors across layers. This is an exploratory visualization track; paper claims and prior findings remain unchanged.
 
 The active Paper 1.5 objective is to write **Interpreting Persona Activation Geometry**. The paper is no longer primarily an adaptive extraction replication paper. Its contribution is an interpretation of persona activation geometry after methodological stress testing: semantic structure, dispositional/trait structure, procedural/operating-mode structure, lexical/register structure, and residual developmental/liminal/collective structure.
 

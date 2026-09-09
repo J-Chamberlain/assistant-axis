@@ -2,6 +2,17 @@
 
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
+## persona_emotion_surface_viewer plan
+
+Artifact: Implementation brief for a Qwen 3D persona emotion-affinity surface viewer.
+Location: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer_plan.md`
+Created: 2026-09-09 by Codex (GPT-6), from the user's requested interface and the preceding read-only artifact inspection.
+Source inputs: `research/visualizations/geometry_viz_data.json`; `research/visualizations/scripts/build_geometry_viz.py`; released Qwen role/trait tensors under `downloads/hf_vectors/qwen-3-32b/`; `research/emotions/scripts/extract_qwen_full.py`; saved 171-emotion directions and readout diagnostics under `research/emotions/outputs/`; role-vector structure audit and A100 hook-boundary test.
+Generating procedure: Direct documentation only; no scores, viewer, model/API calls, or GPU work generated.
+Current status: Active plan; implementation pending. Base commit: `9a50682`.
+Dependent work: Proposed six-emotion slider, two-PC plane, normalized emotion-height surface, and exact persona nodes.
+Notes/caveats: The existing PCA averages role tensors across layers. Emotion directions use story-last-token `hidden_states[48]`; corrected response clouds use the block-48 hook matching `hidden_states[49]`. The plan requires matching-layer verification and disclosure of remaining pooling transfer before scoring. Surface heights are proposed relative activation affinities, not measured response prevalence or subjective emotional experience. `CLAIMS_REGISTER.md` and `FINDINGS_LEDGER.md` are unchanged because this is a plan, not a new experiment.
+
 ## claude_full_feature_matrix.csv
 
 Artifact: Claude full latent-feature matrix, including Big Five-style scores and TF-IDF/SVD-derived features.

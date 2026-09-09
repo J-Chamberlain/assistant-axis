@@ -10,6 +10,10 @@ Paper 1.5 is active: **Interpreting Persona Activation Geometry**. The core cont
 
 Paper 2 is active planning: local centroid perturbation and local persona-manifold mapping around anchors such as Trickster, Actor, Therapist, and Spy. Older dyad/contagion/attractor-collapse work is archived as future dynamics work.
 
+## Current Visualization Plan (2026-09-09)
+
+The requested Qwen emotion surface viewer is documented at `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer_plan.md`. It proposes two selectable PC axes, six emotion-slider stops, relative scores normalized across all 275 personas, a smooth fabric surface, and exact selectable persona nodes. Layer correspondence and story-to-role pooling transfer must be checked before scoring. Documentation is complete; implementation has not started and no new analysis or claim is established.
+
 ## Current Best Findings
 
 - Semantic topology partially predicts activation topology but does not explain it away.

@@ -44,3 +44,17 @@ hopeful are strongest on positive valence; distressed, terrified, scared,
 and shaken are strongest on negative valence; angry, outraged, furious,
 and irate are highest arousal; content, peaceful, melancholy, and relaxed
 are lowest arousal.
+
+## Update 2026-09-09
+
+Documented a proposed Qwen persona emotion surface viewer at
+`research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer_plan.md`.
+It would show two selected persona PCs and a normalized emotion-affinity height,
+with six emotion-slider states and a smooth fabric surface. Implementation and
+new scoring have not started. The source inspection identifies a necessary
+alignment check: the emotion extractor uses story-last-token
+`hidden_states[48]`, while the corrected response-cloud block-48 hook matches
+`hidden_states[49]` and pools response tokens. The existing persona explorer
+also averages released role vectors across layers before PCA. The plan preserves
+these distinctions; it does not extend the historical readout verdict to
+response prevalence or validated functional valence.

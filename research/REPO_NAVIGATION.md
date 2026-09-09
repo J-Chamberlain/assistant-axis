@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-06-13T19:35:00Z
-Last commit when generated: 8e2cac8
+Updated UTC: 2026-09-09T12:04:18Z
+Last commit when updated: 9a50682 (base before documentation commit)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3762
+- active analyses: 3766
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 12
@@ -32,12 +32,12 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - geometry tables: 30
 - notebooks: 7
 - trait analyses: 340
-- visualizations: 123
+- visualizations: 124
 
 
 ## Status Counts
 
-- active: 4461
+- active: 4466
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -56,6 +56,8 @@ Paper 1.5 writing-phase entry point: `research/paper15_content_ledger.md`, with 
 Most active analyses live under `research/outputs/`, `research/assistant_axis_methodology/`, and `research/q2_stability/qwen/outputs/`. Prefer the directory-level report files first, then inspect CSV/JSON support files only as needed. The exploratory occupation-population persona join lives under `research/outputs/occupation_population_persona_join/` and is marked future-work/appendix material, not Paper 1.5 core evidence. Its descriptive geometry overlay lives under `research/outputs/occupation_prevalence_geometry_overlay/`. The active second-generation role-free probe packet for future PC1/PC2 directional pilot inspection lives under `research/outputs/role_free_directional_prompt_pilot_v2/`; it is prompt design only, with no activation run. The first packet under `research/outputs/role_free_directional_prompt_pilot/` is retained as the superseded comparison baseline. The true role-free directional steering packet lives under `research/outputs/role_free_directional_steering_prompts/`; it contains response-guidance instructions, not probe scenarios. The canonical v1 no-label elicitation prompt packet for Paper 1.5 manual review lives under `research/outputs/no_label_elicitation_prompt_packet_v1/`; it freezes 60 chat-developed prompts. The completed 600-response activation validation using that packet lives under `research/outputs/no_label_elicitation_validation/`. The diagnostic geometry follow-up for that validation lives under `research/outputs/no_label_elicitation_geometry_diagnostics/` and should be consulted before redesigning failed/off-axis no-label prompt families. The assistant-centroid provenance audit lives under `research/outputs/assistant_centroid_provenance_audit/`; it establishes that the current Paper 1.5 assistant baseline is the released role-conditioned `assistant` centroid, not bare Qwen, making the 240-question bare-Qwen/default baseline foundational for future no-label interpretation. The default Assistant baseline audit lives under `research/outputs/default_assistant_baseline_audit/`; it projects Lu et al.'s released Qwen `default_vector.pt` and shows it is distinct from both the assistant role centroid and Run 2 bare no-system centroid. The completed Run 2 no-label elicitation execution lives under `research/outputs/no_label_elicitation_run2/`; it contains the 1,690-response bare-Qwen/replacement/minimal-pair result tables, completed report, final heartbeat/status files, and local gitignored activation shards. Treat `run2_report.md`, `run2_execution_status.json`, and `run2_local_integrity_check.json` as the entry points. The Run 2 prompt-level diagnostic follow-up lives under `research/outputs/no_label_elicitation_run2_prompt_diagnostics/`; use it to inspect the PC1+ failed/strongest prompts, PC2- selected prompts, and five PC3 cost-to-others pair contrasts including the Run 1 `pc3_pos_05` A-side. The focused PC1 accountability validation lives under `research/outputs/pc1_accountability_validation/`; use it as the execution-time evidence that accountability/scrutiny wording drives stronger positive PC1 movement than determination or arithmetic/checking wording under matched scenarios. The role geometry/instruction inventory lives under `research/outputs/role_geometry_instruction_inventory/`; it joins Qwen role PC coordinates to the five positive role-conditioning prompts for Excel/manual inspection. The iterative semantic prediction methods archive lives under `research/outputs/iterative_semantic_prediction_methods/`; use it for the Paper 1.5 methods prose and benchmark table showing semantic baseline through SVD15 prompt-register performance. The PC1 competing-theories diagnostic lives under `research/outputs/pc1_competing_theories_test/`; use it to compare orderliness, determination, and external-standard-accountability vocabulary features. The completed blind PC interpretation rating benchmark lives under `research/outputs/blind_pc_interpretation_rating_benchmark/`; use it as the stronger coordinate-blind GPT-5.5 evidence for PC1 external-standard accountability, PC2 signed integration/coherence, and PC3 internal-objective-vs-care ratings over the shared 273-persona benchmark.
 
 ### Visualizations
+
+Planned Qwen emotion surface viewer: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer_plan.md` is the active implementation brief for the requested six-emotion slider and two-PC fabric landscape. It is documentation only; no new viewer or score table exists yet. The plan records normalization, layer/pooling caveats, exact node placement, surface support, and acceptance checks.
 
 Current interactive visualizations live under `research/visualizations/` and `visualizations/`. The main current geometry explorer is `research/visualizations/persona_geometry_explorer.html`; it now includes native PC1 x PC2 trait-region overlay controls backed by `research/visualizations/trait_region_overlay_data.json`. Paper 1 public-facing visualization assets remain under `visualizations/`.
 

@@ -1,11 +1,13 @@
 # Raw URL Index
 
-Updated UTC: 2026-06-13T19:35:00Z
+Updated UTC: 2026-09-09T12:04:18Z
+Base commit for this update: 9a50682
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
 |---|---|---|---|---|
+| active | visualizations | `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer_plan.md` | Plan only: Qwen two-PC landscape with normalized emotion-height fabric and six-state slider | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer_plan.md |
 | active | active analyses | `research/outputs/no_label_elicitation_geometry_diagnostics/no_label_elicitation_geometry_diagnostics_report.md` | No-label elicitation geometry diagnostic report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/no_label_elicitation_geometry_diagnostics/no_label_elicitation_geometry_diagnostics_report.md |
 | active | active analyses | `research/outputs/no_label_elicitation_geometry_diagnostics/family_role_centroid_overlay_pc1_pc2.svg` | PC1 x PC2 role centroid and family mean overlay SVG | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/no_label_elicitation_geometry_diagnostics/family_role_centroid_overlay_pc1_pc2.svg |
 | active | active analyses | `research/outputs/no_label_elicitation_geometry_diagnostics/family_role_centroid_overlay_pc1_pc2.png` | Phone-friendly PC1 x PC2 role centroid and family mean overlay PNG | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/no_label_elicitation_geometry_diagnostics/family_role_centroid_overlay_pc1_pc2.png |
