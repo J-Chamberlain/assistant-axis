@@ -25,7 +25,7 @@ scripts.forEach((source,i)=>{if(i!==2)new vm.Script(source);});
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
 assert.equal(new Set(ids).size,ids.length,'Unique IDs');
 class Element {
-  constructor(id='') {this.id=id;this.value='';this.min='';this.max='';this.children=[];this.style={};this.events={};this.textContent='';this.checked=true;this.options=[];}
+  constructor(id='') {this.id=id;this.value='';this.min='';this.max='';this.children=[];this.style={};this.events={};this.textContent='';this.checked=true;this.disabled=false;this.hidden=false;this.options=[];}
   addEventListener(event,fn){(this.events[event]??=[]).push(fn);}
   on(event,fn){this.addEventListener(event,fn);}
   emit(event,arg={}){for(const fn of this.events[event]||[]) fn(arg);}
@@ -64,6 +64,17 @@ async function check(){
     assert.deepEqual(Array.from(plot.data[4].z),data.categories[g].values);
     assert.equal(plot.data[1].cmin,0);assert.equal(plot.data[1].cmax,100);assert.equal(plot.data[1].opacity,1);
   }
+  assert.equal(plot.data[6].name,'Best-fit flat plane');
+  assert.equal(plot.data[6].visible,true);
+  assert.ok(Number.isFinite(api.snapshot().flatAdherence.fabric_flat_rmse));
+  elements['show-flat'].checked=false;elements['show-flat'].emit('change');await ready();
+  assert.equal(plot.data[6].visible,false);
+  elements['show-flat'].checked=true;elements['show-flat'].emit('change');await ready();
+  elements['show-flat-only'].checked=true;elements['show-flat-only'].emit('change');await ready();
+  assert.equal(plot.data[6].visible,true);
+  for(const i of [0,1,2,3,4,5]) assert.equal(plot.data[i].visible,false);
+  assert.equal(elements['show-surface'].disabled,true);
+  elements['show-flat-only'].checked=false;elements['show-flat-only'].emit('change');await ready();
   await set('persona-picker',data.roles.findIndex(r=>r.name==='playwright'));
   assert.equal(elements['member-scores'].children.length,3);
   assert.equal(plot.data[5].x.length,1);

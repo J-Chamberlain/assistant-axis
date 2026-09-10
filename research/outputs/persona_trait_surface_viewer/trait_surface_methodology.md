@@ -1,9 +1,9 @@
 # Five-Group Qwen Trait Landscape
 
-Date: 2026-09-09 (America/Los_Angeles)
+Date: 2026-09-10 (America/Los_Angeles)
 Startup: canonical raw manifest and three startup files fetched in order and verified against local content, SHA256 and byte counts before implementation.
 Base commit: 03d99df on master.
-Status: implemented; data, camera-math and UI-state tests pass. New live-browser/WebGL verification unavailable because browser-use policy blocked the local URL. The block was not bypassed.
+Status: implemented; data, camera-math and UI-state tests pass, including flat-plane comparison and flat-plane-only visibility. New live-browser/WebGL verification unavailable because browser-use policy blocked the local URL. The block was not bypassed.
 
 ## Open and Use
 
@@ -18,7 +18,15 @@ New controls:
 - **Orientation dials:** yaw (horizontal rotation), pitch (tilt), roll and zoom, each with a slider, a visual dial indicator and exact numeric entry. Rotation/roll span -180 to 180 degrees, tilt -90 to 90, zoom 25-300 percent. Higher zoom means a closer camera. Angles and numbers synchronize after mouse camera changes; the existing mouse-drag/wheel controls remain available.
 - **View presets:** Isometric, Top, Front and Side recenter the scene. Reset view restores the original camera. Individual dial changes preserve any mouse-adjusted camera center; changing group, axes or smoothing preserves orientation/zoom. Camera updates are coalesced so rapid changes end at the latest requested setting.
 
-The side panel lists the selected group's three constituent trait percentiles, group mean, mean member z-score, the original selected PC coordinates, and the fitted-surface gap. Smoothness still offers Detail, Balanced and Gentle; smoothing never changes exact nodes.
+The side panel lists the selected group's three constituent trait percentiles, group mean, mean member z-score, the original selected PC coordinates, the fitted-surface gap, and the flat-plane diagnostics. Smoothness still offers Detail, Balanced and Gentle; smoothing never changes exact nodes.
+
+## Flat-Plane Comparison
+
+The **Best-fit flat plane** is an ordinary least-squares plane fit independently for each trait group and each selected unordered PC plane. Its predictors are an intercept plus the two centered, common-scale PC coordinates used by the rolling fabric fit. The displayed plane is evaluated on the same 61-by-61 grid and uses the same convex-hull / sixth-neighbor support mask; unsupported cells remain empty. Exact persona nodes are not changed.
+
+The **Flat plane** checkbox toggles this semi-transparent comparison surface. **Flat plane only** hides the population reference plane, rolling fabric, weave, node-to-fabric gaps, persona nodes and pinned persona, leaving the flat comparison plane and axes. Axis reversal transposes the stored plane grid for display, just as it transposes the rolling surface.
+
+The side panel reports three related quantities. **Plane R2 at nodes** is the in-sample R2 of the least-squares plane against the exact 275 persona group heights. **Rolling / flat RMSE** is the RMS difference, in percentile points, between the clipped rolling fabric and the clipped flat plane over supported grid cells. **Flat adherence** is a descriptive 0-100 presentation score defined as `clip(100 * fabric_flat_r2, 0, 100)`, where `fabric_flat_r2 = 1 - SSE(rolling, flat) / SST(rolling)`. A negative R2 therefore receives a score of 0. This score measures geometric resemblance of the selected rolling surface to its best linear plane; it is not held-out predictive validation, a confidence measure, or evidence that a group is psychologically flat.
 
 ## Group Definition
 

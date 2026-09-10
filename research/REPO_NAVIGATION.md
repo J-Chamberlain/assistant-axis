@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-10T01:49:59Z
-Last commit when updated: c37f3ad (base before emotion-landscape control update)
+Updated UTC: 2026-09-10T02:15:00Z
+Last commit when updated: fdf8bed (base before flat-plane trait comparison update)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -57,7 +57,7 @@ Most active analyses live under `research/outputs/`, `research/assistant_axis_me
 
 ### Visualizations
 
-Grouped trait landscape: `research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html` is a separate 3D fabric view of exploration, response, scrutiny, challenge and affiliation. Each height averages the three original trait percentiles from the ridge plots; coordinates and members remain unchanged. Includes vivid fixed-range height colors, complete node-free mode, yaw/pitch/roll/zoom sliders with numeric entry and view presets, 1,375 group rows and source/fit/control checks. Local-page browser automation was blocked; static preview is not a screenshot. Open the completed HTML, not `viewer_template.html`.
+Grouped trait landscape: `research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html` is a separate 3D fabric view of exploration, response, scrutiny, challenge and affiliation. Each height averages the three original trait percentiles from the ridge plots; coordinates and members remain unchanged. Includes vivid fixed-range height colors, a semi-transparent least-squares flat-plane comparison with descriptive adherence/node-fit scores, flat-plane-only mode, complete node-free mode, yaw/pitch/roll/zoom sliders with numeric entry and view presets, 1,375 group rows and source/fit/control checks. Local-page browser automation was blocked; static preview is not a screenshot. Open the completed HTML, not `viewer_template.html`.
 
 PC-ranked trait profiles: `research/outputs/persona_trait_ridge_plots/persona_trait_ridges.html` shows all 275 personas in three descending-PC rankings. Fifteen of the 240 previously mapped traits are grouped as exploration, response, scrutiny, challenge and affiliation; the left-to-right order is descriptive, not a valence scale or fitted factor. Height is within-trait percentile over personas. Full SVG/PNG plots, a top-15 overview, 4,125 exact-source scores and provenance/checks are in the directory. Same-space activation-cosine evidence, not independent psychological validation; existing viewers unchanged.
 

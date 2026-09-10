@@ -15,7 +15,7 @@
     "Top/front/side/isometric and reset",
     "Empty numeric input restored"
   ],
-  "react_count": 24,
+  "react_count": 28,
   "relayout_count": 11,
   "live_browser_test": false,
   "note": "Plotly/DOM double tests UI state and camera math, not actual WebGL rendering. Local browser URL was blocked by browser-use policy."

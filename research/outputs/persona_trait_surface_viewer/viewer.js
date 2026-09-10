@@ -9,7 +9,7 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const initialCamera = {eye: {x: 1.26, y: 1.29, z: 0.94}, up: {x: 0, y: 0, z: 1}, center: {x: 0, y: 0, z: -0.04}};
   if(window.innerWidth<600) for(const axis of ["x","y","z"]) initialCamera.eye[axis]*=1.35;
-  const state = {x: 0, y: 1, category: 0, smoothing: 1, surface: true, connectors: true, nodes: true,
+  const state = {x: 0, y: 1, category: 0, smoothing: 1, surface: true, flat: true, flatOnly: false, connectors: true, nodes: true,
     selected: null, hovered: null, camera: structuredClone(initialCamera), transitioning: false};
   let requestVersion = 0, renderedVersion = -1, running = false, initialized = false, previous = null;
   let cameraVersion=0,cameraApplied=0,cameraBusy=false;
@@ -26,6 +26,8 @@
     const reversed=state.x > state.y, category=data.categories[state.category];
     return {x: reversed?view.y:view.x, y: reversed?view.x:view.y,
       grid: reversed?transpose(level.grids[state.category]):level.grids[state.category],
+      flat: reversed?transpose(view.flat_grids[state.category]):view.flat_grids[state.category],
+      flatAdherence: level.flat_adherence[state.category], flatPlane: view.flat_plane[state.category],
       fitted: level.fitted_nodes[state.category], heights: category.values,
       axisX: state.x, axisY: state.y, category: state.category, smoothing: state.smoothing,
       fitRmse: level.fit_rmse[state.category], support: view.supported_grid_fraction};
@@ -34,7 +36,8 @@
   function blend(a,b,t) {
     return {...b, heights: b.heights.map((v,i)=>a.heights[i]+t*(v-a.heights[i])),
       fitted: b.fitted.map((v,i)=>a.fitted[i]+t*(v-a.fitted[i])),
-      grid: b.grid.map((row,j)=>row.map((v,i)=>v===null?null:a.grid[j][i]+t*(v-a.grid[j][i])))};
+      grid: b.grid.map((row,j)=>row.map((v,i)=>v===null?null:a.grid[j][i]+t*(v-a.grid[j][i]))),
+      flat: b.flat.map((row,j)=>row.map((v,i)=>v===null?null:a.flat[j][i]+t*(v-a.flat[j][i])))};
   }
 
   function weave(s) {
@@ -55,26 +58,30 @@
     const selected=state.selected===null?[]:[state.selected];
     const custom=data.roles.map((r,i)=>[escapeText(r.name),category.values[i],category.values[i],category.mean_z[i],i]);
     return [
-      {type:"surface",name:"Population mean reference",visible:state.nodes,x:[s.x[0],s.x.at(-1)],y:[s.y[0],s.y.at(-1)],z:[[50,50],[50,50]],
+      {type:"surface",name:"Population mean reference",visible:state.nodes&&!state.flatOnly,x:[s.x[0],s.x.at(-1)],y:[s.y[0],s.y.at(-1)],z:[[50,50],[50,50]],
         colorscale:[[0,"#777777"],[1,"#777777"]],opacity:0.055,showscale:false,hoverinfo:"skip"},
-      {type:"surface",name:"Fitted fabric",x:s.x,y:s.y,z:s.grid,connectgaps:false,visible:state.surface,
+      {type:"surface",name:"Fitted fabric",x:s.x,y:s.y,z:s.grid,connectgaps:false,visible:state.surface&&!state.flatOnly,
         colorscale:colors,cmin:0,cmax:100,showscale:true,colorbar:{title:{text:"Mean trait<br>percentile"},tickvals:[0,25,50,75,100],thickness:12,len:0.55,x:0.94,tickfont:{size:10}},opacity:1,hoverinfo:"skip",
         lighting:{ambient:0.88,diffuse:0.35,specular:0.05,roughness:0.93,fresnel:0.1},
         lightposition:{x:100,y:100,z:200},contours:{z:{show:false}}},
-      {type:"scatter3d",name:"Fabric weave",mode:"lines",...weave(s),visible:state.surface,
+      {type:"scatter3d",name:"Fabric weave",mode:"lines",...weave(s),visible:state.surface&&!state.flatOnly,
         line:{color:"rgba(47,48,45,0.36)",width:1},hoverinfo:"skip",connectgaps:false},
       {type:"scatter3d",name:"Node-to-fabric gaps",mode:"lines",...lines,
-        visible:state.surface&&state.connectors&&state.nodes,line:{color:"rgba(225,218,201,0.42)",width:1},hoverinfo:"skip",connectgaps:false},
-      {type:"scatter3d",name:"Persona nodes",mode:"markers",x:xs,y:ys,z:s.heights,visible:state.nodes,
+        visible:state.surface&&state.connectors&&state.nodes&&!state.flatOnly,line:{color:"rgba(225,218,201,0.42)",width:1},hoverinfo:"skip",connectgaps:false},
+      {type:"scatter3d",name:"Persona nodes",mode:"markers",x:xs,y:ys,z:s.heights,visible:state.nodes&&!state.flatOnly,
         marker:{size:3.3,color:"#fff5df",opacity:1,line:{color:"#242424",width:0.6}},customdata:custom,
         hoverinfo:transition?"skip":undefined,
         hovertemplate:transition?undefined:`<b>%{customdata[0]}</b><br>${category.label}: %{customdata[1]:.1f}/100<br>`+
           `Mean member z: %{customdata[3]:+.2f}<br>`+
           `PC${s.axisX+1}: %{x:.2f} | PC${s.axisY+1}: %{y:.2f}<extra></extra>`},
-      {type:"scatter3d",name:"Pinned persona",mode:"markers+text",visible:state.nodes,x:selected.map(i=>xs[i]),y:selected.map(i=>ys[i]),
+      {type:"scatter3d",name:"Pinned persona",mode:"markers+text",visible:state.nodes&&!state.flatOnly,x:selected.map(i=>xs[i]),y:selected.map(i=>ys[i]),
         z:selected.map(i=>s.heights[i]),text:selected.map(i=>escapeText(names[i])),textposition:"top center",
         textfont:{size:12,color:"#e8e8e8"},marker:{size:6,color:"#78c6e8",line:{color:"#09202c",width:1}},
-        customdata:selected.map(i=>custom[i]),hoverinfo:"skip"}
+        customdata:selected.map(i=>custom[i]),hoverinfo:"skip"},
+      {type:"surface",name:"Best-fit flat plane",x:s.x,y:s.y,z:s.flat,connectgaps:false,
+        visible:state.flat||state.flatOnly,colorscale:[[0,"#f5edd7"],[1,"#f5edd7"]],showscale:false,opacity:0.38,hoverinfo:"skip",
+        lighting:{ambient:0.9,diffuse:0.25,specular:0.05,roughness:0.98,fresnel:0.05},
+        lightposition:{x:100,y:100,z:200},contours:{z:{show:false}}}
     ];
   }
 
@@ -102,7 +109,10 @@
     });
     el("selected-x-label").textContent=`PC${state.x+1}`;el("selected-y-label").textContent=`PC${state.y+1}`;
     el("clear-selection").hidden=state.selected===null;
-    el("surface-fit-note").textContent=`Fabric fit gap: ${s.fitRmse.toFixed(2)} percentile points RMS. Smoothing changes the fabric, never the nodes.`;
+    el("flat-score").textContent=s.flatAdherence.fabric_flat_score===null?"--":`${s.flatAdherence.fabric_flat_score.toFixed(1)} / 100`;
+    el("flat-rmse").textContent=s.flatAdherence.fabric_flat_rmse===null?"--":`${s.flatAdherence.fabric_flat_rmse.toFixed(2)} points`;
+    el("flat-plane-r2").textContent=s.flatPlane.node_r2===null?"--":s.flatPlane.node_r2.toFixed(3);
+    el("surface-fit-note").textContent=`Fabric fit gap: ${s.fitRmse.toFixed(2)} percentile points RMS. Rolling fabric gap from flat plane: ${s.flatAdherence.fabric_flat_rmse.toFixed(2)} RMS. Flat adherence is descriptive, not predictive validation.`;
     if(i===null) {
       el("selected-name").textContent="Explore the fabric";el("selection-kind").textContent="Hover a node or choose a name";
       for(const id of ["selected-score","selected-percentile","selected-raw","selected-x","selected-y","selected-gap"]) el(id).textContent="--";
@@ -124,7 +134,10 @@
     el("plot-category").textContent=data.categories[state.category].label;
     el("category-current").textContent=data.categories[state.category].label;
     el("plane-caption").textContent=`PC${state.x+1} / PC${state.y+1} | height = mean trait percentile`;
-    el("show-connectors").disabled=!state.nodes||!state.surface;
+    el("show-flat").checked=state.flat;el("show-flat-only").checked=state.flatOnly;
+    el("show-flat").disabled=state.flatOnly;el("show-surface").disabled=state.flatOnly;
+    el("show-nodes").disabled=state.flatOnly;
+    el("show-connectors").disabled=state.flatOnly||!state.nodes||!state.surface;
     el("category-slider").value=state.category;
     el("category-slider").setAttribute("aria-valuetext",data.categories[state.category].label);
     [...el("category-stops").children].forEach((button,i)=>button.setAttribute("aria-pressed",String(i===state.category)));
@@ -249,8 +262,9 @@
   el("category-slider").addEventListener("input",()=>{state.category=Number(el("category-slider").value);scheduleRender();});
   for(const [id,key] of [["x-axis","x"],["y-axis","y"],["smoothing","smoothing"]])
     el(id).addEventListener("change",()=>{state[key]=Number(el(id).value);scheduleRender();});
-  for(const [id,key] of [["show-surface","surface"],["show-connectors","connectors"],["show-nodes","nodes"]])
+  for(const [id,key] of [["show-surface","surface"],["show-flat","flat"],["show-connectors","connectors"],["show-nodes","nodes"]])
     el(id).addEventListener("change",()=>{state[key]=el(id).checked;if(!state.nodes) state.hovered=null;scheduleRender();});
+  el("show-flat-only").addEventListener("change",()=>{state.flatOnly=el("show-flat-only").checked;if(state.flatOnly) state.flat=true;scheduleRender();});
   el("persona-picker").addEventListener("change",()=>{state.selected=el("persona-picker").value===""?null:Number(el("persona-picker").value);scheduleRender();});
   el("clear-selection").addEventListener("click",()=>{state.selected=null;state.hovered=null;el("persona-picker").value="";scheduleRender();});
   for(const key of cameraKeys) for(const prefix of ["camera","number"]) {

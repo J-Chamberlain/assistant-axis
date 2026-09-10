@@ -80,6 +80,23 @@ def make_meshes(roles,groups):
         xx,yy=np.meshgrid(x,y);grid=(np.column_stack([xx.ravel(),yy.ravel()])-center)/scale
         sixth,_=tree.query(grid,k=6)
         supported=((Delaunay(unique).find_simplex(grid)>=0)&(sixth[:,-1]<=radius)).reshape(61,61)
+        node_basis=np.column_stack([np.ones(len(points)),points])
+        grid_basis=np.column_stack([np.ones(len(grid)),grid])
+        flat_grid_arrays=[];flat_plane=[]
+        for c in range(len(groups)):
+            coefficients=np.linalg.lstsq(node_basis,scores[:,c],rcond=None)[0]
+            flat_nodes_raw=node_basis@coefficients
+            flat_grid_raw=(grid_basis@coefficients).reshape(61,61)
+            node_sst=float(np.sum((scores[:,c]-scores[:,c].mean())**2))
+            node_sse=float(np.sum((scores[:,c]-flat_nodes_raw)**2))
+            node_r2=None if node_sst<1e-12 else float(1-node_sse/node_sst)
+            flat_grid_arrays.append(np.clip(flat_grid_raw,0,100))
+            flat_plane.append(dict(coefficients=coefficients.tolist(),
+                                   node_rmse=float(np.sqrt(np.mean((scores[:,c]-flat_nodes_raw)**2))),
+                                   node_r2=node_r2))
+        flat_grids=[[[round(float(v),6) if ok else None for v,ok in zip(row,supported_row)]
+                     for row,supported_row in zip(flat_grid,supported)]
+                    for flat_grid in flat_grid_arrays]
         levels=[]
         for label,smoothing in SMOOTHING:
             fit=RBFInterpolator(unique,targets,kernel='thin_plate_spline',smoothing=smoothing,degree=1)
@@ -87,23 +104,37 @@ def make_meshes(roles,groups):
             assert np.isfinite(original).all() and np.isfinite(fitted_original).all()
             values=np.clip(original,0,100);fitted=np.clip(fitted_original,0,100)
             rmse=np.sqrt(np.mean((fitted-scores)**2,axis=0))
-            grids=[]
-            for c,category in enumerate(groups):
+            grids=[];flat_adherence=[]
+            for c in range(len(groups)):
                 grids.append([[round(float(v),6) if ok else None for v,ok in zip(row,mask)]
                               for row,mask in zip(values[:,:,c],supported)])
                 displayed=original[:,:,c][supported]
-                diagnostics.append(dict(x_axis=axes[0]+1,y_axis=axes[1]+1,group=category['label'],
+                rolling=values[:,:,c][supported]
+                flat=flat_grid_arrays[c][supported]
+                flat_sse=float(np.sum((rolling-flat)**2))
+                rolling_sst=float(np.sum((rolling-rolling.mean())**2))
+                flat_r2=None if rolling_sst<1e-12 else float(1-flat_sse/rolling_sst)
+                flat_score=None if flat_r2 is None else float(np.clip(100*flat_r2,0,100))
+                flat_adherence.append(dict(fabric_flat_rmse=float(np.sqrt(np.mean((rolling-flat)**2))),
+                                           fabric_flat_r2=flat_r2,
+                                           fabric_flat_score=flat_score))
+                diagnostics.append(dict(x_axis=axes[0]+1,y_axis=axes[1]+1,group=groups[c]['label'],
                     smoothing_label=label,smoothing=smoothing,fit_rmse_percentile_points=float(rmse[c]),
                     support_fraction=float(supported.mean()),supported_cells=int(supported.sum()),
                     clipped_supported_cells=int(((displayed<0)|(displayed>100)).sum()),
                     fitted_nodes_clipped=int(((fitted_original[:,c]<0)|(fitted_original[:,c]>100)).sum()),
                     unclipped_supported_min=float(displayed.min()),unclipped_supported_max=float(displayed.max()),
-                    maximum_node_fabric_gap=float(np.max(np.abs(fitted[:,c]-scores[:,c])))))
+                    maximum_node_fabric_gap=float(np.max(np.abs(fitted[:,c]-scores[:,c]))),
+                    flat_plane_node_rmse=flat_plane[c]['node_rmse'],flat_plane_node_r2=flat_plane[c]['node_r2'],
+                    fabric_flat_rmse=flat_adherence[-1]['fabric_flat_rmse'],fabric_flat_r2=flat_r2,
+                    fabric_flat_score=flat_score))
+
             levels.append(dict(label=label,smoothing=smoothing,grids=grids,
-                               fitted_nodes=fitted.T.tolist(),fit_rmse=rmse.tolist()))
+                               fitted_nodes=fitted.T.tolist(),fit_rmse=rmse.tolist(),
+                               flat_adherence=flat_adherence))
         views[f'{axes[0]}_{axes[1]}']=dict(axes=list(axes),x=x.tolist(),y=y.tolist(),levels=levels,
             fit_center=center.tolist(),fit_common_scale=scale,support_sixth_neighbor_radius=radius,
-            supported_grid_fraction=float(supported.mean()))
+            supported_grid_fraction=float(supported.mean()),flat_grids=flat_grids,flat_plane=flat_plane)
     return views,diagnostics
 
 
@@ -136,7 +167,8 @@ def main():
         ROOT/'research/outputs/persona_trait_ridge_plots/persona_trait_ridge_manifest.json',
         ROOT/'research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md',
         ROOT/'research/outputs/persona_emotion_surface_viewer/run_persona_emotion_surface_viewer.py',
-        HERE/'run_persona_trait_surface.py',HERE/'viewer.js',HERE/'camera_controls.js',HERE/'viewer_template.html',HERE/'viewer_bootstrap.js']
+        HERE/'run_persona_trait_surface.py',HERE/'viewer.js',HERE/'camera_controls.js',HERE/'viewer_template.html',
+        HERE/'viewer_bootstrap.js',HERE/'trait_surface_methodology.md']
     save_json('trait_surface_manifest.json',dict(generated_utc=datetime.now(timezone.utc).isoformat(),
         base_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True,cwd=ROOT).strip(),
         activation_model='Qwen/Qwen3-32B',author='Codex; exact runtime identifier not recorded',
@@ -144,6 +176,8 @@ def main():
         personas=275,groups=5,member_traits=15,group_rows=1375,ordered_axis_views=6,
         aggregation=data['aggregation'],grid_size=61,smoothing=SMOOTHING,
         height_range=[0,100],color_range=[0,100],bounded_fabric='Clip fitted surface only to 0-100; preserve exact group nodes',
+        flat_plane_fit='Least-squares plane over intercept and normalized selected-PC coordinates; same support mask as rolling fabric',
+        flat_adherence='Descriptive R2 of the flat plane as an approximation to each displayed rolling fabric; user score clips 100*R2 to 0-100',
         fit_diagnostics='In-sample descriptive errors; not held-out validation',
         sources=[dict(path=str(p.relative_to(ROOT)),sha256=digest(p)) for p in source_paths]))
     print(json.dumps(dict(personas=275,groups=[g['label'] for g in groups],rows=1375,mesh_variants=45,

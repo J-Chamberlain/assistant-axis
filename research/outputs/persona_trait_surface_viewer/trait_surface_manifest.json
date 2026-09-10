@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-09-10T00:28:31.798025+00:00",
-  "base_commit": "03d99df985b77b4836043c237e0276bb7f3311a0",
+  "generated_utc": "2026-09-10T11:56:33.925928+00:00",
+  "base_commit": "fdf8bed26c23e25cc0d93fba746081487e231e60",
   "activation_model": "Qwen/Qwen3-32B",
   "author": "Codex; exact runtime identifier not recorded",
   "gpu_used": false,
@@ -38,6 +38,8 @@
     100
   ],
   "bounded_fabric": "Clip fitted surface only to 0-100; preserve exact group nodes",
+  "flat_plane_fit": "Least-squares plane over intercept and normalized selected-PC coordinates; same support mask as rolling fabric",
+  "flat_adherence": "Descriptive R2 of the flat plane as an approximation to each displayed rolling fabric; user score clips 100*R2 to 0-100",
   "fit_diagnostics": "In-sample descriptive errors; not held-out validation",
   "sources": [
     {
@@ -62,15 +64,15 @@
     },
     {
       "path": "research/outputs/persona_emotion_surface_viewer/run_persona_emotion_surface_viewer.py",
-      "sha256": "de84b0c2069e354075d253d248b150c196680f4f29de873c6135b9c0171735d6"
+      "sha256": "b4985e613390845941db26d44f5bf7616b4047bc6ca3429b5355565abea2bfa8"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/run_persona_trait_surface.py",
-      "sha256": "d304cb982d17ff46c80d8dbc87e2bfc2dc2f9ff122d9a0e24a2ad4b380f4c0eb"
+      "sha256": "a0f04ef3e5dff1715203f49f7901854e872974eac221c801b20b6e918d6bfde6"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer.js",
-      "sha256": "7eaace30e2de4f3915d61150beddad9fedc275bb75069cbeceb1af3effd6c327"
+      "sha256": "6808bcc921be2159a2343c530522edf85cf345b786a3393064848491f7d9b7b3"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/camera_controls.js",
@@ -78,11 +80,15 @@
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer_template.html",
-      "sha256": "f9190a442c0b54ec02f067a67ca08d7597539ffd2321d3a736e3bde23f968b12"
+      "sha256": "ed33d0ef9a07f728ee553982e69c7d4ad54f16506e71e1c8b8791983d65f1aa5"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer_bootstrap.js",
       "sha256": "3e29fbc4f03c69705127eec1dfec92555734fe31f8eff1974cd40645b15af6d8"
+    },
+    {
+      "path": "research/outputs/persona_trait_surface_viewer/trait_surface_methodology.md",
+      "sha256": "fdfc67b127e1a9b824dde925c60510d622fc742f5fd038db6843b9529ac14cc6"
     }
   ]
 }

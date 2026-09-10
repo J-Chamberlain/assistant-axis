@@ -101,6 +101,8 @@ a { color:var(--accent); text-underline-offset:3px; }
   <label class="control" for="y-axis">Y axis <select id="y-axis"><option value="0">PC1</option><option value="1" selected>PC2</option><option value="2">PC3</option></select></label>
   <label class="control" for="smoothing">Surface <select id="smoothing"><option value="0">Detail</option><option value="1" selected>Balanced</option><option value="2">Gentle</option></select></label>
   <label class="control"><input id="show-surface" type="checkbox" checked> Fabric</label>
+  <label class="control"><input id="show-flat" type="checkbox" checked> Flat plane</label>
+  <label class="control"><input id="show-flat-only" type="checkbox"> Flat plane only</label>
   <label class="control"><input id="show-nodes" type="checkbox" checked> Persona nodes</label>
   <label class="control"><input id="show-connectors" type="checkbox" checked> Connectors</label>
   <button id="reset-view" class="end" type="button">Reset view</button>
@@ -131,8 +133,8 @@ a { color:var(--accent); text-underline-offset:3px; }
   </section>
   <aside aria-label="Persona inspection">
     <div><p class="panel-heading">Inspect a persona</p><label class="sr-only" for="persona-picker">Select a persona</label><select id="persona-picker"><option value="">Hover or choose a persona</option></select><h2 id="selected-name">Explore the fabric</h2><div id="selection-kind">Hover a node or choose a name</div><button id="clear-selection" type="button" hidden>Clear selection</button></div>
-    <div><div id="selected-score">--</div><div class="score-label">mean trait percentile / 100</div><dl><dt>Group weighting</dt><dd id="selected-percentile">--</dd><dt>Mean member z</dt><dd id="selected-raw">--</dd><dt id="selected-x-label">PC1</dt><dd id="selected-x">--</dd><dt id="selected-y-label">PC2</dt><dd id="selected-y">--</dd><dt>Node / fabric gap</dt><dd id="selected-gap">--</dd></dl></div>
-    <div class="aside-help"><div id="member-scores" class="member-scores"></div><div class="rule"></div><p class="small-note">50 is the population mean for each group. Higher means higher average percentile among personas, not a probability.</p><p class="small-note">Nodes are exact scores. The fabric smooths between them; gaps and cutouts show where it cannot faithfully fill the space.</p><p class="small-note" id="surface-fit-note"></p></div>
+    <div><div id="selected-score">--</div><div class="score-label">mean trait percentile / 100</div><dl><dt>Group weighting</dt><dd id="selected-percentile">--</dd><dt>Mean member z</dt><dd id="selected-raw">--</dd><dt id="selected-x-label">PC1</dt><dd id="selected-x">--</dd><dt id="selected-y-label">PC2</dt><dd id="selected-y">--</dd><dt>Node / fabric gap</dt><dd id="selected-gap">--</dd><dt>Flat adherence</dt><dd id="flat-score">--</dd><dt>Rolling / flat RMSE</dt><dd id="flat-rmse">--</dd><dt>Plane R2 at nodes</dt><dd id="flat-plane-r2">--</dd></dl></div>
+    <div class="aside-help"><div id="member-scores" class="member-scores"></div><div class="rule"></div><p class="small-note">50 is the population mean for each group. Higher means higher average percentile among personas, not a probability.</p><p class="small-note">Nodes are exact scores. The fabric smooths between them; gaps and cutouts show where it cannot faithfully fill the space.</p><p class="small-note">Flat adherence is a descriptive 0-100 score: 100 means the rolling fabric matches its least-squares flat plane; it is not predictive validation.</p><p class="small-note" id="surface-fit-note"></p></div>
   </aside>
 </main>
 <footer>
@@ -140,6 +142,7 @@ a { color:var(--accent); text-underline-offset:3px; }
   <p>This is a descriptive overlay of five editorial trait groups. Each node's height is the equal-weight mean of its three member traits' percentiles from the existing ridge plots. It is not a newly trained factor, independent psychological rating or probability.</p>
   <p>Trait scores and the unchanged Qwen PCA share activation sources. Each group contains exactly three of the 15 already selected traits; none were added or rescored. The selector chooses categories, not mixtures or a valence continuum.</p>
   <p>The fabric uses the same regularized thin-plate method and density/hull masks as the emotion viewer. Fitted values outside 0-100 are clipped for display, with counts in the fit diagnostics; exact nodes never change. Fabric gaps are not confidence intervals. Height colors use a fixed 0-100 scale across all groups.</p>
+  <p>The flat plane is the least-squares plane fit to the exact group heights in the selected PC plane. It is semi-transparent and uses the same support mask as the rolling fabric. Flat adherence is the R2 of that plane as an approximation to the displayed rolling fabric; the separate node R2 reports how well the plane fits observed persona nodes.</p>
   <p><a href="trait_surface_methodology.md">Methodology and controls</a> &middot; <a href="persona_trait_group_scores.csv" download>Group and member scores</a> &middot; <a href="../persona_trait_ridge_plots/persona_trait_ridges.html">Trait ridges</a> &middot; <a href="../persona_emotion_surface_viewer/persona_emotion_surface_viewer.html">Emotion landscape</a></p>
   </div></details>
 </footer>

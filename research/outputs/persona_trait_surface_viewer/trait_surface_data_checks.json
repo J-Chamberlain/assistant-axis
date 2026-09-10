@@ -11,6 +11,8 @@
   "all_meshes_bounded": true,
   "same_support_masks_as_emotion_viewer": true,
   "source_hashes": true,
+  "flat_plane_schema": true,
+  "flat_adherence_schema": true,
   "self_contained_html": true,
   "no_pca_refit": true,
   "new_activations": false
