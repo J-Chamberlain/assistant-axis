@@ -1,0 +1,88 @@
+{
+  "generated_utc": "2026-09-10T00:28:31.798025+00:00",
+  "base_commit": "03d99df985b77b4836043c237e0276bb7f3311a0",
+  "activation_model": "Qwen/Qwen3-32B",
+  "author": "Codex; exact runtime identifier not recorded",
+  "gpu_used": false,
+  "api_calls": 0,
+  "new_activations": false,
+  "pca_refit": false,
+  "plotly_python_version": "6.7.0",
+  "personas": 275,
+  "groups": 5,
+  "member_traits": 15,
+  "group_rows": 1375,
+  "ordered_axis_views": 6,
+  "aggregation": "Equal-weight mean of three within-trait midrank percentiles from the ridge plots",
+  "grid_size": 61,
+  "smoothing": [
+    [
+      "Detail",
+      0.003
+    ],
+    [
+      "Balanced",
+      0.03
+    ],
+    [
+      "Gentle",
+      0.3
+    ]
+  ],
+  "height_range": [
+    0,
+    100
+  ],
+  "color_range": [
+    0,
+    100
+  ],
+  "bounded_fabric": "Clip fitted surface only to 0-100; preserve exact group nodes",
+  "fit_diagnostics": "In-sample descriptive errors; not held-out validation",
+  "sources": [
+    {
+      "path": "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_data.json",
+      "sha256": "3528220f260ee9df6d273bc1faa1af0dd3502031167499a83029093c82e7dca5"
+    },
+    {
+      "path": "research/visualizations/geometry_viz_data.json",
+      "sha256": "1b15d8e3425bc3d51032919157eb683f1358f353f4ee071a18d06347a792ec6d"
+    },
+    {
+      "path": "research/outputs/persona_trait_ridge_plots/trait_category_order.csv",
+      "sha256": "ae0e2745d58ddb18c5b30bca56373b7cb3b532280bdad38c9a64d7bc8e761d95"
+    },
+    {
+      "path": "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_manifest.json",
+      "sha256": "c88a67640bbbda9e1f3463a29c82bdf83112813f0fb107886602569e3baee2eb"
+    },
+    {
+      "path": "research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md",
+      "sha256": "b3548fa5a08c6810035da1cea3f2166810d7b61b7137970f2d933a021d0fc330"
+    },
+    {
+      "path": "research/outputs/persona_emotion_surface_viewer/run_persona_emotion_surface_viewer.py",
+      "sha256": "de84b0c2069e354075d253d248b150c196680f4f29de873c6135b9c0171735d6"
+    },
+    {
+      "path": "research/outputs/persona_trait_surface_viewer/run_persona_trait_surface.py",
+      "sha256": "d304cb982d17ff46c80d8dbc87e2bfc2dc2f9ff122d9a0e24a2ad4b380f4c0eb"
+    },
+    {
+      "path": "research/outputs/persona_trait_surface_viewer/viewer.js",
+      "sha256": "7eaace30e2de4f3915d61150beddad9fedc275bb75069cbeceb1af3effd6c327"
+    },
+    {
+      "path": "research/outputs/persona_trait_surface_viewer/camera_controls.js",
+      "sha256": "1f5231e8f53f76066241b98c4e18de6651652d9e0b0ea1794cae158045c5f917"
+    },
+    {
+      "path": "research/outputs/persona_trait_surface_viewer/viewer_template.html",
+      "sha256": "f9190a442c0b54ec02f067a67ca08d7597539ffd2321d3a736e3bde23f968b12"
+    },
+    {
+      "path": "research/outputs/persona_trait_surface_viewer/viewer_bootstrap.js",
+      "sha256": "3e29fbc4f03c69705127eec1dfec92555734fe31f8eff1974cd40645b15af6d8"
+    }
+  ]
+}

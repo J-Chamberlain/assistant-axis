@@ -2,6 +2,16 @@
 
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
+## persona_trait_surface_viewer
+
+Artifact: Five-group 3D trait fabric landscape with stronger height colors, node-free mode, yaw/pitch/roll/zoom dials, numeric entry and camera presets.
+Location: `research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html`; method: `trait_surface_methodology.md`; source hashes: `trait_surface_manifest.json`; output hashes/URLs: `artifact_inventory.csv`.
+Created: 2026-09-09 by Codex (exact runtime identifier not recorded); activation source Qwen/Qwen3-32B. No new activations, GPU, API, generation or judging.
+Inputs: Unchanged trait-ridge data, category definitions and manifest; canonical role geometry; prior trait-profile provenance audit; working emotion-surface interpolation/UI conventions.
+Procedure: Equal-weight average of three within-trait percentiles for each of five existing editorial groups: exploration, response, scrutiny, challenge, affiliation. 1,375 group rows and original constituent scores. No group re-ranking, fitted weights or PCA refit. Reuse 61-by-61 thin-plate meshes, three smoothing settings and unchanged hull/density masks; clip interpolated fabric to 0-100 while preserving exact nodes. Fixed vivid height colors span 0-100 in every group. Camera math has explicit yaw/pitch/roll/distance conversion; node-free mode also removes pins, connectors and reference plane.
+Verification: Exact aggregation, coordinates and members; all 45 mesh variants; source hashes; 225 camera round-trips plus poles; six ordered planes, node visibility, rapid camera/group updates, presets, numeric controls and persistence tested using Plotly/DOM doubles. Static SVG/Sharp scientific preview visually inspected. Browser-use blocked the local URL; no workaround attempted and no new WebGL screenshot claimed.
+Caveats: Editorial groups are not validated factors; mean member percentile is not percentile rank of the composite. Same-space activation-cosine evidence, not independent psychology or measured trait prevalence. Surface fit errors are in-sample; 73/74,820 supported grid values clipped, with full diagnostics. Do not infer an inverse PC1/PC2 relationship from this UI task. Existing viewers, claims and findings unchanged.
+
 ## persona_trait_ridge_plots
 
 Artifact: Three full 275-persona PC-ranked ridge profiles for 15 of the 240 previously mapped Qwen traits.

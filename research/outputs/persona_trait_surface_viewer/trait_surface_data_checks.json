@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "personas": 275,
+  "groups": 5,
+  "rows": 1375,
+  "surface_variants": 45,
+  "exact_geometry": true,
+  "exact_member_scores": true,
+  "equal_weight_mean": true,
+  "population_group_mean": 50,
+  "all_meshes_bounded": true,
+  "same_support_masks_as_emotion_viewer": true,
+  "source_hashes": true,
+  "self_contained_html": true,
+  "no_pca_refit": true,
+  "new_activations": false
+}

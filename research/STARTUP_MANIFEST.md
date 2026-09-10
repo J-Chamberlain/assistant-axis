@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-10T00:11:17Z`
+- Generated timestamp UTC: `2026-09-10T00:32:33Z`
 - Current branch: `master`
-- generation base commit: `bcba251e6cee617e5b01af62c99c4d05028d92db`
+- generation base commit: `03d99df985b77b4836043c237e0276bb7f3311a0`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -33,42 +33,42 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
-- Latest commit touching file: `bcba251e6cee617e5b01af62c99c4d05028d92db`
-- generation base commit: `bcba251e6cee617e5b01af62c99c4d05028d92db`
-- Git blob hash: `eae8bc9c660bddb1aa85c94aed7066200e853b9f`
-- SHA256 content hash: `fdf8b953f85741dabbd0f370595160a7f2fd21f3b72142d424d32cf0955a9e59`
-- Byte count: `162364`
+- Latest commit touching file: `03d99df985b77b4836043c237e0276bb7f3311a0`
+- generation base commit: `03d99df985b77b4836043c237e0276bb7f3311a0`
+- Git blob hash: `35988f4f56524594cbdfb5845e1aec3fab8faf02`
+- SHA256 content hash: `4f8e30cb9a568cb58c917fa3be0599735c8e53d9625ec5eca5ed2205d66e2137`
+- Byte count: `163902`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
   - Last updated: `2026-09-09`
-  - Last commit: `bcba251 (base before fifteen-trait PC-ranked ridge plots)`
+  - Last commit: `03d99df (base before grouped-trait 3D landscape and precise camera controls)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-10T00:11:17Z`
+- Generated timestamp UTC: `2026-09-10T00:32:33Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
-- Latest commit touching file: `bcba251e6cee617e5b01af62c99c4d05028d92db`
-- generation base commit: `bcba251e6cee617e5b01af62c99c4d05028d92db`
-- Git blob hash: `b8792ffd6158fc3029217a950ce7e8f1f779ffc9`
-- SHA256 content hash: `0fa16126bcdfbf399991184c2f78e109cb40e98f4cc20679d1db86c48160ac3d`
-- Byte count: `23845`
+- Latest commit touching file: `03d99df985b77b4836043c237e0276bb7f3311a0`
+- generation base commit: `03d99df985b77b4836043c237e0276bb7f3311a0`
+- Git blob hash: `2df2cabd41f57d59d5596a0f6cf546b9f3b67ea3`
+- SHA256 content hash: `356539a76701984f437b1c2734295d2ee0f36e5e73960194643e293dfea9e94f`
+- Byte count: `24647`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
   - Last updated: `2026-09-09`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-10T00:11:17Z`
+- Generated timestamp UTC: `2026-09-10T00:32:33Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
 - Latest commit touching file: `96770accce38fa79d77435f1a8c94b6e286b395a`
-- generation base commit: `bcba251e6cee617e5b01af62c99c4d05028d92db`
+- generation base commit: `03d99df985b77b4836043c237e0276bb7f3311a0`
 - Git blob hash: `999673d640f24c34924fe8421b13c11245e4f23b`
 - SHA256 content hash: `80840a6c9a2c22b6611f4f11d61a13f05b107375a5ca41fb1cb84b82017f4615`
 - Byte count: `43979`
@@ -78,7 +78,7 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-06-10`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-10T00:11:17Z`
+- Generated timestamp UTC: `2026-09-10T00:32:33Z`
 
 ## Maintenance Rule
 
