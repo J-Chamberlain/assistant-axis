@@ -1,0 +1,155 @@
+{
+  "generated_utc": "2026-09-10T00:09:54.851832+00:00",
+  "base_commit": "bcba251e6cee617e5b01af62c99c4d05028d92db",
+  "activation_model": "Qwen/Qwen3-32B",
+  "author": "Codex; exact runtime identifier not recorded",
+  "source_personas": 275,
+  "source_traits": 240,
+  "selected_traits": 15,
+  "score_rows": 4125,
+  "groups": [
+    {
+      "position": 1,
+      "trait": "creative",
+      "group": "Exploration",
+      "color": "#b4a5d0",
+      "definition": "Offers imaginative solutions, novel perspectives, and original approaches to problems."
+    },
+    {
+      "position": 2,
+      "trait": "abstract",
+      "group": "Exploration",
+      "color": "#b4a5d0",
+      "definition": "Thinks in terms of concepts, patterns, and theoretical frameworks."
+    },
+    {
+      "position": 3,
+      "trait": "curious",
+      "group": "Exploration",
+      "color": "#b4a5d0",
+      "definition": "Shows genuine interest in learning and exploring new topics and ideas."
+    },
+    {
+      "position": 4,
+      "trait": "reactive",
+      "group": "Response",
+      "color": "#dbb77c",
+      "definition": "Responds to situations as they arise rather than planning ahead."
+    },
+    {
+      "position": 5,
+      "trait": "adaptable",
+      "group": "Response",
+      "color": "#dbb77c",
+      "definition": "Adjusts communication style and approach based on context and user needs."
+    },
+    {
+      "position": 6,
+      "trait": "practical",
+      "group": "Response",
+      "color": "#dbb77c",
+      "definition": "Emphasizes real-world applications and actionable advice over theory."
+    },
+    {
+      "position": 7,
+      "trait": "skeptical",
+      "group": "Scrutiny",
+      "color": "#91b6d0",
+      "definition": "Questions assumptions, seeks evidence, and challenges conventional thinking."
+    },
+    {
+      "position": 8,
+      "trait": "analytical",
+      "group": "Scrutiny",
+      "color": "#91b6d0",
+      "definition": "Breaks down complex topics into logical components and examines each part systematically."
+    },
+    {
+      "position": 9,
+      "trait": "conscientious",
+      "group": "Scrutiny",
+      "color": "#91b6d0",
+      "definition": "Demonstrates careful attention to responsibilities and thoroughness in work."
+    },
+    {
+      "position": 10,
+      "trait": "rebellious",
+      "group": "Challenge",
+      "color": "#d99a87",
+      "definition": "Challenges authority and conventional wisdom. Questions established norms and suggests alternative approaches to traditional methods."
+    },
+    {
+      "position": 11,
+      "trait": "competitive",
+      "group": "Challenge",
+      "color": "#d99a87",
+      "definition": "Emphasizes winning, achievement, and outperforming others."
+    },
+    {
+      "position": 12,
+      "trait": "manipulative",
+      "group": "Challenge",
+      "color": "#d99a87",
+      "definition": "Uses deception, emotional exploitation, and psychological tactics to control others."
+    },
+    {
+      "position": 13,
+      "trait": "empathetic",
+      "group": "Affiliation",
+      "color": "#8bc5c0",
+      "definition": "Shows understanding and consideration for human emotions and perspectives."
+    },
+    {
+      "position": 14,
+      "trait": "agreeable",
+      "group": "Affiliation",
+      "color": "#8bc5c0",
+      "definition": "Prioritizes harmony and maintaining positive relationships over confrontation."
+    },
+    {
+      "position": 15,
+      "trait": "altruistic",
+      "group": "Affiliation",
+      "color": "#8bc5c0",
+      "definition": "Prioritizes helping others and societal benefit over individual gain."
+    }
+  ],
+  "selection": "Editorial coverage based on saved trait descriptions; not data-optimized or statistically representative",
+  "raw_scores": "Copied exactly from saved role-by-trait cosine matrix; all 240 columns checked against PC2 joined copy",
+  "joined_matrix_max_absolute_difference": 9.985502008591496e-17,
+  "matrix_construction": "Mean of 64 stored activation rows per role/trait, then L2 normalization and dot product; inherited without rescoring",
+  "normalization": "100 * (average rank - 0.5) / 275 separately per trait; population z-scores also provided",
+  "ordering": "Descending unchanged canonical PC value with name tie-break",
+  "x_axis": "Equally spaced descriptive groups, not measured psychological/valence distance",
+  "curve": "PCHIP score connectors; not density, no within-persona area/peak normalization",
+  "gpu_used": false,
+  "api_calls": 0,
+  "activation_generation": false,
+  "pca_refit": false,
+  "source_files": [
+    {
+      "path": "research/visualizations/geometry_viz_data.json",
+      "sha256": "1b15d8e3425bc3d51032919157eb683f1358f353f4ee071a18d06347a792ec6d"
+    },
+    {
+      "path": "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv",
+      "sha256": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8"
+    },
+    {
+      "path": "research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv",
+      "sha256": "6d4ace37bd886cda1e6c08a39e0c0801a4dcea99d818009dfffd328e84bbdd8f"
+    },
+    {
+      "path": "data/traits/trait_list.json",
+      "sha256": "17ec18a088fbaacbabe1c87e4df4bac0be7e264bc2b281a33f50cdfa9a03734e"
+    },
+    {
+      "path": "research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md",
+      "sha256": "b3548fa5a08c6810035da1cea3f2166810d7b61b7137970f2d933a021d0fc330"
+    },
+    {
+      "path": "research/outputs/trait_persona_prediction/run_trait_persona_prediction.py",
+      "sha256": "c83a7cde6bb08771d2ad075e8529bb9476f0154826a9f2f1468e04d4691a581b"
+    }
+  ]
+}

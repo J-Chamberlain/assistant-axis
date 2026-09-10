@@ -2,6 +2,16 @@
 
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
+## persona_trait_ridge_plots
+
+Artifact: Three full 275-persona PC-ranked ridge profiles for 15 of the 240 previously mapped Qwen traits.
+Location: `research/outputs/persona_trait_ridge_plots/persona_trait_ridges.html`; method: `persona_trait_ridge_methodology.md`; source hashes: `persona_trait_ridge_manifest.json`; output hashes/raw URLs: `artifact_inventory.csv`.
+Created: 2026-09-09 by Codex (exact runtime identifier not recorded). Activation source: Qwen/Qwen3-32B; no GPU, generation, new activations, API or judge calls.
+Inputs: Canonical `geometry_viz_data.json` roles.names/pca3d; primary 275-by-240 `trait_persona_prediction/persona_trait_similarity_matrix.csv`; the PC2 stratified joined copy; `data/traits/trait_list.json`; existing generator and trait-profile provenance audit.
+Procedure: Exact primary-matrix values for 15 editorially selected traits in five descriptive groups (exploration, response, scrutiny, challenge, affiliation). Per-trait midrank percentile gives ridge height; raw cosine and population z-scores retained. Same PC coordinates and descending ranks in all three plots. PCHIP connects categorical scores without overshoot. The matrix averages each released tensor's 64 rows before normalization; it is not the single-layer emotion readout.
+Verification: All 66,000 source/joined cosine values agree within 1e-12 (max 9.986e-17); 4,125 exact selected rows; 825 ridges; 12,375 markers; independently checked percentiles, geometry and ranks; full static SVG/PNG renders and linked-selection unit tests. Overview visually inspected; no live-browser QA claimed.
+Caveats: Same-space activation cosines with mixed provenance, not independent psychological ratings. Groups/order are editorial, not fitted factors, valence or a measured continuum. Percentiles compare personas within a trait, not absolute strengths across traits; curves are not probability densities. Existing emotion viewers unchanged. Claims and findings unchanged.
+
 ## persona_emotion_ridge_plots
 
 Artifact: Three all-persona PC-ranked, ten-emotion ridge plots with standalone HTML, full SVG/PNG exports and 2,750 scores.

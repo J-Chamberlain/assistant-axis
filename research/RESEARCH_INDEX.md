@@ -10,6 +10,10 @@ Paper 1.5 is active: **Interpreting Persona Activation Geometry**. The core cont
 
 Paper 2 is active planning: local centroid perturbation and local persona-manifold mapping around anchors such as Trickster, Actor, Therapist, and Spy. Older dyad/contagion/attractor-collapse work is archived as future dynamics work.
 
+## Current Trait Ridge Visualization (2026-09-09)
+
+`research/outputs/persona_trait_ridge_plots/persona_trait_ridges.html` extends the working ridge format to 15 of the 240 previously mapped traits. Three complete 275-persona descending-PC rankings preserve geometry and use within-trait percentile heights. Editorial left-to-right groups are exploration, response, scrutiny, challenge and affiliation, not a valence scale. The directory includes 4,125 scores, full SVG/PNG plots, a labeled top-15 overview, provenance/methodology and numerical/static-render/unit checks. Same-space activation-cosine evidence; no new ratings, activations, claims or GPU/API work. Next step is manual inspection.
+
 ## Current Emotion Visualization (2026-09-09)
 
 The user now confirms the completed 3D viewer works; the build template had been opened instead of the runnable artifact. New companion: `research/outputs/persona_emotion_ridge_plots/persona_emotion_ridges.html` contains three full 275-persona ridge plots ordered descending on PC1/PC2/PC3, with ten existing emotion directions, negative-to-positive categorical ordering, and per-emotion percentile heights. Full SVG/PNG exports, a top-20 preview, 2,750 scores, provenance/methodology, and data/static-render/unit checks are in that directory. All six original channels agree exactly. Not probability distributions or validated emotion prevalence; no GPU/API work and no new live-browser verification.

@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "source_matrix_shape": [
+    275,
+    240
+  ],
+  "selected_score_rows": 4125,
+  "persona_rows_in_html": 825,
+  "category_points_in_html": 12375,
+  "canonical_geometry_unchanged": true,
+  "raw_scores_exact": true,
+  "independent_midrank_check": true,
+  "all_rankings_descending": true,
+  "source_checksums_pass": true,
+  "all_panels_prerendered": true,
+  "no_external_scripts": true,
+  "browser_validation": "Not performed; static SVG rasterization and DOM-double unit checks only"
+}
