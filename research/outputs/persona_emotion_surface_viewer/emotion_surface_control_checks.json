@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "camera_roundtrip_cases": 225,
+  "poles_checked": true,
+  "checks": [
+    "Compiled HTML scripts parse and embedded data matches",
+    "All six emotion channels and fixed vivid symmetric color limits",
+    "Exact 275 nodes",
+    "Fabric-only hides nodes, pins, connectors and reference plane",
+    "All six ordered axis views",
+    "Yaw/pitch/roll/zoom and numeric entry",
+    "Drag relayout updates controls",
+    "Camera survives axes, emotion and smoothing changes",
+    "Rapid camera/emotion changes converge",
+    "Top/front/side/isometric and reset",
+    "Empty numeric input restored"
+  ],
+  "react_count": 26,
+  "relayout_count": 11,
+  "live_browser_test": false,
+  "note": "Plotly/DOM double tests UI state and camera math, not actual WebGL rendering."
+}

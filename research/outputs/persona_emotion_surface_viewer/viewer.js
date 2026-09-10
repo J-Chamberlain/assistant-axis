@@ -9,10 +9,12 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const initialCamera = {eye: {x: 1.26, y: 1.29, z: 0.94}, up: {x: 0, y: 0, z: 1}, center: {x: 0, y: 0, z: -0.04}};
   if(window.innerWidth<600) for(const axis of ["x","y","z"]) initialCamera.eye[axis]*=1.35;
-  const state = {x: 0, y: 1, emotion: 0, smoothing: 1, surface: true, connectors: true,
+  const state = {x: 0, y: 1, emotion: 0, smoothing: 1, surface: true, connectors: true, nodes: true,
     selected: null, hovered: null, camera: structuredClone(initialCamera), transitioning: false};
   let requestVersion = 0, renderedVersion = -1, running = false, initialized = false, previous = null;
-  const colors = [[0,"#547d9d"],[0.25,"#92adbd"],[0.5,"#d5d3c9"],[0.75,"#caa38c"],[1,"#b6795d"]];
+  let cameraVersion=0,cameraApplied=0,cameraBusy=false;
+  const cameraKeys=["yaw","pitch","roll","zoom"];
+  const colors = [[0,"#173d9e"],[0.2,"#198bcc"],[0.4,"#74d9d0"],[0.5,"#f4f1dc"],[0.65,"#ffd04a"],[0.8,"#ef7529"],[1,"#b21932"]];
   const transpose = matrix => matrix[0].map((_, i) => matrix.map(row => row[i]));
   const signed = (v, n=2) => `${v >= 0 ? "+" : ""}${v.toFixed(n)}`;
   const escapeText = text => String(text).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -53,23 +55,23 @@
     const selected=state.selected===null?[]:[state.selected];
     const custom=data.roles.map((r,i)=>[escapeText(r.name),emotion.z[i],emotion.percentile[i],emotion.raw[i],i]);
     return [
-      {type:"surface",name:"Zero reference",x:[s.x[0],s.x.at(-1)],y:[s.y[0],s.y.at(-1)],z:[[0,0],[0,0]],
+      {type:"surface",name:"Zero reference",visible:state.nodes,x:[s.x[0],s.x.at(-1)],y:[s.y[0],s.y.at(-1)],z:[[0,0],[0,0]],
         colorscale:[[0,"#777777"],[1,"#777777"]],opacity:0.055,showscale:false,hoverinfo:"skip"},
       {type:"surface",name:"Fitted fabric",x:s.x,y:s.y,z:s.grid,connectgaps:false,visible:state.surface,
-        colorscale:colors,cmin:-data.z_limit,cmax:data.z_limit,showscale:false,opacity:0.87,hoverinfo:"skip",
-        lighting:{ambient:0.73,diffuse:0.65,specular:0.1,roughness:0.93,fresnel:0.1},
+        colorscale:colors,cmin:-data.z_limit,cmax:data.z_limit,showscale:true,colorbar:{title:{text:"Affinity<br>z-score"},tickvals:[-data.z_limit,0,data.z_limit],thickness:12,len:0.55,x:0.94,tickfont:{size:10}},opacity:1,hoverinfo:"skip",
+        lighting:{ambient:0.88,diffuse:0.35,specular:0.05,roughness:0.93,fresnel:0.1},
         lightposition:{x:100,y:100,z:200},contours:{z:{show:false}}},
       {type:"scatter3d",name:"Fabric weave",mode:"lines",...weave(s),visible:state.surface,
         line:{color:"rgba(47,48,45,0.36)",width:1},hoverinfo:"skip",connectgaps:false},
       {type:"scatter3d",name:"Node-to-fabric gaps",mode:"lines",...lines,
-        visible:state.surface&&state.connectors,line:{color:"rgba(225,218,201,0.42)",width:1},hoverinfo:"skip",connectgaps:false},
-      {type:"scatter3d",name:"Persona nodes",mode:"markers",x:xs,y:ys,z:s.heights,
+        visible:state.surface&&state.connectors&&state.nodes,line:{color:"rgba(225,218,201,0.42)",width:1},hoverinfo:"skip",connectgaps:false},
+      {type:"scatter3d",name:"Persona nodes",mode:"markers",x:xs,y:ys,z:s.heights,visible:state.nodes,
         marker:{size:3.3,color:"#fff5df",opacity:1,line:{color:"#242424",width:0.6}},customdata:custom,
         hoverinfo:transition?"skip":undefined,
         hovertemplate:transition?undefined:`<b>%{customdata[0]}</b><br>${emotion.label}: %{customdata[1]:+.2f} SD<br>`+
           `Percentile: %{customdata[2]:.1f}<br>Raw cosine: %{customdata[3]:.5f}<br>`+
           `PC${s.axisX+1}: %{x:.2f} | PC${s.axisY+1}: %{y:.2f}<extra></extra>`},
-      {type:"scatter3d",name:"Pinned persona",mode:"markers+text",x:selected.map(i=>xs[i]),y:selected.map(i=>ys[i]),
+      {type:"scatter3d",name:"Pinned persona",mode:"markers+text",visible:state.nodes,x:selected.map(i=>xs[i]),y:selected.map(i=>ys[i]),
         z:selected.map(i=>s.heights[i]),text:selected.map(i=>escapeText(names[i])),textposition:"top center",
         textfont:{size:12,color:"#e8e8e8"},marker:{size:6,color:"#78c6e8",line:{color:"#09202c",width:1}},
         customdata:selected.map(i=>custom[i]),hoverinfo:"skip"}
@@ -81,7 +83,7 @@
     const axis={color:"#aaa6a0",gridcolor:"#303033",zerolinecolor:"#55555a",showbackground:false,
       tickfont:{size:11},nticks:5,showspikes:false};
     return {paper_bgcolor:"rgba(0,0,0,0)",plot_bgcolor:"rgba(0,0,0,0)",showlegend:false,
-      margin:{l:10,r:10,t:48,b:15},font:{family:'Menlo, Consolas, monospace',color:"#e8e8e8"},
+      margin:{l:10,r:45,t:48,b:15},font:{family:'Menlo, Consolas, monospace',color:"#e8e8e8"},
       uirevision:"emotion-landscape",hoverlabel:{bgcolor:"#1b1b1b",bordercolor:"#76746e",font:{size:12,color:"#eee"}},
       scene:{uirevision:"emotion-landscape-camera",bgcolor:"rgba(0,0,0,0)",dragmode:"orbit",camera:state.camera,
         aspectmode:"manual",aspectratio:{x:1.25*(xRange[1]-xRange[0])/longest,y:1.25*(yRange[1]-yRange[0])/longest,z:0.75},
@@ -115,6 +117,7 @@
     el("plot-emotion").textContent=data.emotions[state.emotion].label;
     el("emotion-current").textContent=data.emotions[state.emotion].label;
     el("plane-caption").textContent=`PC${state.x+1} / PC${state.y+1} | height = relative affinity`;
+    el("show-connectors").disabled=!state.nodes||!state.surface;
     el("emotion-slider").value=state.emotion;
     el("emotion-slider").setAttribute("aria-valuetext",data.emotions[state.emotion].label);
     [...el("emotion-stops").children].forEach((button,i)=>button.setAttribute("aria-pressed",String(i===state.emotion)));
@@ -126,14 +129,45 @@
   }
 
   function captureCamera() {
+    if(cameraBusy||running||cameraVersion!==cameraApplied) return;
     // Plotly 3.5 can emit a wheel relayout before the GL camera finishes zooming.
     const live=plot._fullLayout?.scene?._scene?.getCamera?.();
-    if(live) state.camera=structuredClone(live);
+    if(live) {state.camera=structuredClone(live);syncCameraControls();}
+  }
+
+  function syncCameraControls() {
+    const angles=EmotionCamera.fromCamera(state.camera,Number(el("camera-yaw").value));
+    for(const key of cameraKeys) {
+      const value=Number(angles[key].toFixed(1));
+      el(`camera-${key}`).value=value;el(`number-${key}`).value=value;
+      el(`camera-${key}`).setAttribute("aria-valuetext",`${value}${key==="zoom"?" percent":" degrees"}`);
+      el(`dial-${key}`).style.transform=`rotate(${key==="zoom"?(value-100)*.8:value}deg)`;
+    }
+  }
+
+  async function flushCamera() {
+    if(!initialized||running||cameraBusy||cameraApplied===cameraVersion) return;
+    cameraBusy=true;
+    try {
+      while(cameraApplied!==cameraVersion) {
+        const version=cameraVersion;
+        await Plotly.relayout(plot,{"scene.camera":structuredClone(state.camera)});
+        cameraApplied=version;
+      }
+    } catch(error) {fail(error);} finally {
+      cameraBusy=false;
+      if(renderedVersion!==requestVersion) scheduleRender();
+    }
+  }
+
+  function requestCamera(camera) {
+    state.camera=structuredClone(camera);cameraVersion++;syncCameraControls();
+    requestAnimationFrame(flushCamera);
   }
 
   function bindPlotEvents() {
     const pin = i => {
-      if(state.transitioning || i===null || state.selected===i) return;
+      if(!state.nodes || state.transitioning || i===null || state.selected===i) return;
       state.selected=i;el("persona-picker").value=i;scheduleRender();
     };
     // Some WebGL/browser combinations report hover but omit plotly_click.
@@ -152,9 +186,13 @@
       requestAnimationFrame(captureCamera);
       setTimeout(captureCamera,150);
     },{passive:true});
-    plot.on("plotly_relayout", event=>{if(event["scene.camera"]) state.camera=structuredClone(event["scene.camera"]);});
+    plot.on("plotly_relayout", event=>{
+      if(!cameraBusy&&!running&&cameraVersion===cameraApplied&&event["scene.camera"]) {
+        state.camera=structuredClone(event["scene.camera"]);syncCameraControls();
+      }
+    });
     plot.on("plotly_hover", event=>{
-      if(state.transitioning) return;
+      if(!state.nodes||state.transitioning) return;
       const p=event.points?.find(p=>p.curveNumber===4);if(!p) return;
       state.hovered=p.customdata[4];updatePanel();
     });
@@ -191,11 +229,11 @@
         }
         previous=target;renderedVersion=version;state.transitioning=false;
         if(version===requestVersion) {
-          el("render-status").textContent="275 personas | drag to explore";
+          el("render-status").textContent="275 personas | use dials or drag";
           window.__emotionViewer.lastRenderMilliseconds=performance.now()-started;
         }
       }
-    } catch(error) {fail(error);} finally {running=false;state.transitioning=false;}
+    } catch(error) {fail(error);} finally {running=false;state.transitioning=false;flushCamera();}
   }
 
   data.roles.forEach((role,i)=>{const option=document.createElement("option");option.value=i;option.textContent=role.name.replaceAll("_"," ");el("persona-picker").appendChild(option);});
@@ -204,11 +242,26 @@
   el("emotion-slider").addEventListener("input",()=>{state.emotion=Number(el("emotion-slider").value);scheduleRender();});
   for(const [id,key] of [["x-axis","x"],["y-axis","y"],["smoothing","smoothing"]])
     el(id).addEventListener("change",()=>{state[key]=Number(el(id).value);scheduleRender();});
-  for(const [id,key] of [["show-surface","surface"],["show-connectors","connectors"]])
-    el(id).addEventListener("change",()=>{state[key]=el(id).checked;scheduleRender();});
+  for(const [id,key] of [["show-surface","surface"],["show-connectors","connectors"],["show-nodes","nodes"]])
+    el(id).addEventListener("change",()=>{state[key]=el(id).checked;if(!state.nodes) state.hovered=null;scheduleRender();});
   el("persona-picker").addEventListener("change",()=>{state.selected=el("persona-picker").value===""?null:Number(el("persona-picker").value);scheduleRender();});
   el("clear-selection").addEventListener("click",()=>{state.selected=null;state.hovered=null;el("persona-picker").value="";scheduleRender();});
-  el("reset-view").addEventListener("click",()=>{state.camera=structuredClone(initialCamera);if(initialized) Plotly.relayout(plot,{"scene.camera":state.camera});});
-  window.__emotionViewer={data,state,snapshot,get ready(){return initialized&&!running;},get rendering(){return running;},lastRenderMilliseconds:null};
+  for(const key of cameraKeys) for(const prefix of ["camera","number"]) {
+    const input=el(`${prefix}-${key}`);
+    input.addEventListener(prefix==="camera"?"input":"change",()=>{
+      if(input.value.trim()===""||!Number.isFinite(Number(input.value))) {syncCameraControls();return;}
+      const angles=EmotionCamera.fromCamera(state.camera,Number(el("camera-yaw").value));
+      angles[key]=Math.max(Number(input.min),Math.min(Number(input.max),Number(input.value)));
+      requestCamera(EmotionCamera.toCamera(angles,state.camera.center));
+    });
+  }
+  document.querySelectorAll("[data-view]").forEach(button=>button.addEventListener("click",()=>{
+    const views={iso:EmotionCamera.defaults,top:{yaw:-90,pitch:90,roll:0,zoom:100},
+      front:{yaw:-90,pitch:0,roll:0,zoom:100},side:{yaw:0,pitch:0,roll:0,zoom:100}};
+    requestCamera(EmotionCamera.toCamera(views[button.dataset.view]));
+  }));
+  el("reset-view").addEventListener("click",()=>requestCamera(initialCamera));
+  window.__emotionViewer={data,state,snapshot,get ready(){return initialized&&!running&&!cameraBusy&&cameraVersion===cameraApplied;},get rendering(){return running;},lastRenderMilliseconds:null};
+  syncCameraControls();
   scheduleRender();
 })();

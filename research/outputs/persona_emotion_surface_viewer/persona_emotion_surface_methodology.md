@@ -5,7 +5,7 @@ Author: Codex; exact runtime model identifier unavailable. Activation model: Qwe
 
 ## What Was Built
 
-An offline HTML viewer with 275 exact persona nodes, six emotion-slider stops, all six ordered PC pairs, three surface smoothing levels, node tooltips and pinned selection, camera persistence, rotation, zoom, surface/connector toggles, and a zero-height reference. No model inference, new activations, or judge calls were used.
+An offline HTML viewer with 275 exact persona nodes, six emotion-slider stops, all six ordered PC pairs, three surface smoothing levels, node tooltips and pinned selection, camera persistence, rotation, zoom, surface/connector toggles, and a zero-height reference. The UI also provides a vivid fixed symmetric z-score color scale, a fabric-only mode that hides nodes and reference guides, and synchronized yaw/pitch/roll/zoom dials with Isometric, Top, Front, and Side presets. No model inference, new activations, or judge calls were used; this update changes presentation controls only.
 
 ## Sources and Layer Alignment
 

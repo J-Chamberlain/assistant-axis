@@ -5,6 +5,12 @@ Status: prototype implemented; startup guard patched after user-reported loading
 Branch: `master`. Implementation base commit: `e7513f60697ee52d5ef3b6f1c3962756e54c22d5`.
 Author: Codex; exact runtime model identifier unavailable. Source activation model: Qwen/Qwen3-32B.
 
+### UI Control Update (2026-09-09)
+
+The existing emotion viewer was updated in place from its saved data bundle. The surface now uses a more saturated fixed symmetric z-score palette, the `Persona nodes` control provides a true fabric-only view by hiding nodes, pins, connectors, and the zero reference, and synchronized yaw/pitch/roll/zoom controls provide numeric entry plus Isometric, Top, Front, and Side presets. These are presentation controls only: the six emotion scores, 275 persona coordinates, meshes, and emotion semantics were not regenerated or changed.
+
+The new `camera_controls.js`, `verify_emotion_surface_controls.cjs`, and `emotion_surface_control_checks.json` are indexed with the viewer. The control test covers 225 camera round trips, pole handling, all six emotions and ordered PC views, node visibility, camera persistence, rapid updates, presets, and numeric input using Plotly/DOM doubles. It is not a live WebGL browser test.
+
 ## Open and Explore
 
 ### Startup Follow-Up (2026-09-09)
@@ -59,6 +65,7 @@ python3 -B research/outputs/persona_emotion_surface_viewer/run_persona_emotion_s
 python3 -B research/outputs/persona_emotion_surface_viewer/verify_persona_emotion_surface_data.py
 node research/outputs/persona_emotion_surface_viewer/verify_viewer_bootstrap.cjs
 node research/outputs/persona_emotion_surface_viewer/verify_persona_emotion_surface_browser.cjs
+node research/outputs/persona_emotion_surface_viewer/verify_emotion_surface_controls.cjs
 ```
 
 Package versions are frozen in the output manifest. In this Mac environment, Playwright was resolved through `NODE_PATH=/Users/alfred/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules`. Rebuilding requires the local source tensors; opening the HTML does not. The generator uses one CPU thread with the local OpenMP compatibility setting recorded in source. UI sources are `viewer_template.html` and `viewer.js`; edit those and regenerate rather than editing the embedded library HTML.

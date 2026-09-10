@@ -238,7 +238,10 @@ def methodology(manifest, sensitivity, diagnostics):
              "## What Was Built", "",
              "An offline HTML viewer with 275 exact persona nodes, six emotion-slider stops, all six ordered PC pairs, "
              "three surface smoothing levels, node tooltips and pinned selection, camera persistence, rotation, zoom, "
-             "surface/connector toggles, and a zero-height reference. No model inference, new activations, or judge calls were used.", "",
+             "surface/connector toggles, and a zero-height reference. The UI also provides a vivid fixed symmetric "
+             "z-score color scale, a fabric-only mode that hides nodes and reference guides, and synchronized "
+             "yaw/pitch/roll/zoom dials with Isometric, Top, Front, and Side presets. No model inference, new "
+             "activations, or judge calls were used; this update changes presentation controls only.", "",
              "## Sources and Layer Alignment", "",
              "The displayed PC coordinates are copied exactly from `research/visualizations/geometry_viz_data.json`. "
              "Its builder averages released role tensors across all 64 layers before PCA. No PCA is fitted by this tool.", "",
@@ -305,6 +308,7 @@ def render_html(data):
     image = "data:image/png;base64," + base64.b64encode(preview.read_bytes()).decode() if preview.exists() else ""
     replacements = {"__PLOTLY_LIBRARY__": library, "__VIEWER_DATA__": payload,
                     "__VIEWER_JS__": (HERE / "viewer.js").read_text(),
+                    "__CAMERA_JS__": (HERE / "camera_controls.js").read_text(),
                     "__BOOTSTRAP_JS__": (HERE / "viewer_bootstrap.js").read_text(), "__PREVIEW_IMAGE__": image}
     for key, value in replacements.items():
         html = html.replace(key, value)
@@ -324,7 +328,7 @@ def rebuild_ui(output):
     manifest["viewer_base_commit"] = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     manifest["versions"]["plotly_js"] = version
     sources = {item["path"]: item for item in manifest["sources"]}
-    for path in [Path(__file__), HERE / "viewer_template.html", HERE / "viewer.js", HERE / "viewer_bootstrap.js",
+    for path in [Path(__file__), HERE / "viewer_template.html", HERE / "viewer.js", HERE / "camera_controls.js", HERE / "viewer_bootstrap.js",
                  HERE / "persona_emotion_surface_desktop.png"]:
         sources[str(path.relative_to(ROOT))] = {"path": str(path.relative_to(ROOT)), "sha256": sha256(path)}
     manifest["sources"] = list(sources.values())
@@ -370,7 +374,7 @@ def main():
         "verification": {"unique_personas": True, "finite_sources": True, "normalization_pass": True,
                           "pc_coordinates_copied_without_refit": True, "surface_diagnostics_are_in_sample": True},
     }
-    source_paths = [GEOMETRY, DIRECTIONS, EXTRACTOR, BOUNDARY, Path(__file__), HERE / "viewer_template.html", HERE / "viewer.js", HERE / "viewer_bootstrap.js",
+    source_paths = [GEOMETRY, DIRECTIONS, EXTRACTOR, BOUNDARY, Path(__file__), HERE / "viewer_template.html", HERE / "viewer.js", HERE / "camera_controls.js", HERE / "viewer_bootstrap.js",
                     ROOT / "assistant_axis/internals/activations.py", ROOT / "research/visualizations/scripts/build_geometry_viz.py",
                     ROOT / "research/assistant_axis_methodology/role_vector_structure_audit.md",
                     ROOT / "research/outputs/public_source_extraction_equivalence/qwen_hidden_states_semantics_notes.md",

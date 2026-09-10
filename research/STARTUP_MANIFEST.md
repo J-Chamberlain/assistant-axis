@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-10T00:32:33Z`
+- Generated timestamp UTC: `2026-09-10T01:48:52Z`
 - Current branch: `master`
-- generation base commit: `03d99df985b77b4836043c237e0276bb7f3311a0`
+- generation base commit: `c37f3ad040513d13684b457ee83d292ce893d325`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -33,42 +33,42 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
-- Latest commit touching file: `03d99df985b77b4836043c237e0276bb7f3311a0`
-- generation base commit: `03d99df985b77b4836043c237e0276bb7f3311a0`
-- Git blob hash: `35988f4f56524594cbdfb5845e1aec3fab8faf02`
-- SHA256 content hash: `4f8e30cb9a568cb58c917fa3be0599735c8e53d9625ec5eca5ed2205d66e2137`
-- Byte count: `163902`
+- Latest commit touching file: `c37f3ad040513d13684b457ee83d292ce893d325`
+- generation base commit: `c37f3ad040513d13684b457ee83d292ce893d325`
+- Git blob hash: `af8a17ab17a68d672b43fa55fc53379949572710`
+- SHA256 content hash: `f28d2718e8642544c63c95c92918eedbedd034ec0bdc6e2add805b61bc636e13`
+- Byte count: `164642`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
   - Last updated: `2026-09-09`
-  - Last commit: `03d99df (base before grouped-trait 3D landscape and precise camera controls)`
+  - Last commit: `c37f3ad (base before emotion-landscape control update)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-10T00:32:33Z`
+- Generated timestamp UTC: `2026-09-10T01:48:52Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
-- Latest commit touching file: `03d99df985b77b4836043c237e0276bb7f3311a0`
-- generation base commit: `03d99df985b77b4836043c237e0276bb7f3311a0`
-- Git blob hash: `2df2cabd41f57d59d5596a0f6cf546b9f3b67ea3`
-- SHA256 content hash: `356539a76701984f437b1c2734295d2ee0f36e5e73960194643e293dfea9e94f`
-- Byte count: `24647`
+- Latest commit touching file: `c37f3ad040513d13684b457ee83d292ce893d325`
+- generation base commit: `c37f3ad040513d13684b457ee83d292ce893d325`
+- Git blob hash: `976903d972cbaf0695fce3e513eb134d72285a2c`
+- SHA256 content hash: `4f5806208b8b4241b6c8d23338f9fa52ba07f9f214bc0a65c26db68f5724fe29`
+- Byte count: `25239`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
   - Last updated: `2026-09-09`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-10T00:32:33Z`
+- Generated timestamp UTC: `2026-09-10T01:48:52Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
 - Latest commit touching file: `96770accce38fa79d77435f1a8c94b6e286b395a`
-- generation base commit: `03d99df985b77b4836043c237e0276bb7f3311a0`
+- generation base commit: `c37f3ad040513d13684b457ee83d292ce893d325`
 - Git blob hash: `999673d640f24c34924fe8421b13c11245e4f23b`
 - SHA256 content hash: `80840a6c9a2c22b6611f4f11d61a13f05b107375a5ca41fb1cb84b82017f4615`
 - Byte count: `43979`
@@ -78,7 +78,7 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-06-10`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-10T00:32:33Z`
+- Generated timestamp UTC: `2026-09-10T01:48:52Z`
 
 ## Maintenance Rule
 

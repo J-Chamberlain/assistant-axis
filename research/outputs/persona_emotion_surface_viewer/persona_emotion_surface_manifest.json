@@ -1200,15 +1200,15 @@
     },
     {
       "path": "research/outputs/persona_emotion_surface_viewer/run_persona_emotion_surface_viewer.py",
-      "sha256": "de84b0c2069e354075d253d248b150c196680f4f29de873c6135b9c0171735d6"
+      "sha256": "b4985e613390845941db26d44f5bf7616b4047bc6ca3429b5355565abea2bfa8"
     },
     {
       "path": "research/outputs/persona_emotion_surface_viewer/viewer_template.html",
-      "sha256": "9a30fc4379e0530ce8a33351f7df44a99f08ea5015863228bfc54544c4ccc910"
+      "sha256": "1b29195bff2723341af32ab6bab737c294ffba4a77d9cea8e6be854d6689bd49"
     },
     {
       "path": "research/outputs/persona_emotion_surface_viewer/viewer.js",
-      "sha256": "bb9f1a69ecabdb89fb8f0df85bb8bb9d2ee79d2524cc3a6630809a89f4cc97df"
+      "sha256": "960d0ff0463cfaf4c7e60d6a70124b0cc5abc85098afa33b8cf52e887e85b05f"
     },
     {
       "path": "assistant_axis/internals/activations.py",
@@ -1241,6 +1241,10 @@
     {
       "path": "research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_desktop.png",
       "sha256": "087a305c3356a190a46eaf754d8fc849f53a36dd118c92d8197cc7e04af2c1ce"
+    },
+    {
+      "path": "research/outputs/persona_emotion_surface_viewer/camera_controls.js",
+      "sha256": "b8033713f5c9616ce4b8ce372b9185a805936dfc72019be5eabbce91da2cd904"
     }
   ],
   "elapsed_seconds": 0.7155985409626737,
@@ -1275,15 +1279,15 @@
     },
     {
       "filename": "persona_emotion_surface_methodology.md",
-      "sha256": "034e3d476a6c8f1c9a81aba86f3606f555181d7a1e31b8b33bfd61bb12187bfd",
-      "bytes": 6552
+      "sha256": "de1c0ae4c63fa8494883462a7c50d84ecf573ee1f37f55defcbf82f66b3d40dd",
+      "bytes": 6813
     },
     {
       "filename": "persona_emotion_surface_viewer.html",
-      "sha256": "93c9eadf4608bbf996d5f39cff99dd1cbafd6158b2be0f1ad2bfe99018d9d777",
-      "bytes": 7275030
+      "sha256": "7a77724095f7ec60f303ebf398a7717dfe456cb51ad5c5a3144264c9cfd3861f",
+      "bytes": 7283234
     }
   ],
-  "viewer_updated_utc": "2026-09-09T22:55:10.335235+00:00",
-  "viewer_base_commit": "57ec408ab196afe8d9c04f5b95bde09c48a7de25"
+  "viewer_updated_utc": "2026-09-10T01:49:50.512670+00:00",
+  "viewer_base_commit": "c37f3ad040513d13684b457ee83d292ce893d325"
 }

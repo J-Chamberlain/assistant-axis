@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-10T00:32:34Z
-Last commit when updated: 03d99df (base before grouped-trait 3D landscape)
+Updated UTC: 2026-09-10T01:49:59Z
+Last commit when updated: c37f3ad (base before emotion-landscape control update)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -65,7 +65,7 @@ PC-ranked emotion profiles: `research/outputs/persona_emotion_ridge_plots/person
 
 Emotion viewer startup follow-up: the user now reports the completed 3D viewer works; the shown nonworking page was the build template. The original clean-profile tests remain historical, and no new live-browser verification is claimed.
 
-Qwen emotion surface viewer: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html` is the offline six-emotion slider/two-PC fabric landscape for all 275 personas. The directory contains the 1,650-row score table, data bundle, source manifest, methodology, implementation report, reproducible generator/UI sources, browser/data verification, and screenshots. The original plan is retained with a completion addendum. Values are normalized activation affinities, not emotion prevalence; layer/pooling caveats and smoothing gaps remain explicit. This companion does not overwrite the main explorer.
+Qwen emotion surface viewer: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html` is the offline six-emotion slider/two-PC fabric landscape for all 275 personas. The directory contains the 1,650-row score table, data bundle, source manifest, methodology, implementation report, reproducible generator/UI sources, browser/data verification, and screenshots. The current UI adds a vivid fixed symmetric z-score palette, a fabric-only node toggle, synchronized yaw/pitch/roll/zoom dials, numeric entry, and Isometric/Top/Front/Side presets. The original plan is retained with a completion addendum. Values are normalized activation affinities, not emotion prevalence; layer/pooling caveats and smoothing gaps remain explicit. This companion does not overwrite the main explorer.
 
 Current interactive visualizations live under `research/visualizations/` and `visualizations/`. The main current geometry explorer is `research/visualizations/persona_geometry_explorer.html`; it now includes native PC1 x PC2 trait-region overlay controls backed by `research/visualizations/trait_region_overlay_data.json`. Paper 1 public-facing visualization assets remain under `visualizations/`.
 
