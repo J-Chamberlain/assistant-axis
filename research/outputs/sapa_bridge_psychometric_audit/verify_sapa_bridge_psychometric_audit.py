@@ -179,6 +179,24 @@ def main() -> None:
     )
     add(checks, "raw_hash_matches_release", sha256(raw_path) == manifest["raw_data"]["sha256"])
     add(checks, "raw_hash_expected", sha256(raw_path) == "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6")
+    frozen_rubric = subprocess.run(
+        [
+            "git",
+            "show",
+            "6bf36c0:research/outputs/sapa_bridge_psychometric_audit/psychometric_support_rubric.md",
+        ],
+        cwd=repo,
+        text=True,
+        capture_output=True,
+        check=True,
+    ).stdout
+    current_rubric = (output / "psychometric_support_rubric.md").read_text(encoding="utf-8")
+    add(
+        checks,
+        "rubric_semantics_unchanged_from_freeze",
+        [line.rstrip() for line in frozen_rubric.splitlines()]
+        == [line.rstrip() for line in current_rubric.splitlines()],
+    )
     add(checks, "respondent_id_columns_loaded_zero", manifest["raw_data"]["respondent_id_or_demographic_columns_loaded"] == 0)
     add(checks, "model_geometry_not_used", manifest["model_geometry_used"] is False)
     add(checks, "human_to_model_projection_not_performed", manifest["human_to_model_projection_performed"] is False)

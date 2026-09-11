@@ -13,6 +13,7 @@
     "all_input_hashes_match": true,
     "raw_hash_matches_release": true,
     "raw_hash_expected": true,
+    "rubric_semantics_unchanged_from_freeze": true,
     "respondent_id_columns_loaded_zero": true,
     "model_geometry_not_used": true,
     "human_to_model_projection_not_performed": true,

@@ -13,7 +13,7 @@
 - Missingness: treated as SAPA's randomized planned item administration. There was no complete-case analysis and no respondent/item mean imputation.
 - Model information: none. The script loads no persona, activation, trait-cosine, predictor, occupation, or model-coordinate artifact.
 
-The decision rules were frozen in [`psychometric_support_rubric.md`](psychometric_support_rubric.md) at commit `6bf36c0` before inspecting response covariance. The complete source chain and hashes are in [`source_manifest.json`](source_manifest.json).
+The decision rules were frozen in [`psychometric_support_rubric.md`](psychometric_support_rubric.md) at commit `6bf36c0` before inspecting response covariance. A later cleanup removed four Markdown hard-break trailing spaces but changed no criterion or threshold; the verifier checks line content after trailing-space normalization against the frozen commit. The complete source chain and hashes are in [`source_manifest.json`](source_manifest.json).
 
 ## Observed
 

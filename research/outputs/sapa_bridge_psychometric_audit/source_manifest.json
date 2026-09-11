@@ -4,6 +4,7 @@
   "generated_at": "2026-09-11T23:10:00Z",
   "rubric_version": "1.0",
   "rubric_freeze_commit": "6bf36c0",
+  "rubric_post_freeze_change": "Four Markdown hard-break trailing spaces were removed; criteria text and thresholds are unchanged.",
   "random_seed": 20260911,
   "parallel_analysis_draws": 500,
   "inputs_loaded": {

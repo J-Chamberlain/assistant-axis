@@ -1246,6 +1246,7 @@ def main() -> None:
         "generated_at": GENERATED_AT,
         "rubric_version": "1.0",
         "rubric_freeze_commit": RUBRIC_FREEZE_COMMIT,
+        "rubric_post_freeze_change": "Four Markdown hard-break trailing spaces were removed; criteria text and thresholds are unchanged.",
         "random_seed": SEED,
         "parallel_analysis_draws": PARALLEL_DRAWS,
         "inputs_loaded": {
