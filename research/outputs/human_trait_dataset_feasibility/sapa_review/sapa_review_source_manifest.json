@@ -1,0 +1,34 @@
+{
+  "artifact": "SAPA Category-3 frozen blinded review packet",
+  "packet_version": "1.0",
+  "review_type": "coordinate-blind second-pass semantic review",
+  "model_used_for_later_second_pass_review": "GPT-5.5",
+  "random_seed": 20260911,
+  "selection_rule": "Exactly the 78 rows labeled coverage_category=3 in the immutable AA-1 feasibility crosswalk.",
+  "reviewer_packet_excludes": [
+    "original category and confidence fields",
+    "persona identities and data",
+    "PC coordinates and trait-PC correlations",
+    "predictor coefficients and trait ranks",
+    "trait sparsity results",
+    "occupation and NLSY97 data",
+    "all downstream correspondence results"
+  ],
+  "sources": {
+    "research/outputs/human_trait_dataset_feasibility/sapa/sapa_model_trait_candidate_crosswalk.csv": "4000593255646b75e509a0e1e194dec52fd3770b58503b3df0d3388bd53d6d37",
+    "research/outputs/human_trait_dataset_feasibility/sapa/sapa_item_dictionary.csv": "6297d7fc351cea2121a1a211c5203f9e1bc07d0157c551087e0820b8bbd6bda9",
+    "research/outputs/human_trait_dataset_feasibility/sapa/sapa_scale_inventory.csv": "1db3444330e4a500eeb0189f0b6a020c27d4ee27d7ff34cba40e08a76460e965",
+    "data/traits/trait_list.json": "17ec18a088fbaacbabe1c87e4df4bac0be7e264bc2b281a33f50cdfa9a03734e",
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_category3_review_rubric.md": "cfc2df83d2dc463966b337ee3bc461411ab24e1711e6e53e48976a1876381dae"
+  },
+  "frozen_outputs": {
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_category3_blinded_review_packet.csv": "c4e40601f9855769fd1040eed11c4120e46224d0d27ae0caa2f7b4d672af1814",
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_category3_blinded_review_packet.json": "4f639df54c074c719793df0ec78e78dd1ff08a06cb4b8a801415cd826ec111b4",
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_category3_external_review_packet.csv": "c4e40601f9855769fd1040eed11c4120e46224d0d27ae0caa2f7b4d672af1814"
+  },
+  "original_category3_count": 78,
+  "no_human_to_model_projection": true,
+  "external_model_api_used": false,
+  "new_model_inference_used": false,
+  "generated_at": "2026-09-11T22:35:00Z"
+}
