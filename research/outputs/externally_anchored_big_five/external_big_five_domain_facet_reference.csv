@@ -1,0 +1,31 @@
+domain,facet_code,facet,definition,primary_source
+neuroticism,N1,Anxiety,"Tendency toward worry, fear, and tension.",https://ipip.ori.org/newNEOKey.htm
+neuroticism,N2,Anger,"Proneness to irritation, anger, and frustration.",https://ipip.ori.org/newNEOKey.htm
+neuroticism,N3,Depression,"Proneness to sadness, hopelessness, and low mood.",https://ipip.ori.org/newNEOKey.htm
+neuroticism,N4,Self-Consciousness,Sensitivity to social evaluation and embarrassment.,https://ipip.ori.org/newNEOKey.htm
+neuroticism,N5,Immoderation,Difficulty resisting urges and immediate gratification.,https://ipip.ori.org/newNEOKey.htm
+neuroticism,N6,Vulnerability,Difficulty remaining composed and effective under stress.,https://ipip.ori.org/newNEOKey.htm
+extraversion,E1,Friendliness,Warmth and ease in approaching other people.,https://ipip.ori.org/newNEOKey.htm
+extraversion,E2,Gregariousness,Preference for company and social interaction.,https://ipip.ori.org/newNEOKey.htm
+extraversion,E3,Assertiveness,"Readiness to speak up, lead, and influence others.",https://ipip.ori.org/newNEOKey.htm
+extraversion,E4,Activity Level,"Energetic, busy, and fast-paced engagement.",https://ipip.ori.org/newNEOKey.htm
+extraversion,E5,Excitement-Seeking,"Preference for stimulation, risk, and excitement.",https://ipip.ori.org/newNEOKey.htm
+extraversion,E6,Cheerfulness,"Proneness to positive affect, fun, and enthusiasm.",https://ipip.ori.org/newNEOKey.htm
+openness,O1,Imagination,"Rich fantasy, imagery, and imaginative ideation.",https://ipip.ori.org/newNEOKey.htm
+openness,O2,Artistic Interests,"Appreciation of art, beauty, and aesthetic experience.",https://ipip.ori.org/newNEOKey.htm
+openness,O3,Emotionality,Awareness of and receptivity to emotional experience.,https://ipip.ori.org/newNEOKey.htm
+openness,O4,Adventurousness,"Preference for novelty, variety, and new experience.",https://ipip.ori.org/newNEOKey.htm
+openness,O5,Intellect,"Enjoyment of ideas, complexity, inquiry, and abstract thought.",https://ipip.ori.org/newNEOKey.htm
+openness,O6,Liberalism,"Readiness to reconsider convention, authority, and established values.",https://ipip.ori.org/newNEOKey.htm
+agreeableness,A1,Trust,Expectation that other people are honest and well intentioned.,https://ipip.ori.org/newNEOKey.htm
+agreeableness,A2,Morality,"Straightforward, sincere, and non-manipulative conduct.",https://ipip.ori.org/newNEOKey.htm
+agreeableness,A3,Altruism,Active concern for and willingness to help others.,https://ipip.ori.org/newNEOKey.htm
+agreeableness,A4,Cooperation,Preference for compromise and harmony over conflict.,https://ipip.ori.org/newNEOKey.htm
+agreeableness,A5,Modesty,Low self-aggrandizement and absence of superiority claims.,https://ipip.ori.org/newNEOKey.htm
+agreeableness,A6,Sympathy,Compassion and concern for others' suffering.,https://ipip.ori.org/newNEOKey.htm
+conscientiousness,C1,Self-Efficacy,Confidence in one's ability to accomplish tasks.,https://ipip.ori.org/newNEOKey.htm
+conscientiousness,C2,Orderliness,"Preference for organization, planning, and structure.",https://ipip.ori.org/newNEOKey.htm
+conscientiousness,C3,Dutifulness,"Commitment to obligations, rules, and reliability.",https://ipip.ori.org/newNEOKey.htm
+conscientiousness,C4,Achievement-Striving,Drive to attain demanding goals and high standards.,https://ipip.ori.org/newNEOKey.htm
+conscientiousness,C5,Self-Discipline,Persistence and follow-through despite distraction.,https://ipip.ori.org/newNEOKey.htm
+conscientiousness,C6,Cautiousness,Deliberation before acting and avoidance of rash choices.,https://ipip.ori.org/newNEOKey.htm

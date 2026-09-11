@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "freeze_timestamp_utc": "2026-09-11T22:58:36Z",
+  "freeze_commit": null,
+  "mapping_stage": "complete_before_any_new_geometry_analysis",
+  "model_used": "GPT-5.5",
+  "geometry_blind": true,
+  "geometry_inputs_available_to_generator": false,
+  "inputs": {
+    "data/traits/trait_list.json": "17ec18a088fbaacbabe1c87e4df4bac0be7e264bc2b281a33f50cdfa9a03734e",
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_trait_bridge_provisional_v1.csv": "e70be82752ec8ec4a7a8c64c7f5d37386b0997363c16a721e59a6aa0ac254e22"
+  },
+  "construction_rules": {
+    "human_anchored_strict": "Only defensible Big Five assignments among reviewed ACCEPT_DIRECT links.",
+    "human_anchored_extended": "Strict set plus separately flagged defensible ACCEPT_CLOSE links.",
+    "external_taxonomy_expanded": "All 240 traits reviewed; only high-confidence direct facet indicators enter the direction. Medium-confidence proxies remain recorded but excluded, and unmapped traits are explicit.",
+    "historical_hand_predeclared": "Not refit; retained from same_space_big_five_overlay for comparison only."
+  },
+  "forbidden_mapping_inputs": [
+    "persona PCA coordinates",
+    "PC rankings",
+    "trait-PC correlations",
+    "ridge coefficients",
+    "AA-4 sparsity results",
+    "cluster locations",
+    "surface plots",
+    "motivating screenshot"
+  ],
+  "counts": {
+    "human_anchored_strict": {
+      "traits": 42,
+      "by_domain": {
+        "openness": 8,
+        "conscientiousness": 4,
+        "extraversion": 8,
+        "agreeableness": 13,
+        "neuroticism": 9
+      },
+      "positive": 27,
+      "negative": 15
+    },
+    "human_anchored_extended": {
+      "traits": 67,
+      "by_domain": {
+        "openness": 13,
+        "conscientiousness": 10,
+        "extraversion": 12,
+        "agreeableness": 20,
+        "neuroticism": 12
+      },
+      "positive": 40,
+      "negative": 27
+    },
+    "external_taxonomy_expanded": {
+      "traits": 109,
+      "by_domain": {
+        "openness": 32,
+        "conscientiousness": 15,
+        "extraversion": 16,
+        "agreeableness": 35,
+        "neuroticism": 11
+      },
+      "positive": 68,
+      "negative": 41,
+      "candidate_rows": 184,
+      "unmapped_rows": 56,
+      "excluded_proxy_rows": 75
+    }
+  },
+  "frozen_artifacts": {
+    "research/outputs/externally_anchored_big_five/external_big_five_domain_facet_reference.csv": "2b0998c309b2c3c859493a02f1ad96d7d95a18e74dfc93cb1344adae463ec775",
+    "research/outputs/externally_anchored_big_five/human_anchored_strict_trait_mapping.csv": "8459b8277a40fb273967015e654ce38758c231eff218562a95d83cee9a20dab6",
+    "research/outputs/externally_anchored_big_five/human_anchored_extended_trait_mapping.csv": "220adb95d16ae3c0d8171909e0e13d46866d788ecbc2b9fe10bb89fd2013ff54",
+    "research/outputs/externally_anchored_big_five/external_taxonomy_expanded_trait_mapping.csv": "849a425aa0df44841a10260bbd39ad41e0fe796aa28565d7747a128435ab67d7",
+    "research/outputs/externally_anchored_big_five/external_big_five_reference_manifest.json": "37e49a19c596117a0a816ff2cd17084062ad7ee418af323a8fd13579f2e3bf58"
+  },
+  "important_caveat": "External anchoring constrains trait selection but does not create independent human psychometric validation."
+}
