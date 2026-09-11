@@ -19,3 +19,7 @@ Local-manifold H100 work is not required for Paper 1.5. It strengthens the grant
 ## Update 2026-09-11
 
 Completed the CPU-only first-stage profile-to-geometry predictor under `research/outputs/trait_profile_pc_predictor/`. A transparent raw-cosine Ridge model now maps complete 240-trait activation-derived profiles to canonical Qwen PC1/PC2/PC3 with all-persona LOPO R2=0.999522/0.998811/0.999611, harder canonical-cluster holdouts, OOD/error context, and deterministic percentile-edit examples for Trickster, Actor, Therapist, and Spy. Synthetic activation interpolation was also validated after exact PCA-basis reproduction, with both source endpoints excluded from each fit. This strengthens the grant's local-mapping feasibility case but does not replace the proposed H100 behavioral experiment: a newly elicited persona has not yet been compared with its frozen predicted coordinate.
+
+## Update 2026-09-11
+
+The same CPU-only complete-profile mapping now replicates in the saved Llama-3.3-70B and Gemma-2-27B vector sets using each model's own verified persona PCA. Raw Ridge LOPO normalized 3D RMSE is 0.1245 for Llama and 0.1278 for Gemma, whole Qwen-canonical role-family holdout is harder, and endpoint-held-out synthetic mixtures remain predictable; Ridge stays sufficient in both. This is factual cross-model same-space feasibility evidence for the local-mapping program, not a claim that any model has more sophisticated or human-like psychology, and it still does not replace the proposed behavioral elicitation experiment.

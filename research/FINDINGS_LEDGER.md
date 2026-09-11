@@ -4,6 +4,16 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### Trait-Profile to Persona-PC Prediction Replicates in Llama and Gemma (2026-09-11)
+
+Built `research/outputs/multimodel_trait_profile_pc_predictor/` from existing released/local saved vectors only and applied the completed Qwen pipeline unchanged to each model's own established PCA geometry. Both bundles contain exactly 275 finite role vectors and 240 finite trait vectors with the same intended labels. Recomputed coordinates match the established multimodel artifact to max error 2.748e-14 for Llama and 1.376e-11 for Gemma. A complete fixed-seed rerun reproduced all 20 deterministic model CSV artifacts byte-for-byte.
+
+Complete raw-cosine Ridge LOPO predicts Llama PC1/PC2/PC3 at R2=0.997833/0.997161/0.989900 with normalized 3D RMSE=0.124494 and Gemma at 0.999788/0.996179/0.987835 with RMSE=0.127824. Fold-safe quantile profiles remain useful but less precise (RMSE=0.328303 and 0.304909). Ridge remains selected in both models: no PLS, RBF Kernel Ridge, or distance-weighted KNN challenger clears the predeclared 10% normalized-RMSE improvement rule without harder-holdout degradation.
+
+The fixed Qwen-canonical role-family partition also generalizes, but is harder: aggregate Ridge R2=0.993894/0.993627/0.977094 with normalized RMSE=0.204224 and mean error 1.810x LOPO for Llama; Gemma=0.999271/0.993851/0.975087, RMSE=0.176110, 1.535x. Clean 100-permutation p95 mean-PC R2 values are -0.009359 and -0.011572. Endpoint-held-out synthetic interpolation remains predictable: Llama R2=0.983420/0.982280/0.946688, RMSE=0.331184; Gemma=0.999557/0.980280/0.969824, RMSE=0.214870. Nearby mixtures are much easier than distant ones, and pair-level endpoint distance correlates with error at Pearson r=0.870 for Llama and 0.774 for Gemma.
+
+Interpretation: the same-space trait bank provides broad approximately linear basis coverage of each saved model's persona geometry. Qwen remains more precise on normalized LOPO, family-holdout, and synthetic RMSE, while Llama/Gemma show larger PC3 errors and stronger distance/error association; these are representation-analysis divergences, not evidence of more or less sophisticated or human-like psychology. Axis orientation supports comparison/display but does not establish identical PC semantics across models. No GPU, RunPod, new inference, activation extraction, or external model API was used.
+
 ### Trait-Profile PC Predictor Generalizes Under Persona, Cluster, and Synthetic Holdouts (2026-09-11)
 
 Built `research/outputs/trait_profile_pc_predictor/` from the existing 275-persona x 240-trait Qwen/Qwen3-32B activation-cosine matrix and canonical Qwen role PCA targets. Raw-cosine Ridge 5-fold outer CV repeated over 10 seeds reached R2=0.999465/0.998718/0.999567 for PC1/PC2/PC3, and genuine LOPO over every persona reached 0.999522/0.998811/0.999611 with per-PC RMSE=0.657/0.741/0.311 and normalized 3D RMSE=0.0454. Fold-safe quantile LOPO remained strong but less precise at R2=0.997556/0.988048/0.989209 and normalized 3D RMSE=0.1590. Ridge outperformed PLS, RBF Kernel Ridge, and distance-weighted KNN under the repeated raw-profile comparison and remains canonical V1.

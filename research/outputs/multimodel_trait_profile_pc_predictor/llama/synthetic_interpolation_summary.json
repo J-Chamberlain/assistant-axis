@@ -1,0 +1,127 @@
+{
+  "alpha_grid": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "by_band": {
+    "all": {
+      "n": 120,
+      "normalized_3d_error_mean": 0.24397148821961517,
+      "normalized_3d_error_median": 0.19628347188368292,
+      "normalized_3d_error_rmse": 0.3311840535713289,
+      "pc1_mae": 0.09925990619737976,
+      "pc1_pearson": 0.9972771707049943,
+      "pc1_r2": 0.9834202931893138,
+      "pc1_rmse": 0.1364970678041036,
+      "pc1_spearman": 0.9936731717480379,
+      "pc2_mae": 0.13380613374073314,
+      "pc2_pearson": 0.9967157561106483,
+      "pc2_r2": 0.982280247715964,
+      "pc2_rmse": 0.18004993017767237,
+      "pc2_spearman": 0.9977220640322244,
+      "pc3_mae": 0.12282814104406624,
+      "pc3_pearson": 0.9840560363999957,
+      "pc3_r2": 0.94668829720237,
+      "pc3_rmse": 0.17519715520577234,
+      "pc3_spearman": 0.9803528022779358,
+      "raw_3d_error_mean": 0.2139069647128254,
+      "raw_3d_error_median": 0.1749917986795703,
+      "raw_3d_error_rmse": 0.285908149705982
+    },
+    "distant": {
+      "n": 60,
+      "normalized_3d_error_mean": 0.4417233970418197,
+      "normalized_3d_error_median": 0.42944869882099945,
+      "normalized_3d_error_rmse": 0.463834313985047,
+      "pc1_mae": 0.1784177261209883,
+      "pc1_pearson": 0.997317264800126,
+      "pc1_r2": 0.9515943606380538,
+      "pc1_rmse": 0.1910205203811062,
+      "pc1_spearman": 0.9961656015559881,
+      "pc2_mae": 0.24034583295683604,
+      "pc2_pearson": 0.9956249607206158,
+      "pc2_r2": 0.8925644935639621,
+      "pc2_rmse": 0.25152372175871135,
+      "pc2_spearman": 0.9906640733537095,
+      "pc3_mae": 0.22617343754307892,
+      "pc3_pearson": 0.9950360121387773,
+      "pc3_r2": 0.934547679766428,
+      "pc3_rmse": 0.2456389527271549,
+      "pc3_spearman": 0.9920533481522648,
+      "raw_3d_error_mean": 0.38500463271088337,
+      "raw_3d_error_median": 0.3782916420240641,
+      "raw_3d_error_rmse": 0.4001143797852256
+    },
+    "near": {
+      "n": 60,
+      "normalized_3d_error_mean": 0.04621957939741071,
+      "normalized_3d_error_median": 0.03369440876144108,
+      "normalized_3d_error_rmse": 0.06498833626039806,
+      "pc1_mae": 0.020102086273771205,
+      "pc1_pearson": 0.9996948531967111,
+      "pc1_r2": 0.9992399444715465,
+      "pc1_rmse": 0.02782193076634841,
+      "pc1_spearman": 0.9931647679911089,
+      "pc2_mae": 0.027266434524630224,
+      "pc2_pearson": 0.9993411089301869,
+      "pc2_r2": 0.9972496528193397,
+      "pc2_rmse": 0.03964558117389279,
+      "pc2_spearman": 0.9911086412892472,
+      "pc3_mae": 0.01948284454505355,
+      "pc3_pearson": 0.9977424541277252,
+      "pc3_r2": 0.9950609343833702,
+      "pc3_rmse": 0.03239739630738108,
+      "pc3_spearman": 0.9988330091692137,
+      "raw_3d_error_mean": 0.04280929671476737,
+      "raw_3d_error_median": 0.030139543691845107,
+      "raw_3d_error_rmse": 0.05827026021634635
+    }
+  },
+  "description": "Raw convex interpolation of mean-pooled activation vectors; both source endpoints excluded from each fitted Ridge model.",
+  "error_vs_endpoint_distance": {
+    "pair_aggregated": {
+      "n": 40,
+      "pearson": 0.8704118044452425,
+      "spearman": 0.7853658536585367
+    },
+    "row_level": {
+      "n": 120,
+      "pearson": 0.8354105485450274,
+      "spearman": 0.7709552225395786
+    }
+  },
+  "normalization_note": "The mixed activation vector was not L2-normalized before canonical PCA projection because the canonical PCA was fit on raw mean-pooled vectors. Only the mix was L2-normalized for cosine-profile construction.",
+  "pair_count": 40,
+  "pca_check": {
+    "coordinate_target_source": "research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_data.json",
+    "explained_variance_ratio": [
+      0.172319543652528,
+      0.14158889459870946,
+      0.06478991769540293
+    ],
+    "max_abs_coordinate_reproduction_error": 2.7478019859472624e-14,
+    "mean_abs_coordinate_reproduction_error": 4.2067485858413275e-15,
+    "orientation_correlations_before_sign": [
+      0.6758428361088472,
+      -0.6058088669611419,
+      -0.4404392061939726
+    ],
+    "orientation_signs": [
+      1,
+      -1,
+      -1
+    ],
+    "passed": true,
+    "permutation": [
+      0,
+      1,
+      2
+    ],
+    "procedure": "SVD PCA on lexically ordered mean-pooled same-model role vectors; same-index PC signs oriented by correlation to Qwen geometry",
+    "reconstruction_procedure_source": "research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py",
+    "strict_tolerance": 1e-08
+  },
+  "run": true,
+  "synthetic_profile_count": 120
+}

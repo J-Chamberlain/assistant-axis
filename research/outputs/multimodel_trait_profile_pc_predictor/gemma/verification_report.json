@@ -1,0 +1,122 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "cosine_matrix_deterministic_recompute_max_abs_difference": 0.0,
+    "cosine_matrix_verification": {
+      "construction": "mean over stored layer vectors, L2-normalize role and trait means, same-model role @ trait.T",
+      "established_viewer_matrix_numeric_precision": "float32",
+      "max_abs_difference_vs_established_float32_viewer_matrix": 1.0152960245868314e-06,
+      "mean_abs_difference_vs_established_float32_viewer_matrix": 1.0060165846338669e-07,
+      "new_matrix_numeric_precision": "float64 after float32 tensor mean",
+      "passed": true,
+      "reference_tolerance": 1e-05
+    },
+    "deterministic_fixed_seed_reruns": {
+      "kernel_ridge_representative_refit_max_abs_difference": 0.0,
+      "knn_representative_refit_max_abs_difference": 0.0,
+      "passed": true,
+      "pls_representative_refit_max_abs_difference": 0.0,
+      "quantile_ridge_representative_refit_max_abs_difference": 0.0,
+      "representative_lopo_reruns_max_abs_difference": {
+        "aberration": 0.0,
+        "maverick": 0.0,
+        "zeitgeist": 0.0
+      },
+      "ridge_representative_refit_max_abs_difference": 0.0
+    },
+    "finite_lopo_predictions": true,
+    "finite_nested_predictions": true,
+    "fold_local_quantile_transforms": true,
+    "fold_local_scaling": true,
+    "integrity": {
+      "cosine_matrix_finite": true,
+      "passed": true,
+      "persona_count": 275,
+      "role_family_counts": {
+        "combative_iconoclast": 15,
+        "editorial": 13,
+        "grounded_social": 54,
+        "mythic_spiritual": 51,
+        "other": 6,
+        "procedural_professional": 126,
+        "trickster_chaos": 10
+      },
+      "role_family_partition_label": "Qwen-canonical role-family partition applied cross-model",
+      "role_vector_audit": {
+        "all_mean_vectors_finite": true,
+        "file_count": 275,
+        "tensor_dtype_counts": {
+          "torch.bfloat16": 275
+        },
+        "tensor_shape_counts": {
+          "(46, 4608)": 275
+        }
+      },
+      "role_vectors_finite": true,
+      "same_intended_persona_labels": true,
+      "same_intended_trait_labels": true,
+      "target_or_metadata_columns_in_features": [],
+      "targets_finite": true,
+      "trait_count": 240,
+      "trait_vector_audit": {
+        "all_mean_vectors_finite": true,
+        "file_count": 240,
+        "tensor_dtype_counts": {
+          "torch.bfloat16": 240
+        },
+        "tensor_shape_counts": {
+          "(46, 4608)": 240
+        }
+      },
+      "trait_vectors_finite": true,
+      "unique_persona_count": 275,
+      "unique_trait_count": 240
+    },
+    "lopo_every_persona_per_representation": true,
+    "lopo_no_held_out_persona_in_training": true,
+    "lopo_rows": 550,
+    "no_target_columns_in_features": true,
+    "pca_deterministic_recompute_max_abs_difference": 1.375610736431554e-11,
+    "pca_reconstruction": {
+      "coordinate_target_source": "research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_data.json",
+      "explained_variance_ratio": [
+        0.23453089585007222,
+        0.1278198481518453,
+        0.05686002238340882
+      ],
+      "max_abs_coordinate_reproduction_error": 1.375610736431554e-11,
+      "mean_abs_coordinate_reproduction_error": 7.431103543956741e-13,
+      "orientation_correlations_before_sign": [
+        0.9525945368765923,
+        0.9220692179867229,
+        0.8057448038831178
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        1
+      ],
+      "passed": true,
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "procedure": "SVD PCA on lexically ordered mean-pooled same-model role vectors; same-index PC signs oriented by correlation to Qwen geometry",
+      "reconstruction_procedure_source": "research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py",
+      "strict_tolerance": 1e-08
+    },
+    "permutation_null_clean": true,
+    "ridge_bundle_roundtrip_max_abs_error": 1.539461891297833e-10,
+    "role_family_all_seven_families_all_models": true,
+    "role_family_no_held_out_member_in_training": true,
+    "synthetic_endpoint_exclusion": true,
+    "training_only_hyperparameter_selection": true
+  },
+  "generated_utc": "2026-09-11T20:51:16Z",
+  "methodology_evidence": {
+    "ood": "Each LOPO OOD scaler/PCA is fit on the 274 training profiles; the held-out profile is transformed afterward.",
+    "partition": "Qwen-canonical role-family partition applied cross-model",
+    "pipeline": "Canonical Qwen representation/scaling pipeline is inside TransformedTargetRegressor passed to inner GridSearchCV, fit separately on every outer-training partition."
+  }
+}

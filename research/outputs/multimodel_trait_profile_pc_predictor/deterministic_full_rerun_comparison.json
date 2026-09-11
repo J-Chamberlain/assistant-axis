@@ -1,0 +1,111 @@
+{
+  "comparison_scope": "Exact SHA256 comparison of all deterministic numeric CSV artifacts from the completed first pass and the complete fixed-seed rerun.",
+  "excluded_from_exact_hash_comparison": "JSON manifests/reports contain generation timestamps; their numerical content is covered by model verification and the CSV comparisons.",
+  "models": {
+    "gemma": {
+      "leave_one_persona_out_predictions.csv": {
+        "exact_match": true,
+        "prior_sha256": "77cb669ce5d9c1e18644a7d78c5bebf72f493d093b4f5486744ab39e8a51cf30",
+        "rerun_sha256": "77cb669ce5d9c1e18644a7d78c5bebf72f493d093b4f5486744ab39e8a51cf30"
+      },
+      "leave_one_role_family_out_predictions.csv": {
+        "exact_match": true,
+        "prior_sha256": "67f16224c9b311ff1142c784bdc4c433a9708efa4d7a393b7ff7982c8e8a63f3",
+        "rerun_sha256": "67f16224c9b311ff1142c784bdc4c433a9708efa4d7a393b7ff7982c8e8a63f3"
+      },
+      "leave_one_role_family_out_summary.csv": {
+        "exact_match": true,
+        "prior_sha256": "617edc5acfa4d74fd25d45a38d3b5d28cb25a7941b5517b445ac37f5d3f54798",
+        "rerun_sha256": "617edc5acfa4d74fd25d45a38d3b5d28cb25a7941b5517b445ac37f5d3f54798"
+      },
+      "model_comparison.csv": {
+        "exact_match": true,
+        "prior_sha256": "ec22d0259d7f7ee889ccc1922c9555e93e8b818e43cf2c961836579c4ad862d3",
+        "rerun_sha256": "ec22d0259d7f7ee889ccc1922c9555e93e8b818e43cf2c961836579c4ad862d3"
+      },
+      "nearest_neighbor_reference.csv": {
+        "exact_match": true,
+        "prior_sha256": "fea06335ce2596b3f814b4131186e08ab53094d7a796743eedd410e73fb4d5ea",
+        "rerun_sha256": "fea06335ce2596b3f814b4131186e08ab53094d7a796743eedd410e73fb4d5ea"
+      },
+      "nested_cv_oof_predictions.csv": {
+        "exact_match": true,
+        "prior_sha256": "b4c35a27dfbce01a2e88cee89b34b37834c129c5ab4bc0431bdb3aa2ce6ef3f2",
+        "rerun_sha256": "b4c35a27dfbce01a2e88cee89b34b37834c129c5ab4bc0431bdb3aa2ce6ef3f2"
+      },
+      "permutation_control.csv": {
+        "exact_match": true,
+        "prior_sha256": "b4b154f5bad684d32cdf45f72111daae2dde5a171e2113f021ed5423b52cf763",
+        "rerun_sha256": "b4b154f5bad684d32cdf45f72111daae2dde5a171e2113f021ed5423b52cf763"
+      },
+      "persona_trait_similarity_matrix.csv": {
+        "exact_match": true,
+        "prior_sha256": "798c0618b9e468eec2e6d9083c96b2eef3d414f15f29d93180ff679614fea427",
+        "rerun_sha256": "798c0618b9e468eec2e6d9083c96b2eef3d414f15f29d93180ff679614fea427"
+      },
+      "profile_representation_comparison.csv": {
+        "exact_match": true,
+        "prior_sha256": "3b1636b8901df6e074ffdb5b4f989ffbb47516ade61c6111e74b351a63e387e7",
+        "rerun_sha256": "3b1636b8901df6e074ffdb5b4f989ffbb47516ade61c6111e74b351a63e387e7"
+      },
+      "synthetic_interpolation_predictions.csv": {
+        "exact_match": true,
+        "prior_sha256": "3f529814afe5fc145ee53b25c1691086c8e0f1af843adbcff6a626574f6759d5",
+        "rerun_sha256": "3f529814afe5fc145ee53b25c1691086c8e0f1af843adbcff6a626574f6759d5"
+      }
+    },
+    "llama": {
+      "leave_one_persona_out_predictions.csv": {
+        "exact_match": true,
+        "prior_sha256": "8f277b1fe02d5a6a100f0f8088772cf2e2b15b52c2b154ad79682bb27c33b89d",
+        "rerun_sha256": "8f277b1fe02d5a6a100f0f8088772cf2e2b15b52c2b154ad79682bb27c33b89d"
+      },
+      "leave_one_role_family_out_predictions.csv": {
+        "exact_match": true,
+        "prior_sha256": "64a594cdc435632691c77a1456153c76e89aedb5f5ed23fa579dc4dcfc46fd02",
+        "rerun_sha256": "64a594cdc435632691c77a1456153c76e89aedb5f5ed23fa579dc4dcfc46fd02"
+      },
+      "leave_one_role_family_out_summary.csv": {
+        "exact_match": true,
+        "prior_sha256": "bb4e60c5276c8461b84c2103152c6d6b41c8f228303d5514a4457b91ebda0483",
+        "rerun_sha256": "bb4e60c5276c8461b84c2103152c6d6b41c8f228303d5514a4457b91ebda0483"
+      },
+      "model_comparison.csv": {
+        "exact_match": true,
+        "prior_sha256": "948d001fa9ca7f33e310fcdb2aaa69b07fd9382858388a04962f5b7db0373162",
+        "rerun_sha256": "948d001fa9ca7f33e310fcdb2aaa69b07fd9382858388a04962f5b7db0373162"
+      },
+      "nearest_neighbor_reference.csv": {
+        "exact_match": true,
+        "prior_sha256": "89d2b2cf796d27bc34e41f2a09c91d8a73b77d13825a8f5a05221e76ca9685d5",
+        "rerun_sha256": "89d2b2cf796d27bc34e41f2a09c91d8a73b77d13825a8f5a05221e76ca9685d5"
+      },
+      "nested_cv_oof_predictions.csv": {
+        "exact_match": true,
+        "prior_sha256": "8859f3dc7dae907483b3ebc68734e755ec0c5f3ae32fdeb3e0ff2af209ac52e7",
+        "rerun_sha256": "8859f3dc7dae907483b3ebc68734e755ec0c5f3ae32fdeb3e0ff2af209ac52e7"
+      },
+      "permutation_control.csv": {
+        "exact_match": true,
+        "prior_sha256": "a83cf7b86ef7c6db1647abe7e7e2855c52a12ca408ac952e1a9e867f6232eec7",
+        "rerun_sha256": "a83cf7b86ef7c6db1647abe7e7e2855c52a12ca408ac952e1a9e867f6232eec7"
+      },
+      "persona_trait_similarity_matrix.csv": {
+        "exact_match": true,
+        "prior_sha256": "74b2cb886967159fe4580b2dc8066cfe3ba789bedde7f0f380ee95240a3ed947",
+        "rerun_sha256": "74b2cb886967159fe4580b2dc8066cfe3ba789bedde7f0f380ee95240a3ed947"
+      },
+      "profile_representation_comparison.csv": {
+        "exact_match": true,
+        "prior_sha256": "dd39f51ae2c9d9de5a878b31bf8227eb455df0c6183d5e374717d0fb141fa738",
+        "rerun_sha256": "dd39f51ae2c9d9de5a878b31bf8227eb455df0c6183d5e374717d0fb141fa738"
+      },
+      "synthetic_interpolation_predictions.csv": {
+        "exact_match": true,
+        "prior_sha256": "244453b16b83184365f6785d6f6bd5635d520dd32c95e5ab81f98cb247c28896",
+        "rerun_sha256": "244453b16b83184365f6785d6f6bd5635d520dd32c95e5ab81f98cb247c28896"
+      }
+    }
+  },
+  "passed": true
+}

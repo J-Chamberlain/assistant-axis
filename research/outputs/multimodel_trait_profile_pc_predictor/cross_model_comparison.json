@@ -1,0 +1,139 @@
+{
+  "generation_timestamp_utc": "2026-09-11T20:47:00Z",
+  "interpretation_boundary": "Accuracy differences do not measure psychological sophistication, human-likeness, causal trait determination, or semantic identity of oriented PCs.",
+  "models": [
+    {
+      "canonical_source": "research/outputs/trait_profile_pc_predictor/validation_summary.json",
+      "family_holdout_over_lopo_mean_error_ratio": 1.6786760489208434,
+      "family_holdout_over_lopo_rmse_ratio": 1.4984603885141514,
+      "model": "Qwen/Qwen3-32B",
+      "permutation_p95_mean_pc_r2": -0.0075477982953639855,
+      "quantile_normalized_3d_rmse": 0.15902840219336542,
+      "raw_normalized_3d_rmse": 0.045377742242990356,
+      "raw_ridge_lopo_r2_pc1": 0.9995215519072446,
+      "raw_ridge_lopo_r2_pc2": 0.9988106035256331,
+      "raw_ridge_lopo_r2_pc3": 0.9996105440103555,
+      "role_count": 275,
+      "role_family_holdout_normalized_3d_rmse": 0.06799674927132635,
+      "selected_model_family": "ridge",
+      "synthetic_interpolation_r2_pc1": 0.9952655805634159,
+      "synthetic_interpolation_r2_pc2": 0.9843770991082437,
+      "synthetic_interpolation_r2_pc3": 0.9971437256530096,
+      "synthetic_normalized_3d_rmse": 0.14972833610006864,
+      "trait_count": 240
+    },
+    {
+      "canonical_source": "research/outputs/multimodel_trait_profile_pc_predictor/llama/validation_summary.json",
+      "family_holdout_over_lopo_mean_error_ratio": 1.8095949492934427,
+      "family_holdout_over_lopo_rmse_ratio": 1.640433159388417,
+      "model": "Llama-3.3-70B",
+      "permutation_p95_mean_pc_r2": -0.009359382526410892,
+      "quantile_normalized_3d_rmse": 0.32830293902004526,
+      "raw_normalized_3d_rmse": 0.12449403915025267,
+      "raw_ridge_lopo_r2_pc1": 0.9978328405738127,
+      "raw_ridge_lopo_r2_pc2": 0.9971606489742502,
+      "raw_ridge_lopo_r2_pc3": 0.9898995918591481,
+      "role_count": 275,
+      "role_family_holdout_normalized_3d_rmse": 0.20422414996827426,
+      "selected_model_family": "ridge",
+      "synthetic_interpolation_r2_pc1": 0.9834202931893138,
+      "synthetic_interpolation_r2_pc2": 0.982280247715964,
+      "synthetic_interpolation_r2_pc3": 0.94668829720237,
+      "synthetic_normalized_3d_rmse": 0.3311840535713289,
+      "trait_count": 240
+    },
+    {
+      "canonical_source": "research/outputs/multimodel_trait_profile_pc_predictor/gemma/validation_summary.json",
+      "family_holdout_over_lopo_mean_error_ratio": 1.5349726542115794,
+      "family_holdout_over_lopo_rmse_ratio": 1.377745769465792,
+      "model": "Gemma-2-27B",
+      "permutation_p95_mean_pc_r2": -0.011572312938627326,
+      "quantile_normalized_3d_rmse": 0.30490942831844975,
+      "raw_normalized_3d_rmse": 0.12782442967180963,
+      "raw_ridge_lopo_r2_pc1": 0.999787936112448,
+      "raw_ridge_lopo_r2_pc2": 0.9961787742027977,
+      "raw_ridge_lopo_r2_pc3": 0.9878351084164707,
+      "role_count": 275,
+      "role_family_holdout_normalized_3d_rmse": 0.17610956721471335,
+      "selected_model_family": "ridge",
+      "synthetic_interpolation_r2_pc1": 0.9995567843862951,
+      "synthetic_interpolation_r2_pc2": 0.9802803276579622,
+      "synthetic_interpolation_r2_pc3": 0.9698243527591488,
+      "synthetic_normalized_3d_rmse": 0.21487027051834762,
+      "trait_count": 240
+    }
+  ],
+  "ood_error_association": {
+    "Gemma-2-27B": {
+      "distance_percentile_vs_training_loo": {
+        "pearson": 0.24282931894993717,
+        "spearman": 0.2747897969498923
+      },
+      "mean_5nn_distance": {
+        "pearson": 0.3825331631606277,
+        "spearman": 0.27430887741265403
+      },
+      "nearest_neighbor_distance": {
+        "pearson": 0.3534904974402655,
+        "spearman": 0.3179608205187387
+      },
+      "profile_pca_reconstruction_error": {
+        "pearson": 0.3791424019570562,
+        "spearman": 0.31928276737543637
+      },
+      "reconstruction_error_percentile_vs_training": {
+        "pearson": 0.29732364138447953,
+        "spearman": 0.3180345121572091
+      }
+    },
+    "Llama-3.3-70B": {
+      "distance_percentile_vs_training_loo": {
+        "pearson": 0.5198749125164838,
+        "spearman": 0.6059804521928066
+      },
+      "mean_5nn_distance": {
+        "pearson": 0.6504740912855472,
+        "spearman": 0.6062519834973025
+      },
+      "nearest_neighbor_distance": {
+        "pearson": 0.48800721104365885,
+        "spearman": 0.5516003577507862
+      },
+      "profile_pca_reconstruction_error": {
+        "pearson": 0.6138216771918616,
+        "spearman": 0.5105063327659329
+      },
+      "reconstruction_error_percentile_vs_training": {
+        "pearson": 0.47756106460181147,
+        "spearman": 0.50832714260335
+      }
+    },
+    "Qwen/Qwen3-32B": {
+      "distance_percentile_vs_training_loo": {
+        "pearson": 0.19890499159740593,
+        "spearman": 0.26289260020083266
+      },
+      "mean_5nn_distance": {
+        "pearson": 0.24310772082254006,
+        "spearman": 0.2626975563313234
+      },
+      "nearest_neighbor_distance": {
+        "pearson": 0.23476279771597494,
+        "spearman": 0.25676466345460314
+      },
+      "profile_pca_reconstruction_error": {
+        "pearson": 0.3002253325266936,
+        "spearman": 0.24774126539915178
+      },
+      "reconstruction_error_percentile_vs_training": {
+        "pearson": 0.2771482978247469,
+        "spearman": 0.24768035096843527
+      }
+    }
+  },
+  "qwen_source": {
+    "path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-llama-gemma-trait-predictor/research/outputs/trait_profile_pc_predictor/validation_summary.json",
+    "sha256": "10f6a2874a5a2450852a00828c813bad5de2d947e1d8ccba801a5058cfc66712",
+    "size_bytes": 64819
+  }
+}

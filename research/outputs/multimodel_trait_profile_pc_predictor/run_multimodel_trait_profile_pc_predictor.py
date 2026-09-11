@@ -54,6 +54,18 @@ PC_NAMES = ["PC1", "PC2", "PC3"]
 PARTITION_LABEL = "Qwen-canonical role-family partition applied cross-model"
 PCA_TOLERANCE = 1e-8
 MATRIX_REFERENCE_TOLERANCE = 1e-5
+DETERMINISTIC_CSVS = [
+    "persona_trait_similarity_matrix.csv",
+    "model_comparison.csv",
+    "nested_cv_oof_predictions.csv",
+    "leave_one_persona_out_predictions.csv",
+    "leave_one_role_family_out_predictions.csv",
+    "leave_one_role_family_out_summary.csv",
+    "permutation_control.csv",
+    "nearest_neighbor_reference.csv",
+    "synthetic_interpolation_predictions.csv",
+    "profile_representation_comparison.csv",
+]
 
 
 def utc_now() -> str:
@@ -680,7 +692,7 @@ def replicated_row(summary: dict[str, Any]) -> dict[str, Any]:
         "quantile_normalized_3d_rmse": quantile["normalized_3d_error_rmse"],
         "role_family_holdout_normalized_3d_rmse": family["normalized_3d_error_rmse"],
         "family_holdout_over_lopo_mean_error_ratio": family["cluster_holdout_vs_lopo_mean_error_ratio"],
-        "family_holdout_over_lopo_rmse_ratio": family["role_family_holdout_over_lopo_rmse_ratio"],
+        "family_holdout_over_lopo_rmse_ratio": family["normalized_3d_error_rmse"] / raw["normalized_3d_error_rmse"],
         "permutation_p95_mean_pc_r2": summary["permutation_control"]["mean_pc_r2_q95"],
         "synthetic_interpolation_r2_pc1": syn["pc1_r2"],
         "synthetic_interpolation_r2_pc2": syn["pc2_r2"],
@@ -696,6 +708,10 @@ def metric_triplet(metrics: dict[str, Any], suffix: str) -> str:
 
 
 def build_report(rows: list[dict[str, Any]], summaries: dict[str, dict[str, Any]], qwen: dict[str, Any], vector_root: Path) -> str:
+    row_by_model = {row["model"]: row for row in rows}
+    qwen_row_data = row_by_model["Qwen/Qwen3-32B"]
+    llama_row_data = row_by_model["Llama-3.3-70B"]
+    gemma_row_data = row_by_model["Gemma-2-27B"]
     lines = [
         "# Multimodel trait-profile to persona-PC predictor",
         "",
@@ -718,9 +734,19 @@ def build_report(rows: list[dict[str, Any]], summaries: dict[str, dict[str, Any]
         "",
         "Qwen numbers above are read directly from the canonical saved validation summary, not recomputed.",
         "",
+        "## Important divergences",
+        "",
+        f"Llama and Gemma raw LOPO normalized RMSE are {llama_row_data['raw_normalized_3d_rmse'] / qwen_row_data['raw_normalized_3d_rmse']:.2f}x and {gemma_row_data['raw_normalized_3d_rmse'] / qwen_row_data['raw_normalized_3d_rmse']:.2f}x Qwen's, and their role-family RMSE values are {llama_row_data['role_family_holdout_normalized_3d_rmse'] / qwen_row_data['role_family_holdout_normalized_3d_rmse']:.2f}x and {gemma_row_data['role_family_holdout_normalized_3d_rmse'] / qwen_row_data['role_family_holdout_normalized_3d_rmse']:.2f}x Qwen's. The largest relative losses are concentrated in PC3 and distant synthetic mixtures, although all raw LOPO PC R2 values remain above 0.9878.",
+        "",
+        "The hardest fixed role family by normalized RMSE is other for both Llama and Gemma, unlike editorial in Qwen. Training-only OOD/error association is also much stronger for Llama than for Qwen or Gemma. These are measured pipeline differences, not rankings of psychological sophistication or human-likeness.",
+        "",
+        "RBF Kernel Ridge partly reduces the precision loss of quantile profiles in repeated nested validation for Llama and Gemma, but neither quantile pipeline beats raw Ridge and no raw nonlinear challenger clears the model-replacement rule.",
+        "",
         "## Methods held constant",
         "",
         "The canonical Qwen runner is imported for the estimator definitions, grids, repeated 5-fold x 10-seed outer validation, 4-fold inner tuning, LOPO, 100 target permutations, training-only OOD PCA, and deterministic synthetic-pair selection. Raw profiles are same-model role-to-trait cosines after layer mean-pooling and L2 normalization. QuantileTransformer and all scaling remain inside each training fold.",
+        "",
+        "A complete second fixed-seed run reproduced all 20 deterministic model CSV artifacts byte-for-byte; exact before/after hashes are saved in deterministic_full_rerun_comparison.json.",
         "",
         f"Role-family transfer uses the fixed label: {PARTITION_LABEL}. It is not described as Llama-native or Gemma-native clustering.",
         "",
@@ -761,6 +787,35 @@ def build_report(rows: list[dict[str, Any]], summaries: dict[str, dict[str, Any]
             f"Selected model family: {summary['model_selection']['selected_model']}. {summary['model_selection']['reason']}",
             "",
         ])
+        lines.extend([
+            "Nested repeated model comparison:",
+            "",
+            "| Representation | Model | PC1 R2 | PC2 R2 | PC3 R2 | normalized 3D RMSE |",
+            "|---|---|---:|---:|---:|---:|",
+        ])
+        for representation in ["raw_cosine", "quantile"]:
+            for model_name in ["ridge", "pls", "kernel_ridge", "knn"]:
+                row = next(
+                    item for item in summary["model_comparison"]
+                    if item["representation"] == representation and item["model"] == model_name
+                )
+                lines.append(
+                    f"| {representation} | {model_name} | {row['pc1_r2']:.6f} | {row['pc2_r2']:.6f} | {row['pc3_r2']:.6f} | {row['normalized_3d_error_rmse']:.6f} |"
+                )
+        lines.extend([
+            "",
+            "Ridge role-family holdouts:",
+            "",
+            "| Role family | n | PC1 R2 | PC2 R2 | PC3 R2 | normalized 3D RMSE | mean-error vs family LOPO | bias PC1/PC2/PC3 |",
+            "|---|---:|---:|---:|---:|---:|---:|---:|",
+        ])
+        for row in summary["leave_one_role_family_out"]:
+            if row["model"] != "ridge" or row["role_family"] == "ALL_CLUSTERS":
+                continue
+            lines.append(
+                f"| {row['role_family']} | {row['n_held_out']} | {row['pc1_r2']:.4f} | {row['pc2_r2']:.4f} | {row['pc3_r2']:.4f} | {row['normalized_3d_error_rmse']:.4f} | {row['cluster_holdout_vs_lopo_mean_error_ratio']:.3f}x | {row['bias_pc1']:.3f}/{row['bias_pc2']:.3f}/{row['bias_pc3']:.3f} |"
+            )
+        lines.append("")
     qood = qwen["error_vs_ood"]
     lines.extend([
         "## OOD association comparison",
@@ -818,6 +873,15 @@ def artifact_inventory() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def deterministic_csv_hashes() -> dict[str, dict[str, str]]:
+    result: dict[str, dict[str, str]] = {}
+    for model_key in ["llama", "gemma"]:
+        model_dir = OUTPUT_ROOT / model_key
+        if all((model_dir / name).is_file() for name in DETERMINISTIC_CSVS):
+            result[model_key] = {name: sha256_file(model_dir / name) for name in DETERMINISTIC_CSVS}
+    return result
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--vector-root", type=Path, default=None, help="Root containing saved hf_vectors model folders")
@@ -829,6 +893,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
+    prior_csv_hashes = deterministic_csv_hashes()
     vector_root = resolve_vector_root(args.vector_root)
     ref = import_reference_runner()
     geometry = json.loads(GEOMETRY_PATH.read_text(encoding="utf-8"))
@@ -858,6 +923,34 @@ def main() -> int:
         print(f"starting complete analysis for {key}", flush=True)
         summaries[key] = run_model(ref, datasets[key], args.n_jobs, generated)
         print(f"completed complete analysis for {key}", flush=True)
+
+    current_csv_hashes = deterministic_csv_hashes()
+    full_rerun_checks = {
+        key: {
+            name: {
+                "prior_sha256": prior_csv_hashes.get(key, {}).get(name),
+                "rerun_sha256": current_csv_hashes[key][name],
+                "exact_match": prior_csv_hashes.get(key, {}).get(name) == current_csv_hashes[key][name],
+            }
+            for name in DETERMINISTIC_CSVS
+        }
+        for key in ["llama", "gemma"]
+    }
+    full_rerun_passed = bool(
+        set(prior_csv_hashes) == {"llama", "gemma"}
+        and all(row["exact_match"] for model in full_rerun_checks.values() for row in model.values())
+    )
+    write_json(
+        OUTPUT_ROOT / "deterministic_full_rerun_comparison.json",
+        {
+            "passed": full_rerun_passed,
+            "comparison_scope": "Exact SHA256 comparison of all deterministic numeric CSV artifacts from the completed first pass and the complete fixed-seed rerun.",
+            "excluded_from_exact_hash_comparison": "JSON manifests/reports contain generation timestamps; their numerical content is covered by model verification and the CSV comparisons.",
+            "models": full_rerun_checks,
+        },
+    )
+    if not full_rerun_passed:
+        raise RuntimeError("Complete fixed-seed rerun did not exactly reproduce every deterministic CSV artifact")
 
     qwen = json.loads(QWEN_SUMMARY.read_text(encoding="utf-8"))
     rows = [qwen_row(qwen), replicated_row(summaries["llama"]), replicated_row(summaries["gemma"])]

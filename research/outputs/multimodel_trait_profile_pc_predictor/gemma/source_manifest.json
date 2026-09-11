@@ -1,0 +1,2733 @@
+{
+  "activation_model": "Gemma-2-27B",
+  "analysis_model_used": "GPT-5.5",
+  "branch": "codex/llama-gemma-trait-predictor",
+  "external_model_api_calls": false,
+  "generation_base_commit": "ba1affb3cb86ae17ccf4203ed2820da18505f2df",
+  "generation_timestamp_utc": "2026-09-11T20:47:00Z",
+  "gpu_used": false,
+  "integrity": {
+    "cosine_matrix_finite": true,
+    "passed": true,
+    "persona_count": 275,
+    "role_family_counts": {
+      "combative_iconoclast": 15,
+      "editorial": 13,
+      "grounded_social": 54,
+      "mythic_spiritual": 51,
+      "other": 6,
+      "procedural_professional": 126,
+      "trickster_chaos": 10
+    },
+    "role_family_partition_label": "Qwen-canonical role-family partition applied cross-model",
+    "role_vector_audit": {
+      "all_mean_vectors_finite": true,
+      "file_count": 275,
+      "tensor_dtype_counts": {
+        "torch.bfloat16": 275
+      },
+      "tensor_shape_counts": {
+        "(46, 4608)": 275
+      }
+    },
+    "role_vectors_finite": true,
+    "same_intended_persona_labels": true,
+    "same_intended_trait_labels": true,
+    "target_or_metadata_columns_in_features": [],
+    "targets_finite": true,
+    "trait_count": 240,
+    "trait_vector_audit": {
+      "all_mean_vectors_finite": true,
+      "file_count": 240,
+      "tensor_dtype_counts": {
+        "torch.bfloat16": 240
+      },
+      "tensor_shape_counts": {
+        "(46, 4608)": 240
+      }
+    },
+    "trait_vectors_finite": true,
+    "unique_persona_count": 275,
+    "unique_trait_count": 240
+  },
+  "matrix_verification": {
+    "construction": "mean over stored layer vectors, L2-normalize role and trait means, same-model role @ trait.T",
+    "established_viewer_matrix_numeric_precision": "float32",
+    "max_abs_difference_vs_established_float32_viewer_matrix": 1.0152960245868314e-06,
+    "mean_abs_difference_vs_established_float32_viewer_matrix": 1.0060165846338669e-07,
+    "new_matrix_numeric_precision": "float64 after float32 tensor mean",
+    "passed": true,
+    "reference_tolerance": 1e-05
+  },
+  "new_activation_extraction": false,
+  "new_model_inference": false,
+  "pca_reconstruction": {
+    "coordinate_target_source": "research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_data.json",
+    "explained_variance_ratio": [
+      0.23453089585007222,
+      0.1278198481518453,
+      0.05686002238340882
+    ],
+    "max_abs_coordinate_reproduction_error": 1.375610736431554e-11,
+    "mean_abs_coordinate_reproduction_error": 7.431103543956741e-13,
+    "orientation_correlations_before_sign": [
+      0.9525945368765923,
+      0.9220692179867229,
+      0.8057448038831178
+    ],
+    "orientation_signs": [
+      1,
+      1,
+      1
+    ],
+    "passed": true,
+    "permutation": [
+      0,
+      1,
+      2
+    ],
+    "procedure": "SVD PCA on lexically ordered mean-pooled same-model role vectors; same-index PC signs oriented by correlation to Qwen geometry",
+    "reconstruction_procedure_source": "research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py",
+    "strict_tolerance": 1e-08
+  },
+  "runpod_used": false,
+  "software": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.12.12",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0",
+    "torch": "2.9.0"
+  },
+  "source_location_note": "Saved vector files were read from the existing main-worktree downloads tree because downloads are gitignored and not duplicated into linked worktrees; that source tree was not modified.",
+  "sources": {
+    "canonical_qwen_predictor_runner": {
+      "path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-llama-gemma-trait-predictor/research/outputs/trait_profile_pc_predictor/run_trait_profile_pc_predictor.py",
+      "sha256": "46ee1dd0dfa4a115cd305ec3ba8bbf1343bf158aeb237f6920d4626b49b88f51",
+      "size_bytes": 90335
+    },
+    "canonical_qwen_validation_summary": {
+      "path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-llama-gemma-trait-predictor/research/outputs/trait_profile_pc_predictor/validation_summary.json",
+      "sha256": "10f6a2874a5a2450852a00828c813bad5de2d947e1d8ccba801a5058cfc66712",
+      "size_bytes": 64819
+    },
+    "established_multimodel_coordinates": {
+      "path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-llama-gemma-trait-predictor/research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_data.json",
+      "sha256": "97093324be48cddc43eae960f170a472dbf6881cffe66ca03d87f7f810d3fd2c",
+      "size_bytes": 10690490
+    },
+    "established_multimodel_report": {
+      "path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-llama-gemma-trait-predictor/research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_report.md",
+      "sha256": "05b73d3ad78524135158a7f46f266f70a7dd3e242c585aaa29e972f6e7e13b4f",
+      "size_bytes": 6042
+    },
+    "established_multimodel_runner": {
+      "path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-llama-gemma-trait-predictor/research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py",
+      "sha256": "840d607ab584160aa0787e33cf1ff4c9bfa7812a7fd66bd885cc341c573d8b33",
+      "size_bytes": 49522
+    },
+    "qwen_canonical_role_family_partition": {
+      "path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-llama-gemma-trait-predictor/research/geometry_tables/cluster_membership_table.csv",
+      "sha256": "5edcf2ae1633385a9ea00e1944c82803f91c41ca19974c95cd6482e899ef8cac",
+      "size_bytes": 57059
+    },
+    "qwen_geometry_orientation_reference": {
+      "path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-llama-gemma-trait-predictor/research/visualizations/geometry_viz_data.json",
+      "sha256": "1b15d8e3425bc3d51032919157eb683f1358f353f4ee071a18d06347a792ec6d",
+      "size_bytes": 288387
+    },
+    "role_vectors": {
+      "actual_local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/gemma-2-27b/role_vectors",
+      "aggregate_sha256_of_sorted_filename_and_file_hashes": "d63d0850700792614ed5ccc3ab7586d4709f7e1b8a750791b621047654910fb1",
+      "file_count": 275,
+      "files": [
+        {
+          "filename": "aberration.pt",
+          "sha256": "ea332573cf8e8dbf0a5b569d528b8ffcb7f44b874f397e07c8db94768c62b7a6",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "absurdist.pt",
+          "sha256": "2d537eebbcf3a0c7627ee1fe6db44dc30e3e9cb50e4a5dd4d99f99c6b6dc8525",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "accountant.pt",
+          "sha256": "54a4dae264cea686713c4850bf0295829785e5b676df79788b4e8af199f1e49d",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "activist.pt",
+          "sha256": "0408a6aaba991df02e5d7b44ae68a63dd6514cc610d67f47d0e234dd2c55fbc3",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "actor.pt",
+          "sha256": "7308e6ea02a344f5193c8495af442bc68986e7b097d0398e9ff04ad0fe2e5e2e",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "addict.pt",
+          "sha256": "39271bcb702f01911ef12e96bfe5fe146c35f6357e769a1d06d1ff8527e191aa",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "adolescent.pt",
+          "sha256": "d32a07ed89bd062dc205887f192e94afd060f18c3b787a4585496a522e347ffc",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "advocate.pt",
+          "sha256": "d782de453dd5b99fde1e8827fd6da809636d82c4838465b28cf0cd514214bb77",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "alien.pt",
+          "sha256": "128fcba47f8ac097bab6593319322b9039d28dd3b9b86a1a7532fda6c14c3379",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "altruist.pt",
+          "sha256": "e7d368963646848b4c25a2a8d0e6c5cf7dd30e4f8517b3850ae5e9b976e97ee1",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "amateur.pt",
+          "sha256": "78c2dc7430db30147e1a88b5ee0b072f34f8883050f16b290d3529e10d95b581",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "ambassador.pt",
+          "sha256": "35305ecd93829a7f4ea954be7560a839accdda252eab0d63c9e0b204ea4770c6",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "amnesiac.pt",
+          "sha256": "34e7af50a38543d553d0c20bea471d50ad74e00351f59841c44a7f45997a7a2a",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "analyst.pt",
+          "sha256": "930f1c1a7cf0f2962c7c8dc421a7ff8e370d158754a214f830d15e711c66ac20",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "anarchist.pt",
+          "sha256": "fcbe214c8b8547957e0c28bc62c997ac56aab9deb00d8b31264cd739f01c2d4a",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "ancient.pt",
+          "sha256": "f1f5817db1de094765f8713e852d5b415615eeac230044a73aa43acd376821dd",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "angel.pt",
+          "sha256": "dfa986397d81c53e57aa2014cfd033ef5ac71cf70edd634b27a88a0e987973ad",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "anthropologist.pt",
+          "sha256": "da0a3998e9cf6a53e83267b62fd40aef2dabdabcde90157afbea3efc0572271d",
+          "size_bytes": 425562
+        },
+        {
+          "filename": "archaeologist.pt",
+          "sha256": "4e51a8d246b185c645823f66f0638f8eb9e460cda732dc5602720e11f4011c01",
+          "size_bytes": 425555
+        },
+        {
+          "filename": "architect.pt",
+          "sha256": "9a158409b9e0c9049db6e76208ee31ff94d9bc6493c7ad60539164fbbe7c2fe0",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "archivist.pt",
+          "sha256": "ed1da37827605b0f727cf0a1b8c4457fb1fae3f35997406243888872bacca96c",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "artisan.pt",
+          "sha256": "6c60789870f8ca7b5b4d2f3cd5ac9bf823d2bff73b16109e1d3343a091244fc4",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "ascetic.pt",
+          "sha256": "d861b034cfb5cabb24cf5335547ee84aba67c966f32e000c43591cba56fc66a3",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "assistant.pt",
+          "sha256": "127a43ae266470ba03b21ed9d80cf858b3cac62fc901564fd78295d04936e292",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "auctioneer.pt",
+          "sha256": "037d70e984ddc05c14c23e6b8fa5ae33a3ebc6a243b2c5a3b494a6489b6e6830",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "auditor.pt",
+          "sha256": "91951581b413b5ace02e77618c485d145b1baa3a75accb0276981d0ff544a5f1",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "avatar.pt",
+          "sha256": "57190bbd212d7fb44fc0a072b8fca8ec29759fe6a3d8d954c01de0169aad0018",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "bard.pt",
+          "sha256": "93c10bebae94ccc41c5970ae0e5d44c1157b2f75469e964c8b8749bfd7082fb4",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "bartender.pt",
+          "sha256": "a02ea7fdcba1da703750c95d8e1761ef6725d156c113ffa74b2fb95fb2bf33f6",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "biologist.pt",
+          "sha256": "a0cbd08285321e93f5c58b0b606ac81ae5309ac34818ce062034c4b1abc4f273",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "blogger.pt",
+          "sha256": "8ecf2035c5b7646ae727e04e6fedf1a4b2d0f1dcccc751cd7162fb26f43a005c",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "bohemian.pt",
+          "sha256": "8c5c842b434b9ce2de663557836b76ea38b5330afe16d821a310d7cbf364dbf3",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "builder.pt",
+          "sha256": "22d68ba5f8ca6bc9062e1510cde1eafe912832cb3032b1072af6b750ff635dda",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "caregiver.pt",
+          "sha256": "0262fc8a6a14006b2a181ac932a2fa1b303efdf87837c7e3feeb12576e0c17c0",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "cartographer.pt",
+          "sha256": "84fb077178a6ca492fc94c4889aa265b4b5521069d85bb6624ee4a777c9667f6",
+          "size_bytes": 425548
+        },
+        {
+          "filename": "caveman.pt",
+          "sha256": "d0e6dbb2f452f9f71efda2ae17bde8314a7e6b686ea2b7695768d13e275e66f7",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "celebrity.pt",
+          "sha256": "c019d03c838bbc503200e8b3e751a42eb62036d6d77ac3e3651499ba2741f9df",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "chameleon.pt",
+          "sha256": "9ce4700bc8db8df44f86b6e9d579e14dc4f4b2ccbb55dae6157a1825c29842e7",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "chef.pt",
+          "sha256": "b33d73aff589da4c95c742172b709ebc190a69032cb286fba5bcf54e3ddaa16e",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "chemist.pt",
+          "sha256": "457d4e9656b336eea93bdb344124cbdfda2c6b247f0e85b85c4e782e87199e4e",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "chimera.pt",
+          "sha256": "aecb0925ba428b777d488ad646c91db993ed48c12a1e288a837fb65b3014cb1a",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "coach.pt",
+          "sha256": "48e60f93aaaf29a18fc3305177c0333a25d304feaf01106bc34400055efea83b",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "collaborator.pt",
+          "sha256": "37f5b77235fa1207a9d38a13450f6b2b78a53710071be6ce6ed2d16a6922b9f3",
+          "size_bytes": 425548
+        },
+        {
+          "filename": "collector.pt",
+          "sha256": "e187c1ed00000ed6f506f1527e596e5210f7bc7871c8698d0f5bfe4733dfe17e",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "comedian.pt",
+          "sha256": "3bcc7f9cc19b52d98c315a6c395ce12c8e71f3bb9c8373d9d4497dc707f363b8",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "competitor.pt",
+          "sha256": "96777504fe3f641e5f8b626ddf9bf6bd21268e6a09b53bc9edb6a068751e27cc",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "composer.pt",
+          "sha256": "8cc1370122e6daa8cbf6374a95f6277be2512b97d41ea31e61b96c03e683e8f1",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "conservator.pt",
+          "sha256": "cc4fec7ad86eebad71ef42bd9d298c3eded98e258461cb975b594798a4ac2027",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "consultant.pt",
+          "sha256": "4623c5dda0efe70f22fc701a40d9507a72d8fc4e3902c23b5b987f3b2a1b21fd",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "contrarian.pt",
+          "sha256": "38d6178ebd7fe1aaa608d9de39f129073507972ea45e176d220279862d679bce",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "coordinator.pt",
+          "sha256": "57641f99ae5976ed45bf0babe58d8e51d4dd7b34b4d4df5bec8cd8481c3e7708",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "coral_reef.pt",
+          "sha256": "4b287a7dc836f2ef19ee0f1d2077b32a3698d51c07e62950aeddde1a36af88b8",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "cosmopolitan.pt",
+          "sha256": "45b2492643a20d90f69791b44cb0b532151aa93af089e4e7d987bcff15ec321b",
+          "size_bytes": 425548
+        },
+        {
+          "filename": "counselor.pt",
+          "sha256": "2b7b44f2c469c0eb13626a819edc45470168f149af1d2c3aef30989bf6922fbc",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "criminal.pt",
+          "sha256": "f332adaa8385212a6420e405b6508fcc0720c757731a9cba4ec5cb730409e86e",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "critic.pt",
+          "sha256": "ff908f70dccf0b275cb39d5fc5d136a3a66beb06441e44faf45ee64e09fe3f30",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "crystalline.pt",
+          "sha256": "8dbcd8b00c6c9dbeb6d6747f0b251ffa4f2151575fe9b6217964da0b6580da2f",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "curator.pt",
+          "sha256": "70af890e1cd8a7668e987535669674d6eb50baa3317b1e488b3ef118c6973e25",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "cyborg.pt",
+          "sha256": "faffab3a25cc532fb4623c529b28ecda805e2dd71e872f7e2cbf1a9a8f4704fe",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "cynic.pt",
+          "sha256": "e4c087d401208298229177fa482f628b23f3ef02c2d33f71afdf9788c2586b7c",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "daredevil.pt",
+          "sha256": "a43d0de46b09835ca069ff92e253c0adf172a2e39ce7d9cf6b373ea10e502243",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "debugger.pt",
+          "sha256": "97775e82183b6b28618e5821736cca466088fde0f144316281e4aa158b7973eb",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "demon.pt",
+          "sha256": "8c784d62942fe28f8873ebaf71a5cbac8721cad1f3edd252db0b48925e8ee353",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "designer.pt",
+          "sha256": "361a25ec140a305a31ca19fc4eba8a1038e443eaa5d58ff45db3b3193395c081",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "destroyer.pt",
+          "sha256": "4aab8858a9d5f651b08c21f7fe9117091beab375d2e83f868f6be3339d6de96c",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "detective.pt",
+          "sha256": "b3f8bf75edf57d76f1ff1cee758b4da09a533480e99020037b26032291e8eb1b",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "devils_advocate.pt",
+          "sha256": "2666cb289059e16e6a1864e49da11c0f116bf00e6ae289dc72ab3f0310ea0e33",
+          "size_bytes": 425569
+        },
+        {
+          "filename": "dilettante.pt",
+          "sha256": "533dccd253107845cd94669fb8224c3046fa0c280e0808c9ba90d10d7c4565c2",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "dispatcher.pt",
+          "sha256": "d8e4bd45aa0fdb818a1c5822a1a40bc93a5d608341d84e8cd4ad5981cad47e93",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "divorcee.pt",
+          "sha256": "eba39eee0647ff4c3f9428446928b1db8178462c496581ae69fa4eb4629c1c53",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "doctor.pt",
+          "sha256": "988210a073a9446e3ef78d11e3af9cdbb398672b92003a27c2fbb3ffa6a80de4",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "dreamer.pt",
+          "sha256": "43b59e903dfde68bec5b6b6b19be45b3e24c5c014f476b995ab87d9ee0c72112",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "echo.pt",
+          "sha256": "504b9aa0d0b34ea9203a5af18220d35467eb60ae77ea3d5572d8b3144683e197",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "economist.pt",
+          "sha256": "951c3a801403c7050e6cd7861cfff62a23a0ec91a732db42b3e674535af89a37",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "ecosystem.pt",
+          "sha256": "ecf7582031beffbd6ee4a2527cb00274f167beb3f0170f765872bd1f46f76f07",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "editor.pt",
+          "sha256": "89b3c79e89299362b78956df6e248cfbd94571b05993b6f57e17840c78dcdd33",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "egregore.pt",
+          "sha256": "8fd25d13da56f1d6fd26356d05078cf0ba4fdb098fbdb1f1bf51cbf75ec0ac71",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "elder.pt",
+          "sha256": "93f5c35e2b329428ca0574f05b05909ad79e1060844347febb7fab6e06eee65c",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "eldritch.pt",
+          "sha256": "77d798e4e26cef7d1eedeb4c2f01a8f0f5d061145ddc4536e7d747728bc250c2",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "emissary.pt",
+          "sha256": "9a30468c2a8fa4b946fa3c7f83639a3496c0563dc3a9888938c7a0cd8a279b6d",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "empath.pt",
+          "sha256": "e0e99fe0eadf497211cbbf235ed22303ac458cfd37e0a75bf24bf2fdede20b6b",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "engineer.pt",
+          "sha256": "835826a11734f2b1f9eea18a1628dda6e7dd1ffd447c1f7b991d645a32f038d2",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "entrepreneur.pt",
+          "sha256": "14bf44a76b82b454aa75f8711a5afc3c92ca778298cb9d67e9e28299ed13adbd",
+          "size_bytes": 425548
+        },
+        {
+          "filename": "evaluator.pt",
+          "sha256": "68c4be8bf60a316f9b346290215c1834d67746ed3d35b1a48387a4946f2b021e",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "evangelist.pt",
+          "sha256": "fd151a04ee47bad62da6f3afc67382eaac7ad3dca19a4aff57cf76317f2b5b1e",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "examiner.pt",
+          "sha256": "dc306ad9a286e52214e377212b66aebabd21ab3307e41e269d2e86a666aa7fad",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "exile.pt",
+          "sha256": "aec7dc05cebb67f78b5d293b73a36c37ecca6a26fe858e3910fd625e0fee4393",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "expatriate.pt",
+          "sha256": "a032a31bc007fece877f2d9b2b782d8a91ef470c6ded1f5105406dce3d593ae8",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "facilitator.pt",
+          "sha256": "7c05648e14307a66c7ce28792c03c66f183e89e6b7f590c5889efa12d6fe5b8a",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "familiar.pt",
+          "sha256": "a625ad1743339ed1db1488cf5112cc62787db05c52b2f338a00f1a9cf8a827ea",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "fixer.pt",
+          "sha256": "9e2a5e06834dff2e2e6d52fa5083472a1e7fc3ea904c28be5e4faed0cd370413",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "flaneur.pt",
+          "sha256": "bde21f3e52f1ba960e94eb055cc298ec8fadd0352e19bd8d095a21e0d188b561",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "fool.pt",
+          "sha256": "9215e8da4e367785190cb222a1a873934845e4b376c71b75cec27db7163c11cc",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "forecaster.pt",
+          "sha256": "d3a30cea75fbbcc3fca17eb527e4fab4b9d612215cbb8691b84bfe9bd16771f8",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "futurist.pt",
+          "sha256": "e13eb18db227c9d14e6104fe9097a28d808cd280071662c3a9f12cec3eab050e",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "gamer.pt",
+          "sha256": "bc1b61d91b65a37189c5a0b8630f61b60760167c8d32682eeaded822cdb9293e",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "generalist.pt",
+          "sha256": "20ecab3cfea9a861b5f6aba3624fed894430e68a4ede5581cbd6ec43457b20bc",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "genie.pt",
+          "sha256": "7bdace46e89eed737015c7da4eb3516a29e5c550eccaf8cfdf332a7695afab4f",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "geographer.pt",
+          "sha256": "c8f6b362d2243503aa048f3a1352dd24bb4d8852cc13e4151d4c9a0b5de9e020",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "ghost.pt",
+          "sha256": "0a7e2011f3addc2dc123f5d072ba751839752e84303d1aa4325a3d5a63fa5daf",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "golem.pt",
+          "sha256": "b9c702607444514ddcc12d562cbb2cfa4ea504135b531ab53e66431a5a89701a",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "gossip.pt",
+          "sha256": "089fefdbd7e25a82786b99a9c04210513f83b93ac1dcf7e6625d5897244e9b8e",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "grader.pt",
+          "sha256": "e39f34e232d5f12e7f5f7970a5c5f2f5b65fefb98b4b707b81964cf3581d0ae4",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "graduate.pt",
+          "sha256": "dd88b6ae82e53c35537bded830cd348d33ae68b78a530f26c32e69e6ecf0e65b",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "grandparent.pt",
+          "sha256": "ea2347ca5caa4879ae090c88d40d56641271505c04f1b5da08ffd1316ff9d3d5",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "guardian.pt",
+          "sha256": "3a4776ac59fdb1312f660b2becbb8066376ede3c68efa1c38a98a4b56eef632c",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "guide.pt",
+          "sha256": "0b362f3101073c093a479b621a764581137f6b80ce5f09c11701c11c15fbfa4b",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "guru.pt",
+          "sha256": "92cc92e44a7b4f976d5978434544bbc1a41d77a90b864c935e4f87da77f95a48",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "hacker.pt",
+          "sha256": "ea6d10a8f010519b7d5e960a1da9fecfd6c195a38e1a282f7c9a9c8d1ba3d86d",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "healer.pt",
+          "sha256": "ba4a6b052991f1900a01d9bf6538c2165a0c6f2e19280843d239c81309c4c761",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "hedonist.pt",
+          "sha256": "313213ba368e7ac2bf2387abc6747d9ecf039a5f0c69c6a2513348c89a749b5f",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "hermit.pt",
+          "sha256": "df79ab5dd642170dc56df095013ef463d5cb0c8f1735ebc00a4550fd7e0a49ab",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "historian.pt",
+          "sha256": "57f88d057d9e87c8cd6d142d06a5fc9ec11874d06277560c7aa51bd38b50b117",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "hive.pt",
+          "sha256": "954ac2b99a3f4f7905f23896afbecf2a47abf5c7636a0a89dbba88e4beb62c08",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "hoarder.pt",
+          "sha256": "45fa444b70d1cbb8ecf4bbd6fb71d68bf63ec6d23085e07c871a5a55b387f027",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "homunculus.pt",
+          "sha256": "fdb480711dae2c0c40185216aebff934abca44c35fd7fb39e428a1f75593462f",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "hybrid.pt",
+          "sha256": "5bc9b97c26625cc8ec81a9acdcd92f282cce60d452f20ec82f98d6ffa2ce7c5e",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "idealist.pt",
+          "sha256": "21cf5b50ad995993eddeed7ab96e33f2e782913fa12fbc95af5077e90ea747be",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "immigrant.pt",
+          "sha256": "9d47f42127c6db5cca618fede16110afc7680b0c8e9dd5ba288e9427e01b3a80",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "improviser.pt",
+          "sha256": "5175050a51fbcab24879bc8599a2fee6fbaae65db59eee4b971c375278d21195",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "infant.pt",
+          "sha256": "785a28bc719acedd0363c243331043e7d3182eb4eceb828486badc70a9ccf131",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "influencer.pt",
+          "sha256": "53798832a1b05cfb054d33528c11580ee50e4b67092820da5cb1615face95f98",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "instructor.pt",
+          "sha256": "2b215b60b75694dec6696912fd4871856de0352e1fa4ada0f7074bda01c100c7",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "interpreter.pt",
+          "sha256": "1945754eff5996b3b07ad76e8cbbfe38d7ca411a77cef319a38ca595370fc1f6",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "interviewer.pt",
+          "sha256": "965f797bfb9c1877831bfe49e07a4bda4009af3c3cccf97c407dcdb08645690d",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "jester.pt",
+          "sha256": "fe742a268c659b44604d874976a85c2ef4501001a5418a21d62241e92553e5a5",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "journalist.pt",
+          "sha256": "3eaed4f766cd957cabc43769a79fa30a07a995132169025030283890d136c8c0",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "judge.pt",
+          "sha256": "5c5bd659bd5bb0642107d392a50b8f450c5a7c1d7914900a10ad2da8add03a2e",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "lawyer.pt",
+          "sha256": "8f30c5e947f193d98209fbc0323b20761fd363093da76bdcf90b39caff4bded5",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "leviathan.pt",
+          "sha256": "11f53aebd6365a1e0634527ca0e9c35834288ba25353718f708398d4bc65b1d9",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "librarian.pt",
+          "sha256": "7f5199115bc450a6ce7ab8ae511e8304449ee330ba4abe019cbfc67db2516504",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "linguist.pt",
+          "sha256": "e84e6449c076d1e7f8d30f9ae3c7bd5348b53bc08ea6e69578392dc727501515",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "loner.pt",
+          "sha256": "add41b3d14e3c1dd19f9783ddce489453ccc83a86215ba1a49640b50611d14cb",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "luddite.pt",
+          "sha256": "4ce59a898f0fac2143d52873d361fddeb3a7fa2761402025fcf831b3c06eb998",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "marketer.pt",
+          "sha256": "25f86f91faeca660b37c81dda6b57535b6a28117f64881b5669f2dc3dd908fc3",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "martyr.pt",
+          "sha256": "234948cb35bb5d690f23ab32936fa1d8f4f1e12f6df43146c2c7745774c8ffcc",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "mathematician.pt",
+          "sha256": "9e1921df102b15591285cbff2fb7cee6cb6a20cf9af3330f08b9d3a70e1cc3b1",
+          "size_bytes": 425555
+        },
+        {
+          "filename": "maverick.pt",
+          "sha256": "38fb272c584e242dbd77bb355666470b3cd05fd6d3e32a84044de2217d3ddc75",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "mechanic.pt",
+          "sha256": "1c59cb9b09cedf8ffed4d3532545dc7be9ac498ba113ed7f392777f115d6cc6e",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "mediator.pt",
+          "sha256": "cc9ebff601edaaeab7f26cd02daab4073ad2c3b0127a6469f5fdacf1360c7131",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "mentor.pt",
+          "sha256": "caff90fa662cc2b9bf2969462b684bcc7fe7a287debf50dec5b41a7c462187e8",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "merchant.pt",
+          "sha256": "489487693614030c8d0deff8491c31c78e770fd2510d59a736ad1ce25c355d03",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "minimalist.pt",
+          "sha256": "fac152e2aa45dbdcbf6de8ba5abeb6c7f9c4bf65fe3a3e50adb9a36c5f0cdd47",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "moderator.pt",
+          "sha256": "365728800f5601e66f9b5d1d93c6de4dbf7cc0950a5a528453744de7bdf8f5fe",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "musician.pt",
+          "sha256": "1c76919de3252c40335389530e68559b8dd79af9eaa08caa4cd885e8b4091cb3",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "mycorrhizal.pt",
+          "sha256": "ac5af1fcd243652e53f3231e8b901c8fdf61038a1e1b0c1088b260a0190d8c1c",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "mystic.pt",
+          "sha256": "00495901d6ed82876c993f8c879d0ae6558bdbbac51bd10c70ae8092301d8cd4",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "narcissist.pt",
+          "sha256": "528802f1e87890ba87c31241b6bf8f0ab4decc0a0b5fe0c724ef2501f9cc49d4",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "narrator.pt",
+          "sha256": "f7b4839bcba952f6836ba692be8e0e6bcba536c7e513d8d8f490084703ba6663",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "naturalist.pt",
+          "sha256": "c59d5b332543fbb9069bc7cca1e9b3533f2adabe50ca3d75c5ac306cb842f71d",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "navigator.pt",
+          "sha256": "87279a4ee8b8d8074a511bf4a813c55be629ac8cc0b1cd34fa8c387fddff94fd",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "negotiator.pt",
+          "sha256": "dea05902af47838d14c68e51823e3af64581bcc6c6ac6aa44e09fc4e3e253069",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "networker.pt",
+          "sha256": "6f56d15974f7f0fdf5fc294bf303560993dd9832b3c24f716179db9cf354dc35",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "newlywed.pt",
+          "sha256": "7e638e68f20e2ba5b80d511dfedfa9ecfd1de3bcc2a5cf23e73d3970b7064fe4",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "nomad.pt",
+          "sha256": "f836c1203a012b8526cb8c00624894668fac7a7c58864151d11fbe9b6b30e927",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "novelist.pt",
+          "sha256": "a861210f9ca2c08fec402940e60e7a70428ae5d09b390f646a8bca9a1482ad56",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "nutritionist.pt",
+          "sha256": "e527a4e1241f758bd2bec5080c5a27a3250316f897ff3de02e2fb2f5454714c6",
+          "size_bytes": 425548
+        },
+        {
+          "filename": "observer.pt",
+          "sha256": "c835201cad4d8751690142eea8bc30c0f6cfaba95a2c6c99ced20fc2d8988aef",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "optimist.pt",
+          "sha256": "daa193f8603b17cc40fe5e07f0cae5f24a8d888dfbc9c835ca9ef5352b38ce16",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "oracle.pt",
+          "sha256": "6f2f7263b0cfd060ff6c68868e1de33c0f7962bc7468bbfa4ff15a93821e3fc3",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "organizer.pt",
+          "sha256": "32a70d07ba88cea44bbda7556052a6b7bbe73ff3b16d5f6480c0f1e6991b81a9",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "orphan.pt",
+          "sha256": "4ce0f1f9e0a66e9c300ef0a3ba77a84ebb6f641013e57a9462710d7e9e53f92e",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "pacifist.pt",
+          "sha256": "b188c3ede383625b38baa11d02878c7d55d472b521342bbb12109aedd66b132d",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "paramedic.pt",
+          "sha256": "0449c15d966e12fbff11586841589c26a4aaaf8215c4177bc1b39e203bd95877",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "parasite.pt",
+          "sha256": "d33e69da4a7f717f7e4af5080df4c0d7131c5ec3cfa2cf406c47b34b71f5a23f",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "parent.pt",
+          "sha256": "53fe5fd9dd642d9c580a1113a26b7558972a98c65d324002abebad2c54e9fbc3",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "patient.pt",
+          "sha256": "1fe52bff9cdfe7f4ba0e72fea4ec88448c759a276aabe2e6dc0255a8d8119c77",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "peacekeeper.pt",
+          "sha256": "631bc06461655ff198e26a2d4b00d0328f498cd5e4a924f72f94a07983466157",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "perfectionist.pt",
+          "sha256": "c33a92604194f199e3bb21f05284d44eaa2a18c562c78e1f23899a304d281ff5",
+          "size_bytes": 425555
+        },
+        {
+          "filename": "pharmacist.pt",
+          "sha256": "6a3247b2e1918292a94d61208b94b73e8a52afd77325e8d1fc5dafa5e02f2106",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "philosopher.pt",
+          "sha256": "a8d8fdddc66df667ff639fd3f721958e5cf9a8fed63c974dd309183a9fe711f4",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "photographer.pt",
+          "sha256": "599901386a33faaba0086c367a9267d45f94dfeacd62a8b59bc8eb61949610d3",
+          "size_bytes": 425548
+        },
+        {
+          "filename": "physicist.pt",
+          "sha256": "2f618f9a139beb27afc710ba11a4494476cb5c1cecd508d509146ee898edb53d",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "pilgrim.pt",
+          "sha256": "a97af525f7c1fc775fda93ad35615d0150aa1fcfcc81b2914ed7ff2f28d46867",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "pilot.pt",
+          "sha256": "c9f228d9deff0f79529336ec806b8007a8b4ae6328dd03d24c0becc05b674ccf",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "pirate.pt",
+          "sha256": "d09f43855203504c0a17db620a73c278de7045f98ecbe71acf2331a9798ad01f",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "planner.pt",
+          "sha256": "879a3730c66fe6ee59fd2448936826c6914128e97a50ceb68685e785a2c5c3d3",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "playwright.pt",
+          "sha256": "06ac1827ca30cf633b66f348134875bb42bf098d746b869a88fe17ec34fb9d85",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "podcaster.pt",
+          "sha256": "561f003d66f32675e367f59dde7ea54d4de645a9923b414feb78453b67eca7ad",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "poet.pt",
+          "sha256": "e4cc92863f37bc7ecfaa2d04a31a6ae85c3bda335149f86f7521d0fcb1d4459f",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "polymath.pt",
+          "sha256": "4ecf9dd370bb6b84142651264af08eac8a1c3dd4bcb62f8ccbfd29c9c93e6a4d",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "pragmatist.pt",
+          "sha256": "9245659237e557106b140476f697cfaf70ac80a01d2cdf0160afc03f7c58d5b5",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "predator.pt",
+          "sha256": "f711336f52ec04222848187059f86d578424775248dcf333b5a74ccab7373d24",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "presenter.pt",
+          "sha256": "26a3b9b11f0c318844d0337f06956605247ae42bc60a7b3701a938efd37b5b59",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "prey.pt",
+          "sha256": "79dbdd1d8ba010e50dd4bca2c758516aefca5a255919b58822b1eed705e87f8d",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "prisoner.pt",
+          "sha256": "b67a0a7fd8d75a580139f3030384ffd492693ef9564d4df9b3c93409c667ea8f",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "procrastinator.pt",
+          "sha256": "3b3b0da3146bfcdd11486cf0f0fac68e95bb24d07e7a8e748a7b66655a209921",
+          "size_bytes": 425562
+        },
+        {
+          "filename": "prodigy.pt",
+          "sha256": "3114caeaf336176329695d778c440e29e13afbea02f81bb006a5a62d63e4a308",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "producer.pt",
+          "sha256": "ffa9556be6eef32d8a68903e4f9d59b05038272d60c877365cf6228d1ceb0e7a",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "programmer.pt",
+          "sha256": "0b5ca6fdf1d86bcd7e7414470c771ef5a2ff2f35dcc9b21018c3fda2b635f639",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "proofreader.pt",
+          "sha256": "1e56586f7782c312a707659033b6324ede5a4addcf11fe2b4e80154c052d0585",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "prophet.pt",
+          "sha256": "021c23afa7c304c0d700f3fa9669f5c67f940cdba14a7d817034bbd7717d56fa",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "provincial.pt",
+          "sha256": "148950f830ad2a3a0fcaaa8715ce9d73dd54b38cfc7e72b1dd27f033b761cff9",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "provocateur.pt",
+          "sha256": "de759689256c4a5d1f9314d023cd4f66a9ff48ac3a4a7c956bd17e81ed68798a",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "psychologist.pt",
+          "sha256": "844d3f68a9a381038bc476befa688e6b08e40e284231048629403921284d2ff6",
+          "size_bytes": 425548
+        },
+        {
+          "filename": "publisher.pt",
+          "sha256": "c565bf7d50dbd14d51d1d11b01cf69abc51895169feb8909b86ff9e1d34fffa5",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "purist.pt",
+          "sha256": "5f91ae7cfac33996609f3859155d02859da24a46c395c1afe6ca05834eba759a",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "realist.pt",
+          "sha256": "bc58cbe6dd77edd9bb507b10061e187f7fccf862d94f05da2c0f08d30bcfd6a9",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "rebel.pt",
+          "sha256": "9c85b4c9819ffb3cb00ffeab5ae9a3a027973ec627069559107ad4ff0155da55",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "recruiter.pt",
+          "sha256": "4eadafd825e20626c3bfd12766cc852046f71d7ce3841bcf0a613d2352638b18",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "refugee.pt",
+          "sha256": "1566639b051bf2acfebcb3bdbcb4a8fea7a985765b281919e2ad1d210e215347",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "reporter.pt",
+          "sha256": "c01d24b421d665fb74ba37dae8178590ad07b350c00929c0f6a4e366807fc51a",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "researcher.pt",
+          "sha256": "80896b6dd5a5f0c46af23d5edbb37ed30cd0706dfe3759309a01d65db58b365e",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "retiree.pt",
+          "sha256": "fa92fe51d2863818ca9f8aea2a8fb40d771650c71b3b1b436a25ce2c57153d1b",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "revenant.pt",
+          "sha256": "eaf1d9f81a8c3fc739d09dbab27fc56bf4fd4813b4547ecbd4ccb358cf8a7649",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "reviewer.pt",
+          "sha256": "fcf90ce20432b01e2be41567b8601b34ca97624d9910721968d444800cc3a709",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "revolutionary.pt",
+          "sha256": "135aeef60f7db87a8940e78dee61a0dee3e4a4f5b713a7302cb7ac1483e1336d",
+          "size_bytes": 425555
+        },
+        {
+          "filename": "robot.pt",
+          "sha256": "8a193b0a0fde6042873a1a563fe9637115a3a959ef33fdf0ef51f96915d2adc4",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "rogue.pt",
+          "sha256": "338d1dad80d629692803ac8692e5899f2f1bc7a5371556795f56d2df5b7a9d50",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "romantic.pt",
+          "sha256": "705337d065eecc94b6ba8096bda162ead46677e7f94677855934d46780b56622",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "saboteur.pt",
+          "sha256": "0f52b440b98a1af9b25d562803ad196357a2155f7f06b57bd7839a444c7b4adb",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "sage.pt",
+          "sha256": "585f2f75b324259523d9afc22c729783d786fccea8cf2967f7ee28f1486a0983",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "scheduler.pt",
+          "sha256": "77b0021f53c50da35af86977331ad0ac93aa0007e81abccf66ba9af4c15e49cd",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "scholar.pt",
+          "sha256": "67aad7916dfe41a372b4f00f4065e93b8f555ad6267fbd6ee19d6778ea9207b0",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "scientist.pt",
+          "sha256": "a23b5fb78c1390d38c373a50a9cfc0e97429e3b457c161ac5fefc3e1b4631b8e",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "scout.pt",
+          "sha256": "a7afeca97873d407be0bf788acb4eeafa6e9c100c13fb2b555f26f3504a73a6d",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "screener.pt",
+          "sha256": "dff0f20ae74ad16567a135a9e509da598ed242931ff141bd8b758a7e0d0def79",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "secretary.pt",
+          "sha256": "4ed1d0cddf9dc0a02f121a85c84ae350bbf27294307998d98cdd221fd4d94e14",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "shaman.pt",
+          "sha256": "bad64a1e208f56d40a415805c33fb9cd02d8fa092352aae9cce9fb188d81d689",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "shapeshifter.pt",
+          "sha256": "a6b7bbc4c62bc0df554548a425e39e5c822b4af07b18dd13ffbd328744a1d1b9",
+          "size_bytes": 425548
+        },
+        {
+          "filename": "simulacrum.pt",
+          "sha256": "0bd07ecc638acfd86ff2cc1187e4fe29349af404d3d8a8a03124251227038e07",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "skeptic.pt",
+          "sha256": "f52b3e21ed9669c39bee2849bd8512e1b39094aca4f10cc7da607b46d377f353",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "smuggler.pt",
+          "sha256": "5bce6892be0ac7ce71af69492798f41cbfa2e8abfd5e96700dfe9e4511b162dc",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "sociologist.pt",
+          "sha256": "58a1238fc268298e83a081eb73c0be111ac484b85f164831097a5f546944b777",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "soldier.pt",
+          "sha256": "6c71da56f96868e46c603ede543ed645f420645ae38e0b822eae2b4cd9b2c0b7",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "sommelier.pt",
+          "sha256": "7f703c04da4504d1ffeb8c69600af12186eff0660ceac2d380335e0380143158",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "specialist.pt",
+          "sha256": "acaa8ef45eea8764ea507c8e692df90972c15846152a56f1763176efedcddd6f",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "spirit.pt",
+          "sha256": "a35462444bf207a43f0d62e56ee3cea7208f529fdfdd26ff649d5f3cb734a8e4",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "spy.pt",
+          "sha256": "474f13850977545bebf800e49b58df89e01af62b34bdd981e8f5d84cc7d25f83",
+          "size_bytes": 425421
+        },
+        {
+          "filename": "statistician.pt",
+          "sha256": "be8fbe6ad72101e62807be906342bc8934a0580b29791d574deadaff79137c9c",
+          "size_bytes": 425548
+        },
+        {
+          "filename": "stoic.pt",
+          "sha256": "82daf62b20dc93d37c31779472344d3a5b32bd8fa08f356bedd86651195700bb",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "strategist.pt",
+          "sha256": "042576c27c7d1fbdd964936295ad3de9f2952c1f8545ef86cc8ce775f93f5568",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "student.pt",
+          "sha256": "dbbce0338500db2eea1c6209747f17013ade805da02ffa09596fd83fa073e636",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "summarizer.pt",
+          "sha256": "a97eab8ff546395ef163bae360b2551025aa731b7e4aba837ff23e567419b6f5",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "supervisor.pt",
+          "sha256": "a0a9ab32013cb915b9dd85a964188b960ab60a7e79271937799d9b8b1ee8b890",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "surfer.pt",
+          "sha256": "2ed206b37c3f96ef84f9acd54029553e6c0439915d9cd52c6131cffd57ab6674",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "survivor.pt",
+          "sha256": "68ff03a140d086794b89f07c15c4008a12991fc000358c17825e76bd221a0f0b",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "swarm.pt",
+          "sha256": "45d6ee042b21a2845e75eb33059f75d8db87730bef38fe8a075cca36db36630f",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "symbiont.pt",
+          "sha256": "1bf3ebd3e7ca45f652612861b65056bbec8c5d6daea135d66229eb574005912b",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "synthesizer.pt",
+          "sha256": "f01f3c47478941699061c1c5130e1adda0e42829465c40235746b0180d94f394",
+          "size_bytes": 425541
+        },
+        {
+          "filename": "teacher.pt",
+          "sha256": "ee09527bd52a1758de843fad989d75b089b7d169c8dc0be83930bebd2baed9fd",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "technologist.pt",
+          "sha256": "15aed93395f0c1774eaac7d9caf7775a3f8df14fbfacd3e5b464ef5dbddec2bb",
+          "size_bytes": 425548
+        },
+        {
+          "filename": "teenager.pt",
+          "sha256": "183554efe1f3e834737df4d4a568362355ef53623c87193144610c9e823def10",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "theorist.pt",
+          "sha256": "a254b2030222fc4bb0cab30e64d06bc77390874cc7c103b63778381a9ed07dc9",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "therapist.pt",
+          "sha256": "e8a892dc71fec75f5071b6609775db12075575bb9d02fe2f51a9141627d1f245",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "toddler.pt",
+          "sha256": "5e2e6531004b3cfecde9999281b3c5fc59b45b1d78d6be6c89dd3f4fadbb8381",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "traditionalist.pt",
+          "sha256": "bcec93e12d2c34aeaf1d3709d6eb110401f3b6df4316bb4293dbda5201c81706",
+          "size_bytes": 425562
+        },
+        {
+          "filename": "trainer.pt",
+          "sha256": "c08552e6b797f47b9de6b8f6e5cc29e38a47705df049dc68a8250cc57579ab50",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "translator.pt",
+          "sha256": "d4609e2549e63507424bdedc6407c65e8ded4535506e543242d48f67b30a759f",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "tree.pt",
+          "sha256": "3e3ce9540f4a48257fb2e27460cb50a8e082105d4c741256a51a3b7e3d441fdb",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "trickster.pt",
+          "sha256": "e4718a481a12b08c66635cea68d88d3497b99c09b0dbab2627b15d29b3476d77",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "tulpa.pt",
+          "sha256": "c6fe979531095a6c0545969e1caf0029f0a994b91e513b5e1adfbf671bfe3e66",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "tutor.pt",
+          "sha256": "5a3022be1e7f8121f3195c14e79751ec627e1f8f7a14c01fd71570a92dad5a9f",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "validator.pt",
+          "sha256": "ea433b4fed8ffd3a7d99e0b83b3240722be3daf49e56d87ce429c24642f4eea8",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "vampire.pt",
+          "sha256": "ee2f5fd7a40aecf9d7d3defc6a2f61098a5e20f76b2fa2786d91c4a7faf14b1c",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "vegan.pt",
+          "sha256": "2d0967df427c9691f6ef2f4f6feb3987f0af664056648b7e6de13f863b732cd8",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "veteran.pt",
+          "sha256": "a08bcdea4aaae638f9510f2420388eb2884c850a13e746667391fea005e62a32",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "veterinarian.pt",
+          "sha256": "597f942fc7f704142c3dd275db2f845b4c1519aa8b59e6a54f3abb05da805c19",
+          "size_bytes": 425548
+        },
+        {
+          "filename": "vigilante.pt",
+          "sha256": "69a1cf1940351de6422a40376ff80566af516bcc0951465c378d08af86b71078",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "virtuoso.pt",
+          "sha256": "049cfd499edc96dcef88c3b67068864a75007fd7cc0cdbd2cea787dec1121f8d",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "virus.pt",
+          "sha256": "3d615e8671e4fbfc9509f3c9b927e9736f3d4206fbe714a12a040964b16b9e08",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "visionary.pt",
+          "sha256": "50e05b906e68c790cbd1e71923527ebfb27dcfa6eec66a8c9ccc090241b44e74",
+          "size_bytes": 425527
+        },
+        {
+          "filename": "void.pt",
+          "sha256": "6253a1fa4e355cf1329753fce82a969ac70400911282aa08b89abb877c53004f",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "wanderer.pt",
+          "sha256": "1a9a0f9b14ca6f178d6599e9cb2516b74f580944e7193f5e3144bda5e000252a",
+          "size_bytes": 425520
+        },
+        {
+          "filename": "warrior.pt",
+          "sha256": "984fb746b3f8a81bd470c98df2bd6bc3ac754233468f2701fa71ebb785aa8d6e",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "whale.pt",
+          "sha256": "9b36faab7a90a2b67297e855efe81cc3f898af2a543f81a269abf7c944c87c14",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "widow.pt",
+          "sha256": "510714f8be033cfcf3f32efc1ea05b607584c8cd966e6e601ac8e65ec7dc07e0",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "wind.pt",
+          "sha256": "617e03ec1a388611fa916557ccc1bd41e82dd55d7b8544e7c66a401e17c97b23",
+          "size_bytes": 425428
+        },
+        {
+          "filename": "witch.pt",
+          "sha256": "38f7005f5cf83845f724f028e874087a3228e3e3c59ac5b34cbdde315d2dea3e",
+          "size_bytes": 425435
+        },
+        {
+          "filename": "witness.pt",
+          "sha256": "07b8735b4f7fad21db482ff107d89bcab2579d8e459635ec461873afe1d45d26",
+          "size_bytes": 425513
+        },
+        {
+          "filename": "workaholic.pt",
+          "sha256": "f44dc30c8fed6642ded1be0eac2a613f0229f5394a54f5329a1f98005656c6f9",
+          "size_bytes": 425534
+        },
+        {
+          "filename": "wraith.pt",
+          "sha256": "886f0a4c1017b10dfd75bd75ac617a09ea19bcf0663c193ef251a9d7118a78d6",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "writer.pt",
+          "sha256": "5331fbcc26b6a2046026bf411a0c6ba7007c965fba75a49ee7348e1df115e78d",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "zealot.pt",
+          "sha256": "3d82fb034612472c14d472e30c23be754c8a1b4ae200423812de0905276aae07",
+          "size_bytes": 425442
+        },
+        {
+          "filename": "zeitgeist.pt",
+          "sha256": "f471b6f3dfdec53a5bcc6fb5f1529c7d5f030d966a491b694f9a8d16cff4db1c",
+          "size_bytes": 425527
+        }
+      ],
+      "logical_repository_path": "downloads/hf_vectors/gemma-2-27b/role_vectors",
+      "total_size_bytes": 117013320
+    },
+    "trait_vectors": {
+      "actual_local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/gemma-2-27b/trait_vectors",
+      "aggregate_sha256_of_sorted_filename_and_file_hashes": "c5b32c197d3b46f2fbdd8a17521c205eebf11ae845ee28c59f6cb23776026f57",
+      "file_count": 240,
+      "files": [
+        {
+          "filename": "absolutist.pt",
+          "sha256": "e83a640d0a02571f1d9db62e6dff69482e25c6646a05ce57881ff4affb4b7f73",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "abstract.pt",
+          "sha256": "8d2cea36aa3e852913a77d233b70b336ced0bd6ab1af10d7d897a6ee25e8e051",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "accessible.pt",
+          "sha256": "4a90be7b790860e22c3cfc5a21043a4babd4649266a4c3c643bf053a8348be3c",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "accommodating.pt",
+          "sha256": "32158bb6294976b8670f83e9461c5ef274b6feb046d8e80edb731e5cd5e34e43",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "acerbic.pt",
+          "sha256": "53a237b48ee135a8b37b40e8c243f83f381c59a62ffebb1bcce6f839ce6b3f84",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "adaptable.pt",
+          "sha256": "70b4fc2843e74010fbe3fdb56052db743e828c4acb98bda757d2d565e1f6f7a8",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "adventurous.pt",
+          "sha256": "d7f31c0cb24ce431ae9d8724d53688bc7c6314af00ef3187fbbc3cc2f0052e06",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "agreeable.pt",
+          "sha256": "aaa446b47a1e145fc209035c8fbbf44368150cce6e2e07b3e401de36572f79b1",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "altruistic.pt",
+          "sha256": "82b1e0e819f8fd183dfe913fdc17637dd44ea8f052b8b7dab452f8225676b1a9",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "analytical.pt",
+          "sha256": "46e5eebabc691e399bbba19fff132a268ab82019e9560cbcb388e20479d62071",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "animated.pt",
+          "sha256": "1d07969cffdeec60516f052da73a857958cd7bdb427f8fe85ce19c6c5e5ec82c",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "anthropocentric.pt",
+          "sha256": "07f96496b8bcdb4aeb53a10e493f5caf888e7b3b61bc3d7f53d0abaf60d08aad",
+          "size_bytes": 425156
+        },
+        {
+          "filename": "anxious.pt",
+          "sha256": "a5552bba2cfb74d3ba5bfbee91e21bd34e863e9f81a8101ae915920bca66f898",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "arrogant.pt",
+          "sha256": "93751b0599d664db69728ca586da18be74aeac7106a79e0f5daa2341db5da276",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "artistic.pt",
+          "sha256": "fad4b4a264c705a2fdf0df1864af1fc7fe394b4c6e7b8351d46ebf3cb38f2b5e",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "ascetic.pt",
+          "sha256": "e7ee8cdc4c0217ffb1adae531daca92753214b38d82bdd0985bea90b38aed287",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "assertive.pt",
+          "sha256": "7abf86967bcf606d9ec7c8d22dca6be8f87b3db895a60a757597e388832b217b",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "avoidant.pt",
+          "sha256": "b08c14477f7066ff72be526f35e2a0138a7f6c4e0cb69dd5bcb8ad8a301b5e40",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "benevolent.pt",
+          "sha256": "2384e9091e9acdec01406be5d8b1899d406de674ea2b3600ea74374cc755beaa",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "big_picture.pt",
+          "sha256": "2db317e076db7b7a5c752f51cbb32ac11b4bee38a695e045d0ca7a97506acc5b",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "bitter.pt",
+          "sha256": "f5175f2542def6d3ddb70c6ba6dde682a263f7dbaad24e9241d506b3a18c079e",
+          "size_bytes": 425047
+        },
+        {
+          "filename": "blunt.pt",
+          "sha256": "c6a6e54dcf6e64f3e9747876bd1c9fab2423727fb127f27b9009aaea0a0a3167",
+          "size_bytes": 425042
+        },
+        {
+          "filename": "bombastic.pt",
+          "sha256": "c938de0976bf867281e0097b6041476c7988c051c39db5489733b7320e7d7808",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "calculating.pt",
+          "sha256": "2a4348ddd7c8121001765ad82df7a0f69a91d9511cff00f71e27801179fbf993",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "callous.pt",
+          "sha256": "0c5695fe43718a2041efdb81831daf0e8a4bc9d18e3aa39f6766912321c3e3dd",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "calm.pt",
+          "sha256": "23601d8bb1e31ad0870df308a6e2e71cfd3572387fb99cc218ba00c690cf983d",
+          "size_bytes": 425037
+        },
+        {
+          "filename": "casual.pt",
+          "sha256": "57d6a8e82778e9154d6530c4e73dfe785d2301832bba07858bb1018c8c450b42",
+          "size_bytes": 425047
+        },
+        {
+          "filename": "cautious.pt",
+          "sha256": "9068688dc4df25411d60fed8de3582435a5f456a36020b7fd0fd75f1ced31a1e",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "challenging.pt",
+          "sha256": "9ea44cee3f4bfb39e8188788ef01b81b3485ce7819de572c86984fc155bc1222",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "chaotic.pt",
+          "sha256": "e9424ae60d08ad931e20e66782d90dcfa583403d12d464e205d2eecd0b391895",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "charismatic.pt",
+          "sha256": "b401490df72f0bd56b6c36a11f28b5810ea2b3a7d1b2735979ddb673182f700f",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "chill.pt",
+          "sha256": "2280cc9d1acb6088d4a9604d107f6340fdb21a2b6dc7587e54e26b238b972ff4",
+          "size_bytes": 425042
+        },
+        {
+          "filename": "circumspect.pt",
+          "sha256": "4c51627c39e4db6f4b09aeb342395fd0eeed5aac9967b85a31e3d6fbd2b110e0",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "closure_seeking.pt",
+          "sha256": "d05ee19319afb1b9ca02e6ea20cd9865fc3692b2b9f9fc12dcbdd951a7fd4280",
+          "size_bytes": 425156
+        },
+        {
+          "filename": "collaborative.pt",
+          "sha256": "45aeb321d7e22eb7a5b57ea93ffd74a3253c9b1cacd28fce0871af9cdc7985e0",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "collectivistic.pt",
+          "sha256": "030b88734a73fc357c66d4a610aa0bef2de3a32bf2c6a7e451957263115831de",
+          "size_bytes": 425151
+        },
+        {
+          "filename": "competitive.pt",
+          "sha256": "f11b791b02bf1d2e09710625e522fc246842ce64d776b0268954becb03dc9ce1",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "conceptual.pt",
+          "sha256": "13d028ceaf54279927ac90cd0f5e7bf0c048ea46e72513407c2d023381b11a58",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "conciliatory.pt",
+          "sha256": "3162c9b30042858510e204f3aa88c2062fc48a28aff5bdb4d552e2308b1a4def",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "concise.pt",
+          "sha256": "4589f28219a8b72989fcc4a8d15b9987cd52ed247c4d1afc25869b691216ac4b",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "condescending.pt",
+          "sha256": "d4ce9f3aef1f5528cd68121b593390aeaed8e59ca44681785d3ab49472c7da89",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "confident.pt",
+          "sha256": "e0c344d8961f9548852e657c45d14c9108513598e0597cb7abcbf01de4418691",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "confrontational.pt",
+          "sha256": "cd08cd82e66e92e52ae882a04f5f56bad7cf831a809aa2133e3aac3beb6f89e6",
+          "size_bytes": 425156
+        },
+        {
+          "filename": "conscientious.pt",
+          "sha256": "39661b404a396c15461e87054699538e18d304683b673da525ac4e72163a26fb",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "constructivist.pt",
+          "sha256": "b671327a8e68cd06d80976ada8ca24d61bafecf22bd6776af4ddf20f9af9c64c",
+          "size_bytes": 425151
+        },
+        {
+          "filename": "contemporary.pt",
+          "sha256": "dc2998c13adb9beecc047b5db6582a67a457161a512164fe5544fdd8aabd619e",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "contrarian.pt",
+          "sha256": "613830fb8b3417d4b9788f5286764aaddc0b21e379539468ae8389b1bc829f2b",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "convergent.pt",
+          "sha256": "5c314aff956b0b881b82119c93cdb7af008878734f83320af3591605f34ca0ed",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "cosmopolitan.pt",
+          "sha256": "24caf667a1a5318da3b86157a53c36d1a55b125d1e9ff6a18803ecddb6d97f0b",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "creative.pt",
+          "sha256": "88442bff20be11f9e0d73c512d0377cf2a21d28ca3b044239dbbd156b94c62ad",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "critical.pt",
+          "sha256": "415828c826ce57b54fbde59f1acbbeb1fca4daabc57fee4961b01caedae58488",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "cruel.pt",
+          "sha256": "e26dd7781bde5fc6e33e690a44584201bd0a541114ab8c1db53df03359170319",
+          "size_bytes": 425042
+        },
+        {
+          "filename": "cryptic.pt",
+          "sha256": "cdd958ccb7b08baa5d4c2db86925f2962c635c61b90aa7a40fa3aa595375fe11",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "curious.pt",
+          "sha256": "30c7375670542b48cdcf549893c8c74f6f38cf850ac7f8ec84705dabd009cb02",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "cynical.pt",
+          "sha256": "b9efe3638211990859b51b5b899451a8a327d7a9b310eee9f184ee74a54d30f0",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "data_driven.pt",
+          "sha256": "2393f15203663fe4c2e4efbed6f51f42a0f91f0509205e8ab44645e395dfa631",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "decisive.pt",
+          "sha256": "d90554473fa6b7d1b295148f96c18ff4494e0ab673e391fe6e5f897e12c39825",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "deconstructionist.pt",
+          "sha256": "e2e598f415da8226c5287481eaee09d6b155656bf5fd463f83499d2204dce0bf",
+          "size_bytes": 425166
+        },
+        {
+          "filename": "deferential.pt",
+          "sha256": "d45220aa485a221ab9c96047b8d2f67a67e22fd90ec83959df4f33bca6dda920",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "deontological.pt",
+          "sha256": "e4a2478d8ca5ca8451c4a5f43a8ab7393b3b7682cf507fb1275959e7a31989ec",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "descriptive.pt",
+          "sha256": "b7a5843a3d96106a3b84372959e33c44301064daacda3a59200354d83131452c",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "detached.pt",
+          "sha256": "cefeeee9834cedc5b78f5b363ac8ef441076681673d90cdcf64e193085e81bfe",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "deterministic.pt",
+          "sha256": "f91302994a54d46c38749febbca67a695ea700a58c66533179b361ce5dba13bb",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "diplomatic.pt",
+          "sha256": "68545b4e5db40845e5edeab7dc240d8e2e8fee7b4ee53d02254620bdb641ced0",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "disorganized.pt",
+          "sha256": "2e8d5f2e5cf48ab7c366397688fb87e36bacd856e4e9bd0897f52970a621379c",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "dispassionate.pt",
+          "sha256": "ad482540bd0d1ce5f22c154004c22f0ad434d41a4eee4f0c7f00cb734b8da978",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "divergent.pt",
+          "sha256": "c44860cb1f5c68bcb22ea705b62ca4d4f0acf2f9c061313406341f5f51a55761",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "dogmatic.pt",
+          "sha256": "c3e89f310d54b69238a2fcbe753ddecc2f9b719d851ef17b7cf13ecc0e3f9007",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "dominant.pt",
+          "sha256": "2ee5c04c7260c0a2c8072b8394d51d9e59bfebba4ceab126ba80e91e11484296",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "dramatic.pt",
+          "sha256": "604d6423373f7250d8eba1878ea81d1b9110c0cc06578294a3a4b838e6dc4d9b",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "earnest.pt",
+          "sha256": "3fafffc53d9ef60809c109453b66de54c342ba02aa0ff73980d232faee41fbe6",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "eclectic.pt",
+          "sha256": "d322389c68da33ac9a7142717417d272aeef34d011743e6c9ce3457847809ac2",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "edgy.pt",
+          "sha256": "5fe9bdc099765656e0f27834ca5ef68edf8d41724e2c23c067d3bbf09ba53846",
+          "size_bytes": 425037
+        },
+        {
+          "filename": "educational.pt",
+          "sha256": "0592a7954190aa5ec712610790f57b97138c5e656a094d6a6037486572d25db7",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "efficient.pt",
+          "sha256": "4124e3924e3771fe031ace66a3a6ef8bfafe477bace2826583559339dc8b2058",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "effusive.pt",
+          "sha256": "75c949d0c3d8e25093679889f87f2ce462943aaa0a867b0a7c9563241b543cec",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "egalitarian.pt",
+          "sha256": "7e9a304a155fb7eb3f531380ff4319ba976c7cc96485854c7e38fdfc4f363894",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "elitist.pt",
+          "sha256": "de3baee95da8b827bd66bf6244eb6cf650596ef0f0b336016003b3680d0a469a",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "eloquent.pt",
+          "sha256": "1e536e90350e1b8d396e44b38330cc1981912daf8ae86792fb7a7b85a602d212",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "emotional.pt",
+          "sha256": "58e7da17d45686dc02a6ababd3905c6fcc6d2ae90a89b14ae02f50bf6793968c",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "empathetic.pt",
+          "sha256": "480598cecbb74a4adec03accda3eb6f72ba38cd858e098a32a6db0cfd87729a1",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "enigmatic.pt",
+          "sha256": "b0953c638ebd4aa737cff1cfeb7a33f42b5b6466e51f6ca49cd2fd32ba5320a0",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "entertaining.pt",
+          "sha256": "4deac52eaa59610ecfbed5f14b6f08b69707307e4ad7e76ad7162b65484f6f93",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "environmental.pt",
+          "sha256": "22ae2566a68a9707bc8e3f7d40a6e43e2c7f196a7be5fdc4efc7fcdad519eee1",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "epicurean.pt",
+          "sha256": "ad92e616e714cd9ba984dc4cc9a67c7933943aed91cf32404d5e04ef45fa128b",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "erudite.pt",
+          "sha256": "6f02f56d76f56b63fb61d8838bcb254e0c6ba3fb50b389435b2c04b586092d49",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "esoteric.pt",
+          "sha256": "5d3cb31388b1d78636281bec6ca4551885e82d33efc9875ee4b3b1f4839cb9ba",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "essentialist.pt",
+          "sha256": "11f5bd0f2ee59762709a5ac0901f1779a0af392a55328ccd82e571f8d39c9bdb",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "ethereal.pt",
+          "sha256": "dc4cc5a89e3e20a2082bc8b80f027462129223cd96ec1da527c481afc0419e2d",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "evil.pt",
+          "sha256": "1014081964382ca30a356c58aaec7fc4af850f82407a297bc66d6a9fb70b2eb9",
+          "size_bytes": 425037
+        },
+        {
+          "filename": "existentialist.pt",
+          "sha256": "40c5cf54f8081d068f183e5c17df93d9711d8c3673e8231f08aa3ab125f4fff9",
+          "size_bytes": 425151
+        },
+        {
+          "filename": "experiential.pt",
+          "sha256": "4ca4b725a5dd9d4a0fba71e8e7064e10bef6b016dcc2606656ab259cf81a177b",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "exploratory.pt",
+          "sha256": "a6ebbe0e2cc96117bf78adaffc2106fce01e19608f7c853826f0caa765af9a29",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "extroverted.pt",
+          "sha256": "9055c3c8bf08802ad81e942f2661bbcb71ee164a318fe2895eebf2109daba1ec",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "factual.pt",
+          "sha256": "f0f05603bd3e34a9d0f2e8f55b4b0919d53887606dffbb8cdbdd100e75e3610f",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "fatalistic.pt",
+          "sha256": "881b0da02f024f37d010f93b6a300c802d86d3e50b4041b9770769c1169123b5",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "flexible.pt",
+          "sha256": "26a63e9dbec0017dbe3396feed5c88b6632cdccdba87f882538795d8f6a97d82",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "flippant.pt",
+          "sha256": "89f312082166d477d4122dc38caee91b1bf9ccc9c5cdf7c42b451146e0b98a69",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "flirty.pt",
+          "sha256": "fa1b6a84b191356c4f18425bb3094c7cf2951b2fd130ce30fd941bc5a505d206",
+          "size_bytes": 425047
+        },
+        {
+          "filename": "forgiving.pt",
+          "sha256": "b86fe5b68c2c6233ede1ddbb578acc9d060790fc09600fce203ee95d6a3e7dfb",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "formal.pt",
+          "sha256": "71bb872dca313d1dd2bc10fc25e877ed8fe8202ce4311cdc0b23de37c73169a8",
+          "size_bytes": 425047
+        },
+        {
+          "filename": "formalist.pt",
+          "sha256": "7709ef7861b9507f153f72395a99952bbe69cbdf35630edd079b624ed42940c9",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "fundamentalist.pt",
+          "sha256": "76612cbd426189fa5a08d2fb469d00381cbbb64e9cd7e51d825d90bfce85833e",
+          "size_bytes": 425151
+        },
+        {
+          "filename": "futuristic.pt",
+          "sha256": "690e16753659a5bac9257b42c5ccd7fad923af6eafbea897071c22b4cf7ec0a6",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "generalist.pt",
+          "sha256": "63bee4608b816fead9d5c080847ec1cf6da15bc18dff2368eab7e3e00bc6cfc3",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "generous.pt",
+          "sha256": "488949919327b6d5e9fa87af1e9ae834136cc64036385743ede9f41c4968b8cc",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "goofy.pt",
+          "sha256": "d62689326cd13be123ab8d767e8950322ced67ca1899b80c77062b8fd32f08a4",
+          "size_bytes": 425042
+        },
+        {
+          "filename": "grandiose.pt",
+          "sha256": "fb45f226d47c6ef0cf20ea30baa95ae34da1dd8b2eefef0a964f199adc3269b2",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "gregarious.pt",
+          "sha256": "3e5d2b29a1b8b8e9a87e1f5092c6dd9d4b9abb2a39c3207da79e71120e203f1f",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "grounded.pt",
+          "sha256": "e9a8621503139528e6d940f8bed1043e154a2766a801c384ebc754a568406a7b",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "hedonistic.pt",
+          "sha256": "b860fcf14f4ea8aefa188a6fc4d1acbc20bb491e33c3489dfc380d1de5799dbc",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "historical.pt",
+          "sha256": "8b5695ed8d91262777e71ee9db9719d390f8aac534efe73c1b66e809c0ae0e55",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "holistic.pt",
+          "sha256": "cf1c627deef7efd81443193eb4e24c731c3c227843422c93a32871e730154c65",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "hostile.pt",
+          "sha256": "a70fee9c271b3722b728728defbf383f58262ff9d662786c22ef5075ec468476",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "humanistic.pt",
+          "sha256": "0a5b71efc0b9f95e63995e3068025e077847952679d64c1b4bdbf67685371bc1",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "humble.pt",
+          "sha256": "08d3796f11dfdac94d8adec4a506bb4c7d89834399000534d451d0d99706f8d8",
+          "size_bytes": 425047
+        },
+        {
+          "filename": "iconoclastic.pt",
+          "sha256": "09079fc7e6620643d65e5c1e0255279ebad49b21585ff34fb853a7d74b30bf6d",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "idealistic.pt",
+          "sha256": "41e5a2b8725b4036f869495dbc92dbbd2be58722dc72bb2151d7abe73df8c40c",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "impatient.pt",
+          "sha256": "d078ebb979049413733c47f92572bc1fef913300d7a87d873ea7eec6eb6a7d8e",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "improvisational.pt",
+          "sha256": "30009190ceb32a4e99db0745997bfc706a9f55b1d52df8514e8377cbd4dee0e4",
+          "size_bytes": 425156
+        },
+        {
+          "filename": "impulsive.pt",
+          "sha256": "ec93cc9f65e6b76966dd45bf8f650faa4cb2e8155101a52a01fe3674b3ac2a1c",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "inclusive.pt",
+          "sha256": "9f55da10750c3a8e67a7ece3bdf540bead59b56294e22e8c5f6b26af56b11ca0",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "independent.pt",
+          "sha256": "e374cb74eaad43c5aeb6bb7b0d759923cb00d9c2225b71df66aaa21504a7a45e",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "individualistic.pt",
+          "sha256": "9dd2150a9cfe7768dde410013d64464c850d7c898148ad0a88023e02f86080e3",
+          "size_bytes": 425156
+        },
+        {
+          "filename": "innovative.pt",
+          "sha256": "c8bf2a10ea97a1e82804e402f7e8fa9d7f213fe3ef388a2fb49db895c70542f6",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "inquisitive.pt",
+          "sha256": "d8bc13a3c86e9c6275b33eaea393d28a2066c0dd0901fbe2c81f99c0c29b8fee",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "inspirational.pt",
+          "sha256": "e9abad4a471a877d0d50758b1c61d3209ce5c4071ecbb955da90f61b3edbc287",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "interdisciplinary.pt",
+          "sha256": "c32915bee4e59d6031089ac2947ac90282846f01e21667b8cc991764b5646322",
+          "size_bytes": 425166
+        },
+        {
+          "filename": "introspective.pt",
+          "sha256": "915655ade6d4493caf7ced78f130ab1192cfdef7518f313e5327a811671304d5",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "introverted.pt",
+          "sha256": "aea7409e5933428adacfbaa7df204fa6464843edab0952310d86617cf2b2626f",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "intuitive.pt",
+          "sha256": "4af28143b894be67c029f88be44e7b25f17b26c0ffedec3d0d7f252ea7529a05",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "ironic.pt",
+          "sha256": "f7289d7a7b34ed5e3312082d740dc9d586ab78a1d4d89bd23d1c9590cec23509",
+          "size_bytes": 425047
+        },
+        {
+          "filename": "irreverent.pt",
+          "sha256": "0a822818e0c30495a1880739ec2de12aa4c96b47c99a601a6cc48c303fa4f866",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "judgmental.pt",
+          "sha256": "bc8005ce7bacc588fda04696dca7aab46d83d5a391e9ba654b3e6e6a319b1f93",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "libertarian.pt",
+          "sha256": "92636144c5069cbed5189e822004589ecef2e3f345a54b997295cedf35539993",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "literal.pt",
+          "sha256": "52cde3069a3c7a09814690b96e758aa9a1d37f7026cd446cf379127ec5bda8c8",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "manic.pt",
+          "sha256": "1a333625f5bec3feb126573e548e6bfc67fec45a20395290f5a7249beba007b3",
+          "size_bytes": 425042
+        },
+        {
+          "filename": "manipulative.pt",
+          "sha256": "5f4506eac351a897da0645519c221e9c9863b13fc5dd5a364d674642c4cd7dff",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "materialist.pt",
+          "sha256": "595c2611c51138031cdc41ab27deb2f8854328925881a15b93b8223a09872940",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "meditative.pt",
+          "sha256": "25aff183e7e2c802ae7f52b5731d886b1624416dad3bb127f1fc51f96565d1e3",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "melancholic.pt",
+          "sha256": "c76b52bdcc88210c6d9829e93303359fb6457e91086c2eafe31f358a4c4d61ae",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "melodramatic.pt",
+          "sha256": "99fd70791e15443dff93eddf09b95ebb7306f39a4d973204537b640d6b213cb0",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "mercurial.pt",
+          "sha256": "25ddb1c520e1de0b6f200696b35689ed3b3ebf5253a22928c0fd074dd201a727",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "metaphorical.pt",
+          "sha256": "554e9e3d43fa837da95cc90e762d76938afcbab4bae7c636a9fffa3ff318eb08",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "methodical.pt",
+          "sha256": "bc81e06d4059cfd28a608c628ec385405581a66acfedb76b6e2f7ca7310d657e",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "meticulous.pt",
+          "sha256": "427f9864a8123d06640cc659c32ffd94c0f38086c6594f583b7d5ba696083035",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "militant.pt",
+          "sha256": "b57cc1cd1fc48e987a2f32ebbb9f0c8084c6b256ac686655db9e9fd0d6180dee",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "misanthropic.pt",
+          "sha256": "52ab1dd1597ee005d7ee1940b7341ac7726f4272637899327df033682b728b17",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "mischievous.pt",
+          "sha256": "b70e6d90c4683c6d168876efc1970355506a4d31d12c1111eb102661a5f4da1b",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "moderate.pt",
+          "sha256": "4a336d0d4d089f4f14153b3b3634cb22a11d277c28e229f42202a11d030ccbc8",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "mystical.pt",
+          "sha256": "cf927842eae6c28a2d00c55aa37b2c5cda2ed5fc19b9f516537a68b6663a4061",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "naive.pt",
+          "sha256": "e65eaa9e4db7fdaacb6a34f39b2c6aad3e542d598762953aae883b7fa7b928e9",
+          "size_bytes": 425042
+        },
+        {
+          "filename": "narrative.pt",
+          "sha256": "c44f5376d282ce894a7c74678ce19280170c01abd5190fea5430c0cd4309e105",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "neurotic.pt",
+          "sha256": "85e5617e434ffe60ead5a97d9768a304e7af70c7d17b39bcd09fd92cdf76b238",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "nihilistic.pt",
+          "sha256": "c42b235454f253aead630d741b7fa3f015f1b3467cc39c41a42c8751d1289e7d",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "nonchalant.pt",
+          "sha256": "588edd9499fbab6f9110b9f7fb30a11a96fb732af69623c9599c9e1baadc1649",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "nostalgic.pt",
+          "sha256": "53143f2b00f2f65808a935ca7629ef079a1607c82b7b0b6fefce5400cfa44aed",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "nurturing.pt",
+          "sha256": "abfde13ce942fb27d5443bd2d2f1c4d9c4ab5d7a919d4790f1812978af80a255",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "obsessive.pt",
+          "sha256": "4eaea44b24e27813784c015e28509f0ae17fbda8eff7daa22d28b642a2790bca",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "open_ended.pt",
+          "sha256": "139fe94ecb2bce5deb3172c1f30559d0f56f3028669feb04c6c1d9200f11988d",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "optimistic.pt",
+          "sha256": "9856d6eca21147fee53d3351e9c90b89deeb2dc1d1c7bcdec068304238cc74bc",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "pacifist.pt",
+          "sha256": "225ccd901f01b038e8ea7c974055c90fc41bf6e33ce7d574c8c1471bda679162",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "paradoxical.pt",
+          "sha256": "be25b9ab497c60e49aaa40331e105e77295e0395e55d83ac074fdcbff532ee23",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "paranoid.pt",
+          "sha256": "824aadbf6c4201bdc52b0f2e42cd6257b08ac857efb12fb1d4d692db37452892",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "passionate.pt",
+          "sha256": "c0e5ffac6002d5b4022384dbdddbd7fc04289ec62c0246b7fd9abb312d9c472d",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "passive_aggressive.pt",
+          "sha256": "d67ee6782bed15de09a3cebca83037e05db796f9765e06d647e260d27111464b",
+          "size_bytes": 425171
+        },
+        {
+          "filename": "patient.pt",
+          "sha256": "e12e8afe5b07d756d100afa6593905985857511d3d373d914eed34d8008bd379",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "pedantic.pt",
+          "sha256": "9592c6f89065c7f6ff72e41c4cc8931768597851d1cc724a3769b0f065bda0f5",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "pensive.pt",
+          "sha256": "72b6697c13ada7c49208f5ae1c4ee208eefd71766ccceb5c471e2d13e4f338ca",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "perfectionist.pt",
+          "sha256": "efff989c9d999e91c109ff3b6080acf4feaf6e2ee729306f994c384275a65ec7",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "pessimistic.pt",
+          "sha256": "6128a910bb7c813f01f02979b219d3b0394ff1ea03abbfd800fb10728a8bb1fe",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "petty.pt",
+          "sha256": "a0fa3ff1f7e0991ef182752c9b87e495378a513b12bbdc51bce97f8894dc66e6",
+          "size_bytes": 425042
+        },
+        {
+          "filename": "philosophical.pt",
+          "sha256": "ccd8f66101b59fa85c0cd3a75df322c660ac8c9ba13a91d4a1c1a37544db109a",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "playful.pt",
+          "sha256": "cf05bf7f1ad9a04ebd2b3037aa63f98a371907f520ea025e9918a2aadbdc28c6",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "pluralist.pt",
+          "sha256": "63efe653d6e9e1f10503d409bf24789d05afa15e0dd5f90f9e70d61499bc5c48",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "poetic.pt",
+          "sha256": "27cbcc1c56463c3c8dc64b8e86648929b99defbf58a88d22b9b64d060fe86463",
+          "size_bytes": 425047
+        },
+        {
+          "filename": "practical.pt",
+          "sha256": "aed301b2037de0819176b5494d5a667b5f4df301f1345ca79131c12cfe798cab",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "prescriptive.pt",
+          "sha256": "b075dac5626360a6d7980b550665def8b7f758ad67dbf3f38886736121daa726",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "principled.pt",
+          "sha256": "8052c9109331b868fffdcf427bed1347a93fda6e705a00dbd1d23d64aca44b34",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "proactive.pt",
+          "sha256": "305201436ce8e3a85e075414079d7ad8fbfc3bee0f834b4ac2b7af157305c469",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "problem_solving.pt",
+          "sha256": "e353a3afff7422d4adef8eab3edca43aa63dd887bf69983c6dcb27b87aca01b3",
+          "size_bytes": 425156
+        },
+        {
+          "filename": "progressive.pt",
+          "sha256": "f972a25ccc8c237590e0f567e9b417975901c3a0e09f43d00a9b097be853c3b7",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "provocative.pt",
+          "sha256": "21e11979aaa0bfb3bcbfcc4eaf378b0fefa9c197f3779a32c01c54972bac454a",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "qualitative.pt",
+          "sha256": "76ccf938da960c04d6b849bc2aadd6fb3b455c6f8b4cfb7081c7f3dbbcd021e5",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "quantitative.pt",
+          "sha256": "65493b0f39e46de6c6fe658cbea0b1706fbab5ddd87702c7124e386430a526a0",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "radical.pt",
+          "sha256": "1e532aa8cadced96a031a11c2f073e39389e16f6324de23b27713935bf43de12",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "rationalist.pt",
+          "sha256": "9389b61274e4c90a6e763afcfa357bcac354b9d9ba4b62d357387cf350655162",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "reactive.pt",
+          "sha256": "01d30301478185576d267caca5ba8afb1e36c20c662359ba01130d4bc22f639a",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "rebellious.pt",
+          "sha256": "5f251f08ad370ce44176630ff5cd41c41ed80e4c6a3f5c72f2cb6eb80d47a45b",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "reductionist.pt",
+          "sha256": "6c2eb3457eaa70c2b55c99eca1782e569b563e10776604ba7b23b946f95651c9",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "regulatory.pt",
+          "sha256": "50ad5a970818a7174110b8ce111c27140326ad1a6a2f863016e25ca3446f7c58",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "relativist.pt",
+          "sha256": "cb761e4c1a0a91074c7bd9333e5886b0a78c7ce302a37379372c75be225481ba",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "reserved.pt",
+          "sha256": "01c4e834e7f4993e02b9bb0f6981e17732078d5c8defe6084e9cd0915d1b4d9e",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "resilient.pt",
+          "sha256": "2c890d69c35daa27bd3e1924d10a1abed5c7067a22c1c4c8b821a3b891c4cbb0",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "reverent.pt",
+          "sha256": "02ec9e8fa18768b7fac2e85781f4e81e6fa6630c3127e2fe806734b776023485",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "rhetorical.pt",
+          "sha256": "33ef8a76182b145c8bd5ddc62a6a438d766c3af067df4b06e23c8052282c8592",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "risk_taking.pt",
+          "sha256": "2f9a0fc40ba8854e8ec434ea87d9289d13f86130e1d373c1248b7e5afcae9a8d",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "ritualistic.pt",
+          "sha256": "f6c7cea9890a93b8759cb875f7ccb275dafc99dd1333671f0e6230031ce04293",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "romantic.pt",
+          "sha256": "0c227d6116fd0b2348bd5047c4e7112400b168d85293204c1d58c992c7216bd5",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "sarcastic.pt",
+          "sha256": "59d6a342da973d3667f1bf8d26bf0722ce07208340a45ea99cc52a25c9dd8e4f",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "sardonic.pt",
+          "sha256": "76484fbce1d22ecbf548c6b8cafd75f3c97a16d5cb23022d32a3d6d57d47bc68",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "sassy.pt",
+          "sha256": "a1454b4383a6bba97378fdc70cf1663ce8caf365ab6fda0c74156b79d8269ab2",
+          "size_bytes": 425042
+        },
+        {
+          "filename": "savage.pt",
+          "sha256": "c0835b281158a51d45656d44922da41da68ec1ab9ab84c9d2a70030628e653f7",
+          "size_bytes": 425047
+        },
+        {
+          "filename": "secular.pt",
+          "sha256": "22e250f69749d748531b7a04519e978fd3abd9b8d9457e957fc91777de233f4d",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "serene.pt",
+          "sha256": "89889a177c4ccb1cd84a3592133e64c4ddb82a7561d0dd79797aef6333ec8cea",
+          "size_bytes": 425047
+        },
+        {
+          "filename": "serious.pt",
+          "sha256": "a02d18844d79d684c55dbe4e43f5bea5ceb32602d867d64a9b6a9643052fb55a",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "skeptical.pt",
+          "sha256": "be6397c30a8c3394e6852d9d072583be55e80be33330154e8fb6502bbc5a09f1",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "socratic.pt",
+          "sha256": "738ce2479e723b1a8470e5207cbbdbaf79f4855f819793810162e64535bd8f9a",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "solemn.pt",
+          "sha256": "478fb218cfc8b5c336c2637687057a0f11ecc6150ac67d33bb481b319e23387e",
+          "size_bytes": 425047
+        },
+        {
+          "filename": "specialized.pt",
+          "sha256": "c37544b71c4f117c7c9cec5b314a91d09cad3de3780d8b3eb73e3b01b213fc40",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "speculative.pt",
+          "sha256": "7ae91894f640282291d8541e972fbd9ecae37838e06e154baaa8a3e1295d1b21",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "spiritual.pt",
+          "sha256": "53063941a50606d43846ca4216de539b158b080c4ce7eb0e123f9e47d59cc320",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "spontaneous.pt",
+          "sha256": "66e6b6fe254422ae8895d10bd31636f0677e03df4ff873c4e7a0cdb3a5f2392f",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "stoic.pt",
+          "sha256": "6d364fd861d82d45478d673533521fa9b3a4de78088364aa1efa958b80beded5",
+          "size_bytes": 425042
+        },
+        {
+          "filename": "strategic.pt",
+          "sha256": "34c34008ed1318cb5b8d4184e7b2786f7a98ec186430f5190cf69b27bfb1c67b",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "stream_of_consciousness.pt",
+          "sha256": "9d91e8c195c68a84b01cab675a9c6a4cef1a82e041d66cd553549e547ad4d62c",
+          "size_bytes": 425260
+        },
+        {
+          "filename": "structuralist.pt",
+          "sha256": "5c8e5790ec4c83aa3e7f3cc4c2decec74dd8c6df84823032de06f7600c049711",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "submissive.pt",
+          "sha256": "5884de72aecb475f518811db019d971e177824070c4db723fe2aa2fe45748b1e",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "subversive.pt",
+          "sha256": "82c34443288ba3050bdbbdec86e2fd13fe9941736661ecc590b842fdb5e0d3c3",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "supportive.pt",
+          "sha256": "e8307816916498166c1053384dd99be40fec22fa820009d47dcee7000b60970c",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "sycophantic.pt",
+          "sha256": "e0f28e1130ebe140e5312d012a203ff8318e42f7cc9aff148fb73e0d8b8498db",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "systems_thinker.pt",
+          "sha256": "0574669ff02f8b050a47e6625089bd5fd34a051f5a07f62847137e3d4b92b707",
+          "size_bytes": 425156
+        },
+        {
+          "filename": "tactful.pt",
+          "sha256": "b069f4f67cd883693f48e41cbc85547321a03055a26590b0e35a6f4fec1d5d83",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "technical.pt",
+          "sha256": "3bf2b7025ca212f0c31711930e771cf65f1c98858f4b6400bbf22abef156c75b",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "temperamental.pt",
+          "sha256": "0bbb6ccd06e90873d80db916d67f2b8d3eed07a775816d7e0427ad4fabd21e7e",
+          "size_bytes": 425146
+        },
+        {
+          "filename": "theatrical.pt",
+          "sha256": "eeea613aec5172447abba1c0c604c12bdbd16a1cb28897a8ff3e2cfe2a252ceb",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "theoretical.pt",
+          "sha256": "8c092cb48c9b29749ccb7c38e7d91b123de35d1f6201b7e655dd76229ff4a8d9",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "traditional.pt",
+          "sha256": "273cac896c5ee4a998da2949017b16c471d221b446b0054396ded59b0492b9f5",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "transparent.pt",
+          "sha256": "a29c6f887ad4f154b187e0790b948bd0474b491c998245eb6994f3f916a79600",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "understated.pt",
+          "sha256": "3566dbfac11085a2099de51e423e859f06c7419a11d83c6a9626168acbf07f2a",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "universalist.pt",
+          "sha256": "c726b00c92273bdb2b14b73d6e4f2b338fdeac37d2970930f7e9e16affd1e349",
+          "size_bytes": 425141
+        },
+        {
+          "filename": "urgent.pt",
+          "sha256": "78487b6f8b8ec839e3d129dda7b9cd903e4a9b27dcb98d6182713d22821fea70",
+          "size_bytes": 425047
+        },
+        {
+          "filename": "utilitarian.pt",
+          "sha256": "792669a3d37729d88907da08287ee0c9d45243b15bd8fce1e36cbe24c226d91b",
+          "size_bytes": 425136
+        },
+        {
+          "filename": "verbose.pt",
+          "sha256": "708639014542763fd2da8ef6bae6214646b75adae0e0f4f9acdce3ee81a0ea95",
+          "size_bytes": 425116
+        },
+        {
+          "filename": "vindictive.pt",
+          "sha256": "b37710f1717f92119a09aaca36a8a741eea26994cb94408d0293c80b560b507f",
+          "size_bytes": 425131
+        },
+        {
+          "filename": "visceral.pt",
+          "sha256": "a2fde4519cf1ea850d790f3e5f3d5ee5180d0eef1f5d31ca8b592a54ce95eec8",
+          "size_bytes": 425121
+        },
+        {
+          "filename": "whimsical.pt",
+          "sha256": "01f3b0d06ec14b7dff055cfc552d3241dbef5c39c47d36ddc112179333576840",
+          "size_bytes": 425126
+        },
+        {
+          "filename": "witty.pt",
+          "sha256": "abb45aa70c95fa8726762e964141baffd9d5db0804de18c6a360637391de7d47",
+          "size_bytes": 425042
+        },
+        {
+          "filename": "wry.pt",
+          "sha256": "853e93a84cb0415b978cac4592df6ad188eeca71d24b2333fb9dfcfae17a45c7",
+          "size_bytes": 425032
+        },
+        {
+          "filename": "zealous.pt",
+          "sha256": "e38b5d4e3eb6d528c469302afccd94bd3098a677be91bd8d2840131ac400e256",
+          "size_bytes": 425116
+        }
+      ],
+      "logical_repository_path": "downloads/hf_vectors/gemma-2-27b/trait_vectors",
+      "total_size_bytes": 102029409
+    }
+  }
+}

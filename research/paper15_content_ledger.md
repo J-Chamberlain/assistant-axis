@@ -54,7 +54,7 @@ Explicit non-goals:
 | Role geometry reconstruction | Recover canonical Qwen role/persona PC coordinates and support geometry inspection. | `research/visualizations/geometry_viz_data.json`; `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`; released/local Qwen role vectors. | Canonical role PC coordinates; role rankings; cluster membership tables. | established source geometry |
 | PCA analysis | Define PC1/PC2/PC3 coordinate system for released role vectors. | Released Qwen role-vector artifacts and canonical PCA tables. | PC coordinates, explained variance, role rankings. | established within project |
 | Trait overlays | Inspect same-space role-trait structure without independent psychometric claims. | `research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv`; `research/outputs/same_space_big_five_overlay/`; trait vectors. | Trait-profile matrices; activation-derived Big Five projections; trait-region overlays. | same-space evidence, not independent rating |
-| Trait-profile PC predictor generalization | Test whether a complete activation-derived trait profile predicts canonical PC1/PC2/PC3 when a persona or entire canonical cluster is absent from fitting; support transparent counterfactual profile projection. | Existing 275 x 240 Qwen role-trait cosine matrix; canonical Qwen PCA geometry; cluster table; released role/trait vectors for integrity and synthetic interpolation. | Repeated nested model comparison, complete LOPO, leave-one-cluster-out, permutation null, OOD diagnostics, transparent Ridge V1, synthetic interpolation, prediction CLI. | established same-space held-out reconstruction; behavioral realization untested |
+| Trait-profile PC predictor generalization | Test whether a complete activation-derived trait profile predicts PC1/PC2/PC3 when a persona or fixed Qwen-canonical role family is absent from fitting; compare Qwen, Llama, and Gemma in their own PCA geometries. | Existing 275 x 240 same-model role-trait cosine matrices; canonical/established model-specific PCA geometries; fixed Qwen role-family table; released role/trait vectors. | Repeated nested model comparison, complete LOPO, role-family holdout, permutation null, OOD diagnostics, transparent Ridge bundles, endpoint-held-out synthetic interpolation; Qwen prediction CLI. | established cross-model same-space held-out reconstruction; behavioral realization and PC-semantic identity untested |
 | Semantic prediction benchmark | Test how much text-derived semantic structure predicts canonical activation PCA3D. | Shared 273-persona benchmark rows; no-label/prompt-derived feature matrices. | Semantic baseline R2=0.389397. | established baseline |
 | Codex trait replication | Test compact trait-like feature prediction outside the Claude Big Five source. | `research/q2_stability/qwen/outputs/codex_trait_replication/`. | Mean R2=0.398237. | weak positive signal |
 | Codex procedural features | Test procedural/operating-mode features against canonical activation PCA3D. | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. | Mean R2=0.490090. | supported but weaker than Big Five |
@@ -235,6 +235,19 @@ Design details:
 - Observed: the canonical PCA basis reproduced from all 275 mean-pooled role vectors at max error 1.207e-06. Across 120 synthetic convex activation-vector mixes from 40 near/distant pairs, with both pair endpoints omitted from each fit, R2 was 0.995266/0.984377/0.997144; distant-pair mixes were harder.
 - Interpretation boundary: this is same-space Qwen activation-derived reconstruction and interpolation. Counterfactual percentile edits are predicted locations under the learned map, not observed behavior or causal trait interventions. Generalization to a genuinely new elicited persona, other models, frontier systems, or humans remains untested.
 
+#### Llama/Gemma Trait-Profile Predictor Replication
+
+Source artifact: `research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md`; comparison table: `cross_model_comparison.csv`; machine-readable model summaries: `llama/validation_summary.json` and `gemma/validation_summary.json`.
+
+- Observed: both released/local bundles contain exactly the same intended 275 persona labels and 240 trait labels, with finite bfloat16 source tensors. The exact established within-model PCA reconstruction/orientation procedure reproduces saved Llama coordinates to max error 2.748e-14 and Gemma to 1.376e-11.
+- Observed: raw Ridge LOPO R2 is 0.997833/0.997161/0.989900 for Llama (normalized 3D RMSE 0.124494) and 0.999788/0.996179/0.987835 for Gemma (0.127824), compared with canonical Qwen 0.999522/0.998811/0.999611 (0.045378).
+- Observed: fold-safe quantile Ridge remains strongly predictive but less precise in both replications, with normalized RMSE 0.328303 for Llama and 0.304909 for Gemma. Quantile Kernel Ridge improves over quantile Ridge in repeated nested CV, but raw Ridge remains the best overall representation/model and the selected transparent family.
+- Observed: applying the fixed Qwen-canonical role-family partition cross-model yields aggregate Ridge R2 0.993894/0.993627/0.977094 and normalized RMSE 0.204224 for Llama; Gemma yields 0.999271/0.993851/0.975087 and 0.176110. Mean normalized error is 1.810x and 1.535x LOPO. These labels are not model-native clusters.
+- Observed: 100-permutation p95 mean-PC R2 is -0.009359 for Llama and -0.011572 for Gemma, with no leakage anomaly. Training-only OOD/error association is stronger in Llama (5-NN Pearson 0.650; reconstruction residual 0.614) than Gemma (0.383/0.379) or Qwen (0.243/0.300), but remains descriptive rather than calibrated uncertainty.
+- Observed: 120 endpoint-held-out synthetic mixtures reach R2 0.983420/0.982280/0.946688 for Llama and 0.999557/0.980280/0.969824 for Gemma. Nearby/distant normalized RMSE is 0.0650/0.4638 and 0.0669/0.2964; pair-level endpoint distance correlates with error at Pearson r=0.870/0.774.
+- Observed: a full second fixed-seed run reproduced all 20 deterministic model CSVs byte-for-byte. Ridge remains selected for Qwen, Llama, and Gemma under the predeclared 10% normalized-RMSE improvement/no-harder-holdout-degradation rule.
+- Interpretation boundary: replication supports approximately linear same-space trait-bank coverage across three saved open-model vector sets. It does not establish identical PC semantics across models, independent psychological validity, causal trait determination, behavioral realization, transfer to humans, or relative psychological sophistication/human-likeness.
+
 ## 3. Benchmark Progression
 
 Chronological benchmark table:
@@ -255,6 +268,7 @@ Related non-chronological comparison:
 |---|---|---:|---|---|
 | GPT-5.5 blind three-axis interpretation ratings | `research/outputs/blind_pc_interpretation_rating_benchmark/benchmark_comparison.csv` | 0.525022 | active/supportive | Compact PC interpretations predict geometry better than semantic baseline and Codex procedural features, but below Big Five/hierarchy/residual/SVD families. |
 | Complete activation-derived trait profile | `research/outputs/trait_profile_pc_predictor/trait_profile_pc_predictor_report.md` | LOPO R2 0.999522/0.998811/0.999611 | established, provenance-coupled | Near-ceiling same-space basis reconstruction under persona and cluster holdouts; not comparable to compact independent/semantic feature benchmarks as psychological evidence. |
+| Cross-model complete trait profiles | `research/outputs/multimodel_trait_profile_pc_predictor/cross_model_comparison.csv` | Llama LOPO R2 0.997833/0.997161/0.989900; Gemma 0.999788/0.996179/0.987835 | established replication, provenance-coupled | Same-space mapping replicates in model-specific PCA geometries; accuracy differences are not psychological comparisons and oriented axes need not share semantics. |
 
 ## 4. Current PC1 Interpretation
 
@@ -696,7 +710,7 @@ Status mapping:
 | Professional hierarchy validation | Supports PC1/PC3 and weakens PC2 coherent-uncertainty interpretation; subset-specific. |
 | Blinded axis rubric validation | Conservative lexical/proxy screen; mainly a limitation and motivation for richer rater studies. |
 | Trait-profile provenance audit | Required technical provenance; too detailed for main flow. |
-| Trait-profile PC predictor held-out generalization | Stronger LOPO/cluster/permutation/synthetic support for the same-space trait-geometry statement; include with explicit basis-coverage and no-behavioral-validation caveats. |
+| Trait-profile PC predictor held-out generalization and Llama/Gemma replication | Stronger LOPO/family/permutation/synthetic support for the same-space trait-geometry statement across three saved vector sets; include with explicit basis-coverage, PC-semantic, and no-behavioral-validation caveats. |
 | Big Five provenance audit details | Main paper needs conclusion; full dependency details belong in appendix. |
 | Residual manifold and SVD component details | Main paper can cite metrics; component-level detail belongs in appendix. |
 
