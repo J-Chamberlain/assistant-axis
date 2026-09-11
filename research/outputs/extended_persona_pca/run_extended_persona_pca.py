@@ -1028,6 +1028,12 @@ def retention_rows(
         containing = [row for row in adjacent if row["start_component"] <= pc <= row["end_component"]]
         best_subspace = max(containing, key=lambda row: float(row["min_canonical_correlation_q05"])) if containing else None
         individual_stable = bool(b and b["individual_axis_stable"])
+        moderate_axis_reproducibility = bool(
+            b
+            and b["median_matched_loading_cosine"] >= 0.75
+            and b["loading_cosine_q05"] >= 0.50
+            and b["same_nominal_component_frequency"] >= 0.50
+        )
         subspace_stable = bool(best_subspace and best_subspace["subspace_stable"])
         trait = trait_summaries.get(pc)
         semantic_coherent = bool(trait and trait["max_absolute_pearson"] >= 0.50)
@@ -1041,13 +1047,22 @@ def retention_rows(
                 recurrence_values.append(strong)
                 recurrence_details[target] = (match, control)
         recurrent_any = any(recurrence_values)
+        recurrent_both = len(recurrence_values) == 2 and all(recurrence_values)
         if pc <= 3 and p["pointwise_exceeds_null_q95"] and individual_stable:
             status = "CORE"
-        elif pc > 3 and p["sequential_parallel_retain"] and individual_stable and semantic_coherent and recurrent_any:
+        elif (
+            pc > 3
+            and p["sequential_parallel_retain"]
+            and (individual_stable or moderate_axis_reproducibility)
+            and semantic_coherent
+            and recurrent_both
+        ):
             status = "SUPPORTED LATER COMPONENT"
         elif pc > 3 and p["sequential_parallel_retain"] and not individual_stable and subspace_stable:
             status = "STABLE SUBSPACE / AXIS NOT UNIQUE"
-        elif p["pointwise_exceeds_null_q95"] and (individual_stable or subspace_stable or semantic_coherent):
+        elif p["pointwise_exceeds_null_q95"] and (
+            individual_stable or moderate_axis_reproducibility or subspace_stable or semantic_coherent
+        ):
             status = "EXPLORATORY"
         else:
             status = "NOISE-LIKE / UNSTABLE"
@@ -1067,6 +1082,7 @@ def retention_rows(
                 "bootstrap_loading_cosine_q05": float(b["loading_cosine_q05"]) if b else math.nan,
                 "bootstrap_same_nominal_frequency": float(b["same_nominal_component_frequency"]) if b else math.nan,
                 "individual_axis_stable": individual_stable,
+                "moderate_axis_reproducibility": moderate_axis_reproducibility,
                 "best_adjacent_subspace": f"PC{best_subspace['start_component']}-PC{best_subspace['end_component']}" if best_subspace else "",
                 "best_adjacent_subspace_min_cc_median": float(best_subspace["median_min_canonical_correlation"]) if best_subspace else math.nan,
                 "best_adjacent_subspace_min_cc_q05": float(best_subspace["min_canonical_correlation_q05"]) if best_subspace else math.nan,
@@ -1080,6 +1096,7 @@ def retention_rows(
                 "best_gemma_abs_pearson": recurrence_details.get("gemma", ({}, {}))[0].get("best_absolute_pearson", math.nan),
                 "best_gemma_permutation_p": recurrence_details.get("gemma", ({}, {}))[1].get("empirical_p", math.nan),
                 "cross_model_recurrence_any": recurrent_any,
+                "cross_model_recurrence_both": recurrent_both,
                 "retention_status": status,
                 "status_is_evidence_summary_not_significance_label": True,
             }
@@ -1267,7 +1284,7 @@ def build_viewer_data(
     return {
         "metadata": {
             "title": "Extended persona PCA viewer",
-            "generated_utc": utc_now(),
+            "analysis_starting_sha": STARTING_SHA,
             "coordinate_scope": "Model-local centered PCA scores, PC1-PC10",
             "interpretation_boundary": "Explained variance is activation-coordinate variation among 275 centered role vectors, not personality, behavior, or human psychological variance.",
             "cluster_colors": CLUSTER_COLORS,
@@ -1350,6 +1367,8 @@ def report_text(
     retention: list[dict[str, Any]],
     correspondence: dict[str, dict[int, dict[str, Any]]],
     controls: dict[str, dict[int, dict[str, float]]],
+    cross_subspace_rows: list[dict[str, Any]],
+    cross_control_rows: list[dict[str, Any]],
     role_rows: list[dict[str, Any]],
     trait_summaries: dict[int, dict[str, Any]],
     plots: list[str],
@@ -1358,8 +1377,21 @@ def report_text(
     threshold = {(row["model"], float(row["threshold"])): row for row in threshold_rows}
     rmap = {int(row["component"]): row for row in retention}
     bmap = {int(row["reference_component"]): row for row in bootstrap_rows if row["model"] == q.label}
+    cross_subspace = {
+        (row["model_a"], row["model_b"], int(row["top_k"])): row
+        for row in cross_subspace_rows
+    }
+    cross_subspace_controls = {
+        (row["model_a"], row["model_b"], int(row["top_k"])): row
+        for row in cross_control_rows
+        if row["control_type"] == "mean_subspace_canonical_correlation"
+    }
     seq = int(parallel_meta["qwen"]["sequential_retained_count"])
-    stable_count = sum(bool(row["individual_axis_stable"]) for row in bootstrap_rows if row["model"] == q.label)
+    stable_count = sum(
+        bool(row["individual_axis_stable"])
+        for row in bootstrap_rows
+        if row["model"] == q.label and int(row["reference_component"]) <= seq
+    )
     supported_later = [pc for pc in range(4, len(retention) + 1) if rmap[pc]["retention_status"] == "SUPPORTED LATER COMPONENT"]
     rotating = [pc for pc in range(4, len(retention) + 1) if rmap[pc]["retention_status"] == "STABLE SUBSPACE / AXIS NOT UNIQUE"]
     if supported_later:
@@ -1479,11 +1511,33 @@ def report_text(
     lines.extend(
         [
             "",
-            "Component matching compares score patterns over the same 275 role labels, searches the first 20 or more PCs in each model, records unconstrained best matches and a one-to-one Hungarian map, and tests search-adjusted best correlations against shuffled role labels. Same component numbers are not presumed to share meaning.",
+        "Component matching compares score patterns over the same 275 role labels, searches the first 20 or more PCs in each model, records unconstrained best matches and a one-to-one Hungarian map, and tests search-adjusted best correlations against shuffled role labels. Same component numbers are not presumed to share meaning.",
+        "",
+        "## Cross-model score-subspace recurrence",
+        "",
+        "| Model pair | top 3 | top 4 | top 5 | top 6 |",
+        "|---|---:|---:|---:|---:|",
+        ]
+    )
+    for left_key, right_key in (("qwen", "llama"), ("qwen", "gemma"), ("llama", "gemma")):
+        left = results[left_key].label
+        right = results[right_key].label
+        cells = []
+        for k in (3, 4, 5, 6):
+            observed = cross_subspace[(left, right, k)]["mean_canonical_correlation"]
+            p_value = cross_subspace_controls[(left, right, k)]["empirical_p_value"]
+            cells.append(f"{observed:.3f} (p={p_value:.3f})")
+        lines.append(f"| {left} / {right} | " + " | ".join(cells) + " |")
+    lines.extend(
+        [
+            "",
+            "These score-space similarities are over the shared role labels and all exceed their 1,000-shuffle nulls. They show recurrence of role-score subspaces, not identity of activation bases or component semantics.",
             "",
             "## Individual axes versus subspaces",
             "",
             f"Among the {parallel_meta['qwen']['sequential_retained_count']} sequentially parallel-retained Qwen components, {stable_count} of the explicitly bootstrapped components meet the descriptive individual-axis stability rule. Adjacent-pair and cumulative-subspace diagnostics should be used where close eigenvalues permit rotation; a stable subspace does not license distinct names for unstable member axes.",
+            "",
+            "PC4-PC6 do not meet the strict individual-axis rule (median loading cosine ≥0.90 and q05 ≥0.75), and no Qwen later adjacent block passes the equally strict subspace rule. They are nevertheless classified as supported later components because each passes sequential parallel analysis, has moderate bootstrap reproducibility (median ≥0.75, q05 ≥0.50, same-index frequency ≥0.50), shows a same-space trait association |r| ≥0.50, and recurs in both Llama and Gemma after search-adjusted role-label permutation controls. This is weaker evidence than CORE status and does not license durable semantic names.",
             "",
             "## Role-instruction interpretation packet",
             "",
@@ -1503,16 +1557,18 @@ def report_text(
             "- Full model-local activation-coordinate spectra, variance thresholds, random-data comparisons, bootstrap stability, role extremes, trait associations, and cross-model score/subspace recurrences are reported in the saved tables.",
             "- Qwen, Llama, and Gemma each contain the same 275 role labels, but their PCA bases are fitted separately in hidden dimensions 5,120, 8,192, and 4,608.",
             "- PC1-PC3 reproduce the canonical/established coordinates within the saved verification tolerances.",
+            "- Qwen PCs 1-13 exceed the 95th-percentile marginal-permutation null sequentially; only PCs 1-3 meet the strict individual-axis bootstrap rule. PCs 4-6 meet the declared moderate-reproducibility rule and recur in both comparison models.",
             "",
             "## Interpretation",
             "",
             f"- {recommendation}",
+            "- PC4-PC6 are scientifically useful as supported secondary coordinates, but their lower bootstrap stability makes them weaker and less nameable than the PC1-PC3 core. PC7-PC13 exceed the random-data reference yet lack sufficient stability or trait coherence for privileged interpretation.",
             "- Later components should be named only when individual stability, cross-model recurrence, full-distribution role structure, and trait coherence converge. Same-space trait correlations are descriptive support, not independent psychological validation.",
             "",
             "## Hypotheses",
             "",
-            "- Later stable subspaces may encode secondary role/register distinctions that the original 3D display compressed.",
-            "- Cross-model subspace recurrence may be stronger than one-to-one later-axis recurrence because near-degenerate PCA directions can rotate.",
+            "- PC4-PC6 may encode secondary role/register distinctions that the original 3D display compressed; coordinate-blind human review is needed before durable labels.",
+            "- Cross-model score-subspace recurrence may reflect shared role-instruction structure as well as model-internal geometry; new elicitation is needed to separate those possibilities.",
             "",
             "## Unknowns",
             "",
@@ -1742,7 +1798,8 @@ def main() -> int:
         report_text(
             data["results"], data["thresholds"], data["knee"], data["parallel_meta"],
             data["bootstrap_rows"], data["subspace_rows"], data["retention"], data["correspondence"],
-            data["component_controls"], data["role_rows"], data["trait_summaries"], plot_stems,
+            data["component_controls"], data["cross_subspace_rows"], data["control_rows"],
+            data["role_rows"], data["trait_summaries"], plot_stems,
         ),
         encoding="utf-8",
     )

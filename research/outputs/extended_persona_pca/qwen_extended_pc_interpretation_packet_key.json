@@ -1,0 +1,2097 @@
+{
+  "coordinate_blind_packet": "qwen_extended_pc_interpretation_packet.csv",
+  "dimensions": {
+    "Dimension-01": {
+      "component": 5,
+      "examples": {
+        "Dimension-01-A-01": {
+          "actual_pole": "negative",
+          "pole_rank": 3,
+          "role": "warrior"
+        },
+        "Dimension-01-A-02": {
+          "actual_pole": "negative",
+          "pole_rank": 9,
+          "role": "provincial"
+        },
+        "Dimension-01-A-03": {
+          "actual_pole": "negative",
+          "pole_rank": 14,
+          "role": "pilot"
+        },
+        "Dimension-01-A-04": {
+          "actual_pole": "negative",
+          "pole_rank": 13,
+          "role": "fixer"
+        },
+        "Dimension-01-A-05": {
+          "actual_pole": "negative",
+          "pole_rank": 12,
+          "role": "predator"
+        },
+        "Dimension-01-A-09": {
+          "actual_pole": "negative",
+          "pole_rank": 6,
+          "role": "vigilante"
+        },
+        "Dimension-01-A-10": {
+          "actual_pole": "negative",
+          "pole_rank": 11,
+          "role": "merchant"
+        },
+        "Dimension-01-A-11": {
+          "actual_pole": "negative",
+          "pole_rank": 2,
+          "role": "pirate"
+        },
+        "Dimension-01-A-13": {
+          "actual_pole": "negative",
+          "pole_rank": 4,
+          "role": "veteran"
+        },
+        "Dimension-01-A-17": {
+          "actual_pole": "negative",
+          "pole_rank": 16,
+          "role": "revenant"
+        },
+        "Dimension-01-A-22": {
+          "actual_pole": "negative",
+          "pole_rank": 20,
+          "role": "rogue"
+        },
+        "Dimension-01-A-26": {
+          "actual_pole": "negative",
+          "pole_rank": 18,
+          "role": "paramedic"
+        },
+        "Dimension-01-A-28": {
+          "actual_pole": "negative",
+          "pole_rank": 19,
+          "role": "competitor"
+        },
+        "Dimension-01-A-30": {
+          "actual_pole": "negative",
+          "pole_rank": 15,
+          "role": "scout"
+        },
+        "Dimension-01-A-32": {
+          "actual_pole": "negative",
+          "pole_rank": 7,
+          "role": "smuggler"
+        },
+        "Dimension-01-A-33": {
+          "actual_pole": "negative",
+          "pole_rank": 17,
+          "role": "caveman"
+        },
+        "Dimension-01-A-35": {
+          "actual_pole": "negative",
+          "pole_rank": 1,
+          "role": "soldier"
+        },
+        "Dimension-01-A-36": {
+          "actual_pole": "negative",
+          "pole_rank": 10,
+          "role": "spy"
+        },
+        "Dimension-01-A-37": {
+          "actual_pole": "negative",
+          "pole_rank": 5,
+          "role": "criminal"
+        },
+        "Dimension-01-A-39": {
+          "actual_pole": "negative",
+          "pole_rank": 8,
+          "role": "prisoner"
+        },
+        "Dimension-01-B-06": {
+          "actual_pole": "positive",
+          "pole_rank": 13,
+          "role": "eldritch"
+        },
+        "Dimension-01-B-07": {
+          "actual_pole": "positive",
+          "pole_rank": 2,
+          "role": "infant"
+        },
+        "Dimension-01-B-08": {
+          "actual_pole": "positive",
+          "pole_rank": 4,
+          "role": "fool"
+        },
+        "Dimension-01-B-12": {
+          "actual_pole": "positive",
+          "pole_rank": 17,
+          "role": "aberration"
+        },
+        "Dimension-01-B-14": {
+          "actual_pole": "positive",
+          "pole_rank": 19,
+          "role": "mystic"
+        },
+        "Dimension-01-B-15": {
+          "actual_pole": "positive",
+          "pole_rank": 3,
+          "role": "absurdist"
+        },
+        "Dimension-01-B-16": {
+          "actual_pole": "positive",
+          "pole_rank": 12,
+          "role": "linguist"
+        },
+        "Dimension-01-B-18": {
+          "actual_pole": "positive",
+          "pole_rank": 6,
+          "role": "alien"
+        },
+        "Dimension-01-B-19": {
+          "actual_pole": "positive",
+          "pole_rank": 20,
+          "role": "improviser"
+        },
+        "Dimension-01-B-20": {
+          "actual_pole": "positive",
+          "pole_rank": 18,
+          "role": "bohemian"
+        },
+        "Dimension-01-B-21": {
+          "actual_pole": "positive",
+          "pole_rank": 15,
+          "role": "theorist"
+        },
+        "Dimension-01-B-23": {
+          "actual_pole": "positive",
+          "pole_rank": 16,
+          "role": "philosopher"
+        },
+        "Dimension-01-B-24": {
+          "actual_pole": "positive",
+          "pole_rank": 14,
+          "role": "trickster"
+        },
+        "Dimension-01-B-25": {
+          "actual_pole": "positive",
+          "pole_rank": 11,
+          "role": "dilettante"
+        },
+        "Dimension-01-B-27": {
+          "actual_pole": "positive",
+          "pole_rank": 10,
+          "role": "void"
+        },
+        "Dimension-01-B-29": {
+          "actual_pole": "positive",
+          "pole_rank": 9,
+          "role": "crystalline"
+        },
+        "Dimension-01-B-31": {
+          "actual_pole": "positive",
+          "pole_rank": 8,
+          "role": "procrastinator"
+        },
+        "Dimension-01-B-34": {
+          "actual_pole": "positive",
+          "pole_rank": 1,
+          "role": "toddler"
+        },
+        "Dimension-01-B-38": {
+          "actual_pole": "positive",
+          "pole_rank": 5,
+          "role": "comedian"
+        },
+        "Dimension-01-B-40": {
+          "actual_pole": "positive",
+          "pole_rank": 7,
+          "role": "simulacrum"
+        }
+      },
+      "pole_map": {
+        "negative": "A",
+        "positive": "B"
+      }
+    },
+    "Dimension-02": {
+      "component": 13,
+      "examples": {
+        "Dimension-02-A-01": {
+          "actual_pole": "positive",
+          "pole_rank": 3,
+          "role": "smuggler"
+        },
+        "Dimension-02-A-02": {
+          "actual_pole": "positive",
+          "pole_rank": 6,
+          "role": "spy"
+        },
+        "Dimension-02-A-03": {
+          "actual_pole": "positive",
+          "pole_rank": 20,
+          "role": "stoic"
+        },
+        "Dimension-02-A-06": {
+          "actual_pole": "positive",
+          "pole_rank": 9,
+          "role": "surfer"
+        },
+        "Dimension-02-A-07": {
+          "actual_pole": "positive",
+          "pole_rank": 14,
+          "role": "predator"
+        },
+        "Dimension-02-A-09": {
+          "actual_pole": "positive",
+          "pole_rank": 18,
+          "role": "healer"
+        },
+        "Dimension-02-A-10": {
+          "actual_pole": "positive",
+          "pole_rank": 16,
+          "role": "anthropologist"
+        },
+        "Dimension-02-A-11": {
+          "actual_pole": "positive",
+          "pole_rank": 17,
+          "role": "shaman"
+        },
+        "Dimension-02-A-13": {
+          "actual_pole": "positive",
+          "pole_rank": 12,
+          "role": "rogue"
+        },
+        "Dimension-02-A-15": {
+          "actual_pole": "positive",
+          "pole_rank": 5,
+          "role": "therapist"
+        },
+        "Dimension-02-A-16": {
+          "actual_pole": "positive",
+          "pole_rank": 10,
+          "role": "proofreader"
+        },
+        "Dimension-02-A-18": {
+          "actual_pole": "positive",
+          "pole_rank": 13,
+          "role": "psychologist"
+        },
+        "Dimension-02-A-21": {
+          "actual_pole": "positive",
+          "pole_rank": 4,
+          "role": "criminal"
+        },
+        "Dimension-02-A-29": {
+          "actual_pole": "positive",
+          "pole_rank": 8,
+          "role": "linguist"
+        },
+        "Dimension-02-A-30": {
+          "actual_pole": "positive",
+          "pole_rank": 2,
+          "role": "pirate"
+        },
+        "Dimension-02-A-31": {
+          "actual_pole": "positive",
+          "pole_rank": 15,
+          "role": "counselor"
+        },
+        "Dimension-02-A-32": {
+          "actual_pole": "positive",
+          "pole_rank": 1,
+          "role": "infant"
+        },
+        "Dimension-02-A-33": {
+          "actual_pole": "positive",
+          "pole_rank": 19,
+          "role": "fixer"
+        },
+        "Dimension-02-A-36": {
+          "actual_pole": "positive",
+          "pole_rank": 7,
+          "role": "bartender"
+        },
+        "Dimension-02-A-39": {
+          "actual_pole": "positive",
+          "pole_rank": 11,
+          "role": "anarchist"
+        },
+        "Dimension-02-B-04": {
+          "actual_pole": "negative",
+          "pole_rank": 3,
+          "role": "hoarder"
+        },
+        "Dimension-02-B-05": {
+          "actual_pole": "negative",
+          "pole_rank": 14,
+          "role": "accountant"
+        },
+        "Dimension-02-B-08": {
+          "actual_pole": "negative",
+          "pole_rank": 16,
+          "role": "toddler"
+        },
+        "Dimension-02-B-12": {
+          "actual_pole": "negative",
+          "pole_rank": 6,
+          "role": "prophet"
+        },
+        "Dimension-02-B-14": {
+          "actual_pole": "negative",
+          "pole_rank": 10,
+          "role": "revenant"
+        },
+        "Dimension-02-B-17": {
+          "actual_pole": "negative",
+          "pole_rank": 5,
+          "role": "zealot"
+        },
+        "Dimension-02-B-19": {
+          "actual_pole": "negative",
+          "pole_rank": 13,
+          "role": "leviathan"
+        },
+        "Dimension-02-B-20": {
+          "actual_pole": "negative",
+          "pole_rank": 1,
+          "role": "adolescent"
+        },
+        "Dimension-02-B-22": {
+          "actual_pole": "negative",
+          "pole_rank": 17,
+          "role": "golem"
+        },
+        "Dimension-02-B-23": {
+          "actual_pole": "negative",
+          "pole_rank": 9,
+          "role": "technologist"
+        },
+        "Dimension-02-B-24": {
+          "actual_pole": "negative",
+          "pole_rank": 20,
+          "role": "dreamer"
+        },
+        "Dimension-02-B-25": {
+          "actual_pole": "negative",
+          "pole_rank": 4,
+          "role": "martyr"
+        },
+        "Dimension-02-B-26": {
+          "actual_pole": "negative",
+          "pole_rank": 8,
+          "role": "procrastinator"
+        },
+        "Dimension-02-B-27": {
+          "actual_pole": "negative",
+          "pole_rank": 19,
+          "role": "chemist"
+        },
+        "Dimension-02-B-28": {
+          "actual_pole": "negative",
+          "pole_rank": 11,
+          "role": "evangelist"
+        },
+        "Dimension-02-B-34": {
+          "actual_pole": "negative",
+          "pole_rank": 12,
+          "role": "echo"
+        },
+        "Dimension-02-B-35": {
+          "actual_pole": "negative",
+          "pole_rank": 2,
+          "role": "teenager"
+        },
+        "Dimension-02-B-37": {
+          "actual_pole": "negative",
+          "pole_rank": 18,
+          "role": "architect"
+        },
+        "Dimension-02-B-38": {
+          "actual_pole": "negative",
+          "pole_rank": 15,
+          "role": "ghost"
+        },
+        "Dimension-02-B-40": {
+          "actual_pole": "negative",
+          "pole_rank": 7,
+          "role": "programmer"
+        }
+      },
+      "pole_map": {
+        "negative": "B",
+        "positive": "A"
+      }
+    },
+    "Dimension-03": {
+      "component": 11,
+      "examples": {
+        "Dimension-03-A-01": {
+          "actual_pole": "positive",
+          "pole_rank": 7,
+          "role": "mechanic"
+        },
+        "Dimension-03-A-03": {
+          "actual_pole": "positive",
+          "pole_rank": 2,
+          "role": "ascetic"
+        },
+        "Dimension-03-A-09": {
+          "actual_pole": "positive",
+          "pole_rank": 5,
+          "role": "traditionalist"
+        },
+        "Dimension-03-A-11": {
+          "actual_pole": "positive",
+          "pole_rank": 16,
+          "role": "hermit"
+        },
+        "Dimension-03-A-13": {
+          "actual_pole": "positive",
+          "pole_rank": 17,
+          "role": "veteran"
+        },
+        "Dimension-03-A-19": {
+          "actual_pole": "positive",
+          "pole_rank": 15,
+          "role": "loner"
+        },
+        "Dimension-03-A-21": {
+          "actual_pole": "positive",
+          "pole_rank": 4,
+          "role": "mathematician"
+        },
+        "Dimension-03-A-22": {
+          "actual_pole": "positive",
+          "pole_rank": 3,
+          "role": "philosopher"
+        },
+        "Dimension-03-A-23": {
+          "actual_pole": "positive",
+          "pole_rank": 11,
+          "role": "procrastinator"
+        },
+        "Dimension-03-A-24": {
+          "actual_pole": "positive",
+          "pole_rank": 9,
+          "role": "workaholic"
+        },
+        "Dimension-03-A-25": {
+          "actual_pole": "positive",
+          "pole_rank": 13,
+          "role": "minimalist"
+        },
+        "Dimension-03-A-28": {
+          "actual_pole": "positive",
+          "pole_rank": 1,
+          "role": "stoic"
+        },
+        "Dimension-03-A-31": {
+          "actual_pole": "positive",
+          "pole_rank": 14,
+          "role": "soldier"
+        },
+        "Dimension-03-A-32": {
+          "actual_pole": "positive",
+          "pole_rank": 20,
+          "role": "artisan"
+        },
+        "Dimension-03-A-34": {
+          "actual_pole": "positive",
+          "pole_rank": 18,
+          "role": "crystalline"
+        },
+        "Dimension-03-A-35": {
+          "actual_pole": "positive",
+          "pole_rank": 10,
+          "role": "caveman"
+        },
+        "Dimension-03-A-36": {
+          "actual_pole": "positive",
+          "pole_rank": 19,
+          "role": "luddite"
+        },
+        "Dimension-03-A-37": {
+          "actual_pole": "positive",
+          "pole_rank": 8,
+          "role": "purist"
+        },
+        "Dimension-03-A-38": {
+          "actual_pole": "positive",
+          "pole_rank": 12,
+          "role": "surfer"
+        },
+        "Dimension-03-A-40": {
+          "actual_pole": "positive",
+          "pole_rank": 6,
+          "role": "physicist"
+        },
+        "Dimension-03-B-02": {
+          "actual_pole": "negative",
+          "pole_rank": 13,
+          "role": "spy"
+        },
+        "Dimension-03-B-04": {
+          "actual_pole": "negative",
+          "pole_rank": 6,
+          "role": "infant"
+        },
+        "Dimension-03-B-05": {
+          "actual_pole": "negative",
+          "pole_rank": 9,
+          "role": "advocate"
+        },
+        "Dimension-03-B-06": {
+          "actual_pole": "negative",
+          "pole_rank": 17,
+          "role": "prey"
+        },
+        "Dimension-03-B-07": {
+          "actual_pole": "negative",
+          "pole_rank": 16,
+          "role": "journalist"
+        },
+        "Dimension-03-B-08": {
+          "actual_pole": "negative",
+          "pole_rank": 12,
+          "role": "anarchist"
+        },
+        "Dimension-03-B-10": {
+          "actual_pole": "negative",
+          "pole_rank": 2,
+          "role": "gossip"
+        },
+        "Dimension-03-B-12": {
+          "actual_pole": "negative",
+          "pole_rank": 19,
+          "role": "saboteur"
+        },
+        "Dimension-03-B-14": {
+          "actual_pole": "negative",
+          "pole_rank": 3,
+          "role": "revolutionary"
+        },
+        "Dimension-03-B-15": {
+          "actual_pole": "negative",
+          "pole_rank": 4,
+          "role": "vampire"
+        },
+        "Dimension-03-B-16": {
+          "actual_pole": "negative",
+          "pole_rank": 11,
+          "role": "demon"
+        },
+        "Dimension-03-B-17": {
+          "actual_pole": "negative",
+          "pole_rank": 1,
+          "role": "activist"
+        },
+        "Dimension-03-B-18": {
+          "actual_pole": "negative",
+          "pole_rank": 10,
+          "role": "wraith"
+        },
+        "Dimension-03-B-20": {
+          "actual_pole": "negative",
+          "pole_rank": 8,
+          "role": "reporter"
+        },
+        "Dimension-03-B-26": {
+          "actual_pole": "negative",
+          "pole_rank": 14,
+          "role": "ghost"
+        },
+        "Dimension-03-B-27": {
+          "actual_pole": "negative",
+          "pole_rank": 20,
+          "role": "mycorrhizal"
+        },
+        "Dimension-03-B-29": {
+          "actual_pole": "negative",
+          "pole_rank": 15,
+          "role": "publisher"
+        },
+        "Dimension-03-B-30": {
+          "actual_pole": "negative",
+          "pole_rank": 7,
+          "role": "ambassador"
+        },
+        "Dimension-03-B-33": {
+          "actual_pole": "negative",
+          "pole_rank": 5,
+          "role": "vigilante"
+        },
+        "Dimension-03-B-39": {
+          "actual_pole": "negative",
+          "pole_rank": 18,
+          "role": "fixer"
+        }
+      },
+      "pole_map": {
+        "negative": "B",
+        "positive": "A"
+      }
+    },
+    "Dimension-04": {
+      "component": 9,
+      "examples": {
+        "Dimension-04-A-04": {
+          "actual_pole": "negative",
+          "pole_rank": 19,
+          "role": "spy"
+        },
+        "Dimension-04-A-05": {
+          "actual_pole": "negative",
+          "pole_rank": 9,
+          "role": "therapist"
+        },
+        "Dimension-04-A-06": {
+          "actual_pole": "negative",
+          "pole_rank": 13,
+          "role": "screener"
+        },
+        "Dimension-04-A-07": {
+          "actual_pole": "negative",
+          "pole_rank": 2,
+          "role": "proofreader"
+        },
+        "Dimension-04-A-09": {
+          "actual_pole": "negative",
+          "pole_rank": 18,
+          "role": "fixer"
+        },
+        "Dimension-04-A-10": {
+          "actual_pole": "negative",
+          "pole_rank": 20,
+          "role": "ghost"
+        },
+        "Dimension-04-A-12": {
+          "actual_pole": "negative",
+          "pole_rank": 15,
+          "role": "counselor"
+        },
+        "Dimension-04-A-14": {
+          "actual_pole": "negative",
+          "pole_rank": 4,
+          "role": "void"
+        },
+        "Dimension-04-A-15": {
+          "actual_pole": "negative",
+          "pole_rank": 16,
+          "role": "divorcee"
+        },
+        "Dimension-04-A-22": {
+          "actual_pole": "negative",
+          "pole_rank": 11,
+          "role": "revenant"
+        },
+        "Dimension-04-A-23": {
+          "actual_pole": "negative",
+          "pole_rank": 7,
+          "role": "widow"
+        },
+        "Dimension-04-A-26": {
+          "actual_pole": "negative",
+          "pole_rank": 8,
+          "role": "vampire"
+        },
+        "Dimension-04-A-28": {
+          "actual_pole": "negative",
+          "pole_rank": 17,
+          "role": "workaholic"
+        },
+        "Dimension-04-A-29": {
+          "actual_pole": "negative",
+          "pole_rank": 14,
+          "role": "patient"
+        },
+        "Dimension-04-A-30": {
+          "actual_pole": "negative",
+          "pole_rank": 10,
+          "role": "aberration"
+        },
+        "Dimension-04-A-33": {
+          "actual_pole": "negative",
+          "pole_rank": 5,
+          "role": "interviewer"
+        },
+        "Dimension-04-A-34": {
+          "actual_pole": "negative",
+          "pole_rank": 1,
+          "role": "amnesiac"
+        },
+        "Dimension-04-A-37": {
+          "actual_pole": "negative",
+          "pole_rank": 6,
+          "role": "addict"
+        },
+        "Dimension-04-A-39": {
+          "actual_pole": "negative",
+          "pole_rank": 12,
+          "role": "wraith"
+        },
+        "Dimension-04-A-40": {
+          "actual_pole": "negative",
+          "pole_rank": 3,
+          "role": "loner"
+        },
+        "Dimension-04-B-01": {
+          "actual_pole": "positive",
+          "pole_rank": 20,
+          "role": "advocate"
+        },
+        "Dimension-04-B-02": {
+          "actual_pole": "positive",
+          "pole_rank": 6,
+          "role": "revolutionary"
+        },
+        "Dimension-04-B-03": {
+          "actual_pole": "positive",
+          "pole_rank": 17,
+          "role": "jester"
+        },
+        "Dimension-04-B-08": {
+          "actual_pole": "positive",
+          "pole_rank": 4,
+          "role": "anarchist"
+        },
+        "Dimension-04-B-11": {
+          "actual_pole": "positive",
+          "pole_rank": 14,
+          "role": "evangelist"
+        },
+        "Dimension-04-B-13": {
+          "actual_pole": "positive",
+          "pole_rank": 19,
+          "role": "historian"
+        },
+        "Dimension-04-B-16": {
+          "actual_pole": "positive",
+          "pole_rank": 11,
+          "role": "geographer"
+        },
+        "Dimension-04-B-17": {
+          "actual_pole": "positive",
+          "pole_rank": 15,
+          "role": "rebel"
+        },
+        "Dimension-04-B-18": {
+          "actual_pole": "positive",
+          "pole_rank": 3,
+          "role": "pirate"
+        },
+        "Dimension-04-B-19": {
+          "actual_pole": "positive",
+          "pole_rank": 1,
+          "role": "caveman"
+        },
+        "Dimension-04-B-20": {
+          "actual_pole": "positive",
+          "pole_rank": 8,
+          "role": "vegan"
+        },
+        "Dimension-04-B-21": {
+          "actual_pole": "positive",
+          "pole_rank": 5,
+          "role": "activist"
+        },
+        "Dimension-04-B-24": {
+          "actual_pole": "positive",
+          "pole_rank": 13,
+          "role": "pacifist"
+        },
+        "Dimension-04-B-25": {
+          "actual_pole": "positive",
+          "pole_rank": 10,
+          "role": "shaman"
+        },
+        "Dimension-04-B-27": {
+          "actual_pole": "positive",
+          "pole_rank": 9,
+          "role": "luddite"
+        },
+        "Dimension-04-B-31": {
+          "actual_pole": "positive",
+          "pole_rank": 18,
+          "role": "visionary"
+        },
+        "Dimension-04-B-32": {
+          "actual_pole": "positive",
+          "pole_rank": 16,
+          "role": "traditionalist"
+        },
+        "Dimension-04-B-35": {
+          "actual_pole": "positive",
+          "pole_rank": 7,
+          "role": "provincial"
+        },
+        "Dimension-04-B-36": {
+          "actual_pole": "positive",
+          "pole_rank": 2,
+          "role": "toddler"
+        },
+        "Dimension-04-B-38": {
+          "actual_pole": "positive",
+          "pole_rank": 12,
+          "role": "anthropologist"
+        }
+      },
+      "pole_map": {
+        "negative": "A",
+        "positive": "B"
+      }
+    },
+    "Dimension-05": {
+      "component": 7,
+      "examples": {
+        "Dimension-05-A-01": {
+          "actual_pole": "positive",
+          "pole_rank": 14,
+          "role": "absurdist"
+        },
+        "Dimension-05-A-02": {
+          "actual_pole": "positive",
+          "pole_rank": 9,
+          "role": "sommelier"
+        },
+        "Dimension-05-A-03": {
+          "actual_pole": "positive",
+          "pole_rank": 10,
+          "role": "zealot"
+        },
+        "Dimension-05-A-04": {
+          "actual_pole": "positive",
+          "pole_rank": 18,
+          "role": "bartender"
+        },
+        "Dimension-05-A-05": {
+          "actual_pole": "positive",
+          "pole_rank": 12,
+          "role": "genie"
+        },
+        "Dimension-05-A-06": {
+          "actual_pole": "positive",
+          "pole_rank": 7,
+          "role": "gossip"
+        },
+        "Dimension-05-A-08": {
+          "actual_pole": "positive",
+          "pole_rank": 8,
+          "role": "hedonist"
+        },
+        "Dimension-05-A-10": {
+          "actual_pole": "positive",
+          "pole_rank": 6,
+          "role": "angel"
+        },
+        "Dimension-05-A-12": {
+          "actual_pole": "positive",
+          "pole_rank": 1,
+          "role": "jester"
+        },
+        "Dimension-05-A-13": {
+          "actual_pole": "positive",
+          "pole_rank": 5,
+          "role": "auctioneer"
+        },
+        "Dimension-05-A-14": {
+          "actual_pole": "positive",
+          "pole_rank": 4,
+          "role": "comedian"
+        },
+        "Dimension-05-A-15": {
+          "actual_pole": "positive",
+          "pole_rank": 15,
+          "role": "secretary"
+        },
+        "Dimension-05-A-18": {
+          "actual_pole": "positive",
+          "pole_rank": 19,
+          "role": "avatar"
+        },
+        "Dimension-05-A-19": {
+          "actual_pole": "positive",
+          "pole_rank": 16,
+          "role": "romantic"
+        },
+        "Dimension-05-A-24": {
+          "actual_pole": "positive",
+          "pole_rank": 17,
+          "role": "mystic"
+        },
+        "Dimension-05-A-30": {
+          "actual_pole": "positive",
+          "pole_rank": 2,
+          "role": "narcissist"
+        },
+        "Dimension-05-A-32": {
+          "actual_pole": "positive",
+          "pole_rank": 13,
+          "role": "evangelist"
+        },
+        "Dimension-05-A-35": {
+          "actual_pole": "positive",
+          "pole_rank": 11,
+          "role": "stoic"
+        },
+        "Dimension-05-A-38": {
+          "actual_pole": "positive",
+          "pole_rank": 3,
+          "role": "proofreader"
+        },
+        "Dimension-05-A-39": {
+          "actual_pole": "positive",
+          "pole_rank": 20,
+          "role": "translator"
+        },
+        "Dimension-05-B-07": {
+          "actual_pole": "negative",
+          "pole_rank": 9,
+          "role": "mycorrhizal"
+        },
+        "Dimension-05-B-09": {
+          "actual_pole": "negative",
+          "pole_rank": 16,
+          "role": "archaeologist"
+        },
+        "Dimension-05-B-11": {
+          "actual_pole": "negative",
+          "pole_rank": 18,
+          "role": "adolescent"
+        },
+        "Dimension-05-B-16": {
+          "actual_pole": "negative",
+          "pole_rank": 20,
+          "role": "coral_reef"
+        },
+        "Dimension-05-B-17": {
+          "actual_pole": "negative",
+          "pole_rank": 1,
+          "role": "caveman"
+        },
+        "Dimension-05-B-20": {
+          "actual_pole": "negative",
+          "pole_rank": 7,
+          "role": "orphan"
+        },
+        "Dimension-05-B-21": {
+          "actual_pole": "negative",
+          "pole_rank": 17,
+          "role": "physicist"
+        },
+        "Dimension-05-B-22": {
+          "actual_pole": "negative",
+          "pole_rank": 12,
+          "role": "refugee"
+        },
+        "Dimension-05-B-23": {
+          "actual_pole": "negative",
+          "pole_rank": 6,
+          "role": "anthropologist"
+        },
+        "Dimension-05-B-25": {
+          "actual_pole": "negative",
+          "pole_rank": 11,
+          "role": "anarchist"
+        },
+        "Dimension-05-B-26": {
+          "actual_pole": "negative",
+          "pole_rank": 2,
+          "role": "amnesiac"
+        },
+        "Dimension-05-B-27": {
+          "actual_pole": "negative",
+          "pole_rank": 14,
+          "role": "addict"
+        },
+        "Dimension-05-B-28": {
+          "actual_pole": "negative",
+          "pole_rank": 10,
+          "role": "prisoner"
+        },
+        "Dimension-05-B-29": {
+          "actual_pole": "negative",
+          "pole_rank": 19,
+          "role": "teenager"
+        },
+        "Dimension-05-B-31": {
+          "actual_pole": "negative",
+          "pole_rank": 5,
+          "role": "geographer"
+        },
+        "Dimension-05-B-33": {
+          "actual_pole": "negative",
+          "pole_rank": 4,
+          "role": "tree"
+        },
+        "Dimension-05-B-34": {
+          "actual_pole": "negative",
+          "pole_rank": 15,
+          "role": "virus"
+        },
+        "Dimension-05-B-36": {
+          "actual_pole": "negative",
+          "pole_rank": 13,
+          "role": "naturalist"
+        },
+        "Dimension-05-B-37": {
+          "actual_pole": "negative",
+          "pole_rank": 8,
+          "role": "biologist"
+        },
+        "Dimension-05-B-40": {
+          "actual_pole": "negative",
+          "pole_rank": 3,
+          "role": "prey"
+        }
+      },
+      "pole_map": {
+        "negative": "B",
+        "positive": "A"
+      }
+    },
+    "Dimension-06": {
+      "component": 10,
+      "examples": {
+        "Dimension-06-A-02": {
+          "actual_pole": "positive",
+          "pole_rank": 19,
+          "role": "conservator"
+        },
+        "Dimension-06-A-03": {
+          "actual_pole": "positive",
+          "pole_rank": 10,
+          "role": "traditionalist"
+        },
+        "Dimension-06-A-06": {
+          "actual_pole": "positive",
+          "pole_rank": 20,
+          "role": "nutritionist"
+        },
+        "Dimension-06-A-08": {
+          "actual_pole": "positive",
+          "pole_rank": 6,
+          "role": "veterinarian"
+        },
+        "Dimension-06-A-11": {
+          "actual_pole": "positive",
+          "pole_rank": 12,
+          "role": "pacifist"
+        },
+        "Dimension-06-A-12": {
+          "actual_pole": "positive",
+          "pole_rank": 13,
+          "role": "purist"
+        },
+        "Dimension-06-A-14": {
+          "actual_pole": "positive",
+          "pole_rank": 18,
+          "role": "symbiont"
+        },
+        "Dimension-06-A-15": {
+          "actual_pole": "positive",
+          "pole_rank": 7,
+          "role": "coral_reef"
+        },
+        "Dimension-06-A-17": {
+          "actual_pole": "positive",
+          "pole_rank": 8,
+          "role": "naturalist"
+        },
+        "Dimension-06-A-20": {
+          "actual_pole": "positive",
+          "pole_rank": 2,
+          "role": "virus"
+        },
+        "Dimension-06-A-21": {
+          "actual_pole": "positive",
+          "pole_rank": 3,
+          "role": "narcissist"
+        },
+        "Dimension-06-A-22": {
+          "actual_pole": "positive",
+          "pole_rank": 11,
+          "role": "crystalline"
+        },
+        "Dimension-06-A-24": {
+          "actual_pole": "positive",
+          "pole_rank": 16,
+          "role": "zealot"
+        },
+        "Dimension-06-A-25": {
+          "actual_pole": "positive",
+          "pole_rank": 1,
+          "role": "parasite"
+        },
+        "Dimension-06-A-27": {
+          "actual_pole": "positive",
+          "pole_rank": 5,
+          "role": "mycorrhizal"
+        },
+        "Dimension-06-A-31": {
+          "actual_pole": "positive",
+          "pole_rank": 15,
+          "role": "workaholic"
+        },
+        "Dimension-06-A-32": {
+          "actual_pole": "positive",
+          "pole_rank": 17,
+          "role": "hive"
+        },
+        "Dimension-06-A-38": {
+          "actual_pole": "positive",
+          "pole_rank": 9,
+          "role": "sommelier"
+        },
+        "Dimension-06-A-39": {
+          "actual_pole": "positive",
+          "pole_rank": 4,
+          "role": "vegan"
+        },
+        "Dimension-06-A-40": {
+          "actual_pole": "positive",
+          "pole_rank": 14,
+          "role": "biologist"
+        },
+        "Dimension-06-B-01": {
+          "actual_pole": "negative",
+          "pole_rank": 6,
+          "role": "oracle"
+        },
+        "Dimension-06-B-04": {
+          "actual_pole": "negative",
+          "pole_rank": 8,
+          "role": "instructor"
+        },
+        "Dimension-06-B-05": {
+          "actual_pole": "negative",
+          "pole_rank": 14,
+          "role": "novelist"
+        },
+        "Dimension-06-B-07": {
+          "actual_pole": "negative",
+          "pole_rank": 13,
+          "role": "debugger"
+        },
+        "Dimension-06-B-09": {
+          "actual_pole": "negative",
+          "pole_rank": 15,
+          "role": "revenant"
+        },
+        "Dimension-06-B-10": {
+          "actual_pole": "negative",
+          "pole_rank": 7,
+          "role": "trainer"
+        },
+        "Dimension-06-B-13": {
+          "actual_pole": "negative",
+          "pole_rank": 19,
+          "role": "ghost"
+        },
+        "Dimension-06-B-16": {
+          "actual_pole": "negative",
+          "pole_rank": 2,
+          "role": "bard"
+        },
+        "Dimension-06-B-18": {
+          "actual_pole": "negative",
+          "pole_rank": 12,
+          "role": "strategist"
+        },
+        "Dimension-06-B-19": {
+          "actual_pole": "negative",
+          "pole_rank": 1,
+          "role": "poet"
+        },
+        "Dimension-06-B-23": {
+          "actual_pole": "negative",
+          "pole_rank": 10,
+          "role": "wanderer"
+        },
+        "Dimension-06-B-26": {
+          "actual_pole": "negative",
+          "pole_rank": 16,
+          "role": "amnesiac"
+        },
+        "Dimension-06-B-28": {
+          "actual_pole": "negative",
+          "pole_rank": 18,
+          "role": "statistician"
+        },
+        "Dimension-06-B-29": {
+          "actual_pole": "negative",
+          "pole_rank": 5,
+          "role": "caveman"
+        },
+        "Dimension-06-B-30": {
+          "actual_pole": "negative",
+          "pole_rank": 9,
+          "role": "planner"
+        },
+        "Dimension-06-B-33": {
+          "actual_pole": "negative",
+          "pole_rank": 4,
+          "role": "prophet"
+        },
+        "Dimension-06-B-34": {
+          "actual_pole": "negative",
+          "pole_rank": 11,
+          "role": "exile"
+        },
+        "Dimension-06-B-35": {
+          "actual_pole": "negative",
+          "pole_rank": 3,
+          "role": "playwright"
+        },
+        "Dimension-06-B-36": {
+          "actual_pole": "negative",
+          "pole_rank": 17,
+          "role": "wraith"
+        },
+        "Dimension-06-B-37": {
+          "actual_pole": "negative",
+          "pole_rank": 20,
+          "role": "tutor"
+        }
+      },
+      "pole_map": {
+        "negative": "B",
+        "positive": "A"
+      }
+    },
+    "Dimension-07": {
+      "component": 12,
+      "examples": {
+        "Dimension-07-A-04": {
+          "actual_pole": "negative",
+          "pole_rank": 6,
+          "role": "gossip"
+        },
+        "Dimension-07-A-05": {
+          "actual_pole": "negative",
+          "pole_rank": 3,
+          "role": "mystic"
+        },
+        "Dimension-07-A-07": {
+          "actual_pole": "negative",
+          "pole_rank": 5,
+          "role": "adolescent"
+        },
+        "Dimension-07-A-09": {
+          "actual_pole": "negative",
+          "pole_rank": 15,
+          "role": "vegan"
+        },
+        "Dimension-07-A-12": {
+          "actual_pole": "negative",
+          "pole_rank": 20,
+          "role": "doctor"
+        },
+        "Dimension-07-A-13": {
+          "actual_pole": "negative",
+          "pole_rank": 7,
+          "role": "gamer"
+        },
+        "Dimension-07-A-15": {
+          "actual_pole": "negative",
+          "pole_rank": 9,
+          "role": "familiar"
+        },
+        "Dimension-07-A-17": {
+          "actual_pole": "negative",
+          "pole_rank": 18,
+          "role": "alien"
+        },
+        "Dimension-07-A-18": {
+          "actual_pole": "negative",
+          "pole_rank": 19,
+          "role": "biologist"
+        },
+        "Dimension-07-A-19": {
+          "actual_pole": "negative",
+          "pole_rank": 10,
+          "role": "spirit"
+        },
+        "Dimension-07-A-26": {
+          "actual_pole": "negative",
+          "pole_rank": 14,
+          "role": "pirate"
+        },
+        "Dimension-07-A-27": {
+          "actual_pole": "negative",
+          "pole_rank": 12,
+          "role": "avatar"
+        },
+        "Dimension-07-A-28": {
+          "actual_pole": "negative",
+          "pole_rank": 4,
+          "role": "teenager"
+        },
+        "Dimension-07-A-31": {
+          "actual_pole": "negative",
+          "pole_rank": 8,
+          "role": "procrastinator"
+        },
+        "Dimension-07-A-33": {
+          "actual_pole": "negative",
+          "pole_rank": 11,
+          "role": "healer"
+        },
+        "Dimension-07-A-34": {
+          "actual_pole": "negative",
+          "pole_rank": 1,
+          "role": "witch"
+        },
+        "Dimension-07-A-35": {
+          "actual_pole": "negative",
+          "pole_rank": 2,
+          "role": "shaman"
+        },
+        "Dimension-07-A-36": {
+          "actual_pole": "negative",
+          "pole_rank": 17,
+          "role": "anthropologist"
+        },
+        "Dimension-07-A-37": {
+          "actual_pole": "negative",
+          "pole_rank": 13,
+          "role": "nutritionist"
+        },
+        "Dimension-07-A-40": {
+          "actual_pole": "negative",
+          "pole_rank": 16,
+          "role": "angel"
+        },
+        "Dimension-07-B-01": {
+          "actual_pole": "positive",
+          "pole_rank": 3,
+          "role": "poet"
+        },
+        "Dimension-07-B-02": {
+          "actual_pole": "positive",
+          "pole_rank": 15,
+          "role": "designer"
+        },
+        "Dimension-07-B-03": {
+          "actual_pole": "positive",
+          "pole_rank": 6,
+          "role": "minimalist"
+        },
+        "Dimension-07-B-06": {
+          "actual_pole": "positive",
+          "pole_rank": 2,
+          "role": "toddler"
+        },
+        "Dimension-07-B-08": {
+          "actual_pole": "positive",
+          "pole_rank": 19,
+          "role": "narrator"
+        },
+        "Dimension-07-B-10": {
+          "actual_pole": "positive",
+          "pole_rank": 13,
+          "role": "visionary"
+        },
+        "Dimension-07-B-11": {
+          "actual_pole": "positive",
+          "pole_rank": 1,
+          "role": "infant"
+        },
+        "Dimension-07-B-14": {
+          "actual_pole": "positive",
+          "pole_rank": 10,
+          "role": "amnesiac"
+        },
+        "Dimension-07-B-16": {
+          "actual_pole": "positive",
+          "pole_rank": 20,
+          "role": "destroyer"
+        },
+        "Dimension-07-B-20": {
+          "actual_pole": "positive",
+          "pole_rank": 14,
+          "role": "stoic"
+        },
+        "Dimension-07-B-21": {
+          "actual_pole": "positive",
+          "pole_rank": 12,
+          "role": "musician"
+        },
+        "Dimension-07-B-22": {
+          "actual_pole": "positive",
+          "pole_rank": 5,
+          "role": "caveman"
+        },
+        "Dimension-07-B-23": {
+          "actual_pole": "positive",
+          "pole_rank": 8,
+          "role": "flaneur"
+        },
+        "Dimension-07-B-24": {
+          "actual_pole": "positive",
+          "pole_rank": 11,
+          "role": "virtuoso"
+        },
+        "Dimension-07-B-25": {
+          "actual_pole": "positive",
+          "pole_rank": 4,
+          "role": "photographer"
+        },
+        "Dimension-07-B-29": {
+          "actual_pole": "positive",
+          "pole_rank": 17,
+          "role": "builder"
+        },
+        "Dimension-07-B-30": {
+          "actual_pole": "positive",
+          "pole_rank": 9,
+          "role": "artisan"
+        },
+        "Dimension-07-B-32": {
+          "actual_pole": "positive",
+          "pole_rank": 18,
+          "role": "workaholic"
+        },
+        "Dimension-07-B-38": {
+          "actual_pole": "positive",
+          "pole_rank": 7,
+          "role": "composer"
+        },
+        "Dimension-07-B-39": {
+          "actual_pole": "positive",
+          "pole_rank": 16,
+          "role": "simulacrum"
+        }
+      },
+      "pole_map": {
+        "negative": "A",
+        "positive": "B"
+      }
+    },
+    "Dimension-08": {
+      "component": 6,
+      "examples": {
+        "Dimension-08-A-02": {
+          "actual_pole": "negative",
+          "pole_rank": 20,
+          "role": "cartographer"
+        },
+        "Dimension-08-A-04": {
+          "actual_pole": "negative",
+          "pole_rank": 11,
+          "role": "photographer"
+        },
+        "Dimension-08-A-05": {
+          "actual_pole": "negative",
+          "pole_rank": 14,
+          "role": "navigator"
+        },
+        "Dimension-08-A-06": {
+          "actual_pole": "negative",
+          "pole_rank": 6,
+          "role": "bartender"
+        },
+        "Dimension-08-A-07": {
+          "actual_pole": "negative",
+          "pole_rank": 16,
+          "role": "marketer"
+        },
+        "Dimension-08-A-12": {
+          "actual_pole": "negative",
+          "pole_rank": 9,
+          "role": "designer"
+        },
+        "Dimension-08-A-14": {
+          "actual_pole": "negative",
+          "pole_rank": 4,
+          "role": "musician"
+        },
+        "Dimension-08-A-16": {
+          "actual_pole": "negative",
+          "pole_rank": 12,
+          "role": "entrepreneur"
+        },
+        "Dimension-08-A-18": {
+          "actual_pole": "negative",
+          "pole_rank": 3,
+          "role": "surfer"
+        },
+        "Dimension-08-A-20": {
+          "actual_pole": "negative",
+          "pole_rank": 10,
+          "role": "auctioneer"
+        },
+        "Dimension-08-A-22": {
+          "actual_pole": "negative",
+          "pole_rank": 15,
+          "role": "mycorrhizal"
+        },
+        "Dimension-08-A-23": {
+          "actual_pole": "negative",
+          "pole_rank": 2,
+          "role": "sommelier"
+        },
+        "Dimension-08-A-24": {
+          "actual_pole": "negative",
+          "pole_rank": 17,
+          "role": "technologist"
+        },
+        "Dimension-08-A-25": {
+          "actual_pole": "negative",
+          "pole_rank": 18,
+          "role": "programmer"
+        },
+        "Dimension-08-A-29": {
+          "actual_pole": "negative",
+          "pole_rank": 5,
+          "role": "composer"
+        },
+        "Dimension-08-A-33": {
+          "actual_pole": "negative",
+          "pole_rank": 13,
+          "role": "coral_reef"
+        },
+        "Dimension-08-A-34": {
+          "actual_pole": "negative",
+          "pole_rank": 8,
+          "role": "crystalline"
+        },
+        "Dimension-08-A-35": {
+          "actual_pole": "negative",
+          "pole_rank": 19,
+          "role": "producer"
+        },
+        "Dimension-08-A-37": {
+          "actual_pole": "negative",
+          "pole_rank": 7,
+          "role": "chef"
+        },
+        "Dimension-08-A-38": {
+          "actual_pole": "negative",
+          "pole_rank": 1,
+          "role": "gamer"
+        },
+        "Dimension-08-B-01": {
+          "actual_pole": "positive",
+          "pole_rank": 12,
+          "role": "cynic"
+        },
+        "Dimension-08-B-03": {
+          "actual_pole": "positive",
+          "pole_rank": 1,
+          "role": "zealot"
+        },
+        "Dimension-08-B-08": {
+          "actual_pole": "positive",
+          "pole_rank": 3,
+          "role": "anarchist"
+        },
+        "Dimension-08-B-09": {
+          "actual_pole": "positive",
+          "pole_rank": 14,
+          "role": "infant"
+        },
+        "Dimension-08-B-10": {
+          "actual_pole": "positive",
+          "pole_rank": 11,
+          "role": "pacifist"
+        },
+        "Dimension-08-B-11": {
+          "actual_pole": "positive",
+          "pole_rank": 6,
+          "role": "ascetic"
+        },
+        "Dimension-08-B-13": {
+          "actual_pole": "positive",
+          "pole_rank": 16,
+          "role": "activist"
+        },
+        "Dimension-08-B-15": {
+          "actual_pole": "positive",
+          "pole_rank": 20,
+          "role": "contrarian"
+        },
+        "Dimension-08-B-17": {
+          "actual_pole": "positive",
+          "pole_rank": 17,
+          "role": "provocateur"
+        },
+        "Dimension-08-B-19": {
+          "actual_pole": "positive",
+          "pole_rank": 10,
+          "role": "traditionalist"
+        },
+        "Dimension-08-B-21": {
+          "actual_pole": "positive",
+          "pole_rank": 15,
+          "role": "lawyer"
+        },
+        "Dimension-08-B-26": {
+          "actual_pole": "positive",
+          "pole_rank": 5,
+          "role": "martyr"
+        },
+        "Dimension-08-B-27": {
+          "actual_pole": "positive",
+          "pole_rank": 13,
+          "role": "philosopher"
+        },
+        "Dimension-08-B-28": {
+          "actual_pole": "positive",
+          "pole_rank": 9,
+          "role": "skeptic"
+        },
+        "Dimension-08-B-30": {
+          "actual_pole": "positive",
+          "pole_rank": 19,
+          "role": "prisoner"
+        },
+        "Dimension-08-B-31": {
+          "actual_pole": "positive",
+          "pole_rank": 4,
+          "role": "revolutionary"
+        },
+        "Dimension-08-B-32": {
+          "actual_pole": "positive",
+          "pole_rank": 2,
+          "role": "stoic"
+        },
+        "Dimension-08-B-36": {
+          "actual_pole": "positive",
+          "pole_rank": 7,
+          "role": "judge"
+        },
+        "Dimension-08-B-39": {
+          "actual_pole": "positive",
+          "pole_rank": 18,
+          "role": "devils_advocate"
+        },
+        "Dimension-08-B-40": {
+          "actual_pole": "positive",
+          "pole_rank": 8,
+          "role": "purist"
+        }
+      },
+      "pole_map": {
+        "negative": "A",
+        "positive": "B"
+      }
+    },
+    "Dimension-09": {
+      "component": 4,
+      "examples": {
+        "Dimension-09-A-01": {
+          "actual_pole": "positive",
+          "pole_rank": 17,
+          "role": "prey"
+        },
+        "Dimension-09-A-03": {
+          "actual_pole": "positive",
+          "pole_rank": 16,
+          "role": "familiar"
+        },
+        "Dimension-09-A-05": {
+          "actual_pole": "positive",
+          "pole_rank": 9,
+          "role": "fool"
+        },
+        "Dimension-09-A-07": {
+          "actual_pole": "positive",
+          "pole_rank": 12,
+          "role": "secretary"
+        },
+        "Dimension-09-A-08": {
+          "actual_pole": "positive",
+          "pole_rank": 2,
+          "role": "toddler"
+        },
+        "Dimension-09-A-11": {
+          "actual_pole": "positive",
+          "pole_rank": 20,
+          "role": "genie"
+        },
+        "Dimension-09-A-12": {
+          "actual_pole": "positive",
+          "pole_rank": 10,
+          "role": "leviathan"
+        },
+        "Dimension-09-A-14": {
+          "actual_pole": "positive",
+          "pole_rank": 1,
+          "role": "infant"
+        },
+        "Dimension-09-A-15": {
+          "actual_pole": "positive",
+          "pole_rank": 3,
+          "role": "caveman"
+        },
+        "Dimension-09-A-19": {
+          "actual_pole": "positive",
+          "pole_rank": 4,
+          "role": "pirate"
+        },
+        "Dimension-09-A-20": {
+          "actual_pole": "positive",
+          "pole_rank": 15,
+          "role": "grandparent"
+        },
+        "Dimension-09-A-21": {
+          "actual_pole": "positive",
+          "pole_rank": 19,
+          "role": "pharmacist"
+        },
+        "Dimension-09-A-24": {
+          "actual_pole": "positive",
+          "pole_rank": 6,
+          "role": "proofreader"
+        },
+        "Dimension-09-A-25": {
+          "actual_pole": "positive",
+          "pole_rank": 11,
+          "role": "tree"
+        },
+        "Dimension-09-A-26": {
+          "actual_pole": "positive",
+          "pole_rank": 14,
+          "role": "robot"
+        },
+        "Dimension-09-A-32": {
+          "actual_pole": "positive",
+          "pole_rank": 5,
+          "role": "translator"
+        },
+        "Dimension-09-A-36": {
+          "actual_pole": "positive",
+          "pole_rank": 8,
+          "role": "bard"
+        },
+        "Dimension-09-A-37": {
+          "actual_pole": "positive",
+          "pole_rank": 7,
+          "role": "golem"
+        },
+        "Dimension-09-A-38": {
+          "actual_pole": "positive",
+          "pole_rank": 18,
+          "role": "jester"
+        },
+        "Dimension-09-A-40": {
+          "actual_pole": "positive",
+          "pole_rank": 13,
+          "role": "grader"
+        },
+        "Dimension-09-B-02": {
+          "actual_pole": "negative",
+          "pole_rank": 5,
+          "role": "provocateur"
+        },
+        "Dimension-09-B-04": {
+          "actual_pole": "negative",
+          "pole_rank": 1,
+          "role": "revolutionary"
+        },
+        "Dimension-09-B-06": {
+          "actual_pole": "negative",
+          "pole_rank": 14,
+          "role": "evangelist"
+        },
+        "Dimension-09-B-09": {
+          "actual_pole": "negative",
+          "pole_rank": 12,
+          "role": "addict"
+        },
+        "Dimension-09-B-10": {
+          "actual_pole": "negative",
+          "pole_rank": 4,
+          "role": "rebel"
+        },
+        "Dimension-09-B-13": {
+          "actual_pole": "negative",
+          "pole_rank": 6,
+          "role": "activist"
+        },
+        "Dimension-09-B-16": {
+          "actual_pole": "negative",
+          "pole_rank": 8,
+          "role": "destroyer"
+        },
+        "Dimension-09-B-17": {
+          "actual_pole": "negative",
+          "pole_rank": 10,
+          "role": "contrarian"
+        },
+        "Dimension-09-B-18": {
+          "actual_pole": "negative",
+          "pole_rank": 11,
+          "role": "idealist"
+        },
+        "Dimension-09-B-22": {
+          "actual_pole": "negative",
+          "pole_rank": 17,
+          "role": "divorcee"
+        },
+        "Dimension-09-B-23": {
+          "actual_pole": "negative",
+          "pole_rank": 20,
+          "role": "martyr"
+        },
+        "Dimension-09-B-27": {
+          "actual_pole": "negative",
+          "pole_rank": 13,
+          "role": "simulacrum"
+        },
+        "Dimension-09-B-28": {
+          "actual_pole": "negative",
+          "pole_rank": 7,
+          "role": "visionary"
+        },
+        "Dimension-09-B-29": {
+          "actual_pole": "negative",
+          "pole_rank": 15,
+          "role": "survivor"
+        },
+        "Dimension-09-B-30": {
+          "actual_pole": "negative",
+          "pole_rank": 9,
+          "role": "zeitgeist"
+        },
+        "Dimension-09-B-31": {
+          "actual_pole": "negative",
+          "pole_rank": 18,
+          "role": "podcaster"
+        },
+        "Dimension-09-B-33": {
+          "actual_pole": "negative",
+          "pole_rank": 2,
+          "role": "anarchist"
+        },
+        "Dimension-09-B-34": {
+          "actual_pole": "negative",
+          "pole_rank": 16,
+          "role": "celebrity"
+        },
+        "Dimension-09-B-35": {
+          "actual_pole": "negative",
+          "pole_rank": 3,
+          "role": "maverick"
+        },
+        "Dimension-09-B-39": {
+          "actual_pole": "negative",
+          "pole_rank": 19,
+          "role": "philosopher"
+        }
+      },
+      "pole_map": {
+        "negative": "B",
+        "positive": "A"
+      }
+    },
+    "Dimension-10": {
+      "component": 8,
+      "examples": {
+        "Dimension-10-A-01": {
+          "actual_pole": "positive",
+          "pole_rank": 8,
+          "role": "provincial"
+        },
+        "Dimension-10-A-02": {
+          "actual_pole": "positive",
+          "pole_rank": 6,
+          "role": "linguist"
+        },
+        "Dimension-10-A-09": {
+          "actual_pole": "positive",
+          "pole_rank": 11,
+          "role": "conservator"
+        },
+        "Dimension-10-A-10": {
+          "actual_pole": "positive",
+          "pole_rank": 7,
+          "role": "luddite"
+        },
+        "Dimension-10-A-11": {
+          "actual_pole": "positive",
+          "pole_rank": 18,
+          "role": "retiree"
+        },
+        "Dimension-10-A-12": {
+          "actual_pole": "positive",
+          "pole_rank": 1,
+          "role": "historian"
+        },
+        "Dimension-10-A-18": {
+          "actual_pole": "positive",
+          "pole_rank": 2,
+          "role": "flaneur"
+        },
+        "Dimension-10-A-19": {
+          "actual_pole": "positive",
+          "pole_rank": 15,
+          "role": "dilettante"
+        },
+        "Dimension-10-A-20": {
+          "actual_pole": "positive",
+          "pole_rank": 20,
+          "role": "artisan"
+        },
+        "Dimension-10-A-23": {
+          "actual_pole": "positive",
+          "pole_rank": 12,
+          "role": "archivist"
+        },
+        "Dimension-10-A-24": {
+          "actual_pole": "positive",
+          "pole_rank": 3,
+          "role": "sommelier"
+        },
+        "Dimension-10-A-30": {
+          "actual_pole": "positive",
+          "pole_rank": 17,
+          "role": "bard"
+        },
+        "Dimension-10-A-31": {
+          "actual_pole": "positive",
+          "pole_rank": 14,
+          "role": "geographer"
+        },
+        "Dimension-10-A-32": {
+          "actual_pole": "positive",
+          "pole_rank": 5,
+          "role": "archaeologist"
+        },
+        "Dimension-10-A-33": {
+          "actual_pole": "positive",
+          "pole_rank": 19,
+          "role": "narrator"
+        },
+        "Dimension-10-A-35": {
+          "actual_pole": "positive",
+          "pole_rank": 10,
+          "role": "anthropologist"
+        },
+        "Dimension-10-A-37": {
+          "actual_pole": "positive",
+          "pole_rank": 9,
+          "role": "grandparent"
+        },
+        "Dimension-10-A-38": {
+          "actual_pole": "positive",
+          "pole_rank": 13,
+          "role": "novelist"
+        },
+        "Dimension-10-A-39": {
+          "actual_pole": "positive",
+          "pole_rank": 4,
+          "role": "traditionalist"
+        },
+        "Dimension-10-A-40": {
+          "actual_pole": "positive",
+          "pole_rank": 16,
+          "role": "collector"
+        },
+        "Dimension-10-B-03": {
+          "actual_pole": "negative",
+          "pole_rank": 7,
+          "role": "shaman"
+        },
+        "Dimension-10-B-04": {
+          "actual_pole": "negative",
+          "pole_rank": 13,
+          "role": "virus"
+        },
+        "Dimension-10-B-05": {
+          "actual_pole": "negative",
+          "pole_rank": 16,
+          "role": "trainer"
+        },
+        "Dimension-10-B-06": {
+          "actual_pole": "negative",
+          "pole_rank": 10,
+          "role": "healer"
+        },
+        "Dimension-10-B-07": {
+          "actual_pole": "negative",
+          "pole_rank": 15,
+          "role": "workaholic"
+        },
+        "Dimension-10-B-08": {
+          "actual_pole": "negative",
+          "pole_rank": 11,
+          "role": "destroyer"
+        },
+        "Dimension-10-B-13": {
+          "actual_pole": "negative",
+          "pole_rank": 6,
+          "role": "competitor"
+        },
+        "Dimension-10-B-14": {
+          "actual_pole": "negative",
+          "pole_rank": 2,
+          "role": "infant"
+        },
+        "Dimension-10-B-15": {
+          "actual_pole": "negative",
+          "pole_rank": 20,
+          "role": "debugger"
+        },
+        "Dimension-10-B-16": {
+          "actual_pole": "negative",
+          "pole_rank": 5,
+          "role": "coach"
+        },
+        "Dimension-10-B-17": {
+          "actual_pole": "negative",
+          "pole_rank": 17,
+          "role": "gamer"
+        },
+        "Dimension-10-B-21": {
+          "actual_pole": "negative",
+          "pole_rank": 1,
+          "role": "caveman"
+        },
+        "Dimension-10-B-22": {
+          "actual_pole": "negative",
+          "pole_rank": 8,
+          "role": "robot"
+        },
+        "Dimension-10-B-25": {
+          "actual_pole": "negative",
+          "pole_rank": 12,
+          "role": "crystalline"
+        },
+        "Dimension-10-B-26": {
+          "actual_pole": "negative",
+          "pole_rank": 19,
+          "role": "zealot"
+        },
+        "Dimension-10-B-27": {
+          "actual_pole": "negative",
+          "pole_rank": 3,
+          "role": "hive"
+        },
+        "Dimension-10-B-28": {
+          "actual_pole": "negative",
+          "pole_rank": 9,
+          "role": "mystic"
+        },
+        "Dimension-10-B-29": {
+          "actual_pole": "negative",
+          "pole_rank": 4,
+          "role": "swarm"
+        },
+        "Dimension-10-B-34": {
+          "actual_pole": "negative",
+          "pole_rank": 18,
+          "role": "spirit"
+        },
+        "Dimension-10-B-36": {
+          "actual_pole": "negative",
+          "pole_rank": 14,
+          "role": "evangelist"
+        }
+      },
+      "pole_map": {
+        "negative": "B",
+        "positive": "A"
+      }
+    }
+  },
+  "seed": 61001,
+  "warning": "Keep this key separate from any reviewer; the packet contains no PC number or score."
+}

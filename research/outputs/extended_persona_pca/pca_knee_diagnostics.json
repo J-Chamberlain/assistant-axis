@@ -1,0 +1,43 @@
+{
+  "methods": {
+    "eigengap": "Largest absolute and relative adjacent eigengaps within the declared scope.",
+    "log_chord_curvature": "Maximum vertical departure of normalized log-eigenvalue scree from its endpoint chord.",
+    "two_segment_log_scree": "Breakpoint minimizing total least-squares error of two independent lines on log eigenvalues."
+  },
+  "models": {
+    "gemma": {
+      "log_chord_departure": 0.39720321371113887,
+      "log_chord_knee_pc": 10,
+      "max_absolute_eigengap": 122582.54331817778,
+      "max_absolute_eigengap_after_pc": 1,
+      "max_relative_eigengap": 0.5551549841002691,
+      "max_relative_eigengap_after_pc": 2,
+      "methods_agree_exactly": false,
+      "model": "Gemma-2-27B",
+      "two_segment_log_scree_break_pc": 9
+    },
+    "llama": {
+      "log_chord_departure": 0.3779455974488934,
+      "log_chord_knee_pc": 16,
+      "max_absolute_eigengap": 0.5847069914783201,
+      "max_absolute_eigengap_after_pc": 2,
+      "max_relative_eigengap": 0.5424081960733559,
+      "max_relative_eigengap_after_pc": 2,
+      "methods_agree_exactly": false,
+      "model": "Llama-3.3-70B",
+      "two_segment_log_scree_break_pc": 8
+    },
+    "qwen": {
+      "log_chord_departure": 0.4230656638433448,
+      "log_chord_knee_pc": 11,
+      "max_absolute_eigengap": 441.91786116969655,
+      "max_absolute_eigengap_after_pc": 1,
+      "max_relative_eigengap": 0.48842346264220815,
+      "max_relative_eigengap_after_pc": 1,
+      "methods_agree_exactly": false,
+      "model": "Qwen/Qwen3-32B",
+      "two_segment_log_scree_break_pc": 11
+    }
+  },
+  "scope": "Components 1-50; the near-zero numerical tail is excluded from knee selection."
+}
