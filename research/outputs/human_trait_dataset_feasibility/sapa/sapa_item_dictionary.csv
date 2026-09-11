@@ -1,0 +1,697 @@
+item_id,item_text,source_scale_memberships,source_scale_membership_count,derived_scoring_keys,reverse_keyed_in_derived_scales,response_min,response_max,response_anchors,valid_response_n,missing_n,missing_fraction
+q_6,Accept people as they are.,HEXACO:H:A:G,1,HEXACO_A;HAGentle,,1,6,1=Very Inaccurate;6=Very Accurate,2515,21164,0.89378774
+q_20,Act comfortably with others.,MPQ:MPQ:AL;IPIPneo:E1:FR,2,NEO_E;MPQal;NEOe1,MPQal,1,6,1=Very Inaccurate;6=Very Accurate,2441,21238,0.89691288
+q_22,Act impulsively when something is bothering me.,HEXACO:H:C:PR,1,HEXACO_C;HCPrudence,HEXACO_C;HCPrudence,1,6,1=Very Inaccurate;6=Very Accurate,2712,20967,0.88546814
+q_23,Act like different people in different situations.,HEXACO:H:H:S,1,HEXACO_H;HHSincere,HEXACO_H;HHSincere,1,6,1=Very Inaccurate;6=Very Accurate,3605,20074,0.8477554
+q_26,Act or feel in a way that does not fit me.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2311,21368,0.90240297
+q_31,Act wild and crazy.,IPIPneo:E5:ES,1,NEO_E;NEOe5,,1,6,1=Very Inaccurate;6=Very Accurate,2476,21203,0.89543477
+q_35,Act without thinking.,IPIPneo:C6:CA,1,SPI_15impulsivity;NEO_C;NEOc6,NEO_C;NEOc6,1,6,1=Very Inaccurate;6=Very Accurate,2431,21248,0.89733519
+q_38,Adapt easily to new situations.,IPIPneo:N1:ANX,1,NEO_N;NEOn1,NEO_N;NEOn1,1,6,1=Very Inaccurate;6=Very Accurate,2468,21211,0.89577263
+q_39,Adjust easily.,HEXACO:H:A:FL,1,HEXACO_A;HAFlex,,1,6,1=Very Inaccurate;6=Very Accurate,2529,21150,0.8931965
+q_40,Admire a really clever scam.,HEXACO:H:H:F,1,HEXACO_H;HHFairness,HEXACO_H;HHFairness,1,6,1=Very Inaccurate;6=Very Accurate,5997,17682,0.74673762
+q_43,Always admit it when I make a mistake.,MPQ:MPQ:UV,1,MPQuv,,1,6,1=Very Inaccurate;6=Very Accurate,2369,21310,0.89995355
+q_44,Always know what I am doing.,BFAS:BFAS:C:I;MPQ:MPQ:UV,2,BFASindustry;MPQuv,,1,6,1=Very Inaccurate;6=Very Accurate,2700,20979,0.88597491
+q_45,Always know why I do things.,MPQ:MPQ:UV,1,MPQuv,,1,6,1=Very Inaccurate;6=Very Accurate,2447,21232,0.89665949
+q_47,Am a creature of habit.,IPIPneo:O4:AD,1,SPI_15habit;NEO_O;NEOo4,NEO_O;NEOo4,1,6,1=Very Inaccurate;6=Very Accurate,2449,21230,0.89657502
+q_52,Am a person whose moods go up and down easily.,BFAS:BFAS:N:V,1,SPI_3emotionality;SPI_5neuroticism;BFASvolatile,,1,6,1=Very Inaccurate;6=Very Accurate,2497,21182,0.89454791
+q_53,Am a physical coward.,HEXACO:H:E:F,1,HEXACO_E;HEFear,HEXACO_E;HEFear,1,6,1=Very Inaccurate;6=Very Accurate,3291,20388,0.86101609
+q_55,Am a very private person.,IPIP100:B5:E;QB6:QB6:X,2,QB6extra,QB6extra,1,6,1=Very Inaccurate;6=Very Accurate,2680,20999,0.88681954
+q_56,Am able to control my cravings.,IPIPneo:N5:IM,1,NEO_N;NEOn5,NEO_N;NEOn5,1,6,1=Very Inaccurate;6=Very Accurate,2488,21191,0.894928
+q_63,Am able to stand up for myself.,IPIPneo:N4:SC,1,NEO_N;NEOn4,NEO_N;NEOn4,1,6,1=Very Inaccurate;6=Very Accurate,2465,21214,0.89589932
+q_66,Am afraid of many things.,BFAS:BFAS:N:W;QB6:QB6:ES;IPIPneo:N1:ANX,3,BFASwithdraw;QB6resilient;NEO_N;NEOn1,QB6resilient,1,6,1=Very Inaccurate;6=Very Accurate,2543,21136,0.89260526
+q_67,Am afraid that I will do the wrong thing.,IPIPneo:N4:SC,1,NEO_N;NEOn4,,1,6,1=Very Inaccurate;6=Very Accurate,2473,21206,0.89556147
+q_69,Am afraid to draw attention to myself.,IPIPneo:N4:SC,1,NEO_N;NEOn4,,1,6,1=Very Inaccurate;6=Very Accurate,2429,21250,0.89741965
+q_71,Am always busy.,IPIPneo:E4:AL,1,NEO_E;NEOe4,,1,6,1=Very Inaccurate;6=Very Accurate,2426,21253,0.89754635
+q_74,Am always on the go.,IPIPneo:E4:AL,1,NEO_E;NEOe4,,1,6,1=Very Inaccurate;6=Very Accurate,2431,21248,0.89733519
+q_76,Am always prepared.,IPIP100:B5:C;MPQ:MPQ:UV;IPIPneo:C5:SD,3,IPIP100consc;IPIP50Consc;NEO_C;MPQuv;NEOc5,,1,6,1=Very Inaccurate;6=Very Accurate,2686,20993,0.88656616
+q_77,Am always ready to start afresh.,MPQ:MPQ:UV,1,MPQuv,,1,6,1=Very Inaccurate;6=Very Accurate,2409,21270,0.89826428
+q_79,Am an extraordinary person.,QB6:QB6:O,1,QB6open,,1,6,1=Very Inaccurate;6=Very Accurate,4185,19494,0.82326112
+q_80,Am annoyed by others' mistakes.,HEXACO:H:A:FL,1,HEXACO_A;HAFlex,HEXACO_A;HAFlex,1,6,1=Very Inaccurate;6=Very Accurate,2535,21144,0.89294311
+q_82,Am attached to conventional ways.,IPIPneo:O4:AD,1,NEO_O;NEOo4,NEO_O;NEOo4,1,6,1=Very Inaccurate;6=Very Accurate,2401,21278,0.89860214
+q_85,Am calm even in tense situations.,IPIPneo:N6:VU,1,NEO_N;NEOn6,NEO_N;NEOn6,1,6,1=Very Inaccurate;6=Very Accurate,2464,21215,0.89594155
+q_89,Am comfortable in unfamiliar situations.,IPIPneo:N4:SC,1,NEO_N;NEOn4,NEO_N;NEOn4,1,6,1=Very Inaccurate;6=Very Accurate,2423,21256,0.89767304
+q_90,Am concerned about others.,IPIPneo:A3:AL,1,SPI_3socCohesion;SPI_5compHonHum;SPI_15compassion;NEO_A;NEOa3,,1,6,1=Very Inaccurate;6=Very Accurate,2458,21221,0.89619494
+q_94,Am considered to be kind of eccentric.,HEXACO:H:O:U,1,HEXACO_O;HOUnconvention,,1,6,1=Very Inaccurate;6=Very Accurate,2804,20875,0.88158284
+q_98,Am deeply moved by others' misfortunes.,HEXACO:H:E:S,1,HEXACO_E;HESentiment,HEXACO_E;HESentiment,1,6,1=Very Inaccurate;6=Very Accurate,3338,20341,0.85903121
+q_101,Am easily annoyed.,HEXACO:H:A:P,1,HEXACO_A;HAPatient,HEXACO_A;HAPatient,1,6,1=Very Inaccurate;6=Very Accurate,2533,21146,0.89302758
+q_105,Am easily discouraged.,BFAS:BFAS:N:W,1,BFASwithdraw,,1,6,1=Very Inaccurate;6=Very Accurate,2660,21019,0.88766418
+q_107,Am easily distracted.,BFAS:BFAS:C:I,1,BFASindustry,BFASindustry,1,6,1=Very Inaccurate;6=Very Accurate,2697,20982,0.88610161
+q_108,Am easily disturbed.,IPIP100:B5:ES,1,IPIP100stability;IPIP50EmoSt,IPIP100stability;IPIP50EmoSt,1,6,1=Very Inaccurate;6=Very Accurate,2560,21119,0.89188733
+q_114,Am easily intimidated.,IPIPneo:N4:SC,1,NEO_N;NEOn4,,1,6,1=Very Inaccurate;6=Very Accurate,2455,21224,0.89632164
+q_121,Am easy to satisfy.,IPIPneo:A4:CO,1,SPI_15easyGoingness;NEO_A;NEOa4,,1,6,1=Very Inaccurate;6=Very Accurate,2539,21140,0.89277419
+q_124,Am exacting in my work.,IPIP100:B5:C;HEXACO:H:C:D;MPQ:MPQ:CO,3,IPIP100consc;IPIP50Consc;HEXACO_C;MPQco;HCDiligence,,1,6,1=Very Inaccurate;6=Very Accurate,4343,19336,0.81658854
+q_126,Am filled with doubts about things.,BFAS:BFAS:N:W;MPQ:MPQ:SR,2,BFASwithdraw;MPQsr,,1,6,1=Very Inaccurate;6=Very Accurate,2638,21041,0.88859327
+q_128,Am full of ideas.,IPIP100:B5:O;HEXACO:H:O:C,2,SPI_5intelOpen;IPIP100intel;IPIP50Intel;HEXACO_O;HOCreative,,1,6,1=Very Inaccurate;6=Very Accurate,4348,19331,0.81637738
+q_131,Am good at making impromptu speeches.,HEXACO:H:X:SB;MPQ:MPQ:SP;PS:PS:P,3,HEXACO_X;PSp;MPQsp;HXSocBold,,1,6,1=Very Inaccurate;6=Very Accurate,4285,19394,0.81903797
+q_132,Am good at many things.,IPIP100:B5:O,1,IPIP100intel,,1,6,1=Very Inaccurate;6=Very Accurate,4328,19351,0.81722201
+q_134,Am good at taking advice.,HEXACO:H:A:FL,1,HEXACO_A;HAFlex,,1,6,1=Very Inaccurate;6=Very Accurate,2565,21114,0.89167617
+q_139,Am hard to convince.,HEXACO:H:A:FL,1,HEXACO_A;HAFlex,HEXACO_A;HAFlex,1,6,1=Very Inaccurate;6=Very Accurate,2510,21169,0.8939989
+q_140,Am hard to get to know.,IPIP100:B5:A;BFAS:BFAS:E:E;HEXACO:H:X:S;MPQ:MPQ:SC;IPIPneo:E1:FR,5,IPIP100agree;BFASenthus;HEXACO_X;NEO_E;MPQsc;HXSociable;NEOe1,IPIP100agree;BFASenthus;HEXACO_X;NEO_E;MPQsc;HXSociable;NEOe1,1,6,1=Very Inaccurate;6=Very Accurate,2667,21012,0.88736855
+q_141,Am hard to reason with.,HEXACO:H:A:FL,1,HEXACO_A;HAFlex,HEXACO_A;HAFlex,1,6,1=Very Inaccurate;6=Very Accurate,2512,21167,0.89391444
+q_142,Am hard to satisfy.,HEXACO:H:A:FL,1,HEXACO_A;HAFlex,HEXACO_A;HAFlex,1,6,1=Very Inaccurate;6=Very Accurate,2625,21054,0.88914228
+q_145,Am inclined to forgive others.,HEXACO:H:A:FO;QB6:QB6:A,2,HEXACO_A;QB6agree;HAForgive,,1,6,1=Very Inaccurate;6=Very Accurate,2603,21076,0.89007137
+q_146,Am indifferent to the feelings of others.,IPIP100:B5:A;BFAS:BFAS:A:C;IPIPneo:A3:AL,3,SPI_3socCohesion;SPI_5compHonHum;IPIP100agree;BFAScomp;NEO_A;NEOa3,SPI_3socCohesion;SPI_5compHonHum;IPIP100agree;BFAScomp;NEO_A;NEOa3,1,6,1=Very Inaccurate;6=Very Accurate,3914,19765,0.83470586
+q_148,Interested in many things.,IPIPneo:O4:AD;PS:PS:P,2,NEO_O;PSp;NEOo4,,1,6,1=Very Inaccurate;6=Very Accurate,2522,21157,0.89349212
+q_150,Am interested in people.,IPIP100:B5:A,1,IPIP100agree;IPIP50Agree,,1,6,1=Very Inaccurate;6=Very Accurate,4003,19676,0.83094725
+q_151,Am interested in science.,HEXACO:H:O:I,1,HEXACO_O;HOInquisite,,1,6,1=Very Inaccurate;6=Very Accurate,4307,19372,0.81810887
+q_152,Am just an ordinary person.,HEXACO:H:H:M,1,HEXACO_H;HHModesty,,1,6,1=Very Inaccurate;6=Very Accurate,3604,20075,0.84779763
+q_154,Am likely to show off if I get the chance.,HEXACO:H:H:M,1,HEXACO_H;HHModesty,HEXACO_H;HHModesty,1,6,1=Very Inaccurate;6=Very Accurate,3531,20148,0.85088053
+q_156,Am mainly interested in money.,HEXACO:H:H:GA,1,HEXACO_H;HHGreedAvoid,HEXACO_H;HHGreedAvoid,1,6,1=Very Inaccurate;6=Very Accurate,3518,20161,0.85142954
+q_157,Am more capable than most others.,HEXACO:H:H:M,1,SPI_15intellect;HEXACO_H;HHModesty,HEXACO_H;HHModesty,1,6,1=Very Inaccurate;6=Very Accurate,3593,20086,0.84826217
+q_158,Am never at a loss for words.,HEXACO:H:X:E,1,HEXACO_X;HXExpress,,1,6,1=Very Inaccurate;6=Very Accurate,4195,19484,0.8228388
+q_159,Am nice to people I should be angry at.,HEXACO:H:A:FO,1,HEXACO_A;HAForgive,,1,6,1=Very Inaccurate;6=Very Accurate,4068,19611,0.8282022
+q_163,Am not always honest with myself.,MPQ:MPQ:UV,1,MPQuv,MPQuv,1,6,1=Very Inaccurate;6=Very Accurate,2508,21171,0.89408337
+q_164,Am not always what I appear to be.,MPQ:MPQ:UV,1,MPQuv,MPQuv,1,6,1=Very Inaccurate;6=Very Accurate,2457,21222,0.89623717
+q_168,Am not bothered by difficult social situations.,IPIPneo:N4:SC,1,NEO_N;NEOn4,NEO_N;NEOn4,1,6,1=Very Inaccurate;6=Very Accurate,2520,21159,0.89357659
+q_169,Am not bothered by disorder.,BFAS:BFAS:C:O;HEXACO:H:C:O;IPIPneo:C2:OR,3,BFASorder;HEXACO_C;NEO_C;HCOrgan;NEOc2,BFASorder;HEXACO_C;NEO_C;HCOrgan;NEOc2,1,6,1=Very Inaccurate;6=Very Accurate,4248,19431,0.82060053
+q_170,Am not bothered by messy people.,BFAS:BFAS:C:O;IPIPneo:C2:OR,2,BFASorder;NEO_C;NEOc2,BFASorder;NEO_C;NEOc2,1,6,1=Very Inaccurate;6=Very Accurate,4322,19357,0.8174754
+q_174,Am not easily affected by my emotions.,IPIPneo:O3:EM,1,NEO_O;NEOo3,NEO_O;NEOo3,1,6,1=Very Inaccurate;6=Very Accurate,2422,21257,0.89771528
+q_175,Am not easily amused.,IPIPneo:E6:CH,1,SPI_15seriousness;NEO_E;NEOe6,NEO_E;NEOe6,1,6,1=Very Inaccurate;6=Very Accurate,2401,21278,0.89860214
+q_176,Am not easily annoyed.,BFAS:BFAS:N:V;IPIPneo:N2:ANG,2,BFASvolatile;NEO_N;NEOn2,BFASvolatile;NEO_N;NEOn2,1,6,1=Very Inaccurate;6=Very Accurate,2581,21098,0.89100046
+q_177,Am not easily bothered by things.,IPIP100:B5:ES;MPQ:MPQ:SR;IPIPneo:N1:ANX,3,IPIP100stability;NEO_N;MPQsr;NEOn1,NEO_N;MPQsr;NEOn1,1,6,1=Very Inaccurate;6=Very Accurate,2535,21144,0.89294311
+q_179,Am not easily disturbed by events.,HEXACO:H:E:A;IPIPneo:N1:ANX,2,SPI_15fear;HEXACO_E;NEO_N;HEAnxiety;NEOn1,SPI_15fear;NEO_N;NEOn1,1,6,1=Very Inaccurate;6=Very Accurate,3245,20434,0.86295874
+q_184,Am not embarrassed easily.,BFAS:BFAS:N:W;IPIPneo:N4:SC,2,BFASwithdraw;NEO_N;NEOn4,BFASwithdraw;NEO_N;NEOn4,1,6,1=Very Inaccurate;6=Very Accurate,3327,20352,0.85949576
+q_185,Am not good at deceiving other people.,QB6:QB6:H,1,QB6honprop,,1,6,1=Very Inaccurate;6=Very Accurate,5952,17727,0.74863803
+q_191,Am not highly motivated to succeed.,MPQ:MPQ:AC;IPIPneo:C4:AS,2,NEO_C;MPQac;NEOc4,NEO_C;MPQac;NEOc4,1,6,1=Very Inaccurate;6=Very Accurate,2562,21117,0.89180286
+q_194,Am not interested in abstract ideas.,IPIP100:B5:O;IPIPneo:O5:IN,2,SPI_5intelOpen;SPI_15openness;IPIP100intel;IPIP50Intel;NEO_O;NEOo5,SPI_5intelOpen;SPI_15openness;IPIP100intel;IPIP50Intel;NEO_O;NEOo5,1,6,1=Very Inaccurate;6=Very Accurate,2796,20883,0.88192069
+q_195,Am not interested in other people's problems.,IPIP100:B5:A;BFAS:BFAS:A:C;IPIPneo:A6:SY,3,IPIP100agree;IPIP50Agree;BFAScomp;NEO_A;NEOa6,IPIP100agree;IPIP50Agree;BFAScomp;NEO_A;NEOa6,1,6,1=Very Inaccurate;6=Very Accurate,4041,19638,0.82934246
+q_197,Am not interested in theoretical discussions.,IPIPneo:O5:IN,1,NEO_O;NEOo5,NEO_O;NEOo5,1,6,1=Very Inaccurate;6=Very Accurate,2483,21196,0.89513915
+q_200,Am not really interested in others.,IPIP100:B5:A;IPIPneo:E1:FR,2,IPIP100agree;IPIP50Agree;NEO_E;NEOe1,IPIP100agree;IPIP50Agree;NEO_E;NEOe1,1,6,1=Very Inaccurate;6=Very Accurate,4121,19558,0.82596393
+q_201,Am not sure where my life is going.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2476,21203,0.89543477
+q_206,Am often down in the dumps.,IPIPneo:N3:DE,1,SPI_3emotionality;SPI_5neuroticism;SPI_15enthusiasm;NEO_N;NEOn3,SPI_15enthusiasm,1,6,1=Very Inaccurate;6=Very Accurate,2441,21238,0.89691288
+q_208,Am often in a bad mood.,MPQ:MPQ:WB;IPIPneo:N2:ANG,2,NEO_N;MPQwb;NEOn2,MPQwb,1,6,1=Very Inaccurate;6=Very Accurate,2445,21234,0.89674395
+q_217,Am on good terms with nearly everyone.,IPIP100:B5:A,1,IPIP100agree,,1,6,1=Very Inaccurate;6=Very Accurate,2605,21074,0.88998691
+q_219,Am open about my feelings.,MPQ:MPQ:SC,1,MPQsc,,1,6,1=Very Inaccurate;6=Very Accurate,2452,21227,0.89644833
+q_225,Am out for my own personal gain.,BFAS:BFAS:A:P;HEXACO:H:H:GA,2,SPI_3socCohesion;SPI_5compHonHum;BFASpolite;HEXACO_H;HHGreedAvoid,SPI_3socCohesion;SPI_5compHonHum;BFASpolite;HEXACO_H;HHGreedAvoid,1,6,1=Very Inaccurate;6=Very Accurate,3483,20196,0.85290764
+q_228,Am passionate about causes.,IPIPneo:O3:EM,1,NEO_O;NEOo3,,1,6,1=Very Inaccurate;6=Very Accurate,2501,21178,0.89437899
+q_238,Am quick to correct others.,QB6:QB6:A,1,QB6agree,QB6agree,1,6,1=Very Inaccurate;6=Very Accurate,2576,21103,0.89121162
+q_239,Am quick to judge others.,HEXACO:H:A:G,1,HEXACO_A;HAGentle,HEXACO_A;HAGentle,1,6,1=Very Inaccurate;6=Very Accurate,2570,21109,0.89146501
+q_240,Am quick to understand things.,IPIP100:B5:O;BFAS:BFAS:O:I,2,SPI_5intelOpen;SPI_15intellect;IPIP100intel;IPIP50Intel;BFASintel,,1,6,1=Very Inaccurate;6=Very Accurate,4228,19451,0.82144516
+q_241,Am quiet around strangers.,IPIP100:B5:E,1,IPIP100extra;IPIP50Extra,IPIP100extra;IPIP50Extra,1,6,1=Very Inaccurate;6=Very Accurate,2795,20884,0.88196292
+q_248,Am relaxed most of the time.,IPIP100:B5:ES;MPQ:MPQ:SR;IPIPneo:N1:ANX,3,IPIP100stability;IPIP50EmoSt;NEO_N;MPQsr;NEOn1,NEO_N;MPQsr;NEOn1,1,6,1=Very Inaccurate;6=Very Accurate,2633,21046,0.88880443
+q_251,Am seldom bothered ... suffering of strangers.,HEXACO:H:E:S,1,HEXACO_E;HESentiment,,1,6,1=Very Inaccurate;6=Very Accurate,3407,20272,0.85611723
+q_253,Am sensitive to the needs of others.,HEXACO:H:E:S,1,SPI_3socCohesion;SPI_5compHonHum;SPI_15compassion;HEXACO_E;HESentiment,HEXACO_E;HESentiment,1,6,1=Very Inaccurate;6=Very Accurate,3333,20346,0.85924237
+q_254,Am skilled in handling social situations.,IPIP100:B5:E;PS:PS:P,2,IPIP100extra;PSp,,1,6,1=Very Inaccurate;6=Very Accurate,2884,20795,0.87820432
+q_258,Am sure of my ground.,IPIPneo:C1:SE,1,NEO_C;NEOc1,,1,6,1=Very Inaccurate;6=Very Accurate,2423,21256,0.89767304
+q_260,Am the first to act.,BFAS:BFAS:E:A,1,BFASassert,,1,6,1=Very Inaccurate;6=Very Accurate,4383,19296,0.81489928
+q_262,Am the life of the party.,IPIP100:B5:E;HEXACO:H:X:E,2,IPIP100extra;IPIP50Extra;HEXACO_X;HXExpress,,1,6,1=Very Inaccurate;6=Very Accurate,2786,20893,0.882343
+q_278,Am usually a patient person.,HEXACO:H:A:P;QB6:QB6:A,2,HEXACO_A;QB6agree;HAPatient,,1,6,1=Very Inaccurate;6=Very Accurate,2596,21083,0.89036699
+q_279,Am usually active and full of energy.,HEXACO:H:X:L,1,HEXACO_X;HXLiveliness,,1,6,1=Very Inaccurate;6=Very Accurate,4439,19240,0.81253431
+q_285,Am very pleased with myself.,IPIPneo:N3:DE,1,SPI_15enthusiasm;NEO_N;NEOn3,NEO_N;NEOn3,1,6,1=Very Inaccurate;6=Very Accurate,2410,21269,0.89822205
+q_286,Am wary of others.,MPQ:MPQ:AL;IPIPneo:A1:TR,2,NEO_A;MPQal;NEOa1,NEO_A;NEOa1,1,6,1=Very Inaccurate;6=Very Accurate,2505,21174,0.89421006
+q_292,Am willing to take risks.,HEXACO:H:E:F,1,SPI_15boldness;HEXACO_E;HEFear,,1,6,1=Very Inaccurate;6=Very Accurate,3326,20353,0.85953799
+q_294,Am willing to try anything once.,MPQ:MPQ:HA;IPIPneo:E5:ES,2,NEO_E;MPQha;NEOe5,MPQha,1,6,1=Very Inaccurate;6=Very Accurate,2506,21173,0.89416783
+q_296,Amuse my friends.,IPIPneo:E6:CH,1,NEO_E;NEOe6,,1,6,1=Very Inaccurate;6=Very Accurate,2516,21163,0.89374551
+q_298,Anticipate the needs of others.,IPIPneo:A3:AL,1,NEO_A;NEOa3,,1,6,1=Very Inaccurate;6=Very Accurate,2508,21171,0.89408337
+q_312,Avoid company.,MPQ:MPQ:SC,1,MPQsc,MPQsc,1,6,1=Very Inaccurate;6=Very Accurate,2493,21186,0.89471684
+q_313,Avoid contacts with others.,MPQ:MPQ:SC;IPIPneo:E1:FR,2,NEO_E;MPQsc;NEOe1,NEO_E;MPQsc;NEOe1,1,6,1=Very Inaccurate;6=Very Accurate,2540,21139,0.89273196
+q_314,Avoid crowds.,IPIPneo:E2:GR,1,NEO_E;NEOe2,NEO_E;NEOe2,1,6,1=Very Inaccurate;6=Very Accurate,2427,21252,0.89750412
+q_315,Avoid dangerous situations.,MPQ:MPQ:HA,1,MPQha,,1,6,1=Very Inaccurate;6=Very Accurate,2426,21253,0.89754635
+q_316,Avoid difficult reading material.,IPIP100:B5:O;BFAS:BFAS:O:I;HEXACO:H:O:I;IPIPneo:O5:IN,4,IPIP100intel;BFASintel;HEXACO_O;NEO_O;HOInquisite;NEOo5,IPIP100intel;BFASintel;HEXACO_O;NEO_O;HOInquisite;NEOo5,1,6,1=Very Inaccurate;6=Very Accurate,4373,19306,0.81532159
+q_319,Avoid imposing my will on others.,BFAS:BFAS:A:P,1,BFASpolite,,1,6,1=Very Inaccurate;6=Very Accurate,2567,21112,0.89159171
+q_321,Avoid mistakes.,HEXACO:H:C:PR;IPIPneo:C6:CA,2,HEXACO_C;NEO_C;HCPrudence;NEOc6,,1,6,1=Very Inaccurate;6=Very Accurate,4331,19348,0.81709532
+q_322,Avoid philosophical discussions.,BFAS:BFAS:O:I;IPIPneo:O5:IN,2,BFASintel;NEO_O;NEOo5,BFASintel;NEO_O;NEOo5,1,6,1=Very Inaccurate;6=Very Accurate,2794,20885,0.88200515
+q_331,[A]ngry w people...don't live up to my expectations.,HEXACO:H:A:G;QB6:QB6:A,2,HEXACO_A;QB6agree;HAGentle,HEXACO_A;QB6agree;HAGentle,1,6,1=Very Inaccurate;6=Very Accurate,2587,21092,0.89074708
+q_332,Become overwhelmed by events.,BFAS:BFAS:N:W;IPIPneo:N6:VU,2,SPI_5neuroticism;SPI_15fear;BFASwithdraw;NEO_N;NEOn6,,1,6,1=Very Inaccurate;6=Very Accurate,2614,21065,0.88960682
+q_334,Begin to panic when there is danger.,HEXACO:H:E:F,1,SPI_15fear;HEXACO_E;HEFear,HEXACO_E;HEFear,1,6,1=Very Inaccurate;6=Very Accurate,3385,20294,0.85704633
+q_339,Believe in an eye for an eye.,IPIPneo:A6:SY,1,NEO_A;NEOa6,NEO_A;NEOa6,1,6,1=Very Inaccurate;6=Very Accurate,2459,21220,0.89615271
+q_343,Believe in human goodness.,IPIPneo:A1:TR,1,NEO_A;NEOa1,,1,6,1=Very Inaccurate;6=Very Accurate,2457,21222,0.89623717
+q_345,Believe in one true religion.,MPQ:MPQ:TR;IPIPneo:O6:LI,2,SPI_15seriousness;NEO_O;MPQtr;NEOo6,NEO_O;NEOo6,1,6,1=Very Inaccurate;6=Very Accurate,2445,21234,0.89674395
+q_348,Believe in the importance of art.,BFAS:BFAS:O:O;HEXACO:H:O:A;QB6:QB6:O;MPQ:MPQ:TR;IPIPneo:O2:AI,5,SPI_5intelOpen;SPI_15openness;BFASopen;HEXACO_O;QB6open;NEO_O;MPQtr;HOAesthetic;NEOo2,MPQtr,1,6,1=Very Inaccurate;6=Very Accurate,2791,20888,0.88213185
+q_359,Believe that criminals should receive help rather than punishment.,MPQ:MPQ:TR;IPIPneo:O6:LI,2,NEO_O;MPQtr;NEOo6,MPQtr,1,6,1=Very Inaccurate;6=Very Accurate,2413,21266,0.89809536
+q_364,Believe that I am better than others.,BFAS:BFAS:A:P;HEXACO:H:H:M;IPIPneo:A5:MO,3,SPI_3socCohesion;SPI_5compHonHum;BFASpolite;HEXACO_H;NEO_A;HHModesty;NEOa5,SPI_3socCohesion;SPI_5compHonHum;BFASpolite;HEXACO_H;NEO_A;HHModesty;NEOa5,1,6,1=Very Inaccurate;6=Very Accurate,3481,20198,0.8529921
+q_369,Believe laws should be strictly enforced.,MPQ:MPQ:TR;IPIPneo:O6:LI,2,NEO_O;MPQtr;NEOo6,NEO_O;NEOo6,1,6,1=Very Inaccurate;6=Very Accurate,2519,21160,0.89361882
+q_377,Believe that others have good intentions.,IPIPneo:A1:TR,1,SPI_15trust;NEO_A;NEOa1,,1,6,1=Very Inaccurate;6=Very Accurate,2481,21198,0.89522362
+q_379,Believe that people are basically moral.,IPIPneo:A1:TR,1,SPI_15trust;NEO_A;NEOa1,,1,6,1=Very Inaccurate;6=Very Accurate,2424,21255,0.89763081
+q_381,Believe that people are essentially evil.,IPIPneo:A1:TR,1,NEO_A;NEOa1,NEO_A;NEOa1,1,6,1=Very Inaccurate;6=Very Accurate,2436,21243,0.89712403
+q_383,Believe people should fend for themselves.,IPIPneo:A6:SY,1,NEO_A;NEOa6,NEO_A;NEOa6,1,6,1=Very Inaccurate;6=Very Accurate,2459,21220,0.89615271
+q_393,Believe there is never an excuse for lying.,MPQ:MPQ:UV,1,MPQuv,,1,6,1=Very Inaccurate;6=Very Accurate,2525,21154,0.89336543
+q_394,Believe that there is no absolute right and wrong.,MPQ:MPQ:TR;IPIPneo:O6:LI,2,NEO_O;MPQtr;NEOo6,MPQtr,1,6,1=Very Inaccurate;6=Very Accurate,2498,21181,0.89450568
+q_395,Believe that too much tax money goes to support artists.,IPIPneo:O6:LI,1,NEO_O;NEOo6,NEO_O;NEOo6,1,6,1=Very Inaccurate;6=Very Accurate,2353,21326,0.90062925
+q_397,Believe that we coddle criminals too much.,IPIPneo:O6:LI,1,NEO_O;NEOo6,NEO_O;NEOo6,1,6,1=Very Inaccurate;6=Very Accurate,2415,21264,0.8980109
+q_398,Believe that we should be tough on crime.,MPQ:MPQ:TR;IPIPneo:O6:LI,2,NEO_O;MPQtr;NEOo6,NEO_O;NEOo6,1,6,1=Very Inaccurate;6=Very Accurate,2374,21305,0.89974239
+q_401,Boast about my virtues.,HEXACO:H:H:M;IPIPneo:A5:MO,2,HEXACO_H;NEO_A;HHModesty;NEOa5,HEXACO_H;NEO_A;HHModesty;NEOa5,1,6,1=Very Inaccurate;6=Very Accurate,3440,20239,0.85472359
+q_403,Bottle up my feelings.,IPIP100:B5:E;HEXACO:H:X:E,2,IPIP100extra;HEXACO_X;HXExpress,IPIP100extra;HEXACO_X;HXExpress,1,6,1=Very Inaccurate;6=Very Accurate,2808,20871,0.88141391
+q_404,Break my promises.,IPIPneo:C3:DU,1,NEO_C;NEOc3,NEO_C;NEOc3,1,6,1=Very Inaccurate;6=Very Accurate,2467,21212,0.89581486
+q_405,Break rules.,IPIPneo:C3:DU,1,NEO_C;NEOc3,NEO_C;NEOc3,1,6,1=Very Inaccurate;6=Very Accurate,2488,21191,0.894928
+q_413,Can be stirred up easily.,BFAS:BFAS:N:V,1,SPI_3emotionality;SPI_5neuroticism;SPI_15volatility;BFASvolatile,,1,6,1=Very Inaccurate;6=Very Accurate,2606,21073,0.88994468
+q_422,Can handle a lot of information.,IPIP100:B5:O;BFAS:BFAS:O:I;IPIPneo:O5:IN,3,SPI_5intelOpen;SPI_15intellect;IPIP100intel;BFASintel;NEO_O;NEOo5,,1,6,1=Very Inaccurate;6=Very Accurate,4351,19328,0.81625069
+q_423,Can handle complex problems.,IPIPneo:N6:VU,1,SPI_5intelOpen;SPI_15intellect;NEO_N;NEOn6,NEO_N;NEOn6,1,6,1=Very Inaccurate;6=Very Accurate,2448,21231,0.89661726
+q_429,Can manage many things at the same time.,IPIPneo:E4:AL,1,NEO_E;NEOe4,,1,6,1=Very Inaccurate;6=Very Accurate,2450,21229,0.89653279
+q_438,Can say things beautifully.,PS:PS:P,1,PSp,,1,6,1=Very Inaccurate;6=Very Accurate,2446,21233,0.89670172
+q_455,Can talk others into doing things.,BFAS:BFAS:E:A;MPQ:MPQ:SP;IPIPneo:E3:AS,3,BFASassert;NEO_E;MPQsp;NEOe3,,1,6,1=Very Inaccurate;6=Very Accurate,4325,19354,0.81734871
+q_460,Can't be bothered with other's needs.,BFAS:BFAS:A:C,1,SPI_3socCohesion;SPI_5compHonHum;SPI_15compassion;BFAScomp,SPI_3socCohesion;SPI_5compHonHum;SPI_15compassion;BFAScomp,1,6,1=Very Inaccurate;6=Very Accurate,4037,19642,0.82951138
+q_463,Can't do without the company of others.,HEXACO:H:E:D,1,HEXACO_E;HEDepend,HEXACO_E;HEDepend,1,6,1=Very Inaccurate;6=Very Accurate,3263,20416,0.86219857
+q_469,Can't make up my mind.,IPIPneo:N6:VU,1,NEO_N;NEOn6,,1,6,1=Very Inaccurate;6=Very Accurate,2390,21289,0.89906668
+q_477,Can't stand being contradicted.,HEXACO:H:A:FL,1,HEXACO_A;HAFlex,HEXACO_A;HAFlex,1,6,1=Very Inaccurate;6=Very Accurate,2518,21161,0.89366105
+q_479,Can't stand confrontations.,IPIPneo:A4:CO,1,NEO_A;NEOa4,,1,6,1=Very Inaccurate;6=Very Accurate,2433,21246,0.89725073
+q_487,Can't stand weak people.,IPIPneo:A6:SY,1,NEO_A;NEOa6,NEO_A;NEOa6,1,6,1=Very Inaccurate;6=Very Accurate,2465,21214,0.89589932
+q_491,Carry out my plans.,BFAS:BFAS:C:I;IPIPneo:C5:SD,2,BFASindustry;NEO_C;NEOc5,,1,6,1=Very Inaccurate;6=Very Accurate,2728,20951,0.88479243
+q_492,Carry the conversation to a higher level.,IPIP100:B5:O;HEXACO:H:O:C;PS:PS:P,3,IPIP100intel;HEXACO_O;PSp;HOCreative,,1,6,1=Very Inaccurate;6=Very Accurate,4278,19401,0.81933359
+q_493,Catch on to things quickly.,IPIP100:B5:O,1,SPI_15intellect;IPIP100intel,,1,6,1=Very Inaccurate;6=Very Accurate,4400,19279,0.81418134
+q_497,Change my mood a lot.,IPIP100:B5:ES;BFAS:BFAS:N:V,2,IPIP100stability;IPIP50EmoSt;BFASvolatile,IPIP100stability;IPIP50EmoSt,1,6,1=Very Inaccurate;6=Very Accurate,2541,21138,0.89268973
+q_500,Cheat on people who have trusted me.,HEXACO:H:H:F,1,HEXACO_H;HHFairness,HEXACO_H;HHFairness,1,6,1=Very Inaccurate;6=Very Accurate,6018,17661,0.74585075
+q_501,Cheat to get ahead.,HEXACO:H:H:F;MPQ:MPQ:AG;IPIPneo:A2:MO,3,SPI_3socCohesion;SPI_15machiavell;HEXACO_H;NEO_A;MPQag;HHFairness;NEOa2,SPI_3socCohesion;HEXACO_H;NEO_A;HHFairness;NEOa2,1,6,1=Very Inaccurate;6=Very Accurate,6012,17667,0.74610414
+q_505,Cheer people up.,IPIPneo:E1:FR,1,NEO_E;NEOe1,,1,6,1=Very Inaccurate;6=Very Accurate,2412,21267,0.89813759
+q_507,Choose my words with care.,IPIPneo:C6:CA,1,NEO_C;NEOc6,,1,6,1=Very Inaccurate;6=Very Accurate,2507,21172,0.8941256
+q_515,Come up with good solutions.,IPIPneo:C1:SE,1,SPI_5intelOpen;SPI_15intellect;NEO_C;NEOc1,,1,6,1=Very Inaccurate;6=Very Accurate,2390,21289,0.89906668
+q_516,Come up with something new.,HEXACO:H:O:C,1,HEXACO_O;HOCreative,,1,6,1=Very Inaccurate;6=Very Accurate,4376,19303,0.8151949
+q_519,Complete my duties as soon as possible.,QB6:QB6:C,1,SPI_5conscientious;SPI_15industry;QB6consc,,1,6,1=Very Inaccurate;6=Very Accurate,2647,21032,0.88821318
+q_520,Complete tasks successfully.,HEXACO:H:C:D;IPIPneo:C1:SE,2,HEXACO_C;NEO_C;HCDiligence;NEOc1,,1,6,1=Very Inaccurate;6=Very Accurate,2656,21023,0.8878331
+q_525,Consider myself an average person.,HEXACO:H:H:M;IPIPneo:A5:MO,2,HEXACO_H;NEO_A;HHModesty;NEOa5,,1,6,1=Very Inaccurate;6=Very Accurate,3441,20238,0.85468136
+q_530,Continue until everything is perfect.,IPIP100:B5:C;HEXACO:H:C:PE;MPQ:MPQ:AC,3,IPIP100consc;HEXACO_C;MPQac;HCPerfect,,1,6,1=Very Inaccurate;6=Very Accurate,4335,19344,0.81692639
+q_531,Contradict others.,IPIPneo:A4:CO,1,NEO_A;NEOa4,NEO_A;NEOa4,1,6,1=Very Inaccurate;6=Very Accurate,2493,21186,0.89471684
+q_538,Criticize others' shortcomings.,HEXACO:H:A:G,1,HEXACO_A;HAGentle,HEXACO_A;HAGentle,1,6,1=Very Inaccurate;6=Very Accurate,2550,21129,0.89230964
+q_539,Cry during movies.,HEXACO:H:E:S,1,HEXACO_E;HESentiment,HEXACO_E;HESentiment,1,6,1=Very Inaccurate;6=Very Accurate,3312,20367,0.86012923
+q_549,Demand a lot from others.,QB6:QB6:ES,1,QB6resilient,QB6resilient,1,6,1=Very Inaccurate;6=Very Accurate,2631,21048,0.88888889
+q_554,Demand quality.,HEXACO:H:C:PE;IPIPneo:C4:AS,2,HEXACO_C;NEO_C;HCPerfect;NEOc4,,1,6,1=Very Inaccurate;6=Very Accurate,4406,19273,0.81392795
+q_559,Detect mistakes.,HEXACO:H:C:PE,1,HEXACO_C;HCPerfect,,1,6,1=Very Inaccurate;6=Very Accurate,4340,19339,0.81671523
+q_565,Dislike being the center of attention.,IPIPneo:A5:MO,1,NEO_A;NEOa5,,1,6,1=Very Inaccurate;6=Very Accurate,2449,21230,0.89657502
+q_566,Dislike changes.,IPIPneo:O4:AD,1,SPI_15habit;NEO_O;NEOo4,NEO_O;NEOo4,1,6,1=Very Inaccurate;6=Very Accurate,2568,21111,0.89154947
+q_571,Dislike imperfect work.,HEXACO:H:C:PE,1,HEXACO_C;HCPerfect,,1,6,1=Very Inaccurate;6=Very Accurate,4290,19389,0.81882681
+q_576,Dislike loud music.,IPIPneo:E5:ES,1,NEO_E;NEOe5,NEO_E;NEOe5,1,6,1=Very Inaccurate;6=Very Accurate,2526,21153,0.8933232
+q_578,Dislike myself.,MPQ:MPQ:AL;IPIPneo:N3:DE,2,SPI_15enthusiasm;NEO_N;MPQal;NEOn3,SPI_15enthusiasm,1,6,1=Very Inaccurate;6=Very Accurate,2451,21228,0.89649056
+q_581,Dislike new foods.,IPIPneo:O4:AD,1,NEO_O;NEOo4,NEO_O;NEOo4,1,6,1=Very Inaccurate;6=Very Accurate,2432,21247,0.89729296
+q_582,Dislike routine.,BFAS:BFAS:C:O,1,BFASorder,BFASorder,1,6,1=Very Inaccurate;6=Very Accurate,4406,19273,0.81392795
+q_586,Dislike talking about myself.,IPIPneo:A5:MO,1,NEO_A;NEOa5,,1,6,1=Very Inaccurate;6=Very Accurate,2424,21255,0.89763081
+q_594,Distrust people.,HEXACO:H:A:FO;MPQ:MPQ:AL;IPIPneo:A1:TR,3,SPI_15trust;HEXACO_A;NEO_A;MPQal;HAForgive;NEOa1,SPI_15trust;HEXACO_A;NEO_A;HAForgive;NEOa1,1,6,1=Very Inaccurate;6=Very Accurate,2643,21036,0.88838211
+q_595,Do a lot in my spare time.,IPIPneo:E4:AL,1,NEO_E;NEOe4,,1,6,1=Very Inaccurate;6=Very Accurate,2506,21173,0.89416783
+q_598,Do crazy things.,MPQ:MPQ:HA;IPIPneo:C6:CA,2,NEO_C;MPQha;NEOc6,NEO_C;MPQha;NEOc6,1,6,1=Very Inaccurate;6=Very Accurate,2428,21251,0.89746189
+q_599,Do dangerous things.,MPQ:MPQ:HA,1,MPQha,MPQha,1,6,1=Very Inaccurate;6=Very Accurate,2543,21136,0.89260526
+q_602,Do just enough work to get by.,HEXACO:H:C:D;MPQ:MPQ:AC;IPIPneo:C4:AS,3,HEXACO_C;NEO_C;MPQac;HCDiligence;NEOc4,HEXACO_C;NEO_C;MPQac;HCDiligence;NEOc4,1,6,1=Very Inaccurate;6=Very Accurate,2764,20915,0.8832721
+q_604,Do more than what's expected of me.,MPQ:MPQ:AC;IPIPneo:C4:AS,2,NEO_C;MPQac;NEOc4,,1,6,1=Very Inaccurate;6=Very Accurate,2416,21263,0.89796866
+q_607,Do not enjoy going to art museums.,IPIPneo:O2:AI,1,NEO_O;NEOo2,NEO_O;NEOo2,1,6,1=Very Inaccurate;6=Very Accurate,2446,21233,0.89670172
+q_608,Do not enjoy watching dance performances.,HEXACO:H:O:A;IPIPneo:O2:AI,2,HEXACO_O;NEO_O;HOAesthetic;NEOo2,HEXACO_O;NEO_O;HOAesthetic;NEOo2,1,6,1=Very Inaccurate;6=Very Accurate,2731,20948,0.88466574
+q_609,Do not have a good imagination.,IPIP100:B5:O;HEXACO:H:O:C;IPIPneo:O1:IM,3,IPIP100intel;IPIP50Intel;HEXACO_O;NEO_O;HOCreative;NEOo1,IPIP100intel;IPIP50Intel;HEXACO_O;NEO_O;HOCreative;NEOo1,1,6,1=Very Inaccurate;6=Very Accurate,2762,20917,0.88335656
+q_610,Do not like art.,HEXACO:H:O:A;MPQ:MPQ:AB;IPIPneo:O2:AI,3,HEXACO_O;NEO_O;MPQab;HOAesthetic;NEOo2,HEXACO_O;NEO_O;MPQab;HOAesthetic;NEOo2,1,6,1=Very Inaccurate;6=Very Accurate,2795,20884,0.88196292
+q_611,Do not like concerts.,HEXACO:H:O:A;IPIPneo:O2:AI,2,HEXACO_O;NEO_O;HOAesthetic;NEOo2,HEXACO_O;NEO_O;HOAesthetic;NEOo2,1,6,1=Very Inaccurate;6=Very Accurate,2788,20891,0.88225854
+q_612,Do not like poetry.,BFAS:BFAS:O:O;HEXACO:H:O:A;MPQ:MPQ:AB;IPIPneo:O2:AI,4,BFASopen;HEXACO_O;NEO_O;MPQab;HOAesthetic;NEOo2,BFASopen;HEXACO_O;NEO_O;MPQab;HOAesthetic;NEOo2,1,6,1=Very Inaccurate;6=Very Accurate,2747,20932,0.88399003
+q_618,Do the opposite of what is asked.,IPIPneo:C3:DU,1,NEO_C;NEOc3,NEO_C;NEOc3,1,6,1=Very Inaccurate;6=Very Accurate,2453,21226,0.8964061
+q_619,Do things according to a plan.,IPIP100:B5:C;HEXACO:H:C:PR;IPIPneo:C2:OR,3,SPI_5conscientious;IPIP100consc;HEXACO_C;NEO_C;HCPrudence;NEOc2,,1,6,1=Very Inaccurate;6=Very Accurate,4298,19381,0.81848896
+q_623,Do things by the book.,MPQ:MPQ:CO,1,SPI_5conscientious;SPI_15habit;MPQco,,1,6,1=Very Inaccurate;6=Very Accurate,2395,21284,0.89885553
+q_626,Do things in a half-way manner.,IPIP100:B5:C,1,IPIP100consc,IPIP100consc,1,6,1=Very Inaccurate;6=Very Accurate,2806,20873,0.88149837
+q_630,Do things out of revenge.,MPQ:MPQ:AG,1,MPQag,,1,6,1=Very Inaccurate;6=Very Accurate,2487,21192,0.89497023
+q_632,Do things I later regret.,IPIPneo:N5:IM,1,NEO_N;NEOn5,,1,6,1=Very Inaccurate;6=Very Accurate,2447,21232,0.89665949
+q_634,Do things that others find strange.,HEXACO:H:O:U,1,HEXACO_O;HOUnconvention,,1,6,1=Very Inaccurate;6=Very Accurate,2825,20854,0.88069598
+q_636,Do things without thinking of the consequences.,HEXACO:H:C:PR,1,SPI_15impulsivity;HEXACO_C;HCPrudence,HEXACO_C;HCPrudence,1,6,1=Very Inaccurate;6=Very Accurate,2732,20947,0.88462351
+q_637,Do too little work.,HEXACO:H:C:D;MPQ:MPQ:AC,2,SPI_5conscientious;HEXACO_C;MPQac;HCDiligence,SPI_5conscientious;HEXACO_C;MPQac;HCDiligence,1,6,1=Very Inaccurate;6=Very Accurate,2733,20946,0.88458127
+q_646,Don't always practice what I preach.,MPQ:MPQ:UV,1,MPQuv,MPQuv,1,6,1=Very Inaccurate;6=Very Accurate,2498,21181,0.89450568
+q_651,Don't [worry about] political and social problems.,HEXACO:H:O:I,1,HEXACO_O;HOInquisite,HEXACO_O;HOInquisite,1,6,1=Very Inaccurate;6=Very Accurate,2787,20892,0.88230077
+q_660,Don't consider myself religious.,MPQ:MPQ:TR,1,MPQtr,MPQtr,1,6,1=Very Inaccurate;6=Very Accurate,2553,21126,0.89218295
+q_665,Don't finish the things that I start.,HEXACO:H:C:O,1,HEXACO_C;HCOrgan,HEXACO_C;HCOrgan,1,6,1=Very Inaccurate;6=Very Accurate,2725,20954,0.88491913
+q_668,Don't have a soft side.,BFAS:BFAS:A:C,1,BFAScomp,BFAScomp,1,6,1=Very Inaccurate;6=Very Accurate,4023,19656,0.83010262
+q_670,Don't know much about history.,HEXACO:H:O:I,1,HEXACO_O;HOInquisite,HEXACO_O;HOInquisite,1,6,1=Very Inaccurate;6=Very Accurate,2762,20917,0.88335656
+q_673,Don't know why I do some of the things I do.,HEXACO:H:C:PR;IPIPneo:N5:IM,2,HEXACO_C;NEO_N;HCPrudence;NEOn5,HEXACO_C;HCPrudence,1,6,1=Very Inaccurate;6=Very Accurate,2711,20968,0.88551037
+q_684,Don't like crowded events.,IPIPneo:E2:GR,1,NEO_E;NEOe2,NEO_E;NEOe2,1,6,1=Very Inaccurate;6=Very Accurate,2439,21240,0.89699734
+q_689,Don't like the idea of change.,IPIPneo:O4:AD,1,SPI_15habit;NEO_O;NEOo4,NEO_O;NEOo4,1,6,1=Very Inaccurate;6=Very Accurate,2470,21209,0.89568816
+q_690,Don't like to draw attention to myself.,IPIP100:B5:E;HEXACO:H:X:E;MPQ:MPQ:SP;IPIPneo:E3:AS,4,IPIP100extra;IPIP50Extra;HEXACO_X;NEO_E;MPQsp;HXExpress;NEOe3,IPIP100extra;IPIP50Extra;HEXACO_X;NEO_E;MPQsp;HXExpress;NEOe3,1,6,1=Very Inaccurate;6=Very Accurate,2792,20887,0.88208962
+q_698,Don't mind being the center of attention.,IPIP100:B5:E;HEXACO:H:X:SB;PS:PS:P,3,IPIP100extra;IPIP50Extra;HEXACO_X;PSp;HXSocBold,,1,6,1=Very Inaccurate;6=Very Accurate,4369,19310,0.81549052
+q_704,Don't pretend to be more than I am.,HEXACO:H:H:S,1,HEXACO_H;HHSincere,,1,6,1=Very Inaccurate;6=Very Accurate,3657,20022,0.84555936
+q_706,Don't put my mind on the task at hand.,BFAS:BFAS:C:I,1,BFASindustry,BFASindustry,1,6,1=Very Inaccurate;6=Very Accurate,2646,21033,0.88825542
+q_708,Don't see the consequences of things.,IPIPneo:C1:SE,1,SPI_15impulsivity;NEO_C;NEOc1,NEO_C;NEOc1,1,6,1=Very Inaccurate;6=Very Accurate,2412,21267,0.89813759
+q_711,Don't strive for elegance in my appearance.,HEXACO:H:H:GA,1,HEXACO_H;HHGreedAvoid,,1,6,1=Very Inaccurate;6=Very Accurate,3533,20146,0.85079606
+q_712,Don't talk a lot.,IPIP100:B5:E;HEXACO:H:X:E,2,SPI_3sociability;SPI_5extraversion;SPI_15sociability;IPIP100extra;IPIP50Extra;HEXACO_X;HXExpress,SPI_3sociability;SPI_5extraversion;SPI_15sociability;IPIP100extra;IPIP50Extra;HEXACO_X;HXExpress,1,6,1=Very Inaccurate;6=Very Accurate,2852,20827,0.87955572
+q_716,Don't think that I'm better than other people.,HEXACO:H:H:M,1,HEXACO_H;HHModesty,,1,6,1=Very Inaccurate;6=Very Accurate,3520,20159,0.85134507
+q_721,Don't understand people who get emotional.,HEXACO:H:E:S;IPIPneo:O3:EM,2,HEXACO_E;NEO_O;HESentiment;NEOo3,NEO_O;NEOo3,1,6,1=Very Inaccurate;6=Very Accurate,3352,20327,0.85843997
+q_722,Don't understand things.,IPIPneo:C1:SE,1,NEO_C;NEOc1,NEO_C;NEOc1,1,6,1=Very Inaccurate;6=Very Accurate,2442,21237,0.89687064
+q_727,Don't worry about things that have already happened.,HEXACO:H:E:A;MPQ:MPQ:SR;IPIPneo:N1:ANX,3,HEXACO_E;NEO_N;MPQsr;HEAnxiety;NEOn1,NEO_N;MPQsr;NEOn1,1,6,1=Very Inaccurate;6=Very Accurate,2540,21139,0.89273196
+q_736,Easily resist temptations.,IPIPneo:N5:IM,1,NEO_N;NEOn5,NEO_N;NEOn5,1,6,1=Very Inaccurate;6=Very Accurate,2454,21225,0.89636387
+q_740,Engage in discussions.,PS:PS:P,1,PSp,,1,6,1=Very Inaccurate;6=Very Accurate,2480,21199,0.89526585
+q_744,Enjoy being part of a group.,HEXACO:H:X:S;MPQ:MPQ:SC;IPIPneo:E2:GR,3,HEXACO_X;NEO_E;MPQsc;HXSociable;NEOe2,,1,6,1=Very Inaccurate;6=Very Accurate,2740,20939,0.88428565
+q_745,Enjoy being part of a loud crowd.,IPIPneo:E5:ES,1,NEO_E;NEOe5,,1,6,1=Very Inaccurate;6=Very Accurate,2537,21142,0.89285865
+q_746,Enjoy being reckless.,MPQ:MPQ:HA;IPIPneo:E5:ES,2,NEO_E;MPQha;NEOe5,MPQha,1,6,1=Very Inaccurate;6=Very Accurate,2442,21237,0.89687064
+q_747,"Enjoy being thought of as a normal ""mainstream"" person.",HEXACO:H:O:U,1,HEXACO_O;HOUnconvention,HEXACO_O;HOUnconvention,1,6,1=Very Inaccurate;6=Very Accurate,2709,20970,0.88559483
+q_755,Enjoy examining myself and my life.,IPIPneo:O3:EM,1,NEO_O;NEOo3,,1,6,1=Very Inaccurate;6=Very Accurate,2545,21134,0.8925208
+q_757,"Enjoy feeling ""close to the earth.""",HEXACO:H:O:A,1,HEXACO_O;HOAesthetic,,1,6,1=Very Inaccurate;6=Very Accurate,2714,20965,0.88538367
+q_761,Enjoy intellectual games.,HEXACO:H:O:I,1,HEXACO_O;HOInquisite,,1,6,1=Very Inaccurate;6=Very Accurate,4354,19325,0.81612399
+q_776,Enjoy the beauty of nature.,BFAS:BFAS:O:O;IPIPneo:O2:AI,2,BFASopen;NEO_O;NEOo2,,1,6,1=Very Inaccurate;6=Very Accurate,2673,21006,0.88711517
+q_778,Enjoy thinking about things.,IPIPneo:O5:IN,1,SPI_5intelOpen;SPI_15openness;NEO_O;NEOo5,,1,6,1=Very Inaccurate;6=Very Accurate,2405,21274,0.89843321
+q_780,Enjoy wild flights of fantasy.,MPQ:MPQ:AB;IPIPneo:O1:IM,2,NEO_O;MPQab;NEOo1,,1,6,1=Very Inaccurate;6=Very Accurate,2495,21184,0.89463237
+q_786,Excel in what I do.,MPQ:MPQ:AC;IPIPneo:C1:SE,2,NEO_C;MPQac;NEOc1,,1,6,1=Very Inaccurate;6=Very Accurate,2459,21220,0.89615271
+q_793,Experience my emotions intensely.,IPIPneo:O3:EM,1,NEO_O;NEOo3,,1,6,1=Very Inaccurate;6=Very Accurate,2438,21241,0.89703957
+q_797,Experience very few emotional highs and lows.,IPIPneo:O3:EM,1,NEO_O;NEOo3,NEO_O;NEOo3,1,6,1=Very Inaccurate;6=Very Accurate,2481,21198,0.89522362
+q_799,Express childlike joy.,IPIPneo:E6:CH,1,NEO_E;NEOe6,,1,6,1=Very Inaccurate;6=Very Accurate,2431,21248,0.89733519
+q_803,Express myself easily.,PS:PS:P,1,PSp,,1,6,1=Very Inaccurate;6=Very Accurate,2450,21229,0.89653279
+q_804,Face danger confidently.,HEXACO:H:E:F,1,HEXACO_E;HEFear,,1,6,1=Very Inaccurate;6=Very Accurate,3368,20311,0.85776426
+q_808,Fear for the worst.,IPIPneo:N1:ANX,1,NEO_N;NEOn1,,1,6,1=Very Inaccurate;6=Very Accurate,2433,21246,0.89725073
+q_811,Feel a sense of worthlessness or hopelessness.,QB6:QB6:ES,1,SPI_3emotionality;SPI_15enthusiasm;QB6resilient,SPI_15enthusiasm;QB6resilient,1,6,1=Very Inaccurate;6=Very Accurate,2614,21065,0.88960682
+q_815,Feel at ease with people.,IPIP100:B5:E,1,IPIP100extra,,1,6,1=Very Inaccurate;6=Very Accurate,2800,20879,0.88175176
+q_816,Feel attacked by others.,MPQ:MPQ:AL,1,MPQal,,1,6,1=Very Inaccurate;6=Very Accurate,2393,21286,0.89893999
+q_819,Feel comfortable around people.,IPIP100:B5:E;HEXACO:H:X:SB;IPIPneo:E1:FR,3,IPIP100extra;IPIP50Extra;HEXACO_X;NEO_E;HXSocBold;NEOe1,,1,6,1=Very Inaccurate;6=Very Accurate,2769,20910,0.88306094
+q_820,Feel comfortable with myself.,BFAS:BFAS:N:W;MPQ:MPQ:SR;IPIPneo:N3:DE,3,BFASwithdraw;NEO_N;MPQsr;NEOn3,BFASwithdraw;NEO_N;MPQsr;NEOn3,1,6,1=Very Inaccurate;6=Very Accurate,2574,21105,0.89129609
+q_824,Feel desperate.,IPIPneo:N3:DE;PS:PS:S,2,NEO_N;PSs;NEOn3,,1,6,1=Very Inaccurate;6=Very Accurate,2495,21184,0.89463237
+q_832,Feel healthy and vibrant most of the time.,HEXACO:H:X:L,1,HEXACO_X;HXLiveliness,,1,6,1=Very Inaccurate;6=Very Accurate,4316,19363,0.81772879
+q_838,Feel little concern for others.,IPIP100:B5:A,1,IPIP100agree;IPIP50Agree,IPIP100agree;IPIP50Agree,1,6,1=Very Inaccurate;6=Very Accurate,4157,19522,0.8244436
+q_839,Feel lucky most of the time.,MPQ:MPQ:WB,1,MPQwb,,1,6,1=Very Inaccurate;6=Very Accurate,2463,21216,0.89598378
+q_844,Feel others' emotions.,IPIP100:B5:A;BFAS:BFAS:A:C;HEXACO:H:E:S;IPIPneo:O3:EM,4,SPI_5compHonHum;SPI_15compassion;IPIP100agree;IPIP50Agree;BFAScomp;HEXACO_E;NEO_O;HESentiment;NEOo3,,1,6,1=Very Inaccurate;6=Very Accurate,4095,19584,0.82706195
+q_848,Feel short-changed in life.,MPQ:MPQ:AL,1,MPQal,,1,6,1=Very Inaccurate;6=Very Accurate,2327,21352,0.90172727
+q_851,Feel sympathy for those who are worse off than myself.,IPIPneo:A6:SY,1,SPI_3socCohesion;SPI_5compHonHum;SPI_15compassion;NEO_A;NEOa6,,1,6,1=Very Inaccurate;6=Very Accurate,2491,21188,0.8948013
+q_861,Feel that I have a lot of inner strength.,HEXACO:H:X:L,1,HEXACO_X;HXLiveliness,,1,6,1=Very Inaccurate;6=Very Accurate,4354,19325,0.81612399
+q_867,Feel that I'm unable to deal with things.,IPIPneo:N6:VU,1,NEO_N;NEOn6,,1,6,1=Very Inaccurate;6=Very Accurate,2534,21145,0.89298535
+q_871,Feel that most people can't be trusted.,HEXACO:H:A:FO,1,SPI_5compHonHum;SPI_15trust;HEXACO_A;HAForgive,SPI_5compHonHum;SPI_15trust;HEXACO_A;HAForgive,1,6,1=Very Inaccurate;6=Very Accurate,2612,21067,0.88969129
+q_875,Feel that my life lacks direction.,MPQ:MPQ:WB;IPIPneo:N3:DE;PS:PS:S,3,NEO_N;PSs;MPQwb;NEOn3,MPQwb,1,6,1=Very Inaccurate;6=Very Accurate,2428,21251,0.89746189
+q_878,Feel that others misunderstand me.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2476,21203,0.89543477
+q_880,Feel that people are against me.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2521,21158,0.89353436
+q_882,Feel that people have a hard time understanding me.,MPQ:MPQ:AL;PS:PS:S,2,PSs;MPQal,,1,6,1=Very Inaccurate;6=Very Accurate,2460,21219,0.89611048
+q_890,Feel threatened easily.,IPIP100:B5:ES;BFAS:BFAS:N:W,2,IPIP100stability;BFASwithdraw,IPIP100stability,1,6,1=Very Inaccurate;6=Very Accurate,2609,21070,0.88981798
+q_898,Find fault with everything.,HEXACO:H:A:G,1,HEXACO_A;HAGentle,HEXACO_A;HAGentle,1,6,1=Very Inaccurate;6=Very Accurate,2536,21143,0.89290088
+q_901,Find it difficult to approach others.,IPIP100:B5:E;HEXACO:H:X:SB;IPIPneo:N4:SC,3,IPIP100extra;HEXACO_X;NEO_N;HXSocBold;NEOn4,IPIP100extra;HEXACO_X;HXSocBold,1,6,1=Very Inaccurate;6=Very Accurate,2752,20927,0.88377888
+q_904,Find it difficult to get down to work.,IPIP100:B5:C;BFAS:BFAS:C:I;IPIPneo:C5:SD,3,SPI_3emotionality;SPI_5conscientious;SPI_15industry;IPIP100consc;BFASindustry;NEO_C;NEOc5,SPI_5conscientious;SPI_15industry;IPIP100consc;BFASindustry;NEO_C;NEOc5,1,6,1=Very Inaccurate;6=Very Accurate,2765,20914,0.88322987
+q_905,Find it difficult to manipulate others.,MPQ:MPQ:SP,1,MPQsp,MPQsp,1,6,1=Very Inaccurate;6=Very Accurate,2428,21251,0.89746189
+q_915,Find it hard to forgive others.,HEXACO:H:A:FO,1,HEXACO_A;HAForgive,HEXACO_A;HAForgive,1,6,1=Very Inaccurate;6=Very Accurate,2525,21154,0.89336543
+q_917,Find it necessary to please the people who have power.,HEXACO:H:H:S,1,HEXACO_H;HHSincere,,1,6,1=Very Inaccurate;6=Very Accurate,3551,20128,0.8500359
+q_919,Find life difficult.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2413,21266,0.89809536
+q_920,"Find myself in the same kinds of trouble, time after time.",PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2441,21238,0.89691288
+q_923,Find political discussions interesting.,HEXACO:H:O:I,1,HEXACO_O;HOInquisite,,1,6,1=Very Inaccurate;6=Very Accurate,4355,19324,0.81608176
+q_926,...[T]akes a lot to make me feel angry at someone.,HEXACO:H:A:P,1,SPI_15volatility;HEXACO_A;HAPatient,SPI_15volatility,1,6,1=Very Inaccurate;6=Very Accurate,2563,21116,0.89176063
+q_930,Finish what I start.,BFAS:BFAS:C:I,1,BFASindustry,,1,6,1=Very Inaccurate;6=Very Accurate,2695,20984,0.88618607
+q_931,Follow a schedule.,IPIP100:B5:C;BFAS:BFAS:C:O,2,IPIP100consc;IPIP50Consc;BFASorder,,1,6,1=Very Inaccurate;6=Very Accurate,4211,19468,0.8221631
+q_946,Formulate ideas clearly.,BFAS:BFAS:O:I,1,BFASintel,,1,6,1=Very Inaccurate;6=Very Accurate,4436,19243,0.81266101
+q_952,Get angry easily.,IPIP100:B5:ES;BFAS:BFAS:N:V;HEXACO:H:A:P;QB6:QB6:A;IPIPneo:N2:ANG,5,SPI_15volatility;IPIP100stability;BFASvolatile;HEXACO_A;QB6agree;NEO_N;HAPatient;NEOn2,IPIP100stability;HEXACO_A;QB6agree;HAPatient,1,6,1=Very Inaccurate;6=Very Accurate,2532,21147,0.89306981
+q_957,Get back at others.,MPQ:MPQ:AG;IPIPneo:A4:CO,2,NEO_A;MPQag;NEOa4,NEO_A;NEOa4,1,6,1=Very Inaccurate;6=Very Accurate,2369,21310,0.89995355
+q_958,Get back at people who insult me.,HEXACO:H:A:FO;QB6:QB6:A,2,HEXACO_A;QB6agree;HAForgive,HEXACO_A;QB6agree;HAForgive,1,6,1=Very Inaccurate;6=Very Accurate,2571,21108,0.89142278
+q_960,Get caught up in my problems.,IPIP100:B5:ES;IPIPneo:N1:ANX,2,SPI_3emotionality;SPI_5neuroticism;IPIP100stability;NEO_N;NEOn1,IPIP100stability,1,6,1=Very Inaccurate;6=Very Accurate,2637,21042,0.8886355
+q_962,Get chores done right away.,IPIP100:B5:C;HEXACO:H:C:O;IPIPneo:C5:SD,3,SPI_5conscientious;SPI_15industry;IPIP100consc;IPIP50Consc;HEXACO_C;NEO_C;HCOrgan;NEOc5,,1,6,1=Very Inaccurate;6=Very Accurate,2749,20930,0.88390557
+q_964,Get deeply immersed in music.,BFAS:BFAS:O:O;HEXACO:H:O:A,2,BFASopen;HEXACO_O;HOAesthetic,,1,6,1=Very Inaccurate;6=Very Accurate,2720,20959,0.88513028
+q_965,Get easily agitated.,BFAS:BFAS:N:V,1,SPI_3emotionality;SPI_5neuroticism;SPI_15volatility;BFASvolatile,,1,6,1=Very Inaccurate;6=Very Accurate,2640,21039,0.88850881
+q_966,Get even with others.,HEXACO:H:A:FO,1,HEXACO_A;HAForgive,HEXACO_A;HAForgive,1,6,1=Very Inaccurate;6=Very Accurate,2605,21074,0.88998691
+q_974,Get irritated easily.,IPIP100:B5:ES;HEXACO:H:A:P;IPIPneo:N2:ANG,3,SPI_3emotionality;SPI_5neuroticism;SPI_15volatility;IPIP100stability;IPIP50EmoSt;HEXACO_A;NEO_N;HAPatient;NEOn2,IPIP100stability;IPIP50EmoSt;HEXACO_A;HAPatient,1,6,1=Very Inaccurate;6=Very Accurate,2535,21144,0.89294311
+q_977,Get others to do my duties.,IPIPneo:C3:DU,1,NEO_C;NEOc3,NEO_C;NEOc3,1,6,1=Very Inaccurate;6=Very Accurate,2478,21201,0.89535031
+q_978,Get out of control.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2445,21234,0.89674395
+q_979,Get overwhelmed by emotions.,IPIP100:B5:ES;IPIPneo:N6:VU,2,SPI_3emotionality;SPI_5neuroticism;IPIP100stability;NEO_N;NEOn6,IPIP100stability,1,6,1=Very Inaccurate;6=Very Accurate,2551,21128,0.89226741
+q_985,Get started quickly on doing a job.,HEXACO:H:C:D,1,HEXACO_C;HCDiligence,,1,6,1=Very Inaccurate;6=Very Accurate,2675,21004,0.8870307
+q_986,Get stressed out easily.,IPIP100:B5:ES;HEXACO:H:E:A;MPQ:MPQ:SR;IPIPneo:N1:ANX,4,IPIP100stability;IPIP50EmoSt;HEXACO_E;NEO_N;MPQsr;HEAnxiety;NEOn1,IPIP100stability;IPIP50EmoSt;HEXACO_E;HEAnxiety,1,6,1=Very Inaccurate;6=Very Accurate,2627,21052,0.88905781
+q_988,Get things done quickly.,BFAS:BFAS:C:I,1,BFASindustry,,1,6,1=Very Inaccurate;6=Very Accurate,2746,20933,0.88403226
+q_992,Get to work at once.,IPIPneo:C5:SD,1,SPI_5conscientious;SPI_15industry;NEO_C;NEOc5,,1,6,1=Very Inaccurate;6=Very Accurate,2458,21221,0.89619494
+q_994,Get upset by unpleasant thoughts that come into my mind.,HEXACO:H:E:A,1,HEXACO_E;HEAnxiety,HEXACO_E;HEAnxiety,1,6,1=Very Inaccurate;6=Very Accurate,2607,21072,0.88990245
+q_995,Get upset easily.,IPIP100:B5:ES;BFAS:BFAS:N:V;HEXACO:H:A:P;IPIPneo:N2:ANG,4,SPI_3emotionality;SPI_5neuroticism;IPIP100stability;IPIP50EmoSt;BFASvolatile;HEXACO_A;NEO_N;HAPatient;NEOn2,IPIP100stability;IPIP50EmoSt;HEXACO_A;HAPatient,1,6,1=Very Inaccurate;6=Very Accurate,2503,21176,0.89429452
+q_997,[Get upset if others change way I arranged things].,HEXACO:H:A:FL,1,HEXACO_A;HAFlex,HEXACO_A;HAFlex,1,6,1=Very Inaccurate;6=Very Accurate,2476,21203,0.89543477
+q_1009,Go on binges.,IPIPneo:N5:IM,1,NEO_N;NEOn5,,1,6,1=Very Inaccurate;6=Very Accurate,2409,21270,0.89826428
+q_1012,Go straight for the goal.,IPIPneo:C4:AS,1,NEO_C;NEOc4,,1,6,1=Very Inaccurate;6=Very Accurate,2443,21236,0.89682841
+q_1020,Grumble about things.,IPIP100:B5:ES;PS:PS:S,2,IPIP100stability;PSs,IPIP100stability;PSs,1,6,1=Very Inaccurate;6=Very Accurate,2660,21019,0.88766418
+q_1022,Habitually blow my chances.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2390,21289,0.89906668
+q_1023,Handle tasks smoothly.,IPIPneo:C1:SE,1,NEO_C;NEOc1,,1,6,1=Very Inaccurate;6=Very Accurate,2508,21171,0.89408337
+q_1024,Hang around doing nothing.,HEXACO:H:C:D,1,HEXACO_C;HCDiligence,HEXACO_C;HCDiligence,1,6,1=Very Inaccurate;6=Very Accurate,2735,20944,0.88449681
+q_1027,Hate being the center of attention.,HEXACO:H:X:SB,1,HEXACO_X;HXSocBold,HEXACO_X;HXSocBold,1,6,1=Very Inaccurate;6=Very Accurate,2827,20852,0.88061151
+q_1031,Hate to seem pushy.,BFAS:BFAS:A:P;IPIPneo:A4:CO,2,BFASpolite;NEO_A;NEOa4,,1,6,1=Very Inaccurate;6=Very Accurate,4009,19670,0.83069386
+q_1033,Hate waiting for anything.,QB6:QB6:A,1,QB6agree,QB6agree,1,6,1=Very Inaccurate;6=Very Accurate,2627,21052,0.88905781
+q_1038,Have a dark outlook on the future.,MPQ:MPQ:WB;PS:PS:S,2,SPI_15enthusiasm;PSs;MPQwb,SPI_15enthusiasm;PSs;MPQwb,1,6,1=Very Inaccurate;6=Very Accurate,2466,21213,0.89585709
+q_1041,Have a good word for everyone.,IPIP100:B5:A;HEXACO:H:A:G;IPIPneo:A3:AL,3,IPIP100agree;HEXACO_A;NEO_A;HAGentle;NEOa3,,1,6,1=Very Inaccurate;6=Very Accurate,3959,19720,0.83280544
+q_1042,Have a high opinion of myself.,IPIPneo:A5:MO,1,NEO_A;NEOa5,NEO_A;NEOa5,1,6,1=Very Inaccurate;6=Very Accurate,2449,21230,0.89657502
+q_1043,Have a lot of fun.,BFAS:BFAS:E:E;HEXACO:H:X:L;MPQ:MPQ:WB;IPIPneo:E6:CH,4,BFASenthus;HEXACO_X;NEO_E;MPQwb;HXLiveliness;NEOe6,,1,6,1=Very Inaccurate;6=Very Accurate,2721,20958,0.88508805
+q_1044,Have a low opinion of myself.,MPQ:MPQ:WB;IPIPneo:N3:DE,2,SPI_3emotionality;SPI_15enthusiasm;NEO_N;MPQwb;NEOn3,SPI_15enthusiasm;MPQwb,1,6,1=Very Inaccurate;6=Very Accurate,2457,21222,0.89623717
+q_1045,Have a natural talent for influencing people.,MPQ:MPQ:SP;PS:PS:P,2,PSp;MPQsp,,1,6,1=Very Inaccurate;6=Very Accurate,2553,21126,0.89218295
+q_1050,Have a rich vocabulary.,IPIP100:B5:O;BFAS:BFAS:O:I;HEXACO:H:O:I;QB6:QB6:O;IPIPneo:O5:IN,5,SPI_5intelOpen;IPIP100intel;IPIP50Intel;BFASintel;HEXACO_O;QB6open;NEO_O;HOInquisite;NEOo5,,1,6,1=Very Inaccurate;6=Very Accurate,4466,19213,0.81139406
+q_1051,Have a sharp tongue.,HEXACO:H:A:G;MPQ:MPQ:AG;IPIPneo:A4:CO,3,HEXACO_A;NEO_A;MPQag;HAGentle;NEOa4,HEXACO_A;NEO_A;HAGentle;NEOa4,1,6,1=Very Inaccurate;6=Very Accurate,2551,21128,0.89226741
+q_1052,Have a slow pace to my life.,MPQ:MPQ:AC,1,MPQac,MPQac,1,6,1=Very Inaccurate;6=Very Accurate,2443,21236,0.89682841
+q_1053,Have a soft heart.,IPIP100:B5:A,1,SPI_3socCohesion;SPI_5compHonHum;SPI_15compassion;IPIP100agree;IPIP50Agree,,1,6,1=Very Inaccurate;6=Very Accurate,4080,19599,0.82769543
+q_1054,Have a strong need for power.,HEXACO:H:H:GA,1,HEXACO_H;HHGreedAvoid,HEXACO_H;HHGreedAvoid,1,6,1=Very Inaccurate;6=Very Accurate,3558,20121,0.84974028
+q_1055,Have a strong personality.,BFAS:BFAS:E:A;HEXACO:H:X:SB;PS:PS:P,3,BFASassert;HEXACO_X;PSp;HXSocBold,,1,6,1=Very Inaccurate;6=Very Accurate,4374,19305,0.81527936
+q_1058,Have a vivid imagination.,IPIP100:B5:O;HEXACO:H:O:C;MPQ:MPQ:AB;IPIPneo:O1:IM,4,SPI_5intelOpen;SPI_15openness;IPIP100intel;IPIP50Intel;HEXACO_O;NEO_O;MPQab;HOCreative;NEOo1,,1,6,1=Very Inaccurate;6=Very Accurate,2736,20943,0.88445458
+q_1063,Have an eye for detail.,HEXACO:H:C:PE,1,HEXACO_C;HCPerfect,,1,6,1=Very Inaccurate;6=Very Accurate,4356,19323,0.81603953
+q_1064,"Have an intense, boisterous laugh.",HEXACO:H:X:E,1,HEXACO_X;HXExpress,,1,6,1=Very Inaccurate;6=Very Accurate,2747,20932,0.88399003
+q_1081,Have difficulty expressing my feelings.,PS:PS:P,1,PSp,PSp,1,6,1=Very Inaccurate;6=Very Accurate,2520,21159,0.89357659
+q_1083,Have difficulty imagining things.,IPIP100:B5:O;HEXACO:H:O:C;IPIPneo:O1:IM,3,IPIP100intel;HEXACO_O;NEO_O;HOCreative;NEOo1,IPIP100intel;HEXACO_O;NEO_O;HOCreative;NEOo1,1,6,1=Very Inaccurate;6=Very Accurate,2693,20986,0.88627054
+q_1087,Have difficulty starting tasks.,IPIPneo:C5:SD,1,NEO_C;NEOc5,NEO_C;NEOc5,1,6,1=Very Inaccurate;6=Very Accurate,2457,21222,0.89623717
+q_1088,Have difficulty understanding abstract ideas.,IPIP100:B5:O;BFAS:BFAS:O:I;QB6:QB6:O;IPIPneo:O5:IN,4,IPIP100intel;IPIP50Intel;BFASintel;QB6open;NEO_O;NEOo5,IPIP100intel;IPIP50Intel;BFASintel;QB6open;NEO_O;NEOo5,1,6,1=Very Inaccurate;6=Very Accurate,4213,19466,0.82207864
+q_1090,Have excellent ideas.,IPIP100:B5:O;HEXACO:H:O:C,2,IPIP100intel;IPIP50Intel;HEXACO_O;HOCreative,,1,6,1=Very Inaccurate;6=Very Accurate,4376,19303,0.8151949
+q_1099,Have frequent mood swings.,IPIP100:B5:ES;MPQ:MPQ:SR;IPIPneo:N3:DE,3,SPI_3emotionality;SPI_5neuroticism;IPIP100stability;IPIP50EmoSt;NEO_N;MPQsr;NEOn3,IPIP100stability;IPIP50EmoSt,1,6,1=Very Inaccurate;6=Very Accurate,2622,21057,0.88926897
+q_1104,Have great stamina.,HEXACO:H:X:L,1,HEXACO_X;HXLiveliness,,1,6,1=Very Inaccurate;6=Very Accurate,4352,19327,0.81620845
+q_1110,Have leadership abilities.,HEXACO:H:X:SB;PS:PS:P,2,HEXACO_X;PSp;HXSocBold,,1,6,1=Very Inaccurate;6=Very Accurate,4416,19263,0.81350564
+q_1113,Have little to contribute.,IPIPneo:C1:SE,1,NEO_C;NEOc1,NEO_C;NEOc1,1,6,1=Very Inaccurate;6=Very Accurate,2372,21307,0.89982685
+q_1114,Have little to say.,IPIP100:B5:E;HEXACO:H:X:SB;MPQ:MPQ:SP;IPIPneo:E3:AS;PS:PS:P,5,IPIP100extra;IPIP50Extra;HEXACO_X;NEO_E;PSp;MPQsp;HXSocBold;NEOe3,IPIP100extra;IPIP50Extra;HEXACO_X;NEO_E;PSp;MPQsp;HXSocBold;NEOe3,1,6,1=Very Inaccurate;6=Very Accurate,2791,20888,0.88213185
+q_1120,Have never engaged in gossip.,MPQ:MPQ:UV,1,SPI_15seriousness;MPQuv,,1,6,1=Very Inaccurate;6=Very Accurate,2487,21192,0.89497023
+q_1132,Have read the great literary classics.,HEXACO:H:O:A,1,HEXACO_O;HOAesthetic,,1,6,1=Very Inaccurate;6=Very Accurate,2760,20919,0.88344102
+q_1136,Have some bad habits.,MPQ:MPQ:UV,1,MPQuv,MPQuv,1,6,1=Very Inaccurate;6=Very Accurate,2421,21258,0.89775751
+q_1138,Have sometimes had to tell a lie.,MPQ:MPQ:UV,1,MPQuv,MPQuv,1,6,1=Very Inaccurate;6=Very Accurate,2423,21256,0.89767304
+q_1146,Have trouble guessing how others will react.,HEXACO:H:O:C,1,HEXACO_O;HOCreative,HEXACO_O;HOCreative,1,6,1=Very Inaccurate;6=Very Accurate,4343,19336,0.81658854
+q_1150,Hold a grudge.,HEXACO:H:A:FO;MPQ:MPQ:AG;IPIPneo:A4:CO,3,HEXACO_A;NEO_A;MPQag;HAForgive;NEOa4,HEXACO_A;NEO_A;HAForgive;NEOa4,1,6,1=Very Inaccurate;6=Very Accurate,2483,21196,0.89513915
+q_1151,Hold back my opinions.,BFAS:BFAS:E:A;IPIPneo:E3:AS,2,BFASassert;NEO_E;NEOe3,BFASassert;NEO_E;NEOe3,1,6,1=Very Inaccurate;6=Very Accurate,4299,19380,0.81844672
+q_1159,Immediately feel sad when hearing of an unhappy event.,HEXACO:H:E:S,1,HEXACO_E;HESentiment,HEXACO_E;HESentiment,1,6,1=Very Inaccurate;6=Very Accurate,3323,20356,0.85966468
+q_1161,Indulge in my fantasies.,IPIPneo:O1:IM,1,NEO_O;NEOo1,,1,6,1=Very Inaccurate;6=Very Accurate,2506,21173,0.89416783
+q_1162,Inquire about others' well-being.,IPIP100:B5:A;BFAS:BFAS:A:C,2,SPI_3socCohesion;SPI_5compHonHum;SPI_15compassion;IPIP100agree;BFAScomp,,1,6,1=Very Inaccurate;6=Very Accurate,4129,19550,0.82562608
+q_1163,Insult people.,IPIP100:B5:A;BFAS:BFAS:A:P;IPIPneo:A4:CO,3,IPIP100agree;IPIP50Agree;BFASpolite;NEO_A;NEOa4,IPIP100agree;IPIP50Agree;BFASpolite;NEO_A;NEOa4,1,6,1=Very Inaccurate;6=Very Accurate,2561,21118,0.89184509
+q_1169,Involve others in what I am doing.,IPIPneo:E2:GR,1,NEO_E;NEOe2,,1,6,1=Very Inaccurate;6=Very Accurate,2488,21191,0.894928
+q_1173,Jump into things without thinking.,HEXACO:H:C:PR;MPQ:MPQ:CO;IPIPneo:C6:CA,3,SPI_15impulsivity;HEXACO_C;NEO_C;MPQco;HCPrudence;NEOc6,HEXACO_C;NEO_C;MPQco;HCPrudence;NEOc6,1,6,1=Very Inaccurate;6=Very Accurate,2730,20949,0.88470797
+q_1175,Just know that I will be a success.,MPQ:MPQ:WB,1,MPQwb,,1,6,1=Very Inaccurate;6=Very Accurate,2432,21247,0.89729296
+q_1180,Keep in the background.,IPIP100:B5:E;HEXACO:H:X:SB;MPQ:MPQ:SP;IPIPneo:E3:AS,4,SPI_3sociability;SPI_5extraversion;SPI_15sociability;IPIP100extra;IPIP50Extra;HEXACO_X;NEO_E;MPQsp;HXSocBold;NEOe3,SPI_3sociability;SPI_5extraversion;SPI_15sociability;IPIP100extra;IPIP50Extra;HEXACO_X;NEO_E;MPQsp;HXSocBold;NEOe3,1,6,1=Very Inaccurate;6=Very Accurate,2805,20874,0.88154061
+q_1184,Keep my cool.,IPIPneo:N2:ANG,1,NEO_N;NEOn2,NEO_N;NEOn2,1,6,1=Very Inaccurate;6=Very Accurate,2474,21205,0.89551924
+q_1185,Keep my emotions under control.,BFAS:BFAS:N:V,1,BFASvolatile,BFASvolatile,1,6,1=Very Inaccurate;6=Very Accurate,2652,21027,0.88800203
+q_1190,Keep my promises.,IPIPneo:C3:DU,1,NEO_C;NEOc3,,1,6,1=Very Inaccurate;6=Very Accurate,2439,21240,0.89699734
+q_1196,Keep others at a distance.,BFAS:BFAS:E:E;HEXACO:H:X:S;MPQ:MPQ:SC;IPIPneo:E1:FR,4,BFASenthus;HEXACO_X;NEO_E;MPQsc;HXSociable;NEOe1,BFASenthus;HEXACO_X;NEO_E;MPQsc;HXSociable;NEOe1,1,6,1=Very Inaccurate;6=Very Accurate,2707,20972,0.88567929
+q_1201,Keep things tidy.,BFAS:BFAS:C:O;HEXACO:H:C:O,2,SPI_5conscientious;SPI_15industry;BFASorder;HEXACO_C;HCOrgan,,1,6,1=Very Inaccurate;6=Very Accurate,4367,19312,0.81557498
+q_1205,Know how to captivate people.,IPIP100:B5:E;BFAS:BFAS:E:A;PS:PS:P,3,IPIP100extra;BFASassert;PSp,,1,6,1=Very Inaccurate;6=Very Accurate,4273,19406,0.81954474
+q_1206,Know how to comfort others.,IPIP100:B5:A,1,IPIP100agree,,1,6,1=Very Inaccurate;6=Very Accurate,3994,19685,0.83132734
+q_1209,Know how to cope.,IPIPneo:N6:VU,1,NEO_N;NEOn6,NEO_N;NEOn6,1,6,1=Very Inaccurate;6=Very Accurate,2424,21255,0.89763081
+q_1214,Know how to get around the rules.,IPIPneo:A2:MO,1,NEO_A;NEOa2,NEO_A;NEOa2,1,6,1=Very Inaccurate;6=Very Accurate,2513,21166,0.89387221
+q_1215,Know how to get things done.,IPIPneo:C1:SE,1,NEO_C;NEOc1,,1,6,1=Very Inaccurate;6=Very Accurate,2448,21231,0.89661726
+q_1218,Know immediately what to do.,MPQ:MPQ:UV,1,MPQuv,,1,6,1=Very Inaccurate;6=Very Accurate,2499,21180,0.89446345
+q_1223,Know that anyone who tries can get a job.,MPQ:MPQ:UV,1,MPQuv,,1,6,1=Very Inaccurate;6=Very Accurate,2488,21191,0.894928
+q_1232,Know that my ideas sometimes surprise people.,HEXACO:H:O:U,1,HEXACO_O;HOUnconvention,,1,6,1=Very Inaccurate;6=Very Accurate,2741,20938,0.88424342
+q_1235,Know the answers to many questions.,IPIPneo:A5:MO,1,SPI_5intelOpen;NEO_A;NEOa5,NEO_A;NEOa5,1,6,1=Very Inaccurate;6=Very Accurate,2400,21279,0.89864437
+q_1242,Lack the talent for influencing people.,BFAS:BFAS:E:A;MPQ:MPQ:SP,2,BFASassert;MPQsp,BFASassert;MPQsp,1,6,1=Very Inaccurate;6=Very Accurate,4304,19375,0.81823557
+q_1243,Laugh a lot.,BFAS:BFAS:E:E;HEXACO:H:X:L;QB6:QB6:X,3,BFASenthus;HEXACO_X;QB6extra;HXLiveliness,,1,6,1=Very Inaccurate;6=Very Accurate,2721,20958,0.88508805
+q_1244,Laugh aloud.,IPIPneo:E6:CH,1,NEO_E;NEOe6,,1,6,1=Very Inaccurate;6=Very Accurate,2456,21223,0.8962794
+q_1248,Laugh my way through life.,IPIPneo:E6:CH,1,NEO_E;NEOe6,,1,6,1=Very Inaccurate;6=Very Accurate,2449,21230,0.89657502
+q_1253,Learn things slowly.,BFAS:BFAS:O:I,1,SPI_15intellect;BFASintel,SPI_15intellect;BFASintel,1,6,1=Very Inaccurate;6=Very Accurate,4287,19392,0.8189535
+q_1254,Leave a mess in my room.,IPIP100:B5:C;HEXACO:H:C:O;QB6:QB6:C;IPIPneo:C2:OR,4,IPIP100consc;HEXACO_C;QB6consc;NEO_C;HCOrgan;NEOc2,IPIP100consc;HEXACO_C;QB6consc;NEO_C;HCOrgan;NEOc2,1,6,1=Very Inaccurate;6=Very Accurate,2839,20840,0.88010473
+q_1255,Leave my belongings around.,IPIP100:B5:C;BFAS:BFAS:C:O;HEXACO:H:C:O;IPIPneo:C2:OR,4,IPIP100consc;IPIP50Consc;BFASorder;HEXACO_C;NEO_C;HCOrgan;NEOc2,IPIP100consc;IPIP50Consc;BFASorder;HEXACO_C;NEO_C;HCOrgan;NEOc2,1,6,1=Very Inaccurate;6=Very Accurate,2629,21050,0.88897335
+q_1260,Let myself be influenced by others.,HEXACO:H:E:D,1,SPI_3emotionality;SPI_15trust;HEXACO_E;HEDepend,HEXACO_E;HEDepend,1,6,1=Very Inaccurate;6=Very Accurate,3408,20271,0.856075
+q_1276,Let people push me around to help them feel important.,HEXACO:H:H:S,1,HEXACO_H;HHSincere,,1,6,1=Very Inaccurate;6=Very Accurate,3533,20146,0.85079606
+q_1280,Let things proceed at their own pace.,IPIPneo:E4:AL,1,SPI_15easyGoingness;NEO_E;NEOe4,NEO_E;NEOe4,1,6,1=Very Inaccurate;6=Very Accurate,2403,21276,0.89851767
+q_1281,Like a leisurely lifestyle.,IPIPneo:E4:AL,1,NEO_E;NEOe4,NEO_E;NEOe4,1,6,1=Very Inaccurate;6=Very Accurate,2456,21223,0.8962794
+q_1289,Like music.,IPIPneo:O2:AI,1,NEO_O;NEOo2,,1,6,1=Very Inaccurate;6=Very Accurate,2507,21172,0.8941256
+q_1290,Like order.,IPIP100:B5:C;BFAS:BFAS:C:O;HEXACO:H:C:O;QB6:QB6:C;IPIPneo:C2:OR,5,SPI_5conscientious;IPIP100consc;IPIP50Consc;BFASorder;HEXACO_C;QB6consc;NEO_C;HCOrgan;NEOc2,,1,6,1=Very Inaccurate;6=Very Accurate,4387,19292,0.81473035
+q_1292,Like to act on a whim.,MPQ:MPQ:CO;IPIPneo:C6:CA,2,NEO_C;MPQco;NEOc6,NEO_C;MPQco;NEOc6,1,6,1=Very Inaccurate;6=Very Accurate,2420,21259,0.89779974
+q_1296,Like to attract attention.,HEXACO:H:H:M,1,HEXACO_H;HHModesty,HEXACO_H;HHModesty,1,6,1=Very Inaccurate;6=Very Accurate,3548,20131,0.85016259
+q_1300,Like to be thought of as a normal kind of person.,HEXACO:H:O:U,1,HEXACO_O;HOUnconvention,HEXACO_O;HOUnconvention,1,6,1=Very Inaccurate;6=Very Accurate,2741,20938,0.88424342
+q_1301,Like to be viewed as proper and conventional.,HEXACO:H:O:U,1,HEXACO_O;HOUnconvention,HEXACO_O;HOUnconvention,1,6,1=Very Inaccurate;6=Very Accurate,2753,20926,0.88373664
+q_1303,Like to begin new things.,IPIPneo:O4:AD,1,NEO_O;NEOo4,,1,6,1=Very Inaccurate;6=Very Accurate,2494,21185,0.89467461
+q_1306,Like to do frightening things.,HEXACO:H:E:F;QB6:QB6:H,2,SPI_3socCohesion;SPI_15boldness;HEXACO_E;QB6honprop;HEFear,SPI_3socCohesion,1,6,1=Very Inaccurate;6=Very Accurate,3326,20353,0.85953799
+q_1307,Like to do things for others.,BFAS:BFAS:A:C,1,BFAScomp,,1,6,1=Very Inaccurate;6=Very Accurate,4028,19651,0.82989147
+q_1310,Like to get lost in thought.,MPQ:MPQ:AB;IPIPneo:O1:IM,2,NEO_O;MPQab;NEOo1,,1,6,1=Very Inaccurate;6=Very Accurate,2523,21156,0.89344989
+q_1321,Like to plan ahead.,QB6:QB6:C;MPQ:MPQ:CO,2,QB6consc;MPQco,,1,6,1=Very Inaccurate;6=Very Accurate,4314,19365,0.81781325
+q_1327,Like to solve complex problems.,BFAS:BFAS:O:I;IPIPneo:O5:IN,2,BFASintel;NEO_O;NEOo5,,1,6,1=Very Inaccurate;6=Very Accurate,4443,19236,0.81236539
+q_1328,Like to stand during the national anthem.,MPQ:MPQ:TR;IPIPneo:O6:LI,2,NEO_O;MPQtr;NEOo6,NEO_O;NEOo6,1,6,1=Very Inaccurate;6=Very Accurate,2448,21231,0.89661726
+q_1329,Like to take it easy.,IPIPneo:E4:AL,1,SPI_15easyGoingness;NEO_E;NEOe4,NEO_E;NEOe4,1,6,1=Very Inaccurate;6=Very Accurate,2376,21303,0.89965792
+q_1330,Like to take my time.,IPIPneo:E4:AL,1,NEO_E;NEOe4,NEO_E;NEOe4,1,6,1=Very Inaccurate;6=Very Accurate,2459,21220,0.89615271
+q_1333,Like to tidy up.,IPIP100:B5:C;HEXACO:H:C:O;IPIPneo:C2:OR,3,IPIP100consc;HEXACO_C;NEO_C;HCOrgan;NEOc2,,1,6,1=Very Inaccurate;6=Very Accurate,4414,19265,0.8135901
+q_1334,Like to visit new places.,IPIPneo:O4:AD,1,NEO_O;NEOo4,,1,6,1=Very Inaccurate;6=Very Accurate,2492,21187,0.89475907
+q_1341,Listen to my conscience.,IPIPneo:C3:DU,1,NEO_C;NEOc3,,1,6,1=Very Inaccurate;6=Very Accurate,2408,21271,0.89830652
+q_1350,Look at the bright side of life.,IPIPneo:E6:CH,1,NEO_E;NEOe6,,1,6,1=Very Inaccurate;6=Very Accurate,2422,21257,0.89771528
+q_1354,Look down on others.,IPIPneo:A3:AL,1,SPI_3socCohesion;SPI_5compHonHum;NEO_A;NEOa3,SPI_3socCohesion;SPI_5compHonHum;NEO_A;NEOa3,1,6,1=Very Inaccurate;6=Very Accurate,2453,21226,0.8964061
+q_1357,Lose my temper.,HEXACO:H:A:P;IPIPneo:N2:ANG,2,SPI_15volatility;HEXACO_A;NEO_N;HAPatient;NEOn2,HEXACO_A;HAPatient,1,6,1=Very Inaccurate;6=Very Accurate,2568,21111,0.89154947
+q_1359,Love a good fight.,BFAS:BFAS:A:P;IPIPneo:A4:CO,2,BFASpolite;NEO_A;NEOa4,BFASpolite;NEO_A;NEOa4,1,6,1=Very Inaccurate;6=Very Accurate,2612,21067,0.88969129
+q_1360,Love action.,IPIPneo:E5:ES,1,SPI_3sociability;SPI_15boldness;NEO_E;NEOe5,,1,6,1=Very Inaccurate;6=Very Accurate,2363,21316,0.90020693
+q_1364,Love children.,IPIP100:B5:A,1,IPIP100agree,,1,6,1=Very Inaccurate;6=Very Accurate,4025,19654,0.83001816
+q_1367,Love dangerous situations.,HEXACO:H:E:F,1,SPI_3socCohesion;SPI_15boldness;HEXACO_E;HEFear,SPI_3socCohesion,1,6,1=Very Inaccurate;6=Very Accurate,3303,20376,0.86050931
+q_1368,Love excitement.,IPIPneo:E5:ES,1,NEO_E;NEOe5,,1,6,1=Very Inaccurate;6=Very Accurate,2489,21190,0.89488576
+q_1369,Love flowers.,IPIPneo:O2:AI,1,NEO_O;NEOo2,,1,6,1=Very Inaccurate;6=Very Accurate,2447,21232,0.89665949
+q_1370,Love large parties.,IPIPneo:E2:GR,1,NEO_E;NEOe2,,1,6,1=Very Inaccurate;6=Very Accurate,2429,21250,0.89741965
+q_1371,Love life.,MPQ:MPQ:WB;IPIPneo:E6:CH,2,SPI_15enthusiasm;NEO_E;MPQwb;NEOe6,,1,6,1=Very Inaccurate;6=Very Accurate,2467,21212,0.89581486
+q_1372,Love luxury.,HEXACO:H:H:GA,1,HEXACO_H;HHGreedAvoid,HEXACO_H;HHGreedAvoid,1,6,1=Very Inaccurate;6=Very Accurate,3567,20112,0.84936019
+q_1373,Love my enemies.,HEXACO:H:A:FO,1,HEXACO_A;HAForgive,,1,6,1=Very Inaccurate;6=Very Accurate,2570,21109,0.89146501
+q_1374,Love order and regularity.,IPIP100:B5:C;IPIPneo:C2:OR,2,IPIP100consc;NEO_C;NEOc2,,1,6,1=Very Inaccurate;6=Very Accurate,4205,19474,0.82241649
+q_1376,Love surprise parties.,IPIPneo:E2:GR,1,NEO_E;NEOe2,,1,6,1=Very Inaccurate;6=Very Accurate,2450,21229,0.89653279
+q_1379,Love to chat.,HEXACO:H:X:S;MPQ:MPQ:SC,2,SPI_3sociability;SPI_5extraversion;HEXACO_X;MPQsc;HXSociable,,1,6,1=Very Inaccurate;6=Very Accurate,2757,20922,0.88356772
+q_1381,Love to daydream.,MPQ:MPQ:AB;IPIPneo:O1:IM,2,NEO_O;MPQab;NEOo1,,1,6,1=Very Inaccurate;6=Very Accurate,2447,21232,0.89665949
+q_1384,Love to eat.,IPIPneo:N5:IM,1,NEO_N;NEOn5,,1,6,1=Very Inaccurate;6=Very Accurate,2443,21236,0.89682841
+q_1385,Love to help others.,IPIP100:B5:A;IPIPneo:A3:AL,2,IPIP100agree;NEO_A;NEOa3,,1,6,1=Very Inaccurate;6=Very Accurate,3994,19685,0.83132734
+q_1388,Love to read challenging material.,IPIP100:B5:O;HEXACO:H:O:I;IPIPneo:O5:IN,3,IPIP100intel;HEXACO_O;NEO_O;HOInquisite;NEOo5,,1,6,1=Very Inaccurate;6=Very Accurate,4378,19301,0.81511044
+q_1389,Love to reflect on things.,BFAS:BFAS:O:O;MPQ:MPQ:AB,2,SPI_5intelOpen;SPI_15openness;BFASopen;MPQab,,1,6,1=Very Inaccurate;6=Very Accurate,2761,20918,0.88339879
+q_1392,Love to think up new ways of doing things.,IPIP100:B5:O;HEXACO:H:O:C,2,IPIP100intel;HEXACO_O;HOCreative,,1,6,1=Very Inaccurate;6=Very Accurate,4332,19347,0.81705309
+q_1393,Maintain high energy throughout the day.,HEXACO:H:X:L,1,HEXACO_X;HXLiveliness,,1,6,1=Very Inaccurate;6=Very Accurate,4378,19301,0.81511044
+q_1395,Make a fool of myself.,HEXACO:H:C:PR,1,HEXACO_C;HCPrudence,HEXACO_C;HCPrudence,1,6,1=Very Inaccurate;6=Very Accurate,2675,21004,0.8870307
+q_1397,Make a mess of things.,IPIP100:B5:C;MPQ:MPQ:CO,2,IPIP100consc;IPIP50Consc;MPQco,IPIP100consc;IPIP50Consc;MPQco,1,6,1=Very Inaccurate;6=Very Accurate,2779,20900,0.88263862
+q_1401,Make careless mistakes.,HEXACO:H:C:PR,1,SPI_3emotionality;SPI_5conscientious;HEXACO_C;HCPrudence,SPI_5conscientious;HEXACO_C;HCPrudence,1,6,1=Very Inaccurate;6=Very Accurate,2663,21016,0.88753748
+q_1410,Make friends easily.,IPIP100:B5:E;BFAS:BFAS:E:E;HEXACO:H:X:S;MPQ:MPQ:SC;IPIPneo:E1:FR,5,SPI_3sociability;SPI_5extraversion;IPIP100extra;BFASenthus;HEXACO_X;NEO_E;MPQsc;HXSociable;NEOe1,,1,6,1=Very Inaccurate;6=Very Accurate,2787,20892,0.88230077
+q_1416,Make myself the center of attention.,IPIPneo:A5:MO,1,NEO_A;NEOa5,NEO_A;NEOa5,1,6,1=Very Inaccurate;6=Very Accurate,2445,21234,0.89674395
+q_1419,Make people feel at ease.,IPIP100:B5:A,1,IPIP100agree;IPIP50Agree,,1,6,1=Very Inaccurate;6=Very Accurate,4076,19603,0.82786435
+q_1420,Make people feel uncomfortable.,IPIPneo:A3:AL,1,NEO_A;NEOa3,NEO_A;NEOa3,1,6,1=Very Inaccurate;6=Very Accurate,2518,21161,0.89366105
+q_1421,Make people feel welcome.,IPIPneo:A3:AL,1,NEO_A;NEOa3,,1,6,1=Very Inaccurate;6=Very Accurate,2462,21217,0.89602601
+q_1422,Make plans and stick to them.,IPIP100:B5:C;HEXACO:H:C:PR;MPQ:MPQ:CO,3,IPIP100consc;HEXACO_C;MPQco;HCPrudence,,1,6,1=Very Inaccurate;6=Very Accurate,2693,20986,0.88627054
+q_1424,Make rash decisions.,HEXACO:H:C:PR;MPQ:MPQ:CO;IPIPneo:C6:CA,3,SPI_15impulsivity;HEXACO_C;NEO_C;MPQco;HCPrudence;NEOc6,HEXACO_C;NEO_C;MPQco;HCPrudence;NEOc6,1,6,1=Very Inaccurate;6=Very Accurate,2764,20915,0.8832721
+q_1429,Mess things up.,BFAS:BFAS:C:I,1,BFASindustry,BFASindustry,1,6,1=Very Inaccurate;6=Very Accurate,2616,21063,0.88952236
+q_1435,Misjudge situations.,IPIPneo:C1:SE,1,NEO_C;NEOc1,NEO_C;NEOc1,1,6,1=Very Inaccurate;6=Very Accurate,2465,21214,0.89589932
+q_1436,Misrepresent the facts.,IPIPneo:C3:DU,1,NEO_C;NEOc3,NEO_C;NEOc3,1,6,1=Very Inaccurate;6=Very Accurate,2416,21263,0.89796866
+q_1441,Need a creative outlet.,BFAS:BFAS:O:O,1,SPI_5intelOpen;SPI_15openness;BFASopen,,1,6,1=Very Inaccurate;6=Very Accurate,2770,20909,0.88301871
+q_1444,Need a push to get started.,IPIPneo:C5:SD,1,NEO_C;NEOc5,NEO_C;NEOc5,1,6,1=Very Inaccurate;6=Very Accurate,2492,21187,0.89475907
+q_1446,Need protection.,HEXACO:H:E:D,1,SPI_15fear;HEXACO_E;HEDepend,HEXACO_E;HEDepend,1,6,1=Very Inaccurate;6=Very Accurate,3276,20403,0.86164956
+q_1447,Need reassurance.,HEXACO:H:E:D,1,SPI_3emotionality;SPI_5neuroticism;HEXACO_E;HEDepend,HEXACO_E;HEDepend,1,6,1=Very Inaccurate;6=Very Accurate,3419,20260,0.85561046
+q_1448,Need the approval of others.,HEXACO:H:E:D,1,HEXACO_E;HEDepend,HEXACO_E;HEDepend,1,6,1=Very Inaccurate;6=Very Accurate,3307,20372,0.86034039
+q_1452,Neglect my duties.,IPIP100:B5:C,1,SPI_3emotionality;SPI_5conscientious;SPI_15industry;IPIP100consc,SPI_5conscientious;SPI_15industry;IPIP100consc,1,6,1=Very Inaccurate;6=Very Accurate,2747,20932,0.88399003
+q_1457,Never give up hope.,MPQ:MPQ:UV,1,MPQuv,,1,6,1=Very Inaccurate;6=Very Accurate,2405,21274,0.89843321
+q_1458,Never give up.,MPQ:MPQ:UV,1,MPQuv,,1,6,1=Very Inaccurate;6=Very Accurate,2378,21301,0.89957346
+q_1461,Never spend more than I can afford.,IPIPneo:N5:IM,1,NEO_N;NEOn5,NEO_N;NEOn5,1,6,1=Very Inaccurate;6=Very Accurate,2510,21169,0.8939989
+q_1462,Never splurge.,IPIPneo:N5:IM,1,SPI_15seriousness;NEO_N;NEOn5,NEO_N;NEOn5,1,6,1=Very Inaccurate;6=Very Accurate,2359,21320,0.90037586
+q_1467,Obstruct others' plans.,IPIPneo:A2:MO,1,NEO_A;NEOa2,NEO_A;NEOa2,1,6,1=Very Inaccurate;6=Very Accurate,2535,21144,0.89294311
+q_1474,Often eat too much.,IPIPneo:N5:IM,1,NEO_N;NEOn5,,1,6,1=Very Inaccurate;6=Very Accurate,2396,21283,0.89881329
+q_1477,Often express doubts.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2475,21204,0.895477
+q_1479,Often feel blue.,IPIP100:B5:ES;HEXACO:H:X:L;MPQ:MPQ:WB;IPIPneo:N3:DE,4,IPIP100stability;IPIP50EmoSt;HEXACO_X;NEO_N;MPQwb;HXLiveliness;NEOn3,IPIP100stability;IPIP50EmoSt;HEXACO_X;MPQwb;HXLiveliness,1,6,1=Very Inaccurate;6=Very Accurate,2545,21134,0.8925208
+q_1480,Often feel uncomfortable around others.,IPIP100:B5:E;IPIPneo:E1:FR,2,IPIP100extra;NEO_E;NEOe1,IPIP100extra;NEO_E;NEOe1,1,6,1=Very Inaccurate;6=Very Accurate,2716,20963,0.88529921
+q_1483,[Forget to put things back].,IPIP100:B5:C;HEXACO:H:C:O;IPIPneo:C2:OR,3,IPIP100consc;IPIP50Consc;HEXACO_C;NEO_C;HCOrgan;NEOc2,IPIP100consc;IPIP50Consc;HEXACO_C;NEO_C;HCOrgan;NEOc2,1,6,1=Very Inaccurate;6=Very Accurate,2680,20999,0.88681954
+q_1488,Often make last-minute plans.,MPQ:MPQ:CO;IPIPneo:C6:CA,2,NEO_C;MPQco;NEOc6,NEO_C;MPQco;NEOc6,1,6,1=Very Inaccurate;6=Very Accurate,2450,21229,0.89653279
+q_1490,Often need help.,HEXACO:H:E:D,1,HEXACO_E;HEDepend,HEXACO_E;HEDepend,1,6,1=Very Inaccurate;6=Very Accurate,3266,20413,0.86207188
+q_1495,[Often worry things unimportant].,HEXACO:H:E:A,1,HEXACO_E;HEAnxiety,HEXACO_E;HEAnxiety,1,6,1=Very Inaccurate;6=Very Accurate,2555,21124,0.89209848
+q_1496,Only feel comfortable with friends.,IPIPneo:N4:SC,1,NEO_N;NEOn4,,1,6,1=Very Inaccurate;6=Very Accurate,2524,21155,0.89340766
+q_1505,Panic easily.,IPIP100:B5:ES;HEXACO:H:E:A;QB6:QB6:ES;MPQ:MPQ:SR;IPIPneo:N6:VU,5,SPI_5neuroticism;SPI_15fear;IPIP100stability;HEXACO_E;QB6resilient;NEO_N;MPQsr;HEAnxiety;NEOn6,IPIP100stability;HEXACO_E;QB6resilient;HEAnxiety,1,6,1=Very Inaccurate;6=Very Accurate,2585,21094,0.89083154
+q_1507,Pay attention to details.,IPIP100:B5:C;HEXACO:H:C:PE;MPQ:MPQ:CO,3,IPIP100consc;IPIP50Consc;HEXACO_C;MPQco;HCPerfect,,1,6,1=Very Inaccurate;6=Very Accurate,4333,19346,0.81701085
+q_1508,Pay my bills on time.,IPIPneo:C3:DU,1,NEO_C;NEOc3,,1,6,1=Very Inaccurate;6=Very Accurate,2466,21213,0.89585709
+q_1511,Pay too little attention to details.,HEXACO:H:C:PE;QB6:QB6:C,2,SPI_15impulsivity;HEXACO_C;QB6consc;HCPerfect,HEXACO_C;QB6consc;HCPerfect,1,6,1=Very Inaccurate;6=Very Accurate,4374,19305,0.81527936
+q_1517,Play a role in order to impress people.,HEXACO:H:H:S,1,SPI_15machiavell;HEXACO_H;HHSincere,HEXACO_H;HHSincere,1,6,1=Very Inaccurate;6=Very Accurate,3660,20019,0.84543266
+q_1519,Plunge into tasks with all my heart.,MPQ:MPQ:AC;IPIPneo:C4:AS,2,NEO_C;MPQac;NEOc4,,1,6,1=Very Inaccurate;6=Very Accurate,2425,21254,0.89758858
+q_1521,Postpone decisions.,BFAS:BFAS:C:I;IPIPneo:C5:SD,2,BFASindustry;NEO_C;NEOc5,BFASindustry;NEO_C;NEOc5,1,6,1=Very Inaccurate;6=Very Accurate,2701,20978,0.88593268
+q_1531,Prefer to be alone.,IPIPneo:E2:GR,1,NEO_E;NEOe2,NEO_E;NEOe2,1,6,1=Very Inaccurate;6=Very Accurate,2496,21183,0.89459014
+q_1536,Prefer to eat at expensive restaurants.,HEXACO:H:H:GA,1,HEXACO_H;HHGreedAvoid,HEXACO_H;HHGreedAvoid,1,6,1=Very Inaccurate;6=Very Accurate,3554,20125,0.8499092
+q_1537,Prefer to just let things happen.,HEXACO:H:C:PE,1,SPI_15easyGoingness;HEXACO_C;HCPerfect,HEXACO_C;HCPerfect,1,6,1=Very Inaccurate;6=Very Accurate,2681,20998,0.88677731
+q_1540,Prefer to stick with things that I know.,IPIPneo:O4:AD,1,SPI_15habit;NEO_O;NEOo4,NEO_O;NEOo4,1,6,1=Very Inaccurate;6=Very Accurate,2475,21204,0.895477
+q_1542,Prefer variety to routine.,IPIPneo:O4:AD,1,NEO_O;NEOo4,,1,6,1=Very Inaccurate;6=Very Accurate,2491,21188,0.8948013
+q_1543,Pretend to be concerned for others.,HEXACO:H:H:S;IPIPneo:A2:MO,2,HEXACO_H;NEO_A;HHSincere;NEOa2,HEXACO_H;NEO_A;HHSincere;NEOa2,1,6,1=Very Inaccurate;6=Very Accurate,6073,17606,0.74352802
+q_1550,Push myself very hard to succeed.,HEXACO:H:C:D,1,HEXACO_C;HCDiligence,,1,6,1=Very Inaccurate;6=Very Accurate,2689,20990,0.88643946
+q_1553,Put little time and effort into my work.,IPIPneo:C4:AS,1,NEO_C;NEOc4,NEO_C;NEOc4,1,6,1=Very Inaccurate;6=Very Accurate,2456,21223,0.8962794
+q_1555,Put on a show to impress people.,HEXACO:H:H:S,1,HEXACO_H;HHSincere,HEXACO_H;HHSincere,1,6,1=Very Inaccurate;6=Very Accurate,3572,20107,0.84914904
+q_1556,Rarely put people under pressure.,BFAS:BFAS:A:P;IPIPneo:A2:MO,2,SPI_15easyGoingness;BFASpolite;NEO_A;NEOa2,NEO_A;NEOa2,1,6,1=Very Inaccurate;6=Very Accurate,2563,21116,0.89176063
+q_1563,Quickly lose interest in the tasks I start.,HEXACO:H:C:D,1,HEXACO_C;HCDiligence,HEXACO_C;HCDiligence,1,6,1=Very Inaccurate;6=Very Accurate,2750,20929,0.88386334
+q_1567,Radiate joy.,MPQ:MPQ:WB;IPIPneo:E6:CH,2,NEO_E;MPQwb;NEOe6,NEO_E;NEOe6,1,6,1=Very Inaccurate;6=Very Accurate,2425,21254,0.89758858
+q_1571,Rarely complain.,HEXACO:H:A:G;MPQ:MPQ:AG;IPIPneo:N2:ANG,3,HEXACO_A;NEO_N;MPQag;HAGentle;NEOn2,MPQag,1,6,1=Very Inaccurate;6=Very Accurate,2502,21177,0.89433675
+q_1573,Rarely cry during sad movies.,HEXACO:H:E:S,1,HEXACO_E;HESentiment,,1,6,1=Very Inaccurate;6=Very Accurate,3468,20211,0.85354111
+q_1575,Rarely enjoy being with people.,HEXACO:H:X:S,1,HEXACO_X;HXSociable,HEXACO_X;HXSociable,1,6,1=Very Inaccurate;6=Very Accurate,2697,20982,0.88610161
+q_1577,Rarely feel angry with people.,HEXACO:H:A:P,1,HEXACO_A;HAPatient,,1,6,1=Very Inaccurate;6=Very Accurate,2594,21085,0.89045145
+q_1578,Rarely feel depressed.,BFAS:BFAS:N:W;HEXACO:H:E:A,2,BFASwithdraw;HEXACO_E;HEAnxiety,BFASwithdraw,1,6,1=Very Inaccurate;6=Very Accurate,2576,21103,0.89121162
+q_1583,Rarely get caught up in the excitement.,BFAS:BFAS:E:E,1,BFASenthus,BFASenthus,1,6,1=Very Inaccurate;6=Very Accurate,2641,21038,0.88846657
+q_1585,Rarely get irritated.,IPIP100:B5:ES;BFAS:BFAS:N:V;HEXACO:H:A:P;MPQ:MPQ:AG;IPIPneo:N2:ANG,5,IPIP100stability;BFASvolatile;HEXACO_A;NEO_N;MPQag;HAPatient;NEOn2,BFASvolatile;NEO_N;MPQag;NEOn2,1,6,1=Very Inaccurate;6=Very Accurate,2560,21119,0.89188733
+q_1587,Rarely look for a deeper meaning in things.,MPQ:MPQ:AB,1,MPQab,MPQab,1,6,1=Very Inaccurate;6=Very Accurate,2500,21179,0.89442122
+q_1588,Rarely lose my composure.,BFAS:BFAS:N:V,1,BFASvolatile,BFASvolatile,1,6,1=Very Inaccurate;6=Very Accurate,2653,21026,0.8879598
+q_1589,Rarely notice my emotional reactions.,IPIPneo:O3:EM,1,NEO_O;NEOo3,NEO_O;NEOo3,1,6,1=Very Inaccurate;6=Very Accurate,2380,21299,0.899489
+q_1590,Rarely overindulge.,IPIPneo:N5:IM,1,SPI_15seriousness;NEO_N;NEOn5,NEO_N;NEOn5,1,6,1=Very Inaccurate;6=Very Accurate,2427,21252,0.89750412
+q_1591,Rarely show my anger.,QB6:QB6:A,1,SPI_15volatility;QB6agree,SPI_15volatility,1,6,1=Very Inaccurate;6=Very Accurate,2530,21149,0.89315427
+q_1596,Rarely worry.,HEXACO:H:E:A;QB6:QB6:ES,2,SPI_3emotionality;SPI_5neuroticism;HEXACO_E;QB6resilient;HEAnxiety,SPI_3emotionality;SPI_5neuroticism,1,6,1=Very Inaccurate;6=Very Accurate,2663,21016,0.88753748
+q_1599,React quickly.,IPIPneo:E4:AL,1,NEO_E;NEOe4,,1,6,1=Very Inaccurate;6=Very Accurate,2455,21224,0.89632164
+q_1600,React slowly.,IPIPneo:E4:AL,1,NEO_E;NEOe4,NEO_E;NEOe4,1,6,1=Very Inaccurate;6=Very Accurate,2452,21227,0.89644833
+q_1601,React strongly to criticism.,HEXACO:H:A:FL,1,HEXACO_A;HAFlex,HEXACO_A;HAFlex,1,6,1=Very Inaccurate;6=Very Accurate,2529,21150,0.8931965
+q_1606,Readily overcome setbacks.,IPIPneo:N6:VU,1,NEO_N;NEOn6,NEO_N;NEOn6,1,6,1=Very Inaccurate;6=Very Accurate,2479,21200,0.89530808
+q_1609,Rebel against authority.,HEXACO:H:O:U,1,HEXACO_O;HOUnconvention,,1,6,1=Very Inaccurate;6=Very Accurate,2748,20931,0.8839478
+q_1610,Recover quickly from stress and illness.,QB6:QB6:ES,1,QB6resilient,,1,6,1=Very Inaccurate;6=Very Accurate,2619,21060,0.88939567
+q_1616,Remain calm under pressure.,HEXACO:H:E:A;IPIPneo:N6:VU,2,HEXACO_E;NEO_N;HEAnxiety;NEOn6,NEO_N;NEOn6,1,6,1=Very Inaccurate;6=Very Accurate,2613,21066,0.88964906
+q_1624,Respect authority.,BFAS:BFAS:A:P,1,BFASpolite,,1,6,1=Very Inaccurate;6=Very Accurate,4025,19654,0.83001816
+q_1633,Return extra change when a cashier makes a mistake.,HEXACO:H:H:F,1,HEXACO_H;HHFairness,,1,6,1=Very Inaccurate;6=Very Accurate,6024,17655,0.74559736
+q_1635,Reveal little about myself.,BFAS:BFAS:E:E;QB6:QB6:X,2,BFASenthus;QB6extra,BFASenthus;QB6extra,1,6,1=Very Inaccurate;6=Very Accurate,2814,20865,0.88116052
+q_1638,Rush into things.,IPIPneo:C6:CA,1,SPI_15impulsivity;NEO_C;NEOc6,NEO_C;NEOc6,1,6,1=Very Inaccurate;6=Very Accurate,2429,21250,0.89741965
+q_1643,Say little.,HEXACO:H:X:E,1,SPI_3sociability;HEXACO_X;HXExpress,SPI_3sociability;HEXACO_X;HXExpress,1,6,1=Very Inaccurate;6=Very Accurate,2750,20929,0.88386334
+q_1648,See beauty in things that others might not notice.,BFAS:BFAS:O:O;HEXACO:H:O:A;MPQ:MPQ:AB;IPIPneo:O2:AI,4,BFASopen;HEXACO_O;NEO_O;MPQab;HOAesthetic;NEOo2,,1,6,1=Very Inaccurate;6=Very Accurate,2816,20863,0.88107606
+q_1652,See myself as a good leader.,BFAS:BFAS:E:A;MPQ:MPQ:SP,2,BFASassert;MPQsp,,1,6,1=Very Inaccurate;6=Very Accurate,4365,19314,0.81565945
+q_1653,See myself as an average person.,HEXACO:H:H:M,1,HEXACO_H;HHModesty,,1,6,1=Very Inaccurate;6=Very Accurate,3606,20073,0.84771316
+q_1657,See that rules are observed.,BFAS:BFAS:C:O,1,SPI_5conscientious;BFASorder,,1,6,1=Very Inaccurate;6=Very Accurate,4351,19328,0.81625069
+q_1662,Seek adventure.,MPQ:MPQ:HA;IPIPneo:E5:ES,2,SPI_3sociability;SPI_15boldness;NEO_E;MPQha;NEOe5,MPQha,1,6,1=Very Inaccurate;6=Very Accurate,2469,21210,0.89573039
+q_1663,Seek conflict.,BFAS:BFAS:A:P,1,BFASpolite,BFASpolite,1,6,1=Very Inaccurate;6=Very Accurate,2551,21128,0.89226741
+q_1664,Seek danger.,MPQ:MPQ:HA;IPIPneo:E5:ES,2,SPI_3socCohesion;SPI_15boldness;NEO_E;MPQha;NEOe5,SPI_3socCohesion;MPQha,1,6,1=Very Inaccurate;6=Very Accurate,2436,21243,0.89712403
+q_1666,Seek quiet.,IPIPneo:E2:GR,1,NEO_E;NEOe2,NEO_E;NEOe2,1,6,1=Very Inaccurate;6=Very Accurate,2456,21223,0.8962794
+q_1667,Seek status.,HEXACO:H:H:GA,1,HEXACO_H;HHGreedAvoid,HEXACO_H;HHGreedAvoid,1,6,1=Very Inaccurate;6=Very Accurate,3679,20000,0.84463026
+q_1668,Seek support.,HEXACO:H:E:D,1,HEXACO_E;HEDepend,HEXACO_E;HEDepend,1,6,1=Very Inaccurate;6=Very Accurate,3354,20325,0.8583555
+q_1670,Seek to influence others.,IPIPneo:E3:AS,1,NEO_E;NEOe3,,1,6,1=Very Inaccurate;6=Very Accurate,2447,21232,0.89665949
+q_1671,[Enjoy interactions less than others].,HEXACO:H:X:S,1,SPI_3sociability;SPI_5extraversion;SPI_15sociability;HEXACO_X;HXSociable,SPI_3sociability;SPI_5extraversion;SPI_15sociability;HEXACO_X;HXSociable,1,6,1=Very Inaccurate;6=Very Accurate,2729,20950,0.8847502
+q_1675,Seldom daydream.,BFAS:BFAS:O:O;IPIPneo:O1:IM,2,BFASopen;NEO_O;NEOo1,BFASopen;NEO_O;NEOo1,1,6,1=Very Inaccurate;6=Very Accurate,2802,20877,0.8816673
+q_1676,Seldom experience sudden intuitive insights.,HEXACO:H:O:C;QB6:QB6:O,2,HEXACO_O;QB6open;HOCreative,HEXACO_O;QB6open;HOCreative,1,6,1=Very Inaccurate;6=Very Accurate,2679,21000,0.88686178
+q_1677,Seldom feel blue.,IPIP100:B5:ES;BFAS:BFAS:N:W;MPQ:MPQ:SR;IPIPneo:N3:DE,4,IPIP100stability;IPIP50EmoSt;BFASwithdraw;NEO_N;MPQsr;NEOn3,BFASwithdraw;NEO_N;MPQsr;NEOn3,1,6,1=Very Inaccurate;6=Very Accurate,2641,21038,0.88846657
+q_1679,Seldom feel weepy while reading [sad story].,HEXACO:H:E:S,1,HEXACO_E;HESentiment,,1,6,1=Very Inaccurate;6=Very Accurate,3384,20295,0.85708856
+q_1681,Seldom get emotional.,HEXACO:H:E:S;IPIPneo:O3:EM,2,HEXACO_E;NEO_O;HESentiment;NEOo3,NEO_O;NEOo3,1,6,1=Very Inaccurate;6=Very Accurate,3405,20274,0.8562017
+q_1682,Seldom get lost in thought.,BFAS:BFAS:O:O;MPQ:MPQ:AB;IPIPneo:O1:IM,3,BFASopen;NEO_O;MPQab;NEOo1,BFASopen;NEO_O;MPQab;NEOo1,1,6,1=Very Inaccurate;6=Very Accurate,2722,20957,0.88504582
+q_1683,Seldom get mad.,IPIP100:B5:ES;HEXACO:H:A:P;MPQ:MPQ:AG;IPIPneo:N2:ANG,4,SPI_15volatility;IPIP100stability;HEXACO_A;NEO_N;MPQag;HAPatient;NEOn2,SPI_15volatility;NEO_N;MPQag;NEOn2,1,6,1=Very Inaccurate;6=Very Accurate,2628,21051,0.88901558
+q_1685,Seldom joke around.,QB6:QB6:X;IPIPneo:E6:CH,2,SPI_15seriousness;QB6extra;NEO_E;NEOe6,QB6extra;NEO_E;NEOe6,1,6,1=Very Inaccurate;6=Very Accurate,2726,20953,0.8848769
+q_1687,Seldom notice emotional aspects of [visual art].,BFAS:BFAS:O:O;HEXACO:H:O:A,2,BFASopen;HEXACO_O;HOAesthetic,BFASopen;HEXACO_O;HOAesthetic,1,6,1=Very Inaccurate;6=Very Accurate,2791,20888,0.88213185
+q_1691,Seldom toot my own horn.,IPIPneo:A5:MO,1,NEO_A;NEOa5,,1,6,1=Very Inaccurate;6=Very Accurate,2410,21269,0.89822205
+q_1694,Set high standards for myself and others.,IPIPneo:C4:AS,1,NEO_C;NEOc4,,1,6,1=Very Inaccurate;6=Very Accurate,2498,21181,0.89450568
+q_1696,Shirk my duties.,IPIP100:B5:C;QB6:QB6:C,2,IPIP100consc;IPIP50Consc;QB6consc,IPIP100consc;IPIP50Consc;QB6consc,1,6,1=Very Inaccurate;6=Very Accurate,2729,20950,0.8847502
+q_1697,Shoot my mouth off.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2446,21233,0.89670172
+q_1703,Show my feelings when I'm happy.,BFAS:BFAS:E:E;QB6:QB6:X,2,BFASenthus;QB6extra,,1,6,1=Very Inaccurate;6=Very Accurate,2718,20961,0.88521475
+q_1705,Show my gratitude.,IPIP100:B5:A,1,IPIP100agree,,1,6,1=Very Inaccurate;6=Very Accurate,3976,19703,0.8320875
+q_1706,Show my sadness.,HEXACO:H:E:D,1,HEXACO_E;HEDepend,HEXACO_E;HEDepend,1,6,1=Very Inaccurate;6=Very Accurate,3372,20307,0.85759534
+q_1709,Smile a lot.,HEXACO:H:X:L,1,HEXACO_X;HXLiveliness,,1,6,1=Very Inaccurate;6=Very Accurate,2777,20902,0.88272309
+q_1725,Speak ill of others.,HEXACO:H:A:G,1,HEXACO_A;HAGentle,HEXACO_A;HAGentle,1,6,1=Very Inaccurate;6=Very Accurate,2558,21121,0.89197179
+q_1730,Speak softly.,HEXACO:H:X:E,1,HEXACO_X;HXExpress,HEXACO_X;HXExpress,1,6,1=Very Inaccurate;6=Very Accurate,4351,19328,0.81625069
+q_1738,Spend time reflecting on things.,IPIP100:B5:O;IPIPneo:O1:IM,2,SPI_5intelOpen;SPI_15openness;IPIP100intel;IPIP50Intel;NEO_O;NEOo1,,1,6,1=Very Inaccurate;6=Very Accurate,2828,20851,0.88056928
+q_1742,Start conversations.,IPIP100:B5:E,1,SPI_3sociability;SPI_5extraversion;IPIP100extra;IPIP50Extra,,1,6,1=Very Inaccurate;6=Very Accurate,2759,20920,0.88348326
+q_1744,Start tasks right away.,IPIPneo:C5:SD,1,SPI_5conscientious;SPI_15industry;NEO_C;NEOc5,,1,6,1=Very Inaccurate;6=Very Accurate,2457,21222,0.89623717
+q_1747,Steal things.,HEXACO:H:H:F;QB6:QB6:H,2,HEXACO_H;QB6honprop;HHFairness,HEXACO_H;QB6honprop;HHFairness,1,6,1=Very Inaccurate;6=Very Accurate,6013,17666,0.74606191
+q_1748,Stick to my chosen path.,IPIPneo:C6:CA,1,NEO_C;NEOc6,,1,6,1=Very Inaccurate;6=Very Accurate,2415,21264,0.8980109
+q_1752,Stick to the rules.,QB6:QB6:H;IPIPneo:A2:MO,2,SPI_3socCohesion;SPI_5conscientious;SPI_15habit;QB6honprop;NEO_A;NEOa2,,1,6,1=Very Inaccurate;6=Very Accurate,5920,17759,0.74998944
+q_1754,Stop when work becomes too difficult.,HEXACO:H:C:D,1,HEXACO_C;HCDiligence,HEXACO_C;HCDiligence,1,6,1=Very Inaccurate;6=Very Accurate,2700,20979,0.88597491
+q_1755,Stumble over my words.,IPIPneo:N4:SC,1,NEO_N;NEOn4,,1,6,1=Very Inaccurate;6=Very Accurate,2433,21246,0.89725073
+q_1757,Suffer from others' sorrows.,IPIPneo:A6:SY,1,NEO_A;NEOa6,,1,6,1=Very Inaccurate;6=Very Accurate,2492,21187,0.89475907
+q_1758,Suspect hidden motives in others.,MPQ:MPQ:AL;IPIPneo:A1:TR,2,NEO_A;MPQal;NEOa1,NEO_A;NEOa1,1,6,1=Very Inaccurate;6=Very Accurate,2415,21264,0.8980109
+q_1759,[Suspect facial expressions show when sad].,HEXACO:H:E:D,1,HEXACO_E;HEDepend,HEXACO_E;HEDepend,1,6,1=Very Inaccurate;6=Very Accurate,3433,20246,0.85501922
+q_1761,Swim against the current.,HEXACO:H:O:U,1,HEXACO_O;HOUnconvention,,1,6,1=Very Inaccurate;6=Very Accurate,2728,20951,0.88479243
+q_1762,Switch my loyalties when I feel like it.,HEXACO:H:H:S,1,HEXACO_H;HHSincere,HEXACO_H;HHSincere,1,6,1=Very Inaccurate;6=Very Accurate,6066,17613,0.74382364
+q_1763,Sympathize with others' feelings.,IPIP100:B5:A;BFAS:BFAS:A:C,2,SPI_3socCohesion;SPI_5compHonHum;SPI_15compassion;IPIP100agree;IPIP50Agree;BFAScomp,,1,6,1=Very Inaccurate;6=Very Accurate,4080,19599,0.82769543
+q_1764,Sympathize with the homeless.,IPIPneo:A6:SY,1,NEO_A;NEOa6,,1,6,1=Very Inaccurate;6=Very Accurate,2465,21214,0.89589932
+q_1765,Take advantage of others.,BFAS:BFAS:A:P;IPIPneo:A2:MO,2,SPI_3socCohesion;SPI_5compHonHum;SPI_15machiavell;BFASpolite;NEO_A;NEOa2,SPI_3socCohesion;SPI_5compHonHum;BFASpolite;NEO_A;NEOa2,1,6,1=Very Inaccurate;6=Very Accurate,2547,21132,0.89243634
+q_1766,Take an interest in other people's lives.,BFAS:BFAS:A:C,1,BFAScomp,,1,6,1=Very Inaccurate;6=Very Accurate,3976,19703,0.8320875
+q_1768,Take charge.,IPIP100:B5:E;BFAS:BFAS:E:A;MPQ:MPQ:SP;IPIPneo:E3:AS,4,IPIP100extra;BFASassert;NEO_E;MPQsp;NEOe3,,1,6,1=Very Inaccurate;6=Very Accurate,4366,19313,0.81561721
+q_1769,Take control of things.,IPIPneo:E3:AS,1,NEO_E;NEOe3,,1,6,1=Very Inaccurate;6=Very Accurate,2536,21143,0.89290088
+q_1774,Take no time for others.,BFAS:BFAS:A:C;IPIPneo:A3:AL,2,BFAScomp;NEO_A;NEOa3,BFAScomp;NEO_A;NEOa3,1,6,1=Very Inaccurate;6=Very Accurate,4065,19614,0.8283289
+q_1775,Take offense easily.,IPIP100:B5:ES,1,IPIP100stability,IPIP100stability,1,6,1=Very Inaccurate;6=Very Accurate,2597,21082,0.89032476
+q_1780,Take risks that could cause trouble for me.,QB6:QB6:H,1,QB6honprop,QB6honprop,1,6,1=Very Inaccurate;6=Very Accurate,5902,17777,0.75074961
+q_1781,Take risks.,MPQ:MPQ:HA,1,SPI_3sociability;SPI_15boldness;MPQha,MPQha,1,6,1=Very Inaccurate;6=Very Accurate,2481,21198,0.89522362
+q_1787,Take things as they come.,HEXACO:H:A:G,1,SPI_15easyGoingness;HEXACO_A;HAGentle,,1,6,1=Very Inaccurate;6=Very Accurate,2614,21065,0.88960682
+q_1792,Take time out for others.,IPIP100:B5:A,1,IPIP100agree;IPIP50Agree,,1,6,1=Very Inaccurate;6=Very Accurate,4066,19613,0.82828667
+q_1795,Talk a lot.,HEXACO:H:X:E,1,HEXACO_X;HXExpress,,1,6,1=Very Inaccurate;6=Very Accurate,2769,20910,0.88306094
+q_1798,Talk even when I know I shouldnÕt.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2456,21223,0.8962794
+q_1803,Talk to a lot of different people at parties.,IPIP100:B5:E;HEXACO:H:X:S;QB6:QB6:X;IPIPneo:E2:GR,4,SPI_3sociability;SPI_5extraversion;SPI_15sociability;IPIP100extra;IPIP50Extra;HEXACO_X;QB6extra;NEO_E;HXSociable;NEOe2,,1,6,1=Very Inaccurate;6=Very Accurate,2831,20848,0.88044259
+q_1808,[Tell people...want to hear so they do what I want].,HEXACO:H:H:S,1,SPI_3socCohesion;SPI_15machiavell;HEXACO_H;HHSincere,SPI_3socCohesion;HEXACO_H;HHSincere,1,6,1=Very Inaccurate;6=Very Accurate,3483,20196,0.85290764
+q_1810,Tell people about it when I'm irritated.,HEXACO:H:X:E,1,HEXACO_X;HXExpress,,1,6,1=Very Inaccurate;6=Very Accurate,4285,19394,0.81903797
+q_1812,Tell the truth.,IPIPneo:C3:DU,1,NEO_C;NEOc3,,1,6,1=Very Inaccurate;6=Very Accurate,2441,21238,0.89691288
+q_1818,Tend to dislike soft-hearted people.,IPIPneo:A6:SY,1,NEO_A;NEOa6,NEO_A;NEOa6,1,6,1=Very Inaccurate;6=Very Accurate,2366,21313,0.90008024
+q_1824,Tend to vote for conservative political candidates.,MPQ:MPQ:TR;IPIPneo:O6:LI,2,NEO_O;MPQtr;NEOo6,NEO_O;NEOo6,1,6,1=Very Inaccurate;6=Very Accurate,2385,21294,0.89927784
+q_1825,Tend to vote for liberal political candidates.,MPQ:MPQ:TR;IPIPneo:O6:LI,2,NEO_O;MPQtr;NEOo6,MPQtr,1,6,1=Very Inaccurate;6=Very Accurate,2304,21375,0.90269859
+q_1830,Think highly of myself.,IPIPneo:A5:MO,1,NEO_A;NEOa5,NEO_A;NEOa5,1,6,1=Very Inaccurate;6=Very Accurate,2417,21262,0.89792643
+q_1832,Think of others first.,IPIP100:B5:A,1,IPIP100agree,,1,6,1=Very Inaccurate;6=Very Accurate,4053,19626,0.82883568
+q_1834,Think quickly.,BFAS:BFAS:O:I,1,SPI_15intellect;BFASintel,,1,6,1=Very Inaccurate;6=Very Accurate,4372,19307,0.81536382
+q_1835,Think that all will be well.,IPIPneo:A1:TR,1,NEO_A;NEOa1,,1,6,1=Very Inaccurate;6=Very Accurate,2524,21155,0.89340766
+q_1840,Think that my moods donÕt change more than most peopleÕs do.,PS:PS:S,1,PSs,,1,6,1=Very Inaccurate;6=Very Accurate,2544,21135,0.89256303
+q_1848,Tire out quickly.,HEXACO:H:X:L,1,HEXACO_X;HXLiveliness,HEXACO_X;HXLiveliness,1,6,1=Very Inaccurate;6=Very Accurate,4296,19383,0.81857342
+q_1853,Tremble in dangerous situations.,HEXACO:H:E:F,1,SPI_15fear;HEXACO_E;HEFear,HEXACO_E;HEFear,1,6,1=Very Inaccurate;6=Very Accurate,3397,20282,0.85653955
+q_1854,Trust others.,MPQ:MPQ:AL;IPIPneo:A1:TR,2,SPI_15trust;NEO_A;MPQal;NEOa1,MPQal,1,6,1=Very Inaccurate;6=Very Accurate,2459,21220,0.89615271
+q_1855,Trust what people say.,MPQ:MPQ:AL;IPIPneo:A1:TR,2,SPI_15trust;NEO_A;MPQal;NEOa1,MPQal,1,6,1=Very Inaccurate;6=Very Accurate,2547,21132,0.89243634
+q_1858,Try not to think about the needy.,IPIPneo:A6:SY,1,NEO_A;NEOa6,NEO_A;NEOa6,1,6,1=Very Inaccurate;6=Very Accurate,2489,21190,0.89488576
+q_1861,Try to avoid complex people.,IPIP100:B5:O;HEXACO:H:O:U,2,IPIP100intel;HEXACO_O;HOUnconvention,IPIP100intel;HEXACO_O;HOUnconvention,1,6,1=Very Inaccurate;6=Very Accurate,2812,20867,0.88124499
+q_1867,Try to follow the rules.,HEXACO:H:H:F;IPIPneo:C3:DU;PS:PS:S,3,HEXACO_H;NEO_C;PSs;HHFairness;NEOc3,,1,6,1=Very Inaccurate;6=Very Accurate,6096,17583,0.7425567
+q_1869,Try to forgive and forget.,HEXACO:H:A:FO;MPQ:MPQ:AG,2,HEXACO_A;MPQag;HAForgive,MPQag,1,6,1=Very Inaccurate;6=Very Accurate,2566,21113,0.89163394
+q_1871,Try to impress others.,HEXACO:H:H:GA,1,HEXACO_H;HHGreedAvoid,HEXACO_H;HHGreedAvoid,1,6,1=Very Inaccurate;6=Very Accurate,3486,20193,0.85278095
+q_1872,Try to lead others.,IPIPneo:E3:AS,1,NEO_E;NEOe3,,1,6,1=Very Inaccurate;6=Very Accurate,2527,21152,0.89328097
+q_1880,Try to understand myself.,IPIPneo:O3:EM,1,SPI_15openness;NEO_O;NEOo3,,1,6,1=Very Inaccurate;6=Very Accurate,2401,21278,0.89860214
+q_1881,Turn my back on others.,IPIPneo:A3:AL,1,NEO_A;NEOa3,NEO_A;NEOa3,1,6,1=Very Inaccurate;6=Very Accurate,2484,21195,0.89509692
+q_1883,Turn plans into actions.,IPIPneo:C4:AS,1,NEO_C;NEOc4,,1,6,1=Very Inaccurate;6=Very Accurate,2470,21209,0.89568816
+q_1893,Use difficult words.,IPIP100:B5:O,1,IPIP100intel;IPIP50Intel,,1,6,1=Very Inaccurate;6=Very Accurate,2775,20904,0.88280755
+q_1894,Use flattery to get ahead.,HEXACO:H:H:S;IPIPneo:A2:MO,2,SPI_15machiavell;HEXACO_H;NEO_A;HHSincere;NEOa2,HEXACO_H;NEO_A;HHSincere;NEOa2,1,6,1=Very Inaccurate;6=Very Accurate,3536,20143,0.85066937
+q_1896,Use others for my own ends.,QB6:QB6:H;IPIPneo:A2:MO,2,SPI_3socCohesion;SPI_5compHonHum;SPI_15machiavell;QB6honprop;NEO_A;NEOa2,SPI_3socCohesion;SPI_5compHonHum;QB6honprop;NEO_A;NEOa2,1,6,1=Very Inaccurate;6=Very Accurate,3509,20170,0.85180962
+q_1899,Usually enjoy being with people.,QB6:QB6:X,1,QB6extra,,1,6,1=Very Inaccurate;6=Very Accurate,2797,20882,0.88187846
+q_1904,Usually like to spend my free time with people.,HEXACO:H:X:S,1,HEXACO_X;HXSociable,,1,6,1=Very Inaccurate;6=Very Accurate,2763,20916,0.88331433
+q_1910,Value cooperation over competition.,IPIPneo:A6:SY,1,SPI_15easyGoingness;NEO_A;NEOa6,,1,6,1=Very Inaccurate;6=Very Accurate,2384,21295,0.89932007
+q_1913,Wait for others to lead the way.,IPIP100:B5:E;BFAS:BFAS:E:A;IPIPneo:E3:AS,3,IPIP100extra;BFASassert;NEO_E;NEOe3,IPIP100extra;BFASassert;NEO_E;NEOe3,1,6,1=Very Inaccurate;6=Very Accurate,4333,19346,0.81701085
+q_1915,Want every detail taken care of.,BFAS:BFAS:C:O;HEXACO:H:C:PE,2,BFASorder;HEXACO_C;HCPerfect,,1,6,1=Very Inaccurate;6=Very Accurate,4381,19298,0.81498374
+q_1916,Want everything to add up perfectly.,HEXACO:H:C:PE,1,SPI_15habit;HEXACO_C;HCPerfect,,1,6,1=Very Inaccurate;6=Very Accurate,4417,19262,0.81346341
+q_1917,"Want everything to be ""just right.""",BFAS:BFAS:C:O;HEXACO:H:C:O;IPIPneo:C2:OR,3,SPI_15habit;BFASorder;HEXACO_C;NEO_C;HCOrgan;NEOc2,,1,6,1=Very Inaccurate;6=Very Accurate,4236,19443,0.82110731
+q_1923,Want to be left alone.,MPQ:MPQ:SC;IPIPneo:E2:GR,2,NEO_E;MPQsc;NEOe2,NEO_E;MPQsc;NEOe2,1,6,1=Very Inaccurate;6=Very Accurate,2505,21174,0.89421006
+q_1924,Want to be liked.,HEXACO:H:E:D,1,HEXACO_E;HEDepend,HEXACO_E;HEDepend,1,6,1=Very Inaccurate;6=Very Accurate,3353,20326,0.85839774
+q_1943,Warm up quickly to others.,BFAS:BFAS:E:E;MPQ:MPQ:SC;IPIPneo:E1:FR,3,BFASenthus;NEO_E;MPQsc;NEOe1,,1,6,1=Very Inaccurate;6=Very Accurate,2854,20825,0.87947126
+q_1949,Waste my time.,IPIP100:B5:C;BFAS:BFAS:C:I;QB6:QB6:C;IPIPneo:C5:SD,4,SPI_3emotionality;SPI_5conscientious;SPI_15industry;IPIP100consc;BFASindustry;QB6consc;NEO_C;NEOc5,SPI_5conscientious;SPI_15industry;IPIP100consc;BFASindustry;QB6consc;NEO_C;NEOc5,1,6,1=Very Inaccurate;6=Very Accurate,2719,20960,0.88517252
+q_1957,[Often bothered by at least one in group interactions].,HEXACO:H:A:FL,1,HEXACO_A;HAFlex,HEXACO_A;HAFlex,1,6,1=Very Inaccurate;6=Very Accurate,2586,21093,0.89078931
+q_1962,Will do anything for others.,MPQ:MPQ:UV,1,MPQuv,,1,6,1=Very Inaccurate;6=Very Accurate,2521,21158,0.89353436
+q_1964,Will not probe deeply into a subject.,IPIP100:B5:O;HEXACO:H:O:I,2,IPIP100intel;HEXACO_O;HOInquisite,IPIP100intel;HEXACO_O;HOInquisite,1,6,1=Very Inaccurate;6=Very Accurate,2755,20924,0.88365218
+q_1969,Wish to stay young forever.,HEXACO:H:H:GA,1,HEXACO_H;HHGreedAvoid,HEXACO_H;HHGreedAvoid,1,6,1=Very Inaccurate;6=Very Accurate,3633,20046,0.84657291
+q_1979,Work hard.,HEXACO:H:C:D;MPQ:MPQ:AC;IPIPneo:C4:AS,3,HEXACO_C;NEO_C;MPQac;HCDiligence;NEOc4,,1,6,1=Very Inaccurate;6=Very Accurate,2755,20924,0.88365218
+q_1984,Work too much.,MPQ:MPQ:AC,1,MPQac,,1,6,1=Very Inaccurate;6=Very Accurate,2414,21265,0.89805313
+q_1989,Worry about things.,IPIP100:B5:ES;BFAS:BFAS:N:W;HEXACO:H:E:A;MPQ:MPQ:SR;IPIPneo:N1:ANX,5,IPIP100stability;IPIP50EmoSt;BFASwithdraw;HEXACO_E;NEO_N;MPQsr;HEAnxiety;NEOn1,IPIP100stability;IPIP50EmoSt;HEXACO_E;HEAnxiety,1,6,1=Very Inaccurate;6=Very Accurate,2649,21030,0.88812872
+q_1992,Would be afraid to give a speech in public.,HEXACO:H:X:SB,1,HEXACO_X;HXSocBold,HEXACO_X;HXSocBold,1,6,1=Very Inaccurate;6=Very Accurate,4301,19378,0.81836226
+q_1993,[Good at rescuing from burning building].,HEXACO:H:E:F,1,HEXACO_E;HEFear,,1,6,1=Very Inaccurate;6=Very Accurate,3410,20269,0.85599054
+q_1998,Would describe my experiences as somewhat dull.,PS:PS:P,1,PSp,PSp,1,6,1=Very Inaccurate;6=Very Accurate,2453,21226,0.8964061
+q_2001,Would fear walking in a high-crime part of a city.,HEXACO:H:E:F,1,HEXACO_E;HEFear,HEXACO_E;HEFear,1,6,1=Very Inaccurate;6=Very Accurate,3414,20265,0.85582161
+q_2003,[Would feel v. badly for a long time if stole].,HEXACO:H:H:F,1,HEXACO_H;HHFairness,,1,6,1=Very Inaccurate;6=Very Accurate,5991,17688,0.746991
+q_2005,Would hate to be considered odd or strange.,HEXACO:H:O:U,1,HEXACO_O;HOUnconvention,HEXACO_O;HOUnconvention,1,6,1=Very Inaccurate;6=Very Accurate,2730,20949,0.88470797
+q_2008,Would like to have more power than other people.,HEXACO:H:H:M,1,HEXACO_H;HHModesty,HEXACO_H;HHModesty,1,6,1=Very Inaccurate;6=Very Accurate,3506,20173,0.85193631
+q_2011,Would love to explore strange places.,HEXACO:H:O:I,1,HEXACO_O;HOInquisite,,1,6,1=Very Inaccurate;6=Very Accurate,2789,20890,0.88221631
+q_2016,Would never cheat on my taxes.,HEXACO:H:H:F;IPIPneo:A2:MO,2,HEXACO_H;NEO_A;HHFairness;NEOa2,,1,6,1=Very Inaccurate;6=Very Accurate,6083,17596,0.74310571
+q_2017,Would never go hang gliding or bungee jumping.,MPQ:MPQ:HA;IPIPneo:E5:ES,2,SPI_15boldness;NEO_E;MPQha;NEOe5,SPI_15boldness;NEO_E;NEOe5,1,6,1=Very Inaccurate;6=Very Accurate,2445,21234,0.89674395
+q_2018,[Never go down rapids in a canoe].,HEXACO:H:E:F,1,HEXACO_E;HEFear,HEXACO_E;HEFear,1,6,1=Very Inaccurate;6=Very Accurate,3237,20442,0.86329659
+q_2020,Would never make a high-risk investment.,MPQ:MPQ:HA,1,MPQha,,1,6,1=Very Inaccurate;6=Very Accurate,2471,21208,0.89564593
+q_2021,Would never take things that aren't mine.,HEXACO:H:H:F;QB6:QB6:H;MPQ:MPQ:AG,3,HEXACO_H;QB6honprop;MPQag;HHFairness,MPQag,1,6,1=Very Inaccurate;6=Very Accurate,6022,17657,0.74568183
+q_2024,[Would not enjoy a highly social job].,HEXACO:H:X:S,1,HEXACO_X;HXSociable,HEXACO_X;HXSociable,1,6,1=Very Inaccurate;6=Very Accurate,2799,20880,0.88179399
+q_2025,Would not enjoy being a famous celebrity.,HEXACO:H:H:GA,1,HEXACO_H;HHGreedAvoid,,1,6,1=Very Inaccurate;6=Very Accurate,3549,20130,0.85012036
+q_2029,[Not regret taking advantage of someone impulsively].,HEXACO:H:H:F,1,HEXACO_H;HHFairness,HEXACO_H;HHFairness,1,6,1=Very Inaccurate;6=Very Accurate,6025,17654,0.74555513
+q_2036,Yell at people.,IPIPneo:A4:CO,1,NEO_A;NEOa4,NEO_A;NEOa4,1,6,1=Very Inaccurate;6=Very Accurate,2390,21289,0.89906668
+q_2160,Am not a very enthusiastic person.,BFAS:BFAS:E:E,1,BFASenthus,BFASenthus,1,6,1=Very Inaccurate;6=Very Accurate,2678,21001,0.88690401
+q_2161,Do not have an assertive personality.,BFAS:BFAS:E:A,1,BFASassert,BFASassert,1,6,1=Very Inaccurate;6=Very Accurate,4315,19364,0.81777102
+q_2737,Am a goal-oriented person.,QB6:QB6:C,1,QB6consc,,1,6,1=Very Inaccurate;6=Very Accurate,2776,20903,0.88276532
+q_2745,Am able to come up with new and different ideas.,PS:PS:P,1,SPI_5intelOpen;PSp,,1,6,1=Very Inaccurate;6=Very Accurate,2421,21258,0.89775751
+q_2754,Am an original thinker.,PS:PS:P,1,PSp,,1,6,1=Very Inaccurate;6=Very Accurate,2480,21199,0.89526585
+q_2756,Am considered to be a wise person.,QB6:QB6:O,1,QB6open,,1,6,1=Very Inaccurate;6=Very Accurate,4228,19451,0.82144516
+q_2765,Am happy with my life.,QB6:QB6:ES,1,SPI_15enthusiasm;QB6resilient,,1,6,1=Very Inaccurate;6=Very Accurate,2669,21010,0.88728409
+q_2775,Am not all that curious about the world.,QB6:QB6:O,1,QB6open,QB6open,1,6,1=Very Inaccurate;6=Very Accurate,2780,20899,0.88259639
+q_2786,Am often worried by things that I said or did.,QB6:QB6:ES,1,QB6resilient,QB6resilient,1,6,1=Very Inaccurate;6=Very Accurate,2714,20965,0.88538367
+q_2821,Behave in unusual and strange ways.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2430,21249,0.89737742
+q_2853,Cannot imagine lying or cheating.,QB6:QB6:H,1,SPI_15machiavell;QB6honprop,SPI_15machiavell,1,6,1=Very Inaccurate;6=Very Accurate,5887,17792,0.75138308
+q_2891,Don't pride myself on being original.,QB6:QB6:O,1,QB6open,QB6open,1,6,1=Very Inaccurate;6=Very Accurate,2778,20901,0.88268086
+q_2900,Don't think it's important to socialize with others.,QB6:QB6:X,1,QB6extra,QB6extra,1,6,1=Very Inaccurate;6=Very Accurate,2856,20823,0.8793868
+q_2951,Have a colorful and dramatic way of talking about things. ,PS:PS:P,1,PSp,,1,6,1=Very Inaccurate;6=Very Accurate,2362,21317,0.90024917
+q_3023,Look forward to the opportunity to learn and grow. ,PS:PS:P,1,PSp,,1,6,1=Very Inaccurate;6=Very Accurate,2449,21230,0.89657502
+q_3090,"When with a group, have difficulties selecting a good topic to talk about.",PS:PS:P,1,PSp,PSp,1,6,1=Very Inaccurate;6=Very Accurate,2441,21238,0.89691288
+q_3691,Am selfÐdestructive.,PS:PS:S,1,PSs,PSs,1,6,1=Very Inaccurate;6=Very Accurate,2445,21234,0.89674395
+q_4222,Have many different hobbies.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2480,21199,0.89526585
+q_4223,Stop to think things over before doing anything.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2434,21245,0.8972085
+q_4224,My mood often goes up and down.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2450,21229,0.89653279
+q_4225,Often take notice of what people think.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2548,21131,0.8923941
+q_4226,Am a talkative person.,EPQr:EPQ:E,1,SPI_3sociability;SPI_5extraversion;EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2487,21192,0.89497023
+q_4227,Being in debt is worrisome to me.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2529,21150,0.8931965
+q_4228,"Sometimes feel ""just miserable"" for no reason.",EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2520,21159,0.89357659
+q_4229,Give money to charities.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2421,21258,0.89775751
+q_4230,Am rather lively.,EPQr:EPQ:E,1,SPI_3sociability;SPI_5extraversion;EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2420,21259,0.89779974
+q_4231,It would upset me a lot to see a child or animal suffer.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2436,21243,0.89712403
+q_4232,Often worry about things I should not have done or said.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2392,21287,0.89898222
+q_4233,Dislike people who don't know how to behave themselves.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2356,21323,0.90050256
+q_4234,Can usually let myself go and enjoy a lively party.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2405,21274,0.89843321
+q_4235,Am an irritable person.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2452,21227,0.89644833
+q_4236,People should always respect the law.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2488,21191,0.894928
+q_4237,Enjoy meeting new people.,EPQr:EPQ:E,1,SPI_3sociability;SPI_5extraversion;EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2421,21258,0.89775751
+q_4238,Good manners are very important.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2378,21301,0.89957346
+q_4239,My feelings are easily hurt.,EPQr:EPQ:N,1,SPI_3emotionality;SPI_5neuroticism;SPI_15fear;EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2458,21221,0.89619494
+q_4240,Tend to keep in the background on social occasions.,EPQr:EPQ:E,1,SPI_3sociability;SPI_5extraversion;SPI_15sociability;EPQe,SPI_3sociability;SPI_5extraversion;SPI_15sociability;EPQe,1,6,1=Very Inaccurate;6=Very Accurate,2375,21304,0.89970016
+q_4241,Would take drugs which may have strange or dangerous effects.,EPQr:EPQ:P,1,EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2479,21200,0.89530808
+q_4242,"Often feel ""fed-up.""",EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2493,21186,0.89471684
+q_4243,Like going out a lot.,EPQr:EPQ:E,1,SPI_3sociability;EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2454,21225,0.89636387
+q_4244,Prefer to go my own way rather than act by the rules.,EPQr:EPQ:P,1,EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2476,21203,0.89543477
+q_4245,Enjoy hurting people I love.,EPQr:EPQ:P,1,EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2395,21284,0.89885553
+q_4246,Am often troubled by feelings of guilt.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2397,21282,0.89877106
+q_4247,Prefer reading to meeting people.,EPQr:EPQ:E,1,SPI_3sociability;SPI_5extraversion;SPI_15sociability;EPQe,SPI_3sociability;SPI_5extraversion;SPI_15sociability;EPQe,1,6,1=Very Inaccurate;6=Very Accurate,2404,21275,0.89847544
+q_4248,Have enemies who want to harm me.,EPQr:EPQ:P,1,EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2386,21293,0.89923561
+q_4249,Would call myself a nervous person.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2450,21229,0.89653279
+q_4250,Have many friends.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2511,21168,0.89395667
+q_4251,Enjoy practical jokes that can sometimes really hurt people.,EPQr:EPQ:P,1,EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2537,21142,0.89285865
+q_4252,Am a worrier.,EPQr:EPQ:N,1,SPI_3emotionality;SPI_5neuroticism;EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2433,21246,0.89725073
+q_4253,Would call myself happy-go-lucky.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2428,21251,0.89746189
+q_4254,Good manners and cleanliness matter to me.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2473,21206,0.89556147
+q_4255,Have often gone against my parents' wishes.,EPQr:EPQ:P,1,EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2493,21186,0.89471684
+q_4256,Worry about awful things that might happen.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2526,21153,0.8933232
+q_4257,Usually take the initiative in making new friends.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2492,21187,0.89475907
+q_4258,"Would call myself tense or ""highly-strung.""",EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2449,21230,0.89657502
+q_4259,Am mostly quiet when with other people.,EPQr:EPQ:E,1,SPI_3sociability;SPI_5extraversion;SPI_15sociability;EPQe,SPI_3sociability;SPI_5extraversion;SPI_15sociability;EPQe,1,6,1=Very Inaccurate;6=Very Accurate,2516,21163,0.89374551
+q_4260,Think marriage is old-fashioned and should be done away with.,EPQr:EPQ:P,1,EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2422,21257,0.89771528
+q_4261,Am more easy-going about right and wrong than most people.,EPQr:EPQ:P,1,SPI_15easyGoingness;EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2454,21225,0.89636387
+q_4262,Can easily get some life into a dull party.,EPQr:EPQ:E,1,SPI_3sociability;SPI_5extraversion;EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2488,21191,0.894928
+q_4263,Worry about my health.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2410,21269,0.89822205
+q_4264,Enjoy cooperating with others.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2442,21237,0.89687064
+q_4265,Like telling jokes and funny stories to my friends.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2493,21186,0.89471684
+q_4266,Most things taste the same to me.,EPQr:EPQ:P,1,SPI_15seriousness;EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2406,21273,0.89839098
+q_4267,Like mixing with people.,EPQr:EPQ:E,1,SPI_3sociability;SPI_5extraversion;SPI_15sociability;EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2449,21230,0.89657502
+q_4268,Worry if I know there are mistakes in my work.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2464,21215,0.89594155
+q_4269,Suffer from sleeplessness.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2414,21265,0.89805313
+q_4270,People have said that I sometimes act rashly.,EPQr:EPQ:E,1,SPI_15impulsivity;EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2408,21271,0.89830652
+q_4271,"Nearly always have a ""ready answer"" when talking to people.",EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2453,21226,0.8964061
+q_4272,Like to arrive at appointments in plenty of time.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2481,21198,0.89522362
+q_4273,Often feel listless and tired for no reason.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2502,21177,0.89433675
+q_4274,Like doing things in which I have to act quickly.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2406,21273,0.89839098
+q_4275,My mother is (or was) a good woman.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2416,21263,0.89796866
+q_4276,Often make decisions on the spur of the moment.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2522,21157,0.89349212
+q_4277,Often feel life is very dull.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2514,21165,0.89382998
+q_4278,Often take on more activities than I have time for.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2456,21223,0.8962794
+q_4279,There are several people who keep trying to avoid me.,EPQr:EPQ:P,1,SPI_15seriousness;EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2471,21208,0.89564593
+q_4280,Worry a lot about my looks.,EPQr:EPQ:N,1,SPI_15fear;EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2505,21174,0.89421006
+q_4281,People spend too much time safeguarding their future with savings and insurance.,EPQr:EPQ:P,1,EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2439,21240,0.89699734
+q_4282,Have once wished that I were dead.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2543,21136,0.89260526
+q_4283,Can get a party going.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2427,21252,0.89750412
+q_4284,Try not to be rude to people.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2448,21231,0.89661726
+q_4285,Worry too long after an embarrassing experience.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2467,21212,0.89581486
+q_4286,"Generally ""look before I leap.""",EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2571,21108,0.89142278
+q_4287,"Suffer from ""nerves.""",EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2498,21181,0.89450568
+q_4288,Often feel lonely.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2518,21161,0.89366105
+q_4289,Trust people to mainly tell the truth.,EPQr:EPQ:P,1,SPI_15trust;EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2454,21225,0.89636387
+q_4290,Am easily hurt when people find fault with me or the work I do.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2477,21202,0.89539254
+q_4291,It is better to follow society's rules than to go my own way.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2435,21244,0.89716627
+q_4292,Like having plenty of bustle and excitement around.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2513,21166,0.89387221
+q_4293,Would like for other people to be afraid of me.,EPQr:EPQ:P,1,EPQp,,1,6,1=Very Inaccurate;6=Very Accurate,2437,21242,0.8970818
+q_4294,Am sometimes bubbling over with energy and sometimes very sluggish.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2444,21235,0.89678618
+q_4295,Other people think of me as being very lively.,EPQr:EPQ:E,1,EPQe,,1,6,1=Very Inaccurate;6=Very Accurate,2503,21176,0.89429452
+q_4296,Tell a lot of lies.,EPQr:EPQ:P,1,SPI_3socCohesion;SPI_15machiavell;EPQp,SPI_3socCohesion,1,6,1=Very Inaccurate;6=Very Accurate,2491,21188,0.8948013
+q_4297,Believe one has special duties to one's family.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2469,21210,0.89573039
+q_4298,Am touchy about some things.,EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2494,21185,0.89467461
+q_4299,Would feel very sorry for an animal caught in a trap.,EPQr:EPQ:P,1,EPQp,EPQp,1,6,1=Very Inaccurate;6=Very Accurate,2430,21249,0.89737742
+q_4300,"When my temper rises, I find it difficult to control.",EPQr:EPQ:N,1,EPQn,,1,6,1=Very Inaccurate;6=Very Accurate,2523,21156,0.89344989

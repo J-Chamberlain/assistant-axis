@@ -1,0 +1,7 @@
+summary_type,group,count
+coverage_category,3,78
+coverage_category,2,49
+coverage_category,1,41
+coverage_category,0,72
+threshold,category_ge_2,127
+threshold,all_traits,240

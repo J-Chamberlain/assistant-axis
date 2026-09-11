@@ -1,0 +1,20 @@
+{
+  "original_cohort_n": 8984,
+  "round12_tipi_all_ten_complete_n": 7044,
+  "round12_tipi_scoring_sufficient_n": 7044,
+  "round12_tipi_plus_same_wave_occupation_n": 6261,
+  "round12_weighted_population_estimate": 16499071.2,
+  "round6_goldberg_all_eight_complete_n": 4851,
+  "round6_goldberg_plus_same_wave_occupation_n": 4060,
+  "persona_role_feasibility_counts": {
+    "strong_n_ge_100": 2,
+    "moderate_50_to_99": 5,
+    "exploratory_20_to_49": 20,
+    "too_sparse_lt_20": 71,
+    "translated_persona_roles": 98,
+    "unresolved_prior_included_roles": 0
+  },
+  "primary_occupation_selection": "Use CV_MAINJOB_FLG loop number to select same-round YEMP_OCCODE-2002.xx; never assume roster loop 1.",
+  "scoring_sufficiency_rule": "Both items for every TIPI dimension (all ten items); no undocumented missing-item imputation.",
+  "generated_at": "2026-09-11T21:59:09Z"
+}

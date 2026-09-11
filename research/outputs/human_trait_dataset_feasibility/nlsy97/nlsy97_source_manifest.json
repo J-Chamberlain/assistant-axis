@@ -1,0 +1,238 @@
+{
+  "dataset": "National Longitudinal Survey of Youth 1997 (NLSY97) public-use data",
+  "institution": "U.S. Bureau of Labor Statistics / CHRR, The Ohio State University",
+  "release": "NLSY97 1997-2023, rounds 1-21",
+  "canonical_url": "https://www.bls.gov/nls/nlsy97.htm",
+  "extraction_url": "https://www.nlsinfo.org/investigator/pages/search",
+  "download_date": "2026-09-11",
+  "license_or_access_terms": "Official no-cost public-use NLS Investigator data; project human-data rule prohibits committing respondent rows.",
+  "extract_description": "human_trait_dataset_feasibility_final; 126 columns including six Investigator default identifiers/keys",
+  "respondents": 8984,
+  "files": [
+    {
+      "file_name": "extract.log",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/extract.log",
+      "bytes": 174,
+      "sha256": "ddf61c3dd524c9883d9958369dd884b95c44087c34cd41b88af2684360674401",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility-value-labels.do",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility-value-labels.do",
+      "bytes": 48130,
+      "sha256": "263a81b68f8ed8b961b2766358549b095b61983962e5325b70131b73b8315d6c",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility.NLSY97",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility.NLSY97",
+      "bytes": 504,
+      "sha256": "8f7931ead7e13e40a6295684ffd5c3faaa3deb2b27b8abf38a1ddfeee87ad119",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility.cdb",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility.cdb",
+      "bytes": 93715,
+      "sha256": "79f55841875eab4ccda7e2dca1f40c5131053665776e6e1cfb967ac8d25b9965",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility.csv",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility.csv",
+      "bytes": 1498840,
+      "sha256": "947dd2ed4c56574bdd38ae08446c66d48b81000b7395a08c79ad768d9eb81cc3",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility.dat",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility.dat",
+      "bytes": 1498223,
+      "sha256": "c079a33877b70682affd4962ad3e01081a2164ba093210abb543c4849632a4d7",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility.dct",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility.dct",
+      "bytes": 1500801,
+      "sha256": "00f2c966ab4e720e019cbb4308562917dbbb092b1eb92b11a1c458ce68a5d028",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility.sas",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility.sas",
+      "bytes": 59229,
+      "sha256": "c352f307aedcb002d33e7735e9c9ac5af93146504264de812db3b18210fa0827",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility.sps",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility.sps",
+      "bytes": 81375,
+      "sha256": "1bdf1bb08a24b297bfadbd809491eaf7697575bcaa22196db4646ea193c2234c",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility.zip",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility.zip",
+      "bytes": 943932,
+      "sha256": "8af28d87cce420658d51cfb06cd8c600c7c1c67245f2929b44456a8c647115a4",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_final-value-labels.do",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_final-value-labels.do",
+      "bytes": 67825,
+      "sha256": "c4dd942319ab24e95822931200e4d63f4838b6bb311b705d910d0d55cfda0bf6",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_final.NLSY97",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_final.NLSY97",
+      "bytes": 1134,
+      "sha256": "3efd27da1dfa2252e1338406aeeccc0a8139d89600a343c2b3ece35c2c970040",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_final.cdb",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_final.cdb",
+      "bytes": 169772,
+      "sha256": "08bc87414445955b3147753ce16514077d2d34da3f8169e22cd7cf835b739aba",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_final.csv",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_final.csv",
+      "bytes": 3264436,
+      "sha256": "b55b54308c4b3005ce27f4bf81fff15980c5c68b54a84d2a5a48694f80a51919",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_final.dat",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_final.dat",
+      "bytes": 3263049,
+      "sha256": "a26557442dca569d1df8f72182b4cb9df1c165ebfbc1d07ef5a3fc78a35608e3",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_final.dct",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_final.dct",
+      "bytes": 3269115,
+      "sha256": "26b3a787c2abb65431c88f893c8c7714f3591993a562c82a67ab85f1ffd683b6",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_final.sas",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_final.sas",
+      "bytes": 89518,
+      "sha256": "ab959af30d46f1bcf858cff330e9590f6d4d7eb97d3d93f9061e44aeffc4b64a",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_final.sps",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_final.sps",
+      "bytes": 121335,
+      "sha256": "cacbb854c8dfacb6777e30e71d1ff44428ed0aefd53f770b7b449b8763e23df1",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_final.zip",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_final.zip",
+      "bytes": 1543125,
+      "sha256": "6b72d3bd4667cb1de4d4f5f041b8b8deae05189beb4440cf6db2081f198c08ae",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_full-value-labels.do",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_full-value-labels.do",
+      "bytes": 67506,
+      "sha256": "d4ac093448d06d288c21ee08d1e8eb1235807375995736b6b7f039e55851f4b4",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_full.NLSY97",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_full.NLSY97",
+      "bytes": 1116,
+      "sha256": "93af8a64e1e6589916247db49012bb2bfff3e28d89361954eba9cb34b00db0cc",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_full.cdb",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_full.cdb",
+      "bytes": 168199,
+      "sha256": "208ba2bfb900374e9fb349427ddf9b1999c91f9c508fdee32a1e8f37f17a6f23",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_full.csv",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_full.csv",
+      "bytes": 3218925,
+      "sha256": "04d0504cfce6517a250303f7ce43783168f490a7623b127460ab047350a6975a",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_full.dat",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_full.dat",
+      "bytes": 3217560,
+      "sha256": "2e6ef2ef6cb7d44e8119bab47284d49915736865a28bfe7eb115b14eb09cd4d5",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_full.dct",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_full.dct",
+      "bytes": 3223548,
+      "sha256": "1675557342c6cfe786b38253bcff6a5a7352cfe6486df9356cc6063a8a5b9095",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_full.sas",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_full.sas",
+      "bytes": 89040,
+      "sha256": "91c61af2700a741620400ebef4d672ec20218078dac7f9f7583de14f8bfc38dc",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_full.sps",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_full.sps",
+      "bytes": 120658,
+      "sha256": "994e25f5578ac38c40a1d842e2105e8f30a69e80b57c5e2c5acb76224ecb74d8",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "human_trait_dataset_feasibility_full.zip",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_full.zip",
+      "bytes": 1519853,
+      "sha256": "09c1cc553315a0e6fe8a41b1e416b267ecef7591518c6dbebaa660d2611665b9",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "2002-census-occupation-codes.xls",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/occupation_crosswalks/2002-census-occupation-codes.xls",
+      "bytes": 95232,
+      "sha256": "334c8f3c1b4aff6d46961ea1f9fef6f38254d6f80c883d624adac189fa9b7b6d",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "2010-occ-codes-with-crosswalk-from-2002-2011.xls",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/nlsy97/occupation_crosswalks/2010-occ-codes-with-crosswalk-from-2002-2011.xls",
+      "bytes": 376320,
+      "sha256": "ebf7e6f31c0cda16c7c8518a23bfa13ca537105ba41c427f99dff155a68c2cc6",
+      "gitignored_raw": true
+    }
+  ],
+  "occupation_coding": {
+    "system": "2002 Census occupation codes derived from 2000 SOC",
+    "official_code_url": "https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/2002-census-occupation-codes.xls",
+    "official_2010_census_crosswalk_url": "https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/2010-occ-codes-with-crosswalk-from-2002-2011.xls",
+    "official_bls_2010_to_2018_soc_crosswalk_url": "https://www.bls.gov/soc/2018/crosswalks.htm",
+    "crosswalk_rule": "Only BLS-verified unchanged 2010-to-2018 SOC codes are treated as exact code translations; splits/merges and changed codes require an explicit title-reviewed older-frame mapping."
+  },
+  "survey_design": {
+    "sample_type": "cross-sectional and supplemental oversample identified by CV_SAMPLE_TYPE",
+    "round12_weight": "T2022500 cumulative-cases weight, two implied decimals",
+    "stratum": "R1489700 VSTRAT",
+    "psu": "R1489800 VPSU",
+    "inference_note": "Raw N is used for feasibility. Any later inference must use documented weights, strata, and PSUs rather than simple-random-sample standard errors."
+  },
+  "generated_at": "2026-09-11T21:59:09Z"
+}

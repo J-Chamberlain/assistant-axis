@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3829
+- active analyses: 3855
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 12
@@ -37,7 +37,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Status Counts
 
-- active: 4643
+- active: 4669
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -52,6 +52,8 @@ Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVEN
 ### Active Analyses
 
 Multi-model trait-profile to persona-PC predictor: `research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md` is the entry point for the Llama-3.3-70B and Gemma-2-27B replication of the completed Qwen mapping. Use `cross_model_comparison.csv` for the canonical three-model metric table; each `llama/` and `gemma/` subdirectory contains the complete 275 x 240 cosine matrix, repeated nested comparison, raw/quantile LOPO, fixed Qwen-canonical role-family holdout, 100-permutation control, OOD reference, transparent Ridge/all-model bundles, endpoint-held-out synthetic interpolation, source manifest, and verification report. `deterministic_full_rerun_comparison.json` records byte-identical reproduction of all 20 deterministic CSVs. Each model uses its own established PCA geometry; cross-model sign orientation does not imply identical PC semantics. This is same-space saved-vector evidence, not behavioral, causal, psychometric, human-transfer, or model-sophistication evidence. No GPU, RunPod, new inference, activation extraction, or external model API was used.
+
+Human trait-dataset feasibility: `research/outputs/human_trait_dataset_feasibility/human_trait_dataset_feasibility_report.md` is the entry point for the Phase-1 SAPA vocabulary and NLSY97 occupation/outcome audit. Use `sapa/sapa_model_trait_candidate_crosswalk.csv` for all 240 canonical trait judgments and exact item evidence, `sapa/sapa_trait_coverage_summary.json` for counts, `nlsy97/nlsy97_personality_occupation_cell_summary.json` for cohort totals, `nlsy97/nlsy97_persona_occupation_crosswalk.csv` for conservative prior-role translations and feasibility cells, `nlsy97/nlsy97_wave_overlap_summary.csv` for later-domain co-observation, and `artifact_inventory.csv` for hashes/raw URLs. Raw respondent files are gitignored under `data_external/human_validation/`. This establishes data feasibility only: no human-to-model projection, correspondence test, or human-personality claim was made.
 
 Trait-profile to persona-PC predictor: `research/outputs/trait_profile_pc_predictor/trait_profile_pc_predictor_report.md` is the entry point for the first-stage reusable mapping from all 240 Qwen activation-cosine trait features to canonical PC1/PC2/PC3. Use `validation_summary.json` for metrics and decisions, `ridge_predictor.json` for the transparent canonical V1 specification, `predict_trait_profile.py` for existing/external/percentile-modified profiles, `leave_one_persona_out_predictions.csv` for exact held-out persona lookups, `leave_one_cluster_out_summary.csv` for harder family shift, and `artifact_inventory.csv` for hashes/raw URLs. The analysis includes repeated nested Ridge/PLS/RBF-Kernel-Ridge/KNN comparison, fold-safe quantiles, 275-persona LOPO, all seven canonical cluster holdouts, 100 target permutations, OOD distance/reconstruction diagnostics, and 120 pair-endpoint-held-out synthetic activation mixes. It is same-space Qwen activation geometry; counterfactual outputs are predicted locations, not observed behavior or causal/human-personality claims. No inference, new activations, GPU, RunPod, or external model API was used.
 

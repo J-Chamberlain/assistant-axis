@@ -1,0 +1,16 @@
+{
+  "model_trait_count": 240,
+  "category_3_direct_or_near_direct": 78,
+  "category_2_close_narrow": 49,
+  "category_ge_2": 127,
+  "category_1_broad_only": 41,
+  "category_0_no_defensible_coverage": 72,
+  "method": {
+    "stage_1": "exact/token/deterministic lemma-like overlap candidate ranking",
+    "stage_2": "repo-local word and character TF-IDF candidate generation",
+    "stage_3": "Codex feasibility review against exact item text and canonical definitions",
+    "external_model_api": false,
+    "psychometric_validation": false
+  },
+  "generated_at": "2026-09-11T21:50:53Z"
+}

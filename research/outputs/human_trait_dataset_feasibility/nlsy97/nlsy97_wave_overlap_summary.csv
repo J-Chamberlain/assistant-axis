@@ -1,0 +1,13 @@
+sample,respondent_n,definition
+Original NLSY97 cohort,8984,all public-use cohort respondents
+Round-12 TIPI all ten items complete,7044,all T3162500-T3162509 in 1..7
+Round-12 TIPI + same-wave current/current-most-recent occupation,6261,TIPI complete plus valid official Census code selected by T2009700 roster loop
+Round-6 Goldberg all eight items complete,4851,all S0920000-S0920700 in 1..5
+Round-6 Goldberg + same-wave current/current-most-recent occupation,4060,Goldberg complete plus valid official Census code selected by S1549402 roster loop
+Round-12 TIPI + same-wave occupation + later employment outcome,6178,primary R12 sample plus valid public-use Z9061900
+Round-12 TIPI + same-wave occupation + later education outcome,6007,primary R12 sample plus valid public-use T3606300
+Round-12 TIPI + same-wave occupation + later justice outcome,6021,primary R12 sample plus valid public-use T4501000
+Round-12 TIPI + same-wave occupation + later health outcome,6049,primary R12 sample plus valid public-use T4562200
+Round-12 TIPI + same-wave occupation + later substance use outcome,2322,primary R12 sample plus valid public-use T4495500
+Round-12 TIPI + same-wave occupation + later family income outcome,5379,primary R12 sample plus valid public-use T3606500
+Round-12 TIPI + same-wave occupation + later marital status outcome,6040,primary R12 sample plus valid public-use T3611000
