@@ -1,18 +1,61 @@
 {
   "status": "pass",
-  "source_matrix_shape": [
-    275,
-    240
+  "models": [
+    "qwen",
+    "llama",
+    "gemma"
   ],
-  "selected_score_rows": 4125,
-  "persona_rows_in_html": 825,
-  "category_points_in_html": 12375,
-  "canonical_geometry_unchanged": true,
-  "raw_scores_exact": true,
-  "independent_midrank_check": true,
-  "all_rankings_descending": true,
-  "source_checksums_pass": true,
+  "unique_roles_per_model": 275,
+  "source_traits_per_model": 240,
+  "displayed_traits": [
+    "creative",
+    "abstract",
+    "curious",
+    "reactive",
+    "adaptable",
+    "practical",
+    "skeptical",
+    "analytical",
+    "conscientious",
+    "rebellious",
+    "competitive",
+    "manipulative",
+    "empathetic",
+    "agreeable",
+    "altruistic"
+  ],
+  "score_rows": 12375,
+  "qwen_score_rows": 4125,
+  "persona_rows_in_html": 2475,
+  "category_points_in_html": 37125,
+  "role_name_sets_identical": true,
+  "finite_coordinates": true,
+  "finite_trait_scores": true,
+  "within_model_percentiles": true,
+  "all_model_pc_orders_descending": true,
+  "coordinate_max_abs_difference_vs_established": {
+    "qwen": 0.0,
+    "llama": 0.0,
+    "gemma": 0.0
+  },
+  "qwen_reproduction_max_abs_differences": {
+    "coordinates": 0.0,
+    "raw_affinity": 0.0,
+    "z_score": 0.0,
+    "height_percentile": 0.0
+  },
+  "model_data_changes": {
+    "llama": {
+      "coordinate_max_abs_difference_vs_qwen": 75.71200945750721,
+      "displayed_raw_score_max_abs_difference_vs_qwen": 0.4906069391038402
+    },
+    "gemma": {
+      "coordinate_max_abs_difference_vs_qwen": 1279.164247922244,
+      "displayed_raw_score_max_abs_difference_vs_qwen": 0.523376149382816
+    }
+  },
+  "default_model": "qwen",
   "all_panels_prerendered": true,
   "no_external_scripts": true,
-  "browser_validation": "Not performed; static SVG rasterization and DOM-double unit checks only"
+  "browser_validation": "Recorded separately; this check is numerical/static markup only"
 }

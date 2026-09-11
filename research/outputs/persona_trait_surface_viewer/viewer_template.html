@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>Trait Landscapes | Qwen Persona Geometry</title>
+<title>Trait Landscapes | Qwen, Llama, Gemma Persona Geometry</title>
 <style>
 :root { --bg:#0d0d0d; --panel:#151515; --line:#2a2a2a; --text:#e8e8e8; --muted:#aaa6a0; --accent:#8eb8d0; --warm:#d5a38b; }
 * { box-sizing:border-box; }
@@ -15,6 +15,7 @@ h1 { font-size:22px; line-height:1.3; margin:0 0 4px; font-weight:500; letter-sp
 .subtitle { color:var(--muted); font-size:12px; }
 .count { text-align:right; color:var(--muted); white-space:nowrap; font-size:11px; }
 .count strong { color:var(--text); font-size:17px; font-weight:400; }
+#model-provenance { color:var(--accent); font-size:10px; margin-top:3px; }
 button,input,select { font:inherit; color:var(--text); }
 select,button { background:#1b1b1b; border:1px solid #3b3b3b; border-radius:4px; padding:8px 10px; }
 button { cursor:pointer; }
@@ -93,10 +94,11 @@ a { color:var(--accent); text-underline-offset:3px; }
 </head>
 <body>
 <header>
-  <div><div class="eyebrow">Persona geometry / Qwen</div><h1>Trait landscapes</h1><div class="subtitle">Two principal components. One trait group. A different view of the same personas.</div></div>
+  <div><div class="eyebrow">Persona geometry / <span id="active-model-name">Qwen</span></div><h1>Trait landscapes</h1><div class="subtitle">Two principal components. One trait group. The selected model's own coordinates and trait scores.</div><div id="model-provenance">Canonical Qwen coordinates / exact saved Qwen cosines</div></div>
   <div class="count"><strong>275</strong> personas<br>5 groups / 15 traits</div>
 </header>
 <div class="toolbar" aria-label="Landscape controls">
+  <label class="control" for="model-select">Model <select id="model-select"><option value="qwen" selected>Qwen</option><option value="llama">Llama</option><option value="gemma">Gemma</option></select></label>
   <label class="control" for="x-axis">X axis <select id="x-axis"><option value="0">PC1</option><option value="1">PC2</option><option value="2">PC3</option></select></label>
   <label class="control" for="y-axis">Y axis <select id="y-axis"><option value="0">PC1</option><option value="1" selected>PC2</option><option value="2">PC3</option></select></label>
   <label class="control" for="smoothing">Surface <select id="smoothing"><option value="0">Detail</option><option value="1" selected>Balanced</option><option value="2">Gentle</option></select></label>
@@ -127,22 +129,23 @@ a { color:var(--accent); text-underline-offset:3px; }
 <main>
   <section class="canvas-wrap" aria-label="Interactive category landscape">
     <div class="chart-title"><strong id="plot-category">Exploration</strong><small id="plane-caption">PC1 / PC2 &middot; height = mean trait percentile</small></div>
-    <p id="chart-description" class="sr-only">Rotatable three-dimensional plot. Persona nodes keep their original selected principal-component coordinates. Height is the mean of three within-trait percentiles across 275 personas. The fabric is a smoothed estimate between nodes. Use the persona selector for keyboard-accessible values.</p>
+    <p id="chart-description" class="sr-only">Rotatable three-dimensional plot. Persona nodes use the selected model's principal-component coordinates. Height is the mean of three within-model, within-trait percentiles across 275 personas. The fabric is a smoothed estimate between nodes. Use the persona selector for keyboard-accessible values.</p>
     <div id="plot" role="img" aria-describedby="chart-description"></div>
     <div class="legend"><span><i class="dot"></i> Scored persona</span><span><i class="gradient"></i> Lower / mean / higher score (0 / 50 / 100)</span><span><i class="thread"></i> Node-to-fabric gap</span><span>Drag to rotate &middot; scroll to zoom</span></div>
   </section>
   <aside aria-label="Persona inspection">
     <div><p class="panel-heading">Inspect a persona</p><label class="sr-only" for="persona-picker">Select a persona</label><select id="persona-picker"><option value="">Hover or choose a persona</option></select><h2 id="selected-name">Explore the fabric</h2><div id="selection-kind">Hover a node or choose a name</div><button id="clear-selection" type="button" hidden>Clear selection</button></div>
     <div><div id="selected-score">--</div><div class="score-label">mean trait percentile / 100</div><dl><dt>Group weighting</dt><dd id="selected-percentile">--</dd><dt>Mean member z</dt><dd id="selected-raw">--</dd><dt id="selected-x-label">PC1</dt><dd id="selected-x">--</dd><dt id="selected-y-label">PC2</dt><dd id="selected-y">--</dd><dt>Node / fabric gap</dt><dd id="selected-gap">--</dd><dt>Flat adherence</dt><dd id="flat-score">--</dd><dt>Rolling / flat RMSE</dt><dd id="flat-rmse">--</dd><dt>Plane R2 at nodes</dt><dd id="flat-plane-r2">--</dd></dl></div>
-    <div class="aside-help"><div id="member-scores" class="member-scores"></div><div class="rule"></div><p class="small-note">50 is the population mean for each group. Higher means higher average percentile among personas, not a probability.</p><p class="small-note">Nodes are exact scores. The fabric smooths between them; gaps and cutouts show where it cannot faithfully fill the space.</p><p class="small-note">Flat adherence is a descriptive 0-100 score: 100 means the rolling fabric matches its least-squares flat plane; it is not predictive validation.</p><p class="small-note" id="surface-fit-note"></p></div>
+    <div class="aside-help"><div id="member-scores" class="member-scores"></div><div class="rule"></div><p class="small-note">50 is the selected model's population mean for each group. Higher means higher average within-model percentile, not a probability.</p><p class="small-note">Nodes are exact model-specific scores. The fabric smooths between them; gaps and cutouts show where it cannot faithfully fill the space.</p><p class="small-note">Flat adherence is a descriptive 0-100 score: 100 means this model's rolling fabric matches its own least-squares flat plane; it is not predictive validation.</p><p class="small-note" id="surface-fit-note"></p></div>
   </aside>
 </main>
 <footer>
   <details><summary>How to read this landscape</summary><div class="method-text">
-  <p>This is a descriptive overlay of five editorial trait groups. Each node's height is the equal-weight mean of its three member traits' percentiles from the existing ridge plots. It is not a newly trained factor, independent psychological rating or probability.</p>
-  <p>Trait scores and the unchanged Qwen PCA share activation sources. Each group contains exactly three of the 15 already selected traits; none were added or rescored. The selector chooses categories, not mixtures or a valence continuum.</p>
-  <p>The fabric uses the same regularized thin-plate method and density/hull masks as the emotion viewer. Fitted values outside 0-100 are clipped for display, with counts in the fit diagnostics; exact nodes never change. Fabric gaps are not confidence intervals. Height colors use a fixed 0-100 scale across all groups.</p>
-  <p>The semi-transparent flat plane extends to the chart edges using its fitted linear equation. Extensions beyond the persona outline are extrapolations and can extend below 0 or above 100. A permanent blue-tinted plane marks height zero; a white line marks the intersection where it falls inside the chart. Flat-plane-only mode keeps this reference visible. Adherence scores still use the original supported region, so extending the display does not change them.</p>
+  <p>This is a descriptive overlay of five editorial reading groups, not fitted latent factors. Each node's height is the equal-weight mean of its three member traits' within-model percentiles. It is not a newly trained factor, independent psychological rating or probability.</p>
+  <p>These are same-space activation-cosine trait profiles. Qwen uses canonical geometry coordinates and exact saved Qwen scores. Llama and Gemma use their own layer-mean role-vector PCA coordinates, sign-oriented to the Qwen reference with the established project procedure, and their own role-to-trait cosines.</p>
+  <p>Each model's percentiles are ranks within its own 275-persona distribution. Equal percentiles across models do not imply equal absolute cosine or identical psychological semantics. Model selection does not establish psychological equivalence.</p>
+  <p>The fabric uses the same regularized thin-plate method and density/hull logic as the original viewer, recomputed independently for each model and PC pair. Fitted values outside 0-100 are clipped for display; exact nodes never change. Fabric gaps are not confidence intervals. Height colors use a fixed 0-100 scale.</p>
+  <p>The semi-transparent flat plane, support mask, node-fit diagnostic and flat-adherence diagnostic are all recomputed for the selected model. Extensions beyond the persona outline are extrapolations. A permanent blue-tinted plane marks height zero; a white line marks the intersection where it falls inside the chart.</p>
   <p><a href="trait_surface_methodology.md">Methodology and controls</a> &middot; <a href="persona_trait_group_scores.csv" download>Group and member scores</a> &middot; <a href="../persona_trait_ridge_plots/persona_trait_ridges.html">Trait ridges</a> &middot; <a href="../persona_emotion_surface_viewer/persona_emotion_surface_viewer.html">Emotion landscape</a></p>
   </div></details>
 </footer>

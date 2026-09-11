@@ -1,6 +1,6 @@
 /* Scientific mesh preview only. Pure SVG/Sharp; no browser or WebGL execution. */
 const fs=require('node:fs'),path=require('node:path'),sharp=require('sharp'),assert=require('node:assert/strict');
-const here=__dirname,d=JSON.parse(fs.readFileSync(path.join(here,'persona_trait_surface_data.json')));
+const here=__dirname,d=JSON.parse(fs.readFileSync(path.join(here,'persona_trait_surface_data.json'))),m=d.models[d.default_model];
 const colors=[[0,'173d9e'],[.2,'198bcc'],[.4,'74d9d0'],[.5,'f4f1dc'],[.65,'ffd04a'],[.8,'ef7529'],[1,'b21932']];
 function color(v){
   const t=Math.max(0,Math.min(1,v/100)),j=Math.min(colors.length-2,colors.findIndex((c,i)=>i<colors.length-1&&t<=colors[i+1][0]));
@@ -8,7 +8,7 @@ function color(v){
   const rgb=s=>[0,2,4].map(i=>parseInt(s.slice(i,i+2),16));
   return '#'+rgb(a[1]).map((c,i)=>Math.round(c+(rgb(b[1])[i]-c)*f).toString(16).padStart(2,'0')).join('');
 }
-const view=d.views['0_1'],level=view.levels[1],lo=[view.x[0],view.y[0]],hi=[view.x.at(-1),view.y.at(-1)];
+const view=m.views['0_1'],level=view.levels[1],lo=[view.x[0],view.y[0]],hi=[view.x.at(-1),view.y.at(-1)];
 const longest=Math.max(hi[0]-lo[0],hi[1]-lo[1]);
 const yaw=46*Math.PI/180,pitch=28*Math.PI/180;
 const right=[-Math.sin(yaw),Math.cos(yaw),0],up=[-Math.sin(pitch)*Math.cos(yaw),-Math.sin(pitch)*Math.sin(yaw),Math.cos(pitch)];
@@ -19,8 +19,8 @@ const svg=['<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="555" vi
   '<rect width="3000" height="555" fill="#0d0d0d"/><g font-family="DejaVu Sans, sans-serif" fill="#e8e8e8">'];
 let triangles=0;
 for(let g=0;g<5;g++){
-  svg.push(`<g transform="translate(${g*600},0)"><text x="24" y="34" font-size="23">${d.categories[g].label}</text>`,
-    `<text x="24" y="59" font-size="11" fill="#aaa6a0">${d.categories[g].members.map(m=>m.label).join(' / ')}</text>`);
+  svg.push(`<g transform="translate(${g*600},0)"><text x="24" y="34" font-size="23">${m.categories[g].label}</text>`,
+    `<text x="24" y="59" font-size="11" fill="#aaa6a0">${m.categories[g].members.map(member=>member.label).join(' / ')}</text>`);
   const grid=level.grids[g],faces=[];
   for(let j=0;j<60;j++)for(let i=0;i<60;i++)for(const corners of [[[i,j],[i+1,j],[i,j+1]],[[i+1,j],[i+1,j+1],[i,j+1]]]){
     if(corners.some(([x,y])=>grid[y][x]===null))continue;

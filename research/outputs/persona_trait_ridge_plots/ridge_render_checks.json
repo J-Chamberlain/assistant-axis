@@ -2,6 +2,66 @@
   "status": "pass",
   "static_renders": [
     {
+      "file": "persona_trait_ridges_qwen_pc1.png",
+      "width": 1000,
+      "height": 12380
+    },
+    {
+      "file": "persona_trait_ridges_qwen_pc2.png",
+      "width": 1000,
+      "height": 12380
+    },
+    {
+      "file": "persona_trait_ridges_qwen_pc3.png",
+      "width": 1000,
+      "height": 12380
+    },
+    {
+      "file": "persona_trait_ridges_qwen_overview.png",
+      "width": 3000,
+      "height": 940
+    },
+    {
+      "file": "persona_trait_ridges_llama_pc1.png",
+      "width": 1000,
+      "height": 12380
+    },
+    {
+      "file": "persona_trait_ridges_llama_pc2.png",
+      "width": 1000,
+      "height": 12380
+    },
+    {
+      "file": "persona_trait_ridges_llama_pc3.png",
+      "width": 1000,
+      "height": 12380
+    },
+    {
+      "file": "persona_trait_ridges_llama_overview.png",
+      "width": 3000,
+      "height": 940
+    },
+    {
+      "file": "persona_trait_ridges_gemma_pc1.png",
+      "width": 1000,
+      "height": 12380
+    },
+    {
+      "file": "persona_trait_ridges_gemma_pc2.png",
+      "width": 1000,
+      "height": 12380
+    },
+    {
+      "file": "persona_trait_ridges_gemma_pc3.png",
+      "width": 1000,
+      "height": 12380
+    },
+    {
+      "file": "persona_trait_ridges_gemma_overview.png",
+      "width": 3000,
+      "height": 940
+    },
+    {
       "file": "persona_trait_ridges_pc1.png",
       "width": 1000,
       "height": 12380
@@ -23,10 +83,13 @@
     }
   ],
   "interaction_unit_checks": [
-    "Dropdown selects exactly one row in each plot",
-    "Persona button links all plots",
-    "Clear selection"
+    "Default is Qwen",
+    "Qwen/Llama/Gemma views switch without reload",
+    "Coordinate rows change with model",
+    "Selection persists by persona name across model switches",
+    "Persona buttons link all three PC panels",
+    "Reset restores Qwen and clears selection"
   ],
   "browser_test": false,
-  "note": "SVG rasterization and Node DOM-double unit tests, not a browser screenshot."
+  "note": "Sharp rasterization and a Node DOM double test static/model-switch state; actual browser verification is recorded separately."
 }

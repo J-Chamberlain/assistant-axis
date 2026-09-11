@@ -1,19 +1,42 @@
 {
   "status": "pass",
-  "personas": 275,
-  "groups": 5,
-  "rows": 1375,
-  "surface_variants": 45,
-  "exact_geometry": true,
+  "models": [
+    "qwen",
+    "llama",
+    "gemma"
+  ],
+  "personas_per_model": 275,
+  "source_traits_per_model": 240,
+  "displayed_traits": 15,
+  "groups_per_model": 5,
+  "group_rows": 4125,
+  "qwen_group_rows": 1375,
+  "surface_variants": 135,
+  "exact_model_coordinates": true,
   "exact_member_scores": true,
-  "equal_weight_mean": true,
+  "equal_weight_group_means": true,
   "population_group_mean": 50,
   "all_meshes_bounded": true,
-  "same_support_masks_as_emotion_viewer": true,
+  "support_masks_recomputed_from_selected_model_coordinates": true,
+  "support_mask_cell_differences_vs_qwen": {
+    "llama": {
+      "0_1": 1013,
+      "0_2": 1694,
+      "1_2": 1378
+    },
+    "gemma": {
+      "0_1": 722,
+      "0_2": 873,
+      "1_2": 675
+    }
+  },
+  "flat_planes_recomputed_per_model": true,
+  "flat_adherence_recomputed_per_model": true,
+  "qwen_reproduction_max_abs_difference": 0.0,
+  "qwen_reproduction_max_difference_path": "/roles/0/name",
   "source_hashes": true,
-  "flat_plane_schema": true,
-  "flat_adherence_schema": true,
   "self_contained_html": true,
-  "no_pca_refit": true,
-  "new_activations": false
+  "default_model": "qwen",
+  "new_activations": false,
+  "new_inference": false
 }

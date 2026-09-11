@@ -2,21 +2,26 @@
   "status": "pass",
   "camera_roundtrip_cases": 225,
   "poles_checked": true,
-  "checks": [
-    "Compiled HTML scripts parse and embedded data matches",
-    "All five groups and fixed vivid color limits",
-    "Exact 275 nodes and three member scores",
-    "Flat plane reaches chart edges; zero reference remains visible in fabric/plane-only modes",
-    "All six ordered axis views",
-    "Yaw/pitch/roll/zoom and numeric entry",
-    "Drag relayout updates controls",
-    "Camera survives axes, group and smoothing changes",
-    "Rapid camera/group changes converge to final selection",
-    "Top/front/side/isometric and reset",
-    "Empty numeric input restored"
+  "models_tested": [
+    "qwen",
+    "llama",
+    "gemma"
   ],
-  "react_count": 28,
+  "checks": [
+    "Compiled HTML scripts parse and embedded multimodel data matches",
+    "Default and reset model are Qwen",
+    "All five groups and fixed color limits",
+    "Exact 275 selected-model nodes and three member scores",
+    "All six ordered axis views",
+    "Selected-model surfaces, support masks, flat planes and diagnostics replace prior traces",
+    "Repeated and queued Qwen/Llama/Gemma switches converge without stale traces",
+    "Selection persists by persona name across models",
+    "Yaw/pitch/roll/zoom survive model, axis, group and smoothing changes",
+    "Flat-plane-only and node visibility",
+    "Drag relayout, presets, reset and numeric entry"
+  ],
+  "react_count": 36,
   "relayout_count": 11,
   "live_browser_test": false,
-  "note": "Plotly/DOM double tests UI state and camera math, not actual WebGL rendering. Local browser URL was blocked by browser-use policy."
+  "note": "Plotly/DOM double tests state and camera math; actual browser verification is recorded separately."
 }
