@@ -4,6 +4,14 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### Coordinate-Blind SAPA Review Retains a Restricted Provisional Bridge (2026-09-11)
+
+The original 78 Category-3 SAPA candidates were frozen into a fixed-seed, decision-free packet before adjudication, with model geometry, predictors, personas, occupations, outcomes, original labels, and downstream performance excluded. Applying the preregistered five-decision rubric to all 78 rows yielded 45 `ACCEPT_DIRECT`, 29 `ACCEPT_CLOSE`, 1 `DOWNGRADE_BROAD`, 3 `REJECT`, and 0 `AMBIGUOUS`. The provisional bridge keeps the 45 direct links as its primary tier and the 29 close links as an explicitly separate secondary tier, so reviewed direct coverage is 45/240 rather than the original feasibility screen's 78/240.
+
+The 74 retained rows use 129 distinct SAPA items and 78 distinct source scales. The highest item reuse is four retained traits for `q_1616` ("Remain calm under pressure"), and the highest scale reuse is seven traits for `IPIP100:B5:E`; this indicates differentiated evidence overall with visible local aliasing that later modeling must not ignore. Planned missingness remains decisive: respondents observe a median 13 of the 129 retained items, no respondent observes all 129, and the median pairwise retained-item overlap is 504.
+
+Interpretation: a sufficiently defensible restricted provisional bridge remains for external adjudication and later psychometric design, but complete respondent profiles are not directly available and the same-workflow Codex second pass is not independent psychometric validation. The single next gate is genuinely independent review of the frozen external packet before any human-to-model projection or performance-based crosswalk selection.
+
 ### Trait-Profile to Persona-PC Prediction Replicates in Llama and Gemma (2026-09-11)
 
 Built `research/outputs/multimodel_trait_profile_pc_predictor/` from existing released/local saved vectors only and applied the completed Qwen pipeline unchanged to each model's own established PCA geometry. Both bundles contain exactly 275 finite role vectors and 240 finite trait vectors with the same intended labels. Recomputed coordinates match the established multimodel artifact to max error 2.748e-14 for Llama and 1.376e-11 for Gemma. A complete fixed-seed rerun reproduced all 20 deterministic model CSV artifacts byte-for-byte.

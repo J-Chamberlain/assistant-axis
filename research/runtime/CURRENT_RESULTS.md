@@ -4,6 +4,10 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/runtime/CURRENT_RESULTS.md
 # Status: COMPLETE
 
+## 2026-09-11 — SAPA Category-3 coordinate-blind second-pass review
+
+Integrated the AA-1 human-data feasibility audit on top of the AA-2/AA-3 canonical state and froze a fixed-seed, decision-free packet for all 78 original SAPA Category-3 candidates before adjudication. The same-workflow Codex GPT-5.5 blinded semantic review retained 45 `ACCEPT_DIRECT` and 29 separately flagged `ACCEPT_CLOSE` links, downgraded 1 to broad, rejected 3, and left 0 ambiguous. The 74 retained links use 129 distinct items and 78 source scales, but planned missingness is substantial: respondents observe a median 13/129 retained items and none observes all 129. The bridge remains provisional; genuinely independent external review of the frozen packet is the next gate. No respondent-level data were committed and no human-to-model projection, respondent persona assignment, GPU, RunPod, model inference, activation extraction, or external model API was used.
+
 ## 2026-09-11 — Trait-profile to persona-PC predictor
 
 Completed `research/outputs/trait_profile_pc_predictor/` using only existing Qwen/Qwen3-32B role/trait activation-vector artifacts and canonical PCA geometry. The transparent raw-cosine Ridge V1 reaches LOPO R2=0.999522/0.998811/0.999611 for PC1/PC2/PC3; fold-safe quantile LOPO remains strong but less precise; whole-cluster holdouts increase mean normalized error to 1.68x LOPO; the 100-permutation null is clean; and 120 pair-endpoint-held-out synthetic activation interpolations remain strongly predicted. The CLI supports existing personas, complete raw/percentile profiles, deterministic percentile edits, empirical LOPO error references, model disagreement, and OOD diagnostics. No GPU, RunPod, new model inference, new activations, or external model API was used.

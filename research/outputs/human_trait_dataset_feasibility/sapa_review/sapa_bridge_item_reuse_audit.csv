@@ -1,0 +1,130 @@
+item_id,item_text,retained_model_trait_count,retained_traits,accept_direct_count,accept_close_count,source_scale_memberships,valid_response_n,missing_fraction
+q_1616,Remain calm under pressure.,4,calm;resilient;serene;stoic,4,0,HEXACO:H:E:A;IPIPneo:N6:VU,2613,0.88964906
+q_1099,Have frequent mood swings.,3,mercurial;neurotic;temperamental,2,1,IPIP100:B5:ES;MPQ:MPQ:SR;IPIPneo:N3:DE,2622,0.88926897
+q_1150,Hold a grudge.,3,bitter;hostile;vindictive,2,1,HEXACO:H:A:FO;MPQ:MPQ:AG;IPIPneo:A4:CO,2483,0.89513915
+q_1624,Respect authority.,3,deferential;rebellious;reverent,1,2,BFAS:BFAS:A:P,4025,0.83001816
+q_1742,Start conversations.,3,extroverted;gregarious;reserved,3,0,IPIP100:B5:E,2759,0.88348326
+q_1768,Take charge.,3,assertive;dominant;submissive,2,1,IPIP100:B5:E;BFAS:BFAS:E:A;MPQ:MPQ:SP;IPIPneo:E3:AS,4366,0.81561721
+q_2161,Do not have an assertive personality.,3,assertive;dominant;submissive,2,1,BFAS:BFAS:E:A,4315,0.81777102
+q_4265,Like telling jokes and funny stories to my friends.,3,goofy;mischievous;playful,1,2,EPQr:EPQ:E,2493,0.89471684
+q_630,Do things out of revenge.,3,bitter;hostile;vindictive,2,1,MPQ:MPQ:AG,2487,0.89497023
+q_1051,Have a sharp tongue.,2,acerbic;hostile,0,2,HEXACO:H:A:G;MPQ:MPQ:AG;IPIPneo:A4:CO,2551,0.89226741
+q_1196,Keep others at a distance.,2,detached;reserved,1,1,BFAS:BFAS:E:E;HEXACO:H:X:S;MPQ:MPQ:SC;IPIPneo:E1:FR,2707,0.88567929
+q_1422,Make plans and stick to them.,2,conscientious;methodical,1,1,IPIP100:B5:C;HEXACO:H:C:PR;MPQ:MPQ:CO,2693,0.88627054
+q_1441,Need a creative outlet.,2,artistic;creative,2,0,BFAS:BFAS:O:O,2770,0.88301871
+q_1507,Pay attention to details.,2,conscientious;meticulous,2,0,IPIP100:B5:C;HEXACO:H:C:PE;MPQ:MPQ:CO,4333,0.81701085
+q_1555,Put on a show to impress people.,2,bombastic;theatrical,1,1,HEXACO:H:H:S,3572,0.84914904
+q_1578,Rarely feel depressed.,2,melancholic;neurotic,2,0,BFAS:BFAS:N:W;HEXACO:H:E:A,2576,0.89121162
+q_1588,Rarely lose my composure.,2,serene;stoic,2,0,BFAS:BFAS:N:V,2653,0.8879598
+q_1681,Seldom get emotional.,2,detached;emotional,1,1,HEXACO:H:E:S;IPIPneo:O3:EM,3405,0.8562017
+q_1685,Seldom joke around.,2,goofy;playful,1,1,QB6:QB6:X;IPIPneo:E6:CH,2726,0.8848769
+q_1758,Suspect hidden motives in others.,2,naive;paranoid,1,1,MPQ:MPQ:AL;IPIPneo:A1:TR,2415,0.8980109
+q_1763,Sympathize with others' feelings.,2,agreeable;empathetic,2,0,IPIP100:B5:A;BFAS:BFAS:A:C,4080,0.82769543
+q_1769,Take control of things.,2,assertive;dominant,2,0,IPIPneo:E3:AS,2536,0.89290088
+q_1781,Take risks.,2,cautious;risk_taking,0,2,MPQ:MPQ:HA,2481,0.89522362
+q_1803,Talk to a lot of different people at parties.,2,extroverted;gregarious,2,0,IPIP100:B5:E;HEXACO:H:X:S;QB6:QB6:X;IPIPneo:E2:GR,2831,0.88044259
+q_1910,Value cooperation over competition.,2,agreeable;competitive,1,1,IPIPneo:A6:SY,2384,0.89932007
+q_1915,Want every detail taken care of.,2,meticulous;perfectionist,2,0,BFAS:BFAS:C:O;HEXACO:H:C:PE,4381,0.81498374
+q_1989,Worry about things.,2,anxious;neurotic,2,0,IPIP100:B5:ES;BFAS:BFAS:N:W;HEXACO:H:E:A;MPQ:MPQ:SR;IPIPneo:N1:ANX,2649,0.88812872
+q_228,Am passionate about causes.,2,passionate;zealous,0,2,IPIPneo:O3:EM,2501,0.89437899
+q_248,Am relaxed most of the time.,2,chill;nonchalant,0,2,IPIP100:B5:ES;MPQ:MPQ:SR;IPIPneo:N1:ANX,2633,0.88880443
+q_251,Am seldom bothered ... suffering of strangers.,2,callous;cruel,1,1,HEXACO:H:E:S,3407,0.85611723
+q_2745,Am able to come up with new and different ideas.,2,creative;innovative,2,0,PS:PS:P,2421,0.89775751
+q_292,Am willing to take risks.,2,cautious;risk_taking,0,2,HEXACO:H:E:F,3326,0.85953799
+q_2951,Have a colorful and dramatic way of talking about things. ,2,dramatic;theatrical,2,0,PS:PS:P,2362,0.90024917
+q_345,Believe in one true religion.,2,secular;spiritual,1,1,MPQ:MPQ:TR;IPIPneo:O6:LI,2445,0.89674395
+q_4231,It would upset me a lot to see a child or animal suffer.,2,callous;cruel,1,1,EPQr:EPQ:P,2436,0.89712403
+q_4251,Enjoy practical jokes that can sometimes really hurt people.,2,cruel;mischievous,0,2,EPQr:EPQ:P,2537,0.89285865
+q_4257,Usually take the initiative in making new friends.,2,extroverted;proactive,1,1,EPQr:EPQ:E,2492,0.89475907
+q_463,Can't do without the company of others.,2,gregarious;independent,1,1,HEXACO:H:E:D,3263,0.86219857
+q_497,Change my mood a lot.,2,mercurial;temperamental,1,1,IPIP100:B5:ES;BFAS:BFAS:N:V,2541,0.89268973
+q_52,Am a person whose moods go up and down easily.,2,mercurial;temperamental,1,1,BFAS:BFAS:N:V,2497,0.89454791
+q_594,Distrust people.,2,cynical;paranoid,2,0,HEXACO:H:A:FO;MPQ:MPQ:AL;IPIPneo:A1:TR,2643,0.88838211
+q_660,Don't consider myself religious.,2,secular;spiritual,1,1,MPQ:MPQ:TR,2553,0.89218295
+q_820,Feel comfortable with myself.,2,chill;confident,0,2,BFAS:BFAS:N:W;MPQ:MPQ:SR;IPIPneo:N3:DE,2574,0.89129609
+q_85,Am calm even in tense situations.,2,calm;serene,2,0,IPIPneo:N6:VU,2464,0.89594155
+q_1038,Have a dark outlook on the future.,1,pessimistic,1,0,MPQ:MPQ:WB;PS:PS:S,2466,0.89585709
+q_1042,Have a high opinion of myself.,1,grandiose,1,0,IPIPneo:A5:MO,2449,0.89657502
+q_1043,Have a lot of fun.,1,playful,1,0,BFAS:BFAS:E:E;HEXACO:H:X:L;MPQ:MPQ:WB;IPIPneo:E6:CH,2721,0.88508805
+q_1055,Have a strong personality.,1,confident,0,1,BFAS:BFAS:E:A;HEXACO:H:X:SB;PS:PS:P,4374,0.81527936
+q_1063,Have an eye for detail.,1,meticulous,1,0,HEXACO:H:C:PE,4356,0.81603953
+q_1185,Keep my emotions under control.,1,stoic,1,0,BFAS:BFAS:N:V,2652,0.88800203
+q_1254,Leave a mess in my room.,1,disorganized,0,1,IPIP100:B5:C;HEXACO:H:C:O;QB6:QB6:C;IPIPneo:C2:OR,2839,0.88010473
+q_1301,Like to be viewed as proper and conventional.,1,traditional,1,0,HEXACO:H:O:U,2753,0.88373664
+q_1310,Like to get lost in thought.,1,introspective,1,0,MPQ:MPQ:AB;IPIPneo:O1:IM,2523,0.89344989
+q_1321,Like to plan ahead.,1,methodical,0,1,QB6:QB6:C;MPQ:MPQ:CO,4314,0.81781325
+q_1350,Look at the bright side of life.,1,optimistic,1,0,IPIPneo:E6:CH,2422,0.89771528
+q_1385,Love to help others.,1,altruistic,1,0,IPIP100:B5:A;IPIPneo:A3:AL,3994,0.83132734
+q_1392,Love to think up new ways of doing things.,1,innovative,1,0,IPIP100:B5:O;HEXACO:H:O:C,4332,0.81705309
+q_145,Am inclined to forgive others.,1,forgiving,1,0,HEXACO:H:A:FO;QB6:QB6:A,2603,0.89007137
+q_1457,Never give up hope.,1,optimistic,1,0,MPQ:MPQ:UV,2405,0.89843321
+q_146,Am indifferent to the feelings of others.,1,callous,1,0,IPIP100:B5:A;BFAS:BFAS:A:C;IPIPneo:A3:AL,3914,0.83470586
+q_1483,[Forget to put things back].,1,disorganized,0,1,IPIP100:B5:C;HEXACO:H:C:O;IPIPneo:C2:OR,2680,0.88681954
+q_1488,Often make last-minute plans.,1,spontaneous,0,1,MPQ:MPQ:CO;IPIPneo:C6:CA,2450,0.89653279
+q_1511,Pay too little attention to details.,1,disorganized,0,1,HEXACO:H:C:PE;QB6:QB6:C,4374,0.81527936
+q_1606,Readily overcome setbacks.,1,resilient,1,0,IPIPneo:N6:VU,2479,0.89530808
+q_1609,Rebel against authority.,1,rebellious,1,0,HEXACO:H:O:U,2748,0.8839478
+q_1635,Reveal little about myself.,1,reserved,1,0,BFAS:BFAS:E:E;QB6:QB6:X,2814,0.88116052
+q_1662,Seek adventure.,1,adventurous,1,0,MPQ:MPQ:HA;IPIPneo:E5:ES,2469,0.89573039
+q_1671,[Enjoy interactions less than others].,1,avoidant,0,1,HEXACO:H:X:S,2729,0.8847502
+q_1676,Seldom experience sudden intuitive insights.,1,intuitive,0,1,HEXACO:H:O:C;QB6:QB6:O,2679,0.88686178
+q_1694,Set high standards for myself and others.,1,perfectionist,1,0,IPIPneo:C4:AS,2498,0.89450568
+q_1706,Show my sadness.,1,melancholic,1,0,HEXACO:H:E:D,3372,0.85759534
+q_1757,Suffer from others' sorrows.,1,empathetic,1,0,IPIPneo:A6:SY,2492,0.89475907
+q_1764,Sympathize with the homeless.,1,altruistic,1,0,IPIPneo:A6:SY,2465,0.89589932
+q_1765,Take advantage of others.,1,manipulative,1,0,BFAS:BFAS:A:P;IPIPneo:A2:MO,2547,0.89243634
+q_1780,Take risks that could cause trouble for me.,1,risk_taking,0,1,QB6:QB6:H,5902,0.75074961
+q_1830,Think highly of myself.,1,grandiose,1,0,IPIPneo:A5:MO,2417,0.89792643
+q_1835,Think that all will be well.,1,optimistic,1,0,IPIPneo:A1:TR,2524,0.89340766
+q_1854,Trust others.,1,naive,0,1,MPQ:MPQ:AL;IPIPneo:A1:TR,2459,0.89615271
+q_1869,Try to forgive and forget.,1,forgiving,1,0,HEXACO:H:A:FO;MPQ:MPQ:AG,2566,0.89163394
+q_1871,Try to impress others.,1,bombastic,0,1,HEXACO:H:H:GA,3486,0.85278095
+q_1880,Try to understand myself.,1,introspective,1,0,IPIPneo:O3:EM,2401,0.89860214
+q_1883,Turn plans into actions.,1,proactive,0,1,IPIPneo:C4:AS,2470,0.89568816
+q_1896,Use others for my own ends.,1,manipulative,1,0,QB6:QB6:H;IPIPneo:A2:MO,3509,0.85180962
+q_2011,Would love to explore strange places.,1,adventurous,1,0,HEXACO:H:O:I,2789,0.88221631
+q_2020,Would never make a high-risk investment.,1,cautious,0,1,MPQ:MPQ:HA,2471,0.89564593
+q_219,Am open about my feelings.,1,emotional,1,0,MPQ:MPQ:SC,2452,0.89644833
+q_22,Act impulsively when something is bothering me.,1,impulsive,1,0,HEXACO:H:C:PR,2712,0.88546814
+q_238,Am quick to correct others.,1,judgmental,1,0,QB6:QB6:A,2576,0.89121162
+q_239,Am quick to judge others.,1,judgmental,1,0,HEXACO:H:A:G,2570,0.89146501
+q_258,Am sure of my ground.,1,confident,0,1,IPIPneo:C1:SE,2423,0.89767304
+q_2754,Am an original thinker.,1,creative,1,0,PS:PS:P,2480,0.89526585
+q_2775,Am not all that curious about the world.,1,curious,1,0,QB6:QB6:O,2780,0.88259639
+q_278,Am usually a patient person.,1,patient,1,0,HEXACO:H:A:P;QB6:QB6:A,2596,0.89036699
+q_312,Avoid company.,1,avoidant,0,1,MPQ:MPQ:SC,2493,0.89471684
+q_343,Believe in human goodness.,1,cynical,1,0,IPIPneo:A1:TR,2457,0.89623717
+q_348,Believe in the importance of art.,1,artistic,1,0,BFAS:BFAS:O:O;HEXACO:H:O:A;QB6:QB6:O;MPQ:MPQ:TR;IPIPneo:O2:AI,2791,0.88213185
+q_35,Act without thinking.,1,impulsive,1,0,IPIPneo:C6:CA,2431,0.89733519
+q_364,Believe that I am better than others.,1,grandiose,1,0,BFAS:BFAS:A:P;HEXACO:H:H:M;IPIPneo:A5:MO,3481,0.8529921
+q_377,Believe that others have good intentions.,1,naive,0,1,IPIPneo:A1:TR,2481,0.89522362
+q_38,Adapt easily to new situations.,1,adaptable,0,1,IPIPneo:N1:ANX,2468,0.89577263
+q_381,Believe that people are essentially evil.,1,cynical,1,0,IPIPneo:A1:TR,2436,0.89712403
+q_4229,Give money to charities.,1,altruistic,1,0,EPQr:EPQ:P,2421,0.89775751
+q_4236,People should always respect the law.,1,reverent,0,1,EPQr:EPQ:P,2488,0.894928
+q_4244,Prefer to go my own way rather than act by the rules.,1,independent,0,1,EPQr:EPQ:P,2476,0.89543477
+q_4249,Would call myself a nervous person.,1,anxious,1,0,EPQr:EPQ:N,2450,0.89653279
+q_4256,Worry about awful things that might happen.,1,anxious,1,0,EPQr:EPQ:N,2526,0.8933232
+q_4261,Am more easy-going about right and wrong than most people.,1,nonchalant,0,1,EPQr:EPQ:P,2454,0.89636387
+q_4276,Often make decisions on the spur of the moment.,1,spontaneous,0,1,EPQr:EPQ:E,2522,0.89349212
+q_4291,It is better to follow society's rules than to go my own way.,1,traditional,1,0,EPQr:EPQ:P,2435,0.89716627
+q_491,Carry out my plans.,1,conscientious,1,0,BFAS:BFAS:C:I;IPIPneo:C5:SD,2728,0.88479243
+q_516,Come up with something new.,1,innovative,1,0,HEXACO:H:O:C,4376,0.8151949
+q_530,Continue until everything is perfect.,1,perfectionist,1,0,IPIP100:B5:C;HEXACO:H:C:PE;MPQ:MPQ:AC,4335,0.81692639
+q_566,Dislike changes.,1,adaptable,0,1,IPIPneo:O4:AD,2568,0.89154947
+q_6,Accept people as they are.,1,agreeable,1,0,HEXACO:H:A:G,2515,0.89378774
+q_610,Do not like art.,1,artistic,1,0,HEXACO:H:O:A;MPQ:MPQ:AB;IPIPneo:O2:AI,2795,0.88196292
+q_619,Do things according to a plan.,1,methodical,0,1,IPIP100:B5:C;HEXACO:H:C:PR;IPIPneo:C2:OR,4298,0.81848896
+q_636,Do things without thinking of the consequences.,1,impulsive,1,0,HEXACO:H:C:PR,2732,0.88462351
+q_793,Experience my emotions intensely.,1,emotional,1,0,IPIPneo:O3:EM,2438,0.89703957
+q_808,Fear for the worst.,1,pessimistic,1,0,IPIPneo:N1:ANX,2433,0.89725073
+q_811,Feel a sense of worthlessness or hopelessness.,1,melancholic,1,0,QB6:QB6:ES,2614,0.88960682
+q_819,Feel comfortable around people.,1,chill,0,1,IPIP100:B5:E;HEXACO:H:X:SB;IPIPneo:E1:FR,2769,0.88306094
+q_82,Am attached to conventional ways.,1,traditional,1,0,IPIPneo:O4:AD,2401,0.89860214
+q_844,Feel others' emotions.,1,empathetic,1,0,IPIP100:B5:A;BFAS:BFAS:A:C;HEXACO:H:E:S;IPIPneo:O3:EM,4095,0.82706195
+q_848,Feel short-changed in life.,1,bitter,1,0,MPQ:MPQ:AL,2327,0.90172727
+q_880,Feel that people are against me.,1,paranoid,1,0,PS:PS:S,2521,0.89353436
+q_901,Find it difficult to approach others.,1,avoidant,0,1,IPIP100:B5:E;HEXACO:H:X:SB;IPIPneo:N4:SC,2752,0.88377888
+q_905,Find it difficult to manipulate others.,1,manipulative,1,0,MPQ:MPQ:SP,2428,0.89746189
+q_915,Find it hard to forgive others.,1,forgiving,1,0,HEXACO:H:A:FO,2525,0.89336543
+q_917,Find it necessary to please the people who have power.,1,deferential,0,1,HEXACO:H:H:S,3551,0.8500359

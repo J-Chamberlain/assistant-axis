@@ -1,0 +1,689 @@
+{
+  "retained_trait_count": 74,
+  "retained_unique_item_count": 129,
+  "respondent_count": 23679,
+  "per_item_valid_response_n": {
+    "q_6": 2515,
+    "q_22": 2712,
+    "q_35": 2431,
+    "q_38": 2468,
+    "q_52": 2497,
+    "q_82": 2401,
+    "q_85": 2464,
+    "q_145": 2603,
+    "q_146": 3914,
+    "q_219": 2452,
+    "q_228": 2501,
+    "q_238": 2576,
+    "q_239": 2570,
+    "q_248": 2633,
+    "q_251": 3407,
+    "q_258": 2423,
+    "q_278": 2596,
+    "q_292": 3326,
+    "q_312": 2493,
+    "q_343": 2457,
+    "q_345": 2445,
+    "q_348": 2791,
+    "q_364": 3481,
+    "q_377": 2481,
+    "q_381": 2436,
+    "q_463": 3263,
+    "q_491": 2728,
+    "q_497": 2541,
+    "q_516": 4376,
+    "q_530": 4335,
+    "q_566": 2568,
+    "q_594": 2643,
+    "q_610": 2795,
+    "q_619": 4298,
+    "q_630": 2487,
+    "q_636": 2732,
+    "q_660": 2553,
+    "q_793": 2438,
+    "q_808": 2433,
+    "q_811": 2614,
+    "q_819": 2769,
+    "q_820": 2574,
+    "q_844": 4095,
+    "q_848": 2327,
+    "q_880": 2521,
+    "q_901": 2752,
+    "q_905": 2428,
+    "q_915": 2525,
+    "q_917": 3551,
+    "q_1038": 2466,
+    "q_1042": 2449,
+    "q_1043": 2721,
+    "q_1051": 2551,
+    "q_1055": 4374,
+    "q_1063": 4356,
+    "q_1099": 2622,
+    "q_1150": 2483,
+    "q_1185": 2652,
+    "q_1196": 2707,
+    "q_1254": 2839,
+    "q_1301": 2753,
+    "q_1310": 2523,
+    "q_1321": 4314,
+    "q_1350": 2422,
+    "q_1385": 3994,
+    "q_1392": 4332,
+    "q_1422": 2693,
+    "q_1441": 2770,
+    "q_1457": 2405,
+    "q_1483": 2680,
+    "q_1488": 2450,
+    "q_1507": 4333,
+    "q_1511": 4374,
+    "q_1555": 3572,
+    "q_1578": 2576,
+    "q_1588": 2653,
+    "q_1606": 2479,
+    "q_1609": 2748,
+    "q_1616": 2613,
+    "q_1624": 4025,
+    "q_1635": 2814,
+    "q_1662": 2469,
+    "q_1671": 2729,
+    "q_1676": 2679,
+    "q_1681": 3405,
+    "q_1685": 2726,
+    "q_1694": 2498,
+    "q_1706": 3372,
+    "q_1742": 2759,
+    "q_1757": 2492,
+    "q_1758": 2415,
+    "q_1763": 4080,
+    "q_1764": 2465,
+    "q_1765": 2547,
+    "q_1768": 4366,
+    "q_1769": 2536,
+    "q_1780": 5902,
+    "q_1781": 2481,
+    "q_1803": 2831,
+    "q_1830": 2417,
+    "q_1835": 2524,
+    "q_1854": 2459,
+    "q_1869": 2566,
+    "q_1871": 3486,
+    "q_1880": 2401,
+    "q_1883": 2470,
+    "q_1896": 3509,
+    "q_1910": 2384,
+    "q_1915": 4381,
+    "q_1989": 2649,
+    "q_2011": 2789,
+    "q_2020": 2471,
+    "q_2161": 4315,
+    "q_2745": 2421,
+    "q_2754": 2480,
+    "q_2775": 2780,
+    "q_2951": 2362,
+    "q_4229": 2421,
+    "q_4231": 2436,
+    "q_4236": 2488,
+    "q_4244": 2476,
+    "q_4249": 2450,
+    "q_4251": 2537,
+    "q_4256": 2526,
+    "q_4257": 2492,
+    "q_4261": 2454,
+    "q_4265": 2493,
+    "q_4276": 2522,
+    "q_4291": 2435
+  },
+  "respondent_retained_items_observed": {
+    "mean": 15.647113,
+    "median": 13.0,
+    "min": 0,
+    "p05": 6.0,
+    "p25": 11.0,
+    "p75": 16.0,
+    "p95": 50.0,
+    "max": 71
+  },
+  "respondents_with_any_retained_item_n": 23657,
+  "respondents_with_all_retained_items_n": 0,
+  "respondents_with_all_retained_items_fraction": 0.0,
+  "pairwise_retained_item_overlap_n": {
+    "mean": 508.099564,
+    "median": 504.0,
+    "min": 289,
+    "p05": 383.0,
+    "p25": 436.0,
+    "p75": 559.0,
+    "p95": 667.25,
+    "max": 1212
+  },
+  "trait_level_availability": [
+    {
+      "trait": "risk_taking",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 3,
+      "all_retained_items_observed_n": 178,
+      "at_least_one_retained_item_observed_n": 9700
+    },
+    {
+      "trait": "pessimistic",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 2,
+      "all_retained_items_observed_n": 507,
+      "at_least_one_retained_item_observed_n": 4392
+    },
+    {
+      "trait": "detached",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 512,
+      "at_least_one_retained_item_observed_n": 5600
+    },
+    {
+      "trait": "intuitive",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 1,
+      "all_retained_items_observed_n": 2679,
+      "at_least_one_retained_item_observed_n": 2679
+    },
+    {
+      "trait": "empathetic",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 163,
+      "at_least_one_retained_item_observed_n": 9008
+    },
+    {
+      "trait": "methodical",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 3,
+      "all_retained_items_observed_n": 124,
+      "at_least_one_retained_item_observed_n": 9535
+    },
+    {
+      "trait": "anxious",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 146,
+      "at_least_one_retained_item_observed_n": 6329
+    },
+    {
+      "trait": "patient",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 1,
+      "all_retained_items_observed_n": 2596,
+      "at_least_one_retained_item_observed_n": 2596
+    },
+    {
+      "trait": "artistic",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 69,
+      "at_least_one_retained_item_observed_n": 7327
+    },
+    {
+      "trait": "creative",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 166,
+      "at_least_one_retained_item_observed_n": 6388
+    },
+    {
+      "trait": "mercurial",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 3,
+      "all_retained_items_observed_n": 68,
+      "at_least_one_retained_item_observed_n": 6723
+    },
+    {
+      "trait": "zealous",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 1,
+      "all_retained_items_observed_n": 2501,
+      "at_least_one_retained_item_observed_n": 2501
+    },
+    {
+      "trait": "resilient",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 2,
+      "all_retained_items_observed_n": 431,
+      "at_least_one_retained_item_observed_n": 4661
+    },
+    {
+      "trait": "cruel",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 3,
+      "all_retained_items_observed_n": 158,
+      "at_least_one_retained_item_observed_n": 6965
+    },
+    {
+      "trait": "acerbic",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 1,
+      "all_retained_items_observed_n": 2551,
+      "at_least_one_retained_item_observed_n": 2551
+    },
+    {
+      "trait": "naive",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 3,
+      "all_retained_items_observed_n": 200,
+      "at_least_one_retained_item_observed_n": 5938
+    },
+    {
+      "trait": "perfectionist",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 183,
+      "at_least_one_retained_item_observed_n": 9357
+    },
+    {
+      "trait": "forgiving",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 70,
+      "at_least_one_retained_item_observed_n": 6796
+    },
+    {
+      "trait": "judgmental",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 2,
+      "all_retained_items_observed_n": 314,
+      "at_least_one_retained_item_observed_n": 4832
+    },
+    {
+      "trait": "traditional",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 159,
+      "at_least_one_retained_item_observed_n": 6321
+    },
+    {
+      "trait": "conscientious",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 106,
+      "at_least_one_retained_item_observed_n": 8344
+    },
+    {
+      "trait": "goofy",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 436,
+      "at_least_one_retained_item_observed_n": 4783
+    },
+    {
+      "trait": "adventurous",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 2,
+      "all_retained_items_observed_n": 455,
+      "at_least_one_retained_item_observed_n": 4803
+    },
+    {
+      "trait": "secular",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 2,
+      "all_retained_items_observed_n": 536,
+      "at_least_one_retained_item_observed_n": 4462
+    },
+    {
+      "trait": "adaptable",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 554,
+      "at_least_one_retained_item_observed_n": 4482
+    },
+    {
+      "trait": "temperamental",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 68,
+      "at_least_one_retained_item_observed_n": 6723
+    },
+    {
+      "trait": "dramatic",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 1,
+      "all_retained_items_observed_n": 2362,
+      "at_least_one_retained_item_observed_n": 2362
+    },
+    {
+      "trait": "serene",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 109,
+      "at_least_one_retained_item_observed_n": 6598
+    },
+    {
+      "trait": "confident",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 3,
+      "all_retained_items_observed_n": 141,
+      "at_least_one_retained_item_observed_n": 7913
+    },
+    {
+      "trait": "stoic",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 72,
+      "at_least_one_retained_item_observed_n": 6965
+    },
+    {
+      "trait": "callous",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 125,
+      "at_least_one_retained_item_observed_n": 8209
+    },
+    {
+      "trait": "altruistic",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 159,
+      "at_least_one_retained_item_observed_n": 7362
+    },
+    {
+      "trait": "paranoid",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 159,
+      "at_least_one_retained_item_observed_n": 6253
+    },
+    {
+      "trait": "curious",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 1,
+      "all_retained_items_observed_n": 2780,
+      "at_least_one_retained_item_observed_n": 2780
+    },
+    {
+      "trait": "bombastic",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 529,
+      "at_least_one_retained_item_observed_n": 6529
+    },
+    {
+      "trait": "avoidant",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 3,
+      "all_retained_items_observed_n": 99,
+      "at_least_one_retained_item_observed_n": 6881
+    },
+    {
+      "trait": "mischievous",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 534,
+      "at_least_one_retained_item_observed_n": 4496
+    },
+    {
+      "trait": "impulsive",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 109,
+      "at_least_one_retained_item_observed_n": 6692
+    },
+    {
+      "trait": "neurotic",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 71,
+      "at_least_one_retained_item_observed_n": 6888
+    },
+    {
+      "trait": "disorganized",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 3,
+      "all_retained_items_observed_n": 111,
+      "at_least_one_retained_item_observed_n": 8422
+    },
+    {
+      "trait": "cautious",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 3,
+      "all_retained_items_observed_n": 151,
+      "at_least_one_retained_item_observed_n": 6911
+    },
+    {
+      "trait": "meticulous",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 154,
+      "at_least_one_retained_item_observed_n": 10928
+    },
+    {
+      "trait": "introspective",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 2,
+      "all_retained_items_observed_n": 527,
+      "at_least_one_retained_item_observed_n": 4397
+    },
+    {
+      "trait": "innovative",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 155,
+      "at_least_one_retained_item_observed_n": 9335
+    },
+    {
+      "trait": "assertive",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 157,
+      "at_least_one_retained_item_observed_n": 9462
+    },
+    {
+      "trait": "independent",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 513,
+      "at_least_one_retained_item_observed_n": 5226
+    },
+    {
+      "trait": "spiritual",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 536,
+      "at_least_one_retained_item_observed_n": 4462
+    },
+    {
+      "trait": "nonchalant",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 435,
+      "at_least_one_retained_item_observed_n": 4652
+    },
+    {
+      "trait": "theatrical",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 2,
+      "all_retained_items_observed_n": 499,
+      "at_least_one_retained_item_observed_n": 5435
+    },
+    {
+      "trait": "passionate",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 1,
+      "all_retained_items_observed_n": 2501,
+      "at_least_one_retained_item_observed_n": 2501
+    },
+    {
+      "trait": "deferential",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 696,
+      "at_least_one_retained_item_observed_n": 6880
+    },
+    {
+      "trait": "agreeable",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 123,
+      "at_least_one_retained_item_observed_n": 7613
+    },
+    {
+      "trait": "reverent",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 578,
+      "at_least_one_retained_item_observed_n": 5935
+    },
+    {
+      "trait": "manipulative",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 117,
+      "at_least_one_retained_item_observed_n": 7207
+    },
+    {
+      "trait": "melancholic",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 78,
+      "at_least_one_retained_item_observed_n": 7371
+    },
+    {
+      "trait": "playful",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 102,
+      "at_least_one_retained_item_observed_n": 6838
+    },
+    {
+      "trait": "calm",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 2,
+      "all_retained_items_observed_n": 436,
+      "at_least_one_retained_item_observed_n": 4641
+    },
+    {
+      "trait": "competitive",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 1,
+      "all_retained_items_observed_n": 2384,
+      "at_least_one_retained_item_observed_n": 2384
+    },
+    {
+      "trait": "extroverted",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 110,
+      "at_least_one_retained_item_observed_n": 6913
+    },
+    {
+      "trait": "bitter",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 134,
+      "at_least_one_retained_item_observed_n": 6095
+    },
+    {
+      "trait": "hostile",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 3,
+      "all_retained_items_observed_n": 93,
+      "at_least_one_retained_item_observed_n": 6475
+    },
+    {
+      "trait": "proactive",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 544,
+      "at_least_one_retained_item_observed_n": 4418
+    },
+    {
+      "trait": "emotional",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 151,
+      "at_least_one_retained_item_observed_n": 6923
+    },
+    {
+      "trait": "dominant",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 157,
+      "at_least_one_retained_item_observed_n": 9462
+    },
+    {
+      "trait": "submissive",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 722,
+      "at_least_one_retained_item_observed_n": 7959
+    },
+    {
+      "trait": "reserved",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 58,
+      "at_least_one_retained_item_observed_n": 7214
+    },
+    {
+      "trait": "cynical",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 164,
+      "at_least_one_retained_item_observed_n": 6262
+    },
+    {
+      "trait": "grandiose",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 149,
+      "at_least_one_retained_item_observed_n": 6951
+    },
+    {
+      "trait": "spontaneous",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 2,
+      "all_retained_items_observed_n": 548,
+      "at_least_one_retained_item_observed_n": 4424
+    },
+    {
+      "trait": "optimistic",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 202,
+      "at_least_one_retained_item_observed_n": 5954
+    },
+    {
+      "trait": "vindictive",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 2,
+      "all_retained_items_observed_n": 424,
+      "at_least_one_retained_item_observed_n": 4546
+    },
+    {
+      "trait": "rebellious",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 2,
+      "all_retained_items_observed_n": 594,
+      "at_least_one_retained_item_observed_n": 6179
+    },
+    {
+      "trait": "gregarious",
+      "review_decision": "ACCEPT_DIRECT",
+      "item_count": 3,
+      "all_retained_items_observed_n": 87,
+      "at_least_one_retained_item_observed_n": 7591
+    },
+    {
+      "trait": "chill",
+      "review_decision": "ACCEPT_CLOSE",
+      "item_count": 3,
+      "all_retained_items_observed_n": 60,
+      "at_least_one_retained_item_observed_n": 6907
+    }
+  ],
+  "planned_missingness_interpretation": "SAPA administered random item subsets. The release has no cell-level planned-versus-ordinary nonresponse flag; empty retained-item cells are therefore predominantly but not perfectly identifiable as planned missingness.",
+  "complete_profile_feasibility": "A respondent-level complete profile across all retained evidence is not a realistic default analysis unit.",
+  "later_method_options_not_adjudicated": [
+    "item-response modeling",
+    "source-scale scoring when design overlap is adequate",
+    "latent-variable estimation",
+    "pairwise or partial-information methods"
+  ],
+  "method_selection_status": "not selected in this task",
+  "generated_at": "2026-09-11T22:40:00Z"
+}

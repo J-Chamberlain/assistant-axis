@@ -30,5 +30,33 @@
   "no_human_to_model_projection": true,
   "external_model_api_used": false,
   "new_model_inference_used": false,
-  "generated_at": "2026-09-11T22:35:00Z"
+  "generated_at": "2026-09-11T22:35:00Z",
+  "packet_freeze_commit": "4440ba0bda44517b63c8b4f05505b98651863ba9",
+  "second_pass_review": {
+    "reviewer": "Codex GPT-5.5",
+    "independence_status": "same-workflow coordinate-blind second pass; not independent psychometric validation",
+    "review_input": "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_category3_blinded_review_packet.csv",
+    "rubric": "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_category3_review_rubric.md",
+    "decision_file": "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_category3_second_pass_review.csv",
+    "reviewed_row_count": 78,
+    "forbidden_downstream_information_used": false,
+    "human_to_model_projection_performed": false
+  },
+  "second_pass_sources": {
+    "original_crosswalk": "4000593255646b75e509a0e1e194dec52fd3770b58503b3df0d3388bd53d6d37",
+    "item_dictionary": "6297d7fc351cea2121a1a211c5203f9e1bc07d0157c551087e0820b8bbd6bda9",
+    "scale_inventory": "1db3444330e4a500eeb0189f0b6a020c27d4ee27d7ff34cba40e08a76460e965",
+    "blinded_packet": "c4e40601f9855769fd1040eed11c4120e46224d0d27ae0caa2f7b4d672af1814",
+    "frozen_rubric": "cfc2df83d2dc463966b337ee3bc461411ab24e1711e6e53e48976a1876381dae",
+    "second_pass_review": "f8e77caf9f5970ac8c48743e8422f04a146ac8013fb3cac5a88b1069c82c29a6"
+  },
+  "second_pass_outputs": {
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_category3_second_pass_review.csv": "f8e77caf9f5970ac8c48743e8422f04a146ac8013fb3cac5a88b1069c82c29a6",
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_trait_bridge_provisional_v1.csv": "e70be82752ec8ec4a7a8c64c7f5d37386b0997363c16a721e59a6aa0ac254e22",
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_trait_bridge_provisional_v1_summary.json": "d3dc6c824bb3850bc366674f4c3fcd06c1827e0edd6369fe9e98005e2f1c9a17",
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_bridge_item_reuse_audit.csv": "089b7ca83d7186d0862c9576b0e7e11437186bbd006ab1ce0dece6f91e895ec7",
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_bridge_scale_reuse_audit.csv": "56086164693d4223c2e6b497e3c7a5af34b3e57f09a634157999daea23246b7e",
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_provisional_bridge_missingness_summary.json": "5e9cd3aa7318b30118b5d7aa449c2917f7b530d8c1bfa4f50c8a814f623d55c6"
+  },
+  "second_pass_generated_at": "2026-09-11T22:40:00Z"
 }

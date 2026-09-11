@@ -191,3 +191,64 @@ These scripts are CPU-only and make no model or external LLM API calls. Source m
 - No SAPA or NLSY97 respondent was projected into Qwen PCA space.
 - No human-to-model trait regression, occupational centroid, or correspondence test was run.
 - No GPU, RunPod, model inference, activation extraction, or external model API was used.
+
+---
+
+## Phase 1b: Blinded second-pass review of direct SAPA candidate links
+
+### Method gate
+
+The 78 original Category-3 rows were copied into a fixed-seed (`20260911`) reviewer packet containing only canonical trait names/definitions and relevant SAPA item/scale evidence. Reviewer order was randomized. The packet omits the original category and confidence fields plus all persona data, PC coordinates, trait-PC correlations, predictor coefficients, trait rankings, sparsity results, occupations, NLSY97 outcomes, and downstream correspondence results. The five-decision rubric and both decision-free packets were committed at `4440ba0bda44517b63c8b4f05505b98651863ba9` before adjudication.
+
+Codex GPT-5.5 then performed a coordinate-blind second-pass semantic review from that frozen packet. Because Codex also performed the original feasibility audit, this is **not independent psychometric validation**. It is a stricter same-workflow semantic re-review designed to freeze a provisional bridge and expose construct-boundary disagreements before a genuinely independent reviewer sees the identical decision-free packet.
+
+### Observed
+
+All 78 rows received one rubric decision:
+
+| Decision | Count |
+|---|---:|
+| `ACCEPT_DIRECT` | 45 |
+| `ACCEPT_CLOSE` | 29 |
+| `DOWNGRADE_BROAD` | 1 |
+| `REJECT` | 3 |
+| `AMBIGUOUS` | 0 |
+
+Direct coverage therefore contracts from the original 78/240 (32.5%) feasibility labels to 45/240 (18.75%), a reduction of 33 links or 42.3%. The separately marked close tier retains another 29 links; direct plus close contains 74/240 traits (30.8%). The four rows not retained are `accommodating` (broad agreeableness only), `calculating` (rejected because manipulation/exploitation evidence did not measure neutral calculated planning), `confrontational` (rejected because hostility/revenge did not measure direct conflict engagement), and `sarcastic` (rejected because harshness plus joke-telling did not measure irony or mockery).
+
+No canonical project taxonomy for the 240 traits was found. The loss pattern is therefore described as a construct-boundary observation rather than a new taxonomy: rhetorical/stylistic traits often contracted when SAPA measured general human behavior rather than response style; compound interpersonal constructs contracted when items covered only trust, low dominance, sociability, or broad agreeableness; and strategic/adversarial labels failed when the proposed evidence substituted manipulativeness or hostility for the named construct. Affective traits with direct mood, anxiety, calm, sadness, emotionality, or resilience wording were comparatively likely to retain direct status.
+
+The 74 retained rows use 129 distinct SAPA items and 78 distinct administered source scales. The highest item reuse is four traits: `q_1616` (“Remain calm under pressure”) supports `calm`, `resilient`, `serene`, and `stoic`. The highest scale reuse is seven traits for `IPIP100:B5:E`, spanning four direct and three close judgments. Several items are reused three times across tightly neighboring constructs such as mood volatility, grudge/revenge, authority, sociability, dominance, and joking. Exact reuse tables preserve every affected trait and tier.
+
+Planned missingness remains decisive. Across the 129 retained items, a SAPA respondent has a mean of 15.65 observed items and a median of 13; the 5th to 95th percentile range is 6 to 50 and the maximum is 71. Of 23,679 respondents, 23,657 have at least one retained item and zero have all 129. Pairwise retained-item overlap has median N=504 and range 289–1,212. At the trait row level, the median number with every retained item for that trait is 163.5 (range 58–2,780), while the median with at least one retained item is 6,502. These are aggregate administration counts only; no respondent scores were produced or committed.
+
+The original AA-1 NLSY97 audit was not rerun because integration validation reproduced its counts and hashes. NLSY97 remains suitable as a later external-validation dataset but not as a rich 240-trait bridge. Its narrow occupation cells require preregistration and restriction to adequately sized cells or separately justified broader families; no cells were broadened here.
+
+### Interpretation
+
+A sufficiently defensible **provisional** SAPA bridge remains: 45 direct primary-tier links have item-grounded content correspondence and 29 close links are available only as an explicitly secondary tier. The breadth across 129 items argues against the bridge being only a relabeling of a tiny item set. Reuse nevertheless clusters neighboring constructs around shared evidence and must be modeled or restricted rather than treated as 74 independent measurements.
+
+Complete-case respondent profiles are not a viable default because no respondent answered all retained items. A later design must compare item-response modeling, defensible source-scale scores, latent-variable estimation, and pairwise/partial-information approaches under SAPA's planned administration design. This audit deliberately does not select or implement one.
+
+The single most important remaining gate before any human/model projection is a genuinely independent external review of `sapa_category3_external_review_packet.csv` using the frozen rubric and without model-geometry or downstream results. Agreement and disagreement with the Codex second pass should be preserved before a psychometric scoring plan is preregistered.
+
+### Unknown
+
+- True psychometric equivalence between each canonical model-trait construct and its retained SAPA evidence.
+- Agreement from a genuinely independent human or independent-model reviewer.
+- Reliability and dimensional distinctness of retained single-item and reused-item constructs under planned missingness.
+- Which partial-information or latent scoring method is defensible for a later bridge.
+- Whether measured human distributions correspond to model representations.
+- Whether any later human/model projection will be scientifically meaningful.
+
+### Phase-1b reproduction
+
+```bash
+PYTHON=/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/.venv/bin/python
+
+$PYTHON research/outputs/human_trait_dataset_feasibility/sapa_review/build_sapa_review_packet.py --repo-root .
+$PYTHON research/outputs/human_trait_dataset_feasibility/sapa_review/finalize_sapa_review.py --repo-root .
+$PYTHON research/outputs/human_trait_dataset_feasibility/sapa_review/verify_sapa_review.py --repo-root .
+```
+
+The Phase-1b workflow is CPU-only. It performed no respondent-to-model projection and used no GPU, RunPod, new model inference, activation extraction, or external model API.

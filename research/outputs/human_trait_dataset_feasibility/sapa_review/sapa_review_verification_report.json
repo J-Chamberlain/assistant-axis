@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "checks": {
+    "original_feasibility_crosswalk_sha_unchanged": true,
+    "source_has_exactly_78_category3": true,
+    "packet_has_exactly_78_unique_rows": true,
+    "packet_order_matches_frozen_seed": true,
+    "packet_fields_are_blind_and_allowlisted": true,
+    "packet_json_matches_csv_identity_and_order": true,
+    "external_packet_is_decision_free_and_identical": true,
+    "packet_cites_only_existing_items": true,
+    "packet_cites_only_existing_scales": true,
+    "all_78_rows_receive_one_valid_decision": true,
+    "review_trait_and_evidence_are_packet_bound": true,
+    "review_counts_reproduce": true,
+    "provisional_bridge_has_only_permitted_distinct_tiers": true,
+    "reuse_summaries_reproduce": true,
+    "missingness_aggregates_reproduce_expected_core": true,
+    "manifest_records_freeze_and_blind_review": true,
+    "manifest_source_and_output_hashes_match": true,
+    "rubric_and_packet_commit_precede_adjudication": true,
+    "aa1_original_artifacts_preserved_with_report_addendum": true,
+    "aa2_aa3_artifact_trees_untouched": true,
+    "no_respondent_level_microdata_tracked": true,
+    "no_direct_identifier_headers_in_phase_b": true,
+    "all_human_feasibility_csv_json_parse": true,
+    "artifact_inventory_hashes_match": true,
+    "artifact_inventory_is_complete": true,
+    "startup_manifest_matches_startup_files": true
+  },
+  "review_counts": {
+    "ACCEPT_CLOSE": 29,
+    "ACCEPT_DIRECT": 45,
+    "AMBIGUOUS": 0,
+    "DOWNGRADE_BROAD": 1,
+    "REJECT": 3
+  },
+  "retained": {
+    "traits": 74,
+    "distinct_items": 129,
+    "distinct_scales": 78
+  },
+  "privacy": {
+    "respondent_level_human_microdata_committed": false,
+    "human_respondents_assigned_llm_persona": false,
+    "human_to_model_pca_projection_performed": false
+  },
+  "review_independence": "Codex same-workflow blinded second pass; not independent psychometric validation",
+  "generated_at": "2026-09-11T22:41:00Z"
+}

@@ -1,0 +1,59 @@
+{
+  "original_category3_count": 78,
+  "review_counts": {
+    "ACCEPT_CLOSE": 29,
+    "ACCEPT_DIRECT": 45,
+    "AMBIGUOUS": 0,
+    "DOWNGRADE_BROAD": 1,
+    "REJECT": 3
+  },
+  "retained_direct_count": 45,
+  "retained_close_secondary_count": 29,
+  "total_retained_count": 74,
+  "direct_coverage_of_240": 0.1875,
+  "direct_count_contraction_from_original_category3": 33,
+  "direct_count_contraction_fraction": 0.42307692,
+  "distinct_sapa_items_retained": 129,
+  "distinct_sapa_source_scales_retained": 78,
+  "highest_item_reuse_count": 4,
+  "highest_scale_reuse_count": 7,
+  "most_reused_items": [
+    {
+      "item_id": "q_1616",
+      "item_text": "Remain calm under pressure.",
+      "retained_model_trait_count": 4,
+      "retained_traits": "calm;resilient;serene;stoic",
+      "accept_direct_count": 4,
+      "accept_close_count": 0,
+      "source_scale_memberships": "HEXACO:H:E:A;IPIPneo:N6:VU",
+      "valid_response_n": 2613,
+      "missing_fraction": "0.88964906"
+    }
+  ],
+  "most_reused_scales": [
+    {
+      "scale_id": "IPIP100:B5:E",
+      "instrument": "IPIP100",
+      "scale_name": "B5:E",
+      "retained_model_trait_count": 7,
+      "retained_traits": "assertive;avoidant;chill;dominant;extroverted;gregarious;submissive",
+      "accept_direct_count": 4,
+      "accept_close_count": 3,
+      "retained_evidence_item_count": 5,
+      "retained_evidence_item_ids": "q_1742;q_1768;q_1803;q_819;q_901"
+    }
+  ],
+  "review_type": "blinded second-pass semantic review",
+  "independence_status": "same-workflow Codex review; not independent psychometric validation",
+  "provisional_status": "pending genuinely independent external review",
+  "packet_freeze_commit": "4440ba0bda44517b63c8b4f05505b98651863ba9",
+  "source_hashes": {
+    "original_crosswalk": "4000593255646b75e509a0e1e194dec52fd3770b58503b3df0d3388bd53d6d37",
+    "item_dictionary": "6297d7fc351cea2121a1a211c5203f9e1bc07d0157c551087e0820b8bbd6bda9",
+    "scale_inventory": "1db3444330e4a500eeb0189f0b6a020c27d4ee27d7ff34cba40e08a76460e965",
+    "blinded_packet": "c4e40601f9855769fd1040eed11c4120e46224d0d27ae0caa2f7b4d672af1814",
+    "frozen_rubric": "cfc2df83d2dc463966b337ee3bc461411ab24e1711e6e53e48976a1876381dae",
+    "second_pass_review": "f8e77caf9f5970ac8c48743e8422f04a146ac8013fb3cac5a88b1069c82c29a6"
+  },
+  "generated_at": "2026-09-11T22:40:00Z"
+}
