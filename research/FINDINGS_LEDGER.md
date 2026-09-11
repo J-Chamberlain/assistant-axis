@@ -4,6 +4,16 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### Persona PCA Has a Three-Axis Core and Supported Secondary Coordinates Through Qwen PC6 (2026-09-11)
+
+The project previously displayed three PCs because `build_geometry_viz.py` explicitly requested `PCA(n_components=3)` for a 3D visualization, not because a dimensionality test selected three. The new full-rank audit fits all 274 centered components from 275 mean-pooled saved role vectors in each model. The PCA variables are hidden-state activation coordinates; the 240 named traits do not enter the PCA fits.
+
+Qwen PC1-PC3 explain 31.595%, 16.163%, and 8.690% (56.449% cumulative). PC4-PC6 explain another 4.520%, 3.615%, and 2.824% (67.408% cumulative). Qwen reaches 68% at PC7 and 80% at PC15. The scree diagnostics disagree: the largest absolute/relative eigengap is after PC1, while two deterministic log-scree methods place a knee/break at PC11. Marginal-preserving parallel analysis sequentially retains 13 Qwen components, compared with 35 Llama and 25 Gemma; broken-stick retains Qwen PC1-PC10. These are random-data references, not standalone semantic cutoffs.
+
+Only Qwen PC1-PC3 meet the strict individual-axis bootstrap rule. PC4-PC6 are retained as weaker `SUPPORTED LATER COMPONENT` coordinates because each also passes the sequential null, meets a declared moderate bootstrap rule, has a same-space trait association with |r|>=0.50, and recurs in both Llama and Gemma after search-adjusted 1,000-shuffle role-label controls. PC4 best matches Llama PC3/Gemma PC4 at |r|=0.690/0.628; PC5 matches PC5/PC5 at 0.688/0.651; PC6 matches PC6/Gemma PC8 at 0.505/0.570. No later adjacent Qwen block passes the strict bootstrap subspace rule. PC8 and PC10 remain exploratory; PC7, PC9, and PC11-PC13 are not privileged despite exceeding the null.
+
+Interpretation: future geometry work should keep PC1-PC3 as the compact, named core and may use PC1-PC6 when secondary coordinates are scientifically relevant, while marking PC4-PC6 as weaker and provisionally interpreted. Cross-model recurrence is over shared role-score patterns and may partly reflect shared role-instruction structure; it does not establish identical axes, psychological constructs, behavior, or human correspondence.
+
 ### Coordinate-Blind SAPA Review Retains a Restricted Provisional Bridge (2026-09-11)
 
 The original 78 Category-3 SAPA candidates were frozen into a fixed-seed, decision-free packet before adjudication, with model geometry, predictors, personas, occupations, outcomes, original labels, and downstream performance excluded. Applying the preregistered five-decision rubric to all 78 rows yielded 45 `ACCEPT_DIRECT`, 29 `ACCEPT_CLOSE`, 1 `DOWNGRADE_BROAD`, 3 `REJECT`, and 0 `AMBIGUOUS`. The provisional bridge keeps the 45 direct links as its primary tier and the 29 close links as an explicitly separate secondary tier, so reviewed direct coverage is 45/240 rather than the original feasibility screen's 78/240.

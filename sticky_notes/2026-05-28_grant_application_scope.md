@@ -23,3 +23,9 @@ Completed the CPU-only first-stage profile-to-geometry predictor under `research
 ## Update 2026-09-11
 
 The same CPU-only complete-profile mapping now replicates in the saved Llama-3.3-70B and Gemma-2-27B vector sets using each model's own verified persona PCA. Raw Ridge LOPO normalized 3D RMSE is 0.1245 for Llama and 0.1278 for Gemma, whole Qwen-canonical role-family holdout is harder, and endpoint-held-out synthetic mixtures remain predictable; Ridge stays sufficient in both. This is factual cross-model same-space feasibility evidence for the local-mapping program, not a claim that any model has more sophisticated or human-like psychology, and it still does not replace the proposed behavioral elicitation experiment.
+
+## Update 2026-09-11 — Dimensionality Scope for Local Mapping
+
+The full-rank CPU-only PCA audit shows that the existing three-PC convention came from the original 3D display, not a dimensionality cutoff. Qwen PC1-PC3 remain the strict bootstrap-stable core (56.449% cumulative centered role-activation variance), while PC4-PC6 form a weaker supported secondary set under combined null, moderate-bootstrap, trait-coherence, and cross-model role-score recurrence evidence (67.408% cumulative). Later Qwen PCs are exploratory or unstable despite some exceeding the random-data reference.
+
+Grant and Paper 2 local-manifold designs should therefore preregister PC1-PC3 as the primary coordinate outcomes and may include PC4-PC6 as secondary outcomes rather than silently truncating them or elevating them to equal status. This is a factual design refinement, not a new grant claim: PC4-PC6 do not yet have independently validated semantic labels, and shared role instructions may contribute to their cross-model recurrence. No additional H100 work is required for the current Paper 1.5 dimensionality result.
