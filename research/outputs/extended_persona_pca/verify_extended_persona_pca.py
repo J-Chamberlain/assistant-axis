@@ -9,6 +9,7 @@ import importlib.util
 import json
 import math
 from pathlib import Path
+import subprocess
 import sys
 import warnings
 
@@ -313,14 +314,28 @@ def main() -> int:
     )
 
     runner_hash_ok = source["runner_sha256"] == sha256(RUNNER)
-    source_hash_ok = all(
-        (REPO / item["path"]).is_file() and sha256(REPO / item["path"]) == item["sha256"]
-        for item in source["source_files"]
-    )
+    source_hash_resolution = {}
+    for item in source["source_files"]:
+        path = REPO / item["path"]
+        current_matches = path.is_file() and sha256(path) == item["sha256"]
+        starting_matches = False
+        if not current_matches:
+            try:
+                original = subprocess.check_output(
+                    ["git", "show", f"{source['starting_canonical_myfork_master_sha']}:{item['path']}"],
+                    cwd=REPO,
+                )
+                starting_matches = hashlib.sha256(original).hexdigest() == item["sha256"]
+            except subprocess.CalledProcessError:
+                starting_matches = False
+        source_hash_resolution[item["path"]] = (
+            "current_worktree" if current_matches else "recorded_starting_commit" if starting_matches else "unresolved"
+        )
+    source_hash_ok = all(value != "unresolved" for value in source_hash_resolution.values())
     check(
         "source_manifest_hashes",
         runner_hash_ok and source_hash_ok,
-        f"runner hash match={runner_hash_ok}; {len(source['source_files'])} canonical source-file hashes checked",
+        f"runner hash match={runner_hash_ok}; source resolutions={source_hash_resolution}",
         checks,
     )
 

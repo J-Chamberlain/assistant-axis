@@ -82,7 +82,7 @@
     },
     {
       "check": "source_manifest_hashes",
-      "detail": "runner hash match=True; 10 canonical source-file hashes checked",
+      "detail": "runner hash match=True; source resolutions={'research/visualizations/scripts/build_geometry_viz.py': 'current_worktree', 'research/visualizations/geometry_viz_data.json': 'current_worktree', 'research/geometry_tables/cluster_membership_table.csv': 'current_worktree', 'research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py': 'current_worktree', 'research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_data.json': 'current_worktree', 'research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md': 'current_worktree', 'research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv': 'current_worktree', 'research/outputs/trait_space_interpretation/trait_space_axis_report.md': 'current_worktree', 'research/outputs/persona_trait_ridge_plots/persona_trait_ridge_methodology.md': 'current_worktree', 'research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md': 'recorded_starting_commit'}",
       "passed": true
     }
   ],
