@@ -2,7 +2,7 @@
   "status": "pass",
   "verification_kind": "actual headless browser / real Chrome DOM and Plotly WebGL",
   "browser_version": "Chrome/152.0.7977.84",
-  "generated_utc": "2026-09-11T23:30:56.265Z",
+  "generated_utc": "2026-09-11T23:40:59.753Z",
   "ridge": {
     "default_model": "qwen",
     "models_switched": [
