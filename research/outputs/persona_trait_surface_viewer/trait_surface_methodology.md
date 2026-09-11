@@ -1,40 +1,16 @@
-# Five-Group Qwen Trait Landscape
+# Qwen, Llama, and Gemma Grouped Trait Landscapes
 
-Date: 2026-09-10 (America/Los_Angeles)
-Startup: canonical raw manifest and three startup files fetched in order and verified against local content, SHA256 and byte counts before implementation.
-Base commit: 03d99df on master.
-Status: implemented; data, camera-math and UI-state tests pass, including flat-plane comparison and flat-plane-only visibility. New live-browser/WebGL verification unavailable because browser-use policy blocked the local URL. The block was not bypassed.
+Date: 2026-09-11 (America/Los_Angeles)  
+Status: implemented and verified; Qwen is the default.  
+Scientific label: same-space activation-cosine trait profiles.
 
-## Open and Use
+## What the Viewer Shows
 
-Open [persona_trait_surface_viewer.html](persona_trait_surface_viewer.html), not `viewer_template.html`. The completed file embeds Plotly, the prepared data, camera math and UI; it has no external chart/data dependency. It is a separate companion and does not replace the working emotion landscape or either ridge viewer.
+`persona_trait_surface_viewer.html` extends the accepted trait ridges into five three-dimensional grouped surfaces for Qwen, Llama, and Gemma. Model switching replaces persona coordinates, group heights, fitted fabric, support mask, flat plane, node-fit diagnostics, hover data, and pinned-node position without reloading the page.
 
-Select two distinct PCs for the horizontal plane and use the five-stop group slider or group buttons for height. All six ordered PC pairs are available. Reversing the axes transposes an existing surface rather than changing the scores or fitting a new PCA.
+The groups are unchanged:
 
-New controls:
-
-- **Stronger height colors:** saturated blue through cyan, pale cream, yellow/orange and red; fixed 0-100 range and numeric colorbar across every group. The midpoint 50 is the population mean. Fabric opacity is 1 with more ambient lighting to reduce washed-out shading. Color means only height, not valence, goodness, assistantness or group identity.
-- **Persona nodes:** uncheck to hide exact nodes, pinned labels, node-to-fabric connectors and the faint mean-reference plane. Only the fabric/weave and axes remain. The persona selector still gives exact scores in the side panel. Restoring nodes restores the current selection. Connector controls are disabled while nodes/fabric are hidden.
-- **Orientation dials:** yaw (horizontal rotation), pitch (tilt), roll and zoom, each with a slider, a visual dial indicator and exact numeric entry. Rotation/roll span -180 to 180 degrees, tilt -90 to 90, zoom 25-300 percent. Higher zoom means a closer camera. Angles and numbers synchronize after mouse camera changes; the existing mouse-drag/wheel controls remain available.
-- **View presets:** Isometric, Top, Front and Side recenter the scene. Reset view restores the original camera. Individual dial changes preserve any mouse-adjusted camera center; changing group, axes or smoothing preserves orientation/zoom. Camera updates are coalesced so rapid changes end at the latest requested setting.
-
-The side panel lists the selected group's three constituent trait percentiles, group mean, mean member z-score, the original selected PC coordinates, the fitted-surface gap, and the flat-plane diagnostics. Smoothness still offers Detail, Balanced and Gentle; smoothing never changes exact nodes.
-
-## Flat-Plane Comparison
-
-Update 2026-09-11: the displayed comparison plane now evaluates its unbounded linear equation over the entire padded chart rectangle, including outside the data outline. It is not clipped to 0-100, which would bend a plane. The vertical axis expands to contain the extension. A permanent semi-transparent blue zero plane spans the same rectangle, with a white intersection line when the fitted plane crosses zero inside the chart. Flat-plane-only mode retains this reference. Stored masked/clipped grids and adherence scores remain the original supported-region diagnostics; extrapolated areas do not enter the scores. This supersedes the display-mask and reference-visibility descriptions below.
-
-The **Best-fit flat plane** is an ordinary least-squares plane fit independently for each trait group and each selected unordered PC plane. Its predictors are an intercept plus the two centered, common-scale PC coordinates used by the rolling fabric fit. The displayed plane is evaluated on the same 61-by-61 grid and uses the same convex-hull / sixth-neighbor support mask; unsupported cells remain empty. Exact persona nodes are not changed.
-
-The **Flat plane** checkbox toggles this semi-transparent comparison surface. **Flat plane only** hides the population reference plane, rolling fabric, weave, node-to-fabric gaps, persona nodes and pinned persona, leaving the flat comparison plane and axes. Axis reversal transposes the stored plane grid for display, just as it transposes the rolling surface.
-
-The side panel reports three related quantities. **Plane R2 at nodes** is the in-sample R2 of the least-squares plane against the exact 275 persona group heights. **Rolling / flat RMSE** is the RMS difference, in percentile points, between the clipped rolling fabric and the clipped flat plane over supported grid cells. **Flat adherence** is a descriptive 0-100 presentation score defined as `clip(100 * fabric_flat_r2, 0, 100)`, where `fabric_flat_r2 = 1 - SSE(rolling, flat) / SST(rolling)`. A negative R2 therefore receives a score of 0. This score measures geometric resemblance of the selected rolling surface to its best linear plane; it is not held-out predictive validation, a confidence measure, or evidence that a group is psychologically flat.
-
-## Group Definition
-
-These are the same 15 traits and editorial groups already used in the ridge plots, not newly selected or fitted factors:
-
-| Group | Three members |
+| Editorial reading group | Three equal-weight members |
 |---|---|
 | Exploration | creative, abstract, curious |
 | Response | reactive, adaptable, practical |
@@ -42,50 +18,82 @@ These are the same 15 traits and editorial groups already used in the ridge plot
 | Challenge | rebellious, competitive, manipulative |
 | Affiliation | empathetic, agreeable, altruistic |
 
-For persona i and group g, `height(i,g) = mean(member_trait_percentiles(i,g))`, with three equal weights of 1/3. Member percentiles come unchanged from `persona_trait_ridge_data.json`: `100 * (average_rank(raw_cosine) - 0.5) / 275`, independently within each trait. Every group's across-persona mean is therefore 50, but its variance depends on how its three members co-vary. We do not re-rank or re-standardize the composite, normalize within a persona, fit weights or apply softmax. A group mean of 80 is an average of three trait percentiles, not necessarily the 80th percentile of the group composite.
+These are editorial reading groups, not fitted latent factors. For persona `i`, group `g`, and selected model `m`:
 
-The supplemental mean member z-score is the average of three independently standardized trait cosines. It is not itself a unit-variance group z-score and is not the rendered height. Group scores cannot establish the prevalence of traits, absolute psychological strength or subjective experience.
+`height(i, g, m) = mean(member_trait_within_model_percentiles(i, g, m))`
 
-## Exact Sources and Provenance
+The three weights are exactly `1/3`. The composite is not re-ranked or re-standardized. Its height range is fixed to 0–100, and exact persona nodes retain the exact group mean. Surface heights are equal-weight means of member percentiles, not probabilities or absolute trait intensities.
 
-- [Ridge data](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_trait_ridge_plots/persona_trait_ridge_data.json): 275 personas, unchanged PCs, 15 raw/z/percentile trait profiles and their editorial group assignments.
-- [Ridge category order](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_trait_ridge_plots/trait_category_order.csv) and [manifest](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_trait_ridge_plots/persona_trait_ridge_manifest.json): trait definitions and exact source hashes.
-- [Canonical geometry](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/visualizations/geometry_viz_data.json): `roles.names` and `roles.pca3d` must match the ridge data exactly. No refitting, coordinate rescaling in the data, or sign changes.
-- [Trait-profile provenance audit](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md): inherited trait definitions and released Qwen activation vectors, with internally computed role-to-trait cosines. The upstream matrix averages each released tensor's 64 rows before normalization. This is same-space activation evidence, not independent psychological ratings or the single-layer emotion readout.
-- [Working emotion surface generator](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/persona_emotion_surface_viewer/run_persona_emotion_surface_viewer.py): inherited thin-plate spline, common PC-distance scale, smoothing choices and hull/density masks. Its viewer interaction pattern was reused in separate sources.
+## Model-Specific Data
 
-The new [source manifest](trait_surface_manifest.json) records hashes and software details. [Group score CSV](persona_trait_group_scores.csv) contains 1,375 unique persona/group rows, each including its three original trait scores. There are no new activation generations, GPU runs, judge calls or model API calls.
+All six logical released-vector directories and their bundle SHA256 digests are recorded in `persona_trait_ridge_manifest.json` and `trait_surface_manifest.json`. Each model has 275 roles and 240 traits, and all three role-name and trait-name sets are identical.
 
-## Fabric Construction and Limits
+Qwen uses the exact accepted ridge scores and canonical `geometry_viz_data.json` coordinates. Llama and Gemma use their own role-by-trait activation cosines and PCA coordinates. Their PCAs are fit independently to their layer-mean role vectors and sign-oriented to corresponding Qwen PCs by the exact functions already used in `research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py`. Llama and Gemma are not projected through the Qwen PCA basis.
 
-For each of the three unordered PC planes, use a 61-by-61 grid. Center the two coordinates and divide both by one common scale, `sqrt(mean(var(PCs)))`, preserving relative distance between the axes. Coincident projected points, if any, are combined only for fitting. Fit a degree-1 thin-plate RBF with smoothing 0.003, 0.03 or 0.3 for Detail, Balanced or Gentle. Exact persona nodes retain their unchanged source coordinates and group heights.
+Trait percentiles are computed independently inside each model's 275-persona distribution. Therefore a percentile of 90 has the same rank interpretation across models but not the same raw cosine or necessarily the same psychological meaning. Model selection does not establish identical psychological semantics across models.
 
-Mask outside the persona convex hull or where the sixth-neighbor distance exceeds the 90th percentile of persona sixth-neighbor distances. The masks and grid axes match the working emotion surface exactly. This support mask is not a confidence interval. Interpolated fabric is an in-sample descriptive fit, not independently measured trait values between personas.
+## Fabric, Support, and Diagnostics
 
-Percentile composites have a 0-100 support. Fitted fabric values outside that range are clipped to it, including fitted node values used for connector endpoints; exact scored nodes are never clipped or moved. Across all 45 plane/smoothing/group grids, 73 of 74,820 supported grid values require clipping (about 0.10%). Counts and unclipped extrema are preserved in [fit diagnostics](trait_surface_fit_diagnostics.csv). The default PC1-PC2 Balanced view clips five grid cells for Challenge and none for the other groups. Sharp peaks, smoothing choices and sparse cutouts must not be treated as new latent structure.
+The original methodology is applied independently to every model.
 
-Default PC1-PC2 Balanced fit gaps, in percentile points RMS: Exploration 6.56, Response 4.98, Scrutiny 5.83, Challenge 8.19, Affiliation 11.84. These describe surface approximation error at observed nodes, not prediction performance. The larger Affiliation gap is a reason to inspect the exact nodes before interpreting fabric contours. Vertical display aspect is chosen for readability and is not commensurate with horizontal PC units.
+For each of the three unordered PC planes:
 
-The user's visually inverse PC1/PC2 ridge observation motivated this viewer; this task does not test or establish a statistical inverse relationship. Averaging three traits can hide disagreement, which is why the constituent scores and original ridges remain available.
+1. Select the model's exact 275 two-PC nodes.
+2. Center the two coordinates and divide both axes by one common scale, `sqrt(mean(var(PCs)))`, preserving relative distances.
+3. Combine coincident projected nodes only for fitting.
+4. Prepare a 61-by-61 grid over that model's coordinate extent.
+5. Fit degree-1 thin-plate RBF surfaces at smoothing `0.003` (Detail), `0.03` (Balanced), or `0.3` (Gentle).
+6. Mask grid points outside that model's convex hull or beyond its 90th-percentile sixth-neighbor support radius.
+7. Clip displayed fabric to 0–100 while retaining exact persona nodes.
+
+Each selected model therefore owns its surface and mask. Relative to the Qwen masks, Llama differs in 1,013 / 1,694 / 1,378 grid cells for PC1-PC2 / PC1-PC3 / PC2-PC3; Gemma differs in 722 / 873 / 675 cells. These differences are verification that switching does not leave a Qwen support mask behind, not scientific claims about which geometry is superior.
+
+For every model, group, and PC plane, the flat comparison is a least-squares plane over intercept plus that model's two normalized PC coordinates. `node_r2` and `node_rmse` compare exact group nodes with that model's plane. `fabric_flat_r2`, `fabric_flat_rmse`, and the clipped `100 * R2` adherence score compare that model's supported rolling fabric with its own flat plane. All are in-sample descriptive diagnostics, not held-out validation.
+
+Across all 135 model/plane/smoothing/group meshes, the total clipped supported cells are Qwen 73, Llama 65, and Gemma 47. This count depends on the model's coordinates, group heights, support, and smoothing; it is not a cross-model quality ranking.
+
+## Controls and Switching
+
+The original ordered PC-axis choices, three smoothing settings, fabric toggle, flat-plane toggle, flat-plane-only mode, persona-node toggle, connector toggle, group slider/buttons, hover/pin behavior, and yaw/pitch/roll/zoom controls remain.
+
+On a model switch, the current PC pair, smoothing, view mode, camera, zoom, visibility toggles, and group remain. If a pinned persona is present, it is looked up by role name in the new model and remains selected. Reset View restores Qwen and the initial camera while preserving the selected persona by name.
+
+## Qwen Backward Compatibility
+
+Against the complete saved Qwen surface data at commit `d68921b898ed179194223f449149d715298cdabe`, the maximum numerical difference is `0.0`. This full recursive comparison covers:
+
+- all 275 role names and PC coordinates;
+- all 15 raw/z/percentile member traits;
+- all five group heights and mean member z values;
+- all three PC-plane grids at all smoothing levels;
+- all support masks;
+- all fitted-node values and fit RMSEs;
+- all flat-plane coefficients, node diagnostics, and fabric-adherence diagnostics.
+
+The Qwen subset retains five groups and 1,375 group rows exactly.
 
 ## Verification
 
-`verify_trait_surface_data.py`: exact geometry and member scores, 1,375 group rows, equal-weight means, population group means of 50, all 45 bounded grids, matching hull/density masks, consistent fit errors, embedded data and source hashes.
+`verify_trait_surface_data.py` independently reconstructs group means, support masks, flat-plane fits, and diagnostic values for all three models. It verifies 4,125 unique model/persona/group rows, 135 surface variants, strict Qwen reproduction, bounded meshes, source hashes, and embedded-data identity.
 
-`verify_trait_surface_controls.cjs`: 225 yaw/pitch/roll/zoom round-trips and pole checks; five groups; six ordered planes; exact 275-node traces; fabric-only visibility of all relevant traces; numeric entry; preset/reset behavior; drag-event control synchronization; camera persistence across axes/group/smoothing changes; concurrent/rapid camera and group updates. Uses a Plotly/DOM double: this checks UI state and pure camera math, not WebGL rendering.
+`verify_trait_surface_controls.cjs` is a Plotly/DOM-double suite. It runs 225 camera round trips, all six ordered PC views, all five groups, visibility modes, repeated and queued model switches, selected-model surface/flat diagnostics, stale-trace rejection, camera persistence, and persona-name selection persistence.
 
-Browser-use rejected the attempted local-file opening. No alternate browser, localhost proxy, CDP or native-app workaround was attempted. Consequently no new interactive browser screenshot is claimed. `trait_surface_preview.png` is explicitly a **static orthographic scientific rendering of prepared surfaces**, generated with pure SVG/Sharp, not a screenshot or simulated browser UI. Its five surfaces were visually inspected; the actual interactive appearance remains for user inspection in the completed HTML.
+`verify_trait_viewers_browser.cjs` is separate actual-browser verification. Headless Chrome 152 loaded real embedded Plotly WebGL, switched all three models repeatedly and rapidly, confirmed that node coordinates, group heights, fabric and flat diagnostics matched the selected model, exercised camera presets/dials after switches, preserved `playwright` by name, reset to Qwen, and produced no page errors. Captured browser images are `multimodel_surface_browser.png` and the companion ridge screenshot.
+
+`trait_surface_preview.svg` and `.png` remain static Qwen scientific previews generated without a browser. They are not browser screenshots.
 
 ## Reproduction
 
 ```sh
+python3 -B research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py \
+  --vector-root /absolute/path/to/assistant-axis/downloads/hf_vectors
 python3 -B research/outputs/persona_trait_surface_viewer/run_persona_trait_surface.py
 python3 -B research/outputs/persona_trait_surface_viewer/verify_trait_surface_data.py
 node research/outputs/persona_trait_surface_viewer/verify_trait_surface_controls.cjs
-node research/outputs/persona_trait_surface_viewer/render_trait_surface_preview.cjs
+node research/outputs/persona_trait_surface_viewer/verify_trait_viewers_browser.cjs
 python3 -B research/outputs/persona_trait_surface_viewer/run_persona_trait_surface.py --inventory-only
 ```
 
-Requires NumPy, SciPy and Plotly for building; Node and Sharp for the optional static preview. Generated HTML itself only needs a JavaScript/WebGL-capable browser. `--html-only` rebuilds UI from existing prepared data; a full build refreshes source hashes after edits. [artifact_inventory.csv](artifact_inventory.csv) enumerates safe output paths, SHA256 checksums and canonical raw URLs.
+The completed HTML is self-contained and offline. Build-time Python needs NumPy, SciPy, Plotly, and PyTorch through the ridge loader. Browser verification needs local Chrome plus `puppeteer-core` and is not required to use the saved viewer.
 
-Project state: new descriptive grouped-trait interface and requested controls, no new scientific claim. CLAIMS_REGISTER and FINDINGS_LEDGER unchanged. No sticky notes directly addressed. Next step: user opens the completed HTML and inspects controls and member-level fidelity before any broader interpretation or new compute.
+No new inference, response generation, activation extraction, GPU, RunPod, or external model API was used.

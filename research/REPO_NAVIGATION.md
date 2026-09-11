@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-11T20:54:33Z
-Last commit when updated: ba1affb (base before Llama/Gemma trait-profile predictor result registration)
+Updated UTC: 2026-09-11T22:03:43Z
+Last commit when updated: 0693aaf (canonical master before AA-2 multimodel trait-viewer integration)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -32,12 +32,12 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - geometry tables: 30
 - notebooks: 7
 - trait analyses: 340
-- visualizations: 208
+- visualizations: 238
 
 
 ## Status Counts
 
-- active: 4613
+- active: 4643
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -61,9 +61,9 @@ Most active analyses live under `research/outputs/`, `research/assistant_axis_me
 
 ### Visualizations
 
-Grouped trait landscape: `research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html` is a separate 3D fabric view of exploration, response, scrutiny, challenge and affiliation. Each height averages the three original trait percentiles from the ridge plots; coordinates and members remain unchanged. Includes vivid fixed-range height colors, a semi-transparent least-squares flat-plane comparison with descriptive adherence/node-fit scores, flat-plane-only mode, complete node-free mode, yaw/pitch/roll/zoom sliders with numeric entry and view presets, 1,375 group rows and source/fit/control checks. Local-page browser automation was blocked; static preview is not a screenshot. Open the completed HTML, not `viewer_template.html`.
+Multimodel grouped trait landscape: `research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html` switches without reload among Qwen, Llama, and Gemma views of exploration, response, scrutiny, challenge, and affiliation. Each model has its own coordinates, 1,375 group rows, surfaces, support masks, flat planes, and fit diagnostics; each height is the equal-weight mean of the three member-trait within-model percentiles. The viewer preserves compatible view/camera/selection state across model switches. Qwen exactly reproduces the previous saved science. Data/DOM checks and actual local Chrome 152/Plotly WebGL verification passed. Open the completed HTML, not `viewer_template.html`; use `multimodel_trait_viewers_implementation_report.md` and the directory inventories for methods, verification, hashes, and URLs.
 
-PC-ranked trait profiles: `research/outputs/persona_trait_ridge_plots/persona_trait_ridges.html` shows all 275 personas in three descending-PC rankings. Fifteen of the 240 previously mapped traits are grouped as exploration, response, scrutiny, challenge and affiliation; the left-to-right order is descriptive, not a valence scale or fitted factor. Height is within-trait percentile over personas. Full SVG/PNG plots, a top-15 overview, 4,125 exact-source scores and provenance/checks are in the directory. Same-space activation-cosine evidence, not independent psychological validation; existing viewers unchanged.
+Multimodel PC-ranked trait profiles: `research/outputs/persona_trait_ridge_plots/persona_trait_ridges.html` switches without reload among Qwen, Llama, and Gemma, with all 275 personas ordered by each selected model's own PC1/PC2/PC3 coordinates. The unchanged 15 of 240 traits are grouped as exploration, response, scrutiny, challenge, and affiliation. The 12,375-row bundle retains raw cosine, population z-score, and within-model percentile; equal percentiles mean equal within-model rank, not absolute cross-model equivalence. Qwen uses canonical geometry; Llama/Gemma use model-local PCA with the established multimodel sign orientation. Static model-specific SVG/PNG exports, DOM checks, and actual local Chrome 152 verification are saved. Same-space activation-cosine evidence, not independent psychological validation.
 
 PC-ranked emotion profiles: `research/outputs/persona_emotion_ridge_plots/persona_emotion_ridges.html` shows all 275 personas in three descending-PC rankings. Ten saved categories are ordered negative-to-positive, with ridge height encoding within-emotion percentile affinity. The directory includes 2,750 scores, full SVG/PNG exports, a top-20 overview and reproducible provenance/checks. All plots are pre-rendered; open the completed HTML, not a source template.
 

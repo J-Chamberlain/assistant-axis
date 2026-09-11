@@ -1,4 +1,4 @@
-/* Qwen category surface explorer. All data are embedded; no network requests. */
+/* Qwen/Llama/Gemma category surface explorer. All data are embedded. */
 (() => {
   "use strict";
   window.viewerBoot.stage("Reading the prepared persona data");
@@ -9,7 +9,7 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const initialCamera = {eye: {x: 1.26, y: 1.29, z: 0.94}, up: {x: 0, y: 0, z: 1}, center: {x: 0, y: 0, z: -0.04}};
   if(window.innerWidth<600) for(const axis of ["x","y","z"]) initialCamera.eye[axis]*=1.35;
-  const state = {x: 0, y: 1, category: 0, smoothing: 1, surface: true, flat: true, flatOnly: false, connectors: true, nodes: true,
+  const state = {model: data.default_model, x: 0, y: 1, category: 0, smoothing: 1, surface: true, flat: true, flatOnly: false, connectors: true, nodes: true,
     selected: null, hovered: null, camera: structuredClone(initialCamera), transitioning: false};
   let requestVersion = 0, renderedVersion = -1, running = false, initialized = false, previous = null;
   let cameraVersion=0,cameraApplied=0,cameraBusy=false;
@@ -19,11 +19,13 @@
   const signed = (v, n=2) => `${v >= 0 ? "+" : ""}${v.toFixed(n)}`;
   const escapeText = text => String(text).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const range = a => { const lo=Math.min(...a), hi=Math.max(...a), pad=(hi-lo)*0.04; return [lo-pad,hi+pad]; };
+  const modelData = () => data.models[state.model];
 
   function snapshot() {
+    const model=modelData();
     const lower=Math.min(state.x,state.y), upper=Math.max(state.x,state.y);
-    const view=data.views[`${lower}_${upper}`], level=view.levels[state.smoothing];
-    const reversed=state.x > state.y, category=data.categories[state.category];
+    const view=model.views[`${lower}_${upper}`], level=view.levels[state.smoothing];
+    const reversed=state.x > state.y, category=model.categories[state.category];
     return {x: reversed?view.y:view.x, y: reversed?view.x:view.y,
       grid: reversed?transpose(level.grids[state.category]):level.grids[state.category],
       flat: reversed?transpose(view.flat_grids[state.category]):view.flat_grids[state.category],
@@ -31,7 +33,7 @@
       fitCenter: reversed?[...view.fit_center].reverse():view.fit_center,
       fitScale: view.fit_common_scale, reversed,
       fitted: level.fitted_nodes[state.category], heights: category.values,
-      axisX: state.x, axisY: state.y, category: state.category, smoothing: state.smoothing,
+      model: state.model, axisX: state.x, axisY: state.y, category: state.category, smoothing: state.smoothing,
       fitRmse: level.fit_rmse[state.category], support: view.supported_grid_fraction};
   }
 
@@ -67,15 +69,16 @@
   }
 
   function traces(s, transition=false) {
+    const model=modelData();
     const plane=extendedPlane(s);
-    const category=data.categories[s.category], names=data.roles.map(r=>r.name);
-    const xs=data.roles.map(r=>r.pcs[s.axisX]),ys=data.roles.map(r=>r.pcs[s.axisY]);
+    const category=model.categories[s.category], names=model.roles.map(r=>r.name);
+    const xs=model.roles.map(r=>r.pcs[s.axisX]),ys=model.roles.map(r=>r.pcs[s.axisY]);
     const lines={x:[],y:[],z:[]};
     for(let i=0;i<names.length;i++) if(Math.abs(s.fitted[i]-s.heights[i])>0.03) {
       lines.x.push(xs[i],xs[i],null);lines.y.push(ys[i],ys[i],null);lines.z.push(s.heights[i],s.fitted[i],null);
     }
     const selected=state.selected===null?[]:[state.selected];
-    const custom=data.roles.map((r,i)=>[escapeText(r.name),category.values[i],category.values[i],category.mean_z[i],i]);
+    const custom=model.roles.map((r,i)=>[escapeText(r.name),category.values[i],category.values[i],category.mean_z[i],i,state.model]);
     return [
       {type:"surface",name:"Zero reference",visible:true,x:plane.x,y:plane.y,z:[[0,0],[0,0]],
         colorscale:[[0,"#6eb5ca"],[1,"#6eb5ca"]],opacity:0.3,showscale:false,hoverinfo:"skip"},
@@ -122,8 +125,9 @@
   }
 
   function updatePanel() {
+    const model=modelData();
     const i=state.selected===null?state.hovered:state.selected, s=snapshot();
-    const category=data.categories[state.category];
+    const category=model.categories[state.category];
     el("member-scores").replaceChildren();
     category.members.forEach(member=>{
       const row=document.createElement("div"),name=document.createElement("span"),value=document.createElement("span");
@@ -141,7 +145,7 @@
       for(const id of ["selected-score","selected-percentile","selected-raw","selected-x","selected-y","selected-gap"]) el(id).textContent="--";
       return;
     }
-    const role=data.roles[i];
+    const role=model.roles[i];
     el("selected-name").textContent=role.name.replaceAll("_"," ");
     el("selection-kind").textContent=state.selected===null?"Hover preview":"Pinned persona";
     el("selected-score").textContent=category.values[i].toFixed(1);
@@ -152,17 +156,23 @@
   }
 
   function updateControls() {
+    const model=modelData();
     for(const [id,other] of [["x-axis",state.y],["y-axis",state.x]])
       [...el(id).options].forEach(option=>option.disabled=Number(option.value)===other);
-    el("plot-category").textContent=data.categories[state.category].label;
-    el("category-current").textContent=data.categories[state.category].label;
-    el("plane-caption").textContent=`PC${state.x+1} / PC${state.y+1} | height = mean trait percentile`;
+    el("model-select").value=state.model;
+    el("active-model-name").textContent=model.short_label;
+    el("model-provenance").textContent=model.coordinate_source==="canonical_geometry_viz_data" ?
+      "Canonical Qwen coordinates / exact saved Qwen cosines" :
+      `${model.short_label} own-vector PCA / signs oriented to Qwen reference`;
+    el("plot-category").textContent=model.categories[state.category].label;
+    el("category-current").textContent=model.categories[state.category].label;
+    el("plane-caption").textContent=`${model.short_label} | PC${state.x+1} / PC${state.y+1} | height = within-model mean trait percentile`;
     el("show-flat").checked=state.flat;el("show-flat-only").checked=state.flatOnly;
     el("show-flat").disabled=state.flatOnly;el("show-surface").disabled=state.flatOnly;
     el("show-nodes").disabled=state.flatOnly;
     el("show-connectors").disabled=state.flatOnly||!state.nodes||!state.surface;
     el("category-slider").value=state.category;
-    el("category-slider").setAttribute("aria-valuetext",data.categories[state.category].label);
+    el("category-slider").setAttribute("aria-valuetext",model.categories[state.category].label);
     [...el("category-stops").children].forEach((button,i)=>button.setAttribute("aria-pressed",String(i===state.category)));
     updatePanel();
   }
@@ -256,7 +266,7 @@
     try {
       while(renderedVersion!==requestVersion) {
         const version=requestVersion,target=snapshot();
-        const animate=initialized&&!reducedMotion.matches&&previous&&previous.category!==target.category&&
+        const animate=initialized&&!reducedMotion.matches&&previous&&previous.model===target.model&&previous.category!==target.category&&
           previous.axisX===target.axisX&&previous.axisY===target.axisY&&previous.smoothing===target.smoothing;
         state.transitioning=Boolean(animate);
         if(!initialized) window.viewerBoot.stage("Rendering the prepared 3D landscape");
@@ -272,16 +282,24 @@
         }
         previous=target;renderedVersion=version;state.transitioning=false;
         if(version===requestVersion) {
-          el("render-status").textContent="275 personas | use dials or drag";
+          el("render-status").textContent=`${modelData().short_label} | 275 personas | use dials or drag`;
           window.__traitViewer.lastRenderMilliseconds=performance.now()-started;
         }
       }
     } catch(error) {fail(error);} finally {running=false;state.transitioning=false;flushCamera();}
   }
 
-  data.roles.forEach((role,i)=>{const option=document.createElement("option");option.value=i;option.textContent=role.name.replaceAll("_"," ");el("persona-picker").appendChild(option);});
-  data.categories.forEach((category,i)=>{const button=document.createElement("button");button.type="button";button.textContent=category.label;
+  data.models[data.default_model].roles.forEach((role,i)=>{const option=document.createElement("option");option.value=i;option.textContent=role.name.replaceAll("_"," ");el("persona-picker").appendChild(option);});
+  data.models[data.default_model].categories.forEach((category,i)=>{const button=document.createElement("button");button.type="button";button.textContent=category.label;
     button.setAttribute("aria-pressed",String(i===0));button.addEventListener("click",()=>{state.category=i;scheduleRender();});el("category-stops").appendChild(button);});
+  el("model-select").addEventListener("change",()=>{
+    const old=modelData(),selectedName=state.selected===null?null:old.roles[state.selected].name;
+    state.model=el("model-select").value;state.hovered=null;previous=null;
+    state.selected=selectedName===null?null:modelData().roles.findIndex(role=>role.name===selectedName);
+    if(state.selected<0)state.selected=null;
+    el("persona-picker").value=state.selected===null?"":state.selected;
+    scheduleRender();
+  });
   el("category-slider").addEventListener("input",()=>{state.category=Number(el("category-slider").value);scheduleRender();});
   for(const [id,key] of [["x-axis","x"],["y-axis","y"],["smoothing","smoothing"]])
     el(id).addEventListener("change",()=>{state[key]=Number(el(id).value);scheduleRender();});
@@ -304,8 +322,14 @@
       front:{yaw:-90,pitch:0,roll:0,zoom:100},side:{yaw:0,pitch:0,roll:0,zoom:100}};
     requestCamera(TraitCamera.toCamera(views[button.dataset.view]));
   }));
-  el("reset-view").addEventListener("click",()=>requestCamera(initialCamera));
-  window.__traitViewer={data,state,snapshot,get ready(){return initialized&&!running&&!cameraBusy&&cameraVersion===cameraApplied;},get rendering(){return running;},lastRenderMilliseconds:null};
+  el("reset-view").addEventListener("click",()=>{
+    const selectedName=state.selected===null?null:modelData().roles[state.selected].name;
+    state.model=data.default_model;state.hovered=null;previous=null;
+    state.selected=selectedName===null?null:modelData().roles.findIndex(role=>role.name===selectedName);
+    el("persona-picker").value=state.selected===null?"":state.selected;
+    requestCamera(initialCamera);scheduleRender();
+  });
+  window.__traitViewer={data,state,snapshot,modelData,get selectedPersona(){return state.selected===null?null:modelData().roles[state.selected].name;},get ready(){return initialized&&!running&&!cameraBusy&&cameraVersion===cameraApplied;},get rendering(){return running;},lastRenderMilliseconds:null};
   syncCameraControls();
   scheduleRender();
 })();

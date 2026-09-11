@@ -1,12 +1,73 @@
 {
-  "generated_utc": "2026-09-10T00:09:54.851832+00:00",
-  "base_commit": "bcba251e6cee617e5b01af62c99c4d05028d92db",
-  "activation_model": "Qwen/Qwen3-32B",
-  "author": "Codex; exact runtime identifier not recorded",
-  "source_personas": 275,
-  "source_traits": 240,
+  "generated_utc": "2026-09-11T20:51:45.577447+00:00",
+  "base_commit": "d68921b898ed179194223f449149d715298cdabe",
+  "qwen_compatibility_reference_commit": "d68921b898ed179194223f449149d715298cdabe",
+  "author": "Codex / GPT-5.5",
+  "default_model": "qwen",
+  "models": {
+    "qwen": {
+      "label": "Qwen/Qwen3-32B",
+      "role_count": 275,
+      "trait_count": 240,
+      "coordinate_source": "canonical_geometry_viz_data",
+      "orientation_signs": [
+        1,
+        1,
+        1
+      ],
+      "score_source": "canonical_saved_qwen_persona_trait_similarity_matrix",
+      "vector_sources": {
+        "role_vectors": "downloads/hf_vectors/qwen-3-32b/role_vectors",
+        "trait_vectors": "downloads/hf_vectors/qwen-3-32b/trait_vectors",
+        "role_bundle_sha256": "d9ace5eac56d0702bc8940acd1ab8499ac8806e58f46cbeb7f490ae8758f82b3",
+        "trait_bundle_sha256": "046d239b59dc09e0df211a4fa40b26110d0dfd4ab863f500e299342b59f40074"
+      },
+      "established_coordinate_max_abs_difference": 0.0
+    },
+    "llama": {
+      "label": "Llama-3.3-70B",
+      "role_count": 275,
+      "trait_count": 240,
+      "coordinate_source": "recomputed_layer_mean_role_vector_pca_oriented_to_qwen_reference",
+      "orientation_signs": [
+        1,
+        -1,
+        -1
+      ],
+      "score_source": "established_multimodel_float32_activation_cosine_recomputation",
+      "vector_sources": {
+        "role_vectors": "downloads/hf_vectors/llama-3.3-70b/role_vectors",
+        "trait_vectors": "downloads/hf_vectors/llama-3.3-70b/trait_vectors",
+        "role_bundle_sha256": "6fc7f09d19403dec8d3792baa3e7250a3cb161acc34104b2907a6347993b08f9",
+        "trait_bundle_sha256": "34dc6b0c77dcc4cbf6f0ac700b36564ea4db41030a5bd7986430ccd6727a96c8"
+      },
+      "established_coordinate_max_abs_difference": 0.0
+    },
+    "gemma": {
+      "label": "Gemma-2-27B",
+      "role_count": 275,
+      "trait_count": 240,
+      "coordinate_source": "recomputed_layer_mean_role_vector_pca_oriented_to_qwen_reference",
+      "orientation_signs": [
+        1,
+        1,
+        1
+      ],
+      "score_source": "established_multimodel_float32_activation_cosine_recomputation",
+      "vector_sources": {
+        "role_vectors": "downloads/hf_vectors/gemma-2-27b/role_vectors",
+        "trait_vectors": "downloads/hf_vectors/gemma-2-27b/trait_vectors",
+        "role_bundle_sha256": "6bbf9599df20802b4083256565a423f58c65356ec0bbbe1c0275e9c79a5898b3",
+        "trait_bundle_sha256": "adb4b2036ed60c6d1488ff321b7878add567f08a5ee1de6c5ba3a5a5abecafd3"
+      },
+      "established_coordinate_max_abs_difference": 0.0
+    }
+  },
+  "source_personas_per_model": 275,
+  "source_traits_per_model": 240,
   "selected_traits": 15,
-  "score_rows": 4125,
+  "score_rows": 12375,
+  "qwen_score_rows": 4125,
   "groups": [
     {
       "position": 1,
@@ -114,18 +175,25 @@
       "definition": "Prioritizes helping others and societal benefit over individual gain."
     }
   ],
-  "selection": "Editorial coverage based on saved trait descriptions; not data-optimized or statistically representative",
-  "raw_scores": "Copied exactly from saved role-by-trait cosine matrix; all 240 columns checked against PC2 joined copy",
-  "joined_matrix_max_absolute_difference": 9.985502008591496e-17,
-  "matrix_construction": "Mean of 64 stored activation rows per role/trait, then L2 normalization and dot product; inherited without rescoring",
-  "normalization": "100 * (average rank - 0.5) / 275 separately per trait; population z-scores also provided",
-  "ordering": "Descending unchanged canonical PC value with name tie-break",
-  "x_axis": "Equally spaced descriptive groups, not measured psychological/valence distance",
-  "curve": "PCHIP score connectors; not density, no within-persona area/peak normalization",
+  "selection": "Unchanged editorial coverage based on saved trait descriptions; not data-optimized",
+  "normalization": "100 * (average rank - 0.5) / 275 independently for each trait and model",
+  "aggregation": "Ridge heights show individual trait percentiles; no group composite in this viewer",
+  "ordering": "Descending selected-model PC coordinate with persona-name tie-break",
+  "curve": "PCHIP score connectors; exact dots are data; curves are not densities",
+  "coordinate_orientation": "Qwen uses canonical geometry_viz_data coordinates. Llama and Gemma use PCA over their own layer-mean role vectors, with each PC sign oriented to the corresponding Qwen reference PC exactly as in the established ordered-trait viewer.",
+  "cross_model_caveat": "Each displayed trait is midrank-percentiled independently within the selected model's 275-persona distribution. Equal percentile does not imply equal cosine or identical psychological semantics across models.",
+  "qwen_reproduction_max_differences": {
+    "max_abs_coordinates_difference": 0.0,
+    "max_abs_raw_affinity_difference": 0.0,
+    "max_abs_z_score_difference": 0.0,
+    "max_abs_height_percentile_difference": 0.0
+  },
+  "qwen_vector_recompute_vs_canonical_matrix_max_abs_difference": 2.712500570489773e-06,
   "gpu_used": false,
+  "runpod_used": false,
   "api_calls": 0,
   "activation_generation": false,
-  "pca_refit": false,
+  "new_inference": false,
   "source_files": [
     {
       "path": "research/visualizations/geometry_viz_data.json",
@@ -136,10 +204,6 @@
       "sha256": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8"
     },
     {
-      "path": "research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv",
-      "sha256": "6d4ace37bd886cda1e6c08a39e0c0801a4dcea99d818009dfffd328e84bbdd8f"
-    },
-    {
       "path": "data/traits/trait_list.json",
       "sha256": "17ec18a088fbaacbabe1c87e4df4bac0be7e264bc2b281a33f50cdfa9a03734e"
     },
@@ -148,8 +212,44 @@
       "sha256": "b3548fa5a08c6810035da1cea3f2166810d7b61b7137970f2d933a021d0fc330"
     },
     {
-      "path": "research/outputs/trait_persona_prediction/run_trait_persona_prediction.py",
-      "sha256": "c83a7cde6bb08771d2ad075e8529bb9476f0154826a9f2f1468e04d4691a581b"
+      "path": "research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py",
+      "sha256": "840d607ab584160aa0787e33cf1ff4c9bfa7812a7fd66bd885cc341c573d8b33"
+    },
+    {
+      "path": "research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_data.json",
+      "sha256": "97093324be48cddc43eae960f170a472dbf6881cffe66ca03d87f7f810d3fd2c"
+    },
+    {
+      "path": "research/outputs/multimodel_trait_viewer_data.py",
+      "sha256": "f2fbef53c2bbe28ba0e375fbaa49ed82c244b55efeaf7ba2f7876c24151d5f67"
+    },
+    {
+      "path": "research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py",
+      "sha256": "68897b5d85ed0c6ed2ecc0e9a9afc35227d5eda32d2ec64bc904876b779382a9"
+    },
+    {
+      "path": "research/outputs/persona_trait_ridge_plots/verify_persona_trait_ridges.py",
+      "sha256": "e4a973b45d9e1d5eb15b9ee5c977354392890af652064db65184735c0d6eca00"
+    },
+    {
+      "path": "research/outputs/persona_trait_ridge_plots/render_ridge_images.cjs",
+      "sha256": "6abd38afa99a9f84b5d6aa0b51531c80673d20d2b932f8d9325a39c86fbe07be"
+    },
+    {
+      "path": "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_methodology.md",
+      "sha256": "25b02cb45d92f65b8a8629223c00c3d60010fbc8f60f08f47f39aabbb291e497"
     }
-  ]
+  ],
+  "local_loading_audit": {
+    "vector_root_resolved": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors",
+    "logical_vector_root": "downloads/hf_vectors",
+    "established_coordinate_script": "research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py",
+    "established_coordinate_data": "research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_data.json",
+    "canonical_qwen_matrix": "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv",
+    "canonical_geometry": "research/visualizations/geometry_viz_data.json",
+    "role_sets_identical": true,
+    "trait_sets_identical": true,
+    "cross_model_normalization": "Each displayed trait is midrank-percentiled independently within the selected model's 275-persona distribution. Equal percentile does not imply equal cosine or identical psychological semantics across models.",
+    "coordinate_orientation": "Qwen uses canonical geometry_viz_data coordinates. Llama and Gemma use PCA over their own layer-mean role vectors, with each PC sign oriented to the corresponding Qwen reference PC exactly as in the established ordered-trait viewer."
+  }
 }

@@ -1,19 +1,76 @@
 {
-  "generated_utc": "2026-09-11T10:09:51.817624+00:00",
-  "base_commit": "b0e87ed24d18b57d6027a40a6f9dbe719383e9a4",
-  "activation_model": "Qwen/Qwen3-32B",
-  "author": "Codex; exact runtime identifier not recorded",
-  "gpu_used": false,
-  "api_calls": 0,
-  "new_activations": false,
-  "pca_refit": false,
-  "plotly_python_version": "6.7.0",
-  "personas": 275,
-  "groups": 5,
-  "member_traits": 15,
-  "group_rows": 1375,
-  "ordered_axis_views": 6,
-  "aggregation": "Equal-weight mean of three within-trait midrank percentiles from the ridge plots",
+  "generated_utc": "2026-09-11T20:51:46.809827+00:00",
+  "base_commit": "d68921b898ed179194223f449149d715298cdabe",
+  "qwen_compatibility_reference_commit": "d68921b898ed179194223f449149d715298cdabe",
+  "author": "Codex / GPT-5.5",
+  "default_model": "qwen",
+  "models": {
+    "qwen": {
+      "label": "Qwen/Qwen3-32B",
+      "personas": 275,
+      "source_traits": 240,
+      "member_traits": 15,
+      "groups": 5,
+      "group_rows": 1375,
+      "coordinate_source": "canonical_geometry_viz_data",
+      "orientation_signs": [
+        1,
+        1,
+        1
+      ],
+      "vector_sources": {
+        "role_vectors": "downloads/hf_vectors/qwen-3-32b/role_vectors",
+        "trait_vectors": "downloads/hf_vectors/qwen-3-32b/trait_vectors",
+        "role_bundle_sha256": "d9ace5eac56d0702bc8940acd1ab8499ac8806e58f46cbeb7f490ae8758f82b3",
+        "trait_bundle_sha256": "046d239b59dc09e0df211a4fa40b26110d0dfd4ab863f500e299342b59f40074"
+      }
+    },
+    "llama": {
+      "label": "Llama-3.3-70B",
+      "personas": 275,
+      "source_traits": 240,
+      "member_traits": 15,
+      "groups": 5,
+      "group_rows": 1375,
+      "coordinate_source": "recomputed_layer_mean_role_vector_pca_oriented_to_qwen_reference",
+      "orientation_signs": [
+        1,
+        -1,
+        -1
+      ],
+      "vector_sources": {
+        "role_vectors": "downloads/hf_vectors/llama-3.3-70b/role_vectors",
+        "trait_vectors": "downloads/hf_vectors/llama-3.3-70b/trait_vectors",
+        "role_bundle_sha256": "6fc7f09d19403dec8d3792baa3e7250a3cb161acc34104b2907a6347993b08f9",
+        "trait_bundle_sha256": "34dc6b0c77dcc4cbf6f0ac700b36564ea4db41030a5bd7986430ccd6727a96c8"
+      }
+    },
+    "gemma": {
+      "label": "Gemma-2-27B",
+      "personas": 275,
+      "source_traits": 240,
+      "member_traits": 15,
+      "groups": 5,
+      "group_rows": 1375,
+      "coordinate_source": "recomputed_layer_mean_role_vector_pca_oriented_to_qwen_reference",
+      "orientation_signs": [
+        1,
+        1,
+        1
+      ],
+      "vector_sources": {
+        "role_vectors": "downloads/hf_vectors/gemma-2-27b/role_vectors",
+        "trait_vectors": "downloads/hf_vectors/gemma-2-27b/trait_vectors",
+        "role_bundle_sha256": "6bbf9599df20802b4083256565a423f58c65356ec0bbbe1c0275e9c79a5898b3",
+        "trait_bundle_sha256": "adb4b2036ed60c6d1488ff321b7878add567f08a5ee1de6c5ba3a5a5abecafd3"
+      }
+    }
+  },
+  "group_rows": 4125,
+  "qwen_group_rows": 1375,
+  "ordered_axis_views_per_model": 6,
+  "mesh_variants_per_model": 45,
+  "aggregation": "Equal-weight mean of three member-trait within-model percentiles",
   "grid_size": 61,
   "smoothing": [
     [
@@ -38,17 +95,24 @@
     100
   ],
   "bounded_fabric": "Clip fitted surface only to 0-100; preserve exact group nodes",
-  "flat_plane_fit": "Least-squares plane over intercept and normalized selected-PC coordinates; same support mask as rolling fabric",
-  "flat_adherence": "Descriptive R2 of the flat plane as an approximation to each displayed rolling fabric; user score clips 100*R2 to 0-100",
-  "fit_diagnostics": "In-sample descriptive errors; not held-out validation",
+  "support_mask": "Recomputed independently per model and PC pair from that model's oriented coordinates",
+  "flat_plane_fit": "Recomputed per model/group/view by least squares over normalized selected-model PC coordinates",
+  "flat_adherence": "Descriptive R2 of each model's flat plane as an approximation to its displayed rolling fabric",
+  "fit_diagnostics": "In-sample descriptive errors recomputed independently per model; not held-out validation",
+  "coordinate_orientation": "Qwen uses canonical geometry_viz_data coordinates. Llama and Gemma use PCA over their own layer-mean role vectors, with each PC sign oriented to the corresponding Qwen reference PC exactly as in the established ordered-trait viewer.",
+  "cross_model_caveat": "Percentiles are within-model ranks. Equal percentiles do not imply equal absolute cosine or identical psychological semantics across models.",
+  "qwen_reproduction_max_abs_difference": 0.0,
+  "qwen_reproduction_max_difference_path": "/roles/0/name",
+  "gpu_used": false,
+  "runpod_used": false,
+  "api_calls": 0,
+  "new_activations": false,
+  "new_inference": false,
+  "plotly_python_version": "6.7.0",
   "sources": [
     {
       "path": "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_data.json",
-      "sha256": "3528220f260ee9df6d273bc1faa1af0dd3502031167499a83029093c82e7dca5"
-    },
-    {
-      "path": "research/visualizations/geometry_viz_data.json",
-      "sha256": "1b15d8e3425bc3d51032919157eb683f1358f353f4ee071a18d06347a792ec6d"
+      "sha256": "957fe00c57719a4373d0ebd20e8fe07a49ac642eca3c94f3491ed8c4fef881db"
     },
     {
       "path": "research/outputs/persona_trait_ridge_plots/trait_category_order.csv",
@@ -56,23 +120,31 @@
     },
     {
       "path": "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_manifest.json",
-      "sha256": "c88a67640bbbda9e1f3463a29c82bdf83112813f0fb107886602569e3baee2eb"
+      "sha256": "7cc4a151231a5cd9514d2ff049106ff9f8f0f90b234a9f8624f043c6fb1a152a"
     },
     {
       "path": "research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md",
       "sha256": "b3548fa5a08c6810035da1cea3f2166810d7b61b7137970f2d933a021d0fc330"
     },
     {
-      "path": "research/outputs/persona_emotion_surface_viewer/run_persona_emotion_surface_viewer.py",
-      "sha256": "b4985e613390845941db26d44f5bf7616b4047bc6ca3429b5355565abea2bfa8"
+      "path": "research/outputs/multimodel_trait_viewer_data.py",
+      "sha256": "f2fbef53c2bbe28ba0e375fbaa49ed82c244b55efeaf7ba2f7876c24151d5f67"
+    },
+    {
+      "path": "research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py",
+      "sha256": "840d607ab584160aa0787e33cf1ff4c9bfa7812a7fd66bd885cc341c573d8b33"
+    },
+    {
+      "path": "research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_data.json",
+      "sha256": "97093324be48cddc43eae960f170a472dbf6881cffe66ca03d87f7f810d3fd2c"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/run_persona_trait_surface.py",
-      "sha256": "a0f04ef3e5dff1715203f49f7901854e872974eac221c801b20b6e918d6bfde6"
+      "sha256": "b61204288bef76110099e988ea0945d3dd3806ee2130205fcc95a963f5c98e86"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer.js",
-      "sha256": "2e0e66c0aaf49f07d41708ac358a2601d35c4da39b375b03cc7457f2593ca6b0"
+      "sha256": "6d5710c8df0d78985690cc23448d7f194098355fed43662f004cd38268481580"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/camera_controls.js",
@@ -80,7 +152,7 @@
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer_template.html",
-      "sha256": "1c98098b7bd01e061448f08b0c86d04f155191a7e50f827b79264f2d8af317d9"
+      "sha256": "db0bf5d3f5b115a3db40fd2c9147c8524f8c6fe86cc1dd993f9504ffc49ef571"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer_bootstrap.js",
@@ -88,7 +160,23 @@
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/trait_surface_methodology.md",
-      "sha256": "5280472a2f86fb129e56e5849d114dc49bd49787cee3260ea77313e9f4279e64"
+      "sha256": "6e65226acd4d138bb431561ca809b837b1635f349896ac1fba9b59b63b48fb8d"
+    },
+    {
+      "path": "research/outputs/persona_trait_surface_viewer/verify_trait_surface_data.py",
+      "sha256": "97c87cac281eb93765126ba47c66702535d08e8a09f2b0ef7c2bc254d5954feb"
+    },
+    {
+      "path": "research/outputs/persona_trait_surface_viewer/verify_trait_surface_controls.cjs",
+      "sha256": "657706ec2dc824ebddaecebf0d72cf206223b58e9647641b91e98edb71833a67"
+    },
+    {
+      "path": "research/outputs/persona_trait_surface_viewer/verify_trait_viewers_browser.cjs",
+      "sha256": "83f0e068ccf9637ff35b8317a6e77f695225c35d2ab21e7b1acd638977431dd0"
+    },
+    {
+      "path": "research/outputs/persona_trait_surface_viewer/render_trait_surface_preview.cjs",
+      "sha256": "0a8cc72a2e1ad48e834299b04e2b83be5d347230c2656add806aae13397e3217"
     }
   ]
 }

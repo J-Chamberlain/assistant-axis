@@ -1,79 +1,110 @@
-# PC-Ranked Persona Trait Profiles
+# Multimodel PC-Ranked Persona Trait Profiles
 
-Date: 2026-09-09 (America/Los_Angeles)
-Status: completed descriptive visualization; no new activation experiment.
-Startup: canonical raw STARTUP_MANIFEST, RESEARCH_STATE, THREAD_START and CLAIMS_REGISTER fetched in order; hashes, byte counts and local copies verified before work.
-Branch: master. Base commit: bcba251e6cee617e5b01af62c99c4d05028d92db.
+Date: 2026-09-11 (America/Los_Angeles)  
+Status: completed descriptive visualization; no new inference or activation extraction.  
+Default model: Qwen.
 
-## Open the Plots
+## Scope
 
-Open [persona_trait_ridges.html](persona_trait_ridges.html), the completed offline artifact. It contains all 275 personas in each of three plots, descending PC1, PC2 and PC3, respectively. Click a persona name or select it above the plots to locate it in every ranking. Headers stay visible while scrolling. Wide displays show three columns; smaller displays stack them, with horizontal scrolling where needed to preserve legible labels. The graphs are pre-rendered and remain visible even without JavaScript. No external chart dependency or data fetch is needed.
+`persona_trait_ridges.html` is the canonical offline viewer for the same 15 editorial traits in Qwen, Llama, and Gemma. The Model selector replaces all three PC-ranked panels without a page reload. The selected persona persists by role name when models change because the released bundles were verified to contain the same 275 role names.
 
-Full all-persona figures: [PC1 SVG](persona_trait_ridges_pc1.svg), [PC2 SVG](persona_trait_ridges_pc2.svg), [PC3 SVG](persona_trait_ridges_pc3.svg); matching PNGs are in the same directory. [Overview](persona_trait_ridges_overview.png) deliberately shows only the first 15 personas per PC, not the full population. The working emotion ridge plots and 3D surface viewer are unchanged.
+The trait selection and order are unchanged:
 
-## Selection and Left-to-Right Order
+| Position | Editorial reading group | Trait |
+|---:|---|---|
+| 1 | Exploration | creative |
+| 2 | Exploration | abstract |
+| 3 | Exploration | curious |
+| 4 | Response | reactive |
+| 5 | Response | adaptable |
+| 6 | Response | practical |
+| 7 | Scrutiny | skeptical |
+| 8 | Scrutiny | analytical |
+| 9 | Scrutiny | conscientious |
+| 10 | Challenge | rebellious |
+| 11 | Challenge | competitive |
+| 12 | Challenge | manipulative |
+| 13 | Affiliation | empathetic |
+| 14 | Affiliation | agreeable |
+| 15 | Affiliation | altruistic |
 
-Fifteen traits form a manageable editorial coverage sample from the existing 240 traits, not a statistically representative or optimized subset. Selection and grouping use the saved descriptions, not a search for large PC correlations or attractive ridges. We include expressive/conceptual, situated, evaluative, oppositional and prosocial tendencies rather than only assistant-like traits. The group names are reading aids, not discovered factors, fitted clusters, Big Five dimensions or valence labels.
+These five groups are editorial reading groups, not fitted latent factors, discovered clusters, valence dimensions, or validated psychological scales.
 
-| Position | Group | Trait | Saved description (verbatim) |
-|---|---|---|---|
-| 1 | Exploration | creative | Offers imaginative solutions, novel perspectives, and original approaches to problems. |
-| 2 | Exploration | abstract | Thinks in terms of concepts, patterns, and theoretical frameworks. |
-| 3 | Exploration | curious | Shows genuine interest in learning and exploring new topics and ideas. |
-| 4 | Response | reactive | Responds to situations as they arise rather than planning ahead. |
-| 5 | Response | adaptable | Adjusts communication style and approach based on context and user needs. |
-| 6 | Response | practical | Emphasizes real-world applications and actionable advice over theory. |
-| 7 | Scrutiny | skeptical | Questions assumptions, seeks evidence, and challenges conventional thinking. |
-| 8 | Scrutiny | analytical | Breaks down complex topics into logical components and examines each part systematically. |
-| 9 | Scrutiny | conscientious | Demonstrates careful attention to responsibilities and thoroughness in work. |
-| 10 | Challenge | rebellious | Challenges authority and conventional wisdom. Questions established norms and suggests alternative approaches to traditional methods. |
-| 11 | Challenge | competitive | Emphasizes winning, achievement, and outperforming others. |
-| 12 | Challenge | manipulative | Uses deception, emotional exploitation, and psychological tactics to control others. |
-| 13 | Affiliation | empathetic | Shows understanding and consideration for human emotions and perspectives. |
-| 14 | Affiliation | agreeable | Prioritizes harmony and maintaining positive relationships over confrontation. |
-| 15 | Affiliation | altruistic | Prioritizes helping others and societal benefit over individual gain. |
+## Exact Model Sources
 
-These traits are not ordered negative-to-positive. Traits do not have the same valence interpretation as the emotion channels. Equally spaced categories, dashed group boundaries, colored dots and group titles make the editorial ordering visible. Trait text and the ridge line are neutral. Colors mean only the descriptive group, never assistant-axis projection, score magnitude, goodness or badness. Reordering categories would change the curve's silhouette without changing the underlying scores.
+Only saved local released tensors were used:
 
-## Source Data and Normalization
+- Qwen role vectors: `downloads/hf_vectors/qwen-3-32b/role_vectors` (275 files).
+- Qwen trait vectors: `downloads/hf_vectors/qwen-3-32b/trait_vectors` (240 files).
+- Llama role vectors: `downloads/hf_vectors/llama-3.3-70b/role_vectors` (275 files).
+- Llama trait vectors: `downloads/hf_vectors/llama-3.3-70b/trait_vectors` (240 files).
+- Gemma role vectors: `downloads/hf_vectors/gemma-2-27b/role_vectors` (275 files).
+- Gemma trait vectors: `downloads/hf_vectors/gemma-2-27b/trait_vectors` (240 files).
 
-Observed sources:
+The manifest records a SHA256 bundle digest over sorted filename/content pairs for each directory. The task worktree did not contain a copied `downloads/` cache; generation used the read-only local cache in `/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors` through the explicit `--vector-root` argument. No missing bundle was downloaded or substituted.
 
-- [Canonical geometry](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/visualizations/geometry_viz_data.json): unchanged `roles.names` and `roles.pca3d`, 275 unique personas, three PCs. No PCA fit or sign change.
-- [Primary trait matrix](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv): 275 rows and 241 columns, `persona` plus 240 cosine scores. Selected values are copied exactly, joined by persona, not row position.
-- [PC2 analysis joined matrix](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv): all 66,000 trait values compared with the primary matrix; maximum absolute difference 9.985502008591496e-17, consistent with a CSV floating-point round-trip. The primary matrix retains the source precision.
-- [Trait definitions](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/data/traits/trait_list.json): 240 names/descriptions; selected definitions copied without relabeling the underlying keys.
-- [Matrix generator](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/trait_persona_prediction/run_trait_persona_prediction.py) and [provenance audit](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md): deterministic cosine similarities between L2-normalized means over each released Qwen role/trait tensor's 64 stored rows. We reuse these saved scores, not the single-layer emotion readout.
+## Coordinates and Orientation
 
-For each trait independently across all 275 personas:
+Coordinate construction calls the functions in `research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py`; it does not define a competing PCA alignment.
+
+- Qwen uses `research/visualizations/geometry_viz_data.json` coordinates exactly.
+- Llama and Gemma independently mean-pool every released role tensor across its stored rows, fit three-component PCA to their own 275-role matrix, and orient each resulting PC sign to the corresponding Qwen reference PC with the established cross-role correlation sign rule.
+- Llama orientation signs are `[+1, -1, -1]`; Gemma signs are `[+1, +1, +1]` for these saved bundles.
+- Llama and Gemma are not projected into the Qwen PCA basis.
+
+All three coordinate arrays agree with the previously validated multimodel ordered-trait viewer to maximum absolute difference `0.0`.
+
+## Activation-Cosine Scores
+
+These are same-space activation-cosine trait profiles.
+
+Qwen retains `research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv` as the canonical source so the viewer reproduces the accepted Qwen result exactly. As an audit, the newer multimodel float32 cosine path was also recomputed from Qwen vectors; it differs from the canonical saved matrix by at most `4.389272697635782e-06`, so it is not substituted for the accepted Qwen numbers.
+
+Llama and Gemma use the established multimodel computation: mean each role and trait tensor across stored rows, convert to float32, L2-normalize each mean vector, and take the role-by-trait matrix product. Their displayed data are selected from their own 275-by-240 matrices, never from Qwen.
+
+For every model and trait independently across 275 personas:
 
 `height = 100 * (average_rank(raw_cosine) - 0.5) / 275`
 
-Ties use average ranks. The common height scale is 0-100, with observed endpoints inside that interval. Population z-scores use `(raw - mean) / std(ddof=0)`; raw cosine, z-score and percentile are in marker tooltips and the 4,125-row [score CSV](persona_trait_ridge_scores.csv). Each persona has the same 15-value profile in all three rankings. Only row order changes, using descending original PC and alphabetical tie-breaking.
+Ties use average ranks. Population z-scores use `(raw - mean) / std(ddof=0)`. The saved score table retains model, raw cosine, z-score, percentile, all three PC coordinates, and all three PC ranks for every displayed model/persona/trait row.
 
-The percentile is a relative position among personas for that trait, not the probability, prevalence or physical intensity of a trait. No per-persona peak scaling, area normalization or softmax is performed. A high peak for one trait and another high peak for a second trait mean high relative rankings in their respective populations; they do not establish equal absolute trait strengths. Low height is not proof of trait absence.
+A percentile of 90 in Qwen and 90 in Llama expresses the same within-model rank concept. It does not imply the same absolute cosine, calibrated psychological intensity, or identical psychological semantics. Model selection does not establish psychological equivalence across models.
 
-PCHIP connects the categorical percentile values without overshooting. Exact category dots are the data; intermediate curve points are visual interpolation. This is a ridge-shaped profile, not a probability density or continuous latent measurement.
+## Display
 
-## Evidential Limits
+Each selected model has three complete panels, ordered independently by that model's descending PC1, PC2, and PC3 coordinates with persona-name tie-breaking. Exact colored dots are data. PCHIP supplies non-overshooting visual connectors between equally spaced categories; the line is not a density or continuous trait factor.
 
-Observed: the profiles are same-space activation-cosine evidence. Mixed provenance means inherited released trait vocabulary/vectors combined with an internally computed cosine matrix. Trait scores were not independently assigned by humans, a questionnaire, or a new LLM judge. The role PCA and trait similarities share released activation sources, so their agreement is not independent psychological validation. Historical metadata saying layer 48 does not change the matrix generator's actual averaging across all 64 stored rows.
+The HTML pre-renders all 2,475 model/panel/persona rows and 37,125 trait nodes, keeps Qwen visible by default, and switches the three model panels in place. It remains self-contained and has no network script or data dependency. Static SVG/PNG exports are provided for all three PCs and an overview for each model; the historical unsuffixed exports remain Qwen aliases.
 
-Inferred: grouped trait profiles may help manual inspection of how already-mapped tendencies are distributed through PC space. No new PC interpretation is claimed. Unknown: generalization to response-level behavior or independent trait assessments. The selected 15 do not exhaust all 240 dimensions, and traits are not orthogonal.
+## Qwen Backward Compatibility
 
-## Verification and Reproduction
+The reference is commit `d68921b898ed179194223f449149d715298cdabe`, the canonical J-Chamberlain master at task start. Maximum Qwen differences are:
 
-Run from the repository root, with NumPy/SciPy available and Sharp available to Node:
+- raw trait cosine: `0.0`;
+- z-score: `0.0`;
+- within-trait percentile: `0.0`;
+- PC coordinate: `0.0`;
+- PC orders: exact;
+- 275 personas, 240 source traits, 15 displayed traits, and 4,125 Qwen score rows: exact.
+
+## Verification
+
+`verify_persona_trait_ridges.py` independently checks model counts and role sets, finite values, 240-trait source coverage, the unchanged 15-trait set, percentile/z calculations, all model-specific PC orders, strict coordinate agreement, exact Qwen reproduction, complete saved rows, pre-rendered markup, and source hashes.
+
+`render_ridge_images.cjs` rasterizes all model-specific static exports and runs a DOM double for default/reset behavior, real coordinate-row replacement, linked selection, and persona-name persistence.
+
+`verify_trait_viewers_browser.cjs` separately uses actual headless Chrome. It opened the self-contained viewer, switched Qwen/Llama/Gemma, verified 825 active rows and 12,375 active trait nodes per model, confirmed coordinate rows changed, preserved `playwright` by name, reset to Qwen, and observed no page errors. This actual-browser result is distinct from the DOM-double tests.
+
+## Reproduction
 
 ```sh
-python3 -B research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py
+python3 -B research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py \
+  --vector-root /absolute/path/to/assistant-axis/downloads/hf_vectors
 python3 -B research/outputs/persona_trait_ridge_plots/verify_persona_trait_ridges.py
 node research/outputs/persona_trait_ridge_plots/render_ridge_images.cjs
 python3 -B research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py --inventory-only
 ```
 
-Validation: 275 unique personas, 15 selected traits, 4,125 unique score rows, 825 pre-rendered ridge rows, 12,375 category markers, exact canonical geometry, exact primary scores, independently computed percentiles/z-scores, descending ranks and input SHA256 checks. Four SVGs rasterized to nonblank PNGs; overview visually inspected. Node DOM-double tests exercise linked persona selection and clearing. These are data, static-render and unit tests, not live-browser screenshots. Existing viewers were not modified.
+Static PNG reproduction needs Sharp. Actual browser verification additionally needs `puppeteer-core` and local Chrome; neither runtime package is embedded in the viewer.
 
-Artifacts and canonical raw URLs are enumerated with SHA256 hashes in [artifact_inventory.csv](artifact_inventory.csv). Runtime/source details are in [persona_trait_ridge_manifest.json](persona_trait_ridge_manifest.json); checks in [persona_trait_ridge_checks.json](persona_trait_ridge_checks.json) and [ridge_render_checks.json](ridge_render_checks.json).
-
-No GPU, model generation, new activation extraction, model API or judge calls were performed. CLAIMS_REGISTER and FINDINGS_LEDGER are unchanged because this adds a descriptive view of existing data, not new empirical evidence. No sticky note was directly addressed. Next step: manual inspection, followed by user-selected expansion of the trait subset if useful.
+No new model inference, response generation, activation extraction, GPU, RunPod, or external model API was used.
