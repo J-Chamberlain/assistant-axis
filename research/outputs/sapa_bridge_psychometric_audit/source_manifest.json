@@ -1,0 +1,57 @@
+{
+  "artifact": "Human-only SAPA psychometric structure audit of the provisional trait bridge",
+  "analysis_model": "GPT-5.5",
+  "generated_at": "2026-09-11T23:10:00Z",
+  "rubric_version": "1.0",
+  "rubric_freeze_commit": "6bf36c0",
+  "random_seed": 20260911,
+  "parallel_analysis_draws": 500,
+  "inputs_loaded": {
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_trait_bridge_provisional_v1.csv": "e70be82752ec8ec4a7a8c64c7f5d37386b0997363c16a721e59a6aa0ac254e22",
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_category3_second_pass_review.csv": "f8e77caf9f5970ac8c48743e8422f04a146ac8013fb3cac5a88b1069c82c29a6",
+    "research/outputs/human_trait_dataset_feasibility/sapa/sapa_item_dictionary.csv": "6297d7fc351cea2121a1a211c5203f9e1bc07d0157c551087e0820b8bbd6bda9",
+    "research/outputs/human_trait_dataset_feasibility/sapa/sapa_scale_inventory.csv": "1db3444330e4a500eeb0189f0b6a020c27d4ee27d7ff34cba40e08a76460e965",
+    "research/outputs/human_trait_dataset_feasibility/sapa/sapa_source_manifest.json": "23f5535feccbd2c9722a42e47106dc06ad975ed31931eaeb273ad6284f33536f",
+    "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_review_source_manifest.json": "b6b8be80e4a27f35a8f1ea36e7a41879f67c5354fc6a0e194a07affaf7b29278",
+    "research/outputs/sapa_bridge_psychometric_audit/psychometric_support_rubric.md": "cf1c990d78ab61d63d028b19a4e635266b1f0c5b4744ee5ff7f719a673ca0473",
+    "data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/sapaTempData696items08dec2013thru26jul2014.tab": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+    "data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/superKey696.csv": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49"
+  },
+  "raw_data": {
+    "logical_path": "data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/sapaTempData696items08dec2013thru26jul2014.tab",
+    "resolved_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-aa1-sapa-psychometric-audit/data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/sapaTempData696items08dec2013thru26jul2014.tab",
+    "sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+    "respondents": 23679,
+    "psychological_item_columns_loaded": 696,
+    "respondent_id_or_demographic_columns_loaded": 0,
+    "gitignored": true
+  },
+  "analysis_tiers": {
+    "primary_accept_direct": 45,
+    "secondary_accept_close": 29
+  },
+  "methods": {
+    "pearson": "pairwise-complete item correlations; primary",
+    "spearman": "pairwise-complete retained-item rank correlations; sensitivity",
+    "polychoric": "not run; no reliable local implementation installed",
+    "proxy_composites": "standardized unit-weight composites from pairwise item correlations",
+    "source_scale_convergence": "official superKey696 signs with proxy evidence items excluded",
+    "reliability": "mean inter-item correlation and standardized alpha; omega not estimated for 2-3 item proxies",
+    "missing_data": "planned-missing pairwise information; no complete-case analysis and no mean imputation"
+  },
+  "software": {
+    "python": "3.12.12",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.17.0"
+  },
+  "forbidden_inputs_loaded": [],
+  "model_geometry_used": false,
+  "human_to_model_projection_performed": false,
+  "respondent_level_outputs_written": false,
+  "gpu_used": false,
+  "runpod_used": false,
+  "external_model_api_used": false,
+  "new_model_inference_used": false,
+  "command": "python run_sapa_bridge_psychometric_audit.py --repo-root ."
+}

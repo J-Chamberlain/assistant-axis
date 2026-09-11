@@ -1,9 +1,9 @@
 # SAPA Bridge Human-Data Psychometric Support Rubric
 
-Status: frozen before inspecting human-response covariance results  
-Rubric version: 1.0  
-Frozen UTC: 2026-09-11T23:07:00Z  
-Analysis model: GPT-5.5  
+Status: frozen before inspecting human-response covariance results
+Rubric version: 1.0
+Frozen UTC: 2026-09-11T23:07:00Z
+Analysis model: GPT-5.5
 
 ## Scope and blindness
 

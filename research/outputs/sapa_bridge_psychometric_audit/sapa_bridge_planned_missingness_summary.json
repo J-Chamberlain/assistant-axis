@@ -1,0 +1,48 @@
+{
+  "respondents": 23679,
+  "design_interpretation": "SAPA randomized planned item administration; missingness is not treated as ordinary nonresponse.",
+  "complete_case_analysis_used": false,
+  "mean_imputation_used": false,
+  "tiers": {
+    "accept_direct": {
+      "trait_count": 45,
+      "distinct_item_count": 96,
+      "item_administration_n_min": 2327,
+      "item_administration_n_median": 2573.0,
+      "item_administration_n_max": 4381,
+      "retained_items_observed_per_respondent_p25": 7.0,
+      "retained_items_observed_per_respondent_median": 10.0,
+      "retained_items_observed_per_respondent_p75": 12.0,
+      "retained_items_observed_per_respondent_max": 57,
+      "respondents_observing_all_retained_items": 0,
+      "fully_observed_proxies_per_respondent_p25": 0.0,
+      "fully_observed_proxies_per_respondent_median": 0.0,
+      "fully_observed_proxies_per_respondent_p75": 1.0,
+      "fully_observed_proxies_per_respondent_max": 16,
+      "partially_observed_proxies_per_respondent_median": 11.0,
+      "item_pair_overlap_n_min": 296,
+      "item_pair_overlap_n_median": 490.0,
+      "item_pair_overlap_n_max": 961
+    },
+    "accept_direct_plus_close": {
+      "trait_count": 74,
+      "distinct_item_count": 129,
+      "item_administration_n_min": 2327,
+      "item_administration_n_median": 2570.0,
+      "item_administration_n_max": 5902,
+      "retained_items_observed_per_respondent_p25": 11.0,
+      "retained_items_observed_per_respondent_median": 13.0,
+      "retained_items_observed_per_respondent_p75": 16.0,
+      "retained_items_observed_per_respondent_max": 71,
+      "respondents_observing_all_retained_items": 0,
+      "fully_observed_proxies_per_respondent_p25": 0.0,
+      "fully_observed_proxies_per_respondent_median": 1.0,
+      "fully_observed_proxies_per_respondent_p75": 2.0,
+      "fully_observed_proxies_per_respondent_max": 23,
+      "partially_observed_proxies_per_respondent_median": 17.0,
+      "item_pair_overlap_n_min": 289,
+      "item_pair_overlap_n_median": 504.0,
+      "item_pair_overlap_n_max": 1212
+    }
+  }
+}
