@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": {
+    "canonical_traits_240": true,
+    "freeze_commit_recorded": true,
+    "freeze_ancestor": true,
+    "freeze_predates_analysis": true,
+    "mapping_geometry_blind": true,
+    "role_score_row_count": true,
+    "correlation_row_count": true,
+    "direction_cosine_row_count": true,
+    "direction_count": true,
+    "construction_coverage": true,
+    "domain_coverage": true,
+    "direction_cosines_bounded": true,
+    "all_metrics_finite": true,
+    "roles_275_each": true,
+    "identical_role_names": true,
+    "saved_direction_score_reproduction": true,
+    "within_model_percentile_reproduction": true,
+    "viewer_payload_counts": true,
+    "focal_table_consistency": true,
+    "coordinate_agreement": true,
+    "deterministic_full_rerun": true
+  },
+  "maximum_raw_score_reproduction_difference": 0.0,
+  "maximum_percentile_reproduction_difference": 0.0,
+  "deterministic_rerun_method": "SHA256 before/after comparison of all analytical CSV/JSON outputs",
+  "viewer_checks_pending": true,
+  "browser_checks_pending": true
+}
