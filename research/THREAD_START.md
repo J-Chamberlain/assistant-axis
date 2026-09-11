@@ -2,13 +2,15 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-09-09
+Last updated: 2026-09-11
 
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 
 Current visualization update (2026-09-09): the existing Qwen emotion surface viewer now has a vivid fixed symmetric affinity z-score palette, a `Persona nodes` toggle for a fabric-only view, and synchronized yaw/pitch/roll/zoom dials with numeric entry and Isometric/Top/Front/Side presets. The update reused the saved six-emotion bundle and did not run inference, GPU work, rescoring, or API calls. Data validation and 225-case Plotly/DOM-double UI tests pass; no new live WebGL browser test was claimed. Claims remain unchanged.
 
 ## Current Objective
+
+Current trait-profile predictor (2026-09-11): `research/outputs/trait_profile_pc_predictor/` now provides the reusable first-stage mapping from a complete 240-trait Qwen activation-cosine profile to predicted canonical PC1/PC2/PC3. Raw Ridge LOPO over all 275 personas reaches R2=0.999522/0.998811/0.999611 and remains V1 after repeated nested comparison against PLS, RBF Kernel Ridge, and KNN. Fold-safe quantile LOPO is still strong but less precise; complete cluster holdouts raise normalized 3D RMSE from 0.0454 to 0.0680; the 100-permutation null is clean; and 120 pair-endpoint-held-out synthetic activation mixtures remain strongly predicted, with larger errors for distant pairs. The CLI supports known personas, complete external raw/percentile profiles, deterministic percentile edits, empirical LOPO error references, all-model disagreement, and OOD context using retained-space neighbors plus reconstruction residual. This is same-space activation geometry and predicted counterfactual location, not behavioral realization, causal trait evidence, or human personality prediction. Next scientific step is a separately preregistered novel-persona elicitation/activation comparison; it was explicitly not run here.
 
 Current grouped-trait landscape (2026-09-10): `research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html` extends the accepted trait ridges into a five-stop 3D fabric viewer. Height is an equal-weight mean of three original member percentiles, not a fitted factor or composite percentile rank. Added vivid fixed-range height colors, complete node-free mode, a semi-transparent least-squares flat-plane comparison with descriptive flat-adherence and node-fit scores, flat-plane-only mode, synchronized yaw/pitch/roll/zoom sliders and numeric entry, plus top/front/side/isometric presets. Existing viewers remain untouched. Data, camera-math and UI-state checks pass; browser-use blocked the local URL without a bypass, so actual interactive appearance needs user inspection. Next step: open the completed HTML and inspect the flat-plane overlay, score readouts, group/member fidelity and camera controls; no GPU work or claim change.
 
@@ -27,6 +29,8 @@ Paper 2 is active planning, not execution. Its current scope is local centroid p
 The canonical writing-phase source for Paper 1.5 is now `research/paper15_content_ledger.md`, with source inventory in `research/paper15_content_ledger_artifact_inventory.csv`. Use it before drafting prose. It separates observed findings, interpretations, hypotheses, caveats, rejected explanations, claims inventory, open questions, and inclusion recommendations.
 
 ## Top Findings
+
+Complete activation-derived Qwen trait profiles generalize accurately to held-out canonical persona geometry under stricter validation. Raw Ridge LOPO R2 is 0.999522/0.998811/0.999611; leave-one-cluster-out aggregate R2 is 0.998692/0.997740/0.999338 with 1.68x mean LOPO error; and the target-permutation p95 mean R2 is -0.0075. Canonical PCA reproduction passes at 1.207e-06, permitting endpoint-pair-held-out synthetic interpolation (120 mixes; R2=0.995266/0.984377/0.997144). Treat this as same-space basis coverage and interpolation evidence, not an independent psychological or behavioral-generalization result.
 
 Qwen trickster adaptive extraction worked operationally. The run preserved 1200 rollouts and 1200 activation shards, passed integrity, and Codex/GPT-5.5 adaptive scoring reached 64 score>=2 and 33 score==3 responses in 64 scored records. The score>=2 vector matched the Lu trickster mean at cosine 0.957557, and adaptive stopping passed at n=16.
 
@@ -135,3 +139,4 @@ As of 2026-06-16, `research/paper15_content_ledger.md` has been completed for me
 6. Distill SVD15 prompt-register components into concrete human-readable residual features and retest under the shared benchmark splits.
 7. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.
 8. Extend the activation-cloud geometry audit to a balanced role set before making strong claims about persona-specific cloud size, anisotropy, or orientation.
+9. Freeze a complete novel-role trait profile and predicted PC coordinate with the V1 Ridge CLI, then preregister and run the separate Qwen behavioral elicitation/activation validation without refitting the predictor.

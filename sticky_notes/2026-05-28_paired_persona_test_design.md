@@ -63,3 +63,7 @@ semantic similarity.
 
 Concept only. Pairs not yet written as Lu-style role prompt sets. Next step: write
 role prompt sets for each persona in each pair, preregister predictions, extract vectors.
+
+## Update 2026-09-11
+
+The prerequisite first-stage mapping is now implemented at `research/outputs/trait_profile_pc_predictor/`: a complete named 240-trait Qwen activation-derived profile can be frozen and converted to a predicted canonical PC1/PC2/PC3 coordinate, with empirical LOPO error, model disagreement, nearest-profile context, and OOD diagnostics. The completed work validates existing-persona, whole-cluster, and synthetic activation-interpolation generalization only. It deliberately did not write or elicit the novel paired personas above, generate activations, or compare observed behavior with predicted coordinates. The next step remains to specify complete profiles and role prompts for a novel pair, preregister the predictions, and only then run the separate activation experiment.

@@ -1,0 +1,738 @@
+[
+  {
+    "anchor": "trickster",
+    "baseline_model_disagreement": {
+      "maximum_pairwise_3d_disagreement": 0.802494658779919,
+      "per_pc_range": [
+        0.7461411351162113,
+        0.20447950216416189,
+        0.30565839152818697
+      ],
+      "predictions": {
+        "KNN": [
+          -35.02203055935166,
+          19.740619976937417,
+          20.906417185849257
+        ],
+        "Kernel Ridge": [
+          -34.82352988135414,
+          19.72082572379757,
+          20.917327301633467
+        ],
+        "PLS": [
+          -35.56967101647035,
+          19.740688699499685,
+          21.212075577377444
+        ],
+        "Ridge": [
+          -35.40630694957336,
+          19.536209197335523,
+          21.042931339523616
+        ]
+      }
+    },
+    "baseline_ood": {
+      "distance_percentile_vs_canonical_loo": 86.67883211678831,
+      "heuristic_label": "in-distribution",
+      "mean_5nn_distance": 7.294757385182199,
+      "nearest_neighbor_distance": 6.398898407266758,
+      "nearest_personas": [
+        {
+          "distance": 6.398898407266758,
+          "persona": "jester"
+        },
+        {
+          "distance": 6.605969959902389,
+          "persona": "genie"
+        },
+        {
+          "distance": 7.399895851224076,
+          "persona": "absurdist"
+        },
+        {
+          "distance": 7.79976694949569,
+          "persona": "rogue"
+        },
+        {
+          "distance": 8.26925575802208,
+          "persona": "rebel"
+        }
+      ],
+      "note": "Heuristic profile-geometry diagnostic, not a calibrated probability.",
+      "profile_pca_reconstruction_error": 2.871167683588294,
+      "reconstruction_error_percentile_vs_canonical": 65.69343065693431,
+      "traits_outside_training_range": [],
+      "traits_outside_training_range_count": 0
+    },
+    "baseline_predicted_pc": {
+      "PC1": -35.40630694957336,
+      "PC2": 19.536209197335523,
+      "PC3": 21.042931339523616
+    },
+    "clamps": [
+      {
+        "clamped_percentile": 100.0,
+        "requested_percentile": 105.62043795620438,
+        "trait": "challenging"
+      },
+      {
+        "clamped_percentile": 100.0,
+        "requested_percentile": 106.35036496350365,
+        "trait": "playful"
+      },
+      {
+        "clamped_percentile": 0.0,
+        "requested_percentile": -1.6058394160583944,
+        "trait": "conscientious"
+      }
+    ],
+    "delta_pc": {
+      "PC1": -5.13055971802838,
+      "PC2": -0.10503697018351943,
+      "PC3": 7.627347378856459
+    },
+    "displacement_3d": 9.19293771452354,
+    "interpretation_boundary": "Predicted under the learned same-space mapping; not observed Qwen behavior and not a causal trait intervention.",
+    "label": "PREDICTED COUNTERFACTUAL LOCATION",
+    "modified_model_disagreement": {
+      "maximum_pairwise_3d_disagreement": 9.473502871115523,
+      "per_pc_range": [
+        5.824335799774893,
+        7.5933930992160334,
+        7.197966064244202
+      ],
+      "predictions": {
+        "KNN": [
+          -35.25429017171039,
+          16.41267797450058,
+          25.621380609208444
+        ],
+        "Kernel Ridge": [
+          -35.04567804577257,
+          20.32868586019136,
+          21.472312654135873
+        ],
+        "PLS": [
+          -40.87001384554746,
+          24.006071073716612,
+          24.878894576398267
+        ],
+        "Ridge": [
+          -40.53686666760174,
+          19.431172227152004,
+          28.670278718380075
+        ]
+      }
+    },
+    "modified_ood": {
+      "distance_percentile_vs_canonical_loo": 63.68613138686131,
+      "heuristic_label": "in-distribution",
+      "mean_5nn_distance": 5.78061232555699,
+      "nearest_neighbor_distance": 0.43118950703509973,
+      "nearest_personas": [
+        {
+          "distance": 0.43118950703509973,
+          "persona": "trickster"
+        },
+        {
+          "distance": 6.329333466414096,
+          "persona": "jester"
+        },
+        {
+          "distance": 6.898907892972881,
+          "persona": "genie"
+        },
+        {
+          "distance": 7.290154659214347,
+          "persona": "absurdist"
+        },
+        {
+          "distance": 7.953476102148526,
+          "persona": "rogue"
+        }
+      ],
+      "note": "Heuristic profile-geometry diagnostic, not a calibrated probability.",
+      "profile_pca_reconstruction_error": 4.054640416592668,
+      "reconstruction_error_percentile_vs_canonical": 85.94890510948905,
+      "traits_outside_training_range": [],
+      "traits_outside_training_range_count": 0
+    },
+    "modified_predicted_pc": {
+      "PC1": -40.53686666760174,
+      "PC2": 19.431172227152004,
+      "PC3": 28.670278718380075
+    },
+    "trait_changes": [
+      {
+        "baseline_percentile": 95.62043795620438,
+        "baseline_raw_cosine": 0.1965356921380496,
+        "delta_percentile": 10.0,
+        "modified_percentile": 100.0,
+        "modified_raw_cosine": 0.257111532694428,
+        "requested_percentile": 105.62043795620438,
+        "trait": "challenging"
+      },
+      {
+        "baseline_percentile": 96.35036496350365,
+        "baseline_raw_cosine": -0.0350562334363533,
+        "delta_percentile": 10.0,
+        "modified_percentile": 100.0,
+        "modified_raw_cosine": 0.0627906946070091,
+        "requested_percentile": 106.35036496350365,
+        "trait": "playful"
+      },
+      {
+        "baseline_percentile": 8.394160583941606,
+        "baseline_raw_cosine": 0.2615985940097968,
+        "delta_percentile": -10.0,
+        "modified_percentile": 0.0,
+        "modified_raw_cosine": 0.1239913947768503,
+        "requested_percentile": -1.6058394160583944,
+        "trait": "conscientious"
+      }
+    ]
+  },
+  {
+    "anchor": "actor",
+    "baseline_model_disagreement": {
+      "maximum_pairwise_3d_disagreement": 1.0089295746849933,
+      "per_pc_range": [
+        0.2599949092634972,
+        0.7400990701159103,
+        0.6376360243302788
+      ],
+      "predictions": {
+        "KNN": [
+          -23.89004845129744,
+          21.456843196797983,
+          0.28310250054088654
+        ],
+        "Kernel Ridge": [
+          -23.897828068471256,
+          20.87372374128088,
+          -0.08548111918775271
+        ],
+        "PLS": [
+          -23.63783315920776,
+          20.716744126682073,
+          -0.3545335237893923
+        ],
+        "Ridge": [
+          -23.74022162339257,
+          20.799003081042656,
+          -0.15486303468717466
+        ]
+      }
+    },
+    "baseline_ood": {
+      "distance_percentile_vs_canonical_loo": 77.55474452554745,
+      "heuristic_label": "in-distribution",
+      "mean_5nn_distance": 6.603085009773514,
+      "nearest_neighbor_distance": 5.871687585346327,
+      "nearest_personas": [
+        {
+          "distance": 5.871687585346327,
+          "persona": "hedonist"
+        },
+        {
+          "distance": 6.58160845841005,
+          "persona": "surfer"
+        },
+        {
+          "distance": 6.6795373798791475,
+          "persona": "nomad"
+        },
+        {
+          "distance": 6.928449851618725,
+          "persona": "improviser"
+        },
+        {
+          "distance": 6.95414177361332,
+          "persona": "addict"
+        }
+      ],
+      "note": "Heuristic profile-geometry diagnostic, not a calibrated probability.",
+      "profile_pca_reconstruction_error": 1.8453540492280365,
+      "reconstruction_error_percentile_vs_canonical": 20.802919708029197,
+      "traits_outside_training_range": [],
+      "traits_outside_training_range_count": 0
+    },
+    "baseline_predicted_pc": {
+      "PC1": -23.74022162339257,
+      "PC2": 20.799003081042656,
+      "PC3": -0.15486303468717466
+    },
+    "clamps": [
+      {
+        "clamped_percentile": 0.0,
+        "requested_percentile": -0.5109489051094904,
+        "trait": "reserved"
+      }
+    ],
+    "delta_pc": {
+      "PC1": 1.8147610545714201,
+      "PC2": -0.8677231652209798,
+      "PC3": -1.5702955606788151
+    },
+    "displacement_3d": 2.551887404361306,
+    "interpretation_boundary": "Predicted under the learned same-space mapping; not observed Qwen behavior and not a causal trait intervention.",
+    "label": "PREDICTED COUNTERFACTUAL LOCATION",
+    "modified_model_disagreement": {
+      "maximum_pairwise_3d_disagreement": 2.922800819214693,
+      "per_pc_range": [
+        2.319597244039585,
+        1.804292989413728,
+        1.2628302842165362
+      ],
+      "predictions": {
+        "KNN": [
+          -22.386748873116364,
+          20.613239646490484,
+          -0.7561643391967084
+        ],
+        "Kernel Ridge": [
+          -24.245057812860736,
+          21.13378423937468,
+          -0.4623283111494535
+        ],
+        "PLS": [
+          -22.148796774048122,
+          19.329491249960952,
+          -1.4073050803405351
+        ],
+        "Ridge": [
+          -21.92546056882115,
+          19.931279915821676,
+          -1.7251585953659898
+        ]
+      }
+    },
+    "modified_ood": {
+      "distance_percentile_vs_canonical_loo": 53.83211678832117,
+      "heuristic_label": "in-distribution",
+      "mean_5nn_distance": 5.235014670717435,
+      "nearest_neighbor_distance": 0.19870473215791384,
+      "nearest_personas": [
+        {
+          "distance": 0.19870473215791384,
+          "persona": "actor"
+        },
+        {
+          "distance": 5.981305586944398,
+          "persona": "hedonist"
+        },
+        {
+          "distance": 6.443466168124297,
+          "persona": "surfer"
+        },
+        {
+          "distance": 6.759000242825572,
+          "persona": "nomad"
+        },
+        {
+          "distance": 6.792596623534995,
+          "persona": "improviser"
+        }
+      ],
+      "note": "Heuristic profile-geometry diagnostic, not a calibrated probability.",
+      "profile_pca_reconstruction_error": 2.4301493700201315,
+      "reconstruction_error_percentile_vs_canonical": 51.64233576642335,
+      "traits_outside_training_range": [],
+      "traits_outside_training_range_count": 0
+    },
+    "modified_predicted_pc": {
+      "PC1": -21.92546056882115,
+      "PC2": 19.931279915821676,
+      "PC3": -1.7251585953659898
+    },
+    "trait_changes": [
+      {
+        "baseline_percentile": 72.99270072992701,
+        "baseline_raw_cosine": 0.0923076904223715,
+        "delta_percentile": 10.0,
+        "modified_percentile": 82.99270072992701,
+        "modified_raw_cosine": 0.12245317889884005,
+        "requested_percentile": 82.99270072992701,
+        "trait": "theatrical"
+      },
+      {
+        "baseline_percentile": 81.38686131386861,
+        "baseline_raw_cosine": 0.2175111350917513,
+        "delta_percentile": 10.0,
+        "modified_percentile": 91.38686131386861,
+        "modified_raw_cosine": 0.24043945935119754,
+        "requested_percentile": 91.38686131386861,
+        "trait": "adaptable"
+      },
+      {
+        "baseline_percentile": 9.48905109489051,
+        "baseline_raw_cosine": -0.1127198188354146,
+        "delta_percentile": -10.0,
+        "modified_percentile": 0.0,
+        "modified_raw_cosine": -0.2099281976866152,
+        "requested_percentile": -0.5109489051094904,
+        "trait": "reserved"
+      }
+    ]
+  },
+  {
+    "anchor": "therapist",
+    "baseline_model_disagreement": {
+      "maximum_pairwise_3d_disagreement": 0.4572185464680242,
+      "per_pc_range": [
+        0.1684241808571052,
+        0.4127243920352299,
+        0.1522435216171516
+      ],
+      "predictions": {
+        "KNN": [
+          13.067798551756258,
+          12.359938576595496,
+          -34.5332749067653
+        ],
+        "Kernel Ridge": [
+          13.035766461128143,
+          12.446579379989489,
+          -34.48272047382582
+        ],
+        "PLS": [
+          12.899374370899153,
+          12.772662968630726,
+          -34.63496399544297
+        ],
+        "Ridge": [
+          12.973162611493422,
+          12.568111768495669,
+          -34.59428176872919
+        ]
+      }
+    },
+    "baseline_ood": {
+      "distance_percentile_vs_canonical_loo": 65.87591240875912,
+      "heuristic_label": "in-distribution",
+      "mean_5nn_distance": 5.928557287828682,
+      "nearest_neighbor_distance": 2.0600738595532926,
+      "nearest_personas": [
+        {
+          "distance": 2.0600738595532926,
+          "persona": "counselor"
+        },
+        {
+          "distance": 6.122125355576217,
+          "persona": "vegan"
+        },
+        {
+          "distance": 6.96975353309203,
+          "persona": "immigrant"
+        },
+        {
+          "distance": 7.210840917284503,
+          "persona": "parent"
+        },
+        {
+          "distance": 7.279992773637368,
+          "persona": "caregiver"
+        }
+      ],
+      "note": "Heuristic profile-geometry diagnostic, not a calibrated probability.",
+      "profile_pca_reconstruction_error": 4.023481642614315,
+      "reconstruction_error_percentile_vs_canonical": 85.76642335766424,
+      "traits_outside_training_range": [],
+      "traits_outside_training_range_count": 0
+    },
+    "baseline_predicted_pc": {
+      "PC1": 12.973162611493422,
+      "PC2": 12.568111768495669,
+      "PC3": -34.59428176872919
+    },
+    "clamps": [
+      {
+        "clamped_percentile": 100.0,
+        "requested_percentile": 108.54014598540147,
+        "trait": "agreeable"
+      }
+    ],
+    "delta_pc": {
+      "PC1": 1.4977840784376752,
+      "PC2": -0.4369699298012506,
+      "PC3": -0.6855545832225971
+    },
+    "displacement_3d": 1.7041962773546406,
+    "interpretation_boundary": "Predicted under the learned same-space mapping; not observed Qwen behavior and not a causal trait intervention.",
+    "label": "PREDICTED COUNTERFACTUAL LOCATION",
+    "modified_model_disagreement": {
+      "maximum_pairwise_3d_disagreement": 4.604187438911415,
+      "per_pc_range": [
+        4.259168688791048,
+        1.6682005279450678,
+        0.5245293620145546
+      ],
+      "predictions": {
+        "KNN": [
+          10.211778001140049,
+          13.799342366639486,
+          -34.75530698993723
+        ],
+        "Kernel Ridge": [
+          13.038904987600477,
+          12.497914808802394,
+          -34.77515275050252
+        ],
+        "PLS": [
+          12.936020608212914,
+          12.51779889195899,
+          -35.00490602864815
+        ],
+        "Ridge": [
+          14.470946689931097,
+          12.131141838694418,
+          -35.279836351951786
+        ]
+      }
+    },
+    "modified_ood": {
+      "distance_percentile_vs_canonical_loo": 42.518248175182485,
+      "heuristic_label": "in-distribution",
+      "mean_5nn_distance": 4.510054225523674,
+      "nearest_neighbor_distance": 0.10986174995993062,
+      "nearest_personas": [
+        {
+          "distance": 0.10986174995993062,
+          "persona": "therapist"
+        },
+        {
+          "distance": 2.02390681397265,
+          "persona": "counselor"
+        },
+        {
+          "distance": 6.193377125986083,
+          "persona": "vegan"
+        },
+        {
+          "distance": 7.006570691995672,
+          "persona": "immigrant"
+        },
+        {
+          "distance": 7.216554745704035,
+          "persona": "caregiver"
+        }
+      ],
+      "note": "Heuristic profile-geometry diagnostic, not a calibrated probability.",
+      "profile_pca_reconstruction_error": 4.14476460973998,
+      "reconstruction_error_percentile_vs_canonical": 88.13868613138686,
+      "traits_outside_training_range": [],
+      "traits_outside_training_range_count": 0
+    },
+    "modified_predicted_pc": {
+      "PC1": 14.470946689931097,
+      "PC2": 12.131141838694418,
+      "PC3": -35.279836351951786
+    },
+    "trait_changes": [
+      {
+        "baseline_percentile": 87.22627737226277,
+        "baseline_raw_cosine": 0.0943282797352886,
+        "delta_percentile": 10.0,
+        "modified_percentile": 97.22627737226277,
+        "modified_raw_cosine": 0.14005296495146874,
+        "requested_percentile": 97.22627737226277,
+        "trait": "empathetic"
+      },
+      {
+        "baseline_percentile": 98.54014598540147,
+        "baseline_raw_cosine": 0.31443782448329,
+        "delta_percentile": 10.0,
+        "modified_percentile": 100.0,
+        "modified_raw_cosine": 0.3415686997486726,
+        "requested_percentile": 108.54014598540147,
+        "trait": "agreeable"
+      },
+      {
+        "baseline_percentile": 55.1094890510949,
+        "baseline_raw_cosine": -0.4337325363542539,
+        "delta_percentile": -10.0,
+        "modified_percentile": 45.1094890510949,
+        "modified_raw_cosine": -0.4612412462877922,
+        "requested_percentile": 45.1094890510949,
+        "trait": "reactive"
+      }
+    ]
+  },
+  {
+    "anchor": "spy",
+    "baseline_model_disagreement": {
+      "maximum_pairwise_3d_disagreement": 0.5065769840331015,
+      "per_pc_range": [
+        0.21229693421973372,
+        0.4324013882560638,
+        0.25591857266016405
+      ],
+      "predictions": {
+        "KNN": [
+          0.7214741115843969,
+          2.5354264968315796,
+          32.136985625952626
+        ],
+        "Kernel Ridge": [
+          0.729179157478339,
+          2.319039116439488,
+          32.04464335965334
+        ],
+        "PLS": [
+          0.5593140869681861,
+          2.7514405046955517,
+          32.246621422835666
+        ],
+        "Ridge": [
+          0.5168822232586052,
+          2.64112489737596,
+          32.30056193231351
+        ]
+      }
+    },
+    "baseline_ood": {
+      "distance_percentile_vs_canonical_loo": 65.14598540145985,
+      "heuristic_label": "in-distribution",
+      "mean_5nn_distance": 5.841697184906555,
+      "nearest_neighbor_distance": 3.356751892466808,
+      "nearest_personas": [
+        {
+          "distance": 3.356751892466808,
+          "persona": "saboteur"
+        },
+        {
+          "distance": 5.449173062727509,
+          "persona": "virus"
+        },
+        {
+          "distance": 5.868461967974867,
+          "persona": "devils_advocate"
+        },
+        {
+          "distance": 7.173326262890987,
+          "persona": "workaholic"
+        },
+        {
+          "distance": 7.360772738472605,
+          "persona": "parasite"
+        }
+      ],
+      "note": "Heuristic profile-geometry diagnostic, not a calibrated probability.",
+      "profile_pca_reconstruction_error": 2.778413911754832,
+      "reconstruction_error_percentile_vs_canonical": 61.67883211678832,
+      "traits_outside_training_range": [],
+      "traits_outside_training_range_count": 0
+    },
+    "baseline_predicted_pc": {
+      "PC1": 0.5168822232586052,
+      "PC2": 2.64112489737596,
+      "PC3": 32.30056193231351
+    },
+    "clamps": [],
+    "delta_pc": {
+      "PC1": 2.3119553913683717,
+      "PC2": -1.800262304886246,
+      "PC3": -0.026156515248821677
+    },
+    "displacement_3d": 2.9303184573287564,
+    "interpretation_boundary": "Predicted under the learned same-space mapping; not observed Qwen behavior and not a causal trait intervention.",
+    "label": "PREDICTED COUNTERFACTUAL LOCATION",
+    "modified_model_disagreement": {
+      "maximum_pairwise_3d_disagreement": 3.136254832645408,
+      "per_pc_range": [
+        2.8841391115635506,
+        1.5114074864556968,
+        1.3282516711068055
+      ],
+      "predictions": {
+        "KNN": [
+          -0.05530149693657385,
+          0.7861651609781288,
+          31.043615365338916
+        ],
+        "Kernel Ridge": [
+          0.7617323472317848,
+          2.048830632232567,
+          32.23788842223018
+        ],
+        "PLS": [
+          1.6474739971811942,
+          0.5374231457768701,
+          32.37186703644572
+        ],
+        "Ridge": [
+          2.828837614626977,
+          0.8408625924897137,
+          32.274405417064685
+        ]
+      }
+    },
+    "modified_ood": {
+      "distance_percentile_vs_canonical_loo": 39.96350364963504,
+      "heuristic_label": "in-distribution",
+      "mean_5nn_distance": 4.378476935179706,
+      "nearest_neighbor_distance": 0.05895269382913441,
+      "nearest_personas": [
+        {
+          "distance": 0.05895269382913441,
+          "persona": "spy"
+        },
+        {
+          "distance": 3.331337419902135,
+          "persona": "saboteur"
+        },
+        {
+          "distance": 5.422380034867192,
+          "persona": "virus"
+        },
+        {
+          "distance": 5.870730307083019,
+          "persona": "devils_advocate"
+        },
+        {
+          "distance": 7.208984220217048,
+          "persona": "workaholic"
+        }
+      ],
+      "note": "Heuristic profile-geometry diagnostic, not a calibrated probability.",
+      "profile_pca_reconstruction_error": 2.9237369354396567,
+      "reconstruction_error_percentile_vs_canonical": 67.33576642335767,
+      "traits_outside_training_range": [],
+      "traits_outside_training_range_count": 0
+    },
+    "modified_predicted_pc": {
+      "PC1": 2.828837614626977,
+      "PC2": 0.8408625924897137,
+      "PC3": 32.274405417064685
+    },
+    "trait_changes": [
+      {
+        "baseline_percentile": 62.40875912408759,
+        "baseline_raw_cosine": 0.5157517957344384,
+        "delta_percentile": 10.0,
+        "modified_percentile": 72.4087591240876,
+        "modified_raw_cosine": 0.5294582589063177,
+        "requested_percentile": 72.4087591240876,
+        "trait": "strategic"
+      },
+      {
+        "baseline_percentile": 56.56934306569343,
+        "baseline_raw_cosine": 0.3919986386946802,
+        "delta_percentile": 10.0,
+        "modified_percentile": 66.56934306569343,
+        "modified_raw_cosine": 0.4080004555863669,
+        "requested_percentile": 66.56934306569343,
+        "trait": "calculating"
+      },
+      {
+        "baseline_percentile": 40.87591240875913,
+        "baseline_raw_cosine": 0.2990643871803113,
+        "delta_percentile": -10.0,
+        "modified_percentile": 30.875912408759127,
+        "modified_raw_cosine": 0.2707104473685305,
+        "requested_percentile": 30.875912408759127,
+        "trait": "transparent"
+      }
+    ]
+  }
+]

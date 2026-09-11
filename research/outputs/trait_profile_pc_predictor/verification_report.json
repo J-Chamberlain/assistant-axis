@@ -1,0 +1,106 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "canonical_pca_reproduction": {
+      "basis_source": "reconstructed from all 275 canonical mean-pooled Qwen role vectors and sign-aligned to geometry_viz_data.json",
+      "canonical_builder": "research/visualizations/scripts/build_geometry_viz.py",
+      "canonical_pca_table": "research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv",
+      "max_abs_coordinate_reproduction_error": 1.2070270569708441e-06,
+      "mean_abs_coordinate_reproduction_error": 1.0765914306133452e-07,
+      "passed": true,
+      "sign_alignment": [
+        -1.0,
+        1.0,
+        -1.0
+      ],
+      "strict_tolerance": 1e-05,
+      "supporting_prior_reproduction": "research/outputs/no_label_elicitation_validation/projection_basis_debug.json"
+    },
+    "cli_known_persona_prediction_max_abs_error": 4.1744385725905886e-13,
+    "comparison_json_roundtrip_max_abs_error": {
+      "kernel_ridge": 1.8394175071989594e-12,
+      "knn": 1.7763568394002505e-14,
+      "pls": 6.075140390748857e-13,
+      "ridge": 1.2150280781497713e-12
+    },
+    "deterministic_refit_max_abs_prediction_difference": 0.0,
+    "finite_lopo_predictions": true,
+    "finite_nested_predictions": true,
+    "fold_local_hyperparameter_tuning": true,
+    "fold_local_preprocessing": true,
+    "fold_local_quantile_transform": true,
+    "integrity": {
+      "cluster_counts": {
+        "combative_iconoclast": 15,
+        "editorial": 13,
+        "grounded_social": 54,
+        "mythic_spiritual": 51,
+        "other": 6,
+        "procedural_professional": 126,
+        "trickster_chaos": 10
+      },
+      "cluster_order_exactly_matches_geometry": true,
+      "duplicate_personas": [],
+      "duplicate_traits": [],
+      "matrix_finite": true,
+      "matrix_persona_order_exactly_matches_geometry": true,
+      "passed": true,
+      "persona_count": 275,
+      "target_or_metadata_columns_in_features": [],
+      "targets_finite": true,
+      "trait_count": 240,
+      "unique_persona_count": 275,
+      "unique_trait_count": 240
+    },
+    "leave_cluster_out_all_clusters_all_models": true,
+    "leave_cluster_out_cluster_overlap": false,
+    "lopo_every_persona_per_representation": true,
+    "lopo_row_count": 550,
+    "lopo_train_test_overlap": false,
+    "matrix_reproduction": {
+      "construction": "mean each stored tensor over its first dimension, L2-normalize, role @ trait.T",
+      "max_abs_reproduction_error": 5.551115123125783e-16,
+      "mean_abs_reproduction_error": 5.3824078286755766e-17,
+      "passed": true,
+      "tolerance": 1e-10
+    },
+    "modified_profile_deterministic_max_abs_difference": 0.0,
+    "no_target_columns_in_features": true,
+    "ood_diagnostic_deterministic": true,
+    "parsed_outputs": {
+      "csv_files": {
+        "research/outputs/trait_profile_pc_predictor/counterfactual_examples.csv": 4,
+        "research/outputs/trait_profile_pc_predictor/counterfactual_ood_sweep.csv": 32,
+        "research/outputs/trait_profile_pc_predictor/leave_one_cluster_out_predictions.csv": 1100,
+        "research/outputs/trait_profile_pc_predictor/leave_one_cluster_out_summary.csv": 32,
+        "research/outputs/trait_profile_pc_predictor/leave_one_persona_out_predictions.csv": 550,
+        "research/outputs/trait_profile_pc_predictor/model_comparison.csv": 8,
+        "research/outputs/trait_profile_pc_predictor/nearest_neighbor_reference.csv": 275,
+        "research/outputs/trait_profile_pc_predictor/nested_cv_oof_predictions.csv": 22000,
+        "research/outputs/trait_profile_pc_predictor/permutation_control.csv": 100,
+        "research/outputs/trait_profile_pc_predictor/profile_representation_comparison.csv": 4,
+        "research/outputs/trait_profile_pc_predictor/synthetic_interpolation_predictions.csv": 120
+      },
+      "json_files": {
+        "research/outputs/trait_profile_pc_predictor/comparison_predictors.json": "parsed",
+        "research/outputs/trait_profile_pc_predictor/counterfactual_examples.json": "parsed",
+        "research/outputs/trait_profile_pc_predictor/ood_reference.json": "parsed",
+        "research/outputs/trait_profile_pc_predictor/ridge_predictor.json": "parsed",
+        "research/outputs/trait_profile_pc_predictor/source_manifest.json": "parsed",
+        "research/outputs/trait_profile_pc_predictor/synthetic_interpolation_summary.json": "parsed",
+        "research/outputs/trait_profile_pc_predictor/validation_summary.json": "parsed",
+        "research/outputs/trait_profile_pc_predictor/verification_report.json": "parsed"
+      }
+    },
+    "permutation_near_chance": true,
+    "ridge_json_roundtrip_max_abs_error": 1.7195134205394424e-12,
+    "synthetic_endpoint_training_overlap": false,
+    "transparent_ridge_schema_complete": true
+  },
+  "generated_utc": "2026-09-11T18:33:49Z",
+  "methodology_checks": {
+    "cluster_label_use": "Cluster labels are read only to construct leave-cluster-out indices and report groups; they are absent from X.",
+    "ood_validation_evidence": "Each LOPO OOD scaler and PCA is fit on the 274 training profiles; the held-out persona is transformed only after fitting.",
+    "preprocessing_evidence": "QuantileTransformer and StandardScaler are Pipeline steps inside TransformedTargetRegressor passed to inner GridSearchCV, which is itself fit only on each outer-training partition."
+  }
+}

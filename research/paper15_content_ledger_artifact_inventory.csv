@@ -28,3 +28,4 @@ same_space_big_five_overlay,research/outputs/same_space_big_five_overlay/,active
 trait_profile_provenance_audit,research/outputs/trait_profile_provenance_audit/,active,trait matrix provenance audit,2;5;11,Caveat for trait evidence
 big_five_provenance_audit,research/outputs/big_five_provenance_audit/,active,legacy Big Five provenance audit,2;3;11,Caveat for Big Five evidence
 pc3_validation,research/outputs/pc3_validation/,active,PC3 perturbation-stabilization validation,6;8;11,Primary PC3 direct validation
+trait_profile_pc_predictor,research/outputs/trait_profile_pc_predictor/,active,held-out trait-profile to canonical PC predictor generalization,2;3;9;10;11,"Complete LOPO, cluster holdouts, permutation null, OOD diagnostics, transparent Ridge V1, and synthetic interpolation; same-space evidence only"

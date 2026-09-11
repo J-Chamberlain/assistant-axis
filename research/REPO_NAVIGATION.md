@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-10T02:15:00Z
-Last commit when updated: fdf8bed (base before flat-plane trait comparison update)
+Updated UTC: 2026-09-11T18:38:24Z
+Last commit when updated: 6603cc1 (base before trait-profile PC predictor generalization update)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3766
+- active analyses: 3789
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 12
@@ -37,7 +37,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Status Counts
 
-- active: 4547
+- active: 4570
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -50,6 +50,8 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/FINDINGS_LEDGER.md`, `research/THREAD_START.md`, and `research/STARTUP_MANIFEST.md` for startup and report continuity. Use `research/paper15_content_ledger.md` as the canonical factual source ledger before drafting Paper 1.5 prose.
 
 ### Active Analyses
+
+Trait-profile to persona-PC predictor: `research/outputs/trait_profile_pc_predictor/trait_profile_pc_predictor_report.md` is the entry point for the first-stage reusable mapping from all 240 Qwen activation-cosine trait features to canonical PC1/PC2/PC3. Use `validation_summary.json` for metrics and decisions, `ridge_predictor.json` for the transparent canonical V1 specification, `predict_trait_profile.py` for existing/external/percentile-modified profiles, `leave_one_persona_out_predictions.csv` for exact held-out persona lookups, `leave_one_cluster_out_summary.csv` for harder family shift, and `artifact_inventory.csv` for hashes/raw URLs. The analysis includes repeated nested Ridge/PLS/RBF-Kernel-Ridge/KNN comparison, fold-safe quantiles, 275-persona LOPO, all seven canonical cluster holdouts, 100 target permutations, OOD distance/reconstruction diagnostics, and 120 pair-endpoint-held-out synthetic activation mixes. It is same-space Qwen activation geometry; counterfactual outputs are predicted locations, not observed behavior or causal/human-personality claims. No inference, new activations, GPU, RunPod, or external model API was used.
 
 Paper 1.5 writing-phase entry point: `research/paper15_content_ledger.md`, with source inventory in `research/paper15_content_ledger_artifact_inventory.csv`. Use this ledger before drafting prose; it separates observed findings, interpretations, hypotheses, caveats, rejected explanations, claims inventory, open questions, and inclusion recommendations. As of 2026-06-16, the ledger includes methods-ready design/procedure details for the main PC validation and benchmark artifacts, so methods prose should start there rather than re-deriving sample sizes, rubrics, prompts, or regression procedures from individual reports.
 

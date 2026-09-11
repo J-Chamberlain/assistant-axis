@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: canonical claim status
-Last updated: 2026-06-10
+Last updated: 2026-09-11
 
 This register separates project findings from interpretations. It is intentionally compact: use it to orient a new thread, then verify details in `RESEARCH_STATE.md`, `FINDINGS_LEDGER.md`, `RESEARCH_INDEX.md`, and the cited artifacts.
 
@@ -200,10 +200,10 @@ Last Updated: 2026-05-30
 
 Claim: Trait-vector geometry substantially predicts persona PCA location, supporting the interpretation that persona space is partly organized by trait structure rather than only role semantics.
 Status: Observed
-Evidence: Qwen/Qwen3-32B layer-48 persona-by-trait cosine matrix, 275 personas x 240 traits, predicted `geometry_viz_data.json` PCA coordinates with ridge 5-fold CV R2: PC1 0.999, PC2 0.999, PC3 1.000; 30-permutation baselines stayed near or below zero R2.
-Counterevidence: The trait bank is high-dimensional and in the same activation space as the persona vectors, so near-ceiling prediction may reflect basis coverage/provenance coupling rather than independent psychological explanation.
-Dependencies: `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_report.md`, `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_stats.json`
-Last Updated: 2026-05-30
+Evidence: Qwen/Qwen3-32B persona-by-trait activation-cosine matrix, 275 personas x 240 traits, predicts `geometry_viz_data.json` PCA coordinates under genuine holdout. Raw Ridge LOPO R2 is PC1=0.999522, PC2=0.998811, PC3=0.999611; repeated nested 5-fold x 10-seed R2 is 0.999465/0.998718/0.999567. Leave-one-canonical-cluster-out aggregate R2 remains 0.998692/0.997740/0.999338, although mean normalized error is 1.68x LOPO. A 100-permutation nested control stays below zero mean R2 (p95=-0.007548). After canonical PCA reproduction to max error 1.207e-06, 120 synthetic activation-vector interpolations with both pair endpoints excluded from training reach R2=0.995266/0.984377/0.997144.
+Counterevidence: The trait bank is high-dimensional and in the same activation space as the persona vectors, so near-ceiling prediction likely reflects strong basis coverage/provenance coupling rather than independent psychological explanation. Fold-safe quantile profiles are less precise (LOPO normalized 3D RMSE 0.1590 versus 0.0454 raw), entire-cluster holdout is harder, distant synthetic mixtures degrade more than nearby mixtures, and behavioral realization by a genuinely new elicited persona remains untested.
+Dependencies: `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_report.md`, `research/outputs/trait_profile_pc_predictor/trait_profile_pc_predictor_report.md`, `research/outputs/trait_profile_pc_predictor/validation_summary.json`, `research/outputs/trait_profile_pc_predictor/leave_one_persona_out_predictions.csv`, `research/outputs/trait_profile_pc_predictor/leave_one_cluster_out_summary.csv`, `research/outputs/trait_profile_pc_predictor/synthetic_interpolation_summary.json`
+Last Updated: 2026-09-11
 
 ## 22. Direct Trait-Space PCA Partially Reorganizes Persona-Space Interpretations
 

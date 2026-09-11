@@ -4,6 +4,14 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### Trait-Profile PC Predictor Generalizes Under Persona, Cluster, and Synthetic Holdouts (2026-09-11)
+
+Built `research/outputs/trait_profile_pc_predictor/` from the existing 275-persona x 240-trait Qwen/Qwen3-32B activation-cosine matrix and canonical Qwen role PCA targets. Raw-cosine Ridge 5-fold outer CV repeated over 10 seeds reached R2=0.999465/0.998718/0.999567 for PC1/PC2/PC3, and genuine LOPO over every persona reached 0.999522/0.998811/0.999611 with per-PC RMSE=0.657/0.741/0.311 and normalized 3D RMSE=0.0454. Fold-safe quantile LOPO remained strong but less precise at R2=0.997556/0.988048/0.989209 and normalized 3D RMSE=0.1590. Ridge outperformed PLS, RBF Kernel Ridge, and distance-weighted KNN under the repeated raw-profile comparison and remains canonical V1.
+
+Whole-family shift is harder but does not erase prediction: leave-one-canonical-cluster-out aggregate Ridge R2=0.998692/0.997740/0.999338, normalized 3D RMSE=0.0680, and mean error=1.68x LOPO. Editorial has the largest per-cluster normalized RMSE (0.1062), while mythic/spiritual and procedural/professional have roughly 2.02x and 2.03x their cluster-specific LOPO mean error. Fold-local LOPO normalized error is modestly related to 5-NN profile distance (Pearson=0.243, Spearman=0.263) and PCA reconstruction residual (Pearson=0.300, Spearman=0.248). The 100-permutation nested Ridge null is clean (mean per-PC R2=-0.0244; p95=-0.0075).
+
+The existing canonical PCA projection was reconstructed at max absolute error 1.207e-06. This enabled 120 synthetic raw activation-vector interpolations across 40 near/distant pairs, with both source endpoints omitted from each fit: aggregate R2=0.995266/0.984377/0.997144; distant-pair mixtures were materially harder than near-pair mixtures. The counterfactual CLI maps complete raw or percentile profiles and deterministic percentile edits while reporting empirical LOPO error, all-model disagreement, and heuristic OOD context. Interpretation: this establishes same-space held-out reconstruction and interpolation within the Qwen artifact family. It does not establish causal trait effects, independent psychometrics, human personality prediction, cross-model transfer, or behavioral realization by a newly elicited persona. No new inference, activations, GPU, RunPod, or external model API was used.
+
 ### Careful Evaluator Finding
 
 Gemma 2 27B's assistant axis is dominated by evaluative roles, especially proofreader, screener, grader, and editor. `assistant` ranks 45th out of 275 on the assistant axis, and the top pole correlates strongly with conscientiousness and negatively with psychopathy.
