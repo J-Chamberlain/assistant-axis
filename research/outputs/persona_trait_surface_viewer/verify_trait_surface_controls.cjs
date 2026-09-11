@@ -72,14 +72,19 @@ async function check(){
   elements['show-flat'].checked=true;elements['show-flat'].emit('change');await ready();
   elements['show-flat-only'].checked=true;elements['show-flat-only'].emit('change');await ready();
   assert.equal(plot.data[6].visible,true);
-  for(const i of [0,1,2,3,4,5]) assert.equal(plot.data[i].visible,false);
+  for(const i of [1,2,3,4,5]) assert.equal(plot.data[i].visible,false);
+  assert.equal(plot.data[0].visible,true);
+  assert.deepEqual(Array.from(plot.data[0].z[0]),[0,0]);
+  assert.deepEqual(Array.from(plot.data[6].x),Array.from(plot.layout.scene.xaxis.range));
+  assert.deepEqual(Array.from(plot.data[6].y),Array.from(plot.layout.scene.yaxis.range));
   assert.equal(elements['show-surface'].disabled,true);
   elements['show-flat-only'].checked=false;elements['show-flat-only'].emit('change');await ready();
   await set('persona-picker',data.roles.findIndex(r=>r.name==='playwright'));
   assert.equal(elements['member-scores'].children.length,3);
   assert.equal(plot.data[5].x.length,1);
   elements['show-nodes'].checked=false;elements['show-nodes'].emit('change');await ready();
-  for(const i of [0,3,4,5]) assert.equal(plot.data[i].visible,false);
+  for(const i of [3,4,5]) assert.equal(plot.data[i].visible,false);
+  assert.equal(plot.data[0].visible,true);
   assert.equal(plot.data[1].visible,true);assert.equal(plot.data[2].visible,true);
   assert.equal(elements['show-connectors'].disabled,true);
   elements['show-nodes'].checked=true;elements['show-nodes'].emit('change');await ready();
@@ -110,7 +115,7 @@ async function check(){
   await set('number-zoom','');close(camera.fromCamera(api.state.camera).zoom,100);
   const result={status:'pass',camera_roundtrip_cases:mathCases,poles_checked:true,
     checks:['Compiled HTML scripts parse and embedded data matches','All five groups and fixed vivid color limits','Exact 275 nodes and three member scores',
-      'Fabric-only hides nodes, pins, connectors and reference plane','All six ordered axis views',
+      'Flat plane reaches chart edges; zero reference remains visible in fabric/plane-only modes','All six ordered axis views',
       'Yaw/pitch/roll/zoom and numeric entry','Drag relayout updates controls','Camera survives axes, group and smoothing changes',
       'Rapid camera/group changes converge to final selection','Top/front/side/isometric and reset','Empty numeric input restored'],
     react_count:reactCount,relayout_count:relayoutCount,live_browser_test:false,

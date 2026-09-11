@@ -28,6 +28,8 @@
       grid: reversed?transpose(level.grids[state.category]):level.grids[state.category],
       flat: reversed?transpose(view.flat_grids[state.category]):view.flat_grids[state.category],
       flatAdherence: level.flat_adherence[state.category], flatPlane: view.flat_plane[state.category],
+      fitCenter: reversed?[...view.fit_center].reverse():view.fit_center,
+      fitScale: view.fit_common_scale, reversed,
       fitted: level.fitted_nodes[state.category], heights: category.values,
       axisX: state.x, axisY: state.y, category: state.category, smoothing: state.smoothing,
       fitRmse: level.fit_rmse[state.category], support: view.supported_grid_fraction};
@@ -48,7 +50,24 @@
     return {x,y,z};
   }
 
+  function extendedPlane(s) {
+    const x=range(s.x),y=range(s.y),c=s.flatPlane.coefficients;
+    const a=c[s.reversed?2:1]/s.fitScale,b=c[s.reversed?1:2]/s.fitScale;
+    const intercept=c[0]-a*s.fitCenter[0]-b*s.fitCenter[1];
+    const height=(u,v)=>intercept+a*u+b*v;
+    const corners=[[x[0],y[0]],[x[1],y[0]],[x[1],y[1]],[x[0],y[1]]];
+    const crossings=[];
+    for(let i=0;i<4;i++) {
+      const p=corners[i],q=corners[(i+1)%4],hp=height(...p),hq=height(...q);
+      if(Math.abs(hp)<1e-10) crossings.push(p);
+      if(hp*hq<0) {const t=hp/(hp-hq);crossings.push([p[0]+t*(q[0]-p[0]),p[1]+t*(q[1]-p[1])]);}
+    }
+    return {x,y,z:y.map(v=>x.map(u=>height(u,v))),
+      intersection:{x:crossings.map(p=>p[0]),y:crossings.map(p=>p[1]),z:crossings.map(()=>0)}};
+  }
+
   function traces(s, transition=false) {
+    const plane=extendedPlane(s);
     const category=data.categories[s.category], names=data.roles.map(r=>r.name);
     const xs=data.roles.map(r=>r.pcs[s.axisX]),ys=data.roles.map(r=>r.pcs[s.axisY]);
     const lines={x:[],y:[],z:[]};
@@ -58,8 +77,8 @@
     const selected=state.selected===null?[]:[state.selected];
     const custom=data.roles.map((r,i)=>[escapeText(r.name),category.values[i],category.values[i],category.mean_z[i],i]);
     return [
-      {type:"surface",name:"Population mean reference",visible:state.nodes&&!state.flatOnly,x:[s.x[0],s.x.at(-1)],y:[s.y[0],s.y.at(-1)],z:[[50,50],[50,50]],
-        colorscale:[[0,"#777777"],[1,"#777777"]],opacity:0.055,showscale:false,hoverinfo:"skip"},
+      {type:"surface",name:"Zero reference",visible:true,x:plane.x,y:plane.y,z:[[0,0],[0,0]],
+        colorscale:[[0,"#6eb5ca"],[1,"#6eb5ca"]],opacity:0.3,showscale:false,hoverinfo:"skip"},
       {type:"surface",name:"Fitted fabric",x:s.x,y:s.y,z:s.grid,connectgaps:false,visible:state.surface&&!state.flatOnly,
         colorscale:colors,cmin:0,cmax:100,showscale:true,colorbar:{title:{text:"Mean trait<br>percentile"},tickvals:[0,25,50,75,100],thickness:12,len:0.55,x:0.94,tickfont:{size:10}},opacity:1,hoverinfo:"skip",
         lighting:{ambient:0.88,diffuse:0.35,specular:0.05,roughness:0.93,fresnel:0.1},
@@ -78,14 +97,18 @@
         z:selected.map(i=>s.heights[i]),text:selected.map(i=>escapeText(names[i])),textposition:"top center",
         textfont:{size:12,color:"#e8e8e8"},marker:{size:6,color:"#78c6e8",line:{color:"#09202c",width:1}},
         customdata:selected.map(i=>custom[i]),hoverinfo:"skip"},
-      {type:"surface",name:"Best-fit flat plane",x:s.x,y:s.y,z:s.flat,connectgaps:false,
+      {type:"surface",name:"Best-fit flat plane",x:plane.x,y:plane.y,z:plane.z,connectgaps:false,
         visible:state.flat||state.flatOnly,colorscale:[[0,"#f5edd7"],[1,"#f5edd7"]],showscale:false,opacity:0.38,hoverinfo:"skip",
         lighting:{ambient:0.9,diffuse:0.25,specular:0.05,roughness:0.98,fresnel:0.05},
-        lightposition:{x:100,y:100,z:200},contours:{z:{show:false}}}
+        lightposition:{x:100,y:100,z:200},contours:{z:{show:false}}},
+      {type:"scatter3d",name:"Plane / zero intersection",mode:"lines",...plane.intersection,
+        visible:state.flat||state.flatOnly,line:{color:"#ffffff",width:6},hoverinfo:"skip"}
     ];
   }
 
   function layout(s) {
+    const planeHeights=extendedPlane(s).z.flat();
+    const zRange=state.flat||state.flatOnly?[Math.min(-5,...planeHeights)-3,Math.max(100,...planeHeights)+3]:[-5,100];
     const xRange=range(s.x),yRange=range(s.y),longest=Math.max(xRange[1]-xRange[0],yRange[1]-yRange[0]);
     const axis={color:"#aaa6a0",gridcolor:"#303033",zerolinecolor:"#55555a",showbackground:false,
       tickfont:{size:11},nticks:5,showspikes:false};
@@ -95,7 +118,7 @@
       scene:{uirevision:"category-landscape-camera",bgcolor:"rgba(0,0,0,0)",dragmode:"orbit",camera:state.camera,
         aspectmode:"manual",aspectratio:{x:1.25*(xRange[1]-xRange[0])/longest,y:1.25*(yRange[1]-yRange[0])/longest,z:0.75},
         xaxis:{...axis,title:{text:`PC${s.axisX+1}`},range:xRange},yaxis:{...axis,title:{text:`PC${s.axisY+1}`},range:yRange},
-        zaxis:{...axis,title:{text:"Mean trait percentile",font:{size:11}},range:[0,100],nticks:5}}};
+        zaxis:{...axis,title:{text:"Mean trait percentile",font:{size:11}},range:zRange,nticks:5}}};
   }
 
   function updatePanel() {

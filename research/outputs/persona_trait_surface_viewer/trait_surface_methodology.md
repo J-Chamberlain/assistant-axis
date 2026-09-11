@@ -22,6 +22,8 @@ The side panel lists the selected group's three constituent trait percentiles, g
 
 ## Flat-Plane Comparison
 
+Update 2026-09-11: the displayed comparison plane now evaluates its unbounded linear equation over the entire padded chart rectangle, including outside the data outline. It is not clipped to 0-100, which would bend a plane. The vertical axis expands to contain the extension. A permanent semi-transparent blue zero plane spans the same rectangle, with a white intersection line when the fitted plane crosses zero inside the chart. Flat-plane-only mode retains this reference. Stored masked/clipped grids and adherence scores remain the original supported-region diagnostics; extrapolated areas do not enter the scores. This supersedes the display-mask and reference-visibility descriptions below.
+
 The **Best-fit flat plane** is an ordinary least-squares plane fit independently for each trait group and each selected unordered PC plane. Its predictors are an intercept plus the two centered, common-scale PC coordinates used by the rolling fabric fit. The displayed plane is evaluated on the same 61-by-61 grid and uses the same convex-hull / sixth-neighbor support mask; unsupported cells remain empty. Exact persona nodes are not changed.
 
 The **Flat plane** checkbox toggles this semi-transparent comparison surface. **Flat plane only** hides the population reference plane, rolling fabric, weave, node-to-fabric gaps, persona nodes and pinned persona, leaving the flat comparison plane and axes. Axis reversal transposes the stored plane grid for display, just as it transposes the rolling surface.

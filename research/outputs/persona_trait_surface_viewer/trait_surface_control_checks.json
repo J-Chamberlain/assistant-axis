@@ -6,7 +6,7 @@
     "Compiled HTML scripts parse and embedded data matches",
     "All five groups and fixed vivid color limits",
     "Exact 275 nodes and three member scores",
-    "Fabric-only hides nodes, pins, connectors and reference plane",
+    "Flat plane reaches chart edges; zero reference remains visible in fabric/plane-only modes",
     "All six ordered axis views",
     "Yaw/pitch/roll/zoom and numeric entry",
     "Drag relayout updates controls",
