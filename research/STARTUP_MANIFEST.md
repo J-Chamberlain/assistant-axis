@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-11T22:45:33Z`
-- Current branch: `codex/aa1-human-feasibility-integration`
-- generation base commit: `5cecec530ad149a0ac0f884470e2c2d6898bde1a`
+- Generated timestamp UTC: `2026-09-11T23:39:45Z`
+- Current branch: `codex/aa5-nlsy97-occupation-stability`
+- generation base commit: `13fb08f1d75444820d0b374fef2e3e0292a4d1f1`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -34,41 +34,41 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
 - Latest commit touching file: `5cecec530ad149a0ac0f884470e2c2d6898bde1a`
-- generation base commit: `5cecec530ad149a0ac0f884470e2c2d6898bde1a`
-- Git blob hash: `128e10742a3136c26252686685d3b28eaa94d7d7`
-- SHA256 content hash: `36917ddee9d894c761ad98acba8c716f6f4f691e4c98e10a61e19fd4978a5dd1`
-- Byte count: `176504`
+- generation base commit: `13fb08f1d75444820d0b374fef2e3e0292a4d1f1`
+- Git blob hash: `3e69cba3b4172b8d6a9d0aedf117ce0927222e71`
+- SHA256 content hash: `bb27e9fa1ebdaaa1505ae8b152632b4d0053a25b78ef99b8bca90c823da1a998`
+- Byte count: `178564`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
   - Last updated: `2026-09-11`
-  - Last commit: `cac5c0c (integrated AA-1 feasibility audit and finalized the Phase-1b blinded SAPA review artifacts)`
+  - Last commit: `13fb08f (froze AA-5 NLSY97 occupation-centroid methods and tiers before outcome inspection; final analysis commit pending)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-11T22:45:33Z`
+- Generated timestamp UTC: `2026-09-11T23:39:45Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
 - Latest commit touching file: `cac5c0cefd94de83bdf9eac60d39f6517820d94d`
-- generation base commit: `5cecec530ad149a0ac0f884470e2c2d6898bde1a`
-- Git blob hash: `3f3fceba4bc55f578d5cff3f665f4280102f18d7`
-- SHA256 content hash: `6b22eeb671de9a941544433073dfd7653f086ca95405ddd691a96a750ad15bf3`
-- Byte count: `29996`
+- generation base commit: `13fb08f1d75444820d0b374fef2e3e0292a4d1f1`
+- Git blob hash: `072ee503d9ba6808c287668826ab36ce18fcfda2`
+- SHA256 content hash: `e5115f4b9f2f6b6f47a26095784c2e55b3b1de605fc42190f245102c9c79e143`
+- Byte count: `30875`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
   - Last updated: `2026-09-11`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-11T22:45:33Z`
+- Generated timestamp UTC: `2026-09-11T23:39:45Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
 - Latest commit touching file: `0693aaf76e5073c37377024130dbc2d0e80424fd`
-- generation base commit: `5cecec530ad149a0ac0f884470e2c2d6898bde1a`
+- generation base commit: `13fb08f1d75444820d0b374fef2e3e0292a4d1f1`
 - Git blob hash: `4c50a36065107289371fdf9556ff4e01529b1443`
 - SHA256 content hash: `e821e687c9d34069f7de9fb13a3ea6821614354ec8b980cfc2add51e65ec8d87`
 - Byte count: `45298`
@@ -78,7 +78,7 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-09-11`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-11T22:45:33Z`
+- Generated timestamp UTC: `2026-09-11T23:39:45Z`
 
 ## Maintenance Rule
 

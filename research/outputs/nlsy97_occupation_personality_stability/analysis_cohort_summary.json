@@ -1,0 +1,165 @@
+{
+  "aa1_round12_tipi_plus_official_code_including_nonoccupation_9920_n": 6261,
+  "cell_threshold_counts": {
+    "broad": {
+      "n_ge_10": 22,
+      "n_ge_100": 18,
+      "n_ge_20": 22,
+      "n_ge_50": 20
+    },
+    "intermediate": {
+      "n_ge_10": 72,
+      "n_ge_100": 25,
+      "n_ge_20": 56,
+      "n_ge_50": 39
+    },
+    "narrow": {
+      "n_ge_10": 151,
+      "n_ge_100": 10,
+      "n_ge_20": 81,
+      "n_ge_50": 27
+    }
+  },
+  "design": {
+    "design_degrees_of_freedom": 117,
+    "every_stratum_has_vpsu_1_and_2": true,
+    "psus": 234,
+    "strata": 117
+  },
+  "feasibility_tier_counts": {
+    "broad": {
+      "MODERATE / EXPLORATORY": 2,
+      "STRONG CENTROID": 18,
+      "UNSTABLE / TOO SPARSE": 2
+    },
+    "intermediate": {
+      "BROAD-FAMILY ONLY": 31,
+      "MODERATE / EXPLORATORY": 13,
+      "STRONG CENTROID": 25,
+      "UNSTABLE / TOO SPARSE": 3
+    },
+    "narrow": {
+      "BROAD-FAMILY ONLY": 120,
+      "MODERATE / EXPLORATORY": 18,
+      "STRONG CENTROID": 9,
+      "UNSTABLE / TOO SPARSE": 4
+    }
+  },
+  "generated_at": "2026-09-11T23:30:00Z",
+  "global_weighted_standardization": {
+    "agreeableness": {
+      "raw_mean": 5.00686543888604,
+      "raw_population_sd": 1.0913072005016389
+    },
+    "conscientiousness": {
+      "raw_mean": 5.678037775544602,
+      "raw_population_sd": 1.08341594987338
+    },
+    "emotional_stability": {
+      "raw_mean": 5.006342351259143,
+      "raw_population_sd": 1.303716161578371
+    },
+    "extraversion": {
+      "raw_mean": 4.748013199070261,
+      "raw_population_sd": 1.3490966197451273
+    },
+    "openness": {
+      "raw_mean": 5.49671069514507,
+      "raw_population_sd": 1.0488177981928384
+    }
+  },
+  "original_cohort_n": 8984,
+  "preregistered_specification_sha": "13fb08f1d75444820d0b374fef2e3e0292a4d1f1",
+  "primary_analytic_n": 6261,
+  "primary_weighted_population_estimate": 16499071.2,
+  "round12_tipi_all_ten_complete_n": 7044,
+  "round12_tipi_plus_occupation_excluding_9920_n": 6261,
+  "round6_goldberg_all_eight_complete_n": 4851,
+  "round6_goldberg_plus_occupation_excluding_9920_n": 4060,
+  "round6_universe_limitation": "Items were administered only to respondents age 14 or younger at end of 1996.",
+  "secondary_personality_inventory": {
+    "round12_industriousness": "4 raw items (T3162600-T3162603); inventoried but not combined with TIPI",
+    "round12_traditionalism": "4 raw items (T3162700-T3162703); inventoried but not combined with TIPI",
+    "round16_17_grit": "8 Round-16 items plus a Round-17 repeat for Round-16 nonrespondents; inventoried but not combined with TIPI",
+    "source": "research/outputs/human_trait_dataset_feasibility/nlsy97/nlsy97_personality_item_manifest.csv"
+  },
+  "starting_sha": "7914d01f7d9c23060fe199815a90e547241d9682",
+  "suppression": {
+    "broad": {
+      "cells_n_lt_10": 0,
+      "respondents_in_cells_n_lt_10": 0
+    },
+    "intermediate": {
+      "cells_n_lt_10": 21,
+      "respondents_in_cells_n_lt_10": 111
+    },
+    "narrow": {
+      "cells_n_lt_10": 249,
+      "respondents_in_cells_n_lt_10": 910
+    }
+  },
+  "tipi_item_availability": {
+    "T3162500": {
+      "valid_1_to_7_n_full_extract": 7363,
+      "valid_1_to_7_n_primary_analytic_cohort": 6261
+    },
+    "T3162501": {
+      "valid_1_to_7_n_full_extract": 7195,
+      "valid_1_to_7_n_primary_analytic_cohort": 6261
+    },
+    "T3162502": {
+      "valid_1_to_7_n_full_extract": 7434,
+      "valid_1_to_7_n_primary_analytic_cohort": 6261
+    },
+    "T3162503": {
+      "valid_1_to_7_n_full_extract": 7457,
+      "valid_1_to_7_n_primary_analytic_cohort": 6261
+    },
+    "T3162504": {
+      "valid_1_to_7_n_full_extract": 7410,
+      "valid_1_to_7_n_primary_analytic_cohort": 6261
+    },
+    "T3162505": {
+      "valid_1_to_7_n_full_extract": 7445,
+      "valid_1_to_7_n_primary_analytic_cohort": 6261
+    },
+    "T3162506": {
+      "valid_1_to_7_n_full_extract": 7395,
+      "valid_1_to_7_n_primary_analytic_cohort": 6261
+    },
+    "T3162507": {
+      "valid_1_to_7_n_full_extract": 7454,
+      "valid_1_to_7_n_primary_analytic_cohort": 6261
+    },
+    "T3162508": {
+      "valid_1_to_7_n_full_extract": 7427,
+      "valid_1_to_7_n_primary_analytic_cohort": 6261
+    },
+    "T3162509": {
+      "valid_1_to_7_n_full_extract": 7404,
+      "valid_1_to_7_n_primary_analytic_cohort": 6261
+    }
+  },
+  "tipi_two_item_reliability": {
+    "agreeableness": {
+      "spearman_brown_two_item_coefficient": 0.2249535757793032,
+      "weighted_inter_item_correlation": 0.12673109430254206
+    },
+    "conscientiousness": {
+      "spearman_brown_two_item_coefficient": 0.46950674642026763,
+      "weighted_inter_item_correlation": 0.3067682561305771
+    },
+    "emotional_stability": {
+      "spearman_brown_two_item_coefficient": 0.5773051215190923,
+      "weighted_inter_item_correlation": 0.40578280715785936
+    },
+    "extraversion": {
+      "spearman_brown_two_item_coefficient": 0.5157374667934328,
+      "weighted_inter_item_correlation": 0.3474705149898551
+    },
+    "openness": {
+      "spearman_brown_two_item_coefficient": 0.24534163888257063,
+      "weighted_inter_item_correlation": 0.1398230244241553
+    }
+  }
+}

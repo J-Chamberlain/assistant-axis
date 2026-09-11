@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-11T22:41:00Z
-Last commit when updated: cac5c0c (integrated AA-1 feasibility audit and finalized Phase-1b review artifacts)
+Updated UTC: 2026-09-11T23:30:00Z
+Last commit when updated: 13fb08f (froze AA-5 occupation-centroid analysis before outcome inspection; final analysis commit pending)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3871
+- active analyses: 3891
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 12
@@ -37,7 +37,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Status Counts
 
-- active: 4685
+- active: 4705
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -54,6 +54,8 @@ Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVEN
 Multi-model trait-profile to persona-PC predictor: `research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md` is the entry point for the Llama-3.3-70B and Gemma-2-27B replication of the completed Qwen mapping. Use `cross_model_comparison.csv` for the canonical three-model metric table; each `llama/` and `gemma/` subdirectory contains the complete 275 x 240 cosine matrix, repeated nested comparison, raw/quantile LOPO, fixed Qwen-canonical role-family holdout, 100-permutation control, OOD reference, transparent Ridge/all-model bundles, endpoint-held-out synthetic interpolation, source manifest, and verification report. `deterministic_full_rerun_comparison.json` records byte-identical reproduction of all 20 deterministic CSVs. Each model uses its own established PCA geometry; cross-model sign orientation does not imply identical PC semantics. This is same-space saved-vector evidence, not behavioral, causal, psychometric, human-transfer, or model-sophistication evidence. No GPU, RunPod, new inference, activation extraction, or external model API was used.
 
 Human trait-dataset feasibility: `research/outputs/human_trait_dataset_feasibility/human_trait_dataset_feasibility_report.md` is the entry point for the Phase-1 SAPA vocabulary and NLSY97 occupation/outcome audit. Use `sapa/sapa_model_trait_candidate_crosswalk.csv` for all 240 canonical trait judgments and exact item evidence, `sapa/sapa_trait_coverage_summary.json` for counts, `nlsy97/nlsy97_personality_occupation_cell_summary.json` for cohort totals, `nlsy97/nlsy97_persona_occupation_crosswalk.csv` for conservative prior-role translations and feasibility cells, `nlsy97/nlsy97_wave_overlap_summary.csv` for later-domain co-observation, and `artifact_inventory.csv` for hashes/raw URLs. Raw respondent files are gitignored under `data_external/human_validation/`. This establishes data feasibility only: no human-to-model projection, correspondence test, or human-personality claim was made.
+
+NLSY97 occupational personality stability: `research/outputs/nlsy97_occupation_personality_stability/nlsy97_occupation_personality_stability_report.md` is the human-only AA-5 entry point. The outcome-blind specification was committed first at `13fb08f`; the analysis then reproduced the 7,044 complete-TIPI and 6,261 TIPI-plus-occupation counts, evaluated official Census/SOC narrow, minor, and major groups with Round-12 weights plus VSTRAT/VPSU, and assigned empirical tiers from N, design-respecting bootstrap error, split-half error, and heterogeneity. Use `occupation_centroid_feasibility.csv` for the 9 strong plus 18 moderate narrow cells and 18 strong plus 2 moderate broad families, `occupation_personality_variance_decomposition.csv` for the small sampling-error-corrected between-occupation signal, and `future_model_role_comparison_candidates.csv` for the post-tier future-role list with explicit semantic-cost flags. The complete deterministic runner, verifier, hashes, and raw URLs are in the same directory. No model geometry or human-to-model projection was used; raw respondents remain gitignored.
 
 SAPA bridge Phase-1b review: `research/outputs/human_trait_dataset_feasibility/sapa_review/` contains the fixed-seed coordinate-blind review packet for exactly the 78 original Category-3 candidates, the rubric committed before adjudication, all 78 second-pass decisions, the provisional bridge, item/scale reuse audits, retained-evidence missingness summary, verification, and an identical decision-free packet plus instructions for later external review. The review retained 45 direct primary-tier and 29 explicitly secondary close links, with 1 broad downgrade, 3 rejections, and 0 ambiguous rows. The 74 retained links use 129 items and 78 source scales, but no respondent observes all 129 retained items. The packet excludes original feasibility labels, geometry, predictors, personas, occupations, outcomes, and downstream performance. This same-workflow Codex review is not independent psychometric validation; genuinely independent review of the frozen external packet is the next gate.
 

@@ -1,0 +1,523 @@
+record_type,occupation_level,occupation_code,occupation_title,full_cell_n,subsample_n,subsample_replicates,eligible_occupation_cells,centroid_error_mean,centroid_error_median,centroid_error_p05,centroid_error_p95,reference
+occupation_cell,narrow,0050,Marketing and sales managers,36,10,300,1,0.5847169532,0.5828060991,0.2720777382,0.9451519755,full finite-sample cell centroid
+occupation_cell,narrow,0120,Financial managers,41,10,300,1,0.5343700922,0.5275704264,0.2950902743,0.8431267797,full finite-sample cell centroid
+occupation_cell,narrow,0310,Food service managers,41,10,300,1,0.6417207325,0.6283889813,0.3346553103,0.9981995901,full finite-sample cell centroid
+occupation_cell,narrow,0430,"Managers, all other",55,10,300,1,0.5481752368,0.5344963633,0.2543308816,0.889902695,full finite-sample cell centroid
+occupation_cell,narrow,0620,"Human resources, training, and labor relations specialists",43,10,300,1,0.6593115921,0.6307515895,0.3278557261,1.085900877,full finite-sample cell centroid
+occupation_cell,narrow,0800,Accountants and auditors,59,10,300,1,0.5986297552,0.5700204733,0.3041058837,0.9411769191,full finite-sample cell centroid
+occupation_cell,narrow,2000,Counselors,44,10,300,1,0.7000105703,0.6771812666,0.3587902107,1.109988211,full finite-sample cell centroid
+occupation_cell,narrow,2010,Social workers,41,10,300,1,0.5444298427,0.5235150918,0.2737169546,0.8584757769,full finite-sample cell centroid
+occupation_cell,narrow,2200,Postsecondary teachers,47,10,300,1,0.6244926208,0.6037739473,0.3231521549,1.003352424,full finite-sample cell centroid
+occupation_cell,narrow,2300,Preschool and kindergarten teachers,41,10,300,1,0.6147545382,0.6011628791,0.3184224183,1.005482037,full finite-sample cell centroid
+occupation_cell,narrow,2310,Elementary and middle school teachers,122,10,300,1,0.5899975095,0.5814564595,0.2971308074,0.8846498069,full finite-sample cell centroid
+occupation_cell,narrow,2320,Secondary school teachers,54,10,300,1,0.5687060339,0.5481923744,0.2858745872,0.8812495495,full finite-sample cell centroid
+occupation_cell,narrow,2540,Teacher assistants,59,10,300,1,0.7080088364,0.7004830913,0.3695129782,1.088877365,full finite-sample cell centroid
+occupation_cell,narrow,3130,Registered nurses,71,10,300,1,0.5613364802,0.5338788017,0.2883525329,0.9539028612,full finite-sample cell centroid
+occupation_cell,narrow,3410,Health diagnosing and treating practitioner support technicians,32,10,300,1,0.7032156853,0.6800349804,0.3762447335,1.080284037,full finite-sample cell centroid
+occupation_cell,narrow,3600,"Nursing, psychiatric, and home health aides",134,10,300,1,0.7196838897,0.6992477309,0.3351418415,1.151879376,full finite-sample cell centroid
+occupation_cell,narrow,3650,Medical assistants and other healthcare support occupations,77,10,300,1,0.6841193962,0.6573726389,0.3748858411,1.058361242,full finite-sample cell centroid
+occupation_cell,narrow,3850,Police and sheriff's patrol officers,34,10,300,1,0.4992676046,0.4895415087,0.2301361612,0.8189622683,full finite-sample cell centroid
+occupation_cell,narrow,3920,Security guards and gaming surveillance officers,86,10,300,1,0.7364623013,0.7066441333,0.3759585459,1.190231234,full finite-sample cell centroid
+occupation_cell,narrow,4010,First-line supervisors/managers of food preparation and serving workers,42,10,300,1,0.6061589593,0.584832079,0.3020559023,0.9718683819,full finite-sample cell centroid
+occupation_cell,narrow,4020,Cooks,120,10,300,1,0.7000406073,0.6633435637,0.3578563931,1.10528795,full finite-sample cell centroid
+occupation_cell,narrow,4030,Food preparation workers,46,10,300,1,0.693602719,0.6724766886,0.3258075571,1.13512435,full finite-sample cell centroid
+occupation_cell,narrow,4040,Bartenders,32,10,300,1,0.5649432127,0.5588951682,0.3088440713,0.8665698462,full finite-sample cell centroid
+occupation_cell,narrow,4050,"Combined food preparation and serving workers, including fast food",30,10,300,1,0.6639740595,0.653097535,0.3343067108,1.031859352,full finite-sample cell centroid
+occupation_cell,narrow,4110,Waiters and waitresses,159,10,300,1,0.716168399,0.6926131751,0.3767902062,1.139088927,full finite-sample cell centroid
+occupation_cell,narrow,4220,Janitors and building cleaners,82,10,300,1,0.7594255614,0.7555416274,0.3832502462,1.198419688,full finite-sample cell centroid
+occupation_cell,narrow,4230,Maids and housekeeping cleaners,48,10,300,1,0.7425742611,0.7583698917,0.3421838889,1.126747204,full finite-sample cell centroid
+occupation_cell,narrow,4250,Grounds maintenance workers,70,10,300,1,0.7071249258,0.6836978771,0.3304525977,1.157582937,full finite-sample cell centroid
+occupation_cell,narrow,4510,"Hairdressers, hairstylists, and cosmetologists",35,10,300,1,0.6165264392,0.5996496025,0.3071224609,1.018983038,full finite-sample cell centroid
+occupation_cell,narrow,4600,Child care workers,91,10,300,1,0.733888406,0.7194375905,0.3575765907,1.18337966,full finite-sample cell centroid
+occupation_cell,narrow,4610,Personal and home care aides,59,10,300,1,0.6857164522,0.6628339929,0.3515076435,1.058812784,full finite-sample cell centroid
+occupation_cell,narrow,4700,First-line supervisors/managers of retail sales workers,147,10,300,1,0.6920672441,0.6862364217,0.304973494,1.059620183,full finite-sample cell centroid
+occupation_cell,narrow,4720,Cashiers,213,10,300,1,0.7207294067,0.6878307157,0.3393688572,1.137803398,full finite-sample cell centroid
+occupation_cell,narrow,4760,Retail salespersons,157,10,300,1,0.687287338,0.6750517174,0.3402067453,1.084813898,full finite-sample cell centroid
+occupation_cell,narrow,4810,Insurance sales agents,31,10,300,1,0.5252513826,0.5062995216,0.2718831653,0.8167362602,full finite-sample cell centroid
+occupation_cell,narrow,4850,"Sales representatives, wholesale and manufacturing",48,10,300,1,0.6685912275,0.6374758895,0.295820214,1.076035278,full finite-sample cell centroid
+occupation_cell,narrow,5000,First-line supervisors/managers of office and administrative support workers,47,10,300,1,0.596778398,0.5854385811,0.300908776,0.9410743706,full finite-sample cell centroid
+occupation_cell,narrow,5120,"Bookkeeping, accounting, and auditing clerks",49,10,300,1,0.5799874498,0.5453751062,0.2886351613,0.9454666651,full finite-sample cell centroid
+occupation_cell,narrow,5160,Tellers,34,10,300,1,0.5400391923,0.5280092681,0.2734616998,0.8421721997,full finite-sample cell centroid
+occupation_cell,narrow,5240,Customer service representatives,151,10,300,1,0.7194956885,0.6810270442,0.3765286996,1.231083468,full finite-sample cell centroid
+occupation_cell,narrow,5400,Receptionists and information clerks,75,10,300,1,0.6985114022,0.6664250776,0.3674217638,1.108126195,full finite-sample cell centroid
+occupation_cell,narrow,5610,"Shipping, receiving, and traffic clerks",38,10,300,1,0.6722024538,0.653220714,0.3292858697,1.065673839,full finite-sample cell centroid
+occupation_cell,narrow,5620,Stock clerks and order fillers,88,10,300,1,0.7329738764,0.6995993538,0.3686365124,1.222231159,full finite-sample cell centroid
+occupation_cell,narrow,5700,Secretaries and administrative assistants,113,10,300,1,0.6641090862,0.6330001625,0.338964219,1.088228575,full finite-sample cell centroid
+occupation_cell,narrow,5860,"Office clerks, general",32,10,300,1,0.5457956574,0.5265616369,0.296766263,0.8862072415,full finite-sample cell centroid
+occupation_cell,narrow,6230,Carpenters,73,10,300,1,0.5922067064,0.5620576324,0.2895496638,1.017148654,full finite-sample cell centroid
+occupation_cell,narrow,6260,Construction laborers,87,10,300,1,0.6416590312,0.6203845187,0.309470163,1.027854943,full finite-sample cell centroid
+occupation_cell,narrow,6350,Electricians,38,10,300,1,0.5062529023,0.4973845271,0.2514784621,0.8335518829,full finite-sample cell centroid
+occupation_cell,narrow,7200,Automotive service technicians and mechanics,45,10,300,1,0.575581927,0.5536794389,0.286743886,0.9050316014,full finite-sample cell centroid
+occupation_cell,narrow,7750,Miscellaneous assemblers and fabricators,30,10,300,1,0.5978497083,0.5717730336,0.2858599777,0.9705246755,full finite-sample cell centroid
+occupation_cell,narrow,8140,"Welding, soldering, and brazing workers",30,10,300,1,0.4998555464,0.4753773183,0.2824997164,0.7866005908,full finite-sample cell centroid
+occupation_cell,narrow,8740,"Inspectors, testers, sorters, samplers, and weighers",31,10,300,1,0.574152436,0.5676732637,0.3015009076,0.8400847993,full finite-sample cell centroid
+occupation_cell,narrow,8960,"Production workers, all other",54,10,300,1,0.7701674298,0.7491546726,0.4066365491,1.219753991,full finite-sample cell centroid
+occupation_cell,narrow,9130,Driver/sales workers and truck drivers,84,10,300,1,0.659254806,0.65081046,0.3125640279,1.023617292,full finite-sample cell centroid
+occupation_cell,narrow,9600,Industrial truck and tractor operators,37,10,300,1,0.6372010503,0.6173409543,0.3360961671,1.026991891,full finite-sample cell centroid
+occupation_cell,narrow,9620,"Laborers and freight, stock, and material movers, hand",135,10,300,1,0.7709202459,0.7309229489,0.3365971064,1.309245174,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,narrow,__LEVEL_SUMMARY__,Narrow level summary,,10,300,56,0.6407227726,0.6295702854,0.3207872866,1.027423417,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,narrow,0120,Financial managers,41,20,300,1,0.3183314442,0.307457798,0.1518521379,0.5119301541,full finite-sample cell centroid
+occupation_cell,narrow,0310,Food service managers,41,20,300,1,0.3750036053,0.3630653971,0.1957297517,0.5762704872,full finite-sample cell centroid
+occupation_cell,narrow,0430,"Managers, all other",55,20,300,1,0.3425749773,0.322254335,0.1739726887,0.5727697461,full finite-sample cell centroid
+occupation_cell,narrow,0620,"Human resources, training, and labor relations specialists",43,20,300,1,0.3663722711,0.3477629412,0.1849540761,0.6250725727,full finite-sample cell centroid
+occupation_cell,narrow,0800,Accountants and auditors,59,20,300,1,0.3771899311,0.3626071029,0.1759918594,0.5979848174,full finite-sample cell centroid
+occupation_cell,narrow,2000,Counselors,44,20,300,1,0.4243711899,0.4170492275,0.2150899242,0.6478382844,full finite-sample cell centroid
+occupation_cell,narrow,2010,Social workers,41,20,300,1,0.3229187385,0.3155069716,0.1532180475,0.5227971945,full finite-sample cell centroid
+occupation_cell,narrow,2200,Postsecondary teachers,47,20,300,1,0.3718329762,0.3625461035,0.1923753842,0.5827995758,full finite-sample cell centroid
+occupation_cell,narrow,2300,Preschool and kindergarten teachers,41,20,300,1,0.3508317804,0.3470525407,0.1876008394,0.569605819,full finite-sample cell centroid
+occupation_cell,narrow,2310,Elementary and middle school teachers,122,20,300,1,0.3926359884,0.3781799988,0.198131595,0.617283723,full finite-sample cell centroid
+occupation_cell,narrow,2320,Secondary school teachers,54,20,300,1,0.3532517619,0.3482809215,0.1703828373,0.5151637101,full finite-sample cell centroid
+occupation_cell,narrow,2540,Teacher assistants,59,20,300,1,0.4572296384,0.4371820465,0.2160177324,0.7517353395,full finite-sample cell centroid
+occupation_cell,narrow,3130,Registered nurses,71,20,300,1,0.3548585626,0.3488528372,0.1809266025,0.5508743039,full finite-sample cell centroid
+occupation_cell,narrow,3600,"Nursing, psychiatric, and home health aides",134,20,300,1,0.4890807686,0.4717976241,0.2426493182,0.7862174763,full finite-sample cell centroid
+occupation_cell,narrow,3650,Medical assistants and other healthcare support occupations,77,20,300,1,0.4369503055,0.4290240899,0.2229084966,0.6988179781,full finite-sample cell centroid
+occupation_cell,narrow,3920,Security guards and gaming surveillance officers,86,20,300,1,0.5073445524,0.4861326157,0.2647003096,0.7963377443,full finite-sample cell centroid
+occupation_cell,narrow,4010,First-line supervisors/managers of food preparation and serving workers,42,20,300,1,0.3538209533,0.3451544952,0.1769801827,0.5637768512,full finite-sample cell centroid
+occupation_cell,narrow,4020,Cooks,120,20,300,1,0.4883154215,0.4784830964,0.2294982068,0.7931263835,full finite-sample cell centroid
+occupation_cell,narrow,4030,Food preparation workers,46,20,300,1,0.4303740363,0.4108532791,0.2076069322,0.6998858645,full finite-sample cell centroid
+occupation_cell,narrow,4110,Waiters and waitresses,159,20,300,1,0.4776943027,0.4739322688,0.2099276459,0.7547280155,full finite-sample cell centroid
+occupation_cell,narrow,4220,Janitors and building cleaners,82,20,300,1,0.4706936124,0.4582776097,0.2274652887,0.7284915481,full finite-sample cell centroid
+occupation_cell,narrow,4230,Maids and housekeeping cleaners,48,20,300,1,0.4446032615,0.4332645094,0.2265852012,0.6663102837,full finite-sample cell centroid
+occupation_cell,narrow,4250,Grounds maintenance workers,70,20,300,1,0.4612733813,0.4579026284,0.2167639464,0.739731637,full finite-sample cell centroid
+occupation_cell,narrow,4600,Child care workers,91,20,300,1,0.5010321689,0.4865033395,0.257630161,0.7953052345,full finite-sample cell centroid
+occupation_cell,narrow,4610,Personal and home care aides,59,20,300,1,0.450770433,0.4425548386,0.2370649026,0.7300730922,full finite-sample cell centroid
+occupation_cell,narrow,4700,First-line supervisors/managers of retail sales workers,147,20,300,1,0.4651598072,0.440084569,0.2321996739,0.7290679404,full finite-sample cell centroid
+occupation_cell,narrow,4720,Cashiers,213,20,300,1,0.5109018698,0.4907438664,0.243399329,0.8496693652,full finite-sample cell centroid
+occupation_cell,narrow,4760,Retail salespersons,157,20,300,1,0.4758423703,0.456384972,0.2252833278,0.7735296761,full finite-sample cell centroid
+occupation_cell,narrow,4850,"Sales representatives, wholesale and manufacturing",48,20,300,1,0.4105675743,0.3982197717,0.189822307,0.6704773258,full finite-sample cell centroid
+occupation_cell,narrow,5000,First-line supervisors/managers of office and administrative support workers,47,20,300,1,0.3649394844,0.3517119564,0.1754369209,0.5840783316,full finite-sample cell centroid
+occupation_cell,narrow,5120,"Bookkeeping, accounting, and auditing clerks",49,20,300,1,0.3528838314,0.3475764666,0.1846495858,0.5565638106,full finite-sample cell centroid
+occupation_cell,narrow,5240,Customer service representatives,151,20,300,1,0.5093983473,0.4874666575,0.2571699484,0.8141454531,full finite-sample cell centroid
+occupation_cell,narrow,5400,Receptionists and information clerks,75,20,300,1,0.4679509503,0.4564036138,0.2278787422,0.761048008,full finite-sample cell centroid
+occupation_cell,narrow,5620,Stock clerks and order fillers,88,20,300,1,0.5026372732,0.4837840016,0.2454534411,0.808033225,full finite-sample cell centroid
+occupation_cell,narrow,5700,Secretaries and administrative assistants,113,20,300,1,0.4472091743,0.4325419185,0.2304950423,0.7165934442,full finite-sample cell centroid
+occupation_cell,narrow,6230,Carpenters,73,20,300,1,0.3964583393,0.3843280531,0.1735111847,0.6602825411,full finite-sample cell centroid
+occupation_cell,narrow,6260,Construction laborers,87,20,300,1,0.4246718115,0.4111654139,0.2271856047,0.6452491642,full finite-sample cell centroid
+occupation_cell,narrow,7200,Automotive service technicians and mechanics,45,20,300,1,0.3578670944,0.3551491398,0.1596040982,0.5289304491,full finite-sample cell centroid
+occupation_cell,narrow,8960,"Production workers, all other",54,20,300,1,0.4742748767,0.465264107,0.2594655279,0.724352186,full finite-sample cell centroid
+occupation_cell,narrow,9130,Driver/sales workers and truck drivers,84,20,300,1,0.4603056976,0.447479286,0.2470137742,0.7221455748,full finite-sample cell centroid
+occupation_cell,narrow,9620,"Laborers and freight, stock, and material movers, hand",135,20,300,1,0.537233708,0.5104193844,0.24648917,0.8856984536,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,narrow,__LEVEL_SUMMARY__,Narrow level summary,,20,300,41,0.4262843481,0.4290240899,0.2160177324,0.6988179781,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,narrow,2310,Elementary and middle school teachers,122,30,300,1,0.3118622985,0.3005795605,0.1463562151,0.5346302412,full finite-sample cell centroid
+occupation_cell,narrow,3130,Registered nurses,71,30,300,1,0.2608025215,0.2534860357,0.133374004,0.4221815009,full finite-sample cell centroid
+occupation_cell,narrow,3600,"Nursing, psychiatric, and home health aides",134,30,300,1,0.3864375857,0.3785965727,0.201929072,0.640149296,full finite-sample cell centroid
+occupation_cell,narrow,3650,Medical assistants and other healthcare support occupations,77,30,300,1,0.3256821045,0.319843465,0.1635160949,0.4976375343,full finite-sample cell centroid
+occupation_cell,narrow,3920,Security guards and gaming surveillance officers,86,30,300,1,0.3710755983,0.3630229598,0.1986837607,0.5917023804,full finite-sample cell centroid
+occupation_cell,narrow,4020,Cooks,120,30,300,1,0.3549830524,0.3492469876,0.1944698599,0.5667893327,full finite-sample cell centroid
+occupation_cell,narrow,4110,Waiters and waitresses,159,30,300,1,0.3885392067,0.3817743594,0.1712380377,0.6197212192,full finite-sample cell centroid
+occupation_cell,narrow,4220,Janitors and building cleaners,82,30,300,1,0.3659496941,0.3545339779,0.1753314267,0.5878534029,full finite-sample cell centroid
+occupation_cell,narrow,4250,Grounds maintenance workers,70,30,300,1,0.337968116,0.3235873116,0.1786075479,0.5354067372,full finite-sample cell centroid
+occupation_cell,narrow,4600,Child care workers,91,30,300,1,0.3676065022,0.3400112299,0.180561535,0.6422701586,full finite-sample cell centroid
+occupation_cell,narrow,4700,First-line supervisors/managers of retail sales workers,147,30,300,1,0.3620960684,0.3505152203,0.1823051332,0.5574797493,full finite-sample cell centroid
+occupation_cell,narrow,4720,Cashiers,213,30,300,1,0.4220195794,0.4160756362,0.2001761576,0.6373273982,full finite-sample cell centroid
+occupation_cell,narrow,4760,Retail salespersons,157,30,300,1,0.3797791136,0.373295363,0.2024972077,0.5954500375,full finite-sample cell centroid
+occupation_cell,narrow,5240,Customer service representatives,151,30,300,1,0.4028326443,0.3841628494,0.189311997,0.6458673364,full finite-sample cell centroid
+occupation_cell,narrow,5400,Receptionists and information clerks,75,30,300,1,0.339817021,0.3276586311,0.1663228166,0.5555604879,full finite-sample cell centroid
+occupation_cell,narrow,5620,Stock clerks and order fillers,88,30,300,1,0.3653654993,0.3546628921,0.1727766893,0.5983156016,full finite-sample cell centroid
+occupation_cell,narrow,5700,Secretaries and administrative assistants,113,30,300,1,0.3580465302,0.3481855434,0.174291144,0.5726627485,full finite-sample cell centroid
+occupation_cell,narrow,6230,Carpenters,73,30,300,1,0.2871126353,0.2787471302,0.1532321704,0.4429417086,full finite-sample cell centroid
+occupation_cell,narrow,6260,Construction laborers,87,30,300,1,0.3252721621,0.3166144636,0.1551141764,0.4963755934,full finite-sample cell centroid
+occupation_cell,narrow,9130,Driver/sales workers and truck drivers,84,30,300,1,0.3322012537,0.3331456129,0.1631209123,0.5142153121,full finite-sample cell centroid
+occupation_cell,narrow,9620,"Laborers and freight, stock, and material movers, hand",135,30,300,1,0.4184238615,0.393899677,0.1870762708,0.6990098576,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,narrow,__LEVEL_SUMMARY__,Narrow level summary,,30,300,21,0.3554225261,0.3492469876,0.1753314267,0.5726627485,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,narrow,2310,Elementary and middle school teachers,122,40,300,1,0.2572235955,0.2495066081,0.1396540614,0.4175427726,full finite-sample cell centroid
+occupation_cell,narrow,3600,"Nursing, psychiatric, and home health aides",134,40,300,1,0.3184193431,0.2995926369,0.1687718989,0.5382492282,full finite-sample cell centroid
+occupation_cell,narrow,3920,Security guards and gaming surveillance officers,86,40,300,1,0.2817158845,0.2785316295,0.1246422058,0.4488059286,full finite-sample cell centroid
+occupation_cell,narrow,4020,Cooks,120,40,300,1,0.2979949788,0.2869549684,0.1334687145,0.4785710812,full finite-sample cell centroid
+occupation_cell,narrow,4110,Waiters and waitresses,159,40,300,1,0.3236502095,0.3166924447,0.1713018301,0.5035059711,full finite-sample cell centroid
+occupation_cell,narrow,4220,Janitors and building cleaners,82,40,300,1,0.2888604373,0.2735029649,0.1452025511,0.4667837927,full finite-sample cell centroid
+occupation_cell,narrow,4600,Child care workers,91,40,300,1,0.2959357756,0.2922051763,0.1405206921,0.4680290777,full finite-sample cell centroid
+occupation_cell,narrow,4700,First-line supervisors/managers of retail sales workers,147,40,300,1,0.305122824,0.2944846585,0.1465993248,0.4758514693,full finite-sample cell centroid
+occupation_cell,narrow,4720,Cashiers,213,40,300,1,0.3427856455,0.3340112816,0.1697290934,0.539035574,full finite-sample cell centroid
+occupation_cell,narrow,4760,Retail salespersons,157,40,300,1,0.3084204226,0.3088838161,0.1467923921,0.4784593102,full finite-sample cell centroid
+occupation_cell,narrow,5240,Customer service representatives,151,40,300,1,0.311386379,0.3048837011,0.1484912212,0.504145581,full finite-sample cell centroid
+occupation_cell,narrow,5620,Stock clerks and order fillers,88,40,300,1,0.2897639801,0.2786740522,0.1346634352,0.4781591581,full finite-sample cell centroid
+occupation_cell,narrow,5700,Secretaries and administrative assistants,113,40,300,1,0.2799243669,0.2713356209,0.1401988561,0.4655034837,full finite-sample cell centroid
+occupation_cell,narrow,6260,Construction laborers,87,40,300,1,0.2520546267,0.2448615506,0.1215879552,0.4028249275,full finite-sample cell centroid
+occupation_cell,narrow,9130,Driver/sales workers and truck drivers,84,40,300,1,0.2561852736,0.249916298,0.130614366,0.3920531809,full finite-sample cell centroid
+occupation_cell,narrow,9620,"Laborers and freight, stock, and material movers, hand",135,40,300,1,0.3524660336,0.3305274222,0.1533199941,0.5988281791,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,narrow,__LEVEL_SUMMARY__,Narrow level summary,,40,300,16,0.297619361,0.2895800723,0.1428616216,0.4770053137,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,narrow,2310,Elementary and middle school teachers,122,50,300,1,0.2212055921,0.2128115614,0.1143922127,0.3420990388,full finite-sample cell centroid
+occupation_cell,narrow,3600,"Nursing, psychiatric, and home health aides",134,50,300,1,0.2694085238,0.2550242813,0.1410057332,0.440604288,full finite-sample cell centroid
+occupation_cell,narrow,4020,Cooks,120,50,300,1,0.2388338845,0.2297215479,0.1238280062,0.369541012,full finite-sample cell centroid
+occupation_cell,narrow,4110,Waiters and waitresses,159,50,300,1,0.2751239925,0.2677840355,0.1366027849,0.4392676137,full finite-sample cell centroid
+occupation_cell,narrow,4700,First-line supervisors/managers of retail sales workers,147,50,300,1,0.2614829387,0.2597272729,0.1223542982,0.4079785171,full finite-sample cell centroid
+occupation_cell,narrow,4720,Cashiers,213,50,300,1,0.3023899099,0.3092127568,0.1438628768,0.4516384852,full finite-sample cell centroid
+occupation_cell,narrow,4760,Retail salespersons,157,50,300,1,0.2733551612,0.2657777487,0.1470859863,0.4143915781,full finite-sample cell centroid
+occupation_cell,narrow,5240,Customer service representatives,151,50,300,1,0.2792994215,0.2730342157,0.1514205614,0.435825281,full finite-sample cell centroid
+occupation_cell,narrow,5700,Secretaries and administrative assistants,113,50,300,1,0.240435781,0.2311636018,0.1218614336,0.3814388853,full finite-sample cell centroid
+occupation_cell,narrow,9620,"Laborers and freight, stock, and material movers, hand",135,50,300,1,0.3013533621,0.2908971197,0.15624692,0.5098189447,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,narrow,__LEVEL_SUMMARY__,Narrow level summary,,50,300,10,0.2662888567,0.2627525108,0.1388042591,0.4251084296,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,narrow,4110,Waiters and waitresses,159,75,300,1,0.1956331872,0.1919227884,0.1020686208,0.3052744851,full finite-sample cell centroid
+occupation_cell,narrow,4720,Cashiers,213,75,300,1,0.2281898219,0.2214137668,0.1171424958,0.3654529584,full finite-sample cell centroid
+occupation_cell,narrow,4760,Retail salespersons,157,75,300,1,0.1956493825,0.1861577514,0.09369961476,0.3098860649,full finite-sample cell centroid
+occupation_cell,narrow,5240,Customer service representatives,151,75,300,1,0.1957169608,0.1862368394,0.1012002844,0.3212731922,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,narrow,__LEVEL_SUMMARY__,Narrow level summary,,75,300,4,0.2037973381,0.1890798139,0.1016344526,0.3155796285,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,narrow,4720,Cashiers,213,100,300,1,0.1723300395,0.1723572474,0.08334953529,0.2675287905,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,narrow,__LEVEL_SUMMARY__,Narrow level summary,,100,300,1,0.1723300395,0.1723572474,0.08334953529,0.2675287905,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,intermediate,11-1000,Top Executives,31,10,300,1,0.5588453087,0.5371027169,0.2857287598,0.8951628652,full finite-sample cell centroid
+occupation_cell,intermediate,11-2000,"Advertising, Marketing, Promotions, Public Relations, and Sales Managers",49,10,300,1,0.5623766948,0.5452697695,0.2942360744,0.9102984964,full finite-sample cell centroid
+occupation_cell,intermediate,11-3000,Operations Specialties Managers,69,10,300,1,0.5903926548,0.5862580376,0.2832813774,0.9209729902,full finite-sample cell centroid
+occupation_cell,intermediate,11-9000,Other Management Occupations,176,10,300,1,0.6852394162,0.6859720467,0.3224840196,1.068991304,full finite-sample cell centroid
+occupation_cell,intermediate,13-1000,Business Operations Specialists,134,10,300,1,0.736101958,0.7137429831,0.3927726273,1.149795418,full finite-sample cell centroid
+occupation_cell,intermediate,13-2000,Financial Specialists,119,10,300,1,0.6431571078,0.6201240306,0.3021818184,1.027037786,full finite-sample cell centroid
+occupation_cell,intermediate,15-1000,Computer Specialists,114,10,300,1,0.6726103767,0.6287120814,0.3638914969,1.128733613,full finite-sample cell centroid
+occupation_cell,intermediate,17-2000,Engineers,55,10,300,1,0.572882141,0.5458171001,0.294363373,0.8853713174,full finite-sample cell centroid
+occupation_cell,intermediate,17-3000,"Drafters, Engineering, and Mapping Technicians",35,10,300,1,0.5923578956,0.5798764458,0.2999255949,0.9429457001,full finite-sample cell centroid
+occupation_cell,intermediate,21-1000,"Counselors, Social Workers, and Other Community and Social Service Specialists",111,10,300,1,0.6810624717,0.6558976703,0.3415986625,1.114674734,full finite-sample cell centroid
+occupation_cell,intermediate,23-2000,Legal Support Workers,31,10,300,1,0.466894735,0.4509969985,0.2343052998,0.7401287627,full finite-sample cell centroid
+occupation_cell,intermediate,25-1000,Postsecondary Teachers,47,10,300,1,0.645357522,0.6396084726,0.3476956391,1.020471613,full finite-sample cell centroid
+occupation_cell,intermediate,25-2000,"Primary, Secondary, and Special Education School Teachers",233,10,300,1,0.6625726012,0.6713602237,0.3169853779,1.063247979,full finite-sample cell centroid
+occupation_cell,intermediate,25-9000,"Other Education, Training, and Library Occupations",62,10,300,1,0.7631584833,0.7316513312,0.392467046,1.216186445,full finite-sample cell centroid
+occupation_cell,intermediate,27-1000,Art and Design Workers,38,10,300,1,0.5476361311,0.5359931056,0.2815563502,0.8591878095,full finite-sample cell centroid
+occupation_cell,intermediate,27-2000,"Entertainers and Performers, Sports and Related Workers",47,10,300,1,0.6621665826,0.6416961509,0.3411024296,1.025749629,full finite-sample cell centroid
+occupation_cell,intermediate,27-3000,Media and Communication Workers,55,10,300,1,0.6466772792,0.6196545947,0.3433555533,1.036372188,full finite-sample cell centroid
+occupation_cell,intermediate,29-1000,Health Diagnosing and Treating Practitioners,115,10,300,1,0.6020838327,0.5713775846,0.3035474856,0.971898011,full finite-sample cell centroid
+occupation_cell,intermediate,29-2000,Health Technologists and Technicians,109,10,300,1,0.7144862938,0.6856027214,0.3615196022,1.148560357,full finite-sample cell centroid
+occupation_cell,intermediate,31-1000,"Nursing, Psychiatric, and Home Health Aides",134,10,300,1,0.7090894727,0.6906509316,0.3605814437,1.199451473,full finite-sample cell centroid
+occupation_cell,intermediate,31-9000,Other Healthcare Support Occupations,103,10,300,1,0.7023316229,0.6701756974,0.3613075913,1.148294493,full finite-sample cell centroid
+occupation_cell,intermediate,33-3000,Law Enforcement Workers,64,10,300,1,0.6330564184,0.6288070512,0.3262555059,1.026464904,full finite-sample cell centroid
+occupation_cell,intermediate,33-9000,Other Protective Service Workers,96,10,300,1,0.7146596299,0.7107756255,0.3395947791,1.120483352,full finite-sample cell centroid
+occupation_cell,intermediate,35-1000,"Supervisors, Food Preparation and Serving Workers",64,10,300,1,0.6579529563,0.644012179,0.3439384209,1.007157166,full finite-sample cell centroid
+occupation_cell,intermediate,35-2000,Cooks and Food Preparation Workers,166,10,300,1,0.7220552845,0.7186507245,0.3398436045,1.08505813,full finite-sample cell centroid
+occupation_cell,intermediate,35-3000,Food and Beverage Serving Workers,234,10,300,1,0.7177721121,0.7013011159,0.3629009506,1.122857144,full finite-sample cell centroid
+occupation_cell,intermediate,35-9000,Other Food Preparation and Serving Related Workers,36,10,300,1,0.7849973494,0.74410945,0.3723732393,1.270193867,full finite-sample cell centroid
+occupation_cell,intermediate,37-2000,Building Cleaning and Pest Control Workers,131,10,300,1,0.766895233,0.7560114431,0.3889070279,1.184427171,full finite-sample cell centroid
+occupation_cell,intermediate,37-3000,Grounds Maintenance Workers,70,10,300,1,0.7172698853,0.7038217872,0.3444177219,1.155415504,full finite-sample cell centroid
+occupation_cell,intermediate,39-5000,Personal Appearance Workers,52,10,300,1,0.6680445537,0.631156728,0.312870978,1.075985516,full finite-sample cell centroid
+occupation_cell,intermediate,39-9000,Other Personal Care and Service Workers,182,10,300,1,0.7423134079,0.7330152308,0.3912794555,1.172481353,full finite-sample cell centroid
+occupation_cell,intermediate,41-1000,"Supervisors, Sales Workers",173,10,300,1,0.6782230463,0.6633090182,0.3402459203,1.086606535,full finite-sample cell centroid
+occupation_cell,intermediate,41-2000,Retail Sales Workers,381,10,300,1,0.7348827865,0.6999927557,0.3754508706,1.193598326,full finite-sample cell centroid
+occupation_cell,intermediate,41-3000,"Sales Representatives, Services",83,10,300,1,0.5961989639,0.5789176617,0.294708252,0.9114082158,full finite-sample cell centroid
+occupation_cell,intermediate,41-4000,"Sales Representatives, Wholesale and Manufacturing",48,10,300,1,0.6868206978,0.6553233999,0.3270850327,1.113195277,full finite-sample cell centroid
+occupation_cell,intermediate,41-9000,Other Sales and Related Workers,57,10,300,1,0.7903921243,0.7656664144,0.4116300377,1.27248558,full finite-sample cell centroid
+occupation_cell,intermediate,43-1000,"Supervisors, Office and Administrative Support Workers",47,10,300,1,0.6192342498,0.5841962979,0.2995697701,1.001958478,full finite-sample cell centroid
+occupation_cell,intermediate,43-3000,Financial Clerks,139,10,300,1,0.6355205528,0.607633148,0.3145276491,1.048131086,full finite-sample cell centroid
+occupation_cell,intermediate,43-4000,Information and Record Clerks,322,10,300,1,0.7602499039,0.7510231996,0.3460882326,1.234500014,full finite-sample cell centroid
+occupation_cell,intermediate,43-5000,"Material Recording, Scheduling, Dispatching, and Distributing Workers",189,10,300,1,0.7373644358,0.7275746255,0.3608126114,1.161117875,full finite-sample cell centroid
+occupation_cell,intermediate,43-6000,Secretaries and Administrative Assistants,113,10,300,1,0.668178663,0.643925695,0.3272039928,1.07340967,full finite-sample cell centroid
+occupation_cell,intermediate,43-9000,Other Office and Administrative Support Workers,124,10,300,1,0.7234126016,0.7033423006,0.4030046292,1.101392083,full finite-sample cell centroid
+occupation_cell,intermediate,47-2000,Construction Trades Workers,341,10,300,1,0.7098166473,0.6667868224,0.3127626622,1.174619181,full finite-sample cell centroid
+occupation_cell,intermediate,49-2000,"Electrical and Electronic Equipment Mechanics, Installers, and Repairers",43,10,300,1,0.6318624918,0.6111575379,0.3266124888,1.031775799,full finite-sample cell centroid
+occupation_cell,intermediate,49-3000,"Vehicle and Mobile Equipment Mechanics, Installers, and Repairers",79,10,300,1,0.6182503708,0.6028615298,0.324022906,0.9663329241,full finite-sample cell centroid
+occupation_cell,intermediate,49-9000,"Other Installation, Maintenance, and Repair Occupations",87,10,300,1,0.662705465,0.6640049778,0.351555661,1.038082573,full finite-sample cell centroid
+occupation_cell,intermediate,51-2000,Assemblers and Fabricators,41,10,300,1,0.6174560058,0.5974443947,0.3048231799,0.9532565138,full finite-sample cell centroid
+occupation_cell,intermediate,51-4000,Metal Workers and Plastic Workers,69,10,300,1,0.6052090049,0.5761219712,0.3073150702,0.9409400395,full finite-sample cell centroid
+occupation_cell,intermediate,51-9000,Other Production Occupations,139,10,300,1,0.7024316412,0.6875797127,0.3332442258,1.113768682,full finite-sample cell centroid
+occupation_cell,intermediate,53-3000,Motor Vehicle Operators,106,10,300,1,0.6562112854,0.644083281,0.3256349777,1.045296051,full finite-sample cell centroid
+occupation_cell,intermediate,53-7000,Material Moving Workers,243,10,300,1,0.7280961082,0.679215273,0.3630304752,1.228809711,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,intermediate,__LEVEL_SUMMARY__,Intermediate level summary,,10,300,51,0.6687257737,0.6553233999,0.3395947791,1.07340967,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,intermediate,11-2000,"Advertising, Marketing, Promotions, Public Relations, and Sales Managers",49,20,300,1,0.363192842,0.3502816428,0.1789189803,0.5543981383,full finite-sample cell centroid
+occupation_cell,intermediate,11-3000,Operations Specialties Managers,69,20,300,1,0.3851447672,0.3700231174,0.1996411445,0.6060613131,full finite-sample cell centroid
+occupation_cell,intermediate,11-9000,Other Management Occupations,176,20,300,1,0.4658309973,0.440210031,0.2351809706,0.7523464117,full finite-sample cell centroid
+occupation_cell,intermediate,13-1000,Business Operations Specialists,134,20,300,1,0.4844784271,0.4666703001,0.2470770227,0.7814783723,full finite-sample cell centroid
+occupation_cell,intermediate,13-2000,Financial Specialists,119,20,300,1,0.4322092392,0.4249354503,0.2312378747,0.6810647292,full finite-sample cell centroid
+occupation_cell,intermediate,15-1000,Computer Specialists,114,20,300,1,0.4212803882,0.4123965558,0.2007257218,0.6570315573,full finite-sample cell centroid
+occupation_cell,intermediate,17-2000,Engineers,55,20,300,1,0.3697350746,0.3628816851,0.1712723411,0.5653839945,full finite-sample cell centroid
+occupation_cell,intermediate,21-1000,"Counselors, Social Workers, and Other Community and Social Service Specialists",111,20,300,1,0.4742820179,0.4495252233,0.270027087,0.7522394022,full finite-sample cell centroid
+occupation_cell,intermediate,25-1000,Postsecondary Teachers,47,20,300,1,0.3939269567,0.3914502592,0.2022927351,0.6149687093,full finite-sample cell centroid
+occupation_cell,intermediate,25-2000,"Primary, Secondary, and Special Education School Teachers",233,20,300,1,0.4333510188,0.4254664996,0.2018193537,0.6796279121,full finite-sample cell centroid
+occupation_cell,intermediate,25-9000,"Other Education, Training, and Library Occupations",62,20,300,1,0.4764648651,0.469548223,0.2348427987,0.7659564357,full finite-sample cell centroid
+occupation_cell,intermediate,27-2000,"Entertainers and Performers, Sports and Related Workers",47,20,300,1,0.3852878194,0.3788231401,0.1822262491,0.6245072719,full finite-sample cell centroid
+occupation_cell,intermediate,27-3000,Media and Communication Workers,55,20,300,1,0.3992039124,0.3907998598,0.218478721,0.6151599907,full finite-sample cell centroid
+occupation_cell,intermediate,29-1000,Health Diagnosing and Treating Practitioners,115,20,300,1,0.3892245008,0.3664776796,0.2086116261,0.6273586614,full finite-sample cell centroid
+occupation_cell,intermediate,29-2000,Health Technologists and Technicians,109,20,300,1,0.4838329937,0.4638271567,0.2520764873,0.748984281,full finite-sample cell centroid
+occupation_cell,intermediate,31-1000,"Nursing, Psychiatric, and Home Health Aides",134,20,300,1,0.5031926415,0.4887801756,0.2548354714,0.7974713679,full finite-sample cell centroid
+occupation_cell,intermediate,31-9000,Other Healthcare Support Occupations,103,20,300,1,0.456103812,0.4422331338,0.221759584,0.7280911915,full finite-sample cell centroid
+occupation_cell,intermediate,33-3000,Law Enforcement Workers,64,20,300,1,0.3836646817,0.3715823582,0.1746756502,0.6146528317,full finite-sample cell centroid
+occupation_cell,intermediate,33-9000,Other Protective Service Workers,96,20,300,1,0.4611216911,0.4460946863,0.2243371051,0.7223621731,full finite-sample cell centroid
+occupation_cell,intermediate,35-1000,"Supervisors, Food Preparation and Serving Workers",64,20,300,1,0.4012304493,0.3966377119,0.2106168961,0.6206160778,full finite-sample cell centroid
+occupation_cell,intermediate,35-2000,Cooks and Food Preparation Workers,166,20,300,1,0.4754141596,0.4491841865,0.2456655439,0.7946194623,full finite-sample cell centroid
+occupation_cell,intermediate,35-3000,Food and Beverage Serving Workers,234,20,300,1,0.4992123219,0.4902145428,0.2570011449,0.7580308952,full finite-sample cell centroid
+occupation_cell,intermediate,37-2000,Building Cleaning and Pest Control Workers,131,20,300,1,0.5070859227,0.4936367306,0.2676812466,0.8102580986,full finite-sample cell centroid
+occupation_cell,intermediate,37-3000,Grounds Maintenance Workers,70,20,300,1,0.4636959801,0.4475048323,0.2408033249,0.7394140933,full finite-sample cell centroid
+occupation_cell,intermediate,39-5000,Personal Appearance Workers,52,20,300,1,0.3943234088,0.3867609777,0.1901619161,0.6407473871,full finite-sample cell centroid
+occupation_cell,intermediate,39-9000,Other Personal Care and Service Workers,182,20,300,1,0.5149608639,0.4840306793,0.2499321144,0.8415639786,full finite-sample cell centroid
+occupation_cell,intermediate,41-1000,"Supervisors, Sales Workers",173,20,300,1,0.4651557221,0.460820409,0.2385933391,0.6990574542,full finite-sample cell centroid
+occupation_cell,intermediate,41-2000,Retail Sales Workers,381,20,300,1,0.5198022523,0.5225514894,0.2505995034,0.8316423783,full finite-sample cell centroid
+occupation_cell,intermediate,41-3000,"Sales Representatives, Services",83,20,300,1,0.3966374043,0.3901583603,0.2125221764,0.6045035468,full finite-sample cell centroid
+occupation_cell,intermediate,41-4000,"Sales Representatives, Wholesale and Manufacturing",48,20,300,1,0.4159844448,0.3965763194,0.2033709017,0.6639984275,full finite-sample cell centroid
+occupation_cell,intermediate,41-9000,Other Sales and Related Workers,57,20,300,1,0.486959557,0.4766960784,0.2333019279,0.7908982439,full finite-sample cell centroid
+occupation_cell,intermediate,43-1000,"Supervisors, Office and Administrative Support Workers",47,20,300,1,0.3614291962,0.3601232912,0.1806756769,0.5535521359,full finite-sample cell centroid
+occupation_cell,intermediate,43-3000,Financial Clerks,139,20,300,1,0.4345088473,0.423044629,0.2223397439,0.6744813504,full finite-sample cell centroid
+occupation_cell,intermediate,43-4000,Information and Record Clerks,322,20,300,1,0.5021852027,0.4821994593,0.2351031783,0.7923994742,full finite-sample cell centroid
+occupation_cell,intermediate,43-5000,"Material Recording, Scheduling, Dispatching, and Distributing Workers",189,20,300,1,0.5081705828,0.4896773,0.2593444153,0.8121335523,full finite-sample cell centroid
+occupation_cell,intermediate,43-6000,Secretaries and Administrative Assistants,113,20,300,1,0.4642454365,0.4417240855,0.2398668861,0.7645225701,full finite-sample cell centroid
+occupation_cell,intermediate,43-9000,Other Office and Administrative Support Workers,124,20,300,1,0.5097448685,0.48741585,0.244076047,0.8207873262,full finite-sample cell centroid
+occupation_cell,intermediate,47-2000,Construction Trades Workers,341,20,300,1,0.4972565412,0.4741554209,0.2739225538,0.8078626502,full finite-sample cell centroid
+occupation_cell,intermediate,49-2000,"Electrical and Electronic Equipment Mechanics, Installers, and Repairers",43,20,300,1,0.3793386842,0.3731485644,0.1843624541,0.601564653,full finite-sample cell centroid
+occupation_cell,intermediate,49-3000,"Vehicle and Mobile Equipment Mechanics, Installers, and Repairers",79,20,300,1,0.4025685372,0.3971938383,0.2094851305,0.6301519194,full finite-sample cell centroid
+occupation_cell,intermediate,49-9000,"Other Installation, Maintenance, and Repair Occupations",87,20,300,1,0.4383525589,0.4328856658,0.2194043219,0.6654283907,full finite-sample cell centroid
+occupation_cell,intermediate,51-2000,Assemblers and Fabricators,41,20,300,1,0.3632692016,0.3527578116,0.1664362588,0.5792548622,full finite-sample cell centroid
+occupation_cell,intermediate,51-4000,Metal Workers and Plastic Workers,69,20,300,1,0.3885725249,0.3888572181,0.2098254203,0.5930667058,full finite-sample cell centroid
+occupation_cell,intermediate,51-9000,Other Production Occupations,139,20,300,1,0.4947896953,0.4697661652,0.2565675435,0.8104481828,full finite-sample cell centroid
+occupation_cell,intermediate,53-3000,Motor Vehicle Operators,106,20,300,1,0.4520465278,0.4398671328,0.2301144358,0.7215342346,full finite-sample cell centroid
+occupation_cell,intermediate,53-7000,Material Moving Workers,243,20,300,1,0.5236470683,0.4952520243,0.2347897818,0.9267267849,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,intermediate,__LEVEL_SUMMARY__,Intermediate level summary,,20,300,46,0.4439590567,0.4400385819,0.2272257704,0.7102958444,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,intermediate,11-3000,Operations Specialties Managers,69,30,300,1,0.2684335746,0.2551200892,0.1522624289,0.4219146347,full finite-sample cell centroid
+occupation_cell,intermediate,11-9000,Other Management Occupations,176,30,300,1,0.3575878773,0.349059747,0.1889671298,0.5653435721,full finite-sample cell centroid
+occupation_cell,intermediate,13-1000,Business Operations Specialists,134,30,300,1,0.3791036668,0.3753193205,0.1937816473,0.5931484084,full finite-sample cell centroid
+occupation_cell,intermediate,13-2000,Financial Specialists,119,30,300,1,0.3400722945,0.3262219512,0.171211198,0.5672617342,full finite-sample cell centroid
+occupation_cell,intermediate,15-1000,Computer Specialists,114,30,300,1,0.3397026673,0.3349336649,0.1628861743,0.5340159901,full finite-sample cell centroid
+occupation_cell,intermediate,21-1000,"Counselors, Social Workers, and Other Community and Social Service Specialists",111,30,300,1,0.3582238958,0.3476401979,0.1831391955,0.5853084307,full finite-sample cell centroid
+occupation_cell,intermediate,25-2000,"Primary, Secondary, and Special Education School Teachers",233,30,300,1,0.3383304789,0.3322080319,0.1649720572,0.5416865018,full finite-sample cell centroid
+occupation_cell,intermediate,25-9000,"Other Education, Training, and Library Occupations",62,30,300,1,0.3343468687,0.312264199,0.1560245888,0.5535943828,full finite-sample cell centroid
+occupation_cell,intermediate,29-1000,Health Diagnosing and Treating Practitioners,115,30,300,1,0.3074513461,0.3041730735,0.1442802548,0.4849381274,full finite-sample cell centroid
+occupation_cell,intermediate,29-2000,Health Technologists and Technicians,109,30,300,1,0.3739218396,0.3550372744,0.2045354461,0.5895566429,full finite-sample cell centroid
+occupation_cell,intermediate,31-1000,"Nursing, Psychiatric, and Home Health Aides",134,30,300,1,0.3958391376,0.3717493675,0.1819014209,0.6477765727,full finite-sample cell centroid
+occupation_cell,intermediate,31-9000,Other Healthcare Support Occupations,103,30,300,1,0.3521585482,0.3542980783,0.1793797497,0.5281019825,full finite-sample cell centroid
+occupation_cell,intermediate,33-3000,Law Enforcement Workers,64,30,300,1,0.2867491877,0.2774817801,0.1582105482,0.4382719447,full finite-sample cell centroid
+occupation_cell,intermediate,33-9000,Other Protective Service Workers,96,30,300,1,0.3533962925,0.3445719107,0.1488960596,0.5584461089,full finite-sample cell centroid
+occupation_cell,intermediate,35-1000,"Supervisors, Food Preparation and Serving Workers",64,30,300,1,0.2900127005,0.2781511405,0.1352981568,0.4816300883,full finite-sample cell centroid
+occupation_cell,intermediate,35-2000,Cooks and Food Preparation Workers,166,30,300,1,0.3988605065,0.3876887911,0.2154617455,0.6406540623,full finite-sample cell centroid
+occupation_cell,intermediate,35-3000,Food and Beverage Serving Workers,234,30,300,1,0.3964598238,0.385476047,0.2094948859,0.6145001276,full finite-sample cell centroid
+occupation_cell,intermediate,37-2000,Building Cleaning and Pest Control Workers,131,30,300,1,0.4066179525,0.4006896963,0.1970772887,0.6265889376,full finite-sample cell centroid
+occupation_cell,intermediate,37-3000,Grounds Maintenance Workers,70,30,300,1,0.3476081095,0.3422637674,0.1875885156,0.5503247355,full finite-sample cell centroid
+occupation_cell,intermediate,39-9000,Other Personal Care and Service Workers,182,30,300,1,0.4104452009,0.4022734234,0.2074068785,0.6654548065,full finite-sample cell centroid
+occupation_cell,intermediate,41-1000,"Supervisors, Sales Workers",173,30,300,1,0.375179534,0.3581959025,0.1973496513,0.5860175843,full finite-sample cell centroid
+occupation_cell,intermediate,41-2000,Retail Sales Workers,381,30,300,1,0.4167705873,0.4030195623,0.2035757074,0.6964824192,full finite-sample cell centroid
+occupation_cell,intermediate,41-3000,"Sales Representatives, Services",83,30,300,1,0.3006937047,0.2969821653,0.1463719968,0.4680166373,full finite-sample cell centroid
+occupation_cell,intermediate,43-3000,Financial Clerks,139,30,300,1,0.3495747197,0.3364291729,0.1841749941,0.563774066,full finite-sample cell centroid
+occupation_cell,intermediate,43-4000,Information and Record Clerks,322,30,300,1,0.4221595562,0.4069731116,0.2188111267,0.6911636238,full finite-sample cell centroid
+occupation_cell,intermediate,43-5000,"Material Recording, Scheduling, Dispatching, and Distributing Workers",189,30,300,1,0.3907446346,0.3765372127,0.1872575645,0.645029555,full finite-sample cell centroid
+occupation_cell,intermediate,43-6000,Secretaries and Administrative Assistants,113,30,300,1,0.3514799517,0.3376178135,0.1676824353,0.5715689264,full finite-sample cell centroid
+occupation_cell,intermediate,43-9000,Other Office and Administrative Support Workers,124,30,300,1,0.391540919,0.3745078228,0.2011932416,0.6185234598,full finite-sample cell centroid
+occupation_cell,intermediate,47-2000,Construction Trades Workers,341,30,300,1,0.380210792,0.3700363296,0.191531263,0.6006758683,full finite-sample cell centroid
+occupation_cell,intermediate,49-3000,"Vehicle and Mobile Equipment Mechanics, Installers, and Repairers",79,30,300,1,0.3114924363,0.3079846536,0.145377623,0.4822061,full finite-sample cell centroid
+occupation_cell,intermediate,49-9000,"Other Installation, Maintenance, and Repair Occupations",87,30,300,1,0.337088279,0.3237384202,0.1737078173,0.5323362141,full finite-sample cell centroid
+occupation_cell,intermediate,51-4000,Metal Workers and Plastic Workers,69,30,300,1,0.2833625453,0.2770683421,0.139839289,0.4494813911,full finite-sample cell centroid
+occupation_cell,intermediate,51-9000,Other Production Occupations,139,30,300,1,0.387747063,0.376387497,0.2055849811,0.5945316531,full finite-sample cell centroid
+occupation_cell,intermediate,53-3000,Motor Vehicle Operators,106,30,300,1,0.3455707311,0.3378630953,0.1776155525,0.5501918781,full finite-sample cell centroid
+occupation_cell,intermediate,53-7000,Material Moving Workers,243,30,300,1,0.4244636127,0.4208364239,0.2043357506,0.6596636892,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,intermediate,__LEVEL_SUMMARY__,Intermediate level summary,,30,300,35,0.3572400296,0.3476401979,0.1831391955,0.5672617342,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,intermediate,11-9000,Other Management Occupations,176,40,300,1,0.3049644249,0.2990182326,0.1469494355,0.497877838,full finite-sample cell centroid
+occupation_cell,intermediate,13-1000,Business Operations Specialists,134,40,300,1,0.3101921691,0.2981081038,0.1542649358,0.4894942103,full finite-sample cell centroid
+occupation_cell,intermediate,13-2000,Financial Specialists,119,40,300,1,0.2843094542,0.2797139692,0.1465177009,0.4335879504,full finite-sample cell centroid
+occupation_cell,intermediate,15-1000,Computer Specialists,114,40,300,1,0.2713266119,0.2590507955,0.1435517907,0.4493292204,full finite-sample cell centroid
+occupation_cell,intermediate,21-1000,"Counselors, Social Workers, and Other Community and Social Service Specialists",111,40,300,1,0.2889084378,0.2791681179,0.1529121138,0.448548098,full finite-sample cell centroid
+occupation_cell,intermediate,25-2000,"Primary, Secondary, and Special Education School Teachers",233,40,300,1,0.2899566419,0.283500212,0.1444884781,0.4595650928,full finite-sample cell centroid
+occupation_cell,intermediate,29-1000,Health Diagnosing and Treating Practitioners,115,40,300,1,0.2566129793,0.2449938608,0.1371470245,0.4061734047,full finite-sample cell centroid
+occupation_cell,intermediate,29-2000,Health Technologists and Technicians,109,40,300,1,0.3157508427,0.3108940404,0.1808928456,0.4621192494,full finite-sample cell centroid
+occupation_cell,intermediate,31-1000,"Nursing, Psychiatric, and Home Health Aides",134,40,300,1,0.3308968845,0.3217120116,0.1519451341,0.5334762529,full finite-sample cell centroid
+occupation_cell,intermediate,31-9000,Other Healthcare Support Occupations,103,40,300,1,0.2805662154,0.2762474135,0.1458722018,0.4491888199,full finite-sample cell centroid
+occupation_cell,intermediate,33-9000,Other Protective Service Workers,96,40,300,1,0.2912164387,0.2821100866,0.1400776219,0.466914217,full finite-sample cell centroid
+occupation_cell,intermediate,35-2000,Cooks and Food Preparation Workers,166,40,300,1,0.3257517722,0.3132512601,0.1531741132,0.532590291,full finite-sample cell centroid
+occupation_cell,intermediate,35-3000,Food and Beverage Serving Workers,234,40,300,1,0.3326261639,0.32255539,0.1650569802,0.518173281,full finite-sample cell centroid
+occupation_cell,intermediate,37-2000,Building Cleaning and Pest Control Workers,131,40,300,1,0.3218776196,0.3144263083,0.1558268528,0.4971224209,full finite-sample cell centroid
+occupation_cell,intermediate,39-9000,Other Personal Care and Service Workers,182,40,300,1,0.342020713,0.3346529928,0.1790022969,0.5344564175,full finite-sample cell centroid
+occupation_cell,intermediate,41-1000,"Supervisors, Sales Workers",173,40,300,1,0.3008771715,0.2901503148,0.1458225232,0.4796091821,full finite-sample cell centroid
+occupation_cell,intermediate,41-2000,Retail Sales Workers,381,40,300,1,0.3409562199,0.3331425984,0.1683625867,0.552522805,full finite-sample cell centroid
+occupation_cell,intermediate,41-3000,"Sales Representatives, Services",83,40,300,1,0.223609934,0.2202399621,0.1011677021,0.3564468517,full finite-sample cell centroid
+occupation_cell,intermediate,43-3000,Financial Clerks,139,40,300,1,0.2852161396,0.2836424546,0.1343091932,0.4519993411,full finite-sample cell centroid
+occupation_cell,intermediate,43-4000,Information and Record Clerks,322,40,300,1,0.3476711351,0.3412228955,0.1614527292,0.5545856622,full finite-sample cell centroid
+occupation_cell,intermediate,43-5000,"Material Recording, Scheduling, Dispatching, and Distributing Workers",189,40,300,1,0.3367763945,0.3184951969,0.1845058139,0.5383809751,full finite-sample cell centroid
+occupation_cell,intermediate,43-6000,Secretaries and Administrative Assistants,113,40,300,1,0.2803816857,0.2769321468,0.1279497096,0.458122627,full finite-sample cell centroid
+occupation_cell,intermediate,43-9000,Other Office and Administrative Support Workers,124,40,300,1,0.3254938102,0.3188054392,0.1719998194,0.5207636646,full finite-sample cell centroid
+occupation_cell,intermediate,47-2000,Construction Trades Workers,341,40,300,1,0.3397587433,0.328393319,0.1603164795,0.5465979071,full finite-sample cell centroid
+occupation_cell,intermediate,49-9000,"Other Installation, Maintenance, and Repair Occupations",87,40,300,1,0.267844966,0.2564154681,0.1314290745,0.4100710449,full finite-sample cell centroid
+occupation_cell,intermediate,51-9000,Other Production Occupations,139,40,300,1,0.3138579613,0.3063708756,0.1483385923,0.512090324,full finite-sample cell centroid
+occupation_cell,intermediate,53-3000,Motor Vehicle Operators,106,40,300,1,0.2765708289,0.2736222224,0.128755396,0.460557376,full finite-sample cell centroid
+occupation_cell,intermediate,53-7000,Material Moving Workers,243,40,300,1,0.3591462561,0.3530558044,0.1648130022,0.5775647453,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,intermediate,__LEVEL_SUMMARY__,Intermediate level summary,,40,300,28,0.305183522,0.2985631682,0.1501418632,0.4845516962,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,intermediate,11-9000,Other Management Occupations,176,50,300,1,0.2725421618,0.2703353223,0.1414265154,0.4142666396,full finite-sample cell centroid
+occupation_cell,intermediate,13-1000,Business Operations Specialists,134,50,300,1,0.2609471652,0.2512199076,0.1122457246,0.4359651709,full finite-sample cell centroid
+occupation_cell,intermediate,13-2000,Financial Specialists,119,50,300,1,0.2283920367,0.2247349814,0.1189751206,0.356270506,full finite-sample cell centroid
+occupation_cell,intermediate,15-1000,Computer Specialists,114,50,300,1,0.2226228253,0.2141928156,0.107478593,0.3616890148,full finite-sample cell centroid
+occupation_cell,intermediate,21-1000,"Counselors, Social Workers, and Other Community and Social Service Specialists",111,50,300,1,0.2351267005,0.2268715801,0.1161448755,0.3664654434,full finite-sample cell centroid
+occupation_cell,intermediate,25-2000,"Primary, Secondary, and Special Education School Teachers",233,50,300,1,0.2584977166,0.2551116611,0.1377956005,0.4015485273,full finite-sample cell centroid
+occupation_cell,intermediate,29-1000,Health Diagnosing and Treating Practitioners,115,50,300,1,0.2107532307,0.2035216226,0.1009958116,0.3446367613,full finite-sample cell centroid
+occupation_cell,intermediate,29-2000,Health Technologists and Technicians,109,50,300,1,0.2590854599,0.2512614339,0.1372925294,0.3921139108,full finite-sample cell centroid
+occupation_cell,intermediate,31-1000,"Nursing, Psychiatric, and Home Health Aides",134,50,300,1,0.2728634677,0.2641566213,0.1320905653,0.438383356,full finite-sample cell centroid
+occupation_cell,intermediate,31-9000,Other Healthcare Support Occupations,103,50,300,1,0.2419969828,0.2324527176,0.1310520967,0.4020510742,full finite-sample cell centroid
+occupation_cell,intermediate,35-2000,Cooks and Food Preparation Workers,166,50,300,1,0.2759045937,0.2682628328,0.1437525198,0.4228615927,full finite-sample cell centroid
+occupation_cell,intermediate,35-3000,Food and Beverage Serving Workers,234,50,300,1,0.2882853601,0.2799640472,0.1442956354,0.4567140251,full finite-sample cell centroid
+occupation_cell,intermediate,37-2000,Building Cleaning and Pest Control Workers,131,50,300,1,0.2809760818,0.2750910623,0.14538078,0.433946199,full finite-sample cell centroid
+occupation_cell,intermediate,39-9000,Other Personal Care and Service Workers,182,50,300,1,0.289168058,0.2846367769,0.1368948423,0.4619854038,full finite-sample cell centroid
+occupation_cell,intermediate,41-1000,"Supervisors, Sales Workers",173,50,300,1,0.2660816272,0.2635876043,0.1431454236,0.3988459558,full finite-sample cell centroid
+occupation_cell,intermediate,41-2000,Retail Sales Workers,381,50,300,1,0.3214818749,0.3187519794,0.1580117217,0.5050611076,full finite-sample cell centroid
+occupation_cell,intermediate,43-3000,Financial Clerks,139,50,300,1,0.2415611543,0.2367382308,0.115251521,0.3873018496,full finite-sample cell centroid
+occupation_cell,intermediate,43-4000,Information and Record Clerks,322,50,300,1,0.3048839659,0.3016733666,0.1411543733,0.4926693439,full finite-sample cell centroid
+occupation_cell,intermediate,43-5000,"Material Recording, Scheduling, Dispatching, and Distributing Workers",189,50,300,1,0.2873457523,0.2790336596,0.1361723072,0.4521434058,full finite-sample cell centroid
+occupation_cell,intermediate,43-6000,Secretaries and Administrative Assistants,113,50,300,1,0.2347397872,0.2217863062,0.1067964759,0.3985382689,full finite-sample cell centroid
+occupation_cell,intermediate,43-9000,Other Office and Administrative Support Workers,124,50,300,1,0.272928987,0.2600198497,0.1406279896,0.4440573204,full finite-sample cell centroid
+occupation_cell,intermediate,47-2000,Construction Trades Workers,341,50,300,1,0.289152067,0.2867226358,0.1346687936,0.4778639964,full finite-sample cell centroid
+occupation_cell,intermediate,51-9000,Other Production Occupations,139,50,300,1,0.2698467742,0.2643917721,0.1459538167,0.4150660869,full finite-sample cell centroid
+occupation_cell,intermediate,53-3000,Motor Vehicle Operators,106,50,300,1,0.2234495429,0.2203498018,0.1187060482,0.3508892232,full finite-sample cell centroid
+occupation_cell,intermediate,53-7000,Material Moving Workers,243,50,300,1,0.3117217778,0.2980115519,0.1523663582,0.5124663931,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,intermediate,__LEVEL_SUMMARY__,Intermediate level summary,,50,300,25,0.2648142061,0.2635876043,0.1368948423,0.4150660869,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,intermediate,11-9000,Other Management Occupations,176,75,300,1,0.191869207,0.1864574752,0.09836874686,0.2930200697,full finite-sample cell centroid
+occupation_cell,intermediate,25-2000,"Primary, Secondary, and Special Education School Teachers",233,75,300,1,0.2045545797,0.2015844272,0.1008154346,0.316498392,full finite-sample cell centroid
+occupation_cell,intermediate,35-2000,Cooks and Food Preparation Workers,166,75,300,1,0.1996749762,0.1942904652,0.1020364103,0.3080119746,full finite-sample cell centroid
+occupation_cell,intermediate,35-3000,Food and Beverage Serving Workers,234,75,300,1,0.2217334759,0.2137616992,0.1140567567,0.3475284824,full finite-sample cell centroid
+occupation_cell,intermediate,39-9000,Other Personal Care and Service Workers,182,75,300,1,0.2238465121,0.2159626295,0.1114015205,0.3675301056,full finite-sample cell centroid
+occupation_cell,intermediate,41-1000,"Supervisors, Sales Workers",173,75,300,1,0.1970913536,0.1922814463,0.1048425486,0.3018465242,full finite-sample cell centroid
+occupation_cell,intermediate,41-2000,Retail Sales Workers,381,75,300,1,0.2509446158,0.2515065365,0.1223017736,0.3875369219,full finite-sample cell centroid
+occupation_cell,intermediate,43-4000,Information and Record Clerks,322,75,300,1,0.2392770916,0.2319626022,0.1197966614,0.3842629973,full finite-sample cell centroid
+occupation_cell,intermediate,43-5000,"Material Recording, Scheduling, Dispatching, and Distributing Workers",189,75,300,1,0.2121538888,0.2054380985,0.1002566185,0.3574916764,full finite-sample cell centroid
+occupation_cell,intermediate,47-2000,Construction Trades Workers,341,75,300,1,0.2191638217,0.2203956058,0.1015218642,0.3522296739,full finite-sample cell centroid
+occupation_cell,intermediate,53-7000,Material Moving Workers,243,75,300,1,0.2433566916,0.2283137591,0.1086378399,0.4378481514,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,intermediate,__LEVEL_SUMMARY__,Intermediate level summary,,75,300,11,0.2185151104,0.2137616992,0.1048425486,0.3522296739,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,intermediate,25-2000,"Primary, Secondary, and Special Education School Teachers",233,100,300,1,0.1512607809,0.1512220649,0.07465742468,0.239526758,full finite-sample cell centroid
+occupation_cell,intermediate,35-3000,Food and Beverage Serving Workers,234,100,300,1,0.1752046217,0.172549341,0.0830864658,0.2671629571,full finite-sample cell centroid
+occupation_cell,intermediate,41-2000,Retail Sales Workers,381,100,300,1,0.2039445579,0.1972343667,0.110965147,0.3257315215,full finite-sample cell centroid
+occupation_cell,intermediate,43-4000,Information and Record Clerks,322,100,300,1,0.200951984,0.1915260464,0.1032634753,0.3211227366,full finite-sample cell centroid
+occupation_cell,intermediate,47-2000,Construction Trades Workers,341,100,300,1,0.1825038533,0.1760572617,0.08402563752,0.2924107303,full finite-sample cell centroid
+occupation_cell,intermediate,53-7000,Material Moving Workers,243,100,300,1,0.1922943287,0.1831531075,0.09351273122,0.3241853703,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,intermediate,__LEVEL_SUMMARY__,Intermediate level summary,,100,300,6,0.1843600211,0.1796051846,0.08876918437,0.3067667334,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,intermediate,41-2000,Retail Sales Workers,381,150,300,1,0.1517898734,0.1508597492,0.07573029563,0.2322993518,full finite-sample cell centroid
+occupation_cell,intermediate,43-4000,Information and Record Clerks,322,150,300,1,0.1436268657,0.1365283557,0.0703540838,0.2402086847,full finite-sample cell centroid
+occupation_cell,intermediate,47-2000,Construction Trades Workers,341,150,300,1,0.1317935537,0.1272814595,0.06314446816,0.209776307,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,intermediate,__LEVEL_SUMMARY__,Intermediate level summary,,150,300,3,0.1424034309,0.1365283557,0.0703540838,0.2322993518,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,broad,11-0000,Management Occupations,325,10,300,1,0.653897242,0.64527432,0.3024576436,1.040656107,full finite-sample cell centroid
+occupation_cell,broad,13-0000,Business and Financial Operations Occupations,253,10,300,1,0.6957314382,0.6960234614,0.3625414352,1.086226954,full finite-sample cell centroid
+occupation_cell,broad,15-0000,Computer and Mathematical Occupations,121,10,300,1,0.6631597553,0.6359913409,0.3376487124,1.079579561,full finite-sample cell centroid
+occupation_cell,broad,17-0000,Architecture and Engineering Occupations,98,10,300,1,0.5957120846,0.5718104778,0.3122417184,0.9406102011,full finite-sample cell centroid
+occupation_cell,broad,19-0000,"Life, Physical, and Social Science Occupations",55,10,300,1,0.5701973244,0.5465313548,0.2619930739,0.9370666446,full finite-sample cell centroid
+occupation_cell,broad,21-0000,Community and Social Service Occupations,128,10,300,1,0.6942576905,0.6769870594,0.3670603421,1.102910505,full finite-sample cell centroid
+occupation_cell,broad,23-0000,Legal Occupations,48,10,300,1,0.5533118172,0.5357205056,0.2584188847,0.8950925175,full finite-sample cell centroid
+occupation_cell,broad,25-0000,"Education, Training, and Library Occupations",370,10,300,1,0.677860239,0.6719247001,0.316148853,1.052314412,full finite-sample cell centroid
+occupation_cell,broad,27-0000,"Arts, Design, Entertainment, Sports, and Media Occupations",159,10,300,1,0.6804017782,0.6667002341,0.3529155516,1.047228699,full finite-sample cell centroid
+occupation_cell,broad,29-0000,Healthcare Practitioners and Technical Occupations,226,10,300,1,0.6670039802,0.6297133129,0.3182551637,1.094072007,full finite-sample cell centroid
+occupation_cell,broad,31-0000,Healthcare Support Occupations,241,10,300,1,0.701790239,0.6687411734,0.3202527008,1.141591388,full finite-sample cell centroid
+occupation_cell,broad,33-0000,Protective Service Occupations,174,10,300,1,0.696991623,0.6620881024,0.3361177651,1.112719443,full finite-sample cell centroid
+occupation_cell,broad,35-0000,Food Preparation and Serving Related Occupations,500,10,300,1,0.7550920362,0.7465320244,0.3746438605,1.214626131,full finite-sample cell centroid
+occupation_cell,broad,37-0000,Building and Grounds Cleaning and Maintenance Occupations,212,10,300,1,0.758695018,0.7517048579,0.3513364661,1.200460945,full finite-sample cell centroid
+occupation_cell,broad,39-0000,Personal Care and Service Occupations,289,10,300,1,0.7597490255,0.7381928232,0.3808581861,1.241234861,full finite-sample cell centroid
+occupation_cell,broad,41-0000,Sales and Related Occupations,742,10,300,1,0.7324066335,0.6931564579,0.3442570754,1.216055784,full finite-sample cell centroid
+occupation_cell,broad,43-0000,Office and Administrative Support Occupations,937,10,300,1,0.706966711,0.6631353389,0.3641903368,1.191836867,full finite-sample cell centroid
+occupation_cell,broad,45-0000,"Farming, Fishing, and Forestry Occupations",33,10,300,1,0.623941961,0.5971078676,0.2879248106,0.9684011974,full finite-sample cell centroid
+occupation_cell,broad,47-0000,Construction and Extraction Occupations,402,10,300,1,0.6780552443,0.6477417712,0.3270779546,1.080898344,full finite-sample cell centroid
+occupation_cell,broad,49-0000,"Installation, Maintenance, and Repair Occupations",215,10,300,1,0.6728931584,0.6385450936,0.3851739015,1.088664425,full finite-sample cell centroid
+occupation_cell,broad,51-0000,Production Occupations,340,10,300,1,0.7013668375,0.672311914,0.3356661555,1.14289099,full finite-sample cell centroid
+occupation_cell,broad,53-0000,Transportation and Material Moving Occupations,393,10,300,1,0.7429762656,0.7235869557,0.3356431314,1.173555538,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,broad,__LEVEL_SUMMARY__,Broad level summary,,10,300,22,0.6810208229,0.6649177865,0.3358919603,1.091368216,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,broad,11-0000,Management Occupations,325,20,300,1,0.4669302562,0.4466695544,0.2177153678,0.7585731541,full finite-sample cell centroid
+occupation_cell,broad,13-0000,Business and Financial Operations Occupations,253,20,300,1,0.4870591501,0.4613673999,0.2212641716,0.807498551,full finite-sample cell centroid
+occupation_cell,broad,15-0000,Computer and Mathematical Occupations,121,20,300,1,0.4248919963,0.3976096927,0.2155642008,0.7018882558,full finite-sample cell centroid
+occupation_cell,broad,17-0000,Architecture and Engineering Occupations,98,20,300,1,0.4001581844,0.3902040482,0.1963665066,0.6475760177,full finite-sample cell centroid
+occupation_cell,broad,19-0000,"Life, Physical, and Social Science Occupations",55,20,300,1,0.3677444008,0.3561821946,0.190805477,0.5664659759,full finite-sample cell centroid
+occupation_cell,broad,21-0000,Community and Social Service Occupations,128,20,300,1,0.4527783609,0.4431180813,0.212245684,0.7123340213,full finite-sample cell centroid
+occupation_cell,broad,23-0000,Legal Occupations,48,20,300,1,0.3366499008,0.3269209924,0.1857071323,0.5471018923,full finite-sample cell centroid
+occupation_cell,broad,25-0000,"Education, Training, and Library Occupations",370,20,300,1,0.4735937873,0.4708832166,0.2292575462,0.7756295374,full finite-sample cell centroid
+occupation_cell,broad,27-0000,"Arts, Design, Entertainment, Sports, and Media Occupations",159,20,300,1,0.4692861682,0.464233987,0.2357662879,0.7213873517,full finite-sample cell centroid
+occupation_cell,broad,29-0000,Healthcare Practitioners and Technical Occupations,226,20,300,1,0.4800707513,0.4673779945,0.2520603968,0.7528874719,full finite-sample cell centroid
+occupation_cell,broad,31-0000,Healthcare Support Occupations,241,20,300,1,0.485905016,0.4737015722,0.2150183625,0.7899922198,full finite-sample cell centroid
+occupation_cell,broad,33-0000,Protective Service Occupations,174,20,300,1,0.4731197592,0.4580017145,0.2320610314,0.7501918417,full finite-sample cell centroid
+occupation_cell,broad,35-0000,Food Preparation and Serving Related Occupations,500,20,300,1,0.5274153259,0.5052960152,0.2814406884,0.8490307589,full finite-sample cell centroid
+occupation_cell,broad,37-0000,Building and Grounds Cleaning and Maintenance Occupations,212,20,300,1,0.5446443092,0.5306849897,0.2559983009,0.8624701051,full finite-sample cell centroid
+occupation_cell,broad,39-0000,Personal Care and Service Occupations,289,20,300,1,0.544308293,0.5141000633,0.2628488589,0.9297329088,full finite-sample cell centroid
+occupation_cell,broad,41-0000,Sales and Related Occupations,742,20,300,1,0.5113066452,0.494498732,0.2560220013,0.8233542985,full finite-sample cell centroid
+occupation_cell,broad,43-0000,Office and Administrative Support Occupations,937,20,300,1,0.50665536,0.4966493278,0.2447628942,0.8039800485,full finite-sample cell centroid
+occupation_cell,broad,47-0000,Construction and Extraction Occupations,402,20,300,1,0.4712264095,0.4624684239,0.216622406,0.7630719314,full finite-sample cell centroid
+occupation_cell,broad,49-0000,"Installation, Maintenance, and Repair Occupations",215,20,300,1,0.4729685909,0.4526662172,0.2593973712,0.7484883277,full finite-sample cell centroid
+occupation_cell,broad,51-0000,Production Occupations,340,20,300,1,0.494469141,0.4740110088,0.2728543951,0.7632043274,full finite-sample cell centroid
+occupation_cell,broad,53-0000,Transportation and Material Moving Occupations,393,20,300,1,0.5453932082,0.5245078503,0.2601496331,0.9369613896,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,broad,__LEVEL_SUMMARY__,Broad level summary,,20,300,21,0.4731702388,0.464233987,0.2320610314,0.7630719314,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,broad,11-0000,Management Occupations,325,30,300,1,0.3680123085,0.3635462063,0.1763250176,0.5816005535,full finite-sample cell centroid
+occupation_cell,broad,13-0000,Business and Financial Operations Occupations,253,30,300,1,0.3840570035,0.3712505602,0.1934722967,0.6008154514,full finite-sample cell centroid
+occupation_cell,broad,15-0000,Computer and Mathematical Occupations,121,30,300,1,0.3321486363,0.3193502987,0.1690002951,0.537316444,full finite-sample cell centroid
+occupation_cell,broad,17-0000,Architecture and Engineering Occupations,98,30,300,1,0.311664629,0.304950793,0.1594973913,0.4783374413,full finite-sample cell centroid
+occupation_cell,broad,21-0000,Community and Social Service Occupations,128,30,300,1,0.3630136392,0.355127385,0.1893694303,0.5551454857,full finite-sample cell centroid
+occupation_cell,broad,25-0000,"Education, Training, and Library Occupations",370,30,300,1,0.3705308084,0.3612314947,0.1851938659,0.5848252294,full finite-sample cell centroid
+occupation_cell,broad,27-0000,"Arts, Design, Entertainment, Sports, and Media Occupations",159,30,300,1,0.369783718,0.3660074992,0.177264437,0.6071774667,full finite-sample cell centroid
+occupation_cell,broad,29-0000,Healthcare Practitioners and Technical Occupations,226,30,300,1,0.3744683865,0.3582409767,0.1918289565,0.6105194932,full finite-sample cell centroid
+occupation_cell,broad,31-0000,Healthcare Support Occupations,241,30,300,1,0.3950558989,0.3827472926,0.1923163353,0.644551934,full finite-sample cell centroid
+occupation_cell,broad,33-0000,Protective Service Occupations,174,30,300,1,0.3830709193,0.3739275119,0.1942126702,0.6131199417,full finite-sample cell centroid
+occupation_cell,broad,35-0000,Food Preparation and Serving Related Occupations,500,30,300,1,0.4123733617,0.4014219661,0.2002042209,0.6612737201,full finite-sample cell centroid
+occupation_cell,broad,37-0000,Building and Grounds Cleaning and Maintenance Occupations,212,30,300,1,0.4253753351,0.4195306241,0.1805503265,0.6780004566,full finite-sample cell centroid
+occupation_cell,broad,39-0000,Personal Care and Service Occupations,289,30,300,1,0.4356707513,0.4333595773,0.2134116198,0.6855051702,full finite-sample cell centroid
+occupation_cell,broad,41-0000,Sales and Related Occupations,742,30,300,1,0.4158642554,0.3962577176,0.1948832633,0.6718672607,full finite-sample cell centroid
+occupation_cell,broad,43-0000,Office and Administrative Support Occupations,937,30,300,1,0.4265143258,0.4191950294,0.2228957485,0.6676553304,full finite-sample cell centroid
+occupation_cell,broad,47-0000,Construction and Extraction Occupations,402,30,300,1,0.3977227831,0.389553754,0.1850952763,0.6472386511,full finite-sample cell centroid
+occupation_cell,broad,49-0000,"Installation, Maintenance, and Repair Occupations",215,30,300,1,0.3827759464,0.3799358279,0.186495268,0.5986186083,full finite-sample cell centroid
+occupation_cell,broad,51-0000,Production Occupations,340,30,300,1,0.4003418408,0.3952420594,0.1988194166,0.6310593146,full finite-sample cell centroid
+occupation_cell,broad,53-0000,Transportation and Material Moving Occupations,393,30,300,1,0.4133695275,0.3901594711,0.1951334796,0.6879754353,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,broad,__LEVEL_SUMMARY__,Broad level summary,,30,300,19,0.3874638987,0.3799358279,0.1918289565,0.6131199417,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,broad,11-0000,Management Occupations,325,40,300,1,0.3141036383,0.3045335878,0.1534269625,0.5069958362,full finite-sample cell centroid
+occupation_cell,broad,13-0000,Business and Financial Operations Occupations,253,40,300,1,0.3224231729,0.303299725,0.1462558863,0.5486309722,full finite-sample cell centroid
+occupation_cell,broad,15-0000,Computer and Mathematical Occupations,121,40,300,1,0.274756445,0.268322617,0.1264403943,0.4277829256,full finite-sample cell centroid
+occupation_cell,broad,17-0000,Architecture and Engineering Occupations,98,40,300,1,0.2554905878,0.2486874692,0.1288595879,0.399793842,full finite-sample cell centroid
+occupation_cell,broad,21-0000,Community and Social Service Occupations,128,40,300,1,0.3061681011,0.2955805524,0.1580442756,0.505245189,full finite-sample cell centroid
+occupation_cell,broad,25-0000,"Education, Training, and Library Occupations",370,40,300,1,0.3180324982,0.311127471,0.1467395508,0.5116716146,full finite-sample cell centroid
+occupation_cell,broad,27-0000,"Arts, Design, Entertainment, Sports, and Media Occupations",159,40,300,1,0.3052557973,0.3046641066,0.1529721254,0.4745705005,full finite-sample cell centroid
+occupation_cell,broad,29-0000,Healthcare Practitioners and Technical Occupations,226,40,300,1,0.3125618516,0.2980921973,0.1705646493,0.5068265113,full finite-sample cell centroid
+occupation_cell,broad,31-0000,Healthcare Support Occupations,241,40,300,1,0.3364239364,0.3233958094,0.1651435305,0.5604004368,full finite-sample cell centroid
+occupation_cell,broad,33-0000,Protective Service Occupations,174,40,300,1,0.3200558666,0.3052456635,0.1587520606,0.5148327201,full finite-sample cell centroid
+occupation_cell,broad,35-0000,Food Preparation and Serving Related Occupations,500,40,300,1,0.3571686793,0.3435800285,0.1689075792,0.5814532481,full finite-sample cell centroid
+occupation_cell,broad,37-0000,Building and Grounds Cleaning and Maintenance Occupations,212,40,300,1,0.3578431465,0.3461259682,0.1779830469,0.5761639238,full finite-sample cell centroid
+occupation_cell,broad,39-0000,Personal Care and Service Occupations,289,40,300,1,0.3579688747,0.3536385528,0.163893302,0.5749154729,full finite-sample cell centroid
+occupation_cell,broad,41-0000,Sales and Related Occupations,742,40,300,1,0.3535435622,0.3485006891,0.1928279067,0.5273050093,full finite-sample cell centroid
+occupation_cell,broad,43-0000,Office and Administrative Support Occupations,937,40,300,1,0.3621381282,0.3578429903,0.1884310099,0.5508694729,full finite-sample cell centroid
+occupation_cell,broad,47-0000,Construction and Extraction Occupations,402,40,300,1,0.3381821187,0.3296840853,0.1640982435,0.5823739183,full finite-sample cell centroid
+occupation_cell,broad,49-0000,"Installation, Maintenance, and Repair Occupations",215,40,300,1,0.3148782018,0.3039116692,0.166137117,0.4983028163,full finite-sample cell centroid
+occupation_cell,broad,51-0000,Production Occupations,340,40,300,1,0.3462267376,0.3379725157,0.1678914778,0.5308672372,full finite-sample cell centroid
+occupation_cell,broad,53-0000,Transportation and Material Moving Occupations,393,40,300,1,0.3662336487,0.3533864935,0.1894231036,0.5941550509,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,broad,__LEVEL_SUMMARY__,Broad level summary,,40,300,19,0.3273397365,0.311127471,0.1640982435,0.5273050093,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,broad,11-0000,Management Occupations,325,50,300,1,0.2799027142,0.2717770606,0.1420676321,0.451900599,full finite-sample cell centroid
+occupation_cell,broad,13-0000,Business and Financial Operations Occupations,253,50,300,1,0.2838336654,0.2784674987,0.1393343539,0.4447120685,full finite-sample cell centroid
+occupation_cell,broad,15-0000,Computer and Mathematical Occupations,121,50,300,1,0.2281179955,0.2203264087,0.1156812795,0.3546968961,full finite-sample cell centroid
+occupation_cell,broad,21-0000,Community and Social Service Occupations,128,50,300,1,0.2569876495,0.2539442615,0.1294675137,0.4059389513,full finite-sample cell centroid
+occupation_cell,broad,25-0000,"Education, Training, and Library Occupations",370,50,300,1,0.2762323754,0.2759739411,0.1357088919,0.4241252681,full finite-sample cell centroid
+occupation_cell,broad,27-0000,"Arts, Design, Entertainment, Sports, and Media Occupations",159,50,300,1,0.2677428816,0.2587535526,0.1452606727,0.4126405534,full finite-sample cell centroid
+occupation_cell,broad,29-0000,Healthcare Practitioners and Technical Occupations,226,50,300,1,0.2772576744,0.2713595722,0.142304784,0.4357416379,full finite-sample cell centroid
+occupation_cell,broad,31-0000,Healthcare Support Occupations,241,50,300,1,0.2925025569,0.2858331628,0.1229228573,0.479416424,full finite-sample cell centroid
+occupation_cell,broad,33-0000,Protective Service Occupations,174,50,300,1,0.2745466935,0.2641459746,0.1525411216,0.4379179147,full finite-sample cell centroid
+occupation_cell,broad,35-0000,Food Preparation and Serving Related Occupations,500,50,300,1,0.3169237655,0.3130772376,0.1580416491,0.5316732481,full finite-sample cell centroid
+occupation_cell,broad,37-0000,Building and Grounds Cleaning and Maintenance Occupations,212,50,300,1,0.3084400238,0.2991475848,0.1425401207,0.4774137007,full finite-sample cell centroid
+occupation_cell,broad,39-0000,Personal Care and Service Occupations,289,50,300,1,0.3178029939,0.3057273559,0.152485554,0.5215938576,full finite-sample cell centroid
+occupation_cell,broad,41-0000,Sales and Related Occupations,742,50,300,1,0.3121900334,0.301027682,0.1503450472,0.5117273209,full finite-sample cell centroid
+occupation_cell,broad,43-0000,Office and Administrative Support Occupations,937,50,300,1,0.3237479194,0.307442596,0.165931592,0.5569852522,full finite-sample cell centroid
+occupation_cell,broad,47-0000,Construction and Extraction Occupations,402,50,300,1,0.2810105797,0.2737775457,0.120896267,0.4640923612,full finite-sample cell centroid
+occupation_cell,broad,49-0000,"Installation, Maintenance, and Repair Occupations",215,50,300,1,0.2708236499,0.2705462554,0.1360514892,0.41250103,full finite-sample cell centroid
+occupation_cell,broad,51-0000,Production Occupations,340,50,300,1,0.3054106591,0.2942478833,0.1454558367,0.493055789,full finite-sample cell centroid
+occupation_cell,broad,53-0000,Transportation and Material Moving Occupations,393,50,300,1,0.3111461739,0.3030621422,0.1360248693,0.5167008028,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,broad,__LEVEL_SUMMARY__,Broad level summary,,50,300,18,0.2880344447,0.2772207199,0.142186208,0.4579964801,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,broad,11-0000,Management Occupations,325,75,300,1,0.2234066911,0.2180877103,0.1252734404,0.352742067,full finite-sample cell centroid
+occupation_cell,broad,13-0000,Business and Financial Operations Occupations,253,75,300,1,0.2164848082,0.2143447197,0.1099146928,0.3423436705,full finite-sample cell centroid
+occupation_cell,broad,25-0000,"Education, Training, and Library Occupations",370,75,300,1,0.217921222,0.2106287393,0.1024856469,0.3455090963,full finite-sample cell centroid
+occupation_cell,broad,27-0000,"Arts, Design, Entertainment, Sports, and Media Occupations",159,75,300,1,0.1892138906,0.1876593893,0.09078599115,0.3072538014,full finite-sample cell centroid
+occupation_cell,broad,29-0000,Healthcare Practitioners and Technical Occupations,226,75,300,1,0.2096448536,0.2032690562,0.1137729829,0.328728324,full finite-sample cell centroid
+occupation_cell,broad,31-0000,Healthcare Support Occupations,241,75,300,1,0.2293187053,0.2215975734,0.1106600439,0.3568735936,full finite-sample cell centroid
+occupation_cell,broad,33-0000,Protective Service Occupations,174,75,300,1,0.1985596573,0.1966286784,0.0905310317,0.3128947993,full finite-sample cell centroid
+occupation_cell,broad,35-0000,Food Preparation and Serving Related Occupations,500,75,300,1,0.2677800458,0.2596268183,0.1309778925,0.4276845705,full finite-sample cell centroid
+occupation_cell,broad,37-0000,Building and Grounds Cleaning and Maintenance Occupations,212,75,300,1,0.2281806704,0.2207627873,0.1225794024,0.3664946089,full finite-sample cell centroid
+occupation_cell,broad,39-0000,Personal Care and Service Occupations,289,75,300,1,0.2500026794,0.24654859,0.136099526,0.3937025249,full finite-sample cell centroid
+occupation_cell,broad,41-0000,Sales and Related Occupations,742,75,300,1,0.2492604992,0.2431129972,0.1317666696,0.4066936912,full finite-sample cell centroid
+occupation_cell,broad,43-0000,Office and Administrative Support Occupations,937,75,300,1,0.260283051,0.254250364,0.1355116295,0.4134951166,full finite-sample cell centroid
+occupation_cell,broad,47-0000,Construction and Extraction Occupations,402,75,300,1,0.2234895465,0.2210176402,0.1021807153,0.3441585221,full finite-sample cell centroid
+occupation_cell,broad,49-0000,"Installation, Maintenance, and Repair Occupations",215,75,300,1,0.2048001412,0.2010045423,0.107587092,0.3111532585,full finite-sample cell centroid
+occupation_cell,broad,51-0000,Production Occupations,340,75,300,1,0.232349356,0.2255230486,0.1057799214,0.3761211943,full finite-sample cell centroid
+occupation_cell,broad,53-0000,Transportation and Material Moving Occupations,393,75,300,1,0.2613081941,0.2492567739,0.1237689961,0.4191815986,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,broad,__LEVEL_SUMMARY__,Broad level summary,,75,300,16,0.2288752507,0.2208902137,0.1122165134,0.3548078303,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,broad,11-0000,Management Occupations,325,100,300,1,0.1774741055,0.1765305888,0.08730595915,0.2780989528,full finite-sample cell centroid
+occupation_cell,broad,13-0000,Business and Financial Operations Occupations,253,100,300,1,0.1793590126,0.1686070375,0.09233284394,0.2837643164,full finite-sample cell centroid
+occupation_cell,broad,25-0000,"Education, Training, and Library Occupations",370,100,300,1,0.1877595878,0.1819430569,0.08696159002,0.3002336669,full finite-sample cell centroid
+occupation_cell,broad,29-0000,Healthcare Practitioners and Technical Occupations,226,100,300,1,0.1623084913,0.1575590795,0.08336870274,0.256059106,full finite-sample cell centroid
+occupation_cell,broad,31-0000,Healthcare Support Occupations,241,100,300,1,0.1743076833,0.1686934875,0.08176045289,0.2876144718,full finite-sample cell centroid
+occupation_cell,broad,35-0000,Food Preparation and Serving Related Occupations,500,100,300,1,0.2121077158,0.2060019553,0.1138629682,0.3316484423,full finite-sample cell centroid
+occupation_cell,broad,37-0000,Building and Grounds Cleaning and Maintenance Occupations,212,100,300,1,0.1807603575,0.1721390128,0.08911884735,0.2983759076,full finite-sample cell centroid
+occupation_cell,broad,39-0000,Personal Care and Service Occupations,289,100,300,1,0.197645153,0.1839779432,0.1035148343,0.317613565,full finite-sample cell centroid
+occupation_cell,broad,41-0000,Sales and Related Occupations,742,100,300,1,0.2144050278,0.2049748689,0.1179317533,0.3383990136,full finite-sample cell centroid
+occupation_cell,broad,43-0000,Office and Administrative Support Occupations,937,100,300,1,0.2131542338,0.207461987,0.1048021442,0.3224461584,full finite-sample cell centroid
+occupation_cell,broad,47-0000,Construction and Extraction Occupations,402,100,300,1,0.185587934,0.1768794943,0.09597614297,0.2964885648,full finite-sample cell centroid
+occupation_cell,broad,49-0000,"Installation, Maintenance, and Repair Occupations",215,100,300,1,0.1596605077,0.1592536661,0.08467743123,0.2348575973,full finite-sample cell centroid
+occupation_cell,broad,51-0000,Production Occupations,340,100,300,1,0.1957401052,0.1881889363,0.09441753629,0.3036861685,full finite-sample cell centroid
+occupation_cell,broad,53-0000,Transportation and Material Moving Occupations,393,100,300,1,0.2063415843,0.1961824862,0.1065591059,0.3290103017,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,broad,__LEVEL_SUMMARY__,Broad level summary,,100,300,14,0.1890436785,0.1794112756,0.09337519011,0.2993047873,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,broad,11-0000,Management Occupations,325,150,300,1,0.123537387,0.1197470932,0.05739647636,0.1944398447,full finite-sample cell centroid
+occupation_cell,broad,25-0000,"Education, Training, and Library Occupations",370,150,300,1,0.1400376296,0.1386988011,0.06594994128,0.2194023254,full finite-sample cell centroid
+occupation_cell,broad,35-0000,Food Preparation and Serving Related Occupations,500,150,300,1,0.1581162374,0.1549735418,0.0822883927,0.2519775508,full finite-sample cell centroid
+occupation_cell,broad,41-0000,Sales and Related Occupations,742,150,300,1,0.1693090718,0.1604964725,0.07808352537,0.2815294007,full finite-sample cell centroid
+occupation_cell,broad,43-0000,Office and Administrative Support Occupations,937,150,300,1,0.1744887907,0.1714296575,0.08020109613,0.2938019437,full finite-sample cell centroid
+occupation_cell,broad,47-0000,Construction and Extraction Occupations,402,150,300,1,0.1396591008,0.1353553017,0.06962636697,0.2158028304,full finite-sample cell centroid
+occupation_cell,broad,51-0000,Production Occupations,340,150,300,1,0.1332421222,0.1285480787,0.06572233237,0.213359537,full finite-sample cell centroid
+occupation_cell,broad,53-0000,Transportation and Material Moving Occupations,393,150,300,1,0.153390328,0.1487956044,0.07687691683,0.2455314106,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,broad,__LEVEL_SUMMARY__,Broad level summary,,150,300,8,0.1489725834,0.1437472027,0.0732516419,0.232466868,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,broad,35-0000,Food Preparation and Serving Related Occupations,500,200,300,1,0.1313915337,0.129754575,0.06446053324,0.2090190499,full finite-sample cell centroid
+occupation_cell,broad,41-0000,Sales and Related Occupations,742,200,300,1,0.14241298,0.136424185,0.07414846165,0.2277452015,full finite-sample cell centroid
+occupation_cell,broad,43-0000,Office and Administrative Support Occupations,937,200,300,1,0.1493645147,0.1408723452,0.07718866222,0.2451942787,full finite-sample cell centroid
+occupation_cell,broad,47-0000,Construction and Extraction Occupations,402,200,300,1,0.1086519539,0.1068698914,0.05283908719,0.1734738335,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,broad,__LEVEL_SUMMARY__,Broad level summary,,200,300,4,0.1329552456,0.13308938,0.06930449744,0.2183821257,equal-weight summary of cell-specific full-centroid errors
+occupation_cell,broad,41-0000,Sales and Related Occupations,742,300,300,1,0.1114244821,0.1067236219,0.0589181801,0.1744389348,full finite-sample cell centroid
+occupation_cell,broad,43-0000,Office and Administrative Support Occupations,937,300,300,1,0.1107132336,0.1054246854,0.05241634279,0.1832850675,full finite-sample cell centroid
+level_summary_equal_weight_per_occupation,broad,__LEVEL_SUMMARY__,Broad level summary,,300,300,2,0.1110688578,0.1060741536,0.05566726144,0.1788620011,equal-weight summary of cell-specific full-centroid errors
