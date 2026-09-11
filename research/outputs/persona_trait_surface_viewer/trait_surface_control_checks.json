@@ -15,12 +15,13 @@
     "All six ordered axis views",
     "Selected-model surfaces, support masks, flat planes and diagnostics replace prior traces",
     "Repeated and queued Qwen/Llama/Gemma switches converge without stale traces",
-    "Selection persists by persona name across models",
-    "Yaw/pitch/roll/zoom survive model, axis, group and smoothing changes",
+    "Editorial/Big Five profile switching replaces nodes, meshes, planes and details without stale traces",
+    "Selection persists by persona name across models and profile sets",
+    "Yaw/pitch/roll/zoom survive model, profile, axis, group and smoothing changes",
     "Flat-plane-only and node visibility",
     "Drag relayout, presets, reset and numeric entry"
   ],
-  "react_count": 36,
+  "react_count": 39,
   "relayout_count": 11,
   "live_browser_test": false,
   "note": "Plotly/DOM double tests state and camera math; actual browser verification is recorded separately."

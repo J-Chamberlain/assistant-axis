@@ -11,7 +11,9 @@
   "groups_per_model": 5,
   "group_rows": 4125,
   "qwen_group_rows": 1375,
-  "surface_variants": 135,
+  "surface_variants": 270,
+  "big_five_node_rows": 4125,
+  "big_five_exact_source_scores": true,
   "exact_model_coordinates": true,
   "exact_member_scores": true,
   "equal_weight_group_means": true,
@@ -30,6 +32,18 @@
       "1_2": 675
     }
   },
+  "big_five_support_mask_cell_differences_vs_qwen": {
+    "llama": {
+      "0_1": 1013,
+      "0_2": 1694,
+      "1_2": 1378
+    },
+    "gemma": {
+      "0_1": 722,
+      "0_2": 873,
+      "1_2": 675
+    }
+  },
   "flat_planes_recomputed_per_model": true,
   "flat_adherence_recomputed_per_model": true,
   "qwen_reproduction_max_abs_difference": 0.0,
@@ -37,6 +51,7 @@
   "source_hashes": true,
   "self_contained_html": true,
   "default_model": "qwen",
+  "default_profile_set": "editorial",
   "new_activations": false,
   "new_inference": false
 }

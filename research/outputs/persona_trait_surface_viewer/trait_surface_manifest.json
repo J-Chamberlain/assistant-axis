@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-09-11T20:51:46.809827+00:00",
-  "base_commit": "d68921b898ed179194223f449149d715298cdabe",
+  "generated_utc": "2026-09-11T23:31:55.684861+00:00",
+  "base_commit": "62023e12e676df3d9872c96138a6db148afccbcf",
   "qwen_compatibility_reference_commit": "d68921b898ed179194223f449149d715298cdabe",
   "author": "Codex / GPT-5.5",
   "default_model": "qwen",
@@ -67,9 +67,16 @@
     }
   },
   "group_rows": 4125,
+  "big_five_node_rows": 4125,
   "qwen_group_rows": 1375,
+  "profile_sets": [
+    "editorial",
+    "big_five"
+  ],
+  "default_profile_set": "editorial",
+  "default_big_five_construction": "human_anchored_strict",
   "ordered_axis_views_per_model": 6,
-  "mesh_variants_per_model": 45,
+  "mesh_variants_per_model_per_profile_set": 45,
   "aggregation": "Equal-weight mean of three member-trait within-model percentiles",
   "grid_size": 61,
   "smoothing": [
@@ -115,12 +122,16 @@
       "sha256": "957fe00c57719a4373d0ebd20e8fe07a49ac642eca3c94f3491ed8c4fef881db"
     },
     {
+      "path": "research/outputs/externally_anchored_big_five/big_five_viewer_data.json",
+      "sha256": "a2472308e66d6c7a55c62d06f023e1e0d5b94afcafa7b3fb9e009eaa776b3adf"
+    },
+    {
       "path": "research/outputs/persona_trait_ridge_plots/trait_category_order.csv",
       "sha256": "ae0e2745d58ddb18c5b30bca56373b7cb3b532280bdad38c9a64d7bc8e761d95"
     },
     {
       "path": "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_manifest.json",
-      "sha256": "7cc4a151231a5cd9514d2ff049106ff9f8f0f90b234a9f8624f043c6fb1a152a"
+      "sha256": "a7752592c79c8c5ae0e78b98141a8aec7561322ea9b2bb5977db3dfe58a10574"
     },
     {
       "path": "research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md",
@@ -140,11 +151,11 @@
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/run_persona_trait_surface.py",
-      "sha256": "b61204288bef76110099e988ea0945d3dd3806ee2130205fcc95a963f5c98e86"
+      "sha256": "7590758b331627ea7abe907f9b585bc9a71f6e632b454686a4fcebc9a21cd8bb"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer.js",
-      "sha256": "6d5710c8df0d78985690cc23448d7f194098355fed43662f004cd38268481580"
+      "sha256": "a17fb5fc91d22985653d48ab53b3e6feedf55f4b9ff8c40f3df12b97c1680257"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/camera_controls.js",
@@ -152,7 +163,7 @@
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer_template.html",
-      "sha256": "db0bf5d3f5b115a3db40fd2c9147c8524f8c6fe86cc1dd993f9504ffc49ef571"
+      "sha256": "a3c0b60d317aa3b9e382ab924a46e60d303cbc61972c493b226d14161dbd18e3"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer_bootstrap.js",
@@ -160,19 +171,19 @@
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/trait_surface_methodology.md",
-      "sha256": "6e65226acd4d138bb431561ca809b837b1635f349896ac1fba9b59b63b48fb8d"
+      "sha256": "0c1768ffd9525cb42dcfe317055f5d8ce4857780d4c544b355f524a1f49d50ca"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/verify_trait_surface_data.py",
-      "sha256": "97c87cac281eb93765126ba47c66702535d08e8a09f2b0ef7c2bc254d5954feb"
+      "sha256": "4f179073971b76a5f65bd1b01b9753c4a3f03b5e94e29c634869dddda6660aaa"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/verify_trait_surface_controls.cjs",
-      "sha256": "657706ec2dc824ebddaecebf0d72cf206223b58e9647641b91e98edb71833a67"
+      "sha256": "12a1ebde727f12cf52ea73f9ef0538cf421ec597fb91d6a9ec1118e4b27e20c7"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/verify_trait_viewers_browser.cjs",
-      "sha256": "83f0e068ccf9637ff35b8317a6e77f695225c35d2ab21e7b1acd638977431dd0"
+      "sha256": "1d9fd9183978d6b6463c9061968d6a3f570fdc85653374c2c7812492908e2858"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/render_trait_surface_preview.cjs",

@@ -60,6 +60,9 @@ def git_json(commit: str, path: str) -> dict[str, object]:
 def main() -> None:
     data = json.loads((HERE / "persona_trait_ridge_data.json").read_text())
     manifest = json.loads((HERE / "persona_trait_ridge_manifest.json").read_text())
+    big_five = json.loads(
+        (ROOT / "research/outputs/externally_anchored_big_five/big_five_viewer_data.json").read_text()
+    )
     keys = [row["trait"] for row in data["categories"]]
     if data["default_model"] != "qwen" or data["model_order"] != MODELS:
         raise AssertionError("Qwen must be the default model and model order must be stable")
@@ -121,6 +124,27 @@ def main() -> None:
     if len({frozenset(names) for names in role_sets}) != 1:
         raise AssertionError("Role-name set differs across models")
 
+    if big_five["default_construction"] != "human_anchored_strict" or len(big_five["construction_order"]) != 4:
+        raise AssertionError("Frozen Big Five construction order/default")
+    for model_key in MODELS:
+        source = big_five["models"][model_key]
+        if source["personas"] != data["models"][model_key]["personas"] or source["coordinates"] != data["models"][model_key]["coordinates"]:
+            raise AssertionError(f"{model_key}: Big Five role/coordinate mismatch")
+        for construction_key in big_five["construction_order"]:
+            domains = source["constructions"][construction_key]["domains"]
+            if [domain["key"] for domain in domains] != ["openness", "conscientiousness", "extraversion", "agreeableness", "neuroticism"]:
+                raise AssertionError(f"{construction_key}: Big Five domain order")
+            for domain in domains:
+                raw = np.asarray(domain["raw_score"], dtype=float)
+                percentile = np.asarray(domain["height_percentile"], dtype=float)
+                if raw.shape != (275,) or percentile.shape != (275,) or not np.isfinite(raw).all() or not np.isfinite(percentile).all():
+                    raise AssertionError(f"{model_key}/{construction_key}/{domain['key']}: score shape/finite")
+                independent = np.asarray([
+                    100 * ((raw < value).sum() + 0.5 * (raw == value).sum()) / 275 for value in raw
+                ])
+                if not np.allclose(independent, percentile, atol=1e-12, rtol=0):
+                    raise AssertionError(f"{model_key}/{construction_key}/{domain['key']}: percentile")
+
     matrix = {
         row["persona"]: row
         for row in csv.DictReader(
@@ -157,6 +181,12 @@ def main() -> None:
         raise AssertionError("Model selector/view markup")
     if "hidden" in parser.model_views[0] or any("hidden" not in view for view in parser.model_views[1:]):
         raise AssertionError("Default Qwen visibility")
+    for required in [
+        'id="profile-set-select"', 'value="editorial" selected', 'value="big_five"',
+        'id="construction-select"', 'window.__traitRidgeViewer', 'renderBigFive()',
+    ]:
+        if required not in markup:
+            raise AssertionError(f"Missing Big Five interaction markup: {required}")
 
     offset = 0
     for model_key in MODELS:
@@ -221,6 +251,13 @@ def main() -> None:
         "default_model": "qwen",
         "all_panels_prerendered": True,
         "no_external_scripts": True,
+        "profile_sets": ["editorial", "big_five"],
+        "big_five_constructions": big_five["construction_order"],
+        "big_five_scores_finite": True,
+        "big_five_within_model_percentiles": True,
+        "big_five_role_coordinates_exact": True,
+        "default_profile_set": "editorial",
+        "default_big_five_construction": "human_anchored_strict",
         "browser_validation": "Recorded separately; this check is numerical/static markup only",
     }
     (HERE / "persona_trait_ridge_checks.json").write_text(json.dumps(checks, indent=2) + "\n")

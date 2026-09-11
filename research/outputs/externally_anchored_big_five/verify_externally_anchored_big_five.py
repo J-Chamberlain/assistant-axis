@@ -134,6 +134,29 @@ def main(vector_root: Path) -> None:
         source["models"][model]["coordinate_max_abs_difference_vs_established_viewer"] <= 1e-10 for model in MODELS
     )
     checks["deterministic_full_rerun"] = True
+    ridge_checks = json.loads((ROOT / "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_checks.json").read_text())
+    surface_checks = json.loads((ROOT / "research/outputs/persona_trait_surface_viewer/trait_surface_data_checks.json").read_text())
+    control_checks = json.loads((ROOT / "research/outputs/persona_trait_surface_viewer/trait_surface_control_checks.json").read_text())
+    browser_checks = json.loads((ROOT / "research/outputs/persona_trait_surface_viewer/trait_viewers_browser_checks.json").read_text())
+    checks["ridge_viewer_integration"] = (
+        ridge_checks["status"] == "pass"
+        and ridge_checks["qwen_reproduction_max_abs_differences"] == {
+            "coordinates": 0.0, "raw_affinity": 0.0, "z_score": 0.0, "height_percentile": 0.0
+        }
+        and ridge_checks["profile_sets"] == ["editorial", "big_five"]
+    )
+    checks["surface_viewer_integration"] = (
+        surface_checks["status"] == "pass"
+        and surface_checks["qwen_reproduction_max_abs_difference"] == 0.0
+        and surface_checks["surface_variants"] == 270
+    )
+    checks["viewer_dom_double"] = control_checks["status"] == "pass"
+    checks["actual_browser_verification"] = (
+        browser_checks["status"] == "pass"
+        and browser_checks["verification_kind"].startswith("actual headless browser")
+        and browser_checks["ridge"]["big_five_profile_switch"]
+        and browser_checks["surface"]["big_five_profile_switch"]
+    )
     passed = all(bool(value) for value in checks.values())
     report = {
         "passed": passed,
@@ -141,8 +164,9 @@ def main(vector_root: Path) -> None:
         "maximum_raw_score_reproduction_difference": max_score_difference,
         "maximum_percentile_reproduction_difference": max_percentile_difference,
         "deterministic_rerun_method": "SHA256 before/after comparison of all analytical CSV/JSON outputs",
-        "viewer_checks_pending": True,
-        "browser_checks_pending": True,
+        "viewer_checks_pending": False,
+        "browser_checks_pending": False,
+        "actual_browser": browser_checks["browser_version"],
     }
     (OUT / "verification_report.json").write_text(json.dumps(report, indent=2) + "\n")
     if not passed:

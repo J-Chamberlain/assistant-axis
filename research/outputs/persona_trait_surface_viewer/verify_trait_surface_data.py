@@ -61,14 +61,67 @@ def expected_support(coordinates: np.ndarray, axes: list[int], view: dict[str, o
     return support
 
 
+def verify_views(
+    coordinates: np.ndarray,
+    categories: list[dict[str, object]],
+    views: dict[str, object],
+    masks: dict[str, np.ndarray],
+) -> None:
+    assert len(views) == 3 and len(categories) == 5
+    scores = np.asarray([category["values"] for category in categories]).T
+    for view_key, view in views.items():
+        support = expected_support(coordinates, view["axes"], view)
+        masks[view_key] = support
+        assert abs(float(support.mean()) - view["supported_grid_fraction"]) < 1e-15
+        assert len(view["levels"]) == 3
+        assert len(view["flat_grids"]) == 5 and len(view["flat_plane"]) == 5
+        points = (coordinates[:, view["axes"]] - np.asarray(view["fit_center"])) / view["fit_common_scale"]
+        basis = np.column_stack([np.ones(len(points)), points])
+        for group_index, (flat_grid, plane) in enumerate(zip(view["flat_grids"], view["flat_plane"])):
+            flat_mask = np.asarray([[value is not None for value in row] for row in flat_grid])
+            assert np.array_equal(flat_mask, support)
+            array = np.asarray([[np.nan if value is None else value for value in row] for row in flat_grid])
+            assert np.nanmin(array) >= 0 and np.nanmax(array) <= 100
+            coefficients = np.linalg.lstsq(basis, scores[:, group_index], rcond=None)[0]
+            fitted = basis @ coefficients
+            rmse = float(np.sqrt(np.mean((scores[:, group_index] - fitted) ** 2)))
+            sst = float(np.sum((scores[:, group_index] - scores[:, group_index].mean()) ** 2))
+            r2 = float(1 - np.sum((scores[:, group_index] - fitted) ** 2) / sst)
+            assert np.allclose(coefficients, plane["coefficients"], atol=1e-12, rtol=0)
+            assert abs(rmse - plane["node_rmse"]) < 1e-12
+            assert abs(r2 - plane["node_r2"]) < 1e-12
+        for level in view["levels"]:
+            assert len(level["grids"]) == 5 and len(level["flat_adherence"]) == 5
+            for group_index, grid in enumerate(level["grids"]):
+                grid_mask = np.asarray([[value is not None for value in row] for row in grid])
+                assert np.array_equal(grid_mask, support)
+                array = np.asarray([[np.nan if value is None else value for value in row] for row in grid])
+                assert np.nanmin(array) >= 0 and np.nanmax(array) <= 100
+                fitted = np.asarray(level["fitted_nodes"][group_index])
+                assert len(fitted) == 275 and np.isfinite(fitted).all()
+                rmse = np.sqrt(np.mean((fitted - scores[:, group_index]) ** 2))
+                assert abs(rmse - level["fit_rmse"][group_index]) < 1e-10
+                flat = level["flat_adherence"][group_index]
+                assert flat["fabric_flat_rmse"] >= 0
+                assert flat["fabric_flat_r2"] is None or np.isfinite(flat["fabric_flat_r2"])
+                assert flat["fabric_flat_score"] is None or 0 <= flat["fabric_flat_score"] <= 100
+
+
 def main() -> None:
     data = json.loads((HERE / "persona_trait_surface_data.json").read_text())
+    big_five_surface = json.loads((HERE / "big_five_trait_surface_data.json").read_text())
     ridge = json.loads(
         (ROOT / "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_data.json").read_text()
     )
+    big_five = json.loads(
+        (ROOT / "research/outputs/externally_anchored_big_five/big_five_viewer_data.json").read_text()
+    )
     manifest = json.loads((HERE / "trait_surface_manifest.json").read_text())
     assert data["default_model"] == "qwen" and data["model_order"] == MODELS
+    assert big_five_surface["default_model"] == "qwen" and big_five_surface["model_order"] == MODELS
+    assert big_five_surface["default_construction"] == "human_anchored_strict"
     masks: dict[str, dict[str, np.ndarray]] = {model: {} for model in MODELS}
+    big_five_masks: dict[str, dict[str, np.ndarray]] = {model: {} for model in MODELS}
     for model_key in MODELS:
         model = data["models"][model_key]
         ridge_model = ridge["models"][model_key]
@@ -128,6 +181,23 @@ def main() -> None:
                     assert flat["fabric_flat_r2"] is None or np.isfinite(flat["fabric_flat_r2"])
                     assert flat["fabric_flat_score"] is None or 0 <= flat["fabric_flat_score"] <= 100
 
+        big_five_model = big_five_surface["models"][model_key]
+        source_construction = big_five["models"][model_key]["constructions"][big_five["default_construction"]]
+        assert big_five_model["construction"] == big_five["default_construction"]
+        assert [category["key"] for category in big_five_model["categories"]] == [
+            domain["key"] for domain in source_construction["domains"]
+        ]
+        for category, domain in zip(big_five_model["categories"], source_construction["domains"]):
+            assert np.array_equal(category["values"], domain["height_percentile"])
+            assert np.array_equal(category["raw_score"], domain["raw_score"])
+            assert category["members"] == domain["composition"]
+        verify_views(
+            coordinates,
+            big_five_model["categories"],
+            big_five_model["views"],
+            big_five_masks[model_key],
+        )
+
     mask_differences = {
         model: {
             key: int(np.count_nonzero(masks[model][key] != masks["qwen"][key]))
@@ -136,6 +206,14 @@ def main() -> None:
         for model in ["llama", "gemma"]
     }
     assert all(any(count > 0 for count in differences.values()) for differences in mask_differences.values())
+    big_five_mask_differences = {
+        model: {
+            key: int(np.count_nonzero(big_five_masks[model][key] != big_five_masks["qwen"][key]))
+            for key in big_five_masks[model]
+        }
+        for model in ["llama", "gemma"]
+    }
+    assert all(any(count > 0 for count in differences.values()) for differences in big_five_mask_differences.values())
 
     rows = list(csv.DictReader((HERE / "persona_trait_group_scores.csv").open()))
     assert len(rows) == len({(row["model"], row["persona"], row["group"]) for row in rows}) == 4125
@@ -145,9 +223,13 @@ def main() -> None:
             float(row["group_mean_trait_percentile"])
             - sum(float(row[f"percentile_{index}"]) for index in [1, 2, 3]) / 3
         ) < 1e-12
+    big_five_rows = list(csv.DictReader((HERE / "big_five_surface_node_scores.csv").open()))
+    assert len(big_five_rows) == len({(row["model"], row["persona"], row["domain"]) for row in big_five_rows}) == 4125
+    assert all(sum(row["model"] == model for row in big_five_rows) == 1375 for model in MODELS)
     diagnostics = list(csv.DictReader((HERE / "trait_surface_fit_diagnostics.csv").open()))
-    assert len(diagnostics) == 135
-    assert all(sum(row["model"] == model for row in diagnostics) == 45 for model in MODELS)
+    assert len(diagnostics) == 270
+    assert all(sum(row["model"] == model for row in diagnostics) == 90 for model in MODELS)
+    assert all(sum(row["profile_set"] == profile for row in diagnostics) == 135 for profile in ["editorial", "big_five"])
     for source in manifest["sources"]:
         assert hashlib.sha256((ROOT / source["path"]).read_bytes()).hexdigest() == source["sha256"], source["path"]
 
@@ -169,7 +251,18 @@ def main() -> None:
     assert "<script src=" not in html and "__traitViewer" in html
     scripts = [part.split("</script>", 1)[0] for part in html.split("<script")[1:]]
     embedded = [part.split(">", 1)[1] for part in scripts if 'id="viewer-data"' in part]
-    assert len(embedded) == 1 and json.loads(embedded[0]) == data
+    viewer_data = {
+        **data,
+        "schema_version": 3,
+        "default_profile_set": "editorial",
+        "default_big_five_construction": big_five_surface["default_construction"],
+        "profile_sets": ["editorial", "big_five"],
+        "models": {
+            key: {**data["models"][key], "big_five": big_five_surface["models"][key]}
+            for key in MODELS
+        },
+    }
+    assert len(embedded) == 1 and json.loads(embedded[0]) == viewer_data
 
     result = {
         "status": "pass",
@@ -180,7 +273,9 @@ def main() -> None:
         "groups_per_model": 5,
         "group_rows": 4125,
         "qwen_group_rows": 1375,
-        "surface_variants": 135,
+        "surface_variants": 270,
+        "big_five_node_rows": 4125,
+        "big_five_exact_source_scores": True,
         "exact_model_coordinates": True,
         "exact_member_scores": True,
         "equal_weight_group_means": True,
@@ -188,6 +283,7 @@ def main() -> None:
         "all_meshes_bounded": True,
         "support_masks_recomputed_from_selected_model_coordinates": True,
         "support_mask_cell_differences_vs_qwen": mask_differences,
+        "big_five_support_mask_cell_differences_vs_qwen": big_five_mask_differences,
         "flat_planes_recomputed_per_model": True,
         "flat_adherence_recomputed_per_model": True,
         "qwen_reproduction_max_abs_difference": difference,
@@ -195,6 +291,7 @@ def main() -> None:
         "source_hashes": True,
         "self_contained_html": True,
         "default_model": "qwen",
+        "default_profile_set": "editorial",
         "new_activations": False,
         "new_inference": False,
     }

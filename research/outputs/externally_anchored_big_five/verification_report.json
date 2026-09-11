@@ -21,11 +21,16 @@
     "viewer_payload_counts": true,
     "focal_table_consistency": true,
     "coordinate_agreement": true,
-    "deterministic_full_rerun": true
+    "deterministic_full_rerun": true,
+    "ridge_viewer_integration": true,
+    "surface_viewer_integration": true,
+    "viewer_dom_double": true,
+    "actual_browser_verification": true
   },
   "maximum_raw_score_reproduction_difference": 0.0,
   "maximum_percentile_reproduction_difference": 0.0,
   "deterministic_rerun_method": "SHA256 before/after comparison of all analytical CSV/JSON outputs",
-  "viewer_checks_pending": true,
-  "browser_checks_pending": true
+  "viewer_checks_pending": false,
+  "browser_checks_pending": false,
+  "actual_browser": "Chrome/152.0.7977.84"
 }

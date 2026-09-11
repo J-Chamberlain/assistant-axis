@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-09-11T20:51:45.577447+00:00",
-  "base_commit": "d68921b898ed179194223f449149d715298cdabe",
+  "generated_utc": "2026-09-11T23:31:53.126544+00:00",
+  "base_commit": "62023e12e676df3d9872c96138a6db148afccbcf",
   "qwen_compatibility_reference_commit": "d68921b898ed179194223f449149d715298cdabe",
   "author": "Codex / GPT-5.5",
   "default_model": "qwen",
@@ -176,6 +176,18 @@
     }
   ],
   "selection": "Unchanged editorial coverage based on saved trait descriptions; not data-optimized",
+  "profile_sets": [
+    "editorial",
+    "big_five"
+  ],
+  "big_five_constructions": [
+    "human_anchored_strict",
+    "human_anchored_extended",
+    "external_taxonomy_expanded",
+    "historical_hand_predeclared"
+  ],
+  "big_five_default_construction": "human_anchored_strict",
+  "big_five_score_source": "research/outputs/externally_anchored_big_five/big_five_viewer_data.json",
   "normalization": "100 * (average rank - 0.5) / 275 independently for each trait and model",
   "aggregation": "Ridge heights show individual trait percentiles; no group composite in this viewer",
   "ordering": "Descending selected-model PC coordinate with persona-name tie-break",
@@ -225,19 +237,23 @@
     },
     {
       "path": "research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py",
-      "sha256": "68897b5d85ed0c6ed2ecc0e9a9afc35227d5eda32d2ec64bc904876b779382a9"
+      "sha256": "6041632c9f46cc7bca7ba88f7f9f9b6719e27eca6cdd31da7fd102254473962f"
     },
     {
       "path": "research/outputs/persona_trait_ridge_plots/verify_persona_trait_ridges.py",
-      "sha256": "e4a973b45d9e1d5eb15b9ee5c977354392890af652064db65184735c0d6eca00"
+      "sha256": "7ae08384d3b0c1044b12dd5bd0960aed0e9979e89f025289d97f29685048a88a"
     },
     {
       "path": "research/outputs/persona_trait_ridge_plots/render_ridge_images.cjs",
-      "sha256": "6abd38afa99a9f84b5d6aa0b51531c80673d20d2b932f8d9325a39c86fbe07be"
+      "sha256": "5111cd1595cd8d0021400475dd9827a43d611f9eba852633c71a02f9a4af1fb6"
     },
     {
       "path": "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_methodology.md",
-      "sha256": "25b02cb45d92f65b8a8629223c00c3d60010fbc8f60f08f47f39aabbb291e497"
+      "sha256": "3285684cbd465586b965a83fed42c79e40614b82eab7e1980bb706f3800c2c83"
+    },
+    {
+      "path": "research/outputs/externally_anchored_big_five/big_five_viewer_data.json",
+      "sha256": "a2472308e66d6c7a55c62d06f023e1e0d5b94afcafa7b3fb9e009eaa776b3adf"
     }
   ],
   "local_loading_audit": {

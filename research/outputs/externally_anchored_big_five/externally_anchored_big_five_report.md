@@ -112,6 +112,12 @@ For Qwen strict Agreeableness, node-level flat-plane fits are:
 
 The fixed-camera PNG/SVG artifacts show the same 275 exact persona nodes, a balanced masked surface, and an independently fitted red flat-plane wireframe. All three projections were generated so the focal interpretation is not based on one selected view.
 
+## Viewer integration
+
+The canonical ridge viewer retains its Qwen/editorial default and adds a no-reload **Big Five** profile set for Qwen, Llama, and Gemma. It exposes all four frozen constructions, displays within-model composite percentiles, retains raw projection scores in hover text, and lists constituent traits, polarity, and facet labels. The selected role persists by persona name across models, profile sets, and constructions.
+
+The canonical 3D surface/flat-plane viewer also retains its original Qwen/editorial default. Its Big Five mode displays the preregistered primary human-anchored strict domains. For every model, PC pair, domain, and smoothing level, the exact node heights, thin-plate fabric, support mask, flat plane, fit gaps, and flat-adherence diagnostics are recomputed from that model's coordinates and Big Five scores. The Agreeableness surface does not reuse the editorial Affiliation plane.
+
 ## Method summary
 
 For each construction/domain/model, normalized positive-pole trait vectors are averaged, normalized negative-pole trait vectors are averaged, and the final direction is the normalized positive mean minus negative mean. If a sensitivity omission removes one pole, the alternative is explicitly one-sided; no opposite pole is fabricated. Each normalized role vector is projected onto the saved float32 direction. Raw projections are retained; visualization heights are within-model midrank percentiles.
@@ -142,6 +148,6 @@ It remains unknown whether these activation-derived directions correspond to ind
 
 ## Verification and compute boundary
 
-The analysis verified 240 canonical traits, 275 identical role names per model, exact frozen mapping hashes, valid reviewed SAPA items/scales, exact reconstruction of all saved role scores and percentiles from saved directions, bounded direction cosines, finite metrics, established-coordinate agreement, and byte-identical deterministic analytical CSV/JSON outputs across a complete rerun. Viewer-specific regression and browser checks are reported in the final verification artifact after integration.
+The analysis verified 240 canonical traits, 275 identical role names per model, exact frozen mapping hashes, valid reviewed SAPA items/scales, exact reconstruction of all saved role scores and percentiles from saved directions, bounded direction cosines, finite metrics, established-coordinate agreement, and byte-identical deterministic analytical CSV/JSON outputs across a complete rerun. Viewer tests verified zero Qwen/editorial numerical drift, exact Big Five source nodes, 270 model/profile surface variants, model/profile-specific masks and planes, stale-trace rejection, camera persistence, and persona-name selection persistence. Actual Chrome 152 loaded both self-contained viewers with real Plotly WebGL, switched all models/profile sets (and all ridge constructions), reset to Qwen/editorial, and reported no page errors. DOM-double results are recorded separately from this actual-browser verification.
 
 No GPU, RunPod, new model inference, response generation, activation extraction, or external model API was used. Computation was CPU-only over saved local released vectors.

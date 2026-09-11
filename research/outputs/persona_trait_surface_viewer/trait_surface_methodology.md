@@ -6,7 +6,7 @@ Scientific label: same-space activation-cosine trait profiles.
 
 ## What the Viewer Shows
 
-`persona_trait_surface_viewer.html` extends the accepted trait ridges into five three-dimensional grouped surfaces for Qwen, Llama, and Gemma. Model switching replaces persona coordinates, group heights, fitted fabric, support mask, flat plane, node-fit diagnostics, hover data, and pinned-node position without reloading the page.
+`persona_trait_surface_viewer.html` extends the accepted trait ridges into five three-dimensional profiles for Qwen, Llama, and Gemma. Model or profile-set switching replaces persona coordinates, heights, fitted fabric, support mask, flat plane, node-fit diagnostics, hover data, constituent details, and pinned-node position without reloading the page. The original editorial groups remain the default.
 
 The groups are unchanged:
 
@@ -23,6 +23,8 @@ These are editorial reading groups, not fitted latent factors. For persona `i`, 
 `height(i, g, m) = mean(member_trait_within_model_percentiles(i, g, m))`
 
 The three weights are exactly `1/3`. The composite is not re-ranked or re-standardized. Its height range is fixed to 0–100, and exact persona nodes retain the exact group mean. Surface heights are equal-weight means of member percentiles, not probabilities or absolute trait intensities.
+
+Big Five mode displays the frozen primary human-anchored strict profiles: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. For these surfaces, height is the within-model midrank percentile of that domain's raw composite role projection. The flat plane and all fabric diagnostics are freshly fit to those values; Agreeableness does not reuse the Affiliation plane. Raw composite scores, constituent model traits, polarity, and external facet labels remain available in the inspection panel. The mapping is externally anchored but remains same-space model evidence, not independent psychometric validation.
 
 ## Model-Specific Data
 
@@ -50,13 +52,13 @@ Each selected model therefore owns its surface and mask. Relative to the Qwen ma
 
 For every model, group, and PC plane, the flat comparison is a least-squares plane over intercept plus that model's two normalized PC coordinates. `node_r2` and `node_rmse` compare exact group nodes with that model's plane. `fabric_flat_r2`, `fabric_flat_rmse`, and the clipped `100 * R2` adherence score compare that model's supported rolling fabric with its own flat plane. All are in-sample descriptive diagnostics, not held-out validation.
 
-Across all 135 model/plane/smoothing/group meshes, the total clipped supported cells are Qwen 73, Llama 65, and Gemma 47. This count depends on the model's coordinates, group heights, support, and smoothing; it is not a cross-model quality ranking.
+Across the 135 editorial model/plane/smoothing/group meshes, the total clipped supported cells are Qwen 73, Llama 65, and Gemma 47. Across the 135 primary Big Five meshes the corresponding counts are Qwen 282, Llama 299, and Gemma 201. These counts depend on coordinates, heights, support, and smoothing; they are not cross-model quality rankings.
 
 ## Controls and Switching
 
 The original ordered PC-axis choices, three smoothing settings, fabric toggle, flat-plane toggle, flat-plane-only mode, persona-node toggle, connector toggle, group slider/buttons, hover/pin behavior, and yaw/pitch/roll/zoom controls remain.
 
-On a model switch, the current PC pair, smoothing, view mode, camera, zoom, visibility toggles, and group remain. If a pinned persona is present, it is looked up by role name in the new model and remains selected. Reset View restores Qwen and the initial camera while preserving the selected persona by name.
+On a model switch, the current profile set, PC pair, smoothing, view mode, camera, zoom, visibility toggles, and profile index remain. Profile switching preserves camera, zoom, view settings, and pinned persona name while moving to the first profile in the new set. Reset View restores Qwen/editorial and the initial camera while preserving the selected persona by name.
 
 ## Qwen Backward Compatibility
 
@@ -74,11 +76,11 @@ The Qwen subset retains five groups and 1,375 group rows exactly.
 
 ## Verification
 
-`verify_trait_surface_data.py` independently reconstructs group means, support masks, flat-plane fits, and diagnostic values for all three models. It verifies 4,125 unique model/persona/group rows, 135 surface variants, strict Qwen reproduction, bounded meshes, source hashes, and embedded-data identity.
+`verify_trait_surface_data.py` independently reconstructs editorial group means, Big Five source scores, support masks, flat-plane fits, and diagnostic values for all three models. It verifies 4,125 editorial and 4,125 Big Five node rows, 270 surface variants, strict Qwen/editorial reproduction, bounded meshes, source hashes, and embedded-data identity.
 
-`verify_trait_surface_controls.cjs` is a Plotly/DOM-double suite. It runs 225 camera round trips, all six ordered PC views, all five groups, visibility modes, repeated and queued model switches, selected-model surface/flat diagnostics, stale-trace rejection, camera persistence, and persona-name selection persistence.
+`verify_trait_surface_controls.cjs` is a Plotly/DOM-double suite. It runs 225 camera round trips, all six ordered PC views, both profile sets, all five profiles, visibility modes, repeated and queued switches, selected-model/profile surface and flat diagnostics, stale-trace rejection, camera persistence, and persona-name selection persistence.
 
-`verify_trait_viewers_browser.cjs` is separate actual-browser verification. Headless Chrome 152 loaded real embedded Plotly WebGL, switched all three models repeatedly and rapidly, confirmed that node coordinates, group heights, fabric and flat diagnostics matched the selected model, exercised camera presets/dials after switches, preserved `playwright` by name, reset to Qwen, and produced no page errors. Captured browser images are `multimodel_surface_browser.png` and the companion ridge screenshot.
+`verify_trait_viewers_browser.cjs` is separate actual-browser verification. Headless Chrome 152 loaded real embedded Plotly WebGL, switched all three models and both profile sets repeatedly, confirmed that node coordinates, heights, fabric, support and flat diagnostics matched the selected data, exercised camera presets/dials after switches, preserved `playwright` by name, reset to Qwen/editorial, and produced no page errors. Captured browser images are `multimodel_surface_browser.png` and the companion ridge screenshot.
 
 `trait_surface_preview.svg` and `.png` remain static Qwen scientific previews generated without a browser. They are not browser screenshots.
 
