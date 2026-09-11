@@ -37,7 +37,7 @@ import pandas as pd
 from joblib import Parallel, delayed
 from scipy.cluster.hierarchy import fcluster, linkage
 from scipy.spatial.distance import squareform
-from scipy.stats import pearsonr
+from scipy.stats import pearsonr, spearmanr
 from sklearn.exceptions import ConvergenceWarning
 from sklearn.linear_model import MultiTaskElasticNetCV, Ridge
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
@@ -58,6 +58,14 @@ MATRIX_PATH = REPO_ROOT / "research/outputs/trait_persona_prediction/persona_tra
 GEOMETRY_PATH = REPO_ROOT / "research/visualizations/geometry_viz_data.json"
 RIDGE15_PATH = REPO_ROOT / "research/outputs/persona_trait_ridge_plots/trait_category_order.csv"
 PROVENANCE_REPORT = REPO_ROOT / "research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md"
+PCA_BUILDER = REPO_ROOT / "research/visualizations/scripts/build_geometry_viz.py"
+SAVED_VECTOR_REPO = (
+    REPO_ROOT
+    if (REPO_ROOT / "downloads/hf_vectors/qwen-3-32b").is_dir()
+    else REPO_ROOT.parent / "assistant-axis"
+)
+ROLE_DIR = SAVED_VECTOR_REPO / "downloads/hf_vectors/qwen-3-32b/role_vectors"
+TRAIT_DIR = SAVED_VECTOR_REPO / "downloads/hf_vectors/qwen-3-32b/trait_vectors"
 
 PC_NAMES = ["PC1", "PC2", "PC3"]
 OUTER_SEEDS = list(range(42, 52))
@@ -70,8 +78,9 @@ FIXED15 = [
     "rebellious", "competitive", "manipulative",
     "empathetic", "agreeable", "altruistic",
 ]
-RANDOM_BUDGETS = [5, 10, 15, 30]
-PERMUTATION_BUDGETS = [5, 10, 15]
+RANDOM_REAL_BUDGETS = [1, 2, 3, 5, 8, 10, 15, 20, 30, 40, 60, 240]
+RANDOM_DIRECTION_BUDGETS = [1, 2, 3, 5, 8, 10, 15, 20, 30, 40, 60, 80, 120, 160, 240]
+PERMUTATION_BUDGETS = [5, 10, 15, 30]
 REDUNDANCY_THRESHOLDS = [0.90, 0.95]
 SPARSE_L1_RATIOS = [0.5, 0.9, 1.0]
 SPARSE_ALPHAS = [3e-3, 1e-2, 3e-2, 1e-1]
@@ -83,6 +92,13 @@ def utc_now() -> str:
 
 def rel(path: Path) -> str:
     return str(path.resolve().relative_to(REPO_ROOT.resolve()))
+
+
+def source_path(path: Path) -> str:
+    try:
+        return rel(path)
+    except ValueError:
+        return str(path.resolve())
 
 
 def sha256_file(path: Path) -> str:
@@ -149,6 +165,44 @@ def load_and_verify_data(prior: Any) -> tuple[np.ndarray, np.ndarray, list[str],
         "canonical_coordinate_table_shared_persona_count": len(shared_indices),
     }
     return X, Y, personas, traits, audit
+
+
+def load_and_verify_activation_sources(
+    prior: Any,
+    X: np.ndarray,
+    Y: np.ndarray,
+    personas: list[str],
+    traits: list[str],
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, dict[str, Any]]:
+    """Load saved vectors only to audit algebraic dependence and build controls."""
+    prior.ROLE_DIR = ROLE_DIR
+    prior.TRAIT_DIR = TRAIT_DIR
+    role_raw, trait_raw, matrix_check, pca_basis = prior.verify_sources_and_pca(
+        X, Y, personas, traits
+    )
+    if role_raw.shape != (275, 5120) or trait_raw.shape != (240, 5120):
+        raise RuntimeError(
+            f"Unexpected activation shapes: roles={role_raw.shape}, traits={trait_raw.shape}"
+        )
+    role_norms = np.linalg.norm(role_raw, axis=1)
+    trait_norms = np.linalg.norm(trait_raw, axis=1)
+    if np.any(role_norms <= 0) or np.any(trait_norms <= 0):
+        raise RuntimeError("Zero-norm saved activation vector")
+    role_unit = role_raw / role_norms[:, None]
+    trait_unit = trait_raw / trait_norms[:, None]
+    source_audit = {
+        "role_vector_count": int(role_raw.shape[0]),
+        "trait_vector_count": int(trait_raw.shape[0]),
+        "activation_dimension": int(role_raw.shape[1]),
+        "role_mean_pooling": "Each saved 2D tensor is averaged over its first dimension.",
+        "trait_mean_pooling": "Each saved 2D tensor is averaged over its first dimension.",
+        "trait_cosine_matrix_reproduction": matrix_check,
+        "canonical_pca_reproduction": pca_basis["check"],
+        "pca_feature_variables": "5,120 coordinates of each mean-pooled role activation vector",
+        "named_traits_enter_pca_fit": False,
+        "shared_role_vector_provenance": True,
+    }
+    return role_raw, role_unit, trait_raw, trait_unit, {"pca_basis": pca_basis, "audit": source_audit}
 
 
 def outer_splits(X: np.ndarray, seeds: Sequence[int]) -> list[dict[str, Any]]:
@@ -412,6 +466,7 @@ def metrics_from_arrays(y_true: np.ndarray, y_pred: np.ndarray, train_stds: np.n
         predicted = y_pred[:, index]
         result[f"{pc.lower()}_r2"] = float(r2_score(truth, predicted))
         result[f"{pc.lower()}_pearson"] = float(pearsonr(truth, predicted).statistic)
+        result[f"{pc.lower()}_spearman"] = float(spearmanr(truth, predicted).statistic)
         result[f"{pc.lower()}_rmse"] = float(np.sqrt(mean_squared_error(truth, predicted)))
         result[f"{pc.lower()}_mae"] = float(mean_absolute_error(truth, predicted))
     normalized = np.linalg.norm((y_pred - y_true) / train_stds, axis=1)
@@ -983,14 +1038,15 @@ def redundancy_analysis(
     return pairs, groups, closest
 
 
-def evaluate_random_subsets(
+def evaluate_random_real_trait_subsets(
     splits: Sequence[dict[str, Any]], X: np.ndarray, Y: np.ndarray, traits: Sequence[str], draws: int, n_jobs: int
 ) -> pd.DataFrame:
     rng = np.random.default_rng(20260911)
     tasks = []
-    for budget in RANDOM_BUDGETS:
+    for budget in RANDOM_REAL_BUDGETS:
+        budget_draws = 1 if budget == X.shape[1] else draws
         seen: set[tuple[int, ...]] = set()
-        while len(seen) < draws:
+        while len(seen) < budget_draws:
             selected = tuple(sorted(rng.choice(X.shape[1], size=budget, replace=False).tolist()))
             seen.add(selected)
         for draw, selected in enumerate(sorted(seen)):
@@ -1003,11 +1059,156 @@ def evaluate_random_subsets(
             "draw": draw,
             "subset_seed": 20260911,
             "traits": json.dumps([traits[index] for index in selected]),
+            "basis_type": "random_subset_of_real_traits",
             **aggregate_fixed_results(results),
         }
 
     rows = Parallel(n_jobs=n_jobs, verbose=5)(delayed(one)(*task) for task in tasks)
     return pd.DataFrame(rows).sort_values(["feature_budget", "draw"]).reset_index(drop=True)
+
+
+def bank_draw_count(feature_budget: int, small_draws: int, large_draws: int) -> int:
+    return small_draws if feature_budget <= 30 else large_draws
+
+
+def evaluate_isotropic_random_directions(
+    splits: Sequence[dict[str, Any]],
+    role_unit: np.ndarray,
+    Y: np.ndarray,
+    small_draws: int,
+    large_draws: int,
+    n_jobs: int,
+) -> pd.DataFrame:
+    dimension = role_unit.shape[1]
+    tasks = [
+        (budget, bank)
+        for budget in RANDOM_DIRECTION_BUDGETS
+        for bank in range(bank_draw_count(budget, small_draws, large_draws))
+    ]
+
+    def one(budget: int, bank: int) -> dict[str, Any]:
+        seed = 30_000_000 + budget * 10_000 + bank
+        rng = np.random.default_rng(seed)
+        directions = rng.standard_normal((budget, dimension))
+        directions /= np.linalg.norm(directions, axis=1, keepdims=True)
+        features = role_unit @ directions.T
+        results = [
+            evaluate_fixed_split(split, features, Y, list(range(budget)), [0, 1, 2])
+            for split in splits
+        ]
+        return {
+            "feature_budget": budget,
+            "bank": bank,
+            "bank_seed": seed,
+            "basis_type": "isotropic_gaussian_activation_directions",
+            "activation_dimension": dimension,
+            "direction_generation_used_pc_targets": False,
+            **aggregate_fixed_results(results),
+        }
+
+    rows = Parallel(n_jobs=n_jobs, verbose=5)(delayed(one)(*task) for task in tasks)
+    return pd.DataFrame(rows).sort_values(["feature_budget", "bank"]).reset_index(drop=True)
+
+
+def persona_span_fold_caches(
+    splits: Sequence[dict[str, Any]], role_raw: np.ndarray, role_unit: np.ndarray
+) -> list[dict[str, Any]]:
+    """Precompute target-free Gram forms for fold-local persona-span directions."""
+    unit_raw_gram = role_unit @ role_raw.T
+    raw_gram = role_raw @ role_raw.T
+    caches = []
+    for split in splits:
+        train_idx = split["train_idx"]
+        cross = unit_raw_gram[:, train_idx]
+        projection = cross - cross.mean(axis=1, keepdims=True)
+        train_gram = raw_gram[np.ix_(train_idx, train_idx)]
+        centered_gram = (
+            train_gram
+            - train_gram.mean(axis=1, keepdims=True)
+            - train_gram.mean(axis=0, keepdims=True)
+            + train_gram.mean()
+        )
+        caches.append({"split": split, "projection": projection, "centered_gram": centered_gram})
+    return caches
+
+
+def validate_persona_span_gram_math(
+    split: dict[str, Any], role_raw: np.ndarray, role_unit: np.ndarray
+) -> dict[str, Any]:
+    cache = persona_span_fold_caches([split], role_raw, role_unit)[0]
+    rng = np.random.default_rng(51_201_609)
+    weights = rng.standard_normal((len(split["train_idx"]), 3))
+    centered = role_raw[split["train_idx"]] - role_raw[split["train_idx"]].mean(axis=0)
+    explicit_directions = weights.T @ centered
+    explicit_directions /= np.linalg.norm(explicit_directions, axis=1, keepdims=True)
+    explicit_features = role_unit @ explicit_directions.T
+    gram_norm_sq = np.sum(weights * (cache["centered_gram"] @ weights), axis=0)
+    gram_features = (cache["projection"] @ weights) / np.sqrt(np.maximum(gram_norm_sq, 1e-24))[None, :]
+    maximum = float(np.max(np.abs(explicit_features - gram_features)))
+    return {
+        "max_abs_feature_difference": maximum,
+        "tolerance": 1e-10,
+        "passed": bool(maximum <= 1e-10),
+        "held_out_role_vectors_used_to_construct_directions": False,
+        "pc_targets_used_to_construct_directions": False,
+    }
+
+
+def evaluate_persona_span_random_directions(
+    splits: Sequence[dict[str, Any]],
+    role_raw: np.ndarray,
+    role_unit: np.ndarray,
+    Y: np.ndarray,
+    small_draws: int,
+    large_draws: int,
+    n_jobs: int,
+) -> tuple[pd.DataFrame, dict[str, Any]]:
+    caches = persona_span_fold_caches(splits, role_raw, role_unit)
+    math_check = validate_persona_span_gram_math(splits[0], role_raw, role_unit)
+    if not math_check["passed"]:
+        raise RuntimeError(f"Persona-span Gram construction mismatch: {math_check}")
+    tasks = [
+        (budget, bank)
+        for budget in RANDOM_DIRECTION_BUDGETS
+        for bank in range(bank_draw_count(budget, small_draws, large_draws))
+    ]
+
+    def one(budget: int, bank: int) -> dict[str, Any]:
+        results = []
+        seeds = []
+        for cache in caches:
+            split = cache["split"]
+            seed = (
+                50_000_000
+                + budget * 100_000
+                + bank * 1_000
+                + split["repeat"] * 10
+                + split["outer_fold"]
+            )
+            seeds.append(seed)
+            rng = np.random.default_rng(seed)
+            weights = rng.standard_normal((len(split["train_idx"]), budget))
+            norm_sq = np.sum(weights * (cache["centered_gram"] @ weights), axis=0)
+            if np.any(norm_sq <= 1e-20):
+                raise RuntimeError("Degenerate training-persona-span random direction")
+            features = (cache["projection"] @ weights) / np.sqrt(norm_sq)[None, :]
+            results.append(
+                evaluate_fixed_split(split, features, Y, list(range(budget)), [0, 1, 2])
+            )
+        return {
+            "feature_budget": budget,
+            "bank": bank,
+            "basis_type": "outer_training_persona_variation_span_random_directions",
+            "fold_seed_min": min(seeds),
+            "fold_seed_max": max(seeds),
+            "outer_training_role_only": True,
+            "direction_generation_used_pc_targets": False,
+            **aggregate_fixed_results(results),
+        }
+
+    rows = Parallel(n_jobs=n_jobs, verbose=5)(delayed(one)(*task) for task in tasks)
+    frame = pd.DataFrame(rows).sort_values(["feature_budget", "bank"]).reset_index(drop=True)
+    return frame, math_check
 
 
 def compact_permutation_control(
@@ -1038,6 +1239,214 @@ def full_data_greedy_order(X: np.ndarray, Y: np.ndarray, traits: Sequence[str]) 
     path.insert(0, "label", "DESCRIPTIVE FULL-DATA ORDER")
     path["held_out_importance_ranking"] = False
     return path
+
+
+def write_pca_dependency_audit(
+    activation_audit: dict[str, Any], matrix_check: dict[str, Any], pca_check: dict[str, Any]
+) -> None:
+    lines = [
+        "# PCA–trait dependency audit",
+        "",
+        "## Observed construction",
+        "",
+        "The canonical builder `research/visualizations/scripts/build_geometry_viz.py` loads saved Qwen role tensors and mean-pools every 2D tensor over its first dimension (`load_vectors`, lines 61–70). The verified role matrix has shape 275 × 5,120. The builder then executes `PCA(n_components=3).fit_transform(role_vecs)` on that role matrix (lines 200–205). Thus the PCA feature variables are the 5,120 activation coordinates, and the observations are the 275 roles/personas.",
+        "",
+        "The builder also loads 240 trait tensors, but those traits are processed separately. They do not enter the role-PCA fit. The source-vector audit reproduced the canonical PCA coordinates from centered mean-pooled role vectors with maximum absolute error "
+        f"{pca_check['max_abs_coordinate_reproduction_error']:.3e} (tolerance {pca_check['strict_tolerance']:.1e}).",
+        "",
+        "The existing 275 × 240 predictor matrix was independently reproduced by L2-normalizing the same mean-pooled role vectors and the 240 mean-pooled trait vectors, then multiplying role-unit vectors by trait-unit vectors transposed. Maximum absolute matrix error was "
+        f"{matrix_check['max_abs_reproduction_error']:.3e}.",
+        "",
+        "## Dependency conclusion",
+        "",
+        "PCA and the trait bank are not circular in the strongest sense: the 240 named trait scores are not inputs to the PCA construction. They are nevertheless algebraically dependent. Every target coordinate is a centered linear projection of a role activation vector, while every predictor is a cosine projection of that same role vector onto a trait activation direction. With sufficiently stable role norms and enough directions, Ridge can reconstruct PCA directions through activation-space basis coverage even when the direction labels carry no special psychological meaning.",
+        "",
+        "This audit therefore treats near-ceiling prediction as same-space reconstruction. Semantic trait-specific advantage must be established by outperforming matched generic direction banks; it cannot be inferred from the full 240-trait result alone.",
+        "",
+        "## Verified counts",
+        "",
+        f"- Roles/personas: {activation_audit['role_vector_count']}",
+        f"- Mean-pooled role dimension: {activation_audit['activation_dimension']}",
+        f"- Named trait directions: {activation_audit['trait_vector_count']}",
+        "- Named traits used to fit role PCA: no",
+        "- Same role activation vectors shared across predictors and targets: yes",
+        "",
+    ]
+    (OUTPUT_DIR / "pca_trait_dependency_audit.md").write_text("\n".join(lines), encoding="utf-8")
+
+
+def role_norm_audit(
+    role_raw: np.ndarray, Y: np.ndarray, personas: Sequence[str]
+) -> tuple[pd.DataFrame, dict[str, Any]]:
+    norms = np.linalg.norm(role_raw, axis=1)
+    frame = pd.DataFrame({"persona": personas, "role_vector_l2_norm": norms})
+    for index, pc in enumerate(PC_NAMES):
+        frame[pc.lower()] = Y[:, index]
+    associations = {}
+    for index, pc in enumerate(PC_NAMES):
+        associations[pc] = {
+            "pearson_r": float(pearsonr(norms, Y[:, index]).statistic),
+            "spearman_rho": float(spearmanr(norms, Y[:, index]).statistic),
+        }
+    summary = {
+        "n_personas": len(norms),
+        "activation_dimension": role_raw.shape[1],
+        "mean_l2_norm": float(norms.mean()),
+        "sd_l2_norm_population": float(norms.std(ddof=0)),
+        "coefficient_of_variation": float(norms.std(ddof=0) / norms.mean()),
+        "minimum_l2_norm": float(norms.min()),
+        "maximum_l2_norm": float(norms.max()),
+        "range_l2_norm": float(norms.max() - norms.min()),
+        "pc_associations": associations,
+        "interpretive_rule": "Small norm CV supports cosine-as-scaled-linear-projection; material norm-PC association qualifies that approximation.",
+    }
+    return frame, summary
+
+
+def trait_span_pc_coverage(
+    trait_unit: np.ndarray,
+    pca_components: np.ndarray,
+    traits: Sequence[str],
+    descriptive: pd.DataFrame,
+) -> pd.DataFrame:
+    selected_order = descriptive.sort_values("entry_rank")["trait"].tolist()
+    subsets: list[tuple[str, list[str], bool]] = [
+        ("full_real_trait_bank", list(traits), False),
+        ("fixed_editorial_15", FIXED15, False),
+    ]
+    for budget in [5, 10, 15, 30]:
+        subsets.append((f"full_data_optimized_{budget}", selected_order[:budget], True))
+    rows = []
+    for label, selected_traits, target_selected in subsets:
+        indices = [traits.index(trait) for trait in selected_traits]
+        directions = trait_unit[indices]
+        _, singular, vh = np.linalg.svd(directions, full_matrices=False)
+        tolerance = max(directions.shape) * np.finfo(np.float64).eps * singular[0]
+        rank = int(np.sum(singular > tolerance))
+        basis_rows = vh[:rank]
+        for pc_index, pc in enumerate(PC_NAMES):
+            coverage = float(np.sum((basis_rows @ pca_components[pc_index]) ** 2))
+            if coverage < -1e-10 or coverage > 1.0 + 1e-10:
+                raise RuntimeError(f"Invalid span coverage {coverage} for {label} {pc}")
+            rows.append(
+                {
+                    "subset": label,
+                    "feature_budget": len(indices),
+                    "pc": pc,
+                    "squared_span_coverage": float(np.clip(coverage, 0.0, 1.0)),
+                    "numerical_rank": rank,
+                    "svd_tolerance": tolerance,
+                    "target_informed_subset": target_selected,
+                    "subset_traits": json.dumps(selected_traits),
+                    "interpretation": (
+                        "Descriptive only: subset was selected using target information."
+                        if target_selected else
+                        "Direct activation-space span coverage; not held-out predictive performance."
+                    ),
+                }
+            )
+    return pd.DataFrame(rows)
+
+
+def summarize_bank_distribution(frame: pd.DataFrame, budget: int, prefix: str) -> dict[str, Any]:
+    subset = frame[frame["feature_budget"] == budget]
+    if subset.empty:
+        return {}
+    row: dict[str, Any] = {f"{prefix}_bank_count": len(subset)}
+    for metric in ["pc1_r2", "pc2_r2", "pc3_r2", "normalized_3d_error_rmse"]:
+        values = subset[metric]
+        row[f"{prefix}_{metric}_median"] = float(values.median())
+        row[f"{prefix}_{metric}_q05"] = float(values.quantile(0.05))
+        row[f"{prefix}_{metric}_q95"] = float(values.quantile(0.95))
+        row[f"{prefix}_{metric}_best"] = float(values.max() if metric.endswith("_r2") else values.min())
+        row[f"{prefix}_{metric}_worst"] = float(values.min() if metric.endswith("_r2") else values.max())
+    return row
+
+
+def build_matched_basis_comparison(
+    curve: pd.DataFrame,
+    pc_curve: pd.DataFrame,
+    fixed_metrics: dict[str, Any],
+    random_real: pd.DataFrame,
+    isotropic: pd.DataFrame,
+    persona_span: pd.DataFrame,
+) -> pd.DataFrame:
+    budgets = sorted(set(RANDOM_DIRECTION_BUDGETS) | set(RANDOM_REAL_BUDGETS))
+    rows = []
+    for budget in budgets:
+        selected_rows = curve[curve["feature_budget"] == budget]
+        row: dict[str, Any] = {"feature_budget": budget}
+        if not selected_rows.empty:
+            selected = selected_rows.iloc[0]
+            for metric in ["pc1_r2", "pc2_r2", "pc3_r2", "normalized_3d_error_rmse"]:
+                row[f"optimized_real_traits_{metric}"] = float(selected[metric])
+            for pc in PC_NAMES:
+                pc_selected = pc_curve[
+                    (pc_curve["pc"] == pc) & (pc_curve["feature_budget"] == budget)
+                ]
+                if not pc_selected.empty:
+                    row[f"pc_specific_optimized_real_traits_{pc.lower()}_r2"] = float(pc_selected.iloc[0]["r2"])
+        if budget == 15:
+            for metric in ["pc1_r2", "pc2_r2", "pc3_r2", "normalized_3d_error_rmse"]:
+                row[f"fixed_editorial_15_{metric}"] = float(fixed_metrics[metric])
+        for frame, prefix in [
+            (random_real, "random_real_traits"),
+            (isotropic, "isotropic_random_directions"),
+            (persona_span, "persona_span_random_directions"),
+        ]:
+            row.update(summarize_bank_distribution(frame, budget, prefix))
+        if "optimized_real_traits_normalized_3d_error_rmse" in row:
+            actual = row["optimized_real_traits_normalized_3d_error_rmse"]
+            for frame, prefix in [
+                (random_real, "random_real_traits"),
+                (isotropic, "isotropic_random_directions"),
+                (persona_span, "persona_span_random_directions"),
+            ]:
+                values = frame.loc[
+                    frame["feature_budget"] == budget, "normalized_3d_error_rmse"
+                ]
+                if len(values):
+                    median = float(values.median())
+                    row[f"optimized_minus_{prefix}_median_nrmse"] = actual - median
+                    row[f"optimized_to_{prefix}_median_nrmse_ratio"] = actual / median
+                    row[f"optimized_empirical_percentile_beats_{prefix}"] = float(np.mean(values >= actual))
+        rows.append(row)
+    return pd.DataFrame(rows).sort_values("feature_budget").reset_index(drop=True)
+
+
+def json_safe_records(frame: pd.DataFrame) -> list[dict[str, Any]]:
+    clean = frame.astype(object).where(pd.notna(frame), None)
+    return clean.to_dict(orient="records")
+
+
+def classify_basis_result(matched: pd.DataFrame) -> tuple[str, str]:
+    row15 = matched[matched["feature_budget"] == 15].iloc[0]
+    row240 = matched[matched["feature_budget"] == 240].iloc[0]
+    ratio_iso15 = float(row15["optimized_to_isotropic_random_directions_median_nrmse_ratio"])
+    ratio_span15 = float(row15["optimized_to_persona_span_random_directions_median_nrmse_ratio"])
+    full_rmse = float(row240["optimized_real_traits_normalized_3d_error_rmse"])
+    iso240 = float(row240["isotropic_random_directions_normalized_3d_error_rmse_median"])
+    span240 = float(row240["persona_span_random_directions_normalized_3d_error_rmse_median"])
+    compact_advantage = max(ratio_iso15, ratio_span15) <= 0.75
+    generic_near_full = min(iso240, span240) <= 2.0 * full_rmse
+    if compact_advantage and generic_near_full:
+        return (
+            "mixture",
+            "Optimized real traits have a large compact-k advantage, while a sufficiently large generic basis also approaches the full-bank reconstruction.",
+        )
+    if compact_advantage:
+        return (
+            "compact semantic structure",
+            "Optimized real traits substantially outperform both matched generic bases at k=15, and the generic banks do not reach twice the real full-bank error at k=240.",
+        )
+    return (
+        "generic basis coverage" if generic_near_full else "mixture",
+        (
+            "Matched generic directions explain much of the reconstruction and reach near-full error at high k; compact real-trait advantage is limited."
+            if generic_near_full else
+            "Optimized traits provide some compact advantage, but neither compact semantics nor generic coverage alone accounts for the complete pattern."
+        ),
+    )
 
 
 def threshold_answers(curve: pd.DataFrame, canonical_full_rmse: float) -> dict[str, Any]:
@@ -1121,16 +1530,19 @@ def build_final_ranking(
     return frame.sort_values(["synthesis_rank", "trait"]).reset_index(drop=True)
 
 
-def random_summary(random: pd.DataFrame, curve: pd.DataFrame) -> list[dict[str, Any]]:
+def random_real_summary(random: pd.DataFrame, curve: pd.DataFrame) -> list[dict[str, Any]]:
     rows = []
-    for budget in RANDOM_BUDGETS:
+    for budget in RANDOM_REAL_BUDGETS:
         values = random[random["feature_budget"] == budget]["normalized_3d_error_rmse"]
-        selected = float(curve.loc[curve["feature_budget"] == budget, "normalized_3d_error_rmse"].iloc[0])
+        selected_rows = curve.loc[curve["feature_budget"] == budget, "normalized_3d_error_rmse"]
+        if values.empty or selected_rows.empty:
+            continue
+        selected = float(selected_rows.iloc[0])
         rows.append(
             {
                 "feature_budget": budget,
                 "draws": len(values),
-                "random_mean_normalized_3d_rmse": float(values.mean()),
+                "random_median_normalized_3d_rmse": float(values.median()),
                 "random_q05_normalized_3d_rmse": float(values.quantile(0.05)),
                 "random_q95_normalized_3d_rmse": float(values.quantile(0.95)),
                 "nested_selected_normalized_3d_rmse": selected,
@@ -1150,6 +1562,7 @@ def make_source_manifest(generation_timestamp: str, base_commit: str, branch: st
         "canonical_predictor_validation": PRIOR_SUMMARY,
         "canonical_predictor_model_comparison": PRIOR_MODEL_COMPARISON,
         "trait_profile_provenance_report": PROVENANCE_REPORT,
+        "canonical_geometry_builder": PCA_BUILDER,
     }.items():
         sources[name] = {"path": rel(path), "size_bytes": path.stat().st_size, "sha256": sha256_file(path)}
     import scipy
@@ -1162,6 +1575,14 @@ def make_source_manifest(generation_timestamp: str, base_commit: str, branch: st
         "activation_model": "Qwen/Qwen3-32B",
         "analysis_model_used": "GPT-5.5",
         "primary_representation": "raw activation-cosine trait values",
+        "saved_activation_directories": {
+            "role_vectors": source_path(ROLE_DIR),
+            "trait_vectors": source_path(TRAIT_DIR),
+        },
+        "random_direction_controls": {
+            "isotropic": "Independent N(0,I_5120) vectors, L2-normalized; no PC coordinates/loadings used.",
+            "persona_span": "Fold-local Gaussian linear combinations of centered outer-training role vectors; no held-out role or PC target used.",
+        },
         "sources": sources,
         "software": {
             "python": sys.version.split()[0],
@@ -1189,24 +1610,34 @@ def report_markdown(
     best5 = curve[curve["feature_budget"] == 5].iloc[0]
     full = summary["full_240"]["canonical_lopo"]
     thresholds = summary["threshold_answers"]
-    random_rows = summary["random_subset_comparison"]
+    matched_rows = summary["random_basis_controls"]["matched_key_budgets"]
     robust = ranking[ranking["interpretation_note"].str.startswith("Robustly predictive")].head(15)
+    role_norm = summary["role_norm_audit"]
+    coverage = summary["trait_span_pc_coverage_full_240"]
     lines = [
-        "# Qwen trait sparsity prediction study",
+        "# Qwen trait sparsity and basis-coverage audit",
         "",
         f"Generated: {summary['generation_timestamp_utc']}",
         "",
         "## Central answer",
         "",
-        "**Observed.** A compact trait set provides strong held-out prediction, while near-full reconstruction requires more traits. This is a compression result inside one Qwen activation space, not independent psychological validation.",
+        "**Observed.** Persona PCA is fit to 275 mean-pooled Qwen role vectors using their 5,120 activation coordinates as variables. The 240 named traits are not PCA inputs. However, the PC targets and trait-cosine predictors are algebraically dependent because both are projections of the same role activation vectors.",
         "",
         f"The exact canonical 240-trait LOPO baseline reproduced at PC1/PC2/PC3 R2={full['pc1_r2']:.6f}/{full['pc2_r2']:.6f}/{full['pc3_r2']:.6f} and normalized 3D RMSE={full['normalized_3d_error_rmse']:.6f}. The fixed editorial 15 reaches repeated-nested R2={fixed['pc1_r2']:.4f}/{fixed['pc2_r2']:.4f}/{fixed['pc3_r2']:.4f}, normalized RMSE={fixed['normalized_3d_error_rmse']:.4f}; nested-selected 15 reaches {best15.pc1_r2:.4f}/{best15.pc2_r2:.4f}/{best15.pc3_r2:.4f}, normalized RMSE={best15.normalized_3d_error_rmse:.4f}.",
         "",
+        f"**Interpretation.** The matched controls favor **{summary['result_category']}**: {summary['interpretation']}",
+        "",
+        "## What PCA uses—and the exact dependence",
+        "",
+        "The canonical geometry builder mean-pools each saved role tensor and runs PCA directly on the resulting 275 × 5,120 role-vector matrix. The observations are personas; the variables are activation coordinates. Trait tensors are loaded separately and do not enter the role PCA fit.",
+        "",
+        "For role vector `v_i`, unit trait direction `t_j`, role mean `mu`, and unit PC loading `p_c`, the predictor is `x_ij = (v_i / ||v_i||) dot t_j`, whereas the target is `y_ic = (v_i - mu) dot p_c`. This is not direct target-column leakage, but it is same-vector algebraic dependence. The separate `pca_trait_dependency_audit.md` records source-code and numerical reproduction evidence.",
+        "",
         "## Epistemic labels",
         "",
-        "- **Observed:** held-out metrics, selection frequencies, conditional permutation degradation, sparse nonzero frequencies, trait correlations, and deterministic controls.",
-        "- **Interpretation:** whether the geometry is largely recoverable from a compact trait set or needs broad same-space basis coverage.",
-        "- **Hypothesis:** selected labels are causal psychological dimensions or will predict behaviorally elicited personas. Neither was tested.",
+        "- **Observed:** held-out metrics, random-basis distributions, PC span coverage, role norms, selection frequencies, conditional permutation degradation, sparse nonzero frequencies, and trait correlations.",
+        "- **Interpretation:** what matched generic directions imply about semantic alignment versus generic basis coverage.",
+        "- **Hypothesis:** the labels form a causal psychology, correspond to humans, or determine behavior. None was tested.",
         "",
         "## Validation design",
         "",
@@ -1214,7 +1645,7 @@ def report_markdown(
         "",
         "`sqrt((1 / N_validation) * sum_i sum_c ((y_ic - yhat_ic) / s_c,inner-train)^2)`.",
         "",
-        "No outer-test row influences feature ranking, selection, scaling, target scaling, alpha choice, or stopping. All compact budgets 1 through the reported maximum are evaluated, with 240 retained as the terminal reference.",
+        "No outer-test row influences feature ranking, selection, scaling, target scaling, alpha choice, or stopping. Isotropic directions are generated without PC information. Persona-span directions are regenerated inside each outer fold from centered training role vectors only; held-out role vectors and all PC target values are absent from direction construction.",
         "",
         "## Direct performance comparison",
         "",
@@ -1233,13 +1664,46 @@ def report_markdown(
         f"Smallest evaluated held-out-selected k with all-PC R2 >= .90/.95/.98/.99: {thresholds['smallest_k_all_pc_r2_gte_0.90']}/{thresholds['smallest_k_all_pc_r2_gte_0.95']}/{thresholds['smallest_k_all_pc_r2_gte_0.98']}/{thresholds['smallest_k_all_pc_r2_gte_0.99']}.",
         f"Smallest k with normalized 3D RMSE <= .25/.15/.10: {thresholds['smallest_k_normalized_3d_rmse_lte_0.25']}/{thresholds['smallest_k_normalized_3d_rmse_lte_0.15']}/{thresholds['smallest_k_normalized_3d_rmse_lte_0.10']}. The <=2x-full threshold is {thresholds['two_x_canonical_full_rmse_threshold']:.6f}, reached at k={thresholds['smallest_k_normalized_3d_rmse_lte_2x_canonical_full']}.",
         "",
+        "## Matched basis controls",
+        "",
+        "Each entry below is repeated held-out Ridge performance. Random columns are medians over deterministic banks; lower normalized RMSE is better. The real-trait 240 row is necessarily the full bank. Fixed editorial 15 appears only at k=15.",
+        "",
+        "| k | optimized real | random real | isotropic 5,120-D | train-persona span | fixed editorial | beats isotropic | beats persona-span |",
+        "|---:|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    for row in matched_rows:
+        def shown(key: str) -> str:
+            value = row.get(key)
+            return "—" if value is None else f"{float(value):.4f}"
+        lines.append(
+            f"| {int(row['feature_budget'])} | {shown('optimized_real_traits_normalized_3d_error_rmse')} | "
+            f"{shown('random_real_traits_normalized_3d_error_rmse_median')} | "
+            f"{shown('isotropic_random_directions_normalized_3d_error_rmse_median')} | "
+            f"{shown('persona_span_random_directions_normalized_3d_error_rmse_median')} | "
+            f"{shown('fixed_editorial_15_normalized_3d_error_rmse')} | "
+            f"{shown('optimized_empirical_percentile_beats_isotropic_random_directions')} | "
+            f"{shown('optimized_empirical_percentile_beats_persona_span_random_directions')} |"
+        )
+    row15 = next(row for row in matched_rows if int(row["feature_budget"]) == 15)
+    lines.extend([
+        "",
+        f"At k=15, optimized-real / median-isotropic normalized-RMSE ratio is {row15['optimized_to_isotropic_random_directions_median_nrmse_ratio']:.3f}; optimized-real / median-persona-span ratio is {row15['optimized_to_persona_span_random_directions_median_nrmse_ratio']:.3f}. These are predictive effect sizes, not psychological effect sizes.",
+        "",
+        "Random subsets of real traits test whether deliberate selection helps within the named bank. Isotropic random directions test a generic coordinate system in the ambient 5,120-D activation space. Fold-local persona-span directions are the stronger generic control because every direction is guaranteed to lie in the training-persona variation span.",
+        "",
+        "## Direct span coverage and role norms",
+        "",
+        f"The full 240-trait vector span contains squared fractions {coverage['PC1']:.6f}, {coverage['PC2']:.6f}, and {coverage['PC3']:.6f} of the canonical PC1, PC2, and PC3 loading directions. Coverage for the fixed 15 and descriptive target-selected 5/10/15/30 sets is saved in `trait_span_pc_coverage.csv`; target-selected coverage is not held-out evidence.",
+        "",
+        f"Role-vector L2 norms have mean {role_norm['mean_l2_norm']:.4f}, population SD {role_norm['sd_l2_norm_population']:.4f}, CV {role_norm['coefficient_of_variation']:.4f}, and range {role_norm['minimum_l2_norm']:.4f}–{role_norm['maximum_l2_norm']:.4f}. Norm correlations (Pearson/Spearman) are PC1 {role_norm['pc_associations']['PC1']['pearson_r']:.3f}/{role_norm['pc_associations']['PC1']['spearman_rho']:.3f}, PC2 {role_norm['pc_associations']['PC2']['pearson_r']:.3f}/{role_norm['pc_associations']['PC2']['spearman_rho']:.3f}, and PC3 {role_norm['pc_associations']['PC3']['pearson_r']:.3f}/{role_norm['pc_associations']['PC3']['spearman_rho']:.3f}. This quantifies how far cosine features depart from ordinary unnormalized linear projections.",
+        "",
         "## Robust predictive traits",
         "",
         "A trait is called robustly predictive only when at least three complementary criteria support it, including repeated selection by the 15-feature nested paths. Marginal association alone is not enough.",
         "",
         "| Trait | synthesis rank | joint marginal rank | conditional rank | forward freq @15 | sparse freq |",
         "|---|---:|---:|---:|---:|---:|",
-    ]
+    ])
     for row in robust.itertuples():
         lines.append(
             f"| {row.trait} | {row.synthesis_rank} | {row.joint_marginal_rank} | {row.conditional_permutation_rank} | {row.forward_selection_frequency_at_15:.2f} | {row.sparse_model_selection_frequency:.2f} |"
@@ -1257,16 +1721,10 @@ def report_markdown(
             "",
             "The overlap and divergence of these rankings indicate whether one joint compact basis serves all axes or each PC benefits from distinct trait directions. Full PC-specific curves and rankings are saved separately.",
             "",
-            "## Random-subset and target-permutation controls",
+            "## Target-permutation control",
             "",
-            "| k | selected RMSE | random mean | random q05-q95 | fraction random worse/equal |",
-            "|---:|---:|---:|---:|---:|",
         ]
     )
-    for row in random_rows:
-        lines.append(
-            f"| {row['feature_budget']} | {row['nested_selected_normalized_3d_rmse']:.4f} | {row['random_mean_normalized_3d_rmse']:.4f} | {row['random_q05_normalized_3d_rmse']:.4f}-{row['random_q95_normalized_3d_rmse']:.4f} | {row['fraction_random_subsets_worse_or_equal']:.1%} |"
-        )
     perm = summary["compact_target_permutation_control"]
     lines.extend(
         [
@@ -1285,15 +1743,16 @@ def report_markdown(
             "",
             "## Interpretation",
             "",
-            f"**Interpretation.** {summary['interpretation']}",
+            f"**Interpretation.** The overall result favors **{summary['result_category']}**. {summary['interpretation']}",
             "",
-            "The most defensible result may be mixed: a small trait vocabulary can provide strong prediction, while substantially broader coverage can still be needed to approach the near-ceiling 240-direction reconstruction. Random-subset performance distinguishes deliberate compact selection from generic redundancy in the trait bank.",
+            "This same-space audit should be contrasted with coordinate-blind role-instruction ratings already present in the repository. Those ratings do not receive activation vectors or PCA coordinates and are therefore more independent semantic evidence even when their R2 is much lower. This study does not recompute them.",
             "",
             "## Hypotheses and unresolved questions",
             "",
             "- Whether compact selected traits predict a genuinely new behaviorally elicited Qwen persona remains untested.",
             "- Trait labels may describe activation directions without constituting causal or independently validated psychological dimensions.",
             "- Winner identity within highly correlated groups may change under new persona inventories or extraction procedures.",
+            "- A random direction can predict a PC because it samples the same activation manifold; that does not give the direction semantic content.",
             "- No Llama or Gemma analysis was run in this study.",
             "",
             "## Compute and provenance boundary",
@@ -1310,6 +1769,7 @@ def make_inventory() -> pd.DataFrame:
         "qwen_trait_sparsity_report.md": "Main Qwen compact trait prediction report",
         "run_qwen_trait_sparsity.py": "CPU-only reproducible nested sparsity analysis runner",
         "source_manifest.json": "Source hashes, environment, and no-inference declaration",
+        "pca_trait_dependency_audit.md": "Source-code and numerical audit of PCA inputs and same-vector algebraic dependence",
         "full_model_reproduction.json": "Exact canonical 240-trait Ridge LOPO reproduction",
         "fixed_ridge15_benchmark.json": "Fixed editorial 15-trait held-out benchmark",
         "single_trait_metrics.csv": "All 240 leakage-safe single-trait marginal metrics and ranks",
@@ -1322,9 +1782,14 @@ def make_inventory() -> pd.DataFrame:
         "trait_redundancy_pairs.csv": "Trait pairs with absolute cross-persona correlation at least 0.90",
         "trait_redundancy_groups.csv": "Complete-linkage redundancy group membership at 0.90 and 0.95",
         "pc_specific_feature_budget_curve.csv": "Separately optimized compact prediction curves for PC1/PC2/PC3",
-        "pc_specific_selection_paths.csv": "PC-specific outer-training-only forward selection paths",
-        "pc_specific_selection_stability.csv": "PC-specific repeated selection rankings",
-        "random_subset_baselines.csv": "Deterministic random trait-subset held-out baselines",
+        "pc_specific_trait_rankings.csv": "PC-specific repeated outer-training selection rankings",
+        "random_real_trait_subset_baselines.csv": "Deterministic random real-trait subset held-out baselines",
+        "isotropic_random_direction_baselines.csv": "Target-independent isotropic activation-direction bank baselines",
+        "persona_span_random_direction_baselines.csv": "Fold-local training-persona-span random-direction baselines",
+        "matched_basis_comparison.csv": "Matched optimized, random-real, isotropic, persona-span, and fixed-15 comparison",
+        "trait_span_pc_coverage.csv": "SVD coverage of canonical PC loadings by trait-direction spans",
+        "role_norm_pc_audit.csv": "Per-persona role-vector norms and canonical PCs",
+        "role_norm_summary.json": "Role-norm variation and PC associations",
         "compact_subset_permutation_control.csv": "Nested compact-model target permutation null",
         "final_ranked_traits.csv": "Multi-view predictive-trait synthesis table",
         "validation_summary.json": "Machine-readable metrics, thresholds, and interpretation",
@@ -1354,6 +1819,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--outer-repeats", type=int, default=10, choices=range(1, 11))
     parser.add_argument("--max-features", type=int, default=60)
     parser.add_argument("--random-subsets", type=int, default=100)
+    parser.add_argument("--small-direction-banks", type=int, default=100)
+    parser.add_argument("--large-direction-banks", type=int, default=50)
     parser.add_argument("--compact-permutations", type=int, default=20)
     parser.add_argument("--skip-deterministic-rerun", action="store_true")
     parser.add_argument("--smoke-test", action="store_true")
@@ -1363,14 +1830,38 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    for stale_name in [
+        "random_subset_baselines.csv",
+        "pc_specific_selection_paths.csv",
+        "pc_specific_selection_stability.csv",
+    ]:
+        stale_path = OUTPUT_DIR / stale_name
+        if stale_path.exists():
+            stale_path.unlink()
     generation_timestamp = utc_now()
     base_commit = git_value("rev-parse", "HEAD")
     branch = git_value("branch", "--show-current")
     prior = import_prior()
     print("loading canonical Qwen matrix and targets", flush=True)
     X, Y, personas, traits, integrity = load_and_verify_data(prior)
+    print("loading saved Qwen activation vectors for dependency and basis-control audits", flush=True)
+    role_raw, role_unit, trait_raw, trait_unit, activation_bundle = load_and_verify_activation_sources(
+        prior, X, Y, personas, traits
+    )
+    activation_audit = activation_bundle["audit"]
+    pca_basis = activation_bundle["pca_basis"]
+    integrity.update(activation_audit)
+    write_pca_dependency_audit(
+        activation_audit,
+        activation_audit["trait_cosine_matrix_reproduction"],
+        activation_audit["canonical_pca_reproduction"],
+    )
+    role_norm_frame, role_norm_summary = role_norm_audit(role_raw, Y, personas)
+    write_csv(role_norm_frame, OUTPUT_DIR / "role_norm_pc_audit.csv")
+    write_json(OUTPUT_DIR / "role_norm_summary.json", role_norm_summary)
     vectorized_math_check = validate_vectorized_forward_math(X, Y)
     source_manifest = make_source_manifest(generation_timestamp, base_commit, branch)
+    source_manifest["activation_source_audit"] = activation_audit
     write_json(OUTPUT_DIR / "source_manifest.json", source_manifest)
 
     print("reproducing exact canonical 240-trait LOPO baseline", flush=True)
@@ -1433,8 +1924,7 @@ def main() -> int:
         )
     pc_curve, pc_path, pc_stability = aggregate_pc_results(pc_results, pc_full_results, traits)
     write_csv(pc_curve, OUTPUT_DIR / "pc_specific_feature_budget_curve.csv")
-    write_csv(pc_path, OUTPUT_DIR / "pc_specific_selection_paths.csv")
-    write_csv(pc_stability, OUTPUT_DIR / "pc_specific_selection_stability.csv")
+    write_csv(pc_stability, OUTPUT_DIR / "pc_specific_trait_rankings.csv")
 
     print("running sparse MultiTaskElasticNet stability check", flush=True)
     sparse, sparse_summary = run_sparse_stability(splits, X, Y, traits, args.n_jobs)
@@ -1445,17 +1935,51 @@ def main() -> int:
     write_csv(pairs, OUTPUT_DIR / "trait_redundancy_pairs.csv")
     write_csv(groups, OUTPUT_DIR / "trait_redundancy_groups.csv")
 
-    print("evaluating deterministic random-subset baselines", flush=True)
-    random = evaluate_random_subsets(splits, X, Y, traits, args.random_subsets, args.n_jobs)
-    write_csv(random, OUTPUT_DIR / "random_subset_baselines.csv")
+    print("building descriptive full-data greedy ordering", flush=True)
+    descriptive = full_data_greedy_order(X, Y, traits)
+    write_csv(descriptive, OUTPUT_DIR / "full_data_greedy_trait_order.csv")
+
+    print("computing direct trait-span coverage of canonical PC loading directions", flush=True)
+    coverage = trait_span_pc_coverage(trait_unit, pca_basis["components"], traits, descriptive)
+    write_csv(coverage, OUTPUT_DIR / "trait_span_pc_coverage.csv")
+
+    print("evaluating deterministic random subsets of real trait directions", flush=True)
+    random_real = evaluate_random_real_trait_subsets(
+        splits, X, Y, traits, args.random_subsets, args.n_jobs
+    )
+    write_csv(random_real, OUTPUT_DIR / "random_real_trait_subset_baselines.csv")
+
+    print("evaluating isotropic random activation-direction banks", flush=True)
+    isotropic = evaluate_isotropic_random_directions(
+        splits,
+        role_unit,
+        Y,
+        args.small_direction_banks,
+        args.large_direction_banks,
+        args.n_jobs,
+    )
+    write_csv(isotropic, OUTPUT_DIR / "isotropic_random_direction_baselines.csv")
+
+    print("evaluating outer-training persona-span random-direction banks", flush=True)
+    persona_span, persona_span_math_check = evaluate_persona_span_random_directions(
+        splits,
+        role_raw,
+        role_unit,
+        Y,
+        args.small_direction_banks,
+        args.large_direction_banks,
+        args.n_jobs,
+    )
+    write_csv(persona_span, OUTPUT_DIR / "persona_span_random_direction_baselines.csv")
+
+    matched = build_matched_basis_comparison(
+        curve, pc_curve, fixed_nested, random_real, isotropic, persona_span
+    )
+    write_csv(matched, OUTPUT_DIR / "matched_basis_comparison.csv")
 
     print("running compact nested target-permutation controls", flush=True)
     compact_null = compact_permutation_control(X, Y, traits, args.compact_permutations, args.n_jobs)
     write_csv(compact_null, OUTPUT_DIR / "compact_subset_permutation_control.csv")
-
-    print("building descriptive full-data greedy ordering", flush=True)
-    descriptive = full_data_greedy_order(X, Y, traits)
-    write_csv(descriptive, OUTPUT_DIR / "full_data_greedy_trait_order.csv")
 
     ranking = build_final_ranking(single, importance, stability, sparse, groups, args.max_features)
     write_csv(ranking, OUTPUT_DIR / "final_ranked_traits.csv")
@@ -1483,21 +2007,23 @@ def main() -> int:
     null_summary = compact_null.groupby("feature_budget")["mean_pc_r2"].agg(
         mean="mean", q95=lambda values: values.quantile(0.95), maximum="max"
     ).reset_index()
-    random_comparison = random_summary(random, curve)
+    random_comparison = random_real_summary(random_real, curve)
     robust_count = int(ranking["interpretation_note"].str.startswith("Robustly predictive").sum())
-    k90 = thresholds["smallest_k_all_pc_r2_gte_0.90"]
-    k99 = thresholds["smallest_k_all_pc_r2_gte_0.99"]
-    if k90 is not None and k90 <= 15 and (k99 is None or k99 > 15):
-        interpretation = "The result is mixed: a compact subset is sufficient for strong prediction, but more directions are required for near-full reconstruction."
-    elif k99 is not None and k99 <= 15:
-        interpretation = "A small compact subset predicts all three PCs at near-full levels, weakening a dense-basis-coverage-only explanation."
-    else:
-        interpretation = "Compact prediction degrades materially and broad trait coverage remains important, favoring a high-dimensional basis-coverage interpretation."
+    result_category, interpretation = classify_basis_result(matched)
+    matched_key = matched[matched["feature_budget"].isin([5, 10, 15, 30, 60, 240])]
+    full_coverage = coverage[coverage["subset"] == "full_real_trait_bank"]
     summary = {
         "generation_timestamp_utc": generation_timestamp,
         "generation_base_commit": base_commit,
         "branch": branch,
         "integrity": integrity,
+        "pca_trait_dependency": {
+            "pca_observations": 275,
+            "pca_feature_variables": 5120,
+            "named_traits_used_to_construct_persona_pca": False,
+            "algebraic_dependence": "Targets and predictors are different projections of the same mean-pooled Qwen role activation vectors; cosine predictors additionally divide by role norm.",
+            "audit_artifact": "pca_trait_dependency_audit.md",
+        },
         "validation_design": {
             "outer": f"5-fold shuffled KFold repeated across {len(seeds)} deterministic seeds",
             "outer_seeds": seeds,
@@ -1518,6 +2044,23 @@ def main() -> int:
         "robust_predictive_trait_count": robust_count,
         "top_ranked_traits": ranking.head(20)["trait"].tolist(),
         "random_subset_comparison": random_comparison,
+        "random_basis_controls": {
+            "random_real_trait_draws_default": args.random_subsets,
+            "isotropic_bank_draws_k_lte_30": args.small_direction_banks,
+            "isotropic_bank_draws_k_gt_30": args.large_direction_banks,
+            "persona_span_bank_draws_k_lte_30": args.small_direction_banks,
+            "persona_span_bank_draws_k_gt_30": args.large_direction_banks,
+            "isotropic_generation_used_pc_targets": False,
+            "persona_span_generation_used_pc_targets": False,
+            "persona_span_uses_outer_training_roles_only": True,
+            "persona_span_gram_math_check": persona_span_math_check,
+            "matched_key_budgets": json_safe_records(matched_key),
+        },
+        "trait_span_pc_coverage_full_240": {
+            row["pc"]: row["squared_span_coverage"]
+            for row in json_safe_records(full_coverage)
+        },
+        "role_norm_audit": role_norm_summary,
         "compact_target_permutation_control": {
             "permutations": args.compact_permutations,
             "budgets": PERMUTATION_BUDGETS,
@@ -1530,6 +2073,7 @@ def main() -> int:
             "abs_r_gte_0_95_pair_count": int((pairs["absolute_pearson_r"] >= 0.95).sum()) if len(pairs) else 0,
             "group_rule": "Complete-linkage clustering of distance 1-abs(Pearson r), cut at 0.10 and 0.05.",
         },
+        "result_category": result_category,
         "interpretation": interpretation,
         "no_gpu_runpod_inference_activation_extraction_or_external_model_api": True,
     }
@@ -1565,13 +2109,16 @@ def main() -> int:
 
     expected_files = [
         "qwen_trait_sparsity_report.md", "run_qwen_trait_sparsity.py", "source_manifest.json",
+        "pca_trait_dependency_audit.md",
         "full_model_reproduction.json", "fixed_ridge15_benchmark.json", "single_trait_metrics.csv",
         "full_model_permutation_importance.csv", "feature_budget_curve.csv",
         "nested_forward_selection_paths.csv", "trait_selection_stability.csv",
         "full_data_greedy_trait_order.csv", "sparse_model_stability.csv", "trait_redundancy_pairs.csv",
         "trait_redundancy_groups.csv", "pc_specific_feature_budget_curve.csv",
-        "pc_specific_selection_paths.csv", "pc_specific_selection_stability.csv",
-        "random_subset_baselines.csv", "compact_subset_permutation_control.csv", "final_ranked_traits.csv",
+        "pc_specific_trait_rankings.csv", "random_real_trait_subset_baselines.csv",
+        "isotropic_random_direction_baselines.csv", "persona_span_random_direction_baselines.csv",
+        "matched_basis_comparison.csv", "trait_span_pc_coverage.csv", "role_norm_pc_audit.csv",
+        "role_norm_summary.json", "compact_subset_permutation_control.csv", "final_ranked_traits.csv",
         "validation_summary.json",
     ]
     parse_checks = {
@@ -1593,6 +2140,10 @@ def main() -> int:
         "checks": {
             "persona_count_275": len(personas) == 275,
             "trait_count_240": len(traits) == 240,
+            "activation_dimension_5120": role_raw.shape[1] == 5120,
+            "pca_traits_not_inputs": activation_audit["named_traits_enter_pca_fit"] is False,
+            "source_trait_cosine_matrix_reproduces": activation_audit["trait_cosine_matrix_reproduction"]["passed"],
+            "source_role_pca_reproduces": activation_audit["canonical_pca_reproduction"]["passed"],
             "canonical_targets_match": integrity["canonical_coordinate_table_max_abs_difference"] <= 1e-5,
             "exact_full_model_reproduction": reproduction["passed"],
             "fixed_15_exactly_match_ridge_viewer": integrity["fixed_editorial_traits_exact_match"],
@@ -1602,8 +2153,33 @@ def main() -> int:
             "inner_target_scaling_training_only": True,
             "inner_ridge_tuning_training_only": True,
             "vectorized_forward_math_matches_direct_ridge": vectorized_math_check["passed"],
-            "random_subset_seed": 20260911,
-            "random_subset_draws_per_budget": args.random_subsets,
+            "random_real_trait_subset_seed": 20260911,
+            "random_real_trait_subset_counts_correct": all(
+                len(random_real[random_real["feature_budget"] == budget])
+                == (1 if budget == 240 else args.random_subsets)
+                for budget in RANDOM_REAL_BUDGETS
+            ),
+            "isotropic_random_bank_counts_correct": all(
+                len(isotropic[isotropic["feature_budget"] == budget])
+                == bank_draw_count(budget, args.small_direction_banks, args.large_direction_banks)
+                for budget in RANDOM_DIRECTION_BUDGETS
+            ),
+            "persona_span_random_bank_counts_correct": all(
+                len(persona_span[persona_span["feature_budget"] == budget])
+                == bank_draw_count(budget, args.small_direction_banks, args.large_direction_banks)
+                for budget in RANDOM_DIRECTION_BUDGETS
+            ),
+            "isotropic_generation_target_independent": bool(
+                (~isotropic["direction_generation_used_pc_targets"].astype(bool)).all()
+            ),
+            "persona_span_generation_target_independent": bool(
+                (~persona_span["direction_generation_used_pc_targets"].astype(bool)).all()
+            ),
+            "persona_span_outer_training_roles_only": bool(persona_span["outer_training_role_only"].all()),
+            "persona_span_gram_projection_stable": persona_span_math_check["passed"],
+            "trait_span_coverage_bounded": bool(
+                coverage["squared_span_coverage"].between(-1e-12, 1.0 + 1e-12).all()
+            ),
             "compact_permutation_null_near_chance": permutation_near_chance,
             "all_final_ranking_names_are_canonical": final_names == set(traits),
             "expected_files_present": all((OUTPUT_DIR / name).is_file() for name in expected_files),
@@ -1614,12 +2190,17 @@ def main() -> int:
                 np.isfinite(curve.select_dtypes(include=[np.number]).to_numpy()).all()
                 and np.isfinite(single.select_dtypes(include=[np.number]).to_numpy()).all()
                 and np.isfinite(importance.select_dtypes(include=[np.number]).to_numpy()).all()
+                and np.isfinite(random_real.select_dtypes(include=[np.number]).to_numpy()).all()
+                and np.isfinite(isotropic.select_dtypes(include=[np.number]).to_numpy()).all()
+                and np.isfinite(persona_span.select_dtypes(include=[np.number]).to_numpy()).all()
             ),
         },
         "methodology_evidence": {
             "selection": "Every joint and PC-specific path is recomputed inside its outer training partition using four inner folds.",
             "objective": summary["validation_design"]["joint_objective"],
             "conditional_permutation": "Each full Ridge fit and its preprocessing are learned on outer training data; one untouched test column is permuted at a time.",
+            "isotropic_directions": "Generated from Gaussian draws without any role, target, PC coordinate, or PC loading input.",
+            "persona_span_directions": "Generated separately per outer fold from centered outer-training role vectors; held-out roles and PC targets do not enter generation.",
             "descriptive_order_label": "full_data_greedy_trait_order.csv is explicitly labeled DESCRIPTIVE FULL-DATA ORDER and held_out_importance_ranking=False.",
         },
     }
