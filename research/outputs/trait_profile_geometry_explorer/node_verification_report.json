@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "test_type": "Node.js browser-core numerical verification (not a live browser)",
+  "reference_case_count": 30,
+  "maximum_lopo_reproduction_error": 2.2666313270747196e-12,
+  "maximum_percentile_inverse_mapping_error": 0,
+  "maximum_modified_prediction_python_agreement_error": 5.684341886080801e-13,
+  "maximum_ood_python_agreement_error": 1.4210854715202004e-14,
+  "maximum_2d_projection_error": 0,
+  "passed": true
+}

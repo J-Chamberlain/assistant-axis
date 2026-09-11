@@ -1,0 +1,105 @@
+{
+  "branch": "codex/trait-profile-equalizer",
+  "canonical_explorer_sha256_before_and_after": "82d8e7f3d659ca441551c5db06ec5bba508f669fb3bf54abe184f38ef3277dce",
+  "dependencies": [
+    {
+      "path": "research/outputs/trait_profile_pc_predictor/trait_profile_pc_predictor_report.md",
+      "sha256": "bce19d3e28e067e5968691dbe14a8dcaf7def63bb1a5d79b3a5bd1dfa701b919",
+      "size_bytes": 10262
+    },
+    {
+      "path": "research/outputs/trait_profile_pc_predictor/ridge_predictor.json",
+      "sha256": "684f1c32d94c2df7a5b386a4739e4289b0eed73693276668cf3251d2f61c482f",
+      "size_bytes": 96128
+    },
+    {
+      "path": "research/outputs/trait_profile_pc_predictor/leave_one_persona_out_predictions.csv",
+      "sha256": "6ef430dff5644272785af6a9aee736457157d88627db1796f730c960d08a5d38",
+      "size_bytes": 276366
+    },
+    {
+      "path": "research/outputs/trait_profile_pc_predictor/ood_reference.json",
+      "sha256": "4e688eac3bb70a538a78ca80fc9ec4453b446291dcc53e048f54d4d3e4a38e3c",
+      "size_bytes": 2014332
+    },
+    {
+      "path": "research/outputs/trait_profile_pc_predictor/predict_trait_profile.py",
+      "sha256": "851bb640d0f26097b91fc8c5376679a4778536195bcf05e6da395af7fb854cd2",
+      "size_bytes": 24830
+    },
+    {
+      "path": "research/outputs/trait_profile_pc_predictor/run_trait_profile_pc_predictor.py",
+      "sha256": "46ee1dd0dfa4a115cd305ec3ba8bbf1343bf158aeb237f6920d4626b49b88f51",
+      "size_bytes": 90335
+    },
+    {
+      "path": "research/outputs/trait_profile_pc_predictor/source_manifest.json",
+      "sha256": "4f0006394cbeaa980c715edcb05aef937d37afea5f8d738b8b28079153dd7dbf",
+      "size_bytes": 116544
+    },
+    {
+      "path": "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv",
+      "sha256": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8",
+      "size_bytes": 1339338
+    },
+    {
+      "path": "research/visualizations/geometry_viz_data.json",
+      "sha256": "1b15d8e3425bc3d51032919157eb683f1358f353f4ee071a18d06347a792ec6d",
+      "size_bytes": 288387
+    },
+    {
+      "path": "data/traits/trait_list.json",
+      "sha256": "17ec18a088fbaacbabe1c87e4df4bac0be7e264bc2b281a33f50cdfa9a03734e",
+      "size_bytes": 24056
+    },
+    {
+      "path": "research/visualizations/persona_geometry_explorer.html",
+      "sha256": "82d8e7f3d659ca441551c5db06ec5bba508f669fb3bf54abe184f38ef3277dce",
+      "size_bytes": 512790
+    },
+    {
+      "path": "research/visualizations/scripts/build_geometry_viz.py",
+      "sha256": "a309aa185e973c4edcba711d19b1e7db4e45ab6ab8a2f8f60e32ed6151f24cf8",
+      "size_bytes": 12690
+    },
+    {
+      "path": "research/outputs/persona_trait_ridge_plots/persona_trait_ridges.html",
+      "sha256": "48c16dd34b324547687facc6ee4282d774a8267321c01efcade52f74bc6fe3ed",
+      "size_bytes": 7360999
+    },
+    {
+      "path": "research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html",
+      "sha256": "5a47ae0954c52f38a27681cd8dcc1207caa272453019343ecadc01d2fb0bcccb",
+      "size_bytes": 7045480
+    }
+  ],
+  "external_model_api_used": false,
+  "generation_commit": "d68921b898ed179194223f449149d715298cdabe",
+  "generation_timestamp_utc": "2026-09-11T20:48:21.954492+00:00",
+  "gpu_used": false,
+  "held_out_bundle_audit": {
+    "each_bundle_names_its_excluded_persona": true,
+    "maximum_unedited_lopo_reproduction_error": 2.3163693185779266e-12,
+    "passed": true,
+    "persona_count": 275,
+    "selected_alpha_mismatch_count": 0,
+    "strict_tolerance": 1e-09,
+    "training_count_per_model": 274
+  },
+  "implementation_choice": "Active companion explorer; canonical generated explorer remains byte-identical because its builder only replaces embedded geometry and parallel edits to the monolithic generated HTML would not be safely reproducible.",
+  "input_integrity": {
+    "feature_order_exactly_matches_predictor": true,
+    "finite_coordinates": true,
+    "finite_profiles": true,
+    "persona_count": 275,
+    "trait_count": 240,
+    "unique_persona_count": 275,
+    "unique_trait_count": 240
+  },
+  "model_used": "GPT-5.5",
+  "new_activation_extraction": false,
+  "new_model_inference": false,
+  "runpod_used": false,
+  "schema_version": "1.0",
+  "source_model": "Qwen/Qwen3-32B"
+}

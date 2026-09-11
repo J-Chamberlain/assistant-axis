@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trait-profile geometry equalizer</title>
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080d14;
+      --panel: #111a26;
+      --panel-2: #172333;
+      --ink: #e8eef6;
+      --muted: #93a4b7;
+      --line: #29384c;
+      --actual: #ffffff;
+      --predicted: #ffdf5d;
+      --edited: #5de1ff;
+      --baseline: #708197;
+      --focus: #8dd8ff;
+      --danger: #ff8e9a;
+      --success: #79dfb2;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 Inter, ui-sans-serif, system-ui, sans-serif; }
+    button, input, select { font: inherit; }
+    button, select, input[type="search"] { color: var(--ink); background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; }
+    button { cursor: pointer; }
+    button:hover { border-color: var(--focus); }
+    button[aria-pressed="true"] { background: #244057; border-color: var(--focus); }
+    button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; }
+    h2 { font-size: 16px; font-weight: 600; margin-bottom: 9px; }
+    h3 { font-size: 14px; font-weight: 600; margin-bottom: 5px; }
+    .shell { max-width: 1800px; margin: 0 auto; padding: 14px; }
+    .masthead { display: flex; gap: 16px; align-items: end; justify-content: space-between; margin-bottom: 12px; }
+    .masthead > div:first-child { min-width: 0; flex: 1; }
+    .masthead p { color: var(--muted); margin: 0; padding-right: 12px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(390px, .85fr); gap: 12px; align-items: start; }
+    .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: 8px; margin-bottom: 8px; }
+    .field { display: grid; gap: 4px; color: var(--muted); }
+    .field span { font-size: 12px; }
+    .persona-field { min-width: min(320px, 100%); flex: 1; }
+    .axes { display: flex; gap: 6px; }
+    .axes .field { min-width: 78px; }
+    #geometry-plot { width: 100%; height: min(690px, 68vh); min-height: 480px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin-top: 8px; }
+    .metric { background: var(--panel-2); border-radius: 7px; padding: 8px; }
+    .metric span { color: var(--muted); display: block; font-size: 11px; }
+    .metric strong { font-variant-numeric: tabular-nums; font-weight: 600; }
+    .legend { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: 12px; }
+    .legend i { display: inline-block; width: 10px; height: 10px; margin-right: 5px; }
+    .legend .actual { background: var(--actual); transform: rotate(45deg); }
+    .legend .predicted { background: var(--predicted); border-radius: 50%; }
+    .predictor-label { color: var(--predicted); font-weight: 600; }
+    .equalizer-scroll { overflow-x: auto; border-block: 1px solid var(--line); margin: 8px 0 10px; }
+    #equalizer-svg { display: block; height: 180px; min-width: 100%; }
+    .trait-tools { display: grid; grid-template-columns: minmax(160px, 1fr) auto auto; gap: 7px; align-items: center; }
+    .trait-list { max-height: 410px; overflow-y: auto; margin-top: 8px; padding-right: 3px; }
+    .trait-row { display: grid; grid-template-columns: minmax(115px, .8fr) minmax(130px, 1.4fr) 52px 30px; gap: 8px; align-items: center; min-height: 39px; border-bottom: 1px solid rgba(147,164,183,.14); }
+    .trait-row[hidden] { display: none; }
+    .trait-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .trait-name button { all: unset; cursor: help; border-bottom: 1px dotted var(--muted); }
+    .trait-name button:focus-visible { outline: 2px solid var(--focus); }
+    input[type="range"] { width: 100%; accent-color: var(--edited); }
+    .trait-value { text-align: right; font-variant-numeric: tabular-nums; }
+    .row-reset { padding: 3px; color: var(--muted); }
+    .changed .trait-name, .changed .trait-value { color: var(--edited); font-weight: 600; }
+    .detail { color: var(--muted); min-height: 43px; padding-top: 7px; }
+    .ood-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+    .ood-grid div { background: var(--panel-2); padding: 7px; border-radius: 6px; }
+    .ood-grid span { display: block; color: var(--muted); font-size: 11px; }
+    #neighbor-list { margin: 6px 0 0; padding-left: 20px; }
+    #neighbor-list li { margin: 2px 0; font-variant-numeric: tabular-nums; }
+    .method { margin-top: 12px; color: var(--muted); font-size: 12px; }
+    .method summary { cursor: pointer; color: var(--ink); }
+    .error-reference { color: var(--muted); margin-top: 8px; font-size: 12px; }
+    .error-reference strong { color: var(--ink); }
+    .status { color: var(--muted); font-size: 12px; flex: 0 0 auto; text-align: right; }
+    .status[data-ready="false"] { color: var(--danger); }
+    .mode-note { margin: 0 0 8px; color: var(--muted); }
+    @media (max-width: 1050px) {
+      .layout { grid-template-columns: 1fr; }
+      #geometry-plot { height: 580px; }
+      .trait-list { max-height: 480px; }
+    }
+    @media (max-width: 620px) {
+      .shell { padding: 8px; }
+      .masthead { display: block; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .trait-tools { grid-template-columns: 1fr 1fr; }
+      .trait-tools input { grid-column: 1 / -1; }
+      .trait-row { grid-template-columns: minmax(95px, .8fr) minmax(100px, 1.2fr) 48px 28px; }
+      #geometry-plot { height: 500px; min-height: 420px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <h1>Trait-profile geometry equalizer</h1>
+        <p>Qwen persona distribution with a persona-held-out predicted point and editable 240-trait profile.</p>
+      </div>
+      <div id="app-status" class="status" data-ready="false" role="status">Loading saved geometry and predictor bundles…</div>
+    </header>
+
+    <div class="layout">
+      <section class="panel" aria-label="Persona geometry">
+        <div class="toolbar">
+          <label class="field persona-field"><span>Persona</span><input id="persona-input" type="search" list="persona-options" autocomplete="off"></label>
+          <datalist id="persona-options"></datalist>
+          <button id="load-persona" type="button">Load persona</button>
+          <div role="group" aria-label="Geometry dimension">
+            <button id="view-3d" type="button" aria-pressed="true">3D</button>
+            <button id="view-2d" type="button" aria-pressed="false">2D</button>
+          </div>
+          <div id="axis-controls" class="axes" hidden>
+            <label class="field"><span>x axis</span><select id="x-axis"><option value="0">PC1</option><option value="1">PC2</option><option value="2">PC3</option></select></label>
+            <label class="field"><span>y axis</span><select id="y-axis"><option value="0">PC1</option><option value="1" selected>PC2</option><option value="2">PC3</option></select></label>
+          </div>
+          <label><input id="show-error" type="checkbox" checked> q95 error reference</label>
+        </div>
+        <p class="mode-note"><span class="predictor-label">Held-out prediction:</span> the selected persona is excluded from the Ridge model used for both the baseline and every edit.</p>
+        <div id="geometry-plot" role="img" aria-label="Interactive canonical persona PCA geometry with actual and predicted locations"></div>
+        <div class="legend"><span><i class="actual"></i>Selected actual persona</span><span><i class="predicted"></i>Predicted location</span><span>Line: actual-to-predicted displacement</span></div>
+        <div class="metrics" aria-live="polite">
+          <div class="metric"><span>Predicted PC1</span><strong id="pc1-value">—</strong></div>
+          <div class="metric"><span>Predicted PC2</span><strong id="pc2-value">—</strong></div>
+          <div class="metric"><span>Predicted PC3</span><strong id="pc3-value">—</strong></div>
+          <div class="metric"><span>Δ PC1 / PC2 / PC3 from actual</span><strong id="delta-value">—</strong></div>
+          <div class="metric"><span>3D displacement from actual</span><strong id="distance-value">—</strong></div>
+          <div class="metric"><span>Edited traits</span><strong id="changed-count">0</strong></div>
+        </div>
+        <p class="error-reference"><strong>Empirical held-out error reference:</strong> q95 absolute LOPO error <span id="error-reference">—</span>. This is not a confidence interval, credible interval, or probability region.</p>
+      </section>
+
+      <aside class="panel" aria-label="Trait equalizer and profile context">
+        <h2>240-trait percentile equalizer</h2>
+        <p class="mode-note">Muted line = selected persona baseline. Cyan line = editable profile. Values are corpus-relative percentiles.</p>
+        <div class="equalizer-scroll"><svg id="equalizer-svg" aria-label="Connected baseline and edited percentile profiles" role="img"></svg></div>
+        <div class="trait-tools">
+          <input id="trait-search" type="search" placeholder="Search all traits" aria-label="Search traits">
+          <label><input id="changed-only" type="checkbox"> Changed only</label>
+          <button id="reset-all" type="button">Reset all</button>
+        </div>
+        <div id="trait-list" class="trait-list" aria-label="Trait controls"></div>
+        <div id="trait-detail" class="detail" aria-live="polite">Select a trait name to view its canonical definition.</div>
+
+        <hr>
+        <h2>Profile-manifold context</h2>
+        <div class="ood-grid" aria-live="polite">
+          <div><span>Heuristic</span><strong id="ood-label">—</strong></div>
+          <div><span>5-NN distance</span><strong id="ood-distance">—</strong></div>
+          <div><span>Distance percentile</span><strong id="ood-percentile">—</strong></div>
+          <div><span>Traits outside range</span><strong id="ood-outside">—</strong></div>
+        </div>
+        <h3>Nearest existing profiles</h3>
+        <ol id="neighbor-list"></ol>
+
+        <details class="method">
+          <summary>Scientific scope and method</summary>
+          <p>Trait values are activation-derived, same-space Qwen/Qwen3-32B trait affinities. Percentiles are relative to the 275 canonical Qwen personas and are converted back to raw activation-cosine values with the predictor CLI’s empirical interpolation and clamping rule.</p>
+          <p>The displayed point is generated by the validated raw-cosine Ridge mapping. For an existing selected persona, its Ridge bundle was trained and tuned without that persona. An edited profile therefore yields a <strong>predicted counterfactual location</strong>, not observed model behavior.</p>
+          <p>Trait edits are not causal interventions, and this viewer does not show human personality measurement. OOD labels are heuristic geometric diagnostics, not calibrated probabilities.</p>
+        </details>
+      </aside>
+    </div>
+  </main>
+
+  <script>/*__APP_DATA__*/</script>
+  <script>/*__LOPO_MODELS__*/</script>
+  <script>/*__CORE_JS__*/</script>
+  <script>/*__VIEWER_JS__*/</script>
+</body>
+</html>
