@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": {
+    "respondents_23679": true,
+    "items_696": true,
+    "item_ids_unique": true,
+    "item_ids_align_response_columns": true,
+    "administered_source_constructs_92": true,
+    "canonical_model_traits_240_unique": true,
+    "crosswalk_240_rows": true,
+    "coverage_values_valid": true,
+    "accepted_item_references_valid": true,
+    "candidate_item_references_valid": true,
+    "source_hashes_recorded": true
+  },
+  "discrepancies": [
+    "Data-paper abstract reports 23,681 observations; actual V5 tab release and SAPA update paper contain/report 23,679.",
+    "demographic codes.txt describes first 20 columns, while actual V5 tab has 23 non-item columns.",
+    "The documented 92 scales are administered source constructs; superKey696.csv separately supplies 131 derived scoring keys."
+  ],
+  "generated_at": "2026-09-11T21:50:53Z"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": {
+    "respondents_8984_unique": true,
+    "selected_variable_ids_unique": true,
+    "all_selected_variables_have_codebook_entries": true,
+    "personality_manifest_ids_unique": true,
+    "tipi_ten_items_present": true,
+    "goldberg_eight_items_present": true,
+    "official_occupation_codes_unique": true,
+    "all_accepted_crosswalk_codes_valid": true,
+    "round12_counts_reproduce": true,
+    "round6_counts_reproduce": true,
+    "all_aggregate_counts_nonnegative": true,
+    "source_hashes_recorded": true,
+    "respondent_rows_not_written_to_output_dir": true
+  },
+  "privacy": {
+    "respondent_level_files_committed": false,
+    "direct_identifiers_in_derived_tables": false,
+    "justice_data_output": "metadata and total overlap count only; no row-level or occupation-specific justice outcome",
+    "suppression_rule": "No sensitive subgroup outcome counts were produced. Any later sensitive subgroup table must suppress n<5 at minimum and follow then-current BLS/source requirements."
+  },
+  "limitations": [
+    "Round-6 Goldberg items were administered only to respondents age <=14 at the end of 1996, so that sample is not the full cohort.",
+    "TIPI is very brief and does not cover the 240-model-trait vocabulary.",
+    "Some 2018 SOC role mappings collapse into broader 2002 Census categories; translation quality is explicit row by row.",
+    "Weighted estimates are descriptive; no standard errors or inferential tests were computed."
+  ],
+  "generated_at": "2026-09-11T21:59:09Z"
+}

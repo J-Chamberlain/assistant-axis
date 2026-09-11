@@ -1,0 +1,86 @@
+{
+  "dataset": "Selected personality data from the SAPA-Project: 08Dec2013 to 26Jul2014",
+  "institution": "Harvard Dataverse / SAPA Project",
+  "release_version": "5.0",
+  "persistent_identifier": "doi:10.7910/DVN/SD7SVE",
+  "canonical_url": "https://doi.org/10.7910/DVN/SD7SVE",
+  "download_date": "2026-09-11",
+  "license": "CC0 1.0",
+  "citation": "Condon, David M.; Revelle, William (2015), Selected personality data from the SAPA-Project: 08Dec2013 to 26Jul2014, Harvard Dataverse, V5",
+  "actual_dimensions": {
+    "respondents": 23679,
+    "columns": 719,
+    "psychological_items": 696,
+    "administered_source_constructs": 92,
+    "derived_scoring_keys": 131
+  },
+  "response_scale": "1=Very Inaccurate through 6=Very Accurate",
+  "missing_value_encoding": "NA in tab data",
+  "redistribution": "Dataset release is CC0; raw respondent-level files are nevertheless kept gitignored under the project human-data handling rule.",
+  "files": [
+    {
+      "file_name": "ItemInfo696.csv",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/ItemInfo696.csv",
+      "bytes": 69495,
+      "sha256": "ce280ebf42cd77f3db1955a3027051a74d017ca61da02adf5dbbab11545b1732",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "ItemLists.csv",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/ItemLists.csv",
+      "bytes": 9260,
+      "sha256": "f976dddace596202f850ea328aaaf72264a54d87f8bd5195f3b9d70819c66e06",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "SPIdevelopment.pdf",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/SPIdevelopment.pdf",
+      "bytes": 23059008,
+      "sha256": "3741e523752c268ad85d6430a03002c983ee833ee299d695e4eb9ca4d53b7681",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "dataverse_metadata.json",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/dataverse_metadata.json",
+      "bytes": 8858,
+      "sha256": "158fade38e04588a20c02967e09932c36410beeb8f973095b1fefdd18c6c3e5c",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "demographic codes.txt",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/demographic codes.txt",
+      "bytes": 5531,
+      "sha256": "2a05e27345ea483dadf0e8533aba6877ea99bb29e0ee8c22b6dad49d9b720258",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "sapaTempData696items08dec2013thru26jul2014.RData",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/sapaTempData696items08dec2013thru26jul2014.RData",
+      "bytes": 4621575,
+      "sha256": "803daa08fa07659352f882be365902d2b85d99d1f8b403f5f7dacfda401f7bed",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "sapaTempData696items08dec2013thru26jul2014.tab",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/sapaTempData696items08dec2013thru26jul2014.tab",
+      "bytes": 23975309,
+      "sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "sapa_project_update_paper.pdf",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/sapa_project_update_paper.pdf",
+      "bytes": 801337,
+      "sha256": "d2bade249982e53578b0994150dbf6cc98336734e4328dade468c01861672300",
+      "gitignored_raw": true
+    },
+    {
+      "file_name": "superKey696.csv",
+      "local_path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-human-dataset-feasibility/data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/superKey696.csv",
+      "bytes": 190705,
+      "sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+      "gitignored_raw": true
+    }
+  ],
+  "generated_at": "2026-09-11T21:50:53Z"
+}

@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "checks": {
+    "canonical_model_traits_240_unique": true,
+    "crosswalk_exactly_matches_canonical_trait_order": true,
+    "canonical_definitions_match": true,
+    "sapa_item_ids_696_unique": true,
+    "sapa_scale_ids_or_names_valid": true,
+    "sapa_coverage_categories_valid": true,
+    "sapa_crosswalk_item_references_valid": true,
+    "sapa_crosswalk_scale_references_valid": true,
+    "sapa_coverage_counts_reproduce": true,
+    "sapa_source_hashes_match": true,
+    "sapa_raw_dimensions_reproduce": true,
+    "nlsy_variable_ids_unique": true,
+    "nlsy_manifest_has_official_documentation": true,
+    "nlsy_personality_ids_unique": true,
+    "nlsy_tipi_and_goldberg_exact_counts": true,
+    "official_occupation_codes_510_unique": true,
+    "occupation_crosswalk_codes_valid": true,
+    "nlsy_raw_8984_unique": true,
+    "nlsy_primary_counts_reproduce": true,
+    "nlsy_wave_overlap_counts_reproduce": true,
+    "nlsy_source_hashes_match": true,
+    "raw_human_data_gitignored": true,
+    "full_generators_byte_reproducible_with_fixed_timestamp": true,
+    "all_csv_json_parse": true,
+    "no_respondent_identifier_columns_in_derived_csvs": true,
+    "no_respondent_level_csv_shape_in_output": true,
+    "artifact_inventory_hashes_match": true
+  },
+  "privacy": {
+    "respondent_level_human_microdata_committed": false,
+    "human_respondents_assigned_llm_persona": false,
+    "human_to_model_pca_projection_performed": false,
+    "sensitive_outcomes": "Only metadata and a whole-sample overlap count were emitted; no respondent or occupation-specific justice outcomes."
+  },
+  "reproduction": {
+    "canonical_trait_source": "data/traits/trait_list.json",
+    "sapa_raw_source": "data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/sapaTempData696items08dec2013thru26jul2014.tab",
+    "nlsy97_raw_source": "data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_final.csv",
+    "raw_sources_gitignored": true
+  },
+  "generated_at": "2026-09-11T22:00:28Z"
+}

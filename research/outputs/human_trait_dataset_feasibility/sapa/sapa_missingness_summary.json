@@ -1,0 +1,53 @@
+{
+  "respondent_count": 23679,
+  "psychological_item_count": 696,
+  "total_column_count": 719,
+  "demographic_or_derived_column_count": 23,
+  "demographic_or_derived_columns": [
+    "RID",
+    "gender",
+    "relstatus",
+    "age",
+    "marstatus",
+    "height",
+    "BMI",
+    "weight",
+    "exer",
+    "smoke",
+    "country",
+    "state",
+    "ethnic",
+    "education",
+    "jobstatus",
+    "occPrestige",
+    "occIncomeEst",
+    "p1edu",
+    "p1occPrestige",
+    "p1occIncomeEst",
+    "p2edu",
+    "p2occPrestige",
+    "p2occIncomeEst"
+  ],
+  "answered_items_per_respondent": {
+    "mean": 86.143967,
+    "median": 71.0,
+    "min": 0,
+    "p05": 36.0,
+    "p25": 70.0,
+    "p75": 72.0,
+    "p95": 295.0,
+    "max": 311,
+    "mean_fraction_of_696": 0.12377007
+  },
+  "respondents_per_item": {
+    "mean": 2930.751437,
+    "median": 2554.0,
+    "min": 2304,
+    "p05": 2402.5,
+    "p95": 4373.25,
+    "max": 6096
+  },
+  "overall_item_cell_missing_fraction": 0.87622993,
+  "planned_missingness_interpretation": "SAPA administered random subsets by design. Release files do not carry a separate cell-level planned/nonresponse indicator, so exact planned versus unplanned missingness cannot be separated. The dominant item-cell missingness mechanism is documented planned missingness; it must not be treated as ordinary item nonresponse.",
+  "release_codebook_discrepancy": "demographic codes.txt says items follow the first 20 columns; the actual tab file has 23 non-item columns and 696 q_* item columns (719 total)."
+}

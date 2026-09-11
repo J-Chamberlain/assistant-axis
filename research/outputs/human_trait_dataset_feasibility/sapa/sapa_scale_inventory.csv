@@ -1,0 +1,224 @@
+inventory_type,instrument,scale_id,scale_name,item_count,item_ids,key_source
+administered_source_construct,IPIP100,IPIP100:B5:A,B5:A,20,q_140;q_146;q_150;q_195;q_200;q_217;q_838;q_844;q_1041;q_1053;q_1162;q_1163;q_1206;q_1364;q_1385;q_1419;q_1705;q_1763;q_1792;q_1832,ItemInfo696.csv
+administered_source_construct,IPIP100,IPIP100:B5:C,B5:C,20,q_76;q_124;q_530;q_619;q_626;q_904;q_931;q_962;q_1254;q_1255;q_1290;q_1333;q_1374;q_1397;q_1422;q_1452;q_1483;q_1507;q_1696;q_1949,ItemInfo696.csv
+administered_source_construct,IPIP100,IPIP100:B5:E,B5:E,20,q_55;q_241;q_254;q_262;q_403;q_690;q_698;q_712;q_815;q_819;q_901;q_1114;q_1180;q_1205;q_1410;q_1480;q_1742;q_1768;q_1803;q_1913,ItemInfo696.csv
+administered_source_construct,IPIP100,IPIP100:B5:ES,B5:ES,20,q_108;q_177;q_248;q_497;q_890;q_952;q_960;q_974;q_979;q_986;q_995;q_1020;q_1099;q_1479;q_1505;q_1585;q_1677;q_1683;q_1775;q_1989,ItemInfo696.csv
+administered_source_construct,IPIP100,IPIP100:B5:O,B5:O,20,q_128;q_132;q_194;q_240;q_316;q_422;q_492;q_493;q_609;q_1050;q_1058;q_1083;q_1088;q_1090;q_1388;q_1392;q_1738;q_1861;q_1893;q_1964,ItemInfo696.csv
+administered_source_construct,BFAS,BFAS:BFAS:A:C,BFAS:A:C,10,q_146;q_195;q_460;q_668;q_844;q_1162;q_1307;q_1763;q_1766;q_1774,ItemInfo696.csv
+administered_source_construct,BFAS,BFAS:BFAS:A:P,BFAS:A:P,10,q_225;q_319;q_364;q_1031;q_1163;q_1359;q_1556;q_1624;q_1663;q_1765,ItemInfo696.csv
+administered_source_construct,BFAS,BFAS:BFAS:C:I,BFAS:C:I,10,q_44;q_107;q_491;q_706;q_904;q_930;q_988;q_1429;q_1521;q_1949,ItemInfo696.csv
+administered_source_construct,BFAS,BFAS:BFAS:C:O,BFAS:C:O,10,q_169;q_170;q_582;q_931;q_1201;q_1255;q_1290;q_1657;q_1915;q_1917,ItemInfo696.csv
+administered_source_construct,BFAS,BFAS:BFAS:E:A,BFAS:E:A,10,q_260;q_455;q_1055;q_1151;q_1205;q_1242;q_1652;q_1768;q_1913;q_2161,ItemInfo696.csv
+administered_source_construct,BFAS,BFAS:BFAS:E:E,BFAS:E:E,10,q_140;q_1043;q_1196;q_1243;q_1410;q_1583;q_1635;q_1703;q_1943;q_2160,ItemInfo696.csv
+administered_source_construct,BFAS,BFAS:BFAS:N:V,BFAS:N:V,10,q_52;q_176;q_413;q_497;q_952;q_965;q_995;q_1185;q_1585;q_1588,ItemInfo696.csv
+administered_source_construct,BFAS,BFAS:BFAS:N:W,BFAS:N:W,10,q_66;q_105;q_126;q_184;q_332;q_820;q_890;q_1578;q_1677;q_1989,ItemInfo696.csv
+administered_source_construct,BFAS,BFAS:BFAS:O:I,BFAS:O:I,10,q_240;q_316;q_322;q_422;q_946;q_1050;q_1088;q_1253;q_1327;q_1834,ItemInfo696.csv
+administered_source_construct,BFAS,BFAS:BFAS:O:O,BFAS:O:O,10,q_348;q_612;q_776;q_964;q_1389;q_1441;q_1648;q_1675;q_1682;q_1687,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:A:FL,H:A:FL,10,q_39;q_80;q_134;q_139;q_141;q_142;q_477;q_997;q_1601;q_1957,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:A:FO,H:A:FO,10,q_145;q_159;q_594;q_871;q_915;q_958;q_966;q_1150;q_1373;q_1869,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:A:G,H:A:G,10,q_6;q_239;q_331;q_538;q_898;q_1041;q_1051;q_1571;q_1725;q_1787,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:A:P,H:A:P,10,q_101;q_278;q_926;q_952;q_974;q_995;q_1357;q_1577;q_1585;q_1683,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:C:D,H:C:D,10,q_124;q_520;q_602;q_637;q_985;q_1024;q_1550;q_1563;q_1754;q_1979,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:C:O,H:C:O,10,q_169;q_665;q_962;q_1201;q_1254;q_1255;q_1290;q_1333;q_1483;q_1917,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:C:PE,H:C:PE,10,q_530;q_554;q_559;q_571;q_1063;q_1507;q_1511;q_1537;q_1915;q_1916,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:C:PR,H:C:PR,10,q_22;q_321;q_619;q_636;q_673;q_1173;q_1395;q_1401;q_1422;q_1424,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:E:A,H:E:A,10,q_179;q_727;q_986;q_994;q_1495;q_1505;q_1578;q_1596;q_1616;q_1989,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:E:D,H:E:D,10,q_463;q_1260;q_1446;q_1447;q_1448;q_1490;q_1668;q_1706;q_1759;q_1924,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:E:F,H:E:F,10,q_53;q_292;q_334;q_804;q_1306;q_1367;q_1853;q_1993;q_2001;q_2018,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:E:S,H:E:S,10,q_98;q_251;q_253;q_539;q_721;q_844;q_1159;q_1573;q_1679;q_1681,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:H:F,H:H:F,10,q_40;q_500;q_501;q_1633;q_1747;q_1867;q_2003;q_2016;q_2021;q_2029,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:H:GA,H:H:GA,10,q_156;q_225;q_711;q_1054;q_1372;q_1536;q_1667;q_1871;q_1969;q_2025,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:H:M,H:H:M,10,q_152;q_154;q_157;q_364;q_401;q_525;q_716;q_1296;q_1653;q_2008,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:H:S,H:H:S,10,q_23;q_704;q_917;q_1276;q_1517;q_1543;q_1555;q_1762;q_1808;q_1894,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:O:A,H:O:A,10,q_348;q_608;q_610;q_611;q_612;q_757;q_964;q_1132;q_1648;q_1687,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:O:C,H:O:C,10,q_128;q_492;q_516;q_609;q_1058;q_1083;q_1090;q_1146;q_1392;q_1676,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:O:I,H:O:I,10,q_151;q_316;q_651;q_670;q_761;q_923;q_1050;q_1388;q_1964;q_2011,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:O:U,H:O:U,10,q_94;q_634;q_747;q_1232;q_1300;q_1301;q_1609;q_1761;q_1861;q_2005,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:X:E,H:X:E,10,q_158;q_262;q_403;q_690;q_712;q_1064;q_1643;q_1730;q_1795;q_1810,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:X:L,H:X:L,10,q_279;q_832;q_861;q_1043;q_1104;q_1243;q_1393;q_1479;q_1709;q_1848,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:X:S,H:X:S,10,q_140;q_744;q_1196;q_1379;q_1410;q_1575;q_1671;q_1803;q_1904;q_2024,ItemInfo696.csv
+administered_source_construct,HEXACO,HEXACO:H:X:SB,H:X:SB,10,q_131;q_698;q_819;q_901;q_1027;q_1055;q_1110;q_1114;q_1180;q_1992,ItemInfo696.csv
+administered_source_construct,QB6,QB6:QB6:A,QB6:A,8,q_145;q_238;q_278;q_331;q_952;q_958;q_1033;q_1591,ItemInfo696.csv
+administered_source_construct,QB6,QB6:QB6:C,QB6:C,8,q_519;q_1254;q_1290;q_1321;q_1511;q_1696;q_1949;q_2737,ItemInfo696.csv
+administered_source_construct,QB6,QB6:QB6:ES,QB6:ES,8,q_66;q_549;q_811;q_1505;q_1596;q_1610;q_2765;q_2786,ItemInfo696.csv
+administered_source_construct,QB6,QB6:QB6:H,QB6:H,8,q_185;q_1306;q_1747;q_1752;q_1780;q_1896;q_2021;q_2853,ItemInfo696.csv
+administered_source_construct,QB6,QB6:QB6:O,QB6:O,8,q_79;q_348;q_1050;q_1088;q_1676;q_2756;q_2775;q_2891,ItemInfo696.csv
+administered_source_construct,QB6,QB6:QB6:X,QB6:X,8,q_55;q_1243;q_1635;q_1685;q_1703;q_1803;q_1899;q_2900,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:AB,MPQ:AB,10,q_610;q_612;q_780;q_1058;q_1310;q_1381;q_1389;q_1587;q_1648;q_1682,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:AC,MPQ:AC,10,q_191;q_530;q_602;q_604;q_637;q_786;q_1052;q_1519;q_1979;q_1984,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:AG,MPQ:AG,10,q_501;q_630;q_957;q_1051;q_1150;q_1571;q_1585;q_1683;q_1869;q_2021,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:AL,MPQ:AL,10,q_20;q_286;q_578;q_594;q_816;q_848;q_882;q_1758;q_1854;q_1855,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:CO,MPQ:CO,10,q_124;q_623;q_1173;q_1292;q_1321;q_1397;q_1422;q_1424;q_1488;q_1507,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:HA,MPQ:HA,10,q_294;q_315;q_598;q_599;q_746;q_1662;q_1664;q_1781;q_2017;q_2020,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:SC,MPQ:SC,10,q_140;q_219;q_312;q_313;q_744;q_1196;q_1379;q_1410;q_1923;q_1943,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:SP,MPQ:SP,10,q_131;q_455;q_690;q_905;q_1045;q_1114;q_1180;q_1242;q_1652;q_1768,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:SR,MPQ:SR,10,q_126;q_177;q_248;q_727;q_820;q_986;q_1099;q_1505;q_1677;q_1989,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:TR,MPQ:TR,10,q_345;q_348;q_359;q_369;q_394;q_398;q_660;q_1328;q_1824;q_1825,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:UV,MPQ:UV,17,q_43;q_44;q_45;q_76;q_77;q_163;q_164;q_393;q_646;q_1120;q_1136;q_1138;q_1218;q_1223;q_1457;q_1458;q_1962,ItemInfo696.csv
+administered_source_construct,MPQ,MPQ:MPQ:WB,MPQ:WB,10,q_208;q_839;q_875;q_1038;q_1043;q_1044;q_1175;q_1371;q_1479;q_1567,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:A1:TR,A1:TR,10,q_286;q_343;q_377;q_379;q_381;q_594;q_1758;q_1835;q_1854;q_1855,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:A2:MO,A2:MO,10,q_501;q_1214;q_1467;q_1543;q_1556;q_1752;q_1765;q_1894;q_1896;q_2016,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:A3:AL,A3:AL,10,q_90;q_146;q_298;q_1041;q_1354;q_1385;q_1420;q_1421;q_1774;q_1881,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:A4:CO,A4:CO,10,q_121;q_479;q_531;q_957;q_1031;q_1051;q_1150;q_1163;q_1359;q_2036,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:A5:MO,A5:MO,10,q_364;q_401;q_525;q_565;q_586;q_1042;q_1235;q_1416;q_1691;q_1830,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:A6:SY,A6:SY,10,q_195;q_339;q_383;q_487;q_851;q_1757;q_1764;q_1818;q_1858;q_1910,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:C1:SE,C1:SE,10,q_258;q_515;q_520;q_708;q_722;q_786;q_1023;q_1113;q_1215;q_1435,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:C2:OR,C2:OR,10,q_169;q_170;q_619;q_1254;q_1255;q_1290;q_1333;q_1374;q_1483;q_1917,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:C3:DU,C3:DU,10,q_404;q_405;q_618;q_977;q_1190;q_1341;q_1436;q_1508;q_1812;q_1867,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:C4:AS,C4:AS,10,q_191;q_554;q_602;q_604;q_1012;q_1519;q_1553;q_1694;q_1883;q_1979,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:C5:SD,C5:SD,10,q_76;q_491;q_904;q_962;q_992;q_1087;q_1444;q_1521;q_1744;q_1949,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:C6:CA,C6:CA,10,q_35;q_321;q_507;q_598;q_1173;q_1292;q_1424;q_1488;q_1638;q_1748,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:E1:FR,E1:FR,10,q_20;q_140;q_200;q_313;q_505;q_819;q_1196;q_1410;q_1480;q_1943,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:E2:GR,E2:GR,10,q_314;q_684;q_744;q_1169;q_1370;q_1376;q_1531;q_1666;q_1803;q_1923,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:E3:AS,E3:AS,10,q_455;q_690;q_1114;q_1151;q_1180;q_1670;q_1768;q_1769;q_1872;q_1913,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:E4:AL,E4:AL,10,q_71;q_74;q_429;q_595;q_1280;q_1281;q_1329;q_1330;q_1599;q_1600,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:E5:ES,E5:ES,10,q_31;q_294;q_576;q_745;q_746;q_1360;q_1368;q_1662;q_1664;q_2017,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:E6:CH,E6:CH,10,q_175;q_296;q_799;q_1043;q_1244;q_1248;q_1350;q_1371;q_1567;q_1685,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:N1:ANX,N1:ANX,10,q_38;q_66;q_177;q_179;q_248;q_727;q_808;q_960;q_986;q_1989,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:N2:ANG,N2:ANG,10,q_176;q_208;q_952;q_974;q_995;q_1184;q_1357;q_1571;q_1585;q_1683,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:N3:DE,N3:DE,10,q_206;q_285;q_578;q_820;q_824;q_875;q_1044;q_1099;q_1479;q_1677,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:N4:SC,N4:SC,10,q_63;q_67;q_69;q_89;q_114;q_168;q_184;q_901;q_1496;q_1755,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:N5:IM,N5:IM,10,q_56;q_632;q_673;q_736;q_1009;q_1384;q_1461;q_1462;q_1474;q_1590,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:N6:VU,N6:VU,10,q_85;q_332;q_423;q_469;q_867;q_979;q_1209;q_1505;q_1606;q_1616,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:O1:IM,O1:IM,10,q_609;q_780;q_1058;q_1083;q_1161;q_1310;q_1381;q_1675;q_1682;q_1738,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:O2:AI,O2:AI,10,q_348;q_607;q_608;q_610;q_611;q_612;q_776;q_1289;q_1369;q_1648,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:O3:EM,O3:EM,10,q_174;q_228;q_721;q_755;q_793;q_797;q_844;q_1589;q_1681;q_1880,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:O4:AD,O4:AD,10,q_47;q_82;q_148;q_566;q_581;q_689;q_1303;q_1334;q_1540;q_1542,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:O5:IN,O5:IN,10,q_194;q_197;q_316;q_322;q_422;q_778;q_1050;q_1088;q_1327;q_1388,ItemInfo696.csv
+administered_source_construct,IPIPneo,IPIPneo:O6:LI,O6:LI,10,q_345;q_359;q_369;q_394;q_395;q_397;q_398;q_1328;q_1824;q_1825,ItemInfo696.csv
+administered_source_construct,EPQr,EPQr:EPQ:E,EPQ:E,23,q_4222;q_4226;q_4230;q_4234;q_4237;q_4240;q_4243;q_4247;q_4250;q_4253;q_4257;q_4259;q_4262;q_4265;q_4267;q_4270;q_4271;q_4274;q_4276;q_4278;q_4283;q_4292;q_4295,ItemInfo696.csv
+administered_source_construct,EPQr,EPQr:EPQ:N,EPQ:N,24,q_4224;q_4228;q_4232;q_4235;q_4239;q_4242;q_4246;q_4249;q_4252;q_4256;q_4258;q_4263;q_4269;q_4273;q_4277;q_4280;q_4282;q_4285;q_4287;q_4288;q_4290;q_4294;q_4298;q_4300,ItemInfo696.csv
+administered_source_construct,EPQr,EPQr:EPQ:P,EPQ:P,32,q_4223;q_4225;q_4227;q_4229;q_4231;q_4233;q_4236;q_4238;q_4241;q_4244;q_4245;q_4248;q_4251;q_4254;q_4255;q_4260;q_4261;q_4264;q_4266;q_4268;q_4272;q_4275;q_4279;q_4281;q_4284;q_4286;q_4289;q_4291;q_4293;q_4296;q_4297;q_4299,ItemInfo696.csv
+administered_source_construct,PS,PS:PS:P,PS:P,20,q_131;q_148;q_254;q_438;q_492;q_698;q_740;q_803;q_1045;q_1055;q_1081;q_1110;q_1114;q_1205;q_1998;q_2745;q_2754;q_2951;q_3023;q_3090,ItemInfo696.csv
+administered_source_construct,PS,PS:PS:S,PS:S,20,q_26;q_201;q_824;q_875;q_878;q_880;q_882;q_919;q_920;q_978;q_1020;q_1022;q_1038;q_1477;q_1697;q_1798;q_1840;q_1867;q_2821;q_3691,ItemInfo696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_3sociability,SPI_3sociability,20,q_712;q_1180;q_1360;q_1379;q_1410;q_1643;q_1662;q_1671;q_1742;q_1781;q_1803;q_4226;q_4230;q_4237;q_4240;q_4243;q_4247;q_4259;q_4262;q_4267,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_3socCohesion,SPI_3socCohesion,20,q_90;q_146;q_225;q_253;q_364;q_460;q_501;q_851;q_1053;q_1162;q_1306;q_1354;q_1367;q_1664;q_1752;q_1763;q_1765;q_1808;q_1896;q_4296,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_3emotionality,SPI_3emotionality,20,q_52;q_206;q_413;q_811;q_904;q_960;q_965;q_974;q_979;q_995;q_1044;q_1099;q_1260;q_1401;q_1447;q_1452;q_1596;q_1949;q_4239;q_4252,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_5compHonHum,SPI_5compHonHum,15,q_90;q_146;q_225;q_253;q_364;q_460;q_844;q_851;q_871;q_1053;q_1162;q_1354;q_1763;q_1765;q_1896,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_5conscientious,SPI_5conscientious,15,q_519;q_619;q_623;q_637;q_904;q_962;q_992;q_1201;q_1290;q_1401;q_1452;q_1657;q_1744;q_1752;q_1949,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_5extraversion,SPI_5extraversion,15,q_712;q_1180;q_1379;q_1410;q_1671;q_1742;q_1803;q_4226;q_4230;q_4237;q_4240;q_4247;q_4259;q_4262;q_4267,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_5intelOpen,SPI_5intelOpen,15,q_128;q_194;q_240;q_348;q_422;q_423;q_515;q_778;q_1050;q_1058;q_1235;q_1389;q_1441;q_1738;q_2745,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_5neuroticism,SPI_5neuroticism,15,q_52;q_206;q_332;q_413;q_960;q_965;q_974;q_979;q_995;q_1099;q_1447;q_1505;q_1596;q_4239;q_4252,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15boldness,SPI_15boldness,8,q_292;q_1306;q_1360;q_1367;q_1662;q_1664;q_1781;q_2017,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15compassion,SPI_15compassion,8,q_90;q_253;q_460;q_844;q_851;q_1053;q_1162;q_1763,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15habit,SPI_15habit,8,q_47;q_566;q_623;q_689;q_1540;q_1752;q_1916;q_1917,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15easyGoingness,SPI_15easyGoingness,8,q_121;q_1280;q_1329;q_1537;q_1556;q_1787;q_1910;q_4261,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15fear,SPI_15fear,8,q_179;q_332;q_334;q_1446;q_1505;q_1853;q_4239;q_4280,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15impulsivity,SPI_15impulsivity,8,q_35;q_636;q_708;q_1173;q_1424;q_1511;q_1638;q_4270,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15industry,SPI_15industry,8,q_519;q_904;q_962;q_992;q_1201;q_1452;q_1744;q_1949,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15intellect,SPI_15intellect,8,q_157;q_240;q_422;q_423;q_493;q_515;q_1253;q_1834,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15machiavell,SPI_15machiavell,8,q_501;q_1517;q_1765;q_1808;q_1894;q_1896;q_2853;q_4296,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15openness,SPI_15openness,8,q_194;q_348;q_778;q_1058;q_1389;q_1441;q_1738;q_1880,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15enthusiasm,SPI_15enthusiasm,8,q_206;q_285;q_578;q_811;q_1038;q_1044;q_1371;q_2765,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15seriousness,SPI_15seriousness,8,q_175;q_345;q_1120;q_1462;q_1590;q_1685;q_4266;q_4279,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15sociability,SPI_15sociability,8,q_712;q_1180;q_1671;q_1803;q_4240;q_4247;q_4259;q_4267,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15trust,SPI_15trust,8,q_377;q_379;q_594;q_871;q_1260;q_1854;q_1855;q_4289,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,SPI_15volatility,SPI_15volatility,8,q_413;q_926;q_952;q_965;q_974;q_1357;q_1591;q_1683,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,IPIP100agree,IPIP100agree,20,q_140;q_146;q_150;q_195;q_200;q_217;q_838;q_844;q_1041;q_1053;q_1162;q_1163;q_1206;q_1364;q_1385;q_1419;q_1705;q_1763;q_1792;q_1832,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,IPIP100consc,IPIP100consc,20,q_76;q_124;q_530;q_619;q_626;q_904;q_931;q_962;q_1254;q_1255;q_1290;q_1333;q_1374;q_1397;q_1422;q_1452;q_1483;q_1507;q_1696;q_1949,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,IPIP100extra,IPIP100extra,19,q_241;q_254;q_262;q_403;q_690;q_698;q_712;q_815;q_819;q_901;q_1114;q_1180;q_1205;q_1410;q_1480;q_1742;q_1768;q_1803;q_1913,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,IPIP100intel,IPIP100intel,20,q_128;q_132;q_194;q_240;q_316;q_422;q_492;q_493;q_609;q_1050;q_1058;q_1083;q_1088;q_1090;q_1388;q_1392;q_1738;q_1861;q_1893;q_1964,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,IPIP100stability,IPIP100stability,20,q_108;q_177;q_248;q_497;q_890;q_952;q_960;q_974;q_979;q_986;q_995;q_1020;q_1099;q_1479;q_1505;q_1585;q_1677;q_1683;q_1775;q_1989,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,IPIP50Agree,IPIP50Agree,10,q_150;q_195;q_200;q_838;q_844;q_1053;q_1163;q_1419;q_1763;q_1792,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,IPIP50Consc,IPIP50Consc,10,q_76;q_124;q_931;q_962;q_1255;q_1290;q_1397;q_1483;q_1507;q_1696,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,IPIP50Extra,IPIP50Extra,10,q_241;q_262;q_690;q_698;q_712;q_819;q_1114;q_1180;q_1742;q_1803,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,IPIP50Intel,IPIP50Intel,10,q_128;q_194;q_240;q_609;q_1050;q_1058;q_1088;q_1090;q_1738;q_1893,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,IPIP50EmoSt,IPIP50EmoSt,10,q_108;q_248;q_497;q_974;q_986;q_995;q_1099;q_1479;q_1677;q_1989,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,BFAScomp,BFAScomp,10,q_146;q_195;q_460;q_668;q_844;q_1162;q_1307;q_1763;q_1766;q_1774,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,BFASpolite,BFASpolite,10,q_225;q_319;q_364;q_1031;q_1163;q_1359;q_1556;q_1624;q_1663;q_1765,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,BFASindustry,BFASindustry,10,q_44;q_107;q_491;q_706;q_904;q_930;q_988;q_1429;q_1521;q_1949,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,BFASorder,BFASorder,10,q_169;q_170;q_582;q_931;q_1201;q_1255;q_1290;q_1657;q_1915;q_1917,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,BFASassert,BFASassert,10,q_260;q_455;q_1055;q_1151;q_1205;q_1242;q_1652;q_1768;q_1913;q_2161,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,BFASenthus,BFASenthus,10,q_140;q_1043;q_1196;q_1243;q_1410;q_1583;q_1635;q_1703;q_1943;q_2160,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,BFASintel,BFASintel,10,q_240;q_316;q_322;q_422;q_946;q_1050;q_1088;q_1253;q_1327;q_1834,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,BFASopen,BFASopen,10,q_348;q_612;q_776;q_964;q_1389;q_1441;q_1648;q_1675;q_1682;q_1687,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,BFASvolatile,BFASvolatile,10,q_52;q_176;q_413;q_497;q_952;q_965;q_995;q_1185;q_1585;q_1588,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,BFASwithdraw,BFASwithdraw,10,q_66;q_105;q_126;q_184;q_332;q_820;q_890;q_1578;q_1677;q_1989,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HEXACO_A,HEXACO_A,40,q_6;q_39;q_80;q_101;q_134;q_139;q_141;q_142;q_145;q_159;q_239;q_278;q_331;q_477;q_538;q_594;q_871;q_898;q_915;q_926;q_952;q_958;q_966;q_974;q_995;q_997;q_1041;q_1051;q_1150;q_1357;q_1373;q_1571;q_1577;q_1585;q_1601;q_1683;q_1725;q_1787;q_1869;q_1957,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HEXACO_C,HEXACO_C,40,q_22;q_124;q_169;q_321;q_520;q_530;q_554;q_559;q_571;q_602;q_619;q_636;q_637;q_665;q_673;q_962;q_985;q_1024;q_1063;q_1173;q_1201;q_1254;q_1255;q_1290;q_1333;q_1395;q_1401;q_1422;q_1424;q_1483;q_1507;q_1511;q_1537;q_1550;q_1563;q_1754;q_1915;q_1916;q_1917;q_1979,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HEXACO_X,HEXACO_X,40,q_131;q_140;q_158;q_262;q_279;q_403;q_690;q_698;q_712;q_744;q_819;q_832;q_861;q_901;q_1027;q_1043;q_1055;q_1064;q_1104;q_1110;q_1114;q_1180;q_1196;q_1243;q_1379;q_1393;q_1410;q_1479;q_1575;q_1643;q_1671;q_1709;q_1730;q_1795;q_1803;q_1810;q_1848;q_1904;q_1992;q_2024,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HEXACO_O,HEXACO_O,40,q_94;q_128;q_151;q_316;q_348;q_492;q_516;q_608;q_609;q_610;q_611;q_612;q_634;q_651;q_670;q_747;q_757;q_761;q_923;q_964;q_1050;q_1058;q_1083;q_1090;q_1132;q_1146;q_1232;q_1300;q_1301;q_1388;q_1392;q_1609;q_1648;q_1676;q_1687;q_1761;q_1861;q_1964;q_2005;q_2011,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HEXACO_E,HEXACO_E,40,q_53;q_98;q_179;q_251;q_253;q_292;q_334;q_463;q_539;q_721;q_727;q_804;q_844;q_986;q_994;q_1159;q_1260;q_1306;q_1367;q_1446;q_1447;q_1448;q_1490;q_1495;q_1505;q_1573;q_1578;q_1596;q_1616;q_1668;q_1679;q_1681;q_1706;q_1759;q_1853;q_1924;q_1989;q_1993;q_2001;q_2018,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HEXACO_H,HEXACO_H,40,q_23;q_40;q_152;q_154;q_156;q_157;q_225;q_364;q_401;q_500;q_501;q_525;q_704;q_711;q_716;q_917;q_1054;q_1276;q_1296;q_1372;q_1517;q_1536;q_1543;q_1555;q_1633;q_1653;q_1667;q_1747;q_1762;q_1808;q_1867;q_1871;q_1894;q_1969;q_2003;q_2008;q_2016;q_2021;q_2025;q_2029,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,QB6agree,QB6agree,8,q_145;q_238;q_278;q_331;q_952;q_958;q_1033;q_1591,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,QB6consc,QB6consc,8,q_519;q_1254;q_1290;q_1321;q_1511;q_1696;q_1949;q_2737,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,QB6extra,QB6extra,8,q_55;q_1243;q_1635;q_1685;q_1703;q_1803;q_1899;q_2900,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,QB6open,QB6open,8,q_79;q_348;q_1050;q_1088;q_1676;q_2756;q_2775;q_2891,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,QB6resilient,QB6resilient,8,q_66;q_549;q_811;q_1505;q_1596;q_1610;q_2765;q_2786,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,QB6honprop,QB6honprop,8,q_185;q_1306;q_1747;q_1752;q_1780;q_1896;q_2021;q_2853,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEO_A,NEO_A,60,q_90;q_121;q_146;q_195;q_286;q_298;q_339;q_343;q_364;q_377;q_379;q_381;q_383;q_401;q_479;q_487;q_501;q_525;q_531;q_565;q_586;q_594;q_851;q_957;q_1031;q_1041;q_1042;q_1051;q_1150;q_1163;q_1214;q_1235;q_1354;q_1359;q_1385;q_1416;q_1420;q_1421;q_1467;q_1543;q_1556;q_1691;q_1752;q_1757;q_1758;q_1764;q_1765;q_1774;q_1818;q_1830;q_1835;q_1854;q_1855;q_1858;q_1881;q_1894;q_1896;q_1910;q_2016;q_2036,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEO_C,NEO_C,60,q_35;q_76;q_169;q_170;q_191;q_258;q_321;q_404;q_405;q_491;q_507;q_515;q_520;q_554;q_598;q_602;q_604;q_618;q_619;q_708;q_722;q_786;q_904;q_962;q_977;q_992;q_1012;q_1023;q_1087;q_1113;q_1173;q_1190;q_1215;q_1254;q_1255;q_1290;q_1292;q_1333;q_1341;q_1374;q_1424;q_1435;q_1436;q_1444;q_1483;q_1488;q_1508;q_1519;q_1521;q_1553;q_1638;q_1694;q_1744;q_1748;q_1812;q_1867;q_1883;q_1917;q_1949;q_1979,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEO_E,NEO_E,60,q_20;q_31;q_71;q_74;q_140;q_175;q_200;q_294;q_296;q_313;q_314;q_429;q_455;q_505;q_576;q_595;q_684;q_690;q_744;q_745;q_746;q_799;q_819;q_1043;q_1114;q_1151;q_1169;q_1180;q_1196;q_1244;q_1248;q_1280;q_1281;q_1329;q_1330;q_1350;q_1360;q_1368;q_1370;q_1371;q_1376;q_1410;q_1480;q_1531;q_1567;q_1599;q_1600;q_1662;q_1664;q_1666;q_1670;q_1685;q_1768;q_1769;q_1803;q_1872;q_1913;q_1923;q_1943;q_2017,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEO_O,NEO_O,60,q_47;q_82;q_148;q_174;q_194;q_197;q_228;q_316;q_322;q_345;q_348;q_359;q_369;q_394;q_395;q_397;q_398;q_422;q_566;q_581;q_607;q_608;q_609;q_610;q_611;q_612;q_689;q_721;q_755;q_776;q_778;q_780;q_793;q_797;q_844;q_1050;q_1058;q_1083;q_1088;q_1161;q_1289;q_1303;q_1310;q_1327;q_1328;q_1334;q_1369;q_1381;q_1388;q_1540;q_1542;q_1589;q_1648;q_1675;q_1681;q_1682;q_1738;q_1824;q_1825;q_1880,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEO_N,NEO_N,60,q_38;q_56;q_63;q_66;q_67;q_69;q_85;q_89;q_114;q_168;q_176;q_177;q_179;q_184;q_206;q_208;q_248;q_285;q_332;q_423;q_469;q_578;q_632;q_673;q_727;q_736;q_808;q_820;q_824;q_867;q_875;q_901;q_952;q_960;q_974;q_979;q_986;q_995;q_1009;q_1044;q_1099;q_1184;q_1209;q_1357;q_1384;q_1461;q_1462;q_1474;q_1479;q_1496;q_1505;q_1571;q_1585;q_1590;q_1606;q_1616;q_1677;q_1683;q_1755;q_1989,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,EPQn,EPQn,24,q_4224;q_4228;q_4232;q_4235;q_4239;q_4242;q_4246;q_4249;q_4252;q_4256;q_4258;q_4263;q_4269;q_4273;q_4277;q_4280;q_4282;q_4285;q_4287;q_4288;q_4290;q_4294;q_4298;q_4300,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,EPQe,EPQe,23,q_4222;q_4226;q_4230;q_4234;q_4237;q_4240;q_4243;q_4247;q_4250;q_4253;q_4257;q_4259;q_4262;q_4265;q_4267;q_4270;q_4271;q_4274;q_4276;q_4278;q_4283;q_4292;q_4295,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,EPQp,EPQp,32,q_4223;q_4225;q_4227;q_4229;q_4231;q_4233;q_4236;q_4238;q_4241;q_4244;q_4245;q_4248;q_4251;q_4254;q_4255;q_4260;q_4261;q_4264;q_4266;q_4268;q_4272;q_4275;q_4279;q_4281;q_4284;q_4286;q_4289;q_4291;q_4293;q_4296;q_4297;q_4299,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,PSs,PSs,20,q_26;q_201;q_824;q_875;q_878;q_880;q_882;q_919;q_920;q_978;q_1020;q_1022;q_1038;q_1477;q_1697;q_1798;q_1840;q_1867;q_2821;q_3691,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,PSp,PSp,20,q_131;q_148;q_254;q_438;q_492;q_698;q_740;q_803;q_1045;q_1055;q_1081;q_1110;q_1114;q_1205;q_1998;q_2745;q_2754;q_2951;q_3023;q_3090,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQab,MPQab,10,q_610;q_612;q_780;q_1058;q_1310;q_1381;q_1389;q_1587;q_1648;q_1682,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQac,MPQac,10,q_191;q_530;q_602;q_604;q_637;q_786;q_1052;q_1519;q_1979;q_1984,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQag,MPQag,10,q_501;q_630;q_957;q_1051;q_1150;q_1571;q_1585;q_1683;q_1869;q_2021,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQal,MPQal,10,q_20;q_286;q_578;q_594;q_816;q_848;q_882;q_1758;q_1854;q_1855,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQco,MPQco,10,q_124;q_623;q_1173;q_1292;q_1321;q_1397;q_1422;q_1424;q_1488;q_1507,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQha,MPQha,10,q_294;q_315;q_598;q_599;q_746;q_1662;q_1664;q_1781;q_2017;q_2020,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQsc,MPQsc,10,q_140;q_219;q_312;q_313;q_744;q_1196;q_1379;q_1410;q_1923;q_1943,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQsp,MPQsp,10,q_131;q_455;q_690;q_905;q_1045;q_1114;q_1180;q_1242;q_1652;q_1768,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQsr,MPQsr,10,q_126;q_177;q_248;q_727;q_820;q_986;q_1099;q_1505;q_1677;q_1989,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQtr,MPQtr,10,q_345;q_348;q_359;q_369;q_394;q_398;q_660;q_1328;q_1824;q_1825,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQuv,MPQuv,17,q_43;q_44;q_45;q_76;q_77;q_163;q_164;q_393;q_646;q_1120;q_1136;q_1138;q_1218;q_1223;q_1457;q_1458;q_1962,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,MPQwb,MPQwb,10,q_208;q_839;q_875;q_1038;q_1043;q_1044;q_1175;q_1371;q_1479;q_1567,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HAFlex,HAFlex,10,q_39;q_80;q_134;q_139;q_141;q_142;q_477;q_997;q_1601;q_1957,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HAForgive,HAForgive,10,q_145;q_159;q_594;q_871;q_915;q_958;q_966;q_1150;q_1373;q_1869,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HAGentle,HAGentle,10,q_6;q_239;q_331;q_538;q_898;q_1041;q_1051;q_1571;q_1725;q_1787,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HAPatient,HAPatient,10,q_101;q_278;q_926;q_952;q_974;q_995;q_1357;q_1577;q_1585;q_1683,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HCDiligence,HCDiligence,10,q_124;q_520;q_602;q_637;q_985;q_1024;q_1550;q_1563;q_1754;q_1979,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HCOrgan,HCOrgan,10,q_169;q_665;q_962;q_1201;q_1254;q_1255;q_1290;q_1333;q_1483;q_1917,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HCPerfect,HCPerfect,10,q_530;q_554;q_559;q_571;q_1063;q_1507;q_1511;q_1537;q_1915;q_1916,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HCPrudence,HCPrudence,10,q_22;q_321;q_619;q_636;q_673;q_1173;q_1395;q_1401;q_1422;q_1424,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HEAnxiety,HEAnxiety,10,q_179;q_727;q_986;q_994;q_1495;q_1505;q_1578;q_1596;q_1616;q_1989,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HEDepend,HEDepend,10,q_463;q_1260;q_1446;q_1447;q_1448;q_1490;q_1668;q_1706;q_1759;q_1924,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HEFear,HEFear,10,q_53;q_292;q_334;q_804;q_1306;q_1367;q_1853;q_1993;q_2001;q_2018,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HESentiment,HESentiment,10,q_98;q_251;q_253;q_539;q_721;q_844;q_1159;q_1573;q_1679;q_1681,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HHFairness,HHFairness,10,q_40;q_500;q_501;q_1633;q_1747;q_1867;q_2003;q_2016;q_2021;q_2029,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HHGreedAvoid,HHGreedAvoid,10,q_156;q_225;q_711;q_1054;q_1372;q_1536;q_1667;q_1871;q_1969;q_2025,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HHModesty,HHModesty,10,q_152;q_154;q_157;q_364;q_401;q_525;q_716;q_1296;q_1653;q_2008,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HHSincere,HHSincere,10,q_23;q_704;q_917;q_1276;q_1517;q_1543;q_1555;q_1762;q_1808;q_1894,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HOAesthetic,HOAesthetic,10,q_348;q_608;q_610;q_611;q_612;q_757;q_964;q_1132;q_1648;q_1687,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HOCreative,HOCreative,10,q_128;q_492;q_516;q_609;q_1058;q_1083;q_1090;q_1146;q_1392;q_1676,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HOInquisite,HOInquisite,10,q_151;q_316;q_651;q_670;q_761;q_923;q_1050;q_1388;q_1964;q_2011,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HOUnconvention,HOUnconvention,10,q_94;q_634;q_747;q_1232;q_1300;q_1301;q_1609;q_1761;q_1861;q_2005,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HXExpress,HXExpress,10,q_158;q_262;q_403;q_690;q_712;q_1064;q_1643;q_1730;q_1795;q_1810,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HXLiveliness,HXLiveliness,10,q_279;q_832;q_861;q_1043;q_1104;q_1243;q_1393;q_1479;q_1709;q_1848,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HXSociable,HXSociable,10,q_140;q_744;q_1196;q_1379;q_1410;q_1575;q_1671;q_1803;q_1904;q_2024,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,HXSocBold,HXSocBold,10,q_131;q_698;q_819;q_901;q_1027;q_1055;q_1110;q_1114;q_1180;q_1992,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOa1,NEOa1,10,q_286;q_343;q_377;q_379;q_381;q_594;q_1758;q_1835;q_1854;q_1855,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOa2,NEOa2,10,q_501;q_1214;q_1467;q_1543;q_1556;q_1752;q_1765;q_1894;q_1896;q_2016,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOa3,NEOa3,10,q_90;q_146;q_298;q_1041;q_1354;q_1385;q_1420;q_1421;q_1774;q_1881,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOa4,NEOa4,10,q_121;q_479;q_531;q_957;q_1031;q_1051;q_1150;q_1163;q_1359;q_2036,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOa5,NEOa5,10,q_364;q_401;q_525;q_565;q_586;q_1042;q_1235;q_1416;q_1691;q_1830,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOa6,NEOa6,10,q_195;q_339;q_383;q_487;q_851;q_1757;q_1764;q_1818;q_1858;q_1910,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOc1,NEOc1,10,q_258;q_515;q_520;q_708;q_722;q_786;q_1023;q_1113;q_1215;q_1435,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOc2,NEOc2,10,q_169;q_170;q_619;q_1254;q_1255;q_1290;q_1333;q_1374;q_1483;q_1917,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOc3,NEOc3,10,q_404;q_405;q_618;q_977;q_1190;q_1341;q_1436;q_1508;q_1812;q_1867,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOc4,NEOc4,10,q_191;q_554;q_602;q_604;q_1012;q_1519;q_1553;q_1694;q_1883;q_1979,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOc5,NEOc5,10,q_76;q_491;q_904;q_962;q_992;q_1087;q_1444;q_1521;q_1744;q_1949,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOc6,NEOc6,10,q_35;q_321;q_507;q_598;q_1173;q_1292;q_1424;q_1488;q_1638;q_1748,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOe1,NEOe1,10,q_20;q_140;q_200;q_313;q_505;q_819;q_1196;q_1410;q_1480;q_1943,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOe2,NEOe2,10,q_314;q_684;q_744;q_1169;q_1370;q_1376;q_1531;q_1666;q_1803;q_1923,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOe3,NEOe3,10,q_455;q_690;q_1114;q_1151;q_1180;q_1670;q_1768;q_1769;q_1872;q_1913,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOe4,NEOe4,10,q_71;q_74;q_429;q_595;q_1280;q_1281;q_1329;q_1330;q_1599;q_1600,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOe5,NEOe5,10,q_31;q_294;q_576;q_745;q_746;q_1360;q_1368;q_1662;q_1664;q_2017,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOe6,NEOe6,10,q_175;q_296;q_799;q_1043;q_1244;q_1248;q_1350;q_1371;q_1567;q_1685,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOn1,NEOn1,10,q_38;q_66;q_177;q_179;q_248;q_727;q_808;q_960;q_986;q_1989,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOn2,NEOn2,10,q_176;q_208;q_952;q_974;q_995;q_1184;q_1357;q_1571;q_1585;q_1683,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOn3,NEOn3,10,q_206;q_285;q_578;q_820;q_824;q_875;q_1044;q_1099;q_1479;q_1677,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOn4,NEOn4,10,q_63;q_67;q_69;q_89;q_114;q_168;q_184;q_901;q_1496;q_1755,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOn5,NEOn5,10,q_56;q_632;q_673;q_736;q_1009;q_1384;q_1461;q_1462;q_1474;q_1590,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOn6,NEOn6,10,q_85;q_332;q_423;q_469;q_867;q_979;q_1209;q_1505;q_1606;q_1616,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOo1,NEOo1,10,q_609;q_780;q_1058;q_1083;q_1161;q_1310;q_1381;q_1675;q_1682;q_1738,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOo2,NEOo2,10,q_348;q_607;q_608;q_610;q_611;q_612;q_776;q_1289;q_1369;q_1648,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOo3,NEOo3,10,q_174;q_228;q_721;q_755;q_793;q_797;q_844;q_1589;q_1681;q_1880,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOo4,NEOo4,10,q_47;q_82;q_148;q_566;q_581;q_689;q_1303;q_1334;q_1540;q_1542,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOo5,NEOo5,10,q_194;q_197;q_316;q_322;q_422;q_778;q_1050;q_1088;q_1327;q_1388,superKey696.csv
+derived_scoring_key,SAPA Personality Inventory / superKey696,NEOo6,NEOo6,10,q_345;q_359;q_369;q_394;q_395;q_397;q_398;q_1328;q_1824;q_1825,superKey696.csv
