@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-11T22:03:43Z
-Last commit when updated: 0693aaf (canonical master before AA-2 multimodel trait-viewer integration)
+Updated UTC: 2026-09-11T23:17:59Z
+Last commit when updated: afb53d4 (AA-4 runner before result registration)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -31,13 +31,13 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 340
+- trait analyses: 369
 - visualizations: 238
 
 
 ## Status Counts
 
-- active: 4643
+- active: 4672
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -50,6 +50,8 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/FINDINGS_LEDGER.md`, `research/THREAD_START.md`, and `research/STARTUP_MANIFEST.md` for startup and report continuity. Use `research/paper15_content_ledger.md` as the canonical factual source ledger before drafting Paper 1.5 prose.
 
 ### Active Analyses
+
+Qwen trait sparsity and activation-basis audit: `research/outputs/qwen_trait_sparsity_prediction/qwen_trait_sparsity_report.md` is the entry point for the Qwen-only compact-selection study. It documents that persona PCA uses 275 mean-pooled role vectors with 5,120 activation coordinates—not named traits—as variables, while trait features and PC targets transform the same role vectors. Use `feature_budget_curve.csv` for leakage-safe joint compact performance, `matched_basis_comparison.csv` for optimized real traits versus random real-trait subsets, isotropic activation directions, and fold-local training-persona-span directions, and `trait_span_pc_coverage.csv` for direct PC-loading coverage. Selected real traits have a large low-k advantage, but a 240-direction persona-span random basis nearly matches the full bank; the conclusion is mixed compact alignment plus high-k generic basis coverage. `final_ranked_traits.csv` synthesizes marginal, conditional, forward, sparse, and redundancy evidence without treating one rank as uniquely correct. All analyses are CPU-only and use saved Qwen artifacts; no inference or activation extraction was performed.
 
 Multi-model trait-profile to persona-PC predictor: `research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md` is the entry point for the Llama-3.3-70B and Gemma-2-27B replication of the completed Qwen mapping. Use `cross_model_comparison.csv` for the canonical three-model metric table; each `llama/` and `gemma/` subdirectory contains the complete 275 x 240 cosine matrix, repeated nested comparison, raw/quantile LOPO, fixed Qwen-canonical role-family holdout, 100-permutation control, OOD reference, transparent Ridge/all-model bundles, endpoint-held-out synthetic interpolation, source manifest, and verification report. `deterministic_full_rerun_comparison.json` records byte-identical reproduction of all 20 deterministic CSVs. Each model uses its own established PCA geometry; cross-model sign orientation does not imply identical PC semantics. This is same-space saved-vector evidence, not behavioral, causal, psychometric, human-transfer, or model-sophistication evidence. No GPU, RunPod, new inference, activation extraction, or external model API was used.
 
@@ -91,7 +93,7 @@ Adaptive extraction and recovered role-cloud artifacts live under `research/q2_s
 
 ### Trait Analyses
 
-Trait-vector, Big Five, trait-space PCA, and trait-profile analyses are indexed in `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/pc2_trait_stratified_profile/`, `research/outputs/qwen_pc2_trait_region_overlay/`, `research/outputs/multimodel_ordered_trait_region_viewer/`, `research/outputs/multimodel_trait_profile_pc_predictor/`, `research/outputs/trait_profile_provenance_audit/`, `research/outputs/big_five_provenance_audit/`, `research/outputs/same_space_big_five_overlay/`, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. For PC2 visualization work, start with `research/visualizations/persona_geometry_explorer.html` and its `Trait regions` controls for Qwen-only exploration, or `research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_viewer.html` for Qwen/Llama/Gemma ordered-axis comparisons. Then inspect `research/visualizations/trait_region_overlay_integration_report.md`, `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_report.md`, and `research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_report.md`. For the cross-model held-out predictive replication, use `research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md`. For provenance and evidential-independence caveats on the 275-role x 240-trait matrix, start with `research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md`. For provenance and independence caveats on the legacy Big Five explorer overlay, start with `research/outputs/big_five_provenance_audit/big_five_provenance_report.md`; that legacy overlay should be treated as heuristic cluster-conditioned semantic summary. For the current evidence-bearing same-space Big Five layer, use `research/outputs/same_space_big_five_overlay/same_space_big_five_report.md` and label it as activation-derived trait-vector projection, not independent psychometric rating.
+Trait-vector, Big Five, trait-space PCA, and trait-profile analyses are indexed in `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/pc2_trait_stratified_profile/`, `research/outputs/qwen_pc2_trait_region_overlay/`, `research/outputs/multimodel_ordered_trait_region_viewer/`, `research/outputs/multimodel_trait_profile_pc_predictor/`, `research/outputs/qwen_trait_sparsity_prediction/`, `research/outputs/trait_profile_provenance_audit/`, `research/outputs/big_five_provenance_audit/`, `research/outputs/same_space_big_five_overlay/`, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. For PC2 visualization work, start with `research/visualizations/persona_geometry_explorer.html` and its `Trait regions` controls for Qwen-only exploration, or `research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_viewer.html` for Qwen/Llama/Gemma ordered-axis comparisons. Then inspect `research/visualizations/trait_region_overlay_integration_report.md`, `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_report.md`, and `research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_report.md`. For the cross-model held-out predictive replication, use `research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md`; for compactness and generic-basis controls, use `research/outputs/qwen_trait_sparsity_prediction/qwen_trait_sparsity_report.md`. For provenance and evidential-independence caveats on the 275-role x 240-trait matrix, start with `research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md`. For provenance and independence caveats on the legacy Big Five explorer overlay, start with `research/outputs/big_five_provenance_audit/big_five_provenance_report.md`; that legacy overlay should be treated as heuristic cluster-conditioned semantic summary. For the current evidence-bearing same-space Big Five layer, use `research/outputs/same_space_big_five_overlay/same_space_big_five_report.md` and label it as activation-derived trait-vector projection, not independent psychometric rating.
 
 ### Archived or Deprecated Outputs
 

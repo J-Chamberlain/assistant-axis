@@ -10,6 +10,8 @@ Current visualization update (2026-09-09): the existing Qwen emotion surface vie
 
 ## Current Objective
 
+Current Qwen trait-sparsity audit (2026-09-11): `research/outputs/qwen_trait_sparsity_prediction/` now distinguishes compact real-trait alignment from generic activation-space coverage. Persona PCA uses 5,120 activation coordinates from 275 mean-pooled role vectors; the named traits are not PCA inputs, though predictors and targets transform the same role vectors. Nested selected traits reach all-PC R2>=.99 at k=6; fixed editorial 15 has normalized RMSE 0.1651 versus optimized 15 at 0.0872. Optimized 15 beats all matched random banks, but 240 fold-local persona-span directions reach 0.0514 versus repeated full-real 0.0476, and the full trait span covers 98.8%/98.5%/98.2% of PC loadings. Treat the result as a mixture of compact trait-specific alignment and high-k generic basis coverage, not independent psychometrics or causal psychology.
+
 Current cross-model trait-profile predictor (2026-09-11): `research/outputs/multimodel_trait_profile_pc_predictor/` replicates the complete-profile mapping in each model's own established persona PCA geometry. Raw Ridge LOPO R2 is 0.997833/0.997161/0.989900 for Llama and 0.999788/0.996179/0.987835 for Gemma; normalized 3D RMSE is 0.1245/0.1278 versus Qwen's canonical 0.0454. Fixed Qwen-canonical role-family holdout and endpoint-held-out synthetic interpolation both generalize but degrade, especially for distant pairs and PC3. Ridge remains selected in all three models, and fold-safe percentiles remain useful but less precise than raw cosines. This is same-space basis-coverage evidence, not cross-model PC-semantic identity, independent psychology, causal traits, human-likeness, or behavioral realization. A complete fixed-seed rerun reproduced all deterministic CSV outputs exactly.
 
 Current trait-profile predictor (2026-09-11): `research/outputs/trait_profile_pc_predictor/` now provides the reusable first-stage mapping from a complete 240-trait Qwen activation-cosine profile to predicted canonical PC1/PC2/PC3. Raw Ridge LOPO over all 275 personas reaches R2=0.999522/0.998811/0.999611 and remains V1 after repeated nested comparison against PLS, RBF Kernel Ridge, and KNN. Fold-safe quantile LOPO is still strong but less precise; complete cluster holdouts raise normalized 3D RMSE from 0.0454 to 0.0680; the 100-permutation null is clean; and 120 pair-endpoint-held-out synthetic activation mixtures remain strongly predicted, with larger errors for distant pairs. The CLI supports known personas, complete external raw/percentile profiles, deterministic percentile edits, empirical LOPO error references, all-model disagreement, and OOD context using retained-space neighbors plus reconstruction residual. This is same-space activation geometry and predicted counterfactual location, not behavioral realization, causal trait evidence, or human personality prediction. Next scientific step is a separately preregistered novel-persona elicitation/activation comparison; it was explicitly not run here.
@@ -31,6 +33,8 @@ Paper 2 is active planning, not execution. Its current scope is local centroid p
 The canonical writing-phase source for Paper 1.5 is now `research/paper15_content_ledger.md`, with source inventory in `research/paper15_content_ledger_artifact_inventory.csv`. Use it before drafting prose. It separates observed findings, interpretations, hypotheses, caveats, rejected explanations, claims inventory, open questions, and inclusion recommendations.
 
 ## Top Findings
+
+The Qwen compactness audit favors a mixed explanation. Selected 5/10/15 real traits reach normalized RMSE 0.1765/0.1069/0.0872 and beat every matched random-real, isotropic, and fold-local persona-span bank at k=15. Yet 240 fold-local persona-span random directions reach 0.0514 versus the repeated full-real result 0.0476, and the full 240-trait span directly covers more than 98% of each PC loading. Exact trait winners are often interchangeable: 2,178 trait pairs have absolute cross-persona correlation >=0.90. Compact semantic alignment is real as a predictive contrast, while the near-ceiling complete-bank result is substantially generic basis coverage.
 
 Complete activation-derived trait-profile prediction now replicates across Qwen, Llama, and Gemma under one pipeline. Llama/Gemma raw Ridge LOPO normalized 3D RMSE is 0.1245/0.1278; fixed-family holdout RMSE is 0.2042/0.1761; permutation p95 mean-PC R2 is -0.0094/-0.0116; and synthetic interpolation R2 remains high but is weakest on Llama/Gemma PC3. Qwen is more precise overall, but that performance difference is not a psychological-sophistication or human-likeness measure.
 
@@ -63,6 +67,8 @@ Run 2 of the no-label elicitation program is now completed. The frozen package u
 The default Assistant baseline audit is complete. `downloads/hf_vectors/qwen-3-32b/default_vector.pt` is the released Lu et al. default/no-role vector, while `assistant_axis.pt` is a direction/difference vector rather than a centroid. Projected into the canonical Paper 1.5 Qwen PCA basis, the default vector is PC1=27.131, PC2=8.005, PC3=-6.631. It is distinct from both the role-conditioned assistant centroid and the stricter Run 2 bare no-system centroid, so Paper 1.5 should keep all three reference points rather than replacing the bare baseline with Lu's default vector.
 
 ## Top Open Questions
+
+The compact selected directions have not yet been tested against a genuinely new behaviorally elicited Qwen persona. Their low-k advantage over generic bases is held-out within the existing 275-role inventory, and correlated substitutes make exact label identity unstable; the next decisive test is a frozen compact/profile prediction followed by new elicitation and activation extraction without refitting.
 
 The current PC1 external-standard accountability interpretation now has three related diagnostics: the sparse-vocabulary competing-theories screen under `research/outputs/pc1_competing_theories_test/`, the stronger GPT-5.5 coordinate-blind rating benchmark under `research/outputs/blind_pc_interpretation_rating_benchmark/`, and the execution-time activation diagnostic under `research/outputs/pc1_accountability_validation/`. Exact vocabulary evidence is weak after controls, but the direct blind rating gives PC1 R2=0.704 and the activation diagnostic separates accountability/scrutiny from determination and arithmetic/checking in 10/10 matched pair contrasts. Do not describe PC1 as proven; do treat external-standard accountability as the strongest current compact PC1 wording.
 
@@ -117,6 +123,8 @@ Do not treat Big Five features as psychological ground truth or as fully indepen
 
 Do not treat the 240-trait Qwen profile matrix as independent validation of role PCA geometry. It is derived from the same Qwen activation-vector artifact family as the role PCA geometry, so strong reconstruction or enrichment is same-space evidence.
 
+Do not read the compact Qwen trait winners as a unique psychological ontology. Optimized low-k real traits outperform matched generic directions, but high-k persona-span random directions nearly reproduce the complete-bank mapping, the full trait span covers more than 98% of every PC loading, and widespread trait-profile redundancy makes many labels interchangeable.
+
 Do not treat PC2 as solved. Recent tests weakened the simple uncertainty-capacity formulation and strengthened abstraction/integration language, but independent-rater replication is still needed.
 
 Do not rely on chat memory for state, pod status, or file paths. Use `RESEARCH_STATE.md`, this file, `CLAIMS_REGISTER.md`, `RESEARCH_INDEX.md`, and `PROVENANCE_REGISTRY.md`.
@@ -135,12 +143,12 @@ As of 2026-06-16, `research/paper15_content_ledger.md` has been completed for me
 
 ## Next Experiments
 
-1. Use `research/outputs/same_space_big_five_overlay/` as the evidence-bearing same-space Big Five visualization layer if Big Five overlays are needed; build blinded independent ratings only if independent psychometric-style validation is required.
-2. Run an independent-rater PC2 disentanglement study over the strongest PC1-matched pairs, explicitly separating abstraction, maturity/integration, expertise, uncertainty exposure, and coherent action under uncertainty.
-3. Use `research/outputs/no_label_elicitation_geometry_diagnostics/` before designing a second no-label packet: revise PC1-positive prompts against the assistant-baseline saturation/generic-helpful failure mode, separate self-cost from consequence-to-others pressure in PC3-positive prompts, and treat PC2-negative as mixed until prompt-level context is inspected.
-4. Interpret the completed Run 2 outputs under `research/outputs/no_label_elicitation_run2/`, using the bare-Qwen centroid as the default-behavior baseline and treating the released assistant centroid as a role/persona reference point.
-5. Finish evaluator-sensitivity comparison between Codex/GPT-5.5 and `gpt-4.1-mini` if API quota allows.
-6. Distill SVD15 prompt-register components into concrete human-readable residual features and retest under the shared benchmark splits.
-7. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.
-8. Extend the activation-cloud geometry audit to a balanced role set before making strong claims about persona-specific cloud size, anisotropy, or orientation.
-9. Freeze a complete novel-role trait profile and predicted PC coordinate with the V1 Ridge CLI, then preregister and run the separate Qwen behavioral elicitation/activation validation without refitting the predictor.
+1. Freeze both a compact selected-trait/profile prediction and the complete-profile V1 prediction for a genuinely new Qwen role, then preregister behavioral elicitation and activation validation without refitting.
+2. Use `research/outputs/same_space_big_five_overlay/` as the evidence-bearing same-space Big Five visualization layer if Big Five overlays are needed; build blinded independent ratings only if independent psychometric-style validation is required.
+3. Run an independent-rater PC2 disentanglement study over the strongest PC1-matched pairs, explicitly separating abstraction, maturity/integration, expertise, uncertainty exposure, and coherent action under uncertainty.
+4. Use `research/outputs/no_label_elicitation_geometry_diagnostics/` before designing a second no-label packet: revise PC1-positive prompts against the assistant-baseline saturation/generic-helpful failure mode, separate self-cost from consequence-to-others pressure in PC3-positive prompts, and treat PC2-negative as mixed until prompt-level context is inspected.
+5. Interpret the completed Run 2 outputs under `research/outputs/no_label_elicitation_run2/`, using the bare-Qwen centroid as the default-behavior baseline and treating the released assistant centroid as a role/persona reference point.
+6. Finish evaluator-sensitivity comparison between Codex/GPT-5.5 and `gpt-4.1-mini` if API quota allows.
+7. Distill SVD15 prompt-register components into concrete human-readable residual features and retest under the shared benchmark splits.
+8. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.
+9. Extend the activation-cloud geometry audit to a balanced role set before making strong claims about persona-specific cloud size, anisotropy, or orientation.

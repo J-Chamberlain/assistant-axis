@@ -4,6 +4,16 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### Qwen Trait Sparsity Shows Compact Alignment Plus High-K Basis Coverage (2026-09-11)
+
+The canonical Qwen persona PCA uses 275 mean-pooled role vectors with 5,120 activation coordinates as variables; the 240 named traits are not PCA inputs. The trait-cosine predictors and PC targets nevertheless transform the same role activation vectors, creating a same-vector algebraic dependence without direct target-column leakage. The canonical full-trait LOPO result reproduced exactly at R2=0.999522/0.998811/0.999611 and normalized 3D RMSE=0.045378.
+
+Leakage-safe nested forward selection reached all-PC R2>=0.95 with 3 traits, >=0.98 with 4, and >=0.99 with 6. Selected 5/10/15-trait normalized RMSE was 0.176511/0.106880/0.087216. The pre-existing editorial 15 reached 0.165056, slightly worse than the median of 100 random real-trait subsets at 15 (0.153307); optimized 15 beat all 100 random-real, isotropic, and fold-local persona-span banks. Median matched normalized RMSE at k=15 was 0.737911 for isotropic 5,120-D random directions and 0.170184 for fold-local persona-span random directions.
+
+Generic basis coverage becomes decisive at high k. At 240 directions, the fold-local training-persona-span control reached normalized RMSE=0.051422, close to the repeated full-real-bank 0.047609, while ambient isotropic directions remained worse at 0.124511. The full trait-vector span directly contains 98.7955%/98.5303%/98.1947% of the PC1/PC2/PC3 loading directions. Role norms vary little in relative terms (CV=0.0285) but correlate with PC1/PC2 (Pearson 0.582/-0.683), qualifying a pure cosine-as-linear-projection account.
+
+Interpretation: the evidence favors a mixture. Carefully selected real trait directions have a large compact-k predictive advantage, but the near-ceiling complete-bank result is substantially explained by generic high-dimensional basis coverage. Exact label identity is not stable enough for a unique ontology: 2,178 trait pairs have absolute cross-persona correlation >=0.90, and top compact selections often represent correlated families. This is same-space Qwen representation evidence, not causal psychology, independent psychometrics, human correspondence, or behavioral validation. No GPU, RunPod, inference, activation extraction, or external model API was used.
+
 ### Trait-Profile to Persona-PC Prediction Replicates in Llama and Gemma (2026-09-11)
 
 Built `research/outputs/multimodel_trait_profile_pc_predictor/` from existing released/local saved vectors only and applied the completed Qwen pipeline unchanged to each model's own established PCA geometry. Both bundles contain exactly 275 finite role vectors and 240 finite trait vectors with the same intended labels. Recomputed coordinates match the established multimodel artifact to max error 2.748e-14 for Llama and 1.376e-11 for Gemma. A complete fixed-seed rerun reproduced all 20 deterministic model CSV artifacts byte-for-byte.

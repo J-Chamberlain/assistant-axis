@@ -1,12 +1,22 @@
 # Raw URL Index
 
-Updated UTC: 2026-09-11T20:54:33Z
-Base commit for this update: ba1affb
+Updated UTC: 2026-09-11T23:17:59Z
+Base commit for this update: afb53d4 (AA-4 runner before result registration)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
 |---|---|---|---|---|
+| active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/qwen_trait_sparsity_report.md` | Main Qwen compact-trait and activation-basis scientific report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/qwen_trait_sparsity_report.md |
+| active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/pca_trait_dependency_audit.md` | Source-code and numerical audit of PCA inputs and same-vector algebraic dependence | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/pca_trait_dependency_audit.md |
+| active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/feature_budget_curve.csv` | Leakage-safe repeated nested joint compact-trait performance curve | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/feature_budget_curve.csv |
+| active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/matched_basis_comparison.csv` | Optimized real traits compared with random real, isotropic, persona-span, and fixed-15 bases | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/matched_basis_comparison.csv |
+| active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/trait_span_pc_coverage.csv` | Direct SVD coverage of canonical PC loadings by full, fixed, and descriptive compact trait spans | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/trait_span_pc_coverage.csv |
+| active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/final_ranked_traits.csv` | Multi-view trait ranking with marginal, conditional, forward, sparse, and redundancy evidence | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/final_ranked_traits.csv |
+| active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/fixed_ridge15_benchmark.json` | Exact fixed editorial 15-trait held-out benchmark and optimized-15 contrast | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/fixed_ridge15_benchmark.json |
+| active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/validation_summary.json` | Machine-readable compact thresholds, matched controls, span coverage, and interpretation | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/validation_summary.json |
+| active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/run_qwen_trait_sparsity.py` | CPU-only reproducible nested selection and generic activation-basis runner | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/run_qwen_trait_sparsity.py |
+| active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/artifact_inventory.csv` | Complete output paths, SHA256 hashes, and canonical raw URLs | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/artifact_inventory.csv |
 | active | trait analyses | `research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md` | Llama/Gemma complete trait-profile to within-model persona-PC replication report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md |
 | active | trait analyses | `research/outputs/multimodel_trait_profile_pc_predictor/cross_model_comparison.csv` | Canonical Qwen/Llama/Gemma held-out predictor comparison table | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/multimodel_trait_profile_pc_predictor/cross_model_comparison.csv |
 | active | trait analyses | `research/outputs/multimodel_trait_profile_pc_predictor/cross_model_comparison.json` | Machine-readable Qwen/Llama/Gemma predictor comparison and OOD associations | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/multimodel_trait_profile_pc_predictor/cross_model_comparison.json |

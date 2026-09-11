@@ -1,0 +1,87 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "activation_dimension_5120": true,
+    "all_final_ranking_names_are_canonical": true,
+    "canonical_targets_match": true,
+    "compact_permutation_null_near_chance": true,
+    "exact_full_model_reproduction": true,
+    "expected_files_present": true,
+    "finite_primary_tables": true,
+    "fixed_15_exactly_match_ridge_viewer": true,
+    "inner_feature_selection_training_only": true,
+    "inner_ridge_tuning_training_only": true,
+    "inner_scaling_training_only": true,
+    "inner_target_scaling_training_only": true,
+    "isotropic_generation_target_independent": true,
+    "isotropic_random_bank_counts_correct": true,
+    "no_outer_train_test_overlap": true,
+    "parsed_outputs": {
+      "csv": {
+        "research/outputs/qwen_trait_sparsity_prediction/compact_subset_permutation_control.csv": 80,
+        "research/outputs/qwen_trait_sparsity_prediction/feature_budget_curve.csv": 61,
+        "research/outputs/qwen_trait_sparsity_prediction/final_ranked_traits.csv": 240,
+        "research/outputs/qwen_trait_sparsity_prediction/full_data_greedy_trait_order.csv": 240,
+        "research/outputs/qwen_trait_sparsity_prediction/full_model_permutation_importance.csv": 240,
+        "research/outputs/qwen_trait_sparsity_prediction/isotropic_random_direction_baselines.csv": 1200,
+        "research/outputs/qwen_trait_sparsity_prediction/matched_basis_comparison.csv": 15,
+        "research/outputs/qwen_trait_sparsity_prediction/nested_forward_selection_paths.csv": 3000,
+        "research/outputs/qwen_trait_sparsity_prediction/pc_specific_feature_budget_curve.csv": 183,
+        "research/outputs/qwen_trait_sparsity_prediction/pc_specific_trait_rankings.csv": 720,
+        "research/outputs/qwen_trait_sparsity_prediction/persona_span_random_direction_baselines.csv": 1200,
+        "research/outputs/qwen_trait_sparsity_prediction/random_real_trait_subset_baselines.csv": 1101,
+        "research/outputs/qwen_trait_sparsity_prediction/role_norm_pc_audit.csv": 275,
+        "research/outputs/qwen_trait_sparsity_prediction/single_trait_metrics.csv": 240,
+        "research/outputs/qwen_trait_sparsity_prediction/sparse_model_stability.csv": 240,
+        "research/outputs/qwen_trait_sparsity_prediction/trait_redundancy_groups.csv": 240,
+        "research/outputs/qwen_trait_sparsity_prediction/trait_redundancy_pairs.csv": 2178,
+        "research/outputs/qwen_trait_sparsity_prediction/trait_selection_stability.csv": 2640,
+        "research/outputs/qwen_trait_sparsity_prediction/trait_span_pc_coverage.csv": 18
+      },
+      "json": {
+        "research/outputs/qwen_trait_sparsity_prediction/fixed_ridge15_benchmark.json": "parsed",
+        "research/outputs/qwen_trait_sparsity_prediction/full_model_reproduction.json": "parsed",
+        "research/outputs/qwen_trait_sparsity_prediction/role_norm_summary.json": "parsed",
+        "research/outputs/qwen_trait_sparsity_prediction/source_manifest.json": "parsed",
+        "research/outputs/qwen_trait_sparsity_prediction/validation_summary.json": "parsed",
+        "research/outputs/qwen_trait_sparsity_prediction/verification_report.json": "parsed"
+      }
+    },
+    "pca_traits_not_inputs": true,
+    "persona_count_275": true,
+    "persona_span_generation_target_independent": true,
+    "persona_span_gram_projection_stable": true,
+    "persona_span_outer_training_roles_only": true,
+    "persona_span_random_bank_counts_correct": true,
+    "primary_deterministic_rerun": {
+      "feature_budget_curve_byte_identical": true,
+      "feature_budget_curve_max_abs_numeric_difference": 0.0,
+      "nested_forward_selection_paths_byte_identical": true,
+      "passed": true,
+      "run": true
+    },
+    "random_real_trait_subset_counts_correct": true,
+    "random_real_trait_subset_seed": 20260911,
+    "source_role_pca_reproduces": true,
+    "source_trait_cosine_matrix_reproduces": true,
+    "trait_count_240": true,
+    "trait_span_coverage_bounded": true,
+    "vectorized_forward_math_check": {
+      "comparison_count": 248,
+      "max_abs_sse_difference": 1.4210854715202004e-13,
+      "passed": true,
+      "steps_checked": 2,
+      "tolerance": 1e-08
+    },
+    "vectorized_forward_math_matches_direct_ridge": true
+  },
+  "generated_utc": "2026-09-11T23:14:31Z",
+  "methodology_evidence": {
+    "conditional_permutation": "Each full Ridge fit and its preprocessing are learned on outer training data; one untouched test column is permuted at a time.",
+    "descriptive_order_label": "full_data_greedy_trait_order.csv is explicitly labeled DESCRIPTIVE FULL-DATA ORDER and held_out_importance_ranking=False.",
+    "isotropic_directions": "Generated from Gaussian draws without any role, target, PC coordinate, or PC loading input.",
+    "objective": "sqrt((1/N_validation) * sum_i sum_c ((y_ic-yhat_ic)/s_c,inner-training)^2)",
+    "persona_span_directions": "Generated separately per outer fold from centered outer-training role vectors; held-out roles and PC targets do not enter generation.",
+    "selection": "Every joint and PC-specific path is recomputed inside its outer training partition using four inner folds."
+  }
+}
