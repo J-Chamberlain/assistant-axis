@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "freeze_timestamp_utc": "2026-09-11T22:58:36Z",
-  "freeze_commit": null,
+  "freeze_commit": "636c5c1d9b832a1199e8d5b35dea993a41f94d4b",
   "mapping_stage": "complete_before_any_new_geometry_analysis",
   "model_used": "GPT-5.5",
   "geometry_blind": true,
