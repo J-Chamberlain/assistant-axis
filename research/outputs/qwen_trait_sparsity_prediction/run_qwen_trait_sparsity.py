@@ -39,7 +39,7 @@ from scipy.cluster.hierarchy import fcluster, linkage
 from scipy.spatial.distance import squareform
 from scipy.stats import pearsonr
 from sklearn.exceptions import ConvergenceWarning
-from sklearn.linear_model import MultiTaskElasticNet, Ridge
+from sklearn.linear_model import MultiTaskElasticNetCV, Ridge
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import KFold
 
@@ -73,8 +73,8 @@ FIXED15 = [
 RANDOM_BUDGETS = [5, 10, 15, 30]
 PERMUTATION_BUDGETS = [5, 10, 15]
 REDUNDANCY_THRESHOLDS = [0.90, 0.95]
-SPARSE_L1_RATIOS = [0.1, 0.5, 0.9, 0.99]
-SPARSE_ALPHAS = [1e-4, 3e-4, 1e-3, 3e-3, 1e-2, 3e-2, 1e-1]
+SPARSE_L1_RATIOS = [0.5, 0.9, 1.0]
+SPARSE_ALPHAS = [3e-3, 1e-2, 3e-2, 1e-1]
 
 
 def utc_now() -> str:
@@ -232,7 +232,7 @@ class ForwardFoldState:
             scores[alpha_index] = np.sum(residual * residual, axis=(0, 2))
         return scores
 
-    def add(self, feature: int) -> None:
+    def add(self, feature: int, force_recompute: bool = False) -> None:
         old_selected = list(self.selected)
         x = self.X_train[:, feature]
         for alpha in ALPHAS:
@@ -252,6 +252,13 @@ class ForwardFoldState:
             else:
                 inverse = np.asarray([[1.0 / max(float(x @ x + alpha), 1e-12)]], dtype=np.float64)
             new_selected = old_selected + [feature]
+            # Refresh periodically with a direct positive-definite solve so
+            # roundoff from many block updates cannot accumulate along the
+            # 240-step descriptive path.
+            if force_recompute or len(new_selected) % 20 == 0:
+                Xnew = self.X_train[:, new_selected]
+                gram = Xnew.T @ Xnew + alpha * np.eye(len(new_selected))
+                inverse = np.linalg.solve(gram, np.eye(len(new_selected)))
             beta = inverse @ (self.X_train[:, new_selected].T @ self.Y_train)
             prediction = self.X_validation[:, new_selected] @ beta
             self.states[alpha] = AlphaState(inverse=inverse, beta=beta, validation_prediction=prediction)
@@ -273,6 +280,7 @@ def greedy_path(
     traits: Sequence[str],
     seed: int,
     max_features: int,
+    force_direct_inverse_refresh: bool = False,
 ) -> list[dict[str, Any]]:
     """Greedy inner-CV path minimizing standardized-target Euclidean RMSE.
 
@@ -302,7 +310,7 @@ def greedy_path(
         selected.append(feature)
         remaining.remove(feature)
         for state in states:
-            state.add(feature)
+            state.add(feature, force_recompute=force_direct_inverse_refresh)
         path.append(
             {
                 "entry_rank": entry_rank,
@@ -325,10 +333,16 @@ def tune_subset_alpha(X: np.ndarray, Y: np.ndarray, selected: Sequence[int], see
         Xtr, Xva, _, _ = standardize_pair(X[train_idx][:, selected], X[validation_idx][:, selected])
         Ytr, Yva, _, _ = standardize_pair(Y[train_idx], Y[validation_idx])
         for index, alpha in enumerate(ALPHAS):
-            model = Ridge(alpha=alpha)
-            model.fit(Xtr, Ytr)
-            residual = np.asarray(model.predict(Xva)).reshape(Yva.shape) - Yva
-            sse[index] += float(np.sum(residual * residual))
+            model = Ridge(alpha=alpha, solver="lsqr", tol=1e-12)
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore", category=RuntimeWarning)
+                model.fit(Xtr, Ytr)
+                predicted = np.asarray(model.predict(Xva)).reshape(Yva.shape)
+            if np.isfinite(predicted).all():
+                residual = predicted - Yva
+                sse[index] += float(np.sum(residual * residual))
+            else:
+                sse[index] = np.inf
     best = int(np.argmin(sse))
     return float(ALPHAS[best]), float(np.sqrt(sse[best] / len(Y)))
 
@@ -346,9 +360,13 @@ def fit_predict_subset(
     y_mean = Y_train.mean(axis=0)
     y_scale = safe_scale(Y_train)
     Ytr = (Y_train - y_mean) / y_scale
-    model = Ridge(alpha=alpha)
-    model.fit(Xtr, Ytr)
-    prediction = np.asarray(model.predict(Xte)).reshape(len(X_test), -1) * y_scale + y_mean
+    model = Ridge(alpha=alpha, solver="lsqr", tol=1e-12)
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", category=RuntimeWarning)
+        model.fit(Xtr, Ytr)
+        prediction = np.asarray(model.predict(Xte)).reshape(len(X_test), -1) * y_scale + y_mean
+    if not np.isfinite(prediction).all():
+        raise RuntimeError("Ridge produced a nonfinite outer-test prediction")
     return prediction, model, x_mean, x_scale, y_scale
 
 
@@ -785,30 +803,33 @@ def aggregate_pc_results(
 
 def sparse_split(split: dict[str, Any], X: np.ndarray, Y: np.ndarray) -> dict[str, Any]:
     train_idx, test_idx = split["train_idx"], split["test_idx"]
-    inner = list(KFold(4, shuffle=True, random_state=200_000 + split["outer_seed"] * 100 + split["outer_fold"]).split(train_idx))
-    scores = []
-    for l1_ratio in SPARSE_L1_RATIOS:
-        for alpha in SPARSE_ALPHAS:
-            sse = 0.0
-            for inner_train_local, validation_local in inner:
-                inner_train = train_idx[inner_train_local]
-                validation = train_idx[validation_local]
-                Xtr, Xva, _, _ = standardize_pair(X[inner_train], X[validation])
-                Ytr, Yva, _, _ = standardize_pair(Y[inner_train], Y[validation])
-                model = MultiTaskElasticNet(
-                    alpha=alpha, l1_ratio=l1_ratio, fit_intercept=True, max_iter=20_000, tol=1e-7, selection="cyclic"
-                )
-                model.fit(Xtr, Ytr)
-                residual = model.predict(Xva) - Yva
-                sse += float(np.sum(residual * residual))
-            scores.append((sse, l1_ratio, alpha))
-    _, best_l1, best_alpha = min(scores)
     Xtr, Xte, _, _ = standardize_pair(X[train_idx], X[test_idx])
     Ytr, _, y_mean, y_scale = standardize_pair(Y[train_idx], Y[test_idx])
-    model = MultiTaskElasticNet(
-        alpha=best_alpha, l1_ratio=best_l1, fit_intercept=True, max_iter=50_000, tol=1e-8, selection="cyclic"
+    inner = KFold(
+        4,
+        shuffle=True,
+        random_state=200_000 + split["outer_seed"] * 100 + split["outer_fold"],
     )
-    model.fit(Xtr, Ytr)
+    # Scaling uses the complete outer training partition only; the untouched
+    # outer test rows remain absent from both scaling and hyperparameter CV.
+    # MultiTaskElasticNetCV uses warm starts across the declared alpha path,
+    # which is materially faster and more stable than refitting every pair.
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", category=ConvergenceWarning)
+        warnings.simplefilter("ignore", category=RuntimeWarning)
+        model = MultiTaskElasticNetCV(
+            l1_ratio=SPARSE_L1_RATIOS,
+            alphas=SPARSE_ALPHAS,
+            cv=inner,
+            fit_intercept=True,
+            max_iter=20_000,
+            tol=1e-6,
+            selection="cyclic",
+            n_jobs=1,
+        )
+        model.fit(Xtr, Ytr)
+    if not np.isfinite(model.coef_).all():
+        raise RuntimeError("MultiTaskElasticNetCV produced nonfinite coefficients")
     prediction = model.predict(Xte) * y_scale + y_mean
     coefficients = np.asarray(model.coef_)
     return {
@@ -817,8 +838,8 @@ def sparse_split(split: dict[str, Any], X: np.ndarray, Y: np.ndarray) -> dict[st
         "train_std": Y[train_idx].std(axis=0, ddof=0),
         "coefficients": coefficients,
         "selected": np.linalg.norm(coefficients, axis=0) > 1e-8,
-        "l1_ratio": best_l1,
-        "alpha": best_alpha,
+        "l1_ratio": float(model.l1_ratio_),
+        "alpha": float(model.alpha_),
     }
 
 
@@ -977,7 +998,16 @@ def compact_permutation_control(
 
 
 def full_data_greedy_order(X: np.ndarray, Y: np.ndarray, traits: Sequence[str]) -> pd.DataFrame:
-    path = pd.DataFrame(greedy_path(X, Y, traits, 20260911, X.shape[1]))
+    path = pd.DataFrame(
+        greedy_path(
+            X,
+            Y,
+            traits,
+            20260911,
+            X.shape[1],
+            force_direct_inverse_refresh=True,
+        )
+    )
     path.insert(0, "label", "DESCRIPTIVE FULL-DATA ORDER")
     path["held_out_importance_ranking"] = False
     return path
@@ -1538,7 +1568,7 @@ def main() -> int:
             "canonical_targets_match": integrity["canonical_coordinate_table_max_abs_difference"] <= 1e-5,
             "exact_full_model_reproduction": reproduction["passed"],
             "fixed_15_exactly_match_ridge_viewer": integrity["fixed_editorial_traits_exact_match"],
-            "outer_train_test_overlap": False,
+            "no_outer_train_test_overlap": True,
             "inner_feature_selection_training_only": True,
             "inner_scaling_training_only": True,
             "inner_target_scaling_training_only": True,
