@@ -188,11 +188,16 @@ class AlphaState:
 
 
 class ForwardFoldState:
-    """One inner fold with cached block-inverse states for every Ridge alpha."""
+    """One inner fold with direct, cached Ridge states for every alpha."""
 
     def __init__(self, X_train: np.ndarray, X_validation: np.ndarray, Y_train: np.ndarray, Y_validation: np.ndarray):
         self.X_train, self.X_validation, _, _ = standardize_pair(X_train, X_validation)
         self.Y_train, self.Y_validation, _, _ = standardize_pair(Y_train, Y_validation)
+        if not all(
+            np.isfinite(array).all()
+            for array in [self.X_train, self.X_validation, self.Y_train, self.Y_validation]
+        ):
+            raise RuntimeError("Nonfinite standardized inner-fold data")
         self.selected: list[int] = []
         target_count = self.Y_train.shape[1]
         self.states: dict[float, AlphaState] = {
@@ -205,62 +210,50 @@ class ForwardFoldState:
         }
 
     def candidate_sse(self, remaining: np.ndarray) -> np.ndarray:
-        Xtr_r = self.X_train[:, remaining]
-        Xva_r = self.X_validation[:, remaining]
-        xtx_diag = np.sum(Xtr_r * Xtr_r, axis=0)
-        xty = Xtr_r.T @ self.Y_train
-        scores = np.empty((len(ALPHAS), len(remaining)), dtype=np.float64)
-        if self.selected:
-            Xtr_s = self.X_train[:, self.selected]
-            Xva_s = self.X_validation[:, self.selected]
-            cross = Xtr_s.T @ Xtr_r
-        for alpha_index, alpha in enumerate(ALPHAS):
-            state = self.states[alpha]
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", category=RuntimeWarning)
+            Xtr_r = self.X_train[:, remaining]
+            Xva_r = self.X_validation[:, remaining]
+            xtx_diag = np.sum(Xtr_r * Xtr_r, axis=0)
+            xty = Xtr_r.T @ self.Y_train
+            scores = np.empty((len(ALPHAS), len(remaining)), dtype=np.float64)
             if self.selected:
-                projection = state.inverse @ cross
-                denominator = xtx_diag + alpha - np.sum(cross * projection, axis=0)
-                numerator = xty - cross.T @ state.beta
-                validation_residual = Xva_r - Xva_s @ projection
-            else:
-                denominator = xtx_diag + alpha
-                numerator = xty
-                validation_residual = Xva_r
-            denominator = np.maximum(denominator, 1e-12)
-            candidate_beta = numerator / denominator[:, None]
-            prediction = state.validation_prediction[:, None, :] + validation_residual[:, :, None] * candidate_beta[None, :, :]
-            residual = prediction - self.Y_validation[:, None, :]
-            scores[alpha_index] = np.sum(residual * residual, axis=(0, 2))
+                Xtr_s = self.X_train[:, self.selected]
+                Xva_s = self.X_validation[:, self.selected]
+                cross = Xtr_s.T @ Xtr_r
+            for alpha_index, alpha in enumerate(ALPHAS):
+                state = self.states[alpha]
+                if self.selected:
+                    projection = state.inverse @ cross
+                    denominator = xtx_diag + alpha - np.sum(cross * projection, axis=0)
+                    numerator = xty - cross.T @ state.beta
+                    validation_residual = Xva_r - Xva_s @ projection
+                else:
+                    denominator = xtx_diag + alpha
+                    numerator = xty
+                    validation_residual = Xva_r
+                denominator = np.maximum(denominator, 1e-12)
+                candidate_beta = numerator / denominator[:, None]
+                prediction = state.validation_prediction[:, None, :] + validation_residual[:, :, None] * candidate_beta[None, :, :]
+                residual = prediction - self.Y_validation[:, None, :]
+                scores[alpha_index] = np.sum(residual * residual, axis=(0, 2))
+        if not np.isfinite(scores).all():
+            raise RuntimeError("Nonfinite vectorized forward-selection candidate score")
         return scores
 
-    def add(self, feature: int, force_recompute: bool = False) -> None:
-        old_selected = list(self.selected)
-        x = self.X_train[:, feature]
+    def add(self, feature: int) -> None:
+        new_selected = self.selected + [feature]
+        Xnew = self.X_train[:, new_selected]
         for alpha in ALPHAS:
-            state = self.states[alpha]
-            if old_selected:
-                Xs = self.X_train[:, old_selected]
-                cross = Xs.T @ x
-                projected = state.inverse @ cross
-                denominator = float(x @ x + alpha - cross @ projected)
-                denominator = max(denominator, 1e-12)
-                top_left = state.inverse + np.outer(projected, projected) / denominator
-                inverse = np.empty((len(old_selected) + 1, len(old_selected) + 1), dtype=np.float64)
-                inverse[:-1, :-1] = top_left
-                inverse[:-1, -1] = -projected / denominator
-                inverse[-1, :-1] = -projected / denominator
-                inverse[-1, -1] = 1.0 / denominator
-            else:
-                inverse = np.asarray([[1.0 / max(float(x @ x + alpha), 1e-12)]], dtype=np.float64)
-            new_selected = old_selected + [feature]
-            # Refresh periodically with a direct positive-definite solve so
-            # roundoff from many block updates cannot accumulate along the
-            # 240-step descriptive path.
-            if force_recompute or len(new_selected) % 20 == 0:
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore", category=RuntimeWarning)
                 Xnew = self.X_train[:, new_selected]
                 gram = Xnew.T @ Xnew + alpha * np.eye(len(new_selected))
                 inverse = np.linalg.solve(gram, np.eye(len(new_selected)))
-            beta = inverse @ (self.X_train[:, new_selected].T @ self.Y_train)
-            prediction = self.X_validation[:, new_selected] @ beta
+                beta = inverse @ (Xnew.T @ self.Y_train)
+                prediction = self.X_validation[:, new_selected] @ beta
+            if not np.isfinite(inverse).all() or not np.isfinite(prediction).all():
+                raise RuntimeError("Nonfinite direct Ridge state in forward selection")
             self.states[alpha] = AlphaState(inverse=inverse, beta=beta, validation_prediction=prediction)
         self.selected.append(feature)
 
@@ -280,7 +273,6 @@ def greedy_path(
     traits: Sequence[str],
     seed: int,
     max_features: int,
-    force_direct_inverse_refresh: bool = False,
 ) -> list[dict[str, Any]]:
     """Greedy inner-CV path minimizing standardized-target Euclidean RMSE.
 
@@ -310,7 +302,7 @@ def greedy_path(
         selected.append(feature)
         remaining.remove(feature)
         for state in states:
-            state.add(feature, force_recompute=force_direct_inverse_refresh)
+            state.add(feature)
         path.append(
             {
                 "entry_rank": entry_rank,
@@ -323,6 +315,42 @@ def greedy_path(
         )
         prior_rmse = inner_rmse
     return path
+
+
+def validate_vectorized_forward_math(X: np.ndarray, Y: np.ndarray) -> dict[str, Any]:
+    """Compare vectorized candidate SSE with direct Ridge solves at two steps."""
+    train_idx, validation_idx = next(iter(KFold(4, shuffle=True, random_state=606).split(X)))
+    state = ForwardFoldState(X[train_idx], X[validation_idx], Y[train_idx], Y[validation_idx])
+    maximum_difference = 0.0
+    comparisons = 0
+    for step in range(2):
+        remaining = np.asarray([index for index in range(16) if index not in state.selected], dtype=int)
+        vectorized = state.candidate_sse(remaining)
+        direct = np.empty_like(vectorized)
+        for alpha_index, alpha in enumerate(ALPHAS):
+            for candidate_index, feature in enumerate(remaining):
+                selected = state.selected + [int(feature)]
+                Xtr = state.X_train[:, selected]
+                Xva = state.X_validation[:, selected]
+                gram = Xtr.T @ Xtr + alpha * np.eye(len(selected))
+                beta = np.linalg.solve(gram, Xtr.T @ state.Y_train)
+                residual = Xva @ beta - state.Y_validation
+                direct[alpha_index, candidate_index] = float(np.sum(residual * residual))
+        maximum_difference = max(maximum_difference, float(np.max(np.abs(vectorized - direct))))
+        comparisons += int(vectorized.size)
+        best_alpha, best_candidate = np.unravel_index(int(np.argmin(vectorized)), vectorized.shape)
+        del best_alpha
+        state.add(int(remaining[best_candidate]))
+    result = {
+        "comparison_count": comparisons,
+        "steps_checked": 2,
+        "max_abs_sse_difference": maximum_difference,
+        "tolerance": 1e-8,
+        "passed": bool(maximum_difference <= 1e-8),
+    }
+    if not result["passed"]:
+        raise RuntimeError(f"Vectorized forward-selection math check failed: {result}")
+    return result
 
 
 def tune_subset_alpha(X: np.ndarray, Y: np.ndarray, selected: Sequence[int], seed: int) -> tuple[float, float]:
@@ -566,11 +594,15 @@ def evaluate_single_traits(
         selected_alphas = np.asarray(ALPHAS)[best_alpha_index]
         Xtr, Xte, _, _ = standardize_pair(X[train_idx], X[test_idx])
         Ytr, _, y_mean, y_scale = standardize_pair(target_train, Y[test_idx])
-        numerator = Xtr.T @ Ytr
-        denominator = np.sum(Xtr * Xtr, axis=0) + selected_alphas
-        coefficients = numerator / denominator[:, None]
-        prediction_z = Xte[:, :, None] * coefficients[None, :, :]
-        prediction = prediction_z * y_scale[None, None, :] + y_mean[None, None, :]
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", category=RuntimeWarning)
+            numerator = Xtr.T @ Ytr
+            denominator = np.sum(Xtr * Xtr, axis=0) + selected_alphas
+            coefficients = numerator / denominator[:, None]
+            prediction_z = Xte[:, :, None] * coefficients[None, :, :]
+            prediction = prediction_z * y_scale[None, None, :] + y_mean[None, None, :]
+        if not np.isfinite(prediction).all():
+            raise RuntimeError("Nonfinite single-trait outer prediction")
         return {
             "truth": Y[test_idx],
             "prediction": prediction,
@@ -830,7 +862,11 @@ def sparse_split(split: dict[str, Any], X: np.ndarray, Y: np.ndarray) -> dict[st
         model.fit(Xtr, Ytr)
     if not np.isfinite(model.coef_).all():
         raise RuntimeError("MultiTaskElasticNetCV produced nonfinite coefficients")
-    prediction = model.predict(Xte) * y_scale + y_mean
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", category=RuntimeWarning)
+        prediction = model.predict(Xte) * y_scale + y_mean
+    if not np.isfinite(prediction).all():
+        raise RuntimeError("MultiTaskElasticNetCV produced a nonfinite outer-test prediction")
     coefficients = np.asarray(model.coef_)
     return {
         "truth": Y[test_idx],
@@ -998,16 +1034,7 @@ def compact_permutation_control(
 
 
 def full_data_greedy_order(X: np.ndarray, Y: np.ndarray, traits: Sequence[str]) -> pd.DataFrame:
-    path = pd.DataFrame(
-        greedy_path(
-            X,
-            Y,
-            traits,
-            20260911,
-            X.shape[1],
-            force_direct_inverse_refresh=True,
-        )
-    )
+    path = pd.DataFrame(greedy_path(X, Y, traits, 20260911, X.shape[1]))
     path.insert(0, "label", "DESCRIPTIVE FULL-DATA ORDER")
     path["held_out_importance_ranking"] = False
     return path
@@ -1342,6 +1369,7 @@ def main() -> int:
     prior = import_prior()
     print("loading canonical Qwen matrix and targets", flush=True)
     X, Y, personas, traits, integrity = load_and_verify_data(prior)
+    vectorized_math_check = validate_vectorized_forward_math(X, Y)
     source_manifest = make_source_manifest(generation_timestamp, base_commit, branch)
     write_json(OUTPUT_DIR / "source_manifest.json", source_manifest)
 
@@ -1573,6 +1601,7 @@ def main() -> int:
             "inner_scaling_training_only": True,
             "inner_target_scaling_training_only": True,
             "inner_ridge_tuning_training_only": True,
+            "vectorized_forward_math_matches_direct_ridge": vectorized_math_check["passed"],
             "random_subset_seed": 20260911,
             "random_subset_draws_per_budget": args.random_subsets,
             "compact_permutation_null_near_chance": permutation_near_chance,
@@ -1580,6 +1609,7 @@ def main() -> int:
             "expected_files_present": all((OUTPUT_DIR / name).is_file() for name in expected_files),
             "parsed_outputs": parse_checks,
             "primary_deterministic_rerun": reproducibility,
+            "vectorized_forward_math_check": vectorized_math_check,
             "finite_primary_tables": bool(
                 np.isfinite(curve.select_dtypes(include=[np.number]).to_numpy()).all()
                 and np.isfinite(single.select_dtypes(include=[np.number]).to_numpy()).all()
