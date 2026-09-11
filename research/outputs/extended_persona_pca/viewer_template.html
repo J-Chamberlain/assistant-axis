@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Extended persona PCA viewer</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07111f; --panel:#0d1b2d; --line:#28405e; --text:#e8eef8; --muted:#9fb0c8; --accent:#7dd3fc; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:radial-gradient(circle at top,#132642 0,#07111f 54%); color:var(--text); font:14px/1.45 Inter,ui-sans-serif,system-ui,sans-serif; }
+    header { padding:22px 24px 12px; max-width:1500px; margin:auto; }
+    h1 { margin:0 0 5px; font-size:clamp(22px,3vw,34px); }
+    p { margin:5px 0; color:var(--muted); }
+    .layout { max-width:1500px; margin:auto; padding:10px 20px 28px; display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:14px; }
+    .panel { background:color-mix(in srgb,var(--panel) 94%,transparent); border:1px solid var(--line); border-radius:14px; box-shadow:0 12px 35px #0006; }
+    .controls { grid-column:1/-1; padding:12px; display:flex; gap:10px 14px; flex-wrap:wrap; align-items:end; }
+    label { display:grid; gap:4px; color:var(--muted); font-size:12px; }
+    select,input,button { color:var(--text); background:#10233b; border:1px solid #365274; border-radius:8px; padding:7px 9px; }
+    input[type=range] { padding:0; width:120px; }
+    .check { display:flex; flex-direction:row; align-items:center; padding-bottom:7px; }
+    button { cursor:pointer; }
+    #plot-wrap { min-height:690px; position:relative; overflow:hidden; }
+    #plot { width:100%; height:690px; display:block; touch-action:none; }
+    #plot .grid { stroke:#7890aa22; stroke-width:1; }
+    #plot .axis { stroke:#9fb0c866; stroke-width:1.2; }
+    #plot .role { cursor:pointer; stroke:#06101d; stroke-width:.55; opacity:.86; transition:r .12s,opacity .12s; }
+    #plot .role:hover { r:6.5; opacity:1; stroke:white; stroke-width:1.4; }
+    #plot .selected { r:8; opacity:1; stroke:#fff; stroke-width:2.3; }
+    .side { padding:15px; display:grid; align-content:start; gap:13px; }
+    .side h2 { font-size:15px; margin:0 0 6px; }
+    .details,.diag { background:#091727; border:1px solid #233b58; border-radius:10px; padding:10px; }
+    .metric { display:grid; grid-template-columns:1fr auto; gap:3px 12px; padding:3px 0; border-bottom:1px solid #203550; }
+    .metric:last-child { border:0; }
+    .metric span:first-child { color:var(--muted); }
+    .status { font-weight:700; color:#fde68a; }
+    .legend { display:flex; flex-wrap:wrap; gap:6px 10px; }
+    .legend span { display:flex; align-items:center; gap:5px; color:var(--muted); font-size:11px; }
+    .swatch { width:9px; height:9px; border-radius:50%; }
+    .mode-3d-only.hidden,.pc-z-wrap.hidden { display:none; }
+    .note { font-size:12px; color:#8fa5c0; }
+    @media(max-width:900px){ .layout{grid-template-columns:1fr}.side{grid-row:auto}#plot-wrap,#plot{min-height:560px;height:560px}.controls{align-items:center} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Extended persona PCA</h1>
+    <p>Explore model-local PC1–PC10. Axis numbers are structural labels, not claims of shared semantics across models.</p>
+    <p>Explained variance is centered activation-coordinate variation across 275 saved role vectors—not percent personality or behavior.</p>
+  </header>
+  <main class="layout">
+    <section class="controls panel" aria-label="viewer controls">
+      <label>Model<select id="model"></select></label>
+      <label>Mode<select id="mode"><option value="2d">2D</option><option value="3d">3D</option></select></label>
+      <label>X axis<select id="pc-x"></select></label>
+      <label>Y axis<select id="pc-y"></select></label>
+      <label class="pc-z-wrap">Z axis<select id="pc-z"></select></label>
+      <label class="check"><input id="fixed" type="checkbox" checked> Symmetric fixed ranges</label>
+      <label class="mode-3d-only">Yaw<input id="yaw" type="range" min="-180" max="180" value="35"></label>
+      <label class="mode-3d-only">Pitch<input id="pitch" type="range" min="-80" max="80" value="22"></label>
+      <label class="mode-3d-only">Zoom<input id="zoom" type="range" min="55" max="170" value="100"></label>
+      <button id="reset" type="button">Reset view</button>
+    </section>
+    <section id="plot-wrap" class="panel"><svg id="plot" viewBox="0 0 1000 690" role="img" aria-label="Persona PCA scatter"></svg></section>
+    <aside class="side panel">
+      <div><h2>Selection</h2><div id="details" class="details">Select a role point.</div></div>
+      <div><h2>Selected-axis diagnostics</h2><div id="diagnostics"></div></div>
+      <div><h2>Clusters</h2><div id="legend" class="legend"></div></div>
+      <p class="note">Drag the 3D plot to rotate; use the zoom control or mouse wheel. Role selection and camera state persist across model switches and reloads.</p>
+    </aside>
+  </main>
+  <script>const VIEWER_DATA=__VIEWER_DATA__;</script>
+  <script>__VIEWER_SCRIPT__</script>
+</body>
+</html>
