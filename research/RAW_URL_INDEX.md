@@ -1,7 +1,7 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-12
-Base commit for this update: d1a953a (validated AA-7 merge; canonical links become live after master push)
+Base commit for this update: b9b6008 (AA-7 canonical semantic reconciliation; links become live after master push)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
@@ -15,6 +15,7 @@ Canonical raw links for frequently referenced Assistant Axis artifacts. Status v
 | active | PCA analyses | `research/outputs/human_supported_trait_convergence/procrustes_alignment_null.csv` | One-thousand-permutation alignment null per pair/dimension/variant | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/procrustes_alignment_null.csv |
 | active | trait analyses | `research/outputs/human_supported_trait_convergence/aligned_human_supported_trait_directions.csv` | Model-local and Qwen-aligned frozen trait directions and recurrence | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/aligned_human_supported_trait_directions.csv |
 | active | trait analyses | `research/outputs/human_supported_trait_convergence/aligned_big_five_directions.csv` | Model-local and Qwen-aligned strict Big Five directions and recurrence | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/aligned_big_five_directions.csv |
+| active | trait analyses | `research/outputs/human_supported_trait_convergence/aligned_agreeableness_focal_test.json` | Preregistered aligned Agreeableness focal reconciliation | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/aligned_agreeableness_focal_test.json |
 | active | trait analyses | `research/outputs/human_supported_trait_convergence/verification_report.json` | 82-check source/leakage/null/privacy and byte-reproduction report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/verification_report.json |
 | active | trait analyses | `research/outputs/human_supported_trait_convergence/artifact_inventory.csv` | Complete AA-7 hashes, introducing commits, branch URLs, and future canonical URLs | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/artifact_inventory.csv |
 | active | trait analyses | `research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md` | Llama/Gemma complete trait-profile to within-model persona-PC replication report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md |
