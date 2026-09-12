@@ -1,7 +1,7 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-12
-Last commit when updated: 805f939 (Qwen trait-family SAPA inventory and AA-7 canonical-state reconciliation)
+Last commit when updated: 247d69d (Qwen axis-specificity registry and navigation integration)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
