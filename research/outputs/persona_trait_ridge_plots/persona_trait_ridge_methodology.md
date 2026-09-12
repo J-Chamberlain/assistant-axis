@@ -6,7 +6,9 @@ Default model: Qwen.
 
 ## Scope
 
-`persona_trait_ridges.html` is the canonical offline viewer for the same 15 editorial traits in Qwen, Llama, and Gemma. The Model selector replaces all three PC-ranked panels without a page reload. The selected persona persists by role name when models change because the released bundles were verified to contain the same 275 role names.
+`persona_trait_ridges.html` is the canonical offline viewer for the same 15 editorial traits in Qwen, Llama, and Gemma, now with an additional Big Five profile set. The Model and Profile set selectors replace all three PC-ranked panels without a page reload. The selected persona persists by role name across model and profile changes because the released bundles were verified to contain the same 275 role names. Editorial traits remain the default.
+
+Big Five mode displays Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. Its construction selector exposes the frozen human-anchored strict (default), human-anchored extended, external-taxonomy expanded, and historical hand-predeclared constructions. These are activation-derived same-space domain profiles. External psychometric anchoring does not make them independent human ratings, and the five domains are not fitted latent factors in persona geometry. Constituent traits, polarity, and IPIP facet labels are shown directly in the viewer.
 
 The trait selection and order are unchanged:
 
@@ -74,7 +76,7 @@ A percentile of 90 in Qwen and 90 in Llama expresses the same within-model rank 
 
 Each selected model has three complete panels, ordered independently by that model's descending PC1, PC2, and PC3 coordinates with persona-name tie-breaking. Exact colored dots are data. PCHIP supplies non-overshooting visual connectors between equally spaced categories; the line is not a density or continuous trait factor.
 
-The HTML pre-renders all 2,475 model/panel/persona rows and 37,125 trait nodes, keeps Qwen visible by default, and switches the three model panels in place. It remains self-contained and has no network script or data dependency. Static SVG/PNG exports are provided for all three PCs and an overview for each model; the historical unsuffixed exports remain Qwen aliases.
+The HTML pre-renders all 2,475 editorial model/panel/persona rows and 37,125 editorial trait nodes, keeps Qwen/editorial visible by default, and renders the selected Big Five construction from embedded saved data. Big Five heights are within-model midrank percentiles of the raw composite projection; the raw projection remains in hover text. It remains self-contained and has no network script or data dependency. Static SVG/PNG exports are provided for the unchanged editorial views; the historical unsuffixed exports remain Qwen aliases.
 
 ## Qwen Backward Compatibility
 
@@ -89,11 +91,11 @@ The reference is commit `d68921b898ed179194223f449149d715298cdabe`, the canonica
 
 ## Verification
 
-`verify_persona_trait_ridges.py` independently checks model counts and role sets, finite values, 240-trait source coverage, the unchanged 15-trait set, percentile/z calculations, all model-specific PC orders, strict coordinate agreement, exact Qwen reproduction, complete saved rows, pre-rendered markup, and source hashes.
+`verify_persona_trait_ridges.py` independently checks model counts and role sets, finite values, 240-trait source coverage, the unchanged 15-trait set, percentile/z calculations, all model-specific PC orders, strict coordinate agreement, exact Qwen reproduction, all four Big Five constructions, Big Five role-score percentiles and coordinates, complete saved rows, pre-rendered markup, and source hashes.
 
-`render_ridge_images.cjs` rasterizes all model-specific static exports and runs a DOM double for default/reset behavior, real coordinate-row replacement, linked selection, and persona-name persistence.
+`render_ridge_images.cjs` checks static markup and inline-script integrity; its optional full mode rasterizes unchanged model-specific editorial exports when Sharp is installed. The integration run used `--dom-only` because the editorial SVG/PNG science is byte-stable and the live interaction was exercised in Chrome.
 
-`verify_trait_viewers_browser.cjs` separately uses actual headless Chrome. It opened the self-contained viewer, switched Qwen/Llama/Gemma, verified 825 active rows and 12,375 active trait nodes per model, confirmed coordinate rows changed, preserved `playwright` by name, reset to Qwen, and observed no page errors. This actual-browser result is distinct from the DOM-double tests.
+`verify_trait_viewers_browser.cjs` separately uses actual headless Chrome. It opened the self-contained viewer, switched Qwen/Llama/Gemma and editorial/Big Five modes, changed Big Five constructions, verified active rows/nodes and real height replacement, preserved `playwright` by name, reset to Qwen/editorial, and observed no page errors. This actual-browser result is distinct from the static/DOM-double checks.
 
 ## Reproduction
 
@@ -101,7 +103,7 @@ The reference is commit `d68921b898ed179194223f449149d715298cdabe`, the canonica
 python3 -B research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py \
   --vector-root /absolute/path/to/assistant-axis/downloads/hf_vectors
 python3 -B research/outputs/persona_trait_ridge_plots/verify_persona_trait_ridges.py
-node research/outputs/persona_trait_ridge_plots/render_ridge_images.cjs
+node research/outputs/persona_trait_ridge_plots/render_ridge_images.cjs --dom-only
 python3 -B research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py --inventory-only
 ```
 

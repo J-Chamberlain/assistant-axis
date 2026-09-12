@@ -2,7 +2,7 @@
   "status": "pass",
   "verification_kind": "actual headless browser / real Chrome DOM and Plotly WebGL",
   "browser_version": "Chrome/152.0.7977.84",
-  "generated_utc": "2026-09-11T22:03:22.178Z",
+  "generated_utc": "2026-09-11T23:40:59.753Z",
   "ridge": {
     "default_model": "qwen",
     "models_switched": [
@@ -13,8 +13,11 @@
     "active_rows_per_model": 825,
     "active_trait_nodes_per_model": 12375,
     "coordinate_rows_changed": true,
+    "big_five_profile_switch": true,
+    "all_four_ridge_constructions_available": true,
+    "profile_switch_replaced_heights": true,
     "selection_persisted_by_name": true,
-    "reset_restored_qwen": true,
+    "reset_restored_qwen_editorial": true,
     "page_errors": []
   },
   "surface": {
@@ -28,11 +31,13 @@
     "model_coordinates_changed": true,
     "model_group_heights_changed": true,
     "surface_and_flat_diagnostics_match_selected_model": true,
+    "big_five_profile_switch": true,
+    "profile_switch_replaced_nodes_surface_plane_and_details": true,
     "repeated_and_rapid_switches_no_stale_traces": true,
     "camera_controls_after_switches": true,
     "camera_persisted_across_switches": true,
     "selection_persisted_by_persona_name": true,
-    "reset_restored_qwen": true,
+    "reset_restored_qwen_editorial": true,
     "page_errors": []
   },
   "unit_dom_double_results_are_separate": true

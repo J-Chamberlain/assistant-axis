@@ -25,6 +25,7 @@ blinded_axis_rubric_validation,research/q2_stability/qwen/outputs/blinded_axis_r
 blinded_axis_rater_study,research/q2_stability/qwen/outputs/blinded_axis_rater_study/,active,reading-based GPT-5.5 blinded dossier ratings,2;4;5;6;11,Major rater-study source
 professional_hierarchy_validation,research/q2_stability/qwen/outputs/professional_hierarchy_validation/,active,professional subset PC validation,2;4;5;6;11,Subset support/counterevidence source
 same_space_big_five_overlay,research/outputs/same_space_big_five_overlay/,active,activation-derived Big Five overlay from trait vectors,2;11,Replacement same-space trait layer
+externally_anchored_big_five,research/outputs/externally_anchored_big_five/,active,geometry-blind IPIP and reviewed-SAPA Big Five audit,2;3;4;5;6;11,"Frozen strict extended and external-taxonomy mappings; same-space evidence only"
 trait_profile_provenance_audit,research/outputs/trait_profile_provenance_audit/,active,trait matrix provenance audit,2;5;11,Caveat for trait evidence
 big_five_provenance_audit,research/outputs/big_five_provenance_audit/,active,legacy Big Five provenance audit,2;3;11,Caveat for Big Five evidence
 pc3_validation,research/outputs/pc3_validation/,active,PC3 perturbation-stabilization validation,6;8;11,Primary PC3 direct validation

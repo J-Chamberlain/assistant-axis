@@ -26,6 +26,7 @@ from scipy.spatial import Delaunay, cKDTree
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 RIDGES = ROOT / "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_data.json"
+BIG_FIVE = ROOT / "research/outputs/externally_anchored_big_five/big_five_viewer_data.json"
 SMOOTHING = [("Detail", 0.003), ("Balanced", 0.03), ("Gentle", 0.3)]
 MODEL_ORDER = ["qwen", "llama", "gemma"]
 QWEN_REFERENCE_COMMIT = "d68921b898ed179194223f449149d715298cdabe"
@@ -41,7 +42,13 @@ def save_json(name: str, data: object) -> None:
 
 def save_csv(name: str, rows: list[dict[str, object]]) -> None:
     with (HERE / name).open("w", newline="") as target:
-        writer = csv.DictWriter(target, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(
+            target,
+            fieldnames=list(rows[0]),
+            lineterminator="\n"
+            if name in {"artifact_inventory.csv", "big_five_surface_node_scores.csv", "trait_surface_fit_diagnostics.csv"}
+            else "\r\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 
@@ -120,8 +127,58 @@ def load_groups(model_key: str, ridge_data: dict[str, object]) -> tuple[list[dic
     return roles, groups, rows
 
 
+def load_big_five_groups(
+    model_key: str, ridge_data: dict[str, object], big_five_data: dict[str, object]
+) -> tuple[list[dict[str, object]], list[dict[str, object]], list[dict[str, object]]]:
+    """Load the frozen strict human-anchored domain profiles without changing editorial data."""
+    ridge_model = ridge_data["models"][model_key]
+    source = big_five_data["models"][model_key]
+    if source["personas"] != ridge_model["personas"] or source["coordinates"] != ridge_model["coordinates"]:
+        raise ValueError(f"{model_key}: Big Five personas/coordinates differ from ridge source")
+    construction_key = big_five_data["default_construction"]
+    construction = source["constructions"][construction_key]
+    groups: list[dict[str, object]] = []
+    rows: list[dict[str, object]] = []
+    for domain in construction["domains"]:
+        values = np.asarray(domain["height_percentile"], dtype=np.float64)
+        raw = np.asarray(domain["raw_score"], dtype=np.float64)
+        if values.shape != (275,) or raw.shape != (275,) or not np.isfinite(values).all() or not np.isfinite(raw).all():
+            raise ValueError(f"{model_key}/{domain['key']}: invalid Big Five scores")
+        groups.append(
+            {
+                "key": domain["key"],
+                "label": domain["label"],
+                "values": values.tolist(),
+                "raw_score": raw.tolist(),
+                "members": domain["composition"],
+                "construction": construction_key,
+                "construction_label": construction["label"],
+            }
+        )
+        for persona_index, name in enumerate(source["personas"]):
+            rows.append(
+                {
+                    "model": model_key,
+                    "model_label": ridge_model["label"],
+                    "persona": name,
+                    "domain": domain["label"],
+                    "construction": construction_key,
+                    "raw_composite_projection": float(raw[persona_index]),
+                    "within_model_percentile": float(values[persona_index]),
+                    "pc1": source["coordinates"][persona_index][0],
+                    "pc2": source["coordinates"][persona_index][1],
+                    "pc3": source["coordinates"][persona_index][2],
+                }
+            )
+    if len(groups) != 5 or len(rows) != 1375:
+        raise ValueError(f"{model_key}: expected five Big Five domains and 1,375 rows")
+    roles = [{"name": name, "pcs": pc} for name, pc in zip(source["personas"], source["coordinates"])]
+    return roles, groups, rows
+
+
 def make_meshes(
-    roles: list[dict[str, object]], groups: list[dict[str, object]], model_key: str
+    roles: list[dict[str, object]], groups: list[dict[str, object]], model_key: str,
+    profile_set: str = "editorial", construction: str = ""
 ) -> tuple[dict[str, object], list[dict[str, object]]]:
     coordinates = np.asarray([role["pcs"] for role in roles], dtype=np.float64)
     scores = np.asarray([group["values"] for group in groups], dtype=np.float64).T
@@ -207,6 +264,8 @@ def make_meshes(
                 diagnostics.append(
                     {
                         "model": model_key,
+                        "profile_set": profile_set,
+                        "construction": construction,
                         "x_axis": axes[0] + 1,
                         "y_axis": axes[1] + 1,
                         "group": groups[group_index]["label"],
@@ -322,12 +381,25 @@ def inventory() -> None:
 
 def main(qwen_reference_commit: str) -> None:
     ridge_data = json.loads(RIDGES.read_text())
+    big_five_data = json.loads(BIG_FIVE.read_text())
     models: dict[str, object] = {}
+    big_five_models: dict[str, object] = {}
     rows: list[dict[str, object]] = []
+    big_five_rows: list[dict[str, object]] = []
     diagnostics: list[dict[str, object]] = []
     for model_key in MODEL_ORDER:
         roles, groups, model_rows = load_groups(model_key, ridge_data)
-        views, model_diagnostics = make_meshes(roles, groups, model_key)
+        views, model_diagnostics = make_meshes(roles, groups, model_key, "editorial")
+        big_five_roles, big_five_groups, model_big_five_rows = load_big_five_groups(
+            model_key, ridge_data, big_five_data
+        )
+        big_five_views, big_five_diagnostics = make_meshes(
+            big_five_roles,
+            big_five_groups,
+            model_key,
+            "big_five",
+            big_five_data["default_construction"],
+        )
         ridge_model = ridge_data["models"][model_key]
         models[model_key] = {
             "key": model_key,
@@ -342,8 +414,19 @@ def main(qwen_reference_commit: str) -> None:
             "aggregation": "Equal-weight mean of three within-model trait midrank percentiles",
             "caveat": "Editorial same-space trait-cosine summaries, not independently validated factors or probabilities",
         }
+        big_five_models[model_key] = {
+            "categories": big_five_groups,
+            "views": big_five_views,
+            "construction": big_five_data["default_construction"],
+            "construction_label": big_five_data["construction_labels"][big_five_data["default_construction"]],
+            "height_range": [0, 100],
+            "aggregation": "Within-model percentile of a frozen activation-derived Big Five domain projection",
+            "caveat": "Externally anchored same-space activation directions; not independent human psychometric ratings",
+        }
         rows.extend(model_rows)
+        big_five_rows.extend(model_big_five_rows)
         diagnostics.extend(model_diagnostics)
+        diagnostics.extend(big_five_diagnostics)
 
     old_qwen = git_json(
         qwen_reference_commit,
@@ -376,12 +459,35 @@ def main(qwen_reference_commit: str) -> None:
         ),
     }
     save_csv("persona_trait_group_scores.csv", rows)
+    save_csv("big_five_surface_node_scores.csv", big_five_rows)
     save_csv("trait_surface_fit_diagnostics.csv", diagnostics)
     save_json("persona_trait_surface_data.json", data)
-    build_html(data)
+    big_five_surface_data = {
+        "schema_version": 1,
+        "default_model": "qwen",
+        "default_construction": big_five_data["default_construction"],
+        "model_order": MODEL_ORDER,
+        "models": big_five_models,
+        "height_range": [0, 100],
+        "scientific_label": "externally anchored same-space activation-derived Big Five profiles",
+        "cross_model_caveat": data["cross_model_caveat"],
+    }
+    save_json("big_five_trait_surface_data.json", big_five_surface_data)
+    viewer_data = {
+        **data,
+        "schema_version": 3,
+        "default_profile_set": "editorial",
+        "default_big_five_construction": big_five_data["default_construction"],
+        "profile_sets": ["editorial", "big_five"],
+        "models": {
+            key: {**models[key], "big_five": big_five_models[key]} for key in MODEL_ORDER
+        },
+    }
+    build_html(viewer_data)
 
     source_paths = [
         RIDGES,
+        BIG_FIVE,
         ROOT / "research/outputs/persona_trait_ridge_plots/trait_category_order.csv",
         ROOT / "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_manifest.json",
         ROOT / "research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md",
@@ -429,9 +535,13 @@ def main(qwen_reference_commit: str) -> None:
             for key in MODEL_ORDER
         },
         "group_rows": len(rows),
+        "big_five_node_rows": len(big_five_rows),
         "qwen_group_rows": 1375,
+        "profile_sets": ["editorial", "big_five"],
+        "default_profile_set": "editorial",
+        "default_big_five_construction": big_five_data["default_construction"],
         "ordered_axis_views_per_model": 6,
-        "mesh_variants_per_model": 45,
+        "mesh_variants_per_model_per_profile_set": 45,
         "aggregation": data["aggregation"],
         "grid_size": 61,
         "smoothing": SMOOTHING,
@@ -464,7 +574,7 @@ def main(qwen_reference_commit: str) -> None:
                 "personas_per_model": 275,
                 "groups_per_model": 5,
                 "group_rows": len(rows),
-                "mesh_variants": 45 * len(MODEL_ORDER),
+                "mesh_variants": 45 * len(MODEL_ORDER) * 2,
                 "qwen_reproduction_max_abs_difference": qwen_max_difference,
                 "clipped_cells": {
                     key: sum(
@@ -488,7 +598,19 @@ if __name__ == "__main__":
     )
     arguments = parser.parse_args()
     if arguments.html_only:
-        build_html(json.loads((HERE / "persona_trait_surface_data.json").read_text()))
+        editorial = json.loads((HERE / "persona_trait_surface_data.json").read_text())
+        big_five = json.loads((HERE / "big_five_trait_surface_data.json").read_text())
+        build_html({
+            **editorial,
+            "schema_version": 3,
+            "default_profile_set": "editorial",
+            "default_big_five_construction": big_five["default_construction"],
+            "profile_sets": ["editorial", "big_five"],
+            "models": {
+                key: {**editorial["models"][key], "big_five": big_five["models"][key]}
+                for key in MODEL_ORDER
+            },
+        })
     elif not arguments.inventory_only:
         main(arguments.qwen_reference_commit)
     inventory()

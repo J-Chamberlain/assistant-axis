@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-09-11T23:18:00Z",
+  "model_used": "GPT-5.5",
+  "starting_commit": "7914d01f7d9c23060fe199815a90e547241d9682",
+  "mapping_freeze_commit": "636c5c1d9b832a1199e8d5b35dea993a41f94d4b",
+  "mapping_freeze_manifest_sha256": "a41a59012244729ead9aceea2a2f61789bc22ee1afb6bf60eac046016b37fb51",
+  "models": {
+    "qwen": {
+      "label": "Qwen/Qwen3-32B",
+      "logical_role_vectors": "downloads/hf_vectors/qwen-3-32b/role_vectors",
+      "logical_trait_vectors": "downloads/hf_vectors/qwen-3-32b/trait_vectors",
+      "role_bundle_sha256": "d9ace5eac56d0702bc8940acd1ab8499ac8806e58f46cbeb7f490ae8758f82b3",
+      "trait_bundle_sha256": "046d239b59dc09e0df211a4fa40b26110d0dfd4ab863f500e299342b59f40074",
+      "roles": 275,
+      "traits": 240,
+      "orientation_signs": [
+        1,
+        1,
+        1
+      ],
+      "coordinate_max_abs_difference_vs_established_viewer": 0.0,
+      "pca_explained_variance": [
+        0.31595442260217277,
+        0.1616348694777006,
+        0.08690363114386968
+      ]
+    },
+    "llama": {
+      "label": "Llama-3.3-70B",
+      "logical_role_vectors": "downloads/hf_vectors/llama-3.3-70b/role_vectors",
+      "logical_trait_vectors": "downloads/hf_vectors/llama-3.3-70b/trait_vectors",
+      "role_bundle_sha256": "6fc7f09d19403dec8d3792baa3e7250a3cb161acc34104b2907a6347993b08f9",
+      "trait_bundle_sha256": "34dc6b0c77dcc4cbf6f0ac700b36564ea4db41030a5bd7986430ccd6727a96c8",
+      "roles": 275,
+      "traits": 240,
+      "orientation_signs": [
+        1,
+        -1,
+        -1
+      ],
+      "coordinate_max_abs_difference_vs_established_viewer": 0.0,
+      "pca_explained_variance": [
+        0.17231954365252775,
+        0.14158889459870974,
+        0.06478991769540275
+      ]
+    },
+    "gemma": {
+      "label": "Gemma-2-27B",
+      "logical_role_vectors": "downloads/hf_vectors/gemma-2-27b/role_vectors",
+      "logical_trait_vectors": "downloads/hf_vectors/gemma-2-27b/trait_vectors",
+      "role_bundle_sha256": "6bbf9599df20802b4083256565a423f58c65356ec0bbbe1c0275e9c79a5898b3",
+      "trait_bundle_sha256": "adb4b2036ed60c6d1488ff321b7878add567f08a5ee1de6c5ba3a5a5abecafd3",
+      "roles": 275,
+      "traits": 240,
+      "orientation_signs": [
+        1,
+        1,
+        1
+      ],
+      "coordinate_max_abs_difference_vs_established_viewer": 0.0,
+      "pca_explained_variance": [
+        0.23453089585007245,
+        0.1278198481518452,
+        0.05686002238340878
+      ]
+    }
+  },
+  "coordinate_procedure": "Qwen uses canonical geometry_viz_data coordinates. PCA loading vectors are recomputed from Qwen's own layer-mean role vectors and sign-oriented to that reference. Llama and Gemma use their own layer-mean role-vector PCA, with the established corresponding-axis Qwen sign orientation.",
+  "established_coordinate_script": "research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py",
+  "pre_integration_viewer_sha256": {
+    "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_data.json": "957fe00c57719a4373d0ebd20e8fe07a49ac642eca3c94f3491ed8c4fef881db",
+    "research/outputs/persona_trait_ridge_plots/persona_trait_ridges.html": "4a306c19f9eaf87f279f218403da76239fda3562abf4c8585df129e17c17a3df",
+    "research/outputs/persona_trait_surface_viewer/persona_trait_surface_data.json": "adffe03c629cc0eb65f6bf3ee8768dbc5f079ae7fa0bb0f6af8754971e1f079d",
+    "research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html": "d1df1aa1d21289244606d75c2d7bcb87edd942de6f54f416b366722265d9386e"
+  },
+  "compute": "CPU-only over saved local released vectors; no inference, activation extraction, GPU, RunPod, or external model API.",
+  "scientific_boundary": "Same-space activation-derived trait evidence; external anchoring is not independent human psychometric validation."
+}

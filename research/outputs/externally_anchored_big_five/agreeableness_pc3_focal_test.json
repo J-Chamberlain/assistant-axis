@@ -1,0 +1,108 @@
+{
+  "preregistered_focus": "Agreeableness versus model-local PC3, primary construction human_anchored_strict",
+  "mapping_freeze_commit": "636c5c1d9b832a1199e8d5b35dea993a41f94d4b",
+  "models": {
+    "qwen": {
+      "activation_direction_cosine": -0.8471327084401699,
+      "pearson_r": -0.8817142067464541,
+      "spearman_r": -0.8375263264187416,
+      "single_domain_r2": 0.7774199423785287,
+      "joint_five_domain_standardized_coefficient": -0.8940474548273962,
+      "partial_correlation_controlling_other_four": -0.7304270823368233,
+      "partial_r2_in_sample": 0.5335237226110845,
+      "partial_r2_held_out": 0.5241221297581025,
+      "joint_five_domain_held_out_r2": 0.9046711890516621,
+      "remaining_pc3_variance_after_single_domain": 0.22258005762147126,
+      "competing_domains": {
+        "openness": {
+          "pearson_r": 0.3431122405216127,
+          "single_domain_r2": 0.11772600959576102
+        },
+        "conscientiousness": {
+          "pearson_r": -0.012091403937688028,
+          "single_domain_r2": 0.00014620204918433757
+        },
+        "extraversion": {
+          "pearson_r": -0.009164139524563472,
+          "single_domain_r2": 8.398145322566642e-05
+        },
+        "agreeableness": {
+          "pearson_r": -0.8817142067464541,
+          "single_domain_r2": 0.7774199423785287
+        },
+        "neuroticism": {
+          "pearson_r": 0.33566015838923496,
+          "single_domain_r2": 0.11266774192988631
+        }
+      }
+    },
+    "llama": {
+      "activation_direction_cosine": -0.19284558072762542,
+      "pearson_r": -0.16386096736226766,
+      "spearman_r": -0.01859265456853524,
+      "single_domain_r2": 0.026850416624898146,
+      "joint_five_domain_standardized_coefficient": -0.27855800173940765,
+      "partial_correlation_controlling_other_four": -0.1751920178018374,
+      "partial_r2_in_sample": 0.030692243101479316,
+      "partial_r2_held_out": 0.0057898433682861405,
+      "joint_five_domain_held_out_r2": 0.6146766428243542,
+      "remaining_pc3_variance_after_single_domain": 0.9731495833751018,
+      "competing_domains": {
+        "openness": {
+          "pearson_r": -0.2598874772838674,
+          "single_domain_r2": 0.0675415008489727
+        },
+        "conscientiousness": {
+          "pearson_r": 0.07231508416004132,
+          "single_domain_r2": 0.0052294713970738585
+        },
+        "extraversion": {
+          "pearson_r": -0.6124845440739124,
+          "single_domain_r2": 0.37513731672942835
+        },
+        "agreeableness": {
+          "pearson_r": -0.16386096736226766,
+          "single_domain_r2": 0.026850416624898146
+        },
+        "neuroticism": {
+          "pearson_r": -0.020096333580707754,
+          "single_domain_r2": 0.00040386262338708214
+        }
+      }
+    },
+    "gemma": {
+      "activation_direction_cosine": -0.6900858099495835,
+      "pearson_r": -0.5708574039196237,
+      "spearman_r": -0.5247015377513632,
+      "single_domain_r2": 0.3258781756098524,
+      "joint_five_domain_standardized_coefficient": -0.6628879662848715,
+      "partial_correlation_controlling_other_four": -0.47252756907038024,
+      "partial_r2_in_sample": 0.22328230353156298,
+      "partial_r2_held_out": 0.19917293736971975,
+      "joint_five_domain_held_out_r2": 0.7217307974366604,
+      "remaining_pc3_variance_after_single_domain": 0.6741218243901477,
+      "competing_domains": {
+        "openness": {
+          "pearson_r": 0.2808612850294521,
+          "single_domain_r2": 0.07888306142839514
+        },
+        "conscientiousness": {
+          "pearson_r": 0.19384309627818258,
+          "single_domain_r2": 0.03757514597471276
+        },
+        "extraversion": {
+          "pearson_r": -0.12675671880398026,
+          "single_domain_r2": 0.016067265761951322
+        },
+        "agreeableness": {
+          "pearson_r": -0.5708574039196237,
+          "single_domain_r2": 0.3258781756098524
+        },
+        "neuroticism": {
+          "pearson_r": 0.14629332504636272,
+          "single_domain_r2": 0.02140173695312074
+        }
+      }
+    }
+  }
+}

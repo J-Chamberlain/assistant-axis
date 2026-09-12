@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "taxonomy": "IPIP/IPIP-NEO public-domain Five-Factor Model domain and 30-facet hierarchy",
+  "terminology": {
+    "openness": "Openness to Experience / Intellect",
+    "neuroticism": "Neuroticism; inverse of Emotional Stability"
+  },
+  "facet_count": 30,
+  "sources": [
+    {
+      "source_id": "ipip_neo_300_combined_key",
+      "title": "IPIP NEO key: facets and domains",
+      "url": "https://ipip.ori.org/newNEOKey.htm",
+      "accessed_utc": "2026-09-11T22:58:36Z",
+      "retrieved_sha256": "d0500dc01558d292ab517c4c8efa174e2fb3a2a23fff8283cb239831c98b5a4d",
+      "retrieved_bytes": 76339,
+      "role": "Primary public-domain domain/facet hierarchy and keyed IPIP scales"
+    },
+    {
+      "source_id": "ipip_neo_domain_key",
+      "title": "IPIP NEO domains key",
+      "url": "https://ipip.ori.org/newNEODomainsKey.htm",
+      "accessed_utc": "2026-09-11T22:58:36Z",
+      "retrieved_sha256": "b8cbf9185c225cc7ffaeffa2e853c1ba2845ac5ea29cf6f413a2870e50785fe0",
+      "retrieved_bytes": 25317,
+      "role": "Domain terminology cross-check"
+    },
+    {
+      "source_id": "ipip_neo_facet_key",
+      "title": "IPIP NEO facets key",
+      "url": "https://ipip.ori.org/newNEOFacetsKey.htm",
+      "accessed_utc": "2026-09-11T22:58:36Z",
+      "retrieved_sha256": "f377956f942163dca42a7d1df266bb3ed2988d662cf487c21e4dbfb9f3abb15d",
+      "retrieved_bytes": 51708,
+      "role": "Thirty-facet names, codes, and keyed public-domain scales"
+    },
+    {
+      "source_id": "johnson_ipip_neo_120",
+      "title": "Johnson IPIP-NEO-120 30-facet key",
+      "url": "https://ipip.ori.org/30FacetNEO-PI-RItems.htm",
+      "accessed_utc": "2026-09-11T22:58:36Z",
+      "retrieved_sha256": "a0e491cc737a1d3f0fbc864d64bbc7c283fa696c64c05dab5c639ced4fc14512",
+      "retrieved_bytes": 17649,
+      "citation": "Johnson, J. A. (2014). Journal of Research in Personality, 51, 78-89. https://doi.org/10.1016/j.jrp.2014.05.003",
+      "role": "Published 120-item public-domain thirty-facet implementation"
+    },
+    {
+      "source_id": "ipip_permission",
+      "title": "IPIP permission statement",
+      "url": "https://ipip.ori.org/newPermission.htm",
+      "accessed_utc": "2026-09-11T22:58:36Z",
+      "retrieved_sha256": "15e3d162504ce920c1da2476941b2a538f2d06075b514324de8cbeab874cc198",
+      "retrieved_bytes": 1046,
+      "role": "Public-domain use statement"
+    }
+  ],
+  "licensing_note": "IPIP materials are public domain; no proprietary NEO item bank is reproduced."
+}

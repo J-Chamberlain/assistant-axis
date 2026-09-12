@@ -1,95 +1,14 @@
 {
   "status": "pass",
-  "static_renders": [
-    {
-      "file": "persona_trait_ridges_qwen_pc1.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_qwen_pc2.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_qwen_pc3.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_qwen_overview.png",
-      "width": 3000,
-      "height": 940
-    },
-    {
-      "file": "persona_trait_ridges_llama_pc1.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_llama_pc2.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_llama_pc3.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_llama_overview.png",
-      "width": 3000,
-      "height": 940
-    },
-    {
-      "file": "persona_trait_ridges_gemma_pc1.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_gemma_pc2.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_gemma_pc3.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_gemma_overview.png",
-      "width": 3000,
-      "height": 940
-    },
-    {
-      "file": "persona_trait_ridges_pc1.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_pc2.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_pc3.png",
-      "width": 1000,
-      "height": 12380
-    },
-    {
-      "file": "persona_trait_ridges_overview.png",
-      "width": 3000,
-      "height": 940
-    }
-  ],
+  "static_renders": [],
+  "static_rasterization": "not rerun; unchanged editorial SVGs/PNGs retained",
   "interaction_unit_checks": [
-    "Default is Qwen",
-    "Qwen/Llama/Gemma views switch without reload",
-    "Coordinate rows change with model",
-    "Selection persists by persona name across model switches",
-    "Persona buttons link all three PC panels",
-    "Reset restores Qwen and clears selection"
+    "Inline interaction script parses",
+    "All Qwen/Llama/Gemma editorial rows remain pre-rendered",
+    "Editorial default plus Big Five profile selector are present",
+    "All four frozen Big Five construction keys are embedded",
+    "Dynamic Big Five renderer and public test API are present; live interaction is tested separately in Chrome"
   ],
   "browser_test": false,
-  "note": "Sharp rasterization and a Node DOM double test static/model-switch state; actual browser verification is recorded separately."
+  "note": "Static markup/script checks are deterministic; actual model/profile interaction is verified separately in real Chrome."
 }

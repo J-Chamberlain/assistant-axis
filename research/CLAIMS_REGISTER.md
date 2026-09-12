@@ -152,13 +152,13 @@ Last Updated: 2026-06-15
 
 ## 16. PC3 Tracks Cooperative-Stabilizing Versus Antagonistic-Transgressive Stance
 
-Claim: PC3 shows suggestive but incomplete support for a perturbation-stabilization interpretation; positive PC3 reflects intervention, challenge, disruption, exploitation, or stress-testing, while negative PC3 reflects care, repair, mediation, preservation, and stabilization. Cooperative-antagonistic remains a secondary or partial reading.
+Claim: PC3 shows convergent but incomplete support for a perturbation-stabilization interpretation; positive PC3 reflects intervention, challenge, disruption, exploitation, or stress-testing, while negative PC3 reflects care, repair, mediation, preservation, and stabilization. Negative Qwen PC3 also has a strong externally anchored activation-derived Agreeableness component; Agreeableness is a major partial reading, not an axis identity.
 Status: Provisionally Supported
 Evidence: Reading-based rater PC3 r=0.690 and matched-pair agreement 95%; full-distribution coordinate-blind perturbation-stabilization validation found Pearson r=0.529, Spearman r=0.511, cluster-controlled Pearson r=0.491, and within-cluster pairwise ordering accuracy 0.773; the target rubric outperformed moral_badness, professionalism, weirdness/fantasticality, and abstraction controls.
-Additional evidence: A 2026-06-15 GPT-5.5 coordinate-blind role-instruction benchmark recovered PC3 from an internal-objective-vs-care rating with R2=0.393, and the three-rating joint model improved PC3 to R2=0.463.
-Counterevidence: Grounded_social within-cluster performance was weak (pairwise accuracy 0.565); professional subset has counterexamples such as economist, mathematician, statistician, and lawyer; deterministic rubric scoring is not independent human validation; the single PC3 rating is weaker than the earlier targeted PC3 validation.
-Dependencies: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/`, `research/outputs/pc3_validation/`, `research/outputs/blind_pc_interpretation_rating_benchmark/`
-Last Updated: 2026-06-15
+Additional evidence: A 2026-06-15 GPT-5.5 coordinate-blind role-instruction benchmark recovered PC3 from an internal-objective-vs-care rating with R2=0.393, and the three-rating joint model improved PC3 to R2=0.463. A 2026-09-11 Big Five mapping frozen geometry-blind from public IPIP facets and the reviewed SAPA bridge found strict Qwen Agreeableness versus PC3 direction cosine -0.847133, Pearson r=-0.881714, Spearman rho=-0.837526, single R2=0.777420, and held-out partial R2=0.524122; construction and leave-one-trait/facet sensitivities remain strong.
+Counterevidence: Grounded_social within-cluster performance was weak (pairwise accuracy 0.565); professional subset has counterexamples such as economist, mathematician, statistician, and lawyer; deterministic rubric scoring and externally anchored same-space activation directions are not independent human validation; 22.258% of Qwen PC3 variance remains after the single Agreeableness score; the cross-model axis relation is not stable, because Llama Agreeableness-PC3 is weak and instead aligns with PC2 while Gemma's PC3 relation is moderate.
+Dependencies: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/pc3_hypothesis_evaluation/`, `research/outputs/pc3_validation/`, `research/outputs/blind_pc_interpretation_rating_benchmark/`, `research/outputs/externally_anchored_big_five/`
+Last Updated: 2026-09-11
 
 ## 17. Persona Space May Exhibit Cone-Like Geometric Constraints
 

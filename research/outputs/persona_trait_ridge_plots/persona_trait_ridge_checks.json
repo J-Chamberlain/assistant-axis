@@ -57,5 +57,20 @@
   "default_model": "qwen",
   "all_panels_prerendered": true,
   "no_external_scripts": true,
+  "profile_sets": [
+    "editorial",
+    "big_five"
+  ],
+  "big_five_constructions": [
+    "human_anchored_strict",
+    "human_anchored_extended",
+    "external_taxonomy_expanded",
+    "historical_hand_predeclared"
+  ],
+  "big_five_scores_finite": true,
+  "big_five_within_model_percentiles": true,
+  "big_five_role_coordinates_exact": true,
+  "default_profile_set": "editorial",
+  "default_big_five_construction": "human_anchored_strict",
   "browser_validation": "Recorded separately; this check is numerical/static markup only"
 }
