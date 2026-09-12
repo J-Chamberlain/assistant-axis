@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-12T17:02:28Z`
+- Generated timestamp UTC: `2026-09-12T17:04:23Z`
 - Current branch: `codex/aa1-qwen-trait-family-human-inventory`
-- generation base commit: `4d2bdb41134d8950e8d9f606ee68e8b646c73b6e`
+- generation base commit: `805f9392e58016e312b4e41516c830ec7c6d1e89`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -33,25 +33,25 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
-- Latest commit touching file: `313c5cff6e071d707d37b1318343cde4ed510725`
-- generation base commit: `4d2bdb41134d8950e8d9f606ee68e8b646c73b6e`
-- Git blob hash: `80bc1b3b788eed0433bc1e134d930c049076d6fb`
-- SHA256 content hash: `63fe62bdd6e5d54d747a45dcc2601ad636f3c6e7769a8dbf202b6221d52e51bd`
-- Byte count: `188225`
+- Latest commit touching file: `805f9392e58016e312b4e41516c830ec7c6d1e89`
+- generation base commit: `805f9392e58016e312b4e41516c830ec7c6d1e89`
+- Git blob hash: `f723789b7cee01ac4b47c8c8d883b07348e043d5`
+- SHA256 content hash: `bace393addf20dc9f3c014f51efbbee263eefbec26e5cea94c4de29cdbf1f560`
+- Byte count: `188188`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
   - Last updated: `2026-09-12`
-  - Last commit: `4d2bdb4 (verified the frozen correlation-defined Qwen trait-family to SAPA measurement inventory before canonical-state reconciliation)`
+  - Last commit: `805f939 (semantically integrated the frozen Qwen-SAPA inventory with current AA-7 canonical state)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-12T17:02:28Z`
+- Generated timestamp UTC: `2026-09-12T17:04:23Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
-- Latest commit touching file: `313c5cff6e071d707d37b1318343cde4ed510725`
-- generation base commit: `4d2bdb41134d8950e8d9f606ee68e8b646c73b6e`
+- Latest commit touching file: `805f9392e58016e312b4e41516c830ec7c6d1e89`
+- generation base commit: `805f9392e58016e312b4e41516c830ec7c6d1e89`
 - Git blob hash: `aa76eb9061064de74302982bd05bb4896d4c387c`
 - SHA256 content hash: `b6f16e62d1adaafc7ee11f0ce0043372eb2c58a3dcd97757a21152e20f49a44a`
 - Byte count: `40050`
@@ -61,14 +61,14 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-09-12`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-12T17:02:28Z`
+- Generated timestamp UTC: `2026-09-12T17:04:23Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
-- Latest commit touching file: `c1f241bd94a0ac0fd6e5a21a08392eda553e25bf`
-- generation base commit: `4d2bdb41134d8950e8d9f606ee68e8b646c73b6e`
+- Latest commit touching file: `b9b6008ac4cff37bfef98bd2103a9cb9edf3a3a6`
+- generation base commit: `805f9392e58016e312b4e41516c830ec7c6d1e89`
 - Git blob hash: `96a1b2c77469a7cb5ca1cb67cb053850f5304029`
 - SHA256 content hash: `7f543f3a5a5f8fa308c9ddfbf2efa6068ea7a7e516c7a133a08e14b63b1c69d0`
 - Byte count: `50422`
@@ -78,7 +78,7 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-09-12`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-12T17:02:28Z`
+- Generated timestamp UTC: `2026-09-12T17:04:23Z`
 
 ## Maintenance Rule
 

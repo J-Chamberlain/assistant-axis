@@ -1,7 +1,7 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-12
-Base commit for this update: b9b6008 (AA-7 canonical semantic reconciliation; links become live after master push)
+Base commit for this update: 805f939 (Qwen trait-family SAPA inventory reconciled with AA-7; new links become canonical after a later master merge)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
