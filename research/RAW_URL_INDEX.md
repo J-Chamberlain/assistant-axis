@@ -1,7 +1,7 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-11
-Base commit for this update: c1f241b (all five source histories merged before final semantic reconciliation)
+Base commit for this update: d918ca3 (integrated AA-1 through AA-5 canonical semantic state)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 

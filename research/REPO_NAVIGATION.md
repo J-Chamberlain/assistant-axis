@@ -1,7 +1,7 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-11
-Last commit when updated: c1f241b (merged AA-1 through AA-5 before final semantic reconciliation)
+Last commit when updated: d918ca3 (integrated AA-1 through AA-5 canonical semantic state)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
