@@ -256,6 +256,17 @@ Source artifact: `research/outputs/multimodel_trait_profile_pc_predictor/multimo
 - Observed: a full second fixed-seed run reproduced all 20 deterministic model CSVs byte-for-byte. Ridge remains selected for Qwen, Llama, and Gemma under the predeclared 10% normalized-RMSE improvement/no-harder-holdout-degradation rule.
 - Interpretation boundary: replication supports approximately linear same-space trait-bank coverage across three saved open-model vector sets. It does not establish identical PC semantics across models, independent psychological validity, causal trait determination, behavioral realization, transfer to humans, or relative psychological sophistication/human-likeness.
 
+#### Cross-model PC Trait Specificity (AA-10)
+
+Source artifact: `research/outputs/crossmodel_pc_trait_specificity/crossmodel_pc_trait_specificity_report.md`; count tables: `crossmodel_pc_associated_counts.csv` and `crossmodel_pc_strict_specificity_counts.csv`; focal packet: `qwen_pc2_crossmodel_evidence_packet.csv`.
+
+- Observed: the frozen Qwen workflow reproduces exactly at 328 PC-associated, 202 target-dominant, 88 strict `.70` six-PC-purity, and 70 highly concentrated memberships. With identical rules and no retuning, LLaMA yields 274/205/122/105 and Gemma 297/173/92/72.
+- Observed: focal local components Qwen PC2, LLaMA PC1, and Gemma PC2 explain 16.163%, 17.232%, and 12.782% of model-local variance. Their role-score correlations are Qwen→LLaMA `r=.692` and Qwen→Gemma `r=.922`.
+- Observed: all three associated families recur on positive accessible/experiential/practical and 13 negative inward/abstract/mediated labels. Strict overlap is pairwise: Qwen/LLaMA share practical versus abstract/conceptual/theoretical; Qwen/Gemma share experiential versus erudite/introverted/pensive/principled/reverent/ritualistic/solemn. No focal strict marker occurs in all three.
+- Interpretation: Qwen/Gemma strengthen a bounded immediate/outward/accessible engagement versus inward/abstract/solemn-formal mediation description. LLaMA PC1 also has a large imaginative-symbolic negative family that resembles Qwen PC1, so it clarifies a rotated decomposition without serving as a clean one-axis equivalent.
+- Boundary: cross-model role-score correspondence is not latent homology, trait labels are not validated constructs, and strict marker recurrence is not human/model equivalence. Claims 14/15 remain unchanged.
+- Verification: 53 checks pass, including exact canonical Qwen correlation/FDR/sign-stability values and marker identities. No human respondent data, projection, PCA recomputation, inference, activation extraction, external API, GPU, or RunPod was used.
+
 #### Extended Persona PCA Dimensionality Audit
 
 Source artifact: `research/outputs/extended_persona_pca/extended_persona_pca_report.md`; construction audit: `persona_pca_construction_audit.md`; full spectrum: `full_pca_spectrum.csv`; retention table: `component_retention_summary.csv`.

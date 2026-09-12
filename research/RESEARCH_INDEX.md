@@ -10,6 +10,10 @@ Paper 1.5 is active: **Interpreting Persona Activation Geometry**. The core cont
 
 Paper 2 is active planning: local centroid perturbation and local persona-manifold mapping around anchors such as Trickster, Actor, Therapist, and Spy. Older dyad/contagion/attractor-collapse work is archived as future dynamics work.
 
+## AA-10 Cross-model PC Trait Specificity (2026-09-12)
+
+`research/outputs/crossmodel_pc_trait_specificity/` fills the LLaMA and Gemma PC1-PC6 trait-specificity tables with the frozen Qwen methods. Exact Qwen reproduction passes at 328 associated, 202 target-dominant, 88 strict, and 70 highly concentrated memberships. LLaMA has 274 associated / 205 target-dominant / 122 strict / 105 highly concentrated; Gemma has 297 / 173 / 92 / 72. The focal Qwen PC2 ↔ LLaMA PC1 ↔ Gemma PC2 packet finds the clearest Qwen/Gemma recurrence for immediate, outward, accessible engagement versus inward, abstract, solemn/formally mediated reflection. LLaMA PC1 is coherent but mixes Qwen-PC2-corresponding content with Qwen-PC1-like imaginative-symbolic content, preserving the PC1/PC2 rotation caveat. Claims 14 and 15 are unchanged; no latent homology or human/model equivalence is inferred.
+
 ## Current Human-Data Gate (2026-09-12)
 
 `research/outputs/sapa_bridge_psychometric_audit/` remains the human-only SAPA measurement gate. AA-7 used its 9 high + 3 moderate labels only to freeze model constructs and projected no respondents. Because the frozen 12 did not beat matched random-real subsets and passed only two core-only persona-span controls, AA-7's preregistered gate for designing a respondent-to-model projection study failed. Independent expert review and reduced-bridge scoring-method work may proceed as human measurement research; AA-7 alone does not justify human/model projection.
@@ -22,6 +26,7 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 - AA-4 Qwen trait sparsity and generic-basis controls: `research/outputs/qwen_trait_sparsity_prediction/qwen_trait_sparsity_report.md`
 - AA-5 NLSY97 occupational centroid stability: `research/outputs/nlsy97_occupation_personality_stability/nlsy97_occupation_personality_stability_report.md`
 - AA-7 frozen human-supported trait convergence and aligned PC subspaces: `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md`
+- AA-10 frozen cross-model PC trait specificity: `research/outputs/crossmodel_pc_trait_specificity/crossmodel_pc_trait_specificity_report.md`
 
 The canonical synthesis is: PC1-PC3 are the strict Qwen core and PC4-PC6 supported secondary coordinates; negative Qwen PC3 contains a strong externally anchored Agreeableness component without being identical to Agreeableness; geometry-optimized compact real traits provide semantic efficiency while the 240-trait ceiling is substantially same-space basis coverage; independently human-supported labels do not show unusual compact efficiency; model activation-derived human-supported and Big Five directions nevertheless recur strongly after role-score subspace alignment; 12/45 direct SAPA links have moderate-or-better human structural support; and occupation is weak as a global human personality grouping variable despite selected stable cells. No human respondent has been projected into model geometry.
 

@@ -4,6 +4,12 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/runtime/CURRENT_RESULTS.md
 # Status: COMPLETE
 
+## 2026-09-12 — AA-10 cross-model PC trait specificity
+
+Completed `research/outputs/crossmodel_pc_trait_specificity/` with the unchanged frozen Qwen association and strict six-PC-purity methods. Qwen reproduces exactly at 328 associated / 202 target-dominant / 88 strict / 70 highly concentrated memberships. LLaMA yields 274 / 205 / 122 / 105; Gemma yields 297 / 173 / 92 / 72. The requested PC1-PC6 explained-variance, associated-count, strict-count, and Qwen-referenced correspondence tables are saved with complete model-level membership audits.
+
+For Qwen PC2 ↔ LLaMA PC1 ↔ Gemma PC2, Qwen/Gemma most clearly recur on immediate, experiential/reactive engagement versus inward, solemn, formal, and ritual mediation. LLaMA PC1 offers a coherent concrete-accessible versus symbolic/abstract contrast but also contains strong Qwen-PC1-like imaginative-expression content, preserving the prior LLaMA PC1/PC2 rotation warning. This strengthens a bounded AA-8 interpretation without establishing latent homology. Claims 14/15 and sticky notes are unchanged. Independent verification passes 53 checks. No human respondents, human projection, PCA recomputation, model inference, activation extraction, external API, GPU, or RunPod were used.
+
 ## 2026-09-12 — AA-7 human-supported trait convergence and aligned subspaces
 
 Completed `research/outputs/human_supported_trait_convergence/` from canonical `c5c2628ad54483253ad97b95c3e1febad29f9435`. The exact AA-1 12-trait set and all decisions were frozen before outcome analysis. The primary compact-convergence result is **WEAK / ABSENT**: random-real p-values are 0.2395/0.2615 Qwen, 0.7405/0.3533 Llama, and 0.1497/0.1257 Gemma for core/extended, so human-supported k=12 beats 0/6 matched random-real controls. Only Qwen core (p=0.0220) and Gemma core (p=0.0279) beat persona-span controls. All isotropic comparisons pass, but isotropic is the weaker generic control. Geometry-optimized k=12 is better in every model/scope; human support level does not track utility.

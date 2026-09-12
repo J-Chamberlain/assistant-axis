@@ -2,6 +2,18 @@
 
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
+## crossmodel_pc_trait_specificity
+
+Artifact: AA-10 frozen Qwen-method replication of PC1-PC6 trait association and strict axis specificity for Qwen/Qwen3-32B, Llama-3.3-70B, and Gemma-2-27B.
+Location: `research/outputs/crossmodel_pc_trait_specificity/`; main report: `crossmodel_pc_trait_specificity_report.md`; requested count tables: `crossmodel_pc_associated_counts.csv` and `crossmodel_pc_strict_specificity_counts.csv`; focal packet: `qwen_pc2_crossmodel_evidence_packet.csv`; complete hashes, introducing commits, and URLs: `artifact_inventory.csv`.
+Created: 2026-09-12 by Codex on `codex/aa10-crossmodel-pc-trait-specificity`; analysis commit `d64f7efbd656765b2cd126b9c1f207c7c38b23cd`.
+Lineage: frozen Qwen association implementation at `667acdd634bfb8c39d40432fe60f0c5ef3bbbeeb`; broader specificity tip `db782414c6708f6fd2c46f3e5b08d0e61668b14d`; strict axis-specificity source `6497d28383aac33ea9f61b6ce2ac2ff195dccae4`; AA-8 interpretation source `18c9fe37f41991415c3e14af60ec4e1876eed3fb`; canonical model-local PC scores, spectra, and correspondence from `research/outputs/extended_persona_pca/`; canonical 275 x 240 model matrices from the Qwen and multimodel trait-profile predictor outputs.
+Procedure: within each model, correlate all 240 saved trait-affinity profiles with model-local PC1-PC6; require `|r|>=.50`, within-PC BH-FDR `q<.01`, and 2,000-bootstrap sign stability `>=.95`; then require strict observed target dominance, 2,000-bootstrap dominance probability `>=.95`, and `r_target²/sum(r_PC1²...r_PC6²)>=.70`. Seeds, resampling units, role/trait inventories, PC normalization, and thresholds are unchanged. The broader target-dominant/high-concentration layer is retained separately.
+Observed result: Qwen reproduces exactly at 328 associated / 202 target-dominant / 88 strict / 70 highly concentrated. LLaMA yields 274 / 205 / 122 / 105 and Gemma 297 / 173 / 92 / 72. Qwen PC2, LLaMA PC1, and Gemma PC2 explain 16.163%/17.232%/12.782%. Qwen/Gemma provide the strongest strict recurrence for immediate/experiential versus inward/ritual/formal structure; LLaMA PC1 is strongly symbolic/abstract on its negative pole and therefore retains substantial rotated Qwen-PC1-like content.
+Verification: `verify_crossmodel_pc_trait_specificity.py` passes 53 independent checks, including exact Qwen correlations, FDR values, sign-stability values, strict marker keys, broader target-dominant/high-concentration keys, all model counts, six-PC purity identities, source hashes, and direct reproduction of canonical role-score correspondence.
+Dependent analyses: Paper 1.5 PC2 evidence packet and cross-model caveat; Claims 14/15 receive additional bounded evidence but their wording/status is unchanged.
+Boundary: Corresponding role-score directions are not identical latent variables. Trait labels are same-space activation-vector descriptors, not validated constructs. No human respondent data, scoring, projection, model inference, activation extraction, external model API, GPU, or RunPod was used.
+
 ## human_supported_trait_convergence
 
 Artifact: AA-7 preregistered frozen human-supported trait efficiency and cross-model aligned PC1-PC6 role-score subspace study.

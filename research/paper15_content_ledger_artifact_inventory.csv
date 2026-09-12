@@ -5,6 +5,7 @@ canonical_research_index,research/RESEARCH_INDEX.md,canonical,compact research m
 canonical_provenance_registry,research/PROVENANCE_REGISTRY.md,canonical,artifact lineage and caveats,2;3;4;5;6;7;11,Provenance source
 canonical_claims_register,research/CLAIMS_REGISTER.md,canonical,current claim statuses,4;5;6;8;10,Claims status source
 canonical_findings_ledger,research/FINDINGS_LEDGER.md,canonical,compact finding log,3;4;5;6;7;8,Finding source
+crossmodel_pc_trait_specificity,research/outputs/crossmodel_pc_trait_specificity/,active,frozen cross-model PC1-PC6 association and strict specificity,2;3;4;5;11,AA-10 exact Qwen replication and LLaMA/Gemma marker evidence
 blind_pc_interpretation_rating_benchmark,research/outputs/blind_pc_interpretation_rating_benchmark/,active,coordinate-blind GPT-5.5 PC interpretation benchmark,2;3;4;5;6;11,Primary new compact interpretation benchmark
 pc1_accountability_validation,research/outputs/pc1_accountability_validation/,active,focused PC1 accountability intervention evidence,2;4;8;11,Latest PC1 validation result
 pc1_competing_theories_test,research/outputs/pc1_competing_theories_test/,active,PC1 rival vocabulary comparison,2;4;8;11,Rejects orderliness/determination-only as primary

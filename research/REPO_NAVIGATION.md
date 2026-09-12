@@ -1,7 +1,7 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-12
-Last commit when updated: b9b6008 (AA-7 canonical semantic reconciliation)
+Last commit when updated: d64f7ef (AA-10 cross-model PC trait specificity analysis)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -31,13 +31,13 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 453
+- trait analyses: 471
 - visualizations: 242
 
 
 ## Status Counts
 
-- active: 4896
+- active: 4914
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -50,6 +50,8 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/FINDINGS_LEDGER.md`, `research/THREAD_START.md`, and `research/STARTUP_MANIFEST.md` for startup and report continuity. Use `research/paper15_content_ledger.md` as the canonical factual source ledger before drafting Paper 1.5 prose.
 
 ### Active Analyses
+
+Cross-model PC trait specificity: `research/outputs/crossmodel_pc_trait_specificity/crossmodel_pc_trait_specificity_report.md` is the AA-10 entry point. It exactly reproduces the frozen Qwen 328 associated / 88 strict memberships, then applies the unchanged association, FDR, sign-stability, bootstrap-dominance, and six-PC purity rules to Llama-3.3-70B and Gemma-2-27B. Use `crossmodel_pc_associated_counts.csv` and `crossmodel_pc_strict_specificity_counts.csv` for the requested tables; `llama_pc_trait_memberships.csv` and `gemma_pc_trait_memberships.csv` for full trait-level audit statistics; `qwen_pc2_crossmodel_evidence_packet.csv` for the focal Qwen PC2/LLaMA PC1/Gemma PC2 comparison; and `verification_report.json` plus `artifact_inventory.csv` for reproduction and provenance. LLaMA PC1/PC2 remain partly rotated relative to the Qwen PC1/PC2 plane; correspondence is not latent homology.
 
 Human-supported trait convergence and aligned subspaces: `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md` is the AA-7 entry point. The exact 12 AA-1-supported labels and all decisions were frozen before outcomes. Use `comparator_summary.csv` for the matched compact prediction result, `procrustes_alignment_cv.csv` and `procrustes_alignment_null.csv` for held-out alignment evidence, `aligned_human_supported_trait_directions.csv` and `aligned_big_five_directions.csv` for recurrence, and `verification_report.json` plus `artifact_inventory.csv` for reproduction/provenance. The primary compact-efficiency result is weak/absent; the separate activation-derived aligned-direction recurrence is strong. No human respondent or occupational centroid was projected.
 
