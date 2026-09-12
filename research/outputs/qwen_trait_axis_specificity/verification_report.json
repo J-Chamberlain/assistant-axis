@@ -2,7 +2,7 @@
   "analysis": "Axis-specific Qwen trait markers and purity-filtered SAPA inventory",
   "verified_at_utc": "2026-09-12T19:05:00Z",
   "passed": true,
-  "check_count": 53,
+  "check_count": 54,
   "failure_count": 0,
   "failures": [],
   "checks": [
@@ -376,6 +376,11 @@
     },
     {
       "name": "deterministic_rerun_primary_outputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "artifact_inventory_hashes_match",
       "passed": true,
       "detail": []
     }
