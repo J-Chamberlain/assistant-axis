@@ -1,0 +1,47 @@
+{
+  "analysis_model": "GPT-5.5",
+  "big_five_rows": 30,
+  "canonical_pc1_pc3_max_abs_reproduction_error": 1.207027046312703e-06,
+  "discovery_model": "Qwen/Qwen3-32B",
+  "epistemic_boundary": "Observed Qwen associations and role geometry support discovery hypotheses; they do not demonstrate human/model equivalence.",
+  "firewall": {
+    "aa7_paths_opened": [],
+    "construct_selection_dependency": "Qwen-only signature plus human construct sources",
+    "cross_model_fields_used": [],
+    "llama_or_gemma_values_retained": false,
+    "multimodel_json_method": "stream to exact top-level qwen key and parse only that object",
+    "multimodel_table_method": "filter model == Qwen/Qwen3-32B or model == qwen before retaining requested fields"
+  },
+  "generated_at_utc": "2026-09-12T08:30:00Z",
+  "pc_scope": [
+    "PC1",
+    "PC2",
+    "PC3",
+    "PC4",
+    "PC5",
+    "PC6"
+  ],
+  "role_extreme_rows": 240,
+  "source_hashes": {
+    "research/geometry_tables/qwen_role_pc_rankings.csv": "643a73148de462919c38cb53aa193161ae15d59bf0bb3020a08de6094bd48525",
+    "research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md": "306d110662abf0990d350fe387df7a548859eb302921f6bd90f6ff2cf84ed535",
+    "research/outputs/extended_persona_pca/component_retention_summary.csv": "555fc499d2920ec0707ff21ddb09ea1fefc24b1a4d8642776400ca25e2f663c8",
+    "research/outputs/extended_persona_pca/qwen_extended_pc_role_rankings.csv": "71fafe78ad65a55d0ffded31f011bba8b2a3c16a15e0d4a146dedd0041ffa0c8",
+    "research/outputs/extended_persona_pca/qwen_extended_pc_trait_associations.csv": "d23771a3802557f2db8b109a37e4c25ad9c143939490d341b69eb56f2f3376f3",
+    "research/outputs/extended_persona_pca/viewer_data.json": "672c617758ace9654708d5f248e094d3005f19ee5237d3918a159bc0e3d813d3",
+    "research/outputs/externally_anchored_big_five/big_five_role_scores.csv": "41c4fda3d93c05176eda33e90cb665b10399020be0fa15fa5115dd95c3e2aed1",
+    "research/outputs/pc1_accountability_validation/experiment_summary.csv": "1ee5fe87cee42fa85443e0f142ba73ea8f125ea24f2c7cf0aa553abe7c6b4a40",
+    "research/outputs/qwen_trait_sparsity_prediction/full_model_permutation_importance.csv": "96083c2034c1e9aec499bb729fafb980107eb49632c59037f78035b430646666",
+    "research/outputs/qwen_trait_sparsity_prediction/pc_specific_trait_rankings.csv": "920cfafbf8c8cde0d3f9d9ded9098dd206ce2966b75c62dd2da7be2aa05662ad",
+    "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8"
+  },
+  "trait_rows": 1440,
+  "unique_traits_per_pc": {
+    "PC1": 240,
+    "PC2": 240,
+    "PC3": 240,
+    "PC4": 240,
+    "PC5": 240,
+    "PC6": 240
+  }
+}
