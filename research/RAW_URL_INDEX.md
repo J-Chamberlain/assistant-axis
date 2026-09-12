@@ -1,7 +1,7 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-12
-Base commit for this update: AA-8 branch integration (branch links live after push; future canonical links after master integration)
+Base commit for this update: ebe36e0367fc36ddb8fe32a5842d4ef5d30ae04a (AA-8 repository integration; future canonical links become live after master integration)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 

@@ -1,7 +1,7 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-12
-Last commit when updated: AA-8 branch integration (exact commit recorded in the AA-8 artifact inventory)
+Last commit when updated: ebe36e0367fc36ddb8fe32a5842d4ef5d30ae04a (AA-8 repository integration)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 

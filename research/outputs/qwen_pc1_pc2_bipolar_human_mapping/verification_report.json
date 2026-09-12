@@ -142,8 +142,18 @@
       "status": "PASS"
     },
     {
-      "detail": "csv=11, json=3",
+      "detail": "csv=12, json=3",
       "name": "all current CSV and JSON parse",
+      "status": "PASS"
+    },
+    {
+      "detail": "rows=25, expected=25",
+      "name": "artifact inventory coverage",
+      "status": "PASS"
+    },
+    {
+      "detail": "all non-self artifacts hashed with introducing commits",
+      "name": "artifact inventory hashes and commits",
       "status": "PASS"
     },
     {
@@ -187,13 +197,13 @@
       "status": "PASS"
     },
     {
-      "detail": "changed_paths=20",
+      "detail": "changed_paths=38",
       "name": "no respondent microdata committed",
       "status": "PASS"
     },
     {
-      "detail": "before repository-maintenance commit",
-      "name": "AA-8 outputs isolated",
+      "detail": "unexpected=[]",
+      "name": "AA-8 outputs and maintenance isolated",
       "status": "PASS"
     },
     {
@@ -212,8 +222,8 @@
       "status": "PASS"
     }
   ],
-  "generated_at_utc": "2026-09-12T21:19:50Z",
-  "passed": 42,
+  "generated_at_utc": "2026-09-12T21:30:00Z",
+  "passed": 44,
   "status": "PASS",
-  "total": 42
+  "total": 44
 }

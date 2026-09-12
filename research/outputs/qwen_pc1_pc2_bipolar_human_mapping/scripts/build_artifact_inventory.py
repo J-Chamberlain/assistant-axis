@@ -63,7 +63,11 @@ def main() -> None:
     repo = Path(__file__).resolve().parents[4]
     out = repo / OUT_REL
     target = out / "artifact_inventory.csv"
-    paths = sorted(p for p in out.rglob("*") if p.is_file() and p != target)
+    paths = sorted(
+        p
+        for p in out.rglob("*")
+        if p.is_file() and p != target and "__pycache__" not in p.parts and p.suffix != ".pyc"
+    )
     rows = []
     for path in paths:
         rel = path.relative_to(repo)
@@ -81,7 +85,7 @@ def main() -> None:
             }
         )
     with target.open("w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(fh, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 

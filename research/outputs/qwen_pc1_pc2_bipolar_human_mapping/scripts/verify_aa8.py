@@ -12,7 +12,6 @@ import shutil
 import subprocess
 import tempfile
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -151,7 +150,7 @@ def main() -> None:
     check("no next experiment selected", firewall["next_experiment_selected"] is False, "stopping point preserved")
     check("PC3 remains reference only", source_manifest["pc3_reference_only"]["selection_or_mapping_reopened"] is False, "no PC3 output modified")
 
-    tracked_diff = subprocess.check_output(["git", "diff", "--name-only", "8f4e589df5d92217e56f76a978d51df07af5aa3a..HEAD"], cwd=repo, text=True).splitlines()
+    tracked_diff = subprocess.check_output(["git", "diff", "--name-only", "8f4e589df5d92217e56f76a978d51df07af5aa3a"], cwd=repo, text=True).splitlines()
     check("no respondent microdata committed", not any("response" in p.lower() and "qwen_pc1_pc2" not in p for p in tracked_diff), f"changed_paths={len(tracked_diff)}")
     maintenance_paths = {
         "research/REPO_NAVIGATION.md",
@@ -200,7 +199,7 @@ def main() -> None:
     passed = sum(c["status"] == "PASS" for c in checks)
     report = {
         "analysis": "AA-8 verification",
-        "generated_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+        "generated_at_utc": "2026-09-12T21:30:00Z",
         "status": "PASS" if passed == len(checks) else "FAIL",
         "passed": passed,
         "total": len(checks),
