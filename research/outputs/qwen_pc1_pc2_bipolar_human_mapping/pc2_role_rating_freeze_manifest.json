@@ -8,7 +8,7 @@
     "positive_instruction_5"
   ],
   "analysis": "AA-8 PC2 coordinate-blind role-dimension rating freeze",
-  "builder_sha256": "b5cab6044d68f5aafd3ec3ab26336abe3bec9c925e16ce067a10b83c70efd9d3",
+  "builder_sha256": "6a7ba139fd1bce8ca9e9df67df7c1cb5fd7d91eefd5dc147ae9eac274b2abc6e",
   "dimension_names": [
     "embodied_physical_engagement",
     "practical_concrete_engagement",
@@ -25,7 +25,8 @@
     "trait correlations",
     "specificity outcomes"
   ],
-  "generated_at_utc": "2026-09-12T21:06:48Z",
+  "freeze_commit": "06b605d56ad018f9315db6d6639eed8eec1d0319",
+  "generated_at_utc": "2026-09-12T21:07:25Z",
   "geometry_join_performed": false,
   "model_used": "GPT-5.5",
   "ordinal_scale": [

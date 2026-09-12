@@ -123,6 +123,7 @@ def main() -> None:
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--manifest", required=True, type=Path)
     parser.add_argument("--rubric", required=True, type=Path)
+    parser.add_argument("--freeze-commit", default="")
     args = parser.parse_args()
 
     with args.input.open(newline="", encoding="utf-8") as fh:
@@ -179,6 +180,7 @@ def main() -> None:
             "trait correlations", "specificity outcomes",
         ],
         "geometry_join_performed": False,
+        "freeze_commit": args.freeze_commit,
         "source_sha256": sha256(args.input),
         "rubric_sha256": sha256(args.rubric),
         "builder_sha256": sha256(script_path),
