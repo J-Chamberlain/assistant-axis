@@ -1,0 +1,43 @@
+{
+  "allowed_source_fields": [
+    "role",
+    "positive_instruction_1",
+    "positive_instruction_2",
+    "positive_instruction_3",
+    "positive_instruction_4",
+    "positive_instruction_5"
+  ],
+  "analysis": "AA-8 PC2 coordinate-blind role-dimension rating freeze",
+  "builder_sha256": "b5cab6044d68f5aafd3ec3ab26336abe3bec9c925e16ce067a10b83c70efd9d3",
+  "dimension_names": [
+    "embodied_physical_engagement",
+    "practical_concrete_engagement",
+    "social_outward_engagement",
+    "abstract_conceptual_engagement",
+    "ritual_formal_mediation"
+  ],
+  "forbidden_information": [
+    "PC coordinates",
+    "PC ranks",
+    "PC percentiles",
+    "clusters",
+    "prior PC interpretations",
+    "trait correlations",
+    "specificity outcomes"
+  ],
+  "generated_at_utc": "2026-09-12T21:06:48Z",
+  "geometry_join_performed": false,
+  "model_used": "GPT-5.5",
+  "ordinal_scale": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "rating_method": "deterministic coordinate-blind rubric coding over role name and five positive instructions",
+  "ratings_sha256": "a6ec8920d6176e23980ed660b41712237ec8ab753608a8f6c384eb2d331c1567",
+  "role_count": 275,
+  "rubric_sha256": "3a164c65891f8b2f930028eba6aaf7641f1ccd4cc5ab25aa9e5f4f748740fb39",
+  "source_sha256": "16b7ac17b59c85f252cb0d5b7e6f52629b2be8ec2f4ef00f18d8743c6cf885f1"
+}
