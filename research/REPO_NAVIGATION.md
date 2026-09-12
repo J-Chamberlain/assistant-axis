@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-11T22:41:00Z
-Last commit when updated: cac5c0c (integrated AA-1 feasibility audit and finalized Phase-1b review artifacts)
+Updated UTC: 2026-09-11T23:45:00Z
+Last commit when updated: c5ea17d (completed the human-only SAPA bridge psychometric audit)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3871
+- active analyses: 3900
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 12
@@ -37,7 +37,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Status Counts
 
-- active: 4685
+- active: 4714
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -56,6 +56,8 @@ Multi-model trait-profile to persona-PC predictor: `research/outputs/multimodel_
 Human trait-dataset feasibility: `research/outputs/human_trait_dataset_feasibility/human_trait_dataset_feasibility_report.md` is the entry point for the Phase-1 SAPA vocabulary and NLSY97 occupation/outcome audit. Use `sapa/sapa_model_trait_candidate_crosswalk.csv` for all 240 canonical trait judgments and exact item evidence, `sapa/sapa_trait_coverage_summary.json` for counts, `nlsy97/nlsy97_personality_occupation_cell_summary.json` for cohort totals, `nlsy97/nlsy97_persona_occupation_crosswalk.csv` for conservative prior-role translations and feasibility cells, `nlsy97/nlsy97_wave_overlap_summary.csv` for later-domain co-observation, and `artifact_inventory.csv` for hashes/raw URLs. Raw respondent files are gitignored under `data_external/human_validation/`. This establishes data feasibility only: no human-to-model projection, correspondence test, or human-personality claim was made.
 
 SAPA bridge Phase-1b review: `research/outputs/human_trait_dataset_feasibility/sapa_review/` contains the fixed-seed coordinate-blind review packet for exactly the 78 original Category-3 candidates, the rubric committed before adjudication, all 78 second-pass decisions, the provisional bridge, item/scale reuse audits, retained-evidence missingness summary, verification, and an identical decision-free packet plus instructions for later external review. The review retained 45 direct primary-tier and 29 explicitly secondary close links, with 1 broad downgrade, 3 rejections, and 0 ambiguous rows. The 74 retained links use 129 items and 78 source scales, but no respondent observes all 129 retained items. The packet excludes original feasibility labels, geometry, predictors, personas, occupations, outcomes, and downstream performance. This same-workflow Codex review is not independent psychometric validation; genuinely independent review of the frozen external packet is the next gate.
+
+Human-only SAPA bridge psychometric audit: `research/outputs/sapa_bridge_psychometric_audit/sapa_bridge_psychometric_audit_report.md` is the entry point for pairwise-complete human-response coherence, source-scale convergence, discriminant/reuse, Big Five, planned-missingness, and effective-dimensionality diagnostics on the frozen provisional bridge. Use `sapa_trait_bridge_psychometric_support_v1.csv` for the 74 trait-level outcomes, `human_trait_proxy_dimensionality_summary.json` for direct versus direct-plus-close summaries, the Pearson/Spearman matrix and pairwise-N files for group-level structure, `psychometric_support_rubric.md` for the pre-response freeze, and `artifact_inventory.csv` for hashes and branch/future-canonical URLs. The primary direct tier yields 9 high, 3 moderate, 30 redundant/broad, and 3 insufficient links; the matrix retains 6 parallel-analysis components and participation-ratio rank 12.44. This is human-data structural support only. No model geometry or respondent-to-model projection was used, and raw responses remain gitignored.
 
 Trait-profile to persona-PC predictor: `research/outputs/trait_profile_pc_predictor/trait_profile_pc_predictor_report.md` is the entry point for the first-stage reusable mapping from all 240 Qwen activation-cosine trait features to canonical PC1/PC2/PC3. Use `validation_summary.json` for metrics and decisions, `ridge_predictor.json` for the transparent canonical V1 specification, `predict_trait_profile.py` for existing/external/percentile-modified profiles, `leave_one_persona_out_predictions.csv` for exact held-out persona lookups, `leave_one_cluster_out_summary.csv` for harder family shift, and `artifact_inventory.csv` for hashes/raw URLs. The analysis includes repeated nested Ridge/PLS/RBF-Kernel-Ridge/KNN comparison, fold-safe quantiles, 275-persona LOPO, all seven canonical cluster holdouts, 100 target permutations, OOD distance/reconstruction diagnostics, and 120 pair-endpoint-held-out synthetic activation mixes. It is same-space Qwen activation geometry; counterfactual outputs are predicted locations, not observed behavior or causal/human-personality claims. No inference, new activations, GPU, RunPod, or external model API was used.
 

@@ -1,0 +1,180 @@
+{
+  "method": {
+    "correlation": "standardized unit-weight proxy composites from pairwise-complete item correlations",
+    "psd_adjustment": "eigenvalue clipping plus diagonal renormalization",
+    "parallel_analysis": "500 Gaussian draws at median proxy-pair effective N",
+    "parallel_analysis_seed": 20260911,
+    "clustering": "average linkage on sqrt((1-r)/2); k selected by silhouette"
+  },
+  "tiers": {
+    "accept_direct": {
+      "trait_count": 45,
+      "raw_minimum_eigenvalue": -0.0,
+      "psd_max_absolute_adjustment": 1e-08,
+      "participation_ratio_effective_rank": 12.441369,
+      "entropy_effective_rank": 20.835948,
+      "eigenvalues_above_one": 10,
+      "parallel_analysis_components": 6,
+      "parallel_analysis_draws": 500,
+      "parallel_analysis_reference_n": 474,
+      "components_for_50pct_variance": 5,
+      "components_for_80pct_variance": 16,
+      "components_for_90pct_variance": 24,
+      "selected_cluster_count": 2,
+      "selected_cluster_silhouette": 0.15137077,
+      "big_five_multiple_r_squared_median": 0.333547,
+      "big_five_multiple_r_squared_p25": 0.263568,
+      "big_five_multiple_r_squared_p75": 0.405243,
+      "traits_big_five_r2_below_0_50": 42,
+      "big_five_residual_raw_minimum_eigenvalue": -0.21534545,
+      "big_five_residual_psd_max_adjustment": 0.12238019,
+      "big_five_residual_participation_ratio": 21.8977,
+      "big_five_residual_entropy_effective_rank": 28.752692
+    },
+    "accept_direct_plus_close": {
+      "trait_count": 74,
+      "raw_minimum_eigenvalue": -0.02591144,
+      "psd_max_absolute_adjustment": 0.00426997,
+      "participation_ratio_effective_rank": 15.141161,
+      "entropy_effective_rank": 27.309875,
+      "eigenvalues_above_one": 17,
+      "parallel_analysis_components": 11,
+      "parallel_analysis_draws": 500,
+      "parallel_analysis_reference_n": 488,
+      "components_for_50pct_variance": 5,
+      "components_for_80pct_variance": 21,
+      "components_for_90pct_variance": 32,
+      "selected_cluster_count": 2,
+      "selected_cluster_silhouette": 0.11697314,
+      "big_five_multiple_r_squared_median": 0.300809,
+      "big_five_multiple_r_squared_p25": 0.222816,
+      "big_five_multiple_r_squared_p75": 0.384243,
+      "traits_big_five_r2_below_0_50": 68,
+      "big_five_residual_raw_minimum_eigenvalue": -0.48628943,
+      "big_five_residual_psd_max_adjustment": 0.18264606,
+      "big_five_residual_participation_ratio": 27.589982,
+      "big_five_residual_entropy_effective_rank": 38.320348
+    }
+  },
+  "spearman_sensitivity": {
+    "accept_direct": {
+      "proxy_pair_count": 990,
+      "pearson_spearman_vector_correlation": 0.99740076,
+      "median_absolute_pearson_spearman_difference": 0.00933288,
+      "maximum_absolute_pearson_spearman_difference": 0.07544434,
+      "sign_disagreement_count": 20
+    },
+    "accept_direct_plus_close": {
+      "proxy_pair_count": 2701,
+      "pearson_spearman_vector_correlation": 0.99740484,
+      "median_absolute_pearson_spearman_difference": 0.00891812,
+      "maximum_absolute_pearson_spearman_difference": 0.07544434,
+      "sign_disagreement_count": 64
+    }
+  },
+  "planned_missingness": {
+    "respondents": 23679,
+    "design_interpretation": "SAPA randomized planned item administration; missingness is not treated as ordinary nonresponse.",
+    "complete_case_analysis_used": false,
+    "mean_imputation_used": false,
+    "tiers": {
+      "accept_direct": {
+        "trait_count": 45,
+        "distinct_item_count": 96,
+        "item_administration_n_min": 2327,
+        "item_administration_n_median": 2573.0,
+        "item_administration_n_max": 4381,
+        "retained_items_observed_per_respondent_p25": 7.0,
+        "retained_items_observed_per_respondent_median": 10.0,
+        "retained_items_observed_per_respondent_p75": 12.0,
+        "retained_items_observed_per_respondent_max": 57,
+        "respondents_observing_all_retained_items": 0,
+        "fully_observed_proxies_per_respondent_p25": 0.0,
+        "fully_observed_proxies_per_respondent_median": 0.0,
+        "fully_observed_proxies_per_respondent_p75": 1.0,
+        "fully_observed_proxies_per_respondent_max": 16,
+        "partially_observed_proxies_per_respondent_median": 11.0,
+        "item_pair_overlap_n_min": 296,
+        "item_pair_overlap_n_median": 490.0,
+        "item_pair_overlap_n_max": 961
+      },
+      "accept_direct_plus_close": {
+        "trait_count": 74,
+        "distinct_item_count": 129,
+        "item_administration_n_min": 2327,
+        "item_administration_n_median": 2570.0,
+        "item_administration_n_max": 5902,
+        "retained_items_observed_per_respondent_p25": 11.0,
+        "retained_items_observed_per_respondent_median": 13.0,
+        "retained_items_observed_per_respondent_p75": 16.0,
+        "retained_items_observed_per_respondent_max": 71,
+        "respondents_observing_all_retained_items": 0,
+        "fully_observed_proxies_per_respondent_p25": 0.0,
+        "fully_observed_proxies_per_respondent_median": 1.0,
+        "fully_observed_proxies_per_respondent_p75": 2.0,
+        "fully_observed_proxies_per_respondent_max": 23,
+        "partially_observed_proxies_per_respondent_median": 17.0,
+        "item_pair_overlap_n_min": 289,
+        "item_pair_overlap_n_median": 504.0,
+        "item_pair_overlap_n_max": 1212
+      }
+    }
+  },
+  "human_measurement_support_counts": {
+    "ACCEPT_CLOSE": {
+      "REDUNDANT / BROAD": 19,
+      "INSUFFICIENT": 5,
+      "MODERATE SUPPORT": 5
+    },
+    "ACCEPT_DIRECT": {
+      "HIGH HUMAN-MEASUREMENT SUPPORT": 9,
+      "REDUNDANT / BROAD": 30,
+      "INSUFFICIENT": 3,
+      "MODERATE SUPPORT": 3
+    }
+  },
+  "structural_support_counts": {
+    "ACCEPT_CLOSE": {
+      "WEAK / REDUNDANT": 19,
+      "INSUFFICIENT EVIDENCE": 5,
+      "MODERATE STRUCTURAL SUPPORT": 1,
+      "STRONG STRUCTURAL SUPPORT": 4
+    },
+    "ACCEPT_DIRECT": {
+      "STRONG STRUCTURAL SUPPORT": 11,
+      "WEAK / REDUNDANT": 30,
+      "INSUFFICIENT EVIDENCE": 3,
+      "MODERATE STRUCTURAL SUPPORT": 1
+    }
+  },
+  "single_item_counts": {
+    "ACCEPT_DIRECT": 3,
+    "ACCEPT_CLOSE": 5
+  },
+  "reuse": {
+    "evaluated_shared_evidence_pairs": 224,
+    "exact_or_inverse_item_set_alias_pairs": 4,
+    "shared_item_sensitive_pairs": 34,
+    "same_scale_high_redundancy_pairs": 11,
+    "neighboring_construct_pairs": 99,
+    "differentiated_pairs": 76,
+    "median_absolute_full_correlation": 0.418499,
+    "median_absolute_correlation_after_shared_item_removal": 0.379295
+  },
+  "key_counts": {
+    "direct_total": 45,
+    "close_total": 29,
+    "direct_high_human_measurement_support": 9,
+    "direct_moderate_support": 3,
+    "direct_limited_single_item": 0,
+    "direct_redundant_broad": 30,
+    "direct_insufficient": 3,
+    "close_moderate_or_better": 5
+  },
+  "polychoric": {
+    "run": false,
+    "reason": "No reliable local polychoric implementation was installed; Pearson and Spearman were retained as preregistered primary/sensitivity analyses.",
+    "source_document_context": "The SAPA SPI development document reports mean Pearson-minus-polychoric correlation difference 0.0033 and proceeds with Pearson."
+  },
+  "generated_at": "2026-09-11T23:10:00Z"
+}

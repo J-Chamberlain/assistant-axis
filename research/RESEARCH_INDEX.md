@@ -10,6 +10,10 @@ Paper 1.5 is active: **Interpreting Persona Activation Geometry**. The core cont
 
 Paper 2 is active planning: local centroid perturbation and local persona-manifold mapping around anchors such as Trickster, Actor, Therapist, and Spy. Older dyad/contagion/attractor-collapse work is archived as future dynamics work.
 
+## Current Human-Data Gate (2026-09-11)
+
+`research/outputs/sapa_bridge_psychometric_audit/` is the current entry point for the human-only SAPA measurement gate. A rubric frozen before covariance inspection leaves 9 high + 3 moderate of 45 direct semantic links, with 30 redundant/broad and 3 insufficient single-item proxies. The direct proxy matrix has 6 parallel-analysis components and participation-ratio effective rank 12.44; complete respondent profiles do not exist under SAPA planned administration. This supports independent expert review and a separate reduced-bridge scoring-method study, not human/model projection or a correspondence claim.
+
 ## Current Trait Ridge Visualization (2026-09-09)
 
 Grouped 3D companion: `research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html` offers the same five groups as a slider over any two PCs, with height equal to the mean of three original trait percentiles. Stronger fixed-range color, fabric-only mode, a semi-transparent least-squares flat-plane comparison, flat-plane-only mode, and synchronized yaw/pitch/roll/zoom sliders with numeric entry and view presets address manual inspection requests. Complete group/member scores, fit diagnostics, flat-adherence diagnostics, provenance and tests accompany it. No existing viewer overwritten. Data and control-state tests pass; local browser automation was blocked, so interactive WebGL verification remains user-side. See `trait_surface_methodology.md` for averaging, flat-plane score definitions and same-space evidence caveats.
