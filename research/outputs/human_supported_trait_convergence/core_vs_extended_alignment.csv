@@ -1,0 +1,9 @@
+measure_family,dimensions,mean_coordinate_correlation,mean_distance_matrix_correlation,mean_geometric_rmse,mean_pairwise_direction_cosine,pc1_pc6_minus_pc1_pc3_direction_cosine,material_direction_improvement_ge_0_10
+alignment_cv,3,0.7847613349,0.869567971518,463.598797367,,,False
+human_supported_12,3,,,,0.6486442363,0.233343543297,True
+externally_anchored_big_five_5,3,,,,0.747950680588,0.183867002082,True
+agreeableness_focal,3,,,,0.821808951165,0.108085172995,True
+alignment_cv,6,0.865343987237,0.89825317276,527.892516789,,,False
+human_supported_12,6,,,,0.881987779596,0.233343543297,True
+externally_anchored_big_five_5,6,,,,0.93181768267,0.183867002082,True
+agreeableness_focal,6,,,,0.929894124159,0.108085172995,True

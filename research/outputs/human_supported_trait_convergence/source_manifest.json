@@ -1,0 +1,188 @@
+{
+  "analysis": "AA-7 human-supported trait convergence and cross-model aligned-subspace study",
+  "analysis_model": "GPT-5.5",
+  "branch": "codex/aa7-human-trait-convergence",
+  "canonical_starting_sha": "c5c2628ad54483253ad97b95c3e1febad29f9435",
+  "compute": {
+    "activation_extraction": false,
+    "cpu_only": true,
+    "external_model_api": false,
+    "gpu_used": false,
+    "new_model_inference": false,
+    "response_generation": false,
+    "runpod_used": false
+  },
+  "freeze_commit": "51c54a5862419d0e296da1fa9ac323e4ecfa3d95",
+  "generation_timestamp_utc": "2026-09-12T01:14:04Z",
+  "human_data_boundary": {
+    "human_evidence_use": "AA-1 support labels freeze/select constructs only",
+    "human_outcomes_predicted": false,
+    "human_respondents_projected": false,
+    "occupational_centroids_projected": false,
+    "respondent_level_human_microdata_committed": false,
+    "respondent_level_human_microdata_loaded": false
+  },
+  "inputs": {
+    "research/geometry_tables/cluster_membership_table.csv": {
+      "sha256": "5edcf2ae1633385a9ea00e1944c82803f91c41ca19974c95cd6482e899ef8cac",
+      "size_bytes": 57059
+    },
+    "research/outputs/extended_persona_pca/source_manifest.json": {
+      "sha256": "24aa559170ede3a222cb13793426c5ec90272e610c5328b3f0700e202d0cae7b",
+      "size_bytes": 19412
+    },
+    "research/outputs/extended_persona_pca/viewer_data.json": {
+      "sha256": "672c617758ace9654708d5f248e094d3005f19ee5237d3918a159bc0e3d813d3",
+      "size_bytes": 392114
+    },
+    "research/outputs/externally_anchored_big_five/big_five_domain_directions_manifest.json": {
+      "sha256": "b75fe17ffb112016386b87798d5fb0171f2797a5ccc15be6418134f91451f50c",
+      "size_bytes": 1965750
+    },
+    "research/outputs/externally_anchored_big_five/big_five_role_scores.csv": {
+      "sha256": "41c4fda3d93c05176eda33e90cb665b10399020be0fa15fa5115dd95c3e2aed1",
+      "size_bytes": 3075358
+    },
+    "research/outputs/human_supported_trait_convergence/analysis_preregistration.json": {
+      "sha256": "a0f0c81d70b2f1358f723c39b42222baaa09cd5b57be077755fe08aba0f4e1ee",
+      "size_bytes": 8680
+    },
+    "research/outputs/human_supported_trait_convergence/human_supported_trait_set_freeze.json": {
+      "sha256": "0c9f0c0037c84258031c38f0baec7338a690e1938cfcf968c6aa1d4d3932e791",
+      "size_bytes": 2633
+    },
+    "research/outputs/human_supported_trait_convergence/run_human_supported_trait_convergence.py": {
+      "sha256": "9f0dc163d033aaa2b255fb271480af59ac58a1d4f74cccb468f12e5fa9cf18ec",
+      "size_bytes": 108281
+    },
+    "research/outputs/multimodel_trait_profile_pc_predictor/gemma/persona_trait_similarity_matrix.csv": {
+      "sha256": "798c0618b9e468eec2e6d9083c96b2eef3d414f15f29d93180ff679614fea427",
+      "size_bytes": 1341624
+    },
+    "research/outputs/multimodel_trait_profile_pc_predictor/llama/persona_trait_similarity_matrix.csv": {
+      "sha256": "74b2cb886967159fe4580b2dc8066cfe3ba789bedde7f0f380ee95240a3ed947",
+      "size_bytes": 1334907
+    },
+    "research/outputs/qwen_trait_sparsity_prediction/source_manifest.json": {
+      "sha256": "9aadf9276eb2dfa5806da55b5253968b59ce6a7ee4b83b6af342cf3b4b60d647",
+      "size_bytes": 4916
+    },
+    "research/outputs/sapa_bridge_psychometric_audit/sapa_trait_bridge_psychometric_support_v1.csv": {
+      "sha256": "1cc78b543bf44e636dc8000617c61f0285e8cfc998b33946c38ab164ecdcd5a6",
+      "size_bytes": 28328
+    },
+    "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv": {
+      "sha256": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8",
+      "size_bytes": 1339338
+    }
+  },
+  "isotropic_sampler_audit": {
+    "gemma": {
+      "ambient_dimension": 4608,
+      "method": "Exact distributional Gram/eigendecomposition sampler for normalized ambient Gaussian directions",
+      "orthogonal_residual_degrees_of_freedom": 4333,
+      "role_span_rank": 275,
+      "used_pc_targets": false
+    },
+    "llama": {
+      "ambient_dimension": 8192,
+      "method": "Exact distributional Gram/eigendecomposition sampler for normalized ambient Gaussian directions",
+      "orthogonal_residual_degrees_of_freedom": 7917,
+      "role_span_rank": 275,
+      "used_pc_targets": false
+    },
+    "qwen": {
+      "ambient_dimension": 5120,
+      "method": "Exact distributional Gram/eigendecomposition sampler for normalized ambient Gaussian directions",
+      "orthogonal_residual_degrees_of_freedom": 4845,
+      "role_span_rank": 275,
+      "used_pc_targets": false
+    }
+  },
+  "preregistration_commit": "cabd80732647bf7666c6d6cb469f485e222f87b7",
+  "random_controls": {
+    "alignment_permutations_per_pair_variant_dimension": 1000,
+    "draws_per_model_and_budget": 500
+  },
+  "software": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.12.12",
+    "scikit_learn": "1.8.0",
+    "scipy": "1.17.0",
+    "torch": "2.9.0"
+  },
+  "vector_root_actual": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors",
+  "vector_source_checks": {
+    "gemma": {
+      "aa3_pc1_pc6_max_abs_error": 0.0,
+      "frozen_trait_cosine_matrix_max_abs_error": 1.0547118733938987e-15,
+      "hidden_dimension": 4608,
+      "role_count": 275,
+      "role_vector_audit": {
+        "aggregate_sha256_of_sorted_filename_and_content_hashes": "d63d0850700792614ed5ccc3ab7586d4709f7e1b8a750791b621047654910fb1",
+        "all_source_means_finite": true,
+        "directory": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/gemma-2-27b/role_vectors",
+        "file_count": 275,
+        "mean_vector_matrix_shape": [
+          275,
+          4608
+        ],
+        "source_tensor_dtypes": {
+          "torch.bfloat16": 275
+        },
+        "source_tensor_shapes": {
+          "(46, 4608)": 275
+        }
+      },
+      "trait_count": 240
+    },
+    "llama": {
+      "aa3_pc1_pc6_max_abs_error": 0.0,
+      "frozen_trait_cosine_matrix_max_abs_error": 3.3861802251067274e-15,
+      "hidden_dimension": 8192,
+      "role_count": 275,
+      "role_vector_audit": {
+        "aggregate_sha256_of_sorted_filename_and_content_hashes": "bf038d86c5150a556d2986bacc9bcddf42d6a0b84c8157b75f18cd047e7a0639",
+        "all_source_means_finite": true,
+        "directory": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/llama-3.3-70b/role_vectors",
+        "file_count": 275,
+        "mean_vector_matrix_shape": [
+          275,
+          8192
+        ],
+        "source_tensor_dtypes": {
+          "torch.bfloat16": 275
+        },
+        "source_tensor_shapes": {
+          "(80, 8192)": 275
+        }
+      },
+      "trait_count": 240
+    },
+    "qwen": {
+      "aa3_pc1_pc6_max_abs_error": 0.0,
+      "frozen_trait_cosine_matrix_max_abs_error": 5.88418203051333e-15,
+      "hidden_dimension": 5120,
+      "role_count": 275,
+      "role_vector_audit": {
+        "aggregate_sha256_of_sorted_filename_and_content_hashes": "28573c5a3382dc8cfaad66c0bbe0e11dc61c1aec62194bce260ff34897a74c4b",
+        "all_source_means_finite": true,
+        "directory": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/qwen-3-32b/role_vectors",
+        "file_count": 275,
+        "mean_vector_matrix_shape": [
+          275,
+          5120
+        ],
+        "source_tensor_dtypes": {
+          "torch.bfloat16": 275
+        },
+        "source_tensor_shapes": {
+          "(64, 5120)": 275
+        }
+      },
+      "trait_count": 240
+    }
+  }
+}

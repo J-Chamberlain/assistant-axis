@@ -1551,8 +1551,9 @@ def make_figures(
 ) -> None:
     colors = {"qwen": "#4C78A8", "llama": "#F58518", "gemma": "#54A24B"}
 
-    def save(fig: Any, stem: str) -> None:
-        fig.tight_layout()
+    def save(fig: Any, stem: str, tight: bool = True) -> None:
+        if tight:
+            fig.tight_layout()
         fig.savefig(out / f"{stem}.png", dpi=180, metadata={"Date": GENERATION_TIMESTAMP})
         fig.savefig(out / f"{stem}.svg", metadata={"Date": GENERATION_TIMESTAMP})
         plt.close(fig)
@@ -1571,9 +1572,12 @@ def make_figures(
             ("geometry_optimized_real_traits_12", "D", "#111111", 1.15),
         ]:
             row = current[current.feature_family == family].iloc[0]
-            axis.scatter(xpos, row["aggregate_normalized_geometric_error"], marker=marker, s=90, color=color, zorder=5)
+            label = ({"human_supported_12": "human-supported 12", "geometry_optimized_real_traits_12": "optimized-real 12"}[family]
+                     if key == "qwen" else None)
+            axis.scatter(xpos, row["aggregate_normalized_geometric_error"], marker=marker, s=90, color=color, zorder=5, label=label)
         axis.set_title(MODEL_SPECS[key]["label"])
         axis.set_ylabel("PC1–PC6 aggregate nRMSE")
+    axes[0].legend(loc="upper left", frameon=True)
     save(fig, "figure_a_k12_compact_budget_comparison")
 
     primary = per_pc[(per_pc.protocol == "fixed_5fold_seed42") & (per_pc.scope == "extended")]
@@ -1586,8 +1590,10 @@ def make_figures(
         axis.set_xticks(range(6), PC_NAMES)
         axis.set_yticks(range(len(families)), [x.replace("_", " ") for x in families])
         axis.set_title(MODEL_SPECS[key]["label"])
-    fig.colorbar(im, ax=axes, label="Held-out R²", shrink=0.8)
-    save(fig, "figure_b_pc_prediction_by_feature_family")
+    fig.subplots_adjust(left=0.22, right=0.91, bottom=0.13, top=0.88, wspace=0.12)
+    color_axis = fig.add_axes([0.93, 0.18, 0.012, 0.64])
+    fig.colorbar(im, cax=color_axis, label="Held-out R²")
+    save(fig, "figure_b_pc_prediction_by_feature_family", tight=False)
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 5), sharey=True)
     frozen_order = json.loads(FREEZE_PATH.read_text())["traits"]
@@ -1598,8 +1604,10 @@ def make_figures(
         axis.set_xticks(range(6), PC_NAMES)
         axis.set_yticks(range(12), frozen_order)
         axis.set_title(MODEL_SPECS[key]["label"])
-    fig.colorbar(im, ax=axes, label="Pearson r", shrink=0.8)
-    save(fig, "figure_c_human_trait_pc_association_heatmap")
+    fig.subplots_adjust(left=0.13, right=0.91, bottom=0.11, top=0.90, wspace=0.12)
+    color_axis = fig.add_axes([0.93, 0.18, 0.012, 0.64])
+    fig.colorbar(im, cax=color_axis, label="Pearson r")
+    save(fig, "figure_c_human_trait_pc_association_heatmap", tight=False)
 
     for frame, stem, feature_column in [
         (human_dirs[human_dirs.dimensions == 6], "figure_d_aligned_human_trait_similarity", "trait"),
@@ -1636,6 +1644,7 @@ def make_figures(
         axis.bar(x + offset, values, width, label=family.replace("_", " "))
     axis.set_xticks(x, [MODEL_SPECS[key]["label"] for key in MODEL_ORDER])
     axis.set_ylabel("PC1–PC6 aggregate nRMSE")
+    axis.set_title("Held-out PC1–PC6 coverage performance (lower is better)")
     axis.legend()
     save(fig, "figure_g_big_five_vs_human12_coverage")
 
@@ -1703,7 +1712,9 @@ def write_report(
     out: Path,
     comparator: pd.DataFrame,
     associations: pd.DataFrame,
+    contributions: pd.DataFrame,
     utility: pd.DataFrame,
+    budget_context: pd.DataFrame,
     alignment_cv: pd.DataFrame,
     alignment_null: pd.DataFrame,
     human_dirs: pd.DataFrame,
@@ -1721,21 +1732,51 @@ def write_report(
         "",
         f"Preregistered evidence classification: **{decisions['evidence_strength']}**.",
         "",
+        "The frozen 12 do **not** form an unusually efficient compact coordinate system under the primary matched test: they beat neither the random-real k=12 null in any model/scope nor the fold-local persona-span null beyond the Qwen and Gemma core-only comparisons. They do beat the isotropic ambient baseline in all six model/scope comparisons. Thus AA-7 finds weak/absent evidence that human psychometric support itself identifies geometrically privileged compact traits, even though the model-derived directions recur strongly after cross-model subspace alignment.",
+        "",
         "The table below is the primary fixed-split matched comparison. Aggregate nRMSE is fold-standardized Euclidean geometric error, so lower is better. Empirical p-values are one-sided against 500 target-independent matched banks.",
         "",
-        "| Model | Scope | Human 12 mean R² | Human 12 nRMSE | random median | p vs random | persona-span median | p vs span | optimized 12 nRMSE |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| Model | Scope | Human 12 mean R² | Human 12 nRMSE | random median | random percentile | p vs random | persona-span median | span percentile | p vs span | optimized 12 nRMSE |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for key in MODEL_ORDER:
         for scope in ["core", "extended"]:
             row = human[(human.model_key == key) & (human.scope == scope)].iloc[0]
             opt = comparator[(comparator.model_key == key) & (comparator.scope == scope) & (comparator.feature_family == "geometry_optimized_real_traits_12")].iloc[0]
             lines.append(
-                f"| {MODEL_SPECS[key]['label']} | {scope} | {row['mean_pc_r2']:.4f} | {row['aggregate_normalized_geometric_error']:.4f} | {row['random_real_12_median_error']:.4f} | {row['random_real_12_empirical_one_sided_p']:.4f} | {row['persona_span_12_median_error']:.4f} | {row['persona_span_12_empirical_one_sided_p']:.4f} | {opt['aggregate_normalized_geometric_error']:.4f} |"
+                f"| {MODEL_SPECS[key]['label']} | {scope} | {row['mean_pc_r2']:.4f} | {row['aggregate_normalized_geometric_error']:.4f} | {row['random_real_12_median_error']:.4f} | {row['random_real_12_empirical_percentile']:.1f} | {row['random_real_12_empirical_one_sided_p']:.4f} | {row['persona_span_12_median_error']:.4f} | {row['persona_span_12_empirical_percentile']:.1f} | {row['persona_span_12_empirical_one_sided_p']:.4f} | {opt['aggregate_normalized_geometric_error']:.4f} |"
             )
     lines.extend([
         "",
-        "Absolute feature-family and per-PC results are in `comparator_summary.csv`, `local_pc_prediction_summary.csv`, and `local_pc_prediction_per_pc.csv`. Big Five uses five features and is not treated as an equal-budget comparison with the 12-trait families.",
+        "Percentile is the percentage of null banks with error at least as large as the human-supported error; higher is better. Across the six comparisons, the frozen set passes 0/6 random-real tests, 2/6 persona-span tests (Qwen and Gemma core only), and 6/6 isotropic tests at p≤0.05.",
+        "",
+        "## Absolute feature-family context",
+        "",
+        "The next table reports held-out mean per-PC R² and aggregate nRMSE. Random/generic entries are distribution medians and therefore have no single R² in this compact summary.",
+        "",
+        "| Model | Scope | human 12 R² / nRMSE | optimized 12 R² / nRMSE | random 12 median | span 12 median | isotropic 12 median | Big Five 5 R² / nRMSE | direct 45 R² / nRMSE | full 240 R² / nRMSE |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+    ])
+    family_names = ["human_supported_12", "geometry_optimized_real_traits_12", "externally_anchored_big_five_5", "direct_semantic_45", "full_real_traits_240"]
+    for key in MODEL_ORDER:
+        for scope in ["core", "extended"]:
+            rows = {
+                family: comparator[(comparator.model_key == key) & (comparator.scope == scope) & (comparator.feature_family == family)].iloc[0]
+                for family in family_names
+            }
+            medians = {
+                family: comparator[(comparator.model_key == key) & (comparator.scope == scope) & (comparator.feature_family == family)].iloc[0]["aggregate_normalized_geometric_error"]
+                for family in ["random_real_12_median", "persona_span_12_median", "isotropic_12_median"]
+            }
+            metric = lambda family: f"{rows[family]['mean_pc_r2']:.3f} / {rows[family]['aggregate_normalized_geometric_error']:.3f}"
+            lines.append(
+                f"| {MODEL_SPECS[key]['label']} | {scope} | {metric('human_supported_12')} | {metric('geometry_optimized_real_traits_12')} | {medians['random_real_12_median']:.3f} | {medians['persona_span_12_median']:.3f} | {medians['isotropic_12_median']:.3f} | {metric('externally_anchored_big_five_5')} | {metric('direct_semantic_45')} | {metric('full_real_traits_240')} |"
+            )
+    lines.extend([
+        "",
+        "Geometry-optimized 12-trait sets outperform the frozen 12 in every model/scope. The 45 direct semantic features recover substantially more geometry, and the full 240-feature basis is best. PC4–PC6 are materially harder for the frozen set than PC1–PC3; all per-PC R², RMSE, nRMSE, and MAE values are in `local_pc_prediction_per_pc.csv` and matched-control per-PC distributions are in the three control CSVs.",
+        "",
+        "Big Five uses five features and is not treated as an equal-budget comparison with 12 features. At k=5 in PC1–PC6, its nRMSE is 1.677/1.768/1.759 for Qwen/Llama/Gemma, versus random-real medians 1.537/1.754/1.747 and optimized-real values 1.235/1.535/1.377. It is compact but does not beat matched random-real k=5 on this coverage metric.",
         "",
         "## Individual traits and human-support level",
         "",
@@ -1750,23 +1791,34 @@ def write_report(
     for key in MODEL_ORDER:
         row = utility[(utility.record_type == "ordinal_association") & (utility.trait_family == "human_supported_12") & (utility.model_key == key) & (utility.scope == "extended")].iloc[0]
         lines.append(f"- {MODEL_SPECS[key]['label']} AA-1 support versus extended geometric utility: Spearman rho={row.support_utility_spearman:.3f}; high mean={row.high_mean_utility:.3f}, moderate mean={row.moderate_mean_utility:.3f}. N=12; descriptive only.")
+    lines.append("")
+    for key in MODEL_ORDER:
+        current = contributions[(contributions.model_key == key) & (contributions.scope == "extended")].drop_duplicates("trait")
+        top = current.nlargest(3, "leave_one_trait_out_delta_aggregate_nrmse")
+        text = ", ".join(f"{row.trait} (ΔnRMSE={row.leave_one_trait_out_delta_aggregate_nrmse:.3f})" for row in top.itertuples())
+        lines.append(f"- {MODEL_SPECS[key]['label']} largest leave-one-trait-out degradations: {text}. Leaders differ by model, so performance is not reducible to one universal trait.")
+    lines.append("")
+    for key in MODEL_ORDER:
+        row = utility[(utility.record_type == "ordinal_association") & (utility.trait_family == "direct_semantic_45") & (utility.model_key == key) & (utility.scope == "extended")].iloc[0]
+        lines.append(f"- {MODEL_SPECS[key]['label']} AA-1 support category versus extended utility across all 45 direct traits: Spearman rho={row.support_utility_spearman:.3f}, Kruskal p={row.kruskal_p:.3f}.")
     lines.extend([
         "",
         "## Phase 2 — held-out role-score subspace alignment",
         "",
-        "Primary alignment uses centered raw model-local PC scores; variance-standardized alignment is a declared sensitivity. Values below average the ten repeated role-held-out folds for PC1–PC6.",
+        "Primary alignment uses centered raw model-local PC scores; variance-standardized alignment is a declared sensitivity. Values below average the ten repeated role-held-out folds for PC1–PC6. Raw RMSE is not comparable across pairs because saved activation magnitudes differ sharply by architecture; correlations and the standardized sensitivity are the scale-robust diagnostics.",
         "",
-        "| Pair | coordinate r | distance r | geometric RMSE | permutation p (coordinate r) |",
-        "|---|---:|---:|---:|---:|",
+        "| Pair | coordinate r | distance r | geometric RMSE | NN Jaccard@10 | permutation p (coordinate r) | standardized coordinate r / RMSE |",
+        "|---|---:|---:|---:|---:|---:|---:|",
     ])
     cv6 = alignment_cv[(alignment_cv.dimensions == 6) & (alignment_cv.variant == "raw_pc_scores") & (alignment_cv.protocol == "repeated_5fold")]
     null6 = alignment_null[(alignment_null.dimensions == 6) & (alignment_null.variant == "raw_pc_scores")]
     for pair in ["llama_to_qwen", "gemma_to_qwen", "gemma_to_llama"]:
         cv = cv6[cv6.pair == pair]
+        standardized = alignment_cv[(alignment_cv.dimensions == 6) & (alignment_cv.variant == "variance_standardized") & (alignment_cv.protocol == "repeated_5fold") & (alignment_cv.pair == pair)]
         null = null6[null6.pair == pair]
         observed = cv[cv.repeat_seed == 7100]["mean_aligned_coordinate_correlation"].iloc[0]
         p = (1 + np.sum(null["mean_aligned_coordinate_correlation"] >= observed)) / (len(null) + 1)
-        lines.append(f"| {pair} | {cv.mean_aligned_coordinate_correlation.mean():.3f} | {cv.distance_matrix_correlation.mean():.3f} | {cv.geometric_rmse.mean():.3f} | {p:.4f} |")
+        lines.append(f"| {pair} | {cv.mean_aligned_coordinate_correlation.mean():.3f} | {cv.distance_matrix_correlation.mean():.3f} | {cv.geometric_rmse.mean():.3f} | {cv.nearest_neighbor_jaccard_k10.mean():.3f} | {p:.4f} | {standardized.mean_aligned_coordinate_correlation.mean():.3f} / {standardized.geometric_rmse.mean():.3f} |")
     h6 = human_dirs[human_dirs.dimensions == 6]
     b6 = bigfive_dirs[bigfive_dirs.dimensions == 6]
     lines.extend([
@@ -1777,6 +1829,7 @@ def write_report(
         "## Focal Agreeableness result",
         "",
         f"Preregistered decision: **{agree['decision']}**. Aligned pairwise cosines are Qwen–Llama {agree['aligned_pairwise_cosines']['qwen_llama']:.3f}, Qwen–Gemma {agree['aligned_pairwise_cosines']['qwen_gemma']:.3f}, and Llama–Gemma {agree['aligned_pairwise_cosines']['llama_gemma']:.3f}. The full local and aligned six-dimensional vectors and squared-cosine consensus fractions are in `aligned_agreeableness_focal_test.json`.",
+        f"The consensus contains {agree['fraction_of_directional_energy_in_consensus_squared_cosine']['qwen']:.3f} of Qwen, {agree['fraction_of_directional_energy_in_consensus_squared_cosine']['llama']:.3f} of Llama, and {agree['fraction_of_directional_energy_in_consensus_squared_cosine']['gemma']:.3f} of Gemma Agreeableness direction (squared cosine). Alignment therefore reconciles the previously different local-PC assignments within this model-only six-dimensional role-score space.",
         "",
         "## Core versus secondary coordinates",
         "",
@@ -1788,7 +1841,7 @@ def write_report(
         "",
         "## Big Five versus the frozen 12",
         "",
-        "`feature_family_subspace_coverage.csv` reports held-out coverage, numerical rank, condition number, redundancy, and error reductions. The comparison distinguishes the five-feature Big Five budget from the 12-feature human-supported family and does not treat raw feature counts as equal.",
+        "The Big Five role-score span captures 0.388/0.379/0.379 of the human-supported 12 span in Qwen/Llama/Gemma, whereas the human-supported span captures 0.932/0.908/0.909 of the Big Five span. The 17-feature union remains full rank and improves held-out PC1–PC6 nRMSE over the human 12 from 0.745→0.540, 1.161→0.912, and 1.048→0.795. The 12 are therefore broader than Big Five, although they contain most—not all—Big Five role-score structure. `feature_family_subspace_coverage.csv` reports held-out coverage, numerical rank, condition number, redundancy, and error reductions.",
         "",
         "## Observed",
         "",
@@ -1796,7 +1849,7 @@ def write_report(
         "",
         "## Interpretation",
         "",
-        "AA-7 tests whether human psychometric evidence supplied a useful geometry-blind construct filter. Any advantage is representational/geometric convergence within model activation artifacts, not evidence that the constructs are realized as human psychology in a model.",
+        "AA-7 provides weak/absent evidence for the primary claim that human psychometric defensibility selects unusually efficient compact model coordinates: the human-supported 12 behave like ordinary real-trait subsets. It provides strong, separate evidence that once projected into held-out-alignable model-local PC1–PC6 role-score subspaces, the corresponding activation-derived human-supported and Big Five directions recur across Qwen, Llama, and Gemma. This aligned recurrence is cross-model, broader than Big Five, and not Qwen-specific—but it is model-only representational convergence, not human/model equivalence.",
         "",
         "## Hypotheses",
         "",
@@ -1825,6 +1878,7 @@ def source_manifest(
     permutations: int,
 ) -> dict[str, Any]:
     source_paths = [
+        Path(__file__).resolve(),
         FREEZE_PATH,
         PREREG_PATH,
         AA1_SUPPORT,
@@ -1887,6 +1941,7 @@ def main() -> None:
     parser.add_argument("--control-draws", type=int, default=500)
     parser.add_argument("--alignment-permutations", type=int, default=1000)
     parser.add_argument("--n-jobs", type=int, default=4)
+    parser.add_argument("--refresh-source-manifest-only", action="store_true")
     args = parser.parse_args()
     out = args.output_dir.resolve()
     out.mkdir(parents=True, exist_ok=True)
@@ -1895,6 +1950,20 @@ def main() -> None:
 
     print("loading and verifying canonical sources", flush=True)
     models, support, frozen_traits, direct_traits, vector_root, source_checks = load_sources()
+    if args.refresh_source_manifest_only:
+        prior = json.loads((DEFAULT_OUT / "source_manifest.json").read_text(encoding="utf-8"))
+        write_json(
+            out / "source_manifest.json",
+            source_manifest(
+                vector_root,
+                source_checks,
+                prior["isotropic_sampler_audit"],
+                args.control_draws,
+                args.alignment_permutations,
+            ),
+        )
+        print("refreshed source_manifest.json", flush=True)
+        return
     fixed_splits = kfold_splits(275, 42)
     summaries: list[dict[str, Any]] = []
     per_pc_rows: list[dict[str, Any]] = []
@@ -1998,7 +2067,7 @@ def main() -> None:
         random_real, persona_span, isotropic,
     )
     write_report(
-        out, comparator, associations, utility, alignment_cv, alignment_null, human_dirs,
+        out, comparator, associations, contributions, utility, budget_context, alignment_cv, alignment_null, human_dirs,
         bigfive_dirs, agree, core_extended, coverage, decisions,
     )
     write_json(
