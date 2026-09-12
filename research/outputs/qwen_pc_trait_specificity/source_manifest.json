@@ -1,0 +1,104 @@
+{
+  "analysis": "Qwen PC-associated versus PC-defining trait specificity and frozen SAPA inventory refinement",
+  "bootstrap": {
+    "batch_size": 25,
+    "generator": "NumPy default_rng / PCG64",
+    "paired_across_traits_and_PC1_PC6": true,
+    "resamples": 2000,
+    "seed": 20260912
+  },
+  "branch": "codex/aa1-qwen-pc-trait-specificity",
+  "compute": "CPU only; no GPU, RunPod, model inference, activation extraction, response generation, or external model API.",
+  "concentration_caveat": "Concentration is within PC1-PC6 only, not the proportion of total trait activation-space variance explained uniquely by the target PC.",
+  "epsilon": 1e-12,
+  "firewall": {
+    "AA7_scientific_result_paths_used": [],
+    "Llama_or_Gemma_values_loaded": false,
+    "human_model_correspondence_test_run": false,
+    "human_model_projection_performed": false,
+    "human_respondent_rows_loaded_or_scored": false,
+    "models_used": [
+      "Qwen/Qwen3-32B"
+    ],
+    "next_experiment_selected": false,
+    "respondent_level_human_microdata_emitted": false
+  },
+  "generated_at_utc": "2026-09-12T20:30:00Z",
+  "model": "Qwen/Qwen3-32B",
+  "navigation_sources_consulted": [
+    "research/REPO_NAVIGATION.md",
+    "research/REPO_FILE_INDEX.csv",
+    "research/RAW_URL_INDEX.md"
+  ],
+  "pc3_reference_composite": {
+    "artifact_paths": [
+      "research/outputs/persona_trait_surface_viewer/persona_trait_group_scores.csv",
+      "research/outputs/persona_trait_surface_viewer/trait_surface_methodology.md",
+      "research/outputs/persona_trait_surface_viewer/run_persona_trait_surface.py",
+      "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_data.json"
+    ],
+    "formula": "mean(within-Qwen midrank percentile(empathetic), within-Qwen midrank percentile(agreeable), within-Qwen midrank percentile(altruistic))",
+    "group": "Affiliation",
+    "members_in_canonical_order": [
+      "empathetic",
+      "agreeable",
+      "altruistic"
+    ],
+    "metrics": {
+      "largest_offtarget_abs_r": 0.11006094938463282,
+      "largest_offtarget_pc": "PC1",
+      "largest_offtarget_signed_r": -0.11006094938463282,
+      "pc1_6_concentration_fraction": 0.9781008556436962,
+      "r_PC1": -0.11006094938463282,
+      "r_PC2": -0.011574213353771293,
+      "r_PC3": -0.9448572084322212,
+      "r_PC4": 0.049735769633763964,
+      "r_PC5": 0.06120822519932902,
+      "r_PC6": -0.038997844174685575,
+      "specificity_margin": 0.8347962590475884,
+      "specificity_ratio": 8.584854244002745,
+      "target_abs_r": 0.9448572084322212,
+      "target_pearson_r": -0.9448572084322212
+    },
+    "reference_qwen_compatibility_commit": "d68921b898ed179194223f449149d715298cdabe",
+    "status": "EXACT_CANONICAL_REFERENCE_LOCATED",
+    "weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  "pc_count": 6,
+  "role_count": 275,
+  "rules": {
+    "highly_concentrated": "primary PC-defining and observed PC1-PC6 concentration >= 0.75",
+    "moderately_concentrated": "primary PC-defining and observed PC1-PC6 concentration >= 0.50 and < 0.75",
+    "pareto_objectives": [
+      "higher target |r|",
+      "higher specificity margin",
+      "higher PC1-PC6 concentration"
+    ],
+    "pareto_universe": "all 240 traits divided by observed target-correlation pole within each PC",
+    "pc_associated": "target |r| >= 0.50; within-PC BH-FDR q < 0.01; AA-1 bootstrap sign stability >= 0.95",
+    "primary_pc_defining": "PC-associated and paired-bootstrap target-is-largest probability >= 0.95"
+  },
+  "source_aa1_commit": "667acdd634bfb8c39d40432fe60f0c5ef3bbbeeb",
+  "source_hashes": {
+    "research/outputs/extended_persona_pca/viewer_data.json": "672c617758ace9654708d5f248e094d3005f19ee5237d3918a159bc0e3d813d3",
+    "research/outputs/human_trait_dataset_feasibility/sapa/sapa_model_trait_candidate_crosswalk.csv": "4000593255646b75e509a0e1e194dec52fd3770b58503b3df0d3388bd53d6d37",
+    "research/outputs/persona_trait_ridge_plots/persona_trait_ridge_data.json": "957fe00c57719a4373d0ebd20e8fe07a49ac642eca3c94f3491ed8c4fef881db",
+    "research/outputs/persona_trait_surface_viewer/persona_trait_group_scores.csv": "571c02bd599597d176242ad503061e48f016e257bd13e8b0a09da9d1f0d1512e",
+    "research/outputs/persona_trait_surface_viewer/run_persona_trait_surface.py": "7590758b331627ea7abe907f9b585bc9a71f6e632b454686a4fcebc9a21cd8bb",
+    "research/outputs/persona_trait_surface_viewer/trait_surface_methodology.md": "0c1768ffd9525cb42dcfe317055f5d8ce4857780d4c544b355f524a1f49d50ca",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_pc_trait_family_human_inventory.csv": "49f5b7c5c6b8f74d56ba2a2a410c4b9ebf4e3b4bf2459f013422fba0dfc37896",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_human_mapping_judgments.csv": "cb4ac6b1338ce209ab2a88d24fac67c29abb3e6322055a4475b6b6dbc52e1f3c",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_membership_primary.csv": "cb010ab242747544ee5ba957e64b1565c8207565a76a9523cb5b837331237b97",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_selection_spec.md": "3fa4cad6e3e78f181e7d13bde0a898ea9b5eb9ba429f32c3ece22894bb2863e9",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_pc_correlations_all.csv": "6ccbb08452af12ddf050fc95e083a0e0c4e2e01423c417cf2e9919909fd79424",
+    "research/outputs/qwen_trait_family_human_inventory/verification_report.json": "d191f930c2f6a9d592ea856c8d1f5f0b458b17dbc4bc8a8fc1bc271a6b5ac8b8",
+    "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8"
+  },
+  "specificity_spec_freeze_commit": "595c1e22cc5e7cd7b7e9a6a90046e18b9b103d68",
+  "starting_sha": "667acdd634bfb8c39d40432fe60f0c5ef3bbbeeb",
+  "trait_count": 240
+}

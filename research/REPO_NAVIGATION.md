@@ -1,7 +1,7 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-12
-Last commit when updated: 805f939 (Qwen trait-family SAPA inventory and AA-7 canonical-state reconciliation)
+Last commit when updated: 595c1e2 (Qwen PC-specificity rule frozen before result computation)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -31,13 +31,13 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 453
+- trait analyses: 469
 - visualizations: 242
 
 
 ## Status Counts
 
-- active: 4946
+- active: 4962
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -50,6 +50,8 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/FINDINGS_LEDGER.md`, `research/THREAD_START.md`, and `research/STARTUP_MANIFEST.md` for startup and report continuity. Use `research/paper15_content_ledger.md` as the canonical factual source ledger before drafting Paper 1.5 prose.
 
 ### Active Analyses
+
+Qwen PC-associated versus PC-defining trait specificity: `research/outputs/qwen_pc_trait_specificity/qwen_pc_specificity_report.md` is the readable entry point and `qwen_pc_defining_trait_sets.csv` is the exhaustive all-trait set table. Use `qwen_trait_cross_pc_specificity_all.csv` for all 1,440 trait-target profiles with six signed correlations and paired-bootstrap specificity distributions; `qwen_pc_trait_specificity_pareto.csv` for the all-trait strength/margin/concentration frontier; `qwen_pc_specificity_threshold_sensitivity.csv` for the complete 3 x 3 effect/dominance grid; `qwen_pc_specificity_human_inventory.csv` for the unchanged 48 frozen SAPA judgments plus diagnostic-core intersections; and `pc3_reference_composite_audit.md` for the exact indexed Affiliation composite. The unchanged 328 AA-1 associated memberships contract to 202 PC-defining memberships, including 70 highly concentrated. Verification passes 29 independent checks. This is a Qwen-only inventory refinement: no respondent scoring/projection, correspondence test, cross-model/AA-7 analysis, or next-experiment selection occurred.
 
 Correlation-defined Qwen trait families to SAPA inventory: `research/outputs/qwen_trait_family_human_inventory/qwen_pc_trait_family_human_inventory_report.md` is the readable entry point and `qwen_pc_trait_family_human_inventory.csv` is the exhaustive machine-readable inventory. Use `qwen_trait_pc_correlations_all.csv` for all 1,440 Qwen PC1-PC6 trait associations; `qwen_trait_family_membership_primary.csv` and `qwen_trait_family_threshold_sensitivity.csv` for the frozen `.50` primary and `.40/.60` sensitivity rules; `qwen_trait_family_blinded_mapping_packet.csv` for the neutral-ID packet; and `qwen_trait_family_human_mapping_judgments.csv` for all 48 SAPA proposals. The result inventories 37 unique construct/item candidates and 350 SAPA items across 12 signed families, including two empty poles. This is the requested stopping point: no respondent scoring/projection, cross-model comparison, AA-7 input, correspondence test, or next-experiment selection occurred.
 

@@ -14,13 +14,16 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 
 `research/outputs/sapa_bridge_psychometric_audit/` remains the human-only SAPA measurement gate. AA-7 used its 9 high + 3 moderate labels only to freeze model constructs and projected no respondents. Because the frozen 12 did not beat matched random-real subsets and passed only two core-only persona-span controls, AA-7's preregistered gate for designing a respondent-to-model projection study failed. Independent expert review and reduced-bridge scoring-method work may proceed as human measurement research; AA-7 alone does not justify human/model projection.
 
-`research/outputs/qwen_trait_family_human_inventory/` is the newer requested inspection object. It mechanically defines signed Qwen PC1-PC6 trait families before interpretation and inventories 37 SAPA construct/item candidates and 350 questionnaire items without scoring any respondent. Its PC-blind matching did not use AA-7, Llama/Gemma, role extremes, prior PC labels, or prior AA-1 human-construct hypotheses. This workflow stops at the inventory and does not select a next experiment.
+`research/outputs/qwen_pc_trait_specificity/` is the specificity-refined AA-1 inspection object. It preserves the 328 correlation-defined memberships unchanged, then separates target strength from preferential PC1-PC6 specificity using 2,000 paired role bootstraps. The original families contract to 202 PC-defining memberships, 70 highly concentrated memberships, and an all-trait Pareto view. The frozen 48-row SAPA inventory is retained verbatim and augmented only with defining/high-concentration/Pareto intersections. The exact canonical Qwen Affiliation surface (`empathetic`, `agreeable`, `altruistic` percentile mean) is recovered as a reference, not a threshold target. No respondent is scored or projected, and no cross-model, AA-7, correspondence, or next-experiment analysis enters the refinement.
+
+`research/outputs/qwen_trait_family_human_inventory/` is the association-defined source object. It mechanically defines signed Qwen PC1-PC6 trait families before interpretation and inventories 37 SAPA construct/item candidates and 350 questionnaire items without scoring any respondent. Its PC-blind matching did not use AA-7, Llama/Gemma, role extremes, prior PC labels, or prior AA-1 human-construct hypotheses. This workflow stops at the inventory and does not select a next experiment.
 
 ## Integrated AA-1 Through AA-7 Entry Points (2026-09-12)
 
 - AA-1 human SAPA psychometric structure: `research/outputs/sapa_bridge_psychometric_audit/sapa_bridge_psychometric_audit_report.md`
 - AA-1 Qwen-first human-construct sources: `research/outputs/qwen_pc_human_construct_bridge/qwen_pc_human_construct_bridge_report.md`
 - AA-1 correlation-defined family/SAPA inventory: `research/outputs/qwen_trait_family_human_inventory/qwen_pc_trait_family_human_inventory_report.md`
+- AA-1 PC-specificity refinement: `research/outputs/qwen_pc_trait_specificity/qwen_pc_specificity_report.md`
 - AA-2 externally anchored Big Five and viewer integration: `research/outputs/externally_anchored_big_five/externally_anchored_big_five_report.md`
 - AA-3 extended persona PCA dimensionality: `research/outputs/extended_persona_pca/extended_persona_pca_report.md`
 - AA-4 Qwen trait sparsity and generic-basis controls: `research/outputs/qwen_trait_sparsity_prediction/qwen_trait_sparsity_report.md`
@@ -121,6 +124,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/sapa_bridge_psychometric_audit/`: AA-1 human-only psychometric contraction of the frozen semantic bridge, with verification and artifact inventory.
 - `research/outputs/qwen_pc_human_construct_bridge/`: separate Claude-review agreement, corrected SAPA metadata, 126-construct library, and frozen Qwen-only discovery hypotheses.
 - `research/outputs/qwen_trait_family_human_inventory/`: frozen Qwen trait-family selection, neutral-ID SAPA mapping packet, complete measurement inventory, 34-check verification, and artifact hashes.
+- `research/outputs/qwen_pc_trait_specificity/`: associated-versus-defining Qwen PC1-PC6 trait sets, paired-bootstrap specificity, all-trait Pareto frontiers, sensitivity, exact PC3 reference-composite audit, frozen-SAPA coverage refinement, 29-check verification, and hashes.
 - `research/outputs/externally_anchored_big_five/`: AA-2 frozen external Big Five mappings, multimodel geometry tests, viewer integration report, and artifact inventory.
 - `research/outputs/extended_persona_pca/`: AA-3 full-rank dimensionality/stability audit and interactive PC1-PC10 viewer.
 - `research/outputs/qwen_trait_sparsity_prediction/`: AA-4 compact-feature and matched generic-basis audit of Qwen trait-to-PC prediction.

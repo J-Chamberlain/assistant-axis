@@ -4,6 +4,12 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/runtime/CURRENT_RESULTS.md
 # Status: COMPLETE
 
+## 2026-09-12 — Qwen PC-associated versus PC-defining trait specificity
+
+Completed `research/outputs/qwen_pc_trait_specificity/` from validated AA-1 commit `667acdd634bfb8c39d40432fe60f0c5ef3bbbeeb`. The primary rule was committed before results: preserve AA-1 association membership and require the target PC to be the largest absolute PC1-PC6 correlation in at least 95% of 2,000 paired fixed-seed role bootstraps. The 328 associated memberships contract to 202 PC-defining and 70 highly concentrated memberships. PC1 remains broad at 47/35 positive associated/defining and 123/95 negative; PC2 is 31/12 and 44/23; PC3 is 42/18 and 31/18; PC4 retains one defining negative trait; PC5-PC6 retain none.
+
+The exact canonical Qwen Affiliation visualization composite was recovered as the equal-weight mean of within-Qwen percentiles for `empathetic`, `agreeable`, and `altruistic`. It has PC3 r=-0.944857, largest off-target PC1 r=-0.110061, specificity margin 0.834796, and PC1-PC6 concentration 0.978101. The frozen 48-row SAPA judgments are unchanged; explicit mapped coverage is 145/328 associated memberships versus 93/202 defining memberships, so the apparent match becomes more focused and uneven rather than uniformly stronger. Independent verification passes 29 checks with an algebraically separate bootstrap, independent Pareto reconstruction, exact AA-1/formula reproduction, deterministic rerun, hashes, privacy, and Qwen-only firewalls. No respondent was scored/projected; no Llama/Gemma comparison, AA-7 result, correspondence test, or next experiment entered the workflow.
+
 ## 2026-09-12 — Correlation-defined Qwen trait families to SAPA measurement inventory
 
 Completed `research/outputs/qwen_trait_family_human_inventory/` from the validated Qwen-first AA-1 source commit. All 1,440 Qwen PC1-PC6 x 240 trait associations are saved. The family rule was frozen before semantic description: absolute Pearson r at least 0.50, PC-local BH-FDR q below 0.01, and at least 95% sign stability across 2,000 fixed-seed role bootstraps. It selects 328 signed memberships spanning 238 unique traits; positive/negative family sizes are 47/123, 31/44, 42/31, 2/6, 1/0, and 0/1 for PC1 through PC6.

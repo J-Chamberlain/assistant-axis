@@ -789,6 +789,7 @@ Status mapping:
 | Trait-profile provenance audit | Required technical provenance; too detailed for main flow. |
 | Trait-profile PC predictor held-out generalization and Llama/Gemma replication | Stronger LOPO/family/permutation/synthetic support for the same-space trait-geometry statement across three saved vector sets; include with explicit basis-coverage, PC-semantic, and no-behavioral-validation caveats. |
 | Qwen trait sparsity and basis-coverage audit | Essential qualification of the complete-trait predictor: compact real traits are unusually efficient, while the 240-trait near-ceiling result is substantially generic high-dimensional basis coverage. |
+| Qwen PC-associated versus PC-defining trait specificity | Useful appendix refinement of axis labels: report the 328-to-202 contraction, PC1/PC3 focal examples, all-trait Pareto leaders, and exact PC3 Affiliation composite with the PC1-PC6 concentration caveat. Keep the SAPA coverage portion as future-measurement context, not model/human evidence. |
 | Big Five provenance audit details | Main paper needs conclusion; full dependency details belong in appendix. |
 | Residual manifold and SVD component details | Main paper can cite metrics; component-level detail belongs in appendix. |
 
@@ -803,3 +804,15 @@ Status mapping:
 | SAPA/NLSY97 feasibility audit, occupational-centroid stability study, provisional/narrow bridge, human-only SAPA structure audit, Qwen-derived construct source, and correlation-defined family inventory as Paper 1.5 model results | Use only as carefully bounded future-work context; the narrow audit contracts the direct bridge to 9 high + 3 moderate links, the broader inventory exposes available constructs/items for numerical Qwen families, and AA-5 identifies selected stable cells. None establishes construct equivalence, model correspondence, or a respondent-scoring solution, none belongs in the model-geometry evidence chain, and the family-inventory task deliberately selected no next experiment. |
 | Adaptive extraction operational details beyond brief caveat | Methodological due diligence; not the headline contribution. |
 | Speculative local activation-cloud Paper 2 claims | Future scope; only use if explicitly framed as distributional motivation. |
+
+## 12. Qwen PC-Specificity Refinement Addendum (2026-09-12)
+
+Observed model-side result: the frozen AA-1 association rule yields 328 signed Qwen PC-trait memberships. Adding the separately frozen requirement that the target PC be the largest absolute PC1-PC6 correlation in at least 95% of 2,000 paired role bootstraps retains 202 PC-defining memberships; 70 have observed PC1-PC6 concentration at least 0.75. Associated/defining counts by positive/negative pole are PC1 47/35 and 123/95, PC2 31/12 and 44/23, PC3 42/18 and 31/18, PC4 2/0 and 6/1, PC5 1/0 and 0/0, and PC6 0/0 and 1/0.
+
+PC1 wording implication: `transparent`, `factual`, `analytical`, and `methodical` are highly concentrated PC1-positive labels. `conscientious` is not PC1-specific because PC1 r=0.693 and PC2 r=-0.699 are nearly tied. This supports disciplined, factual, externally legible characterization while qualifying a broad Conscientiousness shorthand.
+
+PC3 wording implication: the focal antagonistic traits `callous`, `cynical`, and `pessimistic` and cooperative-care traits `benevolent`, `nurturing`, `supportive`, and `altruistic` are highly concentrated. `agreeable` is moderately concentrated, while `empathetic`, `accommodating`, and `conciliatory` are broad/cross-PC. The exact prior Affiliation surface is an equal-weight mean of within-Qwen percentiles for `empathetic`, `agreeable`, and `altruistic`; the composite has PC3 r=-0.944857, largest off-target PC1 r=-0.110061, margin 0.834796, ratio 8.584854, and PC1-PC6 concentration 0.978101.
+
+Human-measurement boundary: the frozen 48-row SAPA judgments are unchanged. Their explicit trait lists cover 145/328 associated memberships and 93/202 defining memberships. This is a qualitatively more focused and uneven inventory of measurement availability, not a human/model correspondence analysis. No respondent was scored or projected, and no Llama/Gemma or AA-7 result entered the refinement.
+
+Paper use: appendix/supporting interpretation only. The concentration fraction is within Qwen PC1-PC6, not uniquely explained activation-space variance. The primary report is `research/outputs/qwen_pc_trait_specificity/qwen_pc_specificity_report.md`; exact outputs and 29-check verification are indexed in the accompanying artifact inventory.

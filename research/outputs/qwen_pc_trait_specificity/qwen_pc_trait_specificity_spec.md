@@ -74,12 +74,20 @@ Sensitivity counts additionally use concentration cutoffs 0.60, 0.70, and
 
 ## Pareto view
 
-Within each signed PC-associated family, identify the Pareto frontier for
-higher target absolute correlation, higher specificity margin, and higher
-observed concentration fraction. Trait A dominates trait B if A is at least as
-large on all three metrics (tolerance `1e-12`) and strictly larger on at least
-one. This frontier is threshold-light with respect to specificity, but retains
-the original AA-1 association family as its declared universe.
+Within each PC and observed target-correlation pole, identify the Pareto
+frontier across all 240 traits for higher target absolute correlation, higher
+specificity margin, and higher observed concentration fraction. Trait A
+dominates trait B if A is at least as large on all three metrics (tolerance
+`1e-12`) and strictly larger on at least one. This all-trait universe makes the
+view threshold-light; membership in the original AA-1 associated family is
+retained as a separate flag.
+
+Scope clarification recorded after the first mechanical run but before final
+reporting: the initial text limited the frontier to associated traits. The
+all-trait universe above follows the request's threshold-light purpose more
+literally. This clarification does not alter the frozen primary PC-defining
+rule, its bootstrap probability, any single-trait metric, or any PC-defining
+membership.
 
 ## Sensitivity grid
 
@@ -116,4 +124,3 @@ PC/pole. Family-level proposals that do not enumerate a narrower covered subset
 are treated as covering the associated traits listed by the frozen judgment,
 not as new semantic judgments. Report covered and unmatched diagnostic traits;
 do not score respondents or interpret coverage as human/model correspondence.
-
