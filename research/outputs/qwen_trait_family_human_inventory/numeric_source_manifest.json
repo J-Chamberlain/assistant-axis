@@ -1,0 +1,129 @@
+{
+  "analysis": "Correlation-defined Qwen trait families",
+  "association_row_count": 1440,
+  "bootstrap": {
+    "batch_size": 50,
+    "master_seed": 20260912,
+    "pc_seeds": {
+      "PC1": 20260913,
+      "PC2": 20260914,
+      "PC3": 20260915,
+      "PC4": 20260916,
+      "PC5": 20260917,
+      "PC6": 20260918
+    },
+    "resamples": 2000
+  },
+  "canonical_pc1_pc3_max_abs_reproduction_error": 1.207027046312703e-06,
+  "compute": "CPU only; no GPU, RunPod, model inference, activation extraction, response generation, or external model API.",
+  "discovery_model": "Qwen/Qwen3-32B",
+  "family_counts": {
+    "PC1": {
+      "negative": {
+        "abs_r_0.40": 132,
+        "abs_r_0.50": 123,
+        "abs_r_0.60": 109
+      },
+      "positive": {
+        "abs_r_0.40": 56,
+        "abs_r_0.50": 47,
+        "abs_r_0.60": 42
+      }
+    },
+    "PC2": {
+      "negative": {
+        "abs_r_0.40": 59,
+        "abs_r_0.50": 44,
+        "abs_r_0.60": 36
+      },
+      "positive": {
+        "abs_r_0.40": 44,
+        "abs_r_0.50": 31,
+        "abs_r_0.60": 18
+      }
+    },
+    "PC3": {
+      "negative": {
+        "abs_r_0.40": 37,
+        "abs_r_0.50": 31,
+        "abs_r_0.60": 22
+      },
+      "positive": {
+        "abs_r_0.40": 61,
+        "abs_r_0.50": 42,
+        "abs_r_0.60": 28
+      }
+    },
+    "PC4": {
+      "negative": {
+        "abs_r_0.40": 13,
+        "abs_r_0.50": 6,
+        "abs_r_0.60": 1
+      },
+      "positive": {
+        "abs_r_0.40": 5,
+        "abs_r_0.50": 2,
+        "abs_r_0.60": 0
+      }
+    },
+    "PC5": {
+      "negative": {
+        "abs_r_0.40": 0,
+        "abs_r_0.50": 0,
+        "abs_r_0.60": 0
+      },
+      "positive": {
+        "abs_r_0.40": 2,
+        "abs_r_0.50": 1,
+        "abs_r_0.60": 0
+      }
+    },
+    "PC6": {
+      "negative": {
+        "abs_r_0.40": 6,
+        "abs_r_0.50": 1,
+        "abs_r_0.60": 0
+      },
+      "positive": {
+        "abs_r_0.40": 0,
+        "abs_r_0.50": 0,
+        "abs_r_0.60": 0
+      }
+    }
+  },
+  "firewall": {
+    "aa7_paths_opened": [],
+    "family_selection_inputs": [
+      "canonical Qwen role-by-trait activation-cosine matrix",
+      "Qwen-only PC1-PC6 role coordinates",
+      "canonical trait definitions"
+    ],
+    "llama_or_gemma_values_loaded": false,
+    "models_used": [
+      "Qwen/Qwen3-32B"
+    ],
+    "prior_hypothesis_files_opened": []
+  },
+  "generated_at_utc": "2026-09-12T19:00:00Z",
+  "pc_count": 6,
+  "primary_member_count": 328,
+  "role_count": 275,
+  "source_hashes": {
+    "research/outputs/extended_persona_pca/viewer_data.json": "672c617758ace9654708d5f248e094d3005f19ee5237d3918a159bc0e3d813d3",
+    "research/outputs/human_trait_dataset_feasibility/sapa/sapa_model_trait_candidate_crosswalk.csv": "4000593255646b75e509a0e1e194dec52fd3770b58503b3df0d3388bd53d6d37",
+    "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8",
+    "research/visualizations/geometry_viz_data.json": "1b15d8e3425bc3d51032919157eb683f1358f353f4ee071a18d06347a792ec6d"
+  },
+  "thresholds": {
+    "BH_FDR_q_strictly_below": 0.01,
+    "bootstrap_sign_stability_at_least": 0.95,
+    "primary_absolute_pearson_r": 0.5,
+    "sensitivity_absolute_pearson_r": [
+      0.4,
+      0.5,
+      0.6
+    ]
+  },
+  "trait_count": 240,
+  "unique_primary_trait_count": 238
+}
