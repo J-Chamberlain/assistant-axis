@@ -1,7 +1,7 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-12
-Last commit when updated: 68dc2f8 (AA-7 artifact inventory; navigation update follows on this branch)
+Last commit when updated: d1a953a (validated AA-7 merge; final metadata reconciliation follows)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
