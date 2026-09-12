@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-11T23:26:39Z`
-- Current branch: `codex/aa1-sapa-psychometric-audit`
-- generation base commit: `c5ea17d694150f89e86e443b95118cf73c1bb19d`
+- Generated timestamp UTC: `2026-09-12T00:35:31Z`
+- Current branch: `codex/aa1-aa5-integration`
+- generation base commit: `8a512401751799fac95324ce638d170a02d45e45`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -33,52 +33,52 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
-- Latest commit touching file: `5cecec530ad149a0ac0f884470e2c2d6898bde1a`
-- generation base commit: `c5ea17d694150f89e86e443b95118cf73c1bb19d`
-- Git blob hash: `2f4e44aa60db27654963f438618604206ea44c24`
-- SHA256 content hash: `5665da2c56ab2de5d948c238266fa1b0fe5a9b31355de95446470a61897567fb`
-- Byte count: `177876`
+- Latest commit touching file: `8a512401751799fac95324ce638d170a02d45e45`
+- generation base commit: `8a512401751799fac95324ce638d170a02d45e45`
+- Git blob hash: `b757686d0038668c64b8cd5bdd34ae9695bace2c`
+- SHA256 content hash: `7d1cd156a0566279fae76d11ba0a845972ce79f98dce38a4da0bb9d7b3ba9db2`
+- Byte count: `182509`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
   - Last updated: `2026-09-11`
-  - Last commit: `c5ea17d (completed the human-only SAPA bridge psychometric structure audit)`
+  - Last commit: `d918ca3 (integrated AA-1 through AA-5 claims, state, provenance, navigation, Paper 1.5, interpretation, runtime, and sticky-note layers)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-11T23:26:39Z`
+- Generated timestamp UTC: `2026-09-12T00:35:31Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
-- Latest commit touching file: `cac5c0cefd94de83bdf9eac60d39f6517820d94d`
-- generation base commit: `c5ea17d694150f89e86e443b95118cf73c1bb19d`
-- Git blob hash: `cdc415f8de439401bce993ebcd82dd5f4578e958`
-- SHA256 content hash: `8c89a3b2e95ec50443d5e22d6541adac85d88f9c1d468a2c1ea01ee25565c64c`
-- Byte count: `31442`
+- Latest commit touching file: `d918ca3a9c73d05a8f5bb21c77af20f516a90587`
+- generation base commit: `8a512401751799fac95324ce638d170a02d45e45`
+- Git blob hash: `a05fc2fecaabfc4f9cfbc49c4f010a1d4d912cf6`
+- SHA256 content hash: `e6ee905f89c538ffbe4f67fe8ac39615c01d687b2f51efb47b439ba1824a4bb0`
+- Byte count: `38072`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
   - Last updated: `2026-09-11`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-11T23:26:39Z`
+- Generated timestamp UTC: `2026-09-12T00:35:31Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
-- Latest commit touching file: `0693aaf76e5073c37377024130dbc2d0e80424fd`
-- generation base commit: `c5ea17d694150f89e86e443b95118cf73c1bb19d`
-- Git blob hash: `4c50a36065107289371fdf9556ff4e01529b1443`
-- SHA256 content hash: `e821e687c9d34069f7de9fb13a3ea6821614354ec8b980cfc2add51e65ec8d87`
-- Byte count: `45298`
+- Latest commit touching file: `c1f241bd94a0ac0fd6e5a21a08392eda553e25bf`
+- generation base commit: `8a512401751799fac95324ce638d170a02d45e45`
+- Git blob hash: `4b4fe49c1a69e57e2a6e70edee5b7d852c907893`
+- SHA256 content hash: `6ad43720b0d802411f686dcfbe5146ef5f89c301b5697da2c63e52e2ecd5b5cc`
+- Byte count: `48203`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical claim status`
   - Last updated: `2026-09-11`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-11T23:26:39Z`
+- Generated timestamp UTC: `2026-09-12T00:35:31Z`
 
 ## Maintenance Rule
 
