@@ -57,6 +57,12 @@
       ]
     },
     "primary_inference": "For each model and target scope, compare human_supported_12 aggregate normalized geometric error on the fixed outer splits with each matched bank distribution; lower error is better",
+    "evidence_strength_rule": {
+      "cross_model_strong": "Human-supported 12 beats both random-real and persona-span controls at empirical p <= 0.05 in all three models for both target scopes",
+      "cross_model_moderate": "Human-supported 12 beats random-real at empirical p <= 0.05 in at least two models for both scopes, with no claim of unique semantic privilege unless persona-span is also beaten",
+      "weak_or_absent": "The cross-model-moderate rule is not met"
+    },
+    "later_human_respondent_projection_design_gate": "A later design is justified, but not executed, only if human-supported 12 beats both random-real and persona-span at p <= 0.05 in at least two models for both scopes, neither remaining model shows worse-than-median random-real performance in either scope, both Qwen-reference alignment pairs beat their permutation nulls at p <= 0.05, and at least six frozen traits achieve MODERATE or HIGH cross-model recurrence in PC1-PC6",
     "random_controls": {
       "draws_per_model": 500,
       "empirical_one_sided_p": "(1 + number of null banks with error <= human-supported error) / 501",
