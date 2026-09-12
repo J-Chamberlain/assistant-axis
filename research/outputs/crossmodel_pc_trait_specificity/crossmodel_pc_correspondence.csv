@@ -1,0 +1,13 @@
+qwen_pc,target_model_key,target_model,best_target_pc,signed_pearson_r,absolute_pearson_r,direct_viewer_reproduction_r,direct_reproduction_abs_error,orientation_flip,structural_note
+PC1,llama,Llama-3.3-70B,PC2,-0.6759988408381155,0.6759988408381155,-0.6759988408381161,6.661338147750939e-16,True,Qwen PC1/PC2 and LLaMA PC1/PC2 are partly rotated; do not force one-axis equivalence.
+PC1,gemma,Gemma-2-27B,PC1,0.9525945368765986,0.9525945368765986,0.9525945368765979,6.661338147750939e-16,False,"Correlation identifies a corresponding role-score direction, not latent homology."
+PC2,llama,Llama-3.3-70B,PC1,0.6916005766860939,0.6916005766860939,0.6916005766860933,5.551115123125783e-16,False,Qwen PC1/PC2 and LLaMA PC1/PC2 are partly rotated; do not force one-axis equivalence.
+PC2,gemma,Gemma-2-27B,PC2,0.9220692179842606,0.9220692179842606,0.9220692179842604,1.1102230246251565e-16,False,"Correlation identifies a corresponding role-score direction, not latent homology."
+PC3,llama,Llama-3.3-70B,PC4,0.8022088595205795,0.8022088595205795,0.8022088595205794,1.1102230246251565e-16,False,"Correlation identifies a corresponding role-score direction, not latent homology."
+PC3,gemma,Gemma-2-27B,PC3,0.80574480364072,0.80574480364072,0.8057448036407195,4.440892098500626e-16,False,"Correlation identifies a corresponding role-score direction, not latent homology."
+PC4,llama,Llama-3.3-70B,PC3,0.6898457253082484,0.6898457253082484,0.6898457253082488,4.440892098500626e-16,False,"Correlation identifies a corresponding role-score direction, not latent homology."
+PC4,gemma,Gemma-2-27B,PC4,-0.628242434213033,0.628242434213033,-0.628242434213033,0.0,True,"Correlation identifies a corresponding role-score direction, not latent homology."
+PC5,llama,Llama-3.3-70B,PC5,0.6882928519226665,0.6882928519226665,0.6882928519226662,3.3306690738754696e-16,False,"Correlation identifies a corresponding role-score direction, not latent homology."
+PC5,gemma,Gemma-2-27B,PC5,-0.6511572662495112,0.6511572662495112,-0.6511572662495111,1.1102230246251565e-16,True,"Correlation identifies a corresponding role-score direction, not latent homology."
+PC6,llama,Llama-3.3-70B,PC6,0.5051376797520113,0.5051376797520113,0.5051376797520114,1.1102230246251565e-16,False,"Correlation identifies a corresponding role-score direction, not latent homology."
+PC6,gemma,Gemma-2-27B,PC8,-0.5695016863668106,0.5695016863668106,-0.5695016863668105,1.1102230246251565e-16,True,"Correlation identifies a corresponding role-score direction, not latent homology."

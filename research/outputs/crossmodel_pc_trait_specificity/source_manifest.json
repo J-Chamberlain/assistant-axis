@@ -1,0 +1,65 @@
+{
+  "analysis": "AA-10 cross-model PC trait specificity",
+  "generated_at_utc": "2026-09-12T23:08:38Z",
+  "model_identities": {
+    "qwen": "Qwen/Qwen3-32B",
+    "llama": "Llama-3.3-70B",
+    "gemma": "Gemma-2-27B"
+  },
+  "role_count_each": 275,
+  "trait_count_each": 240,
+  "pcs_evaluated": [
+    "PC1",
+    "PC2",
+    "PC3",
+    "PC4",
+    "PC5",
+    "PC6"
+  ],
+  "frozen_sources": {
+    "association": "667acdd634bfb8c39d40432fe60f0c5ef3bbbeeb",
+    "strict_axis_specificity": "6497d28383aac33ea9f61b6ce2ac2ff195dccae4",
+    "broader_specificity_tip": "db782414c6708f6fd2c46f3e5b08d0e61668b14d",
+    "AA8_interpretation": "18c9fe37f41991415c3e14af60ec4e1876eed3fb"
+  },
+  "association_rule": {
+    "absolute_pearson_r_at_least": 0.5,
+    "within_pc_BH_FDR_q_strictly_below": 0.01,
+    "bootstrap_sign_stability_at_least": 0.95,
+    "resamples": 2000,
+    "pc_seeds": {
+      "PC1": 20260913,
+      "PC2": 20260914,
+      "PC3": 20260915,
+      "PC4": 20260916,
+      "PC5": 20260917,
+      "PC6": 20260918
+    }
+  },
+  "specificity_rule": {
+    "all_six_pcs_in_denominator": true,
+    "formula": "r_target^2 / sum(r_PC1^2 ... r_PC6^2)",
+    "target_strict_largest_absolute_correlation": true,
+    "bootstrap_target_dominance_probability_at_least": 0.95,
+    "purity_at_least": 0.7,
+    "resamples": 2000,
+    "seed": 20260920
+  },
+  "high_concentration_threshold": 0.75,
+  "broader_specificity": {
+    "target_largest_ties_pass": true,
+    "bootstrap_target_dominance_probability_at_least": 0.95,
+    "resamples": 2000,
+    "seed": 20260912
+  },
+  "source_hashes": {
+    "research/outputs/human_trait_dataset_feasibility/sapa/sapa_model_trait_candidate_crosswalk.csv": "4000593255646b75e509a0e1e194dec52fd3770b58503b3df0d3388bd53d6d37",
+    "research/outputs/extended_persona_pca/viewer_data.json": "672c617758ace9654708d5f248e094d3005f19ee5237d3918a159bc0e3d813d3",
+    "research/outputs/extended_persona_pca/full_pca_spectrum.csv": "2f1e9123ce41a513f71057ba6b3091563da89f81c1b83cd9689dabcfac52aeaa",
+    "research/outputs/extended_persona_pca/cross_model_pc_score_correspondence.csv": "f519ec847cd3deaf8a7fc739833606ea51f481acf9fec93408ea74c0c4e5c991",
+    "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8",
+    "research/outputs/multimodel_trait_profile_pc_predictor/llama/persona_trait_similarity_matrix.csv": "74b2cb886967159fe4580b2dc8066cfe3ba789bedde7f0f380ee95240a3ed947",
+    "research/outputs/multimodel_trait_profile_pc_predictor/gemma/persona_trait_similarity_matrix.csv": "798c0618b9e468eec2e6d9083c96b2eef3d414f15f29d93180ff679614fea427"
+  },
+  "compute_boundary": "CPU only; saved artifacts only; no human respondent data, projection, model inference, activation extraction, GPU, RunPod, or external model API."
+}
