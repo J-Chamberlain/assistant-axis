@@ -1,0 +1,57 @@
+{
+  "aa1_validated_source_commit": "313c5cff6e071d707d37b1318343cde4ed510725",
+  "analysis": "Correlation-defined Qwen trait families to SAPA human-measurement inventory",
+  "blind_mapping": {
+    "candidate_universe": "all 126 documented constructs in human_construct_library.csv plus item-level fallback where no adequate scale exists",
+    "family_id_seed": 20260919,
+    "judgments_frozen_commit": "9c5aad1",
+    "packet_frozen_commit": "70f7617",
+    "prior_hypothesis_files_used": []
+  },
+  "branch": "codex/aa1-qwen-trait-family-human-inventory",
+  "canonical_master_observed_at_start": "8f4e589df5d92217e56f76a978d51df07af5aa3a",
+  "compute": "CPU only; no GPU, RunPod, model inference, activation extraction, response generation, or external model API.",
+  "firewall": {
+    "AA7_result_paths_used": [],
+    "Llama_or_Gemma_analysis_used": false,
+    "human_model_projection_performed": false,
+    "human_respondent_rows_loaded_or_scored": false,
+    "models_used": [
+      "Qwen/Qwen3-32B"
+    ],
+    "next_experiment_selected": false,
+    "prior_AA1_hypothesis_files_used": []
+  },
+  "generated_at_utc": "2026-09-12T20:30:00Z",
+  "privacy": "No respondent-level human records were read for this inventory or committed.",
+  "selection": {
+    "BH_FDR_q_strictly_below": 0.01,
+    "bootstrap_sign_stability_at_least": 0.95,
+    "primary_absolute_pearson_r": 0.5,
+    "sensitivity_absolute_pearson_r": [
+      0.4,
+      0.5,
+      0.6
+    ]
+  },
+  "source_counts": {
+    "SAPA_construct_library": 126,
+    "SAPA_item_dictionary": 696,
+    "qwen_pcs": 6,
+    "qwen_roles": 275,
+    "qwen_traits": 240
+  },
+  "source_hashes": {
+    "research/outputs/human_trait_dataset_feasibility/sapa/sapa_item_dictionary.csv": "6297d7fc351cea2121a1a211c5203f9e1bc07d0157c551087e0820b8bbd6bda9",
+    "research/outputs/qwen_pc_human_construct_bridge/human_construct_library.csv": "7aadc382dfd3d18da6dce43be945cc6f5ae8dc8d124dfd9f0a8a8c8fc4864fd0",
+    "research/outputs/qwen_pc_human_construct_bridge/human_construct_library_sources.md": "c9fbae784f4120c2a59a283ce94c115f4ecb08508033d22d7bfb6f214792209f",
+    "research/outputs/qwen_pc_human_construct_bridge/sapa_flagged_item_quality_audit.csv": "bb608b06295d7981f58cda7a725e2c31c62706bae714193df03f1cb93c6a883f",
+    "research/outputs/qwen_pc_human_construct_bridge/verification_report.json": "ef4e6cdc2c0023b3e30b3e8ebad2b320020b071953f7e40f44fe83e9cfc264a6",
+    "research/outputs/qwen_trait_family_human_inventory/numeric_source_manifest.json": "43e5e92015f85ae3c5e38e53586c75eb544b1812e9db0bd8d915f12423306628",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_blinded_mapping_packet.csv": "3c4d48de462d4655d8510fc93cfef580d442ba29f0d483eaa966d016c1e1d65e",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_human_mapping_judgments.csv": "cb4ac6b1338ce209ab2a88d24fac67c29abb3e6322055a4475b6b6dbc52e1f3c",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_membership_primary.csv": "cb010ab242747544ee5ba957e64b1565c8207565a76a9523cb5b837331237b97",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_summaries.csv": "fbec2e386bfde50bd88d695398ac5315b981c254d4811d98a22241e889350cdb",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_pc_correlations_all.csv": "6ccbb08452af12ddf050fc95e083a0e0c4e2e01423c417cf2e9919909fd79424"
+  }
+}

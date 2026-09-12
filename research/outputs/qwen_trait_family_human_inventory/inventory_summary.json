@@ -1,0 +1,178 @@
+{
+  "families": {
+    "FAM-01": {
+      "best_match_category": "FACET_OR_SUBCOMPONENT",
+      "human_candidate_count": 4,
+      "human_unique_item_count": 18,
+      "pc": "PC6",
+      "pole": "negative",
+      "qwen_member_count": 1
+    },
+    "FAM-02": {
+      "best_match_category": "PARTIAL_FAMILY_MATCH",
+      "human_candidate_count": 4,
+      "human_unique_item_count": 31,
+      "pc": "PC4",
+      "pole": "positive",
+      "qwen_member_count": 2
+    },
+    "FAM-03": {
+      "best_match_category": "PARTIAL_FAMILY_MATCH",
+      "human_candidate_count": 5,
+      "human_unique_item_count": 50,
+      "pc": "PC1",
+      "pole": "positive",
+      "qwen_member_count": 47
+    },
+    "FAM-04": {
+      "best_match_category": "STRONG_FAMILY_MATCH",
+      "human_candidate_count": 3,
+      "human_unique_item_count": 24,
+      "pc": "PC5",
+      "pole": "positive",
+      "qwen_member_count": 1
+    },
+    "FAM-05": {
+      "best_match_category": "STRONG_FAMILY_MATCH",
+      "human_candidate_count": 5,
+      "human_unique_item_count": 78,
+      "pc": "PC3",
+      "pole": "positive",
+      "qwen_member_count": 42
+    },
+    "FAM-06": {
+      "best_match_category": "PARTIAL_FAMILY_MATCH",
+      "human_candidate_count": 4,
+      "human_unique_item_count": 45,
+      "pc": "PC4",
+      "pole": "negative",
+      "qwen_member_count": 6
+    },
+    "FAM-07": {
+      "best_match_category": "PARTIAL_FAMILY_MATCH",
+      "human_candidate_count": 5,
+      "human_unique_item_count": 68,
+      "pc": "PC2",
+      "pole": "negative",
+      "qwen_member_count": 44
+    },
+    "FAM-08": {
+      "best_match_category": "NO_DEFENSIBLE_MATCH",
+      "human_candidate_count": 0,
+      "human_unique_item_count": 0,
+      "pc": "PC5",
+      "pole": "negative",
+      "qwen_member_count": 0
+    },
+    "FAM-09": {
+      "best_match_category": "PARTIAL_FAMILY_MATCH",
+      "human_candidate_count": 5,
+      "human_unique_item_count": 69,
+      "pc": "PC2",
+      "pole": "positive",
+      "qwen_member_count": 31
+    },
+    "FAM-10": {
+      "best_match_category": "STRONG_FAMILY_MATCH",
+      "human_candidate_count": 5,
+      "human_unique_item_count": 81,
+      "pc": "PC3",
+      "pole": "negative",
+      "qwen_member_count": 31
+    },
+    "FAM-11": {
+      "best_match_category": "STRONG_FAMILY_MATCH",
+      "human_candidate_count": 6,
+      "human_unique_item_count": 92,
+      "pc": "PC1",
+      "pole": "negative",
+      "qwen_member_count": 123
+    },
+    "FAM-12": {
+      "best_match_category": "NO_DEFENSIBLE_MATCH",
+      "human_candidate_count": 0,
+      "human_unique_item_count": 0,
+      "pc": "PC6",
+      "pole": "positive",
+      "qwen_member_count": 0
+    }
+  },
+  "family_count_including_empty_poles": 12,
+  "family_level_match_category_counts": {
+    "FACET_OR_SUBCOMPONENT": 1,
+    "NO_DEFENSIBLE_MATCH": 2,
+    "PARTIAL_FAMILY_MATCH": 5,
+    "STRONG_FAMILY_MATCH": 4
+  },
+  "generated_at_utc": "2026-09-12T20:30:00Z",
+  "human_constructs_used_in_multiple_families": 7,
+  "maximum_family_reuse_per_human_construct": 4,
+  "maximum_family_reuse_per_sapa_item": 6,
+  "most_reused_human_constructs": [
+    {
+      "families": [
+        "FAM-01",
+        "FAM-03",
+        "FAM-06",
+        "FAM-07"
+      ],
+      "family_count": 4,
+      "human_construct_id": "BFAS:BFAS:O:I"
+    },
+    {
+      "families": [
+        "FAM-03",
+        "FAM-07"
+      ],
+      "family_count": 2,
+      "human_construct_id": "HEXACO:H:C:PE"
+    },
+    {
+      "families": [
+        "FAM-04",
+        "FAM-11"
+      ],
+      "family_count": 2,
+      "human_construct_id": "HEXACO:H:O:C"
+    },
+    {
+      "families": [
+        "FAM-02",
+        "FAM-11"
+      ],
+      "family_count": 2,
+      "human_construct_id": "HEXACO:H:X:E"
+    },
+    {
+      "families": [
+        "FAM-05",
+        "FAM-10"
+      ],
+      "family_count": 2,
+      "human_construct_id": "IPIP100:B5:A"
+    },
+    {
+      "families": [
+        "FAM-03",
+        "FAM-07"
+      ],
+      "family_count": 2,
+      "human_construct_id": "IPIP100:B5:C"
+    },
+    {
+      "families": [
+        "FAM-07",
+        "FAM-09"
+      ],
+      "family_count": 2,
+      "human_construct_id": "IPIP100:B5:E"
+    }
+  ],
+  "primary_membership_rows": 328,
+  "qwen_pc_count": 6,
+  "qwen_role_count": 275,
+  "sapa_items_used_in_multiple_families": 144,
+  "unique_human_construct_or_item_candidates": 37,
+  "unique_qwen_traits_selected": 238,
+  "unique_sapa_questionnaire_items_represented": 350
+}
