@@ -10,19 +10,20 @@ Paper 1.5 is active: **Interpreting Persona Activation Geometry**. The core cont
 
 Paper 2 is active planning: local centroid perturbation and local persona-manifold mapping around anchors such as Trickster, Actor, Therapist, and Spy. Older dyad/contagion/attractor-collapse work is archived as future dynamics work.
 
-## Current Human-Data Gate (2026-09-11)
+## Current Human-Data Gate (2026-09-12)
 
-`research/outputs/sapa_bridge_psychometric_audit/` is the current entry point for the human-only SAPA measurement gate. A rubric frozen before covariance inspection leaves 9 high + 3 moderate of 45 direct semantic links, with 30 redundant/broad and 3 insufficient single-item proxies. The direct proxy matrix has 6 parallel-analysis components and participation-ratio effective rank 12.44; complete respondent profiles do not exist under SAPA planned administration. This supports independent expert review and a separate reduced-bridge scoring-method study, not human/model projection or a correspondence claim.
+`research/outputs/qwen_pc_human_construct_bridge/` is the current entry point for the human-construct bridge gate. A genuinely separate Claude Opus 5 blinded semantic review agrees exactly with the frozen Codex review on 69/78 candidates (kappa 0.785), while nine rows remain discordant and eight item wording/direction flags are explicitly audited. The analysis then changes level: a sourced 126-construct domain/aspect/facet inventory is matched to frozen Qwen-only PC1-PC6 signatures, yielding 37 discovery hypotheses (4 strong, 12 partial, 21 facet/subcomponent; 36 SAPA-available). PC1 recovers broad Conscientiousness/Stability despite its exclusion from the narrow 12-trait proxy set; PC3 retains a strong negative-Agreeableness core. These are frozen discovery hypotheses, not human/model equivalence or cross-model validation. Independent human expert review remains the gate before respondent scoring or held-out validation.
 
 ## Integrated AA-1 Through AA-5 Entry Points (2026-09-11)
 
 - AA-1 human SAPA psychometric structure: `research/outputs/sapa_bridge_psychometric_audit/sapa_bridge_psychometric_audit_report.md`
+- AA-1 Qwen-first construct bridge and independent semantic review: `research/outputs/qwen_pc_human_construct_bridge/qwen_pc_human_construct_bridge_report.md`
 - AA-2 externally anchored Big Five and viewer integration: `research/outputs/externally_anchored_big_five/externally_anchored_big_five_report.md`
 - AA-3 extended persona PCA dimensionality: `research/outputs/extended_persona_pca/extended_persona_pca_report.md`
 - AA-4 Qwen trait sparsity and generic-basis controls: `research/outputs/qwen_trait_sparsity_prediction/qwen_trait_sparsity_report.md`
 - AA-5 NLSY97 occupational centroid stability: `research/outputs/nlsy97_occupation_personality_stability/nlsy97_occupation_personality_stability_report.md`
 
-The canonical synthesis is: PC1-PC3 are the strict Qwen core and PC4-PC6 supported secondary coordinates; negative Qwen PC3 contains a strong externally anchored Agreeableness component without being identical to Agreeableness; compact real traits provide semantic efficiency while the 240-trait ceiling is substantially same-space basis coverage; 12/45 direct SAPA links have moderate-or-better human structural support; and occupation is weak as a global human personality grouping variable despite selected stable cells. The frozen 12-trait cross-model recovery study is future work and has not been run.
+The canonical synthesis is: PC1-PC3 are the strict Qwen core and PC4-PC6 supported secondary coordinates; negative Qwen PC3 contains a strong externally anchored Agreeableness component without being identical to Agreeableness; compact real traits provide semantic efficiency while the 240-trait ceiling is substantially same-space basis coverage; 12/45 direct SAPA links have moderate-or-better narrow human structural support; and occupation is weak as a global human personality grouping variable despite selected stable cells. A broader Qwen-first hierarchy now freezes 37 domain/aspect/facet hypotheses before held-out testing. The next human gate is independent expert review, not projection or cross-model tuning.
 
 ## Current Trait Ridge Visualization (2026-09-09)
 
@@ -111,6 +112,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/paper15_content_ledger.md`: canonical factual ledger for Paper 1.5 writing; use before drafting prose.
 - `research/paper15_content_ledger_artifact_inventory.csv`: source artifact inventory for the Paper 1.5 content ledger.
 - `research/outputs/sapa_bridge_psychometric_audit/`: AA-1 human-only psychometric contraction of the frozen semantic bridge, with verification and artifact inventory.
+- `research/outputs/qwen_pc_human_construct_bridge/`: exact independent Claude review, agreement and metadata-quality audits, Qwen-only PC1-PC6 signatures, sourced human-construct library, frozen discovery hypotheses, measurement feasibility, and held-out validation plan.
 - `research/outputs/externally_anchored_big_five/`: AA-2 frozen external Big Five mappings, multimodel geometry tests, viewer integration report, and artifact inventory.
 - `research/outputs/extended_persona_pca/`: AA-3 full-rank dimensionality/stability audit and interactive PC1-PC10 viewer.
 - `research/outputs/qwen_trait_sparsity_prediction/`: AA-4 compact-feature and matched generic-basis audit of Qwen trait-to-PC prediction.

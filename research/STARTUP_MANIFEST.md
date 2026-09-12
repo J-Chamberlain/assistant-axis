@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-12T00:35:31Z`
-- Current branch: `codex/aa1-aa5-integration`
-- generation base commit: `8a512401751799fac95324ce638d170a02d45e45`
+- Generated timestamp UTC: `2026-09-12T12:19:54Z`
+- Current branch: `codex/aa1-qwen-human-construct-bridge`
+- generation base commit: `08bde9ad5db8417c764bcb356938ab7cf7ff97f6`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -34,41 +34,41 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
 - Latest commit touching file: `8a512401751799fac95324ce638d170a02d45e45`
-- generation base commit: `8a512401751799fac95324ce638d170a02d45e45`
-- Git blob hash: `b757686d0038668c64b8cd5bdd34ae9695bace2c`
-- SHA256 content hash: `7d1cd156a0566279fae76d11ba0a845972ce79f98dce38a4da0bb9d7b3ba9db2`
-- Byte count: `182509`
+- generation base commit: `08bde9ad5db8417c764bcb356938ab7cf7ff97f6`
+- Git blob hash: `97b4084b25207565ac54fb05729d40b04c1bad7b`
+- SHA256 content hash: `f808a7938eb3c28a3d410bbc628877abf725d7b261643220af6d8e65bb928c32`
+- Byte count: `184543`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
-  - Last updated: `2026-09-11`
-  - Last commit: `d918ca3 (integrated AA-1 through AA-5 claims, state, provenance, navigation, Paper 1.5, interpretation, runtime, and sticky-note layers)`
+  - Last updated: `2026-09-12`
+  - Last commit: `08bde9a (Qwen-first human-construct bridge report before canonical state maintenance)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-12T00:35:31Z`
+- Generated timestamp UTC: `2026-09-12T12:19:54Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
 - Latest commit touching file: `d918ca3a9c73d05a8f5bb21c77af20f516a90587`
-- generation base commit: `8a512401751799fac95324ce638d170a02d45e45`
-- Git blob hash: `a05fc2fecaabfc4f9cfbc49c4f010a1d4d912cf6`
-- SHA256 content hash: `e6ee905f89c538ffbe4f67fe8ac39615c01d687b2f51efb47b439ba1824a4bb0`
-- Byte count: `38072`
+- generation base commit: `08bde9ad5db8417c764bcb356938ab7cf7ff97f6`
+- Git blob hash: `1f03db99b445540d82982aa5a10225fbfb0e8897`
+- SHA256 content hash: `34b9b4141c80326e4b36fc1fb3def9e07f7d454fd59b750820548708971d1374`
+- Byte count: `39351`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
-  - Last updated: `2026-09-11`
+  - Last updated: `2026-09-12`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-12T00:35:31Z`
+- Generated timestamp UTC: `2026-09-12T12:19:54Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
 - Latest commit touching file: `c1f241bd94a0ac0fd6e5a21a08392eda553e25bf`
-- generation base commit: `8a512401751799fac95324ce638d170a02d45e45`
+- generation base commit: `08bde9ad5db8417c764bcb356938ab7cf7ff97f6`
 - Git blob hash: `4b4fe49c1a69e57e2a6e70edee5b7d852c907893`
 - SHA256 content hash: `6ad43720b0d802411f686dcfbe5146ef5f89c301b5697da2c63e52e2ecd5b5cc`
 - Byte count: `48203`
@@ -78,7 +78,7 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-09-11`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-12T00:35:31Z`
+- Generated timestamp UTC: `2026-09-12T12:19:54Z`
 
 ## Maintenance Rule
 
