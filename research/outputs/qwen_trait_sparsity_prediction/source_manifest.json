@@ -1,0 +1,103 @@
+{
+  "activation_model": "Qwen/Qwen3-32B",
+  "activation_source_audit": {
+    "activation_dimension": 5120,
+    "canonical_pca_reproduction": {
+      "basis_source": "reconstructed from all 275 canonical mean-pooled Qwen role vectors and sign-aligned to geometry_viz_data.json",
+      "canonical_builder": "research/visualizations/scripts/build_geometry_viz.py",
+      "canonical_pca_table": "research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv",
+      "max_abs_coordinate_reproduction_error": 1.2070270569708441e-06,
+      "mean_abs_coordinate_reproduction_error": 1.0765914306133452e-07,
+      "passed": true,
+      "sign_alignment": [
+        -1.0,
+        1.0,
+        -1.0
+      ],
+      "strict_tolerance": 1e-05,
+      "supporting_prior_reproduction": "research/outputs/no_label_elicitation_validation/projection_basis_debug.json"
+    },
+    "named_traits_enter_pca_fit": false,
+    "pca_feature_variables": "5,120 coordinates of each mean-pooled role activation vector",
+    "role_mean_pooling": "Each saved 2D tensor is averaged over its first dimension.",
+    "role_vector_count": 275,
+    "shared_role_vector_provenance": true,
+    "trait_cosine_matrix_reproduction": {
+      "construction": "mean each stored tensor over its first dimension, L2-normalize, role @ trait.T",
+      "max_abs_reproduction_error": 5.551115123125783e-16,
+      "mean_abs_reproduction_error": 5.3824078286755766e-17,
+      "passed": true,
+      "tolerance": 1e-10
+    },
+    "trait_mean_pooling": "Each saved 2D tensor is averaged over its first dimension.",
+    "trait_vector_count": 240
+  },
+  "analysis_model_used": "GPT-5.5",
+  "branch": "codex/qwen-trait-sparsity",
+  "external_model_api_calls": false,
+  "generation_base_commit": "afb53d4951df421eacb36a72dc964be52a74484d",
+  "generation_timestamp_utc": "2026-09-11T22:20:55Z",
+  "gpu_used": false,
+  "new_activation_extraction": false,
+  "new_model_inference": false,
+  "primary_representation": "raw activation-cosine trait values",
+  "provenance_boundary": "Features and targets share Qwen activation-vector provenance; results measure same-space predictive compression, not independent psychometric or causal validity.",
+  "random_direction_controls": {
+    "isotropic": "Independent N(0,I_5120) vectors, L2-normalized; no PC coordinates/loadings used.",
+    "persona_span": "Fold-local Gaussian linear combinations of centered outer-training role vectors; no held-out role or PC target used."
+  },
+  "runpod_used": false,
+  "saved_activation_directories": {
+    "role_vectors": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/qwen-3-32b/role_vectors",
+    "trait_vectors": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors/qwen-3-32b/trait_vectors"
+  },
+  "software": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.12.12",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0"
+  },
+  "sources": {
+    "canonical_geometry": {
+      "path": "research/visualizations/geometry_viz_data.json",
+      "sha256": "1b15d8e3425bc3d51032919157eb683f1358f353f4ee071a18d06347a792ec6d",
+      "size_bytes": 288387
+    },
+    "canonical_geometry_builder": {
+      "path": "research/visualizations/scripts/build_geometry_viz.py",
+      "sha256": "a309aa185e973c4edcba711d19b1e7db4e45ab6ab8a2f8f60e32ed6151f24cf8",
+      "size_bytes": 12690
+    },
+    "canonical_predictor_model_comparison": {
+      "path": "research/outputs/trait_profile_pc_predictor/model_comparison.csv",
+      "sha256": "8ad33f26eb555145d3011a872de6e63d29e7865a4777db16f743e10ed5749ebe",
+      "size_bytes": 4744
+    },
+    "canonical_predictor_runner": {
+      "path": "research/outputs/trait_profile_pc_predictor/run_trait_profile_pc_predictor.py",
+      "sha256": "46ee1dd0dfa4a115cd305ec3ba8bbf1343bf158aeb237f6920d4626b49b88f51",
+      "size_bytes": 90335
+    },
+    "canonical_predictor_validation": {
+      "path": "research/outputs/trait_profile_pc_predictor/validation_summary.json",
+      "sha256": "10f6a2874a5a2450852a00828c813bad5de2d947e1d8ccba801a5058cfc66712",
+      "size_bytes": 64819
+    },
+    "fixed_editorial_trait_definition": {
+      "path": "research/outputs/persona_trait_ridge_plots/trait_category_order.csv",
+      "sha256": "ae0e2745d58ddb18c5b30bca56373b7cb3b532280bdad38c9a64d7bc8e761d95",
+      "size_bytes": 1714
+    },
+    "trait_profile_matrix": {
+      "path": "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv",
+      "sha256": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8",
+      "size_bytes": 1339338
+    },
+    "trait_profile_provenance_report": {
+      "path": "research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md",
+      "sha256": "b3548fa5a08c6810035da1cea3f2166810d7b61b7137970f2d933a021d0fc330",
+      "size_bytes": 13213
+    }
+  }
+}

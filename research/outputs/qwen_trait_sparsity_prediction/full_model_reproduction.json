@@ -1,0 +1,245 @@
+{
+  "canonical_saved_metrics": {
+    "n": 275,
+    "normalized_3d_error_mean": 0.03365177445147983,
+    "normalized_3d_error_median": 0.02684035491553156,
+    "normalized_3d_error_rmse": 0.045377742242990356,
+    "pc1_mae": 0.43542494692651657,
+    "pc1_pearson": 0.9997621412790606,
+    "pc1_r2": 0.9995215519072446,
+    "pc1_rmse": 0.6567481630567521,
+    "pc1_spearman": 0.9996416721964169,
+    "pc2_mae": 0.4969450648774157,
+    "pc2_pearson": 0.9994066201822844,
+    "pc2_r2": 0.9988106035256331,
+    "pc2_rmse": 0.7406279291561852,
+    "pc2_spearman": 0.9990456132252388,
+    "pc3_mae": 0.21132056640925415,
+    "pc3_pearson": 0.99980594155185,
+    "pc3_r2": 0.9996105440103555,
+    "pc3_rmse": 0.31075447315139826,
+    "pc3_spearman": 0.9996312858832694,
+    "raw_3d_error_mean": 0.760477907427124,
+    "raw_3d_error_median": 0.5920063243371516,
+    "raw_3d_error_rmse": 1.0375048056313767
+  },
+  "generation_timestamp_utc": "2026-09-11T22:20:55Z",
+  "integrity": {
+    "activation_dimension": 5120,
+    "canonical_coordinate_table_max_abs_difference": 7.105427357601002e-15,
+    "canonical_coordinate_table_shared_persona_count": 273,
+    "canonical_coordinate_table_tolerance": 1e-05,
+    "canonical_pca_reproduction": {
+      "basis_source": "reconstructed from all 275 canonical mean-pooled Qwen role vectors and sign-aligned to geometry_viz_data.json",
+      "canonical_builder": "research/visualizations/scripts/build_geometry_viz.py",
+      "canonical_pca_table": "research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv",
+      "max_abs_coordinate_reproduction_error": 1.2070270569708441e-06,
+      "mean_abs_coordinate_reproduction_error": 1.0765914306133452e-07,
+      "passed": true,
+      "sign_alignment": [
+        -1.0,
+        1.0,
+        -1.0
+      ],
+      "strict_tolerance": 1e-05,
+      "supporting_prior_reproduction": "research/outputs/no_label_elicitation_validation/projection_basis_debug.json"
+    },
+    "cluster_counts": {
+      "combative_iconoclast": 15,
+      "editorial": 13,
+      "grounded_social": 54,
+      "mythic_spiritual": 51,
+      "other": 6,
+      "procedural_professional": 126,
+      "trickster_chaos": 10
+    },
+    "cluster_order_exactly_matches_geometry": true,
+    "duplicate_personas": [],
+    "duplicate_traits": [],
+    "fixed_editorial_traits": [
+      "creative",
+      "abstract",
+      "curious",
+      "reactive",
+      "adaptable",
+      "practical",
+      "skeptical",
+      "analytical",
+      "conscientious",
+      "rebellious",
+      "competitive",
+      "manipulative",
+      "empathetic",
+      "agreeable",
+      "altruistic"
+    ],
+    "fixed_editorial_traits_exact_match": true,
+    "matrix_finite": true,
+    "matrix_persona_order_exactly_matches_geometry": true,
+    "named_traits_enter_pca_fit": false,
+    "passed": true,
+    "pca_feature_variables": "5,120 coordinates of each mean-pooled role activation vector",
+    "persona_count": 275,
+    "role_mean_pooling": "Each saved 2D tensor is averaged over its first dimension.",
+    "role_vector_count": 275,
+    "shared_role_vector_provenance": true,
+    "target_or_metadata_columns_in_features": [],
+    "targets_finite": true,
+    "trait_cosine_matrix_reproduction": {
+      "construction": "mean each stored tensor over its first dimension, L2-normalize, role @ trait.T",
+      "max_abs_reproduction_error": 5.551115123125783e-16,
+      "mean_abs_reproduction_error": 5.3824078286755766e-17,
+      "passed": true,
+      "tolerance": 1e-10
+    },
+    "trait_count": 240,
+    "trait_mean_pooling": "Each saved 2D tensor is averaged over its first dimension.",
+    "trait_vector_count": 240,
+    "unique_persona_count": 275,
+    "unique_trait_count": 240
+  },
+  "max_abs_metric_difference": 6.789013795582832e-12,
+  "metric_comparison": {
+    "n": {
+      "abs_difference": 0.0,
+      "reproduced": 275,
+      "saved": 275
+    },
+    "normalized_3d_error_mean": {
+      "abs_difference": 1.6688039838896884e-14,
+      "reproduced": 0.03365177445146314,
+      "saved": 0.03365177445147983
+    },
+    "normalized_3d_error_median": {
+      "abs_difference": 5.507989897512999e-13,
+      "reproduced": 0.02684035491498076,
+      "saved": 0.02684035491553156
+    },
+    "normalized_3d_error_rmse": {
+      "abs_difference": 1.2735645871231327e-13,
+      "reproduced": 0.04537774224311771,
+      "saved": 0.045377742242990356
+    },
+    "pc1_mae": {
+      "abs_difference": 2.1272983374842624e-12,
+      "reproduced": 0.43542494692438927,
+      "saved": 0.43542494692651657
+    },
+    "pc1_pearson": {
+      "abs_difference": 2.220446049250313e-15,
+      "reproduced": 0.9997621412790584,
+      "saved": 0.9997621412790606
+    },
+    "pc1_r2": {
+      "abs_difference": 4.440892098500626e-15,
+      "reproduced": 0.9995215519072401,
+      "saved": 0.9995215519072446
+    },
+    "pc1_rmse": {
+      "abs_difference": 3.022471162239526e-12,
+      "reproduced": 0.6567481630597746,
+      "saved": 0.6567481630567521
+    },
+    "pc1_spearman": {
+      "abs_difference": 0.0,
+      "reproduced": 0.9996416721964169,
+      "saved": 0.9996416721964169
+    },
+    "pc2_mae": {
+      "abs_difference": 5.243028233792302e-13,
+      "reproduced": 0.49694506487794,
+      "saved": 0.4969450648774157
+    },
+    "pc2_pearson": {
+      "abs_difference": 3.1086244689504383e-15,
+      "reproduced": 0.9994066201822813,
+      "saved": 0.9994066201822844
+    },
+    "pc2_r2": {
+      "abs_difference": 6.217248937900877e-15,
+      "reproduced": 0.9988106035256269,
+      "saved": 0.9988106035256331
+    },
+    "pc2_rmse": {
+      "abs_difference": 1.933675441989635e-12,
+      "reproduced": 0.7406279291581189,
+      "saved": 0.7406279291561852
+    },
+    "pc2_spearman": {
+      "abs_difference": 0.0,
+      "reproduced": 0.9990456132252388,
+      "saved": 0.9990456132252388
+    },
+    "pc3_mae": {
+      "abs_difference": 1.5765166949677223e-13,
+      "reproduced": 0.2113205664090965,
+      "saved": 0.21132056640925415
+    },
+    "pc3_pearson": {
+      "abs_difference": 1.1102230246251565e-16,
+      "reproduced": 0.9998059415518499,
+      "saved": 0.99980594155185
+    },
+    "pc3_r2": {
+      "abs_difference": 7.771561172376096e-16,
+      "reproduced": 0.9996105440103548,
+      "saved": 0.9996105440103555
+    },
+    "pc3_rmse": {
+      "abs_difference": 3.0953017926549364e-13,
+      "reproduced": 0.3107544731517078,
+      "saved": 0.31075447315139826
+    },
+    "pc3_spearman": {
+      "abs_difference": 0.0,
+      "reproduced": 0.9996312858832694,
+      "saved": 0.9996312858832694
+    },
+    "raw_3d_error_mean": {
+      "abs_difference": 5.230260669009112e-13,
+      "reproduced": 0.7604779074266009,
+      "saved": 0.760477907427124
+    },
+    "raw_3d_error_median": {
+      "abs_difference": 6.789013795582832e-12,
+      "reproduced": 0.5920063243439406,
+      "saved": 0.5920063243371516
+    },
+    "raw_3d_error_rmse": {
+      "abs_difference": 3.3861802251067274e-12,
+      "reproduced": 1.0375048056347629,
+      "saved": 1.0375048056313767
+    }
+  },
+  "numerical_tolerance": 1e-09,
+  "passed": true,
+  "protocol": "Exact canonical raw-cosine Ridge LOPO: each persona held out; 4-fold inner alpha tuning; StandardScaler for X and Y inside each fit.",
+  "reproduced_metrics": {
+    "n": 275,
+    "normalized_3d_error_mean": 0.03365177445146314,
+    "normalized_3d_error_median": 0.02684035491498076,
+    "normalized_3d_error_rmse": 0.04537774224311771,
+    "pc1_mae": 0.43542494692438927,
+    "pc1_pearson": 0.9997621412790584,
+    "pc1_r2": 0.9995215519072401,
+    "pc1_rmse": 0.6567481630597746,
+    "pc1_spearman": 0.9996416721964169,
+    "pc2_mae": 0.49694506487794,
+    "pc2_pearson": 0.9994066201822813,
+    "pc2_r2": 0.9988106035256269,
+    "pc2_rmse": 0.7406279291581189,
+    "pc2_spearman": 0.9990456132252388,
+    "pc3_mae": 0.2113205664090965,
+    "pc3_pearson": 0.9998059415518499,
+    "pc3_r2": 0.9996105440103548,
+    "pc3_rmse": 0.3107544731517078,
+    "pc3_spearman": 0.9996312858832694,
+    "raw_3d_error_mean": 0.7604779074266009,
+    "raw_3d_error_median": 0.5920063243439406,
+    "raw_3d_error_rmse": 1.0375048056347629
+  },
+  "selected_alpha_counts": {
+    "0.001": 52,
+    "0.01": 223
+  }
+}

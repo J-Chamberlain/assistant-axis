@@ -1,0 +1,25 @@
+{
+  "activation_dimension": 5120,
+  "coefficient_of_variation": 0.028537135253192236,
+  "interpretive_rule": "Small norm CV supports cosine-as-scaled-linear-projection; material norm-PC association qualifies that approximation.",
+  "maximum_l2_norm": 299.30784545027535,
+  "mean_l2_norm": 282.03904766821813,
+  "minimum_l2_norm": 252.10120676020136,
+  "n_personas": 275,
+  "pc_associations": {
+    "PC1": {
+      "pearson_r": 0.5815126849590275,
+      "spearman_rho": 0.6340521046709559
+    },
+    "PC2": {
+      "pearson_r": -0.6834780550151701,
+      "spearman_rho": -0.6182568304434378
+    },
+    "PC3": {
+      "pearson_r": -0.10695998589180153,
+      "spearman_rho": 0.02259023109546753
+    }
+  },
+  "range_l2_norm": 47.20663869007399,
+  "sd_l2_norm_population": 8.048586449989473
+}
