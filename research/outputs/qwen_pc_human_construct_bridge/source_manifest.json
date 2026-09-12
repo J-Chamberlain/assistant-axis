@@ -1,0 +1,189 @@
+{
+  "analysis_model": "GPT-5.5",
+  "branch": "codex/aa1-qwen-human-construct-bridge",
+  "dependency_order": [
+    "external review agreement and metadata corrections",
+    "Qwen-only signature plus human construct library",
+    "rubric freeze",
+    "PC1 worked example and PC1-PC6 candidate application",
+    "Qwen-derived hypothesis freeze",
+    "future held-out validation plan"
+  ],
+  "discovery_model": "Qwen/Qwen3-32B",
+  "external_reviewer": {
+    "independence_boundary": "Genuinely separate from prior Codex semantic decisions and downstream geometry to the extent documented by the reviewer; not independent human psychometric expertise.",
+    "provider": "Anthropic",
+    "review_date": "2026-09-11",
+    "review_sha256": "71902fbe78fd4dec9742af8ca25a1c27dd9429263f3319a85937b85fd3a9a86a",
+    "reviewer": "Claude Opus 5",
+    "structural_conflict": "Anthropic-produced AI system"
+  },
+  "firewall": {
+    "aa7_used": false,
+    "activation_extraction": false,
+    "external_model_api": false,
+    "gemma_used_for_selection": false,
+    "human_respondent_projection": false,
+    "llama_used_for_selection": false,
+    "model_performance_optimization": false,
+    "new_inference": false
+  },
+  "generated_at_utc": "2026-09-12T10:45:00Z",
+  "human_dataset": {
+    "dataset": "SAPA 696-item release V5",
+    "doi": "10.7910/DVN/SD7SVE",
+    "institution": "Harvard Dataverse / SAPA Project",
+    "license": "CC0 per versioned Dataverse metadata",
+    "raw_data_committed": false,
+    "respondents": 23679
+  },
+  "public_construct_sources": {
+    "BFAS": "https://ipip.ori.org/BFASKeys.htm",
+    "Big_Five_metatraits": "https://doi.org/10.1037/0022-3514.91.6.1138",
+    "EPQ_R": "https://doi.org/10.1016/0191-8869(85)90026-1",
+    "HEXACO": "https://hexaco.org/scaledescriptions",
+    "IPIP": "https://ipip.ori.org/",
+    "Need_for_Cognitive_Closure": "https://doi.org/10.1037/0022-3514.67.6.1049",
+    "Questionnaire_Big_Six": "https://doi.org/10.1037/a0024165",
+    "SAPA_SPI": "https://www.sapa-project.org/research/SPI/SPIdevelopment.pdf"
+  },
+  "sources": [
+    {
+      "bytes": 41677,
+      "path": "research/outputs/qwen_pc_human_construct_bridge/sapa_category3_blinded_review_judgments.csv",
+      "role": "external_claude_review",
+      "sha256": "71902fbe78fd4dec9742af8ca25a1c27dd9429263f3319a85937b85fd3a9a86a",
+      "tracked": true
+    },
+    {
+      "bytes": 20292,
+      "path": "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_category3_second_pass_review.csv",
+      "role": "codex_frozen_review",
+      "sha256": "f8e77caf9f5970ac8c48743e8422f04a146ac8013fb3cac5a88b1069c82c29a6",
+      "tracked": true
+    },
+    {
+      "bytes": 91617,
+      "path": "research/outputs/human_trait_dataset_feasibility/sapa_review/sapa_category3_blinded_review_packet.csv",
+      "role": "codex_frozen_packet",
+      "sha256": "c4e40601f9855769fd1040eed11c4120e46224d0d27ae0caa2f7b4d672af1814",
+      "tracked": true
+    },
+    {
+      "bytes": 108066,
+      "path": "research/outputs/human_trait_dataset_feasibility/sapa/sapa_item_dictionary.csv",
+      "role": "sapa_item_dictionary",
+      "sha256": "6297d7fc351cea2121a1a211c5203f9e1bc07d0157c551087e0820b8bbd6bda9",
+      "tracked": true
+    },
+    {
+      "bytes": 38996,
+      "path": "research/outputs/human_trait_dataset_feasibility/sapa/sapa_scale_inventory.csv",
+      "role": "sapa_scale_inventory",
+      "sha256": "1db3444330e4a500eeb0189f0b6a020c27d4ee27d7ff34cba40e08a76460e965",
+      "tracked": true
+    },
+    {
+      "bytes": 23975309,
+      "path": "data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/sapaTempData696items08dec2013thru26jul2014.tab",
+      "privacy": "gitignored local human microdata/metadata; no respondent rows committed",
+      "role": "sapa_raw_responses_gitignored",
+      "sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+      "tracked": false
+    },
+    {
+      "bytes": 190705,
+      "path": "data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/superKey696.csv",
+      "privacy": "gitignored local human microdata/metadata; no respondent rows committed",
+      "role": "sapa_official_scoring_keys_gitignored",
+      "sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+      "tracked": false
+    },
+    {
+      "bytes": 69495,
+      "path": "data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/ItemInfo696.csv",
+      "privacy": "gitignored local human microdata/metadata; no respondent rows committed",
+      "role": "sapa_official_item_info_gitignored",
+      "sha256": "ce280ebf42cd77f3db1955a3027051a74d017ca61da02adf5dbbab11545b1732",
+      "tracked": false
+    },
+    {
+      "bytes": 51217,
+      "path": "research/geometry_tables/qwen_role_pc_rankings.csv",
+      "role": "qwen_canonical_pc1_pc3",
+      "sha256": "643a73148de462919c38cb53aa193161ae15d59bf0bb3020a08de6094bd48525",
+      "tracked": true
+    },
+    {
+      "bytes": 1339338,
+      "path": "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv",
+      "role": "qwen_trait_profiles",
+      "sha256": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8",
+      "tracked": true
+    },
+    {
+      "bytes": 220009,
+      "path": "research/outputs/extended_persona_pca/qwen_extended_pc_trait_associations.csv",
+      "role": "qwen_extended_trait_associations",
+      "sha256": "d23771a3802557f2db8b109a37e4c25ad9c143939490d341b69eb56f2f3376f3",
+      "tracked": true
+    },
+    {
+      "bytes": 52984,
+      "path": "research/outputs/extended_persona_pca/qwen_extended_pc_role_rankings.csv",
+      "role": "qwen_extended_role_rankings",
+      "sha256": "71fafe78ad65a55d0ffded31f011bba8b2a3c16a15e0d4a146dedd0041ffa0c8",
+      "tracked": true
+    },
+    {
+      "bytes": 392114,
+      "path": "research/outputs/extended_persona_pca/viewer_data.json",
+      "role": "qwen_extended_browser_bundle",
+      "sha256": "672c617758ace9654708d5f248e094d3005f19ee5237d3918a159bc0e3d813d3",
+      "tracked": true
+    },
+    {
+      "bytes": 70359,
+      "path": "research/outputs/extended_persona_pca/component_retention_summary.csv",
+      "role": "aa3_component_retention",
+      "sha256": "555fc499d2920ec0707ff21ddb09ea1fefc24b1a4d8642776400ca25e2f663c8",
+      "tracked": true
+    },
+    {
+      "bytes": 45285,
+      "path": "research/outputs/qwen_trait_sparsity_prediction/pc_specific_trait_rankings.csv",
+      "role": "aa4_pc_specific_rankings",
+      "sha256": "920cfafbf8c8cde0d3f9d9ded9098dd206ce2966b75c62dd2da7be2aa05662ad",
+      "tracked": true
+    },
+    {
+      "bytes": 56006,
+      "path": "research/outputs/qwen_trait_sparsity_prediction/full_model_permutation_importance.csv",
+      "role": "aa4_conditional_importance",
+      "sha256": "96083c2034c1e9aec499bb729fafb980107eb49632c59037f78035b430646666",
+      "tracked": true
+    },
+    {
+      "bytes": 3075358,
+      "path": "research/outputs/externally_anchored_big_five/big_five_role_scores.csv",
+      "role": "aa2_qwen_big_five_role_scores",
+      "sha256": "41c4fda3d93c05176eda33e90cb665b10399020be0fa15fa5115dd95c3e2aed1",
+      "tracked": true
+    },
+    {
+      "bytes": 800,
+      "path": "research/outputs/pc1_accountability_validation/experiment_summary.csv",
+      "role": "pc1_accountability",
+      "sha256": "1ee5fe87cee42fa85443e0f142ba73ea8f125ea24f2c7cf0aa553abe7c6b4a40",
+      "tracked": true
+    },
+    {
+      "bytes": 27293,
+      "path": "research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md",
+      "role": "qwen_interpretation_note",
+      "sha256": "306d110662abf0990d350fe387df7a548859eb302921f6bd90f6ff2cf84ed535",
+      "tracked": true
+    }
+  ],
+  "starting_commit": "4b568f3a8062203a288a412ea447829de455f586"
+}
