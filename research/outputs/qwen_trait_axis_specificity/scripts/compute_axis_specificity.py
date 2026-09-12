@@ -567,7 +567,10 @@ def main(repo: Path, output: Path) -> None:
     xz = (x - x.mean(axis=0)) / x.std(axis=0, ddof=0)
     yz = (y - y.mean(axis=0)) / y.std(axis=0, ddof=0)
     coefficients, _, _, _ = np.linalg.lstsq(yz, xz, rcond=None)
-    fitted = yz @ coefficients
+    with np.errstate(over="ignore", divide="ignore", invalid="ignore"):
+        fitted = yz @ coefficients
+    if not np.isfinite(fitted).all():
+        raise ValueError("Nonfinite fitted value in communality/multiple-R2 verification")
     r2 = 1.0 - np.square(xz - fitted).sum(axis=0) / np.square(xz).sum(axis=0)
     communality = np.square(saved).sum(axis=1)
     communality_r2_max_abs_error = float(np.max(np.abs(communality - r2)))

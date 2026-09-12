@@ -34,6 +34,13 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def manifest_key(path: Path, repo: Path) -> str:
+    try:
+        return str(path.relative_to(repo))
+    except ValueError:
+        return f"temporary_output/{path.name}"
+
+
 def main(repo: Path, output: Path) -> None:
     marker_path = output / "qwen_axis_specific_marker_sets.csv"
     metrics_path = output / "qwen_trait_axis_specificity_metrics.csv"
@@ -104,9 +111,9 @@ def main(repo: Path, output: Path) -> None:
         "marker_row_count": len(marker),
         "candidate_construct_count": len(library),
         "source_hashes": {
-            str(marker_path.relative_to(repo)): sha256(marker_path),
-            str(metrics_path.relative_to(repo)): sha256(metrics_path),
-            str(library_path.relative_to(repo)): sha256(library_path),
+            manifest_key(marker_path, repo): sha256(marker_path),
+            manifest_key(metrics_path, repo): sha256(metrics_path),
+            manifest_key(library_path, repo): sha256(library_path),
         },
         "reviewer_packet_excludes": [
             "PC number",

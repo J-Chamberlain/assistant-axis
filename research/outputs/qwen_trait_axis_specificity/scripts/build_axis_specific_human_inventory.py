@@ -84,6 +84,13 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def manifest_key(path: Path, repo: Path) -> str:
+    try:
+        return str(path.relative_to(repo))
+    except ValueError:
+        return f"temporary_output/{path.name}"
+
+
 def item_wording(item_ids: str, items: pd.DataFrame) -> str:
     lookup = items.set_index("item_id")["item_text"].to_dict()
     ids = [item for item in str(item_ids).split(";") if item]
@@ -324,7 +331,7 @@ def main(repo: Path, output: Path) -> None:
         "prior_inventory_loaded_only_after_judgments_were_encoded": True,
     }
     for path in [packet_path, packet_manifest_path, library_path, item_path, prior_inventory_path]:
-        manifest["source_hashes"][str(path.relative_to(repo))] = sha256(path)
+        manifest["source_hashes"][manifest_key(path, repo)] = sha256(path)
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
     print(

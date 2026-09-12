@@ -133,12 +133,12 @@
     "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8",
     "research/visualizations/geometry_viz_data.json": "1b15d8e3425bc3d51032919157eb683f1358f353f4ee071a18d06347a792ec6d",
     "research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_human_mapping_packet.csv": "66b5530352076b9aa115aa9c03e54dc5a9532d192fe0b367b1d0f5b80657f114",
-    "research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_human_mapping_packet_manifest.json": "7bc5ae5f89bc4dcaac799c76328f4b240c6656ee4ed82778785216253021ea14",
+    "research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_human_mapping_packet_manifest.json": "2f8ffea14abe5d91f94004c8f9b00db368491732f7d0922cfd3ed933978bdcb7",
     "research/outputs/qwen_pc_human_construct_bridge/human_construct_library.csv": "7aadc382dfd3d18da6dce43be945cc6f5ae8dc8d124dfd9f0a8a8c8fc4864fd0",
     "research/outputs/human_trait_dataset_feasibility/sapa/sapa_item_dictionary.csv": "6297d7fc351cea2121a1a211c5203f9e1bc07d0157c551087e0820b8bbd6bda9"
   },
   "human_mapping": {
-    "judgments_frozen_at_utc": "2026-09-12T18:15:02Z",
+    "judgments_frozen_at_utc": "2026-09-12T18:18:29Z",
     "mapping_spec_frozen_commit": "0545130",
     "neutral_packet_seed": 20260921,
     "candidate_universe_count": 126,

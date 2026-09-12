@@ -1,0 +1,391 @@
+{
+  "analysis": "Axis-specific Qwen trait markers and purity-filtered SAPA inventory",
+  "verified_at_utc": "2026-09-12T19:05:00Z",
+  "passed": true,
+  "check_count": 53,
+  "failure_count": 0,
+  "failures": [],
+  "checks": [
+    {
+      "name": "prior_hash_qwen_trait_pc_correlations_all.csv",
+      "passed": true,
+      "detail": {
+        "actual": "6ccbb08452af12ddf050fc95e083a0e0c4e2e01423c417cf2e9919909fd79424",
+        "expected": "6ccbb08452af12ddf050fc95e083a0e0c4e2e01423c417cf2e9919909fd79424"
+      }
+    },
+    {
+      "name": "prior_hash_qwen_trait_family_membership_primary.csv",
+      "passed": true,
+      "detail": {
+        "actual": "cb010ab242747544ee5ba957e64b1565c8207565a76a9523cb5b837331237b97",
+        "expected": "cb010ab242747544ee5ba957e64b1565c8207565a76a9523cb5b837331237b97"
+      }
+    },
+    {
+      "name": "prior_hash_qwen_trait_family_human_mapping_judgments.csv",
+      "passed": true,
+      "detail": {
+        "actual": "cb4ac6b1338ce209ab2a88d24fac67c29abb3e6322055a4475b6b6dbc52e1f3c",
+        "expected": "cb4ac6b1338ce209ab2a88d24fac67c29abb3e6322055a4475b6b6dbc52e1f3c"
+      }
+    },
+    {
+      "name": "prior_hash_qwen_pc_trait_family_human_inventory.csv",
+      "passed": true,
+      "detail": {
+        "actual": "49f5b7c5c6b8f74d56ba2a2a410c4b9ebf4e3b4bf2459f013422fba0dfc37896",
+        "expected": "49f5b7c5c6b8f74d56ba2a2a410c4b9ebf4e3b4bf2459f013422fba0dfc37896"
+      }
+    },
+    {
+      "name": "prior_hash_verification_report.json",
+      "passed": true,
+      "detail": {
+        "actual": "d191f930c2f6a9d592ea856c8d1f5f0b458b17dbc4bc8a8fc1bc271a6b5ac8b8",
+        "expected": "d191f930c2f6a9d592ea856c8d1f5f0b458b17dbc4bc8a8fc1bc271a6b5ac8b8"
+      }
+    },
+    {
+      "name": "source_commit_is_exact_branch_ancestor",
+      "passed": true,
+      "detail": "667acdd634bfb8c39d40432fe60f0c5ef3bbbeeb"
+    },
+    {
+      "name": "saved_association_rows_1440",
+      "passed": true,
+      "detail": 1440
+    },
+    {
+      "name": "exactly_240_traits",
+      "passed": true,
+      "detail": 240
+    },
+    {
+      "name": "exactly_6_pcs",
+      "passed": true,
+      "detail": [
+        "PC1",
+        "PC2",
+        "PC3",
+        "PC4",
+        "PC5",
+        "PC6"
+      ]
+    },
+    {
+      "name": "specificity_rows_1440",
+      "passed": true,
+      "detail": 1440
+    },
+    {
+      "name": "best_axis_rows_240",
+      "passed": true,
+      "detail": 240
+    },
+    {
+      "name": "bootstrap_rows_1440",
+      "passed": true,
+      "detail": 1440
+    },
+    {
+      "name": "bootstrap_resamples_2000",
+      "passed": true,
+      "detail": [
+        2000
+      ]
+    },
+    {
+      "name": "bootstrap_seed_fixed",
+      "passed": true,
+      "detail": [
+        20260920
+      ]
+    },
+    {
+      "name": "bootstrap_probabilities_have_valid_counts",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "name": "communality_formula_reproduces",
+      "passed": true,
+      "detail": 1.1102230246251565e-16
+    },
+    {
+      "name": "axis_purity_formula_reproduces",
+      "passed": true,
+      "detail": 2.220446049250313e-16
+    },
+    {
+      "name": "dominance_gap_formula_reproduces",
+      "passed": true,
+      "detail": 1.1102230246251565e-16
+    },
+    {
+      "name": "pc1_pc6_mutually_uncorrelated",
+      "passed": true,
+      "detail": 4.860245601076601e-16
+    },
+    {
+      "name": "communality_matches_multiple_r2",
+      "passed": true,
+      "detail": 9.992007221626409e-16
+    },
+    {
+      "name": "canonical_pc_coordinates_reproduce_within_established_tolerance",
+      "passed": true,
+      "detail": 1.207027046312703e-06
+    },
+    {
+      "name": "saved_correlations_reproduce_from_role_scores",
+      "passed": true,
+      "detail": 1.3322676295501878e-15
+    },
+    {
+      "name": "all_markers_are_prior_family_members",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "markers_target_dominant",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "markers_purity_at_least_070",
+      "passed": true,
+      "detail": 0.7016424291825633
+    },
+    {
+      "name": "markers_bootstrap_dominance_at_least_095",
+      "passed": true,
+      "detail": 1.0
+    },
+    {
+      "name": "classification_covers_all_original_members",
+      "passed": true,
+      "detail": 328
+    },
+    {
+      "name": "classification_values_valid",
+      "passed": true,
+      "detail": [
+        "AXIS_SPECIFIC_STRONG",
+        "NON_TARGET_DOMINANT",
+        "TARGET_DOMINANT_BUT_DIFFUSE"
+      ]
+    },
+    {
+      "name": "threshold_sensitivity_reproduces",
+      "passed": true,
+      "detail": {
+        "rows": 108,
+        "purities": [
+          0.6,
+          0.7,
+          0.8
+        ],
+        "probabilities": [
+          0.9,
+          0.95,
+          0.99
+        ]
+      }
+    },
+    {
+      "name": "primary_threshold_pair_frozen",
+      "passed": true,
+      "detail": {
+        "prior_family_member": true,
+        "target_strict_largest_abs_correlation": true,
+        "bootstrap_dominance_probability_at_least": 0.95,
+        "axis_purity_at_least": 0.7
+      }
+    },
+    {
+      "name": "family_comparison_has_12_signed_rows",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "pareto_rows_unique",
+      "passed": true,
+      "detail": 8
+    },
+    {
+      "name": "documented_composites_present",
+      "passed": true,
+      "detail": [
+        "Affiliation",
+        "Challenge",
+        "Exploration",
+        "Response",
+        "Scrutiny"
+      ]
+    },
+    {
+      "name": "affiliation_is_pc3_specific",
+      "passed": true,
+      "detail": {
+        "best_pc": "PC3",
+        "r": -0.9701289910296632,
+        "purity": 0.965817530082388
+      }
+    },
+    {
+      "name": "mapping_packet_has_12_neutral_families",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "mapping_packet_excludes_prohibited_fields",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "mapping_packet_order_seed_reproduces",
+      "passed": true,
+      "detail": 20260921
+    },
+    {
+      "name": "human_library_exactly_126_unique_constructs",
+      "passed": true,
+      "detail": 126
+    },
+    {
+      "name": "mapping_construct_ids_valid",
+      "passed": true,
+      "detail": [
+        "ITEM:q_660"
+      ]
+    },
+    {
+      "name": "mapping_item_ids_valid",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "mapping_statuses_valid",
+      "passed": true,
+      "detail": [
+        "FACET_OR_SUBCOMPONENT",
+        "ITEM_LEVEL_ONLY",
+        "NO_DEFENSIBLE_MATCH",
+        "PARTIAL_FAMILY_MATCH",
+        "STRONG_FAMILY_MATCH"
+      ]
+    },
+    {
+      "name": "empty_marker_families_only_no_match",
+      "passed": true,
+      "detail": {
+        "empty_families": 6,
+        "rows": 6
+      }
+    },
+    {
+      "name": "inventory_rows_match_judgments",
+      "passed": true,
+      "detail": {
+        "inventory": 31,
+        "judgments": 31
+      }
+    },
+    {
+      "name": "prior_comparison_has_12_signed_rows",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "human_library_byte_identical",
+      "passed": true,
+      "detail": "7aadc382dfd3d18da6dce43be945cc6f5ae8dc8d124dfd9f0a8a8c8fc4864fd0"
+    },
+    {
+      "name": "no_llama_gemma_source",
+      "passed": true,
+      "detail": [
+        "research/outputs/extended_persona_pca/viewer_data.json",
+        "research/outputs/human_trait_dataset_feasibility/sapa/sapa_model_trait_candidate_crosswalk.csv",
+        "research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py",
+        "research/outputs/qwen_trait_family_human_inventory/qwen_pc_trait_family_human_inventory.csv",
+        "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_human_mapping_judgments.csv",
+        "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_membership_primary.csv",
+        "research/outputs/qwen_trait_family_human_inventory/qwen_trait_pc_correlations_all.csv",
+        "research/outputs/qwen_trait_family_human_inventory/verification_report.json",
+        "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv",
+        "research/visualizations/geometry_viz_data.json",
+        "research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_human_mapping_packet.csv",
+        "research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_human_mapping_packet_manifest.json",
+        "research/outputs/qwen_pc_human_construct_bridge/human_construct_library.csv",
+        "research/outputs/human_trait_dataset_feasibility/sapa/sapa_item_dictionary.csv"
+      ]
+    },
+    {
+      "name": "no_aa7_scientific_source",
+      "passed": true,
+      "detail": [
+        "research/outputs/extended_persona_pca/viewer_data.json",
+        "research/outputs/human_trait_dataset_feasibility/sapa/sapa_model_trait_candidate_crosswalk.csv",
+        "research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py",
+        "research/outputs/qwen_trait_family_human_inventory/qwen_pc_trait_family_human_inventory.csv",
+        "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_human_mapping_judgments.csv",
+        "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_membership_primary.csv",
+        "research/outputs/qwen_trait_family_human_inventory/qwen_trait_pc_correlations_all.csv",
+        "research/outputs/qwen_trait_family_human_inventory/verification_report.json",
+        "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv",
+        "research/visualizations/geometry_viz_data.json",
+        "research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_human_mapping_packet.csv",
+        "research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_human_mapping_packet_manifest.json",
+        "research/outputs/qwen_pc_human_construct_bridge/human_construct_library.csv",
+        "research/outputs/human_trait_dataset_feasibility/sapa/sapa_item_dictionary.csv"
+      ]
+    },
+    {
+      "name": "no_human_respondent_rows_loaded",
+      "passed": true,
+      "detail": {
+        "other_models_loaded": [],
+        "AA7_scientific_results_loaded": [],
+        "human_respondent_rows_loaded": false,
+        "human_respondent_scores_computed": false,
+        "human_model_correspondence_tested": false,
+        "next_experiment_selected": false
+      }
+    },
+    {
+      "name": "no_respondent_level_output_schema",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "all_csv_json_parse",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "report_exists",
+      "passed": true,
+      "detail": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-aa1-qwen-axis-specificity/research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_family_report.md"
+    },
+    {
+      "name": "diagnostic_figures_exist",
+      "passed": true,
+      "detail": "png+svg"
+    },
+    {
+      "name": "deterministic_rerun_primary_outputs",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "boundary": {
+    "model_geometry_used": "Qwen/Qwen3-32B only",
+    "human_respondent_scored_or_projected": false,
+    "llama_gemma_comparison": false,
+    "AA7_alignment_used": false,
+    "human_model_correspondence_test": false,
+    "next_experiment_selected": false
+  }
+}
