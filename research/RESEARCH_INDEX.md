@@ -14,6 +14,16 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 
 `research/outputs/sapa_bridge_psychometric_audit/` is the current entry point for the human-only SAPA measurement gate. A rubric frozen before covariance inspection leaves 9 high + 3 moderate of 45 direct semantic links, with 30 redundant/broad and 3 insufficient single-item proxies. The direct proxy matrix has 6 parallel-analysis components and participation-ratio effective rank 12.44; complete respondent profiles do not exist under SAPA planned administration. This supports independent expert review and a separate reduced-bridge scoring-method study, not human/model projection or a correspondence claim.
 
+## Integrated AA-1 Through AA-5 Entry Points (2026-09-11)
+
+- AA-1 human SAPA psychometric structure: `research/outputs/sapa_bridge_psychometric_audit/sapa_bridge_psychometric_audit_report.md`
+- AA-2 externally anchored Big Five and viewer integration: `research/outputs/externally_anchored_big_five/externally_anchored_big_five_report.md`
+- AA-3 extended persona PCA dimensionality: `research/outputs/extended_persona_pca/extended_persona_pca_report.md`
+- AA-4 Qwen trait sparsity and generic-basis controls: `research/outputs/qwen_trait_sparsity_prediction/qwen_trait_sparsity_report.md`
+- AA-5 NLSY97 occupational centroid stability: `research/outputs/nlsy97_occupation_personality_stability/nlsy97_occupation_personality_stability_report.md`
+
+The canonical synthesis is: PC1-PC3 are the strict Qwen core and PC4-PC6 supported secondary coordinates; negative Qwen PC3 contains a strong externally anchored Agreeableness component without being identical to Agreeableness; compact real traits provide semantic efficiency while the 240-trait ceiling is substantially same-space basis coverage; 12/45 direct SAPA links have moderate-or-better human structural support; and occupation is weak as a global human personality grouping variable despite selected stable cells. The frozen 12-trait cross-model recovery study is future work and has not been run.
+
 ## Current Trait Ridge Visualization (2026-09-09)
 
 Grouped 3D companion: `research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html` offers the same five groups as a slider over any two PCs, with height equal to the mean of three original trait percentiles. Stronger fixed-range color, fabric-only mode, a semi-transparent least-squares flat-plane comparison, flat-plane-only mode, and synchronized yaw/pitch/roll/zoom sliders with numeric entry and view presets address manual inspection requests. Complete group/member scores, fit diagnostics, flat-adherence diagnostics, provenance and tests accompany it. No existing viewer overwritten. Data and control-state tests pass; local browser automation was blocked, so interactive WebGL verification remains user-side. See `trait_surface_methodology.md` for averaging, flat-plane score definitions and same-space evidence caveats.
@@ -100,6 +110,11 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/RAW_URL_INDEX.md`: curated raw GitHub URL index for frequently referenced artifacts.
 - `research/paper15_content_ledger.md`: canonical factual ledger for Paper 1.5 writing; use before drafting prose.
 - `research/paper15_content_ledger_artifact_inventory.csv`: source artifact inventory for the Paper 1.5 content ledger.
+- `research/outputs/sapa_bridge_psychometric_audit/`: AA-1 human-only psychometric contraction of the frozen semantic bridge, with verification and artifact inventory.
+- `research/outputs/externally_anchored_big_five/`: AA-2 frozen external Big Five mappings, multimodel geometry tests, viewer integration report, and artifact inventory.
+- `research/outputs/extended_persona_pca/`: AA-3 full-rank dimensionality/stability audit and interactive PC1-PC10 viewer.
+- `research/outputs/qwen_trait_sparsity_prediction/`: AA-4 compact-feature and matched generic-basis audit of Qwen trait-to-PC prediction.
+- `research/outputs/nlsy97_occupation_personality_stability/`: AA-5 human-only occupation-centroid stability audit and future role-candidate table.
 - `research/geometry_tables/`: canonical Qwen role/trait PC ranking tables and cluster membership table generated from `research/visualizations/geometry_viz_data.json`.
 - `research/outputs/assistant_centroid_provenance_audit/`: audit showing the Paper 1.5 assistant baseline is the role-conditioned `assistant` centroid and making the 240-question bare-Qwen/default baseline foundational for future no-label interpretation.
 - `research/outputs/default_assistant_baseline_audit/`: audit identifying and projecting Lu et al.'s released Qwen `default_vector.pt`, comparing it with the assistant role centroid and Run 2 bare no-system centroid.

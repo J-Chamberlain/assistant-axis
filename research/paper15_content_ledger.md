@@ -56,8 +56,10 @@ Explicit non-goals:
 | PCA analysis | Define PC1/PC2/PC3 coordinate system for released role vectors. | Released Qwen role-vector artifacts and canonical PCA tables. | PC coordinates, explained variance, role rankings. | established within project |
 | Extended PCA dimensionality audit | Test the full spectrum rather than assuming the original 3D display is the scientific cutoff. | Exact saved 275-role Qwen/Llama/Gemma tensors; established coordinate orientation; Qwen trait matrix and role instructions. | Full rank-274 spectra, thresholds, knees, broken-stick, parallel analysis, bootstrap component/subspace stability, PC4+ interpretation packet, cross-model recurrence controls, PC1-PC10 viewer. | established dimensionality audit; PC1-PC3 strict core, PC4-PC6 supported secondary Qwen coordinates |
 | Trait overlays | Inspect same-space role-trait structure without independent psychometric claims. | `research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv`; `research/outputs/same_space_big_five_overlay/`; trait vectors. | Trait-profile matrices; activation-derived Big Five projections; trait-region overlays. | same-space evidence, not independent rating |
+| Qwen trait sparsity and basis-coverage audit | Distinguish compact semantic efficiency from generic high-dimensional reconstruction in the complete 240-trait predictor. | Existing Qwen role/trait tensors, 275 x 240 activation-cosine matrix, canonical PC targets, fixed editorial traits, and fold-local generic controls. | Nested compact selection, feature-budget thresholds, matched random real-trait/isotropic/persona-span controls, trait-span PC coverage, redundancy and norm audits. | mixed evidence: strong compact real-trait advantage plus near-complete high-k basis coverage |
+| Externally anchored Big Five audit | Test geometry-blind public-IPIP/SAPA-anchored activation directions and extend the canonical multimodel viewers. | Public-domain IPIP facet keys; reviewed AA-1 SAPA bridge; canonical trait definitions; saved Qwen/Llama/Gemma role and trait vectors. | Four frozen constructions, direction cosines, role-score associations, partial models, sensitivity tables, and integrated ridge/surface modes. | strong same-space Qwen Agreeableness-PC3 component; not independent human validation or universal PC identity |
 | Trait-profile PC predictor generalization | Test whether a complete activation-derived trait profile predicts PC1/PC2/PC3 when a persona or fixed Qwen-canonical role family is absent from fitting; compare Qwen, Llama, and Gemma in their own PCA geometries. | Existing 275 x 240 same-model role-trait cosine matrices; canonical/established model-specific PCA geometries; fixed Qwen role-family table; released role/trait vectors. | Repeated nested model comparison, complete LOPO, role-family holdout, permutation null, OOD diagnostics, transparent Ridge bundles, endpoint-held-out synthetic interpolation; Qwen prediction CLI. | established cross-model same-space held-out reconstruction; behavioral realization and PC-semantic identity untested |
-| Human-dataset feasibility and SAPA bridge review | Determine whether independent human datasets contain adequate trait content and occupation/outcome overlap for a later correspondence study without running that study. | Official SAPA V5 item/scale release; official NLSY97 public-use extraction and codebook; canonical 240 trait definitions; prior conservative role/occupation mapping; frozen coordinate-blind review packet and rubric. | Original SAPA 240-trait coverage evidence; NLSY97 same-wave personality/occupation counts and later-outcome inventory; provisional reviewed SAPA bridge with 45 direct and 29 separately flagged close links. | future-work feasibility only; same-workflow Codex review is not independent psychometric validation or human validation of persona geometry |
+| Human-dataset feasibility, SAPA bridge review, and occupational-centroid stability | Determine whether independent human datasets contain adequate trait content and occupation structure for a later correspondence study without running that study. | Official SAPA V5 item/scale release; official NLSY97 public-use extraction and codebook; canonical trait definitions; prior conservative role/occupation mapping; frozen AA-1 and AA-5 specifications. | SAPA bridge with 45 direct links contracted to 12 moderate-or-better human structural proxies; NLSY97 stability tiers, error curves, corrected ICCs, and future candidate cells. | future-work feasibility only; neither human study supplies model-geometry evidence or a human/model correspondence test |
 | Human-only SAPA bridge psychometric audit | Test whether the frozen direct/close SAPA proxies are coherent and discriminable in human responses before any human/model analysis. | Official SAPA V5 item responses and scoring keys; frozen Phase-1b bridge; psychometric rubric committed before covariance inspection. | Pairwise human proxy correlations/Ns, internal coherence, source convergence, reuse/discriminant audit, Big Five associations, effective dimensionality, and planned-missingness options. | future-work measurement diagnostic only; 12/45 direct links reach moderate-or-better support, but this is not model-geometry evidence or psychometric equivalence |
 | Semantic prediction benchmark | Test how much text-derived semantic structure predicts canonical activation PCA3D. | Shared 273-persona benchmark rows; no-label/prompt-derived feature matrices. | Semantic baseline R2=0.389397. | established baseline |
 | Codex trait replication | Test compact trait-like feature prediction outside the Claude Big Five source. | `research/q2_stability/qwen/outputs/codex_trait_replication/`. | Mean R2=0.398237. | weak positive signal |
@@ -265,6 +267,27 @@ Source artifact: `research/outputs/extended_persona_pca/extended_persona_pca_rep
 - Interpretation boundary: score recurrence over shared role labels may partly reflect shared role-instruction structure and does not establish identical cross-model PC semantics. Explained variance is centered saved-role activation-coordinate variance, not percent personality, behavior, human psychological variation, or causal importance. Trait associations remain same-space evidence.
 - Verification: all 274 components reconstruct each model's centered role matrix; canonical PC1-PC3 reproduce to max error 1.207e-06/2.748e-14/1.376e-11 for Qwen/Llama/Gemma; 14 major numerical outputs are byte-identical on a complete second pass; independent verification passes 17/17 checks.
 
+#### Qwen Trait Sparsity and Basis-Coverage Audit
+
+Source artifact: `research/outputs/qwen_trait_sparsity_prediction/qwen_trait_sparsity_report.md`; machine-readable summary: `validation_summary.json`; matched controls: `matched_basis_comparison.csv`; direct span audit: `trait_span_pc_coverage.csv`.
+
+- Observed: canonical persona PCA fits the 275 x 5,120 mean-pooled role-activation matrix without trait inputs. Predictor features and PC targets nevertheless transform the same role vectors, producing same-space algebraic dependence without direct target-column leakage.
+- Observed: the exact full-bank baseline reproduces at R²=0.999522/0.998811/0.999611 and normalized RMSE=0.045378. Leakage-safe joint selection reaches all-PC R²>=.95/.98/.99 at k=3/4/6 and normalized RMSE<=.10/<=2x-full at k=12/14.
+- Observed: selected 5/10/15 real traits reach normalized RMSE=0.176511/0.106880/0.087216. At k=15 optimized real traits beat all 100 random-real, isotropic, and fold-local persona-span banks, demonstrating a compact semantic-efficiency advantage.
+- Observed: generic coverage becomes decisive at high k. At k=240, fold-local training-persona-span directions reach 0.051422 versus 0.047609 for the full real-trait bank; the real-trait span contains 98.7955%/98.5303%/98.1947% of Qwen PC1/PC2/PC3 loading directions.
+- Interpretation boundary: the result is a mixture of compact real-trait alignment and high-dimensional generic same-space reconstruction. It does not establish an independently validated psychological ontology, causal traits, human correspondence, or behavioral realization.
+
+#### Externally Anchored Big Five Audit
+
+Source artifact: `research/outputs/externally_anchored_big_five/externally_anchored_big_five_report.md`; focal result: `agreeableness_pc3_focal_test.json`; frozen mappings: `human_anchored_strict_trait_mapping.csv`, `human_anchored_extended_trait_mapping.csv`, and `external_taxonomy_expanded_trait_mapping.csv`.
+
+- Observed: mapping A/B/C was frozen before geometry analysis at commit `636c5c1d9b832a1199e8d5b35dea993a41f94d4b`; no persona coordinates, PC correlations, AA-4 results, clusters, surfaces, or motivating screenshot were available to the mapping generator.
+- Observed: strict uses 42 defensible domain assignments among reviewed `ACCEPT_DIRECT`; extended adds 25 separately flagged `ACCEPT_CLOSE`; external-expanded uses 109 high-confidence direct indicators after all 240 traits were reviewed; the historical composite remains comparator D.
+- Observed: strict Qwen Agreeableness versus PC3 has direction cosine -0.847133, Pearson r=-0.881714, Spearman rho=-0.837526, R²=0.777420, joint standardized beta=-0.894047, and held-out partial R²=0.524122. Extended, expanded, and historical constructions remain strongly aligned.
+- Observed: cross-model placement is not universal. Llama Agreeableness-PC3 is weak and Agreeableness instead aligns mainly with negative PC2; Gemma has a moderate PC3 relation plus a substantial PC1 association.
+- Interpretation: negative Qwen PC3 has a strong Agreeableness-related component that sharpens but does not replace the broader care/repair/stabilization versus disruptive/internal-objective wording.
+- Boundary: external anchoring improves construct transparency but remains same-space activation evidence, not independent human psychometric validation, model/human correspondence, behavioral realization, causal trait evidence, or identical cross-model PC semantics.
+
 ## 3. Benchmark Progression
 
 Chronological benchmark table:
@@ -286,6 +309,8 @@ Related non-chronological comparison:
 | GPT-5.5 blind three-axis interpretation ratings | `research/outputs/blind_pc_interpretation_rating_benchmark/benchmark_comparison.csv` | 0.525022 | active/supportive | Compact PC interpretations predict geometry better than semantic baseline and Codex procedural features, but below Big Five/hierarchy/residual/SVD families. |
 | Complete activation-derived trait profile | `research/outputs/trait_profile_pc_predictor/trait_profile_pc_predictor_report.md` | LOPO R2 0.999522/0.998811/0.999611 | established, provenance-coupled | Near-ceiling same-space basis reconstruction under persona and cluster holdouts; not comparable to compact independent/semantic feature benchmarks as psychological evidence. |
 | Cross-model complete trait profiles | `research/outputs/multimodel_trait_profile_pc_predictor/cross_model_comparison.csv` | Llama LOPO R2 0.997833/0.997161/0.989900; Gemma 0.999788/0.996179/0.987835 | established replication, provenance-coupled | Same-space mapping replicates in model-specific PCA geometries; accuracy differences are not psychological comparisons and oriented axes need not share semantics. |
+| Qwen compact traits and matched generic bases | `research/outputs/qwen_trait_sparsity_prediction/` | 3/4/6 traits reach all-PC R²>=.95/.98/.99; k=240 persona-span RMSE=0.0514 vs full real 0.0476 | established mixed same-space result | Compact optimized real traits are efficient, while high-k near-ceiling prediction is substantially generic basis coverage. |
+| Frozen externally anchored Big Five | `research/outputs/externally_anchored_big_five/` | Qwen strict Agreeableness-PC3 cosine=-0.847; r=-0.882; R²=0.777; held-out partial R²=0.524 | strong same-space component evidence | Negative Qwen PC3 has a major Agreeableness-related component; Llama/Gemma reject a universal PC3 identity. |
 
 ## 4. Current PC1 Interpretation
 
@@ -494,6 +519,9 @@ Current wording:
 | Run 1 PC3-positive family | 9/10 pass | `research/outputs/no_label_elicitation_validation/no_label_elicitation_validation_report.md` |
 | Run 1 PC3-negative family | 9/10 pass | `research/outputs/no_label_elicitation_validation/no_label_elicitation_validation_report.md` |
 | Run 2 PC3 cost-to-others minimal pairs | 3/4 complete pairs pass in run report; 4/5 pass when Run 1 `pc3_pos_05` is included as pair 1 A-side in diagnostics | `research/outputs/no_label_elicitation_run2/`; `research/outputs/no_label_elicitation_run2_prompt_diagnostics/` |
+| Frozen strict Agreeableness direction vs Qwen PC3 loading | cosine=-0.847133 | `research/outputs/externally_anchored_big_five/big_five_pc_direction_cosines.csv` |
+| Strict Agreeableness role scores vs Qwen PC3 | Pearson r=-0.881714; Spearman rho=-0.837526; R²=0.777420 | `research/outputs/externally_anchored_big_five/agreeableness_pc3_focal_test.json` |
+| Strict Agreeableness conditional contribution | standardized beta=-0.894047; held-out partial R²=0.524122 | `research/outputs/externally_anchored_big_five/big_five_partial_r2.csv` |
 
 ### Interpretation
 
@@ -501,6 +529,7 @@ Observed:
 
 - Positive PC3 includes both prosocial interventionist roles (auditor, debugger, skeptic, statistician, lawyer) and antisocial/disruptive roles (demon, parasite, criminal, smuggler).
 - Negative PC3 includes counselor, therapist, healer, caregiver, angel, mediator.
+- Negative Qwen PC3 strongly aligns with a frozen externally anchored activation-derived Agreeableness direction at both direction and role-score levels.
 - Cost-to-others framing usually moves more positive on PC3 than cost-to-self framing.
 - Minimal-pair evidence showed cost-to-others framing moves PC3 positive more than cost-to-self framing.
 
@@ -512,6 +541,7 @@ Inferred:
 - PC3- is identity organized around the wellbeing of others rather than an internal objective.
 - Positive PC3 is better described as intervention, stress-testing, disruption, exploitation, challenge, or internal-objective pressure.
 - Negative PC3 is better described as care, repair, protection, mediation, preservation, and stabilization.
+- Agreeableness is a strong component of negative Qwen PC3, but is not equivalent to the full axis.
 
 Speculative:
 
@@ -529,6 +559,8 @@ Speculative:
 ### Caveats
 
 - Grounded_social within-cluster PC3 performance is weak.
+- Agreeableness does not occupy the same model-local PC number across systems: Llama aligns mainly with PC2, while Gemma's PC3 result is weaker and mixed with PC1.
+- The externally anchored construction remains same-space activation evidence with correlated domain directions; it is not independent human psychometric validation.
 - Professional subset includes high-PC3 technical/institutional counterexamples not rated strongly perturbative.
 - Negative controls are not inert.
 - No-label PC3 movement has substantial off-axis coupling, especially with PC1.
@@ -643,7 +675,7 @@ Active unresolved questions only:
 | OQ6 | How much of Big Five predictive performance reflects partially activation-dependent provenance? | Old Big Five overlay is cluster-conditioned; same-space replacement is activation-derived but not independent psychometrics. |
 | OQ7 | Should local activation-cloud geometry be included as supporting Paper 1.5 evidence or reserved for Paper 2? | Current state recommends Paper 2/local-manifold framing, with limited Paper 1.5 support for centroids-as-distributions. |
 | OQ8 | Does a frozen complete trait-profile prediction match the observed coordinate of a genuinely new behaviorally elicited Qwen persona? | V1 same-space predictor and OOD/error references are complete; behavioral realization was deliberately not run in this stage. |
-| OQ9 | Does a genuinely independent reviewer retain a restricted SAPA bridge, can a planned-missingness measurement model recover defensible respondent scores, and can preregistered NLSY97 occupation cells test role-prototype correspondence? | Human-only SAPA structure leaves 9 high + 3 moderate direct links under the frozen rubric; no respondent has a complete direct profile. NLSY97 has 6,261 respondents with Round-12 TIPI plus occupation, but most mapped role cells are sparse and no correspondence analysis has run. |
+| OQ9 | Does a genuinely independent reviewer retain the 12-trait restricted SAPA bridge, can a planned-missingness measurement model recover defensible respondent scores, and can selected NLSY97 occupation cells support a preregistered role-prototype comparison? | Human-only SAPA structure leaves 9 high + 3 moderate direct links and no complete direct profile. AA-5 finds 27 of 151 reportable narrow cells and 20 of 22 broad groups meet frozen strong/moderate stability criteria, but corrected occupation ICCs are only 0.8%-7.8%, broadening has semantic cost, most exact mappings remain sparse, and no correspondence analysis has run. |
 
 ## 10. Claims Inventory
 
@@ -715,6 +747,7 @@ Status mapping:
 | PC2 conditional validation | Central evidence that PC2 is abstraction/integration/developmental, not uncertainty exposure. |
 | PC2 muted-PC1 and cluster-conditioned diagnostics | Necessary caveats and counterexamples for PC2 wording. |
 | PC3 perturbation-stabilization validation | Best direct evidence for PC3 wording and moral-valence rejection. |
+| Externally anchored Big Five audit | Strong frozen-mapping evidence that negative Qwen PC3 has an Agreeableness-related component; include exact direction/role statistics and the cross-model non-identity caveat. |
 | Assistant centroid provenance and bare-Qwen baseline distinction | Required methodological correction for no-label interpretation. |
 | Run 2 no-label core results | Useful activation-space support, especially bare-Qwen baseline, PC2 replacement/minimal pairs, and PC1 accountability context. |
 
@@ -729,6 +762,7 @@ Status mapping:
 | Blinded axis rubric validation | Conservative lexical/proxy screen; mainly a limitation and motivation for richer rater studies. |
 | Trait-profile provenance audit | Required technical provenance; too detailed for main flow. |
 | Trait-profile PC predictor held-out generalization and Llama/Gemma replication | Stronger LOPO/family/permutation/synthetic support for the same-space trait-geometry statement across three saved vector sets; include with explicit basis-coverage, PC-semantic, and no-behavioral-validation caveats. |
+| Qwen trait sparsity and basis-coverage audit | Essential qualification of the complete-trait predictor: compact real traits are unusually efficient, while the 240-trait near-ceiling result is substantially generic high-dimensional basis coverage. |
 | Big Five provenance audit details | Main paper needs conclusion; full dependency details belong in appendix. |
 | Residual manifold and SVD component details | Main paper can cite metrics; component-level detail belongs in appendix. |
 
@@ -740,6 +774,6 @@ Status mapping:
 | Prompt-battery generation details | Useful project history but not needed for Paper 1.5 interpretation. |
 | RunPod logs and activation shards | Reproducibility/support artifacts, not writing content. |
 | Occupation-population joins and overlays | Exploratory future-work/appendix material only; not core evidence. |
-| SAPA/NLSY97 feasibility audit, provisional bridge, and human-only SAPA structure audit as Paper 1.5 results | Use only to motivate carefully bounded future independent validation; the human-only audit contracts the direct bridge to 9 high + 3 moderate links but does not establish construct equivalence, model correspondence, or a respondent-scoring solution, and none of these artifacts belongs in the current geometry evidence chain. |
+| SAPA/NLSY97 feasibility audit, occupational-centroid stability study, provisional bridge, and human-only SAPA structure audit as Paper 1.5 model results | Use only to motivate carefully bounded future independent validation; the human-only audit contracts the direct bridge to 9 high + 3 moderate links and AA-5 identifies selected stable cells, but neither establishes construct equivalence, model correspondence, or a respondent-scoring solution, and neither belongs in the model-geometry evidence chain. |
 | Adaptive extraction operational details beyond brief caveat | Methodological due diligence; not the headline contribution. |
 | Speculative local activation-cloud Paper 2 claims | Future scope; only use if explicitly framed as distributional motivation. |

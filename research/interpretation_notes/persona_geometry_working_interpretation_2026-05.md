@@ -233,3 +233,13 @@ Interpretation: PC1-PC3 remain the compact and currently named core. PC4-PC6 can
 Interpretation boundary: cross-model recurrence compares component score patterns over shared role labels and may partly reflect common role-instruction structure. It does not establish identical component semantics, activation bases, psychological constructs, behavioral realization, or human correspondence. Explained variance is variation among centered saved role activations, not a percent of personality or behavior.
 
 Unknown: coordinate-blind independent raters have not yet evaluated the randomized PC4-PC6 role-instruction packets. The separately developed AA-2 Big Five mapping was not available on this branch and should be tested against these retained secondary coordinates only after both branches are canonically integrated.
+
+## Dated Update: Externally Anchored Big Five Integration (2026-09-11)
+
+Observed: the geometry-blind strict construction derived from public IPIP/IPIP-NEO facet structure and reviewed SAPA direct links gives a strong Qwen Agreeableness relationship with PC3: activation-direction cosine -0.847133, Pearson r=-0.881714, Spearman rho=-0.837526, single-domain R²=0.777420, standardized joint beta=-0.894047, and held-out partial R²=0.524122. The relationship remains strong across the frozen extended, external-taxonomy-expanded, and historical comparator constructions.
+
+Interpretation: negative Qwen PC3 contains a strong Agreeableness-related component. This sharpens but does not replace the broader care/repair/system-stabilizing versus disruptive/internal-objective reading: the strict Agreeableness model leaves 22.258% of PC3 variance, and other interventionist, technical, or transgressive structure remains.
+
+Cross-model boundary: do not assign Agreeableness as a universal label to model-local PC3. Llama Agreeableness aligns mainly with negative PC2, while Gemma's organization is weaker/mixed across PC1-PC3. These are same-space activation-derived domain directions, not independent human psychometric factors, behavioral realization, shared activation bases, or proof of construct identity.
+
+Provisional later-axis boundary: AA-2 does not promote or durably name Qwen PC4-PC6. They remain the AA-3 supported secondary coordinates pending coordinate-blind interpretation; any future Big Five comparison through PC6 should preserve geometry-blind mapping and explicit model-local/subspace alignment.

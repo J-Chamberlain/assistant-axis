@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-11T23:45:00Z
-Last commit when updated: c5ea17d (completed the human-only SAPA bridge psychometric audit)
+Updated UTC: 2026-09-11
+Last commit when updated: c1f241b (merged AA-1 through AA-5 before final semantic reconciliation)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,20 +24,20 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3900
+- active analyses: 3964
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 12
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 340
-- visualizations: 238
+- trait analyses: 405
+- visualizations: 242
 
 
 ## Status Counts
 
-- active: 4714
+- active: 4847
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -50,6 +50,14 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/FINDINGS_LEDGER.md`, `research/THREAD_START.md`, and `research/STARTUP_MANIFEST.md` for startup and report continuity. Use `research/paper15_content_ledger.md` as the canonical factual source ledger before drafting Paper 1.5 prose.
 
 ### Active Analyses
+
+Externally anchored Big Five audit: `research/outputs/externally_anchored_big_five/externally_anchored_big_five_report.md` is the AA-2 entry point for the frozen geometry-blind IPIP/SAPA constructions and their Qwen/Llama/Gemma activation-space tests. Use `agreeableness_pc3_focal_test.json` for the strict Qwen focal result, the mapping CSVs and freeze manifest for construct provenance, and `big_five_viewer_integration_report.md` for canonical ridge/surface compatibility. Negative Qwen PC3 has a strong Agreeableness component; it is not equivalent to Agreeableness, and the model-local axis number does not transfer universally.
+
+Extended persona PCA: `research/outputs/extended_persona_pca/extended_persona_pca_report.md` is the AA-3 entry point for the full rank-274 Qwen/Llama/Gemma spectra, dimensionality diagnostics, bootstrap stability, later-PC interpretation packet, cross-model shared-role score recurrence, and self-contained PC1-PC10 viewer. Use `component_retention_summary.csv` for status: Qwen PC1-PC3 are the strict core, PC4-PC6 supported secondary/provisional coordinates, PC8/PC10 exploratory, and PC7/PC9 plus later tested axes not privileged by the current stability criteria.
+
+Qwen trait sparsity and basis coverage: `research/outputs/qwen_trait_sparsity_prediction/qwen_trait_sparsity_report.md` is the AA-4 entry point. Use `feature_budget_thresholds.csv`, `matched_basis_comparison.csv`, and `trait_span_pc_coverage.csv` to distinguish compact optimized real-trait efficiency from high-dimensional generic same-space reconstruction. The full 240-trait ceiling is substantially basis coverage and must not be described as independent psychological validation.
+
+NLSY97 occupational personality stability: `research/outputs/nlsy97_occupation_personality_stability/nlsy97_occupation_personality_stability_report.md` is the AA-5 human-only entry point. Use `analysis_specification.md` for the frozen design, the narrow/broad stability tables and sample-size curves for centroid precision, and `persona_role_future_candidates.csv` for explicitly future candidate cells. Occupation is weak as a global personality grouping variable; stable broad parents can be semantically costly, no human/model projection was performed, and respondent-level files remain gitignored.
 
 Multi-model trait-profile to persona-PC predictor: `research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md` is the entry point for the Llama-3.3-70B and Gemma-2-27B replication of the completed Qwen mapping. Use `cross_model_comparison.csv` for the canonical three-model metric table; each `llama/` and `gemma/` subdirectory contains the complete 275 x 240 cosine matrix, repeated nested comparison, raw/quantile LOPO, fixed Qwen-canonical role-family holdout, 100-permutation control, OOD reference, transparent Ridge/all-model bundles, endpoint-held-out synthetic interpolation, source manifest, and verification report. `deterministic_full_rerun_comparison.json` records byte-identical reproduction of all 20 deterministic CSVs. Each model uses its own established PCA geometry; cross-model sign orientation does not imply identical PC semantics. This is same-space saved-vector evidence, not behavioral, causal, psychometric, human-transfer, or model-sophistication evidence. No GPU, RunPod, new inference, activation extraction, or external model API was used.
 
@@ -67,9 +75,9 @@ Most active analyses live under `research/outputs/`, `research/assistant_axis_me
 
 ### Visualizations
 
-Multimodel grouped trait landscape: `research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html` switches without reload among Qwen, Llama, and Gemma views of exploration, response, scrutiny, challenge, and affiliation. Each model has its own coordinates, 1,375 group rows, surfaces, support masks, flat planes, and fit diagnostics; each height is the equal-weight mean of the three member-trait within-model percentiles. The viewer preserves compatible view/camera/selection state across model switches. Qwen exactly reproduces the previous saved science. Data/DOM checks and actual local Chrome 152/Plotly WebGL verification passed. Open the completed HTML, not `viewer_template.html`; use `multimodel_trait_viewers_implementation_report.md` and the directory inventories for methods, verification, hashes, and URLs.
+Multimodel grouped trait landscape: `research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html` switches without reload among Qwen, Llama, and Gemma and between the original Editorial groups and AA-2 strict Big Five domains. Editorial remains the default. Every model/profile has its own nodes, fabrics, masks, planes, diagnostics, hover data, and details; camera state and persona-name selection persist as designed, stale traces are removed on rapid switching, and Qwen Editorial numerical drift is exactly zero. Data/DOM tests and actual local Chrome 152/Plotly WebGL verification passed. Open the completed HTML, not `viewer_template.html`; use `big_five_viewer_integration_report.md` and the directory inventories for methods and hashes.
 
-Multimodel PC-ranked trait profiles: `research/outputs/persona_trait_ridge_plots/persona_trait_ridges.html` switches without reload among Qwen, Llama, and Gemma, with all 275 personas ordered by each selected model's own PC1/PC2/PC3 coordinates. The unchanged 15 of 240 traits are grouped as exploration, response, scrutiny, challenge, and affiliation. The 12,375-row bundle retains raw cosine, population z-score, and within-model percentile; equal percentiles mean equal within-model rank, not absolute cross-model equivalence. Qwen uses canonical geometry; Llama/Gemma use model-local PCA with the established multimodel sign orientation. Static model-specific SVG/PNG exports, DOM checks, and actual local Chrome 152 verification are saved. Same-space activation-cosine evidence, not independent psychological validation.
+Multimodel PC-ranked trait profiles: `research/outputs/persona_trait_ridge_plots/persona_trait_ridges.html` keeps the unchanged 15-trait Editorial mode as default and adds Big Five mode with strict, extended, external-taxonomy-expanded, and historical constructions. It switches without reload among Qwen/Llama/Gemma; Qwen Editorial outputs are unchanged, model/profile/construction switching leaves no stale traces, and selection persists by persona name. Heights remain within-model scores/ranks rather than absolute cross-model psychological measurements.
 
 PC-ranked emotion profiles: `research/outputs/persona_emotion_ridge_plots/persona_emotion_ridges.html` shows all 275 personas in three descending-PC rankings. Ten saved categories are ordered negative-to-positive, with ridge height encoding within-emotion percentile affinity. The directory includes 2,750 scores, full SVG/PNG exports, a top-20 overview and reproducible provenance/checks. All plots are pre-rendered; open the completed HTML, not a source template.
 

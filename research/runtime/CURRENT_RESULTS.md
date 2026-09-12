@@ -4,6 +4,12 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/runtime/CURRENT_RESULTS.md
 # Status: COMPLETE
 
+## 2026-09-11 — Canonical AA-1 through AA-5 integration
+
+Integrated the five verified study histories without rerunning or reinterpreting their science. AA-1 contracts 45 direct SAPA links to 12 moderate-or-better human structural proxies (9 high, 3 moderate; 30 redundant/broad; 3 insufficient), with 6 parallel-analysis components and participation-ratio rank 12.44. AA-2 finds a strong negative-Qwen-PC3 Agreeableness component (cosine -0.847133; Pearson -0.881714; R² 0.777420) while rejecting a universal PC3 identity across models. AA-3 retains PC1-PC3 as the strict core (56.449% cumulative variance) and PC4-PC6 as supported secondary coordinates (67.408%). AA-4 shows compact real-trait efficiency—3/4/6 traits reach all-PC R² >=.95/.98/.99—alongside >98% PC-loading coverage and near-complete reconstruction by a 240-direction generic persona-span basis. AA-5 finds selected stable occupational centroids but weak overall occupation-personality signal (corrected ICCs 3.8%-7.8% narrow and 0.8%-3.2% broad; classification near chance).
+
+The frozen 12-trait cross-model PC1-PC3/PC1-PC6 recovery study and aligned-subspace Big Five study are **FUTURE / NOT YET RUN**. Genuinely independent external/expert review of the frozen SAPA packet remains the human gate. No new scientific scoring, respondent-level data, human-to-model projection, GPU, RunPod, model inference, activation extraction, response generation, or external model API was used during integration.
+
 ## 2026-09-11 — Human-only SAPA bridge psychometric structure audit
 
 Completed `research/outputs/sapa_bridge_psychometric_audit/` using only official SAPA V5 item responses, scoring keys, and the frozen Phase-1b bridge. Under a rubric frozen before covariance inspection, 12/45 direct links survive at moderate-or-better human-measurement support (9 high, 3 moderate), 30 are redundant/broad, and 3 single-item links are insufficient. The direct human proxy matrix retains 6 parallel-analysis components and participation-ratio rank 12.44; adding 29 close links contributes only 5 more moderate links. Planned missingness prevents complete profiles (median 10/96 direct items observed; median direct item-pair overlap 490). Deterministic reproduction and privacy/source/scoring checks pass. This is human-data structural support only: no model geometry or human-to-model projection was used, and no respondent-level data were committed.
