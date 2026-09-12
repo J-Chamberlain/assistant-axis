@@ -89,6 +89,30 @@ def standard_alpha(correlation: np.ndarray) -> float:
 
 
 CONSTRUCT_METADATA = {
+    # SAPA Personality Inventory (SPI) hierarchy.
+    "SPI_3sociability": ("Sociability", "SAPA Personality Inventory", "Sociability", "broad_domain", "Preference and capacity for social engagement, interpersonal approach, and affiliation.", "SAPA_SPI"),
+    "SPI_3socCohesion": ("Social Cohesion", "SAPA Personality Inventory", "Social Cohesion", "broad_domain", "Cooperative, trusting, compassionate, and norm-compatible interpersonal orientation.", "SAPA_SPI"),
+    "SPI_3emotionality": ("Emotionality", "SAPA Personality Inventory", "Emotionality", "broad_domain", "Sensitivity to negative affect, threat, distress, and emotional fluctuation.", "SAPA_SPI"),
+    "SPI_5compHonHum": ("Compassion/Honesty/Humility", "SAPA Personality Inventory", "Compassion/Honesty/Humility", "domain", "Compassionate, fair, sincere, and non-exploitative interpersonal orientation.", "SAPA_SPI"),
+    "SPI_5conscientious": ("Conscientiousness", "SAPA Personality Inventory", "Conscientiousness", "domain", "Organized, industrious, controlled, and responsible behavior.", "SAPA_SPI"),
+    "SPI_5extraversion": ("Extraversion", "SAPA Personality Inventory", "Extraversion", "domain", "Social energy, boldness, enthusiasm, and interpersonal engagement.", "SAPA_SPI"),
+    "SPI_5intelOpen": ("Intellect/Openness", "SAPA Personality Inventory", "Intellect/Openness", "domain", "Intellectual curiosity, imagination, aesthetic engagement, and openness to ideas.", "SAPA_SPI"),
+    "SPI_5neuroticism": ("Neuroticism", "SAPA Personality Inventory", "Neuroticism", "domain", "Negative emotional reactivity, fear, volatility, and sensitivity to stress.", "SAPA_SPI"),
+    "SPI_15boldness": ("Boldness", "SAPA Personality Inventory", "Extraversion", "narrow_trait", "Social confidence, assertive approach, and low inhibition.", "SAPA_SPI"),
+    "SPI_15compassion": ("Compassion", "SAPA Personality Inventory", "Social Cohesion", "narrow_trait", "Concern for others, empathy, and willingness to help.", "SAPA_SPI"),
+    "SPI_15habit": ("Habit", "SAPA Personality Inventory", "Conscientiousness", "narrow_trait", "Preference for regular routines, plans, and habitual organization.", "SAPA_SPI"),
+    "SPI_15easyGoingness": ("Easy-Goingness", "SAPA Personality Inventory", "Social Cohesion", "narrow_trait", "Relaxed, patient, and non-irritable interpersonal style.", "SAPA_SPI"),
+    "SPI_15fear": ("Fear", "SAPA Personality Inventory", "Emotionality", "narrow_trait", "Sensitivity to danger, threat, and apprehension.", "SAPA_SPI"),
+    "SPI_15impulsivity": ("Impulsivity", "SAPA Personality Inventory", "Conscientiousness", "narrow_trait", "Tendency toward unplanned, immediate action and weak behavioral restraint.", "SAPA_SPI"),
+    "SPI_15industry": ("Industry", "SAPA Personality Inventory", "Conscientiousness", "narrow_trait", "Persistent, diligent, energetic engagement in work and tasks.", "SAPA_SPI"),
+    "SPI_15intellect": ("Intellect", "SAPA Personality Inventory", "Intellect/Openness", "narrow_trait", "Engagement with ideas, reasoning, learning, and complex information.", "SAPA_SPI"),
+    "SPI_15machiavell": ("Machiavellianism", "SAPA Personality Inventory", "Social Cohesion", "narrow_trait", "Strategic manipulation, distrust, and instrumental treatment of others.", "SAPA_SPI"),
+    "SPI_15openness": ("Openness", "SAPA Personality Inventory", "Intellect/Openness", "narrow_trait", "Imagination, aesthetic sensitivity, and receptivity to unconventional experience.", "SAPA_SPI"),
+    "SPI_15enthusiasm": ("Enthusiasm", "SAPA Personality Inventory", "Sociability", "narrow_trait", "Positive affect, liveliness, warmth, and energetic engagement.", "SAPA_SPI"),
+    "SPI_15seriousness": ("Seriousness", "SAPA Personality Inventory", "Conscientiousness", "narrow_trait", "Deliberate, restrained, earnest, and non-frivolous orientation.", "SAPA_SPI"),
+    "SPI_15sociability": ("Sociability", "SAPA Personality Inventory", "Sociability", "narrow_trait", "Enjoyment of social contact, conversation, and group activity.", "SAPA_SPI"),
+    "SPI_15trust": ("Trust", "SAPA Personality Inventory", "Social Cohesion", "narrow_trait", "Expectation that others are honest, dependable, and well-intentioned.", "SAPA_SPI"),
+    "SPI_15volatility": ("Volatility", "SAPA Personality Inventory", "Emotionality", "narrow_trait", "Irritability, anger, mood instability, and rapid emotional escalation.", "SAPA_SPI"),
     # IPIP 100-item Big Five domains.
     "IPIP100:B5:A": ("Agreeableness", "Big Five", "Agreeableness", "domain", "Compassionate, cooperative, trusting, and considerate interpersonal orientation.", "IPIP_BIG_FIVE"),
     "IPIP100:B5:C": ("Conscientiousness", "Big Five", "Conscientiousness", "domain", "Organized, dependable, planful, persistent, and self-controlled goal pursuit.", "IPIP_BIG_FIVE"),
@@ -131,6 +155,12 @@ CONSTRUCT_METADATA = {
     "HEXACO:H:X:L": ("Liveliness", "HEXACO", "Extraversion", "facet", "Optimism, energy, enthusiasm, and positive mood.", "HEXACO"),
     "HEXACO:H:X:S": ("Sociability", "HEXACO", "Extraversion", "facet", "Enjoyment of conversation, interaction, and social gatherings.", "HEXACO"),
     "HEXACO:H:X:SB": ("Social Boldness", "HEXACO", "Extraversion", "facet", "Confidence and comfort in social leadership and unfamiliar situations.", "HEXACO"),
+    "HEXACO_A": ("Agreeableness", "HEXACO", "Agreeableness", "domain", "Forgiving, gentle, flexible, and patient responding rather than anger and stubbornness.", "HEXACO"),
+    "HEXACO_C": ("Conscientiousness", "HEXACO", "Conscientiousness", "domain", "Organization, diligence, perfectionism, and prudent behavioral control.", "HEXACO"),
+    "HEXACO_E": ("Emotionality", "HEXACO", "Emotionality", "domain", "Fearfulness, anxiety, dependence, sentimentality, and emotional attachment.", "HEXACO"),
+    "HEXACO_H": ("Honesty-Humility", "HEXACO", "Honesty-Humility", "domain", "Sincerity, fairness, modesty, and low greed or exploitation.", "HEXACO"),
+    "HEXACO_O": ("Openness to Experience", "HEXACO", "Openness to Experience", "domain", "Aesthetic appreciation, inquisitiveness, creativity, and unconventionality.", "HEXACO"),
+    "HEXACO_X": ("Extraversion", "HEXACO", "Extraversion", "domain", "Social self-esteem, boldness, sociability, liveliness, and expressive engagement.", "HEXACO"),
     # Questionnaire Big Six domains.
     "QB6:QB6:A": ("Agreeableness", "Questionnaire Big Six", "Agreeableness", "domain", "Kind, cooperative, and nonaggressive interpersonal orientation.", "QB6"),
     "QB6:QB6:C": ("Conscientiousness", "Questionnaire Big Six", "Conscientiousness", "domain", "Reliability, organization, persistence, and behavioral control.", "QB6"),
@@ -158,6 +188,12 @@ CONSTRUCT_METADATA = {
     # Big Five metatraits.
     "PS:PS:P": ("Plasticity", "Big Five Metatraits", "Plasticity", "metatrait", "Shared variance of Extraversion and Openness/Intellect, reflecting exploration and engagement with novelty.", "METATRAITS"),
     "PS:PS:S": ("Stability", "Big Five Metatraits", "Stability", "metatrait", "Shared variance of Agreeableness, Conscientiousness, and Emotional Stability, reflecting maintained goal, affective, and social organization.", "METATRAITS"),
+    # IPIP-NEO domain composites released in superKey696.
+    "NEO_A": ("Agreeableness", "IPIP-NEO", "Agreeableness", "domain", "Trusting, straightforward, altruistic, cooperative, modest, and sympathetic orientation.", "IPIP_NEO"),
+    "NEO_C": ("Conscientiousness", "IPIP-NEO", "Conscientiousness", "domain", "Competence, order, dutifulness, achievement striving, self-discipline, and deliberation.", "IPIP_NEO"),
+    "NEO_E": ("Extraversion", "IPIP-NEO", "Extraversion", "domain", "Warmth, sociability, assertiveness, activity, excitement seeking, and positive emotion.", "IPIP_NEO"),
+    "NEO_N": ("Neuroticism", "IPIP-NEO", "Neuroticism", "domain", "Anxiety, anger, depression, self-consciousness, immoderation, and vulnerability.", "IPIP_NEO"),
+    "NEO_O": ("Openness to Experience", "IPIP-NEO", "Openness to Experience", "domain", "Imagination, aesthetics, emotional receptivity, adventurousness, intellect, and openness to values.", "IPIP_NEO"),
 }
 
 
@@ -226,8 +262,9 @@ def build_construct_library(repo: Path, output: Path) -> tuple[list[dict[str, ob
     raw_root = repo / "data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE"
     raw_path = raw_root / "sapaTempData696items08dec2013thru26jul2014.tab"
     key_path = raw_root / "superKey696.csv"
-    scale = pd.read_csv(scale_path)
-    scale = scale[scale["inventory_type"] == "administered_source_construct"].copy()
+    all_scale_rows = pd.read_csv(scale_path)
+    source_count = int((all_scale_rows["inventory_type"] == "administered_source_construct").sum())
+    scale = all_scale_rows[all_scale_rows["scale_id"].isin(CONSTRUCT_METADATA)].copy()
     item = pd.read_csv(item_path).set_index("item_id")
     super_key = pd.read_csv(key_path, index_col=0).fillna(0.0)
     key_sets = {column: set(super_key.index[super_key[column].astype(float) != 0]) for column in super_key.columns}
@@ -237,6 +274,11 @@ def build_construct_library(repo: Path, output: Path) -> tuple[list[dict[str, ob
     mappings: dict[str, tuple[str, str]] = {}
     for row in scale.itertuples(index=False):
         source_items = set(split_ids(row.item_ids))
+        if row.inventory_type == "derived_scoring_key":
+            if row.scale_id not in key_sets or key_sets[row.scale_id] != source_items:
+                raise ValueError(f"Derived key mismatch for {row.scale_id}")
+            mappings[row.scale_id] = (row.scale_id, "released_derived_scoring_key")
+            continue
         exact = [key for key, ids in key_sets.items() if ids == source_items]
         if exact:
             mappings[row.scale_id] = (exact[0], "exact_item_set")
@@ -303,7 +345,7 @@ def build_construct_library(repo: Path, output: Path) -> tuple[list[dict[str, ob
     sources = [
         "# Human construct library sources",
         "",
-        "The candidate universe is the complete set of 92 `administered_source_construct` rows in the released SAPA inventory. Names are expanded through documented instrument structures; abbreviations are not interpreted freehand. Definitions in the library are concise paraphrases of the cited construct descriptions and scoring-key content.",
+        "The candidate universe includes all 92 `administered_source_construct` rows in the released SAPA inventory plus 34 nonduplicate established hierarchical composites available as released scoring keys: 23 SPI constructs, six HEXACO domains, and five IPIP-NEO domains. Duplicate short-form or duplicate derived versions of already represented scales are omitted. Names are expanded through documented instrument structures; abbreviations are not interpreted freehand. Definitions are concise paraphrases of cited construct descriptions and scoring-key content.",
         "",
         "## Primary release and administration",
         "",
@@ -328,9 +370,11 @@ def build_construct_library(repo: Path, output: Path) -> tuple[list[dict[str, ob
     (output / "human_construct_library_sources.md").write_text("\n".join(sources) + "\n", encoding="utf-8")
     summary = {
         "construct_count": int(len(frame)),
+        "administered_source_construct_count": source_count,
+        "additional_released_hierarchical_construct_count": int(len(frame) - source_count),
         "framework_counts": frame["framework"].value_counts().sort_index().to_dict(),
         "level_counts": frame["construct_level"].value_counts().sort_index().to_dict(),
-        "all_source_constructs_mapped": len(frame) == len(scale) == 92,
+        "all_source_constructs_mapped": source_count == 92 and len(frame) == len(scale) == len(CONSTRUCT_METADATA),
         "raw_human_rows_read": int(len(responses)),
         "respondent_identifier_read": False,
         "raw_response_output_written": False,

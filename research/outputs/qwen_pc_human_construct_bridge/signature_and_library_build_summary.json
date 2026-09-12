@@ -1,22 +1,27 @@
 {
   "construct_library": {
+    "additional_released_hierarchical_construct_count": 34,
+    "administered_source_construct_count": 92,
     "all_source_constructs_mapped": true,
-    "construct_count": 92,
+    "construct_count": 126,
     "framework_counts": {
       "Big Five": 5,
       "Big Five Aspects": 10,
       "Big Five Metatraits": 2,
       "Eysenck PEN": 3,
-      "HEXACO": 24,
-      "IPIP-NEO": 30,
+      "HEXACO": 30,
+      "IPIP-NEO": 35,
       "Multidimensional Personality Questionnaire": 12,
-      "Questionnaire Big Six": 6
+      "Questionnaire Big Six": 6,
+      "SAPA Personality Inventory": 23
     },
     "level_counts": {
       "aspect": 10,
-      "domain": 14,
+      "broad_domain": 3,
+      "domain": 30,
       "facet": 54,
       "metatrait": 2,
+      "narrow_trait": 15,
       "primary_trait": 11,
       "validity_indicator": 1
     },

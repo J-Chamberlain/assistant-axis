@@ -1,6 +1,6 @@
 # Human construct library sources
 
-The candidate universe is the complete set of 92 `administered_source_construct` rows in the released SAPA inventory. Names are expanded through documented instrument structures; abbreviations are not interpreted freehand. Definitions in the library are concise paraphrases of the cited construct descriptions and scoring-key content.
+The candidate universe includes all 92 `administered_source_construct` rows in the released SAPA inventory plus 34 nonduplicate established hierarchical composites available as released scoring keys: 23 SPI constructs, six HEXACO domains, and five IPIP-NEO domains. Duplicate short-form or duplicate derived versions of already represented scales are omitted. Names are expanded through documented instrument structures; abbreviations are not interpreted freehand. Definitions are concise paraphrases of cited construct descriptions and scoring-key content.
 
 ## Primary release and administration
 
