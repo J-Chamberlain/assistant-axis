@@ -31,13 +31,13 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 453
+- trait analyses: 480
 - visualizations: 242
 
 
 ## Status Counts
 
-- active: 4946
+- active: 4973
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -50,6 +50,8 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/FINDINGS_LEDGER.md`, `research/THREAD_START.md`, and `research/STARTUP_MANIFEST.md` for startup and report continuity. Use `research/paper15_content_ledger.md` as the canonical factual source ledger before drafting Paper 1.5 prose.
 
 ### Active Analyses
+
+Axis-specific Qwen markers and purity-filtered SAPA inventory: `research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_family_report.md` is the readable entry point and `qwen_axis_specific_marker_sets.csv` is the frozen 88-row primary marker set. Use `qwen_trait_axis_specificity_metrics.csv` and `qwen_trait_axis_specificity_bootstrap.csv` for all 1,440 target-axis strength/purity and bootstrap-dominance records; `qwen_trait_family_specificity_classification.csv` for every original family membership; `existing_trait_composite_axis_specificity.csv` for the five documented editorial composites; and `qwen_axis_specific_human_inventory.csv` for the purity-filtered SAPA availability inventory. The `.70` purity / `.95` dominance rule retains 88/328 signed memberships: PC1 12/48, PC2 3/10, PC3 7/8, and none for PC4-PC6. The filtered human inventory contains 22 construct/item candidates and 195 SAPA items. This is same-space Qwen specificity and measurement-availability inventory only; no respondent scoring/projection, cross-model or AA-7 input, correspondence test, or next-experiment selection occurred.
 
 Correlation-defined Qwen trait families to SAPA inventory: `research/outputs/qwen_trait_family_human_inventory/qwen_pc_trait_family_human_inventory_report.md` is the readable entry point and `qwen_pc_trait_family_human_inventory.csv` is the exhaustive machine-readable inventory. Use `qwen_trait_pc_correlations_all.csv` for all 1,440 Qwen PC1-PC6 trait associations; `qwen_trait_family_membership_primary.csv` and `qwen_trait_family_threshold_sensitivity.csv` for the frozen `.50` primary and `.40/.60` sensitivity rules; `qwen_trait_family_blinded_mapping_packet.csv` for the neutral-ID packet; and `qwen_trait_family_human_mapping_judgments.csv` for all 48 SAPA proposals. The result inventories 37 unique construct/item candidates and 350 SAPA items across 12 signed families, including two empty poles. This is the requested stopping point: no respondent scoring/projection, cross-model comparison, AA-7 input, correspondence test, or next-experiment selection occurred.
 

@@ -4,6 +4,12 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/runtime/CURRENT_RESULTS.md
 # Status: COMPLETE
 
+## 2026-09-12 — Axis-specific Qwen markers and purity-filtered SAPA inventory
+
+Extended the unchanged correlation-defined Qwen families with a six-PC specificity layer frozen before result inspection. The primary rule retains 88/328 signed memberships: PC1 positive/negative 12/48, PC2 3/10, PC3 7/8, and PC4-PC6 0/0. The remaining original memberships comprise 150 target-dominant-but-diffuse and 90 non-target-dominant rows. PC1-PC6 orthogonality and the communality/multiple-R² identity reproduce to numerical precision; the 2,000-bootstrap outputs and all primary tables reproduce deterministically.
+
+The documented Affiliation composite is numerically PC3-specific (`r=-0.970129`, purity `0.965818`). A neutral-ID remapping of the pure families against the unchanged full 126-construct SAPA library yields 22 unique construct/item candidates and 195 unique items: three signed families have strong whole-family matches, three partial-only, and six no match because their primary marker set is empty. Verification passes 54 checks. This is the requested stopping point: no respondent was scored/projected, no Llama/Gemma or AA-7 input was used, no correspondence test ran, and no next experiment was selected.
+
 ## 2026-09-12 — Correlation-defined Qwen trait families to SAPA measurement inventory
 
 Completed `research/outputs/qwen_trait_family_human_inventory/` from the validated Qwen-first AA-1 source commit. All 1,440 Qwen PC1-PC6 x 240 trait associations are saved. The family rule was frozen before semantic description: absolute Pearson r at least 0.50, PC-local BH-FDR q below 0.01, and at least 95% sign stability across 2,000 fixed-seed role bootstraps. It selects 328 signed memberships spanning 238 unique traits; positive/negative family sizes are 47/123, 31/44, 42/31, 2/6, 1/0, and 0/1 for PC1 through PC6.

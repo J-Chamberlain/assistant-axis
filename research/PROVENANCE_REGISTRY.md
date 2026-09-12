@@ -2,6 +2,22 @@
 
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
+## qwen_trait_axis_specificity
+
+Artifact: Qwen-only PC1-PC6 axis-specific trait markers, cross-loading classification, documented editorial-composite check, and purity-filtered SAPA measurement inventory.
+
+Location: `research/outputs/qwen_trait_axis_specificity/`; main report: `qwen_axis_specific_family_report.md`; all 1,440 trait-target metrics: `qwen_trait_axis_specificity_metrics.csv`; primary 88-row marker set: `qwen_axis_specific_marker_sets.csv`; human inventory: `qwen_axis_specific_human_inventory.csv`; complete hashes and URLs: `artifact_inventory.csv`.
+
+Lineage: exact child of validated `codex/aa1-qwen-trait-family-human-inventory` commit `667acdd634bfb8c39d40432fe60f0c5ef3bbbeeb`. The authoritative correlation and prior-family inputs retain SHA256 `6ccbb08452af12ddf050fc95e083a0e0c4e2e01423c417cf2e9919909fd79424` and `cb010ab242747544ee5ba957e64b1565c8207565a76a9523cb5b837331237b97`. The unchanged 126-construct human library retains SHA256 `7aadc382dfd3d18da6dce43be945cc6f5ae8dc8d124dfd9f0a8a8c8fc4864fd0`.
+
+Model/data sources: existing Qwen/Qwen3-32B 275-role by 240-trait activation-cosine matrix; Qwen-only saved PC1-PC6 role coordinates; prior sign-stability estimates; canonical trait definitions; the documented five editorial groups in `persona_trait_ridge_plots/run_persona_trait_ridges.py`; existing SAPA item dictionary and construct library. No activation or response was generated.
+
+Procedure: freeze the six-PC specificity formulas and `.70` purity/`.95` bootstrap-dominance rule before result inspection; derive strength, off-axis loading, communality, purity, and dominance from saved correlations; verify communality against standardized multiple R²; run 2,000 fixed-seed role bootstraps for target-axis dominance; classify every original strong-family membership; preserve `.60/.70/.80` by `.90/.95/.99` sensitivities; freeze a neutral-ID packet before mapping primary markers against all 126 SAPA constructs; compare the filtered and prior inventories. PC1-PC3 remain strict core axes and PC4-PC6 supported secondary/provisional axes.
+
+Observed outputs: 88/328 signed memberships survive the primary specificity layer: PC1 positive/negative 12/48, PC2 3/10, PC3 7/8, and PC4-PC6 0 on both poles. The original rows classify as 88 axis-specific, 150 target-dominant-but-diffuse, and 90 non-target-dominant. The documented Affiliation mean (`empathetic`, `agreeable`, `altruistic`) is PC3-dominant with `r=-0.970129`, purity `0.965818`, and dominance gap `0.842644`. The filtered SAPA inventory contains 22 unique construct/item candidates and 195 unique items; three signed families have a strong available match, three partial-only, and six no-match because their primary marker set is empty. Verification passes 54 checks including a full deterministic rerun.
+
+Evidentiary boundary: Qwen same-space association/specificity and semantic measurement availability only. Cross-loading is not treated as invalid. No human respondent was loaded, scored, or projected; no Llama/Gemma comparison or AA-7 alignment result entered selection/mapping; no human/model correspondence test or next-experiment decision was made.
+
 ## qwen_trait_family_human_inventory
 
 Artifact: Mechanically selected signed Qwen PC1-PC6 trait families and a PC-blind inventory of available SAPA human construct/item counterparts.
