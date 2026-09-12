@@ -1,0 +1,98 @@
+{
+  "analysis": "Neutral-ID SAPA mapping packet for primary Qwen axis-specific trait families",
+  "created_at_utc": "2026-09-12T18:12:30Z",
+  "packet_seed": 20260921,
+  "packet_row_count": 12,
+  "marker_row_count": 88,
+  "candidate_construct_count": 126,
+  "source_hashes": {
+    "research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_marker_sets.csv": "e5f2f5c5844919990b34d08b755063b271faded116805ec936e7f90b23764748",
+    "research/outputs/qwen_trait_axis_specificity/qwen_trait_axis_specificity_metrics.csv": "ea098ec2ccf020eeb2c820fc300ba3919ffe1f7232811dfe206f1d58090c258f",
+    "research/outputs/qwen_pc_human_construct_bridge/human_construct_library.csv": "7aadc382dfd3d18da6dce43be945cc6f5ae8dc8d124dfd9f0a8a8c8fc4864fd0"
+  },
+  "reviewer_packet_excludes": [
+    "PC number",
+    "pole label",
+    "role/persona evidence",
+    "prior PC interpretations",
+    "AA-2 results",
+    "AA-7 results",
+    "previous human match labels"
+  ],
+  "family_key_not_reviewer_facing": [
+    {
+      "family_id": "PURE-FAM-01",
+      "pc": "PC5",
+      "pole": "negative",
+      "axis_specific_marker_count": 0
+    },
+    {
+      "family_id": "PURE-FAM-02",
+      "pc": "PC3",
+      "pole": "positive",
+      "axis_specific_marker_count": 7
+    },
+    {
+      "family_id": "PURE-FAM-03",
+      "pc": "PC1",
+      "pole": "negative",
+      "axis_specific_marker_count": 48
+    },
+    {
+      "family_id": "PURE-FAM-04",
+      "pc": "PC6",
+      "pole": "positive",
+      "axis_specific_marker_count": 0
+    },
+    {
+      "family_id": "PURE-FAM-05",
+      "pc": "PC3",
+      "pole": "negative",
+      "axis_specific_marker_count": 8
+    },
+    {
+      "family_id": "PURE-FAM-06",
+      "pc": "PC2",
+      "pole": "negative",
+      "axis_specific_marker_count": 10
+    },
+    {
+      "family_id": "PURE-FAM-07",
+      "pc": "PC4",
+      "pole": "positive",
+      "axis_specific_marker_count": 0
+    },
+    {
+      "family_id": "PURE-FAM-08",
+      "pc": "PC4",
+      "pole": "negative",
+      "axis_specific_marker_count": 0
+    },
+    {
+      "family_id": "PURE-FAM-09",
+      "pc": "PC5",
+      "pole": "positive",
+      "axis_specific_marker_count": 0
+    },
+    {
+      "family_id": "PURE-FAM-10",
+      "pc": "PC6",
+      "pole": "negative",
+      "axis_specific_marker_count": 0
+    },
+    {
+      "family_id": "PURE-FAM-11",
+      "pc": "PC2",
+      "pole": "positive",
+      "axis_specific_marker_count": 3
+    },
+    {
+      "family_id": "PURE-FAM-12",
+      "pc": "PC1",
+      "pole": "positive",
+      "axis_specific_marker_count": 12
+    }
+  ],
+  "prior_human_mapping_loaded": false,
+  "AA7_results_loaded": false
+}
