@@ -1,0 +1,44 @@
+{
+  "aa7_input": false,
+  "candidate_count": 48,
+  "construct_library_sha256": "7aadc382dfd3d18da6dce43be945cc6f5ae8dc8d124dfd9f0a8a8c8fc4864fd0",
+  "cross_model_input": false,
+  "external_measure_required_frozen_rows": 1,
+  "frozen_by_pc": {
+    "PC1": 8,
+    "PC2": 7,
+    "PC3": 7,
+    "PC4": 5,
+    "PC5": 7,
+    "PC6": 3
+  },
+  "frozen_hypothesis_count": 37,
+  "generated_at_utc": "2026-09-12T09:40:00Z",
+  "human_projection": false,
+  "human_respondent_identifier_read": false,
+  "human_response_columns_read": 331,
+  "respondent_level_output_written": false,
+  "rubric_sha256": "000507bde52a2d10adabd30dde8b8b4476e3d3e91f36eac7464d0ca67d2097a2",
+  "sapa_available_frozen_rows": 36,
+  "signature_sha256": "9b21aaa96f64b3f3c2908fb3baf0ac2ead16024b54f6a9f2be9326b6ccf27708",
+  "source_hashes": {
+    "data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/sapaTempData696items08dec2013thru26jul2014.tab": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+    "research/outputs/qwen_pc_human_construct_bridge/human_construct_library.csv": "7aadc382dfd3d18da6dce43be945cc6f5ae8dc8d124dfd9f0a8a8c8fc4864fd0",
+    "research/outputs/qwen_pc_human_construct_bridge/human_construct_match_rubric.md": "000507bde52a2d10adabd30dde8b8b4476e3d3e91f36eac7464d0ca67d2097a2",
+    "research/outputs/qwen_pc_human_construct_bridge/qwen_pc1_pc6_model_side_signatures.csv": "9b21aaa96f64b3f3c2908fb3baf0ac2ead16024b54f6a9f2be9326b6ccf27708"
+  },
+  "status_counts_all_candidates": {
+    "BROAD BUT NONSPECIFIC": 5,
+    "FACET / SUBCOMPONENT": 21,
+    "INSUFFICIENT EVIDENCE": 1,
+    "PLAUSIBLE PARTIAL CANDIDATE": 14,
+    "POOR MATCH": 3,
+    "STRONG CANDIDATE": 4
+  },
+  "status_counts_frozen": {
+    "FACET / SUBCOMPONENT": 21,
+    "PLAUSIBLE PARTIAL CANDIDATE": 12,
+    "STRONG CANDIDATE": 4
+  },
+  "validation_status": "DISCOVERY_ONLY / NOT YET CROSS-MODEL VALIDATED"
+}
