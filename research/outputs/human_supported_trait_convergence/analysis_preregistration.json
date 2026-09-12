@@ -1,0 +1,167 @@
+{
+  "analysis": "AA-7 human-supported trait convergence and cross-model aligned-subspace study",
+  "analysis_model": "GPT-5.5",
+  "canonical_starting_sha": "c5c2628ad54483253ad97b95c3e1febad29f9435",
+  "created_before_new_geometry_analysis": true,
+  "freeze_timestamp_utc": "2026-09-12T01:14:04Z",
+  "models": [
+    "Qwen/Qwen3-32B",
+    "Llama-3.3-70B",
+    "Gemma-2-27B"
+  ],
+  "phase_1": {
+    "alpha_grid": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ],
+    "comparators": {
+      "direct_semantic_45": "All AA-1 primary_direct / ACCEPT_DIRECT traits; descriptive larger human-semantic comparator",
+      "externally_anchored_big_five_5": "AA-2 human_anchored_strict raw_projection_score definitions without rebuilding or retuning",
+      "full_real_240": "All canonical raw activation-cosine trait scores",
+      "geometry_optimized_12": "AA-4 joint greedy forward-selection method reproduced within every outer-training partition at k=12",
+      "human_supported_12": "Exact human_supported_trait_set_freeze.json set",
+      "isotropic_12": "Independent normalized Gaussian ambient directions, target-independent",
+      "persona_span_12": "Gaussian directions in each centered outer-training role span, with held-out roles excluded from construction",
+      "random_real_12": "Uniform subsets without replacement from the 240 real trait directions, selected without targets"
+    },
+    "contribution_diagnostics": {
+      "conditional_permutation": "Permute one fixed trait column only within each untouched outer-test fold; deterministic trait/fold seeds",
+      "leave_one_trait_out": "Re-evaluate the fixed 12-trait family after removing exactly one trait; no replacement or subset optimization",
+      "standardized_coefficients": "Full-data descriptive Ridge after four-fold alpha selection; both X and Y standardized"
+    },
+    "family_holdout": "Use the fixed Qwen-canonical role-family labels for all three shared-role models; tune alpha only inside remaining families",
+    "feature_definition": "Existing same-model raw activation cosine; within-model z-scores and percentiles are descriptive only",
+    "fixed_family_evaluation": {
+      "inner_cv": "4-fold shuffled KFold inside each outer training partition",
+      "outer_cv": "One fixed shuffled 5-fold partition, seed 42",
+      "purpose": "Matched empirical comparisons among human-supported and all random/generic banks"
+    },
+    "geometry_optimized_evaluation": "Nested forward selection and alpha choice occur inside each fixed outer fold; no outer-test role enters selection",
+    "lopo": "Leave each of 275 personas out once; four-fold shuffled inner alpha tuning with seed 10000 + held-out index",
+    "metrics": {
+      "aggregate_normalized_geometric_error": "sqrt(mean over held-out roles of the sum over included PCs of squared residual divided by that role's outer-training PC standard deviation))",
+      "normalized_rmse_per_pc": "sqrt(mean squared held-out residual divided by fold-local outer-training PC standard deviation)",
+      "reported": [
+        "per-PC R2",
+        "per-PC RMSE",
+        "per-PC normalized RMSE",
+        "per-PC MAE",
+        "mean per-PC R2",
+        "aggregate normalized geometric error"
+      ]
+    },
+    "primary_inference": "For each model and target scope, compare human_supported_12 aggregate normalized geometric error on the fixed outer splits with each matched bank distribution; lower error is better",
+    "evidence_strength_rule": {
+      "cross_model_strong": "Human-supported 12 beats both random-real and persona-span controls at empirical p <= 0.05 in all three models for both target scopes",
+      "cross_model_moderate": "Human-supported 12 beats random-real at empirical p <= 0.05 in at least two models for both scopes, with no claim of unique semantic privilege unless persona-span is also beaten",
+      "weak_or_absent": "The cross-model-moderate rule is not met"
+    },
+    "later_human_respondent_projection_design_gate": "A later design is justified, but not executed, only if human-supported 12 beats both random-real and persona-span at p <= 0.05 in at least two models for both scopes, neither remaining model shows worse-than-median random-real performance in either scope, both Qwen-reference alignment pairs beat their permutation nulls at p <= 0.05, and at least six frozen traits achieve MODERATE or HIGH cross-model recurrence in PC1-PC6",
+    "random_controls": {
+      "draws_per_model": 500,
+      "empirical_one_sided_p": "(1 + number of null banks with error <= human-supported error) / 501",
+      "empirical_percentile": "100 * number of null banks with error >= human-supported error / 500",
+      "isotropic_seed_formula": "30000000 + model_index*1000000 + bank*100 + outer_fold",
+      "persona_span_seed_formula": "50000000 + model_index*1000000 + bank*100 + outer_fold",
+      "random_real_seed": 2026091201,
+      "same_random_real_subsets_across_models": true
+    },
+    "ridge_preprocessing": "Within every inner and outer fit, center/scale X from training rows and center/scale Y from training rows only",
+    "support_utility_test": {
+      "category_codes": {
+        "HIGH HUMAN-MEASUREMENT SUPPORT": 3,
+        "INSUFFICIENT": 0,
+        "MODERATE SUPPORT": 2,
+        "REDUNDANT / BROAD": 1
+      },
+      "primary_descriptive_utility": "mean squared Pearson association with the included model-local PCs",
+      "secondary_utility": "maximum absolute Pearson association with the included model-local PCs"
+    },
+    "target_scopes": {
+      "core": [
+        "PC1",
+        "PC2",
+        "PC3"
+      ],
+      "extended": [
+        "PC1",
+        "PC2",
+        "PC3",
+        "PC4",
+        "PC5",
+        "PC6"
+      ]
+    }
+  },
+  "phase_2": {
+    "agreeableness_decision_rule": {
+      "not_reconciled": "mean aligned pairwise cosine < 0.50",
+      "partially_reconciled": "mean aligned pairwise cosine >= 0.50 but minimum pairwise cosine < 0.50",
+      "reconciled": "mean aligned pairwise cosine >= 0.70 and minimum pairwise cosine >= 0.50"
+    },
+    "alignment_cv": {
+      "family_holdout": true,
+      "inner_operation": "Fit centering, optional scaling, and orthogonal Procrustes rotation on training roles only; transform held-out source coordinates",
+      "repeated_5fold_seeds": [
+        7100,
+        7101,
+        7102,
+        7103,
+        7104,
+        7105,
+        7106,
+        7107,
+        7108,
+        7109
+      ]
+    },
+    "alignment_variants": {
+      "primary": "raw PC scores, training-centered, preserving model-local PC variance",
+      "sensitivity": "each PC training-standardized before alignment"
+    },
+    "core_vs_extended_material_improvement": "Mean pairwise aligned direction cosine increases by at least 0.10 for a feature family when moving from PC1-PC3 to PC1-PC6",
+    "direction_projection": "Regress each centered model trait-role score vector on that model's centered local PC score basis to obtain a coefficient vector; unit-normalize it; for source-to-reference alignment Y ~= X R, transform coefficients as R transpose times the local coefficient",
+    "direction_recurrence_thresholds": {
+      "HIGH CROSS-MODEL RECURRENCE": "mean pairwise cosine >= 0.75 and minimum pairwise cosine >= 0.60",
+      "MODERATE": "mean pairwise cosine >= 0.50 and minimum pairwise cosine >= 0.25",
+      "WEAK / MODEL-SPECIFIC": "otherwise"
+    },
+    "focal_domain": "agreeableness",
+    "full_fit_use": "Full 275-role transforms are used only to express final trait directions in one reference coordinate system; alignment evidence is evaluated held-out",
+    "null": {
+      "permutations": 1000,
+      "seed_formula": "9200000 + dimension*100000 + variant_index*10000 + pair_index*2000 + permutation",
+      "test": "Globally permute source role labels, then fit/evaluate alignment with a fixed 5-fold split seed 7100",
+      "validity": "Role labels are permuted before fitting; no held-out target role enters the fitted transform"
+    },
+    "pairs": [
+      "llama_to_qwen",
+      "gemma_to_qwen",
+      "gemma_to_llama"
+    ],
+    "primary_reference": "Qwen PC1-PC6",
+    "reported_cv_metrics": [
+      "per-dimension held-out correlation",
+      "6D RMSE",
+      "pairwise-distance correlation",
+      "10-nearest-neighbor mean Jaccard preservation"
+    ],
+    "subspaces": [
+      3,
+      6
+    ]
+  },
+  "scientific_boundaries": {
+    "causal_interpretation": false,
+    "human_occupational_centroid_projection": false,
+    "human_respondent_projection": false,
+    "model_geometry_only_after_human_construct_freeze": true,
+    "respondent_level_human_microdata_committed": false
+  }
+}

@@ -4,6 +4,12 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/runtime/CURRENT_RESULTS.md
 # Status: COMPLETE
 
+## 2026-09-12 — AA-7 human-supported trait convergence and aligned subspaces
+
+Completed `research/outputs/human_supported_trait_convergence/` from canonical `c5c2628ad54483253ad97b95c3e1febad29f9435`. The exact AA-1 12-trait set and all decisions were frozen before outcome analysis. The primary compact-convergence result is **WEAK / ABSENT**: human-supported k=12 beats 0/6 matched random-real controls and only the Qwen/Gemma PC1-PC3 persona-span controls. Geometry-optimized k=12 is better in every model/scope; human support level does not track utility.
+
+The separate cross-model result is strong but model-only. Held-out PC1-PC6 alignment coordinate r is 0.879 Llama→Qwen, 0.809 Gemma→Qwen, and 0.908 Gemma→Llama (all 1,000-permutation p=0.001). Eleven frozen directions recur highly and one moderately; all five strict Big Five directions recur highly. Agreeableness reconciles after alignment at cosines 0.900/0.952/0.938, and PC4-PC6 materially improve recurrence. The later human-respondent projection-design gate failed. Verification passes 82 checks with byte-identical primary outputs. No respondent or occupational centroid was projected; no human microdata, GPU, RunPod, inference, activations, responses, or external model API were used.
+
 ## 2026-09-11 — Canonical AA-1 through AA-5 integration
 
 Integrated the five verified study histories without rerunning or reinterpreting their science. AA-1 contracts 45 direct SAPA links to 12 moderate-or-better human structural proxies (9 high, 3 moderate; 30 redundant/broad; 3 insufficient), with 6 parallel-analysis components and participation-ratio rank 12.44. AA-2 finds a strong negative-Qwen-PC3 Agreeableness component (cosine -0.847133; Pearson -0.881714; R² 0.777420) while rejecting a universal PC3 identity across models. AA-3 retains PC1-PC3 as the strict core (56.449% cumulative variance) and PC4-PC6 as supported secondary coordinates (67.408%). AA-4 shows compact real-trait efficiency—3/4/6 traits reach all-PC R² >=.95/.98/.99—alongside >98% PC-loading coverage and near-complete reconstruction by a 240-direction generic persona-span basis. AA-5 finds selected stable occupational centroids but weak overall occupation-personality signal (corrected ICCs 3.8%-7.8% narrow and 0.8%-3.2% broad; classification near chance).

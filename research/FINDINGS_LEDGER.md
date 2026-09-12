@@ -4,6 +4,12 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### AA-7 Frozen Human-Supported Traits Are Not Unusually Efficient, but Aligned Model Directions Recur (2026-09-12)
+
+The 12-trait set inherited from AA-1 was frozen at commit `51c54a5` and all outcome rules at `cabd807` before new geometry analysis. Across Qwen/Qwen3-32B, Llama-3.3-70B, and Gemma-2-27B, the human-supported set achieved fixed-five-fold core/extended mean R² and aggregate nRMSE of 0.991/0.168 and 0.908/0.745; 0.916/0.509 and 0.780/1.161; and 0.946/0.400 and 0.819/1.048. It beat none of six 500-bank matched random-real k=12 nulls and only the Qwen/Gemma core persona-span nulls. Geometry-optimized k=12 sets were better in every model/scope, and human-support category did not positively predict geometric utility among the 12 or across all 45 direct links. The preregistered primary convergence classification is **WEAK / ABSENT**.
+
+The separate PC1-PC6 role-score alignment result is strong. Ten repeated role-held-out five-fold Procrustes validations yield mean coordinate correlations 0.879 Llama→Qwen, 0.809 Gemma→Qwen, and 0.908 Gemma→Llama, with all three exceeding 1,000-permutation label-shuffle nulls at p=0.001. Eleven human-supported directions recur highly and one moderately; all five strict Big Five directions recur highly. Agreeableness is reconciled after alignment (cosines 0.900/0.952/0.938), and adding PC4-PC6 materially improves human-12, Big Five, and focal Agreeableness recurrence. This is cross-model recurrence among model activation-derived directions over shared role labels, not evidence that human respondents occupy model space. The later human-respondent projection-design gate failed. Full outputs and an 82-check byte-identical reproduction are under `research/outputs/human_supported_trait_convergence/`.
+
 ### NLSY97 Supports Selected Stable Occupational Centroids, but Occupation Is a Weak Personality Grouping Variable (2026-09-11)
 
 The human-only AA-5 analysis under `research/outputs/nlsy97_occupation_personality_stability/` froze its scoring, official Census/SOC hierarchy, uncertainty methods, and joint feasibility tiers at commit `13fb08f` before inspecting occupational trait outcomes. It exactly reproduces the AA-1 source counts: 7,044 respondents have complete Round-12 TIPI and 6,261 also have a valid same-wave occupation. All primary means use the Round-12 cumulative-case weight, and inferential uncertainty uses VSTRAT/VPSU rather than simple-random-sample standard errors.

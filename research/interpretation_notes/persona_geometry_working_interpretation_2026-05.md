@@ -243,3 +243,13 @@ Interpretation: negative Qwen PC3 contains a strong Agreeableness-related compon
 Cross-model boundary: do not assign Agreeableness as a universal label to model-local PC3. Llama Agreeableness aligns mainly with negative PC2, while Gemma's organization is weaker/mixed across PC1-PC3. These are same-space activation-derived domain directions, not independent human psychometric factors, behavioral realization, shared activation bases, or proof of construct identity.
 
 Provisional later-axis boundary: AA-2 does not promote or durably name Qwen PC4-PC6. They remain the AA-3 supported secondary coordinates pending coordinate-blind interpretation; any future Big Five comparison through PC6 should preserve geometry-blind mapping and explicit model-local/subspace alignment.
+
+## Dated Update: AA-7 Frozen Traits and Aligned PC1-PC6 Subspaces (2026-09-12)
+
+Observed: the 12 labels independently retained by AA-1 human psychometric evidence do not outperform 500 matched random-real k=12 subsets in any Qwen/Llama/Gemma core or extended comparison. They outperform fold-local persona-span directions only for Qwen and Gemma PC1-PC3, not for any PC1-PC6 comparison or Llama. Geometry-optimized k=12 traits are better throughout. Human measurement-support tier does not positively track geometric utility among the 12 or across the 45 direct semantic links.
+
+Observed: model-local PC1-PC6 role-score spaces nevertheless align strongly under role-held-out orthogonal Procrustes validation. After full-fit transforms are used only to express final vectors, 11 human-supported activation-derived directions show high recurrence and one moderate recurrence; all five strict activation-derived Big Five directions show high recurrence. Agreeableness's different local-PC placements become concordant in aligned coordinates (pairwise cosines 0.900, 0.952, 0.938).
+
+Interpretation: distinguish two results. Human psychometric defensibility does not identify geometrically privileged compact labels in this test. Separately, corresponding model-derived trait directions recur within a rotated shared low-dimensional role-score organization. PC4-PC6 materially improve that recurrence, giving them psychologically recognizable model-only structure without promoting them to equal-status named axes.
+
+Boundary: shared English role labels/instructions may drive part of the recurrence. No human respondent, occupational centroid, or human outcome entered model geometry. Aligned activation-derived directions are not proof that human personality occupies LLM persona space, and the preregistered later respondent-study gate failed.
