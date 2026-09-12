@@ -15,12 +15,12 @@ Status labels:
 
 ## 1. Persona Geometry Is Low-Dimensional
 
-Claim: Persona vectors exhibit meaningful low-dimensional structure, including PCA axes that organize roles non-randomly.
+Claim: Persona vectors exhibit meaningful low-dimensional structure with a robust PC1-PC3 core and weaker supported secondary Qwen coordinates through PC6; later null-exceeding variance should not automatically be treated as a set of uniquely interpretable axes.
 Status: Supported
-Evidence: Qwen visualization PCA shows PC1 explains 0.315954 of variance; Paper 1 and Paper 1.5 analyses repeatedly recover structured PC/cluster relationships.
-Counterevidence: Later residual/SVD work shows that multiple layered features are needed for strong prediction; low-dimensional structure is not the whole geometry.
-Dependencies: `research/visualizations/geometry_viz_data.json`, `research/RESEARCH_INDEX.md`
-Last Updated: 2026-05-30
+Evidence: A full-rank audit of 275 mean-pooled role vectors per model finds Qwen PC1-PC3 explain 56.449% of centered activation-coordinate variance and are the only axes meeting the preregistered strict bootstrap rule. Qwen PCs 4-6 add 10.959 percentage points (67.408% cumulative), exceed the 95th-percentile marginal-permutation null, show moderate role-bootstrap reproducibility, have same-space trait associations |r|>=0.50, and recur over the shared role labels in both Llama and Gemma after search-adjusted permutation controls. Qwen reaches 68% at PC7 and 80% at PC15; sequential parallel analysis retains 13 Qwen, 35 Llama, and 25 Gemma components, demonstrating that three was a visualization choice rather than an empirical rank cutoff.
+Counterevidence: Qwen PC4-PC6 do not meet the strict individual-axis stability rule, and no later adjacent Qwen block meets the strict subspace-stability rule. PC7-PC13 exceed the Qwen parallel-analysis null but lack the combined stability/trait evidence needed for distinct interpretation. Shared role instructions can contribute to cross-model score recurrence, and Llama/Gemma require more components than Qwen to reach the same cumulative-variance thresholds.
+Dependencies: `research/visualizations/geometry_viz_data.json`, `research/outputs/extended_persona_pca/`, `research/RESEARCH_INDEX.md`
+Last Updated: 2026-09-11
 
 ## 2. Assistant Axis Aligns Strongly With PC1
 

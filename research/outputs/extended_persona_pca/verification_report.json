@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "check": "required_artifacts_exist",
+      "detail": "20/20 required files present",
+      "passed": true
+    },
+    {
+      "check": "all_csv_json_parse_strictly",
+      "detail": "parsed 14 CSV and 6 JSON files; errors=[]",
+      "passed": true
+    },
+    {
+      "check": "exact_role_counts_and_vector_dimensions",
+      "detail": "{'qwen': [275, 5120], 'llama': [275, 8192], 'gemma': [275, 4608]}",
+      "passed": true
+    },
+    {
+      "check": "shared_role_ordering",
+      "detail": "all three model matrices use the canonical 275-role lexical order",
+      "passed": true
+    },
+    {
+      "check": "finite_source_vectors",
+      "detail": "all mean-pooled source-vector entries are finite",
+      "passed": true
+    },
+    {
+      "check": "canonical_pc123_reproduction",
+      "detail": "{'qwen': 1.207027046312703e-06, 'llama': 2.7478019859472624e-14, 'gemma': 1.375610736431554e-11}",
+      "passed": true
+    },
+    {
+      "check": "full_rank_reconstruction",
+      "detail": "{'qwen': 3.874411521496726e-15, 'llama': 4.064569635755509e-15, 'gemma': 3.6054826342663656e-15}",
+      "passed": true
+    },
+    {
+      "check": "variance_sums_and_cumulative_monotonicity",
+      "detail": "{'qwen': 1.0, 'llama': 1.0, 'gemma': 1.0}",
+      "passed": true
+    },
+    {
+      "check": "saved_full_spectrum_matches_recomputation",
+      "detail": "822 rows and all 274 role-score vectors per model match a fresh SVD",
+      "passed": true
+    },
+    {
+      "check": "broken_stick_formula",
+      "detail": "rank-274 expected shares sum to 1.0000000000000002",
+      "passed": true
+    },
+    {
+      "check": "parallel_analysis_seed_reproducibility",
+      "detail": "250-per-model null and all 14 major numerical outputs are byte-identical on the second fixed-seed pass",
+      "passed": true
+    },
+    {
+      "check": "bootstrap_hungarian_matching_and_sign_handling",
+      "detail": "synthetic permutation/sign test mapping={0: 1, 1: 3, 2: 0, 3: 2}",
+      "passed": true
+    },
+    {
+      "check": "principal_angle_subspace_rotation_invariance",
+      "detail": "synthetic within-subspace rotation canonical correlations=[1.0, 1.0, 1.0]",
+      "passed": true
+    },
+    {
+      "check": "cross_model_hungarian_matching",
+      "detail": "saved one-to-one correspondence map re-optimizes exactly from the saved objective matrices",
+      "passed": true
+    },
+    {
+      "check": "role_label_permutation_controls",
+      "detail": "component summaries=20, subspace summaries=18, permutations=1000",
+      "passed": true
+    },
+    {
+      "check": "viewer_coordinates_and_controls",
+      "detail": "all 825 PC1-PC10 point records match fresh PCA scores; required 2D/3D controls are embedded",
+      "passed": true
+    },
+    {
+      "check": "source_manifest_hashes",
+      "detail": "runner hash match=True; source resolutions={'research/visualizations/scripts/build_geometry_viz.py': 'current_worktree', 'research/visualizations/geometry_viz_data.json': 'current_worktree', 'research/geometry_tables/cluster_membership_table.csv': 'current_worktree', 'research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py': 'current_worktree', 'research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_data.json': 'current_worktree', 'research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md': 'current_worktree', 'research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv': 'current_worktree', 'research/outputs/trait_space_interpretation/trait_space_axis_report.md': 'current_worktree', 'research/outputs/persona_trait_ridge_plots/persona_trait_ridge_methodology.md': 'current_worktree', 'research/interpretation_notes/persona_geometry_working_interpretation_2026-05.md': 'recorded_starting_commit'}",
+      "passed": true
+    }
+  ],
+  "checks_passed": 17,
+  "checks_total": 17,
+  "compute_boundary": "CPU only; no GPU, RunPod, model inference, activation extraction, or external model API.",
+  "inventory_after_report_refresh": {
+    "artifacts_checked": 44,
+    "inventory_excludes_itself_to_avoid_a_circular_hash": true,
+    "passed": true
+  },
+  "numerical_warning_note": "The local Apple Accelerate/NumPy backend emitted spurious matmul floating-point status warnings. Direct finite checks, full-SVD reconstruction, canonical-coordinate reproduction, and a byte-identical second numerical pass establish that saved results are finite and reproducible.",
+  "status": "PASS"
+}

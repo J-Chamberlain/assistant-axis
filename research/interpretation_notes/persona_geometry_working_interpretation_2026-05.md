@@ -221,3 +221,15 @@ Inferred: PC2 should be revised from a coherent-action-under-unresolved-uncertai
 Speculative: the coherent-action score may have partly inverted because the prior rubric rewarded immediate local continuation under uncertainty, while low-PC2 roles often represent abstract residence in unresolved structure rather than visible action. This would make the old label behaviorally plausible but geometrically downstream.
 
 Unknown: abstraction is not a complete one-variable explanation. The strongest counterexample found was `adolescent` versus `parasite`, where the high-PC2 member was rated more abstract by 21 points despite much higher PC2. The next test should use independent human or second-model blinded ratings on PC1-matched pairs and force direct choices among abstraction, maturity/integration, and coherent action.
+
+## Dated Update: Extended PCA Dimensionality Audit (2026-09-11)
+
+Observed: the project's three-component convention came from an explicit `PCA(n_components=3)` 3D-display configuration, not a prior empirical dimensionality cutoff. Full PCA over 275 mean-pooled Qwen role vectors shows PC1-PC3 explain 56.449% of centered activation-coordinate variance; PC4-PC6 add 10.959 percentage points, reaching 67.408%. Qwen requires PC7 for 68% and PC15 for 80%.
+
+Observed: 250 marginal-preserving null permutations retain Qwen PC1-PC13 sequentially, while 500 role bootstraps identify only PC1-PC3 under the strict individual-axis stability rule. PC4-PC6 satisfy a declared moderate reproducibility rule, each has a same-space trait association with |r|>=0.50, and each recurs over the shared 275 role labels in both Llama and Gemma after search-adjusted role-label controls. No later adjacent Qwen pair passes the strict subspace rule.
+
+Interpretation: PC1-PC3 remain the compact and currently named core. PC4-PC6 can be used as supported secondary coordinates when a scientific question needs more geometry, but their lower bootstrap stability means they should not be presented as equal-status core axes or assigned durable semantic labels yet. PC8 and PC10 are exploratory; the other tested later axes are not privileged merely because they exceed a random-data curve.
+
+Interpretation boundary: cross-model recurrence compares component score patterns over shared role labels and may partly reflect common role-instruction structure. It does not establish identical component semantics, activation bases, psychological constructs, behavioral realization, or human correspondence. Explained variance is variation among centered saved role activations, not a percent of personality or behavior.
+
+Unknown: coordinate-blind independent raters have not yet evaluated the randomized PC4-PC6 role-instruction packets. The separately developed AA-2 Big Five mapping was not available on this branch and should be tested against these retained secondary coordinates only after both branches are canonically integrated.

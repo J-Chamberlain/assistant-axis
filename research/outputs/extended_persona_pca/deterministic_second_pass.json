@@ -1,0 +1,200 @@
+{
+  "all_major_numerical_artifacts_byte_identical": true,
+  "artifact_comparison": {
+    "component_retention_summary.csv": {
+      "first_sha256": "555fc499d2920ec0707ff21ddb09ea1fefc24b1a4d8642776400ca25e2f663c8",
+      "match": true,
+      "second_sha256": "555fc499d2920ec0707ff21ddb09ea1fefc24b1a4d8642776400ca25e2f663c8"
+    },
+    "cross_model_pc_permutation_control.csv": {
+      "first_sha256": "640a646fb2050651b3dfb457a77916b8cc55ddbdb1f617f53965bc413d1c705c",
+      "match": true,
+      "second_sha256": "640a646fb2050651b3dfb457a77916b8cc55ddbdb1f617f53965bc413d1c705c"
+    },
+    "cross_model_pc_score_correspondence.csv": {
+      "first_sha256": "f519ec847cd3deaf8a7fc739833606ea51f481acf9fec93408ea74c0c4e5c991",
+      "match": true,
+      "second_sha256": "f519ec847cd3deaf8a7fc739833606ea51f481acf9fec93408ea74c0c4e5c991"
+    },
+    "cross_model_pc_subspace_similarity.csv": {
+      "first_sha256": "45becd576ddd37dee16ca6a8386139f048823fa348c269e2dbc75461ec1cbba0",
+      "match": true,
+      "second_sha256": "45becd576ddd37dee16ca6a8386139f048823fa348c269e2dbc75461ec1cbba0"
+    },
+    "full_pca_spectrum.csv": {
+      "first_sha256": "2f1e9123ce41a513f71057ba6b3091563da89f81c1b83cd9689dabcfac52aeaa",
+      "match": true,
+      "second_sha256": "2f1e9123ce41a513f71057ba6b3091563da89f81c1b83cd9689dabcfac52aeaa"
+    },
+    "pca_bootstrap_component_stability.csv": {
+      "first_sha256": "c46457d8c21b92988697929d89d262215b0db7291d2201611f2a853b461f1fd3",
+      "match": true,
+      "second_sha256": "c46457d8c21b92988697929d89d262215b0db7291d2201611f2a853b461f1fd3"
+    },
+    "pca_broken_stick_comparison.csv": {
+      "first_sha256": "577d87cfc3746b51d3acb505fbf4b55611947978773bf870052bf30c4124ab54",
+      "match": true,
+      "second_sha256": "577d87cfc3746b51d3acb505fbf4b55611947978773bf870052bf30c4124ab54"
+    },
+    "pca_cumulative_variance_thresholds.csv": {
+      "first_sha256": "2745302c563817fba2c51ef17041f5e73465c231ec9df74c9bf8c830e993564e",
+      "match": true,
+      "second_sha256": "2745302c563817fba2c51ef17041f5e73465c231ec9df74c9bf8c830e993564e"
+    },
+    "pca_knee_diagnostics.json": {
+      "first_sha256": "4a37bd37f284c6dae1e70deb55c1be2e8f7aafe3c9ba644e94b3a2a308a1deb0",
+      "match": true,
+      "second_sha256": "4a37bd37f284c6dae1e70deb55c1be2e8f7aafe3c9ba644e94b3a2a308a1deb0"
+    },
+    "pca_parallel_analysis.csv": {
+      "first_sha256": "07fe9051c371865d277e6e7b7d20edcddff8261fa4c0cb395ae29d4113b00e95",
+      "match": true,
+      "second_sha256": "07fe9051c371865d277e6e7b7d20edcddff8261fa4c0cb395ae29d4113b00e95"
+    },
+    "pca_subspace_stability.csv": {
+      "first_sha256": "1531d862ce3b8afb7efbf2a2ef227a86eee8419a1512407744bc18fe0c086c76",
+      "match": true,
+      "second_sha256": "1531d862ce3b8afb7efbf2a2ef227a86eee8419a1512407744bc18fe0c086c76"
+    },
+    "qwen_extended_pc_role_rankings.csv": {
+      "first_sha256": "71fafe78ad65a55d0ffded31f011bba8b2a3c16a15e0d4a146dedd0041ffa0c8",
+      "match": true,
+      "second_sha256": "71fafe78ad65a55d0ffded31f011bba8b2a3c16a15e0d4a146dedd0041ffa0c8"
+    },
+    "qwen_extended_pc_trait_associations.csv": {
+      "first_sha256": "d23771a3802557f2db8b109a37e4c25ad9c143939490d341b69eb56f2f3376f3",
+      "match": true,
+      "second_sha256": "d23771a3802557f2db8b109a37e4c25ad9c143939490d341b69eb56f2f3376f3"
+    },
+    "viewer_data.json": {
+      "first_sha256": "672c617758ace9654708d5f248e094d3005f19ee5237d3918a159bc0e3d813d3",
+      "match": true,
+      "second_sha256": "672c617758ace9654708d5f248e094d3005f19ee5237d3918a159bc0e3d813d3"
+    }
+  },
+  "first_pass_reproducibility": {
+    "bootstrap": {
+      "gemma": {
+        "matching": "one-to-one Hungarian assignment maximizing absolute loading cosine; sign corrected afterward",
+        "matching_pool_components": 45,
+        "replicates": 500,
+        "reported_reference_components": 35,
+        "seed": 43001
+      },
+      "llama": {
+        "matching": "one-to-one Hungarian assignment maximizing absolute loading cosine; sign corrected afterward",
+        "matching_pool_components": 55,
+        "replicates": 500,
+        "reported_reference_components": 45,
+        "seed": 42001
+      },
+      "qwen": {
+        "matching": "one-to-one Hungarian assignment maximizing absolute loading cosine; sign corrected afterward",
+        "matching_pool_components": 40,
+        "replicates": 500,
+        "reported_reference_components": 30,
+        "seed": 41001
+      }
+    },
+    "candidate_max": 13,
+    "cross_model_search_components": 20,
+    "cross_role_label_permutation": {
+      "permutations": 1000,
+      "seed": 51001
+    },
+    "null_array_hashes": {
+      "gemma": "6c5718a79093ab0c0dfd8a6896c4cdd6c35ad3ca9c24770f036adeedca3fcfa8",
+      "llama": "acdc68075767ce67421311a7acf969f42c14166e49d9679c2bfe619dfbfc880a",
+      "qwen": "9e96e126915c87f992e19ca0d8988400419475e7ed84506eda79eaf04a699309"
+    },
+    "parallel": {
+      "gemma": {
+        "all_null_eigenvalues_sha256": "6c5718a79093ab0c0dfd8a6896c4cdd6c35ad3ca9c24770f036adeedca3fcfa8",
+        "first_replicate_eigenvalues_sha256": "f993313fa406d1110522645265bcc91bc777d9401aeccfa3cb04828c44ed7166",
+        "pointwise_exceedance_count": 25,
+        "replicates": 250,
+        "seed": 33001,
+        "sequential_retained_count": 25
+      },
+      "llama": {
+        "all_null_eigenvalues_sha256": "acdc68075767ce67421311a7acf969f42c14166e49d9679c2bfe619dfbfc880a",
+        "first_replicate_eigenvalues_sha256": "a8b3b7cff1b4203edebe6ca5d1aadcd20345bb24bfbde69c601925dcf83d7321",
+        "pointwise_exceedance_count": 35,
+        "replicates": 250,
+        "seed": 32001,
+        "sequential_retained_count": 35
+      },
+      "qwen": {
+        "all_null_eigenvalues_sha256": "9e96e126915c87f992e19ca0d8988400419475e7ed84506eda79eaf04a699309",
+        "first_replicate_eigenvalues_sha256": "09e512bb347ca7def19e0f91892adf4e1f757b1649a8b338fd7eabae151369ff",
+        "pointwise_exceedance_count": 13,
+        "replicates": 250,
+        "seed": 31001,
+        "sequential_retained_count": 13
+      }
+    }
+  },
+  "performed": true,
+  "second_pass_reproducibility": {
+    "bootstrap": {
+      "gemma": {
+        "matching": "one-to-one Hungarian assignment maximizing absolute loading cosine; sign corrected afterward",
+        "matching_pool_components": 45,
+        "replicates": 500,
+        "reported_reference_components": 35,
+        "seed": 43001
+      },
+      "llama": {
+        "matching": "one-to-one Hungarian assignment maximizing absolute loading cosine; sign corrected afterward",
+        "matching_pool_components": 55,
+        "replicates": 500,
+        "reported_reference_components": 45,
+        "seed": 42001
+      },
+      "qwen": {
+        "matching": "one-to-one Hungarian assignment maximizing absolute loading cosine; sign corrected afterward",
+        "matching_pool_components": 40,
+        "replicates": 500,
+        "reported_reference_components": 30,
+        "seed": 41001
+      }
+    },
+    "candidate_max": 13,
+    "cross_model_search_components": 20,
+    "cross_role_label_permutation": {
+      "permutations": 1000,
+      "seed": 51001
+    },
+    "null_array_hashes": {
+      "gemma": "6c5718a79093ab0c0dfd8a6896c4cdd6c35ad3ca9c24770f036adeedca3fcfa8",
+      "llama": "acdc68075767ce67421311a7acf969f42c14166e49d9679c2bfe619dfbfc880a",
+      "qwen": "9e96e126915c87f992e19ca0d8988400419475e7ed84506eda79eaf04a699309"
+    },
+    "parallel": {
+      "gemma": {
+        "all_null_eigenvalues_sha256": "6c5718a79093ab0c0dfd8a6896c4cdd6c35ad3ca9c24770f036adeedca3fcfa8",
+        "first_replicate_eigenvalues_sha256": "f993313fa406d1110522645265bcc91bc777d9401aeccfa3cb04828c44ed7166",
+        "pointwise_exceedance_count": 25,
+        "replicates": 250,
+        "seed": 33001,
+        "sequential_retained_count": 25
+      },
+      "llama": {
+        "all_null_eigenvalues_sha256": "acdc68075767ce67421311a7acf969f42c14166e49d9679c2bfe619dfbfc880a",
+        "first_replicate_eigenvalues_sha256": "a8b3b7cff1b4203edebe6ca5d1aadcd20345bb24bfbde69c601925dcf83d7321",
+        "pointwise_exceedance_count": 35,
+        "replicates": 250,
+        "seed": 32001,
+        "sequential_retained_count": 35
+      },
+      "qwen": {
+        "all_null_eigenvalues_sha256": "9e96e126915c87f992e19ca0d8988400419475e7ed84506eda79eaf04a699309",
+        "first_replicate_eigenvalues_sha256": "09e512bb347ca7def19e0f91892adf4e1f757b1649a8b338fd7eabae151369ff",
+        "pointwise_exceedance_count": 13,
+        "replicates": 250,
+        "seed": 31001,
+        "sequential_retained_count": 13
+      }
+    }
+  }
+}
