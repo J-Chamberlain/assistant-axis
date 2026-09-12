@@ -1,0 +1,35 @@
+{
+  "analysis": "PC-blind Qwen trait-family to SAPA mapping packet",
+  "empty_families_preserved": 2,
+  "epistemic_boundary": "Descriptions are interpretations of mechanically selected Qwen families; the packet contains no evidence of human/model equivalence.",
+  "excluded_fields": [
+    "PC number",
+    "explicit pole label",
+    "role or persona names and extremes",
+    "prior PC interpretations",
+    "AA-2 Big Five results",
+    "AA-7 results",
+    "prior AA-1 human-construct hypotheses and candidate labels",
+    "Llama or Gemma results"
+  ],
+  "family_count": 12,
+  "family_id_assignment": "Python random.Random(seed).shuffle over PC1-positive, PC1-negative, ..., PC6-positive, PC6-negative; assignment key intentionally absent from reviewer-facing packet and manifest",
+  "family_id_seed": 20260919,
+  "judgments_present": false,
+  "packet_sha256": "3c4d48de462d4655d8510fc93cfef580d442ba29f0d483eaa966d016c1e1d65e",
+  "reviewer_visible_fields": [
+    "family_id",
+    "primary_member_count",
+    "family_members_ordered",
+    "family_member_evidence_json",
+    "strongest_correlated_trait",
+    "second_strongest_trait",
+    "third_strongest_trait",
+    "family_description"
+  ],
+  "source_hashes": {
+    "qwen_trait_family_membership_primary.csv": "cb010ab242747544ee5ba957e64b1565c8207565a76a9523cb5b837331237b97",
+    "qwen_trait_family_selection_spec.md": "3fa4cad6e3e78f181e7d13bde0a898ea9b5eb9ba429f32c3ece22894bb2863e9",
+    "qwen_trait_family_threshold_sensitivity.csv": "fff82c5e3cc3c551d60b03a52555601f96413eb9b68c2fbb2d8572f394108498"
+  }
+}
