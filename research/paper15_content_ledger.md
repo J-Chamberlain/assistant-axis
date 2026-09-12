@@ -30,6 +30,7 @@ Research questions:
 | RQ4 | Do blinded ratings and no-label elicitation experiments support the working PC interpretations? | active |
 | RQ5 | Which evidence belongs in the main Paper 1.5 argument versus appendix or exclusion? | active |
 | RQ6 | How many persona PCA components are supported as a strict core, weaker secondary coordinates, or exploratory variation? | active |
+| RQ7 | Do externally constrained trait directions recur after aligning model-local PC1-PC6 role-score subspaces? | active; bounded model-only evidence |
 
 Intended contribution:
 
@@ -61,6 +62,7 @@ Explicit non-goals:
 | Trait-profile PC predictor generalization | Test whether a complete activation-derived trait profile predicts PC1/PC2/PC3 when a persona or fixed Qwen-canonical role family is absent from fitting; compare Qwen, Llama, and Gemma in their own PCA geometries. | Existing 275 x 240 same-model role-trait cosine matrices; canonical/established model-specific PCA geometries; fixed Qwen role-family table; released role/trait vectors. | Repeated nested model comparison, complete LOPO, role-family holdout, permutation null, OOD diagnostics, transparent Ridge bundles, endpoint-held-out synthetic interpolation; Qwen prediction CLI. | established cross-model same-space held-out reconstruction; behavioral realization and PC-semantic identity untested |
 | Human-dataset feasibility, SAPA bridge review, and occupational-centroid stability | Determine whether independent human datasets contain adequate trait content and occupation structure for a later correspondence study without running that study. | Official SAPA V5 item/scale release; official NLSY97 public-use extraction and codebook; canonical trait definitions; prior conservative role/occupation mapping; frozen AA-1 and AA-5 specifications. | SAPA bridge with 45 direct links contracted to 12 moderate-or-better human structural proxies; NLSY97 stability tiers, error curves, corrected ICCs, and future candidate cells. | future-work feasibility only; neither human study supplies model-geometry evidence or a human/model correspondence test |
 | Human-only SAPA bridge psychometric audit | Test whether the frozen direct/close SAPA proxies are coherent and discriminable in human responses before any human/model analysis. | Official SAPA V5 item responses and scoring keys; frozen Phase-1b bridge; psychometric rubric committed before covariance inspection. | Pairwise human proxy correlations/Ns, internal coherence, source convergence, reuse/discriminant audit, Big Five associations, effective dimensionality, and planned-missingness options. | future-work measurement diagnostic only; 12/45 direct links reach moderate-or-better support, but this is not model-geometry evidence or psychometric equivalence |
+| AA-7 frozen-trait convergence and aligned role-score subspaces | Test a human-evidence-selected label set without human respondent projection, then compare activation-derived trait directions after held-out PC1-PC6 alignment. | Frozen AA-1 12 labels; AA-2 strict Big Five role scores; AA-3 model-local PC1-PC6 role scores; AA-4 nested compact and generic controls; saved 275 x 240 role-trait cosine matrices. | Matched held-out Ridge comparisons, 500-bank random/generic nulls, role-held-out Procrustes validation, 1,000-permutation nulls, aligned human-supported/Big Five directions, Agreeableness focal test. | primary compact convergence weak/absent; separate aligned model-direction recurrence strong; no human/model equivalence |
 | Semantic prediction benchmark | Test how much text-derived semantic structure predicts canonical activation PCA3D. | Shared 273-persona benchmark rows; no-label/prompt-derived feature matrices. | Semantic baseline R2=0.389397. | established baseline |
 | Codex trait replication | Test compact trait-like feature prediction outside the Claude Big Five source. | `research/q2_stability/qwen/outputs/codex_trait_replication/`. | Mean R2=0.398237. | weak positive signal |
 | Codex procedural features | Test procedural/operating-mode features against canonical activation PCA3D. | `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. | Mean R2=0.490090. | supported but weaker than Big Five |
@@ -287,6 +289,16 @@ Source artifact: `research/outputs/externally_anchored_big_five/externally_ancho
 - Observed: cross-model placement is not universal. Llama Agreeableness-PC3 is weak and Agreeableness instead aligns mainly with negative PC2; Gemma has a moderate PC3 relation plus a substantial PC1 association.
 - Interpretation: negative Qwen PC3 has a strong Agreeableness-related component that sharpens but does not replace the broader care/repair/stabilization versus disruptive/internal-objective wording.
 - Boundary: external anchoring improves construct transparency but remains same-space activation evidence, not independent human psychometric validation, model/human correspondence, behavioral realization, causal trait evidence, or identical cross-model PC semantics.
+
+#### AA-7 Human-Supported Trait Convergence and Aligned Subspaces
+
+Source artifact: `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md`; matched comparison: `comparator_summary.csv`; alignment evidence: `procrustes_alignment_cv.csv` and `procrustes_alignment_null.csv`; aligned directions: `aligned_human_supported_trait_directions.csv` and `aligned_big_five_directions.csv`.
+
+- Observed: the exact 12 AA-1 moderate-or-better labels and support levels were frozen before geometry outcomes. The human-supported family beat 0/6 matched random-real k=12 nulls and 2/6 fold-local persona-span nulls; the preregistered primary classification is weak/absent. Geometry-optimized k=12 sets were better for every model/scope, while the frozen set beat isotropic ambient controls in all six comparisons.
+- Observed: role-held-out PC1-PC6 alignment mean coordinate correlations are 0.879 Llama→Qwen, 0.809 Gemma→Qwen, and 0.908 Gemma→Llama; each exceeds a 1,000-permutation role-label null at p=0.001. Eleven frozen directions recur highly and one moderately; all five strict Big Five directions recur highly.
+- Observed: Agreeableness is reconciled after alignment, with pairwise cosines 0.900/0.952/0.938 and squared-cosine consensus fractions 0.948/0.939/0.973. Adding PC4-PC6 materially increases recurrence for the frozen 12, Big Five, and Agreeableness.
+- Interpretation: AA-7 does not show that human psychometric defensibility identifies unusually efficient compact model coordinates. It does show cross-model recurrence of the corresponding model activation-derived directions after rotation, supporting a shared low-dimensional role-space organization broader than Big Five.
+- Boundary: shared English role labels/instructions can contribute to recurrence. No human respondent or occupational centroid was projected, no human microdata were committed, and the preregistered gate for designing a respondent-projection study failed.
 
 ## 3. Benchmark Progression
 
@@ -675,7 +687,8 @@ Active unresolved questions only:
 | OQ6 | How much of Big Five predictive performance reflects partially activation-dependent provenance? | Old Big Five overlay is cluster-conditioned; same-space replacement is activation-derived but not independent psychometrics. |
 | OQ7 | Should local activation-cloud geometry be included as supporting Paper 1.5 evidence or reserved for Paper 2? | Current state recommends Paper 2/local-manifold framing, with limited Paper 1.5 support for centroids-as-distributions. |
 | OQ8 | Does a frozen complete trait-profile prediction match the observed coordinate of a genuinely new behaviorally elicited Qwen persona? | V1 same-space predictor and OOD/error references are complete; behavioral realization was deliberately not run in this stage. |
-| OQ9 | Does a genuinely independent reviewer retain the 12-trait restricted SAPA bridge, can a planned-missingness measurement model recover defensible respondent scores, and can selected NLSY97 occupation cells support a preregistered role-prototype comparison? | Human-only SAPA structure leaves 9 high + 3 moderate direct links and no complete direct profile. AA-5 finds 27 of 151 reportable narrow cells and 20 of 22 broad groups meet frozen strong/moderate stability criteria, but corrected occupation ICCs are only 0.8%-7.8%, broadening has semantic cost, most exact mappings remain sparse, and no correspondence analysis has run. |
+| OQ9 | Does a genuinely independent reviewer retain the 12-trait restricted SAPA bridge, and can a planned-missingness measurement model recover defensible respondent scores? | AA-7 used human evidence only to freeze labels; it projected no respondents and failed the preregistered gate for designing such a projection study. |
+| OQ10 | Does AA-7 aligned-direction recurrence generalize beyond the three saved-vector releases and the common 275 English role inventory? | Current alignment is strong but can reflect shared role-instruction structure; independent role inventories and model releases are untested. |
 
 ## 10. Claims Inventory
 
@@ -728,6 +741,7 @@ Status mapping:
 | Within-Role Displacement Study Design Is Prepared | Observed | established |
 | Playwright Within-Role Displacement Scoring Is Prepared | Observed | established |
 | Frozen No-Label Elicitation Prompts Partially Validate Directional Activation Movement | Partially supported | tentative |
+| Activation-Derived Trait Directions Recur in Aligned Model Role-Score Subspaces | Observed | established with model-only boundary |
 | PC1 orderliness/neatness/symmetry primary interpretation | rejected in this ledger | rejected |
 | PC1 determination-only interpretation | rejected in this ledger | rejected |
 | PC2 uncertainty-exposure primary interpretation | rejected in this ledger | rejected |
@@ -755,6 +769,7 @@ Status mapping:
 
 | Item | Justification |
 |---|---|
+| AA-7 frozen-trait efficiency and aligned-subspace convergence | Include as bounded supporting/appendix evidence, not a headline: the primary human-selection efficiency result is negative, while the strong aligned Big Five/human-direction recurrence qualifies AA-2/AA-3 and requires shared-role/model-only caveats. A short main-text sentence may point to the appendix if cross-model organization is discussed. |
 | Run 1 no-label prompt packet and failures | Important negative/diagnostic evidence; too detailed for main narrative. |
 | No-label geometry diagnostics | Explains PC1-positive and `pc3_pos_05` failure modes; appendix evidence. |
 | Run 2 prompt-level diagnostics | Useful for prompt design and exact prompt examples; appendix table. |

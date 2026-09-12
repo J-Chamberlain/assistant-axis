@@ -2,6 +2,18 @@
 
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
+## human_supported_trait_convergence
+
+Artifact: AA-7 preregistered frozen human-supported trait efficiency and cross-model aligned PC1-PC6 role-score subspace study.
+Location: `research/outputs/human_supported_trait_convergence/`; main report: `human_supported_trait_convergence_report.md`; freeze: `human_supported_trait_set_freeze.json`; preregistration: `analysis_preregistration.json`; decisions: `primary_decisions.json`; complete hashes, introducing commits, and URLs: `artifact_inventory.csv`.
+Created: 2026-09-12 by Codex (GPT-5.5) on `codex/aa7-human-trait-convergence` from canonical `c5c2628ad54483253ad97b95c3e1febad29f9435`. Freeze commit: `51c54a5`; preregistration commit: `cabd807`; corrected runner commit: `e5e2fb1`; result commit: `717caba`; inventory commit: `68dc2f8`.
+Lineage: AA-1 `sapa_trait_bridge_psychometric_support_v1.csv` freezes the exact 12 labels; AA-2 `human_anchored_strict` role scores/directions freeze Big Five; AA-3 saved PC1-PC6 role-score coordinates define targets; AA-4 nested forward selection and fold-local random-direction controls define matched comparators. AA-7 cannot retroactively change any upstream selection.
+Procedure: Use existing 275 x 240 same-model raw activation-cosine matrices. Evaluate fixed feature families by Ridge with fold-local scaling and inner alpha tuning under fixed five-fold, leave-one-persona-out, and Qwen-canonical role-family holdouts. Reproduce nested AA-4 optimized k=5/k=12 selection within each outer fold. Compare with 500 target-independent random-real, fold-local centered-training-persona-span, and isotropic banks. Fit raw-score and variance-standardized orthogonal Procrustes transforms on shared-role training folds; evaluate held-out coordinates, distances, and neighbors; test 1,000 role-label permutations per pair/dimension/variant. Project trait role-score vectors into local PC bases and transform coefficients into Qwen-aligned coordinates.
+Observed result: The frozen 12 beat 0/6 random-real k=12 nulls and 2/6 persona-span nulls; preregistered compact convergence is weak/absent. PC1-PC6 alignment is above permutation for all three pairs; 11/12 frozen directions recur highly and one moderately, all five strict Big Five recur highly, and Agreeableness reconciles after alignment. PC4-PC6 materially improve aligned recurrence.
+Verification: `verify_human_supported_trait_convergence.py` passes 82 source, reproduction, leakage, seed, null, parse, privacy, and deterministic-output checks. Primary CSV/JSON/report outputs reproduce byte-for-byte. Static figures were visually inspected; overlapping colorbars and the comparator legend were corrected before final verification.
+Dependent analyses: Claim 21 qualification; Claim 40; Paper 1.5 bounded supporting/appendix evidence; possible future replication on additional saved-vector releases. AA-7 does not pass its later human-respondent projection-design gate.
+Boundary: All evaluated role and trait directions are model activation-derived. Human evidence selected labels only. No SAPA/NLSY respondent, NLSY97 respondent, occupational centroid, human outcome, or person-level record was projected into model geometry; no human microdata were committed. No GPU, RunPod, new inference, activation extraction, response generation, or external model API was used.
+
 ## sapa_bridge_psychometric_audit
 
 Artifact: Human-only empirical structure audit of the frozen provisional model-trait ↔ SAPA bridge.
