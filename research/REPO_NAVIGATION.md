@@ -1,7 +1,7 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-12
-Last commit when updated: b9b6008 (AA-7 canonical semantic reconciliation)
+Last commit when updated: AA-8 branch integration (exact commit recorded in the AA-8 artifact inventory)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -108,6 +108,37 @@ Adaptive extraction and recovered role-cloud artifacts live under `research/q2_s
 ### Trait Analyses
 
 Trait-vector, Big Five, trait-space PCA, and trait-profile analyses are indexed in `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/pc2_trait_stratified_profile/`, `research/outputs/qwen_pc2_trait_region_overlay/`, `research/outputs/multimodel_ordered_trait_region_viewer/`, `research/outputs/multimodel_trait_profile_pc_predictor/`, `research/outputs/trait_profile_provenance_audit/`, `research/outputs/big_five_provenance_audit/`, `research/outputs/same_space_big_five_overlay/`, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`. For PC2 visualization work, start with `research/visualizations/persona_geometry_explorer.html` and its `Trait regions` controls for Qwen-only exploration, or `research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_viewer.html` for Qwen/Llama/Gemma ordered-axis comparisons. Then inspect `research/visualizations/trait_region_overlay_integration_report.md`, `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_report.md`, and `research/outputs/multimodel_ordered_trait_region_viewer/multimodel_ordered_trait_region_report.md`. For the cross-model held-out predictive replication, use `research/outputs/multimodel_trait_profile_pc_predictor/multimodel_trait_profile_pc_predictor_report.md`. For provenance and evidential-independence caveats on the 275-role x 240-trait matrix, start with `research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md`. For provenance and independence caveats on the legacy Big Five explorer overlay, start with `research/outputs/big_five_provenance_audit/big_five_provenance_report.md`; that legacy overlay should be treated as heuristic cluster-conditioned semantic summary. For the current evidence-bearing same-space Big Five layer, use `research/outputs/same_space_big_five_overlay/same_space_big_five_report.md` and label it as activation-derived trait-vector projection, not independent psychometric rating.
+
+#### AA-8 Qwen PC1/PC2 Bipolar Human Mapping
+
+Use `research/outputs/qwen_pc1_pc2_bipolar_human_mapping/pc1_pc2_bipolar_human_mapping_report.md` as the entry point. All files are active; the two specificity sources are frozen and complementary.
+
+- `analysis_specification.md`: frozen scope, hierarchy, rubrics, and firewalls.
+- `pc1_bipolar_model_evidence_packet.csv`: PC1 trait, role, cluster, and prior-result packet.
+- `pc2_bipolar_model_evidence_packet.csv`: PC2 trait, role, cluster, and prior-result packet.
+- `model_evidence_packet_manifest.json`: packet source hashes and freeze provenance.
+- `pc1_sapa_construct_reconsideration.csv`: full 126-construct PC1 screen.
+- `pc1_rule_procedure_item_audit.csv`: 696-item-dictionary audit subset for rules/procedures/standards.
+- `pc1_bipolar_human_mapping.csv`: bipolar PC1 candidate judgments.
+- `pc2_coordinate_blind_role_rating_rubric.md`: frozen role-content rubric.
+- `pc2_coordinate_blind_role_ratings.csv`: frozen ratings for all 275 roles, with no geometry fields.
+- `pc2_role_rating_freeze_manifest.json`: rating hash and freeze commit.
+- `pc2_role_dimension_pc_associations.csv`: post-freeze association and incremental diagnostics.
+- `pc2_role_dimension_diagnostic_report.md`: embodiment, continuum, and counterexample audit.
+- `pc2_sapa_construct_reconsideration.csv`: full 126-construct PC2/opposite-pole screen.
+- `pc2_physicality_activity_item_audit.csv`: 696-item-dictionary physicality/activity audit subset.
+- `pc2_bipolar_human_mapping.csv`: bipolar PC2 candidate judgments.
+- `pc1_pc2_bipolar_interpretation_comparison.csv`: axis synthesis and competing interpretations.
+- `pc1_pc2_bipolar_human_mapping_report.md`: primary scientific report.
+- `source_manifest.json`: exact commit/path/hash provenance.
+- `verification_report.json`: source, freeze, leakage, parse, and reproducibility checks.
+- `artifact_inventory.csv`: hashes, introducing commits, and branch/future-canonical raw URLs.
+- `scripts/build_pc2_coordinate_blind_role_ratings.py`: deterministic blind-rating builder.
+- `scripts/build_model_evidence_and_role_diagnostics.py`: evidence/diagnostic builder.
+- `scripts/build_human_reconsideration.py`: construct/item inventory builder.
+- `scripts/build_source_manifest.py`: source-manifest builder.
+- `scripts/verify_aa8.py`: independent verifier.
+- `scripts/build_artifact_inventory.py`: artifact-inventory builder.
 
 ### Archived or Deprecated Outputs
 

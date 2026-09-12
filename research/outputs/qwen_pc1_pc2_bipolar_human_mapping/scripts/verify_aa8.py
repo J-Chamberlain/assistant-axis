@@ -112,6 +112,22 @@ def main() -> None:
         parse_ok = False
     check("all current CSV and JSON parse", parse_ok, f"csv={len(expected_csv)}, json={len(expected_json)}")
 
+    inventory = read_csv(out / "artifact_inventory.csv")
+    inventoried = {r["path"] for r in inventory}
+    expected_inventory = {
+        p.relative_to(repo).as_posix()
+        for p in out.rglob("*")
+        if p.is_file() and p.name != "artifact_inventory.csv"
+    }
+    inventory_hashes_ok = all(
+        sha(repo / r["path"]) == r["sha256"]
+        and (repo / r["path"]).stat().st_size == int(r["size_bytes"])
+        and r["introducing_commit"] != "PENDING_FINAL_COMMIT"
+        for r in inventory
+    )
+    check("artifact inventory coverage", inventoried == expected_inventory, f"rows={len(inventory)}, expected={len(expected_inventory)}")
+    check("artifact inventory hashes and commits", inventory_hashes_ok, "all non-self artifacts hashed with introducing commits")
+
     source_manifest = json.loads((out / "source_manifest.json").read_text())
     check("source manifest commits exact", source_manifest["source_branches"]["strict_axis_specificity"]["commit"] == STRICT and source_manifest["source_branches"]["target_dominance_specificity"]["commit"] == BROAD, "exact SHAs")
     source_hash_ok = True
@@ -137,7 +153,23 @@ def main() -> None:
 
     tracked_diff = subprocess.check_output(["git", "diff", "--name-only", "8f4e589df5d92217e56f76a978d51df07af5aa3a..HEAD"], cwd=repo, text=True).splitlines()
     check("no respondent microdata committed", not any("response" in p.lower() and "qwen_pc1_pc2" not in p for p in tracked_diff), f"changed_paths={len(tracked_diff)}")
-    check("AA-8 outputs isolated", all(p.startswith(str(OUT_REL)) for p in tracked_diff), "before repository-maintenance commit")
+    maintenance_paths = {
+        "research/REPO_NAVIGATION.md",
+        "research/REPO_FILE_INDEX.csv",
+        "research/RAW_URL_INDEX.md",
+        "research/RESEARCH_INDEX.md",
+        "research/PROVENANCE_REGISTRY.md",
+        "research/FINDINGS_LEDGER.md",
+        "research/RESEARCH_STATE.md",
+        "research/THREAD_START.md",
+        "research/paper15_content_ledger.md",
+        "research/paper15_content_ledger_artifact_inventory.csv",
+        "research/runtime/CURRENT_RESULTS.md",
+        "research/runtime/PENDING_TASK.md",
+        "research/STARTUP_MANIFEST.md",
+    }
+    unexpected = [p for p in tracked_diff if not p.startswith(str(OUT_REL)) and p not in maintenance_paths]
+    check("AA-8 outputs and maintenance isolated", not unexpected, f"unexpected={unexpected}")
 
     with tempfile.TemporaryDirectory(prefix="aa8_verify_") as td:
         tmp = Path(td)

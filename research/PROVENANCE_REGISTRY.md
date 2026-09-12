@@ -2,6 +2,17 @@
 
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
+## qwen_pc1_pc2_bipolar_human_mapping
+
+Artifact: AA-8 frozen-evidence reinterpretation of Qwen PC1 and PC2 as whole bipolar axes, with complete SAPA construct reconsideration and a coordinate-blind PC2 role-content diagnostic.
+Location: `research/outputs/qwen_pc1_pc2_bipolar_human_mapping/`; main report: `pc1_pc2_bipolar_human_mapping_report.md`; evidence packets: `pc1_bipolar_model_evidence_packet.csv` and `pc2_bipolar_model_evidence_packet.csv`; complete hashes and URLs: `artifact_inventory.csv`.
+Created: 2026-09-12 by Codex on branch `codex/aa8-pc1-pc2-bipolar-human-mapping`, starting from canonical SHA `8f4e589df5d92217e56f76a978d51df07af5aa3a`.
+Lineage: strict axis-specific evidence is frozen at `6497d28383aac33ea9f61b6ce2ac2ff195dccae4`; broader target-dominance/concentration evidence is frozen at `db782414c6708f6fd2c46f3e5b08d0e61668b14d`. The coordinate-blind 275-role rating table was frozen at `06b605d210b2a16d63682719af565781025dad31` before any PC coordinates were joined. Existing role geometry, role instructions, coordinate-blind interpretation studies, PC1 accountability evidence, the frozen 126-construct library, and the 696-item dictionary were then joined interpretively.
+Key result: PC1 is best described as externally legible, standards-governed empirical/procedural discipline versus expressive-symbolic possibility. PC2 is best described as direct, situated experiential engagement versus inward, abstract, formally mediated integration. Physicality has a modest positive PC2 relationship (Pearson `r=0.144714`; standardized incremental `Delta R2=0.019355` beyond PC1, practical, and social ratings) but is not the primary axis. No single SAPA construct captures either axis; human matches are explicitly decomposed into partial domains/aspects/facets and model-specific residuals.
+Verification: `scripts/verify_aa8.py` checks exact source commits/counts, the immutable role-rating freeze, 275-role coverage, six-PC marker profiles, the full 126/696 human library, firewall exclusions, parsing, source hashes, and deterministic regeneration.
+Dependent analyses: Paper 1.5 PC1/PC2 interpretation and future human-measure design only. This is not a human/model correspondence test and supplies no respondent projection or equivalence claim.
+Notes/caveats: Specificity was neither rerun nor retuned. PC3 was reference-only. No Llama/Gemma or AA-7 result was used to select interpretations; no respondent-level data, GPU, RunPod, inference, activation extraction, response generation, or external model API was used.
+
 ## human_supported_trait_convergence
 
 Artifact: AA-7 preregistered frozen human-supported trait efficiency and cross-model aligned PC1-PC6 role-score subspace study.

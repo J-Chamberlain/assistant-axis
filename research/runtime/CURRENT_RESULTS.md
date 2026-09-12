@@ -4,6 +4,12 @@
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/runtime/CURRENT_RESULTS.md
 # Status: COMPLETE
 
+## 2026-09-12 — AA-8 bipolar PC1/PC2 interpretation and human mapping
+
+Completed `research/outputs/qwen_pc1_pc2_bipolar_human_mapping/` without rerunning or retuning specificity. The frozen evidence hierarchy retains 328 associated, 202 target-dominant, 88 strict `.70`-purity, and 70 highly concentrated memberships. PC1 is best interpreted as externally legible, standards-governed empirical/procedural discipline versus internally generated expressive-symbolic possibility. PC2 is best interpreted as direct, situated experiential engagement versus inward, abstract, formally mediated integration. A coordinate-blind rating of all 275 role instructions was frozen before coordinates were joined; physicality is modestly positive (`r=0.145`, incremental `Delta R2=0.019`) and therefore secondary, while abstract/conceptual and ritual/formal engagement are more clearly negative.
+
+The full 126-construct SAPA library and 696-item dictionary were reconsidered. Neither axis maps cleanly to one human construct. Broad Conscientiousness is decomposed for PC1; inverse Intellect and Extraversion are partial PC2 analogues; SAPA has no defensible direct physicality/athleticism construct. Verification passes. No human respondent was scored or projected, no correspondence test was run, no Llama/Gemma or AA-7 result selected interpretations, and no next experiment was selected.
+
 ## 2026-09-12 — AA-7 human-supported trait convergence and aligned subspaces
 
 Completed `research/outputs/human_supported_trait_convergence/` from canonical `c5c2628ad54483253ad97b95c3e1febad29f9435`. The exact AA-1 12-trait set and all decisions were frozen before outcome analysis. The primary compact-convergence result is **WEAK / ABSENT**: random-real p-values are 0.2395/0.2615 Qwen, 0.7405/0.3533 Llama, and 0.1497/0.1257 Gemma for core/extended, so human-supported k=12 beats 0/6 matched random-real controls. Only Qwen core (p=0.0220) and Gemma core (p=0.0279) beat persona-span controls. All isotropic comparisons pass, but isotropic is the weaker generic control. Geometry-optimized k=12 is better in every model/scope; human support level does not track utility.
