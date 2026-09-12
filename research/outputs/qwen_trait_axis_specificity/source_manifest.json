@@ -1,0 +1,136 @@
+{
+  "analysis": "Axis-specific Qwen trait markers and purity-filtered SAPA inventory",
+  "source_commit": "667acdd634bfb8c39d40432fe60f0c5ef3bbbeeb",
+  "selection_spec_frozen_commit": "1fe7fae",
+  "generated_at_utc": "2026-09-12T18:11:22Z",
+  "model": "Qwen/Qwen3-32B",
+  "role_count": 275,
+  "trait_count": 240,
+  "pc_count": 6,
+  "supported_subspace": {
+    "strict_core": [
+      "PC1",
+      "PC2",
+      "PC3"
+    ],
+    "supported_secondary_provisional": [
+      "PC4",
+      "PC5",
+      "PC6"
+    ]
+  },
+  "saved_correlations_reused_not_recomputed_as_analysis": true,
+  "bootstrap": {
+    "resamples": 2000,
+    "seed": 20260920,
+    "sampling_unit": "Qwen role",
+    "same_indices_across_all_traits_and_pcs_per_resample": true
+  },
+  "primary_axis_specific_rule": {
+    "prior_family_member": true,
+    "target_strict_largest_abs_correlation": true,
+    "bootstrap_dominance_probability_at_least": 0.95,
+    "axis_purity_at_least": 0.7
+  },
+  "sensitivity": {
+    "purity_thresholds": [
+      0.6,
+      0.7,
+      0.8
+    ],
+    "bootstrap_dominance_probability_thresholds": [
+      0.9,
+      0.95,
+      0.99
+    ]
+  },
+  "verification_metrics": {
+    "canonical_pc1_pc3_coordinate_max_abs_error": 1.207027046312703e-06,
+    "saved_vs_role_level_recomputed_correlation_max_abs_error": 1.3322676295501878e-15,
+    "pc1_pc6_correlation_matrix": [
+      [
+        1.0,
+        4.1033565157467475e-17,
+        3.2702386487365735e-16,
+        -4.789015267988121e-17,
+        1.8980691941134894e-17,
+        -7.593245891382411e-17
+      ],
+      [
+        4.1033565157467475e-17,
+        0.9999999999999999,
+        -1.3386488055555828e-16,
+        3.118973177932524e-16,
+        9.856711371071775e-17,
+        3.1634354433843056e-16
+      ],
+      [
+        3.270238648736574e-16,
+        -1.3386488055555825e-16,
+        1.0,
+        2.311758077739081e-16,
+        -3.955202226360875e-16,
+        9.35977698660446e-17
+      ],
+      [
+        -4.789015267988121e-17,
+        3.118973177932524e-16,
+        2.311758077739081e-16,
+        1.0,
+        -4.8602456010766e-16,
+        3.20393646514961e-16
+      ],
+      [
+        1.8980691941134894e-17,
+        9.856711371071777e-17,
+        -3.955202226360875e-16,
+        -4.860245601076601e-16,
+        0.9999999999999998,
+        3.21995670039162e-16
+      ],
+      [
+        -7.59324589138241e-17,
+        3.1634354433843056e-16,
+        9.35977698660446e-17,
+        3.2039364651496097e-16,
+        3.21995670039162e-16,
+        1.0
+      ]
+    ],
+    "pc_max_abs_off_diagonal_correlation": 4.860245601076601e-16,
+    "communality_vs_multiple_r2_max_abs_error": 9.992007221626409e-16
+  },
+  "documented_composites": {
+    "source": "research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py",
+    "construction": "unweighted mean of each documented three-trait editorial group",
+    "names": [
+      "Exploration",
+      "Response",
+      "Scrutiny",
+      "Challenge",
+      "Affiliation"
+    ],
+    "affects_individual_marker_selection": false
+  },
+  "firewall": {
+    "other_models_loaded": [],
+    "AA7_scientific_results_loaded": [],
+    "human_respondent_rows_loaded": false,
+    "human_respondent_scores_computed": false,
+    "human_model_correspondence_tested": false,
+    "next_experiment_selected": false
+  },
+  "compute": "CPU only; no GPU, RunPod, model inference, activation extraction, response generation, or external model API.",
+  "source_hashes": {
+    "research/outputs/extended_persona_pca/viewer_data.json": "672c617758ace9654708d5f248e094d3005f19ee5237d3918a159bc0e3d813d3",
+    "research/outputs/human_trait_dataset_feasibility/sapa/sapa_model_trait_candidate_crosswalk.csv": "4000593255646b75e509a0e1e194dec52fd3770b58503b3df0d3388bd53d6d37",
+    "research/outputs/persona_trait_ridge_plots/run_persona_trait_ridges.py": "6041632c9f46cc7bca7ba88f7f9f9b6719e27eca6cdd31da7fd102254473962f",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_pc_trait_family_human_inventory.csv": "49f5b7c5c6b8f74d56ba2a2a410c4b9ebf4e3b4bf2459f013422fba0dfc37896",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_human_mapping_judgments.csv": "cb4ac6b1338ce209ab2a88d24fac67c29abb3e6322055a4475b6b6dbc52e1f3c",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_family_membership_primary.csv": "cb010ab242747544ee5ba957e64b1565c8207565a76a9523cb5b837331237b97",
+    "research/outputs/qwen_trait_family_human_inventory/qwen_trait_pc_correlations_all.csv": "6ccbb08452af12ddf050fc95e083a0e0c4e2e01423c417cf2e9919909fd79424",
+    "research/outputs/qwen_trait_family_human_inventory/verification_report.json": "d191f930c2f6a9d592ea856c8d1f5f0b458b17dbc4bc8a8fc1bc271a6b5ac8b8",
+    "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8",
+    "research/visualizations/geometry_viz_data.json": "1b15d8e3425bc3d51032919157eb683f1358f353f4ee071a18d06347a792ec6d"
+  }
+}
