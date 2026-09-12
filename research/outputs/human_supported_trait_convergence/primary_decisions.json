@@ -1,0 +1,40 @@
+{
+  "alignment_qwen_reference_empirical_p": {
+    "gemma_to_qwen": 0.000999000999000999,
+    "llama_to_qwen": 0.000999000999000999
+  },
+  "evidence_strength": "WEAK / ABSENT",
+  "later_human_respondent_projection_design_gate_passed": false,
+  "later_study_statement": "AA-7 does not satisfy the preregistered gate for designing a human-respondent projection study.",
+  "model_scope_control_passes": {
+    "core": {
+      "gemma": {
+        "persona_span_pass": true,
+        "random_real_pass": false
+      },
+      "llama": {
+        "persona_span_pass": false,
+        "random_real_pass": false
+      },
+      "qwen": {
+        "persona_span_pass": true,
+        "random_real_pass": false
+      }
+    },
+    "extended": {
+      "gemma": {
+        "persona_span_pass": false,
+        "random_real_pass": false
+      },
+      "llama": {
+        "persona_span_pass": false,
+        "random_real_pass": false
+      },
+      "qwen": {
+        "persona_span_pass": false,
+        "random_real_pass": false
+      }
+    }
+  },
+  "moderate_or_high_recurrent_human_traits_pc1_pc6": 12
+}

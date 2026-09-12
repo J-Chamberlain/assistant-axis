@@ -1,7 +1,7 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-12
-Last commit when updated: 08bde9a (Qwen-first human-construct bridge before navigation maintenance)
+Last commit when updated: 4d2bdb4 (Qwen trait-family SAPA inventory verification before registry maintenance)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,20 +24,20 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3992
+- active analyses: 4015
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 12
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 405
+- trait analyses: 453
 - visualizations: 242
 
 
 ## Status Counts
 
-- active: 4875
+- active: 4946
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -50,6 +50,12 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/FINDINGS_LEDGER.md`, `research/THREAD_START.md`, and `research/STARTUP_MANIFEST.md` for startup and report continuity. Use `research/paper15_content_ledger.md` as the canonical factual source ledger before drafting Paper 1.5 prose.
 
 ### Active Analyses
+
+Correlation-defined Qwen trait families to SAPA inventory: `research/outputs/qwen_trait_family_human_inventory/qwen_pc_trait_family_human_inventory_report.md` is the readable entry point and `qwen_pc_trait_family_human_inventory.csv` is the exhaustive machine-readable inventory. Use `qwen_trait_pc_correlations_all.csv` for all 1,440 Qwen PC1-PC6 trait associations; `qwen_trait_family_membership_primary.csv` and `qwen_trait_family_threshold_sensitivity.csv` for the frozen `.50` primary and `.40/.60` sensitivity rules; `qwen_trait_family_blinded_mapping_packet.csv` for the neutral-ID packet; and `qwen_trait_family_human_mapping_judgments.csv` for all 48 SAPA proposals. The result inventories 37 unique construct/item candidates and 350 SAPA items across 12 signed families, including two empty poles. This is the requested stopping point: no respondent scoring/projection, cross-model comparison, AA-7 input, correspondence test, or next-experiment selection occurred.
+
+Qwen-first human-construct bridge: `research/outputs/qwen_pc_human_construct_bridge/qwen_pc_human_construct_bridge_report.md` is the entry point for the exact user-supplied Claude Opus 5 blinded SAPA review, agreement and item-quality audits, sourced 126-construct human inventory, Qwen-only PC1-PC6 signature packet, transparent construct-matching rubric, 48 evaluated candidates, and frozen 37-row discovery hypothesis set. Use `external_review_agreement_summary.json` and `external_review_disagreements.csv` for the 69/78 agreement and nine discordances; `sapa_flagged_item_quality_audit.csv` for all eight wording/direction flags; `qwen_pc1_pc6_model_side_signatures.csv` for observed Qwen evidence; `qwen_derived_human_construct_hypotheses_v1.csv` for the frozen discovery set; `selected_construct_human_measurement_feasibility.csv` for SAPA availability/planned-missingness constraints; and `verification_report.json` plus `artifact_inventory.csv` for reproducibility and hashes. No Llama/Gemma or AA-7 result entered selection. This is discovery-only bridge construction, not human/model equivalence, cross-model validation, or respondent projection.
+
+Human-supported trait convergence and aligned subspaces: `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md` is the AA-7 entry point. The exact 12 AA-1-supported labels and all decisions were frozen before outcomes. Use `comparator_summary.csv` for the matched compact prediction result, `procrustes_alignment_cv.csv` and `procrustes_alignment_null.csv` for held-out alignment evidence, `aligned_human_supported_trait_directions.csv` and `aligned_big_five_directions.csv` for recurrence, and `verification_report.json` plus `artifact_inventory.csv` for reproduction/provenance. The primary compact-efficiency result is weak/absent; the separate activation-derived aligned-direction recurrence is strong. No human respondent or occupational centroid was projected.
 
 Externally anchored Big Five audit: `research/outputs/externally_anchored_big_five/externally_anchored_big_five_report.md` is the AA-2 entry point for the frozen geometry-blind IPIP/SAPA constructions and their Qwen/Llama/Gemma activation-space tests. Use `agreeableness_pc3_focal_test.json` for the strict Qwen focal result, the mapping CSVs and freeze manifest for construct provenance, and `big_five_viewer_integration_report.md` for canonical ridge/surface compatibility. Negative Qwen PC3 has a strong Agreeableness component; it is not equivalent to Agreeableness, and the model-local axis number does not transfer universally.
 
@@ -66,8 +72,6 @@ Human trait-dataset feasibility: `research/outputs/human_trait_dataset_feasibili
 SAPA bridge Phase-1b review: `research/outputs/human_trait_dataset_feasibility/sapa_review/` contains the fixed-seed coordinate-blind review packet for exactly the 78 original Category-3 candidates, the rubric committed before adjudication, all 78 second-pass decisions, the provisional bridge, item/scale reuse audits, retained-evidence missingness summary, verification, and an identical decision-free packet plus instructions for later external review. The review retained 45 direct primary-tier and 29 explicitly secondary close links, with 1 broad downgrade, 3 rejections, and 0 ambiguous rows. The 74 retained links use 129 items and 78 source scales, but no respondent observes all 129 retained items. The packet excludes original feasibility labels, geometry, predictors, personas, occupations, outcomes, and downstream performance. This same-workflow Codex review is not independent psychometric validation; genuinely independent review of the frozen external packet is the next gate.
 
 Human-only SAPA bridge psychometric audit: `research/outputs/sapa_bridge_psychometric_audit/sapa_bridge_psychometric_audit_report.md` is the entry point for pairwise-complete human-response coherence, source-scale convergence, discriminant/reuse, Big Five, planned-missingness, and effective-dimensionality diagnostics on the frozen provisional bridge. Use `sapa_trait_bridge_psychometric_support_v1.csv` for the 74 trait-level outcomes, `human_trait_proxy_dimensionality_summary.json` for direct versus direct-plus-close summaries, the Pearson/Spearman matrix and pairwise-N files for group-level structure, `psychometric_support_rubric.md` for the pre-response freeze, and `artifact_inventory.csv` for hashes and branch/future-canonical URLs. The primary direct tier yields 9 high, 3 moderate, 30 redundant/broad, and 3 insufficient links; the matrix retains 6 parallel-analysis components and participation-ratio rank 12.44. This is human-data structural support only. No model geometry or respondent-to-model projection was used, and raw responses remain gitignored.
-
-Qwen-first human-construct bridge: `research/outputs/qwen_pc_human_construct_bridge/qwen_pc_human_construct_bridge_report.md` is the entry point for the exact user-supplied Claude Opus 5 blinded SAPA review, agreement and item-quality audits, sourced 126-construct human inventory, Qwen-only PC1-PC6 signature packet, transparent construct-matching rubric, 48 evaluated candidates, and frozen 37-row discovery hypothesis set. Use `external_review_agreement_summary.json` and `external_review_disagreements.csv` for the 69/78 agreement and nine discordances; `sapa_flagged_item_quality_audit.csv` for all eight wording/direction flags; `qwen_pc1_pc6_model_side_signatures.csv` for observed Qwen evidence; `qwen_derived_human_construct_hypotheses_v1.csv` for the frozen discovery set; `selected_construct_human_measurement_feasibility.csv` for SAPA availability/planned-missingness constraints; and `verification_report.json` plus `artifact_inventory.csv` for reproducibility and hashes. No Llama/Gemma or AA-7 result entered selection. This is discovery-only bridge construction, not human/model equivalence, cross-model validation, or respondent projection; independent human expert review is the next gate.
 
 Trait-profile to persona-PC predictor: `research/outputs/trait_profile_pc_predictor/trait_profile_pc_predictor_report.md` is the entry point for the first-stage reusable mapping from all 240 Qwen activation-cosine trait features to canonical PC1/PC2/PC3. Use `validation_summary.json` for metrics and decisions, `ridge_predictor.json` for the transparent canonical V1 specification, `predict_trait_profile.py` for existing/external/percentile-modified profiles, `leave_one_persona_out_predictions.csv` for exact held-out persona lookups, `leave_one_cluster_out_summary.csv` for harder family shift, and `artifact_inventory.csv` for hashes/raw URLs. The analysis includes repeated nested Ridge/PLS/RBF-Kernel-Ridge/KNN comparison, fold-safe quantiles, 275-persona LOPO, all seven canonical cluster holdouts, 100 target permutations, OOD distance/reconstruction diagnostics, and 120 pair-endpoint-held-out synthetic activation mixes. It is same-space Qwen activation geometry; counterfactual outputs are predicted locations, not observed behavior or causal/human-personality claims. No inference, new activations, GPU, RunPod, or external model API was used.
 

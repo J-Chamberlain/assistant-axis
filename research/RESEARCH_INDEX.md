@@ -12,18 +12,22 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 
 ## Current Human-Data Gate (2026-09-12)
 
-`research/outputs/qwen_pc_human_construct_bridge/` is the current entry point for the human-construct bridge gate. A genuinely separate Claude Opus 5 blinded semantic review agrees exactly with the frozen Codex review on 69/78 candidates (kappa 0.785), while nine rows remain discordant and eight item wording/direction flags are explicitly audited. The analysis then changes level: a sourced 126-construct domain/aspect/facet inventory is matched to frozen Qwen-only PC1-PC6 signatures, yielding 37 discovery hypotheses (4 strong, 12 partial, 21 facet/subcomponent; 36 SAPA-available). PC1 recovers broad Conscientiousness/Stability despite its exclusion from the narrow 12-trait proxy set; PC3 retains a strong negative-Agreeableness core. These are frozen discovery hypotheses, not human/model equivalence or cross-model validation. Independent human expert review remains the gate before respondent scoring or held-out validation.
+`research/outputs/sapa_bridge_psychometric_audit/` remains the human-only SAPA measurement gate. AA-7 used its 9 high + 3 moderate labels only to freeze model constructs and projected no respondents. Because the frozen 12 did not beat matched random-real subsets and passed only two core-only persona-span controls, AA-7's preregistered gate for designing a respondent-to-model projection study failed. Independent expert review and reduced-bridge scoring-method work may proceed as human measurement research; AA-7 alone does not justify human/model projection.
 
-## Integrated AA-1 Through AA-5 Entry Points (2026-09-11)
+`research/outputs/qwen_trait_family_human_inventory/` is the newer requested inspection object. It mechanically defines signed Qwen PC1-PC6 trait families before interpretation and inventories 37 SAPA construct/item candidates and 350 questionnaire items without scoring any respondent. Its PC-blind matching did not use AA-7, Llama/Gemma, role extremes, prior PC labels, or prior AA-1 human-construct hypotheses. This workflow stops at the inventory and does not select a next experiment.
+
+## Integrated AA-1 Through AA-7 Entry Points (2026-09-12)
 
 - AA-1 human SAPA psychometric structure: `research/outputs/sapa_bridge_psychometric_audit/sapa_bridge_psychometric_audit_report.md`
-- AA-1 Qwen-first construct bridge and independent semantic review: `research/outputs/qwen_pc_human_construct_bridge/qwen_pc_human_construct_bridge_report.md`
+- AA-1 Qwen-first human-construct sources: `research/outputs/qwen_pc_human_construct_bridge/qwen_pc_human_construct_bridge_report.md`
+- AA-1 correlation-defined family/SAPA inventory: `research/outputs/qwen_trait_family_human_inventory/qwen_pc_trait_family_human_inventory_report.md`
 - AA-2 externally anchored Big Five and viewer integration: `research/outputs/externally_anchored_big_five/externally_anchored_big_five_report.md`
 - AA-3 extended persona PCA dimensionality: `research/outputs/extended_persona_pca/extended_persona_pca_report.md`
 - AA-4 Qwen trait sparsity and generic-basis controls: `research/outputs/qwen_trait_sparsity_prediction/qwen_trait_sparsity_report.md`
 - AA-5 NLSY97 occupational centroid stability: `research/outputs/nlsy97_occupation_personality_stability/nlsy97_occupation_personality_stability_report.md`
+- AA-7 frozen human-supported trait convergence and aligned PC subspaces: `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md`
 
-The canonical synthesis is: PC1-PC3 are the strict Qwen core and PC4-PC6 supported secondary coordinates; negative Qwen PC3 contains a strong externally anchored Agreeableness component without being identical to Agreeableness; compact real traits provide semantic efficiency while the 240-trait ceiling is substantially same-space basis coverage; 12/45 direct SAPA links have moderate-or-better narrow human structural support; and occupation is weak as a global human personality grouping variable despite selected stable cells. A broader Qwen-first hierarchy now freezes 37 domain/aspect/facet hypotheses before held-out testing. The next human gate is independent expert review, not projection or cross-model tuning.
+The canonical synthesis is: PC1-PC3 are the strict Qwen core and PC4-PC6 supported secondary coordinates; negative Qwen PC3 contains a strong externally anchored Agreeableness component without being identical to Agreeableness; geometry-optimized compact real traits provide semantic efficiency while the 240-trait ceiling is substantially same-space basis coverage; independently human-supported labels do not show unusual compact efficiency; model activation-derived human-supported and Big Five directions nevertheless recur strongly after role-score subspace alignment; 12/45 direct SAPA links have moderate-or-better human structural support; and occupation is weak as a global human personality grouping variable despite selected stable cells. No human respondent has been projected into model geometry.
 
 ## Current Trait Ridge Visualization (2026-09-09)
 
@@ -39,6 +43,9 @@ The requested Qwen emotion surface viewer is implemented at `research/outputs/pe
 
 ## Current Best Findings
 
+- The frozen correlation rule yields 328 signed PC-family memberships across 238 unique Qwen traits. Four of 12 signed families have at least one strong available SAPA measurement match, five have partial matches, one has only facet/item coverage, and the two mechanically empty poles remain unmatched. This is inventory evidence, not human/model correspondence.
+- AA-7's frozen 12 human-supported labels do not beat matched random-real subsets at k=12 and therefore do not supply evidence that human psychometric defensibility selects unusually efficient model coordinates.
+- Separately, cross-validated PC1-PC6 role-score alignment is above permutation across Qwen, Llama, and Gemma; the model activation-derived human-supported and strict Big Five directions recur strongly after rotation, including reconciled Agreeableness. This is model-only aligned-subspace evidence, not human/model equivalence.
 - Semantic topology partially predicts activation topology but does not explain it away.
 - Explicit role-label exposure is part of the Lu-style prompt design and remains a methodological caveat.
 - No-label prompt semantic topology remains close to original prompt topology, motivating activation-space no-label stress tests.
@@ -112,11 +119,13 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/paper15_content_ledger.md`: canonical factual ledger for Paper 1.5 writing; use before drafting prose.
 - `research/paper15_content_ledger_artifact_inventory.csv`: source artifact inventory for the Paper 1.5 content ledger.
 - `research/outputs/sapa_bridge_psychometric_audit/`: AA-1 human-only psychometric contraction of the frozen semantic bridge, with verification and artifact inventory.
-- `research/outputs/qwen_pc_human_construct_bridge/`: exact independent Claude review, agreement and metadata-quality audits, Qwen-only PC1-PC6 signatures, sourced human-construct library, frozen discovery hypotheses, measurement feasibility, and held-out validation plan.
+- `research/outputs/qwen_pc_human_construct_bridge/`: separate Claude-review agreement, corrected SAPA metadata, 126-construct library, and frozen Qwen-only discovery hypotheses.
+- `research/outputs/qwen_trait_family_human_inventory/`: frozen Qwen trait-family selection, neutral-ID SAPA mapping packet, complete measurement inventory, 34-check verification, and artifact hashes.
 - `research/outputs/externally_anchored_big_five/`: AA-2 frozen external Big Five mappings, multimodel geometry tests, viewer integration report, and artifact inventory.
 - `research/outputs/extended_persona_pca/`: AA-3 full-rank dimensionality/stability audit and interactive PC1-PC10 viewer.
 - `research/outputs/qwen_trait_sparsity_prediction/`: AA-4 compact-feature and matched generic-basis audit of Qwen trait-to-PC prediction.
 - `research/outputs/nlsy97_occupation_personality_stability/`: AA-5 human-only occupation-centroid stability audit and future role-candidate table.
+- `research/outputs/human_supported_trait_convergence/`: AA-7 frozen human-supported compact-efficiency controls, held-out PC1-PC6 role-score alignment, aligned human-supported/Big Five direction recurrence, report, figures, and 82-check reproduction.
 - `research/geometry_tables/`: canonical Qwen role/trait PC ranking tables and cluster membership table generated from `research/visualizations/geometry_viz_data.json`.
 - `research/outputs/assistant_centroid_provenance_audit/`: audit showing the Paper 1.5 assistant baseline is the role-conditioned `assistant` centroid and making the 240-question bare-Qwen/default baseline foundational for future no-label interpretation.
 - `research/outputs/default_assistant_baseline_audit/`: audit identifying and projecting Lu et al.'s released Qwen `default_vector.pt`, comparing it with the assistant role centroid and Run 2 bare no-system centroid.

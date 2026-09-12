@@ -1,0 +1,590 @@
+{
+  "analysis": "AA-7 verification",
+  "canonical_starting_sha": "c5c2628ad54483253ad97b95c3e1febad29f9435",
+  "checks": [
+    {
+      "check": "canonical starting SHA frozen",
+      "detail": "c5c2628ad54483253ad97b95c3e1febad29f9435",
+      "status": "PASS"
+    },
+    {
+      "check": "exact ordered 12-trait freeze",
+      "detail": [
+        "adventurous",
+        "altruistic",
+        "forgiving",
+        "grandiose",
+        "impulsive",
+        "manipulative",
+        "optimistic",
+        "pessimistic",
+        "traditional",
+        "innovative",
+        "introspective",
+        "judgmental"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "AA-1 support levels are 9 high and 3 moderate",
+      "detail": {
+        "high": 9,
+        "moderate": 3
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "AA-1 canonical source hash",
+      "detail": "1cc78b543bf44e636dc8000617c61f0285e8cfc998b33946c38ab164ecdcd5a6",
+      "status": "PASS"
+    },
+    {
+      "check": "AA-1 direct semantic count",
+      "detail": 45,
+      "status": "PASS"
+    },
+    {
+      "check": "qwen shared role count",
+      "detail": 275,
+      "status": "PASS"
+    },
+    {
+      "check": "qwen shared trait count",
+      "detail": 240,
+      "status": "PASS"
+    },
+    {
+      "check": "qwen AA-3 PC1-PC6 exact reproduction",
+      "detail": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "qwen frozen raw-cosine reproduction",
+      "detail": 5.88418203051333e-15,
+      "status": "PASS"
+    },
+    {
+      "check": "llama shared role count",
+      "detail": 275,
+      "status": "PASS"
+    },
+    {
+      "check": "llama shared trait count",
+      "detail": 240,
+      "status": "PASS"
+    },
+    {
+      "check": "llama AA-3 PC1-PC6 exact reproduction",
+      "detail": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "llama frozen raw-cosine reproduction",
+      "detail": 3.3861802251067274e-15,
+      "status": "PASS"
+    },
+    {
+      "check": "gemma shared role count",
+      "detail": 275,
+      "status": "PASS"
+    },
+    {
+      "check": "gemma shared trait count",
+      "detail": 240,
+      "status": "PASS"
+    },
+    {
+      "check": "gemma AA-3 PC1-PC6 exact reproduction",
+      "detail": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "gemma frozen raw-cosine reproduction",
+      "detail": 1.0547118733938987e-15,
+      "status": "PASS"
+    },
+    {
+      "check": "qwen/openness AA-2 direction byte hash",
+      "detail": "ee5371b17c933efe6fb5343edefb8d6a53e1421c74952776a5f0b8f3fecb1be4",
+      "status": "PASS"
+    },
+    {
+      "check": "qwen/conscientiousness AA-2 direction byte hash",
+      "detail": "22f37cda31d3989b9406d54abc060690a1569551993fcd38ad9da22b82ec5624",
+      "status": "PASS"
+    },
+    {
+      "check": "qwen/extraversion AA-2 direction byte hash",
+      "detail": "0d14519b48c511d8503cd0ad00a2704f5da7b213660128e9dd8808ea1d8c7db1",
+      "status": "PASS"
+    },
+    {
+      "check": "qwen/agreeableness AA-2 direction byte hash",
+      "detail": "20dd02fb862099152f53bbf5600068a08cb695a2d7e07189aa4cdf4049de42b4",
+      "status": "PASS"
+    },
+    {
+      "check": "qwen/neuroticism AA-2 direction byte hash",
+      "detail": "e0777e967e4d60ee242b257b7548910410be50cb6c87465a2c0e956bd9800e5e",
+      "status": "PASS"
+    },
+    {
+      "check": "llama/openness AA-2 direction byte hash",
+      "detail": "0269393646fb7a506002eb3b4b44de060b9ce8c0861cd86e7d411cbb6075aa37",
+      "status": "PASS"
+    },
+    {
+      "check": "llama/conscientiousness AA-2 direction byte hash",
+      "detail": "ee29c8d898301082ca40253e7700b4f7636ef2088f91b3aed237be29e5b61d40",
+      "status": "PASS"
+    },
+    {
+      "check": "llama/extraversion AA-2 direction byte hash",
+      "detail": "77be7a2918549da118ba67a57ecb81a0232753ca798467f9b6bab51ac2d68f13",
+      "status": "PASS"
+    },
+    {
+      "check": "llama/agreeableness AA-2 direction byte hash",
+      "detail": "4918d73c68f20859a93ee25c54a406724bf2ebf1c3732ef8019f77a25e0668fe",
+      "status": "PASS"
+    },
+    {
+      "check": "llama/neuroticism AA-2 direction byte hash",
+      "detail": "79f371f0e0f8db4e7a987afb732f8707846897a0867108472bf2357e049b1f4c",
+      "status": "PASS"
+    },
+    {
+      "check": "gemma/openness AA-2 direction byte hash",
+      "detail": "b2d580193cd2e650b39f9bfc9371a0b203e649b1971a802a3afbed7dd67380a7",
+      "status": "PASS"
+    },
+    {
+      "check": "gemma/conscientiousness AA-2 direction byte hash",
+      "detail": "c0580ca077edb307ad35c0a231fd8148228dbe0ed06ea283731a9dd21f478860",
+      "status": "PASS"
+    },
+    {
+      "check": "gemma/extraversion AA-2 direction byte hash",
+      "detail": "c33a25a179af957fcfea7fefe4ffed54d5ea88654b0e710a76ab8153f0e5750c",
+      "status": "PASS"
+    },
+    {
+      "check": "gemma/agreeableness AA-2 direction byte hash",
+      "detail": "b7503f61d34ff6fa9a08c3560e0da77715d4bd91fb1211c5bc1498f621e3a799",
+      "status": "PASS"
+    },
+    {
+      "check": "gemma/neuroticism AA-2 direction byte hash",
+      "detail": "a8bc516c232437cfa12b88d13e49592c561d92e0fcdf252572f3a034a5da77de",
+      "status": "PASS"
+    },
+    {
+      "check": "AA-2 strict Big Five directions reproduce saved role scores",
+      "detail": 2.1094237467877974e-15,
+      "status": "PASS"
+    },
+    {
+      "check": "fixed_5fold outer train/test separation",
+      "detail": 5,
+      "status": "PASS"
+    },
+    {
+      "check": "leave_one_persona_out outer train/test separation",
+      "detail": 275,
+      "status": "PASS"
+    },
+    {
+      "check": "role_family_holdout outer train/test separation",
+      "detail": 7,
+      "status": "PASS"
+    },
+    {
+      "check": "AA-4 nested optimized k=12 method/path reproduction",
+      "detail": {
+        "alphas_match": true,
+        "traits_match": true
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "random-real has exactly 500 banks per model/budget/scope",
+      "detail": {
+        "('gemma', 12, 'core')": 500,
+        "('gemma', 12, 'extended')": 500,
+        "('gemma', 5, 'core')": 500,
+        "('gemma', 5, 'extended')": 500,
+        "('llama', 12, 'core')": 500,
+        "('llama', 12, 'extended')": 500,
+        "('llama', 5, 'core')": 500,
+        "('llama', 5, 'extended')": 500,
+        "('qwen', 12, 'core')": 500,
+        "('qwen', 12, 'extended')": 500,
+        "('qwen', 5, 'core')": 500,
+        "('qwen', 5, 'extended')": 500
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "isotropic has exactly 500 banks per model/budget/scope",
+      "detail": {
+        "('gemma', 12, 'core')": 500,
+        "('gemma', 12, 'extended')": 500,
+        "('gemma', 5, 'core')": 500,
+        "('gemma', 5, 'extended')": 500,
+        "('llama', 12, 'core')": 500,
+        "('llama', 12, 'extended')": 500,
+        "('llama', 5, 'core')": 500,
+        "('llama', 5, 'extended')": 500,
+        "('qwen', 12, 'core')": 500,
+        "('qwen', 12, 'extended')": 500,
+        "('qwen', 5, 'core')": 500,
+        "('qwen', 5, 'extended')": 500
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "persona-span has exactly 500 banks per model/budget/scope",
+      "detail": {
+        "('gemma', 12, 'core')": 500,
+        "('gemma', 12, 'extended')": 500,
+        "('gemma', 5, 'core')": 500,
+        "('gemma', 5, 'extended')": 500,
+        "('llama', 12, 'core')": 500,
+        "('llama', 12, 'extended')": 500,
+        "('llama', 5, 'core')": 500,
+        "('llama', 5, 'extended')": 500,
+        "('qwen', 12, 'core')": 500,
+        "('qwen', 12, 'extended')": 500,
+        "('qwen', 5, 'core')": 500,
+        "('qwen', 5, 'extended')": 500
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "random-real subsets fixed identically across models",
+      "detail": 1,
+      "status": "PASS"
+    },
+    {
+      "check": "random-real seed fixed",
+      "detail": [
+        2026091201
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "isotropic preregistered fold-local seed formula",
+      "detail": 3000,
+      "status": "PASS"
+    },
+    {
+      "check": "isotropic direction generation is target-independent",
+      "detail": false,
+      "status": "PASS"
+    },
+    {
+      "check": "persona-span preregistered fold-local seed formula",
+      "detail": 3000,
+      "status": "PASS"
+    },
+    {
+      "check": "persona-span direction generation is target-independent",
+      "detail": false,
+      "status": "PASS"
+    },
+    {
+      "check": "persona-span directions use outer training roles only",
+      "detail": true,
+      "status": "PASS"
+    },
+    {
+      "check": "alignment CV row count/protocol coverage",
+      "detail": {
+        "('gemma_to_llama', 3, 'raw_pc_scores', 'qwen_canonical_role_family_holdout')": 1,
+        "('gemma_to_llama', 3, 'raw_pc_scores', 'repeated_5fold')": 10,
+        "('gemma_to_llama', 3, 'variance_standardized', 'qwen_canonical_role_family_holdout')": 1,
+        "('gemma_to_llama', 3, 'variance_standardized', 'repeated_5fold')": 10,
+        "('gemma_to_llama', 6, 'raw_pc_scores', 'qwen_canonical_role_family_holdout')": 1,
+        "('gemma_to_llama', 6, 'raw_pc_scores', 'repeated_5fold')": 10,
+        "('gemma_to_llama', 6, 'variance_standardized', 'qwen_canonical_role_family_holdout')": 1,
+        "('gemma_to_llama', 6, 'variance_standardized', 'repeated_5fold')": 10,
+        "('gemma_to_qwen', 3, 'raw_pc_scores', 'qwen_canonical_role_family_holdout')": 1,
+        "('gemma_to_qwen', 3, 'raw_pc_scores', 'repeated_5fold')": 10,
+        "('gemma_to_qwen', 3, 'variance_standardized', 'qwen_canonical_role_family_holdout')": 1,
+        "('gemma_to_qwen', 3, 'variance_standardized', 'repeated_5fold')": 10,
+        "('gemma_to_qwen', 6, 'raw_pc_scores', 'qwen_canonical_role_family_holdout')": 1,
+        "('gemma_to_qwen', 6, 'raw_pc_scores', 'repeated_5fold')": 10,
+        "('gemma_to_qwen', 6, 'variance_standardized', 'qwen_canonical_role_family_holdout')": 1,
+        "('gemma_to_qwen', 6, 'variance_standardized', 'repeated_5fold')": 10,
+        "('llama_to_qwen', 3, 'raw_pc_scores', 'qwen_canonical_role_family_holdout')": 1,
+        "('llama_to_qwen', 3, 'raw_pc_scores', 'repeated_5fold')": 10,
+        "('llama_to_qwen', 3, 'variance_standardized', 'qwen_canonical_role_family_holdout')": 1,
+        "('llama_to_qwen', 3, 'variance_standardized', 'repeated_5fold')": 10,
+        "('llama_to_qwen', 6, 'raw_pc_scores', 'qwen_canonical_role_family_holdout')": 1,
+        "('llama_to_qwen', 6, 'raw_pc_scores', 'repeated_5fold')": 10,
+        "('llama_to_qwen', 6, 'variance_standardized', 'qwen_canonical_role_family_holdout')": 1,
+        "('llama_to_qwen', 6, 'variance_standardized', 'repeated_5fold')": 10
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "alignment transforms fit on training roles only",
+      "detail": true,
+      "status": "PASS"
+    },
+    {
+      "check": "all 12 full Procrustes rotations are orthogonal",
+      "detail": 12,
+      "status": "PASS"
+    },
+    {
+      "check": "alignment null has 1000 permutations per pair/dimension/variant",
+      "detail": {
+        "('gemma_to_llama', 3, 'raw_pc_scores')": 1000,
+        "('gemma_to_llama', 3, 'variance_standardized')": 1000,
+        "('gemma_to_llama', 6, 'raw_pc_scores')": 1000,
+        "('gemma_to_llama', 6, 'variance_standardized')": 1000,
+        "('gemma_to_qwen', 3, 'raw_pc_scores')": 1000,
+        "('gemma_to_qwen', 3, 'variance_standardized')": 1000,
+        "('gemma_to_qwen', 6, 'raw_pc_scores')": 1000,
+        "('gemma_to_qwen', 6, 'variance_standardized')": 1000,
+        "('llama_to_qwen', 3, 'raw_pc_scores')": 1000,
+        "('llama_to_qwen', 3, 'variance_standardized')": 1000,
+        "('llama_to_qwen', 6, 'raw_pc_scores')": 1000,
+        "('llama_to_qwen', 6, 'variance_standardized')": 1000
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "alignment null permutes labels before fit and excludes held-out targets",
+      "detail": true,
+      "status": "PASS"
+    },
+    {
+      "check": "human_supported_trait_scores.csv parses with expected rows",
+      "detail": 9900,
+      "status": "PASS"
+    },
+    {
+      "check": "human_supported_trait_scores.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "human_supported_trait_pc_associations.csv parses with expected rows",
+      "detail": 216,
+      "status": "PASS"
+    },
+    {
+      "check": "human_supported_trait_pc_associations.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "human_supported_trait_redundancy.csv parses with expected rows",
+      "detail": 234,
+      "status": "PASS"
+    },
+    {
+      "check": "human_supported_trait_redundancy.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "human_supported_trait_contributions.csv parses with expected rows",
+      "detail": 324,
+      "status": "PASS"
+    },
+    {
+      "check": "human_supported_trait_contributions.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "local_pc_prediction_summary.csv parses with expected rows",
+      "detail": 78,
+      "status": "PASS"
+    },
+    {
+      "check": "local_pc_prediction_summary.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "local_pc_prediction_per_pc.csv parses with expected rows",
+      "detail": 351,
+      "status": "PASS"
+    },
+    {
+      "check": "local_pc_prediction_per_pc.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "role_family_holdout_summary.csv parses with expected rows",
+      "detail": 30,
+      "status": "PASS"
+    },
+    {
+      "check": "role_family_holdout_summary.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "geometry_optimized_k12_selections.csv parses with expected rows",
+      "detail": 360,
+      "status": "PASS"
+    },
+    {
+      "check": "geometry_optimized_k12_selections.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "aligned_human_supported_trait_directions.csv parses with expected rows",
+      "detail": 24,
+      "status": "PASS"
+    },
+    {
+      "check": "aligned_human_supported_trait_directions.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "aligned_big_five_directions.csv parses with expected rows",
+      "detail": 10,
+      "status": "PASS"
+    },
+    {
+      "check": "aligned_big_five_directions.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "aligned_trait_consensus_summary.csv parses with expected rows",
+      "detail": 34,
+      "status": "PASS"
+    },
+    {
+      "check": "aligned_trait_consensus_summary.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "procrustes_alignment_null.csv parses with expected rows",
+      "detail": 12000,
+      "status": "PASS"
+    },
+    {
+      "check": "procrustes_alignment_null.csv contains no numeric infinity",
+      "detail": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "no human respondent/person-level fields in model score output",
+      "detail": [
+        "model",
+        "model_key",
+        "role",
+        "trait",
+        "raw_cosine",
+        "within_model_z_score",
+        "within_model_percentile"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "source manifest records no prohibited human-data operation",
+      "detail": {
+        "human_evidence_use": "AA-1 support labels freeze/select constructs only",
+        "human_outcomes_predicted": false,
+        "human_respondents_projected": false,
+        "occupational_centroids_projected": false,
+        "respondent_level_human_microdata_committed": false,
+        "respondent_level_human_microdata_loaded": false
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "source manifest records prohibited compute as unused",
+      "detail": {
+        "activation_extraction": false,
+        "cpu_only": true,
+        "external_model_api": false,
+        "gpu_used": false,
+        "new_model_inference": false,
+        "response_generation": false,
+        "runpod_used": false
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "source manifest hashes final analysis runner",
+      "detail": "9f0dc163d033aaa2b255fb271480af59ac58a1d4f74cccb468f12e5fa9cf18ec",
+      "status": "PASS"
+    },
+    {
+      "check": "full deterministic reproduction command exits zero",
+      "detail": {
+        "returncode": 0,
+        "stderr_tail": "",
+        "stdout_tail": "99000999,\n    \"llama_to_qwen\": 0.000999000999000999\n  },\n  \"evidence_strength\": \"WEAK / ABSENT\",\n  \"later_human_respondent_projection_design_gate_passed\": false,\n  \"later_study_statement\": \"AA-7 does not satisfy the preregistered gate for designing a human-respondent projection study.\",\n  \"model_scope_control_passes\": {\n    \"core\": {\n      \"gemma\": {\n        \"persona_span_pass\": true,\n        \"random_real_pass\": false\n      },\n      \"llama\": {\n        \"persona_span_pass\": false,\n        \"random_real_pass\": false\n      },\n      \"qwen\": {\n        \"persona_span_pass\": true,\n        \"random_real_pass\": false\n      }\n    },\n    \"extended\": {\n      \"gemma\": {\n        \"persona_span_pass\": false,\n        \"random_real_pass\": false\n      },\n      \"llama\": {\n        \"persona_span_pass\": false,\n        \"random_real_pass\": false\n      },\n      \"qwen\": {\n        \"persona_span_pass\": false,\n        \"random_real_pass\": false\n      }\n    }\n  },\n  \"moderate_or_high_recurrent_human_traits_pc1_pc6\": 12\n}\n"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "primary CSV/JSON/report outputs reproduce byte-for-byte",
+      "detail": [],
+      "status": "PASS"
+    }
+  ],
+  "compute_boundary": {
+    "activation_extraction": false,
+    "cpu_only": true,
+    "external_model_api": false,
+    "gpu_used": false,
+    "new_model_inference": false,
+    "response_generation": false,
+    "runpod_used": false
+  },
+  "deterministic_output_sha256": {
+    "aligned_agreeableness_focal_test.json": "4c0a2eef37841c1f33b5c553f27f64f9edbd9b10132de7c61a3785d76b2b1497",
+    "aligned_big_five_directions.csv": "8d217e97cd75a3094e00796a224e0a7978534769b2a5b1dae8a5e7b14709d636",
+    "aligned_human_supported_trait_directions.csv": "8f7a5e0b992f08cd5c8bcb6e17ed348546f7ed75f5b38d436cff248e7aef56ef",
+    "aligned_trait_consensus_summary.csv": "f1f7efa8a956d10ca42d1b46c5f4046e0a3b5db72c7b9dc319faa601cde94531",
+    "comparator_summary.csv": "40fcb6dfaed0499522b233b9f499414ee81c4727d9b2760e48fb32635c97ec4c",
+    "core_vs_extended_alignment.csv": "0d9242449bca82718f4eaa564f148f2b018f96fa531cfc26397037b236c16957",
+    "feature_budget_context.csv": "55d2da0444d4cbd668559ffefffb675eb524cd1b2fe373c25ce175e41e8e7554",
+    "feature_family_subspace_coverage.csv": "10b139b2948e35cc7f7f0e6a41f02e943d34cd4d75377f4fbe006160937180d2",
+    "geometry_optimized_k12_selections.csv": "9fc20e19c478156d56321f83d6bc03f55d16d5e08a7c9c706856299b8e0dda8d",
+    "human_support_vs_geometric_utility.csv": "95eeb82ae9d2ff94ad369679c16374294541f1675295123c0f356efd0ad792cf",
+    "human_supported_trait_contributions.csv": "38f3a1eeb2942a3e505886e7e751a762d31c5c905d39ba428896da604947b8e3",
+    "human_supported_trait_convergence_report.md": "e4f4cc8da4761299eb79f33f31b6b43cb331eab93c8b56b1ae8acf1e77917cbd",
+    "human_supported_trait_pc_associations.csv": "1309479cfd03d4a9e2657d73aa30d9b041d8dbc72ffe6d1dcb54d403a23be1ca",
+    "human_supported_trait_redundancy.csv": "4b4553d80cf341aa668ead037008b4ccb15d340c2ca074cb70ef09cda3b78c0c",
+    "human_supported_trait_scores.csv": "e0786140a82404fd7dc3ddf5ac1fb8177e349e8bc3e3fe290c7fc0e254d25f2a",
+    "isotropic_k12_distribution.csv": "51dcf5728221d0c564e45538f56605d2d0c5be5fedf8f5bdae525bf4af75c286",
+    "local_pc_prediction_per_pc.csv": "1c1df19bf712e957636c17ed4c3e06d97dc2cd9ed76ffd4c3b1108c444186713",
+    "local_pc_prediction_summary.csv": "dcd0b66ea7f4801a0964d71241806c59a2349c0e28e0c06504c07fe8be3364b9",
+    "persona_span_k12_distribution.csv": "e7deb499512233ac7f86cdd4c18c162390ad4b3cca85055c6d75695ca5f020a6",
+    "primary_decisions.json": "e357dc69c6e4ffa1fd77593e7f7bccf9f70424dcab1dcdab90f6260c3bb9b922",
+    "procrustes_alignment_cv.csv": "f86fcab84473f94799ddeff5410f46fd2a4a3e74c4e1b0a2d95596e41b3c6189",
+    "procrustes_alignment_matrices.json": "045f723df1340fb1eccff01eb4c562c8597cde74f449bc64ee7258417be21b96",
+    "procrustes_alignment_null.csv": "b3ec189789e68733d52508ad7bfba501554746e805928249a48a274d7fa14776",
+    "procrustes_role_residuals.csv": "735facc43a7f3437e832821cb2507e1f8bb330ac1904bb66782b34b37af2791f",
+    "random_real_k12_distribution.csv": "a8ed043c5a47157c0797f20b02d4b201e2c85ceaa42b54d23acd5de3a04b9cb7",
+    "role_family_holdout_summary.csv": "5aa333f7bdeddaf62406f90f7560e085826a95285af79f7436978f3c0b0c07a6",
+    "source_manifest.json": "fd63c35511e229271151fdc4ad3f529328fcdbbd04dad440ed94324f3430b628"
+  },
+  "deterministic_rerun_completed": true,
+  "human_data_boundary": {
+    "human_evidence_use": "AA-1 support labels freeze/select constructs only",
+    "human_outcomes_predicted": false,
+    "human_respondents_projected": false,
+    "occupational_centroids_projected": false,
+    "respondent_level_human_microdata_committed": false,
+    "respondent_level_human_microdata_loaded": false
+  },
+  "overall_status": "PASS",
+  "vector_root_read_only": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis/downloads/hf_vectors"
+}
