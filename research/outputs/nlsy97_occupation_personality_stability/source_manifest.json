@@ -1,0 +1,94 @@
+{
+  "activation_extraction_used": false,
+  "committed_inputs": [
+    {
+      "bytes": 10930,
+      "path": "research/outputs/human_trait_dataset_feasibility/nlsy97/nlsy97_personality_item_manifest.csv",
+      "sha256": "45de3a153356e60b703a6d1b1ba2bd006f14e80c5350540ef0779f45b73f6ddb"
+    },
+    {
+      "bytes": 37774,
+      "path": "research/outputs/human_trait_dataset_feasibility/nlsy97/nlsy97_occupation_variable_manifest.csv",
+      "sha256": "341076745b4187411640612dc1b37b435d6cd8e2386e9b43b7831fb9e9b5c8ab"
+    },
+    {
+      "bytes": 25795,
+      "path": "research/outputs/human_trait_dataset_feasibility/nlsy97/nlsy97_2002_census_occupation_codes.csv",
+      "sha256": "436096189c9f68246287b47d1e422f5241e9bf0b3a475fddf5e09801c2bd9e50"
+    },
+    {
+      "bytes": 107088,
+      "path": "research/outputs/human_trait_dataset_feasibility/nlsy97/nlsy97_personality_occupation_cell_counts.csv",
+      "sha256": "08281e41742d5829b1a260068594fb853730e1bf3cd1a90bce7e8011c3215d0c"
+    },
+    {
+      "bytes": 871,
+      "path": "research/outputs/human_trait_dataset_feasibility/nlsy97/nlsy97_personality_occupation_cell_summary.json",
+      "sha256": "4467cec8e96afb859283ba3573b6c0cc038d37e91d8704c085ef3809fd9cbc4d"
+    },
+    {
+      "bytes": 109745,
+      "path": "research/outputs/human_trait_dataset_feasibility/nlsy97/nlsy97_persona_occupation_crosswalk.csv",
+      "sha256": "8f0faa5103645c84e816cb196209e67870330321260ff568b17816611ac2fa10"
+    },
+    {
+      "bytes": 1382,
+      "path": "research/outputs/human_trait_dataset_feasibility/nlsy97/nlsy97_wave_overlap_summary.csv",
+      "sha256": "91c15463a6f6cb50e8e19656ff62e8261fdb4e2fc43d38c84d194b5f70415d83"
+    },
+    {
+      "bytes": 14886,
+      "path": "research/outputs/human_trait_dataset_feasibility/nlsy97/nlsy97_source_manifest.json",
+      "sha256": "b49ec11621280e5fc6df2a7c2f9185384213658dc3b559bb9f9f51886b10929b"
+    },
+    {
+      "bytes": 55984,
+      "path": "research/outputs/human_trait_dataset_feasibility/nlsy97/nlsy97_variable_manifest.csv",
+      "sha256": "6e42fbd043807a8089a041ccaf8ee8b4365286b623a373d8dd62aa9c542e228a"
+    }
+  ],
+  "external_model_api_used": false,
+  "generated_at": "2026-09-11T23:30:00Z",
+  "gpu_used": false,
+  "human_to_model_projection_performed": false,
+  "model_geometry_used": false,
+  "model_inference_used": false,
+  "official_codebook": {
+    "bytes": 169772,
+    "committed": false,
+    "sha256": "08bc87414445955b3147753ce16514077d2d34da3f8169e22cd7cf835b739aba"
+  },
+  "official_sources": {
+    "census_2002_occupation_codes": "https://www.census.gov/topics/employment/industry-occupation/guidance/code-lists.html",
+    "nlsy97_weights_and_design": "https://www.bls.gov/nls/nlsy97/using-and-understanding-data/",
+    "soc_2000_structure": "https://www.bls.gov/soc/socstructure_2000.pdf",
+    "soc_2000_user_guide": "https://www.bls.gov/soc/2000/socguide.htm",
+    "tipi_primary_manuscript": "https://gosling.psy.utexas.edu/wp-content/uploads/2014/09/JRP-03-tipi.pdf",
+    "tipi_scoring": "https://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/"
+  },
+  "preregistered_specification_sha": "13fb08f1d75444820d0b374fef2e3e0292a4d1f1",
+  "prohibited_inputs_loaded": [],
+  "randomness": {
+    "bootstrap_replicates": 500,
+    "master_seed": 20260911,
+    "split_replicates": 500,
+    "subsample_replicates": 300
+  },
+  "respondent_source": {
+    "bytes": 3264436,
+    "committed": false,
+    "description": "Official NLS Investigator NLSY97 public-use extract; respondent rows remain gitignored",
+    "logical_repo_path": "data_external/human_validation/nlsy97/public_use_extract/human_trait_dataset_feasibility_final.csv",
+    "sha256": "b55b54308c4b3005ce27f4bf81fff15980c5c68b54a84d2a5a48694f80a51919"
+  },
+  "runpod_used": false,
+  "scientific_scope": "human-only; future role names used only in post-tier candidate list",
+  "software": {
+    "numpy": "2.4.4",
+    "python": "3.14.3",
+    "scikit_learn": "1.8.0",
+    "scipy": "1.17.1"
+  },
+  "starting_sha": "7914d01f7d9c23060fe199815a90e547241d9682",
+  "study": "AA-5 NLSY97 occupational personality centroid stability"
+}

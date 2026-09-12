@@ -1,0 +1,125 @@
+{
+  "artifact_inventory_scope": "All substantive outputs, specification, runner, and verifier; excludes inventory and verification report themselves to avoid circular hashes.",
+  "artifact_inventory_sha256": "356fd6c84e351035c4705f0561dde6ce583727ef11c5bb175bf84d95f39556cd",
+  "checks": [
+    {
+      "check": "required_artifacts_present",
+      "detail": "missing=[]",
+      "passed": true
+    },
+    {
+      "check": "csv_json_parse",
+      "detail": "parsed_csv=12; errors=[]",
+      "passed": true
+    },
+    {
+      "check": "canonical_respondent_counts",
+      "detail": "8,984 source; 7,044 complete TIPI; 6,261 primary analytic",
+      "passed": true
+    },
+    {
+      "check": "survey_design",
+      "detail": "audit={'design_degrees_of_freedom': 117, 'every_stratum_has_vpsu_1_and_2': True, 'psus': 234, 'strata': 117}; weight=T2022500/100; variance=VSTRAT/VPSU",
+      "passed": true
+    },
+    {
+      "check": "starting_and_prereg_sha",
+      "detail": "start=7914d01f7d9c23060fe199815a90e547241d9682; prereg=13fb08f1d75444820d0b374fef2e3e0292a4d1f1",
+      "passed": true
+    },
+    {
+      "check": "canonical_aa1_raw_extract",
+      "detail": "sha256=b55b54308c4b3005ce27f4bf81fff15980c5c68b54a84d2a5a48694f80a51919; bytes=3264436",
+      "passed": true
+    },
+    {
+      "check": "official_codebook",
+      "detail": "sha256=08bc87414445955b3147753ce16514077d2d34da3f8169e22cd7cf835b739aba; bytes=169772",
+      "passed": true
+    },
+    {
+      "check": "official_tipi_scoring_implementation",
+      "detail": "Developer key: O=5+10R, C=3+8R, E=1+6R, A=2R+7, ES=4R+9; pair averages",
+      "passed": true
+    },
+    {
+      "check": "official_goldberg_directions",
+      "detail": "All eight bipolar anchors verified from official extract codebook",
+      "passed": true
+    },
+    {
+      "check": "frozen_official_aggregation",
+      "detail": "510 unique Census codes; official SOC minor and major parents; 9920 excluded",
+      "passed": true
+    },
+    {
+      "check": "sparse_cell_suppression",
+      "detail": "All cell-specific scientific outputs have analytic N>=10; candidate source N<10 is coarsened",
+      "passed": true
+    },
+    {
+      "check": "bootstrap_reproducibility_metadata",
+      "detail": "500 stratified PSU replicates; seed=20260911; sqrt(2) two-PSU rescaling",
+      "passed": true
+    },
+    {
+      "check": "split_half_reproducibility_metadata",
+      "detail": "500 within-cell splits; seeds 20260911..20261410",
+      "passed": true
+    },
+    {
+      "check": "sample_curve_reproducibility_metadata",
+      "detail": "300 subsamples per occupation-size combination",
+      "passed": true
+    },
+    {
+      "check": "frozen_tier_rules_recomputed",
+      "detail": "tier_counts={('narrow', 'BROAD-FAMILY ONLY'): 120, ('narrow', 'MODERATE / EXPLORATORY'): 18, ('narrow', 'UNSTABLE / TOO SPARSE'): 4, ('narrow', 'STRONG CENTROID'): 9, ('intermediate', 'BROAD-FAMILY ONLY'): 31, ('intermediate', 'MODERATE / EXPLORATORY'): 13, ('intermediate', 'STRONG CENTROID'): 25, ('intermediate', 'UNSTABLE / TOO SPARSE'): 3, ('broad', 'STRONG CENTROID'): 18, ('broad', 'MODERATE / EXPLORATORY'): 2, ('broad', 'UNSTABLE / TOO SPARSE'): 2}",
+      "passed": true
+    },
+    {
+      "check": "no_row_level_or_model_geometry_fields",
+      "detail": "forbidden_header_hits=[]",
+      "passed": true
+    },
+    {
+      "check": "scientific_compute_boundaries",
+      "detail": "No model geometry/projection; no GPU/RunPod/inference/activation extraction/external model API",
+      "passed": true
+    },
+    {
+      "check": "respondent_data_gitignored",
+      "detail": "check_ignore=True; tracked_external_files=''",
+      "passed": true
+    },
+    {
+      "check": "deterministic_full_rerun",
+      "detail": "returncode=0; exact_hash_matches=15/15; differing=[]; stderr=",
+      "passed": true
+    }
+  ],
+  "checks_passed": 19,
+  "checks_total": 19,
+  "deterministic_artifact_hashes": {
+    "analysis_cohort_summary.json": "17ad8675f32204cfe5f532a883a725c2f5d088ebacf0931d88d7da3760e476c2",
+    "future_model_role_comparison_candidates.csv": "133fd4943c0fd00b69e2848e4cb192918bccc92dc7815657072da03be66042b2",
+    "nlsy97_occupation_personality_stability_report.md": "696aff14b111bdc4933c0bc22f6838e77d7db0f804f58eeaff2a91cfe7f3a62a",
+    "occupation_aggregation_crosswalk.csv": "c98ea950f18e1b355b9e3d3081653d95c9c255deb3dd1c73cb95a5750ea9377a",
+    "occupation_big_five_centroids.csv": "a43b32661f554065daa2e243ea838d9934f0aeee3e8f8461d6be63b9959f4e07",
+    "occupation_centroid_feasibility.csv": "458231368974cf04087e64218a9bebffdb2725af11921dff1fae17918101a29a",
+    "occupation_centroid_sample_size_curve.csv": "957729a2852a6155a537e7f78e207f70d53e3f210b7e662127a78b86b44d5855",
+    "occupation_centroid_shrinkage.csv": "de56bfb085afbce64bf16c89a8d68550668938ffe208f688de15c96aa954df77",
+    "occupation_centroid_split_half_stability.csv": "385487cbede25333e4289c276ea07c31f81f6978ca63cf358ea0d5763918a380",
+    "occupation_centroid_uncertainty.csv": "01bc6f4a08d84cefa81ec21fb59f25f4483ed68d272e5ac3ad5cee9b95c861f2",
+    "occupation_granularity_tradeoff.csv": "5f5a7d9749fd27baa3d2234914043c373e1d7e29eea021ca061efd688f2bf181",
+    "occupation_personality_discriminability.csv": "4631d0e5f0f317a747e8041b43123e117e392635075fc0d7a5997e40f31b3b02",
+    "occupation_personality_variance_decomposition.csv": "31abd68734d4e5a4cc7267828ff7419a9eb3e75b3bfeab1363241a7aeb1a58fd",
+    "occupation_round6_round12_replication.csv": "32a300a3aac86944e4350f6e120fed030ef152d980b2f9777a841f4c3115e5e0",
+    "source_manifest.json": "11b19b7afa17386c24244ff3a3472ddfe76409cdf3b0aecf0ecf1c46d8480465"
+  },
+  "generated_at": "2026-09-11T23:30:00Z",
+  "preregistered_specification_sha": "13fb08f1d75444820d0b374fef2e3e0292a4d1f1",
+  "starting_sha": "7914d01f7d9c23060fe199815a90e547241d9682",
+  "status": "PASS",
+  "study": "AA-5 NLSY97 occupational personality centroid stability"
+}
