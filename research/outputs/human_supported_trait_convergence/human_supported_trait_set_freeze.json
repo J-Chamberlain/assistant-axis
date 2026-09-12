@@ -1,0 +1,74 @@
+{
+  "analysis": "AA-7 human-supported trait convergence and cross-model aligned-subspace study",
+  "canonical_starting_sha": "c5c2628ad54483253ad97b95c3e1febad29f9435",
+  "canonical_source_hash": "1cc78b543bf44e636dc8000617c61f0285e8cfc998b33946c38ab164ecdcd5a6",
+  "freeze_timestamp_utc": "2026-09-12T01:14:04Z",
+  "frozen_count": 12,
+  "frozen_rule": "AA-1 primary_direct traits with HIGH HUMAN-MEASUREMENT SUPPORT or MODERATE SUPPORT; no AA-7 model geometry was consulted",
+  "integrated_commit_provenance": "c5c2628ad54483253ad97b95c3e1febad29f9435",
+  "source_artifact": "research/outputs/sapa_bridge_psychometric_audit/sapa_trait_bridge_psychometric_support_v1.csv",
+  "source_artifact_commit": "c5ea17d694150f89e86e443b95118cf73c1bb19d",
+  "source_branch": "codex/aa1-sapa-psychometric-audit (integrated into canonical myfork/master by AA-6)",
+  "traits": [
+    {
+      "aa1_human_support_level": "high",
+      "aa1_human_support_label": "HIGH HUMAN-MEASUREMENT SUPPORT",
+      "trait": "adventurous"
+    },
+    {
+      "aa1_human_support_level": "high",
+      "aa1_human_support_label": "HIGH HUMAN-MEASUREMENT SUPPORT",
+      "trait": "altruistic"
+    },
+    {
+      "aa1_human_support_level": "high",
+      "aa1_human_support_label": "HIGH HUMAN-MEASUREMENT SUPPORT",
+      "trait": "forgiving"
+    },
+    {
+      "aa1_human_support_level": "high",
+      "aa1_human_support_label": "HIGH HUMAN-MEASUREMENT SUPPORT",
+      "trait": "grandiose"
+    },
+    {
+      "aa1_human_support_level": "high",
+      "aa1_human_support_label": "HIGH HUMAN-MEASUREMENT SUPPORT",
+      "trait": "impulsive"
+    },
+    {
+      "aa1_human_support_level": "high",
+      "aa1_human_support_label": "HIGH HUMAN-MEASUREMENT SUPPORT",
+      "trait": "manipulative"
+    },
+    {
+      "aa1_human_support_level": "high",
+      "aa1_human_support_label": "HIGH HUMAN-MEASUREMENT SUPPORT",
+      "trait": "optimistic"
+    },
+    {
+      "aa1_human_support_level": "high",
+      "aa1_human_support_label": "HIGH HUMAN-MEASUREMENT SUPPORT",
+      "trait": "pessimistic"
+    },
+    {
+      "aa1_human_support_level": "high",
+      "aa1_human_support_label": "HIGH HUMAN-MEASUREMENT SUPPORT",
+      "trait": "traditional"
+    },
+    {
+      "aa1_human_support_level": "moderate",
+      "aa1_human_support_label": "MODERATE SUPPORT",
+      "trait": "innovative"
+    },
+    {
+      "aa1_human_support_level": "moderate",
+      "aa1_human_support_label": "MODERATE SUPPORT",
+      "trait": "introspective"
+    },
+    {
+      "aa1_human_support_level": "moderate",
+      "aa1_human_support_label": "MODERATE SUPPORT",
+      "trait": "judgmental"
+    }
+  ]
+}
