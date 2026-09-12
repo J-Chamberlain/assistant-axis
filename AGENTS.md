@@ -210,3 +210,28 @@ At the start of every Codex session, before doing anything else:
 5. If /tmp/codex_pending.txt is absent or empty: proceed with the user's verbal instructions as normal.
 
 This check is mandatory on every session start. It is the activation mechanism for the zero-relay workflow.
+
+---
+
+## Dialogue Review Workflow
+
+When turns of interest are identified for review, the standard workflow is:
+
+1. Claude or the user identifies specific turns based on geometric anomalies, emotion spikes, or timing events
+2. Claude generates a Codex card asking Codex to extract those turns (plus one turn of context on each side) into a plain markdown file, including per-turn metrics (time, cap_fires, s_cos_t, s_axis, i_cos_role) as a header for each turn
+3. Codex saves the file to the repo and pushes it
+4. Codex reports only the raw GitHub URL in this format:
+   https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/[path]
+5. The user pastes that URL into the Claude conversation and Claude fetches it directly with web_fetch
+
+### Rules for Codex dialogue cards
+- Output file is always plain markdown (.md), never HTML
+- Full response text for every turn — no truncation, no ellipsis, no summaries
+- Never print dialogue to chat
+- Never send the user to GitHub to find the file themselves
+- Report the raw GitHub URL as the only output location
+
+### Rules for Claude
+- Always fetch the raw GitHub URL directly using web_fetch rather than asking the user to relay content
+- Never ask the user to copy-paste dialogue into the conversation
+- The file server at http://100.77.163.21:8080 is for the user to browse on iPhone only — Claude cannot access it
