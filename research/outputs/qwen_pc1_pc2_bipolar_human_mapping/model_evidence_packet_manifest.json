@@ -2,7 +2,7 @@
   "analysis": "AA-8 frozen PC1 and PC2 bipolar model evidence packets",
   "broader_specificity_commit": "db782414c6708f6fd2c46f3e5b08d0e61668b14d",
   "canonical_starting_sha": "8f4e589df5d92217e56f76a978d51df07af5aa3a",
-  "coordinate_blind_rating_freeze_commit": "06b605d56ad018f9315db6d6639eed8eec1d0319",
+  "coordinate_blind_rating_freeze_commit": "06b605d210b2a16d63682719af565781025dad31",
   "firewall": {
     "AA7_results_used": false,
     "human_respondent_rows_loaded": false,
@@ -10,7 +10,7 @@
     "rating_packet_contains_geometry": false,
     "ratings_frozen_before_geometry_join": true
   },
-  "generated_at_utc": "2026-09-12T21:09:56Z",
+  "generated_at_utc": "2026-09-12T21:19:49Z",
   "marker_counts": {
     "highly_concentrated": 70,
     "pc_associated": 328,
@@ -45,12 +45,12 @@
   "role_association_sha256": "224051d4ad82c4b3ab34531fa636c748af3d9ece3bfb7431b036917e4960a642",
   "role_count": 275,
   "role_diagnostic_report_path": "research/outputs/qwen_pc1_pc2_bipolar_human_mapping/pc2_role_dimension_diagnostic_report.md",
-  "role_diagnostic_report_sha256": "339876508498ddcd7d1f33d7afde56f46fc31e9665b52fb5f92a1789ee035069",
+  "role_diagnostic_report_sha256": "26384cc1c65d9ba3e1766a349bfcf31a7376e0aeef51a5443f726efcebfca1bd",
   "source_hashes": {
     "6497d28383aac33ea9f61b6ce2ac2ff195dccae4:research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_marker_sets.csv": "e5f2f5c5844919990b34d08b755063b271faded116805ec936e7f90b23764748",
     "db782414c6708f6fd2c46f3e5b08d0e61668b14d:research/outputs/qwen_pc_trait_specificity/qwen_trait_cross_pc_specificity_all.csv": "f6dc56d6870b8ef87d7dd1e38f7abe1178d5214c1d86929df3d6a02130258122",
     "research/outputs/qwen_pc1_pc2_bipolar_human_mapping/pc2_coordinate_blind_role_ratings.csv": "a6ec8920d6176e23980ed660b41712237ec8ab753608a8f6c384eb2d331c1567",
-    "research/outputs/qwen_pc1_pc2_bipolar_human_mapping/pc2_role_rating_freeze_manifest.json": "6c42e81d801719c2c34349a6cb52890b6b039f664f388dd1ea9b6ac6e15cd5a5",
+    "research/outputs/qwen_pc1_pc2_bipolar_human_mapping/pc2_role_rating_freeze_manifest.json": "e77081e3c542291ac8adeafe98e43186be1d6b4a2c4d77873b717bd711ef6be0",
     "research/outputs/role_geometry_instruction_inventory/qwen_role_geometry_with_positive_instructions.csv": "16b7ac17b59c85f252cb0d5b7e6f52629b2be8ec2f4ef00f18d8743c6cf885f1"
   },
   "specificity_rerun": false,

@@ -1,0 +1,219 @@
+{
+  "analysis": "AA-8 verification",
+  "checks": [
+    {
+      "detail": "6497d28383aac33ea9f61b6ce2ac2ff195dccae4",
+      "name": "strict source commit",
+      "status": "PASS"
+    },
+    {
+      "detail": "db782414c6708f6fd2c46f3e5b08d0e61668b14d",
+      "name": "broader source commit",
+      "status": "PASS"
+    },
+    {
+      "detail": "06b605d210b2a16d63682719af565781025dad31",
+      "name": "rating freeze commit",
+      "status": "PASS"
+    },
+    {
+      "detail": "n=88",
+      "name": "strict 88-marker set",
+      "status": "PASS"
+    },
+    {
+      "detail": "n=328",
+      "name": "associated membership count",
+      "status": "PASS"
+    },
+    {
+      "detail": "n=202",
+      "name": "target-dominant membership count",
+      "status": "PASS"
+    },
+    {
+      "detail": "n=70",
+      "name": "highly concentrated membership count",
+      "status": "PASS"
+    },
+    {
+      "detail": "Counter({('PC1', 'negative'): 48, ('PC1', 'positive'): 12, ('PC2', 'negative'): 10, ('PC3', 'negative'): 8, ('PC3', 'positive'): 7, ('PC2', 'positive'): 3})",
+      "name": "PC1 strict pole counts",
+      "status": "PASS"
+    },
+    {
+      "detail": "Counter({('PC1', 'negative'): 48, ('PC1', 'positive'): 12, ('PC2', 'negative'): 10, ('PC3', 'negative'): 8, ('PC3', 'positive'): 7, ('PC2', 'positive'): 3})",
+      "name": "PC2 strict pole counts",
+      "status": "PASS"
+    },
+    {
+      "detail": "n=275",
+      "name": "275 canonical roles",
+      "status": "PASS"
+    },
+    {
+      "detail": "n=275",
+      "name": "275 frozen role ratings",
+      "status": "PASS"
+    },
+    {
+      "detail": "forbidden_fields=[]",
+      "name": "coordinate-blind rating fields",
+      "status": "PASS"
+    },
+    {
+      "detail": "a6ec8920d6176e23980ed660b41712237ec8ab753608a8f6c384eb2d331c1567",
+      "name": "rating hash matches freeze manifest",
+      "status": "PASS"
+    },
+    {
+      "detail": "06b605d210b2a16d63682719af565781025dad31",
+      "name": "ratings existed identically at freeze commit",
+      "status": "PASS"
+    },
+    {
+      "detail": "git ancestry",
+      "name": "freeze predates current branch tip",
+      "status": "PASS"
+    },
+    {
+      "detail": "roles=275",
+      "name": "PC1 packet role coverage",
+      "status": "PASS"
+    },
+    {
+      "detail": "traits=170",
+      "name": "PC1 packet associated traits",
+      "status": "PASS"
+    },
+    {
+      "detail": "all trait rows contain r_PC1..r_PC6",
+      "name": "PC1 packet six correlations",
+      "status": "PASS"
+    },
+    {
+      "detail": "max tolerance 1e-12",
+      "name": "PC1 role coordinates reproduce",
+      "status": "PASS"
+    },
+    {
+      "detail": "roles=275",
+      "name": "PC2 packet role coverage",
+      "status": "PASS"
+    },
+    {
+      "detail": "traits=75",
+      "name": "PC2 packet associated traits",
+      "status": "PASS"
+    },
+    {
+      "detail": "all trait rows contain r_PC1..r_PC6",
+      "name": "PC2 packet six correlations",
+      "status": "PASS"
+    },
+    {
+      "detail": "max tolerance 1e-12",
+      "name": "PC2 role coordinates reproduce",
+      "status": "PASS"
+    },
+    {
+      "detail": "n=126",
+      "name": "PC1 full 126-construct universe",
+      "status": "PASS"
+    },
+    {
+      "detail": "n=126",
+      "name": "PC2 full 126-construct universe",
+      "status": "PASS"
+    },
+    {
+      "detail": "n=696",
+      "name": "696-item dictionary",
+      "status": "PASS"
+    },
+    {
+      "detail": "rows=233",
+      "name": "single-item epistemic labeling",
+      "status": "PASS"
+    },
+    {
+      "detail": "semantic neighbors kept separate",
+      "name": "no direct physicality construct fabricated",
+      "status": "PASS"
+    },
+    {
+      "detail": "csv=11, json=3",
+      "name": "all current CSV and JSON parse",
+      "status": "PASS"
+    },
+    {
+      "detail": "exact SHAs",
+      "name": "source manifest commits exact",
+      "status": "PASS"
+    },
+    {
+      "detail": "sources=17",
+      "name": "source hashes and byte counts",
+      "status": "PASS"
+    },
+    {
+      "detail": "saved artifacts only",
+      "name": "specificity not rerun or retuned",
+      "status": "PASS"
+    },
+    {
+      "detail": "metadata and item dictionary only",
+      "name": "no human respondent rows or projection",
+      "status": "PASS"
+    },
+    {
+      "detail": "Qwen-only interpretive sources",
+      "name": "no Llama/Gemma or AA-7 selection",
+      "status": "PASS"
+    },
+    {
+      "detail": "not loaded",
+      "name": "no NLSY outcomes",
+      "status": "PASS"
+    },
+    {
+      "detail": "stopping point preserved",
+      "name": "no next experiment selected",
+      "status": "PASS"
+    },
+    {
+      "detail": "no PC3 output modified",
+      "name": "PC3 remains reference only",
+      "status": "PASS"
+    },
+    {
+      "detail": "changed_paths=20",
+      "name": "no respondent microdata committed",
+      "status": "PASS"
+    },
+    {
+      "detail": "before repository-maintenance commit",
+      "name": "AA-8 outputs isolated",
+      "status": "PASS"
+    },
+    {
+      "detail": "a6ec8920d6176e23980ed660b41712237ec8ab753608a8f6c384eb2d331c1567",
+      "name": "deterministic role ratings",
+      "status": "PASS"
+    },
+    {
+      "detail": "pc1_bipolar_model_evidence_packet.csv;pc2_bipolar_model_evidence_packet.csv;pc2_role_dimension_pc_associations.csv;pc2_role_dimension_diagnostic_report.md",
+      "name": "deterministic model packets and diagnostics",
+      "status": "PASS"
+    },
+    {
+      "detail": "pc1_sapa_construct_reconsideration.csv;pc1_rule_procedure_item_audit.csv;pc1_bipolar_human_mapping.csv;pc2_sapa_construct_reconsideration.csv;pc2_physicality_activity_item_audit.csv;pc2_bipolar_human_mapping.csv",
+      "name": "deterministic human inventories",
+      "status": "PASS"
+    }
+  ],
+  "generated_at_utc": "2026-09-12T21:19:50Z",
+  "passed": 42,
+  "status": "PASS",
+  "total": 42
+}

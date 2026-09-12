@@ -101,6 +101,13 @@ def write_csv(path: Path, rows: list[dict], fieldnames: list[str] | None = None)
         writer.writerows(rows)
 
 
+def display_path(path: Path, repo: Path) -> str:
+    try:
+        return str(path.relative_to(repo))
+    except ValueError:
+        return str(path)
+
+
 def trait_rows(repo: Path, axis: str, strict_rows: list[dict], broad_rows: list[dict]) -> list[dict]:
     strict_lookup = {(r["pc"], r["pole"], r["trait"]): r for r in strict_rows}
     out = []
@@ -343,7 +350,7 @@ def diagnostic_report(path: Path, summary: dict, assoc_rows: list[dict]) -> None
         "",
         "## Method boundary",
         "",
-        "The five ordinal ratings were frozen at commit `06b605d56ad018f9315db6d6639eed8eec1d0319` before geometry was joined. The rating file contains role names and instructions but no coordinates, ranks, clusters, trait correlations, or specificity outcomes. Scores are deterministic rubric-coded instruction content, not human ratings or independent validation.",
+        "The five ordinal ratings were frozen at commit `06b605d210b2a16d63682719af565781025dad31` before geometry was joined. The rating file contains role names and instructions but no coordinates, ranks, clusters, trait correlations, or specificity outcomes. Scores are deterministic rubric-coded instruction content, not human ratings or independent validation.",
         "",
         "## Dimension associations",
         "",
@@ -422,7 +429,7 @@ def main() -> None:
         rows = trait_rows(repo, axis, strict_rows, broad_rows) + role_rows(axis, roles) + cluster_rows(axis, roles) + prior_rows(axis)
         path = outdir / f"{axis.lower()}_bipolar_model_evidence_packet.csv"
         write_csv(path, rows)
-        packets[axis] = {"path": str(path.relative_to(repo)), "row_count": len(rows), "sha256": sha256(path), "kind_counts": dict(Counter(r["evidence_kind"] for r in rows))}
+        packets[axis] = {"path": display_path(path, repo), "row_count": len(rows), "sha256": sha256(path), "kind_counts": dict(Counter(r["evidence_kind"] for r in rows))}
 
     assoc_rows, summary = role_associations(ratings, roles)
     assoc_path = outdir / "pc2_role_dimension_pc_associations.csv"
@@ -453,9 +460,9 @@ def main() -> None:
         },
         "role_count": len(roles),
         "packets": packets,
-        "role_association_path": str(assoc_path.relative_to(repo)),
+        "role_association_path": display_path(assoc_path, repo),
         "role_association_sha256": sha256(assoc_path),
-        "role_diagnostic_report_path": str(report_path.relative_to(repo)),
+        "role_diagnostic_report_path": display_path(report_path, repo),
         "role_diagnostic_report_sha256": sha256(report_path),
         "source_hashes": source_hashes,
         "firewall": {

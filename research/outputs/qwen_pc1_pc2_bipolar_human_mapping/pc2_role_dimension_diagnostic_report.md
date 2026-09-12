@@ -2,7 +2,7 @@
 
 ## Method boundary
 
-The five ordinal ratings were frozen at commit `06b605d56ad018f9315db6d6639eed8eec1d0319` before geometry was joined. The rating file contains role names and instructions but no coordinates, ranks, clusters, trait correlations, or specificity outcomes. Scores are deterministic rubric-coded instruction content, not human ratings or independent validation.
+The five ordinal ratings were frozen at commit `06b605d210b2a16d63682719af565781025dad31` before geometry was joined. The rating file contains role names and instructions but no coordinates, ranks, clusters, trait correlations, or specificity outcomes. Scores are deterministic rubric-coded instruction content, not human ratings or independent validation.
 
 ## Dimension associations
 

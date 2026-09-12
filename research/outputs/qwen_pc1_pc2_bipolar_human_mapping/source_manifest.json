@@ -1,0 +1,172 @@
+{
+  "analysis": "AA-8 bipolar interpretation and SAPA measurement reconsideration for Qwen PC1 and PC2",
+  "canonical_starting_sha": "8f4e589df5d92217e56f76a978d51df07af5aa3a",
+  "compute": "CPU only; no GPU, RunPod, model-under-study inference, activation extraction, response generation, or external model API.",
+  "coordinate_blind_rating_freeze_commit": "06b605d210b2a16d63682719af565781025dad31",
+  "firewall": {
+    "AA7_result_used_to_choose_interpretation": false,
+    "NLSY_outcomes_used": false,
+    "human_model_correspondence_test_run": false,
+    "human_projection_performed": false,
+    "human_respondent_rows_loaded_or_scored": false,
+    "llama_or_gemma_scientific_data_used": false,
+    "next_experiment_selected": false,
+    "respondent_level_microdata_committed": false,
+    "specificity_rerun_or_retuned": false
+  },
+  "generated_at_utc": "2026-09-12T21:19:49Z",
+  "model_evidence_packet_freeze_commit": "61daa40",
+  "model_under_study": "Qwen/Qwen3-32B",
+  "model_used_for_interpretive_synthesis": "GPT-5.5",
+  "pc3_reference_only": {
+    "correlations": {
+      "PC1": -0.110061,
+      "PC2": -0.011574,
+      "PC3": -0.944857,
+      "PC4": 0.049736,
+      "PC5": 0.061208,
+      "PC6": -0.038998
+    },
+    "formula": "mean(percentile(empathetic), percentile(agreeable), percentile(altruistic)) with equal weights",
+    "pc1_pc6_concentration": 0.978101,
+    "selection_or_mapping_reopened": false,
+    "specificity_margin": 0.834796
+  },
+  "source_branches": {
+    "strict_axis_specificity": {
+      "branch": "codex/aa1-qwen-axis-specificity",
+      "commit": "6497d28383aac33ea9f61b6ce2ac2ff195dccae4"
+    },
+    "target_dominance_specificity": {
+      "branch": "codex/aa1-qwen-pc-trait-specificity",
+      "commit": "db782414c6708f6fd2c46f3e5b08d0e61668b14d"
+    }
+  },
+  "sources": [
+    {
+      "bytes": 28351,
+      "path": "research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_marker_sets.csv",
+      "role": "strict .70-purity markers",
+      "sha256": "e5f2f5c5844919990b34d08b755063b271faded116805ec936e7f90b23764748",
+      "source_commit": "6497d28383aac33ea9f61b6ce2ac2ff195dccae4"
+    },
+    {
+      "bytes": 740222,
+      "path": "research/outputs/qwen_trait_axis_specificity/qwen_trait_axis_specificity_metrics.csv",
+      "role": "strict specificity metrics",
+      "sha256": "ea098ec2ccf020eeb2c820fc300ba3919ffe1f7232811dfe206f1d58090c258f",
+      "source_commit": "6497d28383aac33ea9f61b6ce2ac2ff195dccae4"
+    },
+    {
+      "bytes": 184633,
+      "path": "research/outputs/qwen_trait_axis_specificity/qwen_axis_specific_human_inventory.csv",
+      "role": "prior strict human inventory",
+      "sha256": "a7bb0346ac97cabd1a4abbf1cf27c95d8789b6e61e429e0364605671b6e8a175",
+      "source_commit": "6497d28383aac33ea9f61b6ce2ac2ff195dccae4"
+    },
+    {
+      "bytes": 97136,
+      "path": "research/outputs/qwen_pc_human_construct_bridge/human_construct_library.csv",
+      "role": "validated 126-construct library",
+      "sha256": "7aadc382dfd3d18da6dce43be945cc6f5ae8dc8d124dfd9f0a8a8c8fc4864fd0",
+      "source_commit": "6497d28383aac33ea9f61b6ce2ac2ff195dccae4"
+    },
+    {
+      "bytes": 1143319,
+      "path": "research/outputs/qwen_pc_trait_specificity/qwen_trait_cross_pc_specificity_all.csv",
+      "role": "target-dominance and concentration metrics",
+      "sha256": "f6dc56d6870b8ef87d7dd1e38f7abe1178d5214c1d86929df3d6a02130258122",
+      "source_commit": "db782414c6708f6fd2c46f3e5b08d0e61668b14d"
+    },
+    {
+      "bytes": 188451,
+      "path": "research/outputs/qwen_pc_trait_specificity/qwen_pc_specificity_human_inventory.csv",
+      "role": "prior target-dominant human inventory",
+      "sha256": "a5e870682961d44099d6423743d26c7bb8ed1c5ce3b77315703c2eb198eb753c",
+      "source_commit": "db782414c6708f6fd2c46f3e5b08d0e61668b14d"
+    },
+    {
+      "bytes": 212055,
+      "path": "research/outputs/role_geometry_instruction_inventory/qwen_role_geometry_with_positive_instructions.csv",
+      "role": "275 role coordinates, ranks, clusters, and instructions",
+      "sha256": "16b7ac17b59c85f252cb0d5b7e6f52629b2be8ec2f4ef00f18d8743c6cf885f1",
+      "source_commit": "8f4e589df5d92217e56f76a978d51df07af5aa3a"
+    },
+    {
+      "bytes": 108066,
+      "path": "research/outputs/human_trait_dataset_feasibility/sapa/sapa_item_dictionary.csv",
+      "role": "696-item SAPA dictionary",
+      "sha256": "6297d7fc351cea2121a1a211c5203f9e1bc07d0157c551087e0820b8bbd6bda9",
+      "source_commit": "8f4e589df5d92217e56f76a978d51df07af5aa3a"
+    },
+    {
+      "bytes": 5132,
+      "path": "research/outputs/blind_pc_interpretation_rating_benchmark/blind_pc_interpretation_rating_report.md",
+      "role": "prior coordinate-blind interpretation evidence",
+      "sha256": "c505de7431f1502611c5632526fb70be5f1e951e563271f00af79f690ac7d2df",
+      "source_commit": "8f4e589df5d92217e56f76a978d51df07af5aa3a"
+    },
+    {
+      "bytes": 3842,
+      "path": "research/outputs/pc1_competing_theories_test/pc1_competing_theories_report.md",
+      "role": "PC1 competing-theories audit",
+      "sha256": "ccfa6d27ac19cba59fbc13c492d4b60c1aa460b05dc5600deed05abe916bf376",
+      "source_commit": "8f4e589df5d92217e56f76a978d51df07af5aa3a"
+    },
+    {
+      "bytes": 2631,
+      "path": "research/outputs/pc1_accountability_validation/accountability_validation_report.md",
+      "role": "focused PC1 activation evidence",
+      "sha256": "e3f493018470b5a670dcd0a8e19caf6b9391322ec57123e521abbf48be8adbcd",
+      "source_commit": "8f4e589df5d92217e56f76a978d51df07af5aa3a"
+    },
+    {
+      "bytes": 13671,
+      "path": "research/q2_stability/qwen/outputs/professional_hierarchy_validation/professional_hierarchy_report.md",
+      "role": "professional-role hierarchy",
+      "sha256": "29ad78279ffb59227b21611e19b88ced1bb35c299b5a78763fc470138f616d59",
+      "source_commit": "8f4e589df5d92217e56f76a978d51df07af5aa3a"
+    },
+    {
+      "bytes": 8592,
+      "path": "research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_conditional_validation_report.md",
+      "role": "PC1-conditioned PC2 interpretation",
+      "sha256": "1dfe1a8c6ad8e40ba9c45486602d3df91ae92c63959ba54ffe95ff87c156c1e5",
+      "source_commit": "8f4e589df5d92217e56f76a978d51df07af5aa3a"
+    },
+    {
+      "bytes": 5258,
+      "path": "research/outputs/pc2_muted_pc1_extremes/pc2_muted_pc1_extremes_report.md",
+      "role": "muted-PC1 PC2 role evidence",
+      "sha256": "e1409bf414fee31f0430ea1a38f065618f12bf56a47a4ebe37720288ebb3982f",
+      "source_commit": "8f4e589df5d92217e56f76a978d51df07af5aa3a"
+    },
+    {
+      "bytes": 6110,
+      "path": "research/outputs/cluster_conditioned_axis_tests/cluster_conditioned_axis_report.md",
+      "role": "cluster-conditioned PC1/PC2 evidence",
+      "sha256": "1e7c08d0c6cb26d7427801e7ae37c7f0f9133f917ad8dc0a275f984a23c2e577",
+      "source_commit": "8f4e589df5d92217e56f76a978d51df07af5aa3a"
+    },
+    {
+      "bytes": 187301,
+      "path": "research/outputs/qwen_pc1_pc2_bipolar_human_mapping/pc2_coordinate_blind_role_ratings.csv",
+      "role": "AA-8 frozen coordinate-blind ratings",
+      "sha256": "a6ec8920d6176e23980ed660b41712237ec8ab753608a8f6c384eb2d331c1567",
+      "source_commit": "AA8_BRANCH"
+    },
+    {
+      "bytes": 1383,
+      "path": "research/outputs/qwen_pc1_pc2_bipolar_human_mapping/pc2_role_rating_freeze_manifest.json",
+      "role": "AA-8 rating freeze record",
+      "sha256": "e77081e3c542291ac8adeafe98e43186be1d6b4a2c4d77873b717bd711ef6be0",
+      "source_commit": "AA8_BRANCH"
+    }
+  ],
+  "specificity_evidence_hierarchy": {
+    "highly_concentrated": 70,
+    "pc_associated": 328,
+    "pc_defining_target_dominant": 202,
+    "strict_point70_purity": 88
+  }
+}

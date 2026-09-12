@@ -146,7 +146,7 @@ Cluster means are other +63.433, trickster-chaos +27.393, combative-iconoclast +
 
 ### Coordinate-blind embodiment audit
 
-The new five-dimension rating packet covers all 275 roles and contains only role names and five role instructions. It was frozen at commit `06b605d56ad018f9315db6d6639eed8eec1d0319` before geometry was joined.
+The new five-dimension rating packet covers all 275 roles and contains only role names and five role instructions. It was frozen at commit `06b605d210b2a16d63682719af565781025dad31` before geometry was joined.
 
 | Blind role dimension | Pearson r with PC2 | Spearman rho | Partial r controlling PC1 | r with PC1 | r with PC3 |
 |---|---:|---:|---:|---:|---:|
