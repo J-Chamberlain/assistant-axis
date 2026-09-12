@@ -1,0 +1,32 @@
+{
+  "reviewer": "Claude Opus 5",
+  "provider": "Anthropic",
+  "review_date": "2026-09-11",
+  "review_file": "research/outputs/qwen_pc_human_construct_bridge/sapa_category3_blinded_review_judgments.csv",
+  "review_file_sha256": "71902fbe78fd4dec9742af8ca25a1c27dd9429263f3319a85937b85fd3a9a86a",
+  "review_rows": 78,
+  "prior_substantive_project_knowledge": "none reported",
+  "materials_located_by_reviewer": "Only the three requested review files; no project-state or downstream-result files",
+  "prohibited_information_reported_visible": false,
+  "files_reported_not_inspected": [
+    "RESEARCH_STATE",
+    "claims",
+    "geometry",
+    "prior review decisions",
+    "sparsity results",
+    "occupations",
+    "NLSY97 outcomes",
+    "downstream analyses"
+  ],
+  "structural_conflict": "Claude is an Anthropic-produced AI system; this is a potential structural conflict",
+  "reviewer_reported_limitations": [
+    "q_251 wording was elided",
+    "q_1483 and q_1671 appeared bracketed or paraphrased",
+    "No prose scale definitions accompanied SAPA scale metadata",
+    "Direction metadata appeared inconsistent for q_1758, q_566, q_463, q_1742, and q_1624",
+    "Several traits used identical or near-identical evidence sets",
+    "The review is content adjudication, not psychometric validation"
+  ],
+  "current_workflow_model_used": "GPT-5.5",
+  "current_workflow_external_model_api_used": false
+}

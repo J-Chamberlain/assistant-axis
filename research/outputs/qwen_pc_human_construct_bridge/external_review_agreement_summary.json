@@ -1,0 +1,64 @@
+{
+  "analysis": "Claude-versus-Codex blinded semantic-review agreement",
+  "n": 78,
+  "claude_input_sha256": "71902fbe78fd4dec9742af8ca25a1c27dd9429263f3319a85937b85fd3a9a86a",
+  "codex_input_sha256": "f8e77caf9f5970ac8c48743e8422f04a146ac8013fb3cac5a88b1069c82c29a6",
+  "frozen_packet_sha256": "c4e40601f9855769fd1040eed11c4120e46224d0d27ae0caa2f7b4d672af1814",
+  "decision_order_for_tables": [
+    "ACCEPT_DIRECT",
+    "ACCEPT_CLOSE",
+    "DOWNGRADE_BROAD",
+    "REJECT",
+    "AMBIGUOUS"
+  ],
+  "claude_decision_counts": {
+    "ACCEPT_DIRECT": 48,
+    "ACCEPT_CLOSE": 22,
+    "DOWNGRADE_BROAD": 2,
+    "REJECT": 4,
+    "AMBIGUOUS": 2
+  },
+  "codex_decision_counts": {
+    "ACCEPT_DIRECT": 45,
+    "ACCEPT_CLOSE": 29,
+    "DOWNGRADE_BROAD": 1,
+    "REJECT": 3,
+    "AMBIGUOUS": 0
+  },
+  "exact_five_category_agreement_n": 69,
+  "exact_five_category_agreement": 0.8846153846153846,
+  "cohens_kappa_unweighted_five_category": 0.7854523227383863,
+  "weighted_kappa_primary_status": "not_defensible_for_all_five_categories_because_AMBIGUOUS_is_not_ordinal",
+  "weighted_kappa_ordinal_sensitivity": {
+    "excluded_any_AMBIGUOUS_rows": 2,
+    "n": 76,
+    "ordered_categories_low_to_high": [
+      "REJECT",
+      "DOWNGRADE_BROAD",
+      "ACCEPT_CLOSE",
+      "ACCEPT_DIRECT"
+    ],
+    "linear": 0.846774193548387,
+    "quadratic": 0.8837209302325582
+  },
+  "binary_retained_status": {
+    "definition": "ACCEPT_DIRECT or ACCEPT_CLOSE versus all other decisions",
+    "agreement_n": 74,
+    "agreement": 0.9487179487179487,
+    "cohens_kappa": 0.6422018348623852
+  },
+  "direct_status": {
+    "definition": "ACCEPT_DIRECT versus all other decisions",
+    "agreement_n": 73,
+    "agreement": 0.9358974358974359,
+    "cohens_kappa": 0.8670756646216768
+  },
+  "disagreement_n": 9,
+  "consensus_status_counts": {
+    "CONSENSUS_DIRECT": 44,
+    "CONSENSUS_CLOSE": 21,
+    "CONSENSUS_NONRETAIN": 4,
+    "DISCORDANT": 9
+  },
+  "epistemic_status": "Two AI semantic reviews, one genuinely separate and blinded as documented; not independent expert psychometric validation"
+}
