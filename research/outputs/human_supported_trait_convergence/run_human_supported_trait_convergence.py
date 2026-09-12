@@ -674,16 +674,21 @@ def evaluate_controls(
         }
 
         def one_isotropic(budget: int, bank: int) -> list[dict[str, Any]]:
-            seed = 30_000_000 + model_index * 1_000_000 + bank * 100 + budget
-            features = sampler(seed, budget)
-            results = evaluate_scopes(features, model.pc_scores, splits)
+            seeds = [30_000_000 + model_index * 1_000_000 + bank * 100 + fold_index for fold_index in range(len(splits))]
+            fold_features = [sampler(seed, budget) for seed in seeds]
+
+            def getter(index: int, _: dict[str, Any]) -> np.ndarray:
+                return fold_features[index]
+
+            results = evaluate_scopes(getter, model.pc_scores, splits)
             return [
                 {
                     "model": model.label,
                     "model_key": key,
                     "feature_budget": budget,
                     "bank": bank,
-                    "bank_seed": seed,
+                    "fold_seed_min": min(seeds),
+                    "fold_seed_max": max(seeds),
                     "direction_generation_used_pc_targets": False,
                     "scope": scope,
                     **summary_wide(result),
@@ -704,7 +709,7 @@ def evaluate_controls(
             fold_features: list[np.ndarray] = []
             seeds: list[int] = []
             for fold_index, split in enumerate(splits):
-                seed = 50_000_000 + model_index * 1_000_000 + bank * 100 + fold_index + budget
+                seed = 50_000_000 + model_index * 1_000_000 + bank * 100 + fold_index
                 seeds.append(seed)
                 rng = np.random.default_rng(seed)
                 weights = rng.standard_normal((len(split["train_idx"]), budget))
@@ -1386,6 +1391,24 @@ def subspace_coverage(
             "direct_semantic_45": model.trait_scores[:, [model.traits.index(x) for x in direct_traits]],
             "full_real_traits_240": model.trait_scores,
         }
+        families["big_five_plus_human_supported_17"] = np.column_stack(
+            [families["externally_anchored_big_five_5"], families["human_supported_12"]]
+        )
+        bf_standardized = (
+            families["externally_anchored_big_five_5"]
+            - families["externally_anchored_big_five_5"].mean(axis=0)
+        ) / safe_scale(families["externally_anchored_big_five_5"])
+        hs_standardized = (
+            families["human_supported_12"] - families["human_supported_12"].mean(axis=0)
+        ) / safe_scale(families["human_supported_12"])
+        q_bf = np.linalg.qr(bf_standardized)[0][:, : np.linalg.matrix_rank(bf_standardized)]
+        q_hs = np.linalg.qr(hs_standardized)[0][:, : np.linalg.matrix_rank(hs_standardized)]
+        shared_energy = float(np.sum((q_bf.T @ q_hs) ** 2))
+        hs_fraction_captured_by_bf = shared_energy / q_hs.shape[1]
+        bf_fraction_captured_by_hs = shared_energy / q_bf.shape[1]
+        union_incremental_rank_over_bf = int(
+            np.linalg.matrix_rank(np.column_stack([bf_standardized, hs_standardized])) - q_bf.shape[1]
+        )
         for name, features in families.items():
             standardized = (features - features.mean(axis=0)) / safe_scale(features)
             singular = np.linalg.svd(standardized, compute_uv=False)
@@ -1407,6 +1430,9 @@ def subspace_coverage(
                     "heldout_mean_pc1_pc6_r2": perf["mean_pc_r2"],
                     "heldout_pc1_pc6_aggregate_nrmse": perf["aggregate_normalized_geometric_error"],
                     "coverage_protocol": "fixed 5-fold seed 42 with fold-local four-fold alpha tuning",
+                    "human12_role_score_span_fraction_captured_by_big_five": hs_fraction_captured_by_bf,
+                    "big_five_role_score_span_fraction_captured_by_human12": bf_fraction_captured_by_hs,
+                    "union_incremental_rank_over_big_five": union_incremental_rank_over_bf,
                 }
             )
         opt_perf = primary[
@@ -1436,6 +1462,9 @@ def subspace_coverage(
                 "heldout_mean_pc1_pc6_r2": opt_perf["mean_pc_r2"],
                 "heldout_pc1_pc6_aggregate_nrmse": opt_perf["aggregate_normalized_geometric_error"],
                 "coverage_protocol": "nested fold-local AA-4 forward selection at k=12",
+                "human12_role_score_span_fraction_captured_by_big_five": hs_fraction_captured_by_bf,
+                "big_five_role_score_span_fraction_captured_by_human12": bf_fraction_captured_by_hs,
+                "union_incremental_rank_over_big_five": union_incremental_rank_over_bf,
             }
         )
     frame = pd.DataFrame(rows)
@@ -1535,7 +1564,7 @@ def make_figures(
             persona_span[(persona_span.model_key == key) & (persona_span.scope == "extended") & (persona_span.feature_budget == 12)]["aggregate_normalized_geometric_error"],
             isotropic[(isotropic.model_key == key) & (isotropic.scope == "extended") & (isotropic.feature_budget == 12)]["aggregate_normalized_geometric_error"],
         ]
-        axis.boxplot(values, labels=["random\nreal", "persona\nspan", "isotropic"], showfliers=False)
+        axis.boxplot(values, tick_labels=["random\nreal", "persona\nspan", "isotropic"], showfliers=False)
         current = comparator[(comparator.model_key == key) & (comparator.scope == "extended")]
         for family, marker, color, xpos in [
             ("human_supported_12", "*", "#B22222", 1.0),
@@ -1882,6 +1911,9 @@ def main() -> None:
             "direct_semantic_45": model.trait_scores[:, [model.traits.index(x) for x in direct_traits]],
             "full_real_traits_240": model.trait_scores,
         }
+        families["big_five_plus_human_supported_17"] = np.column_stack(
+            [families["externally_anchored_big_five_5"], families["human_supported_12"]]
+        )
         for family, features in families.items():
             results = evaluate_scopes(features, model.pc_scores, fixed_splits)
             add_evaluation_records(summaries, per_pc_rows, model, family, features.shape[1], "fixed_5fold_seed42", results)
