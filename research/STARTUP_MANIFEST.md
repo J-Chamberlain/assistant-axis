@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-13T13:11:37Z`
-- Current branch: `codex/aa11-human-model-correspondence-tracks`
-- generation base commit: `bc1168c7232f92b2c4db27c76d221851ace3589e`
+- Generated timestamp UTC: `2026-09-13T14:44:19Z`
+- Current branch: `codex/aa12-sapa-coverage-frontier`
+- generation base commit: `101fd67867001c1afd290e9bfa96dc7824ba8cef`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -33,42 +33,42 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
-- Latest commit touching file: `bc1168c7232f92b2c4db27c76d221851ace3589e`
-- generation base commit: `bc1168c7232f92b2c4db27c76d221851ace3589e`
-- Git blob hash: `a26c70d186bdfcc98c6a4ae3a7fd9368a9fc49b0`
-- SHA256 content hash: `6af428e46ab261242a40572a7d9e8cb5392bfffff7ff8996a2264b1bbc1e877f`
-- Byte count: `186089`
+- Latest commit touching file: `101fd67867001c1afd290e9bfa96dc7824ba8cef`
+- generation base commit: `101fd67867001c1afd290e9bfa96dc7824ba8cef`
+- Git blob hash: `2fd32c5db997833637b7a2de3c5f52010154f14a`
+- SHA256 content hash: `6736ea34a22b56fdb6eb38dff257620c4ff70b219643f598376bc4e2350ba396`
+- Byte count: `187722`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
   - Last updated: `2026-09-13`
-  - Last commit: `1027606 (introduced the AA-11 human/model correspondence-track continuity note)`
+  - Last commit: `26ecfc3 (verified the aggregate AA-12 SAPA item-coverage frontier)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-13T13:11:37Z`
+- Generated timestamp UTC: `2026-09-13T14:44:19Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
-- Latest commit touching file: `1027606ea2cb4d4c4094a928f99b1d0554a5c270`
-- generation base commit: `bc1168c7232f92b2c4db27c76d221851ace3589e`
-- Git blob hash: `effd12f06b9e351ea7c10e36cf952ca2e6b47716`
-- SHA256 content hash: `163aa9873e93b4e1b64a880f56847599609a858320e743b4276d1452d0589fc4`
-- Byte count: `39243`
+- Latest commit touching file: `101fd67867001c1afd290e9bfa96dc7824ba8cef`
+- generation base commit: `101fd67867001c1afd290e9bfa96dc7824ba8cef`
+- Git blob hash: `659a6ed194d7eefbd11943a68284580637932ab9`
+- SHA256 content hash: `5445bd4154a2b8061eea46c77e9746c292cf5a90433cdd6e1857243b13aecc30`
+- Byte count: `40103`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
   - Last updated: `2026-09-13`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-13T13:11:37Z`
+- Generated timestamp UTC: `2026-09-13T14:44:19Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
 - Latest commit touching file: `b9b6008ac4cff37bfef98bd2103a9cb9edf3a3a6`
-- generation base commit: `bc1168c7232f92b2c4db27c76d221851ace3589e`
+- generation base commit: `101fd67867001c1afd290e9bfa96dc7824ba8cef`
 - Git blob hash: `96a1b2c77469a7cb5ca1cb67cb053850f5304029`
 - SHA256 content hash: `7f543f3a5a5f8fa308c9ddfbf2efa6068ea7a7e516c7a133a08e14b63b1c69d0`
 - Byte count: `50422`
@@ -78,7 +78,7 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-09-12`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-13T13:11:37Z`
+- Generated timestamp UTC: `2026-09-13T14:44:19Z`
 
 ## Maintenance Rule
 
