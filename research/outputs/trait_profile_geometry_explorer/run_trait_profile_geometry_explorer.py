@@ -380,9 +380,15 @@ def main() -> None:
     parser.add_argument("--n-jobs", type=int, default=4)
     parser.add_argument("--reuse-lopo", action="store_true")
     parser.add_argument("--inventory-only", action="store_true")
+    parser.add_argument("--viewer-only", action="store_true", help="Rebuild HTML from unchanged saved science bundles")
     args = parser.parse_args()
     if args.inventory_only:
         write_inventory()
+        return
+    if args.viewer_only:
+        build_html(read_json(DATA_PATH), read_json(LOPO_MODELS_PATH))
+        write_inventory()
+        print(json.dumps({"output": relative(GENERATED_HTML_PATH), "mode": "viewer-only"}, indent=2))
         return
 
     canonical_explorer_hash = sha256(CANONICAL_EXPLORER)

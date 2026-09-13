@@ -48,6 +48,8 @@ The viewer renders all canonical personas by the existing seven cluster labels i
 
 All 240 traits have native sliders, exact names, current percentile values, per-trait reset, canonical definitions where available, search, changed-only filtering, and reset-all. A horizontally scrollable connected profile shows the muted selected-persona baseline behind the edited profile. Plot `uirevision` and the last 3D camera state preserve the view during edits.
 
+The optional `Most prominent first` display order sorts trait indices by descending **current edited within-corpus percentile**, breaking ties by original inventory index. The same indices order the baseline line, edited line, changed markers, and slider rows. The selected persona or an edit can change this order; sliders re-sort on release to avoid moving an active drag target. Sorting is presentation-only: the `currentProfile` raw-cosine array retains the predictor's canonical feature order, and Ridge/OOD calculations are unchanged. `Original order` restores the initial display.
+
 ## OOD context
 
 The viewer reuses `ood_reference.json` and the deployed CLI calculation:
@@ -74,12 +76,13 @@ python research/outputs/trait_profile_geometry_explorer/verify_trait_profile_geo
 ```
 
 `--reuse-lopo` rebuilds browser data, reference cases, manifests, and HTML without refitting already verified held-out bundles. `--inventory-only` refreshes hashes and URLs after report or registry edits.
+`--viewer-only` rebuilds just the HTML and inventory from the unchanged saved data and held-out model JSON, for interface-only revisions.
 
 The test layers are intentionally distinguished:
 
 - `verification_report.json`: independent Python artifact and reference-implementation checks.
 - `node_verification_report.json`: browser-core JavaScript numerical checks for all held-out baselines and 30 modified cases.
-- `browser_verification_report.json`: real headless Google Chrome rendering and interaction checks, including list selection, plot selection, sliders, changed-only, reset, 2D projection, and camera persistence. This test forces ANGLE SwiftShader software WebGL and records the renderer, so it does not use a hardware GPU.
+- `browser_verification_report.json`: real headless Google Chrome rendering and interaction checks, including list selection, plot selection, sliders, changed-only, reset, 2D projection, camera persistence, and synchronized sort/chart/slider behavior. This test forces ANGLE SwiftShader software WebGL and records the renderer, so it does not use a hardware GPU.
 
 ## Epistemic labels
 

@@ -59,6 +59,8 @@
     .predictor-label { color: var(--predicted); font-weight: 600; }
     .equalizer-scroll { overflow-x: auto; border-block: 1px solid var(--line); margin: 8px 0 10px; }
     #equalizer-svg { display: block; height: 180px; min-width: 100%; }
+    .equalizer-controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .equalizer-controls .field { min-width: 220px; }
     .trait-tools { display: grid; grid-template-columns: minmax(160px, 1fr) auto auto; gap: 7px; align-items: center; }
     .trait-list { max-height: 410px; overflow-y: auto; margin-top: 8px; padding-right: 3px; }
     .trait-row { display: grid; grid-template-columns: minmax(115px, .8fr) minmax(130px, 1.4fr) 52px 30px; gap: 8px; align-items: center; min-height: 39px; border-bottom: 1px solid rgba(147,164,183,.14); }
@@ -142,6 +144,15 @@
       <aside class="panel" aria-label="Trait equalizer and profile context">
         <h2>240-trait percentile equalizer</h2>
         <p class="mode-note">Muted line = selected persona baseline. Cyan line = editable profile. Values are corpus-relative percentiles.</p>
+        <div class="equalizer-controls">
+          <label class="field" for="trait-sort"><span>Trait order</span>
+            <select id="trait-sort" aria-label="Trait order">
+              <option value="inventory">Original order</option>
+              <option value="prominence">Most prominent first</option>
+            </select>
+          </label>
+          <span class="mode-note">Sorts both the profile and sliders by the current edited percentile. Sliders re-sort when released.</span>
+        </div>
         <div class="equalizer-scroll"><svg id="equalizer-svg" aria-label="Connected baseline and edited percentile profiles" role="img"></svg></div>
         <div class="trait-tools">
           <input id="trait-search" type="search" placeholder="Search all traits" aria-label="Search traits">

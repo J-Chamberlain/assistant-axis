@@ -155,6 +155,15 @@
     return maximum;
   }
 
+  function traitDisplayOrder(percentiles, mode) {
+    if (mode !== "inventory" && mode !== "prominence") throw new Error(`Unknown trait order: ${mode}`);
+    const order = percentiles.map((_, index) => index);
+    if (mode === "prominence") {
+      order.sort((left, right) => percentiles[right] - percentiles[left] || left - right);
+    }
+    return order;
+  }
+
   return {
     dot,
     empiricalQuantile,
@@ -168,6 +177,7 @@
     projectAxes,
     projectProfile,
     reconstructionError,
-    standardizedFeatures
+    standardizedFeatures,
+    traitDisplayOrder
   };
 });

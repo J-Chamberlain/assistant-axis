@@ -5,6 +5,7 @@ This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before ru
 ## trait_profile_geometry_explorer
 
 Artifact: Interactive 2D/3D trait-profile geometry equalizer with a selected persona's observed canonical coordinate, persona-held-out predicted coordinate, complete editable 240-trait percentile profile, empirical LOPO error reference, and OOD/nearest-profile context.
+UI revision (2026-09-13): Optional descending current-percentile display order synchronizes the profile chart and all slider rows. The viewer-only rebuild reused byte-identical saved data and model bundles; sorting does not alter canonical predictor feature order, predictions, or scientific evidence.
 Location: `research/outputs/trait_profile_geometry_explorer/`; completed companion: `trait_profile_geometry_explorer.html`; implementation report: `trait_profile_geometry_implementation_report.md`; methodology: `trait_profile_geometry_methodology.md`; complete hashes and raw URLs: `artifact_inventory.csv`.
 Created: 2026-09-11 by Codex/GPT-5.5.
 Model used: GPT-5.5 for local source inspection, implementation, documentation, and repository maintenance. Ridge fitting was performed locally on CPU over existing saved matrices and targets. No external model API, GPU, RunPod, language-model inference, response generation, or activation extraction was used.

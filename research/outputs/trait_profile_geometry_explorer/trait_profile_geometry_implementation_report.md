@@ -25,6 +25,7 @@ The source matrix has 275 personas × 240 traits. Persona order exactly matches 
 
 - Selecting a point or a name loads the complete 240-trait profile.
 - A connected equalizer shows baseline and edited percentile profiles.
+- The `Trait order` control switches between original inventory order and descending current edited percentile. Both profile lines, changed markers, and all slider rows use the same display order; equal percentiles retain inventory order. An active slider re-sorts on release so it does not jump during a drag. Sorting never permutes the raw-cosine feature vector supplied to Ridge or OOD calculations.
 - Every trait has a native slider, current value, definition access, and individual reset.
 - Search, changed-only, and reset-all controls remain usable across 240 dimensions.
 - Both 2D and 3D keep the full persona distribution, selected actual point, held-out predicted point, connector, PC values, delta vector, and 3D displacement.
@@ -56,6 +57,8 @@ These are software-reproduction results, not new evidence about behavioral gener
 ## Regression and live-browser status
 
 The pre-existing trait-ridge Python verification, trait-surface Python verification, and trait-surface Node/DOM verification all passed. The new explorer also passed a live headless Google Chrome 152 interaction test over a local HTTP server, with 275 personas, 240 sliders, plot selection, list selection, native slider input, changed-only filtering, reset-all, 2D/3D switching, and camera persistence exercised. Chrome was forced to the CPU-based ANGLE SwiftShader WebGL backend; no hardware GPU was used.
+
+The 2026-09-13 display-only sort revision was rebuilt with `--viewer-only` from unchanged saved data/model JSON. Node checks cover descending/tied ordering without input mutation. Live Chrome checks confirm the chart and slider order agree after sort, native edits, persona changes, and restoration to inventory order; merely sorting changes neither the raw profile nor the predicted coordinate (maximum difference `0`).
 
 ## Scientific interpretation boundary
 

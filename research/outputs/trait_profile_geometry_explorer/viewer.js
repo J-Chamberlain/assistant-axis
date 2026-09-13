@@ -27,6 +27,8 @@
     axes: [0, 1],
     camera: null,
     rows: [],
+    sortMode: "inventory",
+    displayOrder: [],
     rendering: false
   };
 
@@ -75,7 +77,12 @@
       slider.max = "100";
       slider.step = "0.1";
       slider.setAttribute("aria-label", `${trait.name} percentile`);
-      slider.addEventListener("input", () => setTraitPercentile(index, Number(slider.value), true));
+      // Keep the active slider in place while dragging; re-sort on release.
+      slider.addEventListener("input", () => setTraitPercentile(index, Number(slider.value), true, false));
+      slider.addEventListener("change", () => {
+        refreshTraitOrder();
+        renderEqualizer();
+      });
 
       const value = document.createElement("output");
       value.className = "trait-value";
@@ -95,7 +102,7 @@
     byId("trait-list").appendChild(fragment);
   }
 
-  function setTraitPercentile(indexOrName, percentile, refresh) {
+  function setTraitPercentile(indexOrName, percentile, refresh, resort = true) {
     const index = typeof indexOrName === "string"
       ? DATA.traits.findIndex((trait) => trait.name === indexOrName)
       : indexOrName;
@@ -107,7 +114,7 @@
     if (Math.abs(state.currentProfile[index] - state.baselineProfile[index]) > 1e-14) state.changed.add(index);
     else state.changed.delete(index);
     updateTraitRow(index);
-    if (refresh !== false) updatePrediction();
+    if (refresh !== false) updatePrediction(resort);
   }
 
   function resetTrait(index) {
@@ -143,6 +150,24 @@
     });
   }
 
+  function refreshTraitOrder() {
+    const order = Core.traitDisplayOrder(state.currentPercentiles, state.sortMode);
+    if (order.length !== state.displayOrder.length || order.some((index, rank) => index !== state.displayOrder[rank])) {
+      const fragment = document.createDocumentFragment();
+      for (const index of order) fragment.appendChild(state.rows[index].row);
+      byId("trait-list").appendChild(fragment);
+    }
+    state.displayOrder = order;
+  }
+
+  function setTraitSort(mode) {
+    if (mode !== "inventory" && mode !== "prominence") throw new Error(`Unknown trait order: ${mode}`);
+    state.sortMode = mode;
+    byId("trait-sort").value = mode;
+    refreshTraitOrder();
+    renderEqualizer();
+  }
+
   function equalizerPath(percentiles, width, height) {
     const pad = 12;
     return percentiles.map((value, index) => {
@@ -169,17 +194,18 @@
       svg.appendChild(line);
     }
     const baseline = document.createElementNS(ns, "path");
-    baseline.setAttribute("d", equalizerPath(state.baselinePercentiles, width, height));
+    baseline.setAttribute("d", equalizerPath(state.displayOrder.map((index) => state.baselinePercentiles[index]), width, height));
     baseline.setAttribute("fill", "none"); baseline.setAttribute("stroke", "#708197"); baseline.setAttribute("stroke-width", "1.4");
     baseline.setAttribute("opacity", ".72");
     svg.appendChild(baseline);
     const edited = document.createElementNS(ns, "path");
-    edited.setAttribute("d", equalizerPath(state.currentPercentiles, width, height));
+    edited.setAttribute("d", equalizerPath(state.displayOrder.map((index) => state.currentPercentiles[index]), width, height));
     edited.setAttribute("fill", "none"); edited.setAttribute("stroke", "#5de1ff"); edited.setAttribute("stroke-width", "2");
     svg.appendChild(edited);
+    const positions = new Map(state.displayOrder.map((index, position) => [index, position]));
     for (const index of state.changed) {
       const circle = document.createElementNS(ns, "circle");
-      const x = 12 + index * ((width - 24) / (DATA.traits.length - 1));
+      const x = 12 + positions.get(index) * ((width - 24) / (DATA.traits.length - 1));
       const y = 12 + (100 - state.currentPercentiles[index]) / 100 * (height - 24);
       circle.setAttribute("cx", String(x)); circle.setAttribute("cy", String(y)); circle.setAttribute("r", "3.5"); circle.setAttribute("fill", "#ffdf5d");
       const title = document.createElementNS(ns, "title");
@@ -329,10 +355,11 @@
     filterTraits();
   }
 
-  function updatePrediction() {
+  function updatePrediction(resort = true) {
     const persona = currentPersona();
     state.prediction = Core.predictRidge(state.currentProfile, LOPO[persona.name]);
     state.ood = Core.oodDiagnostic(state.currentProfile, DATA.ood_reference, persona.name);
+    if (resort) refreshTraitOrder();
     updateMetrics();
     renderEqualizer();
     return renderPlot();
@@ -383,10 +410,13 @@
       projected_actual: Core.projectAxes(persona.coordinate, state.axes),
       axes: state.axes.slice(),
       view: state.view,
+      trait_sort: state.sortMode,
+      display_order: state.displayOrder.slice(),
       changed_traits: Array.from(state.changed).map((index) => DATA.traits[index].name),
       current_profile: state.currentProfile.slice(),
       current_percentiles: state.currentPercentiles.slice(),
       baseline_profile: state.baselineProfile.slice(),
+      baseline_percentiles: state.baselinePercentiles.slice(),
       ood: JSON.parse(JSON.stringify(state.ood)),
       camera: state.camera ? JSON.parse(JSON.stringify(state.camera)) : null
     };
@@ -415,6 +445,7 @@
     });
     byId("show-error").addEventListener("change", renderPlot);
     byId("trait-search").addEventListener("input", filterTraits);
+    byId("trait-sort").addEventListener("change", () => setTraitSort(byId("trait-sort").value));
     byId("changed-only").addEventListener("change", filterTraits);
     byId("reset-all").addEventListener("click", resetAll);
     const plot = byId("geometry-plot");
@@ -459,6 +490,7 @@
     selectPersona,
     setAxes,
     setTraitPercentile,
+    setTraitSort,
     setView,
     snapshot,
     updatePrediction

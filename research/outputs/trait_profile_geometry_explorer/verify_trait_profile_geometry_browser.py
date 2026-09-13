@@ -229,6 +229,42 @@ def main() -> None:
               await new Promise(resolve=>setTimeout(resolve,250));
               return {visible,changed,afterReset:window.__TRAIT_EQUALIZER_TEST__.snapshot().changed_traits.length};
             })()""")
+            sort_interaction = cdp.evaluate("""(async()=>{
+              const api=window.__TRAIT_EQUALIZER_TEST__, core=window.TraitProfileGeometryCore;
+              document.getElementById('changed-only').checked=false;
+              document.getElementById('changed-only').dispatchEvent(new Event('change',{bubbles:true}));
+              const before=api.snapshot();
+              const selector=document.getElementById('trait-sort');
+              selector.value='prominence'; selector.dispatchEvent(new Event('change',{bubbles:true}));
+              function inspect(){
+                const s=api.snapshot();
+                const expected=core.traitDisplayOrder(s.current_percentiles,s.trait_sort);
+                const dom=[...document.querySelectorAll('#trait-list .trait-row')].map(row=>Number(row.dataset.index));
+                const paths=[...document.querySelectorAll('#equalizer-svg path')];
+                function pathError(path,values){
+                  const ys=[...path.getAttribute('d').matchAll(/[ML][0-9.]+,([0-9.]+)/g)].map(match=>Number(match[1]));
+                  if(ys.length!==values.length) return Infinity;
+                  return Math.max(...ys.map((y,rank)=>Math.abs(y-(12+(100-values[dom[rank]])*1.56))));
+                }
+                return {mode:s.trait_sort,orderMatches:JSON.stringify(dom)===JSON.stringify(expected),
+                  snapshotMatches:JSON.stringify(s.display_order)===JSON.stringify(dom),
+                  chartError:Math.max(pathError(paths[0],s.baseline_percentiles),pathError(paths[1],s.current_percentiles)),
+                  profile:s.current_profile,prediction:s.prediction};
+              }
+              const sorted=inspect();
+              const last=document.querySelector('#trait-list .trait-row:last-child input[type=range]');
+              last.value='100'; last.dispatchEvent(new Event('input',{bubbles:true}));
+              last.dispatchEvent(new Event('change',{bubbles:true}));
+              await new Promise(resolve=>setTimeout(resolve,250));
+              const edited=inspect();
+              await api.selectPersona('actor');
+              const persona=inspect();
+              selector.value='inventory'; selector.dispatchEvent(new Event('change',{bubbles:true}));
+              const restored=inspect();
+              return {sorted,edited,persona,restored,
+                sortOnlyProfileError:Math.max(...sorted.profile.map((v,i)=>Math.abs(v-before.current_profile[i]))),
+                sortOnlyPredictionError:Math.max(...sorted.prediction.map((v,i)=>Math.abs(v-before.prediction[i])))};
+            })()""")
             layout = cdp.evaluate("""(() => {
               const canvas=document.querySelector('#geometry-plot canvas');
               let renderer='unavailable';
@@ -263,6 +299,12 @@ def main() -> None:
                 "native_slider_changed_count": dom_interaction["changed"],
                 "changed_only_visible_count": dom_interaction["visible"],
                 "reset_all_changed_count": dom_interaction["afterReset"],
+                "sort_only_profile_error": sort_interaction["sortOnlyProfileError"],
+                "sort_only_prediction_error": sort_interaction["sortOnlyPredictionError"],
+                "sort_modes": [sort_interaction[key]["mode"] for key in ("sorted", "edited", "persona", "restored")],
+                "sort_dom_order_checks": [sort_interaction[key]["orderMatches"] for key in ("sorted", "edited", "persona", "restored")],
+                "sort_snapshot_order_checks": [sort_interaction[key]["snapshotMatches"] for key in ("sorted", "edited", "persona", "restored")],
+                "sort_chart_maximum_error": max(sort_interaction[key]["chartError"] for key in ("sorted", "edited", "persona", "restored")),
                 "body_horizontal_overflow_pixels": layout["bodyOverflow"],
                 "rendered_plot_trace_count": layout["plotTraces"],
                 "rendered_plot_canvas_count": layout["canvasCount"],
@@ -287,6 +329,11 @@ def main() -> None:
                 and dom_interaction["changed"] == 1
                 and dom_interaction["visible"] == 1
                 and dom_interaction["afterReset"] == 0
+                and sort_interaction["sortOnlyProfileError"] == 0
+                and sort_interaction["sortOnlyPredictionError"] == 0
+                and [sort_interaction[key]["mode"] for key in ("sorted", "edited", "persona", "restored")] == ["prominence", "prominence", "prominence", "inventory"]
+                and all(sort_interaction[key]["orderMatches"] and sort_interaction[key]["snapshotMatches"] for key in ("sorted", "edited", "persona", "restored"))
+                and max(sort_interaction[key]["chartError"] for key in ("sorted", "edited", "persona", "restored")) <= 0.0051
                 and layout["bodyOverflow"] <= 0
                 and layout["plotTraces"] >= 10
                 and layout["canvasCount"] >= 1

@@ -22,6 +22,10 @@ assert(data.traits.length === 240, "Expected all 240 traits");
 assert(new Set(data.traits.map((trait) => trait.name)).size === 240, "Duplicate traits");
 assert(Object.keys(bundle.models).length === 275, "Expected 275 held-out Ridge bundles");
 assert(JSON.stringify(data.traits.map((trait) => trait.name)) === JSON.stringify(bundle.trait_feature_names), "Feature order mismatch");
+const sortExample = [35, 90, 90, 2];
+assert(JSON.stringify(Core.traitDisplayOrder(sortExample, "inventory")) === "[0,1,2,3]", "Inventory order changed");
+assert(JSON.stringify(Core.traitDisplayOrder(sortExample, "prominence")) === "[1,2,0,3]", "Prominence order or tie-break changed");
+assert(JSON.stringify(sortExample) === "[35,90,90,2]", "Sorting mutated prediction features");
 
 let maxLopo = 0;
 for (const persona of data.personas) {
