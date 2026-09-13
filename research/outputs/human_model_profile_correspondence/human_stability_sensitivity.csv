@@ -1,0 +1,4 @@
+row_type,K,mean_fisher_z,back_transformed_mean_r,is_stable_subset_max,search_adjusted_p,permutation_count,seed
+K_score,4,0.267518862059,0.261314625446,False,,20000,2026091304
+K_score,5,0.400590736966,0.380454306233,False,,20000,2026091304
+K_score,6,0.482629378712,0.448346919193,True,4.9997500125e-05,20000,2026091304

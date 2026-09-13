@@ -1,0 +1,46 @@
+{
+  "analysis": "preregistered_robustness_and_secondary_results",
+  "date": "2026-09-13",
+  "decision_criteria": {
+    "at_least_3_of_4_family_specific_positive_adjusted": true,
+    "primary_global_p_le_0_05": true,
+    "stable_K456_recognizable": true,
+    "twelve_trait_directionally_concordant": true
+  },
+  "family_45_adjusted_evidence_count": 3,
+  "final_decision_tier": "STRONG AGGREGATE CORRESPONDENCE",
+  "human_stability_K456": {
+    "back_transformed_mean_r": 0.4483469191929081,
+    "best_K": 6,
+    "mean_fisher_z": 0.4826293787118474,
+    "search_adjusted_p": 4.999750012499375e-05
+  },
+  "k9_diagnostic_ineligible": {
+    "back_transformed_mean_r": 0.44606493599356456,
+    "mean_fisher_z": 0.47977692107199565
+  },
+  "mfamily_e_secondary": {
+    "best_K": 10,
+    "best_human_profile": "H10_I",
+    "null_exceedance_count": 0,
+    "pearson_r": 0.747646787414387,
+    "search_adjusted_p": 4.999750012499375e-05,
+    "spearman_rho": 0.7379689717103344,
+    "status": "ADJUSTED EVIDENCE"
+  },
+  "model_used": "GPT-5.5",
+  "persistence_rows": 15,
+  "primary_45_selected_pairs_positive_on_12": 4,
+  "relaxed_browsing_rows": 40,
+  "response_style_sensitivity": "NOT_RUN_NO_FROZEN_TRANSFORM",
+  "semantic_interpretation_performed": false,
+  "twelve_trait": {
+    "back_transformed_mean_r": 0.7607970003865232,
+    "best_K": 10,
+    "mean_fisher_z": 0.998104632235667,
+    "null_exceedance_count": 12,
+    "permutation_count": 20000,
+    "search_adjusted_p": 0.0006499675016249188,
+    "seed": 2026091312
+  }
+}

@@ -1,0 +1,2 @@
+status,separate_corrected_statistic,primary_item_baseline_handling,primary_profile_level_handling,remaining_caveat,frozen_item_centered_between_profile_variance_fraction_range
+NOT_RUN_NO_FROZEN_TRANSFORM,False,observed-item marginal z scores,Pearson removes profile-wide additive elevation,material frozen response-style predictability may still affect relative trait shape,0.965-0.990
