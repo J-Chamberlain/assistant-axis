@@ -1,0 +1,5 @@
+diagnostic,subset,n,accuracy,balanced_accuracy,majority_accuracy_baseline,balanced_accuracy_chance,adjusted_accuracy_above_majority,converged,iterations,discovery_fitted_dense_standardization
+full_696_item_response_mask,validation,4735,0.09376979936642027,0.09546114119436881,0.14762407602956706,0.1,-0.06318136769078297,True,81,False
+full_696_item_response_mask,replication,4737,0.09943001899936668,0.10242116373665959,0.15410597424530292,0.1,-0.06463688545046169,True,81,False
+answered_item_count_only,validation,4735,0.13643083421330518,0.1098068895728802,0.14762407602956706,0.1,-0.013131813676907834,True,4,True
+answered_item_count_only,replication,4737,0.13468439940890858,0.10801826856470646,0.15410597424530292,0.1,-0.022959820314449708,True,4,True

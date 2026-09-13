@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "runs_compared": 2,
+  "comparison_scope": "All latent-model selection values other than wall-clock elapsed_seconds, plus selected K, candidate anchors, profile stability distances, and posterior certainty summaries",
+  "maximum_absolute_numeric_difference": 0.0,
+  "identical_best_seeds_by_k": true,
+  "identical_convergence_counts_by_k": true,
+  "identical_candidate_set": true,
+  "candidate_k": [4, 10],
+  "reference_k": 10,
+  "note": "Wall-clock timing columns are expected to vary and are excluded from deterministic-value comparison. The second complete run incorporated the documented dense auxiliary-classifier standardization correction before numerical freeze."
+}

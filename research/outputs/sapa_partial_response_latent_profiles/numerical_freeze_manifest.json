@@ -1,0 +1,93 @@
+{
+  "status": "FROZEN NUMERICAL OUTPUT; commit SHA recorded in downstream report",
+  "semantic_blinding": "item_id column only; item_text was not read",
+  "model_family": "six-category product-multinomial latent-class model",
+  "fitted_k": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "extension_audit": [
+    {
+      "boundary_k": 12,
+      "eligible": false,
+      "validation_best": true,
+      "paired_improvement_per_answer": 0.001520205115773479,
+      "paired_improvement_se": 0.0006591143871541675,
+      "material_improvement": true,
+      "aic_improves": true
+    }
+  ],
+  "validation_best_k": 10,
+  "bic_best_k": 4,
+  "icl_best_k": 4,
+  "candidate_k": [
+    4,
+    10
+  ],
+  "reference_k": 10,
+  "selection_conflict": true,
+  "selection_reason": "no frozen-rule intersection; retained validation-best/BIC-best/ICL-best anchors; reference diagnostics use validation-best without claiming a unique winner",
+  "certainty_relationship": {
+    "spearman_rho": 0.3272329869519534,
+    "spearman_p_value": 0.0,
+    "linear_slope_max_posterior_per_log1p_answered": 0.07587597858047983,
+    "linear_intercept": 0.6150852587231689
+  },
+  "missingness_summary": {
+    "max_profile_observation_frequency_range": 0.06665213498078418,
+    "median_profile_observation_frequency_range": 0.03247746758692384,
+    "mean_profile_observation_frequency_range": 0.032350385143679924,
+    "strong_missingness_warning": false
+  },
+  "response_style_summary": {
+    "item_centered_between_profile_variance_fraction": 0.965138217341906,
+    "replication_balanced_accuracy": 0.401313410099679,
+    "replication_accuracy": 0.3825205826472451,
+    "strong_response_style_warning": true
+  },
+  "figures": [
+    "model_selection.png",
+    "profile_heatmap.png",
+    "profile_summary.png",
+    "certainty_vs_items_answered.png",
+    "class_sizes.png",
+    "missingness_diagnostic.png"
+  ],
+  "split_counts": {
+    "discovery": 14206,
+    "validation": 4735,
+    "replication": 4737,
+    "zero_answer": 1
+  },
+  "elapsed_seconds": 91.80660200119019,
+  "software": {
+    "python": "3.12.12",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0",
+    "matplotlib": "3.10.8"
+  },
+  "privacy": {
+    "respondent_level_outputs_written": false,
+    "individual_imputations_written": false
+  },
+  "implementation_corrections_after_prefit_freeze": [
+    {
+      "scope": "auxiliary dense logistic diagnostics only",
+      "change": "discovery-fitted column standardization before frozen L2/lbfgs regression",
+      "reason": "unscaled item-count and proportion features caused LBFGS overflow warnings",
+      "unchanged": "latent likelihood, K fits, profiles, selection rules, mask classifier, and semantic blinding"
+    }
+  ]
+}

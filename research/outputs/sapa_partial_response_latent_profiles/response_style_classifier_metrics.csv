@@ -1,0 +1,3 @@
+diagnostic,subset,n,accuracy,balanced_accuracy,majority_accuracy_baseline,balanced_accuracy_chance,adjusted_accuracy_above_majority,converged,iterations,discovery_fitted_dense_standardization
+raw_response_style_summaries,validation,4735,0.3915522703273495,0.4064071900270008,0.14762407602956706,0.1,0.2861744301288404,True,93,True
+raw_response_style_summaries,replication,4737,0.3825205826472451,0.401313410099679,0.15410597424530292,0.1,0.27002745195907163,True,93,True
