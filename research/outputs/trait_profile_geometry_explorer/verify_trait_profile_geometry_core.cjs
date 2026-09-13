@@ -26,6 +26,8 @@ const sortExample = [35, 90, 90, 2];
 assert(JSON.stringify(Core.traitDisplayOrder(sortExample, "inventory")) === "[0,1,2,3]", "Inventory order changed");
 assert(JSON.stringify(Core.traitDisplayOrder(sortExample, "prominence")) === "[1,2,0,3]", "Prominence order or tie-break changed");
 assert(JSON.stringify(sortExample) === "[35,90,90,2]", "Sorting mutated prediction features");
+assert(JSON.stringify(Core.percentileDelta([80, 10, 50], [30, 90, 50])) === "[50,-80,0]", "Percentile delta sign changed");
+assert(JSON.stringify(Core.percentileDelta([80, 10, 50], [30, 90, 50])) !== "[-50,80,0]", "Delta direction reversed");
 
 let maxLopo = 0;
 for (const persona of data.personas) {

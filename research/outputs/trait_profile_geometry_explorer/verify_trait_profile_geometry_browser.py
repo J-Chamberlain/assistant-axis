@@ -265,6 +265,75 @@ def main() -> None:
                 sortOnlyProfileError:Math.max(...sorted.profile.map((v,i)=>Math.abs(v-before.current_profile[i]))),
                 sortOnlyPredictionError:Math.max(...sorted.prediction.map((v,i)=>Math.abs(v-before.prediction[i])))};
             })()""")
+            comparison_interaction = cdp.evaluate("""(async()=>{
+              const api=window.__TRAIT_EQUALIZER_TEST__, core=window.TraitProfileGeometryCore, data=api.data();
+              const plot=document.getElementById('geometry-plot');
+              const first=document.getElementById('equalizer-svg');
+              const second=document.getElementById('comparison-svg');
+              const deltaSvg=document.getElementById('delta-svg');
+              const orderBelowPlot=Boolean(plot.compareDocumentPosition(first)&Node.DOCUMENT_POSITION_FOLLOWING);
+              const chartOrder=Boolean(first.compareDocumentPosition(second)&Node.DOCUMENT_POSITION_FOLLOWING)
+                && Boolean(second.compareDocumentPosition(deltaSvg)&Node.DOCUMENT_POSITION_FOLLOWING);
+              const before=api.snapshot();
+              document.getElementById('comparison-input').value='spy';
+              document.getElementById('load-comparison').click();
+              await new Promise(resolve=>setTimeout(resolve,250));
+              const compared=api.snapshot();
+              const spy=data.personas.find(persona=>persona.name==='spy');
+              const expected=core.profileToPercentiles(spy.profile,data.ood_reference.percentile_reference.sorted_raw_values_by_trait);
+              const profileError=Math.max(...expected.map((value,index)=>Math.abs(value-compared.comparison_percentiles[index])));
+              const deltaError=Math.max(...compared.comparison_delta.map((value,index)=>Math.abs(value-(compared.current_percentiles[index]-expected[index]))));
+              const primaryUnchanged=Math.max(...before.current_profile.map((value,index)=>Math.abs(value-compared.current_profile[index])));
+              const predictionUnchanged=Math.max(...before.prediction.map((value,index)=>Math.abs(value-compared.prediction[index])));
+              const connector3d=plot.data.find(trace=>trace.name==='persona comparison connector');
+              const marker3d=plot.data.find(trace=>trace.name==='comparison actual');
+              const coordinateError3d=Math.max(...[0,1,2].map(index=>Math.abs(connector3d[['x','y','z'][index]][0]-compared.actual[index])),
+                ...[0,1,2].map(index=>Math.abs(connector3d[['x','y','z'][index]][1]-spy.coordinate[index])));
+              const markerError3d=Math.max(...[0,1,2].map(index=>Math.abs(marker3d[['x','y','z'][index]][0]-spy.coordinate[index])));
+              const ys=[...second.querySelector('path').getAttribute('d').matchAll(/[ML][0-9.]+,([0-9.]+)/g)].map(match=>Number(match[1]));
+              const comparisonChartError=Math.max(...ys.map((y,rank)=>Math.abs(y-(12+(100-expected[compared.display_order[rank]])*1.56))));
+              const bars=[...deltaSvg.querySelectorAll('line[data-trait-index]')];
+              const deltaBarsCorrect=bars.length===240 && bars.every((bar,rank)=>{
+                const index=compared.display_order[rank], value=compared.comparison_delta[index];
+                return Number(bar.dataset.traitIndex)===index && Math.abs(Number(bar.dataset.delta)-value)<1e-12
+                  && Number(bar.getAttribute('y1'))===90 && Math.abs(Number(bar.getAttribute('y2'))-(90-value*.78))<1e-12;
+              });
+              const axes=[...deltaSvg.querySelectorAll('line:not([data-trait-index])')];
+              const zeroAxesCorrect=axes.length===2 && axes[0].getAttribute('x1')==='12'
+                && axes[0].getAttribute('x2')==='12' && Number(axes[1].getAttribute('y1'))===90
+                && Number(axes[1].getAttribute('y2'))===90;
+              first.parentElement.scrollLeft=501;
+              await new Promise(resolve=>setTimeout(resolve,80));
+              const scrollError=Math.max(Math.abs(second.parentElement.scrollLeft-501),Math.abs(deltaSvg.parentElement.scrollLeft-501));
+              const changedIndex=compared.display_order[0];
+              api.setTraitPercentile(changedIndex,Math.max(0,compared.current_percentiles[changedIndex]-11),false);
+              await api.updatePrediction();
+              const edited=api.snapshot();
+              const editedDeltaError=Math.max(...edited.comparison_delta.map((value,index)=>Math.abs(value-(edited.current_percentiles[index]-expected[index]))));
+              api.setTraitSort('prominence');
+              const sorted=api.snapshot();
+              const sortedBars=[...deltaSvg.querySelectorAll('line[data-trait-index]')];
+              const sortedOrderCorrect=sortedBars.every((bar,rank)=>Number(bar.dataset.traitIndex)===sorted.display_order[rank]);
+              await api.selectPersona('therapist');
+              const switched=api.snapshot();
+              const switchDeltaError=Math.max(...switched.comparison_delta.map((value,index)=>Math.abs(value-(switched.current_percentiles[index]-expected[index]))));
+              await api.setView('2d'); await api.setAxes(2,0);
+              const connector2d=plot.data.find(trace=>trace.name==='persona comparison connector');
+              const coordinateError2d=Math.max(Math.abs(connector2d.x[0]-switched.actual[2]),Math.abs(connector2d.x[1]-spy.coordinate[2]),
+                Math.abs(connector2d.y[0]-switched.actual[0]),Math.abs(connector2d.y[1]-spy.coordinate[0]));
+              document.getElementById('clear-comparison').click();
+              await new Promise(resolve=>setTimeout(resolve,250));
+              const cleared=api.snapshot();
+              return {orderBelowPlot,chartOrder,profileError,deltaError,primaryUnchanged,predictionUnchanged,
+                coordinateError3d,markerError3d,connector3dType:connector3d.type,comparisonChartError,
+                deltaBarsCorrect,zeroAxesCorrect,scrollError,editedDeltaError,sortedOrderCorrect,
+                comparisonSurvivesPrimarySwitch:switched.comparison_persona==='spy',switchDeltaError,
+                coordinateError2d,connector2dType:connector2d.type,
+                cleared:cleared.comparison_persona===null && cleared.comparison_delta.length===0
+                  && !plot.data.some(trace=>trace.name==='persona comparison connector')
+                  && document.getElementById('comparison-charts').hidden
+                  && !document.getElementById('comparison-empty').hidden};
+            })()""")
             layout = cdp.evaluate("""(() => {
               const canvas=document.querySelector('#geometry-plot canvas');
               let renderer='unavailable';
@@ -305,6 +374,7 @@ def main() -> None:
                 "sort_dom_order_checks": [sort_interaction[key]["orderMatches"] for key in ("sorted", "edited", "persona", "restored")],
                 "sort_snapshot_order_checks": [sort_interaction[key]["snapshotMatches"] for key in ("sorted", "edited", "persona", "restored")],
                 "sort_chart_maximum_error": max(sort_interaction[key]["chartError"] for key in ("sorted", "edited", "persona", "restored")),
+                "comparison_interaction": comparison_interaction,
                 "body_horizontal_overflow_pixels": layout["bodyOverflow"],
                 "rendered_plot_trace_count": layout["plotTraces"],
                 "rendered_plot_canvas_count": layout["canvasCount"],
@@ -334,6 +404,26 @@ def main() -> None:
                 and [sort_interaction[key]["mode"] for key in ("sorted", "edited", "persona", "restored")] == ["prominence", "prominence", "prominence", "inventory"]
                 and all(sort_interaction[key]["orderMatches"] and sort_interaction[key]["snapshotMatches"] for key in ("sorted", "edited", "persona", "restored"))
                 and max(sort_interaction[key]["chartError"] for key in ("sorted", "edited", "persona", "restored")) <= 0.0051
+                and comparison_interaction["orderBelowPlot"]
+                and comparison_interaction["chartOrder"]
+                and comparison_interaction["profileError"] <= 1e-12
+                and comparison_interaction["deltaError"] <= 1e-12
+                and comparison_interaction["primaryUnchanged"] == 0
+                and comparison_interaction["predictionUnchanged"] == 0
+                and comparison_interaction["coordinateError3d"] == 0
+                and comparison_interaction["markerError3d"] == 0
+                and comparison_interaction["connector3dType"] == "scatter3d"
+                and comparison_interaction["comparisonChartError"] <= 0.0051
+                and comparison_interaction["deltaBarsCorrect"]
+                and comparison_interaction["zeroAxesCorrect"]
+                and comparison_interaction["scrollError"] == 0
+                and comparison_interaction["editedDeltaError"] <= 1e-12
+                and comparison_interaction["sortedOrderCorrect"]
+                and comparison_interaction["comparisonSurvivesPrimarySwitch"]
+                and comparison_interaction["switchDeltaError"] <= 1e-12
+                and comparison_interaction["coordinateError2d"] == 0
+                and comparison_interaction["connector2dType"] == "scatter"
+                and comparison_interaction["cleared"]
                 and layout["bodyOverflow"] <= 0
                 and layout["plotTraces"] >= 10
                 and layout["canvasCount"] >= 1

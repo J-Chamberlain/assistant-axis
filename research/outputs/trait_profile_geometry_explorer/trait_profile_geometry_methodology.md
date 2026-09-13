@@ -50,6 +50,10 @@ All 240 traits have native sliders, exact names, current percentile values, per-
 
 The optional `Most prominent first` display order sorts trait indices by descending **current edited within-corpus percentile**, breaking ties by original inventory index. The same indices order the baseline line, edited line, changed markers, and slider rows. The selected persona or an edit can change this order; sliders re-sort on release to avoid moving an active drag target. Sorting is presentation-only: the `currentProfile` raw-cosine array retains the predictor's canonical feature order, and Ridge/OOD calculations are unchanged. `Original order` restores the initial display.
 
+The profile section now follows the scatter plot. When a comparison persona is selected, its saved raw profile is converted to within-trait Qwen-corpus percentiles with the same reference arrays, then drawn as a separate line in the first profile's display order. The third chart shows `current edited first percentile − saved second percentile` for each trait; its vertical segments start on the centered zero axis, with fixed possible range −100 to +100 percentile points. The three charts share horizontal scroll and display order, and slider changes update the first and difference charts without changing the second. These rank differences are not raw activation-cosine differences or psychometric distances.
+
+The scatter comparison connector joins the two **saved actual** persona PCA coordinates, not the first persona's held-out predicted counterfactual. It is projected to the active PC pair in 2D and uses the full three coordinates in 3D. The comparison marker and connector are distinct from the existing actual-to-predicted trace. Selecting or clearing a comparison does not change the first persona, its raw-cosine predictor input, held-out prediction, OOD context, or camera orientation.
+
 ## OOD context
 
 The viewer reuses `ood_reference.json` and the deployed CLI calculation:
@@ -82,7 +86,7 @@ The test layers are intentionally distinguished:
 
 - `verification_report.json`: independent Python artifact and reference-implementation checks.
 - `node_verification_report.json`: browser-core JavaScript numerical checks for all held-out baselines and 30 modified cases.
-- `browser_verification_report.json`: real headless Google Chrome rendering and interaction checks, including list selection, plot selection, sliders, changed-only, reset, 2D projection, camera persistence, and synchronized sort/chart/slider behavior. This test forces ANGLE SwiftShader software WebGL and records the renderer, so it does not use a hardware GPU.
+- `browser_verification_report.json`: real headless Google Chrome rendering and interaction checks, including list selection, plot selection, sliders, changed-only, reset, 2D projection, camera persistence, synchronized sorting, the three comparison charts, and exact actual-to-actual connector endpoints in 2D/3D. This test forces ANGLE SwiftShader software WebGL and records the renderer, so it does not use a hardware GPU.
 
 ## Epistemic labels
 

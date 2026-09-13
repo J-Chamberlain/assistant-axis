@@ -164,6 +164,11 @@
     return order;
   }
 
+  function percentileDelta(first, second) {
+    if (first.length !== second.length) throw new Error("Profile lengths differ");
+    return first.map((value, index) => value - second[index]);
+  }
+
   return {
     dot,
     empiricalQuantile,
@@ -178,6 +183,7 @@
     projectProfile,
     reconstructionError,
     standardizedFeatures,
-    traitDisplayOrder
+    traitDisplayOrder,
+    percentileDelta
   };
 });

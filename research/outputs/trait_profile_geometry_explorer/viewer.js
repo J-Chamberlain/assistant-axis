@@ -16,6 +16,9 @@
   };
   const state = {
     selectedIndex: -1,
+    comparisonIndex: -1,
+    comparisonPercentiles: [],
+    comparisonDelta: [],
     baselineProfile: [],
     baselinePercentiles: [],
     currentProfile: [],
@@ -38,6 +41,10 @@
 
   function currentPersona() {
     return DATA.personas[state.selectedIndex];
+  }
+
+  function comparisonPersona() {
+    return state.comparisonIndex < 0 ? null : DATA.personas[state.comparisonIndex];
   }
 
   function buildPersonaOptions() {
@@ -81,7 +88,7 @@
       slider.addEventListener("input", () => setTraitPercentile(index, Number(slider.value), true, false));
       slider.addEventListener("change", () => {
         refreshTraitOrder();
-        renderEqualizer();
+        renderProfiles();
       });
 
       const value = document.createElement("output");
@@ -165,7 +172,32 @@
     state.sortMode = mode;
     byId("trait-sort").value = mode;
     refreshTraitOrder();
-    renderEqualizer();
+    renderProfiles();
+  }
+
+  function setComparisonPersona(name) {
+    const index = DATA.personas.findIndex((persona) => persona.name === name);
+    if (index < 0) throw new Error(`Unknown comparison persona: ${name}`);
+    state.comparisonIndex = index;
+    state.comparisonPercentiles = Core.profileToPercentiles(
+      DATA.personas[index].profile,
+      DATA.ood_reference.percentile_reference.sorted_raw_values_by_trait
+    );
+    state.comparisonDelta = Core.percentileDelta(state.currentPercentiles, state.comparisonPercentiles);
+    byId("comparison-input").value = name;
+    byId("clear-comparison").disabled = false;
+    renderProfiles();
+    return renderPlot();
+  }
+
+  function clearComparison() {
+    state.comparisonIndex = -1;
+    state.comparisonPercentiles = [];
+    state.comparisonDelta = [];
+    byId("comparison-input").value = "";
+    byId("clear-comparison").disabled = true;
+    renderProfiles();
+    return renderPlot();
   }
 
   function equalizerPath(percentiles, width, height) {
@@ -177,22 +209,32 @@
     }).join(" ");
   }
 
-  function renderEqualizer() {
-    const svg = byId("equalizer-svg");
-    const width = Math.max(3120, svg.parentElement.clientWidth);
+  function prepareProfileSvg(id, width) {
+    const svg = byId(id);
     const height = 180;
     svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
     svg.style.width = `${width}px`;
     svg.replaceChildren();
+    return svg;
+  }
+
+  function appendPercentileGrid(svg, width) {
     const ns = "http://www.w3.org/2000/svg";
     for (const value of [0, 25, 50, 75, 100]) {
-      const y = 12 + (100 - value) / 100 * (height - 24);
+      const y = 12 + (100 - value) / 100 * 156;
       const line = document.createElementNS(ns, "line");
       line.setAttribute("x1", "0"); line.setAttribute("x2", String(width));
       line.setAttribute("y1", String(y)); line.setAttribute("y2", String(y));
       line.setAttribute("stroke", "#29384c"); line.setAttribute("stroke-width", "1");
       svg.appendChild(line);
     }
+  }
+
+  function renderEqualizer(width) {
+    const svg = prepareProfileSvg("equalizer-svg", width);
+    const height = 180;
+    const ns = "http://www.w3.org/2000/svg";
+    appendPercentileGrid(svg, width);
     const baseline = document.createElementNS(ns, "path");
     baseline.setAttribute("d", equalizerPath(state.displayOrder.map((index) => state.baselinePercentiles[index]), width, height));
     baseline.setAttribute("fill", "none"); baseline.setAttribute("stroke", "#708197"); baseline.setAttribute("stroke-width", "1.4");
@@ -212,6 +254,66 @@
       title.textContent = `${DATA.traits[index].name}: ${fmt(state.currentPercentiles[index], 1)} percentile`;
       circle.appendChild(title);
       svg.appendChild(circle);
+    }
+  }
+
+  function renderComparisonProfile(width) {
+    const svg = prepareProfileSvg("comparison-svg", width);
+    appendPercentileGrid(svg, width);
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", equalizerPath(state.displayOrder.map((index) => state.comparisonPercentiles[index]), width, 180));
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", "#bd9bff");
+    path.setAttribute("stroke-width", "2");
+    svg.appendChild(path);
+  }
+
+  function renderDeltaProfile(width) {
+    const svg = prepareProfileSvg("delta-svg", width);
+    const ns = "http://www.w3.org/2000/svg";
+    const zero = 90;
+    const yAxis = document.createElementNS(ns, "line");
+    yAxis.setAttribute("x1", "12"); yAxis.setAttribute("x2", "12");
+    yAxis.setAttribute("y1", "12"); yAxis.setAttribute("y2", "168");
+    yAxis.setAttribute("stroke", "#93a4b7"); yAxis.setAttribute("stroke-width", "1.5");
+    svg.appendChild(yAxis);
+    const xAxis = document.createElementNS(ns, "line");
+    xAxis.setAttribute("x1", "12"); xAxis.setAttribute("x2", String(width));
+    xAxis.setAttribute("y1", String(zero)); xAxis.setAttribute("y2", String(zero));
+    xAxis.setAttribute("stroke", "#c5d2e0"); xAxis.setAttribute("stroke-width", "1.5");
+    svg.appendChild(xAxis);
+    state.displayOrder.forEach((index, rank) => {
+      const delta = state.comparisonDelta[index];
+      const x = 12 + rank * ((width - 24) / (DATA.traits.length - 1));
+      const line = document.createElementNS(ns, "line");
+      line.setAttribute("x1", String(x)); line.setAttribute("x2", String(x));
+      line.setAttribute("y1", String(zero)); line.setAttribute("y2", String(zero - delta * .78));
+      line.setAttribute("stroke", delta >= 0 ? "#5de1ff" : "#ff8e9a");
+      line.setAttribute("stroke-width", "5");
+      line.setAttribute("data-trait-index", String(index));
+      line.setAttribute("data-delta", String(delta));
+      const title = document.createElementNS(ns, "title");
+      title.textContent = `${DATA.traits[index].name}: ${delta >= 0 ? "+" : ""}${fmt(delta, 1)} percentile points (first − second)`;
+      line.appendChild(title);
+      svg.appendChild(line);
+    });
+  }
+
+  function renderProfiles() {
+    const width = Math.max(3120, byId("equalizer-svg").parentElement.clientWidth);
+    byId("primary-profile-title").textContent = `First profile · ${currentPersona().name} (editable)`;
+    renderEqualizer(width);
+    const comparison = comparisonPersona();
+    byId("comparison-empty").hidden = Boolean(comparison);
+    byId("comparison-charts").hidden = !comparison;
+    byId("comparison-legend").hidden = !comparison;
+    if (comparison) {
+      byId("comparison-profile-title").textContent = `Second profile · ${comparison.name} (saved)`;
+      renderComparisonProfile(width);
+      renderDeltaProfile(width);
+      const scroll = byId("equalizer-svg").parentElement.scrollLeft;
+      byId("comparison-svg").parentElement.scrollLeft = scroll;
+      byId("delta-svg").parentElement.scrollLeft = scroll;
     }
   }
 
@@ -300,6 +402,39 @@
     }];
   }
 
+  function comparisonTraces3d(actual) {
+    const comparison = comparisonPersona();
+    if (!comparison) return [];
+    const other = comparison.coordinate;
+    return [{
+      type: "scatter3d", mode: "lines", name: "persona comparison connector", showlegend: false,
+      x: [actual[0], other[0]], y: [actual[1], other[1]], z: [actual[2], other[2]],
+      hoverinfo: "skip", line: { color: "#bd9bff", width: 8 }
+    }, {
+      type: "scatter3d", mode: "markers+text", name: "comparison actual", showlegend: false,
+      x: [other[0]], y: [other[1]], z: [other[2]], text: [`${comparison.name} comparison`], textposition: "top center",
+      hovertemplate: "%{text}<br>PC1 %{x:.3f}<br>PC2 %{y:.3f}<br>PC3 %{z:.3f}<extra></extra>",
+      marker: { size: 9, color: "#bd9bff", symbol: "square", line: { color: "#080d14", width: 2 } }
+    }];
+  }
+
+  function comparisonTraces2d(actual) {
+    const comparison = comparisonPersona();
+    if (!comparison) return [];
+    const [xIndex, yIndex] = state.axes;
+    const first = Core.projectAxes(actual, state.axes);
+    const other = Core.projectAxes(comparison.coordinate, state.axes);
+    return [{
+      type: "scatter", mode: "lines", name: "persona comparison connector", showlegend: false, hoverinfo: "skip",
+      x: [first[0], other[0]], y: [first[1], other[1]], line: { color: "#bd9bff", width: 3 }
+    }, {
+      type: "scatter", mode: "markers+text", name: "comparison actual", showlegend: false,
+      x: [other[0]], y: [other[1]], text: [`${comparison.name} comparison`], textposition: "top center",
+      hovertemplate: `%{text}<br>${PC_NAMES[xIndex]} %{x:.3f}<br>${PC_NAMES[yIndex]} %{y:.3f}<extra></extra>`,
+      marker: { size: 13, color: "#bd9bff", symbol: "square", line: { color: "#080d14", width: 2 } }
+    }];
+  }
+
   function plotLayout() {
     const common = {
       paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)", font: { color: "#dce6f1", size: 11 },
@@ -324,8 +459,8 @@
     if (!window.Plotly) throw new Error("Plotly failed to load");
     const persona = currentPersona();
     const traces = state.view === "3d"
-      ? clusterTraces3d().concat(specialTraces3d(persona.coordinate, state.prediction))
-      : clusterTraces2d().concat(specialTraces2d(persona.coordinate, state.prediction));
+      ? clusterTraces3d().concat(specialTraces3d(persona.coordinate, state.prediction), comparisonTraces3d(persona.coordinate))
+      : clusterTraces2d().concat(specialTraces2d(persona.coordinate, state.prediction), comparisonTraces2d(persona.coordinate));
     state.rendering = true;
     return Plotly.react("geometry-plot", traces, plotLayout(), {
       responsive: true, displaylogo: false, scrollZoom: true, modeBarButtonsToRemove: ["lasso2d", "select2d"]
@@ -359,9 +494,12 @@
     const persona = currentPersona();
     state.prediction = Core.predictRidge(state.currentProfile, LOPO[persona.name]);
     state.ood = Core.oodDiagnostic(state.currentProfile, DATA.ood_reference, persona.name);
+    state.comparisonDelta = comparisonPersona()
+      ? Core.percentileDelta(state.currentPercentiles, state.comparisonPercentiles)
+      : [];
     if (resort) refreshTraitOrder();
     updateMetrics();
-    renderEqualizer();
+    renderProfiles();
     return renderPlot();
   }
 
@@ -405,6 +543,10 @@
     return {
       persona: persona.name,
       actual: persona.coordinate.slice(),
+      comparison_persona: comparisonPersona() ? comparisonPersona().name : null,
+      comparison_coordinate: comparisonPersona() ? comparisonPersona().coordinate.slice() : null,
+      comparison_percentiles: state.comparisonPercentiles.slice(),
+      comparison_delta: state.comparisonDelta.slice(),
       prediction: state.prediction.slice(),
       projected_prediction: Core.projectAxes(state.prediction, state.axes),
       projected_actual: Core.projectAxes(persona.coordinate, state.axes),
@@ -431,6 +573,15 @@
     byId("persona-input").addEventListener("keydown", (event) => {
       if (event.key === "Enter") byId("load-persona").click();
     });
+    byId("load-comparison").addEventListener("click", () => {
+      const name = byId("comparison-input").value.trim();
+      if (DATA.personas.some((persona) => persona.name === name)) setComparisonPersona(name);
+      else byId("app-status").textContent = `Unknown comparison persona: ${name}`;
+    });
+    byId("comparison-input").addEventListener("keydown", (event) => {
+      if (event.key === "Enter") byId("load-comparison").click();
+    });
+    byId("clear-comparison").addEventListener("click", clearComparison);
     byId("view-3d").addEventListener("click", () => setView("3d"));
     byId("view-2d").addEventListener("click", () => setView("2d"));
     byId("x-axis").addEventListener("change", () => {
@@ -448,6 +599,13 @@
     byId("trait-sort").addEventListener("change", () => setTraitSort(byId("trait-sort").value));
     byId("changed-only").addEventListener("change", filterTraits);
     byId("reset-all").addEventListener("click", resetAll);
+    for (const scroll of document.querySelectorAll(".profile-scroll")) {
+      scroll.addEventListener("scroll", () => {
+        for (const other of document.querySelectorAll(".profile-scroll")) {
+          if (other !== scroll && other.scrollLeft !== scroll.scrollLeft) other.scrollLeft = scroll.scrollLeft;
+        }
+      });
+    }
     const plot = byId("geometry-plot");
     plot.on("plotly_click", (event) => {
       const name = event.points && event.points[0] && event.points[0].customdata;
@@ -487,7 +645,9 @@
     data: () => DATA,
     models: () => LOPO,
     resetAll,
+    clearComparison,
     selectPersona,
+    setComparisonPersona,
     setAxes,
     setTraitPercentile,
     setTraitSort,

@@ -60,6 +60,10 @@ The pre-existing trait-ridge Python verification, trait-surface Python verificat
 
 The 2026-09-13 display-only sort revision was rebuilt with `--viewer-only` from unchanged saved data/model JSON. Node checks cover descending/tied ordering without input mutation. Live Chrome checks confirm the chart and slider order agree after sort, native edits, persona changes, and restoration to inventory order; merely sorting changes neither the raw profile nor the predicted coordinate (maximum difference `0`).
 
+The 2026-09-13 comparison revision places the trait profile section below the scatter plot. A second selectable saved persona yields its own 240-point percentile line, followed by a fixed ±100 percentile-point difference chart (`first editable − second saved`) drawn as vertical segments from a zero-crossing horizontal axis. All three charts share the same trait order and synchronized horizontal scroll position; the original 240 sliders remain underneath. The 2D/3D scatter retains the selected actual and held-out prediction markers and adds a distinct comparison marker plus an actual-to-actual connector. The second persona may equal the first, allowing an edited-vs-saved self-comparison. Comparison selection is presentation-only and leaves the held-out prediction unchanged.
+
+Live headless Chrome verified exact comparison percentiles and per-trait deltas, 240 vertical bars and zero axes, chart placement/order/scroll synchronization, sorting and edits, persistence across primary-persona changes, clearing, and exact connector endpoints in both 2D and 3D (all coordinate/delta errors `0`; SVG rounded-line maximum error `<0.005`). The existing all-275 held-out numerical checks, reset, plot/list selection, and camera behavior remain passing.
+
 ## Scientific interpretation boundary
 
 **Observed:** The browser implements the saved transformation and per-persona held-out Ridge mappings to strict numerical tolerance.
