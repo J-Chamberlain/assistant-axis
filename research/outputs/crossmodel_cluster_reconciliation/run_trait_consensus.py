@@ -170,7 +170,10 @@ def main():
         core = sorted(r for r, count in role_support.items() if count == 3)
         majority = sorted(r for r, count in role_support.items() if count >= 2)
         fringe = {m: sorted(r for r in model_role_sets[m] if role_support[r] == 1) for m in MODELS}
-        edge_data = [d for _, _, d in sub.edges(data=True)]
+        edge_data = sorted(
+            [d for _, _, d in sub.edges(data=True)],
+            key=lambda d: (d["model_a"], d["model_b"], int(d["K_a"]), int(d["K_b"]), d["profile_a"], d["profile_b"]),
+        )
         raw_components.append({
             "nodes": sorted(nodes),
             "models": models,
