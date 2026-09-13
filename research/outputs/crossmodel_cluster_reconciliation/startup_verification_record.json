@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "checked_at_utc_date": "2026-09-13",
+  "source_ref": "master",
+  "manifest_generation_timestamp_utc": "2026-09-12T21:15:38Z",
+  "checks": [
+    {
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/STARTUP_MANIFEST.md",
+      "http_status": 200,
+      "bytes": 4521,
+      "sha256": "a1791983863ce43c2d75d73101f557a484bc5a6fc07445d3cc41b5a3f338a8cf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md",
+      "http_status": 200,
+      "bytes": 185112,
+      "sha256": "272020b975c78eb4dce86e83b6ea5bff0015787eb2e3c2782c28759f17d8cdf8",
+      "visible_metadata_match": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md",
+      "http_status": 200,
+      "bytes": 38451,
+      "sha256": "3433cf08fb8d3cbf94a95f450c4ab8f2418d612d587c871c6ea8336e2f49d29a",
+      "visible_metadata_match": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md",
+      "http_status": 200,
+      "bytes": 50422,
+      "sha256": "7f543f3a5a5f8fa308c9ddfbf2efa6068ea7a7e516c7a133a08e14b63b1c69d0",
+      "visible_metadata_match": true
+    }
+  ],
+  "canonical_navigation_consulted": [
+    "research/REPO_NAVIGATION.md",
+    "research/REPO_FILE_INDEX.csv",
+    "research/RAW_URL_INDEX.md",
+    "research/RESEARCH_INDEX.md",
+    "research/PROVENANCE_REGISTRY.md",
+    "research/FINDINGS_LEDGER.md"
+  ]
+}
