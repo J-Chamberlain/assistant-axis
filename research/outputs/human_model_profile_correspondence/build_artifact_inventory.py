@@ -17,7 +17,9 @@ BRANCH = "codex/aa12-human-model-profile-correspondence"
 def git_log(path: str, introducing: bool) -> str:
     args = ["git", "log"]
     if introducing:
-        args += ["--diff-filter=A", "--follow"]
+        # The introducing commit is for this exact path. Do not follow rename
+        # similarity into a different analysis directory.
+        args += ["--diff-filter=A"]
     args += ["-1", "--format=%H", "--", path]
     return subprocess.check_output(args, cwd=REPO, text=True).strip()
 
