@@ -1,0 +1,218 @@
+{
+  "status": "PASS",
+  "url": "file:///Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-aa11/research/outputs/human_profile_terrain_overlay/human_profile_terrain_overlay.html",
+  "browser": "Google Chrome 152.0.7977.84",
+  "desktop": [
+    {
+      "check": "initial render",
+      "passed": true,
+      "observed": {
+        "types": [
+          "isosurface",
+          "scatter3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "scatter3d"
+        ],
+        "humans": true,
+        "k": "6",
+        "t": "12",
+        "mode": "ridge",
+        "title": "Aggregate human profiles in model persona terrain"
+      }
+    },
+    {
+      "check": "default K6 primary Ridge",
+      "passed": true,
+      "observed": {
+        "types": [
+          "isosurface",
+          "scatter3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "scatter3d"
+        ],
+        "humans": true,
+        "k": "6",
+        "t": "12",
+        "mode": "ridge",
+        "title": "Aggregate human profiles in model persona terrain"
+      }
+    },
+    {
+      "check": "model switch",
+      "passed": true,
+      "observed": "LLaMA 3.3 70B \u00b7 3d \u00b7 occupancy \u00b7 coverage 80 \u00b7 role inventory N=275"
+    },
+    {
+      "check": "K and trait switch",
+      "passed": true,
+      "observed": {
+        "k": "10",
+        "t": "45"
+      }
+    },
+    {
+      "check": "kNN 2D mode",
+      "passed": true,
+      "observed": [
+        [
+          "Role-only KDE contours",
+          "contour"
+        ],
+        [
+          "Sampled roles",
+          "scattergl"
+        ],
+        [
+          "Predicted human profiles",
+          "scatter"
+        ]
+      ]
+    },
+    {
+      "check": "aligned comparison",
+      "passed": true,
+      "observed": "Display-aligned shared-role overlay \u00b7 non-native axes"
+    },
+    {
+      "check": "human overlay toggle",
+      "passed": true,
+      "observed": [
+        "Qwen 3 32B",
+        "LLaMA 3.3 70B",
+        "Gemma 2 27B"
+      ]
+    },
+    {
+      "check": "no local paths in page",
+      "passed": true,
+      "observed": "file:///Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-aa11/research/outputs/human_profile_terrain_overlay/human_profile_terrain_overlay.html"
+    },
+    {
+      "check": "screenshot",
+      "passed": true,
+      "observed": 177236
+    },
+    {
+      "check": "no JavaScript errors",
+      "passed": true,
+      "observed": []
+    }
+  ],
+  "mobile": [
+    {
+      "check": "initial render",
+      "passed": true,
+      "observed": {
+        "types": [
+          "isosurface",
+          "scatter3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "scatter3d"
+        ],
+        "humans": true,
+        "k": "6",
+        "t": "12",
+        "mode": "ridge",
+        "title": "Aggregate human profiles in model persona terrain"
+      }
+    },
+    {
+      "check": "default K6 primary Ridge",
+      "passed": true,
+      "observed": {
+        "types": [
+          "isosurface",
+          "scatter3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "mesh3d",
+          "scatter3d"
+        ],
+        "humans": true,
+        "k": "6",
+        "t": "12",
+        "mode": "ridge",
+        "title": "Aggregate human profiles in model persona terrain"
+      }
+    },
+    {
+      "check": "model switch",
+      "passed": true,
+      "observed": "LLaMA 3.3 70B \u00b7 3d \u00b7 occupancy \u00b7 coverage 80 \u00b7 role inventory N=275"
+    },
+    {
+      "check": "K and trait switch",
+      "passed": true,
+      "observed": {
+        "k": "10",
+        "t": "45"
+      }
+    },
+    {
+      "check": "kNN 2D mode",
+      "passed": true,
+      "observed": [
+        [
+          "Role-only KDE contours",
+          "contour"
+        ],
+        [
+          "Sampled roles",
+          "scattergl"
+        ],
+        [
+          "Predicted human profiles",
+          "scatter"
+        ]
+      ]
+    },
+    {
+      "check": "aligned comparison",
+      "passed": true,
+      "observed": "Display-aligned shared-role overlay \u00b7 non-native axes"
+    },
+    {
+      "check": "human overlay toggle",
+      "passed": true,
+      "observed": [
+        "Qwen 3 32B",
+        "LLaMA 3.3 70B",
+        "Gemma 2 27B"
+      ]
+    },
+    {
+      "check": "no local paths in page",
+      "passed": true,
+      "observed": "file:///Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis-aa11/research/outputs/human_profile_terrain_overlay/human_profile_terrain_overlay.html"
+    },
+    {
+      "check": "screenshot",
+      "passed": true,
+      "observed": 89290
+    },
+    {
+      "check": "no JavaScript errors",
+      "passed": true,
+      "observed": []
+    }
+  ],
+  "passed": 20
+}

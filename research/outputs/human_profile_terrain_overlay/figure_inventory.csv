@@ -1,0 +1,13 @@
+figure_id,path,description,source
+qwen_k6_shared12_overlay,figures/qwen_k6_shared12_overlay.png,Qwen native role terrain with K6 primary aggregate Ridge projections,role_coordinates.csv + human_projection_12.csv
+llama_k6_shared12_overlay,figures/llama_k6_shared12_overlay.png,LLaMA native role terrain with K6 primary aggregate Ridge projections,role_coordinates.csv + human_projection_12.csv
+gemma_k6_shared12_overlay,figures/gemma_k6_shared12_overlay.png,Gemma native role terrain with K6 primary aggregate Ridge projections,role_coordinates.csv + human_projection_12.csv
+qwen_k10_shared12_overlay,figures/qwen_k10_shared12_overlay.png,Qwen native role terrain with K10 primary aggregate Ridge projections,role_coordinates.csv + human_projection_12.csv
+llama_k10_shared12_overlay,figures/llama_k10_shared12_overlay.png,LLaMA native role terrain with K10 primary aggregate Ridge projections,role_coordinates.csv + human_projection_12.csv
+gemma_k10_shared12_overlay,figures/gemma_k10_shared12_overlay.png,Gemma native role terrain with K10 primary aggregate Ridge projections,role_coordinates.csv + human_projection_12.csv
+shared12_vs_shared45_displacement,figures/shared12_vs_shared45_displacement.png,Eligible-profile displacement between primary and sensitivity projections,human_projection_12_vs_45.csv
+ridge_vs_interpolation_diagnostic,figures/ridge_vs_interpolation_diagnostic.png,Primary Ridge versus support-constrained kNN displacement,human_projection_ridge_vs_knn.csv
+human_projection_terrain_sparsity,figures/human_projection_terrain_sparsity.png,Model-terrain sparsity of primary predicted locations,human_projection_coverage_relation.csv
+bootstrap_coverage_envelope_stability,figures/bootstrap_coverage_envelope_stability.png,Bootstrap projection fraction inside the frozen model 95 percent sampled-role region,human_projection_bootstrap_summary.csv
+viewer_desktop,figures/viewer_desktop.png,Headless Chrome desktop render of the interactive overlay,human_profile_terrain_overlay.html
+viewer_mobile,figures/viewer_mobile.png,Headless Chrome mobile-width render of the interactive overlay,human_profile_terrain_overlay.html

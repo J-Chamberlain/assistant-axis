@@ -1,0 +1,17 @@
+{
+  "status": "frozen derivative analysis",
+  "method_freeze": "58529805ce25f0c1e6ab2716fad4eaa8bc4b80e0",
+  "model_validation_freeze": "1fbf9500cca092f5949a06f497f5d502f1ebc5c3",
+  "human_projection_freeze": "9b84bf339d52b710117aed07799d9b308d097141",
+  "model_terrain_final": "103c13ea692ed7e1c9cb8309bfc8b150171e7b40",
+  "model_terrain_numerical": "9335ffaeac215cfdbb709b041c1fa1db0d8f754e",
+  "model_terrain_viewer": "bdecaee2511a19d7c52fd796bf19bbc1c83f803d",
+  "model_only_viewer_sha256": "47652660aa614930d94ff2b3962612d66c1cd78892806eb9ab791b4dc6a0c60b",
+  "human_inputs": [
+    "research/outputs/human_model_profile_correspondence/human_trait_profiles_12.csv",
+    "research/outputs/human_model_profile_correspondence/human_trait_profiles_45.csv"
+  ],
+  "terrain_input": "research/outputs/model_coverage_terrain_viewer/terrain_viewer_data.json",
+  "display_alignment": "research/outputs/human_supported_trait_convergence/procrustes_alignment_matrices.json",
+  "privacy": "aggregate human latent profiles only; no respondent-level records"
+}

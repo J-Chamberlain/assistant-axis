@@ -1,0 +1,11 @@
+figure,model,K,trait_set,source
+qwen_k6_shared12_overlay.png,qwen,6,12,role_coordinates.csv + human_projection_12.csv
+qwen_k10_shared12_overlay.png,qwen,10,12,role_coordinates.csv + human_projection_12.csv
+llama_k6_shared12_overlay.png,llama,6,12,role_coordinates.csv + human_projection_12.csv
+llama_k10_shared12_overlay.png,llama,10,12,role_coordinates.csv + human_projection_12.csv
+gemma_k6_shared12_overlay.png,gemma,6,12,role_coordinates.csv + human_projection_12.csv
+gemma_k10_shared12_overlay.png,gemma,10,12,role_coordinates.csv + human_projection_12.csv
+shared12_vs_shared45_displacement.png,all,eligible,12_vs_45,human_projection_12_vs_45.csv
+ridge_vs_interpolation_diagnostic.png,all,eligible,12,human_projection_ridge_vs_knn.csv
+human_projection_terrain_sparsity.png,all,eligible,12,human_projection_coverage_relation.csv
+bootstrap_coverage_envelope_stability.png,all,eligible,12,human_projection_bootstrap_summary.csv
