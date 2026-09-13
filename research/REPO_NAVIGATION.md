@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-13T16:53:34Z
-Last commit when updated: 25aa232 (registered cross-resolution banks and preserved canonical index encoding)
+Updated UTC: 2026-09-13T17:54:35Z
+Last commit when updated: 5641ce1 (inventoried cross-model reconciliation artifacts)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 4051
+- active analyses: 4095
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 12
@@ -58,6 +58,8 @@ SAPA item-coverage frontier: `research/outputs/sapa_item_coverage_frontier/sapa_
 SAPA partial-response latent profiles: `research/outputs/sapa_partial_response_latent_profiles/sapa_partial_response_latent_profiles_report.md` is the AA-12 follow-up entry point for the human-only six-category product-multinomial mixture fitted directly to observed partial responses. The pre-fit method was frozen in `6b2e460`, anonymous numerical profiles in `f0e5572`, semantic interpretation in `80aae41`, and 61-check verification in `537830e`. Frozen selection evidence conflicts: validation favors eligible K=10, BIC/ICL favor K=4, their support sets do not intersect, K=4 split-refit stability is moderate, K=10 is low, response-style warnings trigger for both, and administration-mask warnings do not. Use `frozen_profile_item_probabilities.csv` for complete six-category aggregate profiles, `model_selection_metrics.csv` for K evidence, `profile_stability_metrics.csv`, `posterior_certainty_summary.csv`, and the artifact diagnostics for qualifications. No unique K, answer threshold, natural type claim, model geometry, human/model comparison, external profile-literature verification, respondent posterior, or individual imputation was produced.
 
 Cross-resolution profile solution banks: `research/outputs/cross_resolution_profile_banks/report.md` is the AA-12 follow-up-2 entry point for two independently frozen K=4–10 inputs to later Track 1 design. Human solutions exactly reuse the AA-12 categorical observed-cell method: K=4–8 and K=10 retain eligible status, while K=9 remains `DIAGNOSTIC / INELIGIBLE`; split-refit stability is moderate at K=4–6 and low at K=7–10, response-style warnings occur at every K, and mask warnings occur at none. Qwen/LLaMA/Gemma use independent 100-start spherical K-means on the canonical 275 layer-mean/L2-normalized role vectors plus 50 deterministic 80% refits; model stability is mainly moderate/low and small-cluster warnings appear from Qwen K=7 and at every LLaMA/Gemma K. Use `human/human_cross_resolution_profiles.csv`, each model's `memberships.csv` and `trait_profiles.csv`, and the within-domain adjacent-K tables. Model method freeze: `34dc9fa`; numerical-bank freeze: `d0c902b`; post-freeze semantics: `423fde6`. No human/model similarity, matching, same-K rule, or preferred cross-domain K pair was produced.
+
+Cross-model cluster reconciliation: `research/outputs/crossmodel_cluster_reconciliation/crossmodel_cluster_reconciliation_report.md` is the AA-12 follow-up-3 entry point. It reuses the exact frozen Qwen/LLaMA/Gemma K=4–10 memberships without reclustering and compares the same 275 opaque role IDs across all 147 K-pair cells and 343 K triples. Method freeze: `2a38f67`; partition-agreement freeze: `4b16aac`; cluster-overlap/persistence/tiny-cluster freeze: `93aa390`; secondary trait/consensus output: `83e0e54`; semantic interpretation: `0e868aa`; verification: `b2c7457`. The best and quality-constrained triple is Qwen K=6/LLaMA K=9/Gemma K=6 (mean AMI 0.644895; 5,000-draw search-adjusted p=0.000200), within an eight-triple ridge. Four broad direct three-model candidate families plus a resolution-dependent developmental outlier family are supported; a creative/conceptual region is deliberately not accepted by the anti-transitivity rule. Use `pairwise_k_agreement.csv`, `triple_k_agreement.csv`, `cluster_overlap_edges.csv`, `cross_resolution_persistence.csv`, `tiny_cluster_audit.csv`, and the `candidate_consensus_*` outputs. The 240-trait confirmation is secondary same-activation-space evidence. No human or SAPA artifact was loaded and no human/model matching occurred.
 
 Human-supported trait convergence and aligned subspaces: `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md` is the AA-7 entry point. The exact 12 AA-1-supported labels and all decisions were frozen before outcomes. Use `comparator_summary.csv` for the matched compact prediction result, `procrustes_alignment_cv.csv` and `procrustes_alignment_null.csv` for held-out alignment evidence, `aligned_human_supported_trait_directions.csv` and `aligned_big_five_directions.csv` for recurrence, and `verification_report.json` plus `artifact_inventory.csv` for reproduction/provenance. The primary compact-efficiency result is weak/absent; the separate activation-derived aligned-direction recurrence is strong. No human respondent or occupational centroid was projected.
 

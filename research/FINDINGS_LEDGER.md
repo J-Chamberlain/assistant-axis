@@ -4,6 +4,14 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### Frozen Model Partitions Reconcile into Broad Cross-Resolution Families (2026-09-13)
+
+AA-12 follow-up 3 exhaustively compared the already-frozen Qwen/LLaMA/Gemma K=4–10 role partitions over the same 275 roles. The primary AMI scan covers 49 K pairs per model pair and all 343 triples. Qwen K=6/LLaMA K=9/Gemma K=6 is both the global and frozen-quality-constrained maximum: pairwise AMIs are 0.618967, 0.666448, and 0.649270 (mean 0.644895). Eight triples lie within 0.02 of the maximum. A 5,000-draw null that preserves every exact partition, cluster-size vector, tiny group, and within-model cross-K relationship yields search-adjusted p=0.000200 for the triple maximum and each pairwise maximum.
+
+Across all resolutions, 961 cluster pairs meet the preregistered role-overlap/enrichment rule; 688 are high and 194 moderate in the neighboring-K persistence audit. At the mechanically chosen Q6/L9/G6 anchor, an anti-transitive graph supports four broad components with direct Qwen-LLaMA, Qwen-Gemma, and LLaMA-Gemma edges: analytical/professional, mythic/symbolic, informal life-stage/social, and adversarial/competitive. A fifth caveman/infant/toddler developmental outlier component is two-model at the anchor but recurs across all three models at neighboring K. Majority roles from accepted components cover 220/275 roles with no majority ambiguity. A creative/conceptual region is deliberately not promoted because its direct Qwen-LLaMA edge is isolated under the frozen persistence rule.
+
+Interpretation: cross-model profile recurrence is better represented as four broad families plus resolution-dependent subdivisions/outliers than as one universal flat K. Secondary 240-trait correlations for the broad families are high (Pearson 0.805–0.957), but share activation provenance and are not independent validation. This is a bounded model-only finding over a designed role inventory. It does not establish population prevalence, universal personality types, or correspondence with human SAPA profiles.
+
 ### Cross-Resolution Profile Banks Expose Stability and Small-Cluster Limits Before Matching (2026-09-13)
 
 AA-12 follow-up 2 froze independent K=4–10 solution banks under `research/outputs/cross_resolution_profile_banks/`. The unchanged SAPA observed-cell mixture exactly reproduces its prior frozen fits: K=4–8 and K=10 remain eligible, K=9 remains diagnostic/ineligible, split-refit profile distance rises from moderate at K=4–6 (0.0917–0.1175) to low stability at K=7–10 (0.1332–0.1583), response-style warnings trigger at every K, and administration-mask warnings trigger at none. Adjacent expected-response profiles remain descriptively recognizable, but distances generally grow at the finer resolutions.
