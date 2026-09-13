@@ -1,0 +1,88 @@
+{
+  "analysis_model": "GPT-5.5",
+  "generated_utc": "2026-09-13T13:07:54-07:00",
+  "method_freeze_commit": "5c2814f7554d26cfce97cb83fd0cda34ffbf2333",
+  "scope": "model-only curated-role sample occupancy; no human input",
+  "inputs": [
+    {
+      "path": "research/outputs/extended_persona_pca/viewer_data.json",
+      "sha256": "672c617758ace9654708d5f248e094d3005f19ee5237d3918a159bc0e3d813d3",
+      "bytes": 392114
+    },
+    {
+      "path": "research/outputs/extended_persona_pca/source_manifest.json",
+      "sha256": "24aa559170ede3a222cb13793426c5ec90272e610c5328b3f0700e202d0cae7b",
+      "bytes": 19412
+    },
+    {
+      "path": "research/outputs/crossmodel_cluster_reconciliation/consensus_family_roles.csv",
+      "sha256": "212a32b3edc187fa837a6dc31b66b1bf4c05ab3e39bfb837ef1b07068c0ab24c",
+      "bytes": 13267
+    },
+    {
+      "path": "research/outputs/crossmodel_cluster_reconciliation/candidate_consensus_families.csv",
+      "sha256": "ed109cda337fd9a7e4672ef6c7ed6750139216326ced9ce3a7ab246bc42e3b6c",
+      "bytes": 1554
+    },
+    {
+      "path": "research/outputs/cross_resolution_profile_banks/model/qwen/memberships_with_role_names.csv",
+      "sha256": "392f686a79f5b6a86fc19ca50778b9a2fb7bf290504de3497ff8901708049135",
+      "bytes": 93946
+    },
+    {
+      "path": "research/geometry_tables/qwen_trait_pc_rankings.csv",
+      "sha256": "3063da7db511bb31602e070f9f131f4ad5c768887b86fa384010de6bec9ee56c",
+      "bytes": 40282
+    },
+    {
+      "path": "research/outputs/human_supported_trait_convergence/procrustes_alignment_matrices.json",
+      "sha256": "045f723df1340fb1eccff01eb4c562c8597cde74f449bc64ee7258417be21b96",
+      "bytes": 21987,
+      "access": "git object; model-only transform"
+    }
+  ],
+  "coordinate_verification": {
+    "models": [
+      "qwen",
+      "llama",
+      "gemma"
+    ],
+    "roles_per_model": {
+      "gemma": 275,
+      "llama": 275,
+      "qwen": 275
+    },
+    "identical_role_sets": true,
+    "finite_native_coordinates": true,
+    "no_role_vector_recomputation": true
+  },
+  "parameters": {
+    "kde": "scipy gaussian_kde full covariance Scott",
+    "bandwidth_multipliers": [
+      0.75,
+      1.0,
+      1.25
+    ],
+    "grid_3d": 36,
+    "grid_2d": 80,
+    "coverage_levels": [
+      0.5,
+      0.8,
+      0.95
+    ],
+    "nearest_neighbor_k": 10,
+    "minimum_family_envelope_n": 10,
+    "fallback_seed": 120926
+  },
+  "boundaries": {
+    "roles_only_define_occupancy": true,
+    "trait_landmarks_excluded_from_density": true,
+    "human_artifacts_loaded": false,
+    "human_model_correspondence_loaded": false,
+    "new_inference": false,
+    "activation_extraction": false,
+    "external_api": false,
+    "gpu": false,
+    "runpod": false
+  }
+}

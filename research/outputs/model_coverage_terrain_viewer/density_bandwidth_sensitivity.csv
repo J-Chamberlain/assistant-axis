@@ -1,0 +1,10 @@
+model,model_label,bandwidth_multiplier,effective_kde_factor,role_density_rank_spearman_vs_primary,densest_decile_jaccard_vs_primary,sparsest_decile_jaccard_vs_primary,grid_density_pearson_vs_primary,density_ordering_robust_at_frozen_rule,dense_extreme_robust_at_frozen_rule,sparse_extreme_robust_at_frozen_rule
+qwen,Qwen 3 32B,0.75,0.336190288822,0.983363434408,0.75,0.806451612903,0.980476643379,True,True,True
+qwen,Qwen 3 32B,1,0.448253718429,1,1,1,1,True,True,True
+qwen,Qwen 3 32B,1.25,0.560317148037,0.988885490898,0.806451612903,0.866666666667,0.987180487991,True,True,True
+llama,LLaMA 3.3 70B,0.75,0.336190288822,0.992546666282,0.806451612903,0.866666666667,0.975109586753,True,True,True
+llama,LLaMA 3.3 70B,1,0.448253718429,1,1,1,1,True,True,True
+llama,LLaMA 3.3 70B,1.25,0.560317148037,0.995237875422,0.69696969697,0.866666666667,0.983492589251,True,False,True
+gemma,Gemma 2 27B,0.75,0.336190288822,0.991592279507,0.806451612903,0.69696969697,0.979849277146,True,True,False
+gemma,Gemma 2 27B,1,0.448253718429,1,1,1,1,True,True,True
+gemma,Gemma 2 27B,1.25,0.560317148037,0.994876662531,0.69696969697,0.806451612903,0.986178114256,True,False,True
