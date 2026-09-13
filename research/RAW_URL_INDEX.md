@@ -1,12 +1,13 @@
 # Raw URL Index
 
-Updated UTC: 2026-09-12
-Base commit for this update: b9b6008 (AA-7 canonical semantic reconciliation; links become live after master push)
+Updated UTC: 2026-09-13T13:09:12Z
+Base commit for this update: INTRO_COMMIT (AA-11 correspondence-track planning note introduction; canonical link becomes live after master integration)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
 |---|---|---|---|---|
+| active | active analyses | `research/interpretation_notes/human_model_correspondence_research_tracks_2026-09.md` | AA-11 three-track human/model correspondence continuity note; Track 1 active, Tracks 2-3 parked; introduced in `INTRO_COMMIT` | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/interpretation_notes/human_model_correspondence_research_tracks_2026-09.md |
 | active | trait analyses | `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md` | AA-7 frozen human-supported compact-efficiency and aligned-subspace report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md |
 | active | trait analyses | `research/outputs/human_supported_trait_convergence/comparator_summary.csv` | Human 12, optimized, random/generic, Big Five, direct-45, and full-240 comparison | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/comparator_summary.csv |
 | active | trait analyses | `research/outputs/human_supported_trait_convergence/human_supported_trait_set_freeze.json` | Pre-outcome exact AA-1 12-trait freeze and provenance | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/human_supported_trait_set_freeze.json |

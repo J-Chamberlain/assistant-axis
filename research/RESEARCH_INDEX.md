@@ -14,6 +14,10 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 
 `research/outputs/sapa_bridge_psychometric_audit/` remains the human-only SAPA measurement gate. AA-7 used its 9 high + 3 moderate labels only to freeze model constructs and projected no respondents. Because the frozen 12 did not beat matched random-real subsets and passed only two core-only persona-span controls, AA-7's preregistered gate for designing a respondent-to-model projection study failed. Independent expert review and reduced-bridge scoring-method work may proceed as human measurement research; AA-7 alone does not justify human/model projection.
 
+## Human/Model Correspondence Tracks (AA-11, 2026-09-13)
+
+`research/interpretation_notes/human_model_correspondence_research_tracks_2026-09.md` is the active continuity note. Track 1, independent profile-group correspondence, is ACTIVE. Track 2, PC-pole profile correspondence, and Track 3, trait-relationship structural correspondence, are PARKED. Where practical, the tracks should eventually share one frozen human/model feature representation, but AA-11 deliberately does not choose it. Constructing that common feature/profile representation is the next Track 1 methodological question. No human/model analysis, finding, or claim was created.
+
 ## Integrated AA-1 Through AA-7 Entry Points (2026-09-12)
 
 - AA-1 human SAPA psychometric structure: `research/outputs/sapa_bridge_psychometric_audit/sapa_bridge_psychometric_audit_report.md`
