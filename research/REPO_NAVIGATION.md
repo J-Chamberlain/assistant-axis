@@ -1,7 +1,7 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-13T17:54:35Z
-Last commit when updated: 5641ce1 (inventoried cross-model reconciliation artifacts)
+Last commit when updated: df39509 (registered cross-model reconciliation state)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 

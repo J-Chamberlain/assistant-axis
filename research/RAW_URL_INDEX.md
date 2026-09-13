@@ -1,7 +1,7 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-13T17:54:35Z
-Base commit for this update: 5641ce1 (inventoried cross-model reconciliation artifacts; canonical links become live after master integration)
+Base commit for this update: df39509 (registered cross-model reconciliation state; canonical links become live after master integration)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
