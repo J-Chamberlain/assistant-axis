@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-12T21:15:38Z`
-- Current branch: `codex/aa9-startup-manifest-repair`
-- generation base commit: `8f4e589df5d92217e56f76a978d51df07af5aa3a`
+- Generated timestamp UTC: `2026-09-13T13:11:37Z`
+- Current branch: `codex/aa11-human-model-correspondence-tracks`
+- generation base commit: `bc1168c7232f92b2c4db27c76d221851ace3589e`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -33,42 +33,42 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
-- Latest commit touching file: `ee9bacf232bd9b26b25c6720eac7ba205ffa780a`
-- generation base commit: `8f4e589df5d92217e56f76a978d51df07af5aa3a`
-- Git blob hash: `2352658eee91f51764358b010732a8d9f4fa1bfa`
-- SHA256 content hash: `272020b975c78eb4dce86e83b6ea5bff0015787eb2e3c2782c28759f17d8cdf8`
-- Byte count: `185112`
+- Latest commit touching file: `bc1168c7232f92b2c4db27c76d221851ace3589e`
+- generation base commit: `bc1168c7232f92b2c4db27c76d221851ace3589e`
+- Git blob hash: `a26c70d186bdfcc98c6a4ae3a7fd9368a9fc49b0`
+- SHA256 content hash: `6af428e46ab261242a40572a7d9e8cb5392bfffff7ff8996a2264b1bbc1e877f`
+- Byte count: `186089`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
-  - Last updated: `2026-09-12`
-  - Last commit: `b9b6008 (reconciled AA-7's negative compact-selection result, model-only aligned recurrence, exact controls, and canonical continuity)`
+  - Last updated: `2026-09-13`
+  - Last commit: `1027606 (introduced the AA-11 human/model correspondence-track continuity note)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-12T21:15:38Z`
+- Generated timestamp UTC: `2026-09-13T13:11:37Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
-- Latest commit touching file: `b9b6008ac4cff37bfef98bd2103a9cb9edf3a3a6`
-- generation base commit: `8f4e589df5d92217e56f76a978d51df07af5aa3a`
-- Git blob hash: `55417c8de7a8aedc0578dc1e959781b04a64562e`
-- SHA256 content hash: `3433cf08fb8d3cbf94a95f450c4ab8f2418d612d587c871c6ea8336e2f49d29a`
-- Byte count: `38451`
+- Latest commit touching file: `1027606ea2cb4d4c4094a928f99b1d0554a5c270`
+- generation base commit: `bc1168c7232f92b2c4db27c76d221851ace3589e`
+- Git blob hash: `effd12f06b9e351ea7c10e36cf952ca2e6b47716`
+- SHA256 content hash: `163aa9873e93b4e1b64a880f56847599609a858320e743b4276d1452d0589fc4`
+- Byte count: `39243`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
-  - Last updated: `2026-09-12`
+  - Last updated: `2026-09-13`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-12T21:15:38Z`
+- Generated timestamp UTC: `2026-09-13T13:11:37Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
 - Latest commit touching file: `b9b6008ac4cff37bfef98bd2103a9cb9edf3a3a6`
-- generation base commit: `8f4e589df5d92217e56f76a978d51df07af5aa3a`
+- generation base commit: `bc1168c7232f92b2c4db27c76d221851ace3589e`
 - Git blob hash: `96a1b2c77469a7cb5ca1cb67cb053850f5304029`
 - SHA256 content hash: `7f543f3a5a5f8fa308c9ddfbf2efa6068ea7a7e516c7a133a08e14b63b1c69d0`
 - Byte count: `50422`
@@ -78,7 +78,7 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-09-12`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-12T21:15:38Z`
+- Generated timestamp UTC: `2026-09-13T13:11:37Z`
 
 ## Maintenance Rule
 
