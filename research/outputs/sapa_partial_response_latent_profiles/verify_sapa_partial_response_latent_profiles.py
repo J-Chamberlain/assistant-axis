@@ -153,7 +153,11 @@ def main() -> None:
     checks["six_category_probabilities_normalize"] = bool(
         np.allclose(probabilities[probability_columns].sum(axis=1), 1.0, atol=1e-10)
     )
-    expected = probabilities[probability_columns].to_numpy() @ np.arange(1, 7, dtype=float)
+    expected = np.sum(
+        probabilities[probability_columns].to_numpy()
+        * np.arange(1, 7, dtype=float)[None, :],
+        axis=1,
+    )
     checks["expected_scores_match_category_probabilities"] = bool(
         np.allclose(expected, probabilities.expected_response, atol=1e-10)
     )
