@@ -1,0 +1,26 @@
+figure_id,files,description,source_data
+qwen_point_cloud,figures/qwen_pc1_pc3_point_cloud.png,Native PC1-PC3 sampled-role point cloud,role_coordinates.csv
+qwen_occupancy_cloud,figures/qwen_occupancy_cloud.png,Native 50/80/95% sampled-role KDE boundaries,terrain_viewer_data.json;coverage_region_summary.csv
+qwen_pc1_pc2_contour,figures/qwen_pc1_pc2_density_contour.png;figures/qwen_pc1_pc2_density_contour.svg,Native Native PC1 × Native PC2 role-only KDE contours,terrain_viewer_data.json;role_coordinates.csv
+qwen_pc1_pc3_contour,figures/qwen_pc1_pc3_density_contour.png;figures/qwen_pc1_pc3_density_contour.svg,Native Native PC1 × Native PC3 role-only KDE contours,terrain_viewer_data.json;role_coordinates.csv
+qwen_pc2_pc3_contour,figures/qwen_pc2_pc3_density_contour.png;figures/qwen_pc2_pc3_density_contour.svg,Native Native PC2 × Native PC3 role-only KDE contours,terrain_viewer_data.json;role_coordinates.csv
+qwen_family_view,figures/qwen_family_view.png,Frozen family placement and eligible convex sample envelopes,role_coordinates.csv;role_family_membership.csv;terrain_viewer_data.json
+qwen_sparsity_view,figures/qwen_sparsity_view.png,Native point cloud colored by inverse-KDE sparsity rank,role_coordinates.csv;role_sparsity_scores.csv
+llama_point_cloud,figures/llama_pc1_pc3_point_cloud.png,Native PC1-PC3 sampled-role point cloud,role_coordinates.csv
+llama_occupancy_cloud,figures/llama_occupancy_cloud.png,Native 50/80/95% sampled-role KDE boundaries,terrain_viewer_data.json;coverage_region_summary.csv
+llama_pc1_pc2_contour,figures/llama_pc1_pc2_density_contour.png;figures/llama_pc1_pc2_density_contour.svg,Native Native PC1 × Native PC2 role-only KDE contours,terrain_viewer_data.json;role_coordinates.csv
+llama_pc1_pc3_contour,figures/llama_pc1_pc3_density_contour.png;figures/llama_pc1_pc3_density_contour.svg,Native Native PC1 × Native PC3 role-only KDE contours,terrain_viewer_data.json;role_coordinates.csv
+llama_pc2_pc3_contour,figures/llama_pc2_pc3_density_contour.png;figures/llama_pc2_pc3_density_contour.svg,Native Native PC2 × Native PC3 role-only KDE contours,terrain_viewer_data.json;role_coordinates.csv
+llama_family_view,figures/llama_family_view.png,Frozen family placement and eligible convex sample envelopes,role_coordinates.csv;role_family_membership.csv;terrain_viewer_data.json
+llama_sparsity_view,figures/llama_sparsity_view.png,Native point cloud colored by inverse-KDE sparsity rank,role_coordinates.csv;role_sparsity_scores.csv
+gemma_point_cloud,figures/gemma_pc1_pc3_point_cloud.png,Native PC1-PC3 sampled-role point cloud,role_coordinates.csv
+gemma_occupancy_cloud,figures/gemma_occupancy_cloud.png,Native 50/80/95% sampled-role KDE boundaries,terrain_viewer_data.json;coverage_region_summary.csv
+gemma_pc1_pc2_contour,figures/gemma_pc1_pc2_density_contour.png;figures/gemma_pc1_pc2_density_contour.svg,Native Native PC1 × Native PC2 role-only KDE contours,terrain_viewer_data.json;role_coordinates.csv
+gemma_pc1_pc3_contour,figures/gemma_pc1_pc3_density_contour.png;figures/gemma_pc1_pc3_density_contour.svg,Native Native PC1 × Native PC3 role-only KDE contours,terrain_viewer_data.json;role_coordinates.csv
+gemma_pc2_pc3_contour,figures/gemma_pc2_pc3_density_contour.png;figures/gemma_pc2_pc3_density_contour.svg,Native Native PC2 × Native PC3 role-only KDE contours,terrain_viewer_data.json;role_coordinates.csv
+gemma_family_view,figures/gemma_family_view.png,Frozen family placement and eligible convex sample envelopes,role_coordinates.csv;role_family_membership.csv;terrain_viewer_data.json
+gemma_sparsity_view,figures/gemma_sparsity_view.png,Native point cloud colored by inverse-KDE sparsity rank,role_coordinates.csv;role_sparsity_scores.csv
+cross_model_family_comparison,figures/cross_model_family_comparison.png,Family-colored linked native-space comparison,role_coordinates.csv;role_family_membership.csv
+cross_model_density_sparsity_summary,figures/cross_model_density_sparsity_summary.png;figures/cross_model_density_sparsity_summary.svg,Top and bottom role-sample density ranks across models,role_density_scores.csv
+bandwidth_sensitivity,figures/bandwidth_sensitivity.png;figures/bandwidth_sensitivity.svg,Frozen 0.75×/1×/1.25× Scott sensitivity,density_bandwidth_sensitivity.csv
+cross_model_neighborhood_recurrence,figures/cross_model_neighborhood_recurrence.png;figures/cross_model_neighborhood_recurrence.svg,Distribution of shared-role local-topology recurrence,cross_model_neighborhood_recurrence.csv
