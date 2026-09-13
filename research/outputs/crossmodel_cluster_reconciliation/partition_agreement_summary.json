@@ -1,0 +1,138 @@
+{
+  "status": "PARTITION AGREEMENT NUMERICALLY FROZEN; NO ROLE NAMES OR TRAITS USED",
+  "model_used": "GPT-5.5",
+  "role_count": 275,
+  "K_values": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "pairwise_comparison_count": 147,
+  "comparisons_per_model_pair": 49,
+  "triple_count": 343,
+  "permutation_count": 5000,
+  "permutation_seed": 2026091303,
+  "source_hashes": {
+    "qwen": {
+      "memberships.csv": "2c4aee82f6ed7499401e45174b7e354bb4a4e09ff4600536c5534dc48a6a2f0d",
+      "solution_summary.csv": "d5b713f67d2f57556376f074d19c558f61789424594f9bbe6283db4ebecadabe",
+      "adjacent_k_continuity.csv": "1b2e07cd0fbfc26a8d60a2ffcdd4eafeb25a3b2b6b5bb5a7c661ddb8296305fe"
+    },
+    "llama": {
+      "memberships.csv": "e4e74cd915c3490fd7e4adbddf8bb38e4058dc41e104acf7ab03a8a2285aa86f",
+      "solution_summary.csv": "ee9f2b8c3c3421beab9c2980b540ba561e47c6f725c1ae099c15415660fafd33",
+      "adjacent_k_continuity.csv": "aa056d03b69b3369a406033133996c463eab5925e5bb816b2018874df2973f19"
+    },
+    "gemma": {
+      "memberships.csv": "4df15ca4048a26a7b5ac3c93885baa1f9f0ffe866e2282c83d4c0520cf38d2d1",
+      "solution_summary.csv": "72ed3f144b57dd2e2072583b93a2e4d53a2e3a286b32b4a83f15c53df7f73e79",
+      "adjacent_k_continuity.csv": "772415c99e88613eec3ad6d01fa8f71b380f78b5af04672939c142083798e303"
+    }
+  },
+  "pairwise_best": [
+    {
+      "model_a": "qwen",
+      "model_b": "llama",
+      "best_K_a": 7,
+      "best_K_b": 9,
+      "best_ami": 0.6296923451364017,
+      "best_ari": 0.6484187011095683,
+      "best_nmi": 0.6489348544904184,
+      "near_best_count": 3,
+      "near_best_K_a_values": "6;7",
+      "near_best_K_b_values": "9;10",
+      "broad_ridge": false,
+      "search_adjusted_p": 0.0001999600079984003
+    },
+    {
+      "model_a": "qwen",
+      "model_b": "gemma",
+      "best_K_a": 7,
+      "best_K_b": 10,
+      "best_ami": 0.6669549858821623,
+      "best_ari": 0.6883211685976918,
+      "best_nmi": 0.6847135116162023,
+      "near_best_count": 3,
+      "near_best_K_a_values": "6;7",
+      "near_best_K_b_values": "6;10",
+      "broad_ridge": false,
+      "search_adjusted_p": 0.0001999600079984003
+    },
+    {
+      "model_a": "llama",
+      "model_b": "gemma",
+      "best_K_a": 4,
+      "best_K_b": 4,
+      "best_ami": 0.6748722672695705,
+      "best_ari": 0.7438950946061892,
+      "best_nmi": 0.6800152010612309,
+      "near_best_count": 1,
+      "near_best_K_a_values": "4",
+      "near_best_K_b_values": "4",
+      "broad_ridge": false,
+      "search_adjusted_p": 0.0001999600079984003
+    }
+  ],
+  "observed_best_triple": {
+    "rank": 1,
+    "K_qwen": 6,
+    "K_llama": 9,
+    "K_gemma": 6,
+    "qwen_llama_ami": 0.618967412898966,
+    "qwen_gemma_ami": 0.6664477392118083,
+    "llama_gemma_ami": 0.6492697172949747,
+    "mean_pairwise_ami": 0.644894956468583,
+    "minimum_pairwise_ami": 0.618967412898966,
+    "qwen_start_ari": 0.7569452239319449,
+    "qwen_refit_ari": 0.875964086809095,
+    "qwen_small_cluster_warning": false,
+    "llama_start_ari": 0.7134643949517894,
+    "llama_refit_ari": 0.7577815475363421,
+    "llama_small_cluster_warning": true,
+    "gemma_start_ari": 0.672514209560622,
+    "gemma_refit_ari": 0.7722801214036135,
+    "gemma_small_cluster_warning": true,
+    "mean_refit_ari": 0.8020085852496835,
+    "quality_constrained": true,
+    "near_best": true
+  },
+  "quality_best_triple": {
+    "rank": 1,
+    "K_qwen": 6,
+    "K_llama": 9,
+    "K_gemma": 6,
+    "qwen_llama_ami": 0.618967412898966,
+    "qwen_gemma_ami": 0.6664477392118083,
+    "llama_gemma_ami": 0.6492697172949747,
+    "mean_pairwise_ami": 0.644894956468583,
+    "minimum_pairwise_ami": 0.618967412898966,
+    "qwen_start_ari": 0.7569452239319449,
+    "qwen_refit_ari": 0.875964086809095,
+    "qwen_small_cluster_warning": false,
+    "llama_start_ari": 0.7134643949517894,
+    "llama_refit_ari": 0.7577815475363421,
+    "llama_small_cluster_warning": true,
+    "gemma_start_ari": 0.672514209560622,
+    "gemma_refit_ari": 0.7722801214036135,
+    "gemma_small_cluster_warning": true,
+    "mean_refit_ari": 0.8020085852496835,
+    "quality_constrained": true,
+    "near_best": true
+  },
+  "consensus_anchor_triple": {
+    "K_qwen": 6,
+    "K_llama": 9,
+    "K_gemma": 6,
+    "mean_pairwise_ami": 0.644894956468583,
+    "rule_triggered": "quality-constrained best lies within 0.02 of global maximum"
+  },
+  "triple_near_best_count": 8,
+  "triple_broad_ridge": true,
+  "triple_search_adjusted_p": 0.0001999600079984003,
+  "quality_threshold_refit_ari": 0.7,
+  "boundary": "Model-only shared-role partition comparison; no human data or semantic matching."
+}
