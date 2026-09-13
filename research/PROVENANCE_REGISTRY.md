@@ -2,6 +2,20 @@
 
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
+## cross_resolution_profile_banks
+
+Artifact: AA-12 follow-up-2 independent human and Qwen/LLaMA/Gemma K=4–10 profile solution banks for later Track 1 correspondence design.
+Location: `research/outputs/cross_resolution_profile_banks/`; main report: `report.md`; model freeze: `model/model_clustering_prefit_freeze.md`; human bank: `human/human_cross_resolution_profiles.csv`; per-model memberships and trait descriptions: `model/{qwen,llama,gemma}/`; hashes and URLs: `artifact_inventory.csv`.
+Created: 2026-09-13 by Codex (GPT-5.5) on branch `codex/aa12-cross-resolution-profile-banks`, based on prior AA-12 final commit `4c7bf33b77412f8e1547a0817192fd50e9db7365`. Model-method freeze: `34dc9fa`; human/model numerical-bank freeze: `d0c902b`; post-freeze semantics/figures: `423fde6`; report/75-check verification: `6e80399`.
+Human source and method: Harvard Dataverse SAPA V5 DOI `10.7910/DVN/SD7SVE`, 23,679 respondents, all 696 canonical behavioral items, and the exact AA-12 six-category observed-cell mixture frozen at `6b2e460` and numerically frozen at `f0e5572`. All K=4–10 metrics reproduce exactly. K=4–8/K=10 remain eligible; K=9 remains diagnostic/ineligible. Only aggregate probabilities, sizes, continuity, and diagnostics are committed.
+Qwen source: 275 released/local `[64,5120]` tensors under `downloads/hf_vectors/qwen-3-32b/role_vectors/`, aggregate filename-plus-bytes SHA256 `3dc4bdcdcec301b3c947020f1c24755280af07aaf5fb8ab74ba10e3db9e73752`.
+LLaMA source: 275 `[80,8192]` tensors under `downloads/hf_vectors/llama-3.3-70b/role_vectors/`, aggregate SHA256 `3b1863bf5b9770223c46c1b8a7b8e818b4b70c65d484eec78a07fcaa9f5aa235`.
+Gemma source: 275 `[46,4608]` tensors under `downloads/hf_vectors/gemma-2-27b/role_vectors/`, aggregate SHA256 `5ec98556b81c8cf499f6c4521b6120196124aacebefcb55d33338e8d8ad12191`.
+Model procedure: Mean each tensor over stored layers, L2-normalize, and fit independent exact spherical K-means for K=4–10 using 100 fixed starts. Quantify start stability and 50 deterministic 80% role-subsample refits with 20 starts; publish anonymous membership, native centroids/hashes, cluster sizes, and adjacent-K ARI/NMI/overlap. A complete rerun reproduced all deterministic numerical outputs exactly apart from wall-clock fields.
+Post-freeze description: After `d0c902b`, join role names and the existing 275×240 same-model activation-cosine matrices—Qwen `research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv`, LLaMA/Gemma corresponding matrices under `research/outputs/multimodel_trait_profile_pc_predictor/`—and human item wording for browsing only. Descriptions and display selections do not alter K, profiles, membership, or eligibility.
+Observed within-domain result: Human split-refit stability is moderate at K=4–6 and low at K=7–10; response-style warnings trigger at every K and mask warnings at none. Model stability is mainly moderate/low; Qwen develops below-five-role clusters at K≥7, while LLaMA/Gemma have them at every K. These are resolution/stability diagnostics, not cross-domain evidence or natural-type claims.
+Boundary: No respondent rows, IDs, masks, posterior memberships, individual profiles, or imputations are committed. No human/model similarity, assignment, matching, cross-domain score, same-K constraint, preferred cross-domain K pair, or cross-model profile matching was computed. No new model inference, activation extraction, prompt generation, external model API, GPU, or RunPod work occurred. External human-profile literature verification remains intentionally unperformed. Track 1 remains active; Tracks 2–3 remain parked.
+
 ## sapa_partial_response_latent_profiles
 
 Artifact: AA-12 follow-up human-only categorical latent-profile discovery directly from planned-missing SAPA responses for Track 1.

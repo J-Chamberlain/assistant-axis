@@ -26,6 +26,10 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 
 `research/outputs/sapa_partial_response_latent_profiles/sapa_partial_response_latent_profiles_report.md` fits a human-only categorical latent-class model directly to the observed 1–6 responses, with missing cells absent from likelihood terms and no respondent-profile imputation. The pre-fit design was committed before candidate fitting and anonymous profiles before item-wording unblinding. Frozen selection is conflicted: validation favors eligible K=10, BIC/ICL favor K=4, and the formal support sets do not intersect. K=4 has moderate independent refit stability; K=10 has low stability. Administration masks do not predict labels above chance, but raw response-style summaries trigger warnings for both anchors. Thus broad recurring configurations are recoverable, but no unique K or stable fine-grained taxonomy is established. Track 1 stays ACTIVE; human/model comparison and external human-profile literature verification remain unperformed.
 
+## Track 1 Cross-Resolution Input Banks (AA-12 follow-up 2, 2026-09-13)
+
+`research/outputs/cross_resolution_profile_banks/report.md` freezes separate human and Qwen/LLaMA/Gemma profile banks across K=4–10 without performing correspondence. The human bank exactly reproduces the earlier frozen method and eligibility: K=4–8 and K=10 are eligible, K=9 is diagnostic/ineligible, split-refit stability is moderate at K=4–6 and low at K=7–10, administration masks never warn, and response style always warns. The model method was frozen before fitting; every model/K uses 100-start spherical K-means on the canonical 275 saved role vectors and 50 deterministic 80% refits. Qwen has moderate start/refit stability at K=4 and K=6, with small clusters from K=7; LLaMA and Gemma have small clusters at every K and largely low start stability. Post-freeze role/item/trait packets describe but do not alter the banks. No human/model similarity, match, same-K requirement, or preferred cross-domain K pair exists. The next Track 1 step is to design and freeze the cross-resolution pairing and null-testing procedure after user inspection.
+
 ## Integrated AA-1 Through AA-7 Entry Points (2026-09-12)
 
 - AA-1 human SAPA psychometric structure: `research/outputs/sapa_bridge_psychometric_audit/sapa_bridge_psychometric_audit_report.md`
@@ -128,6 +132,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/outputs/sapa_bridge_psychometric_audit/`: AA-1 human-only psychometric contraction of the frozen semantic bridge, with verification and artifact inventory.
 - `research/outputs/sapa_item_coverage_frontier/`: AA-12 aggregate marginal and greedy nested SAPA item-coverage frontier, reproducible code, figure, verification, and inventory; no respondent-level data.
 - `research/outputs/sapa_partial_response_latent_profiles/`: AA-12 follow-up categorical partial-response mixture, conflicted K=4/K=10 anonymous anchors, stability/certainty/artifact diagnostics, post-freeze semantic summary, verification, and aggregate-only inventory.
+- `research/outputs/cross_resolution_profile_banks/`: AA-12 follow-up-2 human and Qwen/LLaMA/Gemma K=4–10 banks, within-domain adjacent-K continuity, post-freeze browsing packets, figures, verification, and aggregate-only inventory.
 - `research/outputs/externally_anchored_big_five/`: AA-2 frozen external Big Five mappings, multimodel geometry tests, viewer integration report, and artifact inventory.
 - `research/outputs/extended_persona_pca/`: AA-3 full-rank dimensionality/stability audit and interactive PC1-PC10 viewer.
 - `research/outputs/qwen_trait_sparsity_prediction/`: AA-4 compact-feature and matched generic-basis audit of Qwen trait-to-PC prediction.

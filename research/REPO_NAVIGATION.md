@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-13T15:35:42Z
-Last commit when updated: 537830e (verified AA-12 partial-response latent profiles)
+Updated UTC: 2026-09-13T16:53:34Z
+Last commit when updated: 7730b94 (cross-resolution profile-bank artifacts before canonical maintenance)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3978
+- active analyses: 4051
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 12
@@ -37,7 +37,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Status Counts
 
-- active: 4909
+- active: 4982
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -56,6 +56,8 @@ Human/model correspondence research tracks: `research/interpretation_notes/human
 SAPA item-coverage frontier: `research/outputs/sapa_item_coverage_frontier/sapa_item_coverage_frontier_report.md` is the AA-12 entry point for marginal item response rates and the complete 696-step availability-only greedy nested frontier. Use `sapa_item_response_rates.csv` for item-level marginal counts, `sapa_marginal_coverage_thresholds.csv` for threshold summaries, `sapa_nested_coverage_frontier.csv` for strict and relaxed 95/90/80% counts, `sapa_nested_item_order.csv` for the deterministic nested order, and `sapa_coverage_frontier.png` for the paired full/early view. The strict curve falls from 6,096 respondents at one item to 1,455/358/103/41 at two through five items; one respondent persists from 137 through 294 items, an algorithmic tiny-cohort tail rather than a broadly usable profile panel. No threshold, respondent cohort, common feature space, construct score, cluster, or human/model match was selected. Analysis outputs were introduced in `4c5cf0c`; verification and inventory in `26ecfc3`.
 
 SAPA partial-response latent profiles: `research/outputs/sapa_partial_response_latent_profiles/sapa_partial_response_latent_profiles_report.md` is the AA-12 follow-up entry point for the human-only six-category product-multinomial mixture fitted directly to observed partial responses. The pre-fit method was frozen in `6b2e460`, anonymous numerical profiles in `f0e5572`, semantic interpretation in `80aae41`, and 61-check verification in `537830e`. Frozen selection evidence conflicts: validation favors eligible K=10, BIC/ICL favor K=4, their support sets do not intersect, K=4 split-refit stability is moderate, K=10 is low, response-style warnings trigger for both, and administration-mask warnings do not. Use `frozen_profile_item_probabilities.csv` for complete six-category aggregate profiles, `model_selection_metrics.csv` for K evidence, `profile_stability_metrics.csv`, `posterior_certainty_summary.csv`, and the artifact diagnostics for qualifications. No unique K, answer threshold, natural type claim, model geometry, human/model comparison, external profile-literature verification, respondent posterior, or individual imputation was produced.
+
+Cross-resolution profile solution banks: `research/outputs/cross_resolution_profile_banks/report.md` is the AA-12 follow-up-2 entry point for two independently frozen K=4–10 inputs to later Track 1 design. Human solutions exactly reuse the AA-12 categorical observed-cell method: K=4–8 and K=10 retain eligible status, while K=9 remains `DIAGNOSTIC / INELIGIBLE`; split-refit stability is moderate at K=4–6 and low at K=7–10, response-style warnings occur at every K, and mask warnings occur at none. Qwen/LLaMA/Gemma use independent 100-start spherical K-means on the canonical 275 layer-mean/L2-normalized role vectors plus 50 deterministic 80% refits; model stability is mainly moderate/low and small-cluster warnings appear from Qwen K=7 and at every LLaMA/Gemma K. Use `human/human_cross_resolution_profiles.csv`, each model's `memberships.csv` and `trait_profiles.csv`, and the within-domain adjacent-K tables. Model method freeze: `34dc9fa`; numerical-bank freeze: `d0c902b`; post-freeze semantics: `423fde6`. No human/model similarity, matching, same-K rule, or preferred cross-domain K pair was produced.
 
 Human-supported trait convergence and aligned subspaces: `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md` is the AA-7 entry point. The exact 12 AA-1-supported labels and all decisions were frozen before outcomes. Use `comparator_summary.csv` for the matched compact prediction result, `procrustes_alignment_cv.csv` and `procrustes_alignment_null.csv` for held-out alignment evidence, `aligned_human_supported_trait_directions.csv` and `aligned_big_five_directions.csv` for recurrence, and `verification_report.json` plus `artifact_inventory.csv` for reproduction/provenance. The primary compact-efficiency result is weak/absent; the separate activation-derived aligned-direction recurrence is strong. No human respondent or occupational centroid was projected.
 

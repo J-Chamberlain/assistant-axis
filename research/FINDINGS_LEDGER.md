@@ -4,6 +4,14 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### Cross-Resolution Profile Banks Expose Stability and Small-Cluster Limits Before Matching (2026-09-13)
+
+AA-12 follow-up 2 froze independent K=4–10 solution banks under `research/outputs/cross_resolution_profile_banks/`. The unchanged SAPA observed-cell mixture exactly reproduces its prior frozen fits: K=4–8 and K=10 remain eligible, K=9 remains diagnostic/ineligible, split-refit profile distance rises from moderate at K=4–6 (0.0917–0.1175) to low stability at K=7–10 (0.1332–0.1583), response-style warnings trigger at every K, and administration-mask warnings trigger at none. Adjacent expected-response profiles remain descriptively recognizable, but distances generally grow at the finer resolutions.
+
+Separately, 100-start spherical K-means plus 50 fixed 80% refits materialize Qwen/LLaMA/Gemma role partitions at every K over their own canonical 275 saved activation vectors. Qwen has moderate start/refit stability at K=4 and K=6, but below-five-role clusters appear from K=7; LLaMA and Gemma contain below-five-role clusters at every K and mostly low start stability. These warnings are exposed rather than retuned away. The role inventory is designed rather than population sampled, and the post-freeze 240-trait summaries share activation-vector provenance.
+
+Interpretation: resolution increases expose recognizable within-domain refinements alongside declining or uneven stability and small-cluster artifacts. This is a bounded methodological/structural finding only. No human/model similarity or matching was computed, no equal-K requirement or preferred cross-domain pair was selected, and no human/model correspondence claim is supported yet.
+
 ### Partial-Response SAPA Mixtures Yield Conflicted Coarse/Fine Anchors with Response-Style Warnings (2026-09-13)
 
 The AA-12 follow-up fit a six-category product-multinomial mixture directly to all observed responses in the 23,679 × 696 SAPA matrix; missing cells entered no likelihood term and no individual response was imputed. The pre-fit method was committed before candidate fitting and anonymous profile probabilities before item-wording inspection. Synthetic validation recovered four known classes under 87.1% planned missingness (mean aligned distance 0.06694; ARI 0.87869; aligned accuracy 0.953) and verified exact missing-cell invariance.
