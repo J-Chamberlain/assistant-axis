@@ -1,0 +1,105 @@
+{
+  "artifact": "AA-12 SAPA item-coverage frontier",
+  "generated_at": "2026-09-13T14:41:03Z",
+  "analysis_model": "GPT-5.5",
+  "branch": "codex/aa12-sapa-coverage-frontier",
+  "generation_base_commit": "72eb4eeee91d71dedadec8a8a6a4d804a971de8f",
+  "source": {
+    "dataset": "Selected personality data from the SAPA-Project: 08Dec2013 to 26Jul2014",
+    "release_version": "5.0",
+    "doi": "10.7910/DVN/SD7SVE",
+    "license": "CC0 1.0",
+    "respondent_tab_logical_name": "sapaTempData696items08dec2013thru26jul2014.tab",
+    "respondent_tab_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+    "raw_item_info_logical_name": "ItemInfo696.csv",
+    "raw_item_info_sha256": "ce280ebf42cd77f3db1955a3027051a74d017ca61da02adf5dbbab11545b1732",
+    "canonical_dictionary_path": "research/outputs/human_trait_dataset_feasibility/sapa/sapa_item_dictionary.csv",
+    "canonical_dictionary_sha256": "6297d7fc351cea2121a1a211c5203f9e1bc07d0157c551087e0820b8bbd6bda9"
+  },
+  "integrity": {
+    "respondent_rows": 23679,
+    "total_columns": 719,
+    "canonical_behavioral_items_expected": 696,
+    "canonical_behavioral_items_present": 696,
+    "excluded_nonbehavioral_columns": [
+      "RID",
+      "gender",
+      "relstatus",
+      "age",
+      "marstatus",
+      "height",
+      "BMI",
+      "weight",
+      "exer",
+      "smoke",
+      "country",
+      "state",
+      "ethnic",
+      "education",
+      "jobstatus",
+      "occPrestige",
+      "occIncomeEst",
+      "p1edu",
+      "p1occPrestige",
+      "p1occIncomeEst",
+      "p2edu",
+      "p2occPrestige",
+      "p2occIncomeEst"
+    ],
+    "duplicate_rids": 0,
+    "observed_behavioral_response_codes": [
+      "",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "missing_behavioral_cell_encoding": "empty tab field",
+    "literal_NA_behavioral_cells": 0,
+    "planned_missingness": true,
+    "cell_level_planned_missingness_indicator_available": false,
+    "wave_or_form_indicator_available": false
+  },
+  "method": {
+    "item_eligibility": "exact 696 item IDs and order in the canonical committed dictionary, cross-checked with raw ItemInfo696.csv and respondent q_* columns",
+    "greedy_objective": "maximize expanded-panel respondents answering 100% of selected items",
+    "tie_breaks": [
+      "higher marginal response count",
+      "earlier canonical dictionary order"
+    ],
+    "frontier_status": "greedy nested frontier; not a proven global Pareto optimum",
+    "relaxed_levels": [
+      0.95,
+      0.9,
+      0.8
+    ],
+    "relaxed_rule": "answered count >= ceil(level * panel size) on the same nested panel",
+    "random_seed": null
+  },
+  "privacy": {
+    "respondent_level_output_written": false,
+    "respondent_ids_written": false,
+    "individual_response_masks_written": false,
+    "aggregate_outputs_only": true
+  },
+  "prohibited_methods": {
+    "imputation": false,
+    "construct_scoring": false,
+    "clustering": false,
+    "human_model_matching": false,
+    "human_pca_or_projection": false,
+    "model_inference": false,
+    "activation_extraction": false,
+    "external_model_api": false,
+    "gpu_or_runpod": false
+  },
+  "software": {
+    "python": "3.12.12",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.8"
+  },
+  "command": "python research/outputs/sapa_item_coverage_frontier/run_sapa_item_coverage_frontier.py --repo-root . --raw-dir <gitignored-sapa-v5-directory>"
+}

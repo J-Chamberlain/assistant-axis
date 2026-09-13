@@ -152,63 +152,20 @@ def first_at_or_below(frontier: pd.DataFrame, column: str, target: int) -> int |
 
 
 def informative_sizes(frontier: pd.DataFrame) -> list[int]:
+    # Every strict-count transition is empirically informative; add the last
+    # positive and first-zero steps for each relaxed curve.
     sizes = {1, len(frontier)}
-    for column in (
-        "complete_n",
-        "at_least_95pct_n",
-        "at_least_90pct_n",
-        "at_least_80pct_n",
-    ):
-        start = int(frontier[column].iloc[0])
-        targets = sorted(
-            {
-                0,
-                1,
-                10,
-                100,
-                500,
-                1000,
-                2500,
-                5000,
-                int(start * 0.75),
-                int(start * 0.50),
-                int(start * 0.25),
-                int(start * 0.10),
-            },
-            reverse=True,
-        )
-        for target in targets:
-            step = first_at_or_below(frontier, column, target)
-            if step is not None:
-                sizes.update({max(1, step - 1), step})
-    # Retain empirical transition neighborhoods while keeping the report compact.
-    ordered = sorted(sizes)
-    if len(ordered) <= 28:
-        return ordered
-    must = {1, len(frontier)}
-    strict_zero = first_at_or_below(frontier, "complete_n", 0)
-    if strict_zero:
-        must.update({max(1, strict_zero - 1), strict_zero})
-    ranked = []
-    columns = ["complete_n", "at_least_95pct_n", "at_least_90pct_n", "at_least_80pct_n"]
-    for size in ordered:
-        if size in must or size == 1:
-            score = float("inf")
-        else:
-            i = size - 1
-            score = sum(
-                abs(
-                    math.log1p(float(frontier[c].iloc[i]))
-                    - math.log1p(float(frontier[c].iloc[max(0, i - 1)]))
-                )
-                for c in columns
-            )
-        ranked.append((score, size))
-    keep = must | {size for _, size in sorted(ranked, reverse=True)[:28]}
-    return sorted(keep)
+    strict = frontier["complete_n"].to_numpy()
+    sizes.update((np.flatnonzero(np.r_[True, strict[1:] != strict[:-1]]) + 1).tolist())
+    for column in ("complete_n", "at_least_95pct_n", "at_least_90pct_n", "at_least_80pct_n"):
+        zero = first_at_or_below(frontier, column, 0)
+        if zero is not None:
+            sizes.update({max(1, zero - 1), zero})
+    return sorted(sizes)
 
 
 def render_figure(frontier: pd.DataFrame, output: Path) -> None:
+    matplotlib.rcParams["svg.hashsalt"] = "aa12-sapa-item-coverage-frontier"
     plt.rcParams.update({"font.size": 10, "axes.titleweight": "bold"})
     colors = {
         "complete_n": "#14213d",
@@ -236,10 +193,7 @@ def render_figure(frontier: pd.DataFrame, output: Path) -> None:
     axes[0].grid(alpha=0.22)
     axes[0].legend(ncol=2, frameon=False)
 
-    strict = frontier["complete_n"]
-    strict_positive = frontier.loc[strict > 0, "panel_size"]
-    strict_end = int(strict_positive.iloc[-1]) if len(strict_positive) else 1
-    zoom_end = min(len(frontier), max(20, strict_end + 5))
+    zoom_end = min(len(frontier), 50)
     early = frontier.loc[frontier.panel_size <= zoom_end]
     for column in colors:
         axes[1].plot(
@@ -256,6 +210,7 @@ def render_figure(frontier: pd.DataFrame, output: Path) -> None:
         xlim=(1, zoom_end),
     )
     axes[1].set_yscale("symlog", linthresh=10)
+    axes[1].set_ylim(0, max(early["at_least_80pct_n"]) * 1.08)
     axes[1].grid(alpha=0.22, which="both")
     axes[1].text(
         0.995,
@@ -344,6 +299,8 @@ Full item-level counts and percentages are in `sapa_item_response_rates.csv`; th
 The sequence starts with the item having the largest marginal response count. At each step it adds the remaining item that maximizes the number of respondents answering **every** item in the expanded panel. Exact ties are resolved by (1) higher marginal response count and (2) earlier position in the canonical 696-item dictionary. Item wording, scale membership, construct names, and psychological content never enter selection.
 
 The relaxed ≥95%, ≥90%, and ≥80% curves are evaluated on the **same nested item order**. For panel size `k`, the required number answered is `ceil(level × k)`. These are descriptive recovery curves only; respondents below 100% are not treated as complete and no value is imputed.
+
+The strict curve has a visually clear, very steep early bend: 6,096 respondents remain at one item, 1,455 at two, 358 at three, 103 at four, and 41 at five. This describes the coverage geometry; it does not nominate any one of those panel sizes. Once the greedy strict cohort becomes tiny, the algorithm can preserve an idiosyncratic respondent for a long tail (one strict-complete respondent from panel sizes 137 through 294). That tail is algorithmically valid but is not evidence of a broadly usable cohort. Relaxed counts can rise at occasional steps because `ceil(level × k)` does not increase at every step while a newly added answered item can move respondents across the fixed integer requirement.
 
 {markdown_table(frontier, sizes)}
 

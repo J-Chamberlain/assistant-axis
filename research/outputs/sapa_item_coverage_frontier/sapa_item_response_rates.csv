@@ -1,0 +1,697 @@
+canonical_order,marginal_coverage_rank,item_id,item_text,recorded_n,recorded_pct_total,missing_n,missing_pct_total
+1,405,q_6,Accept people as they are.,2515,10.621226,21164,89.378774
+2,580,q_20,Act comfortably with others.,2441,10.308712,21238,89.691288
+3,260,q_22,Act impulsively when something is bothering me.,2712,11.453186,20967,88.546814
+4,116,q_23,Act like different people in different situations.,3605,15.22446,20074,84.77554
+5,695,q_26,Act or feel in a way that does not fit me.,2311,9.759703,21368,90.240297
+6,478,q_31,Act wild and crazy.,2476,10.456523,21203,89.543477
+7,601,q_35,Act without thinking.,2431,10.266481,21248,89.733519
+8,494,q_38,Adapt easily to new situations.,2468,10.422737,21211,89.577263
+9,380,q_39,Adjust easily.,2529,10.68035,21150,89.31965
+10,11,q_40,Admire a really clever scam.,5997,25.326238,17682,74.673762
+11,686,q_43,Always admit it when I make a mistake.,2369,10.004645,21310,89.995355
+12,265,q_44,Always know what I am doing.,2700,11.402509,20979,88.597491
+13,559,q_45,Always know why I do things.,2447,10.334051,21232,89.665949
+14,548,q_47,Am a creature of habit.,2449,10.342498,21230,89.657502
+15,435,q_52,Am a person whose moods go up and down easily.,2497,10.545209,21182,89.454791
+16,165,q_53,Am a physical coward.,3291,13.898391,20388,86.101609
+17,275,q_55,Am a very private person.,2680,11.318046,20999,88.681954
+18,455,q_56,Am able to control my cravings.,2488,10.5072,21191,89.4928
+19,500,q_63,Am able to stand up for myself.,2465,10.410068,21214,89.589932
+20,361,q_66,Am afraid of many things.,2543,10.739474,21136,89.260526
+21,486,q_67,Am afraid that I will do the wrong thing.,2473,10.443853,21206,89.556147
+22,606,q_69,Am afraid to draw attention to myself.,2429,10.258035,21250,89.741965
+23,616,q_71,Am always busy.,2426,10.245365,21253,89.754635
+24,602,q_74,Am always on the go.,2431,10.266481,21248,89.733519
+25,273,q_76,Am always prepared.,2686,11.343384,20993,88.656616
+26,651,q_77,Am always ready to start afresh.,2409,10.173572,21270,89.826428
+27,85,q_79,Am an extraordinary person.,4185,17.673888,19494,82.326112
+28,372,q_80,Am annoyed by others' mistakes.,2535,10.705689,21144,89.294311
+29,662,q_82,Am attached to conventional ways.,2401,10.139786,21278,89.860214
+30,504,q_85,Am calm even in tense situations.,2464,10.405845,21215,89.594155
+31,623,q_89,Am comfortable in unfamiliar situations.,2423,10.232696,21256,89.767304
+32,514,q_90,Am concerned about others.,2458,10.380506,21221,89.619494
+33,186,q_94,Am considered to be kind of eccentric.,2804,11.841716,20875,88.158284
+34,156,q_98,Am deeply moved by others' misfortunes.,3338,14.096879,20341,85.903121
+35,377,q_101,Am easily annoyed.,2533,10.697242,21146,89.302758
+36,286,q_105,Am easily discouraged.,2660,11.233582,21019,88.766418
+37,267,q_107,Am easily distracted.,2697,11.389839,20982,88.610161
+38,345,q_108,Am easily disturbed.,2560,10.811267,21119,89.188733
+39,528,q_114,Am easily intimidated.,2455,10.367836,21224,89.632164
+40,367,q_121,Am easy to satisfy.,2539,10.722581,21140,89.277419
+41,51,q_124,Am exacting in my work.,4343,18.341146,19336,81.658854
+42,298,q_126,Am filled with doubts about things.,2638,11.140673,21041,88.859327
+43,50,q_128,Am full of ideas.,4348,18.362262,19331,81.637738
+44,73,q_131,Am good at making impromptu speeches.,4285,18.096203,19394,81.903797
+45,59,q_132,Am good at many things.,4328,18.277799,19351,81.722201
+46,340,q_134,Am good at taking advice.,2565,10.832383,21114,89.167617
+47,411,q_139,Am hard to convince.,2510,10.60011,21169,89.39989
+48,283,q_140,Am hard to get to know.,2667,11.263145,21012,88.736855
+49,409,q_141,Am hard to reason with.,2512,10.608556,21167,89.391444
+50,306,q_142,Am hard to satisfy.,2625,11.085772,21054,88.914228
+51,321,q_145,Am inclined to forgive others.,2603,10.992863,21076,89.007137
+52,110,q_146,Am indifferent to the feelings of others.,3914,16.529414,19765,83.470586
+53,392,q_148,Interested in many things.,2522,10.650788,21157,89.349212
+54,104,q_150,Am interested in people.,4003,16.905275,19676,83.094725
+55,65,q_151,Am interested in science.,4307,18.189113,19372,81.810887
+56,117,q_152,Am just an ordinary person.,3604,15.220237,20075,84.779763
+57,129,q_154,Am likely to show off if I get the chance.,3531,14.911947,20148,85.088053
+58,131,q_156,Am mainly interested in money.,3518,14.857046,20161,85.142954
+59,118,q_157,Am more capable than most others.,3593,15.173783,20086,84.826217
+60,84,q_158,Am never at a loss for words.,4195,17.71612,19484,82.28388
+61,93,q_159,Am nice to people I should be angry at.,4068,17.17978,19611,82.82022
+62,413,q_163,Am not always honest with myself.,2508,10.591663,21171,89.408337
+63,517,q_164,Am not always what I appear to be.,2457,10.376283,21222,89.623717
+64,396,q_168,Am not bothered by difficult social situations.,2520,10.642341,21159,89.357659
+65,77,q_169,Am not bothered by disorder.,4248,17.939947,19431,82.060053
+66,61,q_170,Am not bothered by messy people.,4322,18.25246,19357,81.74754
+67,626,q_174,Am not easily affected by my emotions.,2422,10.228472,21257,89.771528
+68,663,q_175,Am not easily amused.,2401,10.139786,21278,89.860214
+69,328,q_176,Am not easily annoyed.,2581,10.899954,21098,89.100046
+70,373,q_177,Am not easily bothered by things.,2535,10.705689,21144,89.294311
+71,169,q_179,Am not easily disturbed by events.,3245,13.704126,20434,86.295874
+72,158,q_184,Am not embarrassed easily.,3327,14.050424,20352,85.949576
+73,13,q_185,Am not good at deceiving other people.,5952,25.136197,17727,74.863803
+74,343,q_191,Am not highly motivated to succeed.,2562,10.819714,21117,89.180286
+75,191,q_194,Am not interested in abstract ideas.,2796,11.807931,20883,88.192069
+76,97,q_195,Am not interested in other people's problems.,4041,17.065754,19638,82.934246
+77,465,q_197,Am not interested in theoretical discussions.,2483,10.486085,21196,89.513915
+78,88,q_200,Am not really interested in others.,4121,17.403607,19558,82.596393
+79,479,q_201,Am not sure where my life is going.,2476,10.456523,21203,89.543477
+80,581,q_206,Am often down in the dumps.,2441,10.308712,21238,89.691288
+81,567,q_208,Am often in a bad mood.,2445,10.325605,21234,89.674395
+82,319,q_217,Am on good terms with nearly everyone.,2605,11.001309,21074,88.998691
+83,538,q_219,Am open about my feelings.,2452,10.355167,21227,89.644833
+84,135,q_225,Am out for my own personal gain.,3483,14.709236,20196,85.290764
+85,428,q_228,Am passionate about causes.,2501,10.562101,21178,89.437899
+86,329,q_238,Am quick to correct others.,2576,10.878838,21103,89.121162
+87,334,q_239,Am quick to judge others.,2570,10.853499,21109,89.146501
+88,79,q_240,Am quick to understand things.,4228,17.855484,19451,82.144516
+89,192,q_241,Am quiet around strangers.,2795,11.803708,20884,88.196292
+90,300,q_248,Am relaxed most of the time.,2633,11.119557,21046,88.880443
+91,146,q_251,Am seldom bothered ... suffering of strangers.,3407,14.388277,20272,85.611723
+92,157,q_253,Am sensitive to the needs of others.,3333,14.075763,20346,85.924237
+93,171,q_254,Am skilled in handling social situations.,2884,12.179568,20795,87.820432
+94,624,q_258,Am sure of my ground.,2423,10.232696,21256,89.767304
+95,28,q_260,Am the first to act.,4383,18.510072,19296,81.489928
+96,203,q_262,Am the life of the party.,2786,11.7657,20893,88.2343
+97,323,q_278,Am usually a patient person.,2596,10.963301,21083,89.036699
+98,19,q_279,Am usually active and full of energy.,4439,18.746569,19240,81.253431
+99,648,q_285,Am very pleased with myself.,2410,10.177795,21269,89.822205
+100,421,q_286,Am wary of others.,2505,10.578994,21174,89.421006
+101,159,q_292,Am willing to take risks.,3326,14.046201,20353,85.953799
+102,418,q_294,Am willing to try anything once.,2506,10.583217,21173,89.416783
+103,403,q_296,Amuse my friends.,2516,10.625449,21163,89.374551
+104,414,q_298,Anticipate the needs of others.,2508,10.591663,21171,89.408337
+105,441,q_312,Avoid company.,2493,10.528316,21186,89.471684
+106,365,q_313,Avoid contacts with others.,2540,10.726804,21139,89.273196
+107,613,q_314,Avoid crowds.,2427,10.249588,21252,89.750412
+108,617,q_315,Avoid dangerous situations.,2426,10.245365,21253,89.754635
+109,36,q_316,Avoid difficult reading material.,4373,18.467841,19306,81.532159
+110,338,q_319,Avoid imposing my will on others.,2567,10.840829,21112,89.159171
+111,58,q_321,Avoid mistakes.,4331,18.290468,19348,81.709532
+112,194,q_322,Avoid philosophical discussions.,2794,11.799485,20885,88.200515
+113,325,q_331,[A]ngry w people...don't live up to my expectations.,2587,10.925292,21092,89.074708
+114,310,q_332,Become overwhelmed by events.,2614,11.039318,21065,88.960682
+115,149,q_334,Begin to panic when there is danger.,3385,14.295367,20294,85.704633
+116,509,q_339,Believe in an eye for an eye.,2459,10.384729,21220,89.615271
+117,518,q_343,Believe in human goodness.,2457,10.376283,21222,89.623717
+118,568,q_345,Believe in one true religion.,2445,10.325605,21234,89.674395
+119,196,q_348,Believe in the importance of art.,2791,11.786815,20888,88.213185
+120,644,q_359,Believe that criminals should receive help rather than punishment.,2413,10.190464,21266,89.809536
+121,137,q_364,Believe that I am better than others.,3481,14.70079,20198,85.29921
+122,399,q_369,Believe laws should be strictly enforced.,2519,10.638118,21160,89.361882
+123,467,q_377,Believe that others have good intentions.,2481,10.477638,21198,89.522362
+124,620,q_379,Believe that people are basically moral.,2424,10.236919,21255,89.763081
+125,590,q_381,Believe that people are essentially evil.,2436,10.287597,21243,89.712403
+126,510,q_383,Believe people should fend for themselves.,2459,10.384729,21220,89.615271
+127,386,q_393,Believe there is never an excuse for lying.,2525,10.663457,21154,89.336543
+128,431,q_394,Believe that there is no absolute right and wrong.,2498,10.549432,21181,89.450568
+129,693,q_395,Believe that too much tax money goes to support artists.,2353,9.937075,21326,90.062925
+130,639,q_397,Believe that we coddle criminals too much.,2415,10.19891,21264,89.80109
+131,684,q_398,Believe that we should be tough on crime.,2374,10.025761,21305,89.974239
+132,140,q_401,Boast about my virtues.,3440,14.527641,20239,85.472359
+133,183,q_403,Bottle up my feelings.,2808,11.858609,20871,88.141391
+134,495,q_404,Break my promises.,2467,10.418514,21212,89.581486
+135,456,q_405,Break rules.,2488,10.5072,21191,89.4928
+136,318,q_413,Can be stirred up easily.,2606,11.005532,21073,88.994468
+137,47,q_422,Can handle a lot of information.,4351,18.374931,19328,81.625069
+138,555,q_423,Can handle complex problems.,2448,10.338274,21231,89.661726
+139,542,q_429,Can manage many things at the same time.,2450,10.346721,21229,89.653279
+140,564,q_438,Can say things beautifully.,2446,10.329828,21233,89.670172
+141,60,q_455,Can talk others into doing things.,4325,18.265129,19354,81.734871
+142,98,q_460,Can't be bothered with other's needs.,4037,17.048862,19642,82.951138
+143,168,q_463,Can't do without the company of others.,3263,13.780143,20416,86.219857
+144,672,q_469,Can't make up my mind.,2390,10.093332,21289,89.906668
+145,400,q_477,Can't stand being contradicted.,2518,10.633895,21161,89.366105
+146,595,q_479,Can't stand confrontations.,2433,10.274927,21246,89.725073
+147,501,q_487,Can't stand weak people.,2465,10.410068,21214,89.589932
+148,247,q_491,Carry out my plans.,2728,11.520757,20951,88.479243
+149,75,q_492,Carry the conversation to a higher level.,4278,18.066641,19401,81.933359
+150,26,q_493,Catch on to things quickly.,4400,18.581866,19279,81.418134
+151,364,q_497,Change my mood a lot.,2541,10.731027,21138,89.268973
+152,8,q_500,Cheat on people who have trusted me.,6018,25.414925,17661,74.585075
+153,10,q_501,Cheat to get ahead.,6012,25.389586,17667,74.610414
+154,646,q_505,Cheer people up.,2412,10.186241,21267,89.813759
+155,416,q_507,Choose my words with care.,2507,10.58744,21172,89.41256
+156,673,q_515,Come up with good solutions.,2390,10.093332,21289,89.906668
+157,32,q_516,Come up with something new.,4376,18.48051,19303,81.51949
+158,292,q_519,Complete my duties as soon as possible.,2647,11.178682,21032,88.821318
+159,288,q_520,Complete tasks successfully.,2656,11.21669,21023,88.78331
+160,139,q_525,Consider myself an average person.,3441,14.531864,20238,85.468136
+161,54,q_530,Continue until everything is perfect.,4335,18.307361,19344,81.692639
+162,442,q_531,Contradict others.,2493,10.528316,21186,89.471684
+163,354,q_538,Criticize others' shortcomings.,2550,10.769036,21129,89.230964
+164,162,q_539,Cry during movies.,3312,13.987077,20367,86.012923
+165,301,q_549,Demand a lot from others.,2631,11.111111,21048,88.888889
+166,24,q_554,Demand quality.,4406,18.607205,19273,81.392795
+167,53,q_559,Detect mistakes.,4340,18.328477,19339,81.671523
+168,549,q_565,Dislike being the center of attention.,2449,10.342498,21230,89.657502
+169,336,q_566,Dislike changes.,2568,10.845053,21111,89.154947
+170,71,q_571,Dislike imperfect work.,4290,18.117319,19389,81.882681
+171,384,q_576,Dislike loud music.,2526,10.66768,21153,89.33232
+172,541,q_578,Dislike myself.,2451,10.350944,21228,89.649056
+173,599,q_581,Dislike new foods.,2432,10.270704,21247,89.729296
+174,25,q_582,Dislike routine.,4406,18.607205,19273,81.392795
+175,621,q_586,Dislike talking about myself.,2424,10.236919,21255,89.763081
+176,294,q_594,Distrust people.,2643,11.161789,21036,88.838211
+177,419,q_595,Do a lot in my spare time.,2506,10.583217,21173,89.416783
+178,609,q_598,Do crazy things.,2428,10.253811,21251,89.746189
+179,362,q_599,Do dangerous things.,2543,10.739474,21136,89.260526
+180,214,q_602,Do just enough work to get by.,2764,11.67279,20915,88.32721
+181,636,q_604,Do more than what's expected of me.,2416,10.203134,21263,89.796866
+182,565,q_607,Do not enjoy going to art museums.,2446,10.329828,21233,89.670172
+183,242,q_608,Do not enjoy watching dance performances.,2731,11.533426,20948,88.466574
+184,217,q_609,Do not have a good imagination.,2762,11.664344,20917,88.335656
+185,193,q_610,Do not like art.,2795,11.803708,20884,88.196292
+186,200,q_611,Do not like concerts.,2788,11.774146,20891,88.225854
+187,231,q_612,Do not like poetry.,2747,11.600997,20932,88.399003
+188,534,q_618,Do the opposite of what is asked.,2453,10.35939,21226,89.64061
+189,69,q_619,Do things according to a plan.,4298,18.151104,19381,81.848896
+190,668,q_623,Do things by the book.,2395,10.114447,21284,89.885553
+191,184,q_626,Do things in a half-way manner.,2806,11.850163,20873,88.149837
+192,461,q_630,Do things out of revenge.,2487,10.502977,21192,89.497023
+193,560,q_632,Do things I later regret.,2447,10.334051,21232,89.665949
+194,179,q_634,Do things that others find strange.,2825,11.930402,20854,88.069598
+195,241,q_636,Do things without thinking of the consequences.,2732,11.537649,20947,88.462351
+196,240,q_637,Do too little work.,2733,11.541873,20946,88.458127
+197,432,q_646,Don't always practice what I preach.,2498,10.549432,21181,89.450568
+198,201,q_651,Don't [worry about] political and social problems.,2787,11.769923,20892,88.230077
+199,349,q_660,Don't consider myself religious.,2553,10.781705,21126,89.218295
+200,250,q_665,Don't finish the things that I start.,2725,11.508087,20954,88.491913
+201,102,q_668,Don't have a soft side.,4023,16.989738,19656,83.010262
+202,218,q_670,Don't know much about history.,2762,11.664344,20917,88.335656
+203,261,q_673,Don't know why I do some of the things I do.,2711,11.448963,20968,88.551037
+204,585,q_684,Don't like crowded events.,2439,10.300266,21240,89.699734
+205,490,q_689,Don't like the idea of change.,2470,10.431184,21209,89.568816
+206,195,q_690,Don't like to draw attention to myself.,2792,11.791038,20887,88.208962
+207,38,q_698,Don't mind being the center of attention.,4369,18.450948,19310,81.549052
+208,113,q_704,Don't pretend to be more than I am.,3657,15.444064,20022,84.555936
+209,293,q_706,Don't put my mind on the task at hand.,2646,11.174458,21033,88.825542
+210,647,q_708,Don't see the consequences of things.,2412,10.186241,21267,89.813759
+211,127,q_711,Don't strive for elegance in my appearance.,3533,14.920394,20146,85.079606
+212,174,q_712,Don't talk a lot.,2852,12.044428,20827,87.955572
+213,130,q_716,Don't think that I'm better than other people.,3520,14.865493,20159,85.134507
+214,155,q_721,Don't understand people who get emotional.,3352,14.156003,20327,85.843997
+215,577,q_722,Don't understand things.,2442,10.312936,21237,89.687064
+216,366,q_727,Don't worry about things that have already happened.,2540,10.726804,21139,89.273196
+217,530,q_736,Easily resist temptations.,2454,10.363613,21225,89.636387
+218,471,q_740,Engage in discussions.,2480,10.473415,21199,89.526585
+219,237,q_744,Enjoy being part of a group.,2740,11.571435,20939,88.428565
+220,368,q_745,Enjoy being part of a loud crowd.,2537,10.714135,21142,89.285865
+221,578,q_746,Enjoy being reckless.,2442,10.312936,21237,89.687064
+222,262,q_747,"Enjoy being thought of as a normal ""mainstream"" person.",2709,11.440517,20970,88.559483
+223,358,q_755,Enjoy examining myself and my life.,2545,10.74792,21134,89.25208
+224,258,q_757,"Enjoy feeling ""close to the earth.""",2714,11.461633,20965,88.538367
+225,44,q_761,Enjoy intellectual games.,4354,18.387601,19325,81.612399
+226,281,q_776,Enjoy the beauty of nature.,2673,11.288483,21006,88.711517
+227,657,q_778,Enjoy thinking about things.,2405,10.156679,21274,89.843321
+228,437,q_780,Enjoy wild flights of fantasy.,2495,10.536763,21184,89.463237
+229,511,q_786,Excel in what I do.,2459,10.384729,21220,89.615271
+230,588,q_793,Experience my emotions intensely.,2438,10.296043,21241,89.703957
+231,468,q_797,Experience very few emotional highs and lows.,2481,10.477638,21198,89.522362
+232,603,q_799,Express childlike joy.,2431,10.266481,21248,89.733519
+233,543,q_803,Express myself easily.,2450,10.346721,21229,89.653279
+234,152,q_804,Face danger confidently.,3368,14.223574,20311,85.776426
+235,596,q_808,Fear for the worst.,2433,10.274927,21246,89.725073
+236,311,q_811,Feel a sense of worthlessness or hopelessness.,2614,11.039318,21065,88.960682
+237,188,q_815,Feel at ease with people.,2800,11.824824,20879,88.175176
+238,670,q_816,Feel attacked by others.,2393,10.106001,21286,89.893999
+239,211,q_819,Feel comfortable around people.,2769,11.693906,20910,88.306094
+240,331,q_820,Feel comfortable with myself.,2574,10.870391,21105,89.129609
+241,438,q_824,Feel desperate.,2495,10.536763,21184,89.463237
+242,62,q_832,Feel healthy and vibrant most of the time.,4316,18.227121,19363,81.772879
+243,86,q_838,Feel little concern for others.,4157,17.55564,19522,82.44436
+244,506,q_839,Feel lucky most of the time.,2463,10.401622,21216,89.598378
+245,89,q_844,Feel others' emotions.,4095,17.293805,19584,82.706195
+246,694,q_848,Feel short-changed in life.,2327,9.827273,21352,90.172727
+247,450,q_851,Feel sympathy for those who are worse off than myself.,2491,10.51987,21188,89.48013
+248,45,q_861,Feel that I have a lot of inner strength.,4354,18.387601,19325,81.612399
+249,376,q_867,Feel that I'm unable to deal with things.,2534,10.701465,21145,89.298535
+250,314,q_871,Feel that most people can't be trusted.,2612,11.030871,21067,88.969129
+251,610,q_875,Feel that my life lacks direction.,2428,10.253811,21251,89.746189
+252,480,q_878,Feel that others misunderstand me.,2476,10.456523,21203,89.543477
+253,394,q_880,Feel that people are against me.,2521,10.646564,21158,89.353436
+254,508,q_882,Feel that people have a hard time understanding me.,2460,10.388952,21219,89.611048
+255,316,q_890,Feel threatened easily.,2609,11.018202,21070,88.981798
+256,370,q_898,Find fault with everything.,2536,10.709912,21143,89.290088
+257,226,q_901,Find it difficult to approach others.,2752,11.622112,20927,88.377888
+258,213,q_904,Find it difficult to get down to work.,2765,11.677013,20914,88.322987
+259,611,q_905,Find it difficult to manipulate others.,2428,10.253811,21251,89.746189
+260,387,q_915,Find it hard to forgive others.,2525,10.663457,21154,89.336543
+261,123,q_917,Find it necessary to please the people who have power.,3551,14.99641,20128,85.00359
+262,645,q_919,Find life difficult.,2413,10.190464,21266,89.809536
+263,582,q_920,"Find myself in the same kinds of trouble, time after time.",2441,10.308712,21238,89.691288
+264,43,q_923,Find political discussions interesting.,4355,18.391824,19324,81.608176
+265,341,q_926,...[T]akes a lot to make me feel angry at someone.,2563,10.823937,21116,89.176063
+266,269,q_930,Finish what I start.,2695,11.381393,20984,88.618607
+267,82,q_931,Follow a schedule.,4211,17.78369,19468,82.21631
+268,20,q_946,Formulate ideas clearly.,4436,18.733899,19243,81.266101
+269,378,q_952,Get angry easily.,2532,10.693019,21147,89.306981
+270,687,q_957,Get back at others.,2369,10.004645,21310,89.995355
+271,332,q_958,Get back at people who insult me.,2571,10.857722,21108,89.142278
+272,299,q_960,Get caught up in my problems.,2637,11.13645,21042,88.86355
+273,229,q_962,Get chores done right away.,2749,11.609443,20930,88.390557
+274,254,q_964,Get deeply immersed in music.,2720,11.486972,20959,88.513028
+275,297,q_965,Get easily agitated.,2640,11.149119,21039,88.850881
+276,320,q_966,Get even with others.,2605,11.001309,21074,88.998691
+277,374,q_974,Get irritated easily.,2535,10.705689,21144,89.294311
+278,476,q_977,Get others to do my duties.,2478,10.464969,21201,89.535031
+279,569,q_978,Get out of control.,2445,10.325605,21234,89.674395
+280,351,q_979,Get overwhelmed by emotions.,2551,10.773259,21128,89.226741
+281,279,q_985,Get started quickly on doing a job.,2675,11.29693,21004,88.70307
+282,304,q_986,Get stressed out easily.,2627,11.094219,21052,88.905781
+283,234,q_988,Get things done quickly.,2746,11.596774,20933,88.403226
+284,515,q_992,Get to work at once.,2458,10.380506,21221,89.619494
+285,317,q_994,Get upset by unpleasant thoughts that come into my mind.,2607,11.009755,21072,88.990245
+286,424,q_995,Get upset easily.,2503,10.570548,21176,89.429452
+287,481,q_997,[Get upset if others change way I arranged things].,2476,10.456523,21203,89.543477
+288,652,q_1009,Go on binges.,2409,10.173572,21270,89.826428
+289,574,q_1012,Go straight for the goal.,2443,10.317159,21236,89.682841
+290,287,q_1020,Grumble about things.,2660,11.233582,21019,88.766418
+291,674,q_1022,Habitually blow my chances.,2390,10.093332,21289,89.906668
+292,415,q_1023,Handle tasks smoothly.,2508,10.591663,21171,89.408337
+293,239,q_1024,Hang around doing nothing.,2735,11.550319,20944,88.449681
+294,178,q_1027,Hate being the center of attention.,2827,11.938849,20852,88.061151
+295,103,q_1031,Hate to seem pushy.,4009,16.930614,19670,83.069386
+296,305,q_1033,Hate waiting for anything.,2627,11.094219,21052,88.905781
+297,498,q_1038,Have a dark outlook on the future.,2466,10.414291,21213,89.585709
+298,109,q_1041,Have a good word for everyone.,3959,16.719456,19720,83.280544
+299,550,q_1042,Have a high opinion of myself.,2449,10.342498,21230,89.657502
+300,252,q_1043,Have a lot of fun.,2721,11.491195,20958,88.508805
+301,519,q_1044,Have a low opinion of myself.,2457,10.376283,21222,89.623717
+302,350,q_1045,Have a natural talent for influencing people.,2553,10.781705,21126,89.218295
+303,17,q_1050,Have a rich vocabulary.,4466,18.860594,19213,81.139406
+304,352,q_1051,Have a sharp tongue.,2551,10.773259,21128,89.226741
+305,575,q_1052,Have a slow pace to my life.,2443,10.317159,21236,89.682841
+306,90,q_1053,Have a soft heart.,4080,17.230457,19599,82.769543
+307,121,q_1054,Have a strong need for power.,3558,15.025972,20121,84.974028
+308,34,q_1055,Have a strong personality.,4374,18.472064,19305,81.527936
+309,238,q_1058,Have a vivid imagination.,2736,11.554542,20943,88.445458
+310,42,q_1063,Have an eye for detail.,4356,18.396047,19323,81.603953
+311,232,q_1064,"Have an intense, boisterous laugh.",2747,11.600997,20932,88.399003
+312,397,q_1081,Have difficulty expressing my feelings.,2520,10.642341,21159,89.357659
+313,270,q_1083,Have difficulty imagining things.,2693,11.372946,20986,88.627054
+314,520,q_1087,Have difficulty starting tasks.,2457,10.376283,21222,89.623717
+315,81,q_1088,Have difficulty understanding abstract ideas.,4213,17.792136,19466,82.207864
+316,33,q_1090,Have excellent ideas.,4376,18.48051,19303,81.51949
+317,307,q_1099,Have frequent mood swings.,2622,11.073103,21057,88.926897
+318,46,q_1104,Have great stamina.,4352,18.379155,19327,81.620845
+319,22,q_1110,Have leadership abilities.,4416,18.649436,19263,81.350564
+320,685,q_1113,Have little to contribute.,2372,10.017315,21307,89.982685
+321,197,q_1114,Have little to say.,2791,11.786815,20888,88.213185
+322,462,q_1120,Have never engaged in gossip.,2487,10.502977,21192,89.497023
+323,220,q_1132,Have read the great literary classics.,2760,11.655898,20919,88.344102
+324,629,q_1136,Have some bad habits.,2421,10.224249,21258,89.775751
+325,625,q_1138,Have sometimes had to tell a lie.,2423,10.232696,21256,89.767304
+326,52,q_1146,Have trouble guessing how others will react.,4343,18.341146,19336,81.658854
+327,466,q_1150,Hold a grudge.,2483,10.486085,21196,89.513915
+328,68,q_1151,Hold back my opinions.,4299,18.155328,19380,81.844672
+329,161,q_1159,Immediately feel sad when hearing of an unhappy event.,3323,14.033532,20356,85.966468
+330,420,q_1161,Indulge in my fantasies.,2506,10.583217,21173,89.416783
+331,87,q_1162,Inquire about others' well-being.,4129,17.437392,19550,82.562608
+332,344,q_1163,Insult people.,2561,10.815491,21118,89.184509
+333,457,q_1169,Involve others in what I am doing.,2488,10.5072,21191,89.4928
+334,243,q_1173,Jump into things without thinking.,2730,11.529203,20949,88.470797
+335,600,q_1175,Just know that I will be a success.,2432,10.270704,21247,89.729296
+336,185,q_1180,Keep in the background.,2805,11.845939,20874,88.154061
+337,485,q_1184,Keep my cool.,2474,10.448076,21205,89.551924
+338,290,q_1185,Keep my emotions under control.,2652,11.199797,21027,88.800203
+339,586,q_1190,Keep my promises.,2439,10.300266,21240,89.699734
+340,263,q_1196,Keep others at a distance.,2707,11.432071,20972,88.567929
+341,39,q_1201,Keep things tidy.,4367,18.442502,19312,81.557498
+342,76,q_1205,Know how to captivate people.,4273,18.045526,19406,81.954474
+343,105,q_1206,Know how to comfort others.,3994,16.867266,19685,83.132734
+344,622,q_1209,Know how to cope.,2424,10.236919,21255,89.763081
+345,407,q_1214,Know how to get around the rules.,2513,10.612779,21166,89.387221
+346,556,q_1215,Know how to get things done.,2448,10.338274,21231,89.661726
+347,430,q_1218,Know immediately what to do.,2499,10.553655,21180,89.446345
+348,458,q_1223,Know that anyone who tries can get a job.,2488,10.5072,21191,89.4928
+349,235,q_1232,Know that my ideas sometimes surprise people.,2741,11.575658,20938,88.424342
+350,665,q_1235,Know the answers to many questions.,2400,10.135563,21279,89.864437
+351,66,q_1242,Lack the talent for influencing people.,4304,18.176443,19375,81.823557
+352,253,q_1243,Laugh a lot.,2721,11.491195,20958,88.508805
+353,522,q_1244,Laugh aloud.,2456,10.37206,21223,89.62794
+354,551,q_1248,Laugh my way through life.,2449,10.342498,21230,89.657502
+355,72,q_1253,Learn things slowly.,4287,18.10465,19392,81.89535
+356,175,q_1254,Leave a mess in my room.,2839,11.989527,20840,88.010473
+357,302,q_1255,Leave my belongings around.,2629,11.102665,21050,88.897335
+358,145,q_1260,Let myself be influenced by others.,3408,14.3925,20271,85.6075
+359,128,q_1276,Let people push me around to help them feel important.,3533,14.920394,20146,85.079606
+360,661,q_1280,Let things proceed at their own pace.,2403,10.148233,21276,89.851767
+361,523,q_1281,Like a leisurely lifestyle.,2456,10.37206,21223,89.62794
+362,417,q_1289,Like music.,2507,10.58744,21172,89.41256
+363,27,q_1290,Like order.,4387,18.526965,19292,81.473035
+364,633,q_1292,Like to act on a whim.,2420,10.220026,21259,89.779974
+365,125,q_1296,Like to attract attention.,3548,14.983741,20131,85.016259
+366,236,q_1300,Like to be thought of as a normal kind of person.,2741,11.575658,20938,88.424342
+367,225,q_1301,Like to be viewed as proper and conventional.,2753,11.626336,20926,88.373664
+368,439,q_1303,Like to begin new things.,2494,10.532539,21185,89.467461
+369,160,q_1306,Like to do frightening things.,3326,14.046201,20353,85.953799
+370,99,q_1307,Like to do things for others.,4028,17.010853,19651,82.989147
+371,390,q_1310,Like to get lost in thought.,2523,10.655011,21156,89.344989
+372,64,q_1321,Like to plan ahead.,4314,18.218675,19365,81.781325
+373,18,q_1327,Like to solve complex problems.,4443,18.763461,19236,81.236539
+374,557,q_1328,Like to stand during the national anthem.,2448,10.338274,21231,89.661726
+375,682,q_1329,Like to take it easy.,2376,10.034208,21303,89.965792
+376,512,q_1330,Like to take my time.,2459,10.384729,21220,89.615271
+377,23,q_1333,Like to tidy up.,4414,18.64099,19265,81.35901
+378,446,q_1334,Like to visit new places.,2492,10.524093,21187,89.475907
+379,653,q_1341,Listen to my conscience.,2408,10.169348,21271,89.830652
+380,627,q_1350,Look at the bright side of life.,2422,10.228472,21257,89.771528
+381,535,q_1354,Look down on others.,2453,10.35939,21226,89.64061
+382,337,q_1357,Lose my temper.,2568,10.845053,21111,89.154947
+383,315,q_1359,Love a good fight.,2612,11.030871,21067,88.969129
+384,689,q_1360,Love action.,2363,9.979307,21316,90.020693
+385,100,q_1364,Love children.,4025,16.998184,19654,83.001816
+386,164,q_1367,Love dangerous situations.,3303,13.949069,20376,86.050931
+387,453,q_1368,Love excitement.,2489,10.511424,21190,89.488576
+388,561,q_1369,Love flowers.,2447,10.334051,21232,89.665949
+389,607,q_1370,Love large parties.,2429,10.258035,21250,89.741965
+390,496,q_1371,Love life.,2467,10.418514,21212,89.581486
+391,120,q_1372,Love luxury.,3567,15.063981,20112,84.936019
+392,335,q_1373,Love my enemies.,2570,10.853499,21109,89.146501
+393,83,q_1374,Love order and regularity.,4205,17.758351,19474,82.241649
+394,544,q_1376,Love surprise parties.,2450,10.346721,21229,89.653279
+395,222,q_1379,Love to chat.,2757,11.643228,20922,88.356772
+396,562,q_1381,Love to daydream.,2447,10.334051,21232,89.665949
+397,576,q_1384,Love to eat.,2443,10.317159,21236,89.682841
+398,106,q_1385,Love to help others.,3994,16.867266,19685,83.132734
+399,30,q_1388,Love to read challenging material.,4378,18.488956,19301,81.511044
+400,219,q_1389,Love to reflect on things.,2761,11.660121,20918,88.339879
+401,57,q_1392,Love to think up new ways of doing things.,4332,18.294691,19347,81.705309
+402,31,q_1393,Maintain high energy throughout the day.,4378,18.488956,19301,81.511044
+403,280,q_1395,Make a fool of myself.,2675,11.29693,21004,88.70307
+404,205,q_1397,Make a mess of things.,2779,11.736138,20900,88.263862
+405,284,q_1401,Make careless mistakes.,2663,11.246252,21016,88.753748
+406,202,q_1410,Make friends easily.,2787,11.769923,20892,88.230077
+407,570,q_1416,Make myself the center of attention.,2445,10.325605,21234,89.674395
+408,92,q_1419,Make people feel at ease.,4076,17.213565,19603,82.786435
+409,401,q_1420,Make people feel uncomfortable.,2518,10.633895,21161,89.366105
+410,507,q_1421,Make people feel welcome.,2462,10.397399,21217,89.602601
+411,271,q_1422,Make plans and stick to them.,2693,11.372946,20986,88.627054
+412,215,q_1424,Make rash decisions.,2764,11.67279,20915,88.32721
+413,309,q_1429,Mess things up.,2616,11.047764,21063,88.952236
+414,502,q_1435,Misjudge situations.,2465,10.410068,21214,89.589932
+415,637,q_1436,Misrepresent the facts.,2416,10.203134,21263,89.796866
+416,210,q_1441,Need a creative outlet.,2770,11.698129,20909,88.301871
+417,447,q_1444,Need a push to get started.,2492,10.524093,21187,89.475907
+418,166,q_1446,Need protection.,3276,13.835044,20403,86.164956
+419,142,q_1447,Need reassurance.,3419,14.438954,20260,85.561046
+420,163,q_1448,Need the approval of others.,3307,13.965961,20372,86.034039
+421,233,q_1452,Neglect my duties.,2747,11.600997,20932,88.399003
+422,658,q_1457,Never give up hope.,2405,10.156679,21274,89.843321
+423,680,q_1458,Never give up.,2378,10.042654,21301,89.957346
+424,412,q_1461,Never spend more than I can afford.,2510,10.60011,21169,89.39989
+425,691,q_1462,Never splurge.,2359,9.962414,21320,90.037586
+426,375,q_1467,Obstruct others' plans.,2535,10.705689,21144,89.294311
+427,667,q_1474,Often eat too much.,2396,10.118671,21283,89.881329
+428,483,q_1477,Often express doubts.,2475,10.4523,21204,89.5477
+429,359,q_1479,Often feel blue.,2545,10.74792,21134,89.25208
+430,257,q_1480,Often feel uncomfortable around others.,2716,11.470079,20963,88.529921
+431,276,q_1483,[Forget to put things back].,2680,11.318046,20999,88.681954
+432,545,q_1488,Often make last-minute plans.,2450,10.346721,21229,89.653279
+433,167,q_1490,Often need help.,3266,13.792812,20413,86.207188
+434,348,q_1495,[Often worry things unimportant].,2555,10.790152,21124,89.209848
+435,388,q_1496,Only feel comfortable with friends.,2524,10.659234,21155,89.340766
+436,327,q_1505,Panic easily.,2585,10.916846,21094,89.083154
+437,55,q_1507,Pay attention to details.,4333,18.298915,19346,81.701085
+438,499,q_1508,Pay my bills on time.,2466,10.414291,21213,89.585709
+439,35,q_1511,Pay too little attention to details.,4374,18.472064,19305,81.527936
+440,112,q_1517,Play a role in order to impress people.,3660,15.456734,20019,84.543266
+441,618,q_1519,Plunge into tasks with all my heart.,2425,10.241142,21254,89.758858
+442,264,q_1521,Postpone decisions.,2701,11.406732,20978,88.593268
+443,436,q_1531,Prefer to be alone.,2496,10.540986,21183,89.459014
+444,122,q_1536,Prefer to eat at expensive restaurants.,3554,15.00908,20125,84.99092
+445,274,q_1537,Prefer to just let things happen.,2681,11.322269,20998,88.677731
+446,484,q_1540,Prefer to stick with things that I know.,2475,10.4523,21204,89.5477
+447,451,q_1542,Prefer variety to routine.,2491,10.51987,21188,89.48013
+448,3,q_1543,Pretend to be concerned for others.,6073,25.647198,17606,74.352802
+449,272,q_1550,Push myself very hard to succeed.,2689,11.356054,20990,88.643946
+450,524,q_1553,Put little time and effort into my work.,2456,10.37206,21223,89.62794
+451,119,q_1555,Put on a show to impress people.,3572,15.085096,20107,84.914904
+452,342,q_1556,Rarely put people under pressure.,2563,10.823937,21116,89.176063
+453,227,q_1563,Quickly lose interest in the tasks I start.,2750,11.613666,20929,88.386334
+454,619,q_1567,Radiate joy.,2425,10.241142,21254,89.758858
+455,426,q_1571,Rarely complain.,2502,10.566325,21177,89.433675
+456,138,q_1573,Rarely cry during sad movies.,3468,14.645889,20211,85.354111
+457,268,q_1575,Rarely enjoy being with people.,2697,11.389839,20982,88.610161
+458,324,q_1577,Rarely feel angry with people.,2594,10.954855,21085,89.045145
+459,330,q_1578,Rarely feel depressed.,2576,10.878838,21103,89.121162
+460,295,q_1583,Rarely get caught up in the excitement.,2641,11.153343,21038,88.846657
+461,346,q_1585,Rarely get irritated.,2560,10.811267,21119,89.188733
+462,429,q_1587,Rarely look for a deeper meaning in things.,2500,10.557878,21179,89.442122
+463,289,q_1588,Rarely lose my composure.,2653,11.20402,21026,88.79598
+464,679,q_1589,Rarely notice my emotional reactions.,2380,10.0511,21299,89.9489
+465,614,q_1590,Rarely overindulge.,2427,10.249588,21252,89.750412
+466,379,q_1591,Rarely show my anger.,2530,10.684573,21149,89.315427
+467,285,q_1596,Rarely worry.,2663,11.246252,21016,88.753748
+468,529,q_1599,React quickly.,2455,10.367836,21224,89.632164
+469,539,q_1600,React slowly.,2452,10.355167,21227,89.644833
+470,381,q_1601,React strongly to criticism.,2529,10.68035,21150,89.31965
+471,474,q_1606,Readily overcome setbacks.,2479,10.469192,21200,89.530808
+472,230,q_1609,Rebel against authority.,2748,11.60522,20931,88.39478
+473,308,q_1610,Recover quickly from stress and illness.,2619,11.060433,21060,88.939567
+474,313,q_1616,Remain calm under pressure.,2613,11.035094,21066,88.964906
+475,101,q_1624,Respect authority.,4025,16.998184,19654,83.001816
+476,6,q_1633,Return extra change when a cashier makes a mistake.,6024,25.440264,17655,74.559736
+477,181,q_1635,Reveal little about myself.,2814,11.883948,20865,88.116052
+478,608,q_1638,Rush into things.,2429,10.258035,21250,89.741965
+479,228,q_1643,Say little.,2750,11.613666,20929,88.386334
+480,180,q_1648,See beauty in things that others might not notice.,2816,11.892394,20863,88.107606
+481,41,q_1652,See myself as a good leader.,4365,18.434055,19314,81.565945
+482,115,q_1653,See myself as an average person.,3606,15.228684,20073,84.771316
+483,48,q_1657,See that rules are observed.,4351,18.374931,19328,81.625069
+484,492,q_1662,Seek adventure.,2469,10.426961,21210,89.573039
+485,353,q_1663,Seek conflict.,2551,10.773259,21128,89.226741
+486,591,q_1664,Seek danger.,2436,10.287597,21243,89.712403
+487,525,q_1666,Seek quiet.,2456,10.37206,21223,89.62794
+488,111,q_1667,Seek status.,3679,15.536974,20000,84.463026
+489,153,q_1668,Seek support.,3354,14.16445,20325,85.83555
+490,563,q_1670,Seek to influence others.,2447,10.334051,21232,89.665949
+491,245,q_1671,[Enjoy interactions less than others].,2729,11.52498,20950,88.47502
+492,187,q_1675,Seldom daydream.,2802,11.83327,20877,88.16673
+493,277,q_1676,Seldom experience sudden intuitive insights.,2679,11.313822,21000,88.686178
+494,296,q_1677,Seldom feel blue.,2641,11.153343,21038,88.846657
+495,150,q_1679,Seldom feel weepy while reading [sad story].,3384,14.291144,20295,85.708856
+496,147,q_1681,Seldom get emotional.,3405,14.37983,20274,85.62017
+497,251,q_1682,Seldom get lost in thought.,2722,11.495418,20957,88.504582
+498,303,q_1683,Seldom get mad.,2628,11.098442,21051,88.901558
+499,249,q_1685,Seldom joke around.,2726,11.51231,20953,88.48769
+500,198,q_1687,Seldom notice emotional aspects of [visual art].,2791,11.786815,20888,88.213185
+501,649,q_1691,Seldom toot my own horn.,2410,10.177795,21269,89.822205
+502,433,q_1694,Set high standards for myself and others.,2498,10.549432,21181,89.450568
+503,246,q_1696,Shirk my duties.,2729,11.52498,20950,88.47502
+504,566,q_1697,Shoot my mouth off.,2446,10.329828,21233,89.670172
+505,256,q_1703,Show my feelings when I'm happy.,2718,11.478525,20961,88.521475
+506,107,q_1705,Show my gratitude.,3976,16.79125,19703,83.20875
+507,151,q_1706,Show my sadness.,3372,14.240466,20307,85.759534
+508,207,q_1709,Smile a lot.,2777,11.727691,20902,88.272309
+509,347,q_1725,Speak ill of others.,2558,10.802821,21121,89.197179
+510,49,q_1730,Speak softly.,4351,18.374931,19328,81.625069
+511,177,q_1738,Spend time reflecting on things.,2828,11.943072,20851,88.056928
+512,221,q_1742,Start conversations.,2759,11.651674,20920,88.348326
+513,521,q_1744,Start tasks right away.,2457,10.376283,21222,89.623717
+514,9,q_1747,Steal things.,6013,25.393809,17666,74.606191
+515,640,q_1748,Stick to my chosen path.,2415,10.19891,21264,89.80109
+516,14,q_1752,Stick to the rules.,5920,25.001056,17759,74.998944
+517,266,q_1754,Stop when work becomes too difficult.,2700,11.402509,20979,88.597491
+518,597,q_1755,Stumble over my words.,2433,10.274927,21246,89.725073
+519,448,q_1757,Suffer from others' sorrows.,2492,10.524093,21187,89.475907
+520,641,q_1758,Suspect hidden motives in others.,2415,10.19891,21264,89.80109
+521,141,q_1759,[Suspect facial expressions show when sad].,3433,14.498078,20246,85.501922
+522,248,q_1761,Swim against the current.,2728,11.520757,20951,88.479243
+523,4,q_1762,Switch my loyalties when I feel like it.,6066,25.617636,17613,74.382364
+524,91,q_1763,Sympathize with others' feelings.,4080,17.230457,19599,82.769543
+525,503,q_1764,Sympathize with the homeless.,2465,10.410068,21214,89.589932
+526,356,q_1765,Take advantage of others.,2547,10.756366,21132,89.243634
+527,108,q_1766,Take an interest in other people's lives.,3976,16.79125,19703,83.20875
+528,40,q_1768,Take charge.,4366,18.438279,19313,81.561721
+529,371,q_1769,Take control of things.,2536,10.709912,21143,89.290088
+530,95,q_1774,Take no time for others.,4065,17.16711,19614,82.83289
+531,322,q_1775,Take offense easily.,2597,10.967524,21082,89.032476
+532,15,q_1780,Take risks that could cause trouble for me.,5902,24.925039,17777,75.074961
+533,469,q_1781,Take risks.,2481,10.477638,21198,89.522362
+534,312,q_1787,Take things as they come.,2614,11.039318,21065,88.960682
+535,94,q_1792,Take time out for others.,4066,17.171333,19613,82.828667
+536,212,q_1795,Talk a lot.,2769,11.693906,20910,88.306094
+537,526,q_1798,Talk even when I know I shouldnÕt.,2456,10.37206,21223,89.62794
+538,176,q_1803,Talk to a lot of different people at parties.,2831,11.955741,20848,88.044259
+539,136,q_1808,[Tell people...want to hear so they do what I want].,3483,14.709236,20196,85.290764
+540,74,q_1810,Tell people about it when I'm irritated.,4285,18.096203,19394,81.903797
+541,583,q_1812,Tell the truth.,2441,10.308712,21238,89.691288
+542,688,q_1818,Tend to dislike soft-hearted people.,2366,9.991976,21313,90.008024
+543,677,q_1824,Tend to vote for conservative political candidates.,2385,10.072216,21294,89.927784
+544,696,q_1825,Tend to vote for liberal political candidates.,2304,9.730141,21375,90.269859
+545,635,q_1830,Think highly of myself.,2417,10.207357,21262,89.792643
+546,96,q_1832,Think of others first.,4053,17.116432,19626,82.883568
+547,37,q_1834,Think quickly.,4372,18.463618,19307,81.536382
+548,389,q_1835,Think that all will be well.,2524,10.659234,21155,89.340766
+549,360,q_1840,Think that my moods donÕt change more than most peopleÕs do.,2544,10.743697,21135,89.256303
+550,70,q_1848,Tire out quickly.,4296,18.142658,19383,81.857342
+551,148,q_1853,Tremble in dangerous situations.,3397,14.346045,20282,85.653955
+552,513,q_1854,Trust others.,2459,10.384729,21220,89.615271
+553,357,q_1855,Trust what people say.,2547,10.756366,21132,89.243634
+554,454,q_1858,Try not to think about the needy.,2489,10.511424,21190,89.488576
+555,182,q_1861,Try to avoid complex people.,2812,11.875501,20867,88.124499
+556,1,q_1867,Try to follow the rules.,6096,25.74433,17583,74.25567
+557,339,q_1869,Try to forgive and forget.,2566,10.836606,21113,89.163394
+558,134,q_1871,Try to impress others.,3486,14.721905,20193,85.278095
+559,383,q_1872,Try to lead others.,2527,10.671903,21152,89.328097
+560,664,q_1880,Try to understand myself.,2401,10.139786,21278,89.860214
+561,464,q_1881,Turn my back on others.,2484,10.490308,21195,89.509692
+562,491,q_1883,Turn plans into actions.,2470,10.431184,21209,89.568816
+563,209,q_1893,Use difficult words.,2775,11.719245,20904,88.280755
+564,126,q_1894,Use flattery to get ahead.,3536,14.933063,20143,85.066937
+565,132,q_1896,Use others for my own ends.,3509,14.819038,20170,85.180962
+566,190,q_1899,Usually enjoy being with people.,2797,11.812154,20882,88.187846
+567,216,q_1904,Usually like to spend my free time with people.,2763,11.668567,20916,88.331433
+568,678,q_1910,Value cooperation over competition.,2384,10.067993,21295,89.932007
+569,56,q_1913,Wait for others to lead the way.,4333,18.298915,19346,81.701085
+570,29,q_1915,Want every detail taken care of.,4381,18.501626,19298,81.498374
+571,21,q_1916,Want everything to add up perfectly.,4417,18.653659,19262,81.346341
+572,78,q_1917,"Want everything to be ""just right.""",4236,17.889269,19443,82.110731
+573,422,q_1923,Want to be left alone.,2505,10.578994,21174,89.421006
+574,154,q_1924,Want to be liked.,3353,14.160226,20326,85.839774
+575,173,q_1943,Warm up quickly to others.,2854,12.052874,20825,87.947126
+576,255,q_1949,Waste my time.,2719,11.482748,20960,88.517252
+577,326,q_1957,[Often bothered by at least one in group interactions].,2586,10.921069,21093,89.078931
+578,395,q_1962,Will do anything for others.,2521,10.646564,21158,89.353436
+579,223,q_1964,Will not probe deeply into a subject.,2755,11.634782,20924,88.365218
+580,114,q_1969,Wish to stay young forever.,3633,15.342709,20046,84.657291
+581,224,q_1979,Work hard.,2755,11.634782,20924,88.365218
+582,642,q_1984,Work too much.,2414,10.194687,21265,89.805313
+583,291,q_1989,Worry about things.,2649,11.187128,21030,88.812872
+584,67,q_1992,Would be afraid to give a speech in public.,4301,18.163774,19378,81.836226
+585,144,q_1993,[Good at rescuing from burning building].,3410,14.400946,20269,85.599054
+586,536,q_1998,Would describe my experiences as somewhat dull.,2453,10.35939,21226,89.64061
+587,143,q_2001,Would fear walking in a high-crime part of a city.,3414,14.417839,20265,85.582161
+588,12,q_2003,[Would feel v. badly for a long time if stole].,5991,25.3009,17688,74.6991
+589,244,q_2005,Would hate to be considered odd or strange.,2730,11.529203,20949,88.470797
+590,133,q_2008,Would like to have more power than other people.,3506,14.806369,20173,85.193631
+591,199,q_2011,Would love to explore strange places.,2789,11.778369,20890,88.221631
+592,2,q_2016,Would never cheat on my taxes.,6083,25.689429,17596,74.310571
+593,571,q_2017,Would never go hang gliding or bungee jumping.,2445,10.325605,21234,89.674395
+594,170,q_2018,[Never go down rapids in a canoe].,3237,13.670341,20442,86.329659
+595,488,q_2020,Would never make a high-risk investment.,2471,10.435407,21208,89.564593
+596,7,q_2021,Would never take things that aren't mine.,6022,25.431817,17657,74.568183
+597,189,q_2024,[Would not enjoy a highly social job].,2799,11.820601,20880,88.179399
+598,124,q_2025,Would not enjoy being a famous celebrity.,3549,14.987964,20130,85.012036
+599,5,q_2029,[Not regret taking advantage of someone impulsively].,6025,25.444487,17654,74.555513
+600,675,q_2036,Yell at people.,2390,10.093332,21289,89.906668
+601,278,q_2160,Am not a very enthusiastic person.,2678,11.309599,21001,88.690401
+602,63,q_2161,Do not have an assertive personality.,4315,18.222898,19364,81.777102
+603,208,q_2737,Am a goal-oriented person.,2776,11.723468,20903,88.276532
+604,630,q_2745,Am able to come up with new and different ideas.,2421,10.224249,21258,89.775751
+605,472,q_2754,Am an original thinker.,2480,10.473415,21199,89.526585
+606,80,q_2756,Am considered to be a wise person.,4228,17.855484,19451,82.144516
+607,282,q_2765,Am happy with my life.,2669,11.271591,21010,88.728409
+608,204,q_2775,Am not all that curious about the world.,2780,11.740361,20899,88.259639
+609,259,q_2786,Am often worried by things that I said or did.,2714,11.461633,20965,88.538367
+610,604,q_2821,Behave in unusual and strange ways.,2430,10.262258,21249,89.737742
+611,16,q_2853,Cannot imagine lying or cheating.,5887,24.861692,17792,75.138308
+612,206,q_2891,Don't pride myself on being original.,2778,11.731914,20901,88.268086
+613,172,q_2900,Don't think it's important to socialize with others.,2856,12.06132,20823,87.93868
+614,690,q_2951,Have a colorful and dramatic way of talking about things. ,2362,9.975083,21317,90.024917
+615,552,q_3023,Look forward to the opportunity to learn and grow. ,2449,10.342498,21230,89.657502
+616,584,q_3090,"When with a group, have difficulties selecting a good topic to talk about.",2441,10.308712,21238,89.691288
+617,572,q_3691,Am selfÐdestructive.,2445,10.325605,21234,89.674395
+618,473,q_4222,Have many different hobbies.,2480,10.473415,21199,89.526585
+619,594,q_4223,Stop to think things over before doing anything.,2434,10.27915,21245,89.72085
+620,546,q_4224,My mood often goes up and down.,2450,10.346721,21229,89.653279
+621,355,q_4225,Often take notice of what people think.,2548,10.76059,21131,89.23941
+622,463,q_4226,Am a talkative person.,2487,10.502977,21192,89.497023
+623,382,q_4227,Being in debt is worrisome to me.,2529,10.68035,21150,89.31965
+624,398,q_4228,"Sometimes feel ""just miserable"" for no reason.",2520,10.642341,21159,89.357659
+625,631,q_4229,Give money to charities.,2421,10.224249,21258,89.775751
+626,634,q_4230,Am rather lively.,2420,10.220026,21259,89.779974
+627,592,q_4231,It would upset me a lot to see a child or animal suffer.,2436,10.287597,21243,89.712403
+628,671,q_4232,Often worry about things I should not have done or said.,2392,10.101778,21287,89.898222
+629,692,q_4233,Dislike people who don't know how to behave themselves.,2356,9.949744,21323,90.050256
+630,659,q_4234,Can usually let myself go and enjoy a lively party.,2405,10.156679,21274,89.843321
+631,540,q_4235,Am an irritable person.,2452,10.355167,21227,89.644833
+632,459,q_4236,People should always respect the law.,2488,10.5072,21191,89.4928
+633,632,q_4237,Enjoy meeting new people.,2421,10.224249,21258,89.775751
+634,681,q_4238,Good manners are very important.,2378,10.042654,21301,89.957346
+635,516,q_4239,My feelings are easily hurt.,2458,10.380506,21221,89.619494
+636,683,q_4240,Tend to keep in the background on social occasions.,2375,10.029984,21304,89.970016
+637,475,q_4241,Would take drugs which may have strange or dangerous effects.,2479,10.469192,21200,89.530808
+638,443,q_4242,"Often feel ""fed-up.""",2493,10.528316,21186,89.471684
+639,531,q_4243,Like going out a lot.,2454,10.363613,21225,89.636387
+640,482,q_4244,Prefer to go my own way rather than act by the rules.,2476,10.456523,21203,89.543477
+641,669,q_4245,Enjoy hurting people I love.,2395,10.114447,21284,89.885553
+642,666,q_4246,Am often troubled by feelings of guilt.,2397,10.122894,21282,89.877106
+643,660,q_4247,Prefer reading to meeting people.,2404,10.152456,21275,89.847544
+644,676,q_4248,Have enemies who want to harm me.,2386,10.076439,21293,89.923561
+645,547,q_4249,Would call myself a nervous person.,2450,10.346721,21229,89.653279
+646,410,q_4250,Have many friends.,2511,10.604333,21168,89.395667
+647,369,q_4251,Enjoy practical jokes that can sometimes really hurt people.,2537,10.714135,21142,89.285865
+648,598,q_4252,Am a worrier.,2433,10.274927,21246,89.725073
+649,612,q_4253,Would call myself happy-go-lucky.,2428,10.253811,21251,89.746189
+650,487,q_4254,Good manners and cleanliness matter to me.,2473,10.443853,21206,89.556147
+651,444,q_4255,Have often gone against my parents' wishes.,2493,10.528316,21186,89.471684
+652,385,q_4256,Worry about awful things that might happen.,2526,10.66768,21153,89.33232
+653,449,q_4257,Usually take the initiative in making new friends.,2492,10.524093,21187,89.475907
+654,553,q_4258,"Would call myself tense or ""highly-strung.""",2449,10.342498,21230,89.657502
+655,404,q_4259,Am mostly quiet when with other people.,2516,10.625449,21163,89.374551
+656,628,q_4260,Think marriage is old-fashioned and should be done away with.,2422,10.228472,21257,89.771528
+657,532,q_4261,Am more easy-going about right and wrong than most people.,2454,10.363613,21225,89.636387
+658,460,q_4262,Can easily get some life into a dull party.,2488,10.5072,21191,89.4928
+659,650,q_4263,Worry about my health.,2410,10.177795,21269,89.822205
+660,579,q_4264,Enjoy cooperating with others.,2442,10.312936,21237,89.687064
+661,445,q_4265,Like telling jokes and funny stories to my friends.,2493,10.528316,21186,89.471684
+662,655,q_4266,Most things taste the same to me.,2406,10.160902,21273,89.839098
+663,554,q_4267,Like mixing with people.,2449,10.342498,21230,89.657502
+664,505,q_4268,Worry if I know there are mistakes in my work.,2464,10.405845,21215,89.594155
+665,643,q_4269,Suffer from sleeplessness.,2414,10.194687,21265,89.805313
+666,654,q_4270,People have said that I sometimes act rashly.,2408,10.169348,21271,89.830652
+667,537,q_4271,"Nearly always have a ""ready answer"" when talking to people.",2453,10.35939,21226,89.64061
+668,470,q_4272,Like to arrive at appointments in plenty of time.,2481,10.477638,21198,89.522362
+669,427,q_4273,Often feel listless and tired for no reason.,2502,10.566325,21177,89.433675
+670,656,q_4274,Like doing things in which I have to act quickly.,2406,10.160902,21273,89.839098
+671,638,q_4275,My mother is (or was) a good woman.,2416,10.203134,21263,89.796866
+672,393,q_4276,Often make decisions on the spur of the moment.,2522,10.650788,21157,89.349212
+673,406,q_4277,Often feel life is very dull.,2514,10.617002,21165,89.382998
+674,527,q_4278,Often take on more activities than I have time for.,2456,10.37206,21223,89.62794
+675,489,q_4279,There are several people who keep trying to avoid me.,2471,10.435407,21208,89.564593
+676,423,q_4280,Worry a lot about my looks.,2505,10.578994,21174,89.421006
+677,587,q_4281,People spend too much time safeguarding their future with savings and insurance.,2439,10.300266,21240,89.699734
+678,363,q_4282,Have once wished that I were dead.,2543,10.739474,21136,89.260526
+679,615,q_4283,Can get a party going.,2427,10.249588,21252,89.750412
+680,558,q_4284,Try not to be rude to people.,2448,10.338274,21231,89.661726
+681,497,q_4285,Worry too long after an embarrassing experience.,2467,10.418514,21212,89.581486
+682,333,q_4286,"Generally ""look before I leap.""",2571,10.857722,21108,89.142278
+683,434,q_4287,"Suffer from ""nerves.""",2498,10.549432,21181,89.450568
+684,402,q_4288,Often feel lonely.,2518,10.633895,21161,89.366105
+685,533,q_4289,Trust people to mainly tell the truth.,2454,10.363613,21225,89.636387
+686,477,q_4290,Am easily hurt when people find fault with me or the work I do.,2477,10.460746,21202,89.539254
+687,593,q_4291,It is better to follow society's rules than to go my own way.,2435,10.283373,21244,89.716627
+688,408,q_4292,Like having plenty of bustle and excitement around.,2513,10.612779,21166,89.387221
+689,589,q_4293,Would like for other people to be afraid of me.,2437,10.29182,21242,89.70818
+690,573,q_4294,Am sometimes bubbling over with energy and sometimes very sluggish.,2444,10.321382,21235,89.678618
+691,425,q_4295,Other people think of me as being very lively.,2503,10.570548,21176,89.429452
+692,452,q_4296,Tell a lot of lies.,2491,10.51987,21188,89.48013
+693,493,q_4297,Believe one has special duties to one's family.,2469,10.426961,21210,89.573039
+694,440,q_4298,Am touchy about some things.,2494,10.532539,21185,89.467461
+695,605,q_4299,Would feel very sorry for an animal caught in a trap.,2430,10.262258,21249,89.737742
+696,391,q_4300,"When my temper rises, I find it difficult to control.",2523,10.655011,21156,89.344989
