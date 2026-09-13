@@ -1,0 +1,617 @@
+k,profile,selection,rank,item_id,item_text,expected_response,contrast_vs_other_profiles,ranking_value
+4,Profile A,highest_expected,1,q_1289,Like music.,5.331469291197638,-0.30445481773334837,5.331469291197638
+4,Profile A,highest_expected,2,q_4231,It would upset me a lot to see a child or animal suffer.,5.295793994738466,-0.239597382857764,5.295793994738466
+4,Profile A,highest_expected,3,q_1334,Like to visit new places.,5.195991777031005,-0.11487730517516859,5.195991777031005
+4,Profile A,highest_expected,4,q_4275,My mother is (or was) a good woman.,5.139736789832502,-0.06786247521590649,5.139736789832502
+4,Profile A,highest_expected,5,q_3023,Look forward to the opportunity to learn and grow. ,5.014982732142644,-0.41709862431729405,5.014982732142644
+4,Profile A,highest_expected,6,q_4238,Good manners are very important.,5.00095685756177,-0.25194778484309666,5.00095685756177
+4,Profile A,highest_expected,7,q_1880,Try to understand myself.,4.993388160045879,-0.428729341988598,4.993388160045879
+4,Profile A,highest_expected,8,q_776,Enjoy the beauty of nature.,4.96430021173778,-0.3625317316263992,4.96430021173778
+4,Profile A,highest_expected,9,q_778,Enjoy thinking about things.,4.942460947200292,-0.37893450520199234,4.942460947200292
+4,Profile A,highest_expected,10,q_4299,Would feel very sorry for an animal caught in a trap.,4.909842464714236,-0.26313521302962606,4.909842464714236
+4,Profile A,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.355910335437781,0.07275663932858567,1.355910335437781
+4,Profile A,lowest_expected,2,q_1747,Steal things.,1.6644824333988777,0.13037906890736695,1.6644824333988777
+4,Profile A,lowest_expected,3,q_500,Cheat on people who have trusted me.,1.8511151877499832,0.2213937567489901,1.8511151877499832
+4,Profile A,lowest_expected,4,q_4248,Have enemies who want to harm me.,2.0360030710210246,0.08374402200422115,2.0360030710210246
+4,Profile A,lowest_expected,5,q_2775,Am not all that curious about the world.,2.0902337618722413,0.36365355284805045,2.0902337618722413
+4,Profile A,lowest_expected,6,q_4260,Think marriage is old-fashioned and should be done away with.,2.1179473014228263,-0.03743265754946501,2.1179473014228263
+4,Profile A,lowest_expected,7,q_4241,Would take drugs which may have strange or dangerous effects.,2.120587568056729,-0.041041643870356026,2.120587568056729
+4,Profile A,lowest_expected,8,q_501,Cheat to get ahead.,2.18211626637801,0.2725447404340582,2.18211626637801
+4,Profile A,lowest_expected,9,q_668,Don't have a soft side.,2.1977637831368955,0.2425446819025463,2.1977637831368955
+4,Profile A,lowest_expected,10,q_4266,Most things taste the same to me.,2.20482876859492,0.34044837017990326,2.20482876859492
+4,Profile A,largest_positive_contrast,1,q_1083,Have difficulty imagining things.,2.515095110653766,0.5716687088365735,0.5716687088365735
+4,Profile A,largest_positive_contrast,2,q_1587,Rarely look for a deeper meaning in things.,2.6536999583597023,0.5440321303446267,0.5440321303446267
+4,Profile A,largest_positive_contrast,3,q_1913,Wait for others to lead the way.,3.4718104615392256,0.5016688941987577,0.5016688941987577
+4,Profile A,largest_positive_contrast,4,q_1260,Let myself be influenced by others.,3.490321064630395,0.500971364380943,0.500971364380943
+4,Profile A,largest_positive_contrast,5,q_609,Do not have a good imagination.,2.618522627323925,0.5000304699243667,0.5000304699243667
+4,Profile A,largest_positive_contrast,6,q_1114,Have little to say.,3.206254815595418,0.49571472901279945,0.49571472901279945
+4,Profile A,largest_positive_contrast,7,q_1858,Try not to think about the needy.,3.045271679754778,0.4783541818157824,0.4783541818157824
+4,Profile A,largest_positive_contrast,8,q_1964,Will not probe deeply into a subject.,2.7647349552513396,0.4757241483876964,0.4757241483876964
+4,Profile A,largest_positive_contrast,9,q_958,Get back at people who insult me.,3.3373076180094405,0.4650277221522021,0.4650277221522021
+4,Profile A,largest_positive_contrast,10,q_626,Do things in a half-way manner.,3.0332346639351737,0.4622569668747669,0.4622569668747669
+4,Profile A,largest_positive_contrast,11,q_706,Don't put my mind on the task at hand.,2.9852351536227495,0.46169462663544314,0.46169462663544314
+4,Profile A,largest_positive_contrast,12,q_1765,Take advantage of others.,2.466947582732831,0.45899864454396777,0.45899864454396777
+4,Profile A,largest_negative_contrast,1,q_1648,See beauty in things that others might not notice.,4.451942643479041,-0.6769613934824168,-0.6769613934824168
+4,Profile A,largest_negative_contrast,2,q_1389,Love to reflect on things.,4.453656535951042,-0.6680944010929482,-0.6680944010929482
+4,Profile A,largest_negative_contrast,3,q_740,Engage in discussions.,4.201684254779954,-0.6376503589099887,-0.6376503589099887
+4,Profile A,largest_negative_contrast,4,q_2745,Am able to come up with new and different ideas.,4.284530783298827,-0.6314240316722959,-0.6314240316722959
+4,Profile A,largest_negative_contrast,5,q_1392,Love to think up new ways of doing things.,4.1996096245285806,-0.610105612475679,-0.610105612475679
+4,Profile A,largest_negative_contrast,6,q_1738,Spend time reflecting on things.,4.6075706832292305,-0.576877573293852,-0.576877573293852
+4,Profile A,largest_negative_contrast,7,q_2754,Am an original thinker.,4.157380431222858,-0.566657806632251,-0.566657806632251
+4,Profile A,largest_negative_contrast,8,q_423,Can handle complex problems.,4.27665787066006,-0.560931124333929,-0.560931124333929
+4,Profile A,largest_negative_contrast,9,q_128,Am full of ideas.,4.400055504776514,-0.5427663098446338,-0.5427663098446338
+4,Profile A,largest_negative_contrast,10,q_438,Can say things beautifully.,3.915974454060347,-0.541478400664535,-0.541478400664535
+4,Profile A,largest_negative_contrast,11,q_1915,Want every detail taken care of.,4.132689353997426,-0.531703447987419,-0.531703447987419
+4,Profile A,largest_negative_contrast,12,q_492,Carry the conversation to a higher level.,4.069592358427396,-0.5295677259044984,-0.5295677259044984
+4,Profile B,highest_expected,1,q_1289,Like music.,5.69648006985254,0.18222622047318815,5.69648006985254
+4,Profile B,highest_expected,2,q_4231,It would upset me a lot to see a child or animal suffer.,5.65137524985568,0.23451095729852245,5.65137524985568
+4,Profile B,highest_expected,3,q_3023,Look forward to the opportunity to learn and grow. ,5.596293733839746,0.35798271127884185,5.596293733839746
+4,Profile B,highest_expected,4,q_148,Interested in many things.,5.475802433059428,0.32835885244656726,5.475802433059428
+4,Profile B,highest_expected,5,q_1334,Like to visit new places.,5.464366304946243,0.24295539871181582,5.464366304946243
+4,Profile B,highest_expected,6,q_4238,Good manners are very important.,5.447752854759487,0.3437802114205244,5.447752854759487
+4,Profile B,highest_expected,7,q_776,Enjoy the beauty of nature.,5.429815238566591,0.2581549708120159,5.429815238566591
+4,Profile B,highest_expected,8,q_1979,Work hard.,5.429077178867186,0.6394381773651041,5.429077178867186
+4,Profile B,highest_expected,9,q_1421,Make people feel welcome.,5.364780961441844,0.759464693605433,5.364780961441844
+4,Profile B,highest_expected,10,q_1385,Love to help others.,5.359579839836161,0.5009039322902007,5.359579839836161
+4,Profile B,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.1031518961738271,-0.26425461302335296,1.1031518961738271
+4,Profile B,lowest_expected,2,q_1747,Steal things.,1.350598359696406,-0.2881330293625952,1.350598359696406
+4,Profile B,lowest_expected,3,q_500,Cheat on people who have trusted me.,1.4125205810796595,-0.36339905214477497,1.4125205810796595
+4,Profile B,lowest_expected,4,q_2775,Am not all that curious about the world.,1.5346116711835909,-0.37717590140348345,1.5346116711835909
+4,Profile B,lowest_expected,5,q_1881,Turn my back on others.,1.6138176919748763,-0.6059402355429386,1.6138176919748763
+4,Profile B,lowest_expected,6,q_501,Cheat to get ahead.,1.630542391328588,-0.4628870929651714,1.630542391328588
+4,Profile B,lowest_expected,7,q_4248,Have enemies who want to harm me.,1.6512437845890764,-0.42926835990504264,1.6512437845890764
+4,Profile B,lowest_expected,8,q_4266,Most things taste the same to me.,1.659681531231174,-0.3864146129717583,1.659681531231174
+4,Profile B,lowest_expected,9,q_1663,Seek conflict.,1.7418575407867298,-0.3163001794695066,1.7418575407867298
+4,Profile B,lowest_expected,10,q_1083,Have difficulty imagining things.,1.7565247752677973,-0.4397584050113843,1.7565247752677973
+4,Profile B,largest_positive_contrast,1,q_254,Am skilled in handling social situations.,4.878111803764172,1.0190417617709744,1.0190417617709744
+4,Profile B,largest_positive_contrast,2,q_819,Feel comfortable around people.,4.881338801961196,1.0028884054691645,1.0028884054691645
+4,Profile B,largest_positive_contrast,3,q_1578,Rarely feel depressed.,3.9656638070111407,0.9925503353468108,0.9925503353468108
+4,Profile B,largest_positive_contrast,4,q_815,Feel at ease with people.,4.756511253201624,0.9705717613710805,0.9705717613710805
+4,Profile B,largest_positive_contrast,5,q_1410,Make friends easily.,4.829923383272731,0.9702260324951935,0.9702260324951935
+4,Profile B,largest_positive_contrast,6,q_1350,Look at the bright side of life.,5.051802119699837,0.9414071676927112,0.9414071676927112
+4,Profile B,largest_positive_contrast,7,q_1371,Love life.,5.340361308378708,0.9410412391694081,0.9410412391694081
+4,Profile B,largest_positive_contrast,8,q_2765,Am happy with my life.,4.9990193813288855,0.9406591635413699,0.9406591635413699
+4,Profile B,largest_positive_contrast,9,q_820,Feel comfortable with myself.,4.956536606396481,0.9373484380379651,0.9373484380379651
+4,Profile B,largest_positive_contrast,10,q_1803,Talk to a lot of different people at parties.,4.052876039938333,0.8802999050726057,0.8802999050726057
+4,Profile B,largest_positive_contrast,11,q_803,Express myself easily.,4.67725934144883,0.8701899040940302,0.8701899040940302
+4,Profile B,largest_positive_contrast,12,q_1567,Radiate joy.,4.525709147666875,0.8696869072041804,0.8696869072041804
+4,Profile B,largest_negative_contrast,1,q_811,Feel a sense of worthlessness or hopelessness.,2.0198892840217892,-1.3272767511941521,-1.3272767511941521
+4,Profile B,largest_negative_contrast,2,q_875,Feel that my life lacks direction.,2.3060961104198316,-1.2804941034996524,-1.2804941034996524
+4,Profile B,largest_negative_contrast,3,q_578,Dislike myself.,2.017383986041054,-1.0933387242335582,-1.0933387242335582
+4,Profile B,largest_negative_contrast,4,q_1038,Have a dark outlook on the future.,1.9034375864031776,-1.0797757422388574,-1.0797757422388574
+4,Profile B,largest_negative_contrast,5,q_4228,"Sometimes feel ""just miserable"" for no reason.",2.7624080731384915,-1.0755277409411987,-1.0755277409411987
+4,Profile B,largest_negative_contrast,6,q_201,Am not sure where my life is going.,2.8626679913579323,-1.0613073040167675,-1.0613073040167675
+4,Profile B,largest_negative_contrast,7,q_206,Am often down in the dumps.,2.216121814157283,-1.052760649780185,-1.052760649780185
+4,Profile B,largest_negative_contrast,8,q_1671,[Enjoy interactions less than others].,2.5372849002159423,-1.0506671003870474,-1.0506671003870474
+4,Profile B,largest_negative_contrast,9,q_52,Am a person whose moods go up and down easily.,2.8245220768699104,-1.0488313145067276,-1.0488313145067276
+4,Profile B,largest_negative_contrast,10,q_4249,Would call myself a nervous person.,2.617800642621245,-1.035726932723093,-1.035726932723093
+4,Profile B,largest_negative_contrast,11,q_901,Find it difficult to approach others.,2.637879239279397,-1.0277618143378153,-1.0277618143378153
+4,Profile B,largest_negative_contrast,12,q_919,Find life difficult.,2.8341307411073764,-1.0251384811632196,-1.0251384811632196
+4,Profile C,highest_expected,1,q_1289,Like music.,5.457293535289232,-0.1366891589445558,5.457293535289232
+4,Profile C,highest_expected,2,q_1880,Try to understand myself.,5.370850906323414,0.07455431971478355,5.370850906323414
+4,Profile C,highest_expected,3,q_4231,It would upset me a lot to see a child or animal suffer.,5.295067062833333,-0.2405666253979417,5.295067062833333
+4,Profile C,highest_expected,4,q_778,Enjoy thinking about things.,5.2686807564609275,0.05602524047885549,5.2686807564609275
+4,Profile C,highest_expected,5,q_1310,Like to get lost in thought.,5.212254829287688,0.7154448925454631,5.212254829287688
+4,Profile C,highest_expected,6,q_4227,Being in debt is worrisome to me.,5.204552271921136,0.3624117924734245,5.204552271921136
+4,Profile C,highest_expected,7,q_1738,Spend time reflecting on things.,5.189016602592761,0.1983836525241891,5.189016602592761
+4,Profile C,highest_expected,8,q_776,Enjoy the beauty of nature.,5.1765222656795995,-0.0795689930373058,5.1765222656795995
+4,Profile C,highest_expected,9,q_1989,Worry about things.,5.17509569168874,0.7615176548938818,5.17509569168874
+4,Profile C,highest_expected,10,q_4268,Worry if I know there are mistakes in my work.,5.1652551244499,0.2700663756531654,5.1652551244499
+4,Profile C,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.4424220182862435,0.18810554979320226,1.4424220182862435
+4,Profile C,lowest_expected,2,q_1747,Steal things.,1.7714279041346452,0.27297302988839034,1.7714279041346452
+4,Profile C,lowest_expected,3,q_2775,Am not all that curious about the world.,1.8245360931590917,0.009389994563850923,1.8245360931590917
+4,Profile C,lowest_expected,4,q_500,Cheat on people who have trusted me.,1.9072574928814103,0.29625016359089296,1.9072574928814103
+4,Profile C,lowest_expected,5,q_1596,Rarely worry.,1.9632258467109975,-0.8725430971996839,1.9632258467109975
+4,Profile C,lowest_expected,6,q_668,Don't have a soft side.,2.0222791945508987,0.008565230454550488,2.0222791945508987
+4,Profile C,lowest_expected,7,q_610,Do not like art.,2.0354200704166843,-0.13271280030301114,2.0354200704166843
+4,Profile C,lowest_expected,8,q_4248,Have enemies who want to harm me.,2.047260645035953,0.0987541206907927,2.047260645035953
+4,Profile C,lowest_expected,9,q_1578,Rarely feel depressed.,2.118780065491004,-1.4699613200133714,2.118780065491004
+4,Profile C,lowest_expected,10,q_262,Am the life of the party.,2.1271828752454396,-1.105573608203367,2.1271828752454396
+4,Profile C,largest_positive_contrast,1,q_811,Feel a sense of worthlessness or hopelessness.,4.330493153047934,1.7535284075073747,1.7535284075073747
+4,Profile C,largest_positive_contrast,2,q_4228,"Sometimes feel ""just miserable"" for no reason.",4.855910253389572,1.715808499393575,1.715808499393575
+4,Profile C,largest_positive_contrast,3,q_867,Feel that I'm unable to deal with things.,4.097072676641162,1.6636289598581695,1.6636289598581695
+4,Profile C,largest_positive_contrast,4,q_1038,Have a dark outlook on the future.,3.9369994796524743,1.6316401154268712,1.6316401154268712
+4,Profile C,largest_positive_contrast,5,q_206,Am often down in the dumps.,4.22512330118324,1.6259079995877572,1.6259079995877572
+4,Profile C,largest_positive_contrast,6,q_578,Dislike myself.,4.0371879625482325,1.59973324444268,1.59973324444268
+4,Profile C,largest_positive_contrast,7,q_901,Find it difficult to approach others.,4.599031895509084,1.587108393968434,1.587108393968434
+4,Profile C,largest_positive_contrast,8,q_824,Feel desperate.,3.801104703764368,1.5492897999444941,1.5492897999444941
+4,Profile C,largest_positive_contrast,9,q_1479,Often feel blue.,4.511895525635055,1.5272072228070166,1.5272072228070166
+4,Profile C,largest_positive_contrast,10,q_1480,Often feel uncomfortable around others.,4.412472740228166,1.509561436474145,1.509561436474145
+4,Profile C,largest_positive_contrast,11,q_105,Am easily discouraged.,4.322809838571235,1.5079087028320646,1.5079087028320646
+4,Profile C,largest_positive_contrast,12,q_1044,Have a low opinion of myself.,4.268686490108695,1.4839095501386637,1.4839095501386637
+4,Profile C,largest_negative_contrast,1,q_1410,Make friends easily.,2.8498821958618805,-1.669828884052607,-1.669828884052607
+4,Profile C,largest_negative_contrast,2,q_819,Feel comfortable around people.,2.926068342631599,-1.6041388736369648,-1.6041388736369648
+4,Profile C,largest_negative_contrast,3,q_815,Feel at ease with people.,2.8617417464318606,-1.5557875809886035,-1.5557875809886035
+4,Profile C,largest_negative_contrast,4,q_254,Am skilled in handling social situations.,2.989280008550281,-1.4994006318475477,-1.4994006318475477
+4,Profile C,largest_negative_contrast,5,q_2765,Am happy with my life.,3.178066042149995,-1.4872786220304848,-1.4872786220304848
+4,Profile C,largest_negative_contrast,6,q_1350,Look at the bright side of life.,3.2305630223377735,-1.4869116287900406,-1.4869116287900406
+4,Profile C,largest_negative_contrast,7,q_832,Feel healthy and vibrant most of the time.,2.871621422532583,-1.486598186507392,-1.486598186507392
+4,Profile C,largest_negative_contrast,8,q_1578,Rarely feel depressed.,2.118780065491004,-1.4699613200133714,-1.4699613200133714
+4,Profile C,largest_negative_contrast,9,q_279,Am usually active and full of energy.,2.867779760989131,-1.46476357619194,-1.46476357619194
+4,Profile C,largest_negative_contrast,10,q_285,Am very pleased with myself.,2.755361982706077,-1.449334233988612,-1.449334233988612
+4,Profile C,largest_negative_contrast,11,q_4257,Usually take the initiative in making new friends.,2.4689912816481665,-1.4439623293205486,-1.4439623293205486
+4,Profile C,largest_negative_contrast,12,q_1742,Start conversations.,2.8946588959826185,-1.437631677701412,-1.437631677701412
+4,Profile D,highest_expected,1,q_1289,Like music.,5.753998721651186,0.2589177562047169,5.753998721651186
+4,Profile D,highest_expected,2,q_4231,It would upset me a lot to see a child or animal suffer.,5.659731820099674,0.24565305095718148,5.659731820099674
+4,Profile D,highest_expected,3,q_3023,Look forward to the opportunity to learn and grow. ,5.629188448073226,0.4018423302568159,5.629188448073226
+4,Profile D,highest_expected,4,q_515,Come up with good solutions.,5.5452321986575,0.8189254543547273,5.5452321986575
+4,Profile D,highest_expected,5,q_1880,Try to understand myself.,5.5397018968557825,0.2996889737579398,5.5397018968557825
+4,Profile D,highest_expected,6,q_148,Interested in many things.,5.530247034876988,0.4009516548699805,5.530247034876988
+4,Profile D,highest_expected,7,q_1334,Like to visit new places.,5.496084013425728,0.285245676684462,5.496084013425728
+4,Profile D,highest_expected,8,q_1705,Show my gratitude.,5.483145434276325,0.5837935690844693,5.483145434276325
+4,Profile D,highest_expected,9,q_1215,Know how to get things done.,5.460493275849322,0.8254730219491524,5.460493275849322
+4,Profile D,highest_expected,10,q_4238,Good manners are very important.,5.459579215894025,0.35954869293324254,5.459579215894025
+4,Profile D,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.3038871738675155,0.0033924239015650226,1.3038871738675155
+4,Profile D,lowest_expected,2,q_1747,Steal things.,1.480283829643481,-0.11521906943316207,1.480283829643481
+4,Profile D,lowest_expected,3,q_500,Cheat on people who have trusted me.,1.56938621904191,-0.15424486819510763,1.56938621904191
+4,Profile D,lowest_expected,4,q_404,Break my promises.,1.7009550378903964,-0.5980574839294521,1.7009550378903964
+4,Profile D,lowest_expected,5,q_4266,Most things taste the same to me.,1.755524900376397,-0.2586234541114607,1.755524900376397
+4,Profile D,lowest_expected,6,q_1467,Obstruct others' plans.,1.7808199965770843,-0.30769093546301174,1.7808199965770843
+4,Profile D,lowest_expected,7,q_1663,Seek conflict.,1.781746541947543,-0.2631148445884226,1.781746541947543
+4,Profile D,lowest_expected,8,q_1113,Have little to contribute.,1.7846719240553883,-0.7578027933362892,1.7846719240553883
+4,Profile D,lowest_expected,9,q_4296,Tell a lot of lies.,1.8078966274704091,-0.4972769543272608,1.8078966274704091
+4,Profile D,lowest_expected,10,q_2775,Am not all that curious about the world.,1.82059286272989,0.004132353991582072,1.82059286272989
+4,Profile D,largest_positive_contrast,1,q_1410,Make friends easily.,4.894793288996622,1.0567192401270482,1.0567192401270482
+4,Profile D,largest_positive_contrast,2,q_1742,Start conversations.,4.730905609153003,1.010697273192434,1.010697273192434
+4,Profile D,largest_positive_contrast,3,q_254,Am skilled in handling social situations.,4.869534026352025,1.0076047252214448,1.0076047252214448
+4,Profile D,largest_positive_contrast,4,q_1205,Know how to captivate people.,4.647723316180024,0.964350629708195,0.964350629708195
+4,Profile D,largest_positive_contrast,5,q_429,Can manage many things at the same time.,5.071987790165752,0.9621966148091019,0.9621966148091019
+4,Profile D,largest_positive_contrast,6,q_1652,See myself as a good leader.,5.029095644409523,0.9593469433379225,0.9593469433379225
+4,Profile D,largest_positive_contrast,7,q_4283,Can get a party going.,4.041936859153337,0.9590591642922512,0.9590591642922512
+4,Profile D,largest_positive_contrast,8,q_4257,Usually take the initiative in making new friends.,4.270532285300372,0.9580923422157257,0.9580923422157257
+4,Profile D,largest_positive_contrast,9,q_1055,Have a strong personality.,5.281169338039387,0.9565186672477788,0.9565186672477788
+4,Profile D,largest_positive_contrast,10,q_1045,Have a natural talent for influencing people.,4.731863763362889,0.9563590396179822,0.9563590396179822
+4,Profile D,largest_positive_contrast,11,q_1883,Turn plans into actions.,5.090144662436139,0.9472971540050814,0.9472971540050814
+4,Profile D,largest_positive_contrast,12,q_279,Am usually active and full of energy.,4.661215559907507,0.926484155699228,0.926484155699228
+4,Profile D,largest_negative_contrast,1,q_1949,Waste my time.,2.725009098135195,-1.166599493204021,-1.166599493204021
+4,Profile D,largest_negative_contrast,2,q_1913,Wait for others to lead the way.,2.2321203550090303,-1.1512512478415027,-1.1512512478415027
+4,Profile D,largest_negative_contrast,3,q_867,Feel that I'm unable to deal with things.,2.0841943203331392,-1.0202088485525267,-1.0202088485525267
+4,Profile D,largest_negative_contrast,4,q_114,Am easily intimidated.,2.2369315492237063,-0.9797597436075725,-0.9797597436075725
+4,Profile D,largest_negative_contrast,5,q_3090,"When with a group, have difficulties selecting a good topic to talk about.",2.472342836648483,-0.9661387666449834,-0.9661387666449834
+4,Profile D,largest_negative_contrast,6,q_1087,Have difficulty starting tasks.,2.7990654173956155,-0.9583653395509901,-0.9583653395509901
+4,Profile D,largest_negative_contrast,7,q_665,Don't finish the things that I start.,2.2766343528109254,-0.9033221028555642,-0.9033221028555642
+4,Profile D,largest_negative_contrast,8,q_105,Am easily discouraged.,2.515408407533292,-0.9019598718851931,-0.9019598718851931
+4,Profile D,largest_negative_contrast,9,q_4228,"Sometimes feel ""just miserable"" for no reason.",2.913748912828361,-0.8737399546880393,-0.8737399546880393
+4,Profile D,largest_negative_contrast,10,q_904,Find it difficult to get down to work.,2.683788366992654,-0.8672948970919685,-0.8672948970919685
+4,Profile D,largest_negative_contrast,11,q_66,Am afraid of many things.,2.325799605217199,-0.8349588787094055,-0.8349588787094055
+4,Profile D,largest_negative_contrast,12,q_1024,Hang around doing nothing.,2.902916728118962,-0.8337719674133086,-0.8337719674133086
+10,Profile A,highest_expected,1,q_778,Enjoy thinking about things.,5.544850102890911,0.37097038162739704,5.544850102890911
+10,Profile A,highest_expected,2,q_3023,Look forward to the opportunity to learn and grow. ,5.530244483042836,0.28942590065958385,5.530244483042836
+10,Profile A,highest_expected,3,q_1880,Try to understand myself.,5.435272524805672,0.16515008015500499,5.435272524805672
+10,Profile A,highest_expected,4,q_1289,Like music.,5.371200587503582,-0.16239940460782343,5.371200587503582
+10,Profile A,highest_expected,5,q_776,Enjoy the beauty of nature.,5.3094281810950665,0.1438315724543422,5.3094281810950665
+10,Profile A,highest_expected,6,q_240,Am quick to understand things.,5.2952681258588274,0.5234759781841554,5.2952681258588274
+10,Profile A,highest_expected,7,q_148,Interested in many things.,5.279809326110348,0.10028289288443126,5.279809326110348
+10,Profile A,highest_expected,8,q_761,Enjoy intellectual games.,5.262750786836006,0.6136641543596228,5.262750786836006
+10,Profile A,highest_expected,9,q_1738,Spend time reflecting on things.,5.197561261772424,0.20216837391298537,5.197561261772424
+10,Profile A,highest_expected,10,q_493,Catch on to things quickly.,5.193543757238552,0.33572286227860104,5.193543757238552
+10,Profile A,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.1837046385177692,-0.1695055808913315,1.1837046385177692
+10,Profile A,lowest_expected,2,q_2775,Am not all that curious about the world.,1.4366533398916908,-0.45276178200531514,1.4366533398916908
+10,Profile A,lowest_expected,3,q_1747,Steal things.,1.4690510015833405,-0.148354425655014,1.4690510015833405
+10,Profile A,lowest_expected,4,q_500,Cheat on people who have trusted me.,1.4899183031416787,-0.2629261494648094,1.4899183031416787
+10,Profile A,lowest_expected,5,q_501,Cheat to get ahead.,1.6806977297346173,-0.3811314048118224,1.6806977297346173
+10,Profile A,lowest_expected,6,q_1083,Have difficulty imagining things.,1.725818010236539,-0.43720828452486993,1.725818010236539
+10,Profile A,lowest_expected,7,q_708,Don't see the consequences of things.,1.7273022378090708,-0.5348207609569446,1.7273022378090708
+10,Profile A,lowest_expected,8,q_4248,Have enemies who want to harm me.,1.7276988340869774,-0.30624052906347643,1.7276988340869774
+10,Profile A,lowest_expected,9,q_316,Avoid difficult reading material.,1.74297117675124,-0.9357307497955787,1.74297117675124
+10,Profile A,lowest_expected,10,q_1088,Have difficulty understanding abstract ideas.,1.7744096205563418,-0.9018096031016554,1.7744096205563418
+10,Profile A,largest_positive_contrast,1,q_1681,Seldom get emotional.,4.296547911753306,1.2220227646096014,1.2220227646096014
+10,Profile A,largest_positive_contrast,2,q_712,Don't talk a lot.,4.36730485339256,1.1463681744299739,1.1463681744299739
+10,Profile A,largest_positive_contrast,3,q_1671,[Enjoy interactions less than others].,4.45972879650302,1.129821619587155,1.129821619587155
+10,Profile A,largest_positive_contrast,4,q_721,Don't understand people who get emotional.,3.6378373556474832,1.0639304980683169,1.0639304980683169
+10,Profile A,largest_positive_contrast,5,q_174,Am not easily affected by my emotions.,3.8605521794558175,1.0324270529693922,1.0324270529693922
+10,Profile A,largest_positive_contrast,6,q_140,Am hard to get to know.,4.592125739625045,1.0017312086959649,1.0017312086959649
+10,Profile A,largest_positive_contrast,7,q_1583,Rarely get caught up in the excitement.,4.0668843185568155,0.9649322081899756,0.9649322081899756
+10,Profile A,largest_positive_contrast,8,q_4247,Prefer reading to meeting people.,4.447865120850816,0.9558302249904473,0.9558302249904473
+10,Profile A,largest_positive_contrast,9,q_2024,[Would not enjoy a highly social job].,3.9576305457488137,0.8920237053310713,0.8920237053310713
+10,Profile A,largest_positive_contrast,10,q_797,Experience very few emotional highs and lows.,3.791784699155597,0.8765448692328475,0.8765448692328475
+10,Profile A,largest_positive_contrast,11,q_4240,Tend to keep in the background on social occasions.,4.559212939678724,0.8680058933806682,0.8680058933806682
+10,Profile A,largest_positive_contrast,12,q_4259,Am mostly quiet when with other people.,4.299039562999222,0.8676075976237057,0.8676075976237057
+10,Profile A,largest_negative_contrast,1,q_986,Get stressed out easily.,2.778176471656079,-1.2916514316075682,-1.2916514316075682
+10,Profile A,largest_negative_contrast,2,q_979,Get overwhelmed by emotions.,2.6585296129667855,-1.240968817598635,-1.240968817598635
+10,Profile A,largest_negative_contrast,3,q_1775,Take offense easily.,2.1953718321016975,-1.2321643733989749,-1.2321643733989749
+10,Profile A,largest_negative_contrast,4,q_1795,Talk a lot.,2.5852357754093607,-1.2103761480729118,-1.2103761480729118
+10,Profile A,largest_negative_contrast,5,q_4226,Am a talkative person.,2.7764924491329364,-1.1965944594807758,-1.1965944594807758
+10,Profile A,largest_negative_contrast,6,q_1505,Panic easily.,2.1375410331083864,-1.187385128709404,-1.187385128709404
+10,Profile A,largest_negative_contrast,7,q_4239,My feelings are easily hurt.,2.7131202923198745,-1.1444574846970568,-1.1444574846970568
+10,Profile A,largest_negative_contrast,8,q_1759,[Suspect facial expressions show when sad].,3.127798201576221,-1.143843168181677,-1.143843168181677
+10,Profile A,largest_negative_contrast,9,q_497,Change my mood a lot.,2.520600609885256,-1.140922432945962,-1.140922432945962
+10,Profile A,largest_negative_contrast,10,q_995,Get upset easily.,2.4315438180392777,-1.1397519014993809,-1.1397519014993809
+10,Profile A,largest_negative_contrast,11,q_4267,Like mixing with people.,2.9207496783197624,-1.1188481246776472,-1.1188481246776472
+10,Profile A,largest_negative_contrast,12,q_793,Experience my emotions intensely.,3.3032430213369617,-1.1185501943824887,-1.1185501943824887
+10,Profile B,highest_expected,1,q_1289,Like music.,5.220182203658409,-0.33019760888023875,5.220182203658409
+10,Profile B,highest_expected,2,q_241,Am quiet around strangers.,5.119559043890658,1.0884518817555824,5.119559043890658
+10,Profile B,highest_expected,3,q_4240,Tend to keep in the background on social occasions.,5.11822587430926,1.489131376303487,5.11822587430926
+10,Profile B,highest_expected,4,q_1880,Try to understand myself.,5.054302790444579,-0.2581496246906534,5.054302790444579
+10,Profile B,highest_expected,5,q_4227,Being in debt is worrisome to me.,5.033794651673794,0.12332095849455005,5.033794651673794
+10,Profile B,highest_expected,6,q_4231,It would upset me a lot to see a child or animal suffer.,4.993764745613785,-0.4552678339720462,4.993764745613785
+10,Profile B,highest_expected,7,q_565,Dislike being the center of attention.,4.990350872557192,1.2802921225724142,4.990350872557192
+10,Profile B,highest_expected,8,q_1666,Seek quiet.,4.9803738538447515,0.5184028467274917,4.9803738538447515
+10,Profile B,highest_expected,9,q_4232,Often worry about things I should not have done or said.,4.962704769055059,0.639589541294936,4.962704769055059
+10,Profile B,highest_expected,10,q_67,Am afraid that I will do the wrong thing.,4.9503929829451785,0.7896710254693753,4.9503929829451785
+10,Profile B,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.4914667090997906,0.17245227531091456,1.4914667090997906
+10,Profile B,lowest_expected,2,q_1747,Steal things.,1.6702397595875829,0.07518863879414428,1.6702397595875829
+10,Profile B,lowest_expected,3,q_4283,Can get a party going.,1.728581023450687,-1.6534923970625235,1.728581023450687
+10,Profile B,lowest_expected,4,q_262,Am the life of the party.,1.7494424470847496,-1.247922577590561,1.7494424470847496
+10,Profile B,lowest_expected,5,q_1416,Make myself the center of attention.,1.7891163219126005,-0.8432763440344102,1.7891163219126005
+10,Profile B,lowest_expected,6,q_1370,Love large parties.,1.8298637084609757,-1.2592431663314834,1.8298637084609757
+10,Profile B,lowest_expected,7,q_500,Cheat on people who have trusted me.,1.887587867104196,0.17892892160465412,1.887587867104196
+10,Profile B,lowest_expected,8,q_4248,Have enemies who want to harm me.,1.9119380481668764,-0.10153029119692247,1.9119380481668764
+10,Profile B,lowest_expected,9,q_745,Enjoy being part of a loud crowd.,1.9160586761853973,-1.0488466071519513,1.9160586761853973
+10,Profile B,lowest_expected,10,q_1803,Talk to a lot of different people at parties.,1.9205026440408557,-1.4854972133580886,1.9205026440408557
+10,Profile B,largest_positive_contrast,1,q_4240,Tend to keep in the background on social occasions.,5.11822587430926,1.489131376303487,1.489131376303487
+10,Profile B,largest_positive_contrast,2,q_1114,Have little to say.,4.164817318065731,1.4351121069691932,1.4351121069691932
+10,Profile B,largest_positive_contrast,3,q_901,Find it difficult to approach others.,4.770556416358486,1.3803497907041145,1.3803497907041145
+10,Profile B,largest_positive_contrast,4,q_4259,Am mostly quiet when with other people.,4.680165018991302,1.2910803265037956,1.2910803265037956
+10,Profile B,largest_positive_contrast,5,q_565,Dislike being the center of attention.,4.990350872557192,1.2802921225724142,1.2802921225724142
+10,Profile B,largest_positive_contrast,6,q_712,Don't talk a lot.,4.479075107921358,1.270557346128638,1.270557346128638
+10,Profile B,largest_positive_contrast,7,q_2024,[Would not enjoy a highly social job].,4.266983128510687,1.2357487972887085,1.2357487972887085
+10,Profile B,largest_positive_contrast,8,q_1242,Lack the talent for influencing people.,3.9474623774942352,1.2300049128921335,1.2300049128921335
+10,Profile B,largest_positive_contrast,9,q_3090,"When with a group, have difficulties selecting a good topic to talk about.",4.389416271582162,1.2046469621544165,1.2046469621544165
+10,Profile B,largest_positive_contrast,10,q_626,Do things in a half-way manner.,3.823201779298457,1.147787785351317,1.147787785351317
+10,Profile B,largest_positive_contrast,11,q_114,Am easily intimidated.,4.089081820892632,1.146624867207061,1.146624867207061
+10,Profile B,largest_positive_contrast,12,q_313,Avoid contacts with others.,4.120247143840579,1.1457810738781706,1.1457810738781706
+10,Profile B,largest_negative_contrast,1,q_4283,Can get a party going.,1.728581023450687,-1.6534923970625235,-1.6534923970625235
+10,Profile B,largest_negative_contrast,2,q_254,Am skilled in handling social situations.,2.5513968745633764,-1.6254907753994208,-1.6254907753994208
+10,Profile B,largest_negative_contrast,3,q_1410,Make friends easily.,2.4914311174894928,-1.622049687249985,-1.622049687249985
+10,Profile B,largest_negative_contrast,4,q_4234,Can usually let myself go and enjoy a lively party.,2.4737621569671853,-1.52129001273057,-1.52129001273057
+10,Profile B,largest_negative_contrast,5,q_1742,Start conversations.,2.5272042715260343,-1.5204971806570486,-1.5204971806570486
+10,Profile B,largest_negative_contrast,6,q_1803,Talk to a lot of different people at parties.,1.9205026440408557,-1.4854972133580886,-1.4854972133580886
+10,Profile B,largest_negative_contrast,7,q_4226,Am a talkative person.,2.548020248289598,-1.4504524604178188,-1.4504524604178188
+10,Profile B,largest_negative_contrast,8,q_4257,Usually take the initiative in making new friends.,2.1466390791766807,-1.4484014986477303,-1.4484014986477303
+10,Profile B,largest_negative_contrast,9,q_4267,Like mixing with people.,2.666013713644481,-1.4018880854279594,-1.4018880854279594
+10,Profile B,largest_negative_contrast,10,q_1652,See myself as a good leader.,2.971978227397898,-1.3967007085261,-1.3967007085261
+10,Profile B,largest_negative_contrast,11,q_4262,Can easily get some life into a dull party.,2.02666002713929,-1.393285737376059,-1.393285737376059
+10,Profile B,largest_negative_contrast,12,q_698,Don't mind being the center of attention.,2.239793078797473,-1.380066109072168,-1.380066109072168
+10,Profile C,highest_expected,1,q_4231,It would upset me a lot to see a child or animal suffer.,5.7618674003161185,0.39817956014165823,5.7618674003161185
+10,Profile C,highest_expected,2,q_4284,Try not to be rude to people.,5.68559512041339,0.7088214713299932,5.68559512041339
+10,Profile C,highest_expected,3,q_1289,Like music.,5.683115072304338,0.184172245170795,5.683115072304338
+10,Profile C,highest_expected,4,q_2003,[Would feel v. badly for a long time if stole].,5.612641736912209,0.8609356170405222,5.612641736912209
+10,Profile C,highest_expected,5,q_4238,Good manners are very important.,5.596427532429935,0.5228965000896935,5.596427532429935
+10,Profile C,highest_expected,6,q_1385,Love to help others.,5.519402967104848,0.6832661404646103,5.519402967104848
+10,Profile C,highest_expected,7,q_1979,Work hard.,5.5109622368934135,0.7038278175235773,5.5109622368934135
+10,Profile C,highest_expected,8,q_3023,Look forward to the opportunity to learn and grow. ,5.460348655891693,0.21176387049164802,5.460348655891693
+10,Profile C,highest_expected,9,q_1053,Have a soft heart.,5.458085649315231,0.8828141251962816,5.458085649315231
+10,Profile C,highest_expected,10,q_90,Am concerned about others.,5.4445368339965015,0.7033861123701897,5.4445368339965015
+10,Profile C,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.0725237636120473,-0.2930398863421335,1.0725237636120473
+10,Profile C,lowest_expected,2,q_1747,Steal things.,1.1704663857925346,-0.48011510986702066,1.1704663857925346
+10,Profile C,lowest_expected,3,q_500,Cheat on people who have trusted me.,1.2350026919119772,-0.5461657174978114,1.2350026919119772
+10,Profile C,lowest_expected,4,q_501,Cheat to get ahead.,1.2515136938336977,-0.8580025558128446,1.2515136938336977
+10,Profile C,lowest_expected,5,q_1765,Take advantage of others.,1.3584111291919378,-0.9283213350848327,1.3584111291919378
+10,Profile C,lowest_expected,6,q_4293,Would like for other people to be afraid of me.,1.37288124734378,-0.9367877834783085,1.37288124734378
+10,Profile C,lowest_expected,7,q_2029,[Not regret taking advantage of someone impulsively].,1.3803558475085127,-0.9238763187302024,1.3803558475085127
+10,Profile C,lowest_expected,8,q_1663,Seek conflict.,1.3853652562172567,-0.7132753030475227,1.3853652562172567
+10,Profile C,lowest_expected,9,q_1881,Turn my back on others.,1.416245319792149,-0.8017097363892136,1.416245319792149
+10,Profile C,lowest_expected,10,q_1896,Use others for my own ends.,1.4405011740364395,-0.9515191018443192,1.4405011740364395
+10,Profile C,largest_positive_contrast,1,q_185,Am not good at deceiving other people.,4.455437202269003,0.9994816305644747,0.9994816305644747
+10,Profile C,largest_positive_contrast,2,q_1752,Stick to the rules.,4.917141078337155,0.9752991719039565,0.9752991719039565
+10,Profile C,largest_positive_contrast,3,q_1867,Try to follow the rules.,5.390802237338895,0.946279439020425,0.946279439020425
+10,Profile C,largest_positive_contrast,4,q_2853,Cannot imagine lying or cheating.,4.361953295136577,0.9337746639424238,0.9337746639424238
+10,Profile C,largest_positive_contrast,5,q_152,Am just an ordinary person.,4.508057103211352,0.9193389667784033,0.9193389667784033
+10,Profile C,largest_positive_contrast,6,q_1624,Respect authority.,5.390085533391499,0.9138425190995694,0.9138425190995694
+10,Profile C,largest_positive_contrast,7,q_1053,Have a soft heart.,5.458085649315231,0.8828141251962816,0.8828141251962816
+10,Profile C,largest_positive_contrast,8,q_539,Cry during movies.,4.34589723641737,0.878756660933492,0.878756660933492
+10,Profile C,largest_positive_contrast,9,q_519,Complete my duties as soon as possible.,4.597825474925999,0.8746147317421666,0.8746147317421666
+10,Profile C,largest_positive_contrast,10,q_623,Do things by the book.,4.324332373259977,0.8738926181093958,0.8738926181093958
+10,Profile C,largest_positive_contrast,11,q_315,Avoid dangerous situations.,4.80950085938333,0.8733156101505064,0.8733156101505064
+10,Profile C,largest_positive_contrast,12,q_1657,See that rules are observed.,4.900698190914002,0.8706233918541662,0.8706233918541662
+10,Profile C,largest_negative_contrast,1,q_40,Admire a really clever scam.,2.0068476316309867,-1.4175480345230973,-1.4175480345230973
+10,Profile C,largest_negative_contrast,2,q_746,Enjoy being reckless.,1.6824429799877474,-1.2845672357283808,-1.2845672357283808
+10,Profile C,largest_negative_contrast,3,q_1609,Rebel against authority.,1.9898173349792625,-1.2721730358056345,-1.2721730358056345
+10,Profile C,largest_negative_contrast,4,q_2821,Behave in unusual and strange ways.,2.3037396041209703,-1.2571633357371081,-1.2571633357371081
+10,Profile C,largest_negative_contrast,5,q_405,Break rules.,2.0266717973875377,-1.2303251770028987,-1.2303251770028987
+10,Profile C,largest_negative_contrast,6,q_1664,Seek danger.,1.4740695109700708,-1.16877740563148,-1.16877740563148
+10,Profile C,largest_negative_contrast,7,q_4244,Prefer to go my own way rather than act by the rules.,2.8496433513755797,-1.1352785062573387,-1.1352785062573387
+10,Profile C,largest_negative_contrast,8,q_599,Do dangerous things.,1.743996634541526,-1.1228518182834284,-1.1228518182834284
+10,Profile C,largest_negative_contrast,9,q_1367,Love dangerous situations.,1.9521399253174632,-1.0922150831711679,-1.0922150831711679
+10,Profile C,largest_negative_contrast,10,q_1214,Know how to get around the rules.,2.7919383373508033,-1.0817877777001828,-1.0817877777001828
+10,Profile C,largest_negative_contrast,11,q_598,Do crazy things.,2.481341290235079,-1.0722961188421753,-1.0722961188421753
+10,Profile C,largest_negative_contrast,12,q_660,Don't consider myself religious.,2.93553210084776,-1.0671573113918336,-1.0671573113918336
+10,Profile D,highest_expected,1,q_1334,Like to visit new places.,5.196587309799873,-0.03817231819828315,5.196587309799873
+10,Profile D,highest_expected,2,q_1289,Like music.,5.165347895402426,-0.3911246180535528,5.165347895402426
+10,Profile D,highest_expected,3,q_4231,It would upset me a lot to see a child or animal suffer.,5.1640023605044885,-0.26611492853793184,5.1640023605044885
+10,Profile D,highest_expected,4,q_4275,My mother is (or was) a good woman.,5.062303374515038,-0.09727782068844348,5.062303374515038
+10,Profile D,highest_expected,5,q_4238,Good manners are very important.,5.038304190169693,-0.09724054686613037,5.038304190169693
+10,Profile D,highest_expected,6,q_776,Enjoy the beauty of nature.,4.9832166851475375,-0.21862564526513317,4.9832166851475375
+10,Profile D,highest_expected,7,q_3023,Look forward to the opportunity to learn and grow. ,4.897291919547189,-0.4138547254466909,4.897291919547189
+10,Profile D,highest_expected,8,q_1705,Show my gratitude.,4.808392479688354,-0.18496266040978782,4.808392479688354
+10,Profile D,highest_expected,9,q_1703,Show my feelings when I'm happy.,4.796637816169916,-0.09209362861656878,4.796637816169916
+10,Profile D,highest_expected,10,q_1880,Try to understand myself.,4.790367435644364,-0.5514111300242259,4.790367435644364
+10,Profile D,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.3646258968111626,0.03151803943466125,1.3646258968111626
+10,Profile D,lowest_expected,2,q_1747,Steal things.,1.6280741928061828,0.028338009037032874,1.6280741928061828
+10,Profile D,lowest_expected,3,q_500,Cheat on people who have trusted me.,1.8049184464702408,0.08707400978914848,1.8049184464702408
+10,Profile D,lowest_expected,4,q_4241,Would take drugs which may have strange or dangerous effects.,2.045803998552258,-0.15541807021513732,2.045803998552258
+10,Profile D,lowest_expected,5,q_501,Cheat to get ahead.,2.0742271307583544,0.056123485214552016,2.0742271307583544
+10,Profile D,lowest_expected,6,q_4248,Have enemies who want to harm me.,2.1400734885256196,0.15195353142390333,2.1400734885256196
+10,Profile D,lowest_expected,7,q_4260,Think marriage is old-fashioned and should be done away with.,2.1789772987384066,-0.0032042414016282272,2.1789772987384066
+10,Profile D,lowest_expected,8,q_2775,Am not all that curious about the world.,2.1999568105229796,0.39535318536278363,2.1999568105229796
+10,Profile D,lowest_expected,9,q_4296,Tell a lot of lies.,2.239596372892935,-0.02008233597368614,2.239596372892935
+10,Profile D,lowest_expected,10,q_1881,Turn my back on others.,2.2623315347780935,0.13838605803961368,2.2623315347780935
+10,Profile D,largest_positive_contrast,1,q_1587,Rarely look for a deeper meaning in things.,2.8513291162468364,0.6378187664408883,0.6378187664408883
+10,Profile D,largest_positive_contrast,2,q_1685,Seldom joke around.,3.0825760091429397,0.6165453372992173,0.6165453372992173
+10,Profile D,largest_positive_contrast,3,q_1578,Rarely feel depressed.,3.6692057786718095,0.5334140833714325,0.5334140833714325
+10,Profile D,largest_positive_contrast,4,q_1824,Tend to vote for conservative political candidates.,3.0821036078877104,0.5325131461492361,0.5325131461492361
+10,Profile D,largest_positive_contrast,5,q_1083,Have difficulty imagining things.,2.5938844408125123,0.5273099716706557,0.5273099716706557
+10,Profile D,largest_positive_contrast,6,q_1370,Love large parties.,3.423114333922994,0.5110353064040924,0.5110353064040924
+10,Profile D,largest_positive_contrast,7,q_1682,Seldom get lost in thought.,3.1622984626419903,0.49261482501641973,0.49261482501641973
+10,Profile D,largest_positive_contrast,8,q_194,Am not interested in abstract ideas.,2.900917337330202,0.48613512906872325,0.48613512906872325
+10,Profile D,largest_positive_contrast,9,q_1861,Try to avoid complex people.,3.102458216341481,0.48485561386205545,0.48485561386205545
+10,Profile D,largest_positive_contrast,10,q_1964,Will not probe deeply into a subject.,2.866837374014067,0.47997845146016793,0.47997845146016793
+10,Profile D,largest_positive_contrast,11,q_610,Do not like art.,2.5911413910879433,0.46217281750235006,0.46217281750235006
+10,Profile D,largest_positive_contrast,12,q_322,Avoid philosophical discussions.,2.928982945443177,0.4495383891890188,0.4495383891890188
+10,Profile D,largest_negative_contrast,1,q_4282,Have once wished that I were dead.,2.865872414055854,-1.0386717377529369,-1.0386717377529369
+10,Profile D,largest_negative_contrast,2,q_1058,Have a vivid imagination.,4.292187916711963,-0.6461072575923072,-0.6461072575923072
+10,Profile D,largest_negative_contrast,3,q_1310,Like to get lost in thought.,4.151121379146993,-0.6355176324294849,-0.6355176324294849
+10,Profile D,largest_negative_contrast,4,q_1389,Love to reflect on things.,4.3562705368375045,-0.634994374430339,-0.634994374430339
+10,Profile D,largest_negative_contrast,5,q_793,Experience my emotions intensely.,3.7397872122135993,-0.6335010934084471,-0.6335010934084471
+10,Profile D,largest_negative_contrast,6,q_1441,Need a creative outlet.,3.880434496232459,-0.6322692098466831,-0.6322692098466831
+10,Profile D,largest_negative_contrast,7,q_1738,Spend time reflecting on things.,4.458097580027398,-0.6194579391370425,-0.6194579391370425
+10,Profile D,largest_negative_contrast,8,q_4247,Prefer reading to meeting people.,3.038932916176152,-0.6096500024258455,-0.6096500024258455
+10,Profile D,largest_negative_contrast,9,q_1666,Seek quiet.,3.9803395552025327,-0.5927463739860848,-0.5927463739860848
+10,Profile D,largest_negative_contrast,10,q_1648,See beauty in things that others might not notice.,4.387565691938098,-0.5869747210131209,-0.5869747210131209
+10,Profile D,largest_negative_contrast,11,q_1479,Often feel blue.,2.9518539292751296,-0.5778025312010948,-0.5778025312010948
+10,Profile D,largest_negative_contrast,12,q_634,Do things that others find strange.,3.745685666273231,-0.5688948247908634,-0.5688948247908634
+10,Profile E,highest_expected,1,q_3023,Look forward to the opportunity to learn and grow. ,5.854428927870109,0.6496308393565551,5.854428927870109
+10,Profile E,highest_expected,2,q_4231,It would upset me a lot to see a child or animal suffer.,5.801819458425319,0.44257073581854645,5.801819458425319
+10,Profile E,highest_expected,3,q_1289,Like music.,5.773337708215321,0.28441961840521834,5.773337708215321
+10,Profile E,highest_expected,4,q_1979,Work hard.,5.7443958858558535,0.9631985385929545,5.7443958858558535
+10,Profile E,highest_expected,5,q_861,Feel that I have a lot of inner strength.,5.727783174679601,1.183060523212161,5.727783174679601
+10,Profile E,highest_expected,6,q_1705,Show my gratitude.,5.722196090770314,0.8303746852368343,5.722196090770314
+10,Profile E,highest_expected,7,q_148,Interested in many things.,5.7110547507512255,0.5794444758187396,5.7110547507512255
+10,Profile E,highest_expected,8,q_1371,Love life.,5.687710175161042,1.2572438897379197,5.687710175161042
+10,Profile E,highest_expected,9,q_4238,Good manners are very important.,5.657861458626742,0.5911564180861459,5.657861458626742
+10,Profile E,highest_expected,10,q_1334,Like to visit new places.,5.625931464496554,0.4388767425758058,5.625931464496554
+10,Profile E,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.1157848439487548,-0.2449720193013476,1.1157848439487548
+10,Profile E,lowest_expected,2,q_1747,Steal things.,1.1659466729017534,-0.4851370130789998,1.1659466729017534
+10,Profile E,lowest_expected,3,q_501,Cheat to get ahead.,1.226240536432566,-0.8860838418141019,1.226240536432566
+10,Profile E,lowest_expected,4,q_500,Cheat on people who have trusted me.,1.288132217098675,-0.48713291173481355,1.288132217098675
+10,Profile E,lowest_expected,5,q_4296,Tell a lot of lies.,1.3528780229370656,-1.005324947035763,1.3528780229370656
+10,Profile E,lowest_expected,6,q_1113,Have little to contribute.,1.3883327045030058,-1.1762103788392206,1.3883327045030058
+10,Profile E,lowest_expected,7,q_1663,Seek conflict.,1.4135704049068465,-0.6819362489479783,1.4135704049068465
+10,Profile E,lowest_expected,8,q_1765,Take advantage of others.,1.4144981706236806,-0.8660024001606743,1.4144981706236806
+10,Profile E,lowest_expected,9,q_824,Feel desperate.,1.4343549835438207,-1.431564573837744,1.4343549835438207
+10,Profile E,lowest_expected,10,q_1896,Use others for my own ends.,1.4443240313815096,-0.9472714825720192,1.4443240313815096
+10,Profile E,largest_positive_contrast,1,q_1410,Make friends easily.,5.381638792946175,1.589292174368552,1.589292174368552
+10,Profile E,largest_positive_contrast,2,q_595,Do a lot in my spare time.,5.140815985843227,1.5857123822664634,1.5857123822664634
+10,Profile E,largest_positive_contrast,3,q_819,Feel comfortable around people.,5.392329622294894,1.5456775037343138,1.5456775037343138
+10,Profile E,largest_positive_contrast,4,q_1393,Maintain high energy throughout the day.,4.841376068661088,1.5417955155971734,1.5417955155971734
+10,Profile E,largest_positive_contrast,5,q_4257,Usually take the initiative in making new friends.,4.828215626785835,1.5311279986957747,1.5311279986957747
+10,Profile E,largest_positive_contrast,6,q_254,Am skilled in handling social situations.,5.366161515401088,1.5020254921980358,1.5020254921980358
+10,Profile E,largest_positive_contrast,7,q_1742,Start conversations.,5.2264219273439,1.4786335480294688,1.4786335480294688
+10,Profile E,largest_positive_contrast,8,q_279,Am usually active and full of energy.,5.160046584406003,1.4581488195226302,1.4581488195226302
+10,Profile E,largest_positive_contrast,9,q_1175,Just know that I will be a success.,5.277241986666438,1.450080023568324,1.450080023568324
+10,Profile E,largest_positive_contrast,10,q_1567,Radiate joy.,5.029459756172633,1.4390781872226364,1.4390781872226364
+10,Profile E,largest_positive_contrast,11,q_1803,Talk to a lot of different people at parties.,4.526551890041539,1.4101130599760032,1.4101130599760032
+10,Profile E,largest_positive_contrast,12,q_89,Am comfortable in unfamiliar situations.,4.752925333468934,1.4043297167271667,1.4043297167271667
+10,Profile E,largest_negative_contrast,1,q_4228,"Sometimes feel ""just miserable"" for no reason.",1.9495263216455485,-1.9485359405212477,-1.9485359405212477
+10,Profile E,largest_negative_contrast,2,q_3090,"When with a group, have difficulties selecting a good topic to talk about.",1.6497943392617422,-1.839377407090494,-1.839377407090494
+10,Profile E,largest_negative_contrast,3,q_206,Am often down in the dumps.,1.5530363964144742,-1.7349864902656553,-1.7349864902656553
+10,Profile E,largest_negative_contrast,4,q_1024,Hang around doing nothing.,2.095627676102553,-1.698858492758026,-1.698858492758026
+10,Profile E,largest_negative_contrast,5,q_811,Feel a sense of worthlessness or hopelessness.,1.555138660813435,-1.697302066473232,-1.697302066473232
+10,Profile E,largest_negative_contrast,6,q_126,Am filled with doubts about things.,2.585611839769318,-1.6911887786957642,-1.6911887786957642
+10,Profile E,largest_negative_contrast,7,q_1480,Often feel uncomfortable around others.,1.8713709128464888,-1.6903021184201594,-1.6903021184201594
+10,Profile E,largest_negative_contrast,8,q_1949,Waste my time.,2.20896126957557,-1.6741758499987842,-1.6741758499987842
+10,Profile E,largest_negative_contrast,9,q_1044,Have a low opinion of myself.,1.7256508303958953,-1.6650219801104351,-1.6650219801104351
+10,Profile E,largest_negative_contrast,10,q_105,Am easily discouraged.,1.820208553871383,-1.611353028203966,-1.611353028203966
+10,Profile E,largest_negative_contrast,11,q_1038,Have a dark outlook on the future.,1.4445274960901389,-1.5947411079583962,-1.5947411079583962
+10,Profile E,largest_negative_contrast,12,q_4273,Often feel listless and tired for no reason.,2.284781035186789,-1.5884731286932126,-1.5884731286932126
+10,Profile F,highest_expected,1,q_1289,Like music.,5.685832247586349,0.18719132881747225,5.685832247586349
+10,Profile F,highest_expected,2,q_4231,It would upset me a lot to see a child or animal suffer.,5.61977119605116,0.24029488873614824,5.61977119605116
+10,Profile F,highest_expected,3,q_3023,Look forward to the opportunity to learn and grow. ,5.586717049737881,0.3521731969874127,5.586717049737881
+10,Profile F,highest_expected,4,q_4275,My mother is (or was) a good woman.,5.562178859902539,0.4581393852976685,5.562178859902539
+10,Profile F,highest_expected,5,q_1334,Like to visit new places.,5.526485766956102,0.32838152308641533,5.526485766956102
+10,Profile F,highest_expected,6,q_1703,Show my feelings when I'm happy.,5.520531797952023,0.7122330178079945,5.520531797952023
+10,Profile F,highest_expected,7,q_148,Interested in many things.,5.4944240638635,0.3387437126101558,5.4944240638635
+10,Profile F,highest_expected,8,q_1371,Love life.,5.483224812348161,1.030037931056941,5.483224812348161
+10,Profile F,highest_expected,9,q_1421,Make people feel welcome.,5.478634485812224,0.8682125315050699,5.478634485812224
+10,Profile F,highest_expected,10,q_2011,Would love to explore strange places.,5.449263250433556,0.4778741761116887,5.449263250433556
+10,Profile F,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.149615612778955,-0.2073822761566808,1.149615612778955
+10,Profile F,lowest_expected,2,q_2775,Am not all that curious about the world.,1.44106509108304,-0.4478598362371493,1.44106509108304
+10,Profile F,lowest_expected,3,q_1747,Steal things.,1.458909355806312,-0.1596229209628235,1.458909355806312
+10,Profile F,lowest_expected,4,q_2900,Don't think it's important to socialize with others.,1.5785396839332713,-1.0480662642316163,1.5785396839332713
+10,Profile F,lowest_expected,5,q_500,Cheat on people who have trusted me.,1.5896261462187438,-0.15213965715695932,1.5896261462187438
+10,Profile F,lowest_expected,6,q_4266,Most things taste the same to me.,1.6741769270869424,-0.37052122521962794,1.6741769270869424
+10,Profile F,lowest_expected,7,q_1881,Turn my back on others.,1.716420534670103,-0.4681817198581537,1.716420534670103
+10,Profile F,lowest_expected,8,q_4248,Have enemies who want to harm me.,1.7296744025220974,-0.30404545302445496,1.7296744025220974
+10,Profile F,lowest_expected,9,q_1083,Have difficulty imagining things.,1.7608829538483826,-0.3982472360672662,1.7608829538483826
+10,Profile F,lowest_expected,10,q_1575,Rarely enjoy being with people.,1.7612528341791722,-0.9921099911380216,1.7612528341791722
+10,Profile F,largest_positive_contrast,1,q_1803,Talk to a lot of different people at parties.,4.815425133419309,1.731083330395748,1.731083330395748
+10,Profile F,largest_positive_contrast,2,q_4283,Can get a party going.,4.579952747375115,1.5146984072979524,1.5146984072979524
+10,Profile F,largest_positive_contrast,3,q_262,Am the life of the party.,4.199632618930563,1.4745109466825648,1.4745109466825648
+10,Profile F,largest_positive_contrast,4,q_4262,Can easily get some life into a dull party.,4.552047998432432,1.4127008973940987,1.4127008973940987
+10,Profile F,largest_positive_contrast,5,q_1370,Love large parties.,4.221978431296054,1.3986620812630481,1.3986620812630481
+10,Profile F,largest_positive_contrast,6,q_4267,Like mixing with people.,5.16394998325646,1.3735966585853516,1.3735966585853516
+10,Profile F,largest_positive_contrast,7,q_1795,Talk a lot.,4.901028798295466,1.3627272106894277,1.3627272106894277
+10,Profile F,largest_positive_contrast,8,q_4250,Have many friends.,4.807701756585403,1.3509729308552103,1.3509729308552103
+10,Profile F,largest_positive_contrast,9,q_1410,Make friends easily.,5.162641873951681,1.3459622643746694,1.3459622643746694
+10,Profile F,largest_positive_contrast,10,q_4226,Am a talkative person.,5.046266417089442,1.325376616026452,1.325376616026452
+10,Profile F,largest_positive_contrast,11,q_819,Feel comfortable around people.,5.189956625828514,1.320818618771669,1.320818618771669
+10,Profile F,largest_positive_contrast,12,q_4237,Enjoy meeting new people.,5.4158766154207445,1.3062167606220454,1.3062167606220454
+10,Profile F,largest_negative_contrast,1,q_4259,Am mostly quiet when with other people.,2.0118673292957174,-1.6736948842690769,-1.6736948842690769
+10,Profile F,largest_negative_contrast,2,q_4240,Tend to keep in the background on social occasions.,2.3635787952037663,-1.5715876004803953,-1.5715876004803953
+10,Profile F,largest_negative_contrast,3,q_901,Find it difficult to approach others.,2.132017484570631,-1.5513601335046139,-1.5513601335046139
+10,Profile F,largest_negative_contrast,4,q_314,Avoid crowds.,2.5392130020401886,-1.4952402905934745,-1.4952402905934745
+10,Profile F,largest_negative_contrast,5,q_1671,[Enjoy interactions less than others].,2.0992495145176555,-1.4929331381743607,-1.4929331381743607
+10,Profile F,largest_negative_contrast,6,q_712,Don't talk a lot.,2.0233463515408605,-1.4580301609608033,-1.4580301609608033
+10,Profile F,largest_negative_contrast,7,q_312,Avoid company.,1.8810215093528195,-1.411863538134246,-1.411863538134246
+10,Profile F,largest_negative_contrast,8,q_684,Don't like crowded events.,2.779281904274237,-1.37856828794855,-1.37856828794855
+10,Profile F,largest_negative_contrast,9,q_1180,Keep in the background.,2.486596308891792,-1.3655609809853968,-1.3655609809853968
+10,Profile F,largest_negative_contrast,10,q_1643,Say little.,2.152872295466501,-1.3636203466800838,-1.3636203466800838
+10,Profile F,largest_negative_contrast,11,q_1196,Keep others at a distance.,2.5591758071054693,-1.3484820276113796,-1.3484820276113796
+10,Profile F,largest_negative_contrast,12,q_140,Am hard to get to know.,2.485129122640622,-1.3393761435089502,-1.3393761435089502
+10,Profile G,highest_expected,1,q_4231,It would upset me a lot to see a child or animal suffer.,5.536822513889671,0.14812968633449408,5.536822513889671
+10,Profile G,highest_expected,2,q_126,Am filled with doubts about things.,5.504851269948045,1.5524105881694878,5.504851269948045
+10,Profile G,highest_expected,3,q_1989,Worry about things.,5.497522223713189,1.004823558555274,5.497522223713189
+10,Profile G,highest_expected,4,q_4285,Worry too long after an embarrassing experience.,5.496424752912998,1.3183219669877335,5.496424752912998
+10,Profile G,highest_expected,5,q_67,Am afraid that I will do the wrong thing.,5.419338227601214,1.3107212973094153,5.419338227601214
+10,Profile G,highest_expected,6,q_1381,Love to daydream.,5.410994276709639,0.7964382803207375,5.410994276709639
+10,Profile G,highest_expected,7,q_1289,Like music.,5.408385179238188,-0.12108319156937242,5.408385179238188
+10,Profile G,highest_expected,8,q_4268,Worry if I know there are mistakes in my work.,5.382629327678227,0.5039171206183735,5.382629327678227
+10,Profile G,highest_expected,9,q_1880,Try to understand myself.,5.349937916208534,0.07033384838040657,5.349937916208534
+10,Profile G,highest_expected,10,q_4232,Often worry about things I should not have done or said.,5.324891890024239,1.042019675705136,5.324891890024239
+10,Profile G,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.455901957239815,0.13293588435538606,1.455901957239815
+10,Profile G,lowest_expected,2,q_1596,Rarely worry.,1.4664616246246045,-1.2256541390456202,1.4664616246246045
+10,Profile G,lowest_expected,3,q_1747,Steal things.,1.6842886414620586,0.09079850754356156,1.6842886414620586
+10,Profile G,lowest_expected,4,q_1578,Rarely feel depressed.,1.710552081843583,-1.6428678019932639,1.710552081843583
+10,Profile G,lowest_expected,5,q_668,Don't have a soft side.,1.715291880211664,-0.37110847436568384,1.715291880211664
+10,Profile G,lowest_expected,6,q_1663,Seek conflict.,1.810219128017836,-0.2412154454913238,1.810219128017836
+10,Profile G,lowest_expected,7,q_500,Cheat on people who have trusted me.,1.8480189194924783,0.13496342425830132,1.8480189194924783
+10,Profile G,lowest_expected,8,q_262,Am the life of the party.,1.8826180790090432,-1.0999496532302349,1.8826180790090432
+10,Profile G,lowest_expected,9,q_727,Don't worry about things that have already happened.,1.8929300795507549,-1.409207992561065,1.8929300795507549
+10,Profile G,lowest_expected,10,q_174,Am not easily affected by my emotions.,1.9235516203030496,-1.1197957905336828,1.9235516203030496
+10,Profile G,largest_positive_contrast,1,q_867,Feel that I'm unable to deal with things.,4.713557392152624,2.0088814626296383,2.0088814626296383
+10,Profile G,largest_positive_contrast,2,q_811,Feel a sense of worthlessness or hopelessness.,4.861873848659019,1.9768481422440831,1.9768481422440831
+10,Profile G,largest_positive_contrast,3,q_105,Am easily discouraged.,5.029421185831636,1.9544387850852045,1.9544387850852045
+10,Profile G,largest_positive_contrast,4,q_1044,Have a low opinion of myself.,4.971674974758077,1.9416715136253222,1.9416715136253222
+10,Profile G,largest_positive_contrast,5,q_206,Am often down in the dumps.,4.716491243681356,1.7799633400308803,1.7799633400308803
+10,Profile G,largest_positive_contrast,6,q_578,Dislike myself.,4.5014392435186865,1.7781165691788652,1.7781165691788652
+10,Profile G,largest_positive_contrast,7,q_1479,Often feel blue.,5.061958233362732,1.7667578066740188,1.7667578066740188
+10,Profile G,largest_positive_contrast,8,q_824,Feel desperate.,4.309052425034184,1.7625436944848825,1.7625436944848825
+10,Profile G,largest_positive_contrast,9,q_66,Am afraid of many things.,4.549416936700946,1.7505785470164819,1.7505785470164819
+10,Profile G,largest_positive_contrast,10,q_875,Feel that my life lacks direction.,4.925414508283781,1.7391909609745424,1.7391909609745424
+10,Profile G,largest_positive_contrast,11,q_919,Find life difficult.,5.1547957462623,1.6941781349106364,1.6941781349106364
+10,Profile G,largest_positive_contrast,12,q_4228,"Sometimes feel ""just miserable"" for no reason.",5.222051230183374,1.6876028467430029,1.6876028467430029
+10,Profile G,largest_negative_contrast,1,q_285,Am very pleased with myself.,2.159425461413318,-1.7728284948858324,-1.7728284948858324
+10,Profile G,largest_negative_contrast,2,q_1042,Have a high opinion of myself.,2.3100610054449007,-1.734538406325611,-1.734538406325611
+10,Profile G,largest_negative_contrast,3,q_1578,Rarely feel depressed.,1.710552081843583,-1.6428678019932639,-1.6428678019932639
+10,Profile G,largest_negative_contrast,4,q_1652,See myself as a good leader.,2.808371502500304,-1.578485958412315,-1.578485958412315
+10,Profile G,largest_negative_contrast,5,q_2765,Am happy with my life.,2.855577894984105,-1.4972641584912552,-1.4972641584912552
+10,Profile G,largest_negative_contrast,6,q_820,Feel comfortable with myself.,2.8570558966847175,-1.4654587817421039,-1.4654587817421039
+10,Profile G,largest_negative_contrast,7,q_254,Am skilled in handling social situations.,2.701691631342317,-1.4584966012005993,-1.4584966012005993
+10,Profile G,largest_negative_contrast,8,q_279,Am usually active and full of energy.,2.5463528271612854,-1.445955355193723,-1.445955355193723
+10,Profile G,largest_negative_contrast,9,q_832,Feel healthy and vibrant most of the time.,2.6082955456687986,-1.436301380215491,-1.436301380215491
+10,Profile G,largest_negative_contrast,10,q_258,Am sure of my ground.,3.0290555757628628,-1.4336055617304675,-1.4336055617304675
+10,Profile G,largest_negative_contrast,11,q_1883,Turn plans into actions.,2.9845772562297133,-1.4318215874097997,-1.4318215874097997
+10,Profile G,largest_negative_contrast,12,q_1350,Look at the bright side of life.,2.959869961874342,-1.431007448011567,-1.431007448011567
+10,Profile H,highest_expected,1,q_1289,Like music.,5.683915895079391,0.18506204825418582,5.683915895079391
+10,Profile H,highest_expected,2,q_4231,It would upset me a lot to see a child or animal suffer.,5.567340229882499,0.18203825965985931,5.567340229882499
+10,Profile H,highest_expected,3,q_1880,Try to understand myself.,5.556994359570168,0.3003965632266672,5.556994359570168
+10,Profile H,highest_expected,4,q_4268,Worry if I know there are mistakes in my work.,5.413351659350582,0.538053044698767,5.413351659350582
+10,Profile H,highest_expected,5,q_4284,Try not to be rude to people.,5.324684301489683,0.3078094503036519,5.324684301489683
+10,Profile H,highest_expected,6,q_1705,Show my gratitude.,5.3215471486934565,0.3852091940403257,5.3215471486934565
+10,Profile H,highest_expected,7,q_1190,Keep my promises.,5.273214656968018,0.34776467466171024,5.273214656968018
+10,Profile H,highest_expected,8,q_778,Enjoy thinking about things.,5.271279355876533,0.06700288494475615,5.271279355876533
+10,Profile H,highest_expected,9,q_4238,Good manners are very important.,5.263520718752898,0.15300004044854099,5.263520718752898
+10,Profile H,highest_expected,10,q_1389,Love to reflect on things.,5.247804471412772,0.3555988862088473,5.247804471412772
+10,Profile H,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.307511003836239,-0.031942952759698606,1.307511003836239
+10,Profile H,lowest_expected,2,q_1747,Steal things.,1.568918768731366,-0.03739023993498569,1.568918768731366
+10,Profile H,lowest_expected,3,q_500,Cheat on people who have trusted me.,1.6407437847485258,-0.0953422810127571,1.6407437847485258
+10,Profile H,lowest_expected,4,q_1663,Seek conflict.,1.788994172756965,-0.2647987291145135,1.788994172756965
+10,Profile H,lowest_expected,5,q_404,Break my promises.,1.8538906309838437,-0.39608268308413797,1.8538906309838437
+10,Profile H,lowest_expected,6,q_1765,Take advantage of others.,1.923441202033498,-0.300510143038655,1.923441202033498
+10,Profile H,lowest_expected,7,q_1467,Obstruct others' plans.,1.947823557223709,-0.13386767283786094,1.947823557223709
+10,Profile H,lowest_expected,8,q_977,Get others to do my duties.,1.954411635824852,-0.4447434613307497,1.954411635824852
+10,Profile H,lowest_expected,9,q_1416,Make myself the center of attention.,1.9773228703905317,-0.6341579568367091,1.9773228703905317
+10,Profile H,lowest_expected,10,q_708,Don't see the consequences of things.,1.999187060501832,-0.2327265135205434,1.999187060501832
+10,Profile H,largest_positive_contrast,1,q_4249,Would call myself a nervous person.,4.2972522171839795,0.9633164158276344,0.9633164158276344
+10,Profile H,largest_positive_contrast,2,q_848,Feel short-changed in life.,3.8764014310514545,0.8907528612228379,0.8907528612228379
+10,Profile H,largest_positive_contrast,3,q_4224,My mood often goes up and down.,4.650478818436373,0.8725459081109461,0.8725459081109461
+10,Profile H,largest_positive_contrast,4,q_1044,Have a low opinion of myself.,3.928474258216735,0.7825596063571645,0.7825596063571645
+10,Profile H,largest_positive_contrast,5,q_206,Am often down in the dumps.,3.8153171495795575,0.7786587910288811,0.7786587910288811
+10,Profile H,largest_positive_contrast,6,q_4255,Have often gone against my parents' wishes.,4.6070836165468965,0.7675927305201666,0.7675927305201666
+10,Profile H,largest_positive_contrast,7,q_1330,Like to take my time.,5.139489246015226,0.7663311067251488,0.7663311067251488
+10,Profile H,largest_positive_contrast,8,q_4247,Prefer reading to meeting people.,4.2756677118853,0.7644997705843197,0.7644997705843197
+10,Profile H,largest_positive_contrast,9,q_1666,Seek quiet.,5.193577008966075,0.7552952413067411,0.7552952413067411
+10,Profile H,largest_positive_contrast,10,q_1759,[Suspect facial expressions show when sad].,4.832817352071535,0.7506225545908931,0.7506225545908931
+10,Profile H,largest_positive_contrast,11,q_1505,Panic easily.,3.8795424363692623,0.7481719860249028,0.7481719860249028
+10,Profile H,largest_positive_contrast,12,q_4282,Have once wished that I were dead.,4.472225880774655,0.7461654474901751,0.7461654474901751
+10,Profile H,largest_negative_contrast,1,q_1555,Put on a show to impress people.,2.0828441195441116,-0.8190425059212911,-0.8190425059212911
+10,Profile H,largest_negative_contrast,2,q_1803,Talk to a lot of different people at parties.,2.5721213412353596,-0.7614764386975295,-0.7614764386975295
+10,Profile H,largest_negative_contrast,3,q_665,Don't finish the things that I start.,2.405337585182166,-0.7117503128902989,-0.7117503128902989
+10,Profile H,largest_negative_contrast,4,q_405,Break rules.,2.5034489408261593,-0.7005727954044296,-0.7005727954044296
+10,Profile H,largest_negative_contrast,5,q_1416,Make myself the center of attention.,1.9773228703905317,-0.6341579568367091,-0.6341579568367091
+10,Profile H,largest_negative_contrast,6,q_904,Find it difficult to get down to work.,2.8713540555129824,-0.6165122938136922,-0.6165122938136922
+10,Profile H,largest_negative_contrast,7,q_154,Am likely to show off if I get the chance.,2.6334363184563694,-0.5951408074566356,-0.5951408074566356
+10,Profile H,largest_negative_contrast,8,q_1610,Recover quickly from stress and illness.,3.392972788653064,-0.5833602822420678,-0.5833602822420678
+10,Profile H,largest_negative_contrast,9,q_1370,Love large parties.,2.438396721485227,-0.583095374082315,-0.583095374082315
+10,Profile H,largest_negative_contrast,10,q_1296,Like to attract attention.,2.438292751340666,-0.5536240517041504,-0.5536240517041504
+10,Profile H,largest_negative_contrast,11,q_1517,Play a role in order to impress people.,2.442662568567247,-0.5454564749901318,-0.5454564749901318
+10,Profile H,largest_negative_contrast,12,q_1825,Tend to vote for liberal political candidates.,3.300838234869482,-0.5333855617737728,-0.5333855617737728
+10,Profile I,highest_expected,1,q_1289,Like music.,5.621230643311431,0.11541176851200863,5.621230643311431
+10,Profile I,highest_expected,2,q_4231,It would upset me a lot to see a child or animal suffer.,5.468622027987,0.07235136866485892,5.468622027987
+10,Profile I,highest_expected,3,q_1334,Like to visit new places.,5.359619860585707,0.14297496045264246,5.359619860585707
+10,Profile I,highest_expected,4,q_4299,Would feel very sorry for an animal caught in a trap.,5.331407212069098,0.3015902875221368,5.331407212069098
+10,Profile I,highest_expected,5,q_4275,My mother is (or was) a good woman.,5.289639486372494,0.15531785915317453,5.289639486372494
+10,Profile I,highest_expected,6,q_1924,Want to be liked.,5.2521628944203105,0.6181471882416769,5.2521628944203105
+10,Profile I,highest_expected,7,q_1880,Try to understand myself.,5.197462247971577,-0.09908356077176705,5.197462247971577
+10,Profile I,highest_expected,8,q_1989,Worry about things.,5.173242345709238,0.6445125829953282,5.173242345709238
+10,Profile I,highest_expected,9,q_776,Enjoy the beauty of nature.,5.1660124863656725,-0.015519199467205702,5.1660124863656725
+10,Profile I,highest_expected,10,q_2011,Would love to explore strange places.,5.164495256903125,0.16146529441120983,5.164495256903125
+10,Profile I,lowest_expected,1,q_4245,Enjoy hurting people I love.,1.4275598748763787,0.10144468172934551,1.4275598748763787
+10,Profile I,lowest_expected,2,q_2775,Am not all that curious about the world.,1.882409196844558,0.042522503497870456,1.882409196844558
+10,Profile I,lowest_expected,3,q_1747,Steal things.,1.9731418934264384,0.41174656528176135,1.9731418934264384
+10,Profile I,lowest_expected,4,q_668,Don't have a soft side.,1.9967874538742976,-0.05833561474053539,1.9967874538742976
+10,Profile I,lowest_expected,5,q_4260,Think marriage is old-fashioned and should be done away with.,2.0534195909364734,-0.1427128056259983,2.0534195909364734
+10,Profile I,lowest_expected,6,q_1596,Rarely worry.,2.0545429034565084,-0.5722304958990603,2.0545429034565084
+10,Profile I,lowest_expected,7,q_4266,Most things taste the same to me.,2.0591858073710174,0.05726641954045508,2.0591858073710174
+10,Profile I,lowest_expected,8,q_610,Do not like art.,2.0995896855358733,-0.08399574422217171,2.0995896855358733
+10,Profile I,lowest_expected,9,q_1120,Have never engaged in gossip.,2.1487825240907683,-0.4185124616301521,2.1487825240907683
+10,Profile I,lowest_expected,10,q_500,Cheat on people who have trusted me.,2.151544060553451,0.4722135809927155,2.151544060553451
+10,Profile I,largest_positive_contrast,1,q_1099,Have frequent mood swings.,4.455785238026281,1.085640879718583,1.085640879718583
+10,Profile I,largest_positive_contrast,2,q_1517,Play a role in order to impress people.,3.906393864659551,1.0809116317790948,1.0809116317790948
+10,Profile I,largest_positive_contrast,3,q_52,Am a person whose moods go up and down easily.,4.614801865190389,1.072739771594569,1.072739771594569
+10,Profile I,largest_positive_contrast,4,q_22,Act impulsively when something is bothering me.,4.667096154883012,1.0571917184291788,1.0571917184291788
+10,Profile I,largest_positive_contrast,5,q_4224,My mood often goes up and down.,4.792319456890193,1.0301466175040805,1.0301466175040805
+10,Profile I,largest_positive_contrast,6,q_1638,Rush into things.,4.244988850475091,1.0278753447294626,1.0278753447294626
+10,Profile I,largest_positive_contrast,7,q_413,Can be stirred up easily.,4.426486379161047,1.0264277331444775,1.0264277331444775
+10,Profile I,largest_positive_contrast,8,q_1555,Put on a show to impress people.,3.736475205270519,1.0183253671080505,1.0183253671080505
+10,Profile I,largest_positive_contrast,9,q_952,Get angry easily.,4.058108396169247,1.0161488306265998,1.0161488306265998
+10,Profile I,largest_positive_contrast,10,q_978,Get out of control.,3.549516955802803,1.0117862487371116,1.0117862487371116
+10,Profile I,largest_positive_contrast,11,q_154,Am likely to show off if I get the chance.,4.065825790609982,0.9964030504918227,0.9964030504918227
+10,Profile I,largest_positive_contrast,12,q_1395,Make a fool of myself.,4.091385415722782,0.9872588836006231,0.9872588836006231
+10,Profile I,largest_negative_contrast,1,q_1185,Keep my emotions under control.,3.366652236058346,-0.8209743724129743,-0.8209743724129743
+10,Profile I,largest_negative_contrast,2,q_2021,Would never take things that aren't mine.,3.9048950304946,-0.7597544210583238,-0.7597544210583238
+10,Profile I,largest_negative_contrast,3,q_45,Always know why I do things.,3.256187621174337,-0.7550107973404132,-0.7550107973404132
+10,Profile I,largest_negative_contrast,4,q_712,Don't talk a lot.,2.69998141315721,-0.7062134258315265,-0.7062134258315265
+10,Profile I,largest_negative_contrast,5,q_174,Am not easily affected by my emotions.,2.3044979908999395,-0.6965220454260277,-0.6965220454260277
+10,Profile I,largest_negative_contrast,6,q_1588,Rarely lose my composure.,3.448828243134563,-0.6667654150725557,-0.6667654150725557
+10,Profile I,largest_negative_contrast,7,q_4236,People should always respect the law.,3.649172294381603,-0.6658777255268835,-0.6658777255268835
+10,Profile I,largest_negative_contrast,8,q_1461,Never spend more than I can afford.,3.402847276173617,-0.6588043647809405,-0.6588043647809405
+10,Profile I,largest_negative_contrast,9,q_278,Am usually a patient person.,3.599278251332463,-0.655967909938139,-0.655967909938139
+10,Profile I,largest_negative_contrast,10,q_151,Am interested in science.,3.846663482203968,-0.6550087125100825,-0.6550087125100825
+10,Profile I,largest_negative_contrast,11,q_76,Am always prepared.,3.4044385109014836,-0.6520898930741019,-0.6520898930741019
+10,Profile I,largest_negative_contrast,12,q_962,Get chores done right away.,2.7565145177816275,-0.6426588253580903,-0.6426588253580903
+10,Profile J,highest_expected,1,q_1289,Like music.,5.561053084206801,0.04854781395130825,5.561053084206801
+10,Profile J,highest_expected,2,q_1334,Like to visit new places.,5.472059588737514,0.26790799173242785,5.472059588737514
+10,Profile J,highest_expected,3,q_1880,Try to understand myself.,5.43503946933808,0.16489112963545782,5.43503946933808
+10,Profile J,highest_expected,4,q_1055,Have a strong personality.,5.415018410298745,1.0079020094525433,5.415018410298745
+10,Profile J,highest_expected,5,q_240,Am quick to understand things.,5.387809895913019,0.6263001671332571,5.387809895913019
+10,Profile J,highest_expected,6,q_2745,Am able to come up with new and different ideas.,5.358972295230917,0.7424392910880968,5.358972295230917
+10,Profile J,highest_expected,7,q_2011,Would love to explore strange places.,5.3570192536547525,0.37538084635746305,5.3570192536547525
+10,Profile J,highest_expected,8,q_778,Enjoy thinking about things.,5.355008497790988,0.16003526484970454,5.355008497790988
+10,Profile J,highest_expected,9,q_148,Interested in many things.,5.345056679354435,0.17277995204452878,5.345056679354435
+10,Profile J,highest_expected,10,q_1694,Set high standards for myself and others.,5.343982803893902,0.44917590816464514,5.343982803893902
+10,Profile J,lowest_expected,1,q_2775,Am not all that curious about the world.,1.7497283726404236,-0.10490063450672338,1.7497283726404236
+10,Profile J,lowest_expected,2,q_4245,Enjoy hurting people I love.,1.7939023124787647,0.5084918346208855,1.7939023124787647
+10,Profile J,lowest_expected,3,q_1083,Have difficulty imagining things.,1.805044427294579,-0.3491789322381589,1.805044427294579
+10,Profile J,lowest_expected,4,q_1964,Will not probe deeply into a subject.,1.970416805534752,-0.5160444024057371,1.970416805534752
+10,Profile J,lowest_expected,5,q_4291,It is better to follow society's rules than to go my own way.,1.979868761840374,-1.03058772074557,1.979868761840374
+10,Profile J,lowest_expected,6,q_197,Am not interested in theoretical discussions.,2.008791752723967,-0.5297453952506439,2.008791752723967
+10,Profile J,lowest_expected,7,q_610,Do not like art.,2.02162065397205,-0.17062800151530944,2.02162065397205
+10,Profile J,lowest_expected,8,q_4266,Most things taste the same to me.,2.029083912436704,0.023819869613440403,2.029083912436704
+10,Profile J,lowest_expected,9,q_609,Do not have a good imagination.,2.053517083210644,-0.2601281929089052,2.053517083210644
+10,Profile J,lowest_expected,10,q_194,Am not interested in abstract ideas.,2.0617418436408155,-0.44628208614170584,2.0617418436408155
+10,Profile J,largest_positive_contrast,1,q_1609,Rebel against authority.,4.637536144521991,1.6697367525751745,1.6697367525751745
+10,Profile J,largest_positive_contrast,2,q_405,Break rules.,4.619992469468835,1.6511422364207653,1.6511422364207653
+10,Profile J,largest_positive_contrast,3,q_599,Do dangerous things.,4.20091296864579,1.6070552196101984,1.6070552196101984
+10,Profile J,largest_positive_contrast,4,q_1054,Have a strong need for power.,4.668037104052018,1.6021358355455306,1.6021358355455306
+10,Profile J,largest_positive_contrast,5,q_2029,[Not regret taking advantage of someone impulsively].,3.5411652620516327,1.4770230307621528,1.4770230307621528
+10,Profile J,largest_positive_contrast,6,q_40,Admire a really clever scam.,4.608220718517121,1.4728665064614965,1.4728665064614965
+10,Profile J,largest_positive_contrast,7,q_1664,Seek danger.,3.8183844274387138,1.436016946000346,1.436016946000346
+10,Profile J,largest_positive_contrast,8,q_1416,Make myself the center of attention.,3.835118571929013,1.4300594893171592,1.4300594893171592
+10,Profile J,largest_positive_contrast,9,q_1780,Take risks that could cause trouble for me.,4.404608389749036,1.4209128998955687,1.4209128998955687
+10,Profile J,largest_positive_contrast,10,q_1214,Know how to get around the rules.,5.044084198790984,1.4205965127889075,1.4205965127889075
+10,Profile J,largest_positive_contrast,11,q_1354,Look down on others.,3.8470730681599674,1.3835230532812042,1.3835230532812042
+10,Profile J,largest_positive_contrast,12,q_531,Contradict others.,4.762752504369094,1.3616106387488456,1.3616106387488456
+10,Profile J,largest_negative_contrast,1,q_905,Find it difficult to manipulate others.,2.333377177127668,-1.280818278707995,-1.280818278707995
+10,Profile J,largest_negative_contrast,2,q_1653,See myself as an average person.,2.3700489759304855,-1.2768518293907682,-1.2768518293907682
+10,Profile J,largest_negative_contrast,3,q_2853,Cannot imagine lying or cheating.,2.4371279051018875,-1.2049202138738981,-1.2049202138738981
+10,Profile J,largest_negative_contrast,4,q_1867,Try to follow the rules.,3.473484364986777,-1.184073752481929,-1.184073752481929
+10,Profile J,largest_negative_contrast,5,q_479,Can't stand confrontations.,2.9076009253416077,-1.1458764302654685,-1.1458764302654685
+10,Profile J,largest_negative_contrast,6,q_716,Don't think that I'm better than other people.,3.089009220167127,-1.1391303655763778,-1.1391303655763778
+10,Profile J,largest_negative_contrast,7,q_393,Believe there is never an excuse for lying.,2.335504111007872,-1.135240093167294,-1.135240093167294
+10,Profile J,largest_negative_contrast,8,q_1300,Like to be thought of as a normal kind of person.,2.8527249324664794,-1.1321570576951654,-1.1321570576951654
+10,Profile J,largest_negative_contrast,9,q_1624,Respect authority.,3.568551480400884,-1.1100842064455594,-1.1100842064455594
+10,Profile J,largest_negative_contrast,10,q_185,Am not good at deceiving other people.,2.5810788949701102,-1.0831387108787394,-1.0831387108787394
+10,Profile J,largest_negative_contrast,11,q_121,Am easy to satisfy.,2.988304815691972,-1.068909610225555,-1.068909610225555
+10,Profile J,largest_negative_contrast,12,q_315,Avoid dangerous situations.,3.0713308044850804,-1.0579844508475493,-1.0579844508475493

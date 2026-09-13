@@ -1,3 +1,5 @@
-diagnostic,subset,n,accuracy,balanced_accuracy,majority_accuracy_baseline,balanced_accuracy_chance,adjusted_accuracy_above_majority,converged,iterations,discovery_fitted_dense_standardization
-raw_response_style_summaries,validation,4735,0.3915522703273495,0.4064071900270008,0.14762407602956706,0.1,0.2861744301288404,True,93,True
-raw_response_style_summaries,replication,4737,0.3825205826472451,0.401313410099679,0.15410597424530292,0.1,0.27002745195907163,True,93,True
+k,diagnostic,subset,n,accuracy,balanced_accuracy,majority_accuracy_baseline,balanced_accuracy_chance,adjusted_accuracy_above_majority,converged,iterations,discovery_fitted_dense_standardization
+4,raw_response_style_summaries,validation,4735,0.6654699049630411,0.6907907490170102,0.33917634635691657,0.25,0.4937679769894535,True,53,True
+4,raw_response_style_summaries,replication,4737,0.6732108929702343,0.6935878071299735,0.3409330800084442,0.25,0.50416399743754,True,53,True
+10,raw_response_style_summaries,validation,4735,0.3915522703273495,0.4064071900270008,0.14762407602956706,0.1,0.2861744301288404,True,93,True
+10,raw_response_style_summaries,replication,4737,0.3825205826472451,0.401313410099679,0.15410597424530292,0.1,0.27002745195907163,True,93,True
