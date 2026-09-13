@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-13T17:54:35Z
-Last commit when updated: df39509 (registered cross-model reconciliation state)
+Updated UTC: 2026-09-13T19:14:03Z
+Last commit when updated: ba4c138 (inventoried the AA-12 correspondence visualization packet before canonical maintenance)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -32,12 +32,12 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - geometry tables: 30
 - notebooks: 7
 - trait analyses: 453
-- visualizations: 242
+- visualizations: 315
 
 
 ## Status Counts
 
-- active: 4982
+- active: 5055
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -62,6 +62,8 @@ Cross-resolution profile solution banks: `research/outputs/cross_resolution_prof
 Cross-model cluster reconciliation: `research/outputs/crossmodel_cluster_reconciliation/crossmodel_cluster_reconciliation_report.md` is the AA-12 follow-up-3 entry point. It reuses the exact frozen Qwen/LLaMA/Gemma K=4–10 memberships without reclustering and compares the same 275 opaque role IDs across all 147 K-pair cells and 343 K triples. Method freeze: `2a38f67`; partition-agreement freeze: `4b16aac`; cluster-overlap/persistence/tiny-cluster freeze: `93aa390`; secondary trait/consensus output: `83e0e54`; semantic interpretation: `0e868aa`; verification: `b2c7457`. The best and quality-constrained triple is Qwen K=6/LLaMA K=9/Gemma K=6 (mean AMI 0.644895; 5,000-draw search-adjusted p=0.000200), within an eight-triple ridge. Four broad direct three-model candidate families plus a resolution-dependent developmental outlier family are supported; a creative/conceptual region is deliberately not accepted by the anti-transitivity rule. Use `pairwise_k_agreement.csv`, `triple_k_agreement.csv`, `cluster_overlap_edges.csv`, `cross_resolution_persistence.csv`, `tiny_cluster_audit.csv`, and the `candidate_consensus_*` outputs. The 240-trait confirmation is secondary same-activation-space evidence. No human or SAPA artifact was loaded and no human/model matching occurred.
 
 Aggregate human↔model profile correspondence: `research/outputs/human_model_profile_correspondence/human_model_profile_correspondence_report.md` is the AA-12 follow-up-4 entry point for the first preregistered aggregate Track 1 comparison. The method froze at `c71bcf9`, aggregate 45/12-trait representations at `ba095f6`, primary correspondence at `96c3e0d`, robustness at `e1d10da`, and semantics/figures at `f55738d`; verification passes 69/69 checks. The 45-trait injective A-D search maximizes at eligible human K=10 (mean Fisher-z 0.576571; back-transformed mean r 0.520169; 20,000-draw bridge-permutation max-test p=0.000050), and the frozen tier is `STRONG AGGREGATE CORRESPONDENCE`. Exact pairing is qualified: B misses its family-specific cutoff, C and D share H10_I as their unconstrained best, the 12-trait optimum changes three of four pair identities, and K=10 human stability is low. The K=4–6 sensitivity remains significant and retains 86.2% of primary mean-r. E has adjusted similarity to H10_I but no distinct fifth counterpart. This is aggregate profile-shape evidence over a pre-existing bridge—not respondent projection, psychometric/prevalence equivalence, natural types, or shared mechanism. Use the profile tables, similarity/assignment tables, full permutation nulls, persistence/replication diagnostics, searchable 96-item wording table, and `artifact_inventory.csv`.
+
+Human↔model correspondence visualization packet: `research/outputs/human_model_profile_visualization/human_model_profile_visualization.html` is the self-contained AA-12 follow-up-5 inspection entry point, with `visualization_report.md` as the static guide. It deterministically reshapes only the frozen follow-up-4 aggregate values into 18 source tables, 42 static PNG/SVG files spanning 17 figure requirements, searchable exact wording for all 96 direct-bridge SAPA items, and interactive family/order/model/K/trait-set/profile controls. Figure-source data froze at `719886c`, static figures at `d7f48f7`, HTML at `5c7af7e`, and 118/118 deterministic/browser checks at `3142ef1`; the inventory was introduced at `ba4c138`. Two prior figures are reused byte-for-byte and every other view fills a specifically missing inspection requirement. No matching, K, family, bridge, null, inference, or claim changed. The packet visually emphasizes that A persists across resolution, B is marginal, C/D/E compete for H10_I, D is cross-model consistent, the 12-trait global result is concordant while exact assignments change, and the observed maximum is separated from the full-search null. These are decompositions of the existing result, not new inferential findings.
 
 Human-supported trait convergence and aligned subspaces: `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md` is the AA-7 entry point. The exact 12 AA-1-supported labels and all decisions were frozen before outcomes. Use `comparator_summary.csv` for the matched compact prediction result, `procrustes_alignment_cv.csv` and `procrustes_alignment_null.csv` for held-out alignment evidence, `aligned_human_supported_trait_directions.csv` and `aligned_big_five_directions.csv` for recurrence, and `verification_report.json` plus `artifact_inventory.csv` for reproduction/provenance. The primary compact-efficiency result is weak/absent; the separate activation-derived aligned-direction recurrence is strong. No human respondent or occupational centroid was projected.
 
