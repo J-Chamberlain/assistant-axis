@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import json
 
 import pandas as pd
 
@@ -74,10 +75,39 @@ def main() -> None:
                 })
     pd.DataFrame(rows).to_csv(HERE / "consensus_family_trait_summary.csv", index=False)
 
+    partition = json.loads((HERE / "partition_agreement_summary.json").read_text())
+    anchor = {
+        "qwen": int(partition["consensus_anchor_triple"]["K_qwen"]),
+        "llama": int(partition["consensus_anchor_triple"]["K_llama"]),
+        "gemma": int(partition["consensus_anchor_triple"]["K_gemma"]),
+    }
+    edges = pd.read_csv(HERE / "cluster_overlap_edges.csv")
+    parts = []
+    for a, b in [("qwen", "llama"), ("qwen", "gemma"), ("llama", "gemma")]:
+        sub = edges[
+            (edges.model_a == a) & (edges.model_b == b)
+            & (edges.K_a == anchor[a]) & (edges.K_b == anchor[b])
+            & edges.persistence_tier.isin(["high", "moderate"])
+        ].copy()
+        degree_a = sub.groupby("profile_a").size().to_dict()
+        degree_b = sub.groupby("profile_b").size().to_dict()
+        sub["profile_a_persistent_degree"] = sub.profile_a.map(degree_a)
+        sub["profile_b_persistent_degree"] = sub.profile_b.map(degree_b)
+        sub["split_merge_pattern"] = [
+            "many_to_many" if degree_a[pa] > 1 and degree_b[pb] > 1
+            else "one_to_many" if degree_a[pa] > 1
+            else "many_to_one" if degree_b[pb] > 1
+            else "one_to_one"
+            for pa, pb in zip(sub.profile_a, sub.profile_b)
+        ]
+        parts.append(sub)
+    pd.concat(parts, ignore_index=True).to_csv(HERE / "anchor_split_merge_patterns.csv", index=False)
+
     print({
         "consensus_role_rows": len(roles),
         "tiny_audit_rows": len(tiny),
         "trait_summary_rows": len(rows),
+        "split_merge_edge_rows": sum(len(x) for x in parts),
         "role_map_count": len(names),
     })
 
