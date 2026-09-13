@@ -1100,3 +1100,14 @@ All artifacts are `active`. Numerical banks were introduced at `d0c902b`; semant
 | active | model coverage terrain viewer | `research/outputs/model_coverage_terrain_viewer/terrain_viewer_data.json` | Embedded deterministic grids, roles, hulls, and controls payload; introduced in 9335ffa | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/model_coverage_terrain_viewer/terrain_viewer_data.json |
 | active | model coverage terrain viewer | `research/outputs/model_coverage_terrain_viewer/trait_landmarks.csv` | Optional Qwen trait-direction landmarks excluded from occupancy density; introduced in 9335ffa | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/model_coverage_terrain_viewer/trait_landmarks.csv |
 | active | model coverage terrain viewer | `research/outputs/model_coverage_terrain_viewer/verification_report.json` | Numerical, source, scope, rendering, and reproducibility verification; introduced in d9efc06 | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/model_coverage_terrain_viewer/verification_report.json |
+
+## Live public deployments (not raw source URLs)
+
+These are rendered, interactive pages for humans to open directly in a browser (including mobile) — distinct from the raw-source links in the table above, which serve unrendered file content for agents/tooling.
+
+| Status | Viewer | Public URL | Deployed from | Deployment commit |
+|---|---|---|---|---|
+| active | AA-12 human-terrain overlay (mandatory) | https://j-chamberlain.github.io/assistant-axis/human-terrain/ | `research/outputs/human_profile_terrain_overlay/human_profile_terrain_overlay.html` @ `codex/aa12-human-terrain-overlay` 953c65d | c5227a1b17d1a89a641890dba4bfc04e2c8f6189 on `J-Chamberlain/assistant-axis` master |
+| active | AA-12 model-only coverage terrain (unchanged baseline) | https://j-chamberlain.github.io/assistant-axis/model-terrain/ | `research/outputs/model_coverage_terrain_viewer/model_coverage_terrain_viewer.html` @ `codex/aa12-human-terrain-overlay` 953c65d | c5227a1b17d1a89a641890dba4bfc04e2c8f6189 on `J-Chamberlain/assistant-axis` master |
+
+Both pages are served via the pre-existing GitHub Pages site on the `J-Chamberlain/assistant-axis` fork (branch `master`, root path). No login required; verified in an unauthenticated browser session on 2026-09-13.
