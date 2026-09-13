@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "checked_utc_date": "2026-09-13",
+  "manifest_generated_timestamp_utc": "2026-09-12T21:15:38Z",
+  "checks": [
+    {
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/STARTUP_MANIFEST.md",
+      "http_status": 200,
+      "bytes": 4521,
+      "sha256": "a1791983863ce43c2d75d73101f557a484bc5a6fc07445d3cc41b5a3f338a8cf",
+      "fetched_in_required_order": 1
+    },
+    {
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md",
+      "http_status": 200,
+      "bytes": 185112,
+      "sha256": "272020b975c78eb4dce86e83b6ea5bff0015787eb2e3c2782c28759f17d8cdf8",
+      "fetched_in_required_order": 2,
+      "visible_metadata_match": true,
+      "integrity_matches_manifest": true,
+      "latest_touch_commit_present": true,
+      "last_commit_match": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md",
+      "http_status": 200,
+      "bytes": 38451,
+      "sha256": "3433cf08fb8d3cbf94a95f450c4ab8f2418d612d587c871c6ea8336e2f49d29a",
+      "fetched_in_required_order": 3,
+      "visible_metadata_match": true,
+      "integrity_matches_manifest": true,
+      "latest_touch_commit_present": true,
+      "last_commit_status": "not present in file, matching manifest"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md",
+      "http_status": 200,
+      "bytes": 50422,
+      "sha256": "7f543f3a5a5f8fa308c9ddfbf2efa6068ea7a7e516c7a133a08e14b63b1c69d0",
+      "fetched_in_required_order": 4,
+      "visible_metadata_match": true,
+      "integrity_matches_manifest": true,
+      "latest_touch_commit_present": true,
+      "last_commit_status": "not present in file, matching manifest"
+    }
+  ],
+  "canonical_navigation_consulted": [
+    "research/REPO_NAVIGATION.md",
+    "research/REPO_FILE_INDEX.csv",
+    "research/RAW_URL_INDEX.md",
+    "research/RESEARCH_INDEX.md",
+    "research/PROVENANCE_REGISTRY.md",
+    "research/FINDINGS_LEDGER.md"
+  ],
+  "zero_relay_status": "absent",
+  "branch_base_resolution": {
+    "previous_commit": "c8383931fcaf4847b67fb178fd9ffd825f42e2f7",
+    "integrated_into_canonical_master": false,
+    "base_used": "c8383931fcaf4847b67fb178fd9ffd825f42e2f7"
+  }
+}
