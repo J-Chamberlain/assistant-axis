@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-09-13T21:05:34Z",
+  "startup_urls_in_required_order": [
+    "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/STARTUP_MANIFEST.md",
+    "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md",
+    "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md",
+    "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md"
+  ],
+  "startup_manifest_generated_utc": "2026-09-12T21:15:38Z",
+  "startup_files": {
+    "STARTUP_MANIFEST.md": {"http_status": 200, "bytes": 4521, "sha256": "a1791983863ce43c2d75d73101f557a484bc5a6fc07445d3cc41b5a3f338a8cf"},
+    "RESEARCH_STATE.md": {"http_status": 200, "bytes": 185112, "sha256": "272020b975c78eb4dce86e83b6ea5bff0015787eb2e3c2782c28759f17d8cdf8", "visible_metadata_match": true, "latest_touch_commit": "ee9bacf232bd9b26b25c6720eac7ba205ffa780a"},
+    "THREAD_START.md": {"http_status": 200, "bytes": 38451, "sha256": "3433cf08fb8d3cbf94a95f450c4ab8f2418d612d587c871c6ea8336e2f49d29a", "visible_metadata_match": true, "latest_touch_commit": "b9b6008ac4cff37bfef98bd2103a9cb9edf3a3a6"},
+    "CLAIMS_REGISTER.md": {"http_status": 200, "bytes": 50422, "sha256": "7f543f3a5a5f8fa308c9ddfbf2efa6068ea7a7e516c7a133a08e14b63b1c69d0", "visible_metadata_match": true, "latest_touch_commit": "b9b6008ac4cff37bfef98bd2103a9cb9edf3a3a6"}
+  },
+  "navigation_consulted": [
+    "research/REPO_NAVIGATION.md",
+    "research/REPO_FILE_INDEX.csv",
+    "research/RAW_URL_INDEX.md",
+    "research/RESEARCH_INDEX.md",
+    "research/PROVENANCE_REGISTRY.md",
+    "research/FINDINGS_LEDGER.md"
+  ],
+  "followup6": {
+    "required_final_sha": "103c13ea692ed7e1c9cb8309bfc8b150171e7b40",
+    "local_sha": "103c13ea692ed7e1c9cb8309bfc8b150171e7b40",
+    "remote_sha": "103c13ea692ed7e1c9cb8309bfc8b150171e7b40",
+    "model_only_viewer_preservation_baseline_sha256": "47652660aa614930d94ff2b3962612d66c1cd78892806eb9ab791b4dc6a0c60b"
+  },
+  "hosting_inspection": {
+    "existing_openai_hosting_manifest": false,
+    "existing_github_pages_workflow": false,
+    "existing_cname": false,
+    "existing_wrangler_manifest": false,
+    "existing_vercel_manifest": false,
+    "existing_netlify_manifest": false,
+    "selected_route": "authorized Sites static hosting after numerical and browser validation"
+  },
+  "human_pc_coordinates_computed_before_freeze": false
+}
