@@ -24,3 +24,4 @@ cross_model_family_comparison,figures/cross_model_family_comparison.png,Family-c
 cross_model_density_sparsity_summary,figures/cross_model_density_sparsity_summary.png;figures/cross_model_density_sparsity_summary.svg,Top and bottom role-sample density ranks across models,role_density_scores.csv
 bandwidth_sensitivity,figures/bandwidth_sensitivity.png;figures/bandwidth_sensitivity.svg,Frozen 0.75×/1×/1.25× Scott sensitivity,density_bandwidth_sensitivity.csv
 cross_model_neighborhood_recurrence,figures/cross_model_neighborhood_recurrence.png;figures/cross_model_neighborhood_recurrence.svg,Distribution of shared-role local-topology recurrence,cross_model_neighborhood_recurrence.csv
+viewer_headless_chrome,figures/viewer_headless_chrome.png,Headless Chrome diagnostic render of interactive viewer controls and WebGL terrain,model_coverage_terrain_viewer.html;terrain_viewer_data.json

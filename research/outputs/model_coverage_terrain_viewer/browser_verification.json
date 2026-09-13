@@ -1,0 +1,237 @@
+{
+  "status": "PASS",
+  "browser": "Google Chrome 152.0.7977.84",
+  "viewer": "research/outputs/model_coverage_terrain_viewer/model_coverage_terrain_viewer.html",
+  "checks": [
+    {
+      "check": "initial Plotly render completed",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "check": "initial native view includes role points",
+      "passed": true,
+      "observed": {
+        "types": [
+          "isosurface",
+          "scatter3d"
+        ],
+        "status": "Qwen 3 32B \u00b7 3d \u00b7 occupancy \u00b7 coverage 80 \u00b7 role inventory N=275",
+        "errors": 0
+      }
+    },
+    {
+      "check": "initial occupancy view includes KDE isosurface",
+      "passed": true,
+      "observed": {
+        "types": [
+          "isosurface",
+          "scatter3d"
+        ],
+        "status": "Qwen 3 32B \u00b7 3d \u00b7 occupancy \u00b7 coverage 80 \u00b7 role inventory N=275",
+        "errors": 0
+      }
+    },
+    {
+      "check": "initial status identifies Qwen and 80% level",
+      "passed": true,
+      "observed": "Qwen 3 32B \u00b7 3d \u00b7 occupancy \u00b7 coverage 80 \u00b7 role inventory N=275"
+    },
+    {
+      "check": "model switch renders only LLaMA role metadata",
+      "passed": true,
+      "observed": {
+        "status": "LLaMA 3.3 70B \u00b7 3d \u00b7 occupancy \u00b7 coverage 80 \u00b7 role inventory N=275",
+        "models": [
+          "llama"
+        ]
+      }
+    },
+    {
+      "check": "no stale Qwen status after LLaMA switch",
+      "passed": true,
+      "observed": "LLaMA 3.3 70B \u00b7 3d \u00b7 occupancy \u00b7 coverage 80 \u00b7 role inventory N=275"
+    },
+    {
+      "check": "2D mode renders role-only density contour",
+      "passed": true,
+      "observed": [
+        "contour",
+        "scattergl"
+      ]
+    },
+    {
+      "check": "2D mode renders sampled role points",
+      "passed": true,
+      "observed": [
+        "contour",
+        "scattergl"
+      ]
+    },
+    {
+      "check": "linked native comparison has three separate scenes",
+      "passed": true,
+      "observed": {
+        "scenes": 3,
+        "models": [
+          "gemma",
+          "llama",
+          "qwen"
+        ]
+      }
+    },
+    {
+      "check": "linked native comparison carries all three model labels",
+      "passed": true,
+      "observed": {
+        "scenes": 3,
+        "models": [
+          "gemma",
+          "llama",
+          "qwen"
+        ]
+      }
+    },
+    {
+      "check": "display-aligned overlay is explicitly labeled non-native",
+      "passed": true,
+      "observed": {
+        "title": "Display-aligned shared-role overlay \u00b7 non-native axes",
+        "models": [
+          "gemma",
+          "llama",
+          "qwen"
+        ]
+      }
+    },
+    {
+      "check": "display-aligned overlay retains all models",
+      "passed": true,
+      "observed": {
+        "title": "Display-aligned shared-role overlay \u00b7 non-native axes",
+        "models": [
+          "gemma",
+          "llama",
+          "qwen"
+        ]
+      }
+    },
+    {
+      "check": "family mode renders eligible family sample envelopes",
+      "passed": true,
+      "observed": {
+        "mesh": 4,
+        "families": [
+          "Family A",
+          "Family B",
+          "Family C",
+          "Family D",
+          "Family E",
+          "Unassigned"
+        ],
+        "model": "llama"
+      }
+    },
+    {
+      "check": "family mode retains anonymous family labels",
+      "passed": true,
+      "observed": {
+        "mesh": 4,
+        "families": [
+          "Family A",
+          "Family B",
+          "Family C",
+          "Family D",
+          "Family E",
+          "Unassigned"
+        ],
+        "model": "llama"
+      }
+    },
+    {
+      "check": "role search selects and labels mystic",
+      "passed": true,
+      "observed": {
+        "title": "mystic",
+        "rows": 3,
+        "selected": true
+      }
+    },
+    {
+      "check": "role detail links the same role across three models",
+      "passed": true,
+      "observed": {
+        "title": "mystic",
+        "rows": 3,
+        "selected": true
+      }
+    },
+    {
+      "check": "optional Qwen trait landmark layer executes",
+      "passed": true,
+      "observed": {
+        "hasTrait": true,
+        "selectedTitle": "mystic"
+      }
+    },
+    {
+      "check": "selected role persists across model switch",
+      "passed": true,
+      "observed": {
+        "hasTrait": true,
+        "selectedTitle": "mystic"
+      }
+    },
+    {
+      "check": "persona-node toggle hides family point traces",
+      "passed": true,
+      "observed": [
+        "~80% sampled-role region",
+        "Family A sample envelope",
+        "Family B sample envelope",
+        "Family C sample envelope",
+        "Family D sample envelope",
+        "Trait landmarks",
+        "Selected role"
+      ]
+    },
+    {
+      "check": "viewer embeds exactly 275 roles per model",
+      "passed": true,
+      "observed": {
+        "q": 275,
+        "l": 275,
+        "g": 275,
+        "eL": 3,
+        "eG": 4,
+        "eLHull": false,
+        "eGHull": false
+      }
+    },
+    {
+      "check": "small E groups stay points-only",
+      "passed": true,
+      "observed": {
+        "q": 275,
+        "l": 275,
+        "g": 275,
+        "eL": 3,
+        "eG": 4,
+        "eLHull": false,
+        "eGHull": false
+      }
+    },
+    {
+      "check": "headless Chrome captured rendered viewer",
+      "passed": true,
+      "observed": 234295
+    },
+    {
+      "check": "no browser JavaScript exceptions or console errors",
+      "passed": true,
+      "observed": []
+    }
+  ],
+  "passed": 23,
+  "failed": 0
+}

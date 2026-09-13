@@ -1,0 +1,415 @@
+{
+  "status": "PASS",
+  "analysis": "AA-12 follow-up 6 model-only persona-space coverage terrain viewer",
+  "method_freeze_commit": "5c2814f7554d26cfce97cb83fd0cda34ffbf2333",
+  "numerical_terrain_freeze_commit": "9335ffaeac215cfdbb709b041c1fa1db0d8f754e",
+  "viewer_commit": "bdecaee2511a19d7c52fd796bf19bbc1c83f803d",
+  "startup": {
+    "STARTUP_MANIFEST.md": {
+      "status": 200,
+      "bytes": 4521,
+      "sha256": "a1791983863ce43c2d75d73101f557a484bc5a6fc07445d3cc41b5a3f338a8cf"
+    },
+    "RESEARCH_STATE.md": {
+      "status": 200,
+      "bytes": 185112,
+      "sha256": "272020b975c78eb4dce86e83b6ea5bff0015787eb2e3c2782c28759f17d8cdf8"
+    },
+    "THREAD_START.md": {
+      "status": 200,
+      "bytes": 38451,
+      "sha256": "3433cf08fb8d3cbf94a95f450c4ab8f2418d612d587c871c6ea8336e2f49d29a"
+    },
+    "CLAIMS_REGISTER.md": {
+      "status": 200,
+      "bytes": 50422,
+      "sha256": "7f543f3a5a5f8fa308c9ddfbf2efa6068ea7a7e516c7a133a08e14b63b1c69d0"
+    }
+  },
+  "checks": [
+    {
+      "check": "startup passed using exact ordered raw URLs",
+      "passed": true,
+      "observed": {
+        "STARTUP_MANIFEST.md": {
+          "status": 200,
+          "bytes": 4521,
+          "sha256": "a1791983863ce43c2d75d73101f557a484bc5a6fc07445d3cc41b5a3f338a8cf"
+        },
+        "RESEARCH_STATE.md": {
+          "status": 200,
+          "bytes": 185112,
+          "sha256": "272020b975c78eb4dce86e83b6ea5bff0015787eb2e3c2782c28759f17d8cdf8"
+        },
+        "THREAD_START.md": {
+          "status": 200,
+          "bytes": 38451,
+          "sha256": "3433cf08fb8d3cbf94a95f450c4ab8f2418d612d587c871c6ea8336e2f49d29a"
+        },
+        "CLAIMS_REGISTER.md": {
+          "status": 200,
+          "bytes": 50422,
+          "sha256": "7f543f3a5a5f8fa308c9ddfbf2efa6068ea7a7e516c7a133a08e14b63b1c69d0"
+        }
+      },
+      "expected": true
+    },
+    {
+      "check": "all six canonical navigation artifacts consulted and present",
+      "passed": true,
+      "observed": [
+        "research/REPO_NAVIGATION.md",
+        "research/REPO_FILE_INDEX.csv",
+        "research/RAW_URL_INDEX.md",
+        "research/RESEARCH_INDEX.md",
+        "research/PROVENANCE_REGISTRY.md",
+        "research/FINDINGS_LEDGER.md"
+      ],
+      "expected": true
+    },
+    {
+      "check": "exact saved 275-role inventory reused per model",
+      "passed": true,
+      "observed": {
+        "gemma": 275,
+        "llama": 275,
+        "qwen": 275
+      },
+      "expected": true
+    },
+    {
+      "check": "role names align exactly across all models",
+      "passed": true,
+      "observed": {
+        "qwen": 275,
+        "llama": 275,
+        "gemma": 275
+      },
+      "expected": true
+    },
+    {
+      "check": "native PC coordinates are finite and unique by model-role",
+      "passed": true,
+      "observed": 825,
+      "expected": true
+    },
+    {
+      "check": "canonical model-local PCA coordinates reproduced from saved viewer source",
+      "passed": true,
+      "observed": 4.8739821068011224e-09,
+      "expected": "<1e-8"
+    },
+    {
+      "check": "Qwen native coordinates reproduce canonical geometry table",
+      "passed": true,
+      "observed": 1.2070304444833369e-06,
+      "expected": "<2e-6"
+    },
+    {
+      "check": "coordinates reproduce frozen full-PCA role-score arrays",
+      "passed": true,
+      "observed": 4.8739821068011224e-09,
+      "expected": "<1e-8"
+    },
+    {
+      "check": "no role-vector recomputation",
+      "passed": true,
+      "observed": {
+        "models": [
+          "qwen",
+          "llama",
+          "gemma"
+        ],
+        "roles_per_model": {
+          "gemma": 275,
+          "llama": 275,
+          "qwen": 275
+        },
+        "identical_role_sets": true,
+        "finite_native_coordinates": true,
+        "no_role_vector_recomputation": true
+      },
+      "expected": true
+    },
+    {
+      "check": "density uses frozen 3D Scott covariance-aware factor",
+      "passed": true,
+      "observed": {
+        "gemma": 0.448253718429,
+        "llama": 0.448253718429,
+        "qwen": 0.448253718429
+      },
+      "expected": 0.4482537184292216
+    },
+    {
+      "check": "density and sparsity tables contain roles only",
+      "passed": true,
+      "observed": {
+        "density": 825,
+        "sparsity": 825
+      },
+      "expected": true
+    },
+    {
+      "check": "trait landmarks remain a separate 240-row Qwen-only layer",
+      "passed": true,
+      "observed": {
+        "rows": 240,
+        "models": [
+          "qwen"
+        ]
+      },
+      "expected": true
+    },
+    {
+      "check": "coverage thresholds reproduce advertised enclosed sample fractions",
+      "passed": true,
+      "observed": {
+        "gemma": {
+          "50": 138,
+          "80": 220,
+          "95": 261
+        },
+        "llama": {
+          "50": 138,
+          "80": 220,
+          "95": 261
+        },
+        "qwen": {
+          "50": 138,
+          "80": 220,
+          "95": 261
+        }
+      },
+      "expected": "138/220/261 of 275"
+    },
+    {
+      "check": "coverage grid is frozen at 36 cubed",
+      "passed": true,
+      "observed": [
+        36
+      ],
+      "expected": true
+    },
+    {
+      "check": "bandwidth sensitivity uses only 0.75x 1x 1.25x Scott",
+      "passed": true,
+      "observed": {
+        "gemma": [
+          0.75,
+          1.0,
+          1.25
+        ],
+        "llama": [
+          0.75,
+          1.0,
+          1.25
+        ],
+        "qwen": [
+          0.75,
+          1.0,
+          1.25
+        ]
+      },
+      "expected": true
+    },
+    {
+      "check": "density-rank sensitivity passes frozen rho rule throughout",
+      "passed": true,
+      "observed": 0.983363434408,
+      "expected": ">=0.90"
+    },
+    {
+      "check": "nearest-role table contains exactly 10 non-self neighbors per role/model",
+      "passed": true,
+      "observed": 8250,
+      "expected": true
+    },
+    {
+      "check": "cross-model neighborhood recurrence covers all shared roles",
+      "passed": true,
+      "observed": 275,
+      "expected": true
+    },
+    {
+      "check": "MFamily A-E memberships reproduce frozen reconciliation flags",
+      "passed": true,
+      "observed": {
+        "qwen": 233,
+        "llama": 229,
+        "gemma": 216
+      },
+      "expected": true
+    },
+    {
+      "check": "E remains small and resolution-sensitive",
+      "passed": true,
+      "observed": {
+        "gemma": 4,
+        "llama": 3
+      },
+      "expected": true
+    },
+    {
+      "check": "minimum N=10 family-envelope rule respected",
+      "passed": true,
+      "observed": {
+        "qwen": [
+          "MFamily_A",
+          "MFamily_B",
+          "MFamily_C",
+          "MFamily_D"
+        ],
+        "llama": [
+          "MFamily_A",
+          "MFamily_B",
+          "MFamily_C",
+          "MFamily_D"
+        ],
+        "gemma": [
+          "MFamily_A",
+          "MFamily_B",
+          "MFamily_C",
+          "MFamily_D"
+        ]
+      },
+      "expected": true
+    },
+    {
+      "check": "display-alignment table covers all roles/models and stays secondary",
+      "passed": true,
+      "observed": 825,
+      "expected": true
+    },
+    {
+      "check": "display alignment provenance is the frozen model-only transform",
+      "passed": true,
+      "observed": [
+        "research/outputs/extended_persona_pca/viewer_data.json",
+        "research/outputs/extended_persona_pca/source_manifest.json",
+        "research/outputs/crossmodel_cluster_reconciliation/consensus_family_roles.csv",
+        "research/outputs/crossmodel_cluster_reconciliation/candidate_consensus_families.csv",
+        "research/outputs/cross_resolution_profile_banks/model/qwen/memberships_with_role_names.csv",
+        "research/geometry_tables/qwen_trait_pc_rankings.csv",
+        "research/outputs/human_supported_trait_convergence/procrustes_alignment_matrices.json"
+      ],
+      "expected": true
+    },
+    {
+      "check": "viewer is self-contained with embedded Plotly and terrain data",
+      "passed": true,
+      "observed": 7464506,
+      "expected": true
+    },
+    {
+      "check": "all required core viewer controls are present",
+      "passed": true,
+      "observed": [
+        "model",
+        "view",
+        "mode",
+        "showPoints",
+        "showSurface",
+        "showHulls",
+        "showTraits",
+        "roleSearch",
+        "traitSearch",
+        "resetCamera"
+      ],
+      "expected": true
+    },
+    {
+      "check": "coverage UI contains the required non-probability warning",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "check": "native coordinates are not raw-overlaid; aligned view is explicitly non-native",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "check": "2D contour modes are all present",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "check": "headless Chrome render and interaction suite passed",
+      "passed": true,
+      "observed": {
+        "browser": "Google Chrome 152.0.7977.84",
+        "passed": 23,
+        "failed": 0
+      },
+      "expected": true
+    },
+    {
+      "check": "all inventoried static figures exist",
+      "passed": true,
+      "observed": {
+        "inventory_rows": 26,
+        "missing": []
+      },
+      "expected": true
+    },
+    {
+      "check": "all PNG static figures render at inspection resolution",
+      "passed": true,
+      "observed": [],
+      "expected": true
+    },
+    {
+      "check": "analysis generator contains no human or correspondence input",
+      "passed": true,
+      "observed": [],
+      "expected": true
+    },
+    {
+      "check": "source manifest confirms model-only compute boundaries",
+      "passed": true,
+      "observed": {
+        "roles_only_define_occupancy": true,
+        "trait_landmarks_excluded_from_density": true,
+        "human_artifacts_loaded": false,
+        "human_model_correspondence_loaded": false,
+        "new_inference": false,
+        "activation_extraction": false,
+        "external_api": false,
+        "gpu": false,
+        "runpod": false
+      },
+      "expected": true
+    },
+    {
+      "check": "deterministic regeneration reproduces all numerical source tables byte-for-byte",
+      "passed": true,
+      "observed": {
+        "files": 14,
+        "mismatches": []
+      },
+      "expected": true
+    },
+    {
+      "check": "no new inference activation extraction API GPU or RunPod",
+      "passed": true,
+      "observed": {
+        "roles_only_define_occupancy": true,
+        "trait_landmarks_excluded_from_density": true,
+        "human_artifacts_loaded": false,
+        "human_model_correspondence_loaded": false,
+        "new_inference": false,
+        "activation_extraction": false,
+        "external_api": false,
+        "gpu": false,
+        "runpod": false
+      },
+      "expected": true
+    }
+  ],
+  "passed": 35,
+  "failed": 0,
+  "final_worktree_clean_check": "performed after the final commit and reported in the Codex handoff"
+}
