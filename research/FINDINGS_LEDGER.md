@@ -4,6 +4,12 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### Curated Persona Occupancy Has Stable Broad Density Ordering but Model-Specific Local Topology (2026-09-13)
+
+AA-12 follow-up 6 applies one preregistered role-only Scott-KDE and standardized-space k=10 neighborhood procedure to the same 275 saved roles in each model's canonical native PC1-PC3 space. Publisher and librarian recur among the densest roles in Qwen, LLaMA, and Gemma; infant, toddler, caveman, fool, and procrastinator recur among the eight sparsest roles in all three. MFamily_A occupies the highest-median-density family region in each model. The small resolution-sensitive MFamily_E is peripheral where represented and remains points-only rather than receiving a fitted family density.
+
+Broad density ordering is insensitive to 0.75×/1×/1.25× Scott bandwidth changes (role-density rank correlations 0.983–0.995; grid-density correlations 0.975–0.987), although a few extreme-decile overlap checks fall just below the frozen 0.70 criterion. Local topology is recognizable but not identical: mean three-pair Jaccard overlap of each role's ten nearest neighbors is 0.221 (median 0.207), with Qwen–Gemma highest on average at 0.279. These are bounded descriptions of a curated role inventory. They do not establish population probability, prevalence, dynamic stability, accessibility, latent attractors, or human occupancy; apparent gaps remain exploratory visualization features rather than mechanistic findings.
+
 ### Preregistered Aggregate Human and Reconciled-Model Profiles Correspond, with Non-Unique Exact Pairing (2026-09-13)
 
 AA-12 follow-up 4 compared independently frozen SAPA latent profiles with independently frozen reconciled model families A-D through exactly 45 pre-existing coordinate-blind `ACCEPT_DIRECT` trait mappings. At every eligible human K, a maximum-weight injective assignment paired all four model families with distinct human profiles. The K=10 maximum has mean Fisher-z 0.576571 and back-transformed mean r 0.520169. A 20,000-draw bridge-permutation null repeated all correlations, assignment optimization, and the K=4,5,6,7,8,10 search; 0 draws reached the observed maximum (p=0.000050).

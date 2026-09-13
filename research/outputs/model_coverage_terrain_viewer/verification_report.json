@@ -387,7 +387,7 @@
       "check": "deterministic regeneration reproduces all numerical source tables byte-for-byte",
       "passed": true,
       "observed": {
-        "files": 14,
+        "files": 15,
         "mismatches": []
       },
       "expected": true

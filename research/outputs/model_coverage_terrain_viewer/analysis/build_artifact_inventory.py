@@ -101,7 +101,7 @@ def main() -> None:
     )
     rows.sort(key=lambda row: row["path"])
     with inventory.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     print(f"wrote {len(rows)} rows to {inventory}")

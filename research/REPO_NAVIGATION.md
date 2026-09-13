@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-13T19:14:03Z
-Last commit when updated: ba4c138 (inventoried the AA-12 correspondence visualization packet before canonical maintenance)
+Updated UTC: 2026-09-13T20:22:10Z
+Last commit when updated: d9efc06 (verified and reported the model-only persona coverage terrain viewer before canonical maintenance)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 4095
+- active analyses: 4258
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 12
@@ -37,7 +37,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Status Counts
 
-- active: 5055
+- active: 5262
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -64,6 +64,8 @@ Cross-model cluster reconciliation: `research/outputs/crossmodel_cluster_reconci
 Aggregate human↔model profile correspondence: `research/outputs/human_model_profile_correspondence/human_model_profile_correspondence_report.md` is the AA-12 follow-up-4 entry point for the first preregistered aggregate Track 1 comparison. The method froze at `c71bcf9`, aggregate 45/12-trait representations at `ba095f6`, primary correspondence at `96c3e0d`, robustness at `e1d10da`, and semantics/figures at `f55738d`; verification passes 69/69 checks. The 45-trait injective A-D search maximizes at eligible human K=10 (mean Fisher-z 0.576571; back-transformed mean r 0.520169; 20,000-draw bridge-permutation max-test p=0.000050), and the frozen tier is `STRONG AGGREGATE CORRESPONDENCE`. Exact pairing is qualified: B misses its family-specific cutoff, C and D share H10_I as their unconstrained best, the 12-trait optimum changes three of four pair identities, and K=10 human stability is low. The K=4–6 sensitivity remains significant and retains 86.2% of primary mean-r. E has adjusted similarity to H10_I but no distinct fifth counterpart. This is aggregate profile-shape evidence over a pre-existing bridge—not respondent projection, psychometric/prevalence equivalence, natural types, or shared mechanism. Use the profile tables, similarity/assignment tables, full permutation nulls, persistence/replication diagnostics, searchable 96-item wording table, and `artifact_inventory.csv`.
 
 Human↔model correspondence visualization packet: `research/outputs/human_model_profile_visualization/human_model_profile_visualization.html` is the self-contained AA-12 follow-up-5 inspection entry point, with `visualization_report.md` as the static guide. It deterministically reshapes only the frozen follow-up-4 aggregate values into 18 source tables, 42 static PNG/SVG files spanning 17 figure requirements, searchable exact wording for all 96 direct-bridge SAPA items, and interactive family/order/model/K/trait-set/profile controls. Figure-source data froze at `719886c`, static figures at `d7f48f7`, HTML at `5c7af7e`, and 118/118 deterministic/browser checks at `3142ef1`; the inventory was introduced at `ba4c138`. Two prior figures are reused byte-for-byte and every other view fills a specifically missing inspection requirement. No matching, K, family, bridge, null, inference, or claim changed. The packet visually emphasizes that A persists across resolution, B is marginal, C/D/E compete for H10_I, D is cross-model consistent, the 12-trait global result is concordant while exact assignments change, and the observed maximum is separated from the full-search null. These are decompositions of the existing result, not new inferential findings.
+
+Model-only persona coverage terrain viewer: `research/outputs/model_coverage_terrain_viewer/model_coverage_terrain_viewer.html` is the self-contained AA-12 follow-up-6 entry point, with `model_coverage_terrain_report.md` and `coverage_terrain_method.md` as its reader and method guides. It uses exactly 275 saved role coordinates per Qwen/LLaMA/Gemma native PC1-PC3 space, role-only covariance-aware Scott KDE, inverse-density and 10-neighbor sparsity diagnostics, frozen A-E family membership, linked native comparisons, and a clearly non-native secondary display-aligned view. Numerical tables froze at `9335ffa`, static figures at `8b59e9d`, the viewer at `bdecaee`, and 35/35 numerical plus 23/23 Chrome/WebGL checks at `d9efc06`; the method was frozen first at `5c2814f`. Trait directions are optional Qwen landmarks and never enter occupancy density. Coverage means occupancy of the curated role inventory, not population probability, prevalence, accessibility, stability, or human placement. No human artifact, bridge, correspondence table, new inference, activation extraction, API, GPU, or RunPod was used.
 
 Human-supported trait convergence and aligned subspaces: `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md` is the AA-7 entry point. The exact 12 AA-1-supported labels and all decisions were frozen before outcomes. Use `comparator_summary.csv` for the matched compact prediction result, `procrustes_alignment_cv.csv` and `procrustes_alignment_null.csv` for held-out alignment evidence, `aligned_human_supported_trait_directions.csv` and `aligned_big_five_directions.csv` for recurrence, and `verification_report.json` plus `artifact_inventory.csv` for reproduction/provenance. The primary compact-efficiency result is weak/absent; the separate activation-derived aligned-direction recurrence is strong. No human respondent or occupational centroid was projected.
 
