@@ -1,0 +1,71 @@
+{
+  "K_score": "mean Fisher-z of four assigned r values",
+  "K_scores": [
+    {
+      "K": 4,
+      "back_transformed_mean_r": 0.26131462544586775,
+      "maximizing_K": false,
+      "mean_fisher_z": 0.2675188620590944
+    },
+    {
+      "K": 5,
+      "back_transformed_mean_r": 0.3804543062327213,
+      "maximizing_K": false,
+      "mean_fisher_z": 0.40059073696623615
+    },
+    {
+      "K": 6,
+      "back_transformed_mean_r": 0.4483469191929081,
+      "maximizing_K": false,
+      "mean_fisher_z": 0.4826293787118474
+    },
+    {
+      "K": 7,
+      "back_transformed_mean_r": 0.4352536011261312,
+      "maximizing_K": false,
+      "mean_fisher_z": 0.4663600296356432
+    },
+    {
+      "K": 8,
+      "back_transformed_mean_r": 0.4034696270481622,
+      "maximizing_K": false,
+      "mean_fisher_z": 0.4277862979255187
+    },
+    {
+      "K": 10,
+      "back_transformed_mean_r": 0.5201688077382118,
+      "maximizing_K": true,
+      "mean_fisher_z": 0.5765711530686384
+    }
+  ],
+  "analysis": "primary_45_trait_aggregate_human_model_profile_correspondence",
+  "assignment": "maximum total raw Pearson r; injective A-D to four distinct human profiles",
+  "date": "2026-09-13",
+  "decision_tier": "PENDING_PREDECLARED_ROBUSTNESS",
+  "eligible_K": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    10
+  ],
+  "family_specific_positive_evidence_count": 3,
+  "maximizing_K": 10,
+  "model_used": "GPT-5.5",
+  "null": "single bridge permutation applied consistently to all human K/profiles; maximum over assignments and eligible K",
+  "null_exceedance_count": 0,
+  "observed_max_back_transformed_mean_r": 0.5201688077382118,
+  "observed_max_mean_fisher_z": 0.5765711530686384,
+  "permutation_count": 20000,
+  "primary_global_pass_p05": true,
+  "primary_model_families": [
+    "MFamily_A",
+    "MFamily_B",
+    "MFamily_C",
+    "MFamily_D"
+  ],
+  "search_adjusted_global_p": 4.999750012499375e-05,
+  "seed": 2026091304,
+  "semantic_interpretation_performed": false
+}
