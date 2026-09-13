@@ -1,0 +1,638 @@
+{
+  "analysis": "AA-12 follow-up-5 frozen correspondence visualization verification",
+  "boundaries": {
+    "GPU": false,
+    "K_changed": false,
+    "PC_informed_remapping": false,
+    "RunPod": false,
+    "activation_extraction": false,
+    "bridge_changed": false,
+    "external_model_API": false,
+    "family_changed": false,
+    "new_correspondence_test": false,
+    "new_model_inference": false,
+    "respondent_level_output": false
+  },
+  "browser_verification": {
+    "attempted": true,
+    "javascript_dom_evidence": true,
+    "nonwhite_color_count": 8435,
+    "passed": true,
+    "renderer": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "screenshot_dimensions": [
+      1440,
+      1200
+    ]
+  },
+  "check_count": 118,
+  "checks": [
+    {
+      "detail": "",
+      "name": "startup_passed",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "startup_exact_url_order",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "startup_http_200",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "canonical_navigation_consulted",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "base_is_prior_final",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "source_final_frozen",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "source_method_freeze_frozen",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "source_common_space_freeze_frozen",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "source_primary_freeze_frozen",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "source_robustness_freeze_frozen",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/human_trait_profiles_45.csv",
+      "name": "source_hash::human_trait_profiles_45.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/human_trait_profiles_12.csv",
+      "name": "source_hash::human_trait_profiles_12.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/human_sapa_item_profile_values.csv",
+      "name": "source_hash::human_sapa_item_profile_values.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/human_sapa_item_visualization_order.csv",
+      "name": "source_hash::human_sapa_item_visualization_order.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/model_family_trait_profiles_45.csv",
+      "name": "source_hash::model_family_trait_profiles_45.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/model_family_trait_profiles_12.csv",
+      "name": "source_hash::model_family_trait_profiles_12.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/profile_similarity_45.csv",
+      "name": "source_hash::profile_similarity_45.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/profile_similarity_12.csv",
+      "name": "source_hash::profile_similarity_12.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/primary_assignments_by_k.csv",
+      "name": "source_hash::primary_assignments_by_k.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/primary_assignments_12_by_k.csv",
+      "name": "source_hash::primary_assignments_12_by_k.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/bridge_permutation_null_45.csv",
+      "name": "source_hash::bridge_permutation_null_45.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/bridge_permutation_null_12.csv",
+      "name": "source_hash::bridge_permutation_null_12.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/family_specific_results.csv",
+      "name": "source_hash::family_specific_results.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/human_stability_sensitivity.csv",
+      "name": "source_hash::human_stability_sensitivity.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/k9_diagnostic.csv",
+      "name": "source_hash::k9_diagnostic.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/model_specific_replication.csv",
+      "name": "source_hash::model_specific_replication.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/cross_resolution_human_persistence.csv",
+      "name": "source_hash::cross_resolution_human_persistence.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/relaxed_split_merge_browsing.csv",
+      "name": "source_hash::relaxed_split_merge_browsing.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/mfamily_e_secondary.csv",
+      "name": "source_hash::mfamily_e_secondary.csv",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/primary_global_result.json",
+      "name": "source_hash::primary_global_result.json",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/robustness_result.json",
+      "name": "source_hash::robustness_result.json",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/common_space_manifest.json",
+      "name": "source_hash::common_space_manifest.json",
+      "passed": true
+    },
+    {
+      "detail": "research/outputs/human_model_profile_correspondence/semantic_profile_summary.md",
+      "name": "source_hash::semantic_profile_summary.md",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "numerical_reproduction_status",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "all_20_numerical_checks_pass",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "primary_shape_rows",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "primary_shape_trait_count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "primary_shape_pair_count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "covariance_contribution_formula",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "primary_pair_ids_exact",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "45_direct_traits",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "12_core_traits",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "single_item_traits",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "measurement_grouping_preexisting",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "eligible_K_exact",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "K9_diagnostic_only",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "K10_primary_mean_r",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "full_similarity_rows",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "E_secondary_only",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "primary_assignments_four_per_K",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "primary_assignments_distinct_humans",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "45_and_12_distinct",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "only_A_identity_retained",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "fixed_45_pairs_positive_on_12",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "C_fixed_pair_near_zero_on_12",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "null_histogram_complete",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "null_exceedance_zero",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "null_empirical_p_exact",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "null_annotation_is_max_stat",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "SAPA_96_unique_items",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "SAPA_five_profiles",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "SAPA_exact_wording_preserved",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "SAPA_only_aggregate_values",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_inventory_42_files",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_inventory_17_requirements",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_formats",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::10_ad_exemplars.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::10_ad_exemplars.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::11_trait_set_comparison.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::11_trait_set_comparison.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::12_model_specific_replication_reused.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::13_primary_permutation_null.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::13_primary_permutation_null.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::14_family_specific_statistics.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::14_family_specific_statistics.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::15_sapa_language_profiles.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::15_sapa_language_profiles.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::01_primary_matched_shapes_canonical.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::01_primary_matched_shapes_canonical.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::01b_primary_matched_shapes_measurement_grouped.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::01b_primary_matched_shapes_measurement_grouped.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::02_trait_decomposition_all_traits.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::02_trait_decomposition_all_traits.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::02b_top_trait_drivers.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::02b_top_trait_drivers.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::03_primary_pair_heatmap.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::03_primary_pair_heatmap.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::04_k_progression.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::04_k_progression.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::05_family_best_across_k.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::05_family_best_across_k.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::06_assignment_evolution_matrix.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::06_assignment_evolution_matrix.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::07_human_profile_continuity_reused.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k04.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k04.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k05.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k05.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k06.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k06.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k07.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k07.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k08.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k08.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k10.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::08_similarity_matrix_k10.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::09_cde_competition.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "figure_hash::09_cde_competition.svg",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "two_figures_reused",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "reused_continuity_exact",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "reused_replication_exact",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "HTML_self_contained_images",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "HTML_no_external_image_sources",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "HTML_has_interaction_controls",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "HTML_has_statistical_boundary",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "HTML_has_full_search_null_note",
+      "passed": true
+    },
+    {
+      "detail": {
+        "attempted": true,
+        "javascript_dom_evidence": true,
+        "nonwhite_color_count": 8435,
+        "passed": true,
+        "renderer": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "screenshot_dimensions": [
+          1440,
+          1200
+        ]
+      },
+      "name": "HTML_headless_browser_render",
+      "passed": true
+    },
+    {
+      "detail": {
+        "after_files": 64,
+        "before_files": 64
+      },
+      "name": "full_deterministic_rerun",
+      "passed": true
+    }
+  ],
+  "date": "2026-09-13",
+  "failed_count": 0,
+  "full_deterministic_rerun": true,
+  "passed_count": 118,
+  "status": "PASS"
+}

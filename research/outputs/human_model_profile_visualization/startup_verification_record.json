@@ -1,0 +1,77 @@
+{
+  "branch_base_resolution": {
+    "canonical_master_sha": "663853ece6042b53f11725fdef099848c602c74b",
+    "prior_commit_integrated_into_master": false,
+    "selected_base_sha": "fea29c20792617b013775f40efe0546ebd6e8ec7"
+  },
+  "canonical_navigation_consulted": [
+    "research/REPO_NAVIGATION.md",
+    "research/REPO_FILE_INDEX.csv",
+    "research/RAW_URL_INDEX.md",
+    "research/RESEARCH_INDEX.md",
+    "research/PROVENANCE_REGISTRY.md",
+    "research/FINDINGS_LEDGER.md"
+  ],
+  "date": "2026-09-13",
+  "files": [
+    {
+      "bytes": 4521,
+      "http_status": 200,
+      "order": 1,
+      "path": "research/STARTUP_MANIFEST.md",
+      "sha256": "a1791983863ce43c2d75d73101f557a484bc5a6fc07445d3cc41b5a3f338a8cf",
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/STARTUP_MANIFEST.md"
+    },
+    {
+      "bytes": 185112,
+      "http_status": 200,
+      "integrity_matches_manifest": true,
+      "latest_touch_commit": "ee9bacf232bd9b26b25c6720eac7ba205ffa780a",
+      "order": 2,
+      "path": "research/RESEARCH_STATE.md",
+      "sha256": "272020b975c78eb4dce86e83b6ea5bff0015787eb2e3c2782c28759f17d8cdf8",
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md",
+      "visible_metadata": {
+        "canonical_startup_file": "yes",
+        "last_commit": "b9b6008 (reconciled AA-7's negative compact-selection result, model-only aligned recurrence, exact controls, and canonical continuity)",
+        "last_updated": "2026-09-12",
+        "state_role": "canonical project state"
+      }
+    },
+    {
+      "bytes": 38451,
+      "http_status": 200,
+      "integrity_matches_manifest": true,
+      "latest_touch_commit": "b9b6008ac4cff37bfef98bd2103a9cb9edf3a3a6",
+      "order": 3,
+      "path": "research/THREAD_START.md",
+      "sha256": "3433cf08fb8d3cbf94a95f450c4ab8f2418d612d587c871c6ea8336e2f49d29a",
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md",
+      "visible_metadata": {
+        "canonical_startup_file": "yes",
+        "last_commit": "not present",
+        "last_updated": "2026-09-12",
+        "state_role": "session continuity and immediate priorities"
+      }
+    },
+    {
+      "bytes": 50422,
+      "http_status": 200,
+      "integrity_matches_manifest": true,
+      "latest_touch_commit": "b9b6008ac4cff37bfef98bd2103a9cb9edf3a3a6",
+      "order": 4,
+      "path": "research/CLAIMS_REGISTER.md",
+      "sha256": "7f543f3a5a5f8fa308c9ddfbf2efa6068ea7a7e516c7a133a08e14b63b1c69d0",
+      "url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md",
+      "visible_metadata": {
+        "canonical_startup_file": "yes",
+        "last_commit": "not present",
+        "last_updated": "2026-09-12",
+        "state_role": "canonical claim status"
+      }
+    }
+  ],
+  "manifest_generation_base": "8f4e589df5d92217e56f76a978d51df07af5aa3a",
+  "manifest_generated_utc": "2026-09-12T21:15:38Z",
+  "startup_status": "PASSED"
+}
