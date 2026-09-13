@@ -4,6 +4,16 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### Preregistered Aggregate Human and Reconciled-Model Profiles Correspond, with Non-Unique Exact Pairing (2026-09-13)
+
+AA-12 follow-up 4 compared independently frozen SAPA latent profiles with independently frozen reconciled model families A-D through exactly 45 pre-existing coordinate-blind `ACCEPT_DIRECT` trait mappings. At every eligible human K, a maximum-weight injective assignment paired all four model families with distinct human profiles. The K=10 maximum has mean Fisher-z 0.576571 and back-transformed mean r 0.520169. A 20,000-draw bridge-permutation null repeated all correlations, assignment optimization, and the K=4,5,6,7,8,10 search; 0 draws reached the observed maximum (p=0.000050).
+
+The K=10 primary pairs are A↔H10_C r=0.519496, B↔H10_J r=0.394457, C↔H10_G r=0.318677, and D↔H10_I r=0.754532. A, C, and D pass separate max-over-profile/K family tests, while B is marginal at p=0.053497. The conservative 12-trait analysis also maximizes at K=10 (back-transformed mean r 0.760797; p=0.000650), and the moderate-stability K=4–6 sensitivity peaks at K=6 (mean r 0.448347; p=0.000050), retaining 86.2% of the primary mean-r. All four frozen strong-tier criteria therefore pass.
+
+Exact pair identity is not a clean flat taxonomy. C and D share H10_I as their unconstrained best human counterpart; injectivity moves C to H10_G. The 12-trait optimum changes three of four K=10 pair identities. B is rarely the nearest family in relaxed browsing, and selected B/C human lineages are generally closer to other model families. Secondary E also selects H10_I (r=0.747647; adjusted p=0.000050), providing similarity evidence without a distinct fifth human counterpart. Fixed primary pairs remain positive in Qwen, LLaMA, and Gemma, but C is weak in Qwen.
+
+Interpretation: the preregistered evidence supports strong aggregate multivariate profile-shape correspondence through the frozen bridge, while exact family-to-profile matching is resolution-sensitive and partially many-to-one. This does not establish respondent-level projection, prevalence or psychometric equivalence, natural personality types, causal/shared mechanisms, or individual human placement in model geometry. The 30 redundant/broad and 3 single-item direct mappings, low K=10 human stability, and material response-style warning remain explicit constraints.
+
 ### Frozen Model Partitions Reconcile into Broad Cross-Resolution Families (2026-09-13)
 
 AA-12 follow-up 3 exhaustively compared the already-frozen Qwen/LLaMA/Gemma K=4–10 role partitions over the same 275 roles. The primary AMI scan covers 49 K pairs per model pair and all 343 triples. Qwen K=6/LLaMA K=9/Gemma K=6 is both the global and frozen-quality-constrained maximum: pairwise AMIs are 0.618967, 0.666448, and 0.649270 (mean 0.644895). Eight triples lie within 0.02 of the maximum. A 5,000-draw null that preserves every exact partition, cluster-size vector, tiny group, and within-model cross-K relationship yields search-adjusted p=0.000200 for the triple maximum and each pairwise maximum.

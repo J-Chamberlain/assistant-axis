@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: canonical claim status
-Last updated: 2026-09-12
+Last updated: 2026-09-13
 
 This register separates project findings from interpretations. It is intentionally compact: use it to orient a new thread, then verify details in `RESEARCH_STATE.md`, `FINDINGS_LEDGER.md`, `RESEARCH_INDEX.md`, and the cited artifacts.
 
@@ -375,3 +375,13 @@ Evidence: AA-7 fit orthogonal Procrustes transforms only on training roles durin
 Counterevidence: The shared objects are the same 275 English role labels/instructions, which can induce common structure. Possible training-data overlap and genuinely recurrent representational structure remain unresolved alternative explanations. Full-fit transforms are used only to express final directions and do not eliminate model-specific scaling, residuals, or prompt-corpus dependence. The human-supported directions are model activation-derived trait vectors whose labels were selected with human evidence; no human respondent or human occupational centroid was projected. AA-7's primary compact-efficiency test was weak/absent, the preregistered gate for designing a respondent-projection study failed, and no causal interpretation is supported.
 Dependencies: `research/outputs/human_supported_trait_convergence/procrustes_alignment_cv.csv`, `research/outputs/human_supported_trait_convergence/procrustes_alignment_null.csv`, `research/outputs/human_supported_trait_convergence/aligned_human_supported_trait_directions.csv`, `research/outputs/human_supported_trait_convergence/aligned_big_five_directions.csv`, `research/outputs/human_supported_trait_convergence/aligned_agreeableness_focal_test.json`
 Last Updated: 2026-09-12
+
+## 41. Frozen Aggregate Human and Reconciled-Model Profile Shapes Correspond Through the Pre-Existing Direct Bridge
+
+Claim: Independently frozen aggregate SAPA latent profiles and independently frozen reconciled model persona families show search-adjusted multivariate profile-shape correspondence across the pre-existing coordinate-blind 45-trait direct bridge, while exact family-to-profile identities remain resolution-sensitive and partly non-unique.
+Status: Supported
+Evidence: AA-12 follow-up 4 froze the analysis before any human/model similarity. The maximum-weight injective A-D assignment over eligible human K=4,5,6,7,8,10 peaks at K=10 with mean Fisher-z 0.576571 and back-transformed mean r 0.520169. A 20,000-draw bridge-permutation null repeated all correlations, four-family assignment optimization, and K search; 0 null maxima reached the observed value (p=0.000050). Three of four family-specific max tests pass. The independently permuted 12-trait conservative analysis is also significant (K=10 mean r=0.760797, p=0.000650), and the moderate-stability K=4–6 sensitivity retains 86.2% of primary mean-r at p=0.000050. Fixed selected pairs remain positive separately in Qwen, LLaMA, and Gemma.
+Counterevidence: B misses its family-specific cutoff (p=0.053497). C and D share H10_I as their unconstrained best human counterpart, so the injective C pair is weaker. The 12-trait optimum changes three of four K=10 pair identities, and C's primary pair is nearly absent on those 12 traits. K=10 human split-refit stability is low. The 45 mappings include 30 redundant/broad proxies and 3 insufficient single-item proxies; response-style predictability remains material and no separate correction was frozen. Secondary E also selects H10_I, so it does not establish a distinct fifth human counterpart.
+Dependencies: `research/outputs/human_model_profile_correspondence/analysis_preregistration.md`, `primary_global_result.json`, `primary_assignments_by_k.csv`, `bridge_permutation_null_45.csv`, `family_specific_results.csv`, `bridge_permutation_null_12.csv`, `human_stability_sensitivity.csv`, `model_specific_replication.csv`, `mfamily_e_secondary.csv`, and `human_model_profile_correspondence_report.md`.
+Boundary: This claim concerns aggregate latent-profile correspondence under a pre-existing semantic bridge. No respondent was projected into model geometry; no individual score, posterior, mask, or imputation was committed. It does not establish psychometric equivalence, population-prevalence equivalence, causal/shared latent mechanisms, natural human/model types, longitudinal change, or wellbeing topology. No bridge expansion, `ACCEPT_CLOSE` primary use, PC-informed mapping, model reclustering, new inference, activation extraction, external model API, GPU, or RunPod work occurred.
+Last Updated: 2026-09-13
