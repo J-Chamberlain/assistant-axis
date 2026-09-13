@@ -1,0 +1,18 @@
+{
+  "status": "ESTABLISHED_CANDIDATE_SET",
+  "model_used": "GPT-5.5",
+  "anchor": {
+    "qwen": 6,
+    "llama": 9,
+    "gemma": 6
+  },
+  "construction_basis": "opaque shared-role overlap only; traits did not gate graph",
+  "accepted_component_count": 5,
+  "three_model_family_count": 4,
+  "majority_role_union_count": 220,
+  "majority_role_inventory_fraction": 0.8,
+  "ambiguous_majority_role_count": 0,
+  "search_adjusted_triple_p": 0.0001999600079984003,
+  "cluster_trait_edge_count": 961,
+  "trait_provenance_warning": "The 240 traits share activation provenance with the role vectors and are secondary, not independent validation."
+}

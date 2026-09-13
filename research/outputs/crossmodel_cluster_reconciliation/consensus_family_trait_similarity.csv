@@ -1,0 +1,14 @@
+consensus_family_id,model_a,model_b,pearson_240_traits,spearman_240_traits,centered_cosine_240_traits,evidence_role
+MFamily_A,gemma,llama,0.9253159792022428,0.9136165558429832,0.9253159792022432,secondary same-activation-space confirmation
+MFamily_A,gemma,qwen,0.8890164977304317,0.9037057935033591,0.8890164977304317,secondary same-activation-space confirmation
+MFamily_A,llama,qwen,0.85396375140838,0.8535452004375074,0.85396375140838,secondary same-activation-space confirmation
+MFamily_B,gemma,llama,0.8906711587370864,0.894957377732252,0.890671158737086,secondary same-activation-space confirmation
+MFamily_B,gemma,qwen,0.8829973618095057,0.8989140436465908,0.8829973618095057,secondary same-activation-space confirmation
+MFamily_B,llama,qwen,0.8050836049551225,0.8212286671643603,0.8050836049551225,secondary same-activation-space confirmation
+MFamily_C,gemma,llama,0.8926845939395497,0.879606416778069,0.8926845939395495,secondary same-activation-space confirmation
+MFamily_C,gemma,qwen,0.8854300837318463,0.8848756054792616,0.8854300837318462,secondary same-activation-space confirmation
+MFamily_C,llama,qwen,0.8340225085949525,0.8257582596920084,0.8340225085949523,secondary same-activation-space confirmation
+MFamily_D,gemma,llama,0.9213121964302035,0.9200281254882895,0.9213121964302036,secondary same-activation-space confirmation
+MFamily_D,gemma,qwen,0.9568305608124292,0.957616451674508,0.9568305608124292,secondary same-activation-space confirmation
+MFamily_D,llama,qwen,0.8536620904196905,0.8583734092605771,0.8536620904196907,secondary same-activation-space confirmation
+MFamily_E,gemma,llama,0.8309484040213595,0.8412863070539417,0.8309484040213593,secondary same-activation-space confirmation
