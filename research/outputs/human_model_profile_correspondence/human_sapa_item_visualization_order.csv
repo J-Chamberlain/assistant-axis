@@ -1,0 +1,97 @@
+item_id,item_text,primary_frozen_trait_owner,all_frozen_direct_trait_mappings,mapping_count,trait_orientation_signs,item_number,visualization_order
+q_1662,Seek adventure.,adventurous,adventurous,1,adventurous:1,1662,1
+q_2011,Would love to explore strange places.,adventurous,adventurous,1,adventurous:1,2011,2
+q_6,Accept people as they are.,agreeable,agreeable,1,agreeable:1,6,3
+q_1763,Sympathize with others' feelings.,agreeable,agreeable;empathetic,2,agreeable:1;empathetic:1,1763,4
+q_1910,Value cooperation over competition.,agreeable,agreeable,1,agreeable:1,1910,5
+q_1385,Love to help others.,altruistic,altruistic,1,altruistic:1,1385,6
+q_1764,Sympathize with the homeless.,altruistic,altruistic,1,altruistic:1,1764,7
+q_4229,Give money to charities.,altruistic,altruistic,1,altruistic:1,4229,8
+q_1989,Worry about things.,anxious,anxious;neurotic,2,anxious:1;neurotic:1,1989,9
+q_4249,Would call myself a nervous person.,anxious,anxious,1,anxious:1,4249,10
+q_4256,Worry about awful things that might happen.,anxious,anxious,1,anxious:1,4256,11
+q_348,Believe in the importance of art.,artistic,artistic,1,artistic:1,348,12
+q_610,Do not like art.,artistic,artistic,1,artistic:-1,610,13
+q_1441,Need a creative outlet.,artistic,artistic;creative,2,artistic:1;creative:1,1441,14
+q_1768,Take charge.,assertive,assertive;dominant,2,assertive:1;dominant:1,1768,15
+q_1769,Take control of things.,assertive,assertive;dominant,2,assertive:1;dominant:1,1769,16
+q_2161,Do not have an assertive personality.,assertive,assertive;dominant,2,assertive:-1;dominant:-1,2161,17
+q_630,Do things out of revenge.,bitter,bitter;vindictive,2,bitter:1;vindictive:1,630,18
+q_848,Feel short-changed in life.,bitter,bitter,1,bitter:1,848,19
+q_1150,Hold a grudge.,bitter,bitter;vindictive,2,bitter:1;vindictive:1,1150,20
+q_146,Am indifferent to the feelings of others.,callous,callous,1,callous:1,146,21
+q_251,Am seldom bothered ... suffering of strangers.,callous,callous,1,callous:1,251,22
+q_4231,It would upset me a lot to see a child or animal suffer.,callous,callous,1,callous:-1,4231,23
+q_85,Am calm even in tense situations.,calm,calm;serene,2,calm:1;serene:1,85,24
+q_1616,Remain calm under pressure.,calm,calm;resilient;serene;stoic,4,calm:1;resilient:1;serene:1;stoic:1,1616,25
+q_491,Carry out my plans.,conscientious,conscientious,1,conscientious:1,491,26
+q_1422,Make plans and stick to them.,conscientious,conscientious,1,conscientious:1,1422,27
+q_1507,Pay attention to details.,conscientious,conscientious;meticulous,2,conscientious:1;meticulous:1,1507,28
+q_2745,Am able to come up with new and different ideas.,creative,creative;innovative,2,creative:1;innovative:1,2745,29
+q_2754,Am an original thinker.,creative,creative,1,creative:1,2754,30
+q_2775,Am not all that curious about the world.,curious,curious,1,curious:-1,2775,31
+q_343,Believe in human goodness.,cynical,cynical,1,cynical:-1,343,32
+q_381,Believe that people are essentially evil.,cynical,cynical,1,cynical:1,381,33
+q_594,Distrust people.,cynical,cynical;paranoid,2,cynical:1;paranoid:1,594,34
+q_2951,Have a colorful and dramatic way of talking about things. ,dramatic,dramatic;theatrical,2,dramatic:1;theatrical:1,2951,35
+q_219,Am open about my feelings.,emotional,emotional,1,emotional:1,219,36
+q_793,Experience my emotions intensely.,emotional,emotional,1,emotional:1,793,37
+q_1681,Seldom get emotional.,emotional,emotional,1,emotional:-1,1681,38
+q_844,Feel others' emotions.,empathetic,empathetic,1,empathetic:1,844,39
+q_1757,Suffer from others' sorrows.,empathetic,empathetic,1,empathetic:1,1757,40
+q_1742,Start conversations.,extroverted,extroverted;gregarious;reserved,3,extroverted:1;gregarious:1;reserved:-1,1742,41
+q_1803,Talk to a lot of different people at parties.,extroverted,extroverted;gregarious,2,extroverted:1;gregarious:1,1803,42
+q_4257,Usually take the initiative in making new friends.,extroverted,extroverted,1,extroverted:1,4257,43
+q_145,Am inclined to forgive others.,forgiving,forgiving,1,forgiving:1,145,44
+q_915,Find it hard to forgive others.,forgiving,forgiving,1,forgiving:-1,915,45
+q_1869,Try to forgive and forget.,forgiving,forgiving,1,forgiving:1,1869,46
+q_364,Believe that I am better than others.,grandiose,grandiose,1,grandiose:1,364,47
+q_1042,Have a high opinion of myself.,grandiose,grandiose,1,grandiose:1,1042,48
+q_1830,Think highly of myself.,grandiose,grandiose,1,grandiose:1,1830,49
+q_463,Can't do without the company of others.,gregarious,gregarious,1,gregarious:1,463,50
+q_22,Act impulsively when something is bothering me.,impulsive,impulsive,1,impulsive:1,22,51
+q_35,Act without thinking.,impulsive,impulsive,1,impulsive:1,35,52
+q_636,Do things without thinking of the consequences.,impulsive,impulsive,1,impulsive:1,636,53
+q_516,Come up with something new.,innovative,innovative,1,innovative:1,516,54
+q_1392,Love to think up new ways of doing things.,innovative,innovative,1,innovative:1,1392,55
+q_1310,Like to get lost in thought.,introspective,introspective,1,introspective:1,1310,56
+q_1880,Try to understand myself.,introspective,introspective,1,introspective:1,1880,57
+q_238,Am quick to correct others.,judgmental,judgmental,1,judgmental:1,238,58
+q_239,Am quick to judge others.,judgmental,judgmental,1,judgmental:1,239,59
+q_905,Find it difficult to manipulate others.,manipulative,manipulative,1,manipulative:-1,905,60
+q_1765,Take advantage of others.,manipulative,manipulative,1,manipulative:1,1765,61
+q_1896,Use others for my own ends.,manipulative,manipulative,1,manipulative:1,1896,62
+q_811,Feel a sense of worthlessness or hopelessness.,melancholic,melancholic,1,melancholic:1,811,63
+q_1578,Rarely feel depressed.,melancholic,melancholic;neurotic,2,melancholic:-1;neurotic:-1,1578,64
+q_1706,Show my sadness.,melancholic,melancholic,1,melancholic:1,1706,65
+q_1063,Have an eye for detail.,meticulous,meticulous,1,meticulous:1,1063,66
+q_1915,Want every detail taken care of.,meticulous,meticulous;perfectionist,2,meticulous:1;perfectionist:1,1915,67
+q_1099,Have frequent mood swings.,neurotic,neurotic;temperamental,2,neurotic:1;temperamental:1,1099,68
+q_1350,Look at the bright side of life.,optimistic,optimistic,1,optimistic:1,1350,69
+q_1457,Never give up hope.,optimistic,optimistic,1,optimistic:1,1457,70
+q_1835,Think that all will be well.,optimistic,optimistic,1,optimistic:1,1835,71
+q_880,Feel that people are against me.,paranoid,paranoid,1,paranoid:1,880,72
+q_1758,Suspect hidden motives in others.,paranoid,paranoid,1,paranoid:1,1758,73
+q_278,Am usually a patient person.,patient,patient,1,patient:1,278,74
+q_530,Continue until everything is perfect.,perfectionist,perfectionist,1,perfectionist:1,530,75
+q_1694,Set high standards for myself and others.,perfectionist,perfectionist,1,perfectionist:1,1694,76
+q_808,Fear for the worst.,pessimistic,pessimistic,1,pessimistic:1,808,77
+q_1038,Have a dark outlook on the future.,pessimistic,pessimistic,1,pessimistic:1,1038,78
+q_1043,Have a lot of fun.,playful,playful,1,playful:1,1043,79
+q_1685,Seldom joke around.,playful,playful,1,playful:-1,1685,80
+q_4265,Like telling jokes and funny stories to my friends.,playful,playful,1,playful:1,4265,81
+q_1609,Rebel against authority.,rebellious,rebellious,1,rebellious:1,1609,82
+q_1624,Respect authority.,rebellious,rebellious,1,rebellious:-1,1624,83
+q_1196,Keep others at a distance.,reserved,reserved,1,reserved:1,1196,84
+q_1635,Reveal little about myself.,reserved,reserved,1,reserved:1,1635,85
+q_1606,Readily overcome setbacks.,resilient,resilient,1,resilient:1,1606,86
+q_345,Believe in one true religion.,secular,secular,1,secular:-1,345,87
+q_660,Don't consider myself religious.,secular,secular,1,secular:1,660,88
+q_1588,Rarely lose my composure.,serene,serene;stoic,2,serene:1;stoic:1,1588,89
+q_1185,Keep my emotions under control.,stoic,stoic,1,stoic:1,1185,90
+q_52,Am a person whose moods go up and down easily.,temperamental,temperamental,1,temperamental:1,52,91
+q_497,Change my mood a lot.,temperamental,temperamental,1,temperamental:1,497,92
+q_1555,Put on a show to impress people.,theatrical,theatrical,1,theatrical:1,1555,93
+q_82,Am attached to conventional ways.,traditional,traditional,1,traditional:1,82,94
+q_1301,Like to be viewed as proper and conventional.,traditional,traditional,1,traditional:1,1301,95
+q_4291,It is better to follow society's rules than to go my own way.,traditional,traditional,1,traditional:1,4291,96
