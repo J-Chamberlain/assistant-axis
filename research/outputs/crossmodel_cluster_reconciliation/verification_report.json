@@ -1,0 +1,469 @@
+{
+  "status": "PASS",
+  "model_used": "GPT-5.5",
+  "checks_passed": 90,
+  "checks_total": 90,
+  "checks": [
+    {
+      "name": "startup passed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "four exact startup URLs checked",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "visible startup metadata checked",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "canonical navigation consulted",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "method preregistration exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "AMI primary metric frozen",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "K search frozen 4 through 10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "5000 permutations frozen",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "permutation seed frozen",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "quality threshold frozen",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "split merge allowed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "anti-transitivity rule frozen",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "qwen frozen membership hash",
+      "status": "PASS",
+      "detail": "2c4aee82f6ed7499401e45174b7e354bb4a4e09ff4600536c5534dc48a6a2f0d"
+    },
+    {
+      "name": "qwen has K4-K10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "qwen has 275 roles per K",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "qwen has no duplicate K-role",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "qwen shared role inventory",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "llama frozen membership hash",
+      "status": "PASS",
+      "detail": "e4e74cd915c3490fd7e4adbddf8bb38e4058dc41e104acf7ab03a8a2285aa86f"
+    },
+    {
+      "name": "llama has K4-K10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "llama has 275 roles per K",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "llama has no duplicate K-role",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "llama shared role inventory",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "gemma frozen membership hash",
+      "status": "PASS",
+      "detail": "4df15ca4048a26a7b5ac3c93885baa1f9f0ffe866e2282c83d4c0520cf38d2d1"
+    },
+    {
+      "name": "gemma has K4-K10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "gemma has 275 roles per K",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "gemma has no duplicate K-role",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "gemma shared role inventory",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "same exact 275 roles across models",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "all 147 pairwise K cells present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "qwen-llama has 49 K cells",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "qwen-gemma has 49 K cells",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "llama-gemma has 49 K cells",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "all 343 K triples present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "quality sensitivity nonempty",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "5000 permutation maxima present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "null preserves one maximum per model pair",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "triple maximum null present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "best triple Q6 L9 G6",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "quality best equals global best",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "triple score recomputes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "search-adjusted p recomputes",
+      "status": "PASS",
+      "detail": "0.0001999600079984003"
+    },
+    {
+      "name": "search-adjusted p is significant",
+      "status": "PASS",
+      "detail": "0.0001999600079984003"
+    },
+    {
+      "name": "near-best triple ridge recorded",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "AMI recomputes qwen4-llama4",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARI recomputes qwen4-llama4",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "NMI recomputes qwen4-llama4",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "AMI recomputes qwen10-llama10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARI recomputes qwen10-llama10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "NMI recomputes qwen10-llama10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "AMI recomputes llama4-gemma4",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARI recomputes llama4-gemma4",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "NMI recomputes llama4-gemma4",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "AMI recomputes llama10-gemma10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARI recomputes llama10-gemma10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "NMI recomputes llama10-gemma10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "all 7203 cluster pairs present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "all 147 overlap cells present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "overlap statistics finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "sample expected overlap recomputes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "sample hypergeometric p recomputes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "strong edge subset exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "all edges satisfy q threshold",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "persistence row for every edge",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "persistence tiers recompute",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "tiny audit has 24 unique tiny clusters",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "tiny audit covers both other models and every K",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "tiny audit contains semantic names only post-freeze",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "trait confirmation covers every strong edge",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "trait evidence labeled secondary",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "trait correlations bounded",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "five candidate components",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "four all-three families",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "direct support complete",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "majority coverage 220 roles",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "no ambiguous majority roles",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "consensus candidate status established",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "family traits have 240 per family-model",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "trait profiles labeled secondary",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "freeze commits exist",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "freeze commit ordering",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "no human source paths in numerical scripts",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "no inference libraries",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "no GPU or RunPod operations",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "no human-model metric output",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "no respondent-level output",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "all required figures present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "primary report exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "semantic summary exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "deterministic full numerical rerun",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "working tree clean at verification start",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "boundaries": {
+    "human_data_loaded": false,
+    "sapa_artifact_loaded": false,
+    "human_model_matching": false,
+    "reclustering": false,
+    "new_model_inference": false,
+    "activation_extraction": false,
+    "external_model_api": false,
+    "gpu": false,
+    "runpod": false
+  }
+}
