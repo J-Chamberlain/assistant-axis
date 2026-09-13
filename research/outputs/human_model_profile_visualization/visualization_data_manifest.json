@@ -1,0 +1,314 @@
+{
+  "artifact": "AA-12 follow-up-5 visualization source-data manifest",
+  "date": "2026-09-13",
+  "diagnostic_ineligible_K": 9,
+  "eligible_K": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    10
+  ],
+  "existing_figure_review": {
+    "other_existing_figures": "inspected but superseded where requested annotations or comparisons were absent",
+    "reason": "These frozen figures already satisfy the corresponding core display; the packet adds captions and richer companion views.",
+    "reused_exactly": [
+      "figures/bridge_permutation_null_45.png",
+      "figures/cross_resolution_persistence.png",
+      "figures/model_specific_replication.png"
+    ]
+  },
+  "figure_source_tables": [
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/ad_exemplars.csv",
+      "sha256": "335991c71bddbe04c37284bd107fda9b2d0c1183412cbed6930d0e8856f9eaa9",
+      "size_bytes": 16075
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/assignment_evolution.csv",
+      "sha256": "ae9748e39bc9b667a709b42f9383bf6b30589689c2756f4b2558eef8a16ea6f5",
+      "size_bytes": 4934
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/cde_competition.csv",
+      "sha256": "e7f1b6c4b30d3edb810bc62cf0e43dadae09cc820c7bf0446c49e56cfb7bc3c2",
+      "size_bytes": 3103
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/cde_profile_shapes.csv",
+      "sha256": "244b8e39daf3651e0280ad281c7f83055329fc3f0123e49df60094fef555c449",
+      "size_bytes": 9620
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/family_best_by_k.csv",
+      "sha256": "1542f66d3e62869048e32a7e22589e440c6618a4631506bf9aa6140320ed28e6",
+      "size_bytes": 1827
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/family_specific_statistics.csv",
+      "sha256": "17d1456ebc1a0817a4a26b8e1f5f3fb780df8d9ce6d5d38a08983e7286f5aa0b",
+      "size_bytes": 1114
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/full_similarity_matrices.csv",
+      "sha256": "0861ac7cfed3ee95405972a8987ee52c00e97ea168753aa06cc9bd1d59139f62",
+      "size_bytes": 19374
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/human_profile_continuity.csv",
+      "sha256": "006ebd9235ae67a44e4ea18833dd7f81f7a455c1df47363fa612d685aeb24b79",
+      "size_bytes": 2291
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/k_progression.csv",
+      "sha256": "b3b910c56decadb897a797c863229e4b5ccbdcf99b91d1b01eae2097d974b55f",
+      "size_bytes": 564
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/model_specific_replication.csv",
+      "sha256": "c71b4bb0791e28ae0f20f892a838f9c11d00fcd16cf4b57038541c224019b742",
+      "size_bytes": 1267
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/permutation_null_histogram.csv",
+      "sha256": "f91d32cf4659bec12bc8fea89ae8d23cc424fdec0a28a64b9836b60501c03cca",
+      "size_bytes": 2936
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/permutation_null_summary.csv",
+      "sha256": "85042aebbc5fe52f142b6a90444298f80fd445c8a69cb4a6ee71afc384c9b9ff",
+      "size_bytes": 271
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/primary_matched_profile_shapes.csv",
+      "sha256": "bc90f84057f72209fffc7a53db4ca91156508ea74c22432bb87126237392554c",
+      "size_bytes": 47563
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/sapa_language_profiles.csv",
+      "sha256": "47fefce0209ceb8ff27ab84b5379827ace8afedf6659492ef187f73c655c756a",
+      "size_bytes": 80337
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/source_artifact_checks.csv",
+      "sha256": "373fa32291db91c65330a98c2e9ef799c289443db90ddaaca83cc8e0a2be987d",
+      "size_bytes": 4191
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/top_trait_drivers.csv",
+      "sha256": "8655cf8b0726a2b2b6cf8a125c552262a15df5d4dbe387cb89900fecec58a1f8",
+      "size_bytes": 19097
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/trait_metadata.csv",
+      "sha256": "35df8248f16ec81629de9657943756f11958444dee01ac8879164e0d64c2b0c8",
+      "size_bytes": 4138
+    },
+    {
+      "path": "research/outputs/human_model_profile_visualization/data/trait_set_comparison.csv",
+      "sha256": "beb4bfe12f3724ee3be2272449dea41603eae9db07bbd3ffe452c2f4ba290555",
+      "size_bytes": 1234
+    }
+  ],
+  "frozen_primary_pairs": {
+    "MFamily_A": "H10_C",
+    "MFamily_B": "H10_J",
+    "MFamily_C": "H10_G",
+    "MFamily_D": "H10_I"
+  },
+  "primary_model_families": [
+    "MFamily_A",
+    "MFamily_B",
+    "MFamily_C",
+    "MFamily_D"
+  ],
+  "privacy": "aggregate profiles and item moments only; no respondent rows, IDs, masks, posteriors, scores, or imputations",
+  "scientific_boundary": "visualization and deterministic inspection only; no fitting, matching optimization, new null, or claim",
+  "secondary_model_family": "MFamily_E",
+  "source_analysis_final_commit": "fea29c20792617b013775f40efe0546ebd6e8ec7",
+  "source_artifacts": [
+    {
+      "columns": 22,
+      "rows": 2205,
+      "sha256": "89a7677d3c50fdc71e54fd0e0cc0cb843993bc3da4daf9c0b0537328b96f1438",
+      "size_bytes": 605000,
+      "source_path": "research/outputs/human_model_profile_correspondence/human_trait_profiles_45.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 22,
+      "rows": 588,
+      "sha256": "0803c544a687e55bce523c6183a93310d36883a00709cbcdfb5bde7a9d0d128d",
+      "size_bytes": 171516,
+      "source_path": "research/outputs/human_model_profile_correspondence/human_trait_profiles_12.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 20,
+      "rows": 5831,
+      "sha256": "33c72dedf64d09a525443439cb0a547ef2ae5dac042045615e68bdaaf1cd54a3",
+      "size_bytes": 1321187,
+      "source_path": "research/outputs/human_model_profile_correspondence/human_sapa_item_profile_values.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 8,
+      "rows": 96,
+      "sha256": "bf3e13945d014bc35728895de9cbb3e030da7eadac4d63286b4820d57090babb",
+      "size_bytes": 8349,
+      "source_path": "research/outputs/human_model_profile_correspondence/human_sapa_item_visualization_order.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 20,
+      "rows": 225,
+      "sha256": "a4f75bab888efe324e7508a8c6a023b4e12b9b688aff54f3455422a38a47da2c",
+      "size_bytes": 74712,
+      "source_path": "research/outputs/human_model_profile_correspondence/model_family_trait_profiles_45.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 20,
+      "rows": 60,
+      "sha256": "212965647dd2e7eb25bb1e7ee00f2dc1060a78011da1f391f73e5559cf119aeb",
+      "size_bytes": 21214,
+      "source_path": "research/outputs/human_model_profile_correspondence/model_family_trait_profiles_12.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 7,
+      "rows": 160,
+      "sha256": "b6d623926ad486679db35e020cf2c00ff34fa9ef906bed539e92d403c5581860",
+      "size_bytes": 11505,
+      "source_path": "research/outputs/human_model_profile_correspondence/profile_similarity_45.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 6,
+      "rows": 160,
+      "sha256": "124ade6554a08ce306ea9b9c1fe1c5851cc4dbf9e963b76a919d49edcad124b4",
+      "size_bytes": 10999,
+      "source_path": "research/outputs/human_model_profile_correspondence/profile_similarity_12.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 9,
+      "rows": 24,
+      "sha256": "159d788a0715dce8eaa25d32be66d590ea0eacc3fe78ba2353096ee7f50ee930",
+      "size_bytes": 2770,
+      "source_path": "research/outputs/human_model_profile_correspondence/primary_assignments_by_k.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 9,
+      "rows": 24,
+      "sha256": "59cb72bc4d4232b887308e777274d13bff82ee3c6a43e9a1c3afce9265ab0c32",
+      "size_bytes": 2802,
+      "source_path": "research/outputs/human_model_profile_correspondence/primary_assignments_12_by_k.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 12,
+      "rows": 20000,
+      "sha256": "837a01f139af67e1027c90639377d657ede4660ce5edbd420f964c1ad2711993",
+      "size_bytes": 2808178,
+      "source_path": "research/outputs/human_model_profile_correspondence/bridge_permutation_null_45.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 9,
+      "rows": 20000,
+      "sha256": "4a40db4b1e5a3a0d454edeaa88afdfcbe1ea454c0b81ecf8569bf2ccb5c5ecef",
+      "size_bytes": 2166977,
+      "source_path": "research/outputs/human_model_profile_correspondence/bridge_permutation_null_12.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 12,
+      "rows": 4,
+      "sha256": "a9b37dda44bcd64441b6920382906d2435ccf43b92f2f679cbab696dbebae972",
+      "size_bytes": 849,
+      "source_path": "research/outputs/human_model_profile_correspondence/family_specific_results.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 8,
+      "rows": 3,
+      "sha256": "b2d58db1bde75f4bebb90c016eafe8ad1b4c8de1ecc6f5d9e02351c26beefeaa",
+      "size_bytes": 318,
+      "source_path": "research/outputs/human_model_profile_correspondence/human_stability_sensitivity.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 9,
+      "rows": 4,
+      "sha256": "0d819d3066983f1b8b68fa7a9a6a694c417f0a2e4ea03db15ba7fd701c263566",
+      "size_bytes": 554,
+      "source_path": "research/outputs/human_model_profile_correspondence/k9_diagnostic.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 10,
+      "rows": 32,
+      "sha256": "adf96002a28f39c52fb34a552975f0a8b6cefc61e6c3f29753a0b06167e75210",
+      "size_bytes": 2629,
+      "source_path": "research/outputs/human_model_profile_correspondence/model_specific_replication.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 14,
+      "rows": 15,
+      "sha256": "006ebd9235ae67a44e4ea18833dd7f81f7a455c1df47363fa612d685aeb24b79",
+      "size_bytes": 2291,
+      "source_path": "research/outputs/human_model_profile_correspondence/cross_resolution_human_persistence.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 11,
+      "rows": 40,
+      "sha256": "8331dc42bc1d52c65de59d0a699b0aabc480bc2d10e103912c7b6b37d015c966",
+      "size_bytes": 4941,
+      "source_path": "research/outputs/human_model_profile_correspondence/relaxed_split_merge_browsing.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "columns": 9,
+      "rows": 49,
+      "sha256": "a9de8fbc63eaae45d7072bb0fe5a59b3abe0c4b74d4c9ef3e262465578021745",
+      "size_bytes": 3820,
+      "source_path": "research/outputs/human_model_profile_correspondence/mfamily_e_secondary.csv",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "sha256": "9c1459b8a43c5de5b5154f626db374b5ea34cd5501ca8c9ddecdb82f6a03b517",
+      "size_bytes": 1956,
+      "source_path": "research/outputs/human_model_profile_correspondence/primary_global_result.json",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "sha256": "4960f80bd5cc94541a5615c4cbd8530323b46d9a17a48dc7e8b3a4fdb7342399",
+      "size_bytes": 1518,
+      "source_path": "research/outputs/human_model_profile_correspondence/robustness_result.json",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "sha256": "3db07cab5fa5dbb1706be75861b83bda28d43778ead16f7ce743ce835bbab61f",
+      "size_bytes": 3855,
+      "source_path": "research/outputs/human_model_profile_correspondence/common_space_manifest.json",
+      "source_role": "frozen_AA12_followup4"
+    },
+    {
+      "sha256": "7ecdaadfbf9251dc10664003edbe58e03fdf3ae68cb9a4ff3e52334c4e3518a1",
+      "size_bytes": 6149,
+      "source_path": "research/outputs/human_model_profile_correspondence/semantic_profile_summary.md",
+      "source_role": "frozen_AA12_followup4"
+    }
+  ],
+  "source_common_space_freeze": "ba095f60783bd70f0003e14a88eb2e041b65cd42",
+  "source_method_freeze": "c71bcf9568cfed478d706bc559606de01af48f04",
+  "source_postfreeze_semantics": "f55738dcb002c8da8d5013aa40f1ca1855214d3f",
+  "source_primary_numerical_freeze": "96c3e0d8595dfdfd15974c6bc66e31b58f0af065",
+  "source_robustness_freeze": "e1d10da957ac9b31486bb17bcdaabf1306f29a03",
+  "status": "figure-ready aggregate data frozen"
+}

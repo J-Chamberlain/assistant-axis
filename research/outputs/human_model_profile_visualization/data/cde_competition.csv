@@ -1,0 +1,19 @@
+trait_set,K,human_profile_id,model_family_id,pearson_r,spearman_rho,analysis_role,is_primary_injective_assignment,is_unconstrained_family_best_at_K,human_profile_has_ambiguous_top_two_margin,selection_rule
+45_ACCEPT_DIRECT,10,H10_B,MFamily_C,-0.0342752657145,-0.0449290161316,primary_A-D,False,False,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_B,MFamily_D,0.315200423547,0.37741691117,primary_A-D,False,False,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_B,MFamily_E,0.271783052343,0.27313152622,secondary_E,False,False,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_D,MFamily_C,0.0371046970281,0.00592904904963,primary_A-D,False,False,True,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_D,MFamily_D,0.119165641919,0.169504924497,primary_A-D,False,False,True,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_D,MFamily_E,0.310383293061,0.344807141397,secondary_E,False,False,True,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_F,MFamily_C,0.128833184147,0.0997397806793,primary_A-D,False,False,True,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_F,MFamily_D,-0.234179567841,-0.310748048523,primary_A-D,False,False,True,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_F,MFamily_E,-0.167341791646,-0.189861326234,secondary_E,False,False,True,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_G,MFamily_C,0.318676662848,0.283013274636,primary_A-D,True,False,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_G,MFamily_D,0.447492437223,0.456075628562,primary_A-D,False,False,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_G,MFamily_E,0.476355164205,0.427945584738,secondary_E,False,False,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_I,MFamily_C,0.555653425345,0.524127935987,primary_A-D,False,True,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_I,MFamily_D,0.754531714468,0.73487269054,primary_A-D,True,True,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_I,MFamily_E,0.747646787414,0.73796897171,secondary_E,False,True,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_J,MFamily_C,-0.110906289833,-0.100662077198,primary_A-D,False,False,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_J,MFamily_D,0.669712766456,0.661352482325,primary_A-D,False,False,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced
+45_ACCEPT_DIRECT,10,H10_J,MFamily_E,0.187425429978,0.145722849975,secondary_E,False,False,False,union of top four K10 profiles for C/D/E; H10_I and H10_G forced

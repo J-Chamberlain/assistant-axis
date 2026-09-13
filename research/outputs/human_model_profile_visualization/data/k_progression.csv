@@ -1,0 +1,8 @@
+K,included_in_primary,status,mean_fisher_z,back_transformed_mean_r,human_stability,anchor
+4,True,eligible,0.267518862059,0.261314625446,moderate,BIC/ICL anchor
+5,True,eligible,0.400590736966,0.380454306233,moderate,
+6,True,eligible,0.482629378712,0.448346919193,moderate,
+7,True,eligible,0.466360029636,0.435253601126,low,
+8,True,eligible,0.427786297926,0.403469627048,low,
+9,False,DIAGNOSTIC / INELIGIBLE,0.479776921072,0.446064935994,low,excluded from primary scan
+10,True,eligible,0.576571153069,0.520168807738,low,predictive-likelihood anchor; primary maximum

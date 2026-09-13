@@ -1,0 +1,5 @@
+trait_set,model_family_id,family_specific_best_K,family_specific_best_human_profile,family_specific_best_pearson_r,family_specific_best_spearman_rho,family_specific_search_adjusted_p,positive_adjusted_evidence,primary_global_selected_K,primary_global_selected_human_profile,primary_global_selected_pearson_r,primary_global_selected_spearman_rho,frozen_threshold,interpretive_note
+45_ACCEPT_DIRECT,MFamily_A,6,H06_A,0.623661914326,0.592377878381,0.000149992500375,True,10,H10_C,0.519496033231,0.472742844224,0.05,passes; family-specific maximum is H06_A rather than primary H10_C
+45_ACCEPT_DIRECT,MFamily_B,10,H10_J,0.39445674791,0.501334036307,0.0534973251337,False,10,H10_J,0.39445674791,0.501334036307,0.05,marginal; does not pass frozen threshold
+45_ACCEPT_DIRECT,MFamily_C,10,H10_I,0.555653425345,0.524127935987,0.00089995500225,True,10,H10_G,0.318676662848,0.283013274636,0.05,passes but shares H10_I maximum with D
+45_ACCEPT_DIRECT,MFamily_D,10,H10_I,0.754531714468,0.73487269054,4.9997500125e-05,True,10,H10_I,0.754531714468,0.73487269054,0.05,passes strongly; primary and family-specific maximum are H10_I

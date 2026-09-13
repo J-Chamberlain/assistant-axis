@@ -1,0 +1,17 @@
+K,model_family_id,human_profile_id,representation,pearson_r,spearman_rho,pair_fixed_no_reassignment,all_model_signs_agree,minimum_model_r,maximum_model_r,representation_order
+10,MFamily_A,H10_C,three_model_consensus,0.519496033231,0.472742844224,True,,,,0
+10,MFamily_A,H10_C,qwen,0.399571936619,0.362001383641,True,,,,1
+10,MFamily_A,H10_C,llama,0.560230409556,0.529859350068,True,,,,2
+10,MFamily_A,H10_C,gemma,0.56181356096,0.551862709875,True,,,,3
+10,MFamily_B,H10_J,three_model_consensus,0.39445674791,0.501334036307,True,,,,0
+10,MFamily_B,H10_J,qwen,0.321844741653,0.38334596022,True,,,,1
+10,MFamily_B,H10_J,llama,0.36367868103,0.46648440356,True,,,,2
+10,MFamily_B,H10_J,gemma,0.412254668424,0.518396521906,True,,,,3
+10,MFamily_C,H10_G,three_model_consensus,0.318676662848,0.283013274636,True,,,,0
+10,MFamily_C,H10_G,qwen,0.140743800228,0.107315787798,True,,,,1
+10,MFamily_C,H10_G,llama,0.39451250142,0.400803715755,True,,,,2
+10,MFamily_C,H10_G,gemma,0.367102793645,0.330182153741,True,,,,3
+10,MFamily_D,H10_I,three_model_consensus,0.754531714468,0.73487269054,True,,,,0
+10,MFamily_D,H10_I,qwen,0.728865451319,0.640073784069,True,,,,1
+10,MFamily_D,H10_I,llama,0.766594669352,0.758918278352,True,,,,2
+10,MFamily_D,H10_I,gemma,0.72530466809,0.700088936115,True,,,,3

@@ -1,0 +1,169 @@
+{
+  "checks": [
+    {
+      "actual": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "check": "eligible_K",
+      "expected": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 96,
+      "check": "mapped_unique_items",
+      "expected": 96,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 45,
+      "check": "direct_trait_count",
+      "expected": 45,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 12,
+      "check": "supported_trait_count",
+      "expected": 12,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 10,
+      "check": "primary_maximizing_K",
+      "expected": 10,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 0.5765711530686384,
+      "check": "primary_mean_fisher_z",
+      "expected": 0.5765711530686384,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 0.5201688077382118,
+      "check": "primary_mean_r",
+      "expected": 0.5201688077382118,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "check": "primary_null_exceedances",
+      "expected": 0,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 4.999750012499375e-05,
+      "check": "primary_global_p",
+      "expected": 4.999750012499375e-05,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 0.7607970003865232,
+      "check": "twelve_mean_r",
+      "expected": 0.7607970003865232,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 0.0006499675016249188,
+      "check": "twelve_global_p",
+      "expected": 0.0006499675016249188,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 6,
+      "check": "stable_K456_best_K",
+      "expected": 6,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 0.4483469191929081,
+      "check": "stable_K456_mean_r",
+      "expected": 0.4483469191929081,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": "H10_I",
+      "check": "mfamily_E_best_profile",
+      "expected": "H10_I",
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 0.747646787414387,
+      "check": "mfamily_E_r",
+      "expected": 0.747646787414387,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": {
+        "MFamily_A": "H10_C",
+        "MFamily_B": "H10_J",
+        "MFamily_C": "H10_G",
+        "MFamily_D": "H10_I"
+      },
+      "check": "primary_assignment_profiles",
+      "expected": {
+        "MFamily_A": "H10_C",
+        "MFamily_B": "H10_J",
+        "MFamily_C": "H10_G",
+        "MFamily_D": "H10_I"
+      },
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 4,
+      "check": "primary_assignment_is_injective",
+      "expected": 4,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": 16,
+      "check": "replication_pair_rows",
+      "expected": 16,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": true,
+      "check": "all_Qwen_LLaMA_Gemma_fixed_pair_signs_positive",
+      "expected": true,
+      "note": "",
+      "passed": true
+    },
+    {
+      "actual": true,
+      "check": "no_correspondence_reoptimization",
+      "expected": true,
+      "note": "Only frozen rows were selected, joined, checked, or deterministically transformed",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}

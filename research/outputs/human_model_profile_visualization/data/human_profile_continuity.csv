@@ -1,0 +1,16 @@
+human_profile_lineage,origin_model_family,origin_K,K,human_profile_id,eligible_primary_K,best_model_family,best_pearson_r,best_spearman_rho,origin_family_retained,assignment_status,human_split_refit_stability_rating,human_response_style_warning,mutual_nearest_lineage_rule
+MFamily_A_from_H10_C,MFamily_A,10,8,H08_D,True,MFamily_A,0.247396798228,0.199479561359,True,unassigned_human_profile,low,True,True
+MFamily_A_from_H10_C,MFamily_A,10,9,H09_D,False,MFamily_A,0.329455316894,0.28762475723,True,diagnostic_ineligible,low,True,True
+MFamily_A_from_H10_C,MFamily_A,10,10,H10_C,True,MFamily_A,0.519496033231,0.472742844224,True,primary_assigned_to_origin,low,True,True
+MFamily_B_from_H10_J,MFamily_B,10,5,H05_E,True,MFamily_D,0.339106880112,0.266346058974,False,primary_assigned_to_origin,moderate,True,True
+MFamily_B_from_H10_J,MFamily_B,10,6,H06_E,True,MFamily_B,0.290121850447,0.343621331587,True,primary_assigned_to_origin,moderate,True,True
+MFamily_B_from_H10_J,MFamily_B,10,7,H07_G,True,MFamily_C,0.293948897083,0.276688955649,False,primary_assigned_to_origin,low,True,True
+MFamily_B_from_H10_J,MFamily_B,10,8,H08_H,True,MFamily_C,0.530974186075,0.532692117948,False,primary_assigned_other_family,low,True,True
+MFamily_B_from_H10_J,MFamily_B,10,9,H09_I,False,MFamily_D,0.415997735772,0.30758588903,False,diagnostic_ineligible,low,True,True
+MFamily_B_from_H10_J,MFamily_B,10,10,H10_J,True,MFamily_D,0.669712766456,0.661352482325,False,primary_assigned_to_origin,low,True,True
+MFamily_C_from_H10_G,MFamily_C,10,6,H06_F,True,MFamily_D,0.623906459666,0.652656543718,False,primary_assigned_other_family,moderate,True,True
+MFamily_C_from_H10_G,MFamily_C,10,7,H07_F,True,MFamily_D,0.557780013308,0.59283902664,False,primary_assigned_other_family,low,True,True
+MFamily_C_from_H10_G,MFamily_C,10,8,H08_F,True,MFamily_D,0.574433217816,0.581112685186,False,primary_assigned_other_family,low,True,True
+MFamily_C_from_H10_G,MFamily_C,10,9,H09_G,False,MFamily_D,0.618135688407,0.640798445619,False,diagnostic_ineligible,low,True,True
+MFamily_C_from_H10_G,MFamily_C,10,10,H10_G,True,MFamily_D,0.447492437223,0.456075628562,False,primary_assigned_to_origin,low,True,True
+MFamily_D_from_H10_I,MFamily_D,10,10,H10_I,True,MFamily_D,0.754531714468,0.73487269054,True,primary_assigned_to_origin,low,True,True

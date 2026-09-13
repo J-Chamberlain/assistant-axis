@@ -1,0 +1,9 @@
+statistic,value
+null_median,0.223367149198
+null_95th_percentile,0.32636906332
+null_99th_percentile,0.377685618753
+null_99_9th_percentile,0.444032706592
+observed_max_mean_fisher_z,0.576571153069
+null_exceedance_count,0
+permutation_count,20000
+empirical_p,4.9997500125e-05
