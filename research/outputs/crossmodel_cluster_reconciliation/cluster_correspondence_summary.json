@@ -1,0 +1,24 @@
+{
+  "status": "CLUSTER CORRESPONDENCE NUMERICALLY FROZEN; OPAQUE ROLE IDS ONLY",
+  "role_count": 275,
+  "all_cluster_pair_rows": 7203,
+  "strong_edge_count": 961,
+  "persistence_tiers": {
+    "high": 688,
+    "moderate": 194,
+    "isolated": 79
+  },
+  "tiny_cluster_count": 24,
+  "anchor": {
+    "qwen": 6,
+    "llama": 9,
+    "gemma": 6
+  },
+  "anchor_strong_edge_count": 20,
+  "anchor_persistence_tiers": {
+    "high": 14,
+    "moderate": 4,
+    "isolated": 2
+  },
+  "boundary": "Role names, traits, human data, and SAPA artifacts were not loaded."
+}
