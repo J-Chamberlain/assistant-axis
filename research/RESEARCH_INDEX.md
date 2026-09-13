@@ -22,6 +22,10 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 
 `research/outputs/sapa_item_coverage_frontier/sapa_item_coverage_frontier_report.md` describes the raw 23,679 × 696 SAPA behavioral-item availability tradeoff before any human filter or feature-space choice. No item reaches 50% marginal coverage; 14 reach 25%, 16 reach 20%, 122 reach 15%, and 687 reach 10%. The deterministic availability-only greedy nested frontier retains 6,096 strict-complete respondents at one item, 1,455 at two, 358 at three, 103 at four, 41 at five, 11 at ten, 6 at twenty, 3 at 39, 2 at 64, 1 at 137–294, and zero at 295. Relaxed 95/90/80% counts use the same nested panels and reach zero at 310/327/368. The early collapse is visually clear, while the one-person tail is not a broadly usable cohort. AA-12 selects no threshold and performs no construct scoring, clustering, human/model matching, or projection. The next decision is to inspect the frontier and choose what dimensionality/sample-size region is scientifically worth considering.
 
+## Track 1 SAPA Partial-Response Profile Gate (AA-12 follow-up, 2026-09-13)
+
+`research/outputs/sapa_partial_response_latent_profiles/sapa_partial_response_latent_profiles_report.md` fits a human-only categorical latent-class model directly to the observed 1–6 responses, with missing cells absent from likelihood terms and no respondent-profile imputation. The pre-fit design was committed before candidate fitting and anonymous profiles before item-wording unblinding. Frozen selection is conflicted: validation favors eligible K=10, BIC/ICL favor K=4, and the formal support sets do not intersect. K=4 has moderate independent refit stability; K=10 has low stability. Administration masks do not predict labels above chance, but raw response-style summaries trigger warnings for both anchors. Thus broad recurring configurations are recoverable, but no unique K or stable fine-grained taxonomy is established. Track 1 stays ACTIVE; human/model comparison and external human-profile literature verification remain unperformed.
+
 ## Integrated AA-1 Through AA-7 Entry Points (2026-09-12)
 
 - AA-1 human SAPA psychometric structure: `research/outputs/sapa_bridge_psychometric_audit/sapa_bridge_psychometric_audit_report.md`
@@ -123,6 +127,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/paper15_content_ledger_artifact_inventory.csv`: source artifact inventory for the Paper 1.5 content ledger.
 - `research/outputs/sapa_bridge_psychometric_audit/`: AA-1 human-only psychometric contraction of the frozen semantic bridge, with verification and artifact inventory.
 - `research/outputs/sapa_item_coverage_frontier/`: AA-12 aggregate marginal and greedy nested SAPA item-coverage frontier, reproducible code, figure, verification, and inventory; no respondent-level data.
+- `research/outputs/sapa_partial_response_latent_profiles/`: AA-12 follow-up categorical partial-response mixture, conflicted K=4/K=10 anonymous anchors, stability/certainty/artifact diagnostics, post-freeze semantic summary, verification, and aggregate-only inventory.
 - `research/outputs/externally_anchored_big_five/`: AA-2 frozen external Big Five mappings, multimodel geometry tests, viewer integration report, and artifact inventory.
 - `research/outputs/extended_persona_pca/`: AA-3 full-rank dimensionality/stability audit and interactive PC1-PC10 viewer.
 - `research/outputs/qwen_trait_sparsity_prediction/`: AA-4 compact-feature and matched generic-basis audit of Qwen trait-to-PC prediction.

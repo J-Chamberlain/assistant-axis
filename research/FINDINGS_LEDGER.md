@@ -4,6 +4,14 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### Partial-Response SAPA Mixtures Yield Conflicted Coarse/Fine Anchors with Response-Style Warnings (2026-09-13)
+
+The AA-12 follow-up fit a six-category product-multinomial mixture directly to all observed responses in the 23,679 × 696 SAPA matrix; missing cells entered no likelihood term and no individual response was imputed. The pre-fit method was committed before candidate fitting and anonymous profile probabilities before item-wording inspection. Synthetic validation recovered four known classes under 87.1% planned missingness (mean aligned distance 0.06694; ARI 0.87869; aligned accuracy 0.953) and verified exact missing-cell invariance.
+
+Frozen statistical evidence does not select a unique K. Validation favors eligible K=10, while BIC and ICL favor K=4; their preregistered support sets do not intersect. Independent split refitting is moderate for K=4 (mean aligned profile distance 0.091721) and low for K=10 (0.153987). Posterior certainty increases with answered-item count, but sharp assignments do not overcome model instability or the strong conditional-independence assumption.
+
+Administration masks do not explain the frozen labels: replication mask-only balanced accuracy is 0.2428 versus 0.25 chance at K=4 and 0.1024 versus 0.10 at K=10. Response-style summaries do trigger warnings, with replication balanced accuracy 0.6936 and 0.4013 respectively. Yet removal of generic profile-level response elevation retains 99.0% and 96.5% of between-profile item-pattern variance, so response style is a material correlate rather than a complete explanation. Interpretation: broad recurring human response configurations are recoverable, but no unique class count, stable fine-grained taxonomy, or natural personality types are established. Human/model comparison and external human-profile literature verification remain intentionally unperformed.
+
 ### SAPA Planned Missingness Produces a Steep Greedy Nested Coverage Tradeoff (2026-09-13)
 
 AA-12 measured response availability across the complete Harvard Dataverse SAPA V5 matrix (23,679 unique respondents; all 696 canonical behavioral items) without choosing item content, scoring constructs, filtering respondents, imputing, clustering, or using model data. Marginal item coverage ranges from 2,304 (9.730%) to 6,096 (25.744%) respondents. No item reaches 50%; 14 reach 25%, 16 reach 20%, 122 reach 15%, and 687 reach 10%. Marginal rates do not identify a shared respondent cohort.
