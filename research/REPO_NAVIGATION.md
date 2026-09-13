@@ -1,7 +1,7 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-13T16:53:34Z
-Last commit when updated: 7730b94 (cross-resolution profile-bank artifacts before canonical maintenance)
+Last commit when updated: 25aa232 (registered cross-resolution banks and preserved canonical index encoding)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 

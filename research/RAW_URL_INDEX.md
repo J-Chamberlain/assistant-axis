@@ -1,7 +1,7 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-13T16:53:34Z
-Base commit for this update: 7730b94 (cross-resolution artifacts before canonical maintenance; canonical links become live after master integration)
+Base commit for this update: 25aa232 (registered cross-resolution banks; canonical links become live after master integration)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
