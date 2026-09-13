@@ -2,6 +2,19 @@
 
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
+## sapa_item_coverage_frontier
+
+Artifact: AA-12 aggregate marginal item-coverage and availability-only greedy nested respondent-profile frontier for Track 1.
+Location: `research/outputs/sapa_item_coverage_frontier/`; main report: `sapa_item_coverage_frontier_report.md`; full strict/relaxed frontier: `sapa_nested_coverage_frontier.csv`; deterministic order: `sapa_nested_item_order.csv`; complete hashes and raw URLs: `artifact_inventory.csv`.
+Created: 2026-09-13 by Codex (GPT-5.5) on branch `codex/aa12-sapa-coverage-frontier`, based on AA-11 final commit `dbb2bd78ed0b4a1496af24076ae7cd43f386b47e`. Code commit: `72eb4ee`; analysis commit: `4c5cf0c`; verification/inventory commit: `26ecfc3`.
+Human source: Harvard Dataverse SAPA V5, DOI `10.7910/DVN/SD7SVE`, 23,679 respondent rows and 696 canonical behavioral items. Raw respondent data remain gitignored. The committed canonical dictionary `research/outputs/human_trait_dataset_feasibility/sapa/sapa_item_dictionary.csv` was cross-checked against raw `ItemInfo696.csv` and the exact respondent-data `q_*` columns.
+Integrity: All 696 items are present in canonical order; all 23,679 RIDs are unique; only codes 1–6 occur as recorded behavioral responses. Missing behavioral responses are empty tab fields (not literal `NA` in these 696 columns). Twenty-three RID/demographic/derived columns were excluded. This single dated extract has no wave/form field; planned random-subset administration is structurally dominant and no cell-level planned/nonresponse indicator exists.
+Procedure: Start with the highest-marginal-coverage item. At each step add the remaining item maximizing respondents complete on the entire expanded panel; tie-break by higher marginal N and then earlier canonical dictionary order. Evaluate strict 100% completeness plus `ceil(.95k)`, `ceil(.90k)`, and `ceil(.80k)` response counts on the same nested sequence through all 696 items. This is a greedy nested frontier, not a proven global Pareto optimum.
+Observed result: The maximum marginal item coverage is 6,096/23,679 (25.744%) and the minimum 2,304 (9.730%); zero items reach 50% marginal coverage. Strict nested completeness is 6,096/1,455/358/103/41 at panel sizes 1–5, 11 at 10, 6 at 20, 3 at 39, 2 at 64, 1 at 137–294, and 0 at 295. Relaxed 95/90/80% counts reach zero at 310/327/368. The early bend is visually clear; the long one-person tail is a greedy tiny-cohort artifact, not evidence of a broadly usable panel.
+Verification: `verification_report.json` is `PASS` over 40 checks, including exact source/dictionary hashes, marginal rates, all 696 greedy choices, strict and relaxed counts, nestedness, deterministic primary-output rerun hashes, privacy, scope boundaries, and clean-worktree state at verification start.
+Dependent decision: User inspection of the empirical dimensionality/sample-size frontier before choosing what region merits scientific consideration. AA-12 does not choose an item threshold, respondent cohort, complete-case rule, partial-profile method, or common human/model feature representation.
+Boundary: Aggregate descriptive coverage only. No respondent-level output, imputation, construct scoring, semantic item selection, clustering, human/model matching, human PCA/projection, model PCA, specificity, model inference, activation extraction, external model API, GPU, or RunPod was used. Track 1 remains active; Tracks 2 and 3 remain parked.
+
 ## human_supported_trait_convergence
 
 Artifact: AA-7 preregistered frozen human-supported trait efficiency and cross-model aligned PC1-PC6 role-score subspace study.

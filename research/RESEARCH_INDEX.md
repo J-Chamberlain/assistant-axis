@@ -18,6 +18,10 @@ Paper 2 is active planning: local centroid perturbation and local persona-manifo
 
 `research/interpretation_notes/human_model_correspondence_research_tracks_2026-09.md` is the active continuity note. Track 1, independent profile-group correspondence, is ACTIVE. Track 2, PC-pole profile correspondence, and Track 3, trait-relationship structural correspondence, are PARKED. Where practical, the tracks should eventually share one frozen human/model feature representation, but AA-11 deliberately does not choose it. Constructing that common feature/profile representation is the next Track 1 methodological question. No human/model analysis, finding, or claim was created.
 
+## Track 1 Raw SAPA Coverage Gate (AA-12, 2026-09-13)
+
+`research/outputs/sapa_item_coverage_frontier/sapa_item_coverage_frontier_report.md` describes the raw 23,679 × 696 SAPA behavioral-item availability tradeoff before any human filter or feature-space choice. No item reaches 50% marginal coverage; 14 reach 25%, 16 reach 20%, 122 reach 15%, and 687 reach 10%. The deterministic availability-only greedy nested frontier retains 6,096 strict-complete respondents at one item, 1,455 at two, 358 at three, 103 at four, 41 at five, 11 at ten, 6 at twenty, 3 at 39, 2 at 64, 1 at 137–294, and zero at 295. Relaxed 95/90/80% counts use the same nested panels and reach zero at 310/327/368. The early collapse is visually clear, while the one-person tail is not a broadly usable cohort. AA-12 selects no threshold and performs no construct scoring, clustering, human/model matching, or projection. The next decision is to inspect the frontier and choose what dimensionality/sample-size region is scientifically worth considering.
+
 ## Integrated AA-1 Through AA-7 Entry Points (2026-09-12)
 
 - AA-1 human SAPA psychometric structure: `research/outputs/sapa_bridge_psychometric_audit/sapa_bridge_psychometric_audit_report.md`
@@ -118,6 +122,7 @@ All metrics below refer to held-out prediction of canonical Qwen activation PCA3
 - `research/paper15_content_ledger.md`: canonical factual ledger for Paper 1.5 writing; use before drafting prose.
 - `research/paper15_content_ledger_artifact_inventory.csv`: source artifact inventory for the Paper 1.5 content ledger.
 - `research/outputs/sapa_bridge_psychometric_audit/`: AA-1 human-only psychometric contraction of the frozen semantic bridge, with verification and artifact inventory.
+- `research/outputs/sapa_item_coverage_frontier/`: AA-12 aggregate marginal and greedy nested SAPA item-coverage frontier, reproducible code, figure, verification, and inventory; no respondent-level data.
 - `research/outputs/externally_anchored_big_five/`: AA-2 frozen external Big Five mappings, multimodel geometry tests, viewer integration report, and artifact inventory.
 - `research/outputs/extended_persona_pca/`: AA-3 full-rank dimensionality/stability audit and interactive PC1-PC10 viewer.
 - `research/outputs/qwen_trait_sparsity_prediction/`: AA-4 compact-feature and matched generic-basis audit of Qwen trait-to-PC prediction.

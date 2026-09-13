@@ -1,7 +1,7 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-13T13:09:12Z
-Last commit when updated: 1027606 (AA-11 correspondence-track planning note introduction)
+Updated UTC: 2026-09-13T14:41:56Z
+Last commit when updated: 26ecfc3 (AA-12 verified aggregate coverage artifacts)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
@@ -24,7 +24,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Inventory Categories
 
-- active analyses: 3966
+- active analyses: 3978
 - adaptive extraction outputs: 81
 - archived/deprecated outputs: 5
 - canonical report artifacts: 12
@@ -37,7 +37,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 
 ## Status Counts
 
-- active: 4897
+- active: 4909
 - archive: 11
 - canonical: 23
 - deprecated: 24
@@ -52,6 +52,8 @@ Use `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVEN
 ### Active Analyses
 
 Human/model correspondence research tracks: `research/interpretation_notes/human_model_correspondence_research_tracks_2026-09.md` is the active AA-11 continuity artifact. Track 1—independent profile-group correspondence—is ACTIVE; Track 2—PC-pole profile correspondence—and Track 3—trait-relationship structural correspondence—are PARKED. The shared human/model feature representation remains deliberately unresolved and is the next Track 1 methodological question. This artifact records planning scope only and introduces no analysis, finding, or claim. Introduction commit: `1027606`.
+
+SAPA item-coverage frontier: `research/outputs/sapa_item_coverage_frontier/sapa_item_coverage_frontier_report.md` is the AA-12 entry point for marginal item response rates and the complete 696-step availability-only greedy nested frontier. Use `sapa_item_response_rates.csv` for item-level marginal counts, `sapa_marginal_coverage_thresholds.csv` for threshold summaries, `sapa_nested_coverage_frontier.csv` for strict and relaxed 95/90/80% counts, `sapa_nested_item_order.csv` for the deterministic nested order, and `sapa_coverage_frontier.png` for the paired full/early view. The strict curve falls from 6,096 respondents at one item to 1,455/358/103/41 at two through five items; one respondent persists from 137 through 294 items, an algorithmic tiny-cohort tail rather than a broadly usable profile panel. No threshold, respondent cohort, common feature space, construct score, cluster, or human/model match was selected. Analysis outputs were introduced in `4c5cf0c`; verification and inventory in `26ecfc3`.
 
 Human-supported trait convergence and aligned subspaces: `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md` is the AA-7 entry point. The exact 12 AA-1-supported labels and all decisions were frozen before outcomes. Use `comparator_summary.csv` for the matched compact prediction result, `procrustes_alignment_cv.csv` and `procrustes_alignment_null.csv` for held-out alignment evidence, `aligned_human_supported_trait_directions.csv` and `aligned_big_five_directions.csv` for recurrence, and `verification_report.json` plus `artifact_inventory.csv` for reproduction/provenance. The primary compact-efficiency result is weak/absent; the separate activation-derived aligned-direction recurrence is strong. No human respondent or occupational centroid was projected.
 
