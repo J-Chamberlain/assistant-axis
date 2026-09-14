@@ -1,0 +1,2 @@
+dataset,source_variable,source_wording,source_scale,source_wave,source_domain,canonical_domain,canonical_facet,mapping_basis,mapping_tier,scoring_direction,measurement_tier,predictor_overlap,leakage_action,eligible_primary,eligibility_reason,protocol_commit,status
+TEMPLATE,,,,,,,,,DIRECT|CLOSE|PROXY|REJECT,,M1|M2|M3,,,TRUE|FALSE,,f5c783160c674fde3ed2a5c32ba6438b86d62174,active
