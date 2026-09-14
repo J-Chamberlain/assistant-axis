@@ -1,0 +1,18 @@
+{
+  "status": "active",
+  "freeze_date": "2026-09-14",
+  "branch": "gpt/longitudinal-trait-field-validation",
+  "protocol_path": "research/outputs/longitudinal_trait_field_validation/multi_cohort_longitudinal_harmonization_protocol_freeze.md",
+  "protocol_introducing_commit": "f5c783160c674fde3ed2a5c32ba6438b86d62174",
+  "protocol_raw_url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/gpt/longitudinal-trait-field-validation/research/outputs/longitudinal_trait_field_validation/multi_cohort_longitudinal_harmonization_protocol_freeze.md",
+  "bridge_schema_path": "research/outputs/longitudinal_trait_field_validation/cohort_bridge_schema.csv",
+  "bridge_schema_introducing_commit": "7c497c9395504f42f2fecca2b184573c437f652b",
+  "bridge_schema_raw_url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/gpt/longitudinal-trait-field-validation/research/outputs/longitudinal_trait_field_validation/cohort_bridge_schema.csv",
+  "predictive_field_path": "research/outputs/longitudinal_trait_field_validation/frozen_bfi2_facet_jacobian.csv",
+  "predictive_field_blob_sha": "b792b273b4f140e0869c1505d87a8e8397ea306e",
+  "predictive_field_raw_url": "https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/gpt/longitudinal-trait-field-validation/research/outputs/longitudinal_trait_field_validation/frozen_bfi2_facet_jacobian.csv",
+  "prior_outcome_boundary": "Published aggregate PEACH facet changes were inspected before this multi-cohort freeze; PEACH is therefore secondary, not a pristine confirmatory cohort. Long-horizon candidate participant-level lower-level outcomes remain uninspected at freeze.",
+  "candidate_audit_order": ["HILDA", "HRS", "LISS", "SOEP", "MIDUS", "PEACH"],
+  "repo_navigation_integration": "pending branch-to-canonical integration",
+  "repo_file_index_note": "research/REPO_FILE_INDEX.csv was consulted but its contents were not retrievable through the current connector; canonical file-index regeneration is required during integration."
+}
