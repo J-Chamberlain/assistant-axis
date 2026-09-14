@@ -1,0 +1,13 @@
+trait,half0_model,half1_model,gradient_cosine,backbone_trajectory_r,split_recurring
+adventurous,linear,linear,0.9293160281820483,0.9974743446488491,True
+altruistic,linear,linear,0.9891726095463085,0.9999758193773477,True
+forgiving,linear,linear,0.9814492938525031,0.999836177091711,True
+grandiose,linear,linear,0.9849201692297475,0.9999193974743632,True
+impulsive,linear,linear,0.9759113498836239,0.9990900442402884,True
+manipulative,linear,linear,0.9765989761423635,0.9697072719777562,True
+optimistic,linear,linear,0.9948853579303526,0.9999469831353305,True
+pessimistic,linear,linear,0.9920542503952797,0.9999934740745667,True
+traditional,linear,linear,0.9888678759314723,0.9650537638998188,True
+innovative,linear,linear,0.9976687162400208,0.9999937429319685,True
+introspective,linear,linear,0.9653025303237579,0.37891653024387006,False
+judgmental,linear,linear,0.9783857890640079,0.9991292606867582,True
