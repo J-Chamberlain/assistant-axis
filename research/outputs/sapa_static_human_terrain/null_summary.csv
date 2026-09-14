@@ -1,0 +1,7 @@
+null,stat,observed,null_median,null_p05,null_p95,empirical_p
+gaussian_copula,fragmentation_score,0.0,0.0,0.0,0.0,1.0
+gaussian_copula,largest_component_deficit,0.0,0.0,0.0,0.0,1.0
+gaussian_copula,density_iqr,1.772143,1.542949,1.504198,1.602522,0.019608
+mvn,fragmentation_score,0.0,0.0,0.0,0.0,1.0
+mvn,largest_component_deficit,0.0,0.0,0.0,0.0,1.0
+mvn,density_iqr,1.772143,1.719964,1.670313,1.775103,0.078431
