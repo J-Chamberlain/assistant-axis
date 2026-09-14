@@ -1,0 +1,16 @@
+domain,method,rmse,mae,corr,n_predictions
+Agreeableness,raw,1.295647,0.932284,0.392709,74629
+Agreeableness,centered,1.247138,0.919812,0.449378,74629
+Agreeableness,zscaled,1.247437,0.909747,0.451071,74629
+Conscientiousness,raw,1.450381,1.100534,0.386475,63523
+Conscientiousness,centered,1.355725,1.046296,0.481664,63523
+Conscientiousness,zscaled,1.350715,1.032699,0.485710,63523
+Extraversion,raw,1.500973,1.130608,0.462637,54329
+Extraversion,centered,1.393644,1.068751,0.547737,54329
+Extraversion,zscaled,1.390290,1.062525,0.549972,54329
+Openness,raw,1.309354,0.953867,0.359401,71460
+Openness,centered,1.270954,0.950430,0.405382,71460
+Openness,zscaled,1.267123,0.938198,0.409612,71460
+EmotionalStability,raw,1.553866,1.166039,0.410316,45537
+EmotionalStability,centered,1.483317,1.133761,0.470352,45537
+EmotionalStability,zscaled,1.482057,1.131243,0.471169,45537
