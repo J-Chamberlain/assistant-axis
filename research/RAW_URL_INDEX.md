@@ -727,3 +727,15 @@ Canonical raw links for frequently referenced Assistant Axis artifacts. Status v
 | active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/validation_summary.json` | Machine-readable compact thresholds, matched controls, span coverage, and interpretation | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/validation_summary.json |
 | active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/run_qwen_trait_sparsity.py` | CPU-only reproducible nested selection and generic activation-basis runner | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/run_qwen_trait_sparsity.py |
 | active | trait analyses | `research/outputs/qwen_trait_sparsity_prediction/artifact_inventory.csv` | Complete output paths, SHA256 hashes, and canonical raw URLs | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/qwen_trait_sparsity_prediction/artifact_inventory.csv |
+
+## AA-10 SAPA HiFWB reproducibility (2026-09-15)
+
+Branch: `codex/aa10-sapa-hifwb-reproducibility` (human-only; raw respondent data remain local/gitignored).
+
+| status | category | path | description | raw URL |
+|---|---|---|---|---|
+| active | human wellbeing | `research/outputs/sapa_hifwb_reproducibility/sapa_hifwb_reproducibility_report.md` | Reproduction, frozen robustness, and out-of-fold surface-vs-backbone report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa10-sapa-hifwb-reproducibility/research/outputs/sapa_hifwb_reproducibility/sapa_hifwb_reproducibility_report.md |
+| active | human wellbeing | `research/outputs/sapa_hifwb_reproducibility/analysis_specification.md` | Pre-result historical/robustness freeze | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa10-sapa-hifwb-reproducibility/research/outputs/sapa_hifwb_reproducibility/analysis_specification.md |
+| active | human wellbeing | `research/outputs/sapa_hifwb_reproducibility/analysis_summary.json` | Machine-readable headline metrics and contrasts | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa10-sapa-hifwb-reproducibility/research/outputs/sapa_hifwb_reproducibility/analysis_summary.json |
+| active | human wellbeing | `research/outputs/sapa_hifwb_reproducibility/verification_report.json` | Verification checks and privacy controls | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa10-sapa-hifwb-reproducibility/research/outputs/sapa_hifwb_reproducibility/verification_report.json |
+| active | human wellbeing | `research/outputs/sapa_hifwb_reproducibility/artifact_inventory.csv` | Artifact paths, hashes, and introducing commits | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa10-sapa-hifwb-reproducibility/research/outputs/sapa_hifwb_reproducibility/artifact_inventory.csv |

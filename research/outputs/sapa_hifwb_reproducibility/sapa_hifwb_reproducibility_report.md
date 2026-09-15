@@ -18,9 +18,9 @@ The reconstructed Big Five→direct score gives OOF Pearson **0.627627**, Spearm
 |---|---:|---:|---:|---:|---:|---:|
 | historical 13-item | 3,972 | 0.6276 | 0.6202 | 0.3939 | 0.6313 | 0.5006 |
 | non-affect | 2,548 | 0.6356 | 0.6356 | 0.4039 | 0.6422 | 0.5100 |
-| content-balanced ≥2 | 3,731 | 0.6278 | 0.6186 | 0.3942 | 0.6328 | 0.5014 |
-| content-balanced ≥3 | 2,058 | 0.6908 | 0.6848 | 0.4771 | 0.5713 | 0.4526 |
-| six-group vitality auxiliary | 3,731 | 0.6278 | 0.6186 | 0.3942 | 0.6328 | 0.5014 |
+| content-balanced ≥2 | 3,257 | 0.6406 | 0.6342 | 0.4104 | 0.6223 | 0.4937 |
+| content-balanced ≥3 | 1,698 | 0.6979 | 0.6952 | 0.4870 | 0.5707 | 0.4487 |
+| six-group vitality auxiliary | 3,257 | 0.6469 | 0.6380 | 0.4185 | 0.6141 | 0.4877 |
 | fold-safe PC1-loading-weighted | 8,585 | 0.8855 | 0.8729 | 0.7842 | 0.1848 | 0.1441 |
 
 The loading-weighted score is a sensitivity estimator, not a validated HiFWB scale; its larger N and higher predictability reflect its different missingness handling and should not be compared as if it were the historical score.

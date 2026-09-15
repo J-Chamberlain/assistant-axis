@@ -111,10 +111,10 @@ def main():
  dcols=[item_ids.index(i) for i in DIRECT]; dz=z[:,dcols]; direct=np.nanmean(dz,axis=1); direct_ok=np.isfinite(dz).sum(1)>=2
  ncols=[item_ids.index(i) for i in NONAFFECT]; nz=z[:,ncols]; nonaff=np.nanmean(nz,axis=1); nonaff_ok=np.isfinite(nz).sum(1)>=2
  contents={c:np.nanmean(z[:,[item_ids.index(i) for i in ids]],axis=1) for c,ids in CONTENT.items()}
- core=list(CONTENT)[:5]
+ core=list(CONTENT)[:5]; core_contents={c:contents[c] for c in core}
  def balanced(groups,minc,drop=None):
   use=[c for c in groups if c!=drop]; arr=np.column_stack([groups[c] for c in use]); obs=np.isfinite(arr); return np.nanmean(arr,axis=1),obs.sum(1)>=minc,obs.sum(1)
- cb2,cb2ok,cb2n=balanced(contents,2); cb3,cb3ok,cb3n=balanced(contents,3); cb6,cb6ok,cb6n=balanced(contents,2)
+ cb2,cb2ok,cb2n=balanced(core_contents,2); cb3,cb3ok,cb3n=balanced(core_contents,3); cb6,cb6ok,cb6n=balanced(contents,2)
  # fold-safe PC1 loading weighted score
  load=np.full(len(z),np.nan)
  for tr,te in KFold(5,shuffle=True,random_state=SEED).split(z):
@@ -160,7 +160,7 @@ def main():
  pd.DataFrame(vis).to_csv(OUT/"surface_visualization_aggregate.csv",index=False)
  plt.figure(figsize=(7,5)); plt.scatter(pca[:,0],pca[:,1],c=direct[eligible],s=3,alpha=.12,cmap="viridis"); plt.xlabel("Human terrain PC1 (cross-sectional)"); plt.ylabel("Human terrain PC2 (cross-sectional)"); plt.colorbar(label="Aggregate wellbeing score"); plt.tight_layout(); plt.savefig(OUT/"sapa_hifwb_surface.png",dpi=160); plt.close()
  pd.DataFrame(metrics).to_csv(OUT/"robustness_metrics.csv",index=False); pd.DataFrame(loo).to_csv(OUT/"leave_one_content_out.csv",index=False)
- source={"dataset":"SAPA V5","respondents":int(len(frame)),"items":696,"observed_cells":int(np.isfinite(vals).sum()),"respondent_sha256":sha(TAB),"superkey_sha256":sha(KEY),"item_info_sha256":sha(INFO),"terrain_eligibility_N":int(eligible.sum()),"direct_ge2_N":int(direct_ok.sum()),"direct_terrain_N":int((eligible&direct_ok).sum()),"non_affect_terrain_N":int((eligible&nonaff_ok).sum()),"fold_seed":SEED,"historical_fold_assignment":"UNKNOWN","package_versions":{"python":platform.python_version(),"numpy":np.__version__,"pandas":pd.__version__}}
+ source={"dataset":"SAPA V5","respondents":int(len(frame)),"items":696,"observed_cells":int(np.isfinite(vals).sum()),"respondent_sha256":sha(TAB),"superkey_sha256":sha(KEY),"item_info_sha256":sha(INFO),"terrain_eligibility_N":int(eligible.sum()),"direct_ge2_N":int(direct_ok.sum()),"direct_terrain_N":int((eligible&direct_ok).sum()),"non_affect_terrain_N":int((eligible&nonaff_ok).sum()),"fold_seed":SEED,"historical_fold_assignment":"UNKNOWN","package_versions":{"python":platform.python_version(),"numpy":np.__version__,"pandas":pd.__version__},"surface_m3":"RBF Nyström 120 components; max 1200 training rows/fold; frozen grid gamma={0.05,0.1,0.25}, alpha={0.1,1,10}"}
  (OUT/"run_manifest.json").write_text(json.dumps(source,indent=2)+"\n")
  summary={"source":source,"historical_reconstruction":{"pairwise_mean_r":float(np.nanmean(pair)),"first_eigenvalue":float(eig[0]),"first_component_variance_fraction":float(eig[0]/len(DIRECT)),"all_first_component_loadings_positive":True},"surface_models":surface_metrics,"surface_selected_hyperparameters":surface_chosen,"surface_contrasts":{"M1_vs_M2":delta_ci(surface_y,surface_preds["M1"],surface_preds["M2"]),"M1_vs_M3":delta_ci(surface_y,surface_preds["M1"],surface_preds["M3"]),"M2_vs_M3":delta_ci(surface_y,surface_preds["M2"],surface_preds["M3"])},"surface_conclusion":"See report; all metrics are out-of-fold and cross-sectional."}
  (OUT/"analysis_summary.json").write_text(json.dumps(summary,indent=2,allow_nan=False)+"\n")

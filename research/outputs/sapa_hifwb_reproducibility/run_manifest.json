@@ -16,5 +16,6 @@
     "python": "3.12.12",
     "numpy": "2.2.6",
     "pandas": "2.3.3"
-  }
+  },
+  "surface_m3": "RBF Nystr\u00f6m 120 components; max 1200 training rows/fold; frozen grid gamma={0.05,0.1,0.25}, alpha={0.1,1,10}"
 }

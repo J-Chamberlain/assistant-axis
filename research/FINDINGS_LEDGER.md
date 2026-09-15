@@ -800,3 +800,9 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 - Experiment B found accountability/scrutiny wording moved PC1 more positive than arithmetic/checking wording in 5/5 matched scenario pairs: mean B-A PC1 effect +9.551, 95% CI [7.592, 11.510].
 - Secondary effects were consistent across all 10 pairs: accountability/scrutiny wording moved PC2 negative relative to both alternatives, with mean PC2 effects -8.665 versus determination and -16.050 versus arithmetic/checking.
 - Interpretation: this materially strengthens the PC1 external-standard-accountability hypothesis against two local alternatives, but it remains a focused diagnostic rather than proof of PC1 semantics or axis isolation.
+### AA-10 — SAPA HiFWB reproducibility and full wellbeing surface (2026-09-15)
+
+- **Observed:** historical 13-item common-factor diagnostics reproduce exactly (mean pairwise r=0.478443, eigenvalue=6.793177, first fraction=0.522552); direct terrain N=3,972 and non-affect N=2,548 match the preservation snapshot.
+- **Observed:** five-coordinate OOF Ridge R²=0.3939 versus reconstructed backbone-cubic R²=0.2922; ΔR²=0.1017, bootstrap 95% CI [0.0867, 0.1176]. RBF Nyström sensitivity ΔR²=0.0910 [0.0772, 0.1060].
+- **Interpretation:** full Big Five position contains predictive information beyond the one-dimensional backbone in this SAPA cross-section. The original result remains exploratory/post hoc, and the provisional score is not a validated HiFWB scale.
+- **Unknown:** longitudinal/causal generalization, alternate scoring representations, and the unavailable historical fold assignment.

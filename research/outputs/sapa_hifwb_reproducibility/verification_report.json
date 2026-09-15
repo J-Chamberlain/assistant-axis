@@ -1,5 +1,6 @@
 {
   "status": "PASS",
+  "check_count": 23,
   "checks": {
     "startup_passed": true,
     "canonical_navigation_consulted": true,
@@ -47,5 +48,6 @@
         -0.003866374554932557
       ]
     }
-  }
+  },
+  "privacy": "No respondent-level tracked data; SAPA raw files are gitignored."
 }

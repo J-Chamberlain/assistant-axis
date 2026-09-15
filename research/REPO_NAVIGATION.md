@@ -115,6 +115,10 @@ Archived material is marked `archive` in `research/REPO_FILE_INDEX.csv`. Depreca
 
 ## Maintenance Rule
 
+### AA-10 SAPA HiFWB reproducibility
+
+Human-only SAPA reproducibility and wellbeing-surface outputs live under `research/outputs/sapa_hifwb_reproducibility/`. Start with `sapa_hifwb_reproducibility_report.md`, `analysis_specification.md`, `analysis_summary.json`, `verification_report.json`, and `artifact_inventory.csv`. Raw SAPA V5 files remain local/gitignored. Historical results are exploratory/post hoc; new robustness definitions were frozen before execution.
+
 Any future Codex task that creates, deletes, moves, renames, replaces, supersedes, archives, deprecates, or materially revises a research artifact must update all three navigation files before committing:
 
 - `research/REPO_NAVIGATION.md`
