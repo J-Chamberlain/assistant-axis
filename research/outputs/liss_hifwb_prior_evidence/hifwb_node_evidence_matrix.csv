@@ -1,24 +1,11 @@
-node,node_type,label,status,evidence_or_rule
-h,hierarchy,HiFWB hierarchy/ontology,active; analytic ontology only,not an official scale or established score
-subjective_wellbeing,content,Affect,covered,positive and negative affect; happiness
-subjective_wellbeing,content,Appraisal,covered,life satisfaction
-psychological_wellbeing,content,Meaning-making,covered,meaning/purpose
-psychological_wellbeing,content,Self-concept,covered,"self-acceptance, mastery, growth"
-social_wellbeing,content,Community,covered,"belonging, contribution, social contact"
-social_wellbeing,content,Interpersonal relationships,covered,"relatedness, support, love/sorrow sharing"
-subjective_wellbeing,characteristic,positive affect,mapped,direct/near-direct item evidence
-subjective_wellbeing,characteristic,negative affect,mapped,cp20l146-cp20l165 PANAS
-subjective_wellbeing,characteristic,life satisfaction,mapped,SWLS and 0-10 satisfaction items
-psychological_wellbeing,characteristic,meaning/purpose,mapped,MHC-SF-R meaning items
-psychological_wellbeing,characteristic,personal growth,mapped,MHC-SF-R develop-self item
-psychological_wellbeing,characteristic,self-acceptance,mapped,MHC-SF-R acceptance item
-psychological_wellbeing,characteristic,mastery/self-efficacy,mapped,MHC-SF-R mastery item
-social_wellbeing,characteristic,social integration/belonging,mapped,group/relatedness items
-social_wellbeing,characteristic,social contribution,mapped,valuable/can-mean-something items
-social_wellbeing,characteristic,relationship quality,mapped,social contacts and love/sorrow
-social_wellbeing,characteristic,social connection,mapped,relatedness item
-social_wellbeing,characteristic,perceived support,mapped,count-on-others item
-social_wellbeing,characteristic,social acceptance,excluded,not treated as core HiFWB lens
-social_wellbeing,characteristic,social coherence/actualization,excluded,traditional MHC-SF labels not automatic equivalence
-psychological_wellbeing,characteristic,Ryff autonomy,excluded,not in the 2020 MHC-SF-R block
-subjective_wellbeing,characteristic,interested in life,ambiguous,"retain as sensitivity/ambiguity, not direct core"
+hierarchy_level,lens,content,characteristic,measurement_available_in_LISS,prior_studies_measuring_node,prior_studies_isolating_node,prior_studies_testing_personality,cross_sectional_evidence,longitudinal_evidence,prospective_evidence,original_instruments,mapping_strength,evidence_status,conceptual_overlap_caveat,measurement_caveat,planned_2020_test,future_longitudinal_test
+h,All,All,h,Yes; constructed from mapped 2020 indicators,"Lamers2012 and measurement papers use broad positive mental health, not HiFWB h",none,none direct,none direct,none direct,MHC-SF/MHC-SF-R plus 2020 auxiliaries,PARTIAL,no_direct_test_found_in_audited_LISS_literature,Affect may dominate h unless sensitivity-tested,"HiFWB h is a project ontology, not validated LISS score",compare measurement models; test prespecified h,prior-adjusted h change after equivalence
+lens,Subjective wellbeing,All,Subjective wellbeing lens,Yes,Lamers2012; Hounkpatin2018; FetvadjievHe2019; Olaru2023,Hounkpatin2018; FetvadjievHe2019; Olaru2023,strong composite/isolated,strong,strong,MHC-SF emotional; PANAS; SWLS,DIRECT/PARTIAL,well_studied,Affect/personality overlap,legacy emotional factor is not identical to lens,Affect and Appraisal joint/separate,prior-adjusted lens change
+content,Subjective wellbeing,Affect,Affect,Yes,Lamers2012; FetvadjievHe2019,FetvadjievHe2019,FetvadjievHe2019,strong,strong,strong,PANAS; MHC-SF emotional,DIRECT,well_studied,Extraversion and Neuroticism overlap,routed frequency frames,PANAS plus MHC-SF-R; non-Affect sensitivity,within-person affect change
+content,Subjective wellbeing,Appraisal,Appraisal,Yes,Hounkpatin2018; FetvadjievHe2019; Olaru2023; Joshanloo2025,same,same,strong,strong,strong,SWLS; global 0-10,DIRECT,well_studied,shared self-report method,global happiness is single item,SWLS/global appraisal replication,prior-adjusted appraisal change
+lens,Psychological wellbeing,All,Psychological wellbeing lens,Yes,Lamers2012; Lamers2011; JoshanlooLamers2016; FetvadjievHe2019; Joshanloo2025,self-esteem isolated; other nodes embedded,Lamers2012 broad; self-esteem studies direct,mixed,strong for self-esteem,strong for self-esteem,MHC-SF psychological; RSES,PARTIAL,moderately_studied,self-evaluation/personality overlap,legacy factor redistributes across HiFWB contents,Meaning-making and Self-concept separate,prior-adjusted content change
+content,Psychological wellbeing,Meaning-making,Meaning-making,Yes,Lamers2012 embedded,none isolated,Lamers2012 composite only,embedded,no isolated direct test found,no isolated direct test found,MHC-SF psychological items,PARTIAL,sparsely_studied,limited,"meaning, direction, growth not separable in prior composite",direct item/content tests,repeat equivalent meaning/growth measures
+content,Psychological wellbeing,Self-concept,Self-concept,Yes,FetvadjievHe2019; Joshanloo2025; Lamers2012,self-esteem isolated; acceptance/mastery embedded,same,strong for self-esteem,strong for self-esteem,strong for self-esteem,RSES; MHC-SF psychological items,DIRECT/PARTIAL,moderately_studied,Emotional Stability/self-esteem overlap,heterogeneous characteristics,RSES plus acceptance/mastery,prior-adjusted characteristic change
+lens,Social wellbeing,All,Social wellbeing lens,Yes,Lamers2012; Olaru2023; Schellenberg2026,social-contact satisfaction and loneliness isolated,same,mixed,moderate,moderate,MHC-SF social; contact satisfaction; loneliness,PARTIAL,moderately_studied,loneliness/negative affect overlap,legacy social factor includes excluded societal beliefs,core-only lens versus legacy sensitivity,prior-adjusted relational/community change
+content,Social wellbeing,Community,Community,Yes,Lamers2012 embedded,none isolated,Lamers2012 composite only,embedded,no isolated direct test found,no isolated direct test found,MHC-SF social items,PARTIAL,sparsely_studied,limited,exclude acceptance/coherence/actualization from core,belonging and contribution tests,link participation/volunteering to later wellbeing
+content,Social wellbeing,Interpersonal relationships,Interpersonal relationships,Yes,Olaru2023; Schellenberg2026; Lamers2012,Olaru2023; Schellenberg2026,same,moderate,moderate-to-strong,moderate,contact satisfaction; loneliness; MHC-SF-R relational items,DIRECT/CLOSE,moderately_studied,loneliness/negative affect overlap,positive and inverse measures differ,relationship/support characteristic tests,contacts/support/behavior to later wellbeing
