@@ -1,0 +1,17 @@
+{
+  "study": "Human-to-Qwen Static Bridge V1",
+  "frozen_before_outcomes": true,
+  "human_source": {"doi": "10.7910/DVN/SD7SVE", "file": "sapaTempData696items08dec2013thru26jul2014.tab", "bytes": 23975309, "sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6", "local_only": true},
+  "human_bridge_support": {"path": "research/outputs/sapa_bridge_psychometric_audit/sapa_trait_bridge_psychometric_support_v1.csv", "sha256": "1cc78b543bf44e636dc8000617c61f0285e8cfc998b33946c38ab164ecdcd5a6"},
+  "human_item_scoring": {"path": "research/outputs/sapa_bridge_psychometric_audit/trait_proxy_item_scoring.csv", "sha256": "013298002cb8754f6245c551fb2562ebefc91a64a8623f5c84e8618721aaee06"},
+  "qwen_trait_matrix": {"path": "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv", "sha256": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8"},
+  "qwen_geometry": {"path": "research/visualizations/geometry_viz_data.json", "sha256": "1b15d8e3425bc3d51032919157eb683f1358f353f4ee071a18d06347a792ec6d"},
+  "qwen_canonical_pca": {"path": "research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv", "sha256": "194c8302afefa797276e2ec6b72deed0272349f47e3bbbebc2e8fe6274fab7b8"},
+  "existing_predictor_reference": {"path": "research/outputs/trait_profile_pc_predictor/ridge_predictor.json", "sha256": "684f1c32d94c2df7a5b386a4739e4289b0eed73693276668cf3251d2f61c482f"},
+  "primary_anchor_threshold": 6,
+  "coverage_only_counts": {"respondents": 1935, "respondent_target_pairs": 17209},
+  "prohibited_inputs": ["HRS", "LISS", "HILDA", "MIDUS", "SOEP"],
+  "new_inference": false,
+  "new_activation_extraction": false,
+  "external_model_api": false
+}

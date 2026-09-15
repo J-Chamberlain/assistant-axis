@@ -1,0 +1,6 @@
+{
+  "study": "Human-to-Qwen Static Bridge V1",
+  "traits": ["adventurous", "altruistic", "forgiving", "grandiose", "impulsive", "manipulative", "optimistic", "pessimistic", "traditional", "innovative", "introspective", "judgmental"],
+  "selection_rule": "Exactly the 12 SAPA/model traits with moderate-or-better human measurement support in the frozen SAPA psychometric audit.",
+  "frozen_before_outcomes": true
+}

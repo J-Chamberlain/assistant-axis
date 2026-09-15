@@ -1,0 +1,1 @@
+model,Qwen/Qwen3-32B,trait_source,persona_trait_similarity_matrix.csv,scale,within-trait empirical normal score over 275 personas,geometry,canonical Qwen PC1-PC3,estimator,Ridge with deterministic model-persona CV and fixed alpha grid,targets,PC1-PC3 coordinates from canonical Qwen geometry
