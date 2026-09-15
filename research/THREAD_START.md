@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-09-12
+Last updated: 2026-09-15
 
 AA-11 continuity (2026-09-15): three human/model correspondence tracks are memorialized in the LISS HiFWB pre-data package. Track 1 independent profile-group correspondence is active; Tracks 2 PC-pole and 3 trait-relationship structural correspondence are parked. Next question is how to construct the shared human/model feature/profile representation for Track 1; no choice was made here.
 

@@ -5,7 +5,7 @@
 
 Canonical startup file: yes
 State role: canonical project state
-Last updated: 2026-09-12
+Last updated: 2026-09-15
 
 AA-11 pre-data package (2026-09-15): added `research/outputs/liss_hifwb_prior_evidence/` with prior-study crosswalk, HiFWB node rubric, LISS 2020 item/measurement crosswalk, longitudinal audit, access handoff, and fail-closed execution scripts. No respondent files were accessed or analyzed. Track 1 independent profile-group correspondence is the only active path; Tracks 2 PC-pole correspondence and 3 trait-relationship structural correspondence are parked. Next methodological question: construct and freeze the shared human/model feature or profile representation for Track 1; this remains deliberately unresolved.
 
