@@ -1,4 +1,7 @@
-domain,measure,earliest_wave,latest_wave,equivalence_status,decision
-Personality,Big Five,15,965,unknown,resolve item/version equivalence before longitudinal fit
-Wellbeing,MHC-SF/MHC-SF-R,101,1105,unknown,obtain authorized files and establish overlap
-Wellbeing,life satisfaction,15,965,partial,check exact wording and response scale
+domain,measure,earliest_verified_source,latest_verified_source,equivalence_status,required_decision
+Personality,50-item IPIP Big Five,Personality wave 1 / study 15,Personality parent study 14 current waves,partly documented,"verify item wording, reverse key, response scales, and planned-missing routing wave by wave"
+Subjective wellbeing,SWLS,Personality parent study 14 historical waves,Study 965 / wave 12,likely repeated; not frozen,"verify exact wording, scale direction, and administration frequency"
+Self-concept,Rosenberg self-esteem,Personality parent study 14 historical waves,Study 965 / wave 12,likely repeated; not frozen,test longitudinal invariance and stable scoring
+Affect,PANAS,Personality parent study 14 historical waves,Study 965 / wave 12,irregular/planned missingness noted in prior work,inventory actual respondent-wave overlap before use
+Social/interpersonal,loneliness and contact satisfaction,Social Integration and Leisure parent study 6,current waves,unknown,verify repeated wording/scales and temporal alignment
+HiFWB/MHC,MHC-SF versus MHC-SF-R,Mental Health study 101,Study 1105,not equivalent by default,"model form, timeframe, wording, and cross-loading differences explicitly"

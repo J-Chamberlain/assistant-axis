@@ -245,4 +245,34 @@ csv_out("public_dataset_pathway_matrix.csv", ["dataset","static_personality_well
 
 (OUT / "liss_data_access_handoff.md").write_text("""# LISS data-access handoff\n\nLISS respondent-data access is pending. Do not bypass Centerdata controls. Each user must sign the LISS statement and download authorized files directly.\n\nPlace these exact files under gitignored `data_external/liss_2020/`:\n\n- `cp20l_EN_1.0p.dta` and `codebook_cp20l_EN_1.1.pdf` — Study 965: https://www.dataarchive.lissdata.nl/study-units/view/965\n- `ss20a_EN_1.0p.dta` and `codebook_ss20a_EN_1.0.pdf` — Study 1105: https://www.dataarchive.lissdata.nl/study-units/view/1105\n\nUse `nomem_encr` for the local authorized join. Run `verify_liss_2020_sources.py` to record SHA256 values only after files arrive, then validate schema. Raw microdata and identifiers stay local and gitignored; do not commit, upload, share, or redistribute them. If Centerdata terms restrict use with external AI systems, preserve that restriction and keep all respondent-level execution local. Only aggregate, disclosure-reviewed outputs may enter version control.\n""", encoding="utf-8")
 
+csv_out("liss_longitudinal_wave_inventory.csv", ["domain","study_id","wave_or_parent","official_url","data_filename","codebook","field_period","status","note"], [
+ ["Personality","14","parent","https://www.dataarchive.lissdata.nl/study-units/view/14","wave-specific","wave-specific","annual from 2008","verified parent metadata","DOI 10.17026/dans-x5h-4cxd; original AA-11 incorrectly used study 16"],
+ ["Personality","15","wave 1","https://www.dataarchive.lissdata.nl/study-units/view/15","cp08a_1p_EN.dta","codebook_cp08a_EN_1.1.pdf","2008","verified metadata",""],
+ ["Personality","289","wave 5","https://www.dataarchive.lissdata.nl/study-units/view/289","cp12e_1.0p_EN.dta","codebook_cp12e_EN_1.0","2012","verified metadata","short-version routing noted as cp12e197"],
+ ["Personality","965","wave 12","https://www.dataarchive.lissdata.nl/study-units/view/965","cp20l_EN_1.0p.dta","codebook_cp20l_EN_1.1.pdf","May–June 2020","verified metadata","AA-11 focal cross-section"],
+ ["Personality","1764","wave 18","https://www.dataarchive.lissdata.nl/study-units/view/1764","cp26r_EN_1.0p.dta","codebook_cp26r_EN_1.0.pdf","May–June 2026","verified metadata","future wave metadata"],
+ ["Social Integration and Leisure","6","parent","https://www.dataarchive.lissdata.nl/study-units/view/6","wave-specific","wave-specific","annual core study","verified parent metadata","satisfaction, loneliness, contacts, participation, volunteering, sport, leisure"],
+ ["Health","12","parent","https://www.dataarchive.lissdata.nl/study-units/view/12","wave-specific","wave-specific","annual core study","verified parent metadata","physical activity and health behavior concepts"],
+ ["Mental Health","101","parent","https://www.dataarchive.lissdata.nl/study-units/view/101","wave-specific","wave-specific","2007–2009","verified metadata","DOI 10.17026/dans-z99-f3vd"],
+ ["Mental Health","102","wave 1","https://www.dataarchive.lissdata.nl/study-units/view/102","ai07a_EN_1.0p.dta","codebook_ai07a_EN_1.0.pdf","Dec 2007–Jan 2008","verified metadata","ai07a001 random sequence"],
+])
+
+csv_out("liss_longitudinal_measure_equivalence.csv", ["domain","measure","earliest_verified_source","latest_verified_source","equivalence_status","required_decision"], [
+ ["Personality","50-item IPIP Big Five","Personality wave 1 / study 15","Personality parent study 14 current waves","partly documented","verify item wording, reverse key, response scales, and planned-missing routing wave by wave"],
+ ["Subjective wellbeing","SWLS","Personality parent study 14 historical waves","Study 965 / wave 12","likely repeated; not frozen","verify exact wording, scale direction, and administration frequency"],
+ ["Self-concept","Rosenberg self-esteem","Personality parent study 14 historical waves","Study 965 / wave 12","likely repeated; not frozen","test longitudinal invariance and stable scoring"],
+ ["Affect","PANAS","Personality parent study 14 historical waves","Study 965 / wave 12","irregular/planned missingness noted in prior work","inventory actual respondent-wave overlap before use"],
+ ["Social/interpersonal","loneliness and contact satisfaction","Social Integration and Leisure parent study 6","current waves","unknown","verify repeated wording/scales and temporal alignment"],
+ ["HiFWB/MHC","MHC-SF versus MHC-SF-R","Mental Health study 101","Study 1105","not equivalent by default","model form, timeframe, wording, and cross-loading differences explicitly"],
+])
+
+(OUT / "liss_longitudinal_overlap_plan.md").write_text("""# Longitudinal overlap plan
+
+The target is within-person movement in multivariate personality and modifiable behavior/context followed by change in specific wellbeing domains. The minimum credible panel needs at least two comparable wellbeing measurements, repeated behavior/context, baseline personality, prior wellbeing, interval timing, and enough within-person variation. Personality × behavior interactions require a separate power/overlap gate.
+
+Start with public metadata, then authorized respondent-level overlap counts. Separate stable between-person differences from within-person deviations using person-mean centering plus random intercepts or fixed effects. Control prior wellbeing, time, interval, and a small prespecified confounder set. Use RI-CLPM or latent change models only when at least three comparable waves and measurement models support them. Static density is not transition probability, and predictive moderation is not a causal treatment effect.
+
+The corrected Personality parent is Study 14, not Study 16. Social Integration and Leisure (Study 6) and Health (Study 12) are the strongest core-module starting points for repeated pathway variables; exact wave overlap remains pending respondent access.
+""", encoding="utf-8")
+
 print(f"Wrote repaired AA-11 package tables and notes to {OUT}")

@@ -1,8 +1,10 @@
 domain,study_id,wave_or_parent,official_url,data_filename,codebook,field_period,status,note
-Personality,16,parent,https://www.dataarchive.lissdata.nl/study-units/view/16,,,,unresolved,Official page title observed as Work and Schooling; do not infer parent identity
+Personality,14,parent,https://www.dataarchive.lissdata.nl/study-units/view/14,wave-specific,wave-specific,annual from 2008,verified parent metadata,DOI 10.17026/dans-x5h-4cxd; original AA-11 incorrectly used study 16
 Personality,15,wave 1,https://www.dataarchive.lissdata.nl/study-units/view/15,cp08a_1p_EN.dta,codebook_cp08a_EN_1.1.pdf,2008,verified metadata,
-Personality,289,wave 5,https://www.dataarchive.lissdata.nl/study-units/view/289,cp12e_1.0p_EN.dta,codebook_cp12e_EN_1.0,,verified metadata,short version routing noted as cp12e197
-Personality,965,wave 12,https://www.dataarchive.lissdata.nl/study-units/view/965,cp20l_EN_1.0p.dta,codebook_cp20l_EN_1.1.pdf,May–June 2020,verified metadata,AA-11 primary crosswalk
-Personality,1764,wave 18,https://www.dataarchive.lissdata.nl/study-units/view/1764,cp26r_EN_1.0p.dta,codebook_cp26r_EN_1.0.pdf,May–June 2026,verified metadata,future metadata only
-Mental Health,101,parent,https://www.dataarchive.lissdata.nl/study-units/view/101,,,2007–2009,verified metadata,DOI 10.17026/dans-z99-f3vd
+Personality,289,wave 5,https://www.dataarchive.lissdata.nl/study-units/view/289,cp12e_1.0p_EN.dta,codebook_cp12e_EN_1.0,2012,verified metadata,short-version routing noted as cp12e197
+Personality,965,wave 12,https://www.dataarchive.lissdata.nl/study-units/view/965,cp20l_EN_1.0p.dta,codebook_cp20l_EN_1.1.pdf,May–June 2020,verified metadata,AA-11 focal cross-section
+Personality,1764,wave 18,https://www.dataarchive.lissdata.nl/study-units/view/1764,cp26r_EN_1.0p.dta,codebook_cp26r_EN_1.0.pdf,May–June 2026,verified metadata,future wave metadata
+Social Integration and Leisure,6,parent,https://www.dataarchive.lissdata.nl/study-units/view/6,wave-specific,wave-specific,annual core study,verified parent metadata,"satisfaction, loneliness, contacts, participation, volunteering, sport, leisure"
+Health,12,parent,https://www.dataarchive.lissdata.nl/study-units/view/12,wave-specific,wave-specific,annual core study,verified parent metadata,physical activity and health behavior concepts
+Mental Health,101,parent,https://www.dataarchive.lissdata.nl/study-units/view/101,wave-specific,wave-specific,2007–2009,verified metadata,DOI 10.17026/dans-z99-f3vd
 Mental Health,102,wave 1,https://www.dataarchive.lissdata.nl/study-units/view/102,ai07a_EN_1.0p.dta,codebook_ai07a_EN_1.0.pdf,Dec 2007–Jan 2008,verified metadata,ai07a001 random sequence
