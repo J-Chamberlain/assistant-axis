@@ -1,0 +1,36 @@
+{
+  "package": "AA-11 LISS pre-data HiFWB crosswalk",
+  "date": "2026-09-15",
+  "status": "pre_data_verified",
+  "startup_passed": true,
+  "official_sources": {
+    "study_965": "https://www.dataarchive.lissdata.nl/study-units/view/965",
+    "study_1105": "https://www.dataarchive.lissdata.nl/study-units/view/1105",
+    "study_965_codebook": "https://www.dataarchive.lissdata.nl/hosted-files/download/5031",
+    "study_1105_codebook": "https://www.dataarchive.lissdata.nl/hosted-files/download/6031"
+  },
+  "checks": {
+    "exactly_three_research_tracks_documented": true,
+    "track_1_active": true,
+    "tracks_2_and_3_parked": true,
+    "common_feature_space_unresolved": true,
+    "respondent_data_loaded": false,
+    "respondent_analysis_performed": false,
+    "clustering_performed": false,
+    "sapa_item_selection_performed": false,
+    "pca_or_specificity_rerun": false,
+    "model_inference_or_activation_extraction": false,
+    "external_model_api_or_gpu": false,
+    "new_claim_created": false,
+    "claims_register_changed": false,
+    "findings_ledger_changed": false,
+    "sticky_notes_changed": false,
+    "scripts_fail_cleanly_without_authorized_files": true,
+    "gitignored_data_files_tracked": false
+  },
+  "unresolved": [
+    "Centerdata access and exact SHA256 values for the two data files",
+    "longitudinal measure equivalence and the Study 16 parent-page identity",
+    "Track 1 common feature/profile representation"
+  ]
+}

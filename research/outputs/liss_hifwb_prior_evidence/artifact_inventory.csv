@@ -1,24 +1,25 @@
 path,status,artifact_type,source_or_role,commit_introduced
-research/outputs/liss_hifwb_prior_evidence/hifwb_mapping_rubric.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/hifwb_node_evidence_matrix.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/liss_2020_hifwb_analysis_specification.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/liss_2020_hifwb_coverage_summary.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/liss_2020_measurement_notes.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/liss_2020_mhc_hifwb_item_crosswalk.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/liss_2020_scoring_freeze.json,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/liss_2020_variable_manifest.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/liss_data_access_handoff.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/liss_longitudinal_measure_equivalence.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/liss_longitudinal_overlap_plan.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/liss_longitudinal_wave_inventory.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/prior_evidence_report.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/prior_study_crosswalk.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/prior_study_findings.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-research/outputs/liss_hifwb_prior_evidence/source_manifest.json,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,PENDING
-scripts/validate_liss_2020_schema.py,active,execution script,AA-11 LISS HiFWB package,PENDING
-scripts/verify_liss_2020_sources.py,active,execution script,AA-11 LISS HiFWB package,PENDING
-scripts/score_liss_bigfive.py,active,execution script,AA-11 LISS HiFWB package,PENDING
-scripts/score_liss_hifwb.py,active,execution script,AA-11 LISS HiFWB package,PENDING
-scripts/fit_liss_hifwb_measurement_models.py,active,execution script,AA-11 LISS HiFWB package,PENDING
-scripts/fit_liss_personality_wellbeing_models.py,active,execution script,AA-11 LISS HiFWB package,PENDING
-scripts/run_liss_2020_hifwb.py,active,execution script,AA-11 LISS HiFWB package,PENDING
+research/outputs/liss_hifwb_prior_evidence/hifwb_mapping_rubric.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/hifwb_node_evidence_matrix.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/liss_2020_hifwb_analysis_specification.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/liss_2020_hifwb_coverage_summary.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/liss_2020_measurement_notes.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/liss_2020_mhc_hifwb_item_crosswalk.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/liss_2020_scoring_freeze.json,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/liss_2020_variable_manifest.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/liss_data_access_handoff.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/liss_longitudinal_measure_equivalence.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/liss_longitudinal_overlap_plan.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/liss_longitudinal_wave_inventory.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/prior_evidence_report.md,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/prior_study_crosswalk.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/prior_study_findings.csv,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/source_manifest.json,active,pre-data planning/execution artifact,AA-11 LISS HiFWB package,7abd678
+scripts/validate_liss_2020_schema.py,active,execution script,AA-11 LISS HiFWB package,7abd678
+scripts/verify_liss_2020_sources.py,active,execution script,AA-11 LISS HiFWB package,7abd678
+scripts/score_liss_bigfive.py,active,execution script,AA-11 LISS HiFWB package,7abd678
+scripts/score_liss_hifwb.py,active,execution script,AA-11 LISS HiFWB package,7abd678
+scripts/fit_liss_hifwb_measurement_models.py,active,execution script,AA-11 LISS HiFWB package,7abd678
+scripts/fit_liss_personality_wellbeing_models.py,active,execution script,AA-11 LISS HiFWB package,7abd678
+scripts/run_liss_2020_hifwb.py,active,execution script,AA-11 LISS HiFWB package,7abd678
+research/outputs/liss_hifwb_prior_evidence/verification_report.json,active,verification report,AA-11 pre-data checks,2ebfe2b
