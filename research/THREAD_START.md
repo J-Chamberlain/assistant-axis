@@ -148,3 +148,5 @@ As of 2026-06-16, `research/paper15_content_ledger.md` has been completed for me
 ## Immediate continuity (2026-09-15)
 
 The aggregate human↔model Rosetta follow-up is complete in `research/outputs/human_model_rosetta_translation/` and classified WEAK / ABSENT: identity beat all frozen low-complexity translations in held-out target-profile prediction, and three structural nulls were non-supportive. Do not retune V1 from this result. Any continuation should use a new prospective validation design, not retroactive respondent projection.
+
+The descriptive visual companion is now in `research/outputs/human_model_rosetta_translation/profile_visuals/`. It preserves the 24 fixed pairs and shows that the 12-trait profiles are cleaner on average than the 45-trait profiles, without changing the aggregate translation classification. Use the self-contained HTML viewer and comparison report for inspection; do not infer individual-level transfer.
