@@ -3,6 +3,14 @@
 ## Scope
 This is a continuity and execution-planning artifact. It records prior direct personality/wellbeing evidence and a conservative HiFWB ontology; it does not analyze respondents, choose thresholds, or claim human/model equivalence.
 
+## Three correspondence tracks
+
+1. **Track 1 — Independent profile-group correspondence — ACTIVE.** Derive behavioral-profile groupings independently within human survey data and model persona data, then compare profile structures/centroids. Do not force human data into Qwen PC categories; cluster counts need not match and model-role prevalence is not human population prevalence. Open design questions include respondent/item selection, representation, clustering, distance, cluster number, and statistical correspondence evaluation.
+2. **Track 2 — PC-pole profile correspondence — PARKED.** Use relatively pure positive/negative PC1–PC3 pole neighborhoods and compare their multivariate signatures with human profiles. Do not develop or operationalize this track in AA-11.
+3. **Track 3 — Trait-relationship structural correspondence — PARKED.** Compare relational structure among behavioral variables (for example covariance/similarity organization) across humans and models. This is distinct from clustering and PC-pole matching; do not develop or operationalize it in AA-11.
+
+Where practical, all tracks should eventually use one frozen human/model common feature space so results compare cleanly. AA-11 deliberately does **not** choose that space (constructs, SAPA items, model traits, derived dimensions, imputed profiles, or another representation).
+
 ## What prior studies establish
 Lamers et al. (2012) provides a direct cross-sectional Big Five–positive-mental-health precedent. Hounkpatin et al. (2018) and Fetvadjiev & He (2019) provide repeated-wave human-only precedents linking personality change or trait levels with life satisfaction and affective wellbeing. Lamers et al. (2011) and Joshanloo & Lamers (2016) are measurement-structure precedents for the MHC-SF, including the caution that ESEM can fit differently from a constrained CFA.
 
