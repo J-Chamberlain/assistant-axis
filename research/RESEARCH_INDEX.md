@@ -2,6 +2,10 @@
 
 This is the compact navigation index for the current assistant-axis research state. Use it with `research/RESEARCH_STATE.md` and `research/PROVENANCE_REGISTRY.md` before running broad repo searches.
 
+## AA-11 LISS HiFWB pre-data package (2026-09-15)
+
+`research/outputs/liss_hifwb_prior_evidence/prior_evidence_report.md` is the entry point. It records five direct prior-study precedents, a conservative six-node HiFWB ontology, exact LISS 2020 study/codebook metadata, the routed MHC-SF-R item crosswalk, longitudinal wave audit, access handoff, and fail-closed scripts. This is pre-data planning only: Track 1 is active; Tracks 2 and 3 are parked; the common human/model feature space is unresolved.
+
 ## Current Paper Scopes
 
 Paper 1 is complete: Gemma 2 27B persona geometry, careful-evaluator assistant-axis finding, seven-cluster taxonomy, and base-model basin evidence.

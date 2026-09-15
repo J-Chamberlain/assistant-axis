@@ -2,6 +2,10 @@
 
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
+## liss_hifwb_prior_evidence
+
+AA-11 LISS HiFWB pre-data package (2026-09-15): `research/outputs/liss_hifwb_prior_evidence/` is built from official LISS study pages/codebooks and cited prior literature. It contains no respondent data, IDs, model inference, activations, GPU output, or external model API output. The package builder is `scripts/build_aa11_liss_package.py`; fail-closed scripts are listed in `artifact_inventory.csv`. Status active; future execution requires Centerdata-authorized files under gitignored `data_external/liss_2020/` and SHA256 capture on arrival.
+
 ## human_supported_trait_convergence
 
 Artifact: AA-7 preregistered frozen human-supported trait efficiency and cross-model aligned PC1-PC6 role-score subspace study.

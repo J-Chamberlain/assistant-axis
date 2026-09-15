@@ -3,6 +3,8 @@
 Updated UTC: 2026-09-12
 Last commit when updated: b9b6008 (AA-7 canonical semantic reconciliation)
 
+AA-11 update (2026-09-15; branch `codex/aa11-liss-hifwb-crosswalk`): added active pre-data LISS HiFWB package under `research/outputs/liss_hifwb_prior_evidence/`. Entry point is `prior_evidence_report.md`; package includes prior-study crosswalk, exact Study 965/1105 metadata and routed item crosswalk, longitudinal audit, access handoff, and fail-closed scripts. Track 1 is active; Tracks 2 and 3 are parked; common feature space is unresolved.
+
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
 ## Start Here
