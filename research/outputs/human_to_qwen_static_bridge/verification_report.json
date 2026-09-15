@@ -2,7 +2,7 @@
   "checks": {
     "exact_primary_12": true,
     "freeze_commit_resolves": true,
-    "freeze_predates_head": false,
+    "freeze_predates_head": true,
     "respondent_single_outer_fold": true,
     "target_not_in_anchors": true,
     "private_prediction_exists": true,
@@ -11,6 +11,6 @@
     "raw_row_level_not_tracked": true,
     "no_prohibited_model_work": true
   },
-  "all_pass": false,
+  "all_pass": true,
   "note": "Bridge-label and model-joint null families remain pending; descriptive projection intentionally not run."
 }
