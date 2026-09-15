@@ -1,0 +1,20 @@
+{
+  "dataset": "SAPA V5",
+  "respondents": 23679,
+  "items": 696,
+  "observed_cells": 2039803,
+  "respondent_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+  "superkey_sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+  "item_info_sha256": "ce280ebf42cd77f3db1955a3027051a74d017ca61da02adf5dbbab11545b1732",
+  "terrain_eligibility_N": 8585,
+  "direct_ge2_N": 8664,
+  "direct_terrain_N": 3972,
+  "non_affect_terrain_N": 2548,
+  "fold_seed": 20260915,
+  "historical_fold_assignment": "UNKNOWN",
+  "package_versions": {
+    "python": "3.12.12",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3"
+  }
+}

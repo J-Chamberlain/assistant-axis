@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "compared_files": [
+    "analysis_summary.json",
+    "robustness_metrics.csv",
+    "leave_one_content_out.csv",
+    "surface_visualization_aggregate.csv",
+    "run_manifest.json",
+    "sapa_hifwb_surface.png"
+  ],
+  "byte_identical": true
+}

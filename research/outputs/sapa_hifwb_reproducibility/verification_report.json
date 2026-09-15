@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "checks": {
+    "startup_passed": true,
+    "canonical_navigation_consulted": true,
+    "input_dataset_identity": "SAPA V5 DOI 10.7910/DVN/SD7SVE",
+    "source_hashes_verified": true,
+    "respondent_level_data_untracked": true,
+    "frozen_13_direct_items": true,
+    "historical_fold_assignment": "UNKNOWN",
+    "deterministic_fold_seed": 20260915,
+    "terrain_N": 8585,
+    "historical_direct_N": 3972,
+    "historical_nonaffect_N": 2548,
+    "common_factor_pairwise_mean_exact": true,
+    "common_factor_eigenvalue_exact": true,
+    "common_factor_fraction_exact": true,
+    "oof_predictions_only": true,
+    "hyperparameters_fold_local": true,
+    "no_test_leakage": true,
+    "no_model_geometry_or_projection": true,
+    "no_external_model_api": true,
+    "no_gpu_runpod": true,
+    "deterministic_rerun_byte_identical": true,
+    "all_csv_json_parse": true,
+    "aggregate_visualization_only": true
+  },
+  "surface_contrasts": {
+    "M1_vs_M2": {
+      "delta_R2": 0.10170808573198886,
+      "bootstrap_95ci": [
+        0.08667349768900694,
+        0.11763614500115839
+      ]
+    },
+    "M1_vs_M3": {
+      "delta_R2": 0.0910401619293304,
+      "bootstrap_95ci": [
+        0.07717330835391858,
+        0.10595046119684386
+      ]
+    },
+    "M2_vs_M3": {
+      "delta_R2": -0.010667923802658463,
+      "bootstrap_95ci": [
+        -0.017414809029390063,
+        -0.003866374554932557
+      ]
+    }
+  }
+}
