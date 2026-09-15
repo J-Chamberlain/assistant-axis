@@ -1,0 +1,22 @@
+{
+  "package": "AA-11 LISS pre-data HiFWB crosswalk",
+  "date": "2026-09-15",
+  "status": "active",
+  "sources": [
+    {
+      "study": "LISS Personality 2020",
+      "url": "https://www.dataarchive.lissdata.nl/study-units/view/965",
+      "data_filename": "cp20l_EN_1.0p.dta",
+      "codebook": "https://www.dataarchive.lissdata.nl/hosted-files/download/5031",
+      "doi": "10.17026/dans-z2c-fzcd"
+    },
+    {
+      "study": "LISS Social Science 2020 MHC-SF-R",
+      "url": "https://www.dataarchive.lissdata.nl/study-units/view/1105",
+      "data_filename": "ss20a_EN_1.0p.dta",
+      "codebook": "https://www.dataarchive.lissdata.nl/hosted-files/download/6031",
+      "doi": "10.17026/dans-25d-n6kr"
+    }
+  ],
+  "data_access": "No respondent data supplied or accessed; files expected only after Centerdata authorization under gitignored data_external/liss_2020/"
+}

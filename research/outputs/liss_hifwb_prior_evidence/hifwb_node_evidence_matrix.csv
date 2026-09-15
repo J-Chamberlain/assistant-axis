@@ -1,0 +1,24 @@
+node,node_type,label,status,evidence_or_rule
+h,hierarchy,HiFWB hierarchy/ontology,active; analytic ontology only,not an official scale or established score
+subjective_wellbeing,content,Affect,covered,positive and negative affect; happiness
+subjective_wellbeing,content,Appraisal,covered,life satisfaction
+psychological_wellbeing,content,Meaning-making,covered,meaning/purpose
+psychological_wellbeing,content,Self-concept,covered,"self-acceptance, mastery, growth"
+social_wellbeing,content,Community,covered,"belonging, contribution, social contact"
+social_wellbeing,content,Interpersonal relationships,covered,"relatedness, support, love/sorrow sharing"
+subjective_wellbeing,characteristic,positive affect,mapped,direct/near-direct item evidence
+subjective_wellbeing,characteristic,negative affect,mapped,cp20l146-cp20l165 PANAS
+subjective_wellbeing,characteristic,life satisfaction,mapped,SWLS and 0-10 satisfaction items
+psychological_wellbeing,characteristic,meaning/purpose,mapped,MHC-SF-R meaning items
+psychological_wellbeing,characteristic,personal growth,mapped,MHC-SF-R develop-self item
+psychological_wellbeing,characteristic,self-acceptance,mapped,MHC-SF-R acceptance item
+psychological_wellbeing,characteristic,mastery/self-efficacy,mapped,MHC-SF-R mastery item
+social_wellbeing,characteristic,social integration/belonging,mapped,group/relatedness items
+social_wellbeing,characteristic,social contribution,mapped,valuable/can-mean-something items
+social_wellbeing,characteristic,relationship quality,mapped,social contacts and love/sorrow
+social_wellbeing,characteristic,social connection,mapped,relatedness item
+social_wellbeing,characteristic,perceived support,mapped,count-on-others item
+social_wellbeing,characteristic,social acceptance,excluded,not treated as core HiFWB lens
+social_wellbeing,characteristic,social coherence/actualization,excluded,traditional MHC-SF labels not automatic equivalence
+psychological_wellbeing,characteristic,Ryff autonomy,excluded,not in the 2020 MHC-SF-R block
+subjective_wellbeing,characteristic,interested in life,ambiguous,"retain as sensitivity/ambiguity, not direct core"

@@ -1,0 +1,71 @@
+variable,version,timeframe,source_item,item_text,hifwb_content,judgment,characteristic,scale
+ss20a002,1,past week,2,happy,Affect,DIRECT,happiness,0-5 frequency response; preserve routing
+ss20a003,1,past week,3,interested in life,Affect,PARTIAL,ambiguous,0-5 frequency response; preserve routing
+ss20a004,1,past week,4,satisfied with life,Appraisal,DIRECT,life satisfaction,0-5 frequency response; preserve routing
+ss20a005,1,past week,5,valuable contribution to society,Community,DIRECT,social contribution,0-5 frequency response; preserve routing
+ss20a006,1,past week,6,country developing well,Community,NON_CORE_EXCLUDED,social actualization/coherence,0-5 frequency response; preserve routing
+ss20a007,1,past week,7,accept others as they are,Community,NON_CORE_EXCLUDED,social acceptance,0-5 frequency response; preserve routing
+ss20a008,1,past week,8,belong to a group,Community,CLOSE,belonging,0-5 frequency response; preserve routing
+ss20a009,1,past week,9,understand how society works,Community,NON_CORE_EXCLUDED,social coherence,0-5 frequency response; preserve routing
+ss20a010,1,past week,10,accept myself as I am,Self-concept,DIRECT,self-acceptance,0-5 frequency response; preserve routing
+ss20a011,1,past week,11,mastery of my life,Self-concept,DIRECT,mastery/self-efficacy,0-5 frequency response; preserve routing
+ss20a012,1,past week,12,share love and sorrow with some people,Interpersonal relationships,DIRECT,relationship quality,0-5 frequency response; preserve routing
+ss20a013,1,past week,13,develop myself,Self-concept,DIRECT,personal growth,0-5 frequency response; preserve routing
+ss20a014,1,past week,14,dare to express my ideas,Self-concept,NON_CORE_EXCLUDED,not core HiFWB,0-5 frequency response; preserve routing
+ss20a015,1,past week,15,life has meaning,Meaning-making,DIRECT,meaning/purpose,0-5 frequency response; preserve routing
+ss20a016,1,past week,16,can mean something to others,Community,CLOSE,social contribution,0-5 frequency response; preserve routing
+ss20a017,1,past week,17,satisfied with social contacts,Interpersonal relationships,CLOSE,relationship quality,0-5 frequency response; preserve routing
+ss20a018,1,past week,18,feel related to other people,Interpersonal relationships,CLOSE,social connection,0-5 frequency response; preserve routing
+ss20a019,1,past week,19,count on others to help me,Interpersonal relationships,DIRECT,perceived support,0-5 frequency response; preserve routing
+ss20a020,1,past month,-4,routed duplicate of MHC-SF-R item,see source item,ROUTING_ONLY,see source item,0-5 frequency response; preserve routing
+ss20a021,1,past month,-3,routed duplicate of MHC-SF-R item,see source item,ROUTING_ONLY,see source item,0-5 frequency response; preserve routing
+ss20a022,1,past month,-2,routed duplicate of MHC-SF-R item,see source item,ROUTING_ONLY,see source item,0-5 frequency response; preserve routing
+ss20a023,1,past month,-1,routed duplicate of MHC-SF-R item,see source item,ROUTING_ONLY,see source item,0-5 frequency response; preserve routing
+ss20a024,1,past month,0,routed duplicate of MHC-SF-R item,see source item,ROUTING_ONLY,see source item,0-5 frequency response; preserve routing
+ss20a025,1,past month,1,routed duplicate of MHC-SF-R item,see source item,ROUTING_ONLY,see source item,0-5 frequency response; preserve routing
+ss20a026,2,past month,2,happy,Affect,DIRECT,happiness,0-5 frequency response; preserve routing
+ss20a027,2,past month,3,interested in life,Affect,PARTIAL,ambiguous,0-5 frequency response; preserve routing
+ss20a028,2,past month,4,satisfied with life,Appraisal,DIRECT,life satisfaction,0-5 frequency response; preserve routing
+ss20a029,2,past month,5,valuable contribution to society,Community,DIRECT,social contribution,0-5 frequency response; preserve routing
+ss20a030,2,past month,6,country developing well,Community,NON_CORE_EXCLUDED,social actualization/coherence,0-5 frequency response; preserve routing
+ss20a031,2,past month,7,accept others as they are,Community,NON_CORE_EXCLUDED,social acceptance,0-5 frequency response; preserve routing
+ss20a032,2,past month,8,belong to a group,Community,CLOSE,belonging,0-5 frequency response; preserve routing
+ss20a033,2,past month,9,understand how society works,Community,NON_CORE_EXCLUDED,social coherence,0-5 frequency response; preserve routing
+ss20a034,2,past month,10,accept myself as I am,Self-concept,DIRECT,self-acceptance,0-5 frequency response; preserve routing
+ss20a035,2,past month,11,mastery of my life,Self-concept,DIRECT,mastery/self-efficacy,0-5 frequency response; preserve routing
+ss20a036,2,past month,12,share love and sorrow with some people,Interpersonal relationships,DIRECT,relationship quality,0-5 frequency response; preserve routing
+ss20a037,2,past month,13,develop myself,Self-concept,DIRECT,personal growth,0-5 frequency response; preserve routing
+ss20a038,2,past month,14,dare to express my ideas,Self-concept,NON_CORE_EXCLUDED,not core HiFWB,0-5 frequency response; preserve routing
+ss20a039,2,past month,15,life has meaning,Meaning-making,DIRECT,meaning/purpose,0-5 frequency response; preserve routing
+ss20a040,3,past week,2,happy,Affect,DIRECT,happiness,0-5 frequency response; preserve routing
+ss20a041,3,past week,3,interested in life,Affect,PARTIAL,ambiguous,0-5 frequency response; preserve routing
+ss20a042,3,past week,4,satisfied with life,Appraisal,DIRECT,life satisfaction,0-5 frequency response; preserve routing
+ss20a043,3,past week,5,valuable contribution to society,Community,DIRECT,social contribution,0-5 frequency response; preserve routing
+ss20a044,3,past week,6,country developing well,Community,NON_CORE_EXCLUDED,social actualization/coherence,0-5 frequency response; preserve routing
+ss20a045,3,past week,7,accept others as they are,Community,NON_CORE_EXCLUDED,social acceptance,0-5 frequency response; preserve routing
+ss20a046,3,past week,8,belong to a group,Community,CLOSE,belonging,0-5 frequency response; preserve routing
+ss20a047,3,past week,9,understand how society works,Community,NON_CORE_EXCLUDED,social coherence,0-5 frequency response; preserve routing
+ss20a048,3,past week,10,accept myself as I am,Self-concept,DIRECT,self-acceptance,0-5 frequency response; preserve routing
+ss20a049,3,past week,11,mastery of my life,Self-concept,DIRECT,mastery/self-efficacy,0-5 frequency response; preserve routing
+ss20a050,3,past week,12,share love and sorrow with some people,Interpersonal relationships,DIRECT,relationship quality,0-5 frequency response; preserve routing
+ss20a051,3,past week,13,develop myself,Self-concept,DIRECT,personal growth,0-5 frequency response; preserve routing
+ss20a052,3,past week,14,dare to express my ideas,Self-concept,NON_CORE_EXCLUDED,not core HiFWB,0-5 frequency response; preserve routing
+ss20a053,3,past week,15,life has meaning,Meaning-making,DIRECT,meaning/purpose,0-5 frequency response; preserve routing
+ss20a054,4,past month,2,happy,Affect,DIRECT,happiness,0-5 frequency response; preserve routing
+ss20a055,4,past month,3,interested in life,Affect,PARTIAL,ambiguous,0-5 frequency response; preserve routing
+ss20a056,4,past month,4,satisfied with life,Appraisal,DIRECT,life satisfaction,0-5 frequency response; preserve routing
+ss20a057,4,past month,5,valuable contribution to society,Community,DIRECT,social contribution,0-5 frequency response; preserve routing
+ss20a058,4,past month,6,country developing well,Community,NON_CORE_EXCLUDED,social actualization/coherence,0-5 frequency response; preserve routing
+ss20a059,4,past month,7,accept others as they are,Community,NON_CORE_EXCLUDED,social acceptance,0-5 frequency response; preserve routing
+ss20a060,4,past month,8,belong to a group,Community,CLOSE,belonging,0-5 frequency response; preserve routing
+ss20a061,4,past month,9,understand how society works,Community,NON_CORE_EXCLUDED,social coherence,0-5 frequency response; preserve routing
+ss20a062,4,past month,10,accept myself as I am,Self-concept,DIRECT,self-acceptance,0-5 frequency response; preserve routing
+ss20a063,4,past month,11,mastery of my life,Self-concept,DIRECT,mastery/self-efficacy,0-5 frequency response; preserve routing
+ss20a064,4,past month,12,share love and sorrow with some people,Interpersonal relationships,DIRECT,relationship quality,0-5 frequency response; preserve routing
+ss20a065,4,past month,13,develop myself,Self-concept,DIRECT,personal growth,0-5 frequency response; preserve routing
+ss20a066,4,past month,14,dare to express my ideas,Self-concept,NON_CORE_EXCLUDED,not core HiFWB,0-5 frequency response; preserve routing
+ss20a067,4,past month,15,life has meaning,Meaning-making,DIRECT,meaning/purpose,0-5 frequency response; preserve routing
+ss20a068,4,past month,16,can mean something to others,Community,CLOSE,social contribution,0-5 frequency response; preserve routing
+ss20a069,4,past month,17,satisfied with social contacts,Interpersonal relationships,CLOSE,relationship quality,0-5 frequency response; preserve routing
+ss20a070,4,past month,18,feel related to other people,Interpersonal relationships,CLOSE,social connection,0-5 frequency response; preserve routing
+ss20a071,4,past month,19,count on others to help me,Interpersonal relationships,DIRECT,perceived support,0-5 frequency response; preserve routing

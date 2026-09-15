@@ -1,0 +1,15 @@
+{
+  "status": "pre_data_frozen",
+  "date": "2026-09-15",
+  "respondent_data_loaded": false,
+  "join_key": "nomem_encr",
+  "data_dir": "data_external/liss_2020/",
+  "rules": {
+    "no_imputation": true,
+    "no_ids_in_tracked_outputs": true,
+    "preserve_ss20a_version_and_timeframe": true,
+    "bigfive_reverse_key": "freeze from official cp20l codebook before scoring",
+    "minimum_valid_items": "must be finalized from codebook and recorded before data arrival",
+    "common_feature_space": "deliberately unresolved"
+  }
+}

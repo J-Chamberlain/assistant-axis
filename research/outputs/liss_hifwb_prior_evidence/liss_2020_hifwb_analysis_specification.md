@@ -1,0 +1,5 @@
+# LISS 2020 HiFWB analysis specification (pre-data freeze)
+
+This is an execution-ready shell, not an executed analysis. Predictors are the 50 BIG-V items (`cp20l020–069`) with codebook-audited reverse scoring and observed-score composites; no imputation is authorized. Outcomes are routed MHC-SF-R items plus declared sensitivity measures, indexed to HiFWB content/lens. Eligibility requires valid predictor scores and at least one valid outcome; exact minimum-valid rules are frozen in the scoring manifest before data arrival.
+
+Planned model sequence: P0 separate Big Five linear associations; P1 one-dimensional backbone only if independently predeclared; P2 Ridge on five standardized domains; P3 RBF-kernel sensitivity. Use nested cross-validation, deterministic seeds, and an affect-overlap sensitivity. Competing measurement structures (general, correlated HiFWB contents, higher-order, bifactor/ESEM where identified) must be compared before interpreting latent scores. No human/model common feature space is selected here.

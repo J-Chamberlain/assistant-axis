@@ -1,0 +1,12 @@
+variable_block,range,instrument_or_role,scale,routing_or_missing,analysis_role,source_url
+cp20l010,cp20l010,happiness,0-10,-9 don't know; inspect other negative codes,wellbeing outcome,https://www.dataarchive.lissdata.nl/study-units/view/965
+cp20l011,cp20l011,life satisfaction,0-10,-9 don't know; inspect other negative codes,wellbeing outcome,https://www.dataarchive.lissdata.nl/study-units/view/965
+cp20l012-013,cp20l012-cp20l013,mood state/trait,1-7,official missing codes,wellbeing sensitivity,https://www.dataarchive.lissdata.nl/hosted-files/download/5031
+cp20l014-018,cp20l014-cp20l018,SWLS/Diener,1-7,official missing codes,appraisal outcome,https://www.dataarchive.lissdata.nl/hosted-files/download/5031
+cp20l020-069,cp20l020-cp20l069,BIG-V / IPIP-Goldberg Big Five,1-5,official missing codes; reverse key frozen after codebook audit,personality predictors,https://www.dataarchive.lissdata.nl/hosted-files/download/5031
+cp20l070-079,cp20l070-cp20l079,Rosenberg self-esteem,1-7,official missing codes,self-concept outcome,https://www.dataarchive.lissdata.nl/hosted-files/download/5031
+cp20l135,cp20l135,Inclusion of Other in Self,1-7 pictorial,official missing codes,social sensitivity,https://www.dataarchive.lissdata.nl/hosted-files/download/5031
+cp20l146-165,cp20l146-cp20l165,PANAS current affect,1-7,official missing codes,affect outcome/sensitivity,https://www.dataarchive.lissdata.nl/hosted-files/download/5031
+cp20l198-207,cp20l198-cp20l207,LOT-R optimism,1-5,official missing codes,psychological sensitivity,https://www.dataarchive.lissdata.nl/hosted-files/download/5031
+ss20a001,ss20a001,randomized version,1-4,constructed routing field,routing covariate,https://www.dataarchive.lissdata.nl/hosted-files/download/6031
+ss20a002-071,ss20a002-ss20a071,"MHC-SF-R 18 items, routed",0-5 frequency,version/timeframe-specific; page-level missing,HiFWB outcome candidates,https://www.dataarchive.lissdata.nl/hosted-files/download/6031
