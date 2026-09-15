@@ -1,0 +1,4 @@
+null_family,draws,seed,observed_macro,null_mean,null_sd,null_q025,null_q975,exceedances,empirical_p,status,reason
+human_target_shuffle,1000,20260914,0.09958713334916006,7.138975782599292e-05,0.007797132024411153,-0.01546346034040953,0.014995853430238596,0.0,0.000999000999000999,COMPLETE,
+bridge_label_permutation,0,20260915,0.09958713334916006,,,,,,,NOT_RUN_CPU_BUDGET,requires refitting location and decoder mappings per draw; no outcome-based shortcut used
+model_joint_structure_destruction,0,20260916,0.09958713334916006,,,,,,,NOT_RUN_CPU_BUDGET,requires model-side refits per draw; no outcome-based shortcut used

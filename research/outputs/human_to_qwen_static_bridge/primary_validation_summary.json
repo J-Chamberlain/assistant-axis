@@ -1,0 +1,14 @@
+{
+  "freeze_commit": "77318ff22f0e4a30a0186d7fa32241d770a1ae66",
+  "primary_anchor_threshold": 6,
+  "eligible_respondents": 1935,
+  "respondent_target_predictions": 17209,
+  "per_trait_n_min": 1069,
+  "per_trait_n_max": 1616,
+  "macro_fisher_pearson": 0.09958713334916006,
+  "pooled_pearson": 0.08789469310483788,
+  "pooled_spearman": 0.09258193592308375,
+  "raw_sapa_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+  "raw_sapa_bytes": 23975309,
+  "status": "PENDING_NULLS_AND_BOOTSTRAP"
+}

@@ -1,0 +1,13 @@
+{
+  "observed_macro": 0.09958713334916006,
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 20260914,
+  "bootstrap_ci95": [
+    0.07958601187288164,
+    0.1198116556433557
+  ],
+  "target_shuffle_draws": 1000,
+  "target_shuffle_seed": 20260914,
+  "target_shuffle_empirical_p": 0.000999000999000999,
+  "target_shuffle_exceedances": 0
+}
