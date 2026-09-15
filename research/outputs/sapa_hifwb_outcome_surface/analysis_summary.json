@@ -1,0 +1,34 @@
+{
+  "respondents": 23679,
+  "items": 696,
+  "direct_items": 13,
+  "close_items": 4,
+  "respondents_ge2_direct": 8664,
+  "terrain_N": 8585,
+  "terrain_plus_h_N": 3972,
+  "pairwise_mean_r": 0.4784431909062876,
+  "first_eigenvalue": 6.793176506471045,
+  "first_component_variance_fraction": 0.5225520389593112,
+  "eigenvalues_gt1": 2,
+  "cv_bigfive_to_h": {
+    "N": 3972,
+    "pearson_r": 0.6276346615441524,
+    "spearman_rho": 0.6202488003500843,
+    "R2": 0.3939251055001953,
+    "RMSE": 0.6314306919087375,
+    "selected_alphas": [10, 1, 10, 10, 10]
+  },
+  "cv_bigfive_to_nonaffect_h": {
+    "N": 2548,
+    "pearson_r": 0.6355621181137853,
+    "spearman_rho": 0.6355481955929874,
+    "R2": 0.40393853279378245,
+    "RMSE": 0.6423599458611277,
+    "selected_alphas": [10, 10, 10, 10, 10]
+  },
+  "backbone_pearson": 0.536454476346064,
+  "backbone_spearman": 0.5396637753902285,
+  "backbone_nonaffect_pearson": 0.5534610366520517,
+  "backbone_nonaffect_spearman": 0.5555042798586469,
+  "bigfive_overlap_with_direct_items": []
+}
