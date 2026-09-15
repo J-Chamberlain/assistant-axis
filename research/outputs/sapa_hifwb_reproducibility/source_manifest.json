@@ -1,0 +1,14 @@
+{
+  "dataset": "SAPA V5",
+  "doi": "10.7910/DVN/SD7SVE",
+  "source_branch": "gpt/sapa-hifwb-outcome-surface",
+  "source_commit": "2d93b794065d25d99261de1a5769dbe1eb116706",
+  "terrain_branch": "gpt/sapa-static-human-terrain",
+  "terrain_commit": "e385a4664ec46bb53a9d966000728deac06e212b",
+  "raw_data_policy": "local_gitignored_only",
+  "respondent_file_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+  "item_info_sha256": "ce280ebf42cd77f3db1955a3027051a74d017ca61da02adf5dbbab11545b1732",
+  "item_lists_sha256": "f976dddace596202f850ea328aaaf72264a54d87f8bd5195f3b9d70819c66e06",
+  "superkey_sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+  "source_url": "https://doi.org/10.7910/DVN/SD7SVE"
+}

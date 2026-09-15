@@ -1,0 +1,8 @@
+{
+  "analysis": "sapa_hifwb_reproducibility",
+  "status": "template",
+  "script": "run_sapa_hifwb_reproducibility.py",
+  "fold_seed": 20260915,
+  "historical_fold_assignment": "UNKNOWN",
+  "respondent_level_outputs": "never_written_to_git"
+}
