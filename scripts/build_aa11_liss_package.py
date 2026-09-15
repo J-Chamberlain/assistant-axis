@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+raise SystemExit("Deprecated by scripts/repair_aa11_liss_package.py; running this historical builder would overwrite repaired AA-11 artifacts.")
 """Build the AA-11 pre-data LISS/HiFWB planning package."""
 from pathlib import Path
 import csv, json

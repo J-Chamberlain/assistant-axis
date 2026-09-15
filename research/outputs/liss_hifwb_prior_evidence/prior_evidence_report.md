@@ -1,24 +1,37 @@
-# Prior evidence report: LISS HiFWB pre-data package
+# Prior LISS personality–wellbeing evidence and HiFWB pre-data program
 
 ## Scope
-This is a continuity and execution-planning artifact. It records prior direct personality/wellbeing evidence and a conservative HiFWB ontology; it does not analyze respondents, choose thresholds, or claim human/model equivalence.
+This human-only package audits prior LISS personality–wellbeing evidence, maps original measures into a provisional HiFWB analytic ontology, freezes a 2020 pre-data analysis, and defines a metadata-only longitudinal pathway program. No LISS respondent data were accessed.
 
-## Three correspondence tracks
+## Scientific objective
+The immediate question is which wellbeing constructs prior LISS research has measured and related to personality, and what a transparent HiFWB regrouping can add. The longer program asks which feasible behavior/context changes predict later domain-specific wellbeing improvement conditional on prior wellbeing and personality. AA-11 supplies measurement and evidence foundations; it produces no individualized or causal optimization result.
 
-1. **Track 1 — Independent profile-group correspondence — ACTIVE.** Derive behavioral-profile groupings independently within human survey data and model persona data, then compare profile structures/centroids. Do not force human data into Qwen PC categories; cluster counts need not match and model-role prevalence is not human population prevalence. Open design questions include respondent/item selection, representation, clustering, distance, cluster number, and statistical correspondence evaluation.
-2. **Track 2 — PC-pole profile correspondence — PARKED.** Use relatively pure positive/negative PC1–PC3 pole neighborhoods and compare their multivariate signatures with human profiles. Do not develop or operationalize this track in AA-11.
-3. **Track 3 — Trait-relationship structural correspondence — PARKED.** Compare relational structure among behavioral variables (for example covariance/similarity organization) across humans and models. This is distinct from clustering and PC-pole matching; do not develop or operationalize it in AA-11.
+## HiFWB ontology
+The provisional hierarchy is h → three lenses → six contents → characteristics: Subjective wellbeing (Affect, Appraisal), Psychological wellbeing (Meaning-making, Self-concept), and Social wellbeing (Community, Interpersonal relationships). It is an analytic ontology, not an official exhaustive scoring key or a validated LISS scale.
 
-Where practical, all tracks should eventually use one frozen human/model common feature space so results compare cleanly. AA-11 deliberately does **not** choose that space (constructs, SAPA items, model traits, derived dimensions, imputed profiles, or another representation).
+## Prior LISS personality/wellbeing evidence
+Eight verified studies are retained. Lamers et al. (2012) supplies cross-sectional Big Five evidence for broad MHC-SF positive mental health. Hounkpatin et al. (2018) directly tests SWLS life satisfaction across four assessments. Fetvadjiev and He (2019) directly tests positive/negative affect, life satisfaction, and self-esteem across five waves. Lamers et al. (2011) and Joshanloo and Lamers (2016) establish measurement-structure precedents. Olaru et al. (2023) adds 11-year life and social-contact satisfaction evidence. Joshanloo (2025) adds 15-year self-esteem level/stability evidence. Schellenberg et al. (2026) adds loneliness–Big Five transactions including LISS.
 
-## What prior studies establish
-Lamers et al. (2012) provides a direct cross-sectional Big Five–positive-mental-health precedent. Hounkpatin et al. (2018) and Fetvadjiev & He (2019) provide repeated-wave human-only precedents linking personality change or trait levels with life satisfaction and affective wellbeing. Lamers et al. (2011) and Joshanloo & Lamers (2016) are measurement-structure precedents for the MHC-SF, including the caution that ESEM can fit differently from a constrained CFA.
+## Characteristic-level evidence
+Affect, life satisfaction, and self-esteem have the clearest direct precedents. Satisfaction with social contacts and loneliness provide stronger interpersonal evidence than the original AA-11 package recorded. Meaning, purpose/direction, growth, belonging, contribution, self-acceptance, mastery, connection, and perceived support are often available as items but were usually embedded in broad composites or not directly isolated in the audited personality literature. See `hifwb_characteristic_prior_evidence.csv`.
 
-## HiFWB mapping
-The hierarchy is an analytic ontology: subjective wellbeing (Affect, Appraisal), psychological wellbeing (Meaning-making, Self-concept), and social wellbeing (Community, Interpersonal relationships). Traditional MHC-SF subscales are not automatically equivalent to these lenses. The 2020 MHC-SF-R block gives coverage with direct, close, partial, and explicitly excluded judgments recorded in the crosswalk.
+## Content-level evidence
+Affect and Appraisal are well studied. Self-concept is uneven: self-esteem is well studied, while self-acceptance and mastery are not separately established. Interpersonal relationships are moderately studied through social-contact satisfaction and inverse/adjacent loneliness evidence. Meaning-making and Community remain sparse when restricted to core characteristics and isolated tests.
 
-## Epistemic status
-**Observed:** existing model-side analyses establish substantial cross-model convergence in persona geometry across Qwen 3 32B, LLaMA 3.3 70B, and Gemma 2 27B. **Interpretation:** persona geometry appears constrained rather than arbitrary across these models. **Hypothesis:** recurring model geometry may reflect durable statistical organization in human behavioral variation or human-generated behavioral language. **Unknown:** whether corresponding organization occurs in human respondent data, whether dimensions are homologous, causal origin, and generalization across families, architectures, scales, languages, or training regimes.
+## Longitudinal evidence
+Life satisfaction, affect, self-esteem, social-contact satisfaction, and loneliness all have verified longitudinal precedents. These studies support temporal and within-person questions, but their observational estimates remain model- and assumption-dependent. The metadata inventory identifies candidate repeated social, health-behavior, work, financial, relationship, and participation variables for later pathway work. Exact overlap requires authorized data.
 
-## What a future LISS reanalysis could add
-A future, access-authorized analysis could freeze a common feature/profile representation, verify measurement structure, and test preregistered associations and correspondence. It would add direct human-data evidence to a model-side hypothesis, not retroactively validate the model geometry.
+## Legacy MHC-SF versus HiFWB
+MHC-SF Emotional wellbeing overlaps substantially with HiFWB Subjective wellbeing. MHC-SF Psychological wellbeing is not identical to the HiFWB Psychological lens: HiFWB redistributes growth into Meaning-making and self-acceptance/mastery into Self-concept, while autonomy is outside the example core. MHC-SF Social wellbeing is not identical to the HiFWB Social lens: belonging and contribution are relevant, whereas social acceptance, coherence, and actualization are excluded from the example core. Interested in life remains PARTIAL/ambiguous.
+
+## Established, embedded, and unlocated direct tests
+**Established:** broad affect, SWLS life satisfaction, Rosenberg self-esteem, social-contact satisfaction, and loneliness/personality relations. **Embedded:** meaning, personal growth, self-acceptance, mastery, belonging, contribution, and relatedness inside legacy composites. **No direct prior test found in the audited LISS literature:** the explicit HiFWB h, its six simultaneous contents, global subjective happiness as a separate Big Five outcome, and perceived-support/personality association. This wording describes the audited set, not all literature.
+
+## What LISS 2020 can add
+The 2020 join can compare general, correlated-content, higher-order, bifactor, and approximate-crossloading measurement models. Personality relations will be reported at h, lens, content, and characteristic levels only where measurement supports them. P0 ordinary Big Five coefficients, P1 a wellbeing-independent one-dimensional personality gradient, P2 five-dimensional Ridge, and P3 a justified nonlinear sensitivity ask whether multivariate personality position adds held-out information. Non-Affect and affect-overlap sensitivities are prespecified.
+
+## Long-term heterogeneous/modifiable pathways
+Later work will test prior-adjusted within-person changes in behaviors/context and trait-conditioned associations with subsequent wellbeing. Trait advantage, behavioral compensation, and strength-congruent pathways are separate targets. The minimum design separates within-person change from stable between-person differences and begins with one behavior/outcome pair per model.
+
+## Boundaries and epistemic status
+**Observed:** verified studies establish broad and characteristic-specific LISS personality–wellbeing precedents; official 2020 codebooks contain randomized MHC-SF/MHC-SF-R forms covering all six proposed contents. **Interpretation:** the strongest existing evidence lies in Affect, Appraisal, self-esteem, and selected interpersonal outcomes; other nodes are mainly composite-embedded. **Hypothesis:** a six-content HiFWB regrouping and multivariate personality analysis may expose useful heterogeneity. **Unknown:** whether HiFWB measurement models fit LISS, whether behavior/context interactions are replicable, and whether any association represents a modifiable causal pathway.

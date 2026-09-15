@@ -1,0 +1,19 @@
+artifact,original_classification,repair_action
+prior_evidence_report.md,off-scope contamination and incomplete,rewrite around human-only evidence map
+prior_study_crosswalk.csv,valid core sources but incorrect/incomplete mapping,expand schema; correct Hounkpatin; add verified studies
+prior_study_findings.csv,valid but incomplete,replace with bounded evidence/novelty summaries
+hifwb_node_evidence_matrix.csv,incomplete,separate questionnaire coverage from prior literature evidence
+hifwb_mapping_rubric.md,off-scope sentence and incomplete,remove correspondence; expand legacy-factor rules
+liss_2020_mhc_hifwb_item_crosswalk.csv,requires correction,"fix exact routing, wording, source forms, growth and happiness mappings"
+liss_2020_hifwb_coverage_summary.csv,requires correction,separate coverage from evidence
+liss_2020_measurement_notes.md,valid but incomplete,add source-form and legacy/HiFWB distinctions
+liss_2020_hifwb_analysis_specification.md,off-scope sentence and incomplete,human-only hierarchy/geometry program
+liss_2020_variable_manifest.csv,valid but incomplete,retain and clarify roles
+liss_2020_scoring_freeze.json,off-scope key and incomplete,remove common-feature-space key; freeze human-only rules
+liss_data_access_handoff.md,valid but incomplete,"add exact codebooks, URLs, access/AI-use restrictions"
+longitudinal inventory files,valid but incomplete,extend with pathway variables and minimum model
+execution scripts,safe-failure valid; implementation incomplete,"add schema, scoring, hashing, environment and aggregate-only outputs"
+source_manifest.json,incomplete,add authoritative literature and metadata sources
+verification_report.json,off-scope checks,replace with repair checks
+artifact_inventory.csv,incomplete,"add repaired/new artifacts, hashes, and repair commits"
+scripts/build_aa11_liss_package.py,superseded,deprecate to prevent overwriting repaired package

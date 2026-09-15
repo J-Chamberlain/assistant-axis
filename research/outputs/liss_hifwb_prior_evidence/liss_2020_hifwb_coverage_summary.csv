@@ -1,7 +1,7 @@
-hifwb_lens,content,mapped_unique_source_items,mapped_routed_variables,status,notes
-Subjective wellbeing,Affect,2,9,covered,happy; interested in life; affect sensitivity from PANAS
-Subjective wellbeing,Appraisal,1,4,covered,satisfied with life
-Psychological wellbeing,Meaning-making,1,4,covered,life has meaning
-Psychological wellbeing,Self-concept,4,16,covered,accept self; mastery; growth; non-core expressive item excluded
-Social wellbeing,Community,5,20,covered,belonging/contribution; social acceptance/coherence exclusions retained
-Social wellbeing,Interpersonal relationships,4,16,covered,"support, relatedness, contacts, love/sorrow"
+lens,content,routed_variable_count,questionnaire_coverage,prior_literature_evidence_status,distinction
+Subjective wellbeing,Affect,9,covered in randomized 2020 questionnaire,well_studied,Questionnaire coverage does not imply a published personality-association test.
+Subjective wellbeing,Appraisal,5,covered in randomized 2020 questionnaire,well_studied,Questionnaire coverage does not imply a published personality-association test.
+Psychological wellbeing,Meaning-making,8,covered in randomized 2020 questionnaire,sparsely_studied,Questionnaire coverage does not imply a published personality-association test.
+Psychological wellbeing,Self-concept,9,covered in randomized 2020 questionnaire,moderately_studied,Questionnaire coverage does not imply a published personality-association test.
+Social wellbeing,Community,11,covered in randomized 2020 questionnaire,sparsely_studied,Questionnaire coverage does not imply a published personality-association test.
+Social wellbeing,Interpersonal relationships,11,covered in randomized 2020 questionnaire,moderately_studied,Questionnaire coverage does not imply a published personality-association test.
