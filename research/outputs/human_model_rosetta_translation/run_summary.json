@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE",
+  "seed": 2026091501,
+  "null_draws": 2000,
+  "primary_model": "Qwen",
+  "anchor_count": 12,
+  "target_count": 33,
+  "eligible_K": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    10
+  ],
+  "observed_best_nonidentity_delta_pearson": -0.16021025075924172,
+  "selected_observed_method": "global_intercept_scale",
+  "nulls": "cluster pairing, trait-label, and joint-structure; 2,000 draws each",
+  "source_sha256": "89a7677d3c50fdc71e54fd0e0cc0cb843993bc3da4daf9c0b0537328b96f1438"
+}

@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "checks_passed": 17,
+  "checks_total": 17,
+  "checks": [
+    {
+      "name": "required artifact: analysis_freeze.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: source_provenance.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: anchor_target_partition.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: matched_cluster_profiles.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: matched_cluster_profile_residuals.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: matched_cluster_summary.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: translation_cv_predictions.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: translation_model_comparison.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: translation_null_results.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: translation_stability_summary.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: model_replication_summary.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: human_model_rosetta_translation_report.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "required artifact: run_rosetta_translation.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "12 anchors and 33 targets",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "24 folds per method",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "three complete null families",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "no tracked respondent/private outputs",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

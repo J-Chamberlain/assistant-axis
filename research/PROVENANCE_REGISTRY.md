@@ -1,0 +1,878 @@
+# Provenance Registry
+
+This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
+
+## multimodel_trait_profile_pc_predictor
+
+Artifact: Cross-model replication of the complete activation-derived trait-profile to within-model persona-PC predictor for Llama-3.3-70B and Gemma-2-27B, with the canonical saved Qwen result included for direct comparison.
+Location: `research/outputs/multimodel_trait_profile_pc_predictor/`; main report: `multimodel_trait_profile_pc_predictor_report.md`; cross-model table: `cross_model_comparison.csv` and `.json`; per-model validation, Ridge, OOD, source, and verification bundles: `llama/` and `gemma/`; exact hashes: `artifact_inventory.csv`.
+Created: 2026-09-11 by Codex (GPT-5.5). Statistical estimators were Ridge, PLSRegression, RBF Kernel Ridge, and distance-weighted KNN. No GPU, RunPod, language-model inference, activation extraction, response generation, external model API, or undocumented vector download was used.
+Source inputs: Existing local released-vector bundles at `downloads/hf_vectors/llama-3.3-70b/{role_vectors,trait_vectors}` and `downloads/hf_vectors/gemma-2-27b/{role_vectors,trait_vectors}`; canonical Qwen geometry and role-family partition in `research/visualizations/geometry_viz_data.json` and `research/geometry_tables/cluster_membership_table.csv`; established Llama/Gemma PCA reconstruction and orientation artifact in `research/outputs/multimodel_ordered_trait_region_viewer/`; canonical Qwen pipeline and saved comparison numbers in `research/outputs/trait_profile_pc_predictor/`.
+Generating script: `research/outputs/multimodel_trait_profile_pc_predictor/run_multimodel_trait_profile_pc_predictor.py`, which imports the canonical Qwen runner for identical estimators, grids, folds, seeds, transforms, metrics, permutation control, OOD method, and synthetic endpoint selection.
+Procedure: For each model, verified exact 275-role and 240-trait label identity, finite tensors, and no target columns; mean-pooled each saved tensor over stored layers, L2-normalized means, and computed the full same-model 275 x 240 cosine matrix. Recomputed SVD PCA on that model's raw mean-pooled role vectors and used the established same-index sign orientation to Qwen; saved-coordinate reproduction passed at max error 2.748e-14 for Llama and 1.376e-11 for Gemma. Ran raw and fold-safe quantile repeated nested validation, complete Ridge LOPO, all-model holdout of the fixed Qwen-canonical role-family partition, 100 deterministic joint target permutations, training-only OOD diagnostics, final transparent model bundles, and 120 endpoint-held-out synthetic activation mixtures per model. A complete fixed-seed rerun reproduced all 20 deterministic model CSVs byte-for-byte.
+Key result: Llama raw Ridge LOPO R2=0.997833/0.997161/0.989900 with normalized 3D RMSE=0.124494; Gemma=0.999788/0.996179/0.987835 with RMSE=0.127824. Fold-safe quantile RMSE was 0.328303/0.304909. Qwen-canonical family holdout RMSE was 0.204224/0.176110 with mean-error degradation 1.810x/1.535x. Permutation p95 mean-PC R2 was -0.009359/-0.011572. Synthetic R2 was 0.983420/0.982280/0.946688 for Llama and 0.999557/0.980280/0.969824 for Gemma; distant endpoint pairs were much harder than nearby pairs. Ridge remained selected for both under the predeclared 10% improvement/no-hard-holdout-degradation rule.
+Dependent analyses: Paper 1.5 same-space trait-geometry evidence; cross-model mapping replication; later separate behavioral validation of frozen predictions against newly elicited persona activations.
+Current status: Active and complete. The Qwen-only predictor remains the V1 interface with counterfactual CLI; this artifact establishes the Llama/Gemma analytical replication and cross-model comparison.
+Notes/caveats: Features and targets come from each model's same activation-vector space. Accuracy differences do not measure psychological sophistication or human-likeness; oriented PCs are not assumed semantically identical; correlated Ridge coefficients are not stable individual explanations; role families are Qwen-canonical labels applied cross-model, not Llama/Gemma-native clusters; synthetic points are activation interpolations, not elicited behavioral personas; OOD values are geometric diagnostics, not probabilities.
+
+## trait_profile_pc_predictor
+
+Artifact: Reusable first-stage 240-trait-profile to canonical Qwen PC1/PC2/PC3 predictor with nested model comparison, complete LOPO, canonical-cluster holdouts, OOD diagnostics, permutation control, counterfactual profile projection, and synthetic activation interpolation.
+Location: `research/outputs/trait_profile_pc_predictor/`; main report: `trait_profile_pc_predictor_report.md`; transparent primary bundle: `ridge_predictor.json`; validation summary: `validation_summary.json`; complete hashes and raw URLs: `artifact_inventory.csv`.
+Created: 2026-09-11 by Codex (GPT-5 family; exact runtime identifier not exposed).
+Model used: Codex for analysis design, script authoring, interpretation, and repository maintenance. Statistical estimators were Ridge, PLSRegression, RBF Kernel Ridge, and distance-weighted KNN. No external model API, GPU, RunPod, new language-model inference, response generation, or activation generation was used.
+Source inputs: `research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv` (275 personas x 240 Qwen role/trait activation-space cosines); `research/visualizations/geometry_viz_data.json` (canonical Qwen role PCA targets); `research/geometry_tables/cluster_membership_table.csv`; released/local Qwen/Qwen3-32B role and trait tensors under `downloads/hf_vectors/qwen-3-32b/{role_vectors,trait_vectors}`; prior generator/stats under `research/outputs/trait_persona_prediction/`; exact PCA construction in `research/visualizations/scripts/build_geometry_viz.py`; canonical coordinate table `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`.
+Generating scripts: `research/outputs/trait_profile_pc_predictor/run_trait_profile_pc_predictor.py`; prediction interface: `research/outputs/trait_profile_pc_predictor/predict_trait_profile.py`.
+Procedure: Verified exact 275/240 identity/order/finite integrity and no target columns; reproduced the cosine matrix from mean-pooled/L2-normalized source tensors (max abs error 5.55e-16); compared raw cosines with a training-fold-only per-trait QuantileTransformer; nested 5-fold outer CV across 10 deterministic seeds with 4-fold inner tuning; removed every persona separately for Ridge LOPO; removed each canonical cluster for all four model families; ran 100 joint target-row permutations; fit training-only standardized-profile PCA retaining >=95% variance for neighbor distance and reconstruction-residual OOD context; trained final transparent raw-profile bundles only after validation; and generated deterministic percentile-edit examples.
+Synthetic validation: Reconstructed the canonical PCA basis from all 275 raw mean-pooled role vectors with sign alignment (max abs coordinate error 1.207e-06, strict tolerance 1e-05). Selected 20 deterministic near and 20 distant disjoint source pairs; for each pair, omitted both endpoints, tuned Ridge on the other 273 profiles, and evaluated raw convex activation-vector mixtures at alpha 0.25/0.50/0.75. The mixture remained on canonical raw activation scale for PCA projection and was normalized only to compute its trait-cosine profile.
+Outputs: `nested_cv_oof_predictions.csv` (22,000 rows); `leave_one_persona_out_predictions.csv` (550 rows, raw and quantile); `leave_one_cluster_out_predictions.csv` (1,100 rows across four models); `permutation_control.csv` (100 rows); `synthetic_interpolation_predictions.csv` (120 rows); counterfactual examples/sweep; nearest-profile reference; `comparison_predictors.json`; `ood_reference.json`; `verification_report.json`; `source_manifest.json`; and active artifact inventory.
+Key result: Raw Ridge LOPO R2=0.999522/0.998811/0.999611 and normalized 3D RMSE=0.0454. Quantile LOPO R2=0.997556/0.988048/0.989209 and normalized 3D RMSE=0.1590. Aggregate Ridge leave-one-cluster-out R2=0.998692/0.997740/0.999338 with normalized 3D RMSE=0.0680 and mean error 1.68x LOPO. Permutation mean R2=-0.0244 (p95=-0.0075). Endpoint-held-out synthetic R2=0.995266/0.984377/0.997144.
+Dependent analyses: Paper 1.5 same-space trait-geometry evidence and appendix/methods provenance; Paper 2/local-manifold experiment planning; later preregistered behavioral validation in which a genuinely new elicited Qwen persona coordinate is compared against a frozen prediction.
+Current status: Active, complete first-stage predictor/generalization analysis. Ridge on raw-cosine profiles is canonical V1 within this analysis; the directory itself remains `active` rather than a repository-wide canonical artifact.
+Notes/caveats: Both features and targets share Qwen role-vector provenance, so near-ceiling prediction is compatible with geometric basis coverage and is not independent psychological validation. Percentile counterfactuals are predictions under an empirical marginal edit, not observed behavior or causal interventions. OOD labels combine retained-space neighbor distance, discarded-space PCA reconstruction residual, and marginal range checks; they are heuristic, not calibrated probabilities. Generalization to a newly elicited persona, other models, frontier systems, or humans remains a hypothesis.
+
+## persona_trait_surface_viewer
+
+Artifact: Five-group 3D trait fabric landscape with stronger height colors, node-free mode, semi-transparent least-squares flat-plane comparison, flat-plane-only mode, yaw/pitch/roll/zoom dials, numeric entry and camera presets.
+Location: `research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html`; method: `trait_surface_methodology.md`; source hashes: `trait_surface_manifest.json`; output hashes/URLs: `artifact_inventory.csv`.
+Created: 2026-09-09 by Codex (exact runtime identifier not recorded); activation source Qwen/Qwen3-32B. No new activations, GPU, API, generation or judging.
+Inputs: Unchanged trait-ridge data, category definitions and manifest; canonical role geometry; prior trait-profile provenance audit; working emotion-surface interpolation/UI conventions.
+Procedure: Equal-weight average of three within-trait percentiles for each of five existing editorial groups: exploration, response, scrutiny, challenge, affiliation. 1,375 group rows and original constituent scores. No group re-ranking, fitted weights or PCA refit. Reuse 61-by-61 thin-plate meshes, three smoothing settings and unchanged hull/density masks; clip interpolated fabric to 0-100 while preserving exact nodes. For each selected PC plane and group, fit an ordinary least-squares plane to an intercept plus centered/common-scale PC coordinates, evaluate it on the same supported grid, and compare it with each rolling fabric. Fixed vivid height colors span 0-100 in every group. Camera math has explicit yaw/pitch/roll/distance conversion; node-free mode also removes pins, connectors and reference plane, while flat-plane-only mode leaves only the comparison plane and axes.
+Verification: Exact aggregation, coordinates and members; all 45 mesh variants plus flat-plane/adherence schema; source hashes; 225 camera round-trips plus poles; six ordered planes, node visibility, flat-plane visibility, flat-only suppression, rapid camera/group updates, presets, numeric controls and persistence tested using Plotly/DOM doubles. Static SVG/Sharp scientific preview visually inspected. Browser-use blocked the local URL; no workaround attempted and no new WebGL screenshot claimed.
+Caveats: Editorial groups are not validated factors; mean member percentile is not percentile rank of the composite. Same-space activation-cosine evidence, not independent psychology or measured trait prevalence. Surface and flat-plane fit errors are in-sample; flat adherence is a descriptive 0-100 score based on clipped rolling-fabric R2, not predictive validation or a confidence measure. 73/74,820 supported rolling-grid values clipped, with full diagnostics. Do not infer an inverse PC1/PC2 relationship from this UI task. Existing viewers, claims and findings unchanged.
+
+## persona_trait_ridge_plots
+
+Artifact: Three full 275-persona PC-ranked ridge profiles for 15 of the 240 previously mapped Qwen traits.
+Location: `research/outputs/persona_trait_ridge_plots/persona_trait_ridges.html`; method: `persona_trait_ridge_methodology.md`; source hashes: `persona_trait_ridge_manifest.json`; output hashes/raw URLs: `artifact_inventory.csv`.
+Created: 2026-09-09 by Codex (exact runtime identifier not recorded). Activation source: Qwen/Qwen3-32B; no GPU, generation, new activations, API or judge calls.
+Inputs: Canonical `geometry_viz_data.json` roles.names/pca3d; primary 275-by-240 `trait_persona_prediction/persona_trait_similarity_matrix.csv`; the PC2 stratified joined copy; `data/traits/trait_list.json`; existing generator and trait-profile provenance audit.
+Procedure: Exact primary-matrix values for 15 editorially selected traits in five descriptive groups (exploration, response, scrutiny, challenge, affiliation). Per-trait midrank percentile gives ridge height; raw cosine and population z-scores retained. Same PC coordinates and descending ranks in all three plots. PCHIP connects categorical scores without overshoot. The matrix averages each released tensor's 64 rows before normalization; it is not the single-layer emotion readout.
+Verification: All 66,000 source/joined cosine values agree within 1e-12 (max 9.986e-17); 4,125 exact selected rows; 825 ridges; 12,375 markers; independently checked percentiles, geometry and ranks; full static SVG/PNG renders and linked-selection unit tests. Overview visually inspected; no live-browser QA claimed.
+Caveats: Same-space activation cosines with mixed provenance, not independent psychological ratings. Groups/order are editorial, not fitted factors, valence or a measured continuum. Percentiles compare personas within a trait, not absolute strengths across traits; curves are not probability densities. Existing emotion viewers unchanged. Claims and findings unchanged.
+
+## persona_emotion_ridge_plots
+
+Artifact: Three all-persona PC-ranked, ten-emotion ridge plots with standalone HTML, full SVG/PNG exports and 2,750 scores.
+Location: `research/outputs/persona_emotion_ridge_plots/persona_emotion_ridges.html`; method: `persona_emotion_ridge_methodology.md`; sources: `persona_emotion_ridge_manifest.json`.
+Created: 2026-09-09 by Codex (exact author runtime identifier not recorded). Activation source: Qwen/Qwen3-32B. No GPU, new activations, generation, API calls or judge calls.
+Inputs: Unchanged 275-persona `roles.pca3d` geometry; all 275 local released `[64,5120]` role tensors; the existing 171-direction full-layer-48 Qwen emotion bank; saved `qwen_valence_arousal.csv` and anchor metadata; original six-channel score table; prior hook-boundary report and extraction sources. Exact hashes are recorded.
+Procedure: Cosine of unit-normalized role row 47 and saved emotion direction; retain original six plus lonely/excited/grateful/hopeful. Recompute the same per-emotion population z-scores and midrank percentiles; all 1,650 original raw scores agree exactly. Sort categories by saved valence projection, with equal categorical spacing. Height is within-emotion percentile over all 275 roles, without per-persona peak/area normalization. PCHIP connects exact category scores without overshoot. Sort each of three full plots descending by its original PC with alphabetical tie-breaking.
+Verification: 2,750 unique rows; 825 pre-rendered ridges and 8,250 markers; independent normalization/ranking/source checks; full SVG-to-PNG rendering; linked-selection Node DOM-double tests. Overview visually inspected. These are static renders and unit tests, not new live-browser screenshots.
+Caveats: Category spacing is not calibrated valence distance; percentiles do not compare absolute emotion intensity across channels. These profiles are not probability densities, behavioral prevalence or subjective feelings. Story-last-token versus role-response-mean readout transfer remains unvalidated. The PC ordering still uses layer-averaged geometry. `CLAIMS_REGISTER.md` and `FINDINGS_LEDGER.md` unchanged.
+Generator: `run_persona_emotion_ridges.py`; checks: `verify_persona_emotion_ridges.py` and `render_ridge_images.cjs`. The plots render without JavaScript; linked highlighting is optional. Existing surface viewer files were not changed.
+
+## persona_emotion_surface_viewer plan
+
+Artifact: Implementation brief for a Qwen 3D persona emotion-affinity surface viewer.
+Location: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer_plan.md`
+Created: 2026-09-09 by Codex (GPT-6), from the user's requested interface and the preceding read-only artifact inspection.
+Source inputs: `research/visualizations/geometry_viz_data.json`; `research/visualizations/scripts/build_geometry_viz.py`; released Qwen role/trait tensors under `downloads/hf_vectors/qwen-3-32b/`; `research/emotions/scripts/extract_qwen_full.py`; saved 171-emotion directions and readout diagnostics under `research/emotions/outputs/`; role-vector structure audit and A100 hook-boundary test.
+Generating procedure: Direct documentation only; no scores, viewer, model/API calls, or GPU work generated.
+Current status: Implemented on 2026-09-09; original design retained with completion addendum. Plan base commit: `9a50682`; implementation base: `e7513f6`.
+Dependent work: Proposed six-emotion slider, two-PC plane, normalized emotion-height surface, and exact persona nodes.
+Notes/caveats: The existing PCA averages role tensors across layers. Emotion directions use story-last-token `hidden_states[48]`; corrected response clouds use the block-48 hook matching `hidden_states[49]`. The plan required matching-layer verification and disclosure of remaining pooling transfer before scoring. Surface heights are relative activation affinities, not measured response prevalence or subjective emotional experience. At plan creation, `CLAIMS_REGISTER.md` and `FINDINGS_LEDGER.md` were unchanged; the subsequent implementation and sensitivity diagnostics are recorded below.
+
+## persona_emotion_surface_viewer implementation
+
+User confirmation (2026-09-09): the user reports the completed viewer works. The supplied screenshot/URL had shown `viewer_template.html`, whose build placeholders explain that displayed page's inactive controls and missing image. User confirmation is distinct from an automated browser test; previous test caveats remain in the historical record.
+
+Startup repair (2026-09-09; base `57ec408`): the user reported an indefinitely loading local page. Added `viewer_bootstrap.js`, `verify_viewer_bootstrap.cjs`, and `viewer_bootstrap_checks.json` in the viewer directory; the UI-only rebuild embeds the existing Joy screenshot, catches early errors, reports startup stages, and times out after 15 seconds. Saved scores and meshes remain byte-identical. Node/DOM-double tests pass; the original clean-profile browser QA is historical, and actual user-profile confirmation/root-cause diagnosis remain pending. No security settings were changed and the blocked browser-tool local-file access was not bypassed.
+
+Artifact: Offline Qwen emotion-affinity landscape and 1,650 persona/emotion scores.
+Location: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_viewer.html`; entry reports `persona_emotion_surface_methodology.md` and `persona_emotion_surface_implementation_report.md` in that directory.
+Created: 2026-09-09 by Codex; exact author runtime model identifier unavailable. Activation source: Qwen/Qwen3-32B. No inference, model API calls, judges, or GPU runs.
+Inputs: Exact 275-role coordinates from `research/visualizations/geometry_viz_data.json`; 275 released `[64,5120]` role tensors; saved 171-emotion bank `research/emotions/outputs/emotion_readout_directions_qwen3_32b_full_layer48.pt`; extractor, hook-ordering source, previous A100 boundary test, and saved emotion-training mean/nuisance PC for sensitivity only. All source hashes are in `persona_emotion_surface_manifest.json`.
+Procedure: Uncentered cosine between released role row 47 (block-47 output) and six saved emotion directions matching `hidden_states[48]`; population z-scores and midrank percentiles across all 275 roles per emotion. Preserve layer-averaged PCA coordinates exactly. Precompute regularized thin-plate-spline surfaces with three fixed smoothing levels, convex-hull/local-density support masks, and node-to-surface connectors. Axis reversal transposes the fitted surface without altering scores. The 2026-09-09 UI update changed presentation only: it uses a vivid fixed symmetric z-score palette, adds fabric-only node/reference-guide hiding, and adds synchronized yaw/pitch/roll/zoom dials with numeric entry and four view presets.
+Generator: `run_persona_emotion_surface_viewer.py`; editable UI sources `viewer_template.html`, `viewer.js`, and `camera_controls.js`; independent data checks, startup checks, and DOM-double control checks are in the same directory.
+Dependent work: Exploratory manual emotion-affinity inspection; not response-level prevalence estimation or independent validation of PC semantics.
+Caveats: Story-last-token probes and response-mean centroids have different input/pooling distributions. Layer correspondence is source-supported and does not solve that transfer problem. Preprocessing sensitivity is reported rather than used to choose attractive results. Surface fit errors are in-sample, density masks are not confidence intervals, and the categorical slider is not a valence continuum. The new control test uses Plotly/DOM doubles rather than live WebGL; existing browser checks remain historical/user-confirmed. `CLAIMS_REGISTER.md` is unchanged.
+
+## claude_full_feature_matrix.csv
+
+Artifact: Claude full latent-feature matrix, including Big Five-style scores and TF-IDF/SVD-derived features.
+Location: `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
+Created by: Claude-side feature analysis, then aligned into the shared benchmark by Codex.
+Model used: Claude for feature generation; Codex/GPT-5.5 Standard for benchmark integration.
+Source inputs: 273 common personas, canonical activation PCA3D target, Claude feature exports, semantic baseline features.
+Generating script: `research/q2_stability/qwen/scripts/shared_latent_feature_benchmark.py` for local alignment.
+Dependent analyses: shared benchmark, Big Five overlay visualization, hierarchical trait-procedural model, convergence status report.
+Current status: Established feature source for Big Five-style overlays and shared benchmark comparisons.
+Notes/caveats: Big Five scores are not true psychological measurements. The 2026-06-05 audit traces the current Big Five source back to `visualizations/bigfive_profiles.json`, generated from activation-derived cluster base scores plus role-name heuristic adjustments. The matrix covers 273 personas; `coral_reef` and `devils_advocate` are absent from this benchmark feature source.
+
+## geometry_viz_data.json
+
+Artifact: Self-contained persona geometry data for the Plotly viewer.
+Location: `research/visualizations/geometry_viz_data.json`
+Created by: Codex/GPT-5.5 Standard via visualization scripts.
+Model used: Script-author model GPT-5.5; target vectors are Qwen/Qwen3-32B Lu-style role vectors.
+Source inputs: `downloads/hf_vectors/qwen-3-32b/role_vectors/`, `research/visualizations/cluster_assignments_full.json`, assistant-axis vector metadata, nearest-neighbor computations.
+Generating script: `research/visualizations/scripts/build_geometry_viz.py`
+Dependent analyses: `research/visualizations/persona_geometry_explorer.html`, Big Five overlay viewer, PCA/UMAP visual inspection.
+Current status: Established visualization data source.
+Notes/caveats: PCA/UMAP data are visualization coordinates, not new extraction outputs. PC1 explains 0.315954 variance and aligns with the assistant-axis vector at 0.802310 cosine in the current Qwen role-vector geometry.
+
+## bigfive_geometry_overlay_data.json / .csv
+
+Artifact: Persona-aligned Big Five overlay table for the Plotly viewer.
+Location: `research/visualizations/bigfive_geometry_overlay_data.json`; `research/visualizations/bigfive_geometry_overlay_data.csv`
+Created by: Codex/GPT-5.5 Standard.
+Model used: `model_used: GPT-5.5` recorded in JSON and validation note.
+Source inputs: `geometry_viz_data.json`, `claude_full_feature_matrix.csv`, `shared_persona_residual_rankings.csv`, `shared_benchmark_summary.csv`.
+Generating script: One-time local merge performed by Codex in the 2026-05-29 visualization session.
+Dependent analyses: Big Five visualization modes in `research/visualizations/persona_geometry_explorer.html`.
+Current status: Established visualization overlay, but evidence status is heuristic/secondary.
+Notes/caveats: Per-persona Big Five predicted PC coordinates were not found in persisted benchmark outputs, so `predicted_pc1_from_bigfive`, `predicted_pc2_from_bigfive`, and `predicted_pc3_from_bigfive` are null. Big Five scores are missing for `coral_reef` and `devils_advocate`. Current overlay scores are partially activation-dependent because their underlying source uses activation-derived cluster labels as base scores.
+
+## big_five_provenance_audit outputs
+
+Artifact: Provenance and methodology audit of the Big Five overlays used in the persona geometry explorer.
+Location: `research/outputs/big_five_provenance_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, or new activations were run.
+Source inputs: `research/REPO_NAVIGATION.md`, `research/REPO_FILE_INDEX.csv`, `research/RAW_URL_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/RESEARCH_INDEX.md`, `research/RESEARCH_STATE.md`, `research/visualizations/bigfive_geometry_overlay_data.csv`, `research/visualizations/bigfive_overlay_validation.md`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_bigfive_features.csv`, `visualizations/bigfive_profiles.json`, `visualizations/psychology_profiles.csv`, `visualizations/deep_analysis.py`, and Claude branch `myfork/claude/persona-inventory-topology-4qp10` feature-loop artifacts.
+Generating script: Direct audit with a small local CSV/JSON diagnostic; output includes `big_five_pc2_diagnostics.json` and `.csv`.
+Dependent analyses: Future Big Five overlay redesign, PC2 visual interpretation, trait-region overlay comparison, and Paper 1.5 evidential-independence caveats.
+Current status: Complete provenance audit.
+Notes/caveats: The audit classifies the current Big Five overlay as partially dependent on activation geometry because `visualizations/deep_analysis.py` uses activation-derived cluster labels as Big Five base scores before role-name heuristic adjustments. It found no dependency on the 240-trait vector/profile matrix. Recommendation: rebuild any evidence-bearing Big Five layer; retain the current overlay only if relabeled as a heuristic cluster-conditioned semantic summary.
+
+## same-space activation-derived Big Five overlay outputs
+
+Artifact: Same-space Big Five overlay built directly from released role and trait activation vectors.
+Location: `research/outputs/same_space_big_five_overlay/`
+Created by: Codex/GPT-5.5.
+Model used: Script-author and analysis model GPT-5.5; no model APIs, pods, GPUs, or new activations were run.
+Source inputs: released Qwen/Qwen3-32B, Llama-3.3-70B, and Gemma-2-27B role and trait vectors under `downloads/hf_vectors/{qwen-3-32b,llama-3.3-70b,gemma-2-27b}/`; trait vocabulary in `data/traits/trait_list.json`; cross-model role coordinates and clusters in `research/outputs/cross_model_cluster_topology/per_model_cluster_assignments.csv`; legacy heuristic overlay data in `research/visualizations/bigfive_geometry_overlay_data.csv` used only for descriptive continuity comparison; and prior provenance caveats in `research/outputs/big_five_provenance_audit/` and `research/outputs/trait_profile_provenance_audit/`.
+Generating script: `research/outputs/same_space_big_five_overlay/run_same_space_big_five_overlay.py`.
+Dependent analyses: Future evidence-bearing Big Five visualization layers, Paper 1.5 trait-overlay caveats, Qwen/Llama/Gemma same-space trait-vector inspection, and possible replacement or relabeling of the old heuristic Big Five explorer overlay.
+Current status: Active same-space evidence layer.
+Notes/caveats: Each Big Five direction is a predeclared positive-minus-negative facet composite over available released trait vectors, then applied by cosine projection to released role vectors. This is activation-derived trait-vector projection, not independent psychometric rating, human judgment, or behavioral validation. The old heuristic Big Five overlay is retained only as a descriptive comparison and should not be used as source evidence for this layer.
+
+## role_free_directional_prompt_pilot outputs
+
+Artifact: Small role-free prompt-design packet for manual review before any directional Qwen PC1/PC2 activation pilot.
+Location: `research/outputs/role_free_directional_prompt_pilot/`
+Created by: Codex/GPT-5.5.
+Model used: Prompt-design and report-author model GPT-5.5; no model APIs, pods, GPUs, activations, or response generations were run.
+Source inputs: User-specified prompt-design constraints; canonical startup and navigation files; current Qwen PC1/PC2 interpretation context in `research/RESEARCH_STATE.md` and `research/THREAD_START.md`.
+Generating script: Direct local generation with a simple exact-term forbidden-word check; no standalone helper script was required.
+Dependent analyses: Future manual prompt review, no-GPU prompt scoring, or later Qwen activation pilot testing whether ordinary task demands induce predictable PC1/PC2 movement without role/persona labels.
+Current status: Superseded by `research/outputs/role_free_directional_prompt_pilot_v2/`.
+Notes/caveats: The prompts are hypotheses about task-demand pressure only. They do not establish activation movement, forecaster performance, or axis validity. Prompt text avoids explicit roles, personas, occupations, traits, Big Five language, PC/PCA/geometry language, and task-specific target labels; metadata and report text necessarily retain PC1/PC2 labels for auditability. The first packet is retained for comparison because its observed design weaknesses motivated the v2 replacement.
+
+## role_free_directional_prompt_pilot_v2 outputs
+
+Artifact: Second-generation role-free prompt-design packet for manual review before any directional Qwen PC1/PC2 activation pilot.
+Location: `research/outputs/role_free_directional_prompt_pilot_v2/`
+Created by: Codex.
+Model used: Prompt-design and report-author model Codex/GPT-5.5; no model APIs, pods, GPUs, activations, response generations, or activation runs were performed.
+Source inputs: User-specified v2 prompt-design constraints; canonical startup and navigation files; v1 prompt packet at `research/outputs/role_free_directional_prompt_pilot/`; current PC1/PC2 interpretation context in `research/RESEARCH_STATE.md` and `research/THREAD_START.md`.
+Generating script: Direct local generation of CSV/JSON/report artifacts; no standalone helper script was required.
+Dependent analyses: Manual review, possible no-GPU prompt scoring, and later role-free Qwen activation testing of whether task demands alone can induce predictable PC1/PC2 movement.
+Current status: Active prompt-design packet.
+Notes/caveats: This is design evidence only. The packet intentionally broadens positive-PC1 prompts toward eligibility, validity, completeness, and standard-satisfaction judgments, and broadens high-PC2 prompts toward local choices under changing circumstances, incomplete information, scarce time, and imperfect resources. It does not establish activation movement, prompt-to-geometry forecast validity, or PC-axis interpretation.
+
+## role_free_directional_steering_prompts outputs
+
+Artifact: True role-free directional steering prompt packet for manual review before any directional Qwen PC1/PC2 activation pilot.
+Location: `research/outputs/role_free_directional_steering_prompts/`
+Created by: Codex.
+Model used: Prompt-design and report-author model Codex/GPT-5.5; no model APIs, pods, GPUs, activations, response generations, or activation runs were performed.
+Source inputs: User-specified steering-prompt constraints; canonical startup and navigation files; v2 probe packet at `research/outputs/role_free_directional_prompt_pilot_v2/`; current PC1/PC2 interpretation context in `research/RESEARCH_STATE.md` and `research/THREAD_START.md`.
+Generating script: Direct local generation of CSV/JSON/report artifacts; no standalone helper script was required.
+Dependent analyses: Manual review, possible no-GPU prompt scoring, and later role-free Qwen activation testing of whether response-guidance instructions can steer PC1/PC2 movement without role/persona labels.
+Current status: Active steering-prompt packet.
+Notes/caveats: This packet is distinct from the v2 probe packet. It contains domain-general instruction prompts intended to shape response production directly, not scenario questions intended to measure a response. It does not establish activation movement, prompt-to-geometry forecast validity, or PC-axis interpretation.
+
+## no_label_elicitation_prompt_packet_v1 outputs
+
+Artifact: Canonical v1 no-label elicitation prompt packet for Paper 1.5 manual review.
+Location: `research/outputs/no_label_elicitation_prompt_packet_v1/`
+Created by: Claude-derived prompt set with GPT-assisted PC2 revisions, archived by Codex/GPT-5.5.
+Model used: Archival and formatting by GPT-5.5; no model APIs, pods, GPUs, activations, projections, response generations, or result analyses were run.
+Source inputs: User-supplied final 60-prompt text in the 2026-06-09 chat request, including six reasoning paragraphs and required source note.
+Generating script: Direct local archival into CSV, JSON, and Markdown report; only structural formatting and CSV/JSON escaping were applied.
+Dependent analyses: Future Paper 1.5 no-label elicitation validation experiment after human review.
+Current status: Canonical prompt packet pending human review.
+Notes/caveats: This packet freezes the supplied stimulus set verbatim for manual review. It is not an experiment result and should not be treated as evidence of activation movement until a later activation run is explicitly performed and analyzed.
+
+## pc2_muted_pc1_extremes outputs
+
+Artifact: PC2 extremes inspection after muting PC1 to the central percentile band.
+Location: `research/outputs/pc2_muted_pc1_extremes/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, or new activations were run.
+Source inputs: `research/visualizations/geometry_viz_data.json`.
+Generating script: `research/outputs/pc2_muted_pc1_extremes/run_pc2_muted_pc1_extremes.py`
+Dependent analyses: PC2 interpretation language, future PC1-controlled matched-pair rater diagnostics, Paper 1.5 axis-interpretation caveats.
+Current status: Descriptive coordinate-inspection diagnostic.
+Notes/caveats: The selected central 45th-55th percentile PC1 band contains 27 roles with PC1 bounds -2.747954 to 6.917357. High PC2 roles are mostly situated/social/reactive; low PC2 roles are mostly abstract/integrative/systemic/procedural. The band is small and cluster-skewed, so this refines rather than finalizes PC2 interpretation.
+
+## shared_persona_residual_rankings.csv
+
+Artifact: Per-persona residual ranking table across semantic, Codex retained, Big Five, and combined feature families.
+Location: `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_persona_residual_rankings.csv`
+Created by: Codex/GPT-5.5 Standard.
+Model used: Script-author and analysis model GPT-5.5 Standard; Claude features included as input.
+Source inputs: shared benchmark feature matrices, canonical activation PCA3D target, five deterministic split assignments.
+Generating script: `research/q2_stability/qwen/scripts/shared_latent_feature_benchmark.py`
+Dependent analyses: Big Five overlay residual color mode, residual case selection, hierarchical and residual-manifold interpretation.
+Current status: Established diagnostic artifact.
+Notes/caveats: Residual ranks diagnose prediction error under feature models. They are not causal explanations of why a persona occupies a geometry region.
+
+## shared_latent_feature_benchmark outputs
+
+Artifact: Shared benchmark package comparing semantic baseline, Codex retained features, Claude Big Five, Claude full matrix, and combined features.
+Location: `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`
+Created by: Codex/GPT-5.5 Standard, using Codex and Claude feature inputs.
+Model used: Codex/GPT-5.5 Standard for script and analysis; Claude for Claude-side feature matrices.
+Source inputs: canonical activation PCA3D coordinates, Claude cluster-cosine pseudo-PCA3D coordinates, semantic baseline features, Codex retained features, Claude Big Five/full feature matrices.
+Generating script: `research/q2_stability/qwen/scripts/shared_latent_feature_benchmark.py`
+Dependent analyses: convergence status, Big Five performance claim, visual overlay source selection, later hierarchical model.
+Current status: Established apples-to-apples benchmark.
+Notes/caveats: Cleanest current comparison uses 273 common personas and five deterministic Codex outer-loop splits. Big Five reaches canonical activation PCA3D R2 0.612979 vs semantic baseline 0.389397; Codex retained reaches 0.490090. Combined features do not beat Big Five on canonical activation PCA.
+
+## hierarchical_trait_procedural_model outputs
+
+Artifact: Two-stage trait-plus-procedural predictor of canonical activation PCA3D.
+Location: `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/`
+Created by: Codex/GPT-5.5 Standard.
+Model used: Analysis and script-author model GPT-5.5 Standard.
+Source inputs: shared benchmark semantic controls, Claude Big Five-style features, selected Codex procedural/behavioral features, canonical activation PCA3D target, shared splits.
+Generating script: `research/q2_stability/qwen/scripts/hierarchical_trait_procedural_model.py`
+Dependent analyses: layered geometry interpretation, residual-manifold analysis baseline, findings ledger.
+Current status: Provisional but replicated under the shared split/evaluation path.
+Notes/caveats: Hierarchical model reaches R2 0.622 vs trait stage 0.613, a modest +0.009 increment. This supports a small local residual contribution from procedural features, not a strong standalone procedural ontology.
+
+## residual_manifold_analysis outputs
+
+Artifact: Third-layer diagnostic over residual structure after semantic, Big Five, and procedural modeling.
+Location: `research/q2_stability/qwen/outputs/residual_manifold_analysis/`
+Created by: Codex/GPT-5.5 Standard.
+Model used: Analysis and script-author model GPT-5.5 Standard.
+Source inputs: hierarchical model baseline, full no-label prompts, no-label semantic-neighborhood metadata, bridge/displacement metadata, residual histories, canonical activation PCA context.
+Generating script: `research/q2_stability/qwen/scripts/residual_manifold_analysis.py`
+Dependent analyses: residual-layer interpretation, developmental/liminal/collective high-residual hypotheses.
+Current status: Provisional diagnostic.
+Notes/caveats: Residual-manifold model reaches R2 0.632 vs hierarchical baseline 0.622. The improvement is small and should be treated as evidence for candidate residual regions, not a solved third-layer model.
+
+## residual_svd_interpretation outputs
+
+Artifact: Reconstruction and interpretation of Claude's TF-IDF SVD15 residual signal.
+Location: `research/q2_stability/qwen/outputs/residual_svd_interpretation/`
+Created by: Codex/GPT-5.5 Standard, reconstructing Claude's committed SVD15 result.
+Model used: Claude produced the original residual-SVD result; Codex/GPT-5.5 Standard reconstructed and interpreted local components.
+Source inputs: full no-label prompt corpus, Claude residual report/run script, canonical activation PCA3D target, sem+BigFive baseline.
+Generating script: `research/q2_stability/qwen/scripts/residual_svd_interpretation.py`
+Dependent analyses: lexical/register layer claim, Paper 1.5 layered geometry framing.
+Current status: Provisional but strong predictive result.
+Notes/caveats: Sem+BigFive+SVD15 reaches R2 0.707 vs sem+BigFive 0.613. SVD15 is an unsupervised text basis that may exploit prompt-corpus/register artifacts; it should be interpreted as lexical/register signal until distilled into human-readable features and retested.
+
+## semantic topology outputs
+
+Artifact: Semantic-only and semantic-vs-activation topology analyses.
+Location: `research/assistant_axis_methodology/semantic_vs_activation_geometry/`, `research/assistant_axis_methodology/deep_semantic_topology_analysis.md`, `research/assistant_axis_methodology/semantic_geometry_standalone_interpretation.md`
+Created by: Codex/GPT-5.5 Standard.
+Model used: Analysis and script-author model GPT-5.5 Standard; local semantic methods only.
+Source inputs: canonical role list, original prompts, no-label prompts, available activation cluster assignments, local semantic embeddings or TF-IDF/SVD fallback.
+Generating scripts: `research/assistant_axis_methodology/scripts/compare_semantic_vs_activation_geometry.py`, `research/assistant_axis_methodology/scripts/deep_semantic_topology_analysis.py`
+Dependent analyses: semantic-prior framing, no-label activation stress-test design, cluster-overlap analysis.
+Current status: Established as prompt-space due diligence; activation implications remain bounded.
+Notes/caveats: Semantic topology partially predicts activation topology and survives label removal, but activation geometry is not reducible to lexical semantics.
+
+## trait replication outputs
+
+Artifact: Codex-only constrained trait replication loop.
+Location: `research/q2_stability/qwen/outputs/codex_trait_replication/`
+Created by: Codex/GPT-5.5 Standard.
+Model used: Analysis and script-author model GPT-5.5 Standard.
+Source inputs: canonical activation PCA3D target, semantic baseline, Claude Big Five reference, five deterministic shared splits.
+Generating script: `research/q2_stability/qwen/scripts/codex_trait_replication_loop.py`
+Dependent analyses: evaluator/agent convergence discussion, Big Five robustness framing.
+Current status: Negative/provisional replication.
+Notes/caveats: Codex trait model reaches R2 0.398 vs semantic baseline 0.389 and far below Claude Big Five R2 0.613. This is weak positive trait signal, not a successful Big Five-level replication.
+
+## procedural replication / Codex retained outputs
+
+Artifact: Codex retained latent-feature and procedural/behavioral feature family outputs.
+Location: `research/q2_stability/qwen/outputs/iterative_outer_loop/`, `research/q2_stability/qwen/outputs/latent_feature_framing_ablation/`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/codex_retained_features.csv`
+Created by: Codex/GPT-5.5 Standard.
+Model used: Analysis and script-author model GPT-5.5 Standard.
+Source inputs: canonical activation PCA3D target, semantic baseline, role metadata, prompt-derived features, five deterministic split assignments.
+Generating scripts: `research/q2_stability/qwen/scripts/iterative_latent_feature_outer_loop.py`, `research/q2_stability/qwen/scripts/latent_feature_framing_ablation.py`, `research/q2_stability/qwen/scripts/shared_latent_feature_benchmark.py`
+Dependent analyses: procedural/operating-mode layer claim, convergence status, hierarchical model stage B.
+Current status: Established as useful but weaker than Big Five for global geometry.
+Notes/caveats: Codex retained features reach R2 0.490 vs semantic baseline 0.389 in the shared benchmark. They do not transfer to Claude's direct pseudo-PCA target over semantic baseline and should be framed as local/procedural explanatory candidates rather than the best global predictor.
+
+## no-label prompt ablation outputs
+
+Artifact: Label-removed prompt dataset and semantic comparison.
+Location: `research/assistant_axis_methodology/no_label_prompt_ablation/`
+Created by: Codex/GPT-5.5 Standard.
+Model used: Codex/GPT-5.5 Standard for rewrites, validation, and analysis.
+Source inputs: canonical role instruction JSONs, label-exposure audit, canonical system prompts and role list.
+Generating scripts: `research/assistant_axis_methodology/scripts/rewrite_role_prompts_no_label_codex_gpt55.py`, `validate_no_label_prompt_ablation.py`, `compare_original_vs_no_label_prompt_semantics.py`
+Dependent analyses: semantic topology, no-label activation stress-test design, methodology caveats.
+Current status: Established prompt-space stress test input.
+Notes/caveats: No-label prompts remove explicit role labels but still preserve behavioral descriptors, so they do not eliminate all role-identifying content.
+
+## cluster overlap outputs
+
+Artifact: Overlap analysis between activation-space clusters, original semantic prompt clusters, and no-label semantic prompt clusters.
+Location: `research/assistant_axis_methodology/cluster_overlap_analysis.md` and supporting CSV/JSON files in `research/assistant_axis_methodology/`
+Created by: Codex/GPT-5.5 Standard.
+Model used: Analysis and script-author model GPT-5.5 Standard.
+Source inputs: semantic-vs-activation geometry outputs, no-label prompt geometry outputs, activation-cluster mappings.
+Generating script: `research/assistant_axis_methodology/scripts/cluster_overlap_analysis.py`
+Dependent analyses: stable-anchor/bridge-role selection, no-label activation stress-test role selection.
+Current status: Established overlap due diligence.
+Notes/caveats: Structured partial overlap is the finding. Exact equality between semantic and activation clusters is not expected and should not be claimed.
+
+## persona_geometry_explorer.html
+
+Artifact: Interactive Plotly persona geometry viewer.
+Location: `research/visualizations/persona_geometry_explorer.html`
+Created by: Codex/GPT-5.5 Standard.
+Model used: Script-author model GPT-5.5 Standard.
+Source inputs: `geometry_viz_data.json`, `bigfive_geometry_overlay_data.json`, `trait_region_overlay_data.json`, `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_cells.csv`, and `research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv`.
+Generating script: Manual HTML/JS edits plus prior `build_geometry_viz.py` data generation and `research/visualizations/run_integrate_trait_regions_into_explorer.py` for the native trait-region overlay mode.
+Dependent analyses: visual inspection of PCA/UMAP geometry, cluster coloring, Big Five overlays, selection/lasso review, and PC1 x PC2 local trait-enrichment inspection.
+Current status: Established visualization tool with native trait-region overlay mode.
+Notes/caveats: Visualization is self-contained and intentionally large. The trait-region overlay is exploratory support, not a statistical test. Trait labels are same-space Qwen activation-vector cosine enrichments with mixed provenance and should not be described as independent psychological ratings.
+
+## persona geometry trait-region overlay integration
+
+Artifact: Native PC1 x PC2 trait-region overlay mode inside the Persona Geometry Explorer.
+Location: `research/visualizations/persona_geometry_explorer.html`, with companion data/report/script under `research/visualizations/trait_region_overlay_data.json`, `trait_region_overlay_integration_report.md`, and `run_integrate_trait_regions_into_explorer.py`.
+Created by: Codex/GPT-5.5 Standard.
+Model used: Script-author and integration model GPT-5.5 Standard.
+Source inputs: canonical role geometry in `research/visualizations/geometry_viz_data.json`, prior 5 x 3 quantile cells in `research/outputs/qwen_pc2_trait_region_overlay/qwen_pc1_pc2_trait_region_cells.csv`, and joined Qwen role-by-trait profile matrix in `research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv`.
+Generating script: `research/visualizations/run_integrate_trait_regions_into_explorer.py`.
+Dependent analyses: PC2 visual inspection, PC1-band-relative trait-region review, Paper 1.5 exploratory visualization, future axis interpretation figures.
+Current status: Active integrated visualization mode.
+Notes/caveats: Quantile bands are the stable default because they control cell counts. Fixed explorer-grid regions are descriptive only and sparse cells are flagged. Color semantics are separated: point color indicates selected point overlay, label text indicates locally enriched traits, and label border/chip indicates dominant trait-region cluster when used.
+
+## multimodel ordered trait-region viewer
+
+Artifact: Multi-model ordered-axis trait-region viewer for Qwen, Llama, and Gemma.
+Location: `research/outputs/multimodel_ordered_trait_region_viewer/`.
+Created by: Codex/GPT-5.5.
+Model used: Script-author and analysis model GPT-5.5.
+Source inputs: released role and trait vectors under `downloads/hf_vectors/qwen-3-32b/`, `downloads/hf_vectors/llama-3.3-70b/`, and `downloads/hf_vectors/gemma-2-27b/`; Qwen reference geometry and clusters from `research/visualizations/geometry_viz_data.json`; prior Qwen overlay method and caveats from `research/outputs/qwen_pc2_trait_region_overlay/`; trait-profile provenance caveats from `research/outputs/trait_profile_provenance_audit/`.
+Generating script: `research/outputs/multimodel_ordered_trait_region_viewer/run_multimodel_ordered_trait_region_viewer.py`.
+Dependent analyses: cross-model PC-axis visual inspection, ordered-axis PC1/PC2 and PC2/PC1 comparison, PC2/PC3 exploratory trait-region review, future Paper 1.5 visualization selection.
+Current status: Active exploratory visualization and data bundle.
+Notes/caveats: The selected x-axis defines the conditioning baseline, so reversed views are distinct analyses. Qwen uses canonical coordinates from `geometry_viz_data.json`; Llama and Gemma coordinates are recomputed from layer-mean role vectors and sign-oriented to the Qwen reference. Trait labels are same-space activation-vector cosine enrichments, not independent psychological ratings or solved PC interpretations. Quantile views are stable defaults; fixed-grid views are descriptive and sparse cells are flagged.
+
+## blinded axis rubric validation outputs
+
+Artifact: Coordinate-blind no-label prompt rubric validation for PC1, PC2, and PC3 interpretations.
+Location: `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`
+Created by: Codex/GPT-5.5.
+Model used: Script-author and analysis model GPT-5.5; numeric scoring was deterministic local code, not model inference.
+Source inputs: `research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl` and `research/visualizations/geometry_viz_data.json`.
+Generating script: `research/q2_stability/qwen/scripts/blinded_axis_rubric_validation.py`
+Dependent analyses: PC1/PC2/PC3 interpretation confidence, future blinded rater study design, Paper 1.5 methodology caveats.
+Current status: Provisional validation screen.
+Notes/caveats: Uses all five no-label prompts for all 275 personas and excludes persona names/PCA coordinates during scoring. It is a lexical-semantic proxy, not a true independent human or LLM blinded-rating study. Target correlations were positive but modest: PC1 r=0.247, PC2 r=0.224, PC3 r=0.349; matched-pair validation was weak.
+
+## blinded axis rater study outputs
+
+Artifact: Reading-based blinded PCA-axis rater study over anonymized persona dossiers.
+Location: `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`
+Created by: Codex/GPT-5.5.
+Model used: Codex/GPT-5.5 as rater, analysis model, and script-author model.
+Source inputs: `research/assistant_axis_methodology/no_label_prompt_ablation/no_label_role_prompts.jsonl`, `research/visualizations/geometry_viz_data.json`, and corpus inventory over local response/prompt sources.
+Generating script: `research/q2_stability/qwen/scripts/blinded_axis_rater_study.py`
+Dependent analyses: PC1/PC2/PC3 interpretation confidence, Paper 1.5 axis language, future independent-rater study design.
+Current status: Provisional but stronger than the lexical-proxy screen.
+Notes/caveats: Full 275-persona rollout-response corpus was not found locally; dossiers use all five no-label rewritten prompts per persona. Persona names, PCA coordinates, clusters, Big Five scores, residuals, and prior labels were hidden from the rater. This is Codex-as-rater rather than independent human or second-model annotation. Target correlations were PC1 r=0.558, PC2 r=0.373, PC3 r=0.690; matched-pair validation was PC1 75%, PC2 100%, PC3 95%.
+
+## pc2 conditional validation outputs
+
+Artifact: Conditional PC2 validation after approximate PC1 control.
+Location: `research/q2_stability/qwen/outputs/pc2_conditional_validation/`
+Created by: Codex/GPT-5.5 High Reasoning.
+Model used: Analysis and script-author model GPT-5.5 High Reasoning; candidate scores reused from the prior Codex/GPT-5.5 blinded rater study.
+Source inputs: `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv` and `research/q2_stability/qwen/outputs/blinded_axis_rater_study/axis_rater_scores.csv`.
+Generating script: One-time local analysis for the 2026-05-30 conditional PC2 validation session.
+Dependent analyses: PC2 interpretation language, matched-pair follow-up design, Paper 1.5 axis-interpretation confidence.
+Current status: Provisional but strongest current PC2 disentanglement result.
+Notes/caveats: Uses 273 common personas and 10 PC1 percentile bands. The ratings are prompt-dossier based rather than full rollout-response based. Abstraction is the strongest residual PC2 predictor after PC1 band control (r=-0.618, R2=0.382); coherent action is weaker (r=+0.427, R2=0.182); uncertainty exposure fails (r=-0.026, R2=0.001).
+
+## extraction equivalence audit outputs
+
+Artifact: Source/artifact audit comparing original/local Assistant Axis extraction code, prior adaptive trickster/editor extraction, and the H100 percentile-edge extraction runner.
+Location: `research/outputs/extraction_equivalence_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, or new activations were run.
+Source inputs: `pipeline/2_activations.py`, `assistant_axis/internals/activations.py`, `assistant_axis/internals/spans.py`, `assistant_axis/internals/conversation.py`, `assistant_axis/pca.py`, `research/q2_stability/qwen/scripts/phase1_inference_only_v4.py`, `research/q2_stability/qwen/scripts/phase1_inference_only_editor.py`, `research/q2_stability/qwen/outputs/paper1_5/`, `research/outputs/h100_percentile_edge_validation/`, and `research/outputs/h100_diagnostic_followups/`.
+Generating script: `research/outputs/extraction_equivalence_audit/run_extraction_equivalence_audit.py`
+Dependent analyses: H100 D01 diagnostic status, forecast-observed anomaly interpretation, decision whether to calibrate immediately or first run a hook-vs-hidden-states equivalence test.
+Current status: Partial methodological resolution; D01 remains `in_progress`.
+Notes/caveats: Projection, response-token mean pooling, model identity, and prior hook-based trickster replication are verified. The prior trickster score>=2 vector matched the downloaded trickster vector at cosine 0.957557, and H100 PCA reproduction max error was 1.207e-06. Activation-site equivalence remains unresolved because source/prior adaptive extraction uses forward hooks on `model.model.layers[48]`, while H100 validation used `out.hidden_states[48]`.
+
+## public-source extraction equivalence audit outputs
+
+Artifact: Public-source audit of whether H100 `outputs.hidden_states[48]` extraction is equivalent to the original Assistant Axis Qwen layer-48 hook convention.
+Location: `research/outputs/public_source_extraction_equivalence/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, or new activations were run.
+Source inputs: Official Assistant Axis source files under `pipeline/` and `assistant_axis/`, Hugging Face `lu-christina/assistant-axis-vectors` dataset metadata, Hugging Face `belmore/assistant-axis-vector-prompts` metadata, Qwen/Qwen3-32B config metadata, Transformers Qwen3 4.51.0 source semantics, prior trickster/editor adaptive extraction scripts, current H100 runner, and the earlier extraction-equivalence audit.
+Generating script: `research/outputs/public_source_extraction_equivalence/run_public_source_extraction_equivalence_audit.py`
+Dependent analyses: D01 diagnostic status, decision whether H100 PC2/PC3 anomalies can be interpreted behaviorally, and whether to rerun H100 extraction with a corrected boundary.
+Current status: Public-source mismatch likely; D01 is open pending a tiny hook-vs-hidden-states confirmation test.
+Notes/caveats: Official/prior extraction hooks `model.model.layers[48]` and captures decoder layer-48 post-MLP residual output. Public Transformers/Qwen3 semantics indicate `hidden_states[48]` is the input to decoder layer 48 / output after layer 47, while the layer-48 hook output likely corresponds to `hidden_states[49]`. PCA reproduction max error 1.207e-06 remains valid for projection-basis correctness only.
+
+## role rollout artifact audit outputs
+
+Artifact: Public/local audit of original Assistant Axis role-vector rollout inputs, generated-response availability, judge-score availability, retained-filter availability, and the remembered "64" count.
+Location: `research/outputs/role_rollout_artifact_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, activations, or response generation were run.
+Source inputs: Official Assistant Axis paper/arXiv, official GitHub `data/roles/instructions/`, `data/extraction_questions.jsonl`, `pipeline/`, `assistant_axis/generation.py`, Hugging Face `lu-christina/assistant-axis-vectors`, Hugging Face `belmore/assistant-axis-vector-prompts`, local prompt artifact inventory, local extraction-equivalence audit, local trickster/editor adaptive extraction artifacts, `research/RESEARCH_STATE.md`, and `research/FINDINGS_LEDGER.md`.
+Generating script: `research/outputs/role_rollout_artifact_audit/run_role_rollout_artifact_audit.py`
+Dependent analyses: Revised instance-level prompt-to-centroid forecasting design, successful-rollout-only dataset feasibility, and correction of earlier "64-row cap" language.
+Current status: Established public-data boundary: intended inputs are reconstructable; original generated responses, judge scores, and retained masks are not public.
+Notes/caveats: The intended 1,200 combinations per role are reconstructable as 5 positive role instructions x 240 extraction questions. Exact token-level prompts depend on tokenizer/chat-template/runtime version. The remembered "64" is resolved as Qwen layer count in `[64,5120]` released vectors plus local adaptive-extraction sample/count usage, not as a public original retained-response count.
+
+## within-role displacement design outputs
+
+Artifact: Reusable design packet for a user-selected one-role within-role displacement study.
+Location: `research/outputs/within_role_displacement_design/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activations, or response generation were run.
+Source inputs: `data/roles/instructions/*.json`, `data/extraction_questions.jsonl`, `research/visualizations/geometry_viz_data.json`, `research/outputs/role_rollout_artifact_audit/`, and `research/outputs/prompt_artifact_inventory/`. Requested method-card files under `/mnt/data/` were not present.
+Generating script: `research/outputs/within_role_displacement_design/run_within_role_displacement_design.py`
+Dependent analyses: Target-role selection, manual/LLM-assisted instruction/question displacement scoring, selected-role 1,200-input reconstruction, and later corrected-hook within-role GPU displacement analysis after D01/T01 is resolved.
+Current status: Established design artifact; target role remains user-selected.
+Notes/caveats: The packet inventories 275 non-default roles with five positive instructions each and 240 shared questions. It defines centroid-relative displacement rubrics for PC1/PC2/PC3 and provides blank scoring templates. It does not score items, choose a target role, generate responses, extract activations, or overcome the public-data absence of original response-level judge scores and retained masks.
+
+## positive PC2 pilot candidate selection outputs
+
+Artifact: Positive-PC2 edge role shortlist for the first two-persona activation-cloud GPU pilot with playwright.
+Location: `research/outputs/positive_pc2_pilot_candidate_selection/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activations, or response generation were run.
+Source inputs: `research/visualizations/geometry_viz_data.json` and `data/roles/instructions/*.json`.
+Generating script: `research/outputs/positive_pc2_pilot_candidate_selection/run_positive_pc2_candidate_selection.py`
+Dependent analyses: User selection of the second persona for the first activation-cloud pilot after T01/D01 extraction-boundary verification.
+Current status: Planning artifact awaiting user selection.
+Notes/caveats: Preferred filter found 15 valid candidates using PC2 percentile >= 85 and PC1 percentile 40-75, so no fallback was needed. Primary shortlist is `amateur`, `influencer`, `newlywed`, `graduate`, and `patient`; alternates are `celebrity`, `divorcee`, `parent`, `retiree`, and `student`. This does not establish activation movement and should not be treated as empirical validation.
+
+## a100 two-role activation cloud pilot outputs
+
+Artifact: Staged GPU boundary verification and two-role response activation-cloud pilot for amateur and playwright.
+Location: `research/outputs/a100_two_role_activation_cloud_pilot/`
+Created by: Codex/GPT-5.5.
+Model used: Qwen/Qwen3-32B for response generation and activation extraction; Codex/GPT-5.5 for script authoring, orchestration, analysis, and reporting.
+Source inputs: `research/visualizations/geometry_viz_data.json`, `data/roles/instructions/amateur.json`, `data/roles/instructions/playwright.json`, `data/extraction_questions.jsonl`, and `downloads/hf_vectors/qwen-3-32b/role_vectors/*.pt`.
+Generating script: `research/outputs/a100_two_role_activation_cloud_pilot/run_a100_two_role_activation_cloud_pilot.py`
+Dependent analyses: D01/T01 extraction-boundary closeout, response-state uncertainty/T04 analysis, offline judge filtering for role-expression quality, and future region/distribution-level forecasting calibration.
+Current status: Established pilot output; pod outputs were copied back and checksummed locally before termination.
+Notes/caveats: RunPod pod `eu6ub11lshcyze` used an A100-SXM4-80GB at $1.49/hr. Boundary test showed `model.model.layers[48]` hook output matches `outputs.hidden_states[49]`, not `hidden_states[48]`. Stage 2 used direct hook extraction and generated 60 responses per role. Published centroids were near all-response centroids, but individual response clouds were broad; this supports distribution-level rather than exact single-response point-coordinate forecasting. Raw generated responses are preserved for later judge filtering; no judge API was called in this GPU task.
+
+## a100 activation cloud posthoc analysis outputs
+
+Artifact: Local posthoc analysis of amateur/playwright activation-cloud shape, bootstrap sample-size convergence, and GPT-4.1 judge-filter preparation.
+Location: `research/outputs/a100_activation_cloud_posthoc_analysis/`
+Created by: Codex/GPT-5.5.
+Model used: Codex/GPT-5.5 for script authoring and local analysis; GPT-4.1 for role-expression judging at temperature 0 in the completed follow-up judge run.
+Source inputs: `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `activation_cloud_summary_by_role.csv`, `activation_cloud_covariance_by_role.json`, `activation_cloud_distance_stats.json`, `judge_input_responses.jsonl`, and `boundary_test_report.md`.
+Generating scripts: `research/outputs/a100_activation_cloud_posthoc_analysis/run_a100_activation_cloud_posthoc_analysis.py` and `research/outputs/a100_activation_cloud_posthoc_analysis/run_gpt41_judge_filter_resume.py`
+Dependent analyses: Score==3 outlier inspection, rejected near-centroid response review, instruction/question-effect analysis, sample-size planning for future activation-cloud roles, and decision whether response-state forecasting should target role-conditioned distributions rather than exact single-response coordinates.
+Current status: Cloud shape, bootstrap, GPT-4.1 scoring, and judge-filtered cloud analysis complete.
+Notes/caveats: No GPU, pod, activation extraction, or response generation occurred in the posthoc analysis. The first judge attempt hit HTTP 429 quota and wrote a sanitized failure record, later removed after successful scoring; the completed judge run scored all 120 responses. The scripts load `OPENAI_API_KEY` from the environment or `~/.openai_api_key` without logging or committing secrets. Bootstrap estimates use unfiltered response clouds and may underestimate raw generations needed after judge filtering. Filtering reduced volume and mean response distance but moved centroids farther from the published role vectors, so the result is mixed rather than a simple sharpening toward the published centroid.
+
+## a100 activation cloud visualization and judge compare outputs
+
+Artifact: Standalone visualization package and judge-model comparison attempt for the amateur/playwright activation-cloud pilot.
+Location: `research/outputs/a100_activation_cloud_visualization_and_judge_compare/`
+Created by: Codex/GPT-5.5.
+Model used: Codex/GPT-5.5 for script authoring, visualization, and local analysis; GPT-5.5 API availability was checked but no GPT-5.5 judge scoring was run because the required temperature-0 configuration was rejected by the API.
+Source inputs: `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `research/outputs/a100_two_role_activation_cloud_pilot/judge_input_responses.jsonl`, `research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/judge_filtered_cloud_summary_by_role.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/judge_filtered_centroid_shifts.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/cloud_covariance_eigendecomp.json`, and `research/visualizations/geometry_viz_data.json`.
+Generating script: `research/outputs/a100_activation_cloud_visualization_and_judge_compare/run_cloud_viz_judge_suite.py`
+Dependent analyses: Interactive inspection of score==3 outliers, instruction/question effects, future viewer integration, and future judge-model sensitivity if a deterministic or explicitly default-temperature comparison protocol is approved.
+Current status: Visualization package complete; GPT-5.5 comparison skipped under preregistered temperature-0 constraint.
+Notes/caveats: The main geometry viewer was not modified. The standalone viewer uses Plotly from CDN and embeds a compact data bundle. GPT-5.5 appears in the local model list, but the chat-completions API rejected `temperature=0` for that model and only supports default temperature, so no apples-to-apples GPT-4.1-vs-GPT-5.5 judge comparison was produced.
+
+## activation cloud suite tool scaffold
+
+Artifact: Reusable no-GPU activation-cloud analysis scaffold for future persona-cloud pilots.
+Location: `research/tools/activation_cloud_suite/`
+Created by: Codex/GPT-5.5.
+Model used: Codex/GPT-5.5 for tool scaffold and documentation.
+Source inputs: Generalized from the A100 amateur/playwright pilot and posthoc analysis outputs.
+Generating script: `research/outputs/a100_activation_cloud_visualization_and_judge_compare/run_cloud_viz_judge_suite.py`
+Dependent analyses: Future persona activation-cloud pilots after GPU extraction, judge filtering, covariance/cloud-shape inspection, and viewer generation.
+Current status: Scaffolded; the A100 worked-example script remains the reference implementation.
+Notes/caveats: The current suite runner is a lightweight config loader/stub, not a fully factored library. Future pilots should either reuse the worked-example script or promote its functions into the tool package before relying on the suite as a stable interface.
+
+## GPT-5.5 judge and outlier follow-up outputs
+
+Artifact: GPT-5.5 default-temperature judge comparison and score==3/instruction/question follow-up analysis for the amateur/playwright activation clouds.
+Location: `research/outputs/gpt55_judge_and_outlier_followup/`
+Created by: Codex/GPT-5.5.
+Model used: GPT-5.5 through the OpenAI API for role-expression judging at model-default temperature; Codex/GPT-5.5 for script authoring, analysis, and reporting.
+Source inputs: `research/outputs/a100_two_role_activation_cloud_pilot/judge_input_responses.jsonl`, `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/judge_filtered_cloud_summary_by_role.csv`, and `research/outputs/a100_activation_cloud_posthoc_analysis/judge_filtered_centroid_shifts.csv`.
+Generating script: `research/outputs/gpt55_judge_and_outlier_followup/run_gpt55_judge_and_outlier_followup.py`
+Dependent analyses: Judge-model sensitivity, score==3 outlier review, instruction/question selection for future GPU runs, and activation-cloud sample-size/protocol refinement.
+Current status: Complete.
+Notes/caveats: This is not a deterministic replication of GPT-4.1 because GPT-4.1 used temperature 0 while GPT-5.5 required model-default temperature. The comparison should be described as evaluator-model plus decoding-policy sensitivity. No GPU work, response generation, activation extraction, or pod work occurred. API credentials were loaded from the environment or `~/.openai_api_key` and were not logged or committed.
+
+## prior adaptive recovery audit outputs
+
+Artifact: Local recoverability audit for prior adaptive trickster/editor extraction artifacts under the corrected D01 boundary result.
+Location: `research/outputs/prior_adaptive_recovery_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Codex/GPT-5.5 for script authoring, local audit, and reporting; no model API calls, pods, GPU work, response generation, or activation extraction were run.
+Source inputs: `research/q2_stability/qwen/outputs/paper1_5/trickster_phase1.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/trickster_phase2_scores_codex_gpt55.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/activations_trickster/`, `research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase1_128.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase2_scores_codex_gpt55.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/editor/activations_editor/`, `research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/editor_phase1_matched64_1024.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/editor_phase2_scores_1024_codex_gpt55.jsonl`, `research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/activations_editor_1024/`, `research/q2_stability/qwen/scripts/phase1_inference_only_v4.py`, `research/q2_stability/qwen/scripts/phase1_inference_only_editor.py`, `research/q2_stability/qwen/scripts/phase1_inference_editor_matched64_1024.py`, `downloads/hf_vectors/qwen-3-32b/role_vectors/`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`, `data/roles/instructions/`, and `data/extraction_questions.jsonl`.
+Generating script: `research/outputs/prior_adaptive_recovery_audit/run_prior_adaptive_recovery_audit.py`
+Dependent analyses: Evaluator-model sensitivity for prior adaptive extraction, Paper 1.5 methodology caveats, local PCA/cloud comparison of saved hook-derived adaptive vectors, and decisions about whether GPU regeneration is necessary.
+Current status: Complete.
+Notes/caveats: The audit found three explicit prior adaptive runs and classified all three as `full_reproject_possible` because they preserve response text and 5120-d hook-derived activation shards. D01 does not invalidate these saved hook vectors; the corrected result says the hook matches `outputs.hidden_states[49]`, not `hidden_states[48]`. The prepared GPT-4.1 judge input JSONL contains 1,392 saved responses, but no OpenAI judge call was run because no explicit `run_gpt41_rejudge=true` configuration was present. Raw token-level hidden states cannot be recovered from mean-pooled shards without GPU reruns.
+
+## recovered role cloud analysis outputs
+
+Artifact: GPT-4.1 rejudging and activation-cloud comparison for recovered trickster/editor adaptive extraction runs.
+Location: `research/outputs/recovered_role_cloud_analysis/`
+Created by: Codex/GPT-5.5.
+Model used: GPT-4.1 through the OpenAI API for role-expression judging at temperature 0; Codex/GPT-5.5 for script authoring, local analysis, and reporting.
+Source inputs: `research/outputs/prior_adaptive_recovery_audit/prior_adaptive_gpt41_judge_inputs.jsonl`, `research/outputs/prior_adaptive_recovery_audit/prior_adaptive_corrected_coordinates.csv`, `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv`, and `research/visualizations/geometry_viz_data.json`.
+Generating script: `research/outputs/recovered_role_cloud_analysis/run_recovered_role_cloud_analysis.py`
+Dependent analyses: Paper 1.5 evaluator-sensitivity language for adaptive extraction, editor/procedural-professional failure interpretation, future procedural-professional anchoring redesign, and comparison of adaptive extraction clouds to response-state activation clouds.
+Current status: Complete.
+Notes/caveats: The run scored 1,392 recovered responses with GPT-4.1 at temperature 0, using `~/.openai_api_key` without logging the key. Actual usage was 1,084,673 prompt tokens and 187,913 completion tokens, with estimated cost $3.6726. This is GPT-4.1, not `gpt-4.1-mini`; therefore it is a practical evaluator-sensitivity comparison, not strict Lu-method identity. Trickster retained 1200/1200 score>=2 and 1198/1200 score==3; editor remained low at score==3 in both 512-token and 1024-token runs.
+
+## activation cloud layered viewer outputs
+
+Artifact: Standalone layered visualization for activation-cloud comparisons across amateur, playwright, recovered trickster, and recovered editor runs.
+Location: `research/outputs/activation_cloud_layered_viewer/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, judge calls, or response generation were run.
+Source inputs: `research/visualizations/geometry_viz_data.json`, `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv`, `research/outputs/gpt55_judge_and_outlier_followup/gpt55_judge_scores.csv`, `research/outputs/prior_adaptive_recovery_audit/prior_adaptive_corrected_coordinates.csv`, `research/outputs/recovered_role_cloud_analysis/recovered_gpt41_scores.csv`, and prior standalone viewer artifacts under `research/outputs/a100_activation_cloud_visualization_and_judge_compare/`.
+Generating script: `research/outputs/activation_cloud_layered_viewer/run_activation_cloud_layered_viewer.py`
+Dependent analyses: Visual inspection of judge-filter sensitivity, comparison of published centroids to all-response and retained-response subclouds, editor/procedural-professional failure reassessment, and future activation-cloud pilot planning.
+Current status: Complete standalone viewer; main persona geometry explorer was not modified.
+Notes/caveats: The viewer contains 1,512 response points and five role/run views: `amateur`, `playwright`, `trickster_phase1_1200`, `editor_phase1_128`, and `editor_matched64_1024`. GPT-5.5 layers are available only for amateur/playwright. Editor GPT-4.1 score==3 centroids are sparse (`n=3` for `editor_phase1_128`, `n=2` for `editor_matched64_1024`) and should be treated as visual reference points rather than stable centroid estimates.
+
+## cloud eigenvector angle analysis outputs
+
+Artifact: Activation-cloud covariance/eigenvector orientation analysis across layered response clouds.
+Location: `research/outputs/cloud_eigenvector_angle_analysis/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, judge calls, or response generation were run.
+Source inputs: `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_viewer_data.json`, `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_centroids.csv`, `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_membership_counts.csv`, `research/visualizations/geometry_viz_data.json`, and the original cloud/judge artifacts already incorporated by the layered viewer.
+Generating script: `research/outputs/cloud_eigenvector_angle_analysis/run_cloud_eigenvector_angle_analysis.py`
+Dependent analyses: Future activation-cloud pilot role selection, negative-PC2 test design, Paper 1.5 response-cloud uncertainty language, and visual interpretation of role-expression filtering effects.
+Current status: Complete local analysis.
+Notes/caveats: The analysis treats eigenvector angles as sign-invariant line orientations. Assistant-axis direction is a proxy estimated by regressing stored role `axis_projections` on PC1/PC2, not by independently loading an assistant-axis vector in PCA space. The empirical high-PC1/high-PC2 upper-region direction is also a documented proxy. Sparse editor score==3 layers remain unstable (`n=3` and `n=2`), and the all-response boundary/orientation pattern is provisional because only five role/run views were analyzed.
+
+## Paper 1.5 clean repo copy plan
+
+Artifact: Copy plan for a future clean Paper 1.5 core repository.
+Location: `research/outputs/paper15_clean_repo_copy_plan/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no files were copied, moved, deleted, or reorganized.
+Source inputs: Current repo layout, `research/RESEARCH_STATE.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/visualizations/`, `research/outputs/`, `research/q2_stability/qwen/outputs/`, `research/assistant_axis_methodology/`, public role/trait prompt artifacts, and current untracked-file state.
+Generating script: `research/outputs/paper15_clean_repo_copy_plan/run_clean_repo_copy_plan.py`
+Dependent analyses: Future creation of `assistant-axis-paper15-core`, report/notebook consolidation, artifact provenance generation, and first-pass exclusion of H100/prompt-battery materials.
+Current status: Established planning artifact awaiting user review.
+Notes/caveats: The plan proposes 43 canonical include rows, 7 optional include rows, 3 draft-reference rows, and 4 unresolved/user-review rows, with estimated canonical copy size 10.01 MB. It explicitly excludes H100 validation outputs, H100 forecast-observed arrow visualizations, extraction-boundary diagnostics, prompt-battery generation, large generated response JSONLs, RunPod logs, dyad dynamics, emotion-vector work, and activation shards. No copy operation has occurred.
+
+## pc2 cluster-conditioned extremes outputs
+
+Artifact: Global, per-cluster, and muted-PC1-within-cluster PC2 extremes diagnostic for the stability/impressionability interpretation.
+Location: `research/outputs/pc2_cluster_conditioned_extremes/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activations, or response generation were run.
+Source inputs: `research/visualizations/geometry_viz_data.json`, `research/outputs/pc2_muted_pc1_extremes/`, `research/q2_stability/qwen/outputs/pc2_conditional_validation/pc2_candidate_scores.csv`, `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, and `research/outputs/axis_forcing_function_notes/`.
+Generating script: `research/outputs/pc2_cluster_conditioned_extremes/run_pc2_cluster_conditioned_extremes.py`
+Dependent analyses: Paper 1.5 PC2 report wording, future blinded within-cluster matched-pair ratings, and diagnostic role examples for stability/formative-state versus impressionability/transition.
+Current status: Provisional/partial support.
+Notes/caveats: The analysis uses 275 persona/role PCA coordinates and cluster labels from the existing geometry visualization data. Expected-direction checks passed 7/8 globally and 5/8 by cluster median; abstraction was the strongest existing proxy after cluster demeaning (Pearson r=-0.484). `shapeshifter`, `chameleon`, and `elder` remain important caveats, so PC2 should not be stated as a pure plasticity/rootedness axis.
+
+## cross-model PC2/PC3 diagnostic outputs
+
+Artifact: Contained cross-model PC2/PC3 comparability diagnostic over released Qwen, Llama, and secondary Gemma role vectors.
+Location: `research/outputs/cross_model_pc2_pc3_diagnostic/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activations, response generation, clean-repo copying, or visualization edits were run.
+Source inputs: `research/visualizations/geometry_viz_data.json`, `downloads/hf_vectors/qwen-3-32b/role_vectors/*.pt`, `downloads/hf_vectors/llama-3.3-70b/role_vectors/*.pt`, `downloads/hf_vectors/gemma-2-27b/role_vectors/*.pt`, `research/outputs/pc2_muted_pc1_extremes/`, `research/outputs/pc2_cluster_conditioned_extremes/`, and `research/visualizations/persona_geometry_explorer.html` for feasibility inspection only.
+Generating script: `research/outputs/cross_model_pc2_pc3_diagnostic/run_cross_model_pc2_pc3_diagnostic.py`
+Dependent analyses: Paper 1.5 PC2 transfer language, future cross-model visualization decision, and PC3 comparability caveats.
+Current status: Provisional/partial support for Qwen-Llama PC2 transfer in a shared PC1/PC2 plane; weak-to-moderate PC3 comparability.
+Notes/caveats: The diagnostic uses layer-mean role vectors to match the current Qwen visualization builder. Qwen-Llama PC1/PC2 plane principal correlations are 0.977 and 0.905, while same-index PC2 Pearson r=0.606 and Qwen PC2 best matches Llama PC1 at r=0.692. Qwen-Llama same-index PC3 is weaker at Pearson r=0.440, so uncaveated 3D PC3 arrows are not recommended. Gemma was included because local vectors were present and showed strong same-index local artifact alignment with Qwen, but it remains secondary to the requested Qwen-Llama diagnostic.
+
+## cross-model cluster topology outputs
+
+Artifact: Bounded Qwen/Llama/Gemma cluster-topology comparison testing whether coarse persona regions are more stable than later same-index PCs.
+Location: `research/outputs/cross_model_cluster_topology/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activations, response generation, clean-repo copying, or visualization edits were run.
+Source inputs: `research/visualizations/geometry_viz_data.json`, `downloads/hf_vectors/qwen-3-32b/role_vectors/*.pt`, `downloads/hf_vectors/llama-3.3-70b/role_vectors/*.pt`, `downloads/hf_vectors/gemma-2-27b/role_vectors/*.pt`, `research/outputs/cross_model_pc2_pc3_diagnostic/`, `research/outputs/cluster_conditioned_axis_tests/`, `research/outputs/pc2_cluster_conditioned_extremes/`, and `research/visualizations/persona_geometry_explorer.html` for feasibility inspection only.
+Generating script: `research/outputs/cross_model_cluster_topology/run_cross_model_cluster_topology.py`
+Dependent analyses: Paper 1.5 cross-model topology language, cross-model visualization decision, and cautious distinction between stable broad regions and model-local PCA axes.
+Current status: Provisional/partial support for broad topology preservation; hard clusters are not universal.
+Notes/caveats: The diagnostic uses layer-mean role vectors to match the current Qwen visualization builder. Independent `k=7` k-means clustering in top-3-PC space gave Qwen-Llama ARI/NMI 0.364/0.458, Qwen-Gemma 0.637/0.656, and Llama-Gemma 0.355/0.454. Top-5-PC sensitivity improved Qwen-Llama to 0.537/0.548. Procedural/evaluator and mythic/symbolic regions are the clearest recurring regions; grounded/social, care/repair, adversarial/perturbative, and creative/symbolic regions split more. Visualization recommendation is model switching or cluster-overlap/alluvial views before any cross-model PC3 arrows.
+
+## Paper 1.5 core analysis notebook skeleton
+
+Artifact: First-pass local-runnable Jupyter notebook skeleton for the Paper 1.5 core analysis walkthrough.
+Location: `research/notebooks/paper15_core_analysis_walkthrough.ipynb`
+Supporting location: `research/outputs/paper15_notebook_core/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, clean-repo copying, or visualization edits were run.
+Source inputs: `research/outputs/paper15_clean_repo_copy_plan/`, `research/visualizations/geometry_viz_data.json`, `research/visualizations/persona_geometry_explorer.html`, `research/outputs/pc2_muted_pc1_extremes/`, `research/outputs/pc2_cluster_conditioned_extremes/`, `research/outputs/cross_model_pc2_pc3_diagnostic/`, `research/outputs/cross_model_cluster_topology/`, `research/outputs/pc3_validation/`, `research/outputs/trait_persona_prediction/`, `research/outputs/trait_space_interpretation/`, `research/outputs/prompt_to_geometry_forecasting/`, `research/outputs/prompt_artifact_inventory/`, and `research/outputs/role_rollout_artifact_audit/`.
+Generating script: `research/outputs/paper15_notebook_core/run_build_paper15_notebook.py`
+Dependent analyses: Future clean Paper 1.5 core repo, executable technical appendix, report-spine walkthrough, and user review of which canonical artifacts belong in the shareable package.
+Current status: Established WIP notebook skeleton with successful headless Jupyter execution, shareability revision, and collapsed-code HTML export.
+Notes/caveats: The notebook intentionally excludes H100 validation outputs, prompt-battery generation, extraction-boundary diagnostics, RunPod logs, activation shards, and H100 forecast-observed arrow visualizations. Initial plain-Python validation passed before Jupyter was installed. A repo-local `.venv-notebook` environment was then created, the authorized notebook stack was installed, deterministic notebook cell IDs were added as a mechanical metadata fix, and headless execution produced `research/notebooks/paper15_core_analysis_walkthrough.executed.ipynb` plus `research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough.html` with 12/12 code cells executed, 0 errors, and 0 final execution-log warnings. The shareability revision added markdown clarifications for geometry metadata, cross-model PCA alignment, trait/persona reconstruction limits, the 1,200-rollout versus 64-vector-count distinction, optional forecasting status, and final summary caveats; it regenerated `research/outputs/paper15_notebook_core/paper15_core_analysis_walkthrough_report_collapsed_code.html` with 12 collapsed code toggles and outputs visible. PDF export was skipped because nbconvert `webpdf` requires Playwright, which was outside the authorized package list for the revision task.
+
+## PC2 trait-stratified profile outputs
+
+Artifact: PC1-stratified trait-profile analysis of Qwen persona PC2.
+Location: `research/outputs/pc2_trait_stratified_profile/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, or new judging were run.
+Source inputs: `research/visualizations/geometry_viz_data.json`, `research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv`, `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_stats.json`, `research/outputs/pc2_muted_pc1_extremes/`, and `research/outputs/pc2_cluster_conditioned_extremes/`.
+Generating script: `research/outputs/pc2_trait_stratified_profile/run_pc2_trait_stratified_profile.py`
+Dependent analyses: Paper 1.5 PC2 interpretation wording, future prompt-to-geometry rubric design, future blinded PC2 matched-pair checks, and clean notebook/report updates if this analysis is admitted into the core artifact set.
+Current status: Complete local analysis with provisional interpretation update.
+Notes/caveats: The analysis joins 275 roles/personas to 240 trait-cosine features and compares high versus low PC2 roles globally and inside PC1 strata. Replication is defined descriptively by same-sign Cohen's d at threshold across PC1 quintiles. Because PC1 and PC2 are PCA-orthogonal, direct PC2 residualization on PC1 is nearly unchanged; the primary PC1-confound protection is stratified enrichment plus per-trait PC1 covariate checks. Trait profiles are activation-space cosine features, not independent psychological ratings or causal labels.
+
+## Trait-profile provenance audit
+
+Artifact: Provenance audit for the 275-role x 240-trait Qwen profile matrix used in trait-profile and PC2 analyses.
+Location: `research/outputs/trait_profile_provenance_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and editing model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, new trait scoring, or judging were run.
+Source inputs: `research/REPO_NAVIGATION.md`, `research/REPO_FILE_INDEX.csv`, `research/RAW_URL_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/RESEARCH_INDEX.md`, `research/RESEARCH_STATE.md`, `research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv`, `research/outputs/trait_persona_prediction/run_trait_persona_prediction.py`, `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_stats.json`, `research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv`, `research/outputs/pc2_trait_stratified_profile/run_pc2_trait_stratified_profile.py`, `research/outputs/qwen_pc2_trait_region_overlay/run_qwen_pc2_trait_region_overlay.py`, `data/traits/trait_list.json`, `data/traits/instructions/*.json`, `downloads/hf_vectors/qwen-3-32b/trait_vectors/*.pt`, `downloads/hf_vectors/qwen-3-32b/role_vectors/*.pt`, `research/outputs/prompt_artifact_inventory/prompt_artifact_inventory_report.md`, Hugging Face API metadata for `lu-christina/assistant-axis-vectors`, and Hugging Face API metadata for `belmore/assistant-axis-vector-prompts`.
+Generating script: none; direct provenance audit with schema/count checks and source-code inspection.
+Dependent analyses: Paper 1.5 trait-profile language, PC2 trait-stratified interpretation, Qwen PC1 x PC2 trait-region overlay caveats, and future claims about evidential independence of trait-enrichment visualizations.
+Current status: Complete provenance audit.
+Notes/caveats: Verdict is mixed. The 240 trait vocabulary, prompt artifacts, and Qwen trait vectors are inherited Assistant Axis / Lu et al. artifacts; the 275 x 240 CSV matrix is internally generated by mean-pooling released Qwen role/trait tensors, L2-normalizing them, and computing activation-space cosine similarities. Scores are not assigned from bare role names, role descriptions, system prompts, generated response text, human ratings, or an LLM trait questionnaire inside the matrix-generation script. The matrix has low evidential independence from Qwen role PCA geometry because both are derived from the same Qwen activation-vector artifact family.
+
+## Qwen PC1 x PC2 trait-region overlay prototype
+
+Artifact: First Qwen-only PC1 x PC2 trait-region overlay for inspecting local PC2 trait organization within PC1 bands.
+Location: `research/outputs/qwen_pc2_trait_region_overlay/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis, visualization, and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, or judging were run.
+Source inputs: `research/REPO_NAVIGATION.md`, `research/REPO_FILE_INDEX.csv`, `research/RAW_URL_INDEX.md`, `research/geometry_tables/qwen_role_pc_rankings.csv`, `research/geometry_tables/qwen_trait_pc_rankings.csv`, `research/geometry_tables/cluster_membership_table.csv`, and the navigation-located trait profile matrix `research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv`.
+Generating script: `research/outputs/qwen_pc2_trait_region_overlay/run_qwen_pc2_trait_region_overlay.py`
+Dependent analyses: Paper 1.5 PC2 visual interpretation, future interactive persona-geometry overlays, and report figures explaining why PC1-band-relative trait labels are preferable to global trait labels for PC2 inspection.
+Current status: Prototype visualization with descriptive support for PC1-band-relative interpretation.
+Notes/caveats: The prototype uses five equal-count PC1 quantile bands and three equal-count PC2 tertiles within each PC1 band, producing 15 populated cells and no sparse cells under the n<8 threshold. Enrichment is descriptive over activation-space trait cosine features: `enrichment_z = (mean_trait_cell - mean_trait_pc1_band) / global_trait_std`. Mean top-3 overlap between PC1-band-relative and global labels was 0.18, so local labels materially change the visible interpretation. This does not solve PC2 or establish causal psychological labels.
+
+## AGENTS continuity and maintenance instructions
+
+Artifact: Updated repository-level agent instructions for GPT/Codex continuity and canonical registry maintenance.
+Location: `AGENTS.md`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and editing model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, or judging were run.
+Source inputs: `AGENTS.md`, `research/REPO_NAVIGATION.md`, `research/REPO_FILE_INDEX.csv`, `research/RAW_URL_INDEX.md`, `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, `research/FINDINGS_LEDGER.md`, `research/CLAIMS_REGISTER.md`, and `research/PROVENANCE_REGISTRY.md`.
+Generating script: none; direct Markdown/CSV maintenance edit.
+Dependent analyses: Future Codex/GPT startup, handoff continuity, artifact provenance discipline, navigation-file maintenance, and final-report consistency.
+Current status: Active repository instruction.
+Notes/caveats: The update preserves existing instructions except where superseded by canonical registry, navigation, THREAD_START, artifact-status, and final-report requirements. `AGENTS.md` itself remains classified as `active` in `research/REPO_FILE_INDEX.csv`, while navigation files and startup files remain canonical.
+
+## persona cloud geometry audit outputs
+
+Artifact: Local activation-cloud size, anisotropy, orientation reliability, and matched-n sample-size sensitivity audit.
+Location: `research/outputs/persona_cloud_geometry_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, or judging were run.
+Source inputs: `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_viewer_data.json`, `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_centroids.csv`, `research/outputs/activation_cloud_layered_viewer/activation_cloud_layered_membership_counts.csv`, `research/outputs/a100_two_role_activation_cloud_pilot/activation_cloud_per_response.csv`, `research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv`, `research/outputs/gpt55_judge_and_outlier_followup/gpt55_judge_scores.csv`, `research/outputs/prior_adaptive_recovery_audit/prior_adaptive_corrected_coordinates.csv`, `research/outputs/recovered_role_cloud_analysis/recovered_gpt41_scores.csv`, and `research/outputs/cloud_eigenvector_angle_analysis/cloud_orientation_metrics.csv`.
+Generating script: `research/outputs/persona_cloud_geometry_audit/run_persona_cloud_geometry_audit.py`
+Dependent analyses: Paper 2 local-manifold planning, future balanced activation-cloud sampling, Paper 1.5 caveat language around role vectors as centroids, and editor/procedural-professional failure interpretation.
+Current status: Complete local analysis; supporting/future-work evidence, not a material claim-status update.
+Notes/caveats: The audit uses already-projected Qwen PC1/PC2/PC3 response coordinates from existing local artifacts. Matched-n bootstrap comparisons are central because cloud sizes differ from n=60 to n=1200. Sparse editor score==3 clouds are marked unreliable for covariance/orientation. Trickster is less directionally constrained by anisotropy/orientation criteria, but not larger by matched-n RMS radius.
+
+## occupation-population persona join outputs
+
+Artifact: Exploratory join between occupational/professional persona roles and public U.S. occupation statistics.
+Location: `research/outputs/occupation_population_persona_join/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, or judging were run.
+Source inputs: `research/geometry_tables/qwen_role_pc_rankings.csv`, `research/geometry_tables/cluster_membership_table.csv`, `research/outputs/cross_model_cluster_topology/per_model_cluster_assignments.csv`, Bureau of Labor Statistics Occupational Employment and Wage Statistics (OEWS) May 2025 national cross-industry estimates via the BLS public API, OEWS tables page `https://www.bls.gov/oes/tables.htm`, and OEWS time-series documentation under `https://download.bls.gov/pub/time.series/oe/`.
+Generating script: `research/outputs/occupation_population_persona_join/run_occupation_population_persona_join.py`
+Dependent analyses: Exploratory future-work/appendix checks about whether real-world occupational prevalence, wage, or specialization proxies have any detectable relationship to persona geometry among defensibly matchable occupational roles.
+Current status: Complete exploratory first pass; not part of Paper 1.5 core claims.
+Notes/caveats: Role-to-SOC mappings are manual and conservative. Ambiguous mappings are preserved but excluded from quantitative correlations, and unmatched archetypal/mythic/symbolic roles are not forced. Direct scripted downloads from BLS bulk ZIP/text hosts returned HTTP 403 in this environment, and the unauthenticated BLS API hit a daily threshold during the run, so returned BLS coverage is partial: 50 included roles with employment count and 42 included roles with annual median wage. OEWS employment count is not training-corpus frequency and should not be interpreted as evidence that persona geometry reflects U.S. labor demographics.
+
+## occupation-prevalence geometry overlay outputs
+
+Artifact: Descriptive Qwen PC1 x PC2 visualization overlay for exact/close occupation-matched persona roles, with employment-scaled highlighted points.
+Location: `research/outputs/occupation_prevalence_geometry_overlay/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis, visualization, and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, new BLS/Census fetches, or judging were run.
+Source inputs: `research/geometry_tables/qwen_role_pc_rankings.csv`, `research/outputs/occupation_population_persona_join/role_occupation_mapping.csv`, `research/outputs/occupation_population_persona_join/role_occupation_geometry_join.csv`, `research/outputs/occupation_population_persona_join/occupation_population_cluster_summary.csv`, `research/outputs/occupation_population_persona_join/occupation_population_correlations.csv`, and `research/outputs/occupation_population_persona_join/data_source_manifest.md`.
+Generating script: `research/outputs/occupation_prevalence_geometry_overlay/run_occupation_prevalence_geometry_overlay.py`
+Dependent analyses: Exploratory future-work visualization of where occupation-matched professional persona roles sit in Qwen persona geometry; possible appendix/future-work figure, not Paper 1.5 core evidence.
+Current status: Complete descriptive visualization follow-up.
+Notes/caveats: The primary overlay includes exact and close occupational matches only; broad matches are optional in the interactive HTML; ambiguous and unmatched roles are excluded from highlighted layers. Point size reflects log BLS OEWS May 2025 employment count where inherited values are available, and missing employment values are marked explicitly. The overlay supports visual inspection of regional concentration but does not claim persona geometry reflects U.S. labor demographics, training-corpus frequency, or occupational prevalence.
+
+## No-label elicitation validation outputs
+
+Artifact: Paper 1.5 no-label elicitation validation run using the frozen v1 prompt packet.
+Location: `research/outputs/no_label_elicitation_validation/`
+Created by: Codex/GPT-5.5 orchestration plus RunPod Qwen/Qwen3-32B execution.
+Model used: Qwen/Qwen3-32B for response generation and activation extraction; Codex/GPT-5.5 for script authoring, orchestration, and report/index maintenance.
+Compute/runtime: RunPod pod `bcytpp3y184x5x`, A100 SXM 80GB, non-spot/on-demand, $1.49/hr, 200GB container disk. The successful generation process completed 600/600 responses in 9,434.2 seconds after environment setup; two earlier environment loader attempts and one projection-basis attempt failed before generation and were preserved as logs.
+Source inputs: `research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.csv`, `research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.json`, `research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompt_packet_report.md`, `research/visualizations/geometry_viz_data.json`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`, and downloaded `lu-christina/assistant-axis-vectors` Qwen role vectors under `downloads/hf_vectors/qwen-3-32b/role_vectors/`.
+Generating script: `research/outputs/no_label_elicitation_validation/run_no_label_elicitation_validation.py`
+Dependent analyses: Paper 1.5 no-label directional activation evidence, future failed-family/off-axis prompt redesign, and future comparison against within-role activation-cloud studies.
+Current status: Complete activation validation run; partial/modest support for directional no-label elicitation.
+Notes/caveats: Qwen saw only frozen `prompt_text` values in fresh one-message conversations. The run used direct `model.model.layers[48]` hook extraction, response-token mean pooling, and canonical PCA projection with max coordinate reproduction error 1.207e-06. Family-level pass/fail at the preregistered 70% prompt-mean threshold was mixed: PC1-negative, PC2-positive, PC3-positive, and PC3-negative passed; PC1-positive and PC2-negative failed. This does not prove PC semantics, isolate single-axis causality, or validate the failed prompt-family wording.
+
+## No-label elicitation geometry diagnostics
+
+Artifact: Diagnostic geometry overlays and coordinate tables for the completed no-label elicitation validation run.
+Location: `research/outputs/no_label_elicitation_geometry_diagnostics/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis, visualization, and script-author model GPT-5.5; no model APIs, pods, GPU work, activation extraction, response generation, prompt generation, or projection reruns were performed.
+Source inputs: `research/outputs/no_label_elicitation_validation/family_mean_results.csv`, `research/outputs/no_label_elicitation_validation/prompt_mean_results.csv`, `research/outputs/no_label_elicitation_validation/geometric_success_summary.csv`, `research/outputs/no_label_elicitation_validation/projection_basis_debug.json`, `research/outputs/no_label_elicitation_prompt_packet_v1/no_label_elicitation_prompts_v1.csv`, and `research/visualizations/geometry_viz_data.json`.
+Generating script: `research/outputs/no_label_elicitation_geometry_diagnostics/run_no_label_elicitation_geometry_diagnostics.py`
+Dependent analyses: Paper 1.5 no-label validation interpretation, revised no-label prompt design, and future Paper 2 prompt-to-local-manifold diagnostics.
+Current status: Complete diagnostic analysis of existing validation outputs; supporting/interpretive evidence, not a new activation experiment.
+Notes/caveats: The diagnostic found the published assistant baseline at the 83.3rd percentile of role centroids on Qwen PC1, consistent with a partial positive-PC1 saturation explanation. However, the PC1-positive family moved strongly negative rather than merely failing to move farther positive, so the failed packet likely elicited ordinary explanatory/helpful or situated response modes. `pc3_pos_05` moved mainly negative PC1 and positive PC2, supporting the interpretation that it foregrounded self-cost/perseverance rather than consequence-to-others pressure.
+
+## Assistant centroid provenance audit
+
+Artifact: Provenance and interpretation audit of the assistant centroid used in Paper 1.5 no-label and geometry analyses.
+Location: `research/outputs/assistant_centroid_provenance_audit/`
+Created by: Codex/GPT-5.5.
+Model used: Audit, script-inspection, and report-author model GPT-5.5; no model APIs, pods, GPU work, response generation, activation extraction, projection reruns, or PCA-basis changes were performed.
+Source inputs: `research/REPO_NAVIGATION.md`, `research/REPO_FILE_INDEX.csv`, `research/RAW_URL_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, `research/outputs/no_label_elicitation_validation/run_no_label_elicitation_validation.py`, `research/outputs/no_label_elicitation_validation/projection_basis_debug.json`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`, `research/visualizations/geometry_viz_data.json`, `data/roles/instructions/assistant.json`, `data/roles/instructions/default.json`, `downloads/hf_vectors/qwen-3-32b/role_vectors/assistant.pt`, `downloads/hf_vectors/qwen-3-32b/default_vector.pt`, `downloads/hf_vectors/qwen-3-32b/assistant_axis.pt`, `pipeline/5_axis.py`, and `research/assistant_axis_methodology/assistant_axis_pipeline_reconstruction.md`.
+Generating script: Direct source audit; no standalone generation script required.
+Dependent analyses: Future no-label elicitation Run 2 design, 240-question bare-Qwen baseline interpretation, PC1-positive failure interpretation, PC2-negative prompt-redesign criteria, and Paper 1.5 methodological caveats.
+Current status: Complete methodological provenance audit.
+Notes/caveats: The audit finds that the current assistant centroid is the released Qwen `assistant` role/persona vector selected from reconstructed canonical role coordinates. It is not a measurement of bare Qwen, not the released `default_vector.pt`, and not `assistant_axis.pt`. Existing no-label validation deltas should therefore be described as movement relative to the assistant role centroid. The 240-question bare-Qwen/default extraction-question baseline is foundational before future elicitation experiments are interpreted as movement from unconditioned model behavior.
+
+## No-label elicitation Run 2 preflight package
+
+Artifact: Prepared Run 2 no-label elicitation validation package, including bare-Qwen baseline catalog and revised/minimal-pair manipulation prompts.
+Location: `research/outputs/no_label_elicitation_run2/`
+Created by: Codex/GPT-5.5.
+Model used: Script-author, preflight-analysis, and report-author model GPT-5.5; Qwen/Qwen3-32B generation was planned but not run.
+Compute/runtime: No pod launched. `runpodctl` is installed locally but has no configured API key in `~/.runpod/config.toml` or `RUNPOD_API_KEY`; local machine has no approved 80GB+ GPU. Completed generations: 0/1690.
+Source inputs: User-specified Run 2 prompt text and success criteria; `data/extraction_questions.jsonl`; Run 1 measurement convention from `research/outputs/no_label_elicitation_validation/run_no_label_elicitation_validation.py`; assistant-centroid caveat from `research/outputs/assistant_centroid_provenance_audit/`; canonical startup/navigation files.
+Generating script: `research/outputs/no_label_elicitation_run2/run_no_label_elicitation_run2.py`.
+Dependent analyses: Future Run 2 execution, bare-Qwen 240-question baseline, revised PC1+/PC2- elicitation testing, PC1/PC2/PC3 minimal-pair analysis, and Paper 1.5 no-label validation refinement.
+Current status: Prepared and blocked before generation.
+Notes/caveats: The preflight catalog has 289 prompt rows and 1,690 planned generations: 1,200 bare-Qwen baseline generations, 100 PC1+ replacement generations, 100 PC2- replacement generations, 90 PC3 minimal-pair generations, 100 PC1 minimal-pair generations, and 100 PC2 minimal-pair generations. The runner preserves per-generation JSONL and response CSV records, uses direct `model.model.layers[48]` hook extraction with response-token mean pooling and the same canonical Qwen PCA projection basis as Run 1, and writes activation vectors as local gitignored shards. No empirical Run 2 results exist yet.
+
+## No-label elicitation Run 2 completed execution
+
+Artifact: Completed Paper 1.5 no-label elicitation Run 2, including 240-question bare-Qwen baseline, revised PC1+/PC2- replacement families, and PC1/PC2/PC3 minimal pairs.
+Location: `research/outputs/no_label_elicitation_run2/`
+Created by: Codex/GPT-5.5 orchestration plus RunPod Qwen/Qwen3-32B execution.
+Model used: Qwen/Qwen3-32B for response generation and activation extraction; GPT-5.5 for orchestration, reporting, and registry maintenance.
+Compute/runtime: RunPod pod `9r4w6l19t63maj`, A100 SXM 80GB, secure non-spot/on-demand, $1.49/hr, 300GB container disk. Generation heartbeat runtime was 26,909.8 seconds for 1,690 responses after model/vector setup.
+Source inputs: frozen Run 2 catalog and runner under `research/outputs/no_label_elicitation_run2/` at commit `989347e3903889f42c67a58729a8701f1ab4db6c`, `data/extraction_questions.jsonl`, downloaded `lu-christina/assistant-axis-vectors` Qwen role vectors, and `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`.
+Generating script: `research/outputs/no_label_elicitation_run2/run_no_label_elicitation_run2.py`.
+Dependent analyses: Paper 1.5 no-label elicitation interpretation, bare-Qwen default-behavior baseline, revised PC1/PC2/PC3 prompt-design diagnostics, and future Paper 1.5 inclusion caveats.
+Current status: Complete; local integrity passed with 1,690 response rows, 1,690 JSONL records, zero errors, and 1,690 local gitignored activation shards preserved. Pod termination verified via `runpodctl pod delete`, API 404 on get, empty pod list, and SSH refusal.
+Notes/caveats: Qwen-visible input was one user message containing only the prompt text or extraction question. No system prompt, prompt IDs, PC labels, polarity labels, hypotheses, success criteria, metadata, reasoning, geometry terminology, judge calls, or OpenAI key were used on the pod. Activation shards are intentionally local/gitignored and not committed.
+
+## No-label elicitation Run 2 prompt diagnostics
+
+Artifact: Prompt-level diagnostic tables and plot bundle for Run 2 PC1+ replacement, PC2- replacement, and PC3 cost-to-others minimal-pair results.
+Location: `research/outputs/no_label_elicitation_run2_prompt_diagnostics/`
+Created by: Codex/GPT-5.5.
+Model used: Analysis, visualization, and report-author model GPT-5.5; no model APIs, pods, GPU work, response generation, activation extraction, projection reruns, or prompt rewriting were performed.
+Source inputs: `research/outputs/no_label_elicitation_run2/run2_prompt_mean_results.csv`, `research/outputs/no_label_elicitation_run2/run2_pairwise_effects.csv`, `research/outputs/no_label_elicitation_validation/prompt_mean_results.csv`, and `research/outputs/no_label_elicitation_validation/prompt_catalog_used.csv`.
+Generating script: `research/outputs/no_label_elicitation_run2_prompt_diagnostics/run_run2_prompt_diagnostics.py`.
+Dependent analyses: Run 2 prompt redesign, PC1 positive elicitation diagnosis, PC2 negative prompt selection, and PC3 cost-to-others minimal-pair interpretation.
+Current status: Complete diagnostic analysis of existing Run 2 and Run 1 results; active supporting artifact.
+Notes/caveats: PC3 pair 1 joins Run 2 `pc3_pair_01B` against the preregistered Run 1 A-side `pc3_pos_05`, so that pair spans two validation runs while using the same Qwen PCA coordinate system. The diagnostic does not change success criteria or rerun activations.
+## Role geometry with positive instruction inventory
+
+Artifact: Excel-friendly Qwen role geometry table joined to the five positive role-instruction prompts for each role.
+Location: `research/outputs/role_geometry_instruction_inventory/`
+Created by: Codex/GPT-5.5.
+Model used: Script/report generation model GPT-5.5; no model APIs, pods, GPU work, response generation, activation extraction, projection reruns, or prompt rewriting were performed.
+Source inputs: `research/geometry_tables/qwen_role_pc_rankings.csv` and `data/roles/instructions/*.json`.
+Generating script: `research/outputs/role_geometry_instruction_inventory/run_role_geometry_instruction_inventory.py`.
+Dependent analyses: Manual inspection of role-conditioning prompt wording for possible outlier-role explanations and future no-label prompt-design audits.
+Current status: Active inspection table; 275/275 roles have exactly five positive instructions.
+Notes/caveats: The instruction columns are role-conditioning prompts from the public role artifacts, not the 240 shared extraction questions. Wording peculiarities may suggest hypotheses but do not establish causal effects on role geometry without follow-up analysis.
+
+## Iterative semantic prediction methods archive
+
+Artifact: Paper 1.5 methods note and benchmark table for iterative semantic prediction of persona activation geometry.
+Location: `research/outputs/iterative_semantic_prediction_methods/`
+Created by: Codex/GPT-5.5.
+Model used: Script/report generation model GPT-5.5; no model APIs, pods, GPU work, response generation, activation extraction, projection reruns, or new benchmark fitting were performed.
+Source inputs: User-provided methods text, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv`, `research/q2_stability/qwen/outputs/codex_trait_replication/codex_trait_replication_report.md`, `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/hierarchical_model_report.md`, `research/q2_stability/qwen/outputs/residual_manifold_analysis/residual_manifold_report.md`, and `research/q2_stability/qwen/outputs/residual_svd_interpretation/residual_svd_interpretation_report.md`.
+Generating script: `research/outputs/iterative_semantic_prediction_methods/run_iterative_semantic_prediction_methods.py`.
+Dependent analyses: Paper 1.5 technical report methods section, notebook S04/N07 prediction-improvement narrative, and clean repo canonical-claim traceability.
+Current status: Active methods-support artifact.
+Notes/caveats: The table reports held-out mean R2 over canonical Qwen activation PCA3D for the 273 common-persona shared benchmark with five deterministic splits. Approximate R is the positive square root of R2 for readability only. These are prediction benchmarks, not execution-time activation validation.
+## PC1 competing theories and blind-rating validation scaffold
+
+Artifact: Competing-theories evaluation of PC1 vocabulary hypotheses plus corrected blind-rating benchmark scaffold.
+Location: `research/outputs/pc1_competing_theories_test/`
+Created by: Codex/GPT-5.5.
+Model used: GPT-5.5 for local analysis, script authoring, and report generation. GPT-4.1-mini was specified as the blind rater, but the rating pass was blocked because `OPENAI_API_KEY` was absent from the local shell.
+Source inputs: `research/REPO_NAVIGATION.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_split_assignments.csv`, `research/geometry_tables/qwen_role_pc_rankings.csv`, and `data/roles/instructions/*.json`.
+Generating script: `research/outputs/pc1_competing_theories_test/run_pc1_competing_theories_test.py`.
+Dependent analyses: PC1 interpretation wording for Paper 1.5, future GPT-4.1-mini blind-rating validation, and comparison against prior semantic/procedural/Big-Five/SVD benchmarks.
+Current status: Part A complete; Part B blocked pending OpenAI API credentials.
+Notes/caveats: Part A uses transparent exact-vocabulary counts over role instructions, so it is useful as a rival-theory screen but sparse. Cluster/text controls dominate held-out PC1 R2, so the stricter evidence is the small incremental gain for external-standard-accountability vocabulary over controls. The corrected blind-rating test remains the necessary stronger validation before elevating the PC1 interpretation.
+
+## Blind PC interpretation rating benchmark
+
+Artifact: Coordinate-blind GPT-5.5 rating benchmark testing whether the current PC1/PC2/PC3 interpretations recover canonical Qwen activation geometry from role instructions.
+Location: `research/outputs/blind_pc_interpretation_rating_benchmark/`
+Created by: Codex/GPT-5.5.
+Model used: GPT-5.5 through Codex CLI for role-instruction ratings, script/report authoring, and registry maintenance.
+Source inputs: `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_split_assignments.csv`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/shared_benchmark_summary.csv`, and `data/roles/instructions/*.json`.
+Generating script: `research/outputs/blind_pc_interpretation_rating_benchmark/run_blind_pc_interpretation_rating_benchmark.py`.
+Dependent analyses: Paper 1.5 PC interpretation evidence, PC1 external-standard-accountability wording, PC2 integration/coherence wording, PC3 internal-objective-vs-care wording, and comparison against semantic/procedural/Big-Five/hierarchical/SVD benchmark families.
+Current status: Complete active analysis.
+Notes/caveats: GPT-5.5 saw only the five positive role instructions for each role. It did not see PC coordinates, PCA labels, rankings, clusters, assistant-axis values, geometry, benchmark targets, or prior results. The resulting three-rating joint model reached mean R2=0.525 over 273 personas under the shared deterministic splits: PC1 R2=0.695, PC2 R2=0.417, PC3 R2=0.463. Axis-specific one-rating models reached PC1 R2=0.704, PC2 R2=0.423, and PC3 R2=0.393. This supports the current interpretations as compact recoverable summaries, but does not establish causal semantics, human psychometrics, or execution-time response steering.
+
+## Paper 1.5 content ledger
+
+Artifact: Canonical factual content ledger for Paper 1.5 writing.
+Location: `research/paper15_content_ledger.md`
+Created by: Codex/GPT-5.5.
+Model used: GPT-5.5 for source synthesis, ledger construction, and registry maintenance; no new model ratings, Qwen inference, GPU work, activation extraction, or PCA changes were performed.
+Source inputs: `research/REPO_NAVIGATION.md`, `research/RESEARCH_INDEX.md`, `research/PROVENANCE_REGISTRY.md`, `research/CLAIMS_REGISTER.md`, `research/FINDINGS_LEDGER.md`, `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, `research/outputs/blind_pc_interpretation_rating_benchmark/`, `research/outputs/pc1_accountability_validation/`, `research/outputs/pc1_competing_theories_test/`, `research/outputs/no_label_elicitation_run2/`, `research/outputs/no_label_elicitation_run2_prompt_diagnostics/`, `research/outputs/assistant_centroid_provenance_audit/`, `research/outputs/no_label_elicitation_geometry_diagnostics/`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/`, `research/q2_stability/qwen/outputs/hierarchical_trait_procedural_model/`, `research/q2_stability/qwen/outputs/residual_manifold_analysis/`, `research/q2_stability/qwen/outputs/residual_svd_interpretation/`, `research/q2_stability/qwen/outputs/pc2_conditional_validation/`, `research/outputs/pc2_muted_pc1_extremes/`, `research/outputs/pc2_cluster_conditioned_extremes/`, `research/q2_stability/qwen/outputs/blinded_axis_rubric_validation/`, `research/q2_stability/qwen/outputs/blinded_axis_rater_study/`, `research/q2_stability/qwen/outputs/professional_hierarchy_validation/`, `research/outputs/same_space_big_five_overlay/`, `research/outputs/trait_profile_provenance_audit/`, `research/outputs/big_five_provenance_audit/`, and `research/outputs/pc3_validation/`.
+Generating script: none; manually synthesized ledger from canonical artifacts.
+Dependent analyses: Paper 1.5 drafting, GPT/Claude/Codex collaborative writing continuity, claim triage, appendix/main-paper boundary decisions, and future clean-repo report assembly.
+Current status: Active canonical writing-phase ledger.
+Notes/caveats: The ledger is not a paper draft, report, or executive summary. It intentionally separates observed findings, interpretations, hypotheses, caveats, rejected explanations, and inclusion recommendations. It does not create new evidence or change claim statuses by itself.
+
+Update 2026-06-16: Codex/GPT-5.5 completed a methods-drafting augmentation pass on the ledger. The update appended design/procedure details for PC2 conditional validation, blinded axis rater study, professional hierarchy validation, PC1 competing-theories vocabulary test, PC3 perturbation-stabilization validation, PC1 accountability intervention prompts, PC2 muted-PC1 extremes, and the blind PC interpretation rating benchmark. It also added handoff wording for PC1 as external-standard accountability / "rigor," documented the PC1-PC2 diagonal structural observation from the accountability intervention, and refined the PC3 cost-bearer interpretation. This was a synthesis/provenance update only; no new model calls, activation runs, regression reruns, or claim-status changes were performed.
+
+## PC1 accountability activation validation
+
+Artifact: Focused Qwen activation experiment testing whether accountability/scrutiny wording moves PC1 more positive than determination or arithmetic/checking wording under matched scenarios.
+Location: `research/outputs/pc1_accountability_validation/`
+Created by: Codex/GPT-5.5 orchestration plus RunPod Qwen/Qwen3-32B execution.
+Model used: Qwen/Qwen3-32B for response generation and activation extraction; GPT-5.5 for script authoring, orchestration, reporting, and registry maintenance.
+Compute/runtime: RunPod pod `2tni9x1xnj2tdn`, H100 SXM 80GB, secure non-spot/on-demand, $3.29/hr. The first launch attempt on A100 SXM failed due stock/resources. The first H100 run attempt failed before generation because `HF_HOME` was placed on an insufficient cache path; the successful run restarted with `/root/hf_cache` and completed 200/200 planned generations with zero response-level errors.
+Source inputs: User-specified five accountability-vs-determination minimal pairs and five accountability-vs-arithmetic/checking pairs; `research/outputs/no_label_elicitation_run2/run2_response_level_results.csv` for the bare-Qwen baseline; `research/outputs/no_label_elicitation_run2/run2_projection_basis_debug.json` for assistant-centroid reference; `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`; and downloaded `lu-christina/assistant-axis-vectors` Qwen role vectors.
+Generating script: `research/outputs/pc1_accountability_validation/run_pc1_accountability_validation.py`.
+Dependent analyses: Paper 1.5 PC1 interpretation wording, no-label directional elicitation design, and claims-register evidence for external-standard accountability as a high-PC1 mechanism.
+Current status: Complete active diagnostic.
+Notes/caveats: The run intentionally mirrors Run 2 extraction conventions: one fresh user message per sample, no system prompt, direct `model.model.layers[48]` hook, response-token mean pooling, separate no-cache extraction pass, and the same reconstructed Qwen PCA basis/sign alignment. This is a focused compliance/audit-style diagnostic, not a broad Run 3 and not proof that all PC1 movement is accountability-specific.
+
+## Default Assistant baseline audit
+
+Artifact: Audit of Lu et al.'s released Qwen default Assistant activation versus Paper 1.5 assistant-role and bare no-system baselines.
+Location: `research/outputs/default_assistant_baseline_audit/`
+Created by: Codex/GPT-5.5.
+Model used: GPT-5.5 for provenance analysis, projection scripting, report writing, and registry maintenance; no model APIs, pods, new generations, activation extraction, or PCA-basis changes were performed.
+Source inputs: `downloads/hf_vectors/qwen-3-32b/default_vector.pt`, `downloads/hf_vectors/qwen-3-32b/assistant_axis.pt`, `downloads/hf_vectors/qwen-3-32b/role_vectors/assistant.pt`, `data/roles/instructions/default.json`, `data/roles/instructions/assistant.json`, `pipeline/5_axis.py`, `research/visualizations/scripts/build_geometry_viz.py`, `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/canonical_activation_pca3d.csv`, `research/visualizations/geometry_viz_data.json`, `research/outputs/assistant_centroid_provenance_audit/assistant_centroid_provenance_report.md`, and the 1,200 Run 2 baseline activation shards under `research/outputs/no_label_elicitation_run2/activation_shards/`.
+Generating script: One-time local projection/reconciliation script executed in-session; no persistent helper script was required.
+Dependent analyses: Paper 1.5 baseline wording, no-label elicitation Run 2 interpretation, and future comparisons among assistant-role, released default-vector, and bare no-system reference points.
+Current status: Complete active methodological clarification.
+Notes/caveats: The audit identifies `downloads/hf_vectors/qwen-3-32b/default_vector.pt` as the released Lu default/no-role artifact and confirms `assistant_axis.pt` is a direction/difference vector, not a centroid. Projected into the canonical Paper 1.5 Qwen PCA basis, the default vector is PC1=27.130667, PC2=8.005075, PC3=-6.630754. It is distinct from the assistant role centroid (33.702803, 3.441718, -5.155534) and the Run 2 bare no-system centroid (23.509937, 14.040867, -2.460112). Recommendation: keep all three reference points with clear labels; do not replace the Run 2 bare no-system baseline with Lu's default vector.
+
+## Human-model Rosetta translation (2026-09-15)
+
+Source artifacts: prior AA-12 aggregate profile correspondence commits `c71bcf9`, `ba095f6`, `96c3e0d`, `e1d10da`, and verification `1bca429`; exact numerical banks copied into the isolated study worktree. Freeze commit: `4224bf8`. Analysis artifacts: `research/outputs/human_model_rosetta_translation/`; result/verification commit is the commit containing this maintenance record. Primary model: Qwen; Llama/Gemma fixed-pair descriptive summaries. Finding: anchor-only matching on 12 frozen human-supported traits did not yield a held-out low-complexity translation improvement over identity on the 33-trait complement. Status: canonical active analysis; V1 remains frozen and untouched.

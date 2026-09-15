@@ -1,0 +1,743 @@
+# Findings Ledger
+
+This is a compact index of project claims and their status. Use `research/RESEARCH_STATE.md` for full history and exact supporting paths.
+
+## Confirmed Findings
+
+### Trait-Profile to Persona-PC Prediction Replicates in Llama and Gemma (2026-09-11)
+
+Built `research/outputs/multimodel_trait_profile_pc_predictor/` from existing released/local saved vectors only and applied the completed Qwen pipeline unchanged to each model's own established PCA geometry. Both bundles contain exactly 275 finite role vectors and 240 finite trait vectors with the same intended labels. Recomputed coordinates match the established multimodel artifact to max error 2.748e-14 for Llama and 1.376e-11 for Gemma. A complete fixed-seed rerun reproduced all 20 deterministic model CSV artifacts byte-for-byte.
+
+Complete raw-cosine Ridge LOPO predicts Llama PC1/PC2/PC3 at R2=0.997833/0.997161/0.989900 with normalized 3D RMSE=0.124494 and Gemma at 0.999788/0.996179/0.987835 with RMSE=0.127824. Fold-safe quantile profiles remain useful but less precise (RMSE=0.328303 and 0.304909). Ridge remains selected in both models: no PLS, RBF Kernel Ridge, or distance-weighted KNN challenger clears the predeclared 10% normalized-RMSE improvement rule without harder-holdout degradation.
+
+The fixed Qwen-canonical role-family partition also generalizes, but is harder: aggregate Ridge R2=0.993894/0.993627/0.977094 with normalized RMSE=0.204224 and mean error 1.810x LOPO for Llama; Gemma=0.999271/0.993851/0.975087, RMSE=0.176110, 1.535x. Clean 100-permutation p95 mean-PC R2 values are -0.009359 and -0.011572. Endpoint-held-out synthetic interpolation remains predictable: Llama R2=0.983420/0.982280/0.946688, RMSE=0.331184; Gemma=0.999557/0.980280/0.969824, RMSE=0.214870. Nearby mixtures are much easier than distant ones, and pair-level endpoint distance correlates with error at Pearson r=0.870 for Llama and 0.774 for Gemma.
+
+Interpretation: the same-space trait bank provides broad approximately linear basis coverage of each saved model's persona geometry. Qwen remains more precise on normalized LOPO, family-holdout, and synthetic RMSE, while Llama/Gemma show larger PC3 errors and stronger distance/error association; these are representation-analysis divergences, not evidence of more or less sophisticated or human-like psychology. Axis orientation supports comparison/display but does not establish identical PC semantics across models. No GPU, RunPod, new inference, activation extraction, or external model API was used.
+
+### Trait-Profile PC Predictor Generalizes Under Persona, Cluster, and Synthetic Holdouts (2026-09-11)
+
+Built `research/outputs/trait_profile_pc_predictor/` from the existing 275-persona x 240-trait Qwen/Qwen3-32B activation-cosine matrix and canonical Qwen role PCA targets. Raw-cosine Ridge 5-fold outer CV repeated over 10 seeds reached R2=0.999465/0.998718/0.999567 for PC1/PC2/PC3, and genuine LOPO over every persona reached 0.999522/0.998811/0.999611 with per-PC RMSE=0.657/0.741/0.311 and normalized 3D RMSE=0.0454. Fold-safe quantile LOPO remained strong but less precise at R2=0.997556/0.988048/0.989209 and normalized 3D RMSE=0.1590. Ridge outperformed PLS, RBF Kernel Ridge, and distance-weighted KNN under the repeated raw-profile comparison and remains canonical V1.
+
+Whole-family shift is harder but does not erase prediction: leave-one-canonical-cluster-out aggregate Ridge R2=0.998692/0.997740/0.999338, normalized 3D RMSE=0.0680, and mean error=1.68x LOPO. Editorial has the largest per-cluster normalized RMSE (0.1062), while mythic/spiritual and procedural/professional have roughly 2.02x and 2.03x their cluster-specific LOPO mean error. Fold-local LOPO normalized error is modestly related to 5-NN profile distance (Pearson=0.243, Spearman=0.263) and PCA reconstruction residual (Pearson=0.300, Spearman=0.248). The 100-permutation nested Ridge null is clean (mean per-PC R2=-0.0244; p95=-0.0075).
+
+The existing canonical PCA projection was reconstructed at max absolute error 1.207e-06. This enabled 120 synthetic raw activation-vector interpolations across 40 near/distant pairs, with both source endpoints omitted from each fit: aggregate R2=0.995266/0.984377/0.997144; distant-pair mixtures were materially harder than near-pair mixtures. The counterfactual CLI maps complete raw or percentile profiles and deterministic percentile edits while reporting empirical LOPO error, all-model disagreement, and heuristic OOD context. Interpretation: this establishes same-space held-out reconstruction and interpolation within the Qwen artifact family. It does not establish causal trait effects, independent psychometrics, human personality prediction, cross-model transfer, or behavioral realization by a newly elicited persona. No new inference, activations, GPU, RunPod, or external model API was used.
+
+### Careful Evaluator Finding
+
+Gemma 2 27B's assistant axis is dominated by evaluative roles, especially proofreader, screener, grader, and editor. `assistant` ranks 45th out of 275 on the assistant axis, and the top pole correlates strongly with conscientiousness and negatively with psychopathy.
+
+### Base Model Basin Finding
+
+The careful-evaluator basin appears in Gemma 2 27B base model behavior, not only in instruction-tuned behavior. This supports the interpretation that the geometry reflects pretraining distribution structure as well as post-training.
+
+### Qwen/Llama Convergence and Gemma Divergence
+
+Qwen 3 32B and Llama 3.3 70B converge strongly on persona rankings, while Gemma diverges. This matters for any claim that transfers cluster representatives from Gemma into Qwen without Qwen-native validation.
+
+### Trickster Adaptive Extraction Success
+
+Qwen/Qwen3-32B trickster Phase 1 completed 1200 rollouts and 1200 activation shards with final integrity passed. Codex GPT-5.5 Standard adaptive scoring reached 64 score>=2 and 33 score==3 responses in 64 scored records. The score>=2 vector matched the Lu trickster reference mean at cosine 0.957557, and adaptive stopping passed at n=16 for both score>=2 and score==3 subsets.
+
+### Public-Source H100 Extraction Boundary Mismatch
+
+The public-source D01 audit found likely mismatch between H100 `outputs.hidden_states[48]` extraction and the original Assistant Axis Qwen convention. Official/prior extraction hooks `model.model.layers[48]` and captures decoder layer-48 post-MLP residual output, while Transformers/Qwen3 hidden-state semantics indicate `hidden_states[48]` is the input to decoder layer 48 / output after layer 47. The next step is a tiny one-prompt hook-vs-hidden-states confirmation test, not a full H100 rerun.
+
+### A100 Hook Boundary Resolution and Two-Role Activation Clouds
+
+The staged A100 pilot resolved the D01 extraction-boundary question for this run: `model.model.layers[48]` hook output matched `outputs.hidden_states[49]`, not `hidden_states[48]`, with mean hook-vs-hidden_states[49] cosine 1.000000 and mean projected-coordinate delta 0.000. The same run generated 60 amateur and 60 playwright response activations using direct hook extraction. Published centroids were near all-response centroids, but individual responses were broad: amateur centroid distance 8.394 with mean response-to-centroid distance 24.912, and playwright centroid distance 7.460 with mean response-to-centroid distance 27.916. This supports distribution/region-level response-state forecasting over exact single-response point-coordinate precision for the next analysis step.
+
+### A100 Activation-Cloud Posthoc Shape and Sample-Size Result
+
+Posthoc analysis of the unfiltered amateur/playwright clouds found both clouds are anisotropic, mostly PC1-elongated, and substantially aligned with the PC1-PC2 plane. Amateur SDs were PC1=16.922, PC2=15.281, PC3=11.887 with covariance eigenvalue variance shares 55.7%, 28.0%, and 16.3%; playwright SDs were PC1=24.372, PC2=13.072, PC3=10.006 with variance shares 71.4%, 17.4%, and 11.2%. Bootstrap centroid convergence recommends at least 20 retained responses for amateur and 30 retained responses for playwright under the unfiltered stability criteria. GPT-4.1 role-expression filtering was completed in the follow-up judge run after the initial quota failure.
+
+### GPT-4.1 Judge-Filtered Activation Cloud Result
+
+After API quota was enabled, GPT-4.1 scored all 120 saved amateur/playwright responses with temperature 0. Amateur retained 59/60 responses at score>=2 and 34/60 at score==3; playwright retained 54/60 at score>=2 and 49/60 at score==3. Filtering reduced cloud volume and mean response distance to the published centroid, but did not improve centroid alignment: score>=2 centroid-distance changes were +0.148 for amateur and +0.992 for playwright, while score==3 changes were +2.977 and +2.639. Interpretation: broad clouds are not mostly weak role-expression noise, strong role expression forms a tighter but offset subcloud, and future forecasting should distinguish published role-vector centroids, execution clouds, and judged high-expression submanifolds.
+
+### Activation-Cloud Viewer and GPT-5.5 Judge Availability Check
+
+The amateur/playwright activation-cloud analysis now has a standalone viewer and reusable no-GPU suite scaffold. The viewer overlays all-response points with GPT-4.1 scores and supports PC1-PC2, PC1-PC3, and PC2-PC3 projections. GPT-5.5 was visible through the OpenAI API model list, but rejected the required temperature-0 judge configuration; following the preregistered constraint, no default-temperature GPT-5.5 or substitute judge was run. Judge-model agreement remains pending a separately approved deterministic or default-temperature comparison protocol.
+
+### GPT-5.5 Default-Temperature Judge Comparison
+
+After explicitly authorizing GPT-5.5 default-temperature judging, the same 120 amateur/playwright responses were scored with the same rubric and JSON schema. GPT-5.5 and GPT-4.1 agreed exactly on 72/120 0-3 scores (0.600), agreed on retain>=2 for 105/120 responses (0.875), and agreed on retain==3 for 88/120 responses (0.733). GPT-5.5 was stricter for amateur, especially score==3: amateur score==3 count dropped from 34 under GPT-4.1 to 11 under GPT-5.5, while playwright score==3 dropped from 49 to 40. The qualitative cloud result persisted: stronger-expression subsets tightened cloud volume but moved centroids farther from published role vectors, supporting an offset high-expression submanifold interpretation.
+
+### Public Role Rollout Artifacts Are Inputs-Only
+
+Public artifacts allow reconstruction of the intended Assistant Axis role-vector input distribution: 275 non-default roles, 5 positive instructions per role, and 240 shared extraction questions, yielding 1,200 instruction-question combinations per role. Public artifacts do not include the original generated rollout responses, response-level judge scores, or retained-response masks/IDs. The remembered "64" count is resolved as Qwen layer count in `[64,5120]` vectors plus local adaptive-extraction counts, not a public original retained-response count.
+
+### Lu Default Vector Is Distinct From Paper 1.5 Bare No-System Baseline
+
+The default Assistant baseline audit identifies `downloads/hf_vectors/qwen-3-32b/default_vector.pt` as Lu et al.'s released Qwen default/no-role artifact and confirms `assistant_axis.pt` is a direction/difference vector rather than a centroid. Projected into the canonical Paper 1.5 PCA basis, the default vector is PC1=27.130667, PC2=8.005075, PC3=-6.630754. It is distinct from the role-conditioned assistant centroid (33.702803, 3.441718, -5.155534) and the Run 2 bare no-system centroid (23.509937, 14.040867, -2.460112); the Lu default-to-bare 3D distance is 8.181. Recommendation: keep all three reference points with clear labels and do not replace the Run 2 bare baseline with Lu's default vector.
+
+### H100 Anomaly Interpretation Now Uses Four Methodological Dependency Tracks
+
+The persistent H100 diagnostic checklist now treats D01-D09 as subordinate to four higher-level tracks: T01 extraction equivalence / activation boundary, T02 forecaster improvement, T03 prompt-battery construction, and T04 response-state uncertainty / centroid-versus-single-sample mismatch. D01/D02 depend directly on T01; D03/D08 depend partly on T02/T03; D04/D05/D06 should not be finalized until extraction equivalence, forecaster compression, prompt-battery bias, and single-response uncertainty have been considered. This reframes the H100 run as informative but not yet final behavioral evidence for PC2 shifts, cone outliers, or PC3 collapse.
+
+### PC2 Muted-PC1 Extremes Refine the PC2 Interpretation
+
+The muted-PC1 diagnostic selected the central 45th-55th percentile PC1 band from `research/visualizations/geometry_viz_data.json`, with PC1 bounds -2.747954 to 6.917357 and 27 roles. Within this PC1-controlled slice, high PC2 roles were `amateur`, `influencer`, `patient`, `gamer`, `optimist`, `podcaster`, `blogger`, `workaholic`, `chameleon`, and `caregiver`; low PC2 roles were `hive`, `philosopher`, `purist`, `traditionalist`, `composer`, `healer`, `symbiont`, `visionary`, `merchant`, and `guardian`. This supports and refines the PC2 interpretation as situated/social immediacy or locally pressured role performance versus abstract, integrative, systemic, standards-bearing stance. Caveat: the band is small and cluster-skewed, so this is descriptive coordinate inspection rather than independent semantic or causal validation.
+
+### Big Five Overlay Provenance Is Partially Activation-Dependent
+
+The current persona-geometry Big Five overlay is sourced through `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`, but the underlying Big Five scores trace back to `visualizations/bigfive_profiles.json`. That file is generated by `visualizations/deep_analysis.py` using activation-derived cluster labels as cluster base scores plus role-name-specific heuristic adjustments, then rounded and clamped to a 1-5 scale. No evidence was found that the Big Five scores are derived from the 240-trait vector/profile matrix, generated role behavior, human ratings, or external psychometric data. The overlay should therefore be treated as a partially activation-dependent heuristic semantic summary, not primary independent psychological evidence.
+
+### Extraversion Tracks PC2 More Clearly After PC1 Control
+
+The Big Five provenance audit found Extraversion is globally entangled with PC1: PC1 alone explains R2=0.479 of Extraversion scores, while PC2 alone explains R2=0.078. Within PC1-controlled bands, Extraversion is more PC2-relevant: Extraversion-PC2 correlation is r=0.542 in the central 20% PC1 band and r=0.423 in the central 10% band. This supports using PC1-band-relative inspection for PC2 and treating the visual Extraversion gradient as a heuristic cross-check rather than independent confirmation.
+
+### Activation-Derived Big Five Overlay Replaces Heuristic Overlay for Same-Space Evidence
+
+Built `research/outputs/same_space_big_five_overlay/` from predeclared positive and negative facets over the 240 released trait vectors for Qwen, Llama, and Gemma. All three models produced 275 role scores across Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. Leave-one-facet sensitivity was stable under the preregistered checks, with all model/dimension combinations retaining minimum role-score Pearson >= 0.98 and direction cosine >= 0.98 to the full direction in this run. The layer should replace the old heuristic cluster-conditioned Big Five overlay for evidence-bearing same-space visualization, but it remains trait-vector projection rather than independent psychometric rating.
+
+### Cluster-Conditioned PC2 Extremes Partially Support Stability/Impressionability Framing
+
+The cluster-conditioned PC2 diagnostic ranked PC2 globally, within all clusters with at least 10 roles, and within muted-PC1 bands for clusters where sample size permitted. Expected-direction checks passed 7/8 globally and 5/8 against cluster medians; `patient`, `amateur`, `tree`, `hive`, and `philosopher` behaved as predicted, while `shapeshifter`, `chameleon`, and `elder` are the main caveats. Existing proxy-score checks found abstraction was the strongest surviving correlate after cluster demeaning (Pearson r=-0.484), while maturity and residence-time proxies weakened under cluster control. Interpretation: PC2 should be stated provisionally as situated-immediacy/formative-state versus integrated-stability, not as a pure plasticity/rootedness axis.
+
+### Cross-Model PC2/PC3 Diagnostic Finds PC2 Plane Transfer but Weak PC3 Comparability
+
+The contained Qwen/Llama/Gemma diagnostic used released layer-mean role vectors, matching the current Qwen geometry visualization artifact type. Qwen and Llama have a highly comparable PC1/PC2 plane, with principal correlations 0.977 and 0.905, but same-index PC2 is only partial (Pearson r=0.606; Spearman r=0.430) and Qwen PC2's strongest single-axis Llama match is Llama PC1 (Pearson r=0.692). Expected-direction checks passed 16/16 globally for Qwen and 13/16 globally for Llama, but cluster-relative Llama checks were only 7/16. Qwen-Llama PC3 is weaker (same-index Pearson r=0.440; Spearman r=0.558), so cross-model PC3 arrows should not be built without alignment correction or strong caveats.
+
+### Cross-Model Cluster Topology Is Partially Conserved, Not Universal
+
+The bounded topology diagnostic clustered matched Qwen, Llama, and Gemma role vectors independently with `k=7`, matching the Qwen reference cluster count. Qwen-Llama top-3-PC k-means alignment was moderate (ARI 0.364, NMI 0.458), improving in the top-5-PC sensitivity check (ARI 0.537, NMI 0.548); Qwen-Gemma top-3 alignment was stronger (ARI 0.637, NMI 0.656). Qwen reference procedural/professional and mythic/spiritual regions had the clearest cross-model matches, while grounded/social, care/repair, adversarial/perturbative, and creative/symbolic regions split more often. Interpretation: coarse topology is suggestive and more robust than raw same-index PC3, but hard clusters should not be treated as universal persona regions.
+
+### Within-Role Displacement Study Design Prepared
+
+Prepared `research/outputs/within_role_displacement_design/` as reusable scaffolding for a one-role displacement study. The design inventories 275 roles with five positive instructions each, 240 shared extraction questions, scoring templates for expected PC1/PC2/PC3 displacement around a selected role centroid, and a role-candidate helper table. Seven roles fall in the 35th-65th percentile band on all three PCs and 62 roles fall in the 20th-80th band on all three PCs; Actor remains a plausible behaviorally coherent candidate but is PC2-high, so the final target role remains user-selected.
+
+### Occupation-Population Join Is Feasible but Exploratory
+
+The first occupational-prevalence audit mapped only defensible modern U.S. occupation-like persona roles to BLS OEWS May 2025 national SOC statistics. Coverage is partial: 47 exact, 26 close, 25 broad, 25 ambiguous-excluded, and 152 unmatched roles. Because BLS API/rate-limit constraints returned employment values for 50 included roles and annual median wages for 42 included roles in this run, correlations are descriptive and sensitivity-bound. The audit does not support a clean claim that persona geometry reflects U.S. labor demographics or occupational prevalence; it is best treated as exploratory future-work/appendix material.
+
+### Occupation-Prevalence Overlay Shows Regional Concentration Without Global Claim
+
+The Qwen PC1 x PC2 occupation-prevalence overlay highlights exact/close occupation-matched roles from the BLS OEWS audit, with all roles as background and point size tied to log employment count where available. The largest returned-employment exact/close roles visually concentrate mainly in grounded-social, procedural-professional, and editorial/assistant-adjacent territory, while creative/media occupations form a secondary spread. This regional inspection is compatible with the earlier weak global correlation result because the overlay describes where a filtered occupational subset sits rather than testing linear PC-wide prediction. It should remain outside Paper 1.5 core evidence.
+
+### Pod Workflow Lessons
+
+Detached execution, response JSONL preservation, separate activation shards, local integrity checks, explicit run artifacts, and RunPod API or `runpodctl` termination are now validated workflow requirements. Browser/dashboard termination is fallback only.
+
+## Negative Findings
+
+### Gemma Emotion PCA Gate Failure
+
+Gemma 2 27B failed the Anthropic/Sofroniew emotion-vector PCA gate at tested layers. This is a negative result for dominant-PC emotion geometry in Gemma at this scale, though distributed emotion structure remains a separate possibility.
+
+### Editor Adaptive Extraction Failure
+
+The first Qwen editor adaptive extraction chunk did not meet validation thresholds. The 128-record 512-token run produced only 10 score>=2 and 3 score==3 responses, so vector validation and sample sufficiency were correctly not run.
+
+### Token-Cap Sensitivity Result for Editor
+
+The matched first-64 editor rerun at 1024 tokens reduced truncation from 50/64 to 5/64, but score>=2 and score==3 counts did not improve. Token cap alone does not explain editor's low role-expression yield.
+
+### Forced Manual Cap Pilot Failure
+
+The forced manual cap pilot froze geometry despite zero leakage, with post-T3 trickster cosine variance at 0.00e+00. It should not be treated as a valid stabilizing result.
+
+## Provisional Interpretations
+
+### Qwen Persona Emotion-Affinity Overlay (2026-09-09)
+
+Observed: the offline viewer under `research/outputs/persona_emotion_surface_viewer/` uses exact existing PC coordinates and 1,650 relative cosine affinities (275 roles x six emotions). Source conventions support matching released role row 47 to the story emotion readout's `hidden_states[48]`. Layer-mean sensitivity correlations are 0.927-0.968 with top-20 overlap 0.60-0.90; story-centering/nuisance removal correlations are 0.943-0.997 with overlap 0.55-0.95. These diagnostics do not select a preferred psychological interpretation. Inferred: the viewer may help inspect emotion-associated structure. Unknown: functional-valence transfer from story last tokens to response-mean centroids, response prevalence, and subjective experience. No new inference, API calls, or GPU measurements; claim statuses remain unchanged.
+
+### Assistant-Adjacent Collapse
+
+Editor weakness may reflect collapse toward generic assistant behavior for assistant-adjacent personas under the current Lu-style extraction setup. This is plausible but still provisional because only one editor chunk and one matched token-cap follow-up have been tested.
+
+### Adaptive Extraction Generality
+
+Adaptive extraction is operationally validated for trickster but not yet generally validated across persona types. It should be treated as a workflow candidate pending additional high-yield, mid-yield, and assistant-adjacent persona tests.
+
+### Paper 1.5 Scope Reframing
+
+Paper 1.5 is now framed as a persona-geometry interpretation paper rather than primarily as an adaptive extraction replication paper. Adaptive extraction remains important due diligence and tooling evidence, while the main claim is that persona activation geometry decomposes into semantic, dispositional, procedural, lexical/register, and residual layers.
+
+### Paper 2 Local-Manifold Direction
+
+Paper 2 is now framed around local centroid perturbation and local persona-manifold mapping. Candidate anchors are Trickster, Actor, Therapist, and Spy. Older dyad contagion, attractor-collapse, conversational drift, and rumination plans are archived as future dynamics work rather than discarded.
+
+### Cluster Motivational Structure
+
+Six of seven clusters have dialogue-derived motivational characterizations. These are useful for hypothesis generation and Paper 1.5 framing, but empirical verification remains pending.
+
+## Methodological Deviations
+
+### Role-Prompt Label Exposure
+
+The Lu et al. role system prompts contain extensive direct identity-label exposure. A local audit of 275 role files found 1280/1375 prompts, 93.1%, expose the target role label or a normalized variant, and 227/275 roles have 5/5 prompt exposure. This means the elicitation design should be described as role-label-plus-behavior elicitation rather than purely behavioral elicitation; it does not by itself show that activation geometry is invalid or reducible to labels.
+
+### No-Label Prompt Ablation
+
+A deterministic no-label prompt-ablation dataset now exists for all 1375 Lu et al. role prompts. Validation found zero remaining normalized target-label exposure, median character length ratio 0.842, median lexical Jaccard 0.714, and no over-flattening flags. Offline TF-IDF/SVD comparison found continuous prompt-space topology is largely preserved after label removal, with role-level SVD cosine median 0.998, nearest-neighbor preservation 0.924, and pairwise distance correlation 0.985, while hard k-means cluster assignments are much less stable.
+
+### Semantic vs Activation Geometry
+
+Three-way comparison of role-name, original-prompt, no-label prompt, and available activation-reference geometry finds that semantic topology is preserved strongly between original and no-label prompt spaces, but activation cluster structure is only partially recoverable from semantics. At k=7, ARI against activation labels is 0.010 for role names, 0.023 for role names plus descriptions, 0.111 for original prompts, and 0.130 for no-label prompts. No-label prompt distances best predict available activation centroid-profile distances, but correlations remain modest: 0.230 for Gemma and 0.254 for Qwen.
+
+### Semantic Role Manifold Interpretation
+
+The Lu et al. role corpus now has a standalone interpretation as a frontier-model-generated semantic role manifold. It contains meaningful prompt-space topology before activations are considered, and that topology mostly survives label removal. The current interpretation is that activation experiments test how target models internalize, compress, sharpen, or reorganize this semantic manifold rather than revealing a structure independent of the elicitation corpus.
+
+### Deep Semantic Topology
+
+A deeper no-label semantic topology analysis found that the role corpus is organized by mixed social, professional, narrative, stylistic, and archetypal structure rather than by a single psychological taxonomy. The no-label k=7 semantic manifold shows broad professional/helper, lived-experience/social, communicative/media, mythic/fantastical, adversarial/normative, and generalist/helper regions, with soft boundaries and bridge roles such as spy, amnesiac, sage, guardian, merchant, and emissary. Dense pockets include professional and migration/survival neighborhoods; sparse roles include flaneur, predator, devils_advocate, advocate, teenager, vegan, genie, angel, robot, and adolescent. This supports treating the role list as a constructed semantic manifold whose topology partially constrains, but does not determine, activation geometry.
+
+### Semantic-Activation Overlap Structure
+
+Structured overlap analysis between activation clusters, original prompt clusters, and no-label prompt clusters found 73 stable anchor roles and 198 bridge or migratory roles under broad overlap criteria. Editorial is the cleanest semantic-activation overlap region, while procedural-professional compresses several semantic regions into one broad activation basin. Collective/swarm roles are semantically compact but distributed across larger activation clusters rather than forming a dedicated activation cluster in the available labels. This supports the interpretation that activation geometry preserves local semantic anchors while reorganizing broad prompt-space topology around enacted behavioral structure.
+
+### No-Label Activation Stress Test Design
+
+The first no-label activation-space stress test is designed but not launched. It selects 20 roles covering stable anchors, bridge/migratory roles, sparse/outlier roles, assistant-adjacent/procedural roles, theatrical/fantastical roles, and collective/swarm roles: editor, screener, reviewer, consultant, evaluator, proofreader, negotiator, trickster, jester, oracle, leviathan, mystic, hive, egregore, skeptic, philosopher, spy, dilettante, flaneur, and robot. The design uses paired original label-exposed and no-label conditions with 20 rollouts per role per condition, for 800 planned Qwen/Qwen3-32B layer-48 rollouts. The only intended experimental difference is system prompt label exposure.
+
+### Stage-1 Role Inventory Uncertainty Infrastructure
+
+Stage-1 role-inventory uncertainty is now scoped as provider-separated corpus construction. Codex handles OpenAI-side generation, provider-agnostic ingestion, normalization, and local semantic analysis; Anthropic-side generation is delegated to Claude or Claude Code and synced through GitHub. This keeps cross-provider credential handling out of Codex and treats GitHub as the synchronization layer for generated inventories.
+
+### Model Provenance Requirement
+
+Model provenance is now mandatory for future generated, evaluated, or analyzed research artifacts. The canonical schema is `research/workflow/model_provenance_schema.md`; it distinguishes `generation_model`, `evaluation_model`, `analysis_model`, and `script_author_model` so model identity is treated as part of the experimental causal structure rather than incidental metadata.
+
+### Full Cluster Assignment and PCA Projection (2026-05-28)
+
+- All 275 personas assigned to clusters via nearest-centroid lookup
+- Cluster distribution: procedural_professional 126; grounded_social 54; mythic_spiritual 51; combative_iconoclast 15; editorial 13; trickster_chaos 10; other 6
+- Ambiguous assignments with margin < 0.02: 262
+- PC1 explained variance: 0.315954; PC1-assistant-axis alignment: 0.802310
+- Notable surprising placements: anarchist, robot, cyborg, hive, and swarm assign to procedural_professional; virus assigns to mythic_spiritual with extremely low margin; caveman assigns to trickster_chaos with extremely low margin
+
+### Latent Feature Discovery Loop (2026-05-28)
+
+- Implemented the first constrained LLM-assisted latent-feature discovery loop for persona activation geometry, using GPT-5.5 Standard as hypothesis generator and held-out prediction as the only evidence source
+- The loop uses a deterministic 200/75 visible-heldout split, semantic-cluster baselines, operationalized latent dimensions, held-out regression/classification metrics, nearest-neighbor preservation, and permutation/null baselines
+- First-pass held-out evaluation found the strongest improvement for continuous assistant-axis prediction: best latent model R2 0.385 vs semantic baseline R2 0.301, delta +0.084
+- Discrete activation-cluster classification did not improve over the semantic baseline: best latent accuracy 0.600 vs baseline 0.600
+- Residual-proxy improvement was weak: best residual R2 0.300 vs baseline 0.290, delta +0.010, using a proxy residual target because the expected residual summary file was absent locally
+- Most useful preliminary axis predictors were procedural-professional orientation, theatrical/fantastical vividness, assistant-basin adjacency, standards/error aversion, and semantic-label dependence risk
+
+### Latent Feature Framing Ablation (2026-05-28)
+
+- Compared motivational, interactional, procedural/operating-mode, narrative-causal, all-framing, and prior first-loop feature families on held-out PCA3D activation-coordinate prediction using existing local artifacts only
+- The PCA artifact contained 273 personas with coordinates, yielding a 200 visible / 73 held-out deterministic split under the same seed as the first loop
+- Semantic baseline PCA3D R2 was 0.322; the best model was the prior first-loop feature set at R2 0.436, delta +0.114
+- The best new framing-only model was all framings combined at R2 0.405, delta +0.083; the best single new framing was procedural at R2 0.373, delta +0.051
+- Improvement concentrated most on PC1 for the best model: PC1 R2 0.499, PC2 R2 0.353, PC3 R2 0.406
+- Cluster prediction remained secondary and only slightly improved: baseline accuracy 0.616 vs best accuracy 0.630, delta +0.014
+
+### Iterative Latent-Feature Outer Loop (2026-05-28)
+
+- Implemented a finite outer-loop latent-feature discovery harness with five deterministic repeated splits, candidate-dimension retention/discard logic, permutation/null checks, split-variance tracking, and plateau termination
+- Final retained feature set reached mean held-out PCA3D R2 0.492 across five splits versus semantic baseline R2 0.389, mean delta +0.103
+- The loop retained 31 dimensions and terminated after two consecutive refinement iterations failed the meaningful-gain gate
+- Stabilized feature families include procedural, assistant-adjacency, semantic-label-dependence, emotional-regulation, prior first-loop dimensions, motivational, interactional, narrative-causal, institutional, collective/distributed, and destabilization/reactivity
+- Narrow edge-case refinements for mythic/artistic expression, developmental immaturity, social hospitality, nonhuman scale, forecast/control, and judicial norms were discarded under the retention policy
+- Recurring high-residual personas across splits include mechanic, adolescent, prisoner, smuggler, infant, hermit, bard, teenager, predator, journalist, sage, and amateur
+
+### Persona-Level Explanation Residual Ranking (2026-05-28)
+
+- Ranked 273 personas by how well the final iterative outer-loop feature vocabulary predicts activation PCA3D placement
+- Primary ranking uses mean held-out residual where a persona appeared in held-out splits; 221 personas had held-out prediction evidence, while 52 personas use apparent full-model residuals and are marked in the output
+- Most effectively explained personas by final residual: designer, nomad, curator, chemist, and tulpa
+- Least effectively explained personas by final residual: procrastinator, toddler, teenager, comedian, and cyborg
+- Largest improvements over semantic baseline: jester (+27.347 residual reduction), robot (+26.346), wind (+26.271), gossip (+23.916), and poet (+22.722)
+- Strongest worsening relative to semantic baseline: futurist (-26.250), veterinarian (-26.122), forecaster (-23.457), coordinator (-18.523), and producer (-16.241)
+- Interpretation: high residuals are diagnostic cases for the current feature vocabulary, not proof that a persona is inherently inexplicable or that the retained dimensions are final
+
+### Cross-Model Feature Transfer (2026-05-28)
+
+- Compared Codex-derived retained outer-loop features and local Big Five features across canonical activation PCA3D and a reconstructed Big-Five pseudo-PCA3 target using the same five deterministic splits and semantic baseline
+- Codex features improved canonical activation PCA3D prediction: R2 0.490 vs semantic baseline 0.389, delta +0.101, with mean residual reduction +2.042
+- Big Five features transferred strongly to canonical activation PCA3D prediction: R2 0.613 vs semantic baseline 0.389, delta +0.223, with mean residual reduction +5.483
+- Codex features did not robustly transfer to the Big-Five pseudo-PCA3 target: R2 0.280 vs baseline 0.269, delta +0.012, but mean residual reduction was negative at -0.041
+- Big Five features predicted their own reconstructed pseudo-PCA target as a positive-control condition: R2 1.000 vs baseline 0.269, delta +0.731
+- Interpretation: evidence supports asymmetric transfer, with Big Five features transferring to canonical activation geometry but Codex behavioral/procedural features not robustly transferring to the reconstructed Big-Five pseudo-PCA target
+- Caveat: no separately committed Claude pseudo-PCA coordinate artifact was found; pseudo-PCA was reconstructed from `visualizations/bigfive_profiles.json`, which does not itself carry explicit Claude provenance metadata
+
+### Shared Latent Feature Benchmark (2026-05-28)
+
+- Created a canonical shared benchmark using 273 common personas, Codex canonical activation PCA3D coordinates, Claude's direct exported cluster-cosine pseudo-PCA3D target, the same five deterministic Codex outer-loop splits, and aligned semantic, Codex, Claude Big Five, Claude full, and combined feature matrices
+- The direct Claude pseudo-PCA artifact supersedes the earlier reconstructed-target caveat for this benchmark: `claude_target_coordinates.csv` was loaded from the Claude branch rather than reconstructed from `bigfive_profiles.json`
+- Big Five features transfer strongly to canonical activation PCA3D: R2 0.613 vs semantic baseline 0.389, delta +0.224, with mean residual reduction +5.465
+- Codex retained features improve canonical activation PCA3D: R2 0.490 vs semantic baseline 0.389, delta +0.101, with mean residual reduction +2.042
+- Codex retained features do not transfer to Claude's direct pseudo-PCA3D target over the semantic baseline: R2 0.166 vs baseline 0.167, delta -0.001, with mean residual change -0.019
+- Claude Big Five features remain the strongest tested feature family for Claude pseudo-PCA3D: R2 0.243 vs semantic baseline 0.167, delta +0.076
+- Combined Codex+Claude features do not outperform the best single feature family on either target in this aligned benchmark
+- Interpretation: the evidence supports target-aligned Big Five transfer into canonical activation geometry, while Codex procedural/behavioral dimensions remain useful for canonical activation prediction but do not explain Claude's pseudo-PCA target beyond semantics
+
+### Latent Feature Convergence Status (2026-05-28)
+
+- Synthesized Codex/GPT-5.5 and Claude latent-feature analyses into a convergence-and-replicability planning memo
+- Current best explanatory model is a continuous dispositional-behavioral manifold: Big Five-style traits explain broad global placement, while Codex procedural/motivational dimensions remain candidates for role-function and local residual explanation
+- Big Five meaning analysis found strong trait-PC structure in canonical activation PCA: conscientiousness tracks PC1 positively (r=+0.824), openness tracks PC1 negatively (r=-0.779), extraversion tracks PC1 negatively (r=-0.692), neuroticism tracks PC1 negatively (r=-0.672), and agreeableness most strongly tracks PC3 (r=-0.477)
+- Current best interpretation: PC1 separates careful/evaluative/procedural control from open/expressive/unstable or emotionally pressured organization; PC2 appears compound and less cleanly univariate; PC3 partly reflects cooperative-care versus antagonistic/disruptive stance
+- What remains unreplicated: Claude has not yet searched for features that improve canonical activation PCA residuals after Big Five, and Codex has not yet shown a controlled hybrid model that beats Big Five
+- Recommended next step: run a small local trait-plus-procedure hybrid benchmark on canonical activation PCA using Big Five as the baseline to beat, then ask Claude for a residual search only if a residual signal is plausible
+
+### Codex Trait Replication Loop (2026-05-28)
+
+- Ran a constrained Codex/GPT-5.5 trait-only replication loop on canonical Qwen activation PCA using the same 273 personas, five deterministic splits, semantic baseline, and ridge-regression evaluation path
+- Allowed feature space was restricted to dispositional/trait concepts; procedural role labels, occupational functions, explicit operating modes, and narrative archetypes were excluded
+- Final retained Codex trait model kept five core dimensions: organized reliability, imaginative flexibility, social expressivity, affiliative warmth, and threat reactivity
+- Performance was weak but positive: R2 0.398 vs semantic baseline 0.389, delta +0.009; Claude Big Five remains much stronger at R2 0.613
+- Codex trait model per-axis R2 was PC1 0.519, PC2 0.212, PC3 0.328, compared with Claude Big Five PC1 0.734, PC2 0.480, PC3 0.416
+- Measured convergence to Claude Big Five was modest: mean best absolute correlation from retained Codex trait dimensions to Big Five columns was 0.152
+- Interpretation: Codex independently rediscovered a weak trait-like signal under constraint, but did not replicate Claude Big Five's predictive efficiency; the result supports partial dispositional convergence, not a successful Big Five-level replication
+
+### Hierarchical Trait-Procedural Model (2026-05-28)
+
+- Built a two-stage held-out predictor of canonical Qwen activation PCA3D: Stage A used semantic controls plus Claude Big Five-style traits, and Stage B used selected Codex procedural/behavioral dimensions to predict Stage A residuals
+- Trait baseline explained broad geometry at R2 0.613 with mean residual 21.748, reproducing the shared benchmark result under the same five deterministic splits
+- Residualized procedural correction improved the integrated model to R2 0.622 with mean residual 21.524, a modest delta of +0.009 R2 and +0.224 residual reduction over the trait stage
+- Naive concatenation did not improve over the trait stage: R2 0.613 and mean residual 21.768, supporting a residualized/layered interpretation more than a simple feature-union interpretation
+- Procedural correction improved nearest-neighbor preservation from 0.232 to 0.252, suggesting the added signal is more local-topological than broad-cluster-level; cluster accuracy did not improve over the trait stage
+- Bridge roles did not improve disproportionately overall: bridge mean improvement +0.049 vs non-bridge +0.553, though individual bridge roles such as wind, visionary, robot, specialist, evangelist, and bard improved strongly
+- Developmental roles remained high residual after both stages: mean hierarchical residual 52.281 vs non-developmental 21.112
+- Remaining high-residual cases were enriched for bridge, symbolic/liminal, and developmental structure; this supports a future descriptive third-layer hypothesis but does not yet justify fitting a symbolic/liminal correction model
+
+### Residual Manifold Analysis (2026-05-28)
+
+- Implemented a focused residual-manifold loop after the hierarchical trait-plus-procedural model, using full no-label prompts, no-label semantic-neighborhood structure, bridge/displacement metadata, residual histories, and canonical activation PCA context
+- The search space was constrained to developmental dependency, incomplete proceduralization, identity formation, role ambiguity, liminal transition, volatile state transition, social dependency/constraint, collective/nonindividual agency, symbolic/nonprocedural identity, lawless improvisation, isolation, primitive embodiment, and semantic-neighborhood residual pressure
+- The residual layer improved held-out PCA3D R2 from the hierarchical baseline 0.622 to 0.632, with mean residual reduced from 21.524 to 21.326
+- Retained dimensions came from iterations 1 and 2; semantic bridge instability and original-to-no-label semantic displacement were discarded because they added negligible R2 and worsened mean residual
+- Most improved held-out cases included criminal, toddler, prisoner, caveman, teenager, rogue, infant, hoarder, adolescent, fool, and detective
+- Remaining high-residual cases after the residual layer include procrastinator, smuggler, daredevil, teenager, dilettante, hermit, idealist, loner, alien, toddler, cyborg, and swarm
+- Developmental seed roles remain the clearest residual manifold: mean residual 39.834 vs 21.064 for non-developmental roles, with 4/5 developmental seed roles still in the top-25 residual set
+- Symbolic/liminal clusters and collective/nonindividual prompt cases also remain elevated, supporting a narrow future diagnostic rather than an established third symbolic layer
+
+### Residual SVD15 Interpretation (2026-05-28)
+
+- Reconstructed and interpreted Claude's TF-IDF SVD15 residual signal from the committed Claude run script and local full no-label prompt corpus; Claude had not committed separate SVD vocabulary/loading artifacts
+- Reconstruction exactly matched Claude's reported sem+BigFive+SVD15 result to rounding: R2 0.707 vs sem+BigFive baseline R2 0.613, delta +0.094, with SVD15 explaining only 0.138 of TF-IDF prompt variance
+- The strongest activation-PC relation was SVD component 2, a nonhuman/entity-consciousness versus lived family/social-hardship contrast, correlated with PC2 at r=-0.608 and PC3 at r=+0.343
+- Other interpretable components included professional specialization versus existential/liminal being-language, teaching/spiritual lived experience versus standards/evaluation roles, between-worlds/intercultural mediation versus stepwise planning, outlaw/survivor/story-role texture versus collective/student/entity identity, and helping/health/guidance versus abstract analytic forecasting expertise
+- Hand-named residual dimensions were only partially supported: developmental dependency, role ambiguity, and semantic-neighborhood residual pressure had the strongest component alignments, while incomplete proceduralization, identity formation, liminality, collective agency, and symbolic identity appeared diffuse across multiple SVD axes
+- Interpretation: abstract residual labels underfit because they collapse many weak concrete text cues, while SVD15 preserves granular prompt texture and semantic-neighborhood variation; the next step is to distill SVD extremes into concrete human-readable residual features and retest them
+
+### PC3 Hypothesis Evaluation (2026-05-29)
+
+- Evaluated the working PC3 interpretation adversarially using PC1/PC2-neighbor pair contrasts, a description-only blind rubric, seven competing lexical hypotheses, cluster enrichment checks, and residual analysis
+- The blind preserve-minus-challenge/exploit rubric predicted PC3 only weakly to moderately: continuous score r=-0.312 and ordinal rubric r=-0.318, with the sign indicating lower PC3 for preserving/nurturing roles and higher PC3 for challenging/exploiting/competitive roles
+- Alternative-hypothesis search found `nurturing_vs_competitive` slightly strongest at r=-0.319, while the target `system_preserving_vs_exploiting` hypothesis ranked second at r=-0.308
+- PC3 is strongly enriched in combative/trickster regions: combative_iconoclast mean PC3 25.78 with 93% above the global upper quartile, and trickster_chaos mean PC3 23.03 with 80% above the upper quartile, though both clusters overlap the rest of the distribution
+- Agreeableness remains the strongest Big Five correlate of PC3 at r=-0.477, while Big Five and hierarchical residual magnitudes correlate only weakly with PC3
+- Interpretation: the preserving/exploiting hypothesis partially survives but is too narrow; the current best phrasing is a cooperative-care/system-stabilization versus antagonistic-disruptive/transgressive-register axis, with moderate-low confidence pending paired no-label falsification tests
+
+### Blinded PCA-Axis Rubric Validation (2026-05-29)
+
+- Ran a coordinate-blind validation using the full available no-label persona prompt corpus: 1,375 rewritten prompt records covering all 275 personas, five prompts per persona
+- Scoring used deterministic local lexical-semantic rubric proxies over no-label prompt text only; persona names, PCA coordinates, clusters, residuals, and prior labels were excluded until after scoring
+- Target-aligned correlations were positive but modest: PC1 objective-certainty r=0.247, PC2 fragmented/coherent-uncertainty r=0.224, and PC3 antagonistic-transgressive r=0.349
+- Matched-pair validation was weak: PC1 35%, PC2 40%, and PC3 40% direction-match rates over the top 20 close-orthogonal pairs per axis, with many failures caused by tied lexical scores
+- Regression from the three main rubric scores produced low cross-validated R2: PC1 0.065, PC2 0.024, and PC3 0.116; expanded PC2 alternatives improved PC1/PC3 prediction but not PC2
+- Interpretation: this does not cleanly validate the working axis interpretations from no-label prompt text alone; PC3 receives the strongest modest support, PC1 is positive but weaker than expected, and PC2 remains the least certain
+- Caveat: this is a local lexical proxy study, not a true independent human or LLM blinded-rating study; the next test should use richer full rollout responses or independent blinded raters
+
+### Reading-Based Blinded PCA-Axis Rater Study (2026-05-29)
+
+- Ran a true reading-based Codex/GPT-5.5 rater study over anonymized no-label persona dossiers: 275 personas, five rewritten prompts per persona, with persona names/PCA coordinates/clusters/Big Five/residuals hidden from the rater
+- Full 275-persona rollout-response corpora were not found locally; full response corpora exist for trickster/editor and dyad subsets only, so this study validates against persona operationalization text rather than generated rollout behavior
+- Target-aligned reading-based correlations were materially stronger than the lexical-proxy screen: PC1 objective-certainty r=0.558, PC2 coherent-action-under-uncertainty r=0.373, and PC3 antagonistic-transgressive r=0.690
+- Matched-pair validation improved sharply: PC1 75%, PC2 100%, and PC3 95% direction-match rates over the top 20 close-orthogonal pairs per axis
+- Three main rater scores predicted held-out PCA coordinates with CV R2: PC1 0.496, PC2 0.101, and PC3 0.522; expanded PC2 alternatives raised CV R2 to PC1 0.616, PC2 0.564, and PC3 0.686
+- PC3 is now the best-supported direct axis interpretation in the prompt-dossier evidence; PC1 is strengthened but partly entangled with intelligence/expertise; PC2 remains the main uncertainty because abstraction correlates more strongly with PC2 than the direct coherent-action score
+- Caveat: scoring used Codex-as-rater, not an independent local LLM or human rater, and the corpus is no-label system-prompt text rather than full rollout responses
+
+### Professional Hierarchy Validation (2026-05-30)
+
+- Ran a targeted professional-role validation over 102 professional, technical, scientific, analytical, academic, and expert personas present in the Qwen geometry and no-label prompt corpus
+- Codex/GPT-5.5 rated anonymized no-label professional dossiers before PCA evaluation on objective certainty, coherent action under unresolved uncertainty, and system perturbation
+- PC1 received targeted professional support: objective certainty correlated with actual PC1 at r=0.394, and the high-PC1 professional pole contains auditor, examiner, evaluator, validator, screener, reviewer, and grader-like roles
+- PC3 received modest targeted support: system perturbation correlated with actual PC3 at r=0.319, and the three-rating model predicted professional PC3 with CV R2=0.429
+- PC2 was not supported as a professional coherent-action hierarchy: coherent uncertainty capacity was essentially uncorrelated with actual PC2 at r=-0.007
+- Scientist vs physicist weakly supports the actual abstraction ordering because physicist is lower on PC2 than scientist, but the blinded rating gave them similar coherent-uncertainty capacity scores
+- Interpretation: PC1 remains moderate-confidence; PC3 remains moderate with professional counterexamples; PC2 should be reframed away from simple professional uncertainty capacity and toward abstraction/historical-theoretical/world-model depth unless future tests separate those factors more cleanly
+
+### PC2 Conditional Validation After PC1 Control (2026-05-30)
+
+- Ran a conditional PC2 validation over 273 personas common to canonical Qwen PCA coordinates and the blinded no-label dossier score table
+- PC1 was controlled approximately by 10 percentile bands, then residual PC2 variation was tested against maturity, abstraction, expertise, uncertainty exposure, residence time under uncertainty, and coherent action under unresolved uncertainty
+- Abstraction was the strongest pooled band-demeaned predictor of PC2: Pearson r=-0.618, Spearman r=-0.597, R2=0.382
+- Coherent action under unresolved uncertainty remained weaker but nonzero: Pearson r=+0.427, Spearman r=+0.334, R2=0.182
+- Uncertainty exposure failed as a residual explanation after PC1 control: Pearson r=-0.026 and R2=0.001
+- Matched-pair and mythic/developmental tests support revising PC2 from a coherent-action-only axis to an abstraction/integration/developmental axis, with coherent action retained as a secondary behavioral expression
+- Strongest support: teenager vs crystalline at nearly matched PC1 shows high-PC2 developmental/reactive structure against low-PC2 abstraction/integration
+- Strongest counterexample: adolescent vs parasite shows a high-PC2 member with higher abstraction by 21 points, warning that abstraction is not a complete one-variable explanation
+
+### PC3 Perturbation-Stabilization Validation (2026-05-30)
+
+- Ran a full-distribution PC3 validation over all 275 personas using persona name plus neutral eval-prompt definition only; PCA coordinates and clusters were joined after scoring
+- Perturbation-stabilization score predicted PC3 globally: Pearson r=0.529, Spearman r=0.511, and cluster-controlled Pearson r=0.491
+- Within-cluster pairwise ordering accuracy was 0.773 overall, strongest in mythic_spiritual (0.848) and procedural_professional (0.802), but weak in grounded_social (0.565)
+- Negative controls were weaker than the target rubric: moral_badness Pearson r=0.201, professionalism r=0.103, weirdness/fantasticality r=0.029, and abstraction r=0.129
+- Interpretation: PC3 shows suggestive but incomplete support for perturbation-stabilization; cooperative-antagonistic remains a secondary or partial reading, and independent blinded human or second-model rating is the next validation step
+
+### Trait-Space Axis Interpretation (2026-05-30)
+
+- Ran direct PCA over 240 raw Qwen/Qwen3-32B layer-48 trait vectors from `downloads/hf_vectors/qwen-3-32b/trait_vectors/`; each `[64, 5120]` tensor was mean-pooled to one 5120-D vector
+- Trait PCA explained variance: PC1 0.353, PC2 0.168, PC3 0.134, cumulative PC1-PC3 0.655
+- Trait PC1 moderately aligns with persona PC1 in activation-space direction cosine, abs=0.681, but trait PC2 and PC3 weakly align with persona PC2/PC3, abs=0.194 and 0.065
+- Streamlined trait-axis interpretations: PC1 controlled seriousness/formal composure vs playful irreverence/expressive volatility; PC2 cold detachment/hard-edged abstraction vs warm accessibility/affiliative care; PC3 plain practical groundedness vs ornate symbolic/theatrical expressivity
+- Trait-only PC3 did not independently validate perturbation-stabilization: name-based perturbation/stabilization score correlated weakly with trait PC3, Pearson=-0.074 and Spearman=-0.104, while moral valence was near zero
+- Trait-space cone testing did not reproduce the simple persona-space cone pattern: lowest-PC1 vs highest-PC1 radial spread ratio was 0.863, and secondary variation did not expand as PC1 decreased
+- Interpretation: trait vectors strongly reconstruct persona geometry through cosine profiles, but direct trait-space PCA is not the same object as persona-space PCA; this supports a layered shared-geometry model rather than a simple trait-axis reduction
+
+### Trait Prompt Artifact Inventory and Forecasting Readiness (2026-05-30)
+
+- Verified 240 local trait prompt JSON artifacts under `data/traits/instructions/`, exactly matching the 240 Qwen/Qwen3-32B layer-48 trait vector names
+- Verified local role prompt artifacts under `data/roles/instructions/`: 276 files because `default.json` is included, while Qwen `role_vectors/` contains the expected 275 role/persona vectors
+- Retrieved and inspected `belmore/assistant-axis-vector-prompts` (`train.parquet`, SHA `57424a9d6075a44196b935983ce1fa4e83191679`), which contains 516 rows: 275 roles, 240 traits, and 1 default row
+- Trait artifacts include descriptions, five positive instructions, five negative instructions, forty behavioral questions, and a 0-100 eval prompt with refusal handling
+- Exact trait-name match across local artifacts, Belmore prompt rows, and Qwen trait vectors is 240/240, with no missing, extra, or normalization-required names
+- Interpretation: prompt-to-geometry forecasting is ready as a dataset-construction task; the first version should use holdout-by-trait splits and exclude eval prompts or target labels for leakage-controlled forecasting
+
+### Prompt-To-Geometry Forecasting on Held-Out Concepts (2026-05-30)
+
+- Built concept-level forecasting datasets from released role and trait prompt artifacts, with one row per concept per text variant rather than splitting individual prompt rows
+- Excluded eval prompts from all variants; leakage-control variant additionally replaced explicit target names with `[TARGET]`
+- Critical trait split held out 40 complete traits and trained on 200 complete traits; role split held out 55 complete roles
+- Best held-out trait model was elastic-net TF-IDF on leakage-control text: mean R2=0.389, PC1 R2=0.414, PC2 R2=0.304, PC3 R2=0.450; Pearson r=0.656/0.602/0.708
+- Best held-out role model was elastic-net TF-IDF on leakage-control text: mean R2=0.621, PC1 R2=0.783, PC2 R2=0.577, PC3 R2=0.504; Pearson r=0.887/0.772/0.732
+- Nearest-neighbor semantic retrieval was weak on held-out leakage-control traits, mean R2=-0.021, so the linear model adds predictive structure beyond copying the closest training artifact
+- Interpretation: prompt text contains substantial predictive information about released geometry on unseen concepts, but this remains artifact-to-geometry forecasting rather than a new activation-generation or control-system result
+
+### PC1/PC2 Forcing-Function Interpretation Notes (2026-05-30)
+
+- Created `research/outputs/axis_forcing_function_notes/pc1_pc2_forcing_function_note.md`, `judge_rubric_design_notes.md`, and `axis_interpretation_method_sequence.md`
+- PC1 is now framed as convergence pressure versus degrees of freedom, not merely assistantness or careful evaluation; evaluator-like roles are endpoint evidence, while the causal/geometric hypothesis is constraint toward correctness, validation, procedure, evidence, or error correction
+- PC2 is now framed as integrated abstraction versus situated developmental immediacy, with an admissibility constraint: some personas lack the prerequisites for reflective synthesis or accumulated world-model structure without ceasing to be that persona
+- The notes preserve the numerical context: semantic baseline around R2 0.389, procedural features around R2 0.490, Big Five-style features around R2 0.613, richer combined models around R2 0.707, and prompt-to-geometry forecasting results for held-out traits and roles
+- Status: hypothesis to be operationalized through judge rubrics; the next test is whether forcing-function rubric scores improve held-out prompt-to-geometry forecasting beyond text embeddings
+
+### Cluster-Conditioned PC1/PC2 Axis Tests (2026-05-30)
+
+- Tested whether cluster-conditioned interpretation improves PC1 and PC2 prediction using 275 role/persona PCA coordinates, canonical cluster labels, and existing blinded rater annotations
+- Simple within-cluster pairwise ordering was not easier: PC1 global accuracy 0.709 vs within-cluster 0.622; PC2 global accuracy 0.746 vs within-cluster 0.687
+- Cluster-conditioned regression improved calibrated prediction: PC1 direct R2 0.296 vs oracle-cluster R2 0.811; PC2 direct R2 0.416 vs oracle-cluster R2 0.718
+- Text-to-cluster classification from blinded dossier text reached 0.687 held-out accuracy and 0.404 macro F1; predicted-cluster conditioning retained part of the benefit for PC1 (R2 0.647) and less for PC2 (R2 0.520)
+- Interpretation: cluster identity helps as an intercept/slope interaction, not because within-cluster pair ordering is easier; PC1 can use direct judging for simplicity, while PC2 benefits from cluster-conditioned analysis but should avoid hard predicted clusters in deployment unless classifier accuracy improves
+
+### Novel Prompt Battery for H100 Geometry Validation (2026-05-30)
+
+- Built `research/outputs/novel_prompt_battery/` as a frozen 120-prompt validation battery for future H100 measurement of predicted prompt geometry
+- Retrained and serialized the selected role-trained leakage-control elastic-net TF-IDF forecaster; stable model hash is `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`
+- Generated 1,036 candidate prompts from behavioral region templates without external API calls and without explicit persona role labels; final battery has zero explicit role-name flags
+- Final prompt families: 52 mixed-boundary, 24 manual holdout, 19 cluster-region, 13 safety-adjacent, and 12 neutral-control prompts
+- Leakage checks against released artifacts were low: max approximate artifact similarity 0.205, mean 0.069
+- Coverage is partial: 11/27 quantile target cells populated; high-PC1 and high-PC2 target regions remain under-covered by the current natural-prompt generation strategy
+- Interpretation: H100 validation is feasible using `h100_prompt_run_manifest.csv`, but the battery should be described as a partial geometric validation set rather than complete coverage
+
+### Adaptive High-PC3 / High-PC2 Prompt Battery Expansion (2026-05-30)
+
+- Built `research/outputs/novel_prompt_battery_expansion/` as a targeted 60-prompt supplement using the frozen role-trained leakage-control elastic-net TF-IDF forecaster, hash `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`
+- The adaptive loop logged 516 generated candidates, coordinate-error feedback, acceptance/rejection status, leakage scores, explicit-role flags, and safety flags
+- Supplemental prompt counts: 26 mixed-boundary, 22 cluster-region, and 12 safety-adjacent prompts
+- High-frontier coverage improved: 38 supplemental prompts are above the prior PC3 75th percentile, 44 are above the prior PC2 75th percentile, 12 are safety-adjacent high-PC3, and 26 are mixed-boundary high-PC3
+- Combined battery now has 180 prompts and improves quantile target-cell coverage from 11/27 to 16/27
+- Leakage/safety checks passed for the supplement: zero explicit role-name flags, zero operational-harm flags, max artifact similarity 0.104, mean artifact similarity 0.069
+- Interpretation: the combined battery is ready for H100 validation as a targeted high-PC3/high-PC2 frontier probe, while high-PC1 and several exact 3D target cells remain under-covered
+
+### Percentile-Edge Prompt Battery for H100 Validation (2026-05-30)
+
+- Built `research/outputs/novel_prompt_battery_percentile_edges/` as the final edge-heavy prompt battery referenced to inherited role/persona PCA percentiles from `research/visualizations/geometry_viz_data.json`
+- Inherited thresholds: PC1 p20=-32.056, p35=-13.924, p65=19.979, p80=31.909; PC2 p20=-16.333, p35=-8.534, p65=4.215, p80=16.307; PC3 p20=-11.810, p35=-5.698, p65=4.816, p80=11.642
+- The frozen role-trained leakage-control elastic-net TF-IDF forecaster hash was verified before scoring: `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`
+- Final battery has 100 prompts and passes all predefined readiness criteria: PC1 lower 12/8, PC1 upper 11/8, PC2 lower 34/8, PC2 upper 8/8, PC3 lower 8/8, PC3 upper 16/8, shoulder/edge 58/12, interior controls 20/20, final size 100/100, filters pass
+- Generation log preserves 200 generated candidates and 168 rejected candidates; rejection reasons were coordinate_miss 159, criterion_already_met 8, and duplicate_or_near_duplicate 1
+- Leakage/safety checks passed: zero explicit role-name flags, zero operational-harm flags, max artifact similarity 0.133, mean artifact similarity 0.071
+- H100 readiness judgment: ready; recommended manifest is `research/outputs/novel_prompt_battery_percentile_edges/percentile_edge_h100_manifest.csv`
+
+### Pre-H100 Methods Memorial (2026-05-30)
+
+- Created `research/outputs/pre_h100_methods_memorial/` to memorialize the full pre-H100 preparation process before activation validation changes the state
+- The memorial distinguishes descriptive persona geometry, explanatory modeling, prompt-to-geometry forecasting, prompt-battery construction, and pending H100 activation validation
+- It records the chosen H100 manifest, frozen forecaster hash, final percentile-edge pass table, assumptions required for interpretability, smoke/checkpoint/early-stop plan, and success/failure interpretations
+- Current status: pre-H100 preparation is complete, but no claim has yet been established that the forecaster predicts actual response activations on novel prompts
+
+### Percentile-Edge H100 Activation Validation (2026-05-31)
+
+- Ran the full 100-prompt percentile-edge validation battery through Qwen/Qwen3-32B response generation and layer-48 response-token activation extraction on an A100 SXM 80GB RunPod instance
+- Existing persona PCA projection was reconstructed from all 275 Qwen role vectors and verified against committed canonical coordinates before use: max abs reproduction error 1.21e-06
+- Final forecast-vs-observed correlations were positive on all three PCs: PC1 Pearson 0.691 / Spearman 0.696, PC2 Pearson 0.643 / Spearman 0.594, PC3 Pearson 0.491 / Spearman 0.343
+- PC1 showed calibrated predictive value as well as rank correlation, with R2 0.321; PC2 and PC3 remained poorly calibrated with R2 -2.721 and -0.243 despite positive correlations
+- Mean 3D Euclidean error was 37.29, median 36.42, and max 80.21; largest residual was `peb_001`
+- Runtime was stable after cached load: 100-prompt full phase 1631.7 seconds at an estimated $0.68 full-phase compute cost; no early stop triggered
+- Interpretation: the validation supports prompt-to-geometry forecastability as a proof of concept, especially for rank/order structure, while motivating a follow-up calibration/error analysis for PC2 and PC3
+
+### H100 Forecast-Observed Regional Error Geometry (2026-05-31)
+
+- Built `research/outputs/h100_percentile_edge_validation_error_analysis/` with per-prompt error vectors, six-tail regional breakdowns, shoulder/edge breakdowns, and interactive 3D/2D forecast-to-observed arrow visualizations
+- Verified 100/100 prompts have predicted and observed PC1/PC2/PC3; overall mean signed delta vector was (-9.114, +28.342, -8.151), mean 3D error was 37.291, median 36.419, and center-collapse rate was 0.280
+- Errors are structured and axis-biased rather than random: PC2 observations shift strongly upward relative to forecasts, and PC3-high forecasts shift downward on PC3
+- Forecasted tail retention: PC1 lower 0.750, PC1 upper 0.000, PC2 lower 0.000, PC2 upper 1.000, PC3 lower 1.000, PC3 upper 0.000
+- Highest forecast-tail mean 3D error was PC2 upper tail at 44.344; PC3-high forecasts produced 0/16 observed PC3-high tail activations, weakening absolute high-PC3 address claims despite positive full-run PC3 correlation
+- Recommendation: fit an axis-wise calibration layer first, then test region-aware correction; increase safety-adjacent sample size before making a standalone safety-directionality claim
+
+### H100 Diagnostic Follow-Up Checklist and First Pass (2026-05-31)
+
+- Created persistent checklist `research/outputs/h100_diagnostic_followups/diagnostic_followup_checklist.md` with D01-D09 and status/evidence/next-action discipline
+- D01 methodology verification found no blocking projection discrepancy: model ID matched, PCA basis was reconstructed from 275 Qwen role vectors, and committed coordinate reproduction max abs error remained 1.207e-06
+- D01 remains in progress because source extraction equivalence is not fully line-by-line verified: layer-index convention, source chat template, and output-hidden-states versus hook-based post-MLP residual extraction remain open checks
+- First-pass anomaly diagnostics identified cone-violation candidates, extreme-PC1/near-zero-PC3 forecast-origin cases, low-PC2 upward-shift cases, PC3-high collapse cases, and top 3D residual cases
+- PC3-high collapse pass supports a response-neutralization hypothesis: forecasted PC3-high prompts had mean delta_pc3 -18.705 and 0/16 observed high-PC3 retention; largest downward cases moved near roles such as `provincial`, `student`, and `addict`
+- Prompt-generation audit found repeated scaffolds in accepted generated prompts and final battery prompts, so the percentile-edge battery remains valid as a forecaster stress test but not a clean natural-language generalization benchmark
+- Preliminary axis-wise LOOCV calibration improved apparent R2: PC1 0.463, PC2 0.390, PC3 0.211; this is a next-step target, not a resolved fix
+
+### Training Forecast Error Geometry (2026-05-31)
+
+- Built `research/outputs/training_forecast_error_geometry/` to compare frozen forecaster predictions against original role/persona target coordinates, using target-to-forecast arrows over inherited persona geometry
+- Per-example role predictions were not saved in the original forecasting outputs, so they were recomputed from the serialized frozen role-trained leakage-control elastic-net TF-IDF forecaster; stable model hash verified as `7863f7626ead1e7ee7a4404f1e7e10171517f29a083d39f1cd1a38c7adcbdc1f`
+- Frozen-model native target-to-forecast error is tiny because the design forecaster was retrained on all 275 role artifacts: mean 3D error 0.843, PC1/PC2/PC3 R2 all approximately 0.999-1.000
+- Native forecasts do show shrinkage toward the origin: 0.898 of forecasts are closer to the origin than their targets, with mean radial movement toward origin 0.615
+- Native role-artifact forecasts do not reproduce the H100 error pattern: H100 mean 3D error 37.291, H100 observed-minus-forecast PC2 bias +28.342, while native forecast-minus-target PC2 bias is approximately zero; H100 forecast |PC3|<=5 is 0.530 versus native 0.291
+- Interpretation: H100 PC2 upward shift and PC3-high collapse are not explained by native frozen-forecaster target-to-forecast error alone; they likely arise during prompt-generation/response-activation measurement or from the edge-battery stress-test distribution
+
+### Extraction Equivalence Audit (2026-05-31)
+
+- Built `research/outputs/extraction_equivalence_audit/` to compare original/local Assistant Axis extraction code, prior adaptive trickster/editor extraction, and the H100 percentile-edge extraction runner
+- Prior successful trickster replication used Qwen/Qwen3-32B layer 48, thinking disabled, response-token mean pooling, and a forward hook on `model.model.layers[48]`; the score>=2 vector matched the downloaded trickster vector at cosine 0.957557
+- Current H100 validation uses the same model identity and intended layer number, excludes prompt tokens, mean-pools generated response tokens, and projects with a PCA basis that reproduces committed canonical coordinates at max abs error 1.207e-06
+- D01 remains `in_progress`: local source and prior adaptive extraction are hook-based, while H100 reads `out.hidden_states[48]`; source inspection did not prove those activation objects are identical for Qwen/Qwen3-32B
+- Interpretation: H100 PC2/PC3 anomalies remain informative, but they retain a bounded activation-site caveat until a minimal hook-vs-hidden-states equivalence test is run
+
+### H100 Methodological Dependency Tracks (2026-05-31)
+
+- Added `research/outputs/h100_diagnostic_followups/methodological_dependency_tracks.md` and updated the persistent checklist so D01-D09 should not be closed in isolation when a governing T-track remains open
+- T01 extraction equivalence / activation boundary is critical and covers D01 directly; D02 cone-violation outliers should not be resolved until T01 closes
+- T02 forecaster improvement and T03 prompt-battery construction cover D03/D08 origin-plane and forecaster-exploitation concerns
+- T04 response-state uncertainty covers the centroid-versus-single-sample mismatch behind D04/D05 PC2 upward shift and D06 PC3-high collapse, alongside the T01 activation-boundary caveat
+- Recommended order: close T01, advance T02 instance-level prompt-to-centroid forecasting, rebuild/recalibrate the prompt battery under T03, then design the T04 small multi-sample GPU spread study
+
+### Playwright Within-Role Displacement Scoring (2026-05-31)
+
+- Prepared `research/outputs/playwright_displacement_scoring/` as a local no-GPU forecast packet for the user-selected target role `playwright`
+- Scored 240 shared extraction questions role-independently and five positive playwright instructions role-specifically using the current PC1/PC2/PC3 displacement rubric
+- Constructed the full 1,200-row playwright instruction-question additive forecast grid with the available playwright centroid coordinates: PC1 -9.818, PC2 4.586, PC3 4.301, cluster `grounded_social`
+- Question-score coverage is usable but uneven: PC1 has 1 negative, 16 positive, and 223 zero-scored questions; PC2 has 16 negative, 42 positive, and 182 zero; PC3 has 10 negative, 3 positive, and 227 zero
+- Playwright instructions are predicted to push mostly toward negative PC1 and positive PC2, with weak positive/neutral PC3
+- Caveat: these are rubric-based predicted displacement pressures, not observed activation movement; manual review of thin PC1-negative and PC3-positive coverage is recommended before any corrected-hook GPU run
+
+### Prior Adaptive Recovery Audit (2026-06-03)
+
+- Built `research/outputs/prior_adaptive_recovery_audit/` to inventory and classify prior adaptive extraction artifacts for trickster-family and procedural/professional-family targets under the corrected D01 boundary result
+- Found three explicit recoverable hook-based adaptive runs: `trickster_phase1_1200`, `editor_phase1_128`, and `editor_matched64_1024`
+- All three runs preserve response text and one 5120-d hook-derived activation shard per response, so they are locally reprojectable without GPU under D01 because the layer-48 hook is now known to match `outputs.hidden_states[49]`
+- Trickster remains the successful adaptive case: 1200/1200 activation vectors, 64 Codex/GPT-5.5 scored responses, 64 score>=2, and 33 score==3
+- Editor/procedural-adjacent runs are recoverable but low-yield: the 128-record run has 10 score>=2 and 3 score==3; the matched 1024-token 64-record run has 5 score>=2 and 1 score==3
+- Prepared 1,392 saved responses for possible GPT-4.1 rejudging in `prior_adaptive_gpt41_judge_inputs.jsonl`; no OpenAI API calls were made in this audit
+- Interpretation: prior editor failure is better treated as role-elicitation/judge-yield failure than as a D01 boundary artifact; do not rerun GPU solely to recover these prior adaptive runs
+
+### Recovered Role Cloud Analysis (2026-06-03)
+
+- Ran GPT-4.1 temperature-0 rejudging over all 1,392 recovered adaptive responses and processed trickster/editor corrected PCA coordinates through the same activation-cloud summary logic used for amateur/playwright
+- Trickster is strongly validated under GPT-4.1: 1200/1200 score>=2 and 1198/1200 score==3, with all-response centroid distance 13.637 and mean response distance 23.866
+- Editor remains weak under GPT-4.1 despite being less harsh than the prior Codex/GPT-5.5 scoring: editor 512-token retained 57/128 score>=2 and 3/128 score==3; editor 1024-token retained 36/64 score>=2 and 2/64 score==3
+- Editor score>=2 filtering moves centroids closer to the published editor role vector (512-token: 13.627 to 9.658; 1024-token: 14.076 to 8.293), but score==3 samples are too sparse for stable validated role-vector construction
+- Comparison against amateur/playwright shows editor is role/run-specific: amateur retained 59/60 score>=2 and playwright retained 54/60 score>=2 under the same GPT-4.1 rubric
+- Best-supported editor failure explanation is assistant-adjacent elicitation/role-expression difficulty, with centroid mismatch and sampling as possible contributors; GPT-5.5 strictness, D01 boundary error, and token cap are weakened as primary explanations
+- No additional GPU work is needed to recover these runs; any future procedural-professional GPU work should redesign the target/anchoring method rather than repeat editor unchanged
+
+### Activation Cloud Orientation Angle Analysis (2026-06-04)
+
+- Built `research/outputs/cloud_eigenvector_angle_analysis/` to quantify response-cloud covariance/eigenvector orientations for amateur, playwright, recovered trickster, and two recovered editor runs across all-response and judge-filtered layers
+- All-response PC1-PC2 dominant angles were: amateur -34.88 degrees, playwright -12.90 degrees, trickster -87.37 degrees, editor 512-token -31.02 degrees, and editor 1024-token -41.55 degrees
+- Playwright and editor clouds are strongly elongated; all-response dominant 3D variance shares were playwright 71.39%, editor 512-token 64.12%, editor 1024-token 62.46%, amateur 55.68%, and trickster 53.67%
+- Amateur/playwright/editor all-response clouds align much better with the empirical high-PC1/high-PC2 region proxy (-21.42 degrees; angular differences 13.46, 8.52, 9.60, 20.13 degrees) than with the positive +45 degree diagonal
+- Trickster is the qualitative exception: its all-response and GPT-4.1 retained clouds are nearly PC2-vertical and only 2.63 degrees from the PC2 axis
+- Assistant-axis projection was estimated as a proxy by regressing stored role axis projections on PC1/PC2; the proxy angle is +14.70 degrees with R2 0.966, and all-response playwright is closest among these clouds at 27.61 degrees away
+- Interpretation: current evidence supports testing a negative-PC2 role, including `student` as a candidate, but the boundary/orientation pattern remains provisional because the dataset has only five role/run views and repeated editor variants
+
+### PC2 Trait-Stratified Profile Analysis (2026-06-04)
+
+- Built `research/outputs/pc2_trait_stratified_profile/` using the canonical Qwen role-by-trait cosine profile matrix from `research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv` joined to Qwen role PCA coordinates from `research/visualizations/geometry_viz_data.json`
+- Analyzed 275 roles/personas and 240 trait-cosine features with global, PC1 tercile, PC1 quintile, and central muted-PC1 high-vs-low PC2 contrasts
+- Top replicated high-PC2 traits across all five PC1 quintiles include `experiential`, `casual`, `practical`, `reactive`, `grounded`, `anxious`, `neurotic`, `visceral`, `impulsive`, and `accessible`
+- Top replicated low-PC2 traits across all five PC1 quintiles include `ritualistic`, `conscientious`, `formal`, `abstract`, `conceptual`, `pensive`, `serious`, `theoretical`, `meticulous`, and `introverted`
+- PC1-control note: because PC1 and PC2 are PCA-orthogonal, direct residualization of PC2 on PC1 is nearly unchanged; the substantive confound control is the PC1-stratified high/low PC2 comparison plus per-trait PC1 covariate checks
+- Interpretation update: the result supports revising PC2 wording toward context-reactive/accommodating/situated versus stable/internalized/integrated organization; the older situated/formative/impressionable versus integrated/stable wording remains usable but less operationally precise
+- Caveat: trait profiles are activation-space cosine features over correlated traits, not independent psychological ratings or causal ontology
+
+### Qwen PC1 x PC2 Trait-Region Overlay Prototype (2026-06-04)
+
+- Built `research/outputs/qwen_pc2_trait_region_overlay/` as the first Qwen-only PC1 x PC2 trait-region overlay using the navigation-located joined trait profile matrix and canonical geometry tables
+- The prototype uses five PC1 quantile bands and three within-band PC2 tertiles, yielding 15/15 populated cells with no sparse cells under the n<8 threshold
+- PC1-band-relative trait labels differ materially from global labels: mean top-3 overlap was 0.18, showing that global enrichment is strongly shaped by broad PC1 gradients
+- High-PC2 cells frequently surface situated/reactive traits such as `experiential`, `practical`, `casual`, `accessible`, `anxious`, `neurotic`, `grounded`, or `accommodating`, while low-PC2 cells more often surface `abstract`, `conceptual`, `theoretical`, `ritualistic`, `pensive`, `serious`, `formal`, or adjacent integrated/formal traits
+- Caveat: this is a descriptive visualization over activation-space trait cosine features, not a causal or final solution to PC2
+
+### Native Trait-Region Mode in Persona Geometry Explorer (2026-06-05)
+
+- Integrated the Qwen PC1 x PC2 trait-region overlay into `research/visualizations/persona_geometry_explorer.html` rather than leaving it only as a standalone figure
+- The explorer now supports `Trait regions` Off/Top1/Top3/Top5, `Region basis` Quantile bands/Explorer grid, and `Color by: Region Cluster` while preserving the existing role scatterplot geometry, hover/select behavior, and side panel style
+- Quantile mode uses the prior 5 x 3 PC1-band-relative enrichment cells as the statistically stable default; explorer-grid mode is included as descriptive and flags sparse cells
+- Browser smoke testing through the local explorer found no console errors and confirmed the Top 3 quantile overlay renders inside the PC1 x PC2 explorer view
+- Caveat: this is an exploratory visualization integration, not new evidence that PC2 is solved; trait labels remain same-space activation-cosine enrichments rather than independent psychological ratings
+
+### Multi-Model Ordered Trait-Region Viewer (2026-06-05)
+
+- Built `research/outputs/multimodel_ordered_trait_region_viewer/` as a single interactive SVG viewer for Qwen, Llama, and Gemma ordered PC-axis trait-region overlays
+- All three models had complete local released-vector dependencies: 275 role vectors and 240 trait vectors each under `downloads/hf_vectors/`
+- Generated all six ordered PC-axis views per model, with both quantile-band and fixed-grid region bases; combined populated cell table has 531 rows
+- Quantile views have 0 sparse cells and are the stable default; fixed-grid views are descriptive and contain 96 populated sparse cells plus additional empty slots
+- Local x-axis-band-relative labels differ strongly from global labels across views: mean top-3 local/global overlap is 0.199 for quantile views and 0.214 for fixed-grid views
+- Reversing axes changes the conditioning baseline and can change label behavior; the report highlights the largest reversal differences, especially Qwen PC2xPC3 versus PC3xPC2 and Qwen PC1xPC3 versus PC3xPC1
+- Browser smoke testing confirmed the dependency-free SVG viewer renders both the default Qwen PC1xPC2 view and the reversed Llama PC2xPC1 view with 275 points, 15 cells, and 15 labels
+- Caveat: these are activation-space trait-vector overlays, not independent ratings; PC2/PC3 interpretations remain provisional
+
+### Trait-Profile Provenance Audit (2026-06-04)
+
+- Audited the 275-role x 240-trait Qwen profile matrix used in `research/outputs/trait_persona_prediction/`, `research/outputs/pc2_trait_stratified_profile/`, and `research/outputs/qwen_pc2_trait_region_overlay/`
+- Primary matrix: `research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv`, with 275 rows and 241 columns (`persona` plus 240 trait cosine columns)
+- Joined PC2 matrix: `research/outputs/pc2_trait_stratified_profile/pc2_trait_profile_joined_matrix.csv`, with 275 rows and 248 columns (`persona`, PC coordinates/percentiles/cluster, plus 240 trait cosine columns)
+- Provenance verdict: mixed. The 240 trait names/prompts and Qwen role/trait tensors are inherited Assistant Axis / Lu et al. Hugging Face artifacts, while the CSV matrix is internally generated by deterministic cosine similarity between mean-pooled released Qwen role and trait activation vectors
+- Scoring caveat: no independent role-name rating, description rating, prompt rating, generated-response rating, human score, or LLM trait questionnaire produced these matrix cells inside the local script
+- Interpretation impact: trait-enrichment figures are same-space Qwen activation-vector cosine overlays and have low evidential independence from the Qwen role-vector PCA geometry
+
+### AGENTS Continuity and Registry Maintenance Rules (2026-06-04)
+
+- Updated `AGENTS.md` to align Codex/GPT continuity with the current repository navigation and provenance system
+- Deprecated legacy reliance on `research/findings_log.md` as the primary record; future findings, interpretations, negative results, methodology constraints, and claim-relevant evidence should update `research/FINDINGS_LEDGER.md`, `research/CLAIMS_REGISTER.md`, and/or `research/PROVENANCE_REGISTRY.md`
+- Strengthened maintenance requirements for `research/THREAD_START.md`, navigation files, artifact statuses, and final Codex reporting so future work is easier to resume across GPT/Codex handoffs
+
+### Persona Activation-Cloud Geometry Audit (2026-06-04)
+
+- Built `research/outputs/persona_cloud_geometry_audit/` from the existing 1,512-point layered cloud viewer data covering amateur, playwright, trickster, `editor_phase1_128`, and `editor_matched64_1024`
+- Computed centroid, radius, covariance eigenvalues, 2D/3D anisotropy, first-cloud-PC explained variance, PC1/PC2 orientation, robust ellipse/volume proxies, and matched-n bootstrap uncertainty for all-response and available GPT-4.1/GPT-5.5 filtered clouds
+- Matched-n all-response comparison used n=60; trickster had lower RMS radius than the median non-trickster cloud (21.494 vs 28.643) but weaker 2D anisotropy (1.601 vs 2.238 median non-trickster) and much wider matched-n orientation uncertainty
+- Playwright/editor clouds are more elongated and orientation-stable; sparse editor score==3 clouds (`n=2` and `n=3`) are explicitly marked unreliable for covariance/orientation
+- GPT-4.1 filtering tightens and shifts editor clouds toward the published editor vector, while trickster is unchanged because GPT-4.1 retains all or nearly all trickster responses
+- Interpretation: this supports treating role vectors as centroids of local response-state distributions; strong cloud-shape claims should remain Paper 2/local-manifold work until more roles are sampled under balanced conditions
+
+### Big Five Geometry Overlay Visualization (2026-05-29)
+
+- Added Big Five-style LLM-assigned trait overlays to the persona geometry viewer using `research/q2_stability/qwen/outputs/shared_latent_feature_benchmark/claude_full_feature_matrix.csv`
+- The selected source is the shared benchmark feature matrix whose `claude_bigfive` feature set predicts canonical activation PCA3D at R2 0.613 vs semantic baseline R2 0.389
+- Overlay data covers 275 geometry personas, with Big Five scores available for 273; `coral_reef` and `devils_advocate` are present in the geometry but missing from the benchmark feature matrix
+- The viewer now supports continuous color modes for openness, conscientiousness, extraversion, agreeableness, neuroticism, Big Five residual magnitude, and categorical dominant-trait coloring
+- Caveat: these are LLM-assigned Big Five-style features, not true psychological measurements
+
+### Codex GPT-5.5 Judge Substitution
+
+The Lu et al. path uses `gpt-4.1-mini` as the role-expression judge. Current trickster and editor adaptive scoring used Codex GPT-5.5 Standard as a pragmatic substitute. This must be disclosed and should not be described as strict Lu-method replication.
+
+### Adaptive Stopping
+
+The project now uses an adaptive extraction protocol for operational efficiency. The provisional rule is 64 qualifying responses as a conservative target, with adaptive stopping permitted once convergence criteria pass at n>=16. This is a methodological extension beyond the fixed Lu-style rollout framing.
+
+### Chunked Generation
+
+Editor was tested with a 128-rollout chunk rather than a full 1200-rollout run. This was intentional for the second-persona generalization test and should not be conflated with exhaustive Lu-style extraction.
+
+### Truncation as Covariate
+
+High truncation is tracked explicitly rather than silently filtered. Trickster truncation did not materially destabilize geometry; editor token-cap results suggest truncation reduction does not necessarily improve role-expression yield.
+
+## Current Blockers
+
+### No-Label Elicitation Validation (2026-06-10)
+
+- Ran the frozen canonical no-label elicitation prompt packet v1 under `research/outputs/no_label_elicitation_validation/`
+- Generated 600/600 independent Qwen/Qwen3-32B responses from 60 prompts with 10 samples per prompt; zero response-level error rows
+- Prompt blinding passed by construction: Qwen received only each frozen row's `prompt_text` in a fresh one-message conversation; prompt IDs, PC labels, polarity labels, family labels, reasoning, metadata, and predictions were excluded from model-visible input
+- Measurement used direct `model.model.layers[48]` forward-hook extraction, response-token mean pooling, and projection into the existing Qwen persona PCA basis; canonical coordinate reproduction max error was 1.207e-06
+- Family-level result at the preregistered 70% prompt-mean threshold: PC1-negative 10/10 passed, PC1-positive 0/10 failed, PC2-positive 10/10 passed, PC2-negative 5/10 failed, PC3-positive 9/10 passed, and PC3-negative 9/10 passed
+- Interpretation: the experiment supports a partial/modest no-label directional activation claim, strongest for PC3 and PC2-positive. It does not prove the PCs, isolate effects to one axis, or validate the PC1-positive/PC2-negative elicitation wording.
+- Next test: inspect the failed and off-axis prompt families before designing a revised no-label packet; do not reuse PC1-positive or PC2-negative families as clean elicitors without revision.
+
+### No-Label Geometry Diagnostic (2026-06-10)
+
+- Built `research/outputs/no_label_elicitation_geometry_diagnostics/` from the completed no-label validation outputs, frozen prompt packet metadata, the published assistant baseline, and Qwen role centroid geometry
+- The assistant baseline sits at PC1=33.703, the 83.3rd percentile of the Qwen role-centroid PC1 distribution, so positive-PC1 elicitation from the assistant baseline is partly saturation-constrained
+- The PC1-positive family did not merely saturate near the assistant point: it moved to mean PC1=-19.352, with mean delta PC1=-53.055, nearest improviser/bartender/prisoner/actor/loner territory
+- PC3-negative care-orientation prompts also pulled strongly negative on PC1 (mean delta PC1=-95.868), so successful PC3-negative elicitation should not be described as axis-isolated
+- `pc3_pos_05` moved mainly negative PC1 and positive PC2 (delta PC1=-88.495, delta PC2=+41.486, delta PC3=-0.598), supporting a wording diagnosis: it likely evoked self-cost/perseverance rather than consequence-to-others pressure
+- Interpretation: the PC1-positive failure is consistent with assistant-baseline saturation plus prompt wording that recruited ordinary explanatory/situated response modes; revised no-label prompt design should inspect family means against role-centroid context before rerunning activations
+
+### No-Label Baseline Power and Assistant-Centroid Provenance (2026-06-11)
+
+- Analyzed `research/outputs/no_label_elicitation_validation/response_level_results.csv` to estimate repeat-level variance for the planned 240-question bare-Qwen extraction-question baseline
+- Within-prompt sigma distributions across 60 prompts were PC1 min/p25/median/p75/max = 1.327/2.684/3.347/4.790/13.631, PC2 = 1.155/2.685/4.010/4.854/7.963, and PC3 = 0.766/2.345/3.165/3.794/9.517
+- PC3-positive prompts were systematically higher-variance than other families, with mean sigma PC1=7.399, PC2=5.406, PC3=4.901; `pc3_pos_05` was not especially high-variance, so its prior anomaly is directional rather than sampling-noise driven
+- The observed no-label run timing was 9,434.2 seconds for 600 generations, or 15.724 seconds/generation; n=5 over 240 extraction questions implies 1,200 generations and approximately 5.24 hours under the same timing
+- The assistant centroid used in validation is the released role-conditioned `assistant` vector reconstructed from Qwen role tensors, not a bare-Qwen baseline; a 240-question bare-Qwen run would complement rather than duplicate it
+
+### Assistant Centroid Provenance Audit (2026-06-11)
+
+- Built `research/outputs/assistant_centroid_provenance_audit/` to trace the assistant centroid used in Paper 1.5 no-label validation, geometry diagnostics, and projection pipelines
+- The no-label validation runner selects `assistant_baseline = reconstructed[names.index("assistant")]` from reconstructed canonical Qwen role coordinates loaded from `downloads/hf_vectors/qwen-3-32b/role_vectors`
+- The assistant baseline is PC1=33.7028027033, PC2=3.441718015, PC3=-5.155533990 and matches the `assistant` row in `canonical_activation_pca3d.csv` and `geometry_viz_data.json`
+- This centroid is not a measurement of bare Qwen, not `downloads/hf_vectors/qwen-3-32b/default_vector.pt`, and not `downloads/hf_vectors/qwen-3-32b/assistant_axis.pt`
+- Methodological implication: existing no-label validation deltas should be described as movement relative to the inherited assistant role centroid; the 240-question bare-Qwen/default extraction-question baseline is foundational before future elicitation experiments are interpreted as movement from unconditioned model behavior
+
+### No-Label Elicitation Run 2 Preflight Blocker (2026-06-13)
+
+- Archived `research/outputs/no_label_elicitation_run2/`, a full Run 2 package for the no-label elicitation validation program
+- Preflight catalog contains 289 prompt rows and exactly 1,690 planned generations: 1,200 bare-Qwen extraction-question baseline generations, 200 replacement-family generations, 290 minimal-pair generations
+- The runner is designed for the same Qwen/Qwen3-32B layer-48 direct-hook extraction, response-token mean pooling, and canonical Qwen PCA projection basis as the 600-generation validation run
+- Prompt blinding and generation independence docs are written: Qwen-visible input is only prompt text or extraction question in one fresh user message; no system prompt, labels, metadata, hypotheses, or prior history are included
+- Execution did not start because `runpodctl` reports no configured API key and the local machine has no approved 80GB+ GPU; completed generations are 0/1690 and no empirical Run 2 result should be claimed
+
+The next editor experiment is blocked on revised anchoring methodology. More identical editor rollouts are unlikely to answer the failure mode cleanly.
+
+Strict Lu-method replication remains blocked unless `gpt-4.1-mini` judge scoring is restored and run with documented filter choices.
+
+Evaluator-sensitivity comparison remains blocked by OpenAI API quota. The local harness, canonical corpora mapping, Codex-side imported baseline, and output schema now exist under `research/q2_stability/qwen/evaluator_sensitivity/`, but `gpt-4.1-mini` returned `insufficient_quota` and produced zero paired judge records.
+
+Downloaded Lu vector metadata remains underspecified locally: the exact fully-roleplaying versus somewhat-roleplaying storage category and retained-response IDs are not documented in local HF metadata. The earlier "fixed 64-row selection" framing is corrected: public Qwen vector tensors are `[64,5120]` because Qwen has 64 layers, not because vectors store 64 retained rollout examples.
+
+## Next Empirical Tests
+
+1. Finish evaluator-model sensitivity if API access permits, because it is the main unfinished methodological item for Paper 1.5.
+2. Draft Paper 1.5 around layered persona-geometry interpretation rather than adaptive extraction replication.
+3. Prepare local centroid perturbation experiments around Trickster, Actor, Therapist, and Spy as Paper 2 or grant-supported work.
+4. Launch the bounded 800-rollout no-label activation-space stress test once compute is approved.
+5. Run OpenAI-side Stage-1 role-inventory generation and ingest Claude-generated inventories once they are synced through GitHub.
+6. Design a revised editor anchoring methodology only if assistant-adjacent extraction becomes an explicit follow-up target.
+
+### No-Label Elicitation Run 2 Completed (2026-06-13)
+
+- Executed frozen Run 2 package under `research/outputs/no_label_elicitation_run2/` on RunPod A100 SXM 80GB at $1.49/hr.
+- Completed 1,690/1,690 Qwen/Qwen3-32B generations with zero error flags, zero empty responses, 1,690 unique response IDs, and 1,690 local gitignored activation shards.
+- Bare-Qwen 240-question baseline centroid over 1,200 responses: PC1=23.510, PC2=14.041, PC3=-2.460; released assistant role centroid remains PC1=33.703, PC2=3.442, PC3=-5.156.
+- Relative to bare Qwen, PC1+ replacement passed 7/10 prompt means, PC2- replacement passed 9/10, PC3 cost-to-others minimal pairs passed 3/4 complete pairs, PC1 minimal pairs passed 1/5, and PC2 minimal pairs passed 5/5.
+- Methodological implication: future no-label interpretation should use the bare-Qwen baseline as the default-behavior reference; assistant-centroid deltas remain useful only as role/persona-reference contrasts.
+
+### Run 2 Prompt-Level Diagnostics (2026-06-13)
+
+- Built `research/outputs/no_label_elicitation_run2_prompt_diagnostics/` from existing Run 2 prompt means/pairwise effects and Run 1 `pc3_pos_05` for the preregistered PC3 pair-1 A side.
+- PC1+ replacement failures relative to bare Qwen were `pc1_pos_r2_06` (delta PC1=-13.256), `pc1_pos_r2_09` (-9.110), and `pc1_pos_r2_04` (-0.708); strongest successes were `pc1_pos_r2_07` (+14.884), `pc1_pos_r2_05` (+12.363), and `pc1_pos_r2_08` (+11.366).
+- PC2- replacement strongest successes relative to bare Qwen were `pc2_neg_r2_07` (direction-corrected +28.548) and `pc2_neg_r2_10` (+24.777); `pc2_neg_r2_02` failed relative to bare Qwen, while `pc2_neg_r2_02` and `pc2_neg_r2_03` failed relative to the assistant-role centroid.
+- Including the inherited Run 1 A-side for pair 1, PC3 cost-to-others moved more positive than cost-to-self in 4/5 minimal pairs; pair 3 failed and pair 5 had the largest PC3 effect (+14.160) while also shifting strongly negative on PC1 (-15.345).
+### PC1 Competing-Theories Vocabulary Test (2026-06-14)
+
+- Built `research/outputs/pc1_competing_theories_test/` to compare three PC1 rival vocabularies over the same 273-persona shared benchmark rows and deterministic split framework.
+- External-standard accountability was the strongest exact-vocabulary family: Pearson r=0.306, Spearman r=0.342, cluster/text-controlled r=0.192, and held-out PC1 regression R2=0.781.
+- The comparison is supportive but weak by itself because text-length-plus-cluster controls already reach held-out PC1 R2=0.774; incremental R2 was +0.0071 for external-standard accountability, +0.0003 for orderliness/conscientiousness, and -0.0023 for determination-against-explicit-criteria.
+- The corrected GPT-4.1-mini blind-rating validation was scaffolded but blocked because `OPENAI_API_KEY` was not available in the local shell; no blind ratings or rating-benchmark R2 values were fabricated.
+
+### Blind PC Interpretation Rating Benchmark (2026-06-15)
+
+- Built `research/outputs/blind_pc_interpretation_rating_benchmark/` to test whether GPT-5.5 coordinate-blind ratings of the five role instructions recover canonical Qwen activation PCA3D over the same 273-persona shared benchmark and deterministic split assignments.
+- Rater blinding: GPT-5.5 saw role instructions only, not PC coordinates, PCA labels, role rankings, clusters, assistant-axis values, geometry, target variables, or benchmark results.
+- Axis-specific results: external-standard accountability predicted PC1 with R2=0.704; signed integration/coherence-of-wholes predicted PC2 with R2=0.423; internal-objective-vs-care predicted PC3 with R2=0.393.
+- Joint three-rating model results: PC1 R2=0.695, PC2 R2=0.417, PC3 R2=0.463, mean R2=0.525.
+- Interpretation: the current PC meanings are meaningfully recoverable from blinded role-instruction reading and outperform the semantic baseline (mean R2=0.389) plus Codex retained procedural features (0.490), but remain below Claude Big Five (0.613), hierarchical features (0.622), residual manifold (0.632), and semantic+BigFive+SVD15 (0.707).
+
+### PC1 Accountability Activation Validation (2026-06-15)
+
+- Ran `research/outputs/pc1_accountability_validation/` as a focused execution-time activation diagnostic under the same Qwen/Qwen3-32B layer-48 direct-hook extraction, response-token mean pooling, fresh one-message generation protocol, no-cache extraction pass, and canonical Qwen PCA basis used by Run 2.
+- The run completed 200/200 planned generations with zero response-level errors.
+- Experiment A found accountability/scrutiny wording moved PC1 more positive than determination wording in 5/5 matched scenario pairs: mean B-A PC1 effect +3.297, 95% CI [1.574, 5.020].
+- Experiment B found accountability/scrutiny wording moved PC1 more positive than arithmetic/checking wording in 5/5 matched scenario pairs: mean B-A PC1 effect +9.551, 95% CI [7.592, 11.510].
+- Secondary effects were consistent across all 10 pairs: accountability/scrutiny wording moved PC2 negative relative to both alternatives, with mean PC2 effects -8.665 versus determination and -16.050 versus arithmetic/checking.
+- Interpretation: this materially strengthens the PC1 external-standard-accountability hypothesis against two local alternatives, but it remains a focused diagnostic rather than proof of PC1 semantics or axis isolation.
+
+## Aggregate Rosetta translation follow-up (2026-09-15)
+
+- Recovered prior AA-12 aggregate correspondence from frozen local artifacts: focal K=10 mean matched-profile r=0.520169 with 20,000-draw search-adjusted bridge-permutation p=0.00005 in that prior study.
+- New anchor-only test froze 12 prior moderate-or-better SAPA-supported traits for matching and evaluated the exact 33-trait complement across 24 held-out matched-pair folds.
+- Identity target-profile prediction averaged r=0.1500. The best learned candidate, global intercept/scale, reduced held-out r by 0.1602; trait-affine, Procrustes, and Ridge were also worse.
+- Cluster-pairing, trait-label, and joint-structure nulls used 2,000 draws each and gave p=0.9305, 0.8996, and 1.0000 for the best non-identity improvement statistic.
+- Bounded interpretation: the aggregate profile correspondence does not currently support a useful low-complexity Rosetta translation beyond identity. Classification: WEAK / ABSENT. This does not classify or explain V1 and does not establish individual-level transfer.
