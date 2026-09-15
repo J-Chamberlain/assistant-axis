@@ -1,0 +1,18 @@
+item_id,lens,content,characteristic,tier,direction,item_text,included_primary_h
+q_2765,Subjective wellbeing,Appraisal,Life satisfaction,DIRECT,1,Am happy with my life.,True
+q_1371,Subjective wellbeing,Appraisal,Subjective happiness / global enjoyment of life,DIRECT,1,Love life.,True
+q_1043,Subjective wellbeing,Affect,Positive affect,DIRECT,1,Have a lot of fun.,True
+q_208,Subjective wellbeing,Affect,Infrequent negative affect,DIRECT,-1,Am often in a bad mood.,True
+q_206,Subjective wellbeing,Affect,Infrequent negative affect,DIRECT,-1,Am often down in the dumps.,True
+q_1578,Subjective wellbeing,Affect,Infrequent negative affect,DIRECT,1,Rarely feel depressed.,True
+q_875,Psychological wellbeing,Meaning-making,Purpose / direction in life,DIRECT,-1,Feel that my life lacks direction.,True
+q_285,Psychological wellbeing,Self-concept,Self-esteem,DIRECT,1,Am very pleased with myself.,True
+q_820,Psychological wellbeing,Self-concept,Self-esteem / self-acceptance,DIRECT,1,Feel comfortable with myself.,True
+q_1044,Psychological wellbeing,Self-concept,Self-esteem,DIRECT,-1,Have a low opinion of myself.,True
+q_867,Psychological wellbeing,Self-concept,Self-efficacy,DIRECT,-1,Feel that I'm unable to deal with things.,True
+q_4288,Social wellbeing,Interpersonal relationships,Social connection / loneliness,DIRECT,-1,Often feel lonely.,True
+q_832,Auxiliary content-free,Auxiliary,Vitality,DIRECT,1,Feel healthy and vibrant most of the time.,True
+q_4228,Subjective wellbeing,Affect,Infrequent negative affect,CLOSE,-1,"Sometimes feel ""just miserable"" for no reason.",False
+q_201,Psychological wellbeing,Meaning-making,Purpose / direction in life,CLOSE,-1,Am not sure where my life is going.,False
+q_578,Psychological wellbeing,Self-concept,Self-esteem,CLOSE,-1,Dislike myself.,False
+q_4277,Subjective wellbeing,Appraisal,Global life appraisal / dullness,CLOSE,-1,Often feel life is very dull.,False
