@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "checks_passed": 7,
+  "checks_total": 7,
+  "checks": [
+    {
+      "name": "24 fixed Rosetta pairs",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "same pair rows for 12 and 45",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "12 trait membership exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "45 trait membership exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "HTML self-contained",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "static exports present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "no private records tracked",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}
