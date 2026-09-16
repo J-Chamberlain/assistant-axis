@@ -1,0 +1,26 @@
+{
+  "dataset": "SAPA V5",
+  "source_url": "https://doi.org/10.7910/DVN/SD7SVE",
+  "raw_filename": "sapaTempData696items08dec2013thru26jul2014.tab",
+  "raw_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+  "raw_bytes": 23975309,
+  "rows": 23679,
+  "columns": 697,
+  "schema_fingerprint": "0f6eeabd9964a5231a9501a185f9b757feee80ffd4bd1e882eebd8eae71ef466",
+  "superkey_sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+  "item_info_sha256": "ce280ebf42cd77f3db1955a3027051a74d017ca61da02adf5dbbab11545b1732",
+  "split": {
+    "seed": 20260915,
+    "train_n": 14207,
+    "validation_n": 4735,
+    "test_n": 4737,
+    "split_hash": "6f9e6b7163772d233ebe44ad4ecb54680cf0a18af823f16c6a37c59daae4912b"
+  },
+  "candidate_scales": 92,
+  "retained_predictors": 79,
+  "retained_dimensionality": 20,
+  "coverage_threshold": 0.02,
+  "minimum_observed_items": 2,
+  "bf_scores": "reproduced from superKey696.csv; respondent-level BFAS alignment omitted because no frozen BFAS respondent scoring definition was verified",
+  "no_raw_committed": true
+}

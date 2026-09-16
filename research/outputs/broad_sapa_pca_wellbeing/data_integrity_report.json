@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "rows": 23679,
+  "columns": 697,
+  "outcome_eligible_N": 8664,
+  "bigfive_eligible_N": 3972,
+  "common_test_N": 783,
+  "outcome_item_overlap_zero": true,
+  "respondent_ids_written": false
+}

@@ -1,0 +1,44 @@
+{
+  "dataset": "SAPA V5",
+  "rows": 23679,
+  "columns": 697,
+  "observed_cells": 2039803,
+  "respondent_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+  "respondent_bytes": 23975309,
+  "superkey_sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+  "item_info_sha256": "ce280ebf42cd77f3db1955a3027051a74d017ca61da02adf5dbbab11545b1732",
+  "frozen_outcome_eligible_N": 8664,
+  "frozen_bigfive_eligible_N": 8585,
+  "outcome_mean": 0.005919254277177982,
+  "outcome_sd": 0.8153748436452479,
+  "bigfive_summary": {
+    "Agreeableness": {
+      "N": 8585,
+      "mean": -0.021182824282052846,
+      "sd": 0.7492452367321178
+    },
+    "Conscientiousness": {
+      "N": 8585,
+      "mean": -0.009932421317071538,
+      "sd": 0.7399963475960522
+    },
+    "Extraversion": {
+      "N": 8585,
+      "mean": -0.022733715796269323,
+      "sd": 0.7908391183614473
+    },
+    "Emotional Stability": {
+      "N": 8585,
+      "mean": 0.008768031369951993,
+      "sd": 0.7766470415976534
+    },
+    "Openness": {
+      "N": 8585,
+      "mean": 0.005430987748942412,
+      "sd": 0.7125914043185406
+    }
+  },
+  "python": "3.12.12",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3"
+}

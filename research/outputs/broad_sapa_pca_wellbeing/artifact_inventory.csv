@@ -1,0 +1,12 @@
+artifact,status
+analysis_freeze.md,active
+external_data_dependency.md,active
+predictor_inventory.csv,active
+source_manifest.json,active
+data_integrity_report.json,active
+eigenvalue_summary.csv,active
+pc_loadings.csv,active
+predictive_model_comparison.csv,active
+pc_wellbeing_associations.csv,active
+run_broad_sapa_pca.py,active
+reconstruct_frozen_scores.py,active

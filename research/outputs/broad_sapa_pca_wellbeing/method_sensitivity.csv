@@ -1,0 +1,4 @@
+method,status,notes
+pairwise_psd,completed,primary missing-aware method
+EM_PCA,not_run,required follow-up
+mean_imputation,not_run,sensitivity only

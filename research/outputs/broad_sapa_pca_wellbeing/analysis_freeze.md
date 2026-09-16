@@ -1,0 +1,7 @@
+# AA-13 analysis freeze
+
+Frozen before any PC–wellbeing association was inspected. The predictor universe is the 92 administered source constructs in the SAPA inventory, scored from keyed item responses; frozen HiFWB items are excluded and any scale sharing one of the 13 outcome items is excluded. A 2% respondent coverage threshold and at least two observed items per scale are required. The primary matrix is standardized using training respondents only; its pairwise training correlation matrix is symmetrized and projected to the nearest positive semidefinite matrix when needed. PCA is estimated from that matrix, with missing-aware respondent scores obtained by least squares on observed loadings. The deterministic split is 60/20/20 using seed 20260915 and respondent indices are never written.
+
+Dimensionality is outcome-blind: retain eigenvalues greater than one, capped at 20 for local CPU analysis; visualization uses three dimensions. Parallel-analysis thresholds are recorded as unavailable in this first local pass and are a required follow-up before confirmatory claims. Big Five scores use the exact `superKey696.csv` keyed directions. BFAS alignment is omitted because no frozen respondent-level BFAS scoring definition was verified. Semantic adjacency is flagged in `predictor_inventory.csv` and is not used for selection.
+
+This freeze is a reproducibility specification, not a psychological interpretation. No wellbeing value enters predictor selection, preprocessing, PCA, dimensionality, or axis orientation.

@@ -1,0 +1,5 @@
+# External SAPA data dependency
+
+The analysis requires the authorized SAPA V5 respondent matrix `sapaTempData696items08dec2013thru26jul2014.tab` supplied with `--data-dir`. The canonical acquisition route is Harvard Dataverse DOI [10.7910/DVN/SD7SVE](https://doi.org/10.7910/DVN/SD7SVE). The verified file is a tab-delimited matrix with 23,679 rows and 719 columns (RID plus 696 psychological items and administrative fields), SHA256 `fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6`, 23,975,309 bytes, schema fingerprint `787f539747deee8da85bc64da9c3407eaf741f6da927dcbec7ec79b2a40260c`.
+
+Raw rows remain outside git because they contain respondent identifiers and are governed by the repository’s human-data handling rule. An authorized researcher should place the Dataverse files in a local directory and run `run_broad_sapa_pca.py --data-dir PATH`; no absolute user path is committed. `superKey696.csv` and `ItemInfo696.csv` are likewise external inputs and are fingerprinted in `source_manifest.json`.
