@@ -39,7 +39,8 @@ def main():
   valid=elig&np.isfinite(y); yy=y[valid]; xx=terrain[valid]; mu=float(np.nanmean(yy)); ys=yy-mu
   alpha=GridSearchCV(Ridge(),{'alpha':[0.1,1,10,100]},cv=5,scoring='neg_mean_squared_error').fit(xx,ys).best_params_['alpha']; model=Ridge(alpha=alpha).fit(xx,ys); coeff[label]={'alpha':float(alpha),'intercept':float(model.intercept_+mu),'coef':model.coef_.tolist(),'N':int(valid.sum()),'mean':mu,'sd':float(np.nanstd(yy,ddof=1))}
   for ai in range(5):
-   for bi in range(ai+1,5):
+   for bi in range(5):
+    if ai==bi: continue
     ax,ay=names[ai],names[bi]; xv=terrain[valid,ai]; yv=terrain[valid,bi]; xe=np.linspace(np.nanpercentile(xv,1),np.nanpercentile(xv,99),BINS); ye=np.linspace(np.nanpercentile(yv,1),np.nanpercentile(yv,99),BINS); xb=np.clip(np.searchsorted(xe,xv),0,BINS-1); yb=np.clip(np.searchsorted(ye,yv),0,BINS-1)
     for i in range(BINS):
      for j in range(BINS):
