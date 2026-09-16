@@ -806,3 +806,6 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 - **Observed:** five-coordinate OOF Ridge R²=0.3939 versus reconstructed backbone-cubic R²=0.2922; ΔR²=0.1017, bootstrap 95% CI [0.0867, 0.1176]. RBF Nyström sensitivity ΔR²=0.0910 [0.0772, 0.1060].
 - **Interpretation:** full Big Five position contains predictive information beyond the one-dimensional backbone in this SAPA cross-section. The original result remains exploratory/post hoc, and the provisional score is not a validated HiFWB scale.
 - **Unknown:** longitudinal/causal generalization, alternate scoring representations, and the unavailable historical fold assignment.
+# AA-13 update (2026-09-16)
+
+External SAPA V5 respondent matrix was verified against AA-12 fingerprints (23,679 rows, 719 columns, SHA256 fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6). A first CPU-only broad construct pass reconstructed 92 administered source scales and retained 79 after frozen outcome-overlap, duplicate, and coverage rules. Frozen HiFWB eligibility (8,664) and Big Five terrain eligibility (8,585) reproduced. Held-out R² on the shared test subset (N=783) was 0.447 Big Five, 0.211 broad PCs, and 0.462 combined; this is preliminary pending parallel-analysis and full stability resampling.

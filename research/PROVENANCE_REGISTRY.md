@@ -974,3 +974,6 @@ Notes/caveats: The audit identifies `downloads/hf_vectors/qwen-3-32b/default_vec
 ### AA-10 SAPA HiFWB reproducibility
 
 `research/outputs/sapa_hifwb_reproducibility/` was produced on branch `codex/aa10-sapa-hifwb-reproducibility` from canonical `myfork/master` `c5227a1b17d1a89a641890dba4bfc04e2c8f6189`. Historical source is preservation commit `2d93b794065d25d99261de1a5769dbe1eb116706`; frozen human-terrain source is `e385a4664ec46bb53a9d966000728deac06e212b`. SAPA V5 respondent data were downloaded from Harvard Dataverse DOI `10.7910/DVN/SD7SVE`, hash-verified, used locally, and never tracked. Freeze commit: `f30e04f`; execution commit: `2b7830b`; inventory commit: `b7e23c3`.
+# AA-13 provenance update (2026-09-16)
+
+`research/outputs/broad_sapa_pca_wellbeing/` uses external SAPA V5 Dataverse data supplied by `--data-dir`; raw respondent rows remain gitignored. Fingerprints, scoring dependencies, split seed, scripts, and artifact status are recorded in `source_manifest.json` and `external_data_dependency.md`. Commit `4e2cef2` introduces the first CPU-only broad PCA pass.
