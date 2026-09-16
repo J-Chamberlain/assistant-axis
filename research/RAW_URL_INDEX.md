@@ -740,3 +740,4 @@ Branch: `codex/aa10-sapa-hifwb-reproducibility` (human-only; raw respondent data
 | active | human wellbeing | `research/outputs/sapa_hifwb_reproducibility/verification_report.json` | Verification checks and privacy controls | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa10-sapa-hifwb-reproducibility/research/outputs/sapa_hifwb_reproducibility/verification_report.json |
 | active | human wellbeing | `research/outputs/sapa_hifwb_reproducibility/artifact_inventory.csv` | Artifact paths, hashes, and introducing commits | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa10-sapa-hifwb-reproducibility/research/outputs/sapa_hifwb_reproducibility/artifact_inventory.csv |
 # AA-13 broad SAPA PCA artifacts: `research/outputs/broad_sapa_pca_wellbeing/`.
+# AA-13 follow-up raw artifacts are under `research/outputs/broad_sapa_pca_wellbeing/` on the AA-13 branch.

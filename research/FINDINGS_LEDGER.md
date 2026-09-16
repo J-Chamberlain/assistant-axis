@@ -809,3 +809,6 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 # AA-13 update (2026-09-16)
 
 External SAPA V5 respondent matrix was verified against AA-12 fingerprints (23,679 rows, 719 columns, SHA256 fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6). A first CPU-only broad construct pass reconstructed 92 administered source scales and retained 79 after frozen outcome-overlap, duplicate, and coverage rules. Frozen HiFWB eligibility (8,664) and Big Five terrain eligibility (8,585) reproduced. Held-out R² on the shared test subset (N=783) was 0.447 Big Five, 0.211 broad PCs, and 0.462 combined; this is preliminary pending parallel-analysis and full stability resampling.
+# AA-13 follow-up (2026-09-16)
+
+Missingness-preserving parallel analysis (200 deterministic within-construct permutations) retained K=26 versus K=30 by eigenvalue>1. Fifty training split-halves gave median K=3 subspace canonical correlation 0.940. Using K=26, held-out R² was 0.447 Big Five, 0.203 broad PCs, and 0.454 combined; 2,000 paired test bootstraps gave ΔR² mean 0.007, 95% interval [-0.007, 0.022], positive fraction 0.819. Incremental validity is classified C (no reliable incremental structure); individual-axis stability and deferred residual/instrument-balanced analyses remain unresolved.

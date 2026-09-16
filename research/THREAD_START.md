@@ -173,3 +173,6 @@ As of 2026-06-16, `research/paper15_content_ledger.md` has been completed for me
 # AA-13 continuity (2026-09-16)
 
 The AA-13 branch now accepts an external SAPA V5 matrix via `--data-dir`, verifies the AA-12 fingerprint, reconstructs frozen HiFWB/Big Five scores, and produces a first broad PCA result package under `research/outputs/broad_sapa_pca_wellbeing/`.
+# AA-13 follow-up continuity (2026-09-16)
+
+Follow-up checks are committed under `research/outputs/broad_sapa_pca_wellbeing/`: K=26 parallel analysis, 50 split-half stability, populated Big Five alignment, and 2,000 paired test bootstraps. Incremental validity is currently classification C.

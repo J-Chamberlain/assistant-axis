@@ -977,3 +977,6 @@ Notes/caveats: The audit identifies `downloads/hf_vectors/qwen-3-32b/default_vec
 # AA-13 provenance update (2026-09-16)
 
 `research/outputs/broad_sapa_pca_wellbeing/` uses external SAPA V5 Dataverse data supplied by `--data-dir`; raw respondent rows remain gitignored. Fingerprints, scoring dependencies, split seed, scripts, and artifact status are recorded in `source_manifest.json` and `external_data_dependency.md`. Commit `4e2cef2` introduces the first CPU-only broad PCA pass.
+# AA-13 follow-up provenance (2026-09-16)
+
+`run_followup_checks.py` adds outcome-blind permutation parallel analysis, 50 split-half fits, Big Five alignment, and paired fixed-test bootstrap uncertainty. It uses the unchanged external SAPA fingerprint and frozen split seed. Deferred files are explicitly marked in `verification_report.json`.

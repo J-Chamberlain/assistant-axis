@@ -1,2 +1,2 @@
-comparison,N,delta_R2,ci_low,ci_high,status
-M3_vs_M1,783,0.0154287,,,computed; respondent bootstrap pending
+comparison,replications,delta_R2,ci_low,ci_high,positive_fraction
+M3_vs_M1,2000,0.007167683327610632,-0.007134357781449749,0.022266425421289798,0.8185

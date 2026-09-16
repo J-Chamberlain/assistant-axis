@@ -986,3 +986,6 @@ Next step: implement the documented local prototype when the user proceeds, star
 # AA-13 update (2026-09-16)
 
 AA-13 external-data dependency resolved and first local broad SAPA PCA pass completed. See `research/outputs/broad_sapa_pca_wellbeing/`; BFAS alignment remains unavailable because no frozen respondent-level BFAS scorer was verified. Full parallel-analysis, bootstrap stability, secondary outcomes, and canonical startup refresh remain follow-up work.
+# AA-13 follow-up status (2026-09-16)
+
+Parallel analysis supports K=26, with a stable K=3 subspace but unresolved individual axes. The first-pass ΔR² does not survive the paired bootstrap interval (classification C: no reliable incremental structure). Residual-PCA, instrument-balanced refit, repeated full splits, and secondary outcomes remain next decisions.

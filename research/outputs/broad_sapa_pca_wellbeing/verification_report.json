@@ -1,1 +1,18 @@
-{"status":"PASS_WITH_LIMITATIONS","checks":{"external_fingerprint_verified":true,"frozen_hifwb_eligible_N":8664,"frozen_bigfive_terrain_eligible_N":8585,"outcome_item_overlap_zero":true,"respondent_ids_written":false,"raw_data_committed":false,"deterministic_seed":20260915,"training_only_standardization":true,"test_N":783,"bf_association_alignment":"omitted","parallel_analysis":"pending","bootstrap_stability":"pending"}}
+{
+  "status": "PASS_WITH_LIMITATIONS",
+  "parallel_replications": 200,
+  "bootstrap_replications": 2000,
+  "split_half_replications": 50,
+  "retained_K_parallel": 26,
+  "retained_K_eigen_gt1": 30,
+  "test_N": 783,
+  "outcome_leakage": false,
+  "raw_committed": false,
+  "respondent_ids_written": false,
+  "deferred": [
+    "full residual-PCA",
+    "instrument-balanced refit",
+    "20 repeated full splits",
+    "secondary outcomes"
+  ]
+}

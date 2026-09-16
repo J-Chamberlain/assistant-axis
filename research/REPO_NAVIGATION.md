@@ -127,3 +127,4 @@ Any future Codex task that creates, deletes, moves, renames, replaces, supersede
 
 The task should record the update timestamp and commit, and assign each affected artifact one of these statuses: `canonical`, `active`, `archive`, or `deprecated`. If the task also changes `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, or `research/CLAIMS_REGISTER.md`, regenerate `research/STARTUP_MANIFEST.md` with `python3 scripts/update_startup_manifest.py`.
 # AA-13 broad SAPA PCA: `research/outputs/broad_sapa_pca_wellbeing/` (external-data manifest, predictor inventory, PCA loadings, held-out model comparison, and verification).
+# AA-13 decisive follow-up: `research/outputs/broad_sapa_pca_wellbeing/parallel_analysis.csv`, `subspace_stability.csv`, `pc_bigfive_alignment.csv`, and `incremental_prediction_bootstrap.csv`.
