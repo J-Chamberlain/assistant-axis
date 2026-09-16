@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "research/outputs/liss_hifwb_prior_evidence"
 BRANCH = "codex/aa11-liss-hifwb-repair-v2"
 RAW = f"https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/{BRANCH}/"
-REPAIR_COMMITS = "815a2a3;d86b332;ee315eb;c4bcce5"
+REPAIR_COMMITS = "815a2a3;d86b332;ee315eb;c4bcce5;f7d42b1;77090c1"
 SCRIPTS = [
     "scripts/repair_aa11_liss_package.py", "scripts/finalize_aa11_liss_repair.py",
     "scripts/liss_common.py", "scripts/verify_liss_2020_sources.py",
