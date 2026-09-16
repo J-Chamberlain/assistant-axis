@@ -13,7 +13,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 def csv_out(name: str, header: list[str], rows: list[list[object]]) -> None:
     with (OUT / name).open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator="\n")
         writer.writerow(header)
         writer.writerows(rows)
 
@@ -85,7 +85,16 @@ chars = [
  ["Social wellbeing","Interpersonal relationships","perceived social support","none direct in audited set","MHC-SF-R count-on-others item","perceived support","DIRECT","not previously isolated","No","No","No","No direct prior personality test found in audited LISS studies.","LISS Study 1105 codebook","single item; distinguish received support","count-on-others item","link to repeated support measures"],
  ["Social wellbeing","Interpersonal relationships","loneliness (inverse/adjacent)","Schellenberg2026","panel loneliness measures","loneliness","CLOSE","isolated","Yes","Yes","Yes","Small reciprocal within-person effects for Extraversion, Conscientiousness, and Emotional Stability.","10.1111/jopy.70084","inverse indicator; negative affect confounding","not in 2020 focal two-file score; contextual join","RI-CLPM with repeated loneliness"],
 ]
-csv_out("hifwb_characteristic_prior_evidence.csv", ["lens","content","characteristic","prior_liss_study","source_measure_item_subscale","exact_construct","mapping_quality","isolated_or_embedded","big_five_relation_tested","longitudinal_relation_tested","prospective_direction_tested","result_summary","source_citation","unresolved_caveat","planned_liss_2020_test","future_longitudinal_test"], chars)
+characteristic_status = {
+    "positive affect": "well_studied", "infrequent negative affect": "well_studied",
+    "life satisfaction": "well_studied", "self-esteem": "well_studied",
+    "relationship quality": "moderately_studied", "satisfaction with social contacts": "moderately_studied",
+    "loneliness (inverse/adjacent)": "moderately_studied",
+    "global subjective happiness": "apparently_untested", "perceived social support": "apparently_untested",
+}
+for row in chars:
+    row.append(characteristic_status.get(row[2], "sparsely_studied"))
+csv_out("hifwb_characteristic_prior_evidence.csv", ["lens","content","characteristic","prior_liss_study","source_measure_item_subscale","exact_construct","mapping_quality","isolated_or_embedded","big_five_relation_tested","longitudinal_relation_tested","prospective_direction_tested","result_summary","source_citation","unresolved_caveat","planned_liss_2020_test","future_longitudinal_test","evidence_status"], chars)
 
 node_rows = [
  ["h","All","All","h","Yes; constructed from mapped 2020 indicators","Lamers2012 and measurement papers use broad positive mental health, not HiFWB h","none","none direct","none direct","none direct","MHC-SF/MHC-SF-R plus 2020 auxiliaries","PARTIAL","no_direct_test_found_in_audited_LISS_literature","Affect may dominate h unless sensitivity-tested","HiFWB h is a project ontology, not validated LISS score","compare measurement models; test prespecified h","prior-adjusted h change after equivalence"],

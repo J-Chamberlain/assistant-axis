@@ -1,15 +1,28 @@
 {
-  "status": "pre_data_frozen",
+  "status": "human_only_pre_data_freeze_repaired",
   "date": "2026-09-15",
   "respondent_data_loaded": false,
+  "expected_data_files": [
+    "cp20l_EN_1.0p.dta",
+    "ss20a_EN_1.0p.dta"
+  ],
+  "expected_codebooks": [
+    "codebook_cp20l_EN_1.1.pdf",
+    "codebook_ss20a_EN_1.0.pdf"
+  ],
   "join_key": "nomem_encr",
-  "data_dir": "data_external/liss_2020/",
+  "seed": 11011,
+  "output_policy": "aggregate_only_under_gitignored_local_data_directory",
   "rules": {
-    "no_imputation": true,
-    "no_ids_in_tracked_outputs": true,
-    "preserve_ss20a_version_and_timeframe": true,
-    "bigfive_reverse_key": "freeze from official cp20l codebook before scoring",
-    "minimum_valid_items": "must be finalized from codebook and recorded before data arrival",
-    "common_feature_space": "deliberately unresolved"
+    "preserve_form_and_timeframe": true,
+    "no_outcome_defined_personality_geometry": true,
+    "no_outcome_driven_model_selection": true,
+    "no_respondent_ids_in_outputs": true,
+    "no_imputation_primary": true,
+    "missing_codes": "negative official codes to NA after codebook validation",
+    "big_five_minimum_valid_items_per_domain": 8,
+    "hifwb_characteristic_scoring": "item-level; pool equivalent forms only after measurement checks",
+    "affect_overlap_sensitivity": true,
+    "non_affect_analysis_prespecified": true
   }
 }
