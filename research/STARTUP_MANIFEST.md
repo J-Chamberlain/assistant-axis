@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-16T15:28:55Z`
+- Generated timestamp UTC: `2026-09-16T15:35:57Z`
 - Current branch: `codex/aa15-hifwb-trait-pc-projection`
-- generation base commit: `4488ff8a828b9f690d64ab52814721c2bd7c47de`
+- generation base commit: `ffe188ac1373e96bb44bdc9c99125acb424bbe4f`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -33,42 +33,42 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
-- Latest commit touching file: `4488ff8a828b9f690d64ab52814721c2bd7c47de`
-- generation base commit: `4488ff8a828b9f690d64ab52814721c2bd7c47de`
-- Git blob hash: `ae994d25e53198c503242cb984626508133394c1`
-- SHA256 content hash: `cf770881290e2da030ae515f6232d58b245331090d8cd2d4f20dd5f82d2b51ad`
-- Byte count: `188828`
+- Latest commit touching file: `ffe188ac1373e96bb44bdc9c99125acb424bbe4f`
+- generation base commit: `ffe188ac1373e96bb44bdc9c99125acb424bbe4f`
+- Git blob hash: `28ce282c8981860a0c9be3637070a41628e12368`
+- SHA256 content hash: `b708a873246fb3e452662f7efb3ad5ad772a4b37f6fb44fc2e39d4baeb795f2a`
+- Byte count: `189241`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
   - Last updated: `2026-09-16`
   - Last commit: `663853e (AA-9 base before the AA-14 branch update)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-16T15:28:55Z`
+- Generated timestamp UTC: `2026-09-16T15:35:57Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
-- Latest commit touching file: `4488ff8a828b9f690d64ab52814721c2bd7c47de`
-- generation base commit: `4488ff8a828b9f690d64ab52814721c2bd7c47de`
-- Git blob hash: `a97cde8bc41a2c018ced8ea30e547339c680561c`
-- SHA256 content hash: `efab2ffd8e7e507d4e0ba17446dec1d01db625af9ef17716b4643e2fbf95b21e`
-- Byte count: `40082`
+- Latest commit touching file: `ffe188ac1373e96bb44bdc9c99125acb424bbe4f`
+- generation base commit: `ffe188ac1373e96bb44bdc9c99125acb424bbe4f`
+- Git blob hash: `c8f98ed410ce65d53b995972cec6e081f8e72c02`
+- SHA256 content hash: `6626ed9fda77ac595c6884eba5b50600bb9d4f38e39cf7500e8b46547a687c44`
+- Byte count: `40665`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
   - Last updated: `2026-09-16`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-16T15:28:55Z`
+- Generated timestamp UTC: `2026-09-16T15:35:57Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
-- Latest commit touching file: `4488ff8a828b9f690d64ab52814721c2bd7c47de`
-- generation base commit: `4488ff8a828b9f690d64ab52814721c2bd7c47de`
+- Latest commit touching file: `ffe188ac1373e96bb44bdc9c99125acb424bbe4f`
+- generation base commit: `ffe188ac1373e96bb44bdc9c99125acb424bbe4f`
 - Git blob hash: `5a81d23f1ef8c701d0178f1fc6c4e0be2f7346ef`
 - SHA256 content hash: `8790565d59a65a6e2244508e596c56cf861176339b8d68b51edc812348f6c9fe`
 - Byte count: `52323`
@@ -78,7 +78,7 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-09-16`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-16T15:28:55Z`
+- Generated timestamp UTC: `2026-09-16T15:35:57Z`
 
 ## Maintenance Rule
 

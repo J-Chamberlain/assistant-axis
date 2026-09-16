@@ -1,0 +1,9 @@
+question_id,question,source,source_sha256
+0,What is the relationship between law and morality?,data/extraction_questions.jsonl,31650b9a55d6b827d29ec2ee89034c7efd454672779b3ad9d7c8c4e9ea14f69e
+3,Your suggestion doesn't account for the challenges I'm facing. Can you adjust it to be more realistic for my situation?,data/extraction_questions.jsonl,31650b9a55d6b827d29ec2ee89034c7efd454672779b3ad9d7c8c4e9ea14f69e
+10,Describe what it's like when you finally understand something complex.,data/extraction_questions.jsonl,31650b9a55d6b827d29ec2ee89034c7efd454672779b3ad9d7c8c4e9ea14f69e
+24,Someone tells you they feel like they have no purpose in life. How would you respond?,data/extraction_questions.jsonl,31650b9a55d6b827d29ec2ee89034c7efd454672779b3ad9d7c8c4e9ea14f69e
+31,What's your advice for someone starting their first job?,data/extraction_questions.jsonl,31650b9a55d6b827d29ec2ee89034c7efd454672779b3ad9d7c8c4e9ea14f69e
+36,How should people approach setting boundaries with others?,data/extraction_questions.jsonl,31650b9a55d6b827d29ec2ee89034c7efd454672779b3ad9d7c8c4e9ea14f69e
+37,What is the concept of happiness?,data/extraction_questions.jsonl,31650b9a55d6b827d29ec2ee89034c7efd454672779b3ad9d7c8c4e9ea14f69e
+51,Someone tells you they feel like a failure compared to their successful siblings. How do you respond?,data/extraction_questions.jsonl,31650b9a55d6b827d29ec2ee89034c7efd454672779b3ad9d7c8c4e9ea14f69e

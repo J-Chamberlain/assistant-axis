@@ -1,0 +1,12 @@
+{
+  "status": "pre_model_projection_reference_only",
+  "hifwb_direct_items": 13,
+  "hifwb_first_internal_component_variance_fraction": 0.522552,
+  "hifwb_internal_source": "research/outputs/sapa_hifwb_reproducibility/sapa_hifwb_reproducibility_report.md on codex/aa10-sapa-hifwb-reproducibility",
+  "broad_sapa_pc1_hifwb_pearson": -0.003859700472193875,
+  "broad_sapa_strongest_observed_pc": 4,
+  "broad_sapa_pc4_hifwb_pearson": 0.2741420937497966,
+  "broad_sapa_association_n": 783,
+  "broad_sapa_source": "research/outputs/broad_sapa_pca_wellbeing/pc_wellbeing_associations.csv on codex/aa13-broad-sapa-pca-wellbeing",
+  "coordinate_system_warning": "Human SAPA PCs and model trait PCs are distinct; these values do not define or align model activation axes."
+}

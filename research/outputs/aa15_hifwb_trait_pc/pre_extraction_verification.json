@@ -1,0 +1,30 @@
+{
+  "stage": "pre_extraction",
+  "frozen_sha256": "dcac8f8d2e82c6fa337a8c34472b8b1901d7c709823618dd4bf614ed885a46e0",
+  "direct_items": 13,
+  "reverse_keyed": 6,
+  "formulations": 3,
+  "prompt_pairs": 195,
+  "questions": 8,
+  "planned_responses_per_model": 3120,
+  "aa14_frozen_pca_models": {
+    "qwen": {
+      "frozen_rank": 239,
+      "feature_dim": 5120,
+      "first20_orthogonality_max_error": 5.960464477539062e-07
+    },
+    "llama": {
+      "frozen_rank": 239,
+      "feature_dim": 8192,
+      "first20_orthogonality_max_error": 3.5762786865234375e-07
+    },
+    "gemma": {
+      "frozen_rank": 239,
+      "feature_dim": 4608,
+      "first20_orthogonality_max_error": 2.980232238769531e-07
+    }
+  },
+  "new_indicator_vectors_available": false,
+  "viewer_extended": false,
+  "public_aa15_deployment_verified": false
+}
