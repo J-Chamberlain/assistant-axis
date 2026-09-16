@@ -107,13 +107,13 @@ def compactness(indicator_scores: np.ndarray, indicator_norms: np.ndarray,
             "matched_compactness_p": float((1 + (np.array(matched) <= observed).sum()) / (NULL + 1)) if matched_valid else None}
 
 
-def source_centered(folder: str, kind: str, name: str, mean: np.ndarray) -> np.ndarray:
-    path = SOURCE / folder / f"{kind}_vectors" / f"{name}.pt"
+def source_centered(source_root: Path, folder: str, kind: str, name: str, mean: np.ndarray) -> np.ndarray:
+    path = source_root / folder / f"{kind}_vectors" / f"{name}.pt"
     tensor = torch.load(io.BytesIO(path.read_bytes()), map_location="cpu", weights_only=True)
     return tensor.float().mean(0).numpy().astype(np.float64) - mean
 
 
-def main(private_root: Path) -> None:
+def main(private_root: Path, source_root: Path) -> None:
     items = read_rows("hifwb_indicator_inventory.csv")
     assert len(items) == 13
     expected_ids = [r["item_id"] for r in items]
@@ -258,7 +258,7 @@ def main(private_root: Path) -> None:
         for kind, names, pcs in (("trait", trait_names, trait_scores), ("persona", persona_names, persona_scores)):
             output = trait_rows if kind == "trait" else persona_rows
             for name, pc in zip(names, pcs):
-                z = source_centered(folder, "trait" if kind == "trait" else "role", name, mean)
+                z = source_centered(source_root, folder, "trait" if kind == "trait" else "role", name, mean)
                 nearest = int(np.argmin(np.linalg.norm(primary_scores[:, :K] - pc[:K], axis=1)))
                 output.append({"model": model, "kind": kind, "name": name,
                                "signed_projection_on_centroid_direction": float(z @ centroid_dir),
@@ -379,5 +379,7 @@ def main(private_root: Path) -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--private-vector-root", type=Path, required=True)
+    parser.add_argument("--source-vector-root", type=Path, default=SOURCE,
+                        help="AA-14 released .pt bank; defaults to the local sibling downloads tree")
     args = parser.parse_args()
-    main(args.private_vector_root)
+    main(args.private_vector_root, args.source_vector_root)

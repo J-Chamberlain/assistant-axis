@@ -3,7 +3,7 @@
 ## AA-15 extraction provenance gate (2026-09-16)
 
 Start at `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md`. The frozen AA-14 PCA used an all-saved-layer mean for every model; the Qwen layer-48 inventory label is incorrect, but the PCA and public viewer are unchanged. The original paper recovers the contrastive response-token trait method at a high level, while released-tensor response-level selection remains unrecorded. HiFWB vectors must therefore be labeled as a prospective analogue.
-The pre-extraction packet is `analysis_freeze.md`, `hifwb_indicator_inventory.csv`, `hifwb_prompt_freeze.csv`, `hifwb_extraction_questions.csv`, and `pre_extraction_verification.json`. No new indicator activation or projected-coordinate result exists yet.
+The pre-extraction packet is `analysis_freeze.md`, `hifwb_indicator_inventory.csv`, `hifwb_prompt_freeze.csv`, `hifwb_extraction_questions.csv`, and `pre_extraction_verification.json`. The guarded extraction/projection scripts and AA-14-shell-based viewer extension are prepared, not run or published. No new indicator activation or projected-coordinate result exists yet.
 
 ## AA-14 trait-derived persona viewer (2026-09-16)
 
