@@ -1,5 +1,9 @@
 # Findings Ledger
 
+## AA-14 · trait-derived geometry (2026-09-16)
+
+Observed: independent PCA over the shared 240 saved traits reproduces Qwen PC1–3 variance 0.352836/0.168068/0.133744; Llama/Gemma top-three cumulatives are 0.535354/0.571618. Shared-trait top-three score subspaces align after orthogonal matching at mean canonical correlation 0.941–0.974 (500-label-permutation p=0.001996). Projected same-model personas capture median 0.690/0.630/0.728 of centered energy in the first 20 trait PCs but mostly lie outside a descriptive trait-cloud neighborhood reference. Interpretation: recurrent trait-label geometry is not identical local PC semantics, and trait/persona distribution shift warrants conservative reading. Hypothesis: common prompt/label construction may contribute to alignment. Source: `research/outputs/three_model_trait_pca/methodology_report.md`.
+
 This is a compact index of project claims and their status. Use `research/RESEARCH_STATE.md` for full history and exact supporting paths.
 
 ## Confirmed Findings

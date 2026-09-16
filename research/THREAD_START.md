@@ -2,7 +2,9 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-09-12
+Last updated: 2026-09-16
+
+AA-14 (2026-09-16): `research/outputs/three_model_trait_pca/methodology_report.md` is the entry point for three independent 240-trait PCAs and 275 per-model persona projections. Qwen reproduces its known 65.465% top-three trait variance; Llama/Gemma top-three explain 53.535%/57.162%. Shared-label aligned top-three canonical correlations are 0.941–0.974 (500-permutation p=0.001996), but axis order/sign and semantic poles differ. Most native-centered persona projections sit outside a descriptive 20D trait-cloud reference (Qwen 275/275, Llama 259/275, Gemma 275/275). The sibling Plotly viewer reuses the original trait-surface shell and camera math, showing actual projected persona and optional trait markers rather than a fabric height. Public URL: `https://persona-trait-landscapes.josiah-chamberlain.chatgpt.site/three_model_trait_pca/trait_pc_persona_viewer`. No inference, GPU, respondent data, or raw tensors were added.
 
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 

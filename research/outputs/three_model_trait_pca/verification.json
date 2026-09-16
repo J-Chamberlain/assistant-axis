@@ -1,0 +1,12 @@
+{
+  "seed": 140016,
+  "bootstrap": 100,
+  "parallel": 60,
+  "cross_model_permutations": 500,
+  "same_trait_labels_and_order": true,
+  "same_persona_labels_and_order": true,
+  "qwen_variance_max_error": 2.7755575615628914e-16,
+  "qwen_score_max_error": 2.7524347245844183e-09,
+  "spectra_sum_max_error": 2.220446049250313e-16,
+  "projection_identity_max_error": 1.8044374883174896e-08
+}

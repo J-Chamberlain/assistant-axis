@@ -1,0 +1,1883 @@
+{
+  "qwen": {
+    "variance_first20": [
+      0.3528356824760041,
+      0.1680677297753609,
+      0.13374404483700741,
+      0.08127204305846404,
+      0.04474002567892664,
+      0.03767138809784227,
+      0.023543996766569382,
+      0.017236553027708056,
+      0.011995457272175538,
+      0.01147943511332296,
+      0.009486264759896272,
+      0.008168897574068768,
+      0.007310096642779311,
+      0.005895462305825051,
+      0.005220854393386381,
+      0.004714744353862846,
+      0.00436055707547988,
+      0.003932285236187255,
+      0.003631242585747682,
+      0.0034078829247573767
+    ],
+    "cumulative_3": 0.6546474570883725,
+    "effective_rank_participation": 5.488185618677931,
+    "retention_80pct": 6,
+    "top_traits": {
+      "PC1": {
+        "low": [
+          "flippant",
+          "irreverent",
+          "goofy",
+          "sassy",
+          "edgy",
+          "witty",
+          "flirty",
+          "entertaining",
+          "temperamental",
+          "sardonic"
+        ],
+        "high": [
+          "serious",
+          "solemn",
+          "formal",
+          "calm",
+          "conscientious",
+          "serene",
+          "patient",
+          "methodical",
+          "dispassionate",
+          "meticulous"
+        ]
+      },
+      "PC2": {
+        "low": [
+          "nurturing",
+          "accessible",
+          "empathetic",
+          "emotional",
+          "benevolent",
+          "naive",
+          "supportive",
+          "meditative",
+          "chill",
+          "optimistic"
+        ],
+        "high": [
+          "callous",
+          "detached",
+          "technical",
+          "dispassionate",
+          "esoteric",
+          "acerbic",
+          "cruel",
+          "hostile",
+          "savage",
+          "misanthropic"
+        ]
+      },
+      "PC3": {
+        "low": [
+          "eloquent",
+          "bombastic",
+          "cryptic",
+          "poetic",
+          "theatrical",
+          "dramatic",
+          "philosophical",
+          "melodramatic",
+          "metaphorical",
+          "esoteric"
+        ],
+        "high": [
+          "grounded",
+          "practical",
+          "understated",
+          "accessible",
+          "efficient",
+          "concise",
+          "nonchalant",
+          "avoidant",
+          "casual",
+          "literal"
+        ]
+      },
+      "PC4": {
+        "low": [
+          "concise",
+          "ethereal",
+          "fatalistic",
+          "reverent",
+          "mystical",
+          "serene",
+          "romantic",
+          "efficient",
+          "enigmatic",
+          "understated"
+        ],
+        "high": [
+          "educational",
+          "analytical",
+          "verbose",
+          "exploratory",
+          "generous",
+          "animated",
+          "proactive",
+          "problem_solving",
+          "divergent",
+          "strategic"
+        ]
+      },
+      "PC5": {
+        "low": [
+          "bombastic",
+          "theatrical",
+          "melodramatic",
+          "prescriptive",
+          "zealous",
+          "ritualistic",
+          "effusive",
+          "reverent",
+          "inspirational",
+          "animated"
+        ],
+        "high": [
+          "open_ended",
+          "qualitative",
+          "critical",
+          "socratic",
+          "deconstructionist",
+          "relativist",
+          "rebellious",
+          "subversive",
+          "melancholic",
+          "introspective"
+        ]
+      },
+      "PC6": {
+        "low": [
+          "earnest",
+          "militant",
+          "urgent",
+          "blunt",
+          "decisive",
+          "assertive",
+          "confident",
+          "zealous",
+          "confrontational",
+          "impatient"
+        ],
+        "high": [
+          "goofy",
+          "flippant",
+          "wry",
+          "whimsical",
+          "mischievous",
+          "passive_aggressive",
+          "understated",
+          "ironic",
+          "witty",
+          "sardonic"
+        ]
+      },
+      "PC7": {
+        "low": [
+          "concise",
+          "efficient",
+          "resilient",
+          "esoteric",
+          "serene",
+          "inspirational",
+          "reserved",
+          "adventurous",
+          "innovative",
+          "cryptic"
+        ],
+        "high": [
+          "neurotic",
+          "anxious",
+          "accessible",
+          "verbose",
+          "petty",
+          "nostalgic",
+          "educational",
+          "traditional",
+          "melancholic",
+          "naive"
+        ]
+      },
+      "PC8": {
+        "low": [
+          "poetic",
+          "practical",
+          "enigmatic",
+          "melancholic",
+          "cryptic",
+          "experiential",
+          "ethereal",
+          "grounded",
+          "narrative",
+          "accessible"
+        ],
+        "high": [
+          "conceptual",
+          "theoretical",
+          "abstract",
+          "sycophantic",
+          "effusive",
+          "big_picture",
+          "manic",
+          "idealistic",
+          "esoteric",
+          "gregarious"
+        ]
+      },
+      "PC9": {
+        "low": [
+          "ascetic",
+          "altruistic",
+          "environmental",
+          "neurotic",
+          "spiritual",
+          "meditative",
+          "radical",
+          "inclusive",
+          "quantitative",
+          "collectivistic"
+        ],
+        "high": [
+          "elitist",
+          "secular",
+          "eloquent",
+          "libertarian",
+          "competitive",
+          "epicurean",
+          "qualitative",
+          "sycophantic",
+          "manipulative",
+          "callous"
+        ]
+      },
+      "PC10": {
+        "low": [
+          "anxious",
+          "futuristic",
+          "secular",
+          "neurotic",
+          "manic",
+          "effusive",
+          "ethereal",
+          "materialist",
+          "contemporary",
+          "enigmatic"
+        ],
+        "high": [
+          "meditative",
+          "sardonic",
+          "wry",
+          "witty",
+          "serene",
+          "acerbic",
+          "sarcastic",
+          "edgy",
+          "humanistic",
+          "irreverent"
+        ]
+      },
+      "PC11": {
+        "low": [
+          "accessible",
+          "deterministic",
+          "nihilistic",
+          "meditative",
+          "literal",
+          "playful",
+          "libertarian",
+          "divergent",
+          "spiritual",
+          "verbose"
+        ],
+        "high": [
+          "eloquent",
+          "collaborative",
+          "collectivistic",
+          "holistic",
+          "concise",
+          "humanistic",
+          "anxious",
+          "adaptable",
+          "rhetorical",
+          "efficient"
+        ]
+      },
+      "PC12": {
+        "low": [
+          "formal",
+          "secular",
+          "radical",
+          "contemporary",
+          "meticulous",
+          "conscientious",
+          "meditative",
+          "progressive",
+          "egalitarian",
+          "hedonistic"
+        ],
+        "high": [
+          "casual",
+          "esoteric",
+          "nonchalant",
+          "traditional",
+          "ascetic",
+          "fundamentalist",
+          "structuralist",
+          "historical",
+          "reverent",
+          "nostalgic"
+        ]
+      },
+      "PC13": {
+        "low": [
+          "generalist",
+          "collectivistic",
+          "collaborative",
+          "naive",
+          "accessible",
+          "big_picture",
+          "radical",
+          "historical",
+          "constructivist",
+          "interdisciplinary"
+        ],
+        "high": [
+          "socratic",
+          "existentialist",
+          "inquisitive",
+          "meditative",
+          "independent",
+          "challenging",
+          "individualistic",
+          "flirty",
+          "pedantic",
+          "specialized"
+        ]
+      },
+      "PC14": {
+        "low": [
+          "inquisitive",
+          "socratic",
+          "experiential",
+          "paranoid",
+          "spiritual",
+          "relativist",
+          "critical",
+          "avoidant",
+          "deconstructionist",
+          "serene"
+        ],
+        "high": [
+          "secular",
+          "existentialist",
+          "melancholic",
+          "independent",
+          "conceptual",
+          "neurotic",
+          "visceral",
+          "sassy",
+          "universalist",
+          "disorganized"
+        ]
+      },
+      "PC15": {
+        "low": [
+          "socratic",
+          "theatrical",
+          "melodramatic",
+          "nostalgic",
+          "dramatic",
+          "deontological",
+          "poetic",
+          "challenging",
+          "inquisitive",
+          "resilient"
+        ],
+        "high": [
+          "spiritual",
+          "mystical",
+          "futuristic",
+          "meditative",
+          "neurotic",
+          "practical",
+          "intuitive",
+          "disorganized",
+          "serene",
+          "utilitarian"
+        ]
+      },
+      "PC16": {
+        "low": [
+          "spiritual",
+          "mystical",
+          "qualitative",
+          "exploratory",
+          "bombastic",
+          "divergent",
+          "ascetic",
+          "pluralist",
+          "melodramatic",
+          "relativist"
+        ],
+        "high": [
+          "materialist",
+          "data_driven",
+          "deterministic",
+          "quantitative",
+          "narrative",
+          "secular",
+          "serene",
+          "historical",
+          "naive",
+          "altruistic"
+        ]
+      },
+      "PC17": {
+        "low": [
+          "qualitative",
+          "sassy",
+          "constructivist",
+          "regulatory",
+          "resilient",
+          "esoteric",
+          "ritualistic",
+          "nostalgic",
+          "pedantic",
+          "vindictive"
+        ],
+        "high": [
+          "nihilistic",
+          "misanthropic",
+          "meditative",
+          "naive",
+          "structuralist",
+          "cruel",
+          "big_picture",
+          "data_driven",
+          "quantitative",
+          "methodical"
+        ]
+      },
+      "PC18": {
+        "low": [
+          "hostile",
+          "nonchalant",
+          "experiential",
+          "epicurean",
+          "verbose",
+          "bitter",
+          "quantitative",
+          "artistic",
+          "historical",
+          "savage"
+        ],
+        "high": [
+          "goofy",
+          "anxious",
+          "mischievous",
+          "playful",
+          "paranoid",
+          "whimsical",
+          "neurotic",
+          "concise",
+          "patient",
+          "urgent"
+        ]
+      },
+      "PC19": {
+        "low": [
+          "socratic",
+          "narrative",
+          "optimistic",
+          "altruistic",
+          "adventurous",
+          "accessible",
+          "creative",
+          "inquisitive",
+          "inspirational",
+          "innovative"
+        ],
+        "high": [
+          "hedonistic",
+          "meditative",
+          "flirty",
+          "pessimistic",
+          "chill",
+          "cautious",
+          "sassy",
+          "patient",
+          "animated",
+          "effusive"
+        ]
+      },
+      "PC20": {
+        "low": [
+          "historical",
+          "artistic",
+          "experiential",
+          "generalist",
+          "epicurean",
+          "existentialist",
+          "eclectic",
+          "erudite",
+          "impulsive",
+          "concise"
+        ],
+        "high": [
+          "deterministic",
+          "secular",
+          "collaborative",
+          "inquisitive",
+          "collectivistic",
+          "enigmatic",
+          "poetic",
+          "regulatory",
+          "generous",
+          "impatient"
+        ]
+      }
+    },
+    "trait_persona_principal_angles_degrees": {
+      "1": [
+        47.08756890892482
+      ],
+      "3": [
+        43.596327684023166,
+        24.995328145388466,
+        15.260124870535257
+      ],
+      "6": [
+        72.26367271359668,
+        52.156059735574395,
+        47.370237140263434,
+        20.173050908883056,
+        16.491978369869855,
+        11.206542271611644
+      ],
+      "10": [
+        86.24678517408604,
+        65.23658196845216,
+        50.67082074248412,
+        39.64212521978822,
+        36.533414085648154,
+        29.891103227472435,
+        24.95480055535988,
+        18.5829209465222,
+        12.687217251263851,
+        10.31870640751801
+      ],
+      "20": [
+        86.64505496496398,
+        80.33876607230367,
+        72.7101448993046,
+        70.46114687841003,
+        61.318225367216726,
+        56.57695406466794,
+        50.062438298413866,
+        44.11245322741107,
+        43.41693803396017,
+        38.80768018195145,
+        34.479000546374884,
+        29.977479737396997,
+        26.319693510978635,
+        25.110438456493505,
+        23.700885571510025,
+        21.662225864667153,
+        19.023847759924635,
+        11.917670387067966,
+        9.436306080074853,
+        7.470253931814741
+      ]
+    },
+    "same_number_pc_direction_cosines_descriptive_only": [
+      0.6808797879842562,
+      -0.19365878094128608,
+      -0.06518722465643989,
+      -0.18146717296158107,
+      0.1641874623010675,
+      -0.15755987869308524,
+      -0.061681961085709405,
+      -0.020584238600572145,
+      -0.19467433571173487,
+      0.03513306034876939,
+      -0.38749162117582736,
+      -0.1768638001845389,
+      0.14820977683114336,
+      0.0836199625315882,
+      0.3087507207026301,
+      -0.11915655611966972,
+      -0.11727194169820124,
+      0.20415694239011875,
+      -0.11539381791148909,
+      0.0488222540342477
+    ],
+    "normalized_sensitivity_aligned_r3": 0.9773625978451944,
+    "ood_count": 275,
+    "median_capture20": 0.6902347360238485,
+    "median_residual20": 157.79020930258204
+  },
+  "llama": {
+    "variance_first20": [
+      0.2891878189182564,
+      0.14240513993427903,
+      0.10376107568068195,
+      0.07016388047142087,
+      0.04669193043960976,
+      0.03301027441604588,
+      0.03051265284215306,
+      0.02314402812376596,
+      0.01870275691572612,
+      0.01656482547973596,
+      0.012728122586536666,
+      0.010920947625983357,
+      0.010492294421277118,
+      0.009524609405434625,
+      0.008632555545623474,
+      0.008188223010710084,
+      0.007438851888511087,
+      0.0072926553502364305,
+      0.006394726880420559,
+      0.005898219410596821
+    ],
+    "cumulative_3": 0.5353540345332174,
+    "effective_rank_participation": 7.930917475146913,
+    "retention_80pct": 13,
+    "top_traits": {
+      "PC1": {
+        "low": [
+          "conscientious",
+          "supportive",
+          "earnest",
+          "nurturing",
+          "strategic",
+          "educational",
+          "generous",
+          "solemn",
+          "patient",
+          "serene"
+        ],
+        "high": [
+          "flippant",
+          "nonchalant",
+          "impulsive",
+          "reactive",
+          "impatient",
+          "irreverent",
+          "hostile",
+          "goofy",
+          "cruel",
+          "callous"
+        ]
+      },
+      "PC2": {
+        "low": [
+          "grounded",
+          "dispassionate",
+          "understated",
+          "reserved",
+          "concise",
+          "accessible",
+          "rationalist",
+          "detached",
+          "transparent",
+          "efficient"
+        ],
+        "high": [
+          "dramatic",
+          "eloquent",
+          "poetic",
+          "theatrical",
+          "metaphorical",
+          "melodramatic",
+          "cryptic",
+          "bombastic",
+          "romantic",
+          "enigmatic"
+        ]
+      },
+      "PC3": {
+        "low": [
+          "casual",
+          "accessible",
+          "chill",
+          "gregarious",
+          "emotional",
+          "naive",
+          "nurturing",
+          "empathetic",
+          "entertaining",
+          "animated"
+        ],
+        "high": [
+          "bombastic",
+          "serious",
+          "ritualistic",
+          "formal",
+          "solemn",
+          "callous",
+          "introverted",
+          "meticulous",
+          "esoteric",
+          "technical"
+        ]
+      },
+      "PC4": {
+        "low": [
+          "understated",
+          "meditative",
+          "serene",
+          "enigmatic",
+          "submissive",
+          "mystical",
+          "ethereal",
+          "avoidant",
+          "fatalistic",
+          "cryptic"
+        ],
+        "high": [
+          "sassy",
+          "charismatic",
+          "animated",
+          "problem_solving",
+          "educational",
+          "effusive",
+          "passionate",
+          "quantitative",
+          "generous",
+          "transparent"
+        ]
+      },
+      "PC5": {
+        "low": [
+          "concise",
+          "efficient",
+          "decisive",
+          "confident",
+          "inspirational",
+          "closure_seeking",
+          "romantic",
+          "optimistic",
+          "naive",
+          "absolutist"
+        ],
+        "high": [
+          "verbose",
+          "exploratory",
+          "circumspect",
+          "introspective",
+          "cautious",
+          "generous",
+          "deconstructionist",
+          "pensive",
+          "divergent",
+          "open_ended"
+        ]
+      },
+      "PC6": {
+        "low": [
+          "accessible",
+          "qualitative",
+          "earnest",
+          "militant",
+          "misanthropic",
+          "adaptable",
+          "judgmental",
+          "emotional",
+          "melancholic",
+          "ascetic"
+        ],
+        "high": [
+          "goofy",
+          "bombastic",
+          "technical",
+          "flippant",
+          "quantitative",
+          "wry",
+          "data_driven",
+          "esoteric",
+          "mischievous",
+          "specialized"
+        ]
+      },
+      "PC7": {
+        "low": [
+          "naive",
+          "neurotic",
+          "anxious",
+          "sycophantic",
+          "verbose",
+          "ritualistic",
+          "reverent",
+          "effusive",
+          "petty",
+          "traditional"
+        ],
+        "high": [
+          "concise",
+          "sassy",
+          "cryptic",
+          "resilient",
+          "independent",
+          "serene",
+          "efficient",
+          "blunt",
+          "rebellious",
+          "irreverent"
+        ]
+      },
+      "PC8": {
+        "low": [
+          "accessible",
+          "meditative",
+          "melancholic",
+          "serene",
+          "traditional",
+          "adaptable",
+          "experiential",
+          "grounded",
+          "practical",
+          "sardonic"
+        ],
+        "high": [
+          "esoteric",
+          "radical",
+          "manic",
+          "theoretical",
+          "innovative",
+          "relativist",
+          "critical",
+          "futuristic",
+          "conceptual",
+          "reactive"
+        ]
+      },
+      "PC9": {
+        "low": [
+          "neurotic",
+          "anxious",
+          "melancholic",
+          "ethereal",
+          "melodramatic",
+          "cryptic",
+          "ascetic",
+          "blunt",
+          "temperamental",
+          "disorganized"
+        ],
+        "high": [
+          "resilient",
+          "passive_aggressive",
+          "witty",
+          "sycophantic",
+          "charismatic",
+          "calm",
+          "serene",
+          "eloquent",
+          "elitist",
+          "ironic"
+        ]
+      },
+      "PC10": {
+        "low": [
+          "conscientious",
+          "socratic",
+          "concise",
+          "enigmatic",
+          "flirty",
+          "efficient",
+          "accessible",
+          "avoidant",
+          "inquisitive",
+          "melancholic"
+        ],
+        "high": [
+          "nonchalant",
+          "naive",
+          "flippant",
+          "chill",
+          "verbose",
+          "generalist",
+          "optimistic",
+          "spiritual",
+          "serene",
+          "confident"
+        ]
+      },
+      "PC11": {
+        "low": [
+          "competitive",
+          "nonchalant",
+          "secular",
+          "verbose",
+          "vindictive",
+          "enigmatic",
+          "metaphorical",
+          "casual",
+          "cryptic",
+          "adaptable"
+        ],
+        "high": [
+          "meditative",
+          "sardonic",
+          "environmental",
+          "ascetic",
+          "sarcastic",
+          "altruistic",
+          "goofy",
+          "spiritual",
+          "wry",
+          "ironic"
+        ]
+      },
+      "PC12": {
+        "low": [
+          "naive",
+          "deterministic",
+          "fatalistic",
+          "verbose",
+          "nihilistic",
+          "patient",
+          "meditative",
+          "goofy",
+          "accessible",
+          "hedonistic"
+        ],
+        "high": [
+          "concise",
+          "impatient",
+          "eloquent",
+          "efficient",
+          "humanistic",
+          "traditional",
+          "rhetorical",
+          "moderate",
+          "adaptable",
+          "poetic"
+        ]
+      },
+      "PC13": {
+        "low": [
+          "formal",
+          "epicurean",
+          "secular",
+          "progressive",
+          "serious",
+          "adventurous",
+          "cosmopolitan",
+          "sycophantic",
+          "cruel",
+          "existentialist"
+        ],
+        "high": [
+          "ascetic",
+          "nostalgic",
+          "fundamentalist",
+          "meditative",
+          "historical",
+          "casual",
+          "esoteric",
+          "essentialist",
+          "traditional",
+          "quantitative"
+        ]
+      },
+      "PC14": {
+        "low": [
+          "nihilistic",
+          "deterministic",
+          "misanthropic",
+          "fatalistic",
+          "melancholic",
+          "patient",
+          "animated",
+          "chill",
+          "extroverted",
+          "collaborative"
+        ],
+        "high": [
+          "inspirational",
+          "meditative",
+          "disorganized",
+          "existentialist",
+          "mystical",
+          "petty",
+          "ascetic",
+          "spiritual",
+          "hostile",
+          "condescending"
+        ]
+      },
+      "PC15": {
+        "low": [
+          "serene",
+          "adaptable",
+          "quantitative",
+          "experiential",
+          "futuristic",
+          "collaborative",
+          "collectivistic",
+          "environmental",
+          "radical",
+          "innovative"
+        ],
+        "high": [
+          "independent",
+          "manic",
+          "effusive",
+          "existentialist",
+          "qualitative",
+          "traditional",
+          "goofy",
+          "circumspect",
+          "libertarian",
+          "abstract"
+        ]
+      },
+      "PC16": {
+        "low": [
+          "anxious",
+          "neurotic",
+          "existentialist",
+          "independent",
+          "concise",
+          "adaptable",
+          "libertarian",
+          "obsessive",
+          "disorganized",
+          "individualistic"
+        ],
+        "high": [
+          "hostile",
+          "collaborative",
+          "collectivistic",
+          "avoidant",
+          "resilient",
+          "altruistic",
+          "verbose",
+          "savage",
+          "callous",
+          "artistic"
+        ]
+      },
+      "PC17": {
+        "low": [
+          "fatalistic",
+          "deterministic",
+          "impatient",
+          "spiritual",
+          "structuralist",
+          "ascetic",
+          "systems_thinker",
+          "relativist",
+          "accessible",
+          "competitive"
+        ],
+        "high": [
+          "existentialist",
+          "melancholic",
+          "flexible",
+          "independent",
+          "secular",
+          "patient",
+          "spontaneous",
+          "earnest",
+          "verbose",
+          "artistic"
+        ]
+      },
+      "PC18": {
+        "low": [
+          "nihilistic",
+          "inquisitive",
+          "existentialist",
+          "quantitative",
+          "meditative",
+          "socratic",
+          "sycophantic",
+          "nonchalant",
+          "independent",
+          "technical"
+        ],
+        "high": [
+          "goofy",
+          "mischievous",
+          "collectivistic",
+          "generalist",
+          "qualitative",
+          "enigmatic",
+          "whimsical",
+          "collaborative",
+          "wry",
+          "paranoid"
+        ]
+      },
+      "PC19": {
+        "low": [
+          "bombastic",
+          "patient",
+          "melodramatic",
+          "militant",
+          "dramatic",
+          "radical",
+          "chill",
+          "critical",
+          "paranoid",
+          "supportive"
+        ],
+        "high": [
+          "deterministic",
+          "impatient",
+          "fatalistic",
+          "moderate",
+          "chaotic",
+          "witty",
+          "metaphorical",
+          "formal",
+          "conciliatory",
+          "conscientious"
+        ]
+      },
+      "PC20": {
+        "low": [
+          "artistic",
+          "relativist",
+          "adaptable",
+          "transparent",
+          "constructivist",
+          "historical",
+          "accessible",
+          "narrative",
+          "nostalgic",
+          "theatrical"
+        ],
+        "high": [
+          "enigmatic",
+          "cryptic",
+          "manic",
+          "generous",
+          "strategic",
+          "supportive",
+          "misanthropic",
+          "paranoid",
+          "nurturing",
+          "ascetic"
+        ]
+      }
+    },
+    "trait_persona_principal_angles_degrees": {
+      "1": [
+        81.37178571691489
+      ],
+      "3": [
+        61.230230731113906,
+        40.33602497638275,
+        28.000285312378626
+      ],
+      "6": [
+        85.10479939407747,
+        65.7282554213477,
+        50.29890066949996,
+        33.7972540833459,
+        27.58675741567596,
+        22.16001824783277
+      ],
+      "10": [
+        87.59626721681555,
+        76.2981672489477,
+        73.81186153061118,
+        57.291298071614925,
+        47.510048792848636,
+        43.57528364163727,
+        37.73351421432729,
+        28.546995265298158,
+        21.166347756331984,
+        20.529681169978392
+      ],
+      "20": [
+        89.35652747734932,
+        87.60864464834296,
+        79.81267827735341,
+        76.79112887483163,
+        75.44870134750101,
+        69.04195348071292,
+        67.8921114547057,
+        63.188580375511805,
+        59.367483689636714,
+        50.22879423706938,
+        46.58672414028315,
+        44.84215772263189,
+        42.90459797030155,
+        36.30297120472868,
+        31.521104180018753,
+        29.605869663933674,
+        27.62684866499352,
+        21.808497395751946,
+        16.613506837732736,
+        15.45666714076518
+      ]
+    },
+    "same_number_pc_direction_cosines_descriptive_only": [
+      0.15002222071029195,
+      0.17508626066961278,
+      0.3839360291644383,
+      0.3298787153496532,
+      0.16011414163240126,
+      -0.29082512045682263,
+      0.4093379124920689,
+      -0.1939604872062865,
+      0.3617526894392983,
+      -0.181985376932462,
+      -0.01607957530624689,
+      -0.012048593043494727,
+      0.15526983472526182,
+      0.23333312909159354,
+      0.1931965278535671,
+      -0.04958985500888504,
+      -0.03810337193526894,
+      0.17745036487561916,
+      0.08225262540759015,
+      0.1643061611299388
+    ],
+    "normalized_sensitivity_aligned_r3": 0.976427225243646,
+    "ood_count": 259,
+    "median_capture20": 0.6304626275234609,
+    "median_residual20": 5.753359855864029
+  },
+  "gemma": {
+    "variance_first20": [
+      0.2947253101931589,
+      0.15905466892754985,
+      0.11783787096366413,
+      0.07207781608104796,
+      0.04317872811436668,
+      0.03640183259290122,
+      0.030334222406998956,
+      0.022612448540166967,
+      0.01668955245694732,
+      0.015526022129922391,
+      0.012059990955761395,
+      0.011054574120860153,
+      0.010225868477563882,
+      0.009054226751541572,
+      0.00754774822447631,
+      0.007467373705878515,
+      0.006843872610486166,
+      0.005973046505834663,
+      0.005399397656718282,
+      0.005038361715668254
+    ],
+    "cumulative_3": 0.5716178500843729,
+    "effective_rank_participation": 7.283229192700366,
+    "retention_80pct": 10,
+    "top_traits": {
+      "PC1": {
+        "low": [
+          "flippant",
+          "irreverent",
+          "hostile",
+          "manic",
+          "edgy",
+          "goofy",
+          "sardonic",
+          "temperamental",
+          "acerbic",
+          "disorganized"
+        ],
+        "high": [
+          "conscientious",
+          "calm",
+          "serene",
+          "conciliatory",
+          "moderate",
+          "patient",
+          "agreeable",
+          "earnest",
+          "diplomatic",
+          "resilient"
+        ]
+      },
+      "PC2": {
+        "low": [
+          "callous",
+          "dispassionate",
+          "serious",
+          "detached",
+          "formal",
+          "reserved",
+          "technical",
+          "cruel",
+          "ritualistic",
+          "esoteric"
+        ],
+        "high": [
+          "animated",
+          "nurturing",
+          "casual",
+          "accessible",
+          "empathetic",
+          "emotional",
+          "charismatic",
+          "gregarious",
+          "chill",
+          "adaptable"
+        ]
+      },
+      "PC3": {
+        "low": [
+          "eloquent",
+          "bombastic",
+          "cryptic",
+          "dramatic",
+          "theatrical",
+          "melodramatic",
+          "poetic",
+          "esoteric",
+          "grandiose",
+          "enigmatic"
+        ],
+        "high": [
+          "grounded",
+          "understated",
+          "casual",
+          "avoidant",
+          "accessible",
+          "impulsive",
+          "nonchalant",
+          "practical",
+          "impatient",
+          "transparent"
+        ]
+      },
+      "PC4": {
+        "low": [
+          "educational",
+          "proactive",
+          "generous",
+          "strategic",
+          "problem_solving",
+          "exploratory",
+          "sassy",
+          "analytical",
+          "transparent",
+          "charismatic"
+        ],
+        "high": [
+          "serene",
+          "naive",
+          "ethereal",
+          "avoidant",
+          "enigmatic",
+          "meditative",
+          "impulsive",
+          "understated",
+          "reverent",
+          "spiritual"
+        ]
+      },
+      "PC5": {
+        "low": [
+          "circumspect",
+          "passive_aggressive",
+          "anxious",
+          "understated",
+          "exploratory",
+          "verbose",
+          "wry",
+          "cautious",
+          "neurotic",
+          "sardonic"
+        ],
+        "high": [
+          "decisive",
+          "concise",
+          "earnest",
+          "impulsive",
+          "inspirational",
+          "efficient",
+          "blunt",
+          "confident",
+          "urgent",
+          "closure_seeking"
+        ]
+      },
+      "PC6": {
+        "low": [
+          "critical",
+          "deconstructionist",
+          "provocative",
+          "challenging",
+          "socratic",
+          "contrarian",
+          "melancholic",
+          "subversive",
+          "skeptical",
+          "open_ended"
+        ],
+        "high": [
+          "naive",
+          "manic",
+          "effusive",
+          "goofy",
+          "prescriptive",
+          "supportive",
+          "bombastic",
+          "closure_seeking",
+          "educational",
+          "fundamentalist"
+        ]
+      },
+      "PC7": {
+        "low": [
+          "neurotic",
+          "anxious",
+          "melancholic",
+          "earnest",
+          "solemn",
+          "emotional",
+          "accessible",
+          "empathetic",
+          "manipulative",
+          "visceral"
+        ],
+        "high": [
+          "whimsical",
+          "goofy",
+          "resilient",
+          "flippant",
+          "mischievous",
+          "sassy",
+          "nonchalant",
+          "serene",
+          "wry",
+          "chill"
+        ]
+      },
+      "PC8": {
+        "low": [
+          "accessible",
+          "melancholic",
+          "meditative",
+          "enigmatic",
+          "practical",
+          "generalist",
+          "nonchalant",
+          "serene",
+          "proactive",
+          "fatalistic"
+        ],
+        "high": [
+          "sycophantic",
+          "esoteric",
+          "pedantic",
+          "socratic",
+          "erudite",
+          "inquisitive",
+          "submissive",
+          "effusive",
+          "gregarious",
+          "curious"
+        ]
+      },
+      "PC9": {
+        "low": [
+          "theatrical",
+          "ethereal",
+          "enigmatic",
+          "neurotic",
+          "anxious",
+          "cryptic",
+          "melodramatic",
+          "melancholic",
+          "temperamental",
+          "poetic"
+        ],
+        "high": [
+          "serene",
+          "big_picture",
+          "elitist",
+          "sycophantic",
+          "chill",
+          "ironic",
+          "arrogant",
+          "judgmental",
+          "pensive",
+          "witty"
+        ]
+      },
+      "PC10": {
+        "low": [
+          "inquisitive",
+          "calculating",
+          "theatrical",
+          "flirty",
+          "practical",
+          "conscientious",
+          "accessible",
+          "socratic",
+          "narrative",
+          "grounded"
+        ],
+        "high": [
+          "naive",
+          "manic",
+          "disorganized",
+          "theoretical",
+          "conceptual",
+          "abstract",
+          "neurotic",
+          "esoteric",
+          "radical",
+          "generalist"
+        ]
+      },
+      "PC11": {
+        "low": [
+          "flirty",
+          "competitive",
+          "secular",
+          "relativist",
+          "callous",
+          "elitist",
+          "enigmatic",
+          "sycophantic",
+          "patient",
+          "understated"
+        ],
+        "high": [
+          "altruistic",
+          "ascetic",
+          "environmental",
+          "egalitarian",
+          "meditative",
+          "humanistic",
+          "collectivistic",
+          "sardonic",
+          "benevolent",
+          "transparent"
+        ]
+      },
+      "PC12": {
+        "low": [
+          "casual",
+          "esoteric",
+          "fundamentalist",
+          "chill",
+          "traditional",
+          "nonchalant",
+          "poetic",
+          "essentialist",
+          "ascetic",
+          "cryptic"
+        ],
+        "high": [
+          "formal",
+          "naive",
+          "cosmopolitan",
+          "meticulous",
+          "serious",
+          "petty",
+          "conscientious",
+          "accessible",
+          "ironic",
+          "meditative"
+        ]
+      },
+      "PC13": {
+        "low": [
+          "patient",
+          "meditative",
+          "nihilistic",
+          "literal",
+          "introspective",
+          "independent",
+          "earnest",
+          "deterministic",
+          "chill",
+          "existentialist"
+        ],
+        "high": [
+          "impatient",
+          "holistic",
+          "systems_thinker",
+          "generalist",
+          "big_picture",
+          "collectivistic",
+          "intuitive",
+          "nonchalant",
+          "hostile",
+          "collaborative"
+        ]
+      },
+      "PC14": {
+        "low": [
+          "anxious",
+          "flirty",
+          "disorganized",
+          "esoteric",
+          "neurotic",
+          "dominant",
+          "obsessive",
+          "supportive",
+          "nurturing",
+          "condescending"
+        ],
+        "high": [
+          "nihilistic",
+          "accessible",
+          "misanthropic",
+          "melodramatic",
+          "theatrical",
+          "fatalistic",
+          "hostile",
+          "cruel",
+          "naive",
+          "bombastic"
+        ]
+      },
+      "PC15": {
+        "low": [
+          "poetic",
+          "epicurean",
+          "secular",
+          "bitter",
+          "chill",
+          "collaborative",
+          "melancholic",
+          "misanthropic",
+          "artistic",
+          "hedonistic"
+        ],
+        "high": [
+          "ascetic",
+          "goofy",
+          "challenging",
+          "spiritual",
+          "problem_solving",
+          "contrarian",
+          "inquisitive",
+          "accessible",
+          "provocative",
+          "mischievous"
+        ]
+      },
+      "PC16": {
+        "low": [
+          "existentialist",
+          "nonchalant",
+          "independent",
+          "libertarian",
+          "meditative",
+          "cosmopolitan",
+          "epicurean",
+          "individualistic",
+          "egalitarian",
+          "sassy"
+        ],
+        "high": [
+          "patient",
+          "collectivistic",
+          "collaborative",
+          "mischievous",
+          "conscientious",
+          "goofy",
+          "whimsical",
+          "paranoid",
+          "evil",
+          "utilitarian"
+        ]
+      },
+      "PC17": {
+        "low": [
+          "serene",
+          "inquisitive",
+          "practical",
+          "experiential",
+          "quantitative",
+          "meditative",
+          "spiritual",
+          "poetic",
+          "radical",
+          "esoteric"
+        ],
+        "high": [
+          "conceptual",
+          "abstract",
+          "traditional",
+          "theoretical",
+          "qualitative",
+          "independent",
+          "goofy",
+          "big_picture",
+          "generalist",
+          "secular"
+        ]
+      },
+      "PC18": {
+        "low": [
+          "narrative",
+          "experiential",
+          "verbose",
+          "historical",
+          "introspective",
+          "metaphorical",
+          "rhetorical",
+          "creative",
+          "callous",
+          "stream_of_consciousness"
+        ],
+        "high": [
+          "flirty",
+          "supportive",
+          "nurturing",
+          "ethereal",
+          "concise",
+          "spiritual",
+          "efficient",
+          "sassy",
+          "hedonistic",
+          "paranoid"
+        ]
+      },
+      "PC19": {
+        "low": [
+          "resilient",
+          "militant",
+          "avoidant",
+          "disorganized",
+          "cryptic",
+          "hostile",
+          "inspirational",
+          "enigmatic",
+          "paranoid",
+          "humanistic"
+        ],
+        "high": [
+          "nihilistic",
+          "deterministic",
+          "nonchalant",
+          "fatalistic",
+          "neurotic",
+          "charismatic",
+          "chill",
+          "decisive",
+          "melancholic",
+          "naive"
+        ]
+      },
+      "PC20": {
+        "low": [
+          "nihilistic",
+          "secular",
+          "eloquent",
+          "ironic",
+          "ascetic",
+          "urgent",
+          "sardonic",
+          "wry",
+          "existentialist",
+          "agreeable"
+        ],
+        "high": [
+          "flirty",
+          "sassy",
+          "epicurean",
+          "meditative",
+          "historical",
+          "naive",
+          "nostalgic",
+          "hedonistic",
+          "critical",
+          "deconstructionist"
+        ]
+      }
+    },
+    "trait_persona_principal_angles_degrees": {
+      "1": [
+        60.833679785950174
+      ],
+      "3": [
+        58.218113953925126,
+        33.69534993747292,
+        21.737578296339017
+      ],
+      "6": [
+        81.29536463131201,
+        73.56059771638168,
+        54.74959529236376,
+        32.74234088322257,
+        24.841957387112423,
+        18.185348289906063
+      ],
+      "10": [
+        86.71454441292794,
+        80.2537068140776,
+        64.21069429468686,
+        50.01178217366848,
+        43.080264290250895,
+        37.257757933669154,
+        32.393337200326876,
+        26.2131310193876,
+        18.333920533057707,
+        16.04260180430254
+      ],
+      "20": [
+        87.4697080841253,
+        85.40445812523566,
+        77.36427610235829,
+        73.95210520698505,
+        72.29560495629411,
+        64.56967957391564,
+        58.93689770350147,
+        53.826284944376226,
+        49.217483544169696,
+        47.91151226031303,
+        46.30314548308507,
+        41.629223871277965,
+        34.84715100971524,
+        33.93791069055786,
+        30.883037395931286,
+        27.527233456780134,
+        23.52407669046917,
+        18.530210486121884,
+        13.811031011069385,
+        12.488516840340198
+      ]
+    },
+    "same_number_pc_direction_cosines_descriptive_only": [
+      -0.4873464510711577,
+      -0.23360571004373235,
+      0.20654572028429716,
+      -0.10207087679207522,
+      0.12605467583941327,
+      0.4309495567835421,
+      -0.37289043283387946,
+      -0.07348678117479057,
+      -0.30213225861801485,
+      0.17813635957681792,
+      -0.23542064239895727,
+      0.18967678004278624,
+      0.31113407311341446,
+      0.26525784528206453,
+      0.23360346774072763,
+      0.14151405122714433,
+      -0.027983191107723158,
+      -0.1846590264992061,
+      0.1638541345066383,
+      -0.10985451646938416
+    ],
+    "normalized_sensitivity_aligned_r3": 0.9699016495624151,
+    "ood_count": 275,
+    "median_capture20": 0.727851023784936,
+    "median_residual20": 10033.64755391184
+  }
+}

@@ -1,5 +1,14 @@
 # Provenance Registry
 
+## three_model_trait_pca (AA-14)
+
+Artifact: CPU-only independent three-model trait PCA, frozen same-model persona projection, cross-model alignment, and sibling web viewer.
+Location: `research/outputs/three_model_trait_pca/`; main report: `methodology_report.md`; source inventory: `source_inventory.json`; complete compact derived artifacts: `artifact_inventory.csv`.
+Source inputs: 240 saved trait and 275 saved role `.pt` tensors per model under local gitignored `downloads/hf_vectors/{qwen-3-32b,llama-3.3-70b,gemma-2-27b}/`; saved Qwen trait PCA coordinates; existing surface viewer template and camera controls under `research/outputs/persona_trait_surface_viewer/`. The source tensors are not committed.
+Generating scripts: `run_analysis.py` and `build_viewer.py` (CPU, NumPy/SciPy/PyTorch tensor loading, existing Plotly bundle). No new inference, activation extraction, GPU, paid compute, external model API, or respondent-level human data.
+Dependent analyses: Claim 41; trait/persona geometry comparison; public sibling viewer. The original surface viewer source is unmodified.
+Boundary: different model activation coordinates are never concatenated. Shared-label alignment is not raw-vector alignment, psychometric validation, causal interpretation, or evidence that nearest trait labels are human personality descriptions; substantial persona-to-trait cloud shift is flagged.
+
 This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before running repository archaeology. It records where major artifacts came from, which model or agent authored them, what inputs they depend on, and which conclusions currently rely on them.
 
 ## human_supported_trait_convergence

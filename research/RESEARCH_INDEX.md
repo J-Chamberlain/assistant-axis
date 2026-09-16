@@ -1,5 +1,9 @@
 # Research Index
 
+## AA-14 trait-derived persona viewer (2026-09-16)
+
+Start at `research/outputs/three_model_trait_pca/methodology_report.md` for saved-vector three-model trait PCA, Qwen reproduction, aligned shared-trait comparisons, persona projections, and the strong trait/persona distribution-shift caveat. `trait_pc_persona_viewer.html` is the sibling viewer built from the existing trait-surface shell; `artifact_inventory.csv` enumerates the compact derived package. The original surface viewer is unchanged.
+
 This is the compact navigation index for the current assistant-axis research state. Use it with `research/RESEARCH_STATE.md` and `research/PROVENANCE_REGISTRY.md` before running broad repo searches.
 
 ## Current Paper Scopes

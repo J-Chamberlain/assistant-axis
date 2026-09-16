@@ -1,0 +1,32 @@
+{
+  "qwen": {
+    "traits": 240,
+    "personas": 275,
+    "rank": 239,
+    "selector_axis_triples": 8000,
+    "source_to_viewer_max_abs_error": 3.7563898587222866e-06,
+    "all_coordinates_finite": true,
+    "spectrum_sum": 1.0,
+    "cumulative_arithmetic_max_error": 0.0
+  },
+  "llama": {
+    "traits": 240,
+    "personas": 275,
+    "rank": 239,
+    "selector_axis_triples": 8000,
+    "source_to_viewer_max_abs_error": 5.926434365477462e-08,
+    "all_coordinates_finite": true,
+    "spectrum_sum": 0.9999999999999999,
+    "cumulative_arithmetic_max_error": 0.0
+  },
+  "gemma": {
+    "traits": 240,
+    "personas": 275,
+    "rank": 239,
+    "selector_axis_triples": 8000,
+    "source_to_viewer_max_abs_error": 0.00016412390323239379,
+    "all_coordinates_finite": true,
+    "spectrum_sum": 1.0000000000000002,
+    "cumulative_arithmetic_max_error": 0.0
+  }
+}

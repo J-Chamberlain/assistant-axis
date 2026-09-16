@@ -1,12 +1,15 @@
 # Raw URL Index
 
-Updated UTC: 2026-09-12
+Updated UTC: 2026-09-16
 Base commit for this update: b9b6008 (AA-7 canonical semantic reconciliation; links become live after master push)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
 |---|---|---|---|---|
+| active | trait analyses | `research/outputs/three_model_trait_pca/methodology_report.md` | AA-14 three-model trait PCA and persona projection report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/three-model-trait-pca-persona-viewer/research/outputs/three_model_trait_pca/methodology_report.md |
+| active | visualizations | `research/outputs/three_model_trait_pca/trait_pc_persona_viewer.html` | Sibling trait-derived 3D persona/trait viewer | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/three-model-trait-pca-persona-viewer/research/outputs/three_model_trait_pca/trait_pc_persona_viewer.html |
+| active | trait analyses | `research/outputs/three_model_trait_pca/artifact_inventory.csv` | Complete AA-14 derived output inventory and hashes | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/three-model-trait-pca-persona-viewer/research/outputs/three_model_trait_pca/artifact_inventory.csv |
 | active | trait analyses | `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md` | AA-7 frozen human-supported compact-efficiency and aligned-subspace report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md |
 | active | trait analyses | `research/outputs/human_supported_trait_convergence/comparator_summary.csv` | Human 12, optimized, random/generic, Big Five, direct-45, and full-240 comparison | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/comparator_summary.csv |
 | active | trait analyses | `research/outputs/human_supported_trait_convergence/human_supported_trait_set_freeze.json` | Pre-outcome exact AA-1 12-trait freeze and provenance | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/human_supported_trait_convergence/human_supported_trait_set_freeze.json |

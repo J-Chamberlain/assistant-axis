@@ -1,0 +1,9 @@
+# AA-14 analysis freeze · version 1
+
+Frozen before interpreting results. Fit three independent PCA models, each using the 240 sorted shared trait labels as observations and raw activation coordinates as features. For each released `.pt` tensor, mean-pool over its first dimension; do not unit-normalize or standardize features for the primary fit. Subtract that model's trait mean. Retain all 239 nonzero PCs, report every eigenvalue and PC score, and display the first 20. Orient each PC by the positive sign of its largest absolute activation coordinate, except align Qwen PC1–PC3 signs to the saved 2026 Qwen reference scores for reproduction. PC signs have no biological or psychological meaning.
+
+Freeze projection before inspecting the arrangements: each same-model persona tensor is mean-pooled in the same way, centered on the **trait** mean, then multiplied by the frozen trait-PC directions. Personas never enter the trait PCA. The primary coordinates are native centered projections. A secondary sensitivity refits a separate trait PCA to unit-normalized trait rows and projects unit-normalized persona rows centered on that alternative trait mean; it does not replace the primary coordinates.
+
+Diagnostics use the first 20 PCs as the retained/displayable subspace, and additionally store all 239 persona coordinates. OOD is a descriptive threshold: a persona's nearest-trait 20D distance exceeds the 99th percentile of each trait's fifth-nearest-other-trait 20D distance. It is not a probability or calibrated uncertainty interval.
+
+Seeds: 140016. Trait-row bootstrap: 100 draws per model. Feature-wise permutation parallel analysis: 60 draws per model. Cross-model label-permutation test: 500 draws per pair and subspace size. All computations use local saved vectors on CPU; no inference or GPU.

@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: canonical claim status
-Last updated: 2026-09-12
+Last updated: 2026-09-16
 
 This register separates project findings from interpretations. It is intentionally compact: use it to orient a new thread, then verify details in `RESEARCH_STATE.md`, `FINDINGS_LEDGER.md`, `RESEARCH_INDEX.md`, and the cited artifacts.
 
@@ -205,6 +205,7 @@ Counterevidence: The high-k fold-local random persona-span control nearly matche
 Dependencies: `research/outputs/trait_persona_prediction/trait_predicts_persona_pcs_report.md`, `research/outputs/trait_profile_pc_predictor/`, `research/outputs/qwen_trait_sparsity_prediction/`, `research/outputs/multimodel_trait_profile_pc_predictor/`, `research/outputs/human_supported_trait_convergence/`
 Last Updated: 2026-09-12
 
+
 ## 22. Direct Trait-Space PCA Partially Reorganizes Persona-Space Interpretations
 
 Claim: Trait-space analysis partially recovers persona-space axes, supporting shared geometry while preserving unresolved differences between trait and persona manifolds.
@@ -375,3 +376,12 @@ Evidence: AA-7 fit orthogonal Procrustes transforms only on training roles durin
 Counterevidence: The shared objects are the same 275 English role labels/instructions, which can induce common structure. Possible training-data overlap and genuinely recurrent representational structure remain unresolved alternative explanations. Full-fit transforms are used only to express final directions and do not eliminate model-specific scaling, residuals, or prompt-corpus dependence. The human-supported directions are model activation-derived trait vectors whose labels were selected with human evidence; no human respondent or human occupational centroid was projected. AA-7's primary compact-efficiency test was weak/absent, the preregistered gate for designing a respondent-projection study failed, and no causal interpretation is supported.
 Dependencies: `research/outputs/human_supported_trait_convergence/procrustes_alignment_cv.csv`, `research/outputs/human_supported_trait_convergence/procrustes_alignment_null.csv`, `research/outputs/human_supported_trait_convergence/aligned_human_supported_trait_directions.csv`, `research/outputs/human_supported_trait_convergence/aligned_big_five_directions.csv`, `research/outputs/human_supported_trait_convergence/aligned_agreeableness_focal_test.json`
 Last Updated: 2026-09-12
+
+## 41. Three Saved Models Share Trait-Label Geometry, While Personas Form a Shifted Distribution
+
+Claim: Independently fitted PCA over the same 240 saved traits has strongly aligned leading trait-score subspaces across Qwen, Llama, and Gemma after model-local sign/order/rotation resolution; same-model personas can be projected afterward but are usually outside a descriptive trait-cloud neighborhood reference.
+Status: Observed
+Evidence: AA-14 reproduces Qwen trait PC1–3 variance 0.352836/0.168068/0.133744. Llama/Gemma first three cumulatives are 0.535354/0.571618. Shared-trait top-three mean canonical correlations are 0.941/0.955/0.974 for Qwen–Llama/Qwen–Gemma/Llama–Gemma, each p=0.001996 against 500 trait-label permutations. Median first-20 energy capture for persona projections is 0.690/0.630/0.728, while a 20D nearest-trait threshold flags 275/259/275 personas. The primary fit excludes personas entirely.
+Counterevidence: The same English labels and extraction procedure can induce alignment; trait PCA axis numbers and signs do not have universal meaning. Native persona and trait vector distributions differ sharply, limiting direct nearest-trait interpretation. These are model activation-derived representations, not behavioral or independent human psychometric validation.
+Dependencies: `research/outputs/three_model_trait_pca/methodology_report.md`, `research/outputs/three_model_trait_pca/qwen_reproduction.json`, `research/outputs/three_model_trait_pca/cross_model_alignment.csv`, `research/outputs/three_model_trait_pca/projected_personas.csv`
+Last Updated: 2026-09-16
