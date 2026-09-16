@@ -1,5 +1,13 @@
 # Provenance Registry
 
+## AA-15 provenance gate and AA-14 extraction erratum
+
+Artifact: read-only saved-tensor layer audit and corrected provenance classification, without modifying AA-14 data or PCA.
+Location: `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md`; reproducible test: `audit_aa14_vector_provenance.py`; machine results: `aa14_vector_layer_audit.json`.
+Source inputs: AA-14 frozen saved means/spectra and released local bf16 layer matrices; original `data/traits/instructions/*.json`; `pipeline/{1_generate,2_activations}.py`, `assistant_axis/internals/{activations,spans}.py`, `assistant_axis/models.py`; earlier `research/outputs/trait_space_interpretation/` script/report; Lu et al. Appendix C.1; Hugging Face vector-file cache metadata.
+Observed: AA-14 averages all 64/80/46 saved layer rows for Qwen/Llama/Gemma. Its Qwen `layer: 48` inventory field is a mislabeled, historically inherited entry, not the executed procedure. The original paper reports five positive/negative prompt pairs, generated responses, assistant-response-token pooling, 0–100 scoring, and positive-minus-negative activation contrasts. Record-level filtering and aggregation of the released tensors remain unrecoverable from available metadata.
+Boundary: AA-14 numerical outputs and public route are unchanged. Any new HiFWB extraction is a prospectively specified analogue until matched source-level extraction and response-selection records can be demonstrated.
+
 ## three_model_trait_pca (AA-14)
 
 Artifact: CPU-only independent three-model trait PCA, frozen same-model persona projection, cross-model alignment, and sibling web viewer.

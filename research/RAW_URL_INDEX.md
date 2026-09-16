@@ -1,12 +1,14 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-16
-Base commit for this update: b9b6008 (AA-7 canonical semantic reconciliation; links become live after master push)
+Base commit for this update: 4488ff8 (AA-14 base before AA-15 provenance update; AA-15 links become live after branch push)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
 |---|---|---|---|---|
+| active | trait analyses | `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md` | AA-15 provenance gate and AA-14 Qwen layer-label correction | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa15-hifwb-trait-pc-projection/research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md |
+| active | trait analyses | `research/outputs/aa15_hifwb_trait_pc/aa14_vector_layer_audit.json` | Recomputed all-layer versus selected-layer AA-14 PCA comparison | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa15-hifwb-trait-pc-projection/research/outputs/aa15_hifwb_trait_pc/aa14_vector_layer_audit.json |
 | active | trait analyses | `research/outputs/three_model_trait_pca/methodology_report.md` | AA-14 three-model trait PCA and persona projection report | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/three-model-trait-pca-persona-viewer/research/outputs/three_model_trait_pca/methodology_report.md |
 | active | visualizations | `research/outputs/three_model_trait_pca/trait_pc_persona_viewer.html` | Sibling trait-derived 3D persona/trait viewer | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/three-model-trait-pca-persona-viewer/research/outputs/three_model_trait_pca/trait_pc_persona_viewer.html |
 | active | trait analyses | `research/outputs/three_model_trait_pca/artifact_inventory.csv` | Complete AA-14 derived output inventory and hashes | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/three-model-trait-pca-persona-viewer/research/outputs/three_model_trait_pca/artifact_inventory.csv |

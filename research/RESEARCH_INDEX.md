@@ -1,5 +1,9 @@
 # Research Index
 
+## AA-15 extraction provenance gate (2026-09-16)
+
+Start at `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md`. The frozen AA-14 PCA used an all-saved-layer mean for every model; the Qwen layer-48 inventory label is incorrect, but the PCA and public viewer are unchanged. The original paper recovers the contrastive response-token trait method at a high level, while released-tensor response-level selection remains unrecorded. HiFWB vectors must therefore be labeled as a prospective analogue.
+
 ## AA-14 trait-derived persona viewer (2026-09-16)
 
 Start at `research/outputs/three_model_trait_pca/methodology_report.md` for saved-vector three-model trait PCA, Qwen reproduction, aligned shared-trait comparisons, persona projections, and the strong trait/persona distribution-shift caveat. `trait_pc_persona_viewer.html` is the sibling viewer built from the existing trait-surface shell; `artifact_inventory.csv` enumerates the compact derived package. The original surface viewer is unchanged.

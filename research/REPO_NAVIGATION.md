@@ -1,11 +1,13 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-16
-Last commit when updated: b9b6008 (AA-7 canonical semantic reconciliation)
+Last commit when updated: 4488ff8 (AA-14 base before AA-15 provenance update)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
 ## Start Here
+
+- AA-15 provenance gate and AA-14 layer-label erratum: `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md`. It documents why the AA-14 coordinates are correctly computed from all-layer means, not Qwen layer 48, and what remains unknown about original trait-vector extraction.
 
 - AA-14 three-model trait PCA and projected-persona sibling viewer: `research/outputs/three_model_trait_pca/methodology_report.md`. The analysis freeze, source audit, full spectra, all-PC scores, direction summaries, stability/null/alignment tests, compact viewer data, and verification are indexed in `artifact_inventory.csv`. The source surface viewer remains `research/outputs/persona_trait_surface_viewer/` and is unchanged.
 

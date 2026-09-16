@@ -1,5 +1,9 @@
 # Findings Ledger
 
+## AA-15 provenance gate · AA-14 layer-label correction (2026-09-16)
+
+Observed: AA-14 fits and projects **all-saved-layer mean** vectors in Qwen (64 layers), Llama (80), and Gemma (46). Recomputed PC1–3 spectra from those means match to <5e-16; using the previously labeled Qwen layer 48 changes a leading variance fraction by up to 0.0393. The Qwen `layer: 48` inventory entry was inherited from an earlier script/report that also said layer 48 but called `mean(0)`. The numerical AA-14 results remain valid for the all-layer-mean feature construction. The original paper confirms contrastive positive-minus-negative trait prompts and assistant-response-token pooling, but exact response IDs, scoring/selection, and aggregation weights for the released bare tensors remain unresolved. Interpretation: new HiFWB vectors require a separately frozen analogue, not a claim of exact source-method replication. Source: `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md`.
+
 ## AA-14 · trait-derived geometry (2026-09-16)
 
 Observed: independent PCA over the shared 240 saved traits reproduces Qwen PC1–3 variance 0.352836/0.168068/0.133744; Llama/Gemma top-three cumulatives are 0.535354/0.571618. Shared-trait top-three score subspaces align after orthogonal matching at mean canonical correlation 0.941–0.974 (500-label-permutation p=0.001996). Projected same-model personas capture median 0.690/0.630/0.728 of centered energy in the first 20 trait PCs but mostly lie outside a descriptive trait-cloud neighborhood reference. Interpretation: recurrent trait-label geometry is not identical local PC semantics, and trait/persona distribution shift warrants conservative reading. Hypothesis: common prompt/label construction may contribute to alignment. Source: `research/outputs/three_model_trait_pca/methodology_report.md`.
