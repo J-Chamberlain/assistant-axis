@@ -1,9 +1,9 @@
 # Repository Navigation
 
-Updated UTC: 2026-09-12
-Last commit when updated: b9b6008 (AA-7 canonical semantic reconciliation)
+Updated UTC: 2026-09-15
+Last commit when updated: f7d42b1 (AA-11 repair verification and inventory; canonical integration follows)
 
-AA-11 update (2026-09-15; branch `codex/aa11-liss-hifwb-crosswalk`): added active pre-data LISS HiFWB package under `research/outputs/liss_hifwb_prior_evidence/`. Entry point is `prior_evidence_report.md`; package includes prior-study crosswalk, exact Study 965/1105 metadata and routed item crosswalk, longitudinal audit, access handoff, and fail-closed scripts. Track 1 is active; Tracks 2 and 3 are parked; common feature space is unresolved.
+AA-11 repair (2026-09-15; branch `codex/aa11-liss-hifwb-repair-v2`): `research/outputs/liss_hifwb_prior_evidence/prior_evidence_report.md` is the active human-only entry point. The repair removes the unrelated human/model correspondence frame and centers verified prior LISS personality–wellbeing evidence, item/node/characteristic HiFWB mapping, 2020 outcome-blind analysis freeze, local fail-closed execution, longitudinal modifiable-pathway planning, public-dataset replication roles, and exact access handoff. Respondent access remains pending; no causal or personalized optimization result exists.
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 

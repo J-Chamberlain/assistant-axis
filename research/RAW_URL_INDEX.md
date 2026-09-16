@@ -1,9 +1,9 @@
 # Raw URL Index
 
-| active | LISS HiFWB prior evidence | `research/outputs/liss_hifwb_prior_evidence/` | AA-11 pre-data prior-study crosswalk, HiFWB ontology, LISS 2020 crosswalk, longitudinal audit, handoff, and fail-closed scripts | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa11-liss-hifwb-crosswalk/research/outputs/liss_hifwb_prior_evidence/prior_evidence_report.md |
+| active | LISS HiFWB prior evidence | `research/outputs/liss_hifwb_prior_evidence/` | Repaired human-only AA-11 prior evidence, HiFWB mapping, pre-data execution, and longitudinal pathway program | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa11-liss-hifwb-repair-v2/research/outputs/liss_hifwb_prior_evidence/prior_evidence_report.md |
 
-Updated UTC: 2026-09-12
-Base commit for this update: b9b6008 (AA-7 canonical semantic reconciliation; links become live after master push)
+Updated UTC: 2026-09-15
+Base commit for this update: f7d42b1 (AA-11 repair verification and inventory)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 

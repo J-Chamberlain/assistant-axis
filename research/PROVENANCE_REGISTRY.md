@@ -4,7 +4,7 @@ This registry is a fast lineage lookup for Paper 1.5 artifacts. Use it before ru
 
 ## liss_hifwb_prior_evidence
 
-AA-11 LISS HiFWB pre-data package (2026-09-15): `research/outputs/liss_hifwb_prior_evidence/` is built from official LISS study pages/codebooks and cited prior literature. It contains no respondent data, IDs, model inference, activations, GPU output, or external model API output. The package builder is `scripts/build_aa11_liss_package.py`; fail-closed scripts are listed in `artifact_inventory.csv`. Status active; future execution requires Centerdata-authorized files under gitignored `data_external/liss_2020/` and SHA256 capture on arrival.
+AA-11 repaired human-only LISS/HiFWB pre-data package (2026-09-15): `research/outputs/liss_hifwb_prior_evidence/` derives from official LISS study pages/codebooks, eight authoritative publication records, and official Global Flourishing Study/UAS/SAPA metadata. The repaired generator is `scripts/repair_aa11_liss_package.py`; `scripts/build_aa11_liss_package.py` is fail-closed and deprecated. Operational local scripts validate exact filenames/schema, capture source hashes and software, score only after a locally verified Big Five key exists, compare frozen measurement and predictor-only geometry models, and emit aggregate files under gitignored local storage. Repair commits: `815a2a3`, `d86b332`, `ee315eb`, `c4bcce5`, and `f7d42b1`. No respondent data, IDs, model inference, activations, GPU output, or external model API output entered the package. Status active; Centerdata access and source hashes remain pending.
 
 ## human_supported_trait_convergence
 

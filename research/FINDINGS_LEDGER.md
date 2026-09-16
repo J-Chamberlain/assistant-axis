@@ -4,6 +4,10 @@ This is a compact index of project claims and their status. Use `research/RESEAR
 
 ## Confirmed Findings
 
+### AA-11 Audited LISS Evidence Is Strongest for Affect, Appraisal, Self-Esteem, and Selected Interpersonal Outcomes (2026-09-15)
+
+The repaired human-only audit retains eight verified LISS-relevant studies. Direct longitudinal precedent is strongest for positive/negative affect, life satisfaction, and self-esteem; satisfaction with social contacts and inverse/adjacent loneliness provide meaningful interpersonal precedent. Meaning-making, Community, self-acceptance, mastery, connection, and support remain largely composite-embedded, sparse, or without a direct personality test in the audited set. This is a bounded literature finding, not a claim that no other study exists; it does not validate HiFWB in LISS or establish causal or personalized pathways. Supporting matrices are under `research/outputs/liss_hifwb_prior_evidence/`.
+
 ### AA-7 Frozen Human-Supported Traits Are Not Unusually Efficient, but Aligned Model Directions Recur (2026-09-12)
 
 The 12-trait set inherited from AA-1 was frozen at commit `51c54a5` and all outcome rules at `cabd807` before new geometry analysis. Across Qwen/Qwen3-32B, Llama-3.3-70B, and Gemma-2-27B, the human-supported set achieved fixed-five-fold core/extended mean R² and aggregate nRMSE of 0.991/0.168 and 0.908/0.745; 0.916/0.509 and 0.780/1.161; and 0.946/0.400 and 0.819/1.048. Its matched random-real one-sided p-values were 0.2395/0.2615 Qwen, 0.7405/0.3533 Llama, and 0.1497/0.1257 Gemma for core/extended, so it beat none of six 500-bank random-real k=12 nulls. Only the Qwen core (p=0.0220) and Gemma core (p=0.0279) persona-span comparisons passed. All six isotropic comparisons passed, but isotropic ambient directions are a weaker generic control. Geometry-optimized k=12 sets were better in every model/scope, and human-support category did not positively predict geometric utility among the 12 or across all 45 direct links. The preregistered primary convergence classification is **WEAK / ABSENT**.

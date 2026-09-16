@@ -4,7 +4,7 @@ Canonical startup file: yes
 State role: session continuity and immediate priorities
 Last updated: 2026-09-15
 
-AA-11 continuity (2026-09-15): three human/model correspondence tracks are memorialized in the LISS HiFWB pre-data package. Track 1 independent profile-group correspondence is active; Tracks 2 PC-pole and 3 trait-relationship structural correspondence are parked. Next question is how to construct the shared human/model feature/profile representation for Track 1; no choice was made here.
+AA-11 repair continuity (2026-09-15): the original LISS/HiFWB package drifted into unrelated human/model correspondence framing; the repair removed that framing. The active package is human-only prior-evidence mapping and pre-data planning, including exact 2020 item routing, a characteristic evidence and novelty map, local fail-closed execution, and a longitudinal heterogeneous/modifiable-pathway program. LISS respondent access remains pending. No causal or personalized optimization result exists; next execution begins only after authorized files and a codebook-verified Big Five scoring key are local.
 
 This is the three-minute continuity file for new GPT, Claude, and Codex threads. Read it after `RESEARCH_STATE.md` and before deeper repo archaeology.
 

@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-15T21:40:39Z`
-- Current branch: `codex/aa11-liss-hifwb-crosswalk`
-- generation base commit: `c72cd05fb883299ba3619bd394e5bf800e2d0301`
+- Generated timestamp UTC: `2026-09-16T00:09:11Z`
+- Current branch: `codex/aa11-liss-hifwb-repair-v2`
+- generation base commit: `f7d42b101194f6cadeba99c26c11a1c5b14c547e`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -34,41 +34,41 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
 - Latest commit touching file: `2ccbacbd52d41b477ce6014af7935f71fc26db60`
-- generation base commit: `c72cd05fb883299ba3619bd394e5bf800e2d0301`
-- Git blob hash: `ad0bf19a12e0325fae8a8b6a29a40975ab71dc35`
-- SHA256 content hash: `e044a1310745c7a03970a7d3a2b470cdd64e2e2a6eb2c859be71329a0301a481`
-- Byte count: `185733`
+- generation base commit: `f7d42b101194f6cadeba99c26c11a1c5b14c547e`
+- Git blob hash: `87bc27d78c255563f2058c26ade50346b0bc2048`
+- SHA256 content hash: `775b00e8fd46605c36f7090a6f13c3bb30b59075354f5f99d6141b2160c90614`
+- Byte count: `185868`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
   - Last updated: `2026-09-15`
-  - Last commit: `b9b6008 (reconciled AA-7's negative compact-selection result, model-only aligned recurrence, exact controls, and canonical continuity)`
+  - Last commit: `f7d42b1 (verified and inventoried the repaired human-only AA-11 LISS/HiFWB package; canonical integration follows)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-15T21:40:39Z`
+- Generated timestamp UTC: `2026-09-16T00:09:11Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
 - Latest commit touching file: `2ccbacbd52d41b477ce6014af7935f71fc26db60`
-- generation base commit: `c72cd05fb883299ba3619bd394e5bf800e2d0301`
-- Git blob hash: `ede126bfa33a63fd825c40dcc73a22c999521816`
-- SHA256 content hash: `34f253f12d627f1adc7dcb629e6c3fa5c410a6dff0ce24a3aead1cdaeb8a1afd`
-- Byte count: `38842`
+- generation base commit: `f7d42b101194f6cadeba99c26c11a1c5b14c547e`
+- Git blob hash: `8ce0fe4226022b882c4bb41a839942be188f0c2c`
+- SHA256 content hash: `0fbc461f75300a18557077945291b32202089cf5f563caed513ffe1a6002bdc1`
+- Byte count: `39061`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
   - Last updated: `2026-09-15`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-15T21:40:39Z`
+- Generated timestamp UTC: `2026-09-16T00:09:11Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
 - Latest commit touching file: `b9b6008ac4cff37bfef98bd2103a9cb9edf3a3a6`
-- generation base commit: `c72cd05fb883299ba3619bd394e5bf800e2d0301`
+- generation base commit: `f7d42b101194f6cadeba99c26c11a1c5b14c547e`
 - Git blob hash: `96a1b2c77469a7cb5ca1cb67cb053850f5304029`
 - SHA256 content hash: `7f543f3a5a5f8fa308c9ddfbf2efa6068ea7a7e516c7a133a08e14b63b1c69d0`
 - Byte count: `50422`
@@ -78,7 +78,7 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-09-12`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-15T21:40:39Z`
+- Generated timestamp UTC: `2026-09-16T00:09:11Z`
 
 ## Maintenance Rule
 
