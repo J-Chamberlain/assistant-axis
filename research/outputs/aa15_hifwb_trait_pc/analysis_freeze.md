@@ -82,11 +82,14 @@ trait-vector generation. Its boundary is documented in
   wellbeing cluster from an unmatched null alone.
 - Permit a single centroid direction only if (i) norm-matched compactness
   one-sided p<0.05, (ii) at least 10/13 primary vectors have positive
-  projection along the leave-one-out centroid direction, (iii) the median
-  primary-versus-sensitivity alignment among same-pole variants is ≥0.8,
-  and (iv) the bootstrap 5th-percentile centroid-direction cosine to the
-  full fit is ≥0.8. Otherwise report multiple/unresolved regions; a
-  centroid may still be tabulated descriptively.
+  projection along the leave-one-out centroid direction, (iii) median
+  raw cosine to same-pole variants among the seven directly keyed items is
+  ≥0.8 and median raw cosine to original negative-pole variants among the
+  six reverse-keyed items is ≤-0.8, and (iv) the bootstrap 5th-percentile
+  centroid-direction cosine to the full fit is ≥0.8. The negative-pole
+  comparison is a diagnostic expectation, not an algebraic reversal or a
+  replacement of the saved vector. Otherwise report multiple/unresolved
+  regions; a centroid may still be tabulated descriptively.
 - Align 20D model-local trait-score spaces to Qwen using AA-14's shared 240
   trait labels and orthogonal Procrustes, fitted on traits only. Do not
   match PC numbers or use HiFWB to estimate transforms. Permute item labels
