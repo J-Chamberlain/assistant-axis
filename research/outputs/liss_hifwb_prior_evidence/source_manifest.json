@@ -1,22 +1,31 @@
 {
-  "package": "AA-11 LISS pre-data HiFWB crosswalk",
+  "package": "AA-11 repair: human-only LISS/HiFWB prior-evidence and pre-data program",
   "date": "2026-09-15",
-  "status": "active",
-  "sources": [
-    {
-      "study": "LISS Personality 2020",
-      "url": "https://www.dataarchive.lissdata.nl/study-units/view/965",
-      "data_filename": "cp20l_EN_1.0p.dta",
-      "codebook": "https://www.dataarchive.lissdata.nl/hosted-files/download/5031",
-      "doi": "10.17026/dans-z2c-fzcd"
-    },
-    {
-      "study": "LISS Social Science 2020 MHC-SF-R",
-      "url": "https://www.dataarchive.lissdata.nl/study-units/view/1105",
-      "data_filename": "ss20a_EN_1.0p.dta",
-      "codebook": "https://www.dataarchive.lissdata.nl/hosted-files/download/6031",
-      "doi": "10.17026/dans-25d-n6kr"
-    }
+  "status": "active_pre_data",
+  "respondent_data_accessed": false,
+  "liss_sources": [
+    {"study": "LISS Personality 2020 (Study 965)", "url": "https://www.dataarchive.lissdata.nl/study-units/view/965", "doi": "10.17026/dans-z2c-fzcd", "data_filename": "cp20l_EN_1.0p.dta", "codebook_filename": "codebook_cp20l_EN_1.1.pdf", "codebook_url": "https://www.dataarchive.lissdata.nl/hosted-files/download/5031"},
+    {"study": "Social Science 2020: MHC-SF-R (Study 1105)", "url": "https://www.dataarchive.lissdata.nl/study-units/view/1105", "doi": "10.17026/dans-25d-n6kr", "data_filename": "ss20a_EN_1.0p.dta", "codebook_filename": "codebook_ss20a_EN_1.0.pdf", "codebook_url": "https://www.dataarchive.lissdata.nl/hosted-files/download/6031"},
+    {"study": "LISS Personality parent study", "url": "https://www.dataarchive.lissdata.nl/study-units/view/14"},
+    {"study": "LISS Social Integration and Leisure parent study", "url": "https://www.dataarchive.lissdata.nl/study-units/view/6"},
+    {"study": "LISS Health parent study", "url": "https://www.dataarchive.lissdata.nl/study-units/view/12"},
+    {"study": "LISS Mental Health parent study", "url": "https://www.dataarchive.lissdata.nl/study-units/view/101"},
+    {"study": "LISS access FAQ", "url": "https://www.lissdata.nl/faq"}
   ],
-  "data_access": "No respondent data supplied or accessed; files expected only after Centerdata authorization under gitignored data_external/liss_2020/"
+  "literature_sources": [
+    {"study_id": "Lamers2012", "doi": "10.1016/j.jrp.2012.05.012", "url": "https://research.utwente.nl/en/publications/differential-relationships-in-the-association-of-the-big-five-per/"},
+    {"study_id": "Hounkpatin2018", "doi": "10.1037/pspp0000161", "url": "https://pubmed.ncbi.nlm.nih.gov/28921998/"},
+    {"study_id": "FetvadjievHe2019", "doi": "10.1037/pspp0000212", "url": "https://pubmed.ncbi.nlm.nih.gov/30394770/", "erratum_doi": "10.1037/pspp0000246"},
+    {"study_id": "Lamers2011", "doi": "10.1002/jclp.20741", "url": "https://doi.org/10.1002/jclp.20741"},
+    {"study_id": "JoshanlooLamers2016", "doi": "10.1016/j.paid.2016.02.089", "url": "https://research.utwente.nl/en/publications/reinvestigation-of-the-factor-structure-of-the-mhc-sf-in-the-neth/"},
+    {"study_id": "Olaru2023", "doi": "10.1037/pspp0000461", "url": "https://research.tilburguniversity.edu/en/publications/the-link-between-personality-global-and-domain-specific-satisfact/"},
+    {"study_id": "Joshanloo2025", "doi": "10.1080/02699931.2024.2392615", "url": "https://www.tandfonline.com/doi/abs/10.1080/02699931.2024.2392615", "correction_doi": "10.1080/02699931.2024.2396761"},
+    {"study_id": "Schellenberg2026", "doi": "10.1111/jopy.70084", "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jopy.70084"}
+  ],
+  "public_dataset_sources": [
+    {"dataset": "Global Flourishing Study", "url": "https://globalflourishingstudy.com/overview", "data_url": "https://www.cos.io/gfs"},
+    {"dataset": "Understanding America Study", "url": "https://uasdata.usc.edu/index.php?pid=Comprehensive+File&type=3"},
+    {"dataset": "SAPA Project", "url": "https://www.sapa-project.org/research/SPI/"}
+  ],
+  "data_access": "Centerdata authorization remains pending. Exact source hashes are deliberately absent until each authorized file arrives locally under gitignored data_external/liss_2020/."
 }
