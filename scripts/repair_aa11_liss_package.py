@@ -90,7 +90,8 @@ characteristic_status = {
     "life satisfaction": "well_studied", "self-esteem": "well_studied",
     "relationship quality": "moderately_studied", "satisfaction with social contacts": "moderately_studied",
     "loneliness (inverse/adjacent)": "moderately_studied",
-    "global subjective happiness": "apparently_untested", "perceived social support": "apparently_untested",
+    "global subjective happiness": "no_direct_test_found_in_audited_LISS_literature",
+    "perceived social support": "no_direct_test_found_in_audited_LISS_literature",
 }
 for row in chars:
     row.append(characteristic_status.get(row[2], "sparsely_studied"))

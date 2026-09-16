@@ -28,7 +28,7 @@
     "claims_register_change_required": false
   },
   "item_crosswalk_counts": {"DIRECT": 43, "CLOSE": 6, "PARTIAL": 4, "NON_CORE_EXCLUDED": 17, "total": 70},
-  "characteristic_evidence_counts": {"well_studied": 4, "moderately_studied": 3, "sparsely_studied": 10, "apparently_untested": 2, "total": 19},
+  "characteristic_evidence_counts": {"well_studied": 4, "moderately_studied": 3, "sparsely_studied": 10, "no_direct_test_found_in_audited_LISS_literature": 2, "total": 19},
   "authorized_files_still_required": ["cp20l_EN_1.0p.dta", "ss20a_EN_1.0p.dta", "codebook_cp20l_EN_1.1.pdf", "codebook_ss20a_EN_1.0.pdf", "big_five_scoring_key_verified.json"],
   "execution_boundary": "The signed Big Five item key is not guessed or fabricated; it must be frozen locally after authorized codebook/source verification.",
   "unknowns": ["respondent-level overlap and power", "longitudinal measure equivalence", "fit of proposed HiFWB structures", "replicability and causal meaning of heterogeneous pathways"]
