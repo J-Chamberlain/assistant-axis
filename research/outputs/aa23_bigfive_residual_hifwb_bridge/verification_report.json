@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checks": {
+    "41_primary_traits": true,
+    "zero_trait_outcome_item_overlap": true,
+    "same_frozen_split": true,
+    "heldout_test_finite": true,
+    "increment_bootstrap_complete": true,
+    "three_model_projection_rows": true,
+    "bigfive_comparison_rows": true,
+    "no_respondent_rows_exported": true,
+    "no_model_inference": true
+  },
+  "human_eligible_counts": {
+    "train": 2037,
+    "validation": 645,
+    "test": 673
+  },
+  "observed_delta_r2": 0.07450354610242038,
+  "delta_r2_ci": [
+    0.03719420263321473,
+    0.11388231834625055
+  ]
+}

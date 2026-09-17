@@ -1035,3 +1035,16 @@ Generating script: `research/outputs/aa22_direct_trait_hifwb_bridge/run_analysis
 Procedure: Score the 41 unique-source, outcome-safe direct proxies; split respondents before fitting; learn training-only Pearson trait–HiFWB weights; form an absolute-weight-renormalized observed trait index; compare held-out Big Five, direct index, and combined ridge models; then use full-sample weights only for within-model standardized persona transport.
 Observed result: held-out R²=.456 Big Five, .402 direct index, and .495 combined; ΔR²=+.040, paired test-resample 95% CI [+.016,+.065]. Persona-score Pearson/Spearman correlations with AA-21 expanded Big Five are .872/.795 Qwen, .953/.936 Llama, and .943/.932 Gemma.
 Boundary: Sparse provisional semantic coverage, planned SAPA missingness, and one frozen split limit generalization. Transported scores are relative hypothesis rankings, not calibrated wellbeing estimates or model subjective wellbeing. Raw SAPA data remain external and uncommitted.
+
+## AA-23 Big Five-residual trait bridge to HiFWB
+
+Artifact: Outcome 3 of the staged human-associated wellbeing projection: a training-only Big Five-residualization test of the 41-trait direct bridge, with exploratory persona transport.
+Location: `research/outputs/aa23_bigfive_residual_hifwb_bridge/`; main report: `aa23_bigfive_residual_hifwb_report.md`; inventory: `artifact_inventory.csv`.
+Created by: Deterministic CPU-only Python analysis; no language-model inference, RunPod, paid compute, or respondent-row export.
+Source inputs: Hash-matched external SAPA V5 response matrix and `superKey696.csv`; frozen HiFWB item definition; AA-19 41-trait bridge; AA-21 Big Five persona baseline; and the saved Qwen/Llama/Gemma persona-by-trait matrices.
+Generating script: `research/outputs/aa23_bigfive_residual_hifwb_bridge/run_analysis.py`.
+Procedure: Reconstruct the HiFWB composite, official Big Five, and 41 direct trait proxies; residualize each trait and the outcome against Big Five using training respondents only; learn residual trait–residual outcome weights in training; compare held-out Big Five, residual-index, and combined ridge models; then residualize each model's trait profiles against its expanded Big Five profile and transport full-sample residual weights as relative persona rankings.
+Observed result: Held-out R²=.468 Big Five, .054 residual index, and .542 combined; ΔR²=+.075 with paired test-resample 95% CI [+.037,+.114]. Residual-versus-AA-21 Big Five persona-score Pearson correlations are .018 Qwen, .009 Llama, and .015 Gemma.
+Boundary: This is exploratory residual structure, not validated incremental psychological validity. One frozen split, sparse provisional bridge, planned missingness, and same-sample weight construction limit generalization. Scores are relative hypotheses, not calibrated wellbeing estimates or model subjective wellbeing. Raw SAPA data remain external and uncommitted.
+Dependencies: `research/outputs/aa22_direct_trait_hifwb_bridge/`, `research/outputs/aa21_bigfive_hifwb_persona_projection/`, `research/outputs/aa19_human_consensus_factor_validation/bridge_mapping_audit.csv`
+Last Updated: 2026-09-17

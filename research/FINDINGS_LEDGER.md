@@ -843,3 +843,10 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 - On the same held-out respondents, Big Five R²=.456, direct trait index R²=.402, and Big Five plus direct trait index R²=.495. The incremental ΔR²=+.040 with paired test-resample 95% interval [+.016,+.065].
 - Transported full-sample direct-trait weights to all three saved 275×240 persona matrices. Direct-versus-AA-21 expanded Big Five persona scores correlate Pearson/Spearman .872/.795 Qwen, .953/.936 Llama, and .943/.932 Gemma.
 - Interpretation: this is a preliminary incremental human HiFWB signal and a hypothesis-bearing model-persona ranking. It is not a calibrated wellbeing measure, causal evidence, or evidence of model subjective wellbeing. Replication and sensitivity to the sparse semantic bridge remain required.
+
+### AA-23 Big Five-Residual Trait Bridge (2026-09-17)
+
+- Residualized the 41 AA-19 primary, unique-source, outcome-safe traits against the human Big Five using training respondents only, and residualized HiFWB against the same Big Five. On the resulting common eligible split (N=3,355; train/validation/test 2,037/645/673), Big Five held-out R²=.468, the residual trait index alone=.054, and the combined model=.542.
+- The residual increment is ΔR²=+.075 with paired test-resample 95% interval [+.037,+.114]. This is an exploratory residual signal after Big Five overlap removal, not proof of a new construct; the bridge remains sparse and provisional.
+- Full-sample residual weights were transported to all 275 Qwen, Llama, and Gemma personas after analogous within-model Big Five residualization. Residual and AA-21 Big Five persona rankings are nearly independent (Pearson .018/.009/.015 for Qwen/Llama/Gemma), so this outcome supplies a distinct hypothesis space rather than a duplicate Big Five ranking.
+- Interpretation: Outcome 3 passes only as an exploratory residual-structure result. It does not authorize causal claims, calibrated wellbeing scores, model subjective wellbeing, or a model-persona projection gate. Source: `research/outputs/aa23_bigfive_residual_hifwb_bridge/aa23_bigfive_residual_hifwb_report.md`.

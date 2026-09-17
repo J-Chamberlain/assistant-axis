@@ -410,6 +410,15 @@ Evidence: AA-16 Stage 1 retains the pre-existing 45 direct and 29 close proxy ma
 Counterevidence: The bridge remains provisional, only 12 of 45 direct proxies previously had moderate-or-better psychometric support, and planned missingness yields variable pairwise N. Exact source duplication and partial item/scale reuse limit independent evidence. Stage 1 does not inspect PC scores, project indicators, run models, score personas, or test a model wellbeing direction; full-vocabulary inference is unsupported.
 Dependencies: `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_analysis_freeze.md`, `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_findings.md`, `research/outputs/aa16_sapa_hifwb_trait_profile/existing_trait_bridge_audit.csv`, `research/outputs/aa16_sapa_hifwb_trait_profile/hifwb_trait_profile_240_long.csv`, `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_verification_report.json`
 Last Updated: 2026-09-17
+
+## 47. Big Five-Residual Trait Structure Adds Exploratory HiFWB Signal
+
+Claim: Residualizing the 41-trait direct bridge against human Big Five scores yields an exploratory HiFWB increment beyond Big Five and a distinct, nonredundant persona-ranking hypothesis.
+Status: Exploratory; not validated as incremental psychological structure
+Evidence: AA-23 fits all residualization and trait weights within the training split. On the common eligible held-out split (N=673), Big Five R²=.468, residual trait index R²=.054, and Big Five plus residual trait index R²=.542; ΔR²=+.075 with paired test-resample 95% CI [+.037,+.114]. Transported residual versus AA-21 Big Five persona scores have Pearson correlations .018 Qwen, .009 Llama, and .015 Gemma.
+Counterevidence: The apparent increment is based on one frozen split, a sparse 41-of-240 semantic bridge, planned SAPA missingness, and a residual weighted index whose trait associations are estimated from the same human sample. Near-zero persona-score convergence means the result cannot be treated as a more faithful Big Five score; it is a separate hypothesis space. No human causal interpretation, model subjective wellbeing, or calibrated persona wellbeing is established.
+Dependencies: `research/outputs/aa23_bigfive_residual_hifwb_bridge/aa23_bigfive_residual_hifwb_report.md`, `research/outputs/aa23_bigfive_residual_hifwb_bridge/predictive_model_comparison.csv`, `research/outputs/aa23_bigfive_residual_hifwb_bridge/incremental_prediction_bootstrap.csv`, `research/outputs/aa23_bigfive_residual_hifwb_bridge/persona_residual_trait_hifwb_projection.csv`, `research/outputs/aa23_bigfive_residual_hifwb_bridge/projection_comparison_with_bigfive.csv`
+Last Updated: 2026-09-17
 ## 43. Big Five–Mediated Human Wellbeing Profiles Transport Stably Across Saved Persona Spaces
 
 Claim: A human Big Five–HiFWB association model can be transported through the existing Qwen, Llama, and Gemma persona Big Five profiles with strong robustness to strict versus expanded trait construction and to the fitted human coefficient sample.

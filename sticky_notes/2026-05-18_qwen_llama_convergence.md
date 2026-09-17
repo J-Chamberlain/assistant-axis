@@ -54,3 +54,7 @@ The adequately bridged human C1–C3 representations associate with SAPA HiFWB, 
 ## Update 2026-09-17 — AA-22 direct trait bridge
 
 The independent 41-trait direct SAPA bridge adds preliminary held-out HiFWB signal beyond Big Five: Big Five R2=.456 versus .495 for Big Five plus the direct index, ΔR2=+.040, paired test-resample 95% CI [+.016,+.065]. Transported direct-trait persona rankings remain hypothesis-bearing and are most similar to the AA-21 Big Five baseline for Llama/Gemma (.953/.936 and .943/.932 Pearson/Spearman) and less similar for Qwen (.872/.795). This is a human-prediction result, not model wellbeing or human/model equivalence. Source: `research/outputs/aa22_direct_trait_hifwb_bridge/aa22_direct_trait_hifwb_report.md`.
+
+## Update 2026-09-17 — AA-23 Big Five-residual trait bridge
+
+Residualizing the 41 direct traits and HiFWB against human Big Five scores within training respondents produces an exploratory held-out increment: Big Five R2=.468, residual trait index=.054, and combined=.542 (ΔR2=+.075, paired test-resample 95% CI [.037,.114]). Transported residual-trait persona rankings are nearly independent of AA-21 Big Five rankings (Pearson .018 Qwen, .009 Llama, .015 Gemma), making this a distinct hypothesis space rather than a refined Big Five score. It remains limited by one frozen split, sparse semantic coverage, planned missingness, and same-sample weights; no causal or model-subjective-wellbeing claim follows. Source: `research/outputs/aa23_bigfive_residual_hifwb_bridge/aa23_bigfive_residual_hifwb_report.md`.
