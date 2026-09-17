@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks": {
+    "three_models": true,
+    "personas": true,
+    "five_domains": true,
+    "direction_only_probes": true,
+    "no_model_inference": true,
+    "no_respondent_rows": true
+  },
+  "model_rows": 4125,
+  "mapping_traits": 109,
+  "scenario_count": 5
+}

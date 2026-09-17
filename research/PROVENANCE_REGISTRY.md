@@ -1049,6 +1049,16 @@ Boundary: This is exploratory residual structure, not validated incremental psyc
 Dependencies: `research/outputs/aa22_direct_trait_hifwb_bridge/`, `research/outputs/aa21_bigfive_hifwb_persona_projection/`, `research/outputs/aa19_human_consensus_factor_validation/bridge_mapping_audit.csv`
 Last Updated: 2026-09-17
 
+## AA-25 Stage 1 intervention-to-Big-Five transport
+
+Artifact: Literature-informed representation test for later intervention-response prediction.
+Location: `research/outputs/aa25_intervention_bigfive_transport/`; main report: `aa25_intervention_bigfive_transport_report.md`.
+Created by: Deterministic CPU-only Python analysis; no language-model inference, RunPod, paid compute, or respondent-row export.
+Source inputs: Qwen/Llama/Gemma saved 275×240 persona-trait matrices; existing external-taxonomy Big Five mapping; AA-21 human Big Five–HiFWB coefficients; and published intervention/personality-change reviews.
+Procedure: Standardize model trait profiles within model, aggregate polarity-aware trait scores into five model-derived domains, compare those scores with existing human-anchored persona domains, and freeze direction-only intervention probes. One standardized domain unit is a sensitivity convention, not a literature-derived dose.
+Boundary: This is a representation and transport stage. It does not measure model response to intervention, causal model movement, or human predictive validity.
+Last Updated: 2026-09-17
+
 ## AA-24 model-consensus-axis HiFWB transport
 
 Artifact: Outcome 4 of the staged human-associated wellbeing projection: restricted transport of AA-18 consensus axes through the human HiFWB bridge.

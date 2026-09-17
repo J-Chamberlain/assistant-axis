@@ -411,6 +411,15 @@ Counterevidence: The bridge remains provisional, only 12 of 45 direct proxies pr
 Dependencies: `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_analysis_freeze.md`, `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_findings.md`, `research/outputs/aa16_sapa_hifwb_trait_profile/existing_trait_bridge_audit.csv`, `research/outputs/aa16_sapa_hifwb_trait_profile/hifwb_trait_profile_240_long.csv`, `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_verification_report.json`
 Last Updated: 2026-09-17
 
+## 49. Model Trait Spaces Represent Intervention-Relevant Big Five Directions
+
+Claim: The saved 240-trait model spaces contain Big Five-like directions that can support a literature-informed intervention transport analysis.
+Status: Supported as a representation result; causal response untested
+Evidence: AA-25 maps 109 included traits into five polarity-aware domains and compares standardized persona scores with the existing human-anchored Big Five profiles across 275 personas in Qwen, Llama, and Gemma. Alignment is strong for Agreeableness, Conscientiousness, Extraversion, and emotional stability; Openness is positive but weaker. Five direction-only intervention probes are frozen for later model-response testing.
+Counterevidence: The mapping is semantic, the intervention vectors are directional sensitivity probes rather than universal effect sizes, and no model was actually exposed to intervention prompts. The result does not establish causal model movement or human predictive validity.
+Dependencies: `research/outputs/aa25_intervention_bigfive_transport/aa25_intervention_bigfive_transport_report.md`, `research/outputs/aa25_intervention_bigfive_transport/model_vs_human_bigfive_alignment.csv`, `research/outputs/aa25_intervention_bigfive_transport/intervention_directional_probes.csv`
+Last Updated: 2026-09-17
+
 ## 47. Big Five-Residual Trait Structure Adds Exploratory HiFWB Signal
 
 Claim: Residualizing the 41-trait direct bridge against human Big Five scores yields an exploratory HiFWB increment beyond Big Five and a distinct, nonredundant persona-ranking hypothesis.
