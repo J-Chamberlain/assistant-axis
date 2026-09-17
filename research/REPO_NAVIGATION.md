@@ -1,13 +1,13 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-17
-Last commit when updated: 9a8e3c6 (AA-15 base before AA-16 Stage 1)
+Last commit when updated: aa7733b (AA-16 Stage 1 analysis freeze checkpoint)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
 ## Start Here
 
-- AA-16 Stage 1 frozen human-trait HiFWB profile: `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_analysis_freeze.md`. It reuses the 240-label vocabulary and the existing 45-direct/29-close SAPA bridge without reading model PC coordinates or running models. The earlier AA-15 direct-extraction plan is deferred and unnecessary for this stage.
+- AA-16 Stage 1 completed human-trait HiFWB profile: `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_findings.md`; use `stage1_analysis_freeze.md` for the pre-outcome protocol, `existing_trait_bridge_audit.csv` for all 240 mappings, `hifwb_trait_profile_240_long.csv` for all 14 outcomes, `hifwb_trait_profile_240_composite.csv` for the composite, and `stage1_artifact_inventory.csv` for hashes. It reuses the 240-label vocabulary and the existing 45-direct/29-close SAPA bridge without reading model PC coordinates or running models. The earlier AA-15 direct-extraction plan is deferred and unnecessary for this stage.
 - AA-15 provenance gate and AA-14 layer-label erratum: `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md`. It documents why the AA-14 coordinates are correctly computed from all-layer means, not Qwen layer 48, and what remains unknown about original trait-vector extraction.
 - AA-15 pre-extraction freeze: `research/outputs/aa15_hifwb_trait_pc/analysis_freeze.md`; the companion CSVs fix the 13 items, positive-pole/exact/minimal wordings, contrastive prompts, and questions before any new activations. `run_projection_analysis.py` and `build_viewer.py` are prepared for verified private vectors, but no AA-15 coordinates or public viewer exist yet. The packet is indexed in `artifact_inventory.csv`.
 

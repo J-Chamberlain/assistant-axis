@@ -1,12 +1,19 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-17
-Base commit for this update: 9a8e3c6 (AA-15 base before AA-16 Stage 1; AA-16 links become live after branch push)
+Base commit for this update: aa7733b (AA-16 Stage 1 freeze checkpoint; result links live after final branch push)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
 |---|---|---|---|---|
+| active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_findings.md` | AA-16 Stage 1 results and coverage/overlap interpretation | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/stage1_findings.md |
+| active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/existing_trait_bridge_audit.csv` | All 240 existing bridge decisions, provenance, duplicate and overlap flags | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/existing_trait_bridge_audit.csv |
+| active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/hifwb_trait_profile_240_long.csv` | Complete 240×14 observed-or-unavailable human association profile | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/hifwb_trait_profile_240_long.csv |
+| active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/hifwb_trait_profile_240_composite.csv` | Exactly 240 composite-profile rows with missing evidence explicit | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/hifwb_trait_profile_240_composite.csv |
+| active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/coverage_summary.csv` | Outcome-specific mapping and observed-association counts | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/coverage_summary.csv |
+| active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_verification_report.json` | Source hashes, scoring reproduction, arithmetic and privacy checks | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/stage1_verification_report.json |
+| active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_artifact_inventory.csv` | Full Stage 1 package paths, hashes, bytes, and raw links | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/stage1_artifact_inventory.csv |
 | active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_analysis_freeze.md` | Frozen CPU-only 240-trait SAPA–HiFWB association protocol, before PC mapping | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/stage1_analysis_freeze.md |
 | active | trait analyses | `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md` | AA-15 provenance gate and AA-14 Qwen layer-label correction | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa15-hifwb-trait-pc-projection/research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md |
 | active | trait analyses | `research/outputs/aa15_hifwb_trait_pc/aa14_vector_layer_audit.json` | Recomputed all-layer versus selected-layer AA-14 PCA comparison | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa15-hifwb-trait-pc-projection/research/outputs/aa15_hifwb_trait_pc/aa14_vector_layer_audit.json |

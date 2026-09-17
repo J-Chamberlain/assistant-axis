@@ -4,7 +4,9 @@
 
 Artifact: frozen CPU-only human SAPA trait–HiFWB association profile for the AA-14 240-trait vocabulary; no model PC projection or direct indicator extraction.
 Location: `research/outputs/aa16_sapa_hifwb_trait_profile/`; preregistration: `stage1_analysis_freeze.md`.
+Results: `stage1_findings.md`, `existing_trait_bridge_audit.csv`, `hifwb_trait_profile_240_long.csv`, `hifwb_trait_profile_240_composite.csv`, `coverage_summary.csv`, `stage1_verification_report.json`, and `stage1_artifact_inventory.csv`; reproducible CPU runner: `run_stage1.py`. The freeze was separately committed as `aa7733b` before association calculation.
 Sources: AA-14 shared trait labels only; the frozen 240-row feasibility crosswalk, 74-row provisional bridge (45 direct, 29 close), 74-row psychometric support audit, AA-10 byte-frozen 13 DIRECT HiFWB items and scoring, and external gitignored SAPA V5 respondent matrix (DOI 10.7910/DVN/SD7SVE; SHA256 `fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6`).
+Observed coverage: 45 direct, 29 close, 166 absent; five composite item-overlap exclusions leave 42 direct and 69 total observed label associations (65 unique exact item sets); four exact duplicate groups contain eight labels. Unavailable values remain blank, and every model trait appears for each of 14 outcomes. Predictor item z-scoring and respondent proxy aggregation were prospectively frozen for Stage 1 because the earlier structural audit did not freeze respondent-level trait scores.
 Boundary: respondent-level rows/IDs remain local and uncommitted. AA-15 direct extraction was not run, incurred no cost, and is deferred. The 63-character previously cited schema fingerprint is malformed; the verified full-header 64-character SHA256 is recorded in the freeze. Stage 1 uses no model PC coordinates, viewer, personas, new activations, or model inference.
 
 ## AA-15 provenance gate and AA-14 extraction erratum

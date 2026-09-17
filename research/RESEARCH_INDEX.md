@@ -2,7 +2,7 @@
 
 ## AA-16 Stage 1 human-trait HiFWB profile (2026-09-17)
 
-Start at `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_analysis_freeze.md`. This is a CPU-only SAPA-mediated association profile over the frozen 240 model-trait vocabulary, using the already reviewed 45 direct and 29 close human trait proxies. No model PC scores, personas, viewer, RunPod, or new model responses enter Stage 1. The prior AA-15 direct extraction plan is retained as unrun, cost-free, deferred methodological history.
+Start at `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_findings.md`, then the pre-outcome `stage1_analysis_freeze.md`, `existing_trait_bridge_audit.csv`, `hifwb_trait_profile_240_long.csv`, `hifwb_trait_profile_240_composite.csv`, `stage1_verification_report.json`, and `stage1_artifact_inventory.csv`. The CPU-only profile retains the frozen 240 model-trait labels: 45 direct, 29 close, and 166 absent human proxy mappings. Five mapped labels overlap the composite's outcome items, leaving 42 direct and 69 direct-plus-close observed composite label associations. Unsupported values are blank. No model PC scores, personas, viewer, RunPod, or new model responses enter Stage 1. The prior AA-15 direct extraction plan is retained as unrun, cost-free, deferred methodological history.
 
 ## AA-15 extraction provenance gate (2026-09-16)
 

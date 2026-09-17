@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: canonical claim status
-Last updated: 2026-09-16
+Last updated: 2026-09-17
 
 This register separates project findings from interpretations. It is intentionally compact: use it to orient a new thread, then verify details in `RESEARCH_STATE.md`, `FINDINGS_LEDGER.md`, `RESEARCH_INDEX.md`, and the cited artifacts.
 
@@ -385,3 +385,12 @@ Evidence: AA-14 reproduces Qwen trait PC1–3 variance 0.352836/0.168068/0.13374
 Counterevidence: The same English labels and source-vector construction can induce alignment; trait PCA axis numbers and signs do not have universal meaning. Native persona and trait vector distributions differ sharply, limiting direct nearest-trait interpretation. These are model activation-derived representations, not behavioral or independent human psychometric validation. AA-15's provenance audit confirms AA-14 used all-layer means in every model; its Qwen `layer: 48` source-inventory label is wrong. Record-level generation/filtering provenance for the released trait tensors remains unresolved, so new HiFWB vectors cannot be claimed to exactly replicate it.
 Dependencies: `research/outputs/three_model_trait_pca/methodology_report.md`, `research/outputs/three_model_trait_pca/qwen_reproduction.json`, `research/outputs/three_model_trait_pca/cross_model_alignment.csv`, `research/outputs/three_model_trait_pca/projected_personas.csv`
 Last Updated: 2026-09-16
+
+## 42. Frozen Human HiFWB Associations Are Available for Only a Minority of Model-Trait Labels
+
+Claim: The existing human SAPA bridge supplies measured HiFWB associations for a minority of the 240 shared model-trait labels, with explicit overlap exclusions and repeated human sources; it does not establish how the models represent wellbeing.
+Status: Observed
+Evidence: AA-16 Stage 1 retains the pre-existing 45 direct and 29 close proxy mappings, leaving 166 absent. Of the 74 mapped labels, five contain a frozen HiFWB composite item, so the nonoverlapping composite has 42 direct and 69 direct-plus-close observed label associations from 65 exact item-set sources. Four exact duplicate groups contain eight labels. The deterministic 240×14 profile records Pearson and Spearman associations, eligible N, descriptive 95% intervals, and explicit unavailable statuses. The external SAPA file hash and frozen 13-item hash verify; no respondent rows were committed.
+Counterevidence: The bridge remains provisional, only 12 of 45 direct proxies previously had moderate-or-better psychometric support, and planned missingness yields variable pairwise N. Exact source duplication and partial item/scale reuse limit independent evidence. Stage 1 does not inspect PC scores, project indicators, run models, score personas, or test a model wellbeing direction; full-vocabulary inference is unsupported.
+Dependencies: `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_analysis_freeze.md`, `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_findings.md`, `research/outputs/aa16_sapa_hifwb_trait_profile/existing_trait_bridge_audit.csv`, `research/outputs/aa16_sapa_hifwb_trait_profile/hifwb_trait_profile_240_long.csv`, `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_verification_report.json`
+Last Updated: 2026-09-17

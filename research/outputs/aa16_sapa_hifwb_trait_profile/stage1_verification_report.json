@@ -1,0 +1,79 @@
+{
+  "stage": "AA-16 Stage 1 only",
+  "status": "passed",
+  "cpu_only": true,
+  "model_inference_run": false,
+  "paid_compute_cost_usd": 0,
+  "trait_pc_projection_run": false,
+  "viewer_modified": false,
+  "persona_scoring_run": false,
+  "sources": {
+    "hifwb_sha256": "dcac8f8d2e82c6fa337a8c34472b8b1901d7c709823618dd4bf614ed885a46e0",
+    "sapa_matrix": {
+      "rows": 23679,
+      "columns": 719,
+      "schema_fingerprint_full_header": "787f539747deee8da85bc64da9c3407eaf741f6da9277dcbec7ec79b2a40260c",
+      "read_item_count": 139,
+      "source_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+      "source_bytes": 23975309,
+      "observed_read_cells": 397193
+    },
+    "frozen_bridge_sha256": "e70be82752ec8ec4a7a8c64c7f5d37386b0997363c16a721e59a6aa0ac254e22",
+    "candidate_crosswalk_sha256": "4000593255646b75e509a0e1e194dec52fd3770b58503b3df0d3388bd53d6d37",
+    "psychometric_support_sha256": "1cc78b543bf44e636dc8000617c61f0285e8cfc998b33946c38ab164ecdcd5a6",
+    "reverse_keying_source_sha256": "edffacbfa2c050e372508d4fcb0c3d6d96cc5503c248697ec5f9c5e1e776971f"
+  },
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "scoring": {
+    "composite_eligible_n": 8664,
+    "composite_observed_item_count_min": 2,
+    "direct_outcome_ids": [
+      "q_2765",
+      "q_1371",
+      "q_1043",
+      "q_208",
+      "q_206",
+      "q_1578",
+      "q_875",
+      "q_285",
+      "q_820",
+      "q_1044",
+      "q_867",
+      "q_4288",
+      "q_832"
+    ],
+    "reverse_keyed_direct_ids": [
+      "q_1044",
+      "q_206",
+      "q_208",
+      "q_4288",
+      "q_867",
+      "q_875"
+    ]
+  },
+  "checks": {
+    "shared_trait_labels": 240,
+    "direct_bridge_labels": 45,
+    "close_bridge_labels": 29,
+    "unmatched_labels": 166,
+    "outcomes": 14,
+    "long_rows": 3360,
+    "composite_rows": 240,
+    "matched_outcome_rows": 1036,
+    "observed_outcome_rows": 1026,
+    "overlap_excluded_outcome_rows": 10,
+    "composite_observed_labels": 69,
+    "composite_observed_unique_item_sets": 65,
+    "composite_overlap_excluded_labels": 5,
+    "duplicate_exact_item_set_groups": 4,
+    "duplicate_labels": 8,
+    "no_estimate_for_unavailable": true,
+    "no_overlapping_primary_estimate": true,
+    "no_respondent_rows_written": true
+  },
+  "schema_fingerprint_note": "The earlier 63-character fingerprint is a transcription error; the recomputed full 719-column header SHA256 has the additional 7 before dcbec7."
+}
