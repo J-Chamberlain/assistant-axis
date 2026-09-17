@@ -1,11 +1,13 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-17
-Last commit when updated: 547b07d (AA-17 starting point; final branch commit follows)
+Last commit when updated: 05ded7f (AA-18 starting point; final branch commit follows)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
 ## Start Here
+
+- AA-18 three-model consensus trait structure: `research/outputs/aa18_three_model_consensus_trait_structure/three_model_consensus_trait_report.md`. Exact matched 275 × 240 matrices pass; 220/240 named traits have strong all-three persona-profile agreement. Regularized multiview analysis supports five strict all-three axes (decision A) within 13 provisional score directions; AJIVE-like rank-20 row-subspace joint rank 19 is descriptive only. Use `analysis_freeze.md`, `trait_profile_convergence.csv`, `shared_dimension_diagnostics.csv`, `consensus_trait_loadings.csv`, `component_stability.csv`, `joint_individual_variance_partition.csv`, `aa17_factor_alignment.csv`, `human_bridge_consensus_coverage.csv`, `verification_report.json`, and `artifact_inventory.csv` in the AA-18 directory. No human outcome or HiFWB input enters selection.
 
 - AA-17 three-model persona–trait exploratory factor analysis: `research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md`. The saved 275 × 240 signed cosine matrices pass the phase gate; the shrinkage common-factor solution retains 5/6/6 provisional factors with decision C. Use `analysis_freeze.md`, `persona_trait_matrix_audit.md`, `trait_factor_grouping.csv`, `factor_loadings_rotated.csv`, `factor_loading_uncertainty.csv`, `persona_factor_scores.csv`, `cross_model_factor_alignment.csv`, `human_bridge_factor_coverage.csv`, `verification_report.json`, and `artifact_inventory.csv` for methods and results. This is separate from AA-14 trait PCA and AA-16 human HiFWB associations.
 
@@ -39,7 +41,7 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 546
+- trait analyses: 588
 - visualizations: 245
 
 

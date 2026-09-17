@@ -13,6 +13,10 @@ Status labels:
 - Tentative: plausible and useful, but not yet stable across enough tests.
 - Speculative: hypothesis or framing that still needs direct validation.
 
+## 44. Five Model-Only Consensus Axes Recur Across Qwen, Llama, and Gemma
+
+Status: **Supported, bounded to saved persona–trait cosine profiles.** The 275 × 240 matched matrices pass the gate. Under a frozen regularized multiview protocol, C1–C5 meet held-out all-three score agreement, loading congruence, bootstrap/split-half stability, null, and sensitivity thresholds. Thirteen score directions pass provisional held-out retention, but C6–C13 lack sufficient axis-level trait-loading agreement or stability for strong interpretation. The rank-20 AJIVE-like joint rank of 19 describes in-sample persona span, not 19 named factors. Shared prompts and labels, model-derived vectors, and incomplete historical extraction records limit measurement and causal claims. The 45/74 human bridge is a post-fit readiness overlay only; no SAPA or HiFWB outcome entered fitting. Evidence: `research/outputs/aa18_three_model_consensus_trait_structure/three_model_consensus_trait_report.md` and its verification, source, loading, null, and stability artifacts.
+
 ## 43. Saved Persona Trait-Cosine Profiles Have Partially Shared Common Factors
 
 Status: Observed for the numerical structure; candidate interpretation only for factor labels. The three 275 × 240 saved model-specific matrices pass the measurement phase gate. Shrinkage principal-axis factoring with oblimin and marginal-preserving parallel analysis yields 5/6/6 provisional factors in Qwen/Llama/Gemma. A grounded/secular versus idealist/spiritual loading pattern matches all three after permutation and sign alignment (absolute Tucker congruence 0.919–0.930); further factors differ or have unresolved individual axes. MAP and heldout likelihood do not establish a unique count. These candidate latent common dimensions describe correlated activation-cosine profiles, not causal traits, human personality traits, or wellbeing. Source: `research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md`.

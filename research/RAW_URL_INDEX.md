@@ -1,12 +1,18 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-17
-Base commit for this update: 547b07d (AA-17 starting point; AA-17 links live after branch push)
+Base commit for this update: 05ded7f (AA-18 starting point; AA-18 links live after branch push)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
 |---|---|---|---|---|
+| active | trait analyses | `research/outputs/aa18_three_model_consensus_trait_structure/three_model_consensus_trait_report.md` | AA-18 consensus report and decision A | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa18-three-model-consensus-trait-structure/research/outputs/aa18_three_model_consensus_trait_structure/three_model_consensus_trait_report.md |
+| active | trait analyses | `research/outputs/aa18_three_model_consensus_trait_structure/trait_profile_convergence.csv` | All 240 direct trait-profile convergence results | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa18-three-model-consensus-trait-structure/research/outputs/aa18_three_model_consensus_trait_structure/trait_profile_convergence.csv |
+| active | trait analyses | `research/outputs/aa18_three_model_consensus_trait_structure/shared_dimension_diagnostics.csv` | Held-out and null dimensionality decisions | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa18-three-model-consensus-trait-structure/research/outputs/aa18_three_model_consensus_trait_structure/shared_dimension_diagnostics.csv |
+| active | trait analyses | `research/outputs/aa18_three_model_consensus_trait_structure/consensus_trait_loadings.csv` | Signed consensus loadings for supported axes | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa18-three-model-consensus-trait-structure/research/outputs/aa18_three_model_consensus_trait_structure/consensus_trait_loadings.csv |
+| active | trait analyses | `research/outputs/aa18_three_model_consensus_trait_structure/human_bridge_consensus_coverage.csv` | Post-fit human bridge coverage only | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa18-three-model-consensus-trait-structure/research/outputs/aa18_three_model_consensus_trait_structure/human_bridge_consensus_coverage.csv |
+| active | trait analyses | `research/outputs/aa18_three_model_consensus_trait_structure/artifact_inventory.csv` | Complete AA-18 artifact hashes and sizes | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa18-three-model-consensus-trait-structure/research/outputs/aa18_three_model_consensus_trait_structure/artifact_inventory.csv |
 | active | trait analyses | `research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md` | AA-17 three-model factor analysis and decision C | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa17-three-model-trait-factor-analysis/research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md |
 | active | trait analyses | `research/outputs/aa17_three_model_trait_factor/trait_factor_grouping.csv` | All 240 traits per model, primary and secondary loadings and stability | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa17-three-model-trait-factor-analysis/research/outputs/aa17_three_model_trait_factor/trait_factor_grouping.csv |
 | active | trait analyses | `research/outputs/aa17_three_model_trait_factor/factor_loading_uncertainty.csv` | Aligned bootstrap loading intervals for every trait and factor | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa17-three-model-trait-factor-analysis/research/outputs/aa17_three_model_trait_factor/factor_loading_uncertainty.csv |

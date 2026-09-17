@@ -1,0 +1,4 @@
+model,residual_component,variance_fraction,positive_traits,negative_traits
+Qwen,1,0.007257593591841406,literal;avoidant;traditional;regulatory;understated;descriptive;reserved;moderate,systems_thinker;interdisciplinary;curious;progressive;introspective;innovative;inclusive;holistic
+Llama,1,0.00906892713178875,efficient;literal;concise;avoidant;materialist;impatient;convergent;anxious,introspective;verbose;systems_thinker;holistic;intuitive;big_picture;charismatic;generous
+Gemma,1,0.006803064516273,closure_seeking;verbose;dominant;generalist;prescriptive;principled;universalist;confident,introspective;humble;deferential;open_ended;inquisitive;constructivist;vindictive;socratic

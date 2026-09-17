@@ -1,0 +1,42 @@
+{
+  "source_sha256_match": {
+    "Qwen": true,
+    "Llama": true,
+    "Gemma": true
+  },
+  "same_275_persona_order": true,
+  "same_240_trait_order": true,
+  "matrix_gate_passed": true,
+  "direct_trait_rows": 240,
+  "direct_persona_rows": 275,
+  "candidate_dimensions": 20,
+  "supported_consensus_axes": 5,
+  "shared_persona_score_rows": 5500,
+  "model_specific_loading_rows": 14400,
+  "consensus_trait_rows": 4800,
+  "all_score_cells_finite": true,
+  "consensus_loading_only_for_supported_axes": true,
+  "variance_partition_max_abs_sum_error": 4.440892098500626e-16,
+  "score_reconstruction_max_abs_error": 9.769962616701378e-15,
+  "loading_reconstruction_max_abs_error": 0.0,
+  "minimum_aligned_score_dot_product": 6.3445109400818795,
+  "bootstrap_replicates": 100,
+  "split_half_replicates": 20,
+  "persona_correspondence_null_replicates": 100,
+  "trait_label_null_replicates": 100,
+  "seed": 18018,
+  "no_hifwb_component_input": true,
+  "no_sapa_outcome_component_input": true,
+  "no_model_inference": true,
+  "no_paid_compute": true,
+  "no_respondent_level_data": true,
+  "no_viewer": true,
+  "runtime": {
+    "python": "3.14.3",
+    "numpy": "2.4.4",
+    "pandas": "3.0.5",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.8.0"
+  },
+  "all_checks_pass": true
+}

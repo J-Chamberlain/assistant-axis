@@ -1,5 +1,9 @@
 # Research Index
 
+## AA-18 three-model consensus trait structure (2026-09-17)
+
+Start at `research/outputs/aa18_three_model_consensus_trait_structure/three_model_consensus_trait_report.md`; then inspect `analysis_freeze.md`, `matrix_reconstruction_audit.md`, `trait_profile_convergence.csv`, `shared_dimension_diagnostics.csv`, `shared_trait_loadings_by_model.csv`, `consensus_trait_loadings.csv`, `component_stability.csv`, `joint_individual_variance_partition.csv`, `aa17_factor_alignment.csv`, `human_bridge_consensus_coverage.csv`, `verification_report.json`, and `artifact_inventory.csv`. Decision A supports five conservative all-three model-only axes. Thirteen held-out score directions provisionally pass, while later loading axes remain unresolved. The rank-20 row-subspace joint rank of 19 is descriptive. The human bridge is post-fit coverage only; AA-14/16/17 remain untouched.
+
 ## AA-17 three-model persona trait factor analysis (2026-09-17)
 
 Start at `research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md`, then the phase-gate `persona_trait_matrix_audit.md`, pre-fit `analysis_freeze.md`, complete `trait_factor_grouping.csv`, `factor_loadings_rotated.csv`, aligned-bootstrap `factor_loading_uncertainty.csv`, `persona_factor_scores.csv`, `cross_model_factor_alignment.csv`, post-fit `human_bridge_factor_coverage.csv`, `verification_report.json`, and `artifact_inventory.csv`. The three saved 275 × 240 signed cosine matrices pass. Parallel analysis provisionally retains 5/6/6 Qwen/Llama/Gemma factors, but other retention criteria do not identify a unique count. Classification C: one stable all-model loading pattern with partly model-specific and individually unresolved axes. No HiFWB enters the fit; AA-14 PCA and AA-16 human associations remain separate.
