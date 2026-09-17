@@ -1,11 +1,13 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-17
-Last commit when updated: aa7733b (AA-16 Stage 1 analysis freeze checkpoint)
+Last commit when updated: 547b07d (AA-17 starting point; final branch commit follows)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
 ## Start Here
+
+- AA-17 three-model persona–trait exploratory factor analysis: `research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md`. The saved 275 × 240 signed cosine matrices pass the phase gate; the shrinkage common-factor solution retains 5/6/6 provisional factors with decision C. Use `analysis_freeze.md`, `persona_trait_matrix_audit.md`, `trait_factor_grouping.csv`, `factor_loadings_rotated.csv`, `persona_factor_scores.csv`, `cross_model_factor_alignment.csv`, `human_bridge_factor_coverage.csv`, `verification_report.json`, and `artifact_inventory.csv` for methods and results. This is separate from AA-14 trait PCA and AA-16 human HiFWB associations.
 
 - AA-16 Stage 1 completed human-trait HiFWB profile: `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_findings.md`; use `stage1_analysis_freeze.md` for the pre-outcome protocol, `existing_trait_bridge_audit.csv` for all 240 mappings, `hifwb_trait_profile_240_long.csv` for all 14 outcomes, `hifwb_trait_profile_240_composite.csv` for the composite, and `stage1_artifact_inventory.csv` for hashes. It reuses the 240-label vocabulary and the existing 45-direct/29-close SAPA bridge without reading model PC coordinates or running models. The earlier AA-15 direct-extraction plan is deferred and unnecessary for this stage.
 - AA-15 provenance gate and AA-14 layer-label erratum: `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md`. It documents why the AA-14 coordinates are correctly computed from all-layer means, not Qwen layer 48, and what remains unknown about original trait-vector extraction.
@@ -37,15 +39,15 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 453
-- visualizations: 242
+- trait analyses: 545
+- visualizations: 245
 
 
 ## Status Counts
 
-- active: 4896
+- active: 4989
 - archive: 11
-- canonical: 23
+- canonical: 25
 - deprecated: 24
 
 

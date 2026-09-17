@@ -1,12 +1,16 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-17
-Base commit for this update: aa7733b (AA-16 Stage 1 freeze checkpoint; result links live after final branch push)
+Base commit for this update: 547b07d (AA-17 starting point; AA-17 links live after branch push)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
 |---|---|---|---|---|
+| active | trait analyses | `research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md` | AA-17 three-model factor analysis and decision C | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa17-three-model-trait-factor-analysis/research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md |
+| active | trait analyses | `research/outputs/aa17_three_model_trait_factor/trait_factor_grouping.csv` | All 240 traits per model, primary and secondary loadings and stability | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa17-three-model-trait-factor-analysis/research/outputs/aa17_three_model_trait_factor/trait_factor_grouping.csv |
+| active | trait analyses | `research/outputs/aa17_three_model_trait_factor/persona_factor_scores.csv` | Model-specific persona scores, bootstrap uncertainty and aligned identities | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa17-three-model-trait-factor-analysis/research/outputs/aa17_three_model_trait_factor/persona_factor_scores.csv |
+| active | trait analyses | `research/outputs/aa17_three_model_trait_factor/artifact_inventory.csv` | AA-17 factor package hashes and sizes | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa17-three-model-trait-factor-analysis/research/outputs/aa17_three_model_trait_factor/artifact_inventory.csv |
 | active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_findings.md` | AA-16 Stage 1 results and coverage/overlap interpretation | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/stage1_findings.md |
 | active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/existing_trait_bridge_audit.csv` | All 240 existing bridge decisions, provenance, duplicate and overlap flags | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/existing_trait_bridge_audit.csv |
 | active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/hifwb_trait_profile_240_long.csv` | Complete 240×14 observed-or-unavailable human association profile | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/hifwb_trait_profile_240_long.csv |

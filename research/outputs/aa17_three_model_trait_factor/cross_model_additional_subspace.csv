@@ -1,0 +1,3 @@
+model_small,model_large,shared_subspace_dimension,shared_canonical_correlations,extra_direction_top_positive,extra_direction_top_negative,extra_llama_gemma_abs_congruence
+Qwen,Llama,5,0.964079;0.939111;0.932795;0.903228;0.817884,descriptive;futuristic;concise;playful;data_driven;utilitarian;efficient;whimsical;innovative;goofy,deontological;anthropocentric;verbose;assertive;humanistic;empathetic;pessimistic;qualitative;cautious;inquisitive,0.42279640036976535
+Qwen,Gemma,5,0.976757;0.966918;0.945148;0.940728;0.776823,divergent;verbose;naive;generalist;closure_seeking;goofy;prescriptive;manic;collectivistic;interdisciplinary,socratic;concise;introspective;challenging;critical;vindictive;inquisitive;deconstructionist;convergent;skeptical,0.42279640036976535

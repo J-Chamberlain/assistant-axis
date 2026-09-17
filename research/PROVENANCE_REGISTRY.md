@@ -1,5 +1,9 @@
 # Provenance Registry
 
+## AA-17 three-model persona trait factor analysis
+
+Entry point: `research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md`; reproducible CPU runner: `run_analysis.py`; phase gate: `persona_trait_matrix_audit.md`; freeze, verification, and file hashes are in the same directory. Inputs are only the saved Qwen `research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv`, Llama and Gemma `research/outputs/multimodel_trait_profile_pc_predictor/{llama,gemma}/persona_trait_similarity_matrix.csv`, and the frozen SAPA semantic bridge solely for post-fit label coverage. All three matrices derive from L2-normalized mean-pooled released role and trait activation vectors via same-model cosine. No raw tensors, model inference, external model API, paid compute, SAPA respondent data, or HiFWB outcomes were read. The five prior editorial groups were compared only after estimation. Outputs are descriptive candidate common dimensions; ordinary correlations are ill-conditioned, retention criteria disagree, and the upstream exact trait-vector extraction records remain partly unavailable.
+
 ## aa16_sapa_hifwb_trait_profile (Stage 1)
 
 Artifact: frozen CPU-only human SAPA trait–HiFWB association profile for the AA-14 240-trait vocabulary; no model PC projection or direct indicator extraction.

@@ -13,6 +13,10 @@ Status labels:
 - Tentative: plausible and useful, but not yet stable across enough tests.
 - Speculative: hypothesis or framing that still needs direct validation.
 
+## 43. Saved Persona Trait-Cosine Profiles Have Partially Shared Common Factors
+
+Status: Observed for the numerical structure; candidate interpretation only for factor labels. The three 275 × 240 saved model-specific matrices pass the measurement phase gate. Shrinkage principal-axis factoring with oblimin and marginal-preserving parallel analysis yields 5/6/6 provisional factors in Qwen/Llama/Gemma. A grounded/secular versus idealist/spiritual loading pattern matches all three after permutation and sign alignment (absolute Tucker congruence 0.919–0.930); further factors differ or have unresolved individual axes. MAP and heldout likelihood do not establish a unique count. These candidate latent common dimensions describe correlated activation-cosine profiles, not causal traits, human personality traits, or wellbeing. Source: `research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md`.
+
 ## 1. Persona Geometry Is Low-Dimensional
 
 Claim: Persona vectors exhibit meaningful low-dimensional structure with a robust PC1-PC3 core and weaker supported secondary Qwen coordinates through PC6; later null-exceeding variance should not automatically be treated as a set of uniquely interpretable axes.

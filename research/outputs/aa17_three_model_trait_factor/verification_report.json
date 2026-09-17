@@ -1,0 +1,62 @@
+{
+  "matrix_phase_gate": true,
+  "identical_persona_order": true,
+  "identical_240_trait_order": true,
+  "no_hifwb_input": true,
+  "no_model_inference": true,
+  "cpu_only": true,
+  "seed": 17017,
+  "runtime": {
+    "python": "3.14.3",
+    "numpy": "2.4.4",
+    "pandas": "3.0.5",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.8.0",
+    "factor_analyzer": "0.5.1"
+  },
+  "source_sha256": {
+    "Qwen": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8",
+    "Llama": "74b2cb886967159fe4580b2dc8066cfe3ba789bedde7f0f380ee95240a3ed947",
+    "Gemma": "798c0618b9e468eec2e6d9083c96b2eef3d414f15f29d93180ff679614fea427"
+  },
+  "Qwen": {
+    "factors": 5,
+    "finite_loadings": true,
+    "factor_correlations_symmetric": true,
+    "reconstruction_symmetric": true,
+    "communalities_in_range": true,
+    "bootstrap_replicates": 20,
+    "split_half_replicates": 10,
+    "score_rows": 1375,
+    "structure_identity_max_abs_error": 0.0,
+    "loading_reconstruction_max_abs_error": 0.0,
+    "score_bootstrap_sd_finite": true
+  },
+  "Llama": {
+    "factors": 6,
+    "finite_loadings": true,
+    "factor_correlations_symmetric": true,
+    "reconstruction_symmetric": true,
+    "communalities_in_range": true,
+    "bootstrap_replicates": 20,
+    "split_half_replicates": 10,
+    "score_rows": 1650,
+    "structure_identity_max_abs_error": 0.0,
+    "loading_reconstruction_max_abs_error": 0.0,
+    "score_bootstrap_sd_finite": true
+  },
+  "Gemma": {
+    "factors": 6,
+    "finite_loadings": true,
+    "factor_correlations_symmetric": true,
+    "reconstruction_symmetric": true,
+    "communalities_in_range": true,
+    "bootstrap_replicates": 20,
+    "split_half_replicates": 10,
+    "score_rows": 1650,
+    "structure_identity_max_abs_error": 0.0,
+    "loading_reconstruction_max_abs_error": 0.0,
+    "score_bootstrap_sd_finite": true
+  },
+  "all_checks_pass": true
+}
