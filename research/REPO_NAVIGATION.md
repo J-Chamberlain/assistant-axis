@@ -1,11 +1,13 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-17
-Last commit when updated: eefe021 (AA-19 starting point; final branch commit follows)
+Last commit when updated: f2f16a5 (AA-20 starting point; final branch commit follows)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
 ## Start Here
+
+- AA-20 HiFWB associations of supported consensus axes: `research/outputs/aa20_consensus_axes_hifwb/aa20_consensus_axes_hifwb_report.md`. The human-only source/outcome/overlap gate passes, with 2,859 common eligible SAPA respondents. C1/C2/C3 show signed composite associations, but Big Five+C1–C3 has only +.005 held-out R2 versus Big Five (paired bootstrap 95% CI [-.006,+.018]); decision B, reliable association without incremental validity. C1/C2/C3 are Big Five-redundant and no model-persona projection is authorized. Use `analysis_freeze.md`, `phase_gate_audit.md`, `predictor_scoring_specification.md`, `composite_axis_associations.csv`, `predictive_model_comparison.csv`, `incremental_prediction_bootstrap.csv`, `indicator_axis_associations.csv`, `factor_count_sensitivity.csv`, `persona_projection_readiness.md`, `verification_report.json`, and `artifact_inventory.csv`.
 
 - AA-19 independent human consensus-factor validation: `research/outputs/aa19_human_consensus_factor_validation/three_model_human_validation_report.md`. SAPA source and aggregate scoring reproduce; 41 unique-source future-safe direct proxies support five held-out-selected oblique human factors (PA/MAP six; split sensitivity five in 7/8), with overall partial convergence. C3=A in the primary fit with a factor-count-sensitive individual match, C1=C, C2=B, C4/C5=D untestable from bridge coverage. Use `analysis_freeze.md`, `human_matrix_audit.md`, `bridge_axis_reconstruction.csv`, `human_factor_retention.csv`, `human_factor_loadings.csv`, `consensus_axis_human_alignment.csv`, `component_classification.csv`, `bigfive_alignment.csv`, `verification_report.json`, and `artifact_inventory.csv`. No HiFWB association enters the fit.
 
@@ -43,13 +45,13 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 630
+- trait analyses: 660
 - visualizations: 245
 
 
 ## Status Counts
 
-- active: 5032
+- active: 5062
 - archive: 11
 - canonical: 25
 - deprecated: 24

@@ -46,3 +46,7 @@ The exact 275-persona × 240-trait saved cosine matrices yield 220 named traits 
 ## Update 2026-09-17 — AA-19 independent human structure
 
 The frozen Qwen/Llama/Gemma consensus axes were compared with independently fitted SAPA human proxy factors. Human/model trait-covariance agreement is positive (three-model consensus upper-triangle r=0.531, 500-label p=0.002), but transfer is selective: C3 meets the primary five-factor independent-support rule but its individual human-factor match weakens under six factors, C1 maps to a human-factor combination, C2 partially transfers, and C4/C5 lack adequate direct future-safe bridge coverage. This bears on structural convergence but still cannot identify shared training lineage or causal mechanisms. Source: `research/outputs/aa19_human_consensus_factor_validation/three_model_human_validation_report.md`.
+
+## Update 2026-09-17 — AA-20 HiFWB gate
+
+The adequately bridged human C1–C3 representations associate with SAPA HiFWB, but jointly add only +.005 held-out R2 beyond the Big Five (paired bootstrap 95% CI [-.006,+.018]). This closes the requested model-persona projection gate for now: shared model–human trait organization does not yet supply reliable incremental wellbeing prediction. Source: `research/outputs/aa20_consensus_axes_hifwb/aa20_consensus_axes_hifwb_report.md`.

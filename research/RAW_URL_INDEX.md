@@ -1,11 +1,16 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-17
-Base commit for this update: eefe021 (AA-19 starting point; AA-19 links live after branch push)
+Base commit for this update: f2f16a5 (AA-20 starting point; AA-20 links live after branch push)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
+| active | trait analyses | `research/outputs/aa20_consensus_axes_hifwb/aa20_consensus_axes_hifwb_report.md` | AA-20 human-only HiFWB decision B | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa20-consensus-axes-hifwb/research/outputs/aa20_consensus_axes_hifwb/aa20_consensus_axes_hifwb_report.md |
+| active | trait analyses | `research/outputs/aa20_consensus_axes_hifwb/analysis_freeze.md` | AA-20 pre-outcome scoring and validation rules | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa20-consensus-axes-hifwb/research/outputs/aa20_consensus_axes_hifwb/analysis_freeze.md |
+| active | trait analyses | `research/outputs/aa20_consensus_axes_hifwb/predictive_model_comparison.csv` | Held-out Big Five and consensus-axis model comparison | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa20-consensus-axes-hifwb/research/outputs/aa20_consensus_axes_hifwb/predictive_model_comparison.csv |
+| active | trait analyses | `research/outputs/aa20_consensus_axes_hifwb/incremental_prediction_bootstrap.csv` | Paired test-resample incremental R2 uncertainty | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa20-consensus-axes-hifwb/research/outputs/aa20_consensus_axes_hifwb/incremental_prediction_bootstrap.csv |
+| active | trait analyses | `research/outputs/aa20_consensus_axes_hifwb/persona_projection_readiness.md` | AA-20 model-persona projection gate | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa20-consensus-axes-hifwb/research/outputs/aa20_consensus_axes_hifwb/persona_projection_readiness.md |
 |---|---|---|---|---|
 | active | trait analyses | `research/outputs/aa19_human_consensus_factor_validation/three_model_human_validation_report.md` | AA-19 independent human structure decision 2 | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa19-human-consensus-factor-validation/research/outputs/aa19_human_consensus_factor_validation/three_model_human_validation_report.md |
 | active | trait analyses | `research/outputs/aa19_human_consensus_factor_validation/analysis_freeze.md` | AA-19 pre-result selection and bridge rules | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa19-human-consensus-factor-validation/research/outputs/aa19_human_consensus_factor_validation/analysis_freeze.md |

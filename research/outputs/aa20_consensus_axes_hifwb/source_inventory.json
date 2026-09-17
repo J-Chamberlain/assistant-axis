@@ -1,0 +1,10 @@
+{
+  "base_commit": "f2f16a5224da2277ab8bc946e70b27deaa5108de",
+  "aa19_inventory_sha256": "e9d9d3e015272e28ddf720a1347ab146c59779facdc98fc96dc0da7ed47f5d95",
+  "aa16_outcome_freeze_sha256": "dcac8f8d2e82c6fa337a8c34472b8b1901d7c709823618dd4bf614ed885a46e0",
+  "sapa_raw_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+  "sapa_key_sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+  "logical_sapa_path": "data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/",
+  "seed": 20260915,
+  "model_used": "GPT-5.5"
+}

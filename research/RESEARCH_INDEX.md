@@ -1,5 +1,9 @@
 # Research Index
 
+## AA-20 HiFWB associations of supported consensus axes (2026-09-17)
+
+Start at `research/outputs/aa20_consensus_axes_hifwb/aa20_consensus_axes_hifwb_report.md`, then `analysis_freeze.md`, `phase_gate_audit.md`, `predictor_scoring_specification.md`, `composite_axis_associations.csv`, `predictive_model_comparison.csv`, `incremental_prediction_bootstrap.csv`, `indicator_axis_associations.csv`, `factor_count_sensitivity.csv`, `persona_projection_readiness.md`, `verification_report.json`, and `artifact_inventory.csv`. Decision B: C1–C3 associate with the frozen human HiFWB composite but do not add reliable held-out prediction beyond the Big Five. C1/C2/C3 are Big Five-redundant associations and the model-persona projection gate is closed. No model inference, persona scoring, or viewer occurs.
+
 ## AA-19 independent human test of model consensus axes (2026-09-17)
 
 Start at `research/outputs/aa19_human_consensus_factor_validation/three_model_human_validation_report.md`, then `analysis_freeze.md`, `human_matrix_audit.md`, `bridge_mapping_audit.csv`, `bridge_axis_reconstruction.csv`, `human_factor_retention.csv`, `human_factor_loadings.csv`, `human_factor_stability.csv`, `human_model_matrix_alignment.csv`, `consensus_axis_human_alignment.csv`, `component_classification.csv`, `bigfive_alignment.csv`, `verification_report.json`, and `artifact_inventory.csv`. Overall decision 2: partial human convergence. C3 is structurally supported in the primary five-factor fit but its individual match weakens under six, C1 maps to a human-factor combination, C2 partially transfers, and C4/C5 are bridge-limited D. Five oblique human factors are selected by held-out one-standard-error rule; PA/MAP indicate six and split sensitivity selects five in 7/8 sets. No HiFWB association, wellbeing score, or model inference enters this test.
