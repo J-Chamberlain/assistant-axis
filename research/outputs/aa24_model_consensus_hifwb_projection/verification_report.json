@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": {
+    "aa18_source_present": true,
+    "c1_c3_only_primary": true,
+    "c4_c5_excluded": true,
+    "heldout_comparison_finite": true,
+    "increment_bootstrap_complete": true,
+    "three_model_projection_rows": true,
+    "no_respondent_rows_exported": true,
+    "no_model_inference": true
+  },
+  "human_eligible_counts": {
+    "train": 1757,
+    "validation": 538,
+    "test": 564
+  },
+  "observed_delta_r2": 0.004593670829196483,
+  "delta_r2_ci": [
+    -0.00667895728656952,
+    0.016905435409472484
+  ]
+}

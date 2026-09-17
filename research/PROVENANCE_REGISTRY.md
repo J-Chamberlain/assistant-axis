@@ -1048,3 +1048,16 @@ Observed result: Held-out R²=.468 Big Five, .054 residual index, and .542 combi
 Boundary: This is exploratory residual structure, not validated incremental psychological validity. One frozen split, sparse provisional bridge, planned missingness, and same-sample weight construction limit generalization. Scores are relative hypotheses, not calibrated wellbeing estimates or model subjective wellbeing. Raw SAPA data remain external and uncommitted.
 Dependencies: `research/outputs/aa22_direct_trait_hifwb_bridge/`, `research/outputs/aa21_bigfive_hifwb_persona_projection/`, `research/outputs/aa19_human_consensus_factor_validation/bridge_mapping_audit.csv`
 Last Updated: 2026-09-17
+
+## AA-24 model-consensus-axis HiFWB transport
+
+Artifact: Outcome 4 of the staged human-associated wellbeing projection: restricted transport of AA-18 consensus axes through the human HiFWB bridge.
+Location: `research/outputs/aa24_model_consensus_hifwb_projection/`; main report: `aa24_model_consensus_hifwb_report.md`; inventory: `artifact_inventory.csv`.
+Created by: Deterministic CPU-only Python analysis; no language-model inference, RunPod, paid compute, or respondent-row export.
+Source inputs: AA-18 `shared_persona_scores.csv`; AA-20 frozen human scoring and HiFWB definitions; hash-matched external SAPA V5 response matrix and key; AA-21 Big Five persona baseline; and AA-23 residual-trait persona rankings.
+Generating script: `research/outputs/aa24_model_consensus_hifwb_projection/run_analysis.py`.
+Procedure: Reconstruct AA-20 human C1–C3 and HiFWB scores, reuse the exact common eligibility and split, evaluate consensus-only and Big Five-plus-consensus held-out models, then apply full-sample human association weights to AA-18 C1–C3 consensus scores for all 275 personas in each model. C4/C5 are excluded because AA-19 found their bridge coverage inadequate.
+Observed result: Consensus-only R²=.178, Big Five=.494, and combined=.498; ΔR²=+.005 with paired test-resample 95% CI [-.007,+.017]. Full versus train+validation persona ranking Spearman correlations exceed .997; consensus versus AA-21 Big Five Pearson correlations are .413 Qwen, .541 Llama, and .423 Gemma.
+Boundary: The human incremental gate remains closed. Transported values are relative model-consensus hypotheses, not calibrated wellbeing estimates, causal traits, human/model equivalence, or model subjective wellbeing. Raw SAPA data remain external and uncommitted.
+Dependencies: `research/outputs/aa18_three_model_consensus_trait_structure/shared_persona_scores.csv`, `research/outputs/aa20_consensus_axes_hifwb/`, `research/outputs/aa21_bigfive_hifwb_persona_projection/`, `research/outputs/aa23_bigfive_residual_hifwb_bridge/`
+Last Updated: 2026-09-17

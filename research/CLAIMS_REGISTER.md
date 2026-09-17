@@ -419,6 +419,15 @@ Evidence: AA-23 fits all residualization and trait weights within the training s
 Counterevidence: The apparent increment is based on one frozen split, a sparse 41-of-240 semantic bridge, planned SAPA missingness, and a residual weighted index whose trait associations are estimated from the same human sample. Near-zero persona-score convergence means the result cannot be treated as a more faithful Big Five score; it is a separate hypothesis space. No human causal interpretation, model subjective wellbeing, or calibrated persona wellbeing is established.
 Dependencies: `research/outputs/aa23_bigfive_residual_hifwb_bridge/aa23_bigfive_residual_hifwb_report.md`, `research/outputs/aa23_bigfive_residual_hifwb_bridge/predictive_model_comparison.csv`, `research/outputs/aa23_bigfive_residual_hifwb_bridge/incremental_prediction_bootstrap.csv`, `research/outputs/aa23_bigfive_residual_hifwb_bridge/persona_residual_trait_hifwb_projection.csv`, `research/outputs/aa23_bigfive_residual_hifwb_bridge/projection_comparison_with_bigfive.csv`
 Last Updated: 2026-09-17
+
+## 48. Model-Consensus Axes Support a Restricted HiFWB Ranking Hypothesis, Not Incremental Validity
+
+Claim: AA-18 model-consensus axes can be transported through the restricted human C1–C3 HiFWB bridge to produce a distinct, reproducible persona-ranking hypothesis, but they do not improve held-out human wellbeing prediction beyond Big Five.
+Status: Supported as a restricted exploratory transport; no incremental-validity claim
+Evidence: AA-24 reproduces the AA-20 common human sample and split: consensus C1–C3 R²=.178, Big Five=.494, and combined=.498; ΔR²=+.005 with paired test-resample 95% CI [-.007,+.017]. Full versus train+validation transport rankings exceed .997 Spearman across models. Consensus-versus-AA-21 Big Five Pearson correlations are .413 Qwen, .541 Llama, and .423 Gemma.
+Counterevidence: C4/C5 lack adequate human bridge coverage; the primary human increment interval crosses zero; the semantic bridge is provisional; and the transported values are relative scores derived from model activation geometry. The result does not establish causal traits, human/model equivalence, model subjective wellbeing, or predictive validity in new humans.
+Dependencies: `research/outputs/aa24_model_consensus_hifwb_projection/aa24_model_consensus_hifwb_report.md`, `research/outputs/aa24_model_consensus_hifwb_projection/human_model_comparison.csv`, `research/outputs/aa24_model_consensus_hifwb_projection/persona_consensus_hifwb_projection.csv`, `research/outputs/aa24_model_consensus_hifwb_projection/projection_convergence_comparison.csv`
+Last Updated: 2026-09-17
 ## 43. Big Five–Mediated Human Wellbeing Profiles Transport Stably Across Saved Persona Spaces
 
 Claim: A human Big Five–HiFWB association model can be transported through the existing Qwen, Llama, and Gemma persona Big Five profiles with strong robustness to strict versus expanded trait construction and to the fitted human coefficient sample.

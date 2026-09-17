@@ -1,0 +1,11 @@
+{
+  "seed": 20260915,
+  "aa18_shared_persona_scores_sha256": "61dbb2ff17e4b68ad6772cda0bc5c994b1ba829da7dac8f06c21e1a26cf63a66",
+  "aa20_run_sha256": "93c83a8c6254277935c9c9a94c97fbf4c1f1525c16bab32ffe1fcbd56a243fe2",
+  "aa21_baseline_sha256": "85a62311608245af1271345c5f7c49bf1e3f340c1f2cccc6f10f0cc3c3a16a50",
+  "aa23_residual_sha256": "5946a19b953e28d53687cf2fd5052631fe2542cfe89d481b2a4f7c6dd975c47b",
+  "sapa_raw_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+  "sapa_key_sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+  "inference": false,
+  "runpod": false
+}
