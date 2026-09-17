@@ -1,12 +1,13 @@
 # Raw URL Index
 
-Updated UTC: 2026-09-16
-Base commit for this update: 4488ff8 (AA-14 base before AA-15 provenance update; AA-15 links become live after branch push)
+Updated UTC: 2026-09-17
+Base commit for this update: 9a8e3c6 (AA-15 base before AA-16 Stage 1; AA-16 links become live after branch push)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
 |---|---|---|---|---|
+| active | trait analyses | `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_analysis_freeze.md` | Frozen CPU-only 240-trait SAPA–HiFWB association protocol, before PC mapping | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa16-sapa-hifwb-trait-pc-crosswalk/research/outputs/aa16_sapa_hifwb_trait_profile/stage1_analysis_freeze.md |
 | active | trait analyses | `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md` | AA-15 provenance gate and AA-14 Qwen layer-label correction | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa15-hifwb-trait-pc-projection/research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md |
 | active | trait analyses | `research/outputs/aa15_hifwb_trait_pc/aa14_vector_layer_audit.json` | Recomputed all-layer versus selected-layer AA-14 PCA comparison | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa15-hifwb-trait-pc-projection/research/outputs/aa15_hifwb_trait_pc/aa14_vector_layer_audit.json |
 | active | trait analyses | `research/outputs/aa15_hifwb_trait_pc/analysis_freeze.md` | Prospective, non-method-matched HiFWB extraction and analysis freeze | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa15-hifwb-trait-pc-projection/research/outputs/aa15_hifwb_trait_pc/analysis_freeze.md |

@@ -2,7 +2,9 @@
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-09-16
+Last updated: 2026-09-17
+
+AA-16 Stage 1 (2026-09-17): The active question is a CPU-only SAPA-mediated association profile over all 240 model-trait labels, before any model trait-PC mapping. `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_analysis_freeze.md` fixes the 45 direct and 29 close provisional bridge tiers, frozen 13-item HiFWB outcome scoring, item-overlap exclusion, duplicate-source handling, and explicit missing values for unsupported traits. AA-15's direct HiFWB extraction remains unrun, cost-free, deferred, and unnecessary for this stage. Do not launch RunPod, run models, use PC coordinates beyond vocabulary validation, modify viewers, or score personas in AA-16 Stage 1.
 
 AA-15 provenance gate (2026-09-16): `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md` corrects AA-14's misleading Qwen layer-48 inventory label. The actual frozen PCA uses the mean of all saved layer rows for all three models; independent recomputation reproduces its spectra. The original trait protocol is contrastive positive-minus-negative generated-response activation over assistant response tokens, but exact response/filter records for the released tensors are unavailable. Preserve AA-14 numerics and public viewer. AA-15's new HiFWB vectors must be explicitly labeled as a prospective analogue, with prompt sensitivity and source-distribution-shift caveats.
 

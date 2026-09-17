@@ -1,5 +1,12 @@
 # Provenance Registry
 
+## aa16_sapa_hifwb_trait_profile (Stage 1)
+
+Artifact: frozen CPU-only human SAPA trait–HiFWB association profile for the AA-14 240-trait vocabulary; no model PC projection or direct indicator extraction.
+Location: `research/outputs/aa16_sapa_hifwb_trait_profile/`; preregistration: `stage1_analysis_freeze.md`.
+Sources: AA-14 shared trait labels only; the frozen 240-row feasibility crosswalk, 74-row provisional bridge (45 direct, 29 close), 74-row psychometric support audit, AA-10 byte-frozen 13 DIRECT HiFWB items and scoring, and external gitignored SAPA V5 respondent matrix (DOI 10.7910/DVN/SD7SVE; SHA256 `fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6`).
+Boundary: respondent-level rows/IDs remain local and uncommitted. AA-15 direct extraction was not run, incurred no cost, and is deferred. The 63-character previously cited schema fingerprint is malformed; the verified full-header 64-character SHA256 is recorded in the freeze. Stage 1 uses no model PC coordinates, viewer, personas, new activations, or model inference.
+
 ## AA-15 provenance gate and AA-14 extraction erratum
 
 Artifact: read-only saved-tensor layer audit and corrected provenance classification, without modifying AA-14 data or PCA.

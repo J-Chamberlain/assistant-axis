@@ -1,5 +1,9 @@
 # Research Index
 
+## AA-16 Stage 1 human-trait HiFWB profile (2026-09-17)
+
+Start at `research/outputs/aa16_sapa_hifwb_trait_profile/stage1_analysis_freeze.md`. This is a CPU-only SAPA-mediated association profile over the frozen 240 model-trait vocabulary, using the already reviewed 45 direct and 29 close human trait proxies. No model PC scores, personas, viewer, RunPod, or new model responses enter Stage 1. The prior AA-15 direct extraction plan is retained as unrun, cost-free, deferred methodological history.
+
 ## AA-15 extraction provenance gate (2026-09-16)
 
 Start at `research/outputs/aa15_hifwb_trait_pc/aa14_extraction_provenance_erratum.md`. The frozen AA-14 PCA used an all-saved-layer mean for every model; the Qwen layer-48 inventory label is incorrect, but the PCA and public viewer are unchanged. The original paper recovers the contrastive response-token trait method at a high level, while released-tensor response-level selection remains unrecorded. HiFWB vectors must therefore be labeled as a prospective analogue.
