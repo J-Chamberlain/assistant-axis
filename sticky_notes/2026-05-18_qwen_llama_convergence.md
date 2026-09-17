@@ -50,3 +50,7 @@ The frozen Qwen/Llama/Gemma consensus axes were compared with independently fitt
 ## Update 2026-09-17 — AA-20 HiFWB gate
 
 The adequately bridged human C1–C3 representations associate with SAPA HiFWB, but jointly add only +.005 held-out R2 beyond the Big Five (paired bootstrap 95% CI [-.006,+.018]). This closes the requested model-persona projection gate for now: shared model–human trait organization does not yet supply reliable incremental wellbeing prediction. Source: `research/outputs/aa20_consensus_axes_hifwb/aa20_consensus_axes_hifwb_report.md`.
+
+## Update 2026-09-17 — AA-22 direct trait bridge
+
+The independent 41-trait direct SAPA bridge adds preliminary held-out HiFWB signal beyond Big Five: Big Five R2=.456 versus .495 for Big Five plus the direct index, ΔR2=+.040, paired test-resample 95% CI [+.016,+.065]. Transported direct-trait persona rankings remain hypothesis-bearing and are most similar to the AA-21 Big Five baseline for Llama/Gemma (.953/.936 and .943/.932 Pearson/Spearman) and less similar for Qwen (.872/.795). This is a human-prediction result, not model wellbeing or human/model equivalence. Source: `research/outputs/aa22_direct_trait_hifwb_bridge/aa22_direct_trait_hifwb_report.md`.

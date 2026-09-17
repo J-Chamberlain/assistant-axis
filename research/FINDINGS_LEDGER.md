@@ -836,3 +836,10 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 - Transported persona scores are robust to strict 42-trait versus expanded 109-trait construction: Pearson r=.977 Qwen, .953 Gemma, and .949 Llama.
 - Expanded cross-model persona-score correlations are .948 Gemma–Qwen, .919 Gemma–Llama, and .847 Llama–Qwen. A reconstructed AA-20-common ridge fit changes rankings negligibly (minimum Spearman rho=.998991).
 - Interpretation: Outcome 1 supplies a stable Big Five-mediated human-associated wellbeing baseline. It does not measure persona experience, validate causal prescriptions, or establish that richer trait bridges add predictive value.
+
+### AA-22 Direct SAPA-Linked Trait Bridge (2026-09-17)
+
+- Built a leakage-safe direct bridge from 41 AA-19 primary, unique-source, outcome-safe model-trait labels to the frozen 13-item HiFWB composite. Trait–HiFWB associations were learned only in the training split and combined as an observed-weight-renormalized direct trait index.
+- On the same held-out respondents, Big Five R²=.456, direct trait index R²=.402, and Big Five plus direct trait index R²=.495. The incremental ΔR²=+.040 with paired test-resample 95% interval [+.016,+.065].
+- Transported full-sample direct-trait weights to all three saved 275×240 persona matrices. Direct-versus-AA-21 expanded Big Five persona scores correlate Pearson/Spearman .872/.795 Qwen, .953/.936 Llama, and .943/.932 Gemma.
+- Interpretation: this is a preliminary incremental human HiFWB signal and a hypothesis-bearing model-persona ranking. It is not a calibrated wellbeing measure, causal evidence, or evidence of model subjective wellbeing. Replication and sensitivity to the sparse semantic bridge remain required.

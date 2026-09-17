@@ -1,0 +1,15 @@
+{
+  "seed": 20260915,
+  "sapa_raw_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+  "sapa_key_sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+  "aa19_bridge_sha256": "abccb500cbde0cbeb80c96c7d0986da9418070422605bb358ebdcaceefa06a2b",
+  "aa21_baseline_sha256": "85a62311608245af1271345c5f7c49bf1e3f340c1f2cccc6f10f0cc3c3a16a50",
+  "model_matrix_sha256": {
+    "Qwen": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8",
+    "Llama": "74b2cb886967159fe4580b2dc8066cfe3ba789bedde7f0f380ee95240a3ed947",
+    "Gemma": "798c0618b9e468eec2e6d9083c96b2eef3d414f15f29d93180ff679614fea427"
+  },
+  "model_used": null,
+  "inference": false,
+  "runpod": false
+}

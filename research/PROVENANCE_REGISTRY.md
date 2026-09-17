@@ -1024,3 +1024,14 @@ Generating script: `research/outputs/aa21_bigfive_hifwb_persona_projection/run_b
 Dependent analyses: Planned direct-trait, Big Five-residual, and model-consensus wellbeing mappings should compare against this frozen Outcome-1 baseline.
 Current status: Complete active baseline.
 Notes/caveats: Raw respondents remain external and uncommitted. Persona predictors are standardized within model and construction before applying standardized human coefficients. Scores therefore express relative human-associated profile rankings, not calibrated individual predictions or model subjective wellbeing.
+
+## AA-22 Direct SAPA-linked trait bridge to HiFWB
+
+Artifact: Outcome 2 of the staged human-associated wellbeing projection: a direct 41-trait SAPA bridge and transported persona ranking.
+Location: `research/outputs/aa22_direct_trait_hifwb_bridge/`; main report: `aa22_direct_trait_hifwb_report.md`; inventory: `artifact_inventory.csv`.
+Created by: Deterministic CPU-only Python analysis; no language-model inference, RunPod, paid compute, or respondent-row export.
+Source inputs: Hash-matched SAPA V5 raw file and `superKey696.csv`; frozen HiFWB item freeze; AA-19 `bridge_mapping_audit.csv`; the three AA-17/AA-18 persona-by-trait matrices; and AA-21 expanded Big Five persona baseline.
+Generating script: `research/outputs/aa22_direct_trait_hifwb_bridge/run_analysis.py`.
+Procedure: Score the 41 unique-source, outcome-safe direct proxies; split respondents before fitting; learn training-only Pearson trait–HiFWB weights; form an absolute-weight-renormalized observed trait index; compare held-out Big Five, direct index, and combined ridge models; then use full-sample weights only for within-model standardized persona transport.
+Observed result: held-out R²=.456 Big Five, .402 direct index, and .495 combined; ΔR²=+.040, paired test-resample 95% CI [+.016,+.065]. Persona-score Pearson/Spearman correlations with AA-21 expanded Big Five are .872/.795 Qwen, .953/.936 Llama, and .943/.932 Gemma.
+Boundary: Sparse provisional semantic coverage, planned SAPA missingness, and one frozen split limit generalization. Transported scores are relative hypothesis rankings, not calibrated wellbeing estimates or model subjective wellbeing. Raw SAPA data remain external and uncommitted.

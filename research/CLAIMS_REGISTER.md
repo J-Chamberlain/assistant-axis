@@ -418,3 +418,12 @@ Evidence: AA-21 reconstructs the frozen 13-item HiFWB composite and official IPI
 Counterevidence: The transport standardizes persona Big Five scores within each model and construction, so the outputs are relative rankings rather than calibrated human wellbeing levels. Big Five profiles are activation-derived trait-vector projections; shared labels and prompt construction may induce recurrence. The result does not show subjective model wellbeing, causal effects, or incremental validity beyond human Big Five.
 Dependencies: `research/outputs/aa21_bigfive_hifwb_persona_projection/outcome1_bigfive_hifwb_report.md`, `research/outputs/aa21_bigfive_hifwb_persona_projection/persona_bigfive_hifwb_projection.csv`, `research/outputs/externally_anchored_big_five/big_five_role_scores.csv`, `research/outputs/aa20_consensus_axes_hifwb/`
 Last Updated: 2026-09-17
+
+## 44. A Direct 41-Trait SAPA Bridge Adds Preliminary HiFWB Signal Beyond Big Five
+
+Claim: A direct, outcome-safe bridge from 41 mapped model-trait labels to human HiFWB provides preliminary incremental prediction beyond a Big Five baseline on the frozen held-out split and can be transported as a relative persona-ranking hypothesis.
+Status: Observed, provisional
+Evidence: AA-22 learns 41 trait–HiFWB weights in training respondents only. Held-out R² is .456 for Big Five, .402 for the direct index, and .495 for Big Five plus the direct index; ΔR²=+.040 with paired test-resample 95% CI [+.016,+.065]. Direct-versus-AA-21 expanded persona scores correlate .872/.795 Qwen, .953/.936 Llama, and .943/.932 Gemma (Pearson/Spearman).
+Counterevidence: The bridge covers only 41 of 240 labels and depends on provisional semantic mappings and planned-missingness scoring. The increment comes from one frozen split and a one-dimensional weighted index; it requires replication. Persona scores are within-model standardized relative rankings, not calibrated wellbeing or model experience.
+Dependencies: `research/outputs/aa22_direct_trait_hifwb_bridge/aa22_direct_trait_hifwb_report.md`, `research/outputs/aa22_direct_trait_hifwb_bridge/predictive_model_comparison.csv`, `research/outputs/aa22_direct_trait_hifwb_bridge/persona_direct_trait_hifwb_projection.csv`, `research/outputs/aa22_direct_trait_hifwb_bridge/projection_comparison_with_bigfive.csv`
+Last Updated: 2026-09-17

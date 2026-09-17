@@ -1,0 +1,7 @@
+# AA-22 analysis freeze
+
+Primary predictors are the 41 AA-19 `aa19_primary_selected` direct traits, sorted by model-trait label. Exact duplicate-source groups and any trait sharing a frozen HiFWB item are excluded by the AA-19 selection. Respondents are split before association fitting with seed `20260915` and a 60/20/20 train/validation/test allocation. Each proxy is an oriented mean of observed SAPA items after training-sample item standardization; the direct index is the absolute-weight-renormalized mean of observed standardized proxies. The association weights are Pearson correlations learned on training respondents only. Eligibility requires the frozen 13-item HiFWB score, complete official IPIP100 Big Five scores, and at least eight observed direct proxies with a finite direct index.
+
+The primary human comparison is Big Five, direct trait index, and Big Five plus direct trait index on the same held-out respondents. Alpha is selected from `{0,.01,.1,1,10,100}` by validation RMSE. Full-sample trait–HiFWB weights are used only for the separate persona transport. Transport standardizes each model's 41 trait profiles within model and applies the frozen full-sample association weights; it is a relative hypothesis score, not a calibrated wellbeing estimate.
+
+No respondent-level rows, raw SAPA data, HiFWB item values, model inference, RunPod, paid compute, or viewer deployment are committed.
