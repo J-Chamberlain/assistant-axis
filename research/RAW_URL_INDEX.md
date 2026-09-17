@@ -1,11 +1,17 @@
 # Raw URL Index
 
 Updated UTC: 2026-09-17
-Base commit for this update: f2f16a5 (AA-20 starting point; AA-20 links live after branch push)
+Base commit for this update: 2341036 (AA-21 starting point; AA-21 links live after branch push)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 
 | Status | Category | Local path | Description | Raw GitHub URL |
+| active | trait analyses | `research/outputs/aa21_bigfive_hifwb_persona_projection/artifact_inventory.csv` | AA-21 artifact hashes sizes and statuses | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/aa21_bigfive_hifwb_persona_projection/artifact_inventory.csv |
+| active | trait analyses | `research/outputs/aa21_bigfive_hifwb_persona_projection/outcome1_bigfive_hifwb_report.md` | Outcome 1 Big Five-mediated human-associated HiFWB persona baseline | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/aa21_bigfive_hifwb_persona_projection/outcome1_bigfive_hifwb_report.md |
+| active | trait analyses | `research/outputs/aa21_bigfive_hifwb_persona_projection/persona_bigfive_hifwb_projection.csv` | Persona scores for two trait constructions and two human coefficient fits | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/aa21_bigfive_hifwb_persona_projection/persona_bigfive_hifwb_projection.csv |
+| active | trait analyses | `research/outputs/aa21_bigfive_hifwb_persona_projection/construction_sensitivity.csv` | Strict-versus-expanded construction sensitivity | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/aa21_bigfive_hifwb_persona_projection/construction_sensitivity.csv |
+| active | trait analyses | `research/outputs/aa21_bigfive_hifwb_persona_projection/cross_model_convergence.csv` | Cross-model convergence of persona wellbeing-associated rankings | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/aa21_bigfive_hifwb_persona_projection/cross_model_convergence.csv |
+| active | trait analyses | `research/outputs/aa21_bigfive_hifwb_persona_projection/verification_report.json` | AA-21 verification summary | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/aa21_bigfive_hifwb_persona_projection/verification_report.json |
 | active | trait analyses | `research/outputs/aa20_consensus_axes_hifwb/aa20_consensus_axes_hifwb_report.md` | AA-20 human-only HiFWB decision B | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa20-consensus-axes-hifwb/research/outputs/aa20_consensus_axes_hifwb/aa20_consensus_axes_hifwb_report.md |
 | active | trait analyses | `research/outputs/aa20_consensus_axes_hifwb/analysis_freeze.md` | AA-20 pre-outcome scoring and validation rules | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa20-consensus-axes-hifwb/research/outputs/aa20_consensus_axes_hifwb/analysis_freeze.md |
 | active | trait analyses | `research/outputs/aa20_consensus_axes_hifwb/predictive_model_comparison.csv` | Held-out Big Five and consensus-axis model comparison | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa20-consensus-axes-hifwb/research/outputs/aa20_consensus_axes_hifwb/predictive_model_comparison.csv |

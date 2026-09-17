@@ -828,3 +828,11 @@ Downloaded Lu vector metadata remains underspecified locally: the exact fully-ro
 - Experiment B found accountability/scrutiny wording moved PC1 more positive than arithmetic/checking wording in 5/5 matched scenario pairs: mean B-A PC1 effect +9.551, 95% CI [7.592, 11.510].
 - Secondary effects were consistent across all 10 pairs: accountability/scrutiny wording moved PC2 negative relative to both alternatives, with mean PC2 effects -8.665 versus determination and -16.050 versus arithmetic/checking.
 - Interpretation: this materially strengthens the PC1 external-standard-accountability hypothesis against two local alternatives, but it remains a focused diagnostic rather than proof of PC1 semantics or axis isolation.
+### AA-21 Big Five–Transported HiFWB Persona Baseline (2026-09-17)
+
+- Reconstructed the frozen 13-item HiFWB composite and official IPIP100 Big Five scores from the hash-matched public SAPA source without exporting respondent rows.
+- The full Big Five/HiFWB overlap sample is N=3,972; a frozen 60/20/20 split selected alpha=0 and achieved held-out R²=.395 and RMSE=.762 standardized HiFWB units.
+- Full-sample standardized coefficients are emotional stability +.396, extraversion +.276, conscientiousness +.182, agreeableness +.085, and openness +.022.
+- Transported persona scores are robust to strict 42-trait versus expanded 109-trait construction: Pearson r=.977 Qwen, .953 Gemma, and .949 Llama.
+- Expanded cross-model persona-score correlations are .948 Gemma–Qwen, .919 Gemma–Llama, and .847 Llama–Qwen. A reconstructed AA-20-common ridge fit changes rankings negligibly (minimum Spearman rho=.998991).
+- Interpretation: Outcome 1 supplies a stable Big Five-mediated human-associated wellbeing baseline. It does not measure persona experience, validate causal prescriptions, or establish that richer trait bridges add predictive value.

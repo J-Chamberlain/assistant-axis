@@ -1,0 +1,7 @@
+construction,model_a,model_b,pearson_r,spearman_rho,top10_overlap,bottom10_overlap
+external_taxonomy_expanded,gemma,llama,0.9185194981620564,0.9252595135743343,4,7
+external_taxonomy_expanded,gemma,qwen,0.9475863011197895,0.9544490926401432,5,4
+external_taxonomy_expanded,llama,qwen,0.846813537475662,0.8717751940220999,4,4
+human_anchored_strict,gemma,llama,0.9234729505314487,0.8621390034909552,4,9
+human_anchored_strict,gemma,qwen,0.9401260016832954,0.9321831453218314,5,5
+human_anchored_strict,llama,qwen,0.8139695980483083,0.746139465104873,1,4

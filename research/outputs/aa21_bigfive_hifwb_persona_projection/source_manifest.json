@@ -1,0 +1,13 @@
+{
+  "base_commit": "2341036325431b812c113cd18885069608332da1",
+  "sapa_raw_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+  "sapa_key_sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+  "sapa_source": "doi:10.7910/DVN/SD7SVE",
+  "wellbeing_freeze": "research/outputs/sapa_hifwb_reproducibility/wellbeing_item_freeze.csv",
+  "persona_big_five_source": "research/outputs/externally_anchored_big_five/big_five_role_scores.csv",
+  "aa20_reference": "research/outputs/aa20_consensus_axes_hifwb/",
+  "seed": 20260915,
+  "model_inference": false,
+  "paid_compute": false,
+  "respondent_rows_exported": false
+}

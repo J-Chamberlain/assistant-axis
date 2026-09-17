@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checks": {
+    "sapa_raw_hash_matches_aa20": true,
+    "sapa_key_hash_matches_aa20": true,
+    "frozen_hifwb_direct_items": 13,
+    "full_overlap_human_n": 3972,
+    "aa20_common_eligibility_reconstructed_n": 2859,
+    "models": 3,
+    "personas_per_model": 275,
+    "primary_constructions": 2,
+    "persona_rows_per_human_fit": 1650,
+    "human_fit_rank_correlations_min": 0.998991,
+    "construction_pearson_min": 0.949081,
+    "cross_model_expanded_pearson_min": 0.846814,
+    "no_model_inference": true,
+    "no_paid_compute": true,
+    "respondent_rows_exported": false
+  }
+}

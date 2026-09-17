@@ -1,0 +1,22 @@
+{
+  "primary": {
+    "eligible_n": 3972,
+    "train_n": 2383,
+    "validation_n": 794,
+    "test_n": 795,
+    "selected_alpha": 0,
+    "test_r2": 0.39457898723704454,
+    "test_rmse": 0.7617423894512685,
+    "common_eligible_n": 2859
+  },
+  "sensitivity": {
+    "eligible_n": 2859,
+    "train_n": 1715,
+    "validation_n": 572,
+    "test_n": 572,
+    "selected_alpha": 100,
+    "test_r2": 0.39723000622357574,
+    "test_rmse": 0.7718340866297959,
+    "fit": "aa20_common_ridge_sensitivity"
+  }
+}

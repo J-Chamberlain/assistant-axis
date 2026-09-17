@@ -1014,3 +1014,13 @@ Generating script: One-time local projection/reconciliation script executed in-s
 Dependent analyses: Paper 1.5 baseline wording, no-label elicitation Run 2 interpretation, and future comparisons among assistant-role, released default-vector, and bare no-system reference points.
 Current status: Complete active methodological clarification.
 Notes/caveats: The audit identifies `downloads/hf_vectors/qwen-3-32b/default_vector.pt` as the released Lu default/no-role artifact and confirms `assistant_axis.pt` is a direction/difference vector, not a centroid. Projected into the canonical Paper 1.5 Qwen PCA basis, the default vector is PC1=27.130667, PC2=8.005075, PC3=-6.630754. It is distinct from the assistant role centroid (33.702803, 3.441718, -5.155534) and the Run 2 bare no-system centroid (23.509937, 14.040867, -2.460112). Recommendation: keep all three reference points with clear labels; do not replace the Run 2 bare no-system baseline with Lu's default vector.
+## AA-21 Big Five–transported HiFWB persona baseline
+
+Artifact: Outcome 1 of the staged human-associated wellbeing projection across Qwen, Llama, and Gemma personas.
+Location: `research/outputs/aa21_bigfive_hifwb_persona_projection/`
+Created by: Deterministic CPU-only Python analysis; no language-model inference was used for scoring.
+Source inputs: Public SAPA V5 file `sapaTempData696items08dec2013thru26jul2014.tab` (SHA256 `fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6`), `superKey696.csv` (SHA256 `8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49`), frozen `research/outputs/sapa_hifwb_reproducibility/wellbeing_item_freeze.csv`, existing `research/outputs/externally_anchored_big_five/big_five_role_scores.csv`, and AA-18/AA-19 artifacts solely to reconstruct the AA-20 common-eligibility sensitivity.
+Generating script: `research/outputs/aa21_bigfive_hifwb_persona_projection/run_bigfive_hifwb_projection.py`.
+Dependent analyses: Planned direct-trait, Big Five-residual, and model-consensus wellbeing mappings should compare against this frozen Outcome-1 baseline.
+Current status: Complete active baseline.
+Notes/caveats: Raw respondents remain external and uncommitted. Persona predictors are standardized within model and construction before applying standardized human coefficients. Scores therefore express relative human-associated profile rankings, not calibrated individual predictions or model subjective wellbeing.
