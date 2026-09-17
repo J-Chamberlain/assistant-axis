@@ -28,6 +28,8 @@
     "bootstrap_replicates": 20,
     "split_half_replicates": 10,
     "score_rows": 1375,
+    "loading_uncertainty_rows": 1200,
+    "loading_interval_ordered": true,
     "structure_identity_max_abs_error": 0.0,
     "loading_reconstruction_max_abs_error": 0.0,
     "score_bootstrap_sd_finite": true
@@ -41,6 +43,8 @@
     "bootstrap_replicates": 20,
     "split_half_replicates": 10,
     "score_rows": 1650,
+    "loading_uncertainty_rows": 1440,
+    "loading_interval_ordered": true,
     "structure_identity_max_abs_error": 0.0,
     "loading_reconstruction_max_abs_error": 0.0,
     "score_bootstrap_sd_finite": true
@@ -54,6 +58,8 @@
     "bootstrap_replicates": 20,
     "split_half_replicates": 10,
     "score_rows": 1650,
+    "loading_uncertainty_rows": 1440,
+    "loading_interval_ordered": true,
     "structure_identity_max_abs_error": 0.0,
     "loading_reconstruction_max_abs_error": 0.0,
     "score_bootstrap_sd_finite": true

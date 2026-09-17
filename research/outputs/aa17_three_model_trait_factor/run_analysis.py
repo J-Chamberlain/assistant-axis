@@ -335,11 +335,13 @@ def export_solutions(tables, exclusions, retain, solutions, score_data):
 def stability(tables,retain,solutions,score_data,groups):
     boot,split=[],[]
     score_uncertainty=[]
+    loading_uncertainty=[]
     for mi,m in enumerate(tables):
         x=score_data[m]["x"]; ref=solutions[m]["loading"]; k=retain[m]
         rng=np.random.default_rng(SEED+100+mi)
         assignment=np.zeros((x.shape[1],),float); cross=np.zeros_like(assignment)
         boot_scores=np.empty((20,len(x),k))
+        boot_loadings=np.empty((20,x.shape[1],k))
         for b in range(20):
             ids=rng.integers(0,len(x),len(x)); xb=standardize(x[ids]); rr,_=shrink_corr(xb)
             f=fit(rr,k); al,order,signs,_=align(ref,f["loading"])
@@ -347,6 +349,7 @@ def stability(tables,retain,solutions,score_data,groups):
             pmat,_=orthogonal_procrustes(f["loading"],ref)
             procrustes_fit=float(np.linalg.norm(f["loading"]@pmat-ref)/np.linalg.norm(ref))
             boot_scores[b]=x@f["score_coef"][:,order]*signs
+            boot_loadings[b]=al
             assignment+=(np.argmax(abs(al),axis=1)==np.argmax(abs(ref),axis=1))
             cross+=(np.sort(abs(al),axis=1)[:,-2]>=.3)&(np.sort(abs(al),axis=1)[:,-1]>=.3)
             for h in range(k):boot.append(dict(model=m,replicate=b,factor=f"{m}_F{h+1}",congruence=c[h,h],
@@ -354,6 +357,13 @@ def stability(tables,retain,solutions,score_data,groups):
                                             min_subspace_canonical=float(cc.min()),matched_original_axis=int(order[h]+1),sign_correction=int(signs[h])))
             for item in boot[-k:]: item["procrustes_relative_error"]=procrustes_fit
         assignment/=20;cross/=20
+        for j,t in enumerate(score_data[m]["names"]):
+            for h in range(k):
+                values=boot_loadings[:,j,h]
+                loading_uncertainty.append(dict(model=m,trait=t,factor=f"{m}_F{h+1}",
+                                                full_sample_pattern_loading=ref[j,h],bootstrap_mean=float(values.mean()),
+                                                bootstrap_sd=float(values.std(ddof=1)),bootstrap_q05=float(np.quantile(values,.05)),
+                                                bootstrap_q95=float(np.quantile(values,.95))))
         for i,p in enumerate(tables[m].persona):
             for h in range(k):score_uncertainty.append(dict(model=m,persona=p,factor=f"{m}_F{h+1}",score_bootstrap_sd=float(boot_scores[:,i,h].std(ddof=1))))
         idx=groups.model==m
@@ -371,6 +381,7 @@ def stability(tables,retain,solutions,score_data,groups):
                                               min_subspace_canonical=float(cc.min()),matched_other_axis=int(order[h]+1),sign_correction=int(signs[h]),
                                               procrustes_relative_error=procrustes_fit))
     save("factor_bootstrap_stability.csv",boot);save("factor_split_half_stability.csv",split)
+    save("factor_loading_uncertainty.csv",loading_uncertainty)
     groups.to_csv(OUT/"trait_factor_grouping.csv",index=False)
     scores=pd.read_csv(OUT/"persona_factor_scores.csv")
     scores=scores.merge(pd.DataFrame(score_uncertainty),on=["model","persona","factor"],validate="one_to_one")
@@ -581,7 +592,7 @@ def report(summary,retain,groups,boot,split,cross,cover):
         lines.append(f"- **Observed {a}–{b}:** matched absolute Tucker congruence {q.tucker_congruence.abs().round(2).tolist()}, mean {q.matched_mean_abs_congruence.iloc[0]:.2f}; minimum subspace canonical correlation {q.shared_subspace_canonical_min.iloc[0]:.2f}; largest principal angle {q.largest_principal_angle_deg.iloc[0]:.1f}°; trait-label permutation p={q.permutation_p.iloc[0]:.3f}. Individual axes are matched by loadings, not factor number.")
     lines += ["", "The clearest all-model match is Qwen F3, Llama F2, and Gemma F6 (absolute Tucker congruence 0.919/0.930/0.915 pairwise). Llama F1 and Gemma F3 form a further two-model match (0.896). The broader Qwen–Llama and Qwen–Gemma subspaces agree more than the full Llama–Gemma six-dimensional subspaces, whose weakest canonical correlation is 0.49. A signed correlation changes under arbitrary factor polarity. The alignment CSV retains signed and absolute matching information plus the traits of greatest disagreement. `cross_model_additional_subspace.csv` compares the fifth-dimensional shared Qwen subspace with each larger six-dimensional subspace and isolates each additional direction without equating an arbitrary factor number to the extra dimension.", "", "## Prior grouping and human bridge readiness", "", "The five prior editorial groups are semantic, hand-selected triplets covering 15/240 traits, shared across models. Their factor assignments are in `prior_trait_grouping_audit.md`. Agreement is descriptive and cannot validate the numerical solution. The bridge audit below counts traits whose primary absolute loading reaches 0.30; it does not fit or interpret SAPA data.", "", "| Model factor | Indicators | 45 direct | 74 total | No proxy | Poor coverage |", "|---|---:|---:|---:|---:|---|"]
     for r in cover.itertuples():lines.append(f"| {r.factor} | {r.indicator_traits} | {r.direct_45_count} | {r.direct_plus_close_74_count} | {r.no_human_proxy_count} | {r.poor_coverage} |")
-    lines += ["", "Factor-level aggregation could reduce duplication where mapped human proxies reuse SAPA item IDs; `human_bridge_factor_coverage.csv` counts those reuses. It does not create a human factor score, and item reuse must be resolved before later human comparisons.", "", "## Limits and next gate", "", "Factor scores are regression summaries of model persona cosine profiles, with residual profile variance and bootstrap SD in the score table. Bootstrap assignment frequency is a practical uncertainty measure, but neither it nor score coefficients corrects upstream vector measurement uncertainty. No new model inference, GPU, RunPod, HiFWB scoring, respondent-level data, SAPA factor comparison, or viewer was used. The next SAPA/HiFWB stage can use the stable, bridge-covered candidates as hypotheses for an independent test. Poorly covered or axis-unresolved factors should be deferred or compared as subspaces."]
+    lines += ["", "Factor-level aggregation could reduce duplication where mapped human proxies reuse SAPA item IDs; `human_bridge_factor_coverage.csv` counts those reuses. It does not create a human factor score, and item reuse must be resolved before later human comparisons.", "", "## Limits and next gate", "", "Every original trait retains its full loading pattern, 20-bootstrap aligned loading interval in `factor_loading_uncertainty.csv`, and primary/cross-loading assignment frequency. Factor scores are regression summaries of model persona cosine profiles, with residual profile variance and bootstrap SD in the score table. These resampling measures do not correct upstream vector measurement uncertainty. No new model inference, GPU, RunPod, HiFWB scoring, respondent-level data, SAPA factor comparison, or viewer was used. The next SAPA/HiFWB stage can use the stable, bridge-covered candidates as hypotheses for an independent test. Poorly covered or axis-unresolved factors should be deferred or compared as subspaces."]
     (OUT/"three_model_trait_factor_report.md").write_text("\n".join(lines)+"\n")
 
 
@@ -593,16 +604,19 @@ def verify(tables,retain,solutions,groups,boot,split,cross,summary):
                        "factor_analyzer":importlib.metadata.version("factor-analyzer")},
             "source_sha256":{s["model"]:s["sha256"] for s in summary}}
     score_rows=pd.read_csv(OUT/"persona_factor_scores.csv")
+    loading_rows=pd.read_csv(OUT/"factor_loading_uncertainty.csv")
     for m in retain:
         f=solutions[m];r=f["reconstructed"];checks[m]={"factors":retain[m],"finite_loadings":bool(np.isfinite(f["loading"]).all()),
             "factor_correlations_symmetric":bool(np.allclose(f["phi"],f["phi"].T)),
             "reconstruction_symmetric":bool(np.allclose(r,r.T)),"communalities_in_range":bool(((f["h"]>=0)&(f["h"]<=1.01)).all()),
             "bootstrap_replicates":int(boot[boot.model==m].replicate.nunique()),"split_half_replicates":int(split[split.model==m].replicate.nunique()),
             "score_rows":int(score_rows.query("model == @m").shape[0]),
+            "loading_uncertainty_rows":int(loading_rows.query("model == @m").shape[0]),
+            "loading_interval_ordered":bool((loading_rows.loc[loading_rows.model==m,"bootstrap_q05"]<=loading_rows.loc[loading_rows.model==m,"bootstrap_q95"]).all()),
             "structure_identity_max_abs_error":float(np.max(abs(f["structure"]-f["loading"]@f["phi"]))),
             "loading_reconstruction_max_abs_error":float(np.max(abs(r-(f["loading"]@f["phi"]@f["loading"].T+np.diag(f["u"]))))),
             "score_bootstrap_sd_finite":bool(np.isfinite(score_rows.loc[score_rows.model==m,"score_bootstrap_sd"]).all())}
-    checks["all_checks_pass"]=all(v["finite_loadings"] and v["factor_correlations_symmetric"] and v["reconstruction_symmetric"] and v["communalities_in_range"] and v["bootstrap_replicates"]==20 and v["split_half_replicates"]==10 and v["score_rows"]==275*retain[m] for m,v in [(m,checks[m]) for m in retain])
+    checks["all_checks_pass"]=all(v["finite_loadings"] and v["factor_correlations_symmetric"] and v["reconstruction_symmetric"] and v["communalities_in_range"] and v["bootstrap_replicates"]==20 and v["split_half_replicates"]==10 and v["score_rows"]==275*retain[m] and v["loading_uncertainty_rows"]==240*retain[m] and v["loading_interval_ordered"] for m,v in [(m,checks[m]) for m in retain])
     (OUT/"verification_report.json").write_text(json.dumps(checks,indent=2)+"\n")
     rows=[]
     for p in sorted(OUT.iterdir()):

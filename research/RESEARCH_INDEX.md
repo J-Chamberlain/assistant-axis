@@ -2,7 +2,7 @@
 
 ## AA-17 three-model persona trait factor analysis (2026-09-17)
 
-Start at `research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md`, then the phase-gate `persona_trait_matrix_audit.md`, pre-fit `analysis_freeze.md`, complete `trait_factor_grouping.csv`, `factor_loadings_rotated.csv`, `persona_factor_scores.csv`, `cross_model_factor_alignment.csv`, post-fit `human_bridge_factor_coverage.csv`, `verification_report.json`, and `artifact_inventory.csv`. The three saved 275 × 240 signed cosine matrices pass. Parallel analysis provisionally retains 5/6/6 Qwen/Llama/Gemma factors, but other retention criteria do not identify a unique count. Classification C: one stable all-model loading pattern with partly model-specific and individually unresolved axes. No HiFWB enters the fit; AA-14 PCA and AA-16 human associations remain separate.
+Start at `research/outputs/aa17_three_model_trait_factor/three_model_trait_factor_report.md`, then the phase-gate `persona_trait_matrix_audit.md`, pre-fit `analysis_freeze.md`, complete `trait_factor_grouping.csv`, `factor_loadings_rotated.csv`, aligned-bootstrap `factor_loading_uncertainty.csv`, `persona_factor_scores.csv`, `cross_model_factor_alignment.csv`, post-fit `human_bridge_factor_coverage.csv`, `verification_report.json`, and `artifact_inventory.csv`. The three saved 275 × 240 signed cosine matrices pass. Parallel analysis provisionally retains 5/6/6 Qwen/Llama/Gemma factors, but other retention criteria do not identify a unique count. Classification C: one stable all-model loading pattern with partly model-specific and individually unresolved axes. No HiFWB enters the fit; AA-14 PCA and AA-16 human associations remain separate.
 
 ## AA-16 Stage 1 human-trait HiFWB profile (2026-09-17)
 
