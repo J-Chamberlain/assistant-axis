@@ -1,11 +1,13 @@
 # Repository Navigation
 
 Updated UTC: 2026-09-17
-Last commit when updated: 05ded7f (AA-18 starting point; final branch commit follows)
+Last commit when updated: eefe021 (AA-19 starting point; final branch commit follows)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
 ## Start Here
+
+- AA-19 independent human consensus-factor validation: `research/outputs/aa19_human_consensus_factor_validation/three_model_human_validation_report.md`. SAPA source and aggregate scoring reproduce; 41 unique-source future-safe direct proxies support five held-out-selected oblique human factors (PA/MAP six; split sensitivity five in 7/8), with overall partial convergence. C3=A in the primary fit with a factor-count-sensitive individual match, C1=C, C2=B, C4/C5=D untestable from bridge coverage. Use `analysis_freeze.md`, `human_matrix_audit.md`, `bridge_axis_reconstruction.csv`, `human_factor_retention.csv`, `human_factor_loadings.csv`, `consensus_axis_human_alignment.csv`, `component_classification.csv`, `bigfive_alignment.csv`, `verification_report.json`, and `artifact_inventory.csv`. No HiFWB association enters the fit.
 
 - AA-18 three-model consensus trait structure: `research/outputs/aa18_three_model_consensus_trait_structure/three_model_consensus_trait_report.md`. Exact matched 275 × 240 matrices pass; 220/240 named traits have strong all-three persona-profile agreement. Regularized multiview analysis supports five strict all-three axes (decision A) within 13 provisional score directions; AJIVE-like rank-20 row-subspace joint rank 19 is descriptive only. Use `analysis_freeze.md`, `trait_profile_convergence.csv`, `shared_dimension_diagnostics.csv`, `consensus_trait_loadings.csv`, `component_stability.csv`, `joint_individual_variance_partition.csv`, `aa17_factor_alignment.csv`, `human_bridge_consensus_coverage.csv`, `verification_report.json`, and `artifact_inventory.csv` in the AA-18 directory. No human outcome or HiFWB input enters selection.
 
@@ -41,13 +43,13 @@ This is the canonical navigation layer for the Assistant Axis repository. Use it
 - cloud-analysis outputs: 159
 - geometry tables: 30
 - notebooks: 7
-- trait analyses: 588
+- trait analyses: 630
 - visualizations: 245
 
 
 ## Status Counts
 
-- active: 4990
+- active: 5032
 - archive: 11
 - canonical: 25
 - deprecated: 24

@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-17T10:14:45Z`
-- Current branch: `codex/aa18-three-model-consensus-trait-structure`
-- generation base commit: `05ded7f8edd05550e3f9a7e8b18c3926cc51b3c5`
+- Generated timestamp UTC: `2026-09-17T10:56:19Z`
+- Current branch: `codex/aa19-human-consensus-factor-validation`
+- generation base commit: `eefe021f4f76635eb117e121aa824106a9d08c67`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -33,52 +33,52 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 - Path: `research/RESEARCH_STATE.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
-- Latest commit touching file: `68afc62fdea70bf0dc04e1f60fd423991cd2a921`
-- generation base commit: `05ded7f8edd05550e3f9a7e8b18c3926cc51b3c5`
-- Git blob hash: `9ae242b20003d53053b08ab2b6fe2d6b0c579c69`
-- SHA256 content hash: `7ff0eba5eaa7c01a03a02c2dca1664b586e146118770006e7b2fab407b677063`
-- Byte count: `194460`
+- Latest commit touching file: `eefe021f4f76635eb117e121aa824106a9d08c67`
+- generation base commit: `eefe021f4f76635eb117e121aa824106a9d08c67`
+- Git blob hash: `bda64486067831d57c213889d456baa9772b7428`
+- SHA256 content hash: `bfcad0bce016a5c4fb608594f31789795bc710bb40a3e3ded692bd5f9e0f1bf2`
+- Byte count: `196765`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
   - Last updated: `2026-09-17`
-  - Last commit: `05ded7f (AA-17 analytical base before AA-18)`
+  - Last commit: `eefe021 (AA-18 analytical base before AA-19)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-17T10:14:45Z`
+- Generated timestamp UTC: `2026-09-17T10:56:19Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
-- Latest commit touching file: `68afc62fdea70bf0dc04e1f60fd423991cd2a921`
-- generation base commit: `05ded7f8edd05550e3f9a7e8b18c3926cc51b3c5`
-- Git blob hash: `09adebd1bd1a2464016e950f384b06530e301dcb`
-- SHA256 content hash: `9ccb8c3e2d7b0e7e06a21f826587ce4bd279196d6a70b47c150cd150627af5f8`
-- Byte count: `43391`
+- Latest commit touching file: `eefe021f4f76635eb117e121aa824106a9d08c67`
+- generation base commit: `eefe021f4f76635eb117e121aa824106a9d08c67`
+- Git blob hash: `ba8f520f0eb09f23f513e0051db6ecd8a30f4c72`
+- SHA256 content hash: `f55a0eca53bf2eeb173d5fe02fe78c8ac45d3d785c409f712d6d39f119dd36ff`
+- Byte count: `44458`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
   - Last updated: `2026-09-17`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-17T10:14:45Z`
+- Generated timestamp UTC: `2026-09-17T10:56:19Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
 - Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
-- Latest commit touching file: `68afc62fdea70bf0dc04e1f60fd423991cd2a921`
-- generation base commit: `05ded7f8edd05550e3f9a7e8b18c3926cc51b3c5`
-- Git blob hash: `8432dd9643a5f31b30d99da1b5034bfa6de76eaf`
-- SHA256 content hash: `6fe4627390050e1756948f96277ee388ea9a4c6f9ff21447cb8bcb78d2602efe`
-- Byte count: `56130`
+- Latest commit touching file: `eefe021f4f76635eb117e121aa824106a9d08c67`
+- generation base commit: `eefe021f4f76635eb117e121aa824106a9d08c67`
+- Git blob hash: `14a3d63813a7ff53696a5a8b14987dc08ec74d9b`
+- SHA256 content hash: `488d674698ce139c4ce16bd7a2c667b72e261229e9edfa8712ed29144c9030e7`
+- Byte count: `57558`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical claim status`
   - Last updated: `2026-09-17`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-17T10:14:45Z`
+- Generated timestamp UTC: `2026-09-17T10:56:19Z`
 
 ## Maintenance Rule
 

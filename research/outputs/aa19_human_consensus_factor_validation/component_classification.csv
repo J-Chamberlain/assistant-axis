@@ -1,0 +1,6 @@
+component,bridge_adequate,human_subspace_projection_r,best_single_factor,best_single_tucker,mapping_permutation_p,classification
+C1,True,0.8746370952783625,H2,0.5417981008856201,0.001996007984031936,C_human_combination
+C2,True,0.7936325920154966,H1,0.5898768579831201,0.001996007984031936,B_partial_human_analogue
+C3,True,0.8570261893361464,H2,0.7442455640135017,0.001996007984031936,A_independently_supported
+C4,False,0.7919410134916789,H4,0.7527881622670811,0.001996007984031936,D_presently_untestable
+C5,False,0.5962753486766685,H3,0.5303864897746635,0.001996007984031936,D_presently_untestable

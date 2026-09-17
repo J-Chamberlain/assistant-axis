@@ -1,0 +1,11 @@
+{
+  "base_commit": "eefe021f4f76635eb117e121aa824106a9d08c67",
+  "aa18_inventory_sha256": "9e089c05acaa37f204a623ff20fbc12def379fa7a0fb8632f865e4f990c68d30",
+  "aa16_bridge_sha256": "b356de28b1fee0f45d4f061350db9c541307c6866b909f398d182efbbb696bcc",
+  "aa1_scoring_sha256": "013298002cb8754f6245c551fb2562ebefc91a64a8623f5c84e8618721aaee06",
+  "sapa_raw_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+  "sapa_scoring_key_sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+  "sapa_logical_path": "data_external/human_validation/sapa/doi_10.7910_DVN_SD7SVE/",
+  "respondent_rows_expected": 23679,
+  "seed": 19019
+}

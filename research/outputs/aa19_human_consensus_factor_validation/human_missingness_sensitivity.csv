@@ -1,0 +1,2 @@
+method,traits,factors,pearson_vs_spearman_proxy_matrix_r,median_absolute_proxy_pair_change,factor_subspace_min_canonical,factor_subspace_mean_canonical,missingness_treatment
+pairwise_complete_Spearman_item_correlation,41,5,0.9971115186657805,0.009459303023940477,0.9979295334833725,0.9992438103729084,same planned-missing item pairs; rank correlation sensitivity

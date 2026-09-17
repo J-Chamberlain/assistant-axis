@@ -1,5 +1,9 @@
 # Research Index
 
+## AA-19 independent human test of model consensus axes (2026-09-17)
+
+Start at `research/outputs/aa19_human_consensus_factor_validation/three_model_human_validation_report.md`, then `analysis_freeze.md`, `human_matrix_audit.md`, `bridge_mapping_audit.csv`, `bridge_axis_reconstruction.csv`, `human_factor_retention.csv`, `human_factor_loadings.csv`, `human_factor_stability.csv`, `human_model_matrix_alignment.csv`, `consensus_axis_human_alignment.csv`, `component_classification.csv`, `bigfive_alignment.csv`, `verification_report.json`, and `artifact_inventory.csv`. Overall decision 2: partial human convergence. C3 is structurally supported in the primary five-factor fit but its individual match weakens under six, C1 maps to a human-factor combination, C2 partially transfers, and C4/C5 are bridge-limited D. Five oblique human factors are selected by held-out one-standard-error rule; PA/MAP indicate six and split sensitivity selects five in 7/8 sets. No HiFWB association, wellbeing score, or model inference enters this test.
+
 ## AA-18 three-model consensus trait structure (2026-09-17)
 
 Start at `research/outputs/aa18_three_model_consensus_trait_structure/three_model_consensus_trait_report.md`; then inspect `analysis_freeze.md`, `matrix_reconstruction_audit.md`, `trait_profile_convergence.csv`, `shared_dimension_diagnostics.csv`, `shared_trait_loadings_by_model.csv`, `consensus_trait_loadings.csv`, `component_stability.csv`, `joint_individual_variance_partition.csv`, `aa17_factor_alignment.csv`, `human_bridge_consensus_coverage.csv`, `verification_report.json`, and `artifact_inventory.csv`. Decision A supports five conservative all-three model-only axes. Thirteen held-out score directions provisionally pass, while later loading axes remain unresolved. The rank-20 row-subspace joint rank of 19 is descriptive. The human bridge is post-fit coverage only; AA-14/16/17 remain untouched.
