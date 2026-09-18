@@ -1,5 +1,7 @@
 # Thread Start
 
+Current presentation work (2026-09-18): `research/presentation/15_minute_presentation_notes.md` now contains the first audience-facing slide/section. It explains the PC map as location and C1–C5 as behavioral interpretation, with concise working labels and a visual demonstration sequence. This is a write-up scaffold only; no new analysis was run. The next step is user review before adding further slides.
+
 Canonical startup file: yes
 State role: session continuity and immediate priorities
 Last updated: 2026-09-17

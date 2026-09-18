@@ -748,6 +748,10 @@ Observed: AA-14's all-layer-mean PC1–3 variance ratios rederive within 5e-16 f
 
 ## 3. CURRENT STATE
 
+### Current Session: 15-Minute Presentation Notes (2026-09-18)
+
+Created `research/presentation/15_minute_presentation_notes.md` as a durable presentation scaffold. The first slide explains the distinction in audience-facing terms: PC coordinates show where a persona is in the overall landscape, while the five consensus dimensions describe the behavioral pattern prominent at that location. The notes include the current C1–C5 working labels, a visual demonstration sequence, and guardrails against presenting PCs as human personality traits. Next step: add further slides only after the user reviews this first explanation. Last commit before this work: `43fbd885c4165782c5e299a82f63905391207c98`.
+
 ### Current Session: AA-20 Consensus Axes HiFWB Test (2026-09-17)
 
 Completed the CPU-only, human-only held-out HiFWB test of AA-19 C1–C3 on `codex/aa20-consensus-axes-hifwb` from `f2f16a5224da2277ab8bc946e70b27deaa5108de`. Frozen source, outcome, Big Five, duplicate, missingness, and zero-overlap checks pass; 2,859 common eligible respondents support the comparison. C1/C2/C3 associate with the composite, but Big Five+C1–C3 gains only .005 test R2 over Big Five, with paired bootstrap 95% CI crossing zero. Decision B: reliable association without incremental validity. Next step: preserve the no-projection gate; any later work needs a new user-directed question rather than propagation to personas. Last commit before this work: `f2f16a5224da2277ab8bc946e70b27deaa5108de`. AA-13, AA-16, AA-18, and AA-19 artifacts remain unchanged.

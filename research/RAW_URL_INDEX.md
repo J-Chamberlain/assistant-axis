@@ -1,5 +1,7 @@
 # Raw URL Index
 
+| active | presentation notes | `research/presentation/15_minute_presentation_notes.md` | First five-minute audience-facing map/factor explanation | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/presentation/15_minute_presentation_notes.md |
+
 Updated UTC: 2026-09-17
 Base commit for this update: 2341036 (AA-21 starting point; AA-21 links live after branch push)
 

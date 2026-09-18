@@ -1,5 +1,9 @@
 # Research Index
 
+## 15-minute presentation notes (2026-09-18)
+
+Start at `research/presentation/15_minute_presentation_notes.md`. This working scaffold contains the first audience-facing slide/section: PC coordinates are presented as the map of persona locations, while C1–C5 consensus dimensions are presented as interpretable behavioral overlays. It includes concise C1–C5 labels, speaker notes, visual sequencing, and non-equivalence guardrails. No new analysis or empirical claim was produced.
+
 ## AA-20 HiFWB associations of supported consensus axes (2026-09-17)
 
 Start at `research/outputs/aa20_consensus_axes_hifwb/aa20_consensus_axes_hifwb_report.md`, then `analysis_freeze.md`, `phase_gate_audit.md`, `predictor_scoring_specification.md`, `composite_axis_associations.csv`, `predictive_model_comparison.csv`, `incremental_prediction_bootstrap.csv`, `indicator_axis_associations.csv`, `factor_count_sensitivity.csv`, `persona_projection_readiness.md`, `verification_report.json`, and `artifact_inventory.csv`. Decision B: C1–C3 associate with the frozen human HiFWB composite but do not add reliable held-out prediction beyond the Big Five. C1/C2/C3 are Big Five-redundant associations and the model-persona projection gate is closed. No model inference, persona scoring, or viewer occurs.
