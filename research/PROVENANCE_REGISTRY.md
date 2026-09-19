@@ -1,5 +1,13 @@
 # Provenance Registry
 
+
+## AA-26 backward dependency status — authoritative override, 2026-09-19
+
+AA-26 backward dependency audit (2026-09-19): WITHDRAWN PENDING REPAIR — AA-13 broad-score-dependent structure, stability, and predictive comparisons; AA-12 historical-13 and non-affect outcome surfaces/fits. AA-20/22/23/24 and AA-21 common-cohort sensitivity are flagged for per-proxy eligibility verification, not proven invalid. AA-16–19, AA-21 primary, and AA-25 are unaffected by the audited defects. No prior analysis was rerun and no target was rebuilt. See `research/outputs/aa26_sapa_backward_dependency_audit/dependency_audit_report.md` and its 20-row dependency table. Last commit: bcec11d (audit starting point). Next step: stop before target repair; preserve withdrawals and resolve flagged eligibility definitions in a separately directed follow-up.
+
+These scoped statuses override earlier validity language for the specified results; historical files remain unchanged. The missing-reversal implementation does not propagate into AA-16–AA-25. AA-12 historical-13 uses N=6,549 rather than the required N=3,972; its non-affect implementation also retains one-item rows and adds Vitality relative to AA-10. The earlier `q_55` mapping concern is corrected: AA-1 already maps the 19-of-20 source/key anomaly and AA-10 documents it. AA-13 still fails reverse-scoring and eligibility checks.
+
+
 ## 15-minute presentation notes
 
 Entry point: `research/presentation/15_minute_presentation_notes.md`. This is a prose-only presentation scaffold created from the already documented AA-14/AA-18 geometry and interpretation results. It introduces PC coordinates as persona-map locations and C1–C5 as behavioral interpretation overlays, while preserving the distinction between model-space dimensions and human psychological factors. No data, model inference, respondent records, or new empirical result was generated.
@@ -1082,3 +1090,5 @@ Last Updated: 2026-09-17
 AA-26 (2026-09-19): Human-only bridge-expansion feasibility audit stopped before selection. Hash-matched SAPA responses are available (23,679 x 696), but the existing AA-13 79-dimension target applies zero reversals although 78 exact official keys require them, retains 636,832 one-item scale cells contrary to its two-item rule, and leaves one source-membership mismatch. No top-five ranking, minimal set, broad-profile gain, Big Five/HiFWB gain, or model-elicitation evidence is established. Next step: correct and freeze the broad target and leakage-safe item partition before any selection. Entry point: `research/outputs/aa26_sapa_profile_information_gain/aa26_report.md`. Base commit: `56902f6`; branch: `codex/aa26-sapa-profile-information-gain`.
 
 AA-26 provenance: Astra (GPT-6), deterministic Python/NumPy CPU audit. Raw source fingerprints and immutable AA-13/AA-19 input receipts are in the output package; no source artifacts or respondent rows are modified/exported. `run_feasibility_audit.py` reconstructs coverage only and audits keys without fitting. `verify_outputs.py` verifies aggregate identities, source hashes, scope, and navigation. AA-16–AA-25 outputs remain untouched. This result flags AA-13 broad-profile scoring for repair, and does not independently re-evaluate earlier outcome or model results.
+
+Backward audit provenance: Astra (GPT-6); immutable AA-26-parent, AA-13, and AA-10 source blobs, explicit scoring-function tracing, synthetic min-item/sign fixtures, and a hash-verified item-availability-only check. Source receipts and 35 checks are in the new audit directory. Zero models fitted; no respondent scores exported; no historical analysis imports/execution; no target rebuilt; no inference, paid compute, RunPod, or viewer changes.

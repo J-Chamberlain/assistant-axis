@@ -32,6 +32,14 @@ Immediate continuity: AA-7 is complete under `research/outputs/human_supported_t
 
 Current visualization update (2026-09-09): the existing Qwen emotion surface viewer now has a vivid fixed symmetric affinity z-score palette, a `Persona nodes` toggle for a fabric-only view, and synchronized yaw/pitch/roll/zoom dials with numeric entry and Isometric/Top/Front/Side presets. The update reused the saved six-emotion bundle and did not run inference, GPU work, rescoring, or API calls. Data validation and 225-case Plotly/DOM-double UI tests pass; no new live WebGL browser test was claimed. Claims remain unchanged.
 
+
+## AA-26 backward dependency status — authoritative override, 2026-09-19
+
+AA-26 backward dependency audit (2026-09-19): WITHDRAWN PENDING REPAIR — AA-13 broad-score-dependent structure, stability, and predictive comparisons; AA-12 historical-13 and non-affect outcome surfaces/fits. AA-20/22/23/24 and AA-21 common-cohort sensitivity are flagged for per-proxy eligibility verification, not proven invalid. AA-16–19, AA-21 primary, and AA-25 are unaffected by the audited defects. No prior analysis was rerun and no target was rebuilt. See `research/outputs/aa26_sapa_backward_dependency_audit/dependency_audit_report.md` and its 20-row dependency table. Last commit: bcec11d (audit starting point). Next step: stop before target repair; preserve withdrawals and resolve flagged eligibility definitions in a separately directed follow-up.
+
+These scoped statuses override earlier validity language for the specified results; historical files remain unchanged. The missing-reversal implementation does not propagate into AA-16–AA-25. AA-12 historical-13 uses N=6,549 rather than the required N=3,972; its non-affect implementation also retains one-item rows and adds Vitality relative to AA-10. The earlier `q_55` mapping concern is corrected: AA-1 already maps the 19-of-20 source/key anomaly and AA-10 documents it. AA-13 still fails reverse-scoring and eligibility checks.
+
+
 ## Current Objective
 
 Current AA-7 result (2026-09-12): `research/outputs/human_supported_trait_convergence/human_supported_trait_convergence_report.md` is the entry point. The exact 12-trait set was frozen at commit `51c54a5`, decisions at `cabd807`, results at `717caba`, and the inventory at `68dc2f8`. Human-12 core/extended nRMSE is 0.168/0.745 Qwen, 0.509/1.161 Llama, and 0.400/1.048 Gemma. Random-real empirical p-values are 0.2395/0.2615 Qwen, 0.7405/0.3533 Llama, and 0.1497/0.1257 Gemma for core/extended; persona-span passes occur only for Qwen core (p=0.0220) and Gemma core (p=0.0279). Full PC1-PC6 held-out alignment coordinate r is 0.879/0.809/0.908 for Llama→Qwen/Gemma→Qwen/Gemma→Llama, all p=0.001. This is weak evidence for human-supported compact efficiency but strong cross-model recurrence of model activation-derived directions after alignment. No human respondents or occupational centroids entered model geometry.

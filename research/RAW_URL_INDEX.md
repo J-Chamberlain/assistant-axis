@@ -1,5 +1,25 @@
 # Raw URL Index
 
+## AA-26 backward dependency status — authoritative override, 2026-09-19
+
+AA-26 backward dependency audit (2026-09-19): WITHDRAWN PENDING REPAIR — AA-13 broad-score-dependent structure, stability, and predictive comparisons; AA-12 historical-13 and non-affect outcome surfaces/fits. AA-20/22/23/24 and AA-21 common-cohort sensitivity are flagged for per-proxy eligibility verification, not proven invalid. AA-16–19, AA-21 primary, and AA-25 are unaffected by the audited defects. No prior analysis was rerun and no target was rebuilt. See `research/outputs/aa26_sapa_backward_dependency_audit/dependency_audit_report.md` and its 20-row dependency table. Last commit: bcec11d (audit starting point). Next step: stop before target repair; preserve withdrawals and resolve flagged eligibility definitions in a separately directed follow-up.
+
+These scoped statuses override earlier validity language for the specified results; historical files remain unchanged. The missing-reversal implementation does not propagate into AA-16–AA-25. AA-12 historical-13 uses N=6,549 rather than the required N=3,972; its non-affect implementation also retains one-item rows and adds Vitality relative to AA-10. The earlier `q_55` mapping concern is corrected: AA-1 already maps the 19-of-20 source/key anomaly and AA-10 documents it. AA-13 still fails reverse-scoring and eligibility checks.
+
+Updated UTC: 2026-09-19; base commit bcec11d; status active.
+
+- [active: artifact_inventory.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/artifact_inventory.csv)
+- [active: closeout_verification.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/closeout_verification.json)
+- [active: dependency_audit_report.md](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/dependency_audit_report.md)
+- [active: dependency_table.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/dependency_table.csv)
+- [active: eligibility_verification.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/eligibility_verification.json)
+- [active: run_dependency_audit.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/run_dependency_audit.py)
+- [active: scoring_function_locations.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/scoring_function_locations.csv)
+- [active: source_inventory.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/source_inventory.csv)
+- [active: verification_report.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/verification_report.json)
+- [active: verify_closeout.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/verify_closeout.py)
+
+
 | active | presentation notes | `research/presentation/15_minute_presentation_notes.md` | First five-minute audience-facing map/factor explanation | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/presentation/15_minute_presentation_notes.md |
 
 Updated UTC: 2026-09-17

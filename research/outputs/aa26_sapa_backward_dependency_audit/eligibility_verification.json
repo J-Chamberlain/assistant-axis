@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "raw_n": 23679,
+    "bigfive_ge2_n": 8585,
+    "historical13_ge1_n": 6549,
+    "historical13_ge2_n": 3972,
+    "aa12_nonaffect9_ge1_n": 5715,
+    "aa12_nonaffect9_ge2_n": 3003,
+    "aa10_nonaffect8_ge2_n": 2548
+  },
+  "extra_one_item_historical_rows": 2577,
+  "extra_one_item_nonaffect9_rows": 2712,
+  "nonaffect_membership_difference": [
+    "q_832"
+  ],
+  "raw_rows_exported": false,
+  "scoring_or_fitting_performed": false
+}

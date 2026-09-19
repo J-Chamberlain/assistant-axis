@@ -1,5 +1,13 @@
 # Findings Ledger
 
+
+## AA-26 backward dependency status — authoritative override, 2026-09-19
+
+AA-26 backward dependency audit (2026-09-19): WITHDRAWN PENDING REPAIR — AA-13 broad-score-dependent structure, stability, and predictive comparisons; AA-12 historical-13 and non-affect outcome surfaces/fits. AA-20/22/23/24 and AA-21 common-cohort sensitivity are flagged for per-proxy eligibility verification, not proven invalid. AA-16–19, AA-21 primary, and AA-25 are unaffected by the audited defects. No prior analysis was rerun and no target was rebuilt. See `research/outputs/aa26_sapa_backward_dependency_audit/dependency_audit_report.md` and its 20-row dependency table. Last commit: bcec11d (audit starting point). Next step: stop before target repair; preserve withdrawals and resolve flagged eligibility definitions in a separately directed follow-up.
+
+These scoped statuses override earlier validity language for the specified results; historical files remain unchanged. The missing-reversal implementation does not propagate into AA-16–AA-25. AA-12 historical-13 uses N=6,549 rather than the required N=3,972; its non-affect implementation also retains one-item rows and adds Vitality relative to AA-10. The earlier `q_55` mapping concern is corrected: AA-1 already maps the 19-of-20 source/key anomaly and AA-10 documents it. AA-13 still fails reverse-scoring and eligibility checks.
+
+
 ## AA-20 · HiFWB associations of supported model–human consensus axes (2026-09-17)
 
 Observed: AA-19's future-safe unique-source direct C1–C3 bridge and all IPIP100 Big Five keys have zero overlap with the frozen 13-item HiFWB outcome. The frozen outcome reconstruction gives 8,664 eligible SAPA respondents; the common no-imputation coverage rule gives 2,859. C1/C2/C3 have composite zero-order r=-.318/+.339/+.305; their Big Five-adjusted standardized coefficients are -.076 (bootstrap 95% CI [-.136,-.023]), +.051 ([+.002,+.095]), and +.021 ([-.037,+.077]). In the unchanged AA-13 raw split, Big Five test R2=.493 and Big Five+C1–C3 R2=.498 (delta=.005; 1,000 paired-test bootstrap CI [-.006,+.018]; outcome-label permutation p=.033). The prespecified bootstrap criterion therefore fails. All 39 axis-by-indicator zero-order tests survive BH-FDR, but this broad indicator association does not establish incremental validity. Decision B: reliable association without incremental validity; C1/C2/C3 are Big Five-redundant associations. C3 subspace and six-factor sensitivities retain the nonreliable increment. No model-persona projection follows. Source: `research/outputs/aa20_consensus_axes_hifwb/aa20_consensus_axes_hifwb_report.md`.
