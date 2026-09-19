@@ -472,3 +472,8 @@ Last Updated: 2026-09-17
 ## AA-26 broad-profile expansion feasibility — 2026-09-19
 
 AA-26 (2026-09-19): Human-only bridge-expansion feasibility audit stopped before selection. Hash-matched SAPA responses are available (23,679 x 696), but the existing AA-13 79-dimension target applies zero reversals although 78 exact official keys require them, retains 636,832 one-item scale cells contrary to its two-item rule, and leaves one source-membership mismatch. No top-five ranking, minimal set, broad-profile gain, Big Five/HiFWB gain, or model-elicitation evidence is established. Next step: correct and freeze the broad target and leakage-safe item partition before any selection. Entry point: `research/outputs/aa26_sapa_profile_information_gain/aa26_report.md`. Base commit: `56902f6`; branch: `codex/aa26-sapa-profile-information-gain`.
+
+
+## AA-26 corrected human dependency results
+
+AA-26 affected human refits (2026-09-19; frozen target commit 51e5f52): AA20 corrected delta R2 +.0010 CI [-.0186,.0193]; AA22 +.0654 [.0330,.0976]; AA23 +.1119 [.0723,.1528]; AA24 +.0006 [-.0188,.0208]. AA21 common sensitivity R2=.4853; its primary fit untouched. All five were rerun because eligibility changed materially. New aggregate results and original-recipe limitations are in `research/outputs/aa26_sapa_profile_information_gain/dependency_repair/dependency_refit_report.md`. No persona rescoring or unaffected-analysis reruns. Old transports depending on changed weights remain stale; original AA12/13 withdrawals remain. Next: nested human broad-target candidate analysis; no candidate result interpreted yet.

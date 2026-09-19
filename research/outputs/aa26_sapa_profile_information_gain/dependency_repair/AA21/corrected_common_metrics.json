@@ -1,0 +1,9 @@
+{
+  "eligible_n": 1179,
+  "train_n": 707,
+  "validation_n": 236,
+  "test_n": 236,
+  "selected_alpha": 100,
+  "test_r2": 0.4852572867494923,
+  "test_rmse": 0.6826838361266843
+}

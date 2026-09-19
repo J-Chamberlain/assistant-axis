@@ -1,0 +1,4 @@
+variant,metric,value
+primary,test_r2,0.5468591687977646
+C3_five_factor_subspace,test_r2,0.5566759393348466
+six_factor_subspace,test_r2,0.5630228653108317
