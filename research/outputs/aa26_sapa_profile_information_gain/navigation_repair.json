@@ -1,0 +1,8 @@
+{
+  "corrupted_parent_commit": "56902f6",
+  "corrupted_index_sha256": "7b9a8f3912161efaa4fd8c36ea0cd89aaa676d668f9a191c6d71d7f038fc0645",
+  "restored_from_commit": "2341036",
+  "restored_source_sha256": "7a9c9d2c376d6709acb7c5e66f7daebf00fd091cffad67a639e336f08f301cc9",
+  "subsequent_git_path_changes_reconciled": 66,
+  "method": "Restore intact index and reconcile AA20-to-AA25 path metadata, then add AA26; no unrelated artifact contents inspected"
+}

@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-17T15:25:22Z`
-- Current branch: `codex/aa25-intervention-bigfive-transport`
-- generation base commit: `ba868ec947de47ac2f92516364bd758c8081b604`
+- Generated timestamp UTC: `2026-09-19T23:06:47Z`
+- Current branch: `codex/aa26-sapa-profile-information-gain`
+- generation base commit: `56902f6e918d1838f1c28d841bf58a459fd80a16`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -32,53 +32,53 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 ### `research/RESEARCH_STATE.md`
 
 - Path: `research/RESEARCH_STATE.md`
-- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
-- Latest commit touching file: `ba868ec947de47ac2f92516364bd758c8081b604`
-- generation base commit: `ba868ec947de47ac2f92516364bd758c8081b604`
-- Git blob hash: `759078dfdc9e693e24dedd348413aaea2016113e`
-- SHA256 content hash: `048b0f52ff4d779389fbc4b4b1cfc32e81faa0d7590571e888ca2cb02e186792`
-- Byte count: `201765`
+- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/RESEARCH_STATE.md`
+- Latest commit touching file: `56902f6e918d1838f1c28d841bf58a459fd80a16`
+- generation base commit: `56902f6e918d1838f1c28d841bf58a459fd80a16`
+- Git blob hash: `8df73d8dd6b3884838351b9e8dc6a6185db81a99`
+- SHA256 content hash: `bde7bc10cf7501017ddf6caa5e14d2aecbe7fe79b96ba9a2ed33fa406abfb711`
+- Byte count: `204058`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
-  - Last updated: `2026-09-17`
+  - Last updated: `2026-09-19`
   - Last commit: `pending AA-23 remote commit (local analysis complete)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-17T15:25:22Z`
+- Generated timestamp UTC: `2026-09-19T23:06:47Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
-- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
-- Latest commit touching file: `e24e980b6713c59c7f0fed2556faca4072f84af3`
-- generation base commit: `ba868ec947de47ac2f92516364bd758c8081b604`
-- Git blob hash: `5cb52f1dcfbe13d38a965a32ec1ff5a095cd2268`
-- SHA256 content hash: `9ac11761eec89d7c7117b70a0e67835da8597f69a5d762a1a8350aa3a9b248c9`
-- Byte count: `45950`
+- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/THREAD_START.md`
+- Latest commit touching file: `56902f6e918d1838f1c28d841bf58a459fd80a16`
+- generation base commit: `56902f6e918d1838f1c28d841bf58a459fd80a16`
+- Git blob hash: `415a41aae2b462b3f760231cde357dc35a55076d`
+- SHA256 content hash: `86f34320d09ce5bf018e8cd059ecbf5a2d0bb72764864cdc2747a7e05a54404a`
+- Byte count: `47178`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `session continuity and immediate priorities`
-  - Last updated: `2026-09-17`
+  - Last updated: `2026-09-19`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-17T15:25:22Z`
+- Generated timestamp UTC: `2026-09-19T23:06:47Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
-- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
-- Latest commit touching file: `ba868ec947de47ac2f92516364bd758c8081b604`
-- generation base commit: `ba868ec947de47ac2f92516364bd758c8081b604`
-- Git blob hash: `1141975b7604d841d86afdbb36a8fc42ec3ab962`
-- SHA256 content hash: `c5633443254199ecd290d072077ea9d76c2b3e54bdee48237c5bdf947f237b2a`
-- Byte count: `66424`
+- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/CLAIMS_REGISTER.md`
+- Latest commit touching file: `2944dcb365fa79940b189a3854d262ffa735fccf`
+- generation base commit: `56902f6e918d1838f1c28d841bf58a459fd80a16`
+- Git blob hash: `54be35240a38f5d48afb394783d75c3c308b4e71`
+- SHA256 content hash: `2f09d3f2c7984fd487851ee2913c4926819c52391e3c68caee8f5084cf9cc599`
+- Byte count: `67241`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical claim status`
-  - Last updated: `2026-09-17`
+  - Last updated: `2026-09-19`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-17T15:25:22Z`
+- Generated timestamp UTC: `2026-09-19T23:06:47Z`
 
 ## Maintenance Rule
 

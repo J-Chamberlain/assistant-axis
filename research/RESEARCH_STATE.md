@@ -5,7 +5,7 @@
 
 Canonical startup file: yes
 State role: canonical project state
-Last updated: 2026-09-17
+Last updated: 2026-09-19
 
 **Last updated:** 2026-09-17
 **Last commit:** pending AA-23 remote commit (local analysis complete)
@@ -146,6 +146,8 @@ Last updated: 2026-09-17
 ---
 
 ## 2. WHAT HAS BEEN DISCOVERED
+
+**2026-09-19 — measurement-validity blocker, not a candidate-effect result:** AA-26 (2026-09-19): Human-only bridge-expansion feasibility audit stopped before selection. Hash-matched SAPA responses are available (23,679 x 696), but the existing AA-13 79-dimension target applies zero reversals although 78 exact official keys require them, retains 636,832 one-item scale cells contrary to its two-item rule, and leaves one source-membership mismatch. No top-five ranking, minimal set, broad-profile gain, Big Five/HiFWB gain, or model-elicitation evidence is established. Next step: correct and freeze the broad target and leakage-safe item partition before any selection. Entry point: `research/outputs/aa26_sapa_profile_information_gain/aa26_report.md`. Base commit: `56902f6`; branch: `codex/aa26-sapa-profile-information-gain`.
 
 AA-19 (2026-09-17): The independently reconstructed SAPA human trait matrix correlates 0.531 (upper-triangle Pearson; 500-label p=0.002) with the AA-18 three-model consensus trait covariance over 41 future-safe, unique-source direct proxies. Human EFA retains five oblique factors by held-out one-standard-error selection, versus six by PA/MAP. Frozen axis classification is C3=A, C1=C, C2=B, C4/C5=D untestable. The latter are bridge failures, not evidence of human absence. This supports partial model–human structural convergence only; no HiFWB outcome was fit.
 
@@ -747,6 +749,8 @@ Observed: AA-14's all-layer-mean PC1–3 variance ratios rederive within 5e-16 f
 - These are exploratory affinity diagnostics, not new behavioral validation; story-last-token versus response-mean pooling transfer remains unresolved. No new activations, judges, or GPU runs. Source: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_methodology.md`.
 
 ## 3. CURRENT STATE
+
+AA-26 (2026-09-19): Human-only bridge-expansion feasibility audit stopped before selection. Hash-matched SAPA responses are available (23,679 x 696), but the existing AA-13 79-dimension target applies zero reversals although 78 exact official keys require them, retains 636,832 one-item scale cells contrary to its two-item rule, and leaves one source-membership mismatch. No top-five ranking, minimal set, broad-profile gain, Big Five/HiFWB gain, or model-elicitation evidence is established. Next step: correct and freeze the broad target and leakage-safe item partition before any selection. Entry point: `research/outputs/aa26_sapa_profile_information_gain/aa26_report.md`. Base commit: `56902f6`; branch: `codex/aa26-sapa-profile-information-gain`.
 
 ### Current Session: 15-Minute Presentation Notes (2026-09-18)
 

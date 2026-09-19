@@ -1,0 +1,5 @@
+baseline,profile_r2,bigfive_r2,hifwb_r2,status
+current_bridge_only,,,,NOT_RUN_TARGET_GATE_FAILED
+big_five_only,,,,NOT_RUN_TARGET_GATE_FAILED
+current_bridge_plus_big_five,,,,NOT_RUN_TARGET_GATE_FAILED
+current_bridge_plus_big_five_plus_candidates,,,,NOT_RUN_TARGET_GATE_FAILED

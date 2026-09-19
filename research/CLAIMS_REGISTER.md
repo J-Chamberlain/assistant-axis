@@ -2,7 +2,7 @@
 
 Canonical startup file: yes
 State role: canonical claim status
-Last updated: 2026-09-17
+Last updated: 2026-09-19
 
 This register separates project findings from interpretations. It is intentionally compact: use it to orient a new thread, then verify details in `RESEARCH_STATE.md`, `FINDINGS_LEDGER.md`, `RESEARCH_INDEX.md`, and the cited artifacts.
 
@@ -454,3 +454,8 @@ Evidence: AA-22 learns 41 trait–HiFWB weights in training respondents only. He
 Counterevidence: The bridge covers only 41 of 240 labels and depends on provisional semantic mappings and planned-missingness scoring. The increment comes from one frozen split and a one-dimensional weighted index; it requires replication. Persona scores are within-model standardized relative rankings, not calibrated wellbeing or model experience.
 Dependencies: `research/outputs/aa22_direct_trait_hifwb_bridge/aa22_direct_trait_hifwb_report.md`, `research/outputs/aa22_direct_trait_hifwb_bridge/predictive_model_comparison.csv`, `research/outputs/aa22_direct_trait_hifwb_bridge/persona_direct_trait_hifwb_projection.csv`, `research/outputs/aa22_direct_trait_hifwb_bridge/projection_comparison_with_bigfive.csv`
 Last Updated: 2026-09-17
+
+
+## AA-26 broad-profile expansion feasibility — 2026-09-19
+
+AA-26 (2026-09-19): Human-only bridge-expansion feasibility audit stopped before selection. Hash-matched SAPA responses are available (23,679 x 696), but the existing AA-13 79-dimension target applies zero reversals although 78 exact official keys require them, retains 636,832 one-item scale cells contrary to its two-item rule, and leaves one source-membership mismatch. No top-five ranking, minimal set, broad-profile gain, Big Five/HiFWB gain, or model-elicitation evidence is established. Next step: correct and freeze the broad target and leakage-safe item partition before any selection. Entry point: `research/outputs/aa26_sapa_profile_information_gain/aa26_report.md`. Base commit: `56902f6`; branch: `codex/aa26-sapa-profile-information-gain`.

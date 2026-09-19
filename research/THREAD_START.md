@@ -4,7 +4,7 @@ Current presentation work (2026-09-18): `research/presentation/15_minute_present
 
 Canonical startup file: yes
 State role: session continuity and immediate priorities
-Last updated: 2026-09-17
+Last updated: 2026-09-19
 
 AA-21 (2026-09-17): `research/outputs/aa21_bigfive_hifwb_persona_projection/outcome1_bigfive_hifwb_report.md` is the entry point for Outcome 1 of the staged persona–HiFWB mapping. The hash-matched SAPA source gives a complete Big Five/HiFWB overlap sample of 3,972 and held-out R²=.395. Transport through the existing 42-trait strict and 109-trait expanded persona Big Five constructions is stable within models (Pearson r=.949–.977) and across models (expanded r=.847–.948); an AA-20-common coefficient sensitivity leaves persona rankings essentially unchanged. This is a human-associated profile score, not model or persona subjective wellbeing. Outcome 2 should independently test the direct SAPA-linked trait bridge against this frozen baseline.
 
@@ -189,3 +189,8 @@ As of 2026-06-16, `research/paper15_content_ledger.md` has been completed for me
 10. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.
 11. Extend the activation-cloud geometry audit to a balanced role set before making strong claims about persona-specific cloud size, anisotropy, or orientation.
 12. Freeze a complete novel-role trait profile and predicted PC coordinate with the V1 Ridge CLI, then preregister and run the separate Qwen behavioral elicitation/activation validation without refitting the predictor.
+
+
+## AA-26 broad-profile expansion feasibility — 2026-09-19
+
+AA-26 (2026-09-19): Human-only bridge-expansion feasibility audit stopped before selection. Hash-matched SAPA responses are available (23,679 x 696), but the existing AA-13 79-dimension target applies zero reversals although 78 exact official keys require them, retains 636,832 one-item scale cells contrary to its two-item rule, and leaves one source-membership mismatch. No top-five ranking, minimal set, broad-profile gain, Big Five/HiFWB gain, or model-elicitation evidence is established. Next step: correct and freeze the broad target and leakage-safe item partition before any selection. Entry point: `research/outputs/aa26_sapa_profile_information_gain/aa26_report.md`. Base commit: `56902f6`; branch: `codex/aa26-sapa-profile-information-gain`.

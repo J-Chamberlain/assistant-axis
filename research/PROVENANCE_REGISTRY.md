@@ -1075,3 +1075,10 @@ Observed result: Consensus-only R²=.178, Big Five=.494, and combined=.498; ΔR�
 Boundary: The human incremental gate remains closed. Transported values are relative model-consensus hypotheses, not calibrated wellbeing estimates, causal traits, human/model equivalence, or model subjective wellbeing. Raw SAPA data remain external and uncommitted.
 Dependencies: `research/outputs/aa18_three_model_consensus_trait_structure/shared_persona_scores.csv`, `research/outputs/aa20_consensus_axes_hifwb/`, `research/outputs/aa21_bigfive_hifwb_persona_projection/`, `research/outputs/aa23_bigfive_residual_hifwb_bridge/`
 Last Updated: 2026-09-17
+
+
+## AA-26 broad-profile expansion feasibility — 2026-09-19
+
+AA-26 (2026-09-19): Human-only bridge-expansion feasibility audit stopped before selection. Hash-matched SAPA responses are available (23,679 x 696), but the existing AA-13 79-dimension target applies zero reversals although 78 exact official keys require them, retains 636,832 one-item scale cells contrary to its two-item rule, and leaves one source-membership mismatch. No top-five ranking, minimal set, broad-profile gain, Big Five/HiFWB gain, or model-elicitation evidence is established. Next step: correct and freeze the broad target and leakage-safe item partition before any selection. Entry point: `research/outputs/aa26_sapa_profile_information_gain/aa26_report.md`. Base commit: `56902f6`; branch: `codex/aa26-sapa-profile-information-gain`.
+
+AA-26 provenance: Astra (GPT-6), deterministic Python/NumPy CPU audit. Raw source fingerprints and immutable AA-13/AA-19 input receipts are in the output package; no source artifacts or respondent rows are modified/exported. `run_feasibility_audit.py` reconstructs coverage only and audits keys without fitting. `verify_outputs.py` verifies aggregate identities, source hashes, scope, and navigation. AA-16–AA-25 outputs remain untouched. This result flags AA-13 broad-profile scoring for repair, and does not independently re-evaluate earlier outcome or model results.

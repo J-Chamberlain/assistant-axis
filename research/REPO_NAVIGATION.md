@@ -148,3 +148,29 @@ Any future Codex task that creates, deletes, moves, renames, replaces, supersede
 - `research/RAW_URL_INDEX.md`
 
 The task should record the update timestamp and commit, and assign each affected artifact one of these statuses: `canonical`, `active`, `archive`, or `deprecated`. If the task also changes `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, or `research/CLAIMS_REGISTER.md`, regenerate `research/STARTUP_MANIFEST.md` with `python3 scripts/update_startup_manifest.py`.
+
+
+## AA-26 navigation update — 2026-09-19
+
+Updated UTC: 2026-09-19; base commit: 56902f6; status: active. AA-26 (2026-09-19): Human-only bridge-expansion feasibility audit stopped before selection. Hash-matched SAPA responses are available (23,679 x 696), but the existing AA-13 79-dimension target applies zero reversals although 78 exact official keys require them, retains 636,832 one-item scale cells contrary to its two-item rule, and leaves one source-membership mismatch. No top-five ranking, minimal set, broad-profile gain, Big Five/HiFWB gain, or model-elicitation evidence is established. Next step: correct and freeze the broad target and leakage-safe item partition before any selection. Entry point: `research/outputs/aa26_sapa_profile_information_gain/aa26_report.md`. Base commit: `56902f6`; branch: `codex/aa26-sapa-profile-information-gain`.
+
+- [active: aa26_report.md](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/aa26_report.md)
+- [active: baseline_predictor_audit.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/baseline_predictor_audit.csv)
+- [active: candidate_dimension_ranking.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/candidate_dimension_ranking.csv)
+- [active: feasibility_summary.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/feasibility_summary.json)
+- [active: incremental_gain_by_candidate.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/incremental_gain_by_candidate.csv)
+- [active: minimal_set_curve.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/minimal_set_curve.csv)
+- [active: phase_gate_audit.md](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/phase_gate_audit.md)
+- [active: profile_reconstruction_comparison.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/profile_reconstruction_comparison.csv)
+- [active: raw_source_verification.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/raw_source_verification.json)
+- [active: reverse_scoring_evidence.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/reverse_scoring_evidence.csv)
+- [active: run_feasibility_audit.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/run_feasibility_audit.py)
+- [active: selected_question_or_construct_set.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/selected_question_or_construct_set.csv)
+- [active: selection_stability.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/selection_stability.csv)
+- [active: source_artifact_inventory.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/source_artifact_inventory.csv)
+- [active: target_dimension_audit.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/target_dimension_audit.csv)
+- [active: verify_outputs.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/verify_outputs.py)
+- [active: verification_report.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/verification_report.json)
+- [active: artifact_inventory.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/artifact_inventory.csv)
+
+- [active: navigation_repair.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/navigation_repair.json)

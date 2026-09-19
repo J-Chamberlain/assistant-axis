@@ -1,0 +1,23 @@
+[
+  {
+    "file": "sapaTempData696items08dec2013thru26jul2014.tab",
+    "expected_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+    "actual_sha256": "fb480e6bd4c5ba0832cdd105c2fac5dc47b144378e96ffb3a50f3e8d63868cb6",
+    "passed": true,
+    "bytes": 23975309
+  },
+  {
+    "file": "superKey696.csv",
+    "expected_sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+    "actual_sha256": "8d19b6a23c7f42b91cf5bc0895e2c63790510ba9355a2c69d19703c6f791bc49",
+    "passed": true,
+    "bytes": 190705
+  },
+  {
+    "file": "ItemInfo696.csv",
+    "expected_sha256": "ce280ebf42cd77f3db1955a3027051a74d017ca61da02adf5dbbab11545b1732",
+    "actual_sha256": "ce280ebf42cd77f3db1955a3027051a74d017ca61da02adf5dbbab11545b1732",
+    "passed": true,
+    "bytes": 69495
+  }
+]
