@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "target_dimensions": 74,
+  "candidate_families": 9,
+  "target_unique_items": 443,
+  "candidate_unique_items": 62,
+  "profile_eligible_n": 22349,
+  "respondents": 23679,
+  "complete_profiles": 0,
+  "observed_target_cells": 390754,
+  "overall_missing_fraction": 0.7769982068727793,
+  "median_observed_dimensions": 14.0,
+  "observed_dimensions_quantiles": [
+    0.0,
+    11.0,
+    14.0,
+    16.0,
+    67.0
+  ],
+  "cohort_observed_target_cells": 389072,
+  "bridge_target_overlap": 0,
+  "bigfive_target_overlap": 0,
+  "hifwb_target_overlap": 0,
+  "candidate_target_overlap": 0,
+  "one_item_target_scores_retained": 0,
+  "official_reverse_count": 277,
+  "target_eligibility_sha256": "503829e4dc4fd679b0b8eb9460350095c3a2cc5eb2918a6184a08e37ca300a68",
+  "target_observation_mask_sha256": "67ddb851ffe8b932f826189e74f6c6e83588125e5ed9210eddb8d3163d1a5076",
+  "target_spec_sha256": "039dad05aaef8464fbb3ee862b6e5e58ef694f4a2328926aadf9acbc7cfe7da5",
+  "raw_data_exported": false
+}

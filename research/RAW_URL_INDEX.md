@@ -843,3 +843,23 @@ Updated UTC: 2026-09-19; base commit: 56902f6; status: active. AA-26 (2026-09-19
 - [active: artifact_inventory.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/artifact_inventory.csv)
 
 - [active: navigation_repair.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/navigation_repair.json)
+
+
+## AA-26 repair freeze — 2026-09-19 / d4bd3ff
+
+AA-26 repair freeze (2026-09-19; base d4bd3ff): Corrected disjoint-item broad target passes at 74 dimensions / 443 items / 22,349 eligible respondents, with official reversals, minimum two observed target items, and zero predictor/outcome overlap. All five flagged dependency masks materially change: common cohort 2859 to 1179; direct/residual pre-index cohort 3551 to 1528. Human-only affected refits are required; candidate effects have not been fit. Rules and exact target are frozen in `research/outputs/aa26_sapa_profile_information_gain/repair_freeze.md` and `repair/measurement_freeze.json`. Local CPU gate passes; RunPod/paid/GPU/model/persona work remains prohibited. Next: affected human refits, then nested candidate selection. Original AA-12/13 withdrawals remain in force; this is a new target version.
+
+- [active: run_measurement_repair.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/run_measurement_repair.py)
+- [active: aa26_common.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/aa26_common.py)
+- [active: repair_freeze.md](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/repair_freeze.md)
+- [active: repair/measurement_freeze.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/repair/measurement_freeze.json)
+- [active: repair/target_validity_gate.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/repair/target_validity_gate.json)
+- [active: repair/target_alias_audit.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/repair/target_alias_audit.csv)
+- [active: repair/candidate_wording_duplicate_audit.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/repair/candidate_wording_duplicate_audit.csv)
+- [active: repair/candidate_pool_inventory.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/repair/candidate_pool_inventory.csv)
+- [active: repair/source_inventory.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/repair/source_inventory.csv)
+- [active: repair/target_dimension_inventory.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/repair/target_dimension_inventory.csv)
+- [active: repair/target_and_dependency_gate_report.md](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/repair/target_and_dependency_gate_report.md)
+- [active: repair/candidate_existing_questions.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/repair/candidate_existing_questions.csv)
+- [active: dependency_repair/eligibility_comparison.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/dependency_repair/eligibility_comparison.csv)
+- [active: dependency_repair/verification_gate.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_profile_information_gain/dependency_repair/verification_gate.json)

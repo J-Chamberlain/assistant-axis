@@ -1,0 +1,9 @@
+# Repaired target and dependency gate — before candidate interpretation
+
+The corrected target gate **passes** with 74 disjoint-item source-construct dimensions, 443 unique target items, and 22,349 respondents with at least five observed dimensions. Every target uses official item signs (including 7−x reversal) and at least two observed items; all shared bridge, Big Five, and HiFWB items are removed. Zero one-item target scores survive. These are partial source-construct measures, not automatically full-scale validated scores. Exact dimension/coverage/missingness rules and hashes are in `target_dimension_inventory.csv`, `measurement_freeze.json`, and `target_validity_gate.json`.
+
+Overall target missingness is 77.7%; the median respondent has 14 observed dimensions and there are 0 complete profiles. Prediction will use only observed outcome labels and a fixed respondent cohort, never imputed target truth. The unused-item pool has 9 adequately covered multi-item families; no predictive ranking has been calculated at this gate.
+
+All five flagged dependencies materially change under the explicit two-item multi-item-proxy rule. The AA-20/24/common-sensitivity cohort contracts from 2,859 to 1,179; AA-22/23 pre-index eligibility contracts from 3,551 to 1,528. Exact masks were compared in memory and only hashes/counts exported. Passing equality on retained item means would not compensate for these changed masks. Human-only refits are required; original model/persona transports depending on these measures are not revalidated or rescored.
+
+CPU gate: **PASS, local only**. RunPod/paid/GPU/model inference gate: **PROHIBITED**. AA-16–19, AA-21 primary, and AA-25 are not rerun. Old artifacts remain untouched. This report precedes candidate additions and does not state which concepts improve reconstruction.

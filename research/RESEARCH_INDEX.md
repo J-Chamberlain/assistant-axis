@@ -1,5 +1,10 @@
 # Research Index
 
+## AA-26 corrected target frozen; analysis pending
+
+AA-26 repair freeze (2026-09-19; base d4bd3ff): Corrected disjoint-item broad target passes at 74 dimensions / 443 items / 22,349 eligible respondents, with official reversals, minimum two observed target items, and zero predictor/outcome overlap. All five flagged dependency masks materially change: common cohort 2859 to 1179; direct/residual pre-index cohort 3551 to 1528. Human-only affected refits are required; candidate effects have not been fit. Rules and exact target are frozen in `research/outputs/aa26_sapa_profile_information_gain/repair_freeze.md` and `repair/measurement_freeze.json`. Local CPU gate passes; RunPod/paid/GPU/model/persona work remains prohibited. Next: affected human refits, then nested candidate selection. Original AA-12/13 withdrawals remain in force; this is a new target version.
+
+
 
 ## AA-26 backward dependency status — authoritative override, 2026-09-19
 

@@ -1,0 +1,16 @@
+{
+  "original_AA20_common_reproduced": true,
+  "original_AA22_AA23_preindex_reproduced": true,
+  "all_five_require_rerun": true,
+  "unchanged_analyses_not_run": [
+    "AA16",
+    "AA17",
+    "AA18",
+    "AA19",
+    "AA21_primary",
+    "AA25"
+  ],
+  "score_equivalence_tolerance": 1e-10,
+  "mask_equivalence": "exact",
+  "new_item_observations_required_for_multi_item_proxies": 2
+}
