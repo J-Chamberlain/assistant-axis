@@ -1,0 +1,11 @@
+artifact,status,reason
+persona_facet_scores.csv,NOT_RUN,"Primary semantic bridge gate failed: Extraversion retains 2 facets; >=3 required. Empty schema, not zero-valued results."
+human_calibration_summary.csv,NOT_RUN,"Primary semantic bridge gate failed: Extraversion retains 2 facets; >=3 required. Empty schema, not zero-valued results."
+persona_profile_plausibility.csv,NOT_RUN,"Primary semantic bridge gate failed: Extraversion retains 2 facets; >=3 required. Empty schema, not zero-valued results."
+cross_model_profile_agreement.csv,NOT_RUN,"Primary semantic bridge gate failed: Extraversion retains 2 facets; >=3 required. Empty schema, not zero-valued results."
+human calibration figure,NOT_RUN,No profile comparison allowed after primary semantic gate failure; no surrogate result substituted.
+facet-profile comparison figure,NOT_RUN,No profile comparison allowed after primary semantic gate failure; no surrogate result substituted.
+five supported and five outlying examples,NOT_RUN,No profile comparison allowed after primary semantic gate failure; no surrogate result substituted.
+persona-family concentration,NOT_RUN,No profile comparison allowed after primary semantic gate failure; no surrogate result substituted.
+consensus persona profile,NOT_RUN,No profile comparison allowed after primary semantic gate failure; no surrogate result substituted.
+domain agreement diagnostic,NOT_RUN,No profile comparison allowed after primary semantic gate failure; no surrogate result substituted.

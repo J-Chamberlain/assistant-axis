@@ -1,0 +1,11 @@
+sensitivity,status,result
+direct_only_coverage,AUDITED,20 facets; N/E/O/A/C=3/2/5/6/4; primary gate fails
+direct_plus_close_coverage,AUDITED,29 facets; N/E/O/A/C=5/6/6/6/6; cannot rescue primary
+human_completeness_10_of10,AUDITED,117260 adults18–80; all30 facets complete
+human_completeness_9_of10,AUDITED,237832 adults18–80; >=9 observed items on all30 facets
+five_domain_baseline,NOT_RUN,Primary semantic coverage gate failed before model scoring/human calibration
+Qwen_Llama_Gemma_separate,NOT_RUN,Primary semantic coverage gate failed before model scoring/human calibration
+consensus,NOT_RUN,Primary semantic coverage gate failed before model scoring/human calibration
+human_calibrated_percentile_bootstrap,NOT_RUN,Primary semantic coverage gate failed before model scoring/human calibration
+leave_one_mapped_trait_out,NOT_RUN,Primary semantic coverage gate failed before model scoring/human calibration
+strict_vs_expanded_plausibility,NOT_RUN,Primary semantic coverage gate failed before model scoring/human calibration

@@ -1,5 +1,14 @@
 # Findings Ledger
 
+## AA-27 completed feasibility audit — 2026-09-20T10:36:52Z
+
+AA-27 is presently untestable with the frozen direct-only bridge, not a negative persona-plausibility result. Johnson's first-party IPIP-NEO-300 file passes provenance/density checks: 307,313 respondents, 145,388 complete profiles across all ages, 117,260 complete adults 18–80, and 0.403% missing item cells. All 300 official item signs were independently verified; 148 negative keys are ALREADY reversed in the released data and must not be reversed again. The 7,200-row geometry-blind semantic crosswalk retains 20 direct-only facets with domain counts N/E/O/A/C=3/2/5/6/4, failing the frozen >=3-per-domain rule in Extraversion despite meeting the 18-total floor. Direct+close retains 29 facets but cannot rescue primary coverage. Stages C/D stopped before persona scores, human calibration or plausibility classifications. Three model source schemas have exact 275-persona/240-trait alignment, which is not cross-model profile agreement. 60 scoped verification checks pass; 14 aggregate/semantic artifacts reproduce byte-for-byte. No target-model inference, RunPod, paid compute/APIs, HiFWB fitting, interventions, respondent export or viewer work. AA16–26 artifacts remain unchanged. Agent GPT-6 Astra / High.
+
+Next step: review the explicit facet/alias judgments and obtain independently defensible direct coverage for at least one additional Extraversion facet before any newly frozen profile comparison. No additional extraction or model execution is authorized by this feasibility result. The source is a self-selected internet sample and the bridge review is a single semantic assessment; neither proves full psychometric equivalence.
+
+Report: `research/outputs/aa27_ipip_neo_profile_plausibility/aa27_report.md`. Policy commit6d564c3; pre-result scoring/crosswalk freeze79417c2. Last commit before completion:79417c2. Branch `codex/aa27-ipip-neo-profile-plausibility`. This completion supersedes pending AA-27 entries below; AA-26 historical withdrawals remain unchanged.
+
+
 ## AA-27 crosswalk frozen; primary bridge fails
 
 AA-27 pre-result semantic freeze (2026-09-20): 7,200 trait×facet judgments, official300-item key and all reverse signs verified against official IPIP content. Direct-only bridge retains20/30 facets but domain counts N/E/O/A/C=3/2/5/6/4 fail the frozen >=3-each-domain gate. Expanded29 facets cannot rescue the primary. No acquired human response distributions or model persona values were inspected for this crosswalk. Decision: no profile-plausibility test; finish source/density feasibility and verification only. This is inadequate bridge evidence, not evidence personas are nonhuman. Agent GPT-6 Astra / High. Last commit6d564c3.

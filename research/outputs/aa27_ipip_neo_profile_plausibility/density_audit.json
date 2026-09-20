@@ -1,0 +1,40 @@
+{
+  "status": "PASS_DENSE_REFERENCE",
+  "respondents": 307313,
+  "item_columns": 300,
+  "record_bytes": 333,
+  "response_codes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "missing_code": 0,
+  "scale": "1\u20135, already reverse-keyed in released file",
+  "overall_missing_fraction": 0.004030364264880865,
+  "complete_30facets_all_ages": 145388,
+  "complete_30facets_adults_18_80": 117260,
+  "near_complete_9_of10_all_30facets_all_ages": 294985,
+  "near_complete_9_of10_all_30facets_adults_18_80": 237832,
+  "primary_eligible_hash": "efaa182641582d4f7401249f7ed3f91ba61cb56d4f545e892238d379b919a307",
+  "sensitivity_eligible_hash": "9ee57abb570e7f6181b5d396a94258ed145168a6f2a4d61208de03ca2cadd220",
+  "missing_item_quantiles": {
+    "0": 0.0,
+    "0.25": 0.0,
+    "0.5": 1.0,
+    "0.75": 2.0,
+    "0.9": 3.0,
+    "0.99": 8.0,
+    "1": 10.0
+  },
+  "at_least_5000_primary": true,
+  "negative_item_keys": 148,
+  "reverse_roundtrip_all_cells": true,
+  "independent_eligibility_parser_matches": true,
+  "facet_scores_saved": false,
+  "profile_distributions_inspected": false,
+  "persona_profile_analysis_run": false,
+  "respondent_rows_exported": false
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "byte_identical_artifacts": {
+    "density_audit.json": true,
+    "item_missingness.csv": true,
+    "respondent_missingness_distribution.csv": true,
+    "human_facet_eligibility.csv": true,
+    "demographic_summary.csv": true,
+    "ipip_facet_scoring_specification.csv": true,
+    "official_key_verification.csv": true,
+    "scoring_key_verification.json": true,
+    "model_trait_ipip_facet_crosswalk.csv": true,
+    "facet_bridge_coverage.csv": true,
+    "domain_bridge_coverage.csv": true,
+    "bridge_validity_gate.json": true,
+    "freeze_manifest.json": true,
+    "semantic_source_inventory.csv": true
+  },
+  "artifact_count": 14,
+  "temporary_rerun_removed": true,
+  "respondent_profiles_saved": false,
+  "persona_values_evaluated": false,
+  "random_operations": "None in executed feasibility pipeline; conditional unexecuted comparison seed20260920",
+  "seconds": 6.232
+}

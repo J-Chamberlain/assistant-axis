@@ -87,5 +87,13 @@
     }
   ],
   "raw_data_gitignored": true,
-  "respondent_outputs_permitted": false
+  "respondent_outputs_permitted": false,
+  "reuse_conditions": {
+    "item_materials": "IPIP public domain; official permission page",
+    "dataset_node_license": null,
+    "dataset_explicit_license_found": false,
+    "dataset_statement": "Public Johnson OSF repository makes these research data available; item public-domain status is not asserted as a dataset license",
+    "dataset_metadata_url": "https://api.osf.io/v2/nodes/wxvth/",
+    "item_permission_url": "https://ipip.ori.org/newPermission.htm"
+  }
 }

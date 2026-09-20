@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scientific_result": "UNTESTABLE_WITH_PRESENT_BRIDGE",
+  "checks": {
+    "source_and_feasibility_verification": true,
+    "deterministic_14_artifacts": true,
+    "inventory_hashes": true,
+    "canonical_manifest_hashes": true,
+    "manifest_branch_urls": true,
+    "visual_review_density_and_coverage": true,
+    "no_inference_or_calibration_products": true,
+    "required_files_present": true,
+    "whitespace_clean": true
+  },
+  "main_verification_count": 60,
+  "generation_base_commit": "79417c2",
+  "artifact_inventory_excludes_itself": true,
+  "figures": "density and coverage only; requested profile/calibration figures NOT_RUN after gate failure"
+}

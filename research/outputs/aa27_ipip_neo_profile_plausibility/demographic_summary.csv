@@ -1,0 +1,134 @@
+cohort,variable,category,n
+all_raw,sex_code,male,122164
+all_raw,sex_code,female,185149
+all_raw,age_band,missing,0
+all_raw,age_band,under18,59201
+all_raw,age_band,18_29,172146
+all_raw,age_band,30_44,55397
+all_raw,age_band,45_59,18859
+all_raw,age_band,60_80,1625
+all_raw,age_band,over80,85
+all_raw,country_reported_code,SOUTH AFRIC,927
+all_raw,country_reported_code,UK,16489
+all_raw,country_reported_code,USA,212625
+all_raw,country_reported_code,DENMARK,614
+all_raw,country_reported_code,SINGAPORE,2450
+all_raw,country_reported_code,SWEDEN,1352
+all_raw,country_reported_code,INDIA,2841
+all_raw,country_reported_code,ICELAND,159
+all_raw,country_reported_code,CANADA,21798
+all_raw,country_reported_code,FINLAND,1853
+all_raw,country_reported_code,CROATIA,307
+all_raw,country_reported_code,PORTUGAL,455
+all_raw,country_reported_code,AUSTRALIA,10400
+all_raw,country_reported_code,YUGOSLAVIA,178
+all_raw,country_reported_code,GERMANY,1167
+all_raw,country_reported_code,IRELAND,2102
+all_raw,country_reported_code,NEW ZEALAND,2016
+all_raw,country_reported_code,BULGARIA,176
+all_raw,country_reported_code,MALAYSIA,911
+all_raw,country_reported_code,ARGENTINA,235
+all_raw,country_reported_code,SOUTH KOREA,446
+all_raw,country_reported_code,THAILAND,2059
+all_raw,country_reported_code,SPAIN,417
+all_raw,country_reported_code,SWITZERLAND,217
+all_raw,country_reported_code,TRINIDAD AN,158
+all_raw,country_reported_code,NORWAY,1058
+all_raw,country_reported_code,FRANCE,854
+all_raw,country_reported_code,INDONESIA,257
+all_raw,country_reported_code,ROMANIA,577
+all_raw,country_reported_code,AFGHANISTAN,624
+all_raw,country_reported_code,MALTA,108
+all_raw,country_reported_code,MEXICO,700
+all_raw,country_reported_code,BRAZIL,661
+all_raw,country_reported_code,HONG KONG,750
+all_raw,country_reported_code,PAKISTAN,296
+all_raw,country_reported_code,EGYPT,286
+all_raw,country_reported_code,NETHERLANDS,3469
+all_raw,country_reported_code,BELGIUM,663
+all_raw,country_reported_code,TURKEY,396
+all_raw,country_reported_code,CHINA,915
+all_raw,country_reported_code,UKRAINE,179
+all_raw,country_reported_code,PHILIPPINES,2488
+all_raw,country_reported_code,GREECE,653
+all_raw,country_reported_code,PUERTO RICO,218
+all_raw,country_reported_code,ANDORRA,167
+all_raw,country_reported_code,UGANDA,120
+all_raw,country_reported_code,LATVIA,190
+all_raw,country_reported_code,ALGERIA,360
+all_raw,country_reported_code,COLUMBIA,209
+all_raw,country_reported_code,JAPAN,398
+all_raw,country_reported_code,ALBANIA,527
+all_raw,country_reported_code,AUSTRIA,223
+all_raw,country_reported_code,ISRAEL,515
+all_raw,country_reported_code,LEBANON,159
+all_raw,country_reported_code,VIETNAM,127
+all_raw,country_reported_code,RUSSIAN FED,366
+all_raw,country_reported_code,POLAND,411
+all_raw,country_reported_code,PERU,109
+all_raw,country_reported_code,IRAN,117
+all_raw,country_reported_code,ITALY,454
+all_raw,country_reported_code,VENEZUELA,126
+all_raw,country_reported_code,ESTONIA,189
+all_raw,country_reported_code,SERBIA,169
+all_raw,country_reported_code,SLOVENIA,178
+all_raw,country_reported_code,HUNGARY,129
+all_raw,country_reported_code,JAMAICA,129
+all_raw,country_reported_code,UNITED ARAB,196
+all_raw,country_reported_code,TAIWAN,248
+all_raw,country_reported_code,LITHUANIA,118
+all_raw,country_reported_code,CZECH REPUB,108
+all_raw,country_reported_code,OTHER_SMALL_CELLS_OR_BLANK,3767
+complete_adults_18_80,sex_code,female,67723
+complete_adults_18_80,sex_code,male,49537
+complete_adults_18_80,age_band,missing,0
+complete_adults_18_80,age_band,under18,0
+complete_adults_18_80,age_band,18_29,83721
+complete_adults_18_80,age_band,30_44,25193
+complete_adults_18_80,age_band,45_59,7714
+complete_adults_18_80,age_band,60_80,632
+complete_adults_18_80,age_band,over80,0
+complete_adults_18_80,country_reported_code,USA,79729
+complete_adults_18_80,country_reported_code,DENMARK,291
+complete_adults_18_80,country_reported_code,CANADA,8163
+complete_adults_18_80,country_reported_code,FINLAND,903
+complete_adults_18_80,country_reported_code,GERMANY,517
+complete_adults_18_80,country_reported_code,UK,6039
+complete_adults_18_80,country_reported_code,MALAYSIA,320
+complete_adults_18_80,country_reported_code,AUSTRALIA,4083
+complete_adults_18_80,country_reported_code,SOUTH KOREA,224
+complete_adults_18_80,country_reported_code,NEW ZEALAND,759
+complete_adults_18_80,country_reported_code,INDIA,1178
+complete_adults_18_80,country_reported_code,SPAIN,175
+complete_adults_18_80,country_reported_code,SWEDEN,670
+complete_adults_18_80,country_reported_code,IRELAND,778
+complete_adults_18_80,country_reported_code,NORWAY,470
+complete_adults_18_80,country_reported_code,PORTUGAL,193
+complete_adults_18_80,country_reported_code,BRAZIL,285
+complete_adults_18_80,country_reported_code,HONG KONG,314
+complete_adults_18_80,country_reported_code,ROMANIA,199
+complete_adults_18_80,country_reported_code,SOUTH AFRIC,370
+complete_adults_18_80,country_reported_code,SINGAPORE,882
+complete_adults_18_80,country_reported_code,NETHERLANDS,1787
+complete_adults_18_80,country_reported_code,BELGIUM,277
+complete_adults_18_80,country_reported_code,CHINA,457
+complete_adults_18_80,country_reported_code,MEXICO,257
+complete_adults_18_80,country_reported_code,PHILIPPINES,786
+complete_adults_18_80,country_reported_code,ALGERIA,135
+complete_adults_18_80,country_reported_code,TURKEY,179
+complete_adults_18_80,country_reported_code,THAILAND,1113
+complete_adults_18_80,country_reported_code,JAPAN,178
+complete_adults_18_80,country_reported_code,FRANCE,387
+complete_adults_18_80,country_reported_code,EGYPT,131
+complete_adults_18_80,country_reported_code,POLAND,159
+complete_adults_18_80,country_reported_code,GREECE,275
+complete_adults_18_80,country_reported_code,ITALY,177
+complete_adults_18_80,country_reported_code,PAKISTAN,107
+complete_adults_18_80,country_reported_code,ISRAEL,205
+complete_adults_18_80,country_reported_code,ALBANIA,200
+complete_adults_18_80,country_reported_code,AFGHANISTAN,198
+complete_adults_18_80,country_reported_code,INDONESIA,124
+complete_adults_18_80,country_reported_code,RUSSIAN FED,165
+complete_adults_18_80,country_reported_code,CROATIA,131
+complete_adults_18_80,country_reported_code,TAIWAN,113
+complete_adults_18_80,country_reported_code,OTHER_SMALL_CELLS_OR_BLANK,3177
