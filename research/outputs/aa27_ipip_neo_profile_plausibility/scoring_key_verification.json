@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "items": 300,
+  "facets": 30,
+  "negative_keys": 148,
+  "official_html_item_sign_matches": 300,
+  "documented_wording_variants": [
+    58,
+    78,
+    202
+  ],
+  "reverse_twice_prohibited": true,
+  "downloaded_data_documentation": "https://osf.io/download/2kfhe/",
+  "workbook_input_only": true
+}

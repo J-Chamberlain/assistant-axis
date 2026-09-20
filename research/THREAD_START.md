@@ -1,5 +1,10 @@
 # Thread Start
 
+## AA-27 crosswalk frozen; primary bridge fails
+
+AA-27 pre-result semantic freeze (2026-09-20): 7,200 trait×facet judgments, official300-item key and all reverse signs verified against official IPIP content. Direct-only bridge retains20/30 facets but domain counts N/E/O/A/C=3/2/5/6/4 fail the frozen >=3-each-domain gate. Expanded29 facets cannot rescue the primary. No acquired human response distributions or model persona values were inspected for this crosswalk. Decision: no profile-plausibility test; finish source/density feasibility and verification only. This is inadequate bridge evidence, not evidence personas are nonhuman. Agent GPT-6 Astra / High. Last commit6d564c3.
+
+
 ## AA-27 infrastructure prerequisite
 
 AA-27 infrastructure prerequisite (2026-09-20): replaced only AGENTS.md’s stale fixed-model section with the user-requested role-based policy; AA-27 uses GPT-6 Astra / High. Startup manifest remote hashes and clean base91ad751 verified. No human data acquired or profiles inspected yet. Next: first-party Johnson IPIP-NEO-300 provenance/density audit, then freeze a semantic facet bridge before distributions. Last commit before update: 91ad751. Branch codex/aa27-ipip-neo-profile-plausibility.

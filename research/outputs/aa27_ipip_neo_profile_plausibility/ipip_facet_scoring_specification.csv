@@ -1,0 +1,301 @@
+item_number,facet_code,facet,domain,wording,original_response_sign,downloaded_data_already_keyed,download_transform,raw_response_reverse_formula,primary_minimum_observed,sensitivity_minimum_observed,source,official_item_key_source
+1,N1,Anxiety,Neuroticism,Worry about things.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+2,E1,Friendliness,Extraversion,Make friends easily.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+3,O1,Imagination,Openness,Have a vivid imagination.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+4,A1,Trust,Agreeableness,Trust others.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+5,C1,Self-Efficacy,Conscientiousness,Complete tasks successfully.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+6,N2,Anger,Neuroticism,Get angry easily.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+7,E2,Gregariousness,Extraversion,Love large parties.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+8,O2,Artistic Interests,Openness,Believe in the importance of art.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+9,A2,Morality,Agreeableness,Would never cheat on my taxes.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+10,C2,Orderliness,Conscientiousness,Like order.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+11,N3,Depression,Neuroticism,Often feel blue.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+12,E3,Assertiveness,Extraversion,Take charge.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+13,O3,Emotionality,Openness,Experience my emotions intensely.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+14,A3,Altruism,Agreeableness,Make people feel welcome.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+15,C3,Dutifulness,Conscientiousness,Try to follow the rules.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+16,N4,Self-Consciousness,Neuroticism,Am easily intimidated.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+17,E4,Activity Level,Extraversion,Am always busy.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+18,O4,Adventurousness,Openness,Prefer variety to routine.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+19,A4,Cooperation,Agreeableness,Am easy to satisfy.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+20,C4,Achievement-Striving,Conscientiousness,Go straight for the goal.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+21,N5,Immoderation,Neuroticism,Often eat too much.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+22,E5,Excitement-Seeking,Extraversion,Love excitement.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+23,O5,Intellect,Openness,Like to solve complex problems.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+24,A5,Modesty,Agreeableness,Dislike being the center of attention.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+25,C5,Self-Discipline,Conscientiousness,Get chores done right away.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+26,N6,Vulnerability,Neuroticism,Panic easily.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+27,E6,Cheerfulness,Extraversion,Radiate joy.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+28,O6,Liberalism,Openness,Tend to vote for liberal political candidates.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+29,A6,Sympathy,Agreeableness,Sympathize with the homeless.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+30,C6,Cautiousness,Conscientiousness,Avoid mistakes.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+31,N1,Anxiety,Neuroticism,Fear for the worst.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+32,E1,Friendliness,Extraversion,Warm up quickly to others.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+33,O1,Imagination,Openness,Enjoy wild flights of fantasy.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+34,A1,Trust,Agreeableness,Believe that others have good intentions.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+35,C1,Self-Efficacy,Conscientiousness,Excel in what I do.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+36,N2,Anger,Neuroticism,Get irritated easily.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+37,E2,Gregariousness,Extraversion,Talk to a lot of different people at parties.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+38,O2,Artistic Interests,Openness,Like music.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+39,A2,Morality,Agreeableness,Stick to the rules.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+40,C2,Orderliness,Conscientiousness,Like to tidy up.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+41,N3,Depression,Neuroticism,Dislike myself.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+42,E3,Assertiveness,Extraversion,Try to lead others.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+43,O3,Emotionality,Openness,Feel others' emotions.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+44,A3,Altruism,Agreeableness,Anticipate the needs of others.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+45,C3,Dutifulness,Conscientiousness,Keep my promises.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+46,N4,Self-Consciousness,Neuroticism,Am afraid that I will do the wrong thing.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+47,E4,Activity Level,Extraversion,Am always on the go.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+48,O4,Adventurousness,Openness,Like to visit new places.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+49,A4,Cooperation,Agreeableness,Can't stand confrontations.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+50,C4,Achievement-Striving,Conscientiousness,Work hard.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+51,N5,Immoderation,Neuroticism,Don't know why I do some of the things I do.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+52,E5,Excitement-Seeking,Extraversion,Seek adventure.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+53,O5,Intellect,Openness,Love to read challenging material.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+54,A5,Modesty,Agreeableness,Dislike talking about myself.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+55,C5,Self-Discipline,Conscientiousness,Am always prepared.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+56,N6,Vulnerability,Neuroticism,Become overwhelmed by events.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+57,E6,Cheerfulness,Extraversion,Have a lot of fun.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+58,O6,Liberalism,Openness,Believe that there is no absolute right or wrong.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+59,A6,Sympathy,Agreeableness,Feel sympathy for those who are worse off than myself.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+60,C6,Cautiousness,Conscientiousness,Choose my words with care.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+61,N1,Anxiety,Neuroticism,Am afraid of many things.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+62,E1,Friendliness,Extraversion,Feel comfortable around people.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+63,O1,Imagination,Openness,Love to daydream.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+64,A1,Trust,Agreeableness,Trust what people say.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+65,C1,Self-Efficacy,Conscientiousness,Handle tasks smoothly.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+66,N2,Anger,Neuroticism,Get upset easily.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+67,E2,Gregariousness,Extraversion,Enjoy being part of a group.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+68,O2,Artistic Interests,Openness,See beauty in things that others might not notice.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+69,A2,Morality,Agreeableness,Use flattery to get ahead.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+70,C2,Orderliness,Conscientiousness,"Want everything to be ""just right.""",1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+71,N3,Depression,Neuroticism,Am often down in the dumps.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+72,E3,Assertiveness,Extraversion,Can talk others into doing things.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+73,O3,Emotionality,Openness,Am passionate about causes.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+74,A3,Altruism,Agreeableness,Love to help others.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+75,C3,Dutifulness,Conscientiousness,Pay my bills on time.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+76,N4,Self-Consciousness,Neuroticism,Find it difficult to approach others.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+77,E4,Activity Level,Extraversion,Do a lot in my spare time.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+78,O4,Adventurousness,Openness,Interested in many things.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+79,A4,Cooperation,Agreeableness,Hate to seem pushy.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+80,C4,Achievement-Striving,Conscientiousness,Turn plans into actions.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+81,N5,Immoderation,Neuroticism,Do things I later regret.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+82,E5,Excitement-Seeking,Extraversion,Love action.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+83,O5,Intellect,Openness,Have a rich vocabulary.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+84,A5,Modesty,Agreeableness,Consider myself an average person.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+85,C5,Self-Discipline,Conscientiousness,Start tasks right away.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+86,N6,Vulnerability,Neuroticism,Feel that I'm unable to deal with things.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+87,E6,Cheerfulness,Extraversion,Express childlike joy.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+88,O6,Liberalism,Openness,Believe that criminals should receive help rather than punishment.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+89,A6,Sympathy,Agreeableness,Value cooperation over competition.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+90,C6,Cautiousness,Conscientiousness,Stick to my chosen path.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+91,N1,Anxiety,Neuroticism,Get stressed out easily.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+92,E1,Friendliness,Extraversion,Act comfortably with others.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+93,O1,Imagination,Openness,Like to get lost in thought.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+94,A1,Trust,Agreeableness,Believe that people are basically moral.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+95,C1,Self-Efficacy,Conscientiousness,Am sure of my ground.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+96,N2,Anger,Neuroticism,Am often in a bad mood.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+97,E2,Gregariousness,Extraversion,Involve others in what I am doing.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+98,O2,Artistic Interests,Openness,Love flowers.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+99,A2,Morality,Agreeableness,Use others for my own ends.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+100,C2,Orderliness,Conscientiousness,Love order and regularity.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+101,N3,Depression,Neuroticism,Have a low opinion of myself.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+102,E3,Assertiveness,Extraversion,Seek to influence others.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+103,O3,Emotionality,Openness,Enjoy examining myself and my life.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+104,A3,Altruism,Agreeableness,Am concerned about others.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+105,C3,Dutifulness,Conscientiousness,Tell the truth.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+106,N4,Self-Consciousness,Neuroticism,Am afraid to draw attention to myself.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+107,E4,Activity Level,Extraversion,Can manage many things at the same time.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+108,O4,Adventurousness,Openness,Like to begin new things.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+109,A4,Cooperation,Agreeableness,Have a sharp tongue.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+110,C4,Achievement-Striving,Conscientiousness,Plunge into tasks with all my heart.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+111,N5,Immoderation,Neuroticism,Go on binges.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+112,E5,Excitement-Seeking,Extraversion,Enjoy being part of a loud crowd.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+113,O5,Intellect,Openness,Can handle a lot of information.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+114,A5,Modesty,Agreeableness,Seldom toot my own horn.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+115,C5,Self-Discipline,Conscientiousness,Get to work at once.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+116,N6,Vulnerability,Neuroticism,Can't make up my mind.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+117,E6,Cheerfulness,Extraversion,Laugh my way through life.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+118,O6,Liberalism,Openness,Believe in one true religion.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+119,A6,Sympathy,Agreeableness,Suffer from others' sorrows.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+120,C6,Cautiousness,Conscientiousness,Jump into things without thinking.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+121,N1,Anxiety,Neuroticism,Get caught up in my problems.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+122,E1,Friendliness,Extraversion,Cheer people up.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+123,O1,Imagination,Openness,Indulge in my fantasies.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+124,A1,Trust,Agreeableness,Believe in human goodness.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+125,C1,Self-Efficacy,Conscientiousness,Come up with good solutions.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+126,N2,Anger,Neuroticism,Lose my temper.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+127,E2,Gregariousness,Extraversion,Love surprise parties.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+128,O2,Artistic Interests,Openness,Enjoy the beauty of nature.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+129,A2,Morality,Agreeableness,Know how to get around the rules.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+130,C2,Orderliness,Conscientiousness,Do things according to a plan.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+131,N3,Depression,Neuroticism,Have frequent mood swings.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+132,E3,Assertiveness,Extraversion,Take control of things.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+133,O3,Emotionality,Openness,Try to understand myself.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+134,A3,Altruism,Agreeableness,Have a good word for everyone.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+135,C3,Dutifulness,Conscientiousness,Listen to my conscience.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+136,N4,Self-Consciousness,Neuroticism,Only feel comfortable with friends.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+137,E4,Activity Level,Extraversion,React quickly.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+138,O4,Adventurousness,Openness,Prefer to stick with things that I know.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+139,A4,Cooperation,Agreeableness,Contradict others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+140,C4,Achievement-Striving,Conscientiousness,Do more than what's expected of me.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+141,N5,Immoderation,Neuroticism,Love to eat.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+142,E5,Excitement-Seeking,Extraversion,Enjoy being reckless.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+143,O5,Intellect,Openness,Enjoy thinking about things.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+144,A5,Modesty,Agreeableness,Believe that I am better than others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+145,C5,Self-Discipline,Conscientiousness,Carry out my plans.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+146,N6,Vulnerability,Neuroticism,Get overwhelmed by emotions.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+147,E6,Cheerfulness,Extraversion,Love life.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+148,O6,Liberalism,Openness,Tend to vote for conservative political candidates.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+149,A6,Sympathy,Agreeableness,Am not interested in other people's problems.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+150,C6,Cautiousness,Conscientiousness,Make rash decisions.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+151,N1,Anxiety,Neuroticism,Am not easily bothered by things.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+152,E1,Friendliness,Extraversion,Am hard to get to know.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+153,O1,Imagination,Openness,Spend time reflecting on things.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+154,A1,Trust,Agreeableness,Think that all will be well.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+155,C1,Self-Efficacy,Conscientiousness,Know how to get things done.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+156,N2,Anger,Neuroticism,Rarely get irritated.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+157,E2,Gregariousness,Extraversion,Prefer to be alone.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+158,O2,Artistic Interests,Openness,Do not like art.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+159,A2,Morality,Agreeableness,Cheat to get ahead.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+160,C2,Orderliness,Conscientiousness,Often forget to put things back in their proper place.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+161,N3,Depression,Neuroticism,Feel desperate.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+162,E3,Assertiveness,Extraversion,Wait for others to lead the way.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+163,O3,Emotionality,Openness,Seldom get emotional.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+164,A3,Altruism,Agreeableness,Look down on others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+165,C3,Dutifulness,Conscientiousness,Break rules.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+166,N4,Self-Consciousness,Neuroticism,Stumble over my words.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+167,E4,Activity Level,Extraversion,Like to take it easy.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+168,O4,Adventurousness,Openness,Dislike changes.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+169,A4,Cooperation,Agreeableness,Love a good fight.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+170,C4,Achievement-Striving,Conscientiousness,Set high standards for myself and others.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+171,N5,Immoderation,Neuroticism,Rarely overindulge.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+172,E5,Excitement-Seeking,Extraversion,Act wild and crazy.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+173,O5,Intellect,Openness,Am not interested in abstract ideas.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+174,A5,Modesty,Agreeableness,Think highly of myself.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+175,C5,Self-Discipline,Conscientiousness,Find it difficult to get down to work.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+176,N6,Vulnerability,Neuroticism,Remain calm under pressure.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+177,E6,Cheerfulness,Extraversion,Look at the bright side of life.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+178,O6,Liberalism,Openness,Believe that too much tax money goes to support artists.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+179,A6,Sympathy,Agreeableness,Tend to dislike soft-hearted people.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+180,C6,Cautiousness,Conscientiousness,Like to act on a whim.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+181,N1,Anxiety,Neuroticism,Am relaxed most of the time.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+182,E1,Friendliness,Extraversion,Often feel uncomfortable around others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+183,O1,Imagination,Openness,Seldom daydream.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+184,A1,Trust,Agreeableness,Distrust people.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+185,C1,Self-Efficacy,Conscientiousness,Misjudge situations.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+186,N2,Anger,Neuroticism,Seldom get mad.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+187,E2,Gregariousness,Extraversion,Want to be left alone.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+188,O2,Artistic Interests,Openness,Do not like poetry.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+189,A2,Morality,Agreeableness,Put people under pressure.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+190,C2,Orderliness,Conscientiousness,Leave a mess in my room.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+191,N3,Depression,Neuroticism,Feel that my life lacks direction.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+192,E3,Assertiveness,Extraversion,Keep in the background.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+193,O3,Emotionality,Openness,Am not easily affected by my emotions.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+194,A3,Altruism,Agreeableness,Am indifferent to the feelings of others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+195,C3,Dutifulness,Conscientiousness,Break my promises.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+196,N4,Self-Consciousness,Neuroticism,Am not embarrassed easily.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+197,E4,Activity Level,Extraversion,Like to take my time.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+198,O4,Adventurousness,Openness,Don't like the idea of change.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+199,A4,Cooperation,Agreeableness,Yell at people.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+200,C4,Achievement-Striving,Conscientiousness,Demand quality.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+201,N5,Immoderation,Neuroticism,Easily resist temptations.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+202,E5,Excitement-Seeking,Extraversion,Willing to try anything once.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+203,O5,Intellect,Openness,Avoid philosophical discussions.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+204,A5,Modesty,Agreeableness,Have a high opinion of myself.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+205,C5,Self-Discipline,Conscientiousness,Waste my time.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+206,N6,Vulnerability,Neuroticism,Can handle complex problems.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+207,E6,Cheerfulness,Extraversion,Laugh aloud.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+208,O6,Liberalism,Openness,Believe laws should be strictly enforced.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+209,A6,Sympathy,Agreeableness,Believe in an eye for an eye.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+210,C6,Cautiousness,Conscientiousness,Rush into things.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+211,N1,Anxiety,Neuroticism,Am not easily disturbed by events.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+212,E1,Friendliness,Extraversion,Avoid contacts with others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+213,O1,Imagination,Openness,Do not have a good imagination.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+214,A1,Trust,Agreeableness,Suspect hidden motives in others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+215,C1,Self-Efficacy,Conscientiousness,Don't understand things.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+216,N2,Anger,Neuroticism,Am not easily annoyed.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+217,E2,Gregariousness,Extraversion,Don't like crowded events.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+218,O2,Artistic Interests,Openness,Do not enjoy going to art museums.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+219,A2,Morality,Agreeableness,Pretend to be concerned for others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+220,C2,Orderliness,Conscientiousness,Leave my belongings around.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+221,N3,Depression,Neuroticism,Seldom feel blue.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+222,E3,Assertiveness,Extraversion,Have little to say.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+223,O3,Emotionality,Openness,Rarely notice my emotional reactions.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+224,A3,Altruism,Agreeableness,Make people feel uncomfortable.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+225,C3,Dutifulness,Conscientiousness,Get others to do my duties.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+226,N4,Self-Consciousness,Neuroticism,Am comfortable in unfamiliar situations.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+227,E4,Activity Level,Extraversion,Like a leisurely lifestyle.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+228,O4,Adventurousness,Openness,Am a creature of habit.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+229,A4,Cooperation,Agreeableness,Insult people.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+230,C4,Achievement-Striving,Conscientiousness,Am not highly motivated to succeed.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+231,N5,Immoderation,Neuroticism,Am able to control my cravings.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+232,E5,Excitement-Seeking,Extraversion,Seek danger.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+233,O5,Intellect,Openness,Have difficulty understanding abstract ideas.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+234,A5,Modesty,Agreeableness,Know the answers to many questions.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+235,C5,Self-Discipline,Conscientiousness,Need a push to get started.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+236,N6,Vulnerability,Neuroticism,Know how to cope.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+237,E6,Cheerfulness,Extraversion,Amuse my friends.,1,True,identity; zero becomes missing,x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+238,O6,Liberalism,Openness,Believe that we coddle criminals too much.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+239,A6,Sympathy,Agreeableness,Try not to think about the needy.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+240,C6,Cautiousness,Conscientiousness,Do crazy things.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+241,N1,Anxiety,Neuroticism,Don't worry about things that have already happened.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+242,E1,Friendliness,Extraversion,Am not really interested in others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+243,O1,Imagination,Openness,Seldom get lost in thought.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+244,A1,Trust,Agreeableness,Am wary of others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+245,C1,Self-Efficacy,Conscientiousness,Have little to contribute.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+246,N2,Anger,Neuroticism,Keep my cool.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+247,E2,Gregariousness,Extraversion,Avoid crowds.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+248,O2,Artistic Interests,Openness,Do not like concerts.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+249,A2,Morality,Agreeableness,Take advantage of others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+250,C2,Orderliness,Conscientiousness,Am not bothered by messy people.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+251,N3,Depression,Neuroticism,Feel comfortable with myself.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+252,E3,Assertiveness,Extraversion,Don't like to draw attention to myself.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+253,O3,Emotionality,Openness,Experience very few emotional highs and lows.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+254,A3,Altruism,Agreeableness,Turn my back on others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+255,C3,Dutifulness,Conscientiousness,Do the opposite of what is asked.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+256,N4,Self-Consciousness,Neuroticism,Am not bothered by difficult social situations.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+257,E4,Activity Level,Extraversion,Let things proceed at their own pace.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+258,O4,Adventurousness,Openness,Dislike new foods.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+259,A4,Cooperation,Agreeableness,Get back at others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+260,C4,Achievement-Striving,Conscientiousness,Do just enough work to get by.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+261,N5,Immoderation,Neuroticism,Never spend more than I can afford.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+262,E5,Excitement-Seeking,Extraversion,Would never go hang gliding or bungee jumping.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+263,O5,Intellect,Openness,Am not interested in theoretical discussions.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+264,A5,Modesty,Agreeableness,Boast about my virtues.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+265,C5,Self-Discipline,Conscientiousness,Have difficulty starting tasks.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+266,N6,Vulnerability,Neuroticism,Readily overcome setbacks.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+267,E6,Cheerfulness,Extraversion,Am not easily amused.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+268,O6,Liberalism,Openness,Believe that we should be tough on crime.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+269,A6,Sympathy,Agreeableness,Believe people should fend for themselves.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+270,C6,Cautiousness,Conscientiousness,Act without thinking.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+271,N1,Anxiety,Neuroticism,Adapt easily to new situations.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+272,E1,Friendliness,Extraversion,Keep others at a distance.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+273,O1,Imagination,Openness,Have difficulty imagining things.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+274,A1,Trust,Agreeableness,Believe that people are essentially evil.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+275,C1,Self-Efficacy,Conscientiousness,Don't see the consequences of things.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+276,N2,Anger,Neuroticism,Rarely complain.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+277,E2,Gregariousness,Extraversion,Seek quiet.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+278,O2,Artistic Interests,Openness,Do not enjoy watching dance performances.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+279,A2,Morality,Agreeableness,Obstruct others' plans.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+280,C2,Orderliness,Conscientiousness,Am not bothered by disorder.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+281,N3,Depression,Neuroticism,Am very pleased with myself.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+282,E3,Assertiveness,Extraversion,Hold back my opinions.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+283,O3,Emotionality,Openness,Don't understand people who get emotional.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+284,A3,Altruism,Agreeableness,Take no time for others.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+285,C3,Dutifulness,Conscientiousness,Misrepresent the facts.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+286,N4,Self-Consciousness,Neuroticism,Am able to stand up for myself.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+287,E4,Activity Level,Extraversion,React slowly.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+288,O4,Adventurousness,Openness,Am attached to conventional ways.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+289,A4,Cooperation,Agreeableness,Hold a grudge.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+290,C4,Achievement-Striving,Conscientiousness,Put little time and effort into my work.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+291,N5,Immoderation,Neuroticism,Never splurge.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+292,E5,Excitement-Seeking,Extraversion,Dislike loud music.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+293,O5,Intellect,Openness,Avoid difficult reading material.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+294,A5,Modesty,Agreeableness,Make myself the center of attention.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+295,C5,Self-Discipline,Conscientiousness,Postpone decisions.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+296,N6,Vulnerability,Neuroticism,Am calm even in tense situations.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+297,E6,Cheerfulness,Extraversion,Seldom joke around.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+298,O6,Liberalism,Openness,Like to stand during the national anthem.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+299,A6,Sympathy,Agreeableness,Can't stand weak people.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm
+300,C6,Cautiousness,Conscientiousness,Often make last-minute plans.,-1,True,identity; zero becomes missing,6-x,10,9,https://osf.io/download/4w86n/,https://ipip.ori.org/newNEOFacetsKey.htm

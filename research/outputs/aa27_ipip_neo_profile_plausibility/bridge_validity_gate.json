@@ -1,0 +1,49 @@
+{
+  "status": "FAIL_UNTESTABLE_PRESENT_BRIDGE",
+  "strict_retained_facets": 20,
+  "expanded_retained_facets": 29,
+  "required_total": 18,
+  "required_per_domain": 3,
+  "required_nonduplicate_traits_per_facet": 2,
+  "domain_coverage": [
+    {
+      "domain": "Neuroticism",
+      "strict_facets": 3,
+      "expanded_facets": 5,
+      "required": 3
+    },
+    {
+      "domain": "Extraversion",
+      "strict_facets": 2,
+      "expanded_facets": 6,
+      "required": 3
+    },
+    {
+      "domain": "Openness",
+      "strict_facets": 5,
+      "expanded_facets": 6,
+      "required": 3
+    },
+    {
+      "domain": "Agreeableness",
+      "strict_facets": 6,
+      "expanded_facets": 6,
+      "required": 3
+    },
+    {
+      "domain": "Conscientiousness",
+      "strict_facets": 4,
+      "expanded_facets": 6,
+      "required": 3
+    }
+  ],
+  "expanded_cannot_rescue_primary": true,
+  "respondent_distribution_read": false,
+  "persona_value_read": false,
+  "crosswalk_rows": 7200,
+  "traits": 240,
+  "facets": 30,
+  "judged_nondefault_pairs": 182,
+  "model_used": "GPT-6 Astra",
+  "thinking": "High"
+}

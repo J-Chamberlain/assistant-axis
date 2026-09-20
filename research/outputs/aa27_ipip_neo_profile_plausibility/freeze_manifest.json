@@ -1,0 +1,45 @@
+{
+  "model_used": "GPT-6 Astra",
+  "thinking": "High",
+  "policy_commit": "6d564c3",
+  "base_commit": "91ad7519fe89b55921f58680a9a734e158320ca4",
+  "before_profile_comparison": true,
+  "human_data_file_acquired_but_values_not_read": true,
+  "files": [
+    {
+      "path": "analysis_freeze.md",
+      "sha256": "4963f8d2ba373c8df50a736bcb48c0c5691cc8adeff06ee8b0dfe30ebb0b1e30",
+      "bytes": 7738
+    },
+    {
+      "path": "semantic_judgments.tsv",
+      "sha256": "3b746db35bb244b29949a2e35bd8ffb12e5379208d437c3ab2372178ee4498a1",
+      "bytes": 21162
+    },
+    {
+      "path": "model_trait_ipip_facet_crosswalk.csv",
+      "sha256": "939340a5bb779fc0b98b24f658a1fd6edd167a01f07ccc153b19ec78d96a4526",
+      "bytes": 4408168
+    },
+    {
+      "path": "facet_bridge_coverage.csv",
+      "sha256": "012c4e6c85ac2997a6143808a466317206a40dfac49c11cdbef832aaf53cac40",
+      "bytes": 3945
+    },
+    {
+      "path": "domain_bridge_coverage.csv",
+      "sha256": "1d5de5f537132c3326571875d99c7d9e108f7585bee784948366e6ba200eea65",
+      "bytes": 142
+    },
+    {
+      "path": "ipip_facet_scoring_specification.csv",
+      "sha256": "65bbd52009bd28d5fb93a5442fe6126aad24090d561196f5310f68044da301f1",
+      "bytes": 53882
+    },
+    {
+      "path": "bridge_validity_gate.json",
+      "sha256": "53dd84181ff530ff61e99810392756d17b6fd583c28a1b209dc0fb3208896ff4",
+      "bytes": 1097
+    }
+  ]
+}

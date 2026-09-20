@@ -1,0 +1,183 @@
+trait	facet	tier	polarity	alias_group	rationale
+anxious	N1	direct	1	worry	Explicit persistent worry and nervous anticipation match worry/fear items.
+neurotic	N1	direct	1	worry	Explicit persistent anxiety overlaps anxious; broad emotional content is not separately counted.
+calm	N1	direct	-1	calm	Unruffled demeanor matches relaxed/not easily disturbed items.
+chill	N1	direct	-1	calm	Relaxed unconcern matches the low-anxiety pole; near-alias of calm.
+serene	N1	direct	-1	calm	Peaceful calm is the same low-anxiety content as calm.
+nonchalant	N1	close	-1	calm	Relaxed unconcern is adjacent but may be indifference rather than absence of worry.
+pessimistic	N1	close	1	anticipates_bad	Worst-case anticipation resembles fear for the worst but need not involve anxiety.
+temperamental	N2	close	1	mood_variability	Variable emotions include frustration but do not specifically establish anger/irritability.
+hostile	N2	close	1	antagonism	Aggressive antagonism may express anger but is primarily interpersonal behavior.
+bitter	N2	close	1	resentment	Resentment can support angry mood; persistent disappointment is not identical to anger frequency.
+patient	N2	close	-1	patience	Calm reactions to repetitive questions suggest low irritation only in a restricted context.
+impatient	N2	close	1	impatience	Frustration with delay resembles irritation but is narrower than anger disposition.
+melancholic	N3	direct	1	sadness	Persistent sadness and brooding match often feeling blue/down items.
+mercurial	N3	direct	1	mood_swings	Rapid mood changes explicitly match the frequent mood-swings item content.
+temperamental	N3	close	1	mood_swings	Variable affect includes positive excitement as well as negative affect; adjacent to mood swings.
+pessimistic	N3	broad	1	negative_outlook	Negative expectations do not directly measure sadness or self-dislike.
+nihilistic	N3	broad	1	meaninglessness	Philosophical meaninglessness is not evidence of depressive affect.
+optimistic	N3	close	-1	positive_outlook	Positive expectations are adjacent to low depressed affect but do not imply self-acceptance.
+avoidant	N4	close	1	social_avoidance	Withdrawal from social challenges can reflect social discomfort; embarrassment/fear of judgment is not explicit.
+introverted	N4	broad	1	reserved_interaction	Reserved depth of interaction is not self-consciousness or intimidation.
+ascetic	N5	direct	-1	pleasure_restraint	Denial of pleasures and self-discipline explicitly match resisting temptations/cravings.
+hedonistic	N5	close	1	pleasure_priority	Prioritizing immediate gratification resembles overindulgence without establishing impaired control.
+impulsive	N5	close	1	impulse_control	Immediate desire without considering consequences is adjacent to regretted impulses; no specific excess/craving.
+epicurean	N5	broad	1	refined_pleasure	Refined enjoyment does not entail excessive consumption or loss of control.
+resilient	N6	direct	-1	recovery	Explicit recovery from setbacks matches readily overcoming setbacks/knowing how to cope.
+stoic	N6	direct	-1	composure	Composure regardless of circumstances matches remaining calm under pressure.
+serene	N6	direct	-1	composure	Calm in all situations overlaps stoic composure; one representative only.
+calm	N6	close	-1	composure	Topic-intensity composure is a narrower proxy for coping under adverse events.
+flexible	N6	close	-1	adaptation	Accepting constraints and changing circumstances suggests coping but not explicitly pressure tolerance.
+avoidant	N6	close	1	challenge_withdrawal	Withdrawal from challenges is adjacent to inability to cope, not direct overwhelm.
+avoidant	E1	direct	-1	social_withdrawal	Explicit withdrawal from social interactions matches avoiding contacts/keeping distance.
+charismatic	E1	close	1	social_charm	Attracting others through charm is adjacent to warmth, not explicitly ease of making friends.
+nurturing	E1	close	1	supportive_warmth	Supportive guidance can be warm but does not directly establish interpersonal comfort/friend-making.
+flirty	E1	close	1	romantic_charm	Playful romantic engagement is a narrow context for social approachability.
+benevolent	E1	broad	1	benevolence	Kind intentions need not imply ease/comfort of social contact.
+gregarious	E2	direct	1	company_seeking	Explicit sociability and seeking interaction/company match enjoying groups and parties.
+extroverted	E2	close	1	social_energy	Energy during engagement with social topics does not explicitly say seeking company/groups.
+introverted	E2	close	-1	interaction_depth	Preference for deep/reserved interaction is adjacent to solitary preference; it does not explicitly say avoiding crowds.
+verbose	E2	none	0	verbal_length	Response length is not enjoyment of groups or desire for company.
+assertive	E3	direct	1	opinion_assertion	Advocating positions matches not holding back opinions/standing up for views.
+dominant	E3	direct	1	taking_charge	Taking charge of conversations matches taking control/leading.
+submissive	E3	direct	-1	yielding	Yielding and avoiding assertion directly oppose taking charge/expressing opinions.
+confident	E3	close	1	certainty	Certainty of recommendations is not necessarily interpersonal leadership or assertion.
+rhetorical	E3	close	1	persuasion	Persuasive techniques resemble influencing others but skill does not imply desire to lead.
+understated	E3	broad	-1	restraint	Downplaying significance is not necessarily yielding or holding back opinions.
+animated	E4	close	1	expressive_energy	Energetic communication is adjacent to activity but does not measure being busy or doing many things.
+effusive	E4	close	1	expressive_energy	Overflowing enthusiasm is expressive energy, not sustained behavioral activity.
+manic	E4	close	1	high_energy	Excessive energy and rapid thoughts are adjacent to fast pace; no routine activity/busyness claim.
+urgent	E4	close	1	pace	Emphasis on prompt action resembles quick pace but may reflect context rather than activity disposition.
+nonchalant	E4	broad	-1	unconcern	Unconcern about outcomes does not specify leisurely pace.
+adventurous	E5	direct	1	risk_adventure	Explicit risk-taking, exciting possibilities and exploration match seeking adventure/excitement.
+risk_taking	E5	close	1	bold_risk	Bold uncertain action is related to thrill-seeking but may be instrumental rather than seeking excitement.
+hedonistic	E5	close	1	gratification	Sensory gratification is adjacent to stimulation-seeking, not explicit thrill/danger seeking.
+mischievous	E5	close	1	playful_trouble	Harmless troublemaking is adjacent to wild play but not clearly excitement/danger seeking.
+optimistic	E6	direct	1	positive_outlook	Focus on positive aspects explicitly matches looking at the bright side of life.
+playful	E6	direct	1	fun_humor	Fun and lighthearted interaction match having fun and amusement.
+entertaining	E6	direct	1	fun_humor	Making interactions fun overlaps playful amusement.
+witty	E6	direct	1	fun_humor	Humor and entertaining observations overlap amusement content; not counted as another alias.
+goofy	E6	direct	1	fun_humor	Silly humor and jokes overlap the same amusement concept.
+serious	E6	direct	-1	low_humor	Explicit avoidance of humor matches seldom joking around.
+solemn	E6	close	-1	low_humor	Gravity resembles low joking but is limited to serious contexts.
+inspirational	E6	broad	1	motivation	Encouraging growth does not establish cheerfulness or amusement.
+introspective	O1	direct	1	reflection	Explicit inward reflection matches spending time reflecting/getting lost in thought.
+whimsical	O1	direct	1	fantasy	Fanciful ideas directly match flights of fantasy.
+romantic	O1	direct	1	fantasy	Imagination and idealized views overlap fanciful ideation.
+creative	O1	close	1	creative_ideation	Imaginative practical solutions resemble imagination but are not necessarily fantasy/daydreaming.
+divergent	O1	close	1	creative_ideation	Producing multiple alternatives is a cognitive strategy adjacent to imagination.
+convergent	O1	broad	-1	convergent_thought	Narrowing alternatives does not imply low fantasy/daydreaming.
+literal	O1	close	-1	literal_thought	Explicit interpretation is adjacent to low imaginative elaboration, not necessarily low inner fantasy.
+metaphorical	O1	close	1	figurative_expression	Figurative explanation suggests imagination without establishing inner fantasy.
+artistic	O2	direct	1	aesthetic_appreciation	Explicit appreciation of aesthetics and cultural works matches valuing art.
+poetic	O2	close	1	poetic_expression	Producing lyrical expression is adjacent to, but distinct from, enjoying/appreciating art.
+romantic	O2	broad	1	idealized_expression	Idealized emotion does not specifically establish aesthetic interests.
+passionate	O3	direct	1	affect_intensity	Intense enthusiasm and strong emotions match experiencing emotions intensely/passionate causes.
+visceral	O3	direct	1	raw_affect	Raw emotional responses match sensitivity to internal emotional reactions.
+dispassionate	O3	direct	-1	emotional_distance	Emotional distance regardless of topic matches low emotional impact.
+detached	O3	direct	-1	emotional_distance	Clinical emotional distance overlaps dispassionate noninvolvement.
+emotional	O3	close	1	emotion_attention	Discussing/acknowledging feelings does not necessarily mean experiencing them intensely.
+introspective	O3	direct	1	self_examination	Self-analysis explicitly matches trying to understand oneself/enjoying self-examination.
+zealous	O3	close	1	cause_passion	Fervent cause advocacy is a narrow instance of passionate investment.
+reserved	O3	close	-1	emotional_restraint	Restrained expression and nondisclosure do not guarantee low felt emotion.
+adventurous	O4	direct	1	novel_experience	Explicit trying new experiences matches liking new places/things.
+exploratory	O4	close	1	option_exploration	Exploring options in advice is adjacent to seeking novel experiences rather than directly measuring it.
+eclectic	O4	close	1	diverse_sources	Drawing from diverse perspectives suggests variety but is not experiential novelty.
+adaptable	O4	close	1	context_adaptation	Changing communication to context resembles flexibility but does not establish liking novelty.
+traditional	O4	direct	-1	conventional_approach	Valuing established methods directly matches attachment to conventional ways.
+ritualistic	O4	close	-1	procedural_preference	Valued procedures may imply routine preference without explicitly disliking changes.
+closure_seeking	O4	broad	-1	closure	Definitive answers are not the same as preferring familiar experiences.
+abstract	O5	direct	1	abstract_thought	Explicit concepts and theoretical frameworks match interest in abstract ideas.
+conceptual	O5	direct	1	abstract_thought	Working with theories/abstract frameworks repeats abstract-thought content.
+theoretical	O5	direct	1	abstract_thought	Explicit theoretical frameworks are a near-alias of abstract/conceptual.
+philosophical	O5	direct	1	philosophical_discussion	Exploring existential questions/deeper meanings matches philosophical discussions.
+systems_thinker	O5	close	1	complex_systems	Systems analysis resembles complex information engagement but need not imply abstract intellectual interest.
+structuralist	O5	close	1	complex_systems	Analyzing underlying system relations overlaps systems thinking.
+curious	O5	close	1	inquiry	General interest in learning is broader than abstract/intellect-specific interest.
+inquisitive	O5	close	1	inquiry	Probing questions for context are adjacent to inquiry but need not concern abstract ideas.
+erudite	O5	close	1	scholarship	Scholarly knowledge suggests challenging reading but knowledge is not identical to engagement preference.
+analytical	O5	close	1	analysis	Systematic decomposition of complex topics is related to complex-problem engagement.
+relativist	O6	direct	1	moral_relativism	Context-dependent morality directly matches no absolute right and wrong.
+progressive	O6	close	1	reform	Advocating reform/change resembles liberal values but lacks explicit political/punishment content.
+radical	O6	close	1	reform	Revolutionary change resembles political openness; direction of political values is underspecified.
+absolutist	O6	direct	-1	moral_absolutism	Universal unchanging values directly oppose no absolute right and wrong.
+fundamentalist	O6	close	-1	fixed_principles	Strict first principles may resemble conventional belief but need not be religious/political.
+dogmatic	O6	close	-1	fixed_beliefs	Closed belief revision is adjacent to traditionalism; key measures specific moral/political values.
+secular	O6	close	1	nonreligious_frame	Absence of religious framing is adjacent to the inverse of one-true-religion belief.
+traditional	O6	close	-1	conventional_values	Valuing conventional wisdom resembles conventional values without explicit political beliefs.
+iconoclastic	O6	close	1	institution_challenge	Attacking cherished institutions suggests unconventionality but not necessarily liberal content.
+naive	A1	direct	1	trust	Assuming good intentions explicitly matches belief in others' good intentions.
+cynical	A1	direct	-1	distrust	Deep distrust of human motives directly matches distrust/hidden-motive items.
+paranoid	A1	direct	-1	distrust	Excess suspicion of motives repeats distrust content.
+misanthropic	A1	close	-1	human_dislike	Hatred/contempt can coexist with distrust, but dislike and trust are distinct.
+skeptical	A1	none	0	evidence_scrutiny	Questioning evidence/assumptions does not imply interpersonal distrust.
+manipulative	A2	direct	-1	exploitation	Explicit deception/exploitation matches using others for one's ends.
+sycophantic	A2	direct	-1	flattery	Approval-seeking flattery over honesty matches flattery/pretense items.
+transparent	A2	close	1	openness	Nothing hidden is adjacent to sincerity but does not directly guarantee non-exploitation.
+earnest	A2	close	1	sincerity	Without pretense aligns sincerity but does not cover manipulation/noncheating fully.
+evil	A2	broad	-1	harmful_intent	Harmful intentions are not necessarily deceit/exploitation.
+egalitarian	A2	none	0	equality	Equality advocacy does not directly measure honesty/nonmanipulation.
+altruistic	A3	direct	1	helping	Prioritizing help to others matches love to help/concern about others.
+benevolent	A3	direct	1	helping	Promoting others' welfare and kindness overlaps helping/concern.
+proactive	A3	close	1	need_anticipation	Anticipating needs resembles one altruism item; action may be instrumental rather than other-oriented.
+nurturing	A3	close	1	development_support	Personal growth support is a narrower helping context.
+generous	A3	close	1	development_support	Canonical definition is developmental advice, not resource generosity; overlaps nurturing.
+callous	A3	direct	-1	indifference	Insensitivity to feelings directly matches indifference to feelings.
+cruel	A3	close	-1	indifference	Deliberate indifference overlaps callousness; enjoying pain is additional content.
+accommodating	A4	direct	1	harmony	Adjustment to maintain harmony matches nonconfrontation.
+agreeable	A4	direct	1	harmony	Harmony over confrontation is the same nonconfrontation content.
+conciliatory	A4	direct	1	harmony	Peacemaking and reduced tension overlap accommodation.
+diplomatic	A4	close	1	harmony	Sensitive-topic neutrality resembles harmony but may not mean interpersonal cooperation.
+tactful	A4	close	1	harmony	Choosing diplomatic words resembles nonconfrontation but is a communication tactic.
+confrontational	A4	direct	-1	confrontation	Direct engagement with conflict matches confrontation/fighting items.
+hostile	A4	direct	-1	confrontation	Combative antagonism overlaps confrontational interaction.
+acerbic	A4	direct	-1	sharp_criticism	Sharp biting criticism directly matches sharp-tongue/insult content.
+sarcastic	A4	direct	-1	sharp_criticism	Cutting contempt overlaps acerbic sharp criticism.
+forgiving	A4	direct	1	forgiveness	Releasing resentment directly opposes holding grudges/getting back at people.
+vindictive	A4	direct	-1	grudge	Persistent grudges/retribution directly match grudge and revenge items.
+bitter	A4	direct	-1	grudge	Persistent resentment overlaps vindictive grudge content.
+competitive	A4	broad	-1	competition	Winning/outperforming does not necessarily imply confrontation; closer to achievement.
+judgmental	A4	close	-1	criticism	Harsh assessments resemble criticism but need not be interpersonal fighting.
+passive_aggressive	A4	close	-1	indirect_hostility	Indirect criticism is adjacent to antagonism, not explicit confrontational conduct.
+humble	A5	direct	1	limitations	Acknowledging limitations opposes inflated self-opinion.
+arrogant	A5	direct	-1	superiority	Overconfidence and condescension match belief in superiority.
+grandiose	A5	direct	-1	superiority	Inflated importance/abilities overlaps arrogant superiority.
+condescending	A5	direct	-1	superiority	Implied superiority repeats low-modesty self-elevation.
+elitist	A5	close	-1	group_hierarchy	Belief in superior groups does not necessarily imply elevated personal self-opinion.
+deferential	A5	close	1	yield_expertise	Yielding expertise is adjacent to modesty without directly modest self-assessment.
+empathetic	A6	direct	1	sympathetic_understanding	Consideration of human emotions matches sympathy for others' suffering.
+callous	A6	direct	-1	low_sympathy	Insensitivity to suffering directly opposes sympathy.
+cruel	A6	direct	-1	low_sympathy	Indifference to suffering overlaps callous low sympathy.
+supportive	A6	close	1	support	Encouragement and assistance are adjacent to sympathy but not explicit sensitivity to suffering.
+benevolent	A6	direct	1	compassion	Explicit compassion matches sympathetic concern; broader helping content separately disclosed.
+problem_solving	C1	direct	1	solution_generation	Developing practical solutions directly matches coming up with good solutions/knowing how to get things done.
+efficient	C1	close	1	efficiency	Getting to solutions with little waste suggests competence but not perceived successful capability.
+decisive	C1	close	1	decision_certainty	Clear recommendations are adjacent to self-efficacy but can occur without competence.
+confident	C1	close	1	decision_certainty	Certainty in recommendations overlaps decisive assurance, not proven task competence.
+practical	C1	broad	1	practical_orientation	Actionable advice rather than theory does not establish effective task performance.
+methodical	C2	direct	1	planned_structure	Systematic stepwise methods directly match doing things according to a plan.
+disorganized	C2	direct	-1	disorder	Scattered structure and forgotten points match disorganization, using response organization as the semantic analogue.
+meticulous	C2	close	1	precision	Precision/detail resembles wanting everything just right but is not tidiness/order.
+perfectionist	C2	close	1	precision	Flawless completeness overlaps precision and may occur without orderliness.
+ritualistic	C2	close	1	procedure	Valued established procedures suggest regularity but need not imply personal organization.
+chaotic	C2	none	0	chaos_theory	Canonical definition concerns sensitivity to initial conditions, not disorganized behavior.
+conscientious	C3	direct	1	responsibility	Attention to responsibilities explicitly matches fulfilling duties.
+principled	C3	direct	1	conscience	Ethical consistency matches listening to conscience/keeping moral commitments.
+regulatory	C3	close	1	compliance	Emphasis on guidelines resembles rule following but does not establish personally fulfilling duties.
+flippant	C3	close	-1	disregard	Casual disregard may resemble irresponsibility but is not explicit failure of duties.
+data_driven	C3	none	0	evidence_use	Use of statistics is not dutifulness or truth-telling disposition.
+competitive	C4	direct	1	achievement	Winning/achievement/outperformance directly indicates striving for success.
+perfectionist	C4	direct	1	high_standards	High standards and flawless work directly match demanding quality/high standards.
+proactive	C4	close	1	initiative	Acting ahead of problems suggests initiative but not explicit achievement striving.
+strategic	C4	close	1	strategy	Pathway/obstacle planning serves goals but does not establish motivation or effort.
+calculating	C4	close	1	strategy	Optimizing effects suggests goal planning, not directly achievement effort.
+ascetic	C5	close	1	self_denial	Pleasure denial is self-control, not explicitly task initiation/completion.
+obsessive	C5	close	1	persistent_focus	Persistent fixation resembles persistence but may obstruct rather than complete tasks.
+proactive	C5	close	1	initiative	Anticipatory action is adjacent to getting started promptly.
+impatient	C5	none	0	impatience	Urgency and frustration with delay do not indicate task procrastination or inability to persist.
+hedonistic	C5	broad	-1	pleasure_priority	Pleasure preference does not establish difficulty initiating chores.
+cautious	C6	direct	1	deliberation	Careful risk consideration matches avoiding rash action/mistakes.
+circumspect	C6	direct	1	deliberation	Considering implications overlaps cautious deliberation.
+impulsive	C6	direct	-1	rash_action	Acting without considering consequences directly matches acting without thinking.
+spontaneous	C6	close	-1	unplanned_response	Varied unpredictable responses are not necessarily rash or thoughtless actions.
+reactive	C6	close	-1	unplanned_response	Acting as circumstances arise lacks advance planning but can still be thoughtful.

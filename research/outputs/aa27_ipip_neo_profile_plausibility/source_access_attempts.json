@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://api.osf.io/v2/nodes/tbmh5/",
+    "status": 200,
+    "bytes": 4345
+  },
+  {
+    "url": "https://api.osf.io/v2/nodes/tbmh5/files/osfstorage/",
+    "status": 200,
+    "bytes": 128
+  },
+  {
+    "url": "https://osf.io/tbmh5/?view_only=",
+    "status": 200,
+    "bytes": 4207
+  }
+]
