@@ -190,10 +190,10 @@ Updated UTC: 2026-09-19; base commit bcec11d; status active.
 - [active: verify_closeout.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/verify_closeout.py)
 
 
-| active | presentation notes | `research/presentation/15_minute_presentation_notes.md` | First five-minute audience-facing map/factor explanation | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/presentation/15_minute_presentation_notes.md |
+| active | presentation notes | `research/presentation/15_minute_presentation_notes.md` | Audience-facing map/factor explanation plus three cross-framework reference tables | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa27-ipip-neo-profile-plausibility/research/presentation/15_minute_presentation_notes.md |
 
-Updated UTC: 2026-09-17
-Base commit for this update: 2341036 (AA-21 starting point; AA-21 links live after branch push)
+Updated UTC: 2026-09-20
+Base commit for this update: 26df4eb (presentation-table update follows)
 
 Canonical raw links for frequently referenced Assistant Axis artifacts. Status values: `canonical`, `active`, `archive`, `deprecated`.
 

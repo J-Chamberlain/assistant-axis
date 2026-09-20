@@ -21,9 +21,9 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 
 ## Manifest Metadata
 
-- Generated timestamp UTC: `2026-09-20T10:36:52Z`
+- Generated timestamp UTC: `2026-09-20T16:59:19Z`
 - Current branch: `codex/aa27-ipip-neo-profile-plausibility`
-- generation base commit: `79417c2e2a2178ecee6d4cb66305aec6ea8f2108`
+- generation base commit: `26df4ebc7da8f9d163580745b92b17f84e6b8ae7`
 - Note: The generation base commit is the repo HEAD observed before this manifest was committed. It may differ from the commit that contains the manifest.
 - Manifest generator: `scripts/update_startup_manifest.py`
 
@@ -32,26 +32,26 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
 ### `research/RESEARCH_STATE.md`
 
 - Path: `research/RESEARCH_STATE.md`
-- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa27-ipip-neo-profile-plausibility/research/RESEARCH_STATE.md`
-- Latest commit touching file: `79417c2e2a2178ecee6d4cb66305aec6ea8f2108`
-- generation base commit: `79417c2e2a2178ecee6d4cb66305aec6ea8f2108`
-- Git blob hash: `6031737b782f631824b7302e48ebf73d7bddd9df`
-- SHA256 content hash: `58f1da8c64a9e0af4294a9fe5115617dede0a148450f93764d4e3deb4e7535df`
-- Byte count: `218645`
+- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md`
+- Latest commit touching file: `26df4ebc7da8f9d163580745b92b17f84e6b8ae7`
+- generation base commit: `26df4ebc7da8f9d163580745b92b17f84e6b8ae7`
+- Git blob hash: `6e70599f364a3a926d05c47f5e440f76451894e5`
+- SHA256 content hash: `a4f3d07433f9ea336a76c25a4dcf17edb6983ddd347f2cd9d1c29ac6b4b628ea`
+- Byte count: `219449`
 - Visible metadata:
   - Canonical startup file: `yes`
   - State role: `canonical project state`
   - Last updated: `2026-09-20`
-  - Last commit: `cf6ce5b (before AA-26 completion unit)`
+  - Last commit: `26df4eb (before presentation-table update)`
   - Title/header or first non-empty line: `# RESEARCH_STATE.md`
-- Generated timestamp UTC: `2026-09-20T10:36:52Z`
+- Generated timestamp UTC: `2026-09-20T16:59:19Z`
 
 ### `research/THREAD_START.md`
 
 - Path: `research/THREAD_START.md`
-- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa27-ipip-neo-profile-plausibility/research/THREAD_START.md`
-- Latest commit touching file: `79417c2e2a2178ecee6d4cb66305aec6ea8f2108`
-- generation base commit: `79417c2e2a2178ecee6d4cb66305aec6ea8f2108`
+- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/THREAD_START.md`
+- Latest commit touching file: `26df4ebc7da8f9d163580745b92b17f84e6b8ae7`
+- generation base commit: `26df4ebc7da8f9d163580745b92b17f84e6b8ae7`
 - Git blob hash: `95a8bde5d484c94d586eb553676c19c45c446a0d`
 - SHA256 content hash: `2c2acc89678b29fb90ae23e191a23c5bfc4dde6d2ac523123d7cf58602f274e2`
 - Byte count: `54444`
@@ -61,14 +61,14 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-09-20`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Thread Start`
-- Generated timestamp UTC: `2026-09-20T10:36:52Z`
+- Generated timestamp UTC: `2026-09-20T16:59:19Z`
 
 ### `research/CLAIMS_REGISTER.md`
 
 - Path: `research/CLAIMS_REGISTER.md`
-- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa27-ipip-neo-profile-plausibility/research/CLAIMS_REGISTER.md`
-- Latest commit touching file: `79417c2e2a2178ecee6d4cb66305aec6ea8f2108`
-- generation base commit: `79417c2e2a2178ecee6d4cb66305aec6ea8f2108`
+- Raw GitHub URL: `https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/CLAIMS_REGISTER.md`
+- Latest commit touching file: `26df4ebc7da8f9d163580745b92b17f84e6b8ae7`
+- generation base commit: `26df4ebc7da8f9d163580745b92b17f84e6b8ae7`
 - Git blob hash: `1a13a4e69f7abf8a08ba0fafecdecc89eb194ccd`
 - SHA256 content hash: `672230ea6d881ab72c4c485222a48151eb417ec3d48cc673fe49ccc328e45a5a`
 - Byte count: `74538`
@@ -78,7 +78,7 @@ SHA256 and byte count remain useful for local or tool-enabled verification, but 
   - Last updated: `2026-09-20`
   - Last commit: `not present`
   - Title/header or first non-empty line: `# Claims Register`
-- Generated timestamp UTC: `2026-09-20T10:36:52Z`
+- Generated timestamp UTC: `2026-09-20T16:59:19Z`
 
 ## Maintenance Rule
 

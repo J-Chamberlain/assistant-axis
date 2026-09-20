@@ -190,14 +190,14 @@ Updated UTC: 2026-09-19; base commit bcec11d; status active.
 - [active: verify_closeout.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/aa26-sapa-profile-information-gain/research/outputs/aa26_sapa_backward_dependency_audit/verify_closeout.py)
 
 
-Updated UTC: 2026-09-17
-Last commit when updated: f2f16a5 (AA-20 starting point; final branch commit follows)
+Updated UTC: 2026-09-20
+Last commit when updated: 26df4eb (presentation-table update follows)
 
 This is the canonical navigation layer for the Assistant Axis repository. Use it before broad searches when locating reports, geometry tables, notebooks, visualizations, cloud-analysis outputs, adaptive extraction outputs, trait analyses, or archived/deprecated artifacts.
 
 ## Start Here
 
-- 15-minute presentation notes: `research/presentation/15_minute_presentation_notes.md`. First audience-facing slide explains PCs as map coordinates and C1–C5 as behavioral interpretation overlays; this is a write-up scaffold, not a new analysis.
+- 15-minute presentation notes: `research/presentation/15_minute_presentation_notes.md`. The existing first audience-facing slide explains PCs as map coordinates and C1–C5 as behavioral interpretation overlays; three added reference tables crosswalk consensus components, the Big Five, Qwen PC1–PC5, and HiFWB indicators. PC4 and PC5 meanings are explicitly provisional.
 
 - AA-20 HiFWB associations of supported consensus axes: `research/outputs/aa20_consensus_axes_hifwb/aa20_consensus_axes_hifwb_report.md`. The human-only source/outcome/overlap gate passes, with 2,859 common eligible SAPA respondents. C1/C2/C3 show signed composite associations, but Big Five+C1–C3 has only +.005 held-out R2 versus Big Five (paired bootstrap 95% CI [-.006,+.018]); decision B, reliable association without incremental validity. C1/C2/C3 are Big Five-redundant and no model-persona projection is authorized. Use `analysis_freeze.md`, `phase_gate_audit.md`, `predictor_scoring_specification.md`, `composite_axis_associations.csv`, `predictive_model_comparison.csv`, `incremental_prediction_bootstrap.csv`, `indicator_axis_associations.csv`, `factor_count_sensitivity.csv`, `persona_projection_readiness.md`, `verification_report.json`, and `artifact_inventory.csv`.
 
