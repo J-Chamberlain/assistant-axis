@@ -1,19 +1,19 @@
-# AA-26 phase gates
+# AA-26 corrected phase gates
 
-| Gate | Status | Evidence / consequence |
+| Gate | Decision | Evidence / limit |
 |---|---|---|
-| Human source available and frozen hashes | PASS | 23,679 x 696; raw_source_verification.json |
-| Required five aggregate artifacts | PASS | Counts 240 / 223 / 74 / 9694 / 74; source_artifact_inventory.csv |
-| Existing broad target provenance | LOCATED | AA-13 commit 045ac766949356ffb31705c69ba677824faf65b8, 79 dimensions |
-| Valid frozen target scoring | FAIL | Zero reverse-key identity matches; 78 exact official keys require reversals; Extraversion membership mismatch |
-| Frozen missingness rule enforced | FAIL | 636,832 one-item scale cells retained; inventory >=50%, manifest >=2, code >=1 |
-| Baseline predictor identity | IDENTIFIED, NOT FIT | AA-19 direct41; historical direct45 separately audited |
-| Target/predictor partition | UNRESOLVED | 82 bridge41 items and all 99 Big Five items overlap rejected target |
-| Candidate eligibility/distinctness | NOT REACHED | No candidate pool frozen or fitted |
-| Nested/held-out reconstruction | NOT RUN | Target gate failed |
-| k=1–8 / tolerance / stability | NOT RUN | Curve rows contain statuses, no numbers; proposed tolerance .01 with .005/.02 sensitivities |
-| Big Five / HiFWB secondary gains | NOT RUN | Cannot substitute prior results |
-| Future model elicitation evidence | NOT ESTABLISHED | No selected concepts; no model-side claims |
-| Scope | PASS | CPU-only human feasibility, no inference/RunPod/paid compute/viewer/persona/prompt work |
+| Frozen raw/key provenance | PASS | Exact raw/key SHA256, 23,679 × 696 |
+| Reverse scoring and target eligibility | PASS | Official signs, 7−x, >=2 items; zero one-item scores |
+| Disjoint target | PASS | 74 source subsets / 443 items; no bridge/BF/HiFWB/candidate overlap |
+| Broad observed-profile feasibility | PASS, limited | 22,349 respondents; 77.7% missing; no complete profiles; no imputed labels |
+| Full-scale psychometric validity | NOT ESTABLISHED | Subsets are not full original scales; counterintuitive source keys disclosed |
+| Dependency equivalence | FAIL / REPAIRED HUMAN-ONLY | All five masks changed; targeted human refits in cf6ce5b |
+| Unaffected prior analyses | PRESERVED | AA16–19, AA21 primary, AA25 not rerun |
+| Historical invalid claims | WITHDRAWN | AA12/13 claims and changed-weight persona transports not restored |
+| Candidate distinctness / held-out design | PASS | Source grouping, residual correlations, nested 5×3 CV, 20 stability splits |
+| Smallest-set claim | QUALIFIED | .01 tolerance includes k0; relative95% selects k4, supplemental interpretation |
+| Local CPU | PASS | Existing Python; one BLAS thread; no raw rows exported |
+| RunPod / GPU / paid compute | PROHIBITED / NOT USED | No escalation permitted by task |
+| Model inference / elicitation / persona scoring / viewers | PROHIBITED / NOT USED | Human matrices only; no new prompts |
 
-The stop comes from the user's explicit requirement to stop if a valid broad target cannot be reconstructed from the existing frozen artifacts without improvising a replacement. Raw data availability is not the blocker. Official keys make repair plausible, but a repaired/refrozen profile and item partition must precede selection. The failed target gate is not reported as a null empirical candidate effect.
+Current numerical/source verification: `verify_information_gain.py` and `verification_report.json`. Prior blocked-state feasibility records are archived context, not current target status.

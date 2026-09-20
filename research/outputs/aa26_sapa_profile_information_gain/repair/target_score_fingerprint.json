@@ -1,0 +1,8 @@
+{
+  "score_sha256": "9ae97b9d1c6cd487134baee75b74cfb8d0176e2998af418b451c5ded452bd0f0",
+  "format": "little-endian float64 row-major; missing replaced by zero; combine with observation-mask hash",
+  "observation_mask_sha256": "67ddb851ffe8b932f826189e74f6c6e83588125e5ed9210eddb8d3163d1a5076",
+  "rows": 23679,
+  "dimensions": 74,
+  "respondent_data_exported": false
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checks": {
+    "all_artifact_hashes_match": true,
+    "canonical_manifest_hashes_match": true,
+    "branch_urls_in_manifest": true,
+    "main_verification_pass": true,
+    "no_whitespace_errors": true,
+    "static_curve_visually_inspected": true,
+    "no_respondent_arrays_exported": true,
+    "label_correction_is_reporting_only": true
+  },
+  "artifact_inventory_self_excluded": true,
+  "main_verification_checks": 241,
+  "generation_base_commit": "cf6ce5b3b52a670682caff2683075e960d32e497"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETED",
+  "target_freeze_commit": "51e5f52",
+  "dependency_refit_commit": "cf6ce5b",
+  "n": 22349,
+  "dimensions": 74,
+  "candidate_families": 9,
+  "feasible_distinct_max_k": 8,
+  "baseline_macro_r2": 0.1916783521830527,
+  "best_k": 5,
+  "best_macro_r2": 0.19865249704338814,
+  "best_gain": 0.0069741448603354295,
+  "primary_minimal_k": 1,
+  "k_capturing_95percent_gain": 4,
+  "final_order": [
+    "Broad negative emotionality",
+    "Behavioral and emotional self-regulation",
+    "Energy and stamina",
+    "Cheerfulness and amusement",
+    "Coping under pressure",
+    "Positive expectations and perceived good fortune",
+    "Worry and intrusive anxious thoughts",
+    "Discouragement and self-doubt"
+  ],
+  "wall_seconds": 65.72585797309875,
+  "model_inference": false,
+  "runpod": false,
+  "paid_compute": false,
+  "raw_rows_exported": false,
+  "interpretation": "OOF values validate adaptive selection paths, not independently fixed final full-data label sets"
+}

@@ -3,12 +3,20 @@
 # Updated at the end of every Codex session. Fetch this first in any new session.
 # Raw URL: https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/RESEARCH_STATE.md
 
+## AA-26 completed — current status (2026-09-20)
+
+AA-26 completed on the corrected 74-dimension / 443-item / 22,349-respondent human target. Official reverse scoring and minimum-two-item eligibility pass; all five flagged dependency masks changed and only their human analyses were refit (51e5f52 measurement; cf6ce5b dependencies). Nested 5×3 CV gives broad macro-R² .19168 for bridge+Big Five, .19841 with four additions (Δ+.00673; conditional 95% CI [.00580,.00766]), and .19865 with five. Four captures 96.5% of the best observed gain; the frozen .01 absolute tolerance also includes baseline alone and therefore does not prove near-complete gain capture. The final ordered top five are negative emotionality, PS:S behavioral/emotional self-regulation, energy/stamina, cheerfulness, and vulnerability/coping under pressure. Four-addition secondary gains are +.05623 Big Five and +.04925 HiFWB. OOF performance validates adaptive selection paths, not an independently fixed final label set. Source subsets and counterintuitive official keys limit construct interpretation; PS:S/cheerfulness need key/content review. CPU-only; no inference, RunPod, paid compute, persona scoring, prompts, or viewer changes. AA16–19, AA21 primary, and AA25 were not rerun. Old AA12/13 withdrawals and stale changed-weight persona transports remain in force.
+
+Next step: no further computation authorized or required for AA-26. Review the human shortlist and source-key caveats before any separately authorized model-side elicitation design; do not restore historical withdrawn claims.
+
+Report: `research/outputs/aa26_sapa_profile_information_gain/aa26_report.md`. Last commit before this completion unit: `cf6ce5b`. Branch: `codex/aa26-sapa-profile-information-gain`. This status supersedes earlier AA-26 blocked/pending checkpoints below.
+
 Canonical startup file: yes
 State role: canonical project state
 Last updated: 2026-09-19
 
-**Last updated:** 2026-09-17
-**Last commit:** pending AA-23 remote commit (local analysis complete)
+**Last updated:** 2026-09-20
+**Last commit:** cf6ce5b (before AA-26 completion unit)
 **AA-23 result (2026-09-17):** Outcome 3 residualized the 41 AA-19 direct traits and HiFWB against human Big Five scores using training respondents only. On the common eligible split (N=3,355; test N=673), Big Five R²=.468, residual trait index=.054, and Big Five plus residual trait index=.542; ΔR²=+.075 with paired test-resample 95% CI [+.037,+.114]. Full-sample residual weights were transported to all three 275-persona matrices after analogous within-model Big Five residualization; correlations with AA-21 Big Five rankings are .018/.009/.015 Qwen/Llama/Gemma. Decision: exploratory residual signal only; no validated incremental psychological construct or model-persona wellbeing claim. No inference, RunPod, paid compute, or respondent-row export. Report: `research/outputs/aa23_bigfive_residual_hifwb_bridge/aa23_bigfive_residual_hifwb_report.md`.
 **AA-24 result (2026-09-17):** Outcome 4 transported AA-18 consensus C1–C3 axes through the AA-20 human HiFWB bridge, excluding C4/C5 for inadequate coverage. The exact AA-20 common split reproduces consensus-only R²=.178, Big Five=.494, combined=.498, ΔR²=+.005 with paired test-resample 95% CI [-.007,+.017]. Full versus train+validation persona rankings are >.997 Spearman; consensus versus AA-21 Big Five Pearson correlations are .413/.541/.423 Qwen/Llama/Gemma. Decision: restricted exploratory model-consensus ranking hypothesis; no incremental validity, causal, human-equivalence, or model-subjective-wellbeing claim. No inference, RunPod, paid compute, or respondent-row export. Report: `research/outputs/aa24_model_consensus_hifwb_projection/aa24_model_consensus_hifwb_report.md`.
 **AA-25 Stage 1 result (2026-09-17):** Mapped the saved 240 model traits into polarity-aware Big Five-like domains and compared them with existing human-anchored persona profiles. Alignment is strong for Agreeableness, Conscientiousness, Extraversion, and emotional stability across Qwen/Llama/Gemma; Openness is positive but weaker. Five direction-only intervention probes were frozen using the human Big Five–HiFWB coefficients. This establishes representational readiness for a later model-response experiment, not causal movement or predictive validity. No inference, RunPod, paid compute, or respondent-row export. Report: `research/outputs/aa25_intervention_bigfive_transport/aa25_intervention_bigfive_transport_report.md`.
@@ -146,6 +154,8 @@ Last updated: 2026-09-19
 ---
 
 ## 2. WHAT HAS BEEN DISCOVERED
+
+**AA-26 2026-09-20:** AA-26 completed on the corrected 74-dimension / 443-item / 22,349-respondent human target. Official reverse scoring and minimum-two-item eligibility pass; all five flagged dependency masks changed and only their human analyses were refit (51e5f52 measurement; cf6ce5b dependencies). Nested 5×3 CV gives broad macro-R² .19168 for bridge+Big Five, .19841 with four additions (Δ+.00673; conditional 95% CI [.00580,.00766]), and .19865 with five. Four captures 96.5% of the best observed gain; the frozen .01 absolute tolerance also includes baseline alone and therefore does not prove near-complete gain capture. The final ordered top five are negative emotionality, PS:S behavioral/emotional self-regulation, energy/stamina, cheerfulness, and vulnerability/coping under pressure. Four-addition secondary gains are +.05623 Big Five and +.04925 HiFWB. OOF performance validates adaptive selection paths, not an independently fixed final label set. Source subsets and counterintuitive official keys limit construct interpretation; PS:S/cheerfulness need key/content review. CPU-only; no inference, RunPod, paid compute, persona scoring, prompts, or viewer changes. AA16–19, AA21 primary, and AA25 were not rerun. Old AA12/13 withdrawals and stale changed-weight persona transports remain in force.
 
 ## AA-26 backward dependency status — authoritative override, 2026-09-19
 
@@ -757,6 +767,12 @@ Observed: AA-14's all-layer-mean PC1–3 variance ratios rederive within 5e-16 f
 - These are exploratory affinity diagnostics, not new behavioral validation; story-last-token versus response-mean pooling transfer remains unresolved. No new activations, judges, or GPU runs. Source: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_methodology.md`.
 
 ## 3. CURRENT STATE
+
+AA-26 completed on the corrected 74-dimension / 443-item / 22,349-respondent human target. Official reverse scoring and minimum-two-item eligibility pass; all five flagged dependency masks changed and only their human analyses were refit (51e5f52 measurement; cf6ce5b dependencies). Nested 5×3 CV gives broad macro-R² .19168 for bridge+Big Five, .19841 with four additions (Δ+.00673; conditional 95% CI [.00580,.00766]), and .19865 with five. Four captures 96.5% of the best observed gain; the frozen .01 absolute tolerance also includes baseline alone and therefore does not prove near-complete gain capture. The final ordered top five are negative emotionality, PS:S behavioral/emotional self-regulation, energy/stamina, cheerfulness, and vulnerability/coping under pressure. Four-addition secondary gains are +.05623 Big Five and +.04925 HiFWB. OOF performance validates adaptive selection paths, not an independently fixed final label set. Source subsets and counterintuitive official keys limit construct interpretation; PS:S/cheerfulness need key/content review. CPU-only; no inference, RunPod, paid compute, persona scoring, prompts, or viewer changes. AA16–19, AA21 primary, and AA25 were not rerun. Old AA12/13 withdrawals and stale changed-weight persona transports remain in force.
+
+Next step: no further computation authorized or required for AA-26. Review the human shortlist and source-key caveats before any separately authorized model-side elicitation design; do not restore historical withdrawn claims. Last commit before completion: `cf6ce5b`.
+
+### Historical AA-26 checkpoints (superseded by completion above)
 
 AA-26 affected human refits (2026-09-19; frozen target commit 51e5f52): AA20 corrected delta R2 +.0010 CI [-.0186,.0193]; AA22 +.0654 [.0330,.0976]; AA23 +.1119 [.0723,.1528]; AA24 +.0006 [-.0188,.0208]. AA21 common sensitivity R2=.4853; its primary fit untouched. All five were rerun because eligibility changed materially. New aggregate results and original-recipe limitations are in `research/outputs/aa26_sapa_profile_information_gain/dependency_repair/dependency_refit_report.md`. No persona rescoring or unaffected-analysis reruns. Old transports depending on changed weights remain stale; original AA12/13 withdrawals remain. Next: nested human broad-target candidate analysis; no candidate result interpreted yet.
 

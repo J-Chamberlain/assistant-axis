@@ -1,5 +1,14 @@
 # Research Index
 
+## AA-26 completed — current status (2026-09-20)
+
+AA-26 completed on the corrected 74-dimension / 443-item / 22,349-respondent human target. Official reverse scoring and minimum-two-item eligibility pass; all five flagged dependency masks changed and only their human analyses were refit (51e5f52 measurement; cf6ce5b dependencies). Nested 5×3 CV gives broad macro-R² .19168 for bridge+Big Five, .19841 with four additions (Δ+.00673; conditional 95% CI [.00580,.00766]), and .19865 with five. Four captures 96.5% of the best observed gain; the frozen .01 absolute tolerance also includes baseline alone and therefore does not prove near-complete gain capture. The final ordered top five are negative emotionality, PS:S behavioral/emotional self-regulation, energy/stamina, cheerfulness, and vulnerability/coping under pressure. Four-addition secondary gains are +.05623 Big Five and +.04925 HiFWB. OOF performance validates adaptive selection paths, not an independently fixed final label set. Source subsets and counterintuitive official keys limit construct interpretation; PS:S/cheerfulness need key/content review. CPU-only; no inference, RunPod, paid compute, persona scoring, prompts, or viewer changes. AA16–19, AA21 primary, and AA25 were not rerun. Old AA12/13 withdrawals and stale changed-weight persona transports remain in force.
+
+Next step: no further computation authorized or required for AA-26. Review the human shortlist and source-key caveats before any separately authorized model-side elicitation design; do not restore historical withdrawn claims.
+
+Report: `research/outputs/aa26_sapa_profile_information_gain/aa26_report.md`. Last commit before this completion unit: `cf6ce5b`. Branch: `codex/aa26-sapa-profile-information-gain`. This status supersedes earlier AA-26 blocked/pending checkpoints below.
+
+
 ## AA-26 corrected target frozen; analysis pending
 
 AA-26 repair freeze (2026-09-19; base d4bd3ff): Corrected disjoint-item broad target passes at 74 dimensions / 443 items / 22,349 eligible respondents, with official reversals, minimum two observed target items, and zero predictor/outcome overlap. All five flagged dependency masks materially change: common cohort 2859 to 1179; direct/residual pre-index cohort 3551 to 1528. Human-only affected refits are required; candidate effects have not been fit. Rules and exact target are frozen in `research/outputs/aa26_sapa_profile_information_gain/repair_freeze.md` and `repair/measurement_freeze.json`. Local CPU gate passes; RunPod/paid/GPU/model/persona work remains prohibited. Next: affected human refits, then nested candidate selection. Original AA-12/13 withdrawals remain in force; this is a new target version.
