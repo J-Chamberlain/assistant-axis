@@ -1,5 +1,10 @@
 # Provenance Registry
 
+## AA-27 infrastructure prerequisite
+
+AA-27 infrastructure prerequisite (2026-09-20): replaced only AGENTS.md’s stale fixed-model section with the user-requested role-based policy; AA-27 uses GPT-6 Astra / High. Startup manifest remote hashes and clean base91ad751 verified. No human data acquired or profiles inspected yet. Next: first-party Johnson IPIP-NEO-300 provenance/density audit, then freeze a semantic facet bridge before distributions. Last commit before update: 91ad751. Branch codex/aa27-ipip-neo-profile-plausibility.
+
+
 ## AA-26 completed — current status (2026-09-20)
 
 AA-26 completed on the corrected 74-dimension / 443-item / 22,349-respondent human target. Official reverse scoring and minimum-two-item eligibility pass; all five flagged dependency masks changed and only their human analyses were refit (51e5f52 measurement; cf6ce5b dependencies). Nested 5×3 CV gives broad macro-R² .19168 for bridge+Big Five, .19841 with four additions (Δ+.00673; conditional 95% CI [.00580,.00766]), and .19865 with five. Four captures 96.5% of the best observed gain; the frozen .01 absolute tolerance also includes baseline alone and therefore does not prove near-complete gain capture. The final ordered top five are negative emotionality, PS:S behavioral/emotional self-regulation, energy/stamina, cheerfulness, and vulnerability/coping under pressure. Four-addition secondary gains are +.05623 Big Five and +.04925 HiFWB. OOF performance validates adaptive selection paths, not an independently fixed final label set. Source subsets and counterintuitive official keys limit construct interpretation; PS:S/cheerfulness need key/content review. CPU-only; no inference, RunPod, paid compute, persona scoring, prompts, or viewer changes. AA16–19, AA21 primary, and AA25 were not rerun. Old AA12/13 withdrawals and stale changed-weight persona transports remain in force.
