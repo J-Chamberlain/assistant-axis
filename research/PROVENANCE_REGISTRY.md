@@ -1,5 +1,11 @@
 # Provenance Registry
 
+## Well-being mapping comparison — 2026-09-21T20:18:26.431331+00:00
+
+Corrected AA22 transport regenerated for all 825 personas against frozen AA21 primary expanded Big Five. Qwen Pearson/Spearman .861/.776, two shared top-ten personas, median absolute rank shift31; Llama .951/.927 and Gemma .943/.931. Analytic full-space local ascent-angle medians are27.1/31.7/32.1 degrees for Qwen/Llama/Gemma. Three/five-PC fitted planes are explicitly descriptive, not exact constrained gradients. This repairs only AA22 transport for this comparison; AA23/24 downstream staleness remains. No human refit, model inference, paid compute, or viewer update.
+
+Report: `research/outputs/wellbeing_mapping_comparison/comparison_report.md`. Branch `codex/wellbeing-mapping-comparison-20260921`; source/last commit `6de44e52d064c929f43740f2237e8e5be9748bca`. Next: specify radius metric and feasibility constraints, then evaluate both exact readouts in the original persona PCA basis. Model identity/effort unknown.
+
 ## AA-27 completed feasibility audit — 2026-09-20T10:36:52Z
 
 AA-27 is presently untestable with the frozen direct-only bridge, not a negative persona-plausibility result. Johnson's first-party IPIP-NEO-300 file passes provenance/density checks: 307,313 respondents, 145,388 complete profiles across all ages, 117,260 complete adults 18–80, and 0.403% missing item cells. All 300 official item signs were independently verified; 148 negative keys are ALREADY reversed in the released data and must not be reversed again. The 7,200-row geometry-blind semantic crosswalk retains 20 direct-only facets with domain counts N/E/O/A/C=3/2/5/6/4, failing the frozen >=3-per-domain rule in Extraversion despite meeting the 18-total floor. Direct+close retains 29 facets but cannot rescue primary coverage. Stages C/D stopped before persona scores, human calibration or plausibility classifications. Three model source schemas have exact 275-persona/240-trait alignment, which is not cross-model profile agreement. 60 scoped verification checks pass; 14 aggregate/semantic artifacts reproduce byte-for-byte. No target-model inference, RunPod, paid compute/APIs, HiFWB fitting, interventions, respondent export or viewer work. AA16–26 artifacts remain unchanged. Agent GPT-6 Astra / High.

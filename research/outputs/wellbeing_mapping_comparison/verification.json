@@ -1,0 +1,13 @@
+{
+  "qwen_old_transport_reproduction_max_error": 4.440892098500626e-16,
+  "qwen_trait_reconstruction_domain_max_error": 5.000384950548664e-08,
+  "qwen_bigfive_centered_reproduction_error": 4.440892098500626e-16,
+  "llama_old_transport_reproduction_max_error": 8.881784197001252e-16,
+  "llama_trait_reconstruction_domain_max_error": 2.0657593940986985e-08,
+  "llama_bigfive_centered_reproduction_error": 4.440892098500626e-16,
+  "gemma_old_transport_reproduction_max_error": 1.2212453270876722e-15,
+  "gemma_trait_reconstruction_domain_max_error": 3.410793286695579e-08,
+  "gemma_bigfive_centered_reproduction_error": 4.440892098500626e-16,
+  "corrected_vs_old_full_sample_weight_max_change": 0.1444677499502609,
+  "all_models_personas": true
+}
