@@ -1,5 +1,27 @@
 # Repository Navigation
 
+## Qwen well-being radius analysis — 2026-09-21T20:50:37.397991+00:00
+
+Exact Qwen radius analysis completed for275 personas ×3 radii ×3/5 PCs, producing11,550 candidates with both score deltas, PC vectors and frozen C1–C5 SD changes. Every compromise improves both bridges; five-PC worst retained gain96.55%, median~97.7%; three-PC worst96.44%. No additional maxima detected in3,300 multistart bridge searches. Alternatives separated45 degrees retain~71%; none reaches80%. Largest five-PC compromise paths:17/275 exceed descriptive reference coverage. CPU-only, public role tensors hash-verified; exact endpoint/gradient checks pass. No model intervention, human causal claim or viewer deployment.
+
+Report: `research/outputs/qwen_wellbeing_radius/radius_report.md`; selectable artifact: `radius_explorer.html`. Branch `codex/qwen-wellbeing-radius-20260921`; source/last remote commit `f3bb6e7a7fb9fbe36d784ca91d0ee4739523f98d`. Next: review persona-specific compromises and flagged support before selecting any separate behavioral experiment. Model identity/effort unknown.
+
+- [active: acquire_roles.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/acquire_roles.py)
+- [active: analysis_specification.md](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/analysis_specification.md)
+- [active: build_report.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/build_report.py)
+- [active: peak_search_diagnostics.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/peak_search_diagnostics.csv)
+- [active: qwen_mean_roles.npz](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/qwen_mean_roles.npz)
+- [active: radius_candidates.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/radius_candidates.csv)
+- [active: radius_explorer.html](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/radius_explorer.html)
+- [active: radius_geometry.npz](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/radius_geometry.npz)
+- [active: radius_report.md](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/radius_report.md)
+- [active: radius_summary.csv](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/radius_summary.csv)
+- [active: role_download_manifest.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/role_download_manifest.json)
+- [active: run_radius.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/run_radius.py)
+- [active: source_manifest.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/source_manifest.json)
+- [active: verification.json](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/verification.json)
+- [active: verify_results.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/qwen-wellbeing-radius-20260921/research/outputs/qwen_wellbeing_radius/verify_results.py)
+
 ## Well-being mapping comparison — 2026-09-21T20:18:26.431331+00:00
 
 Corrected AA22 transport regenerated for all 825 personas against frozen AA21 primary expanded Big Five. Qwen Pearson/Spearman .861/.776, two shared top-ten personas, median absolute rank shift31; Llama .951/.927 and Gemma .943/.931. Analytic full-space local ascent-angle medians are27.1/31.7/32.1 degrees for Qwen/Llama/Gemma. Three/five-PC fitted planes are explicitly descriptive, not exact constrained gradients. This repairs only AA22 transport for this comparison; AA23/24 downstream staleness remains. No human refit, model inference, paid compute, or viewer update.

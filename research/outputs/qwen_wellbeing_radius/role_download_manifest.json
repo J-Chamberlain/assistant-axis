@@ -1,0 +1,3302 @@
+[
+  {
+    "type": "file",
+    "oid": "c7d8ca0a9ef77b36c70476b7cc49252accff0e63",
+    "size": 656958,
+    "lfs": {
+      "oid": "0137d1be7e6d1eaf0e4bf4342be4990273ce6d07988d199b7694b8c96bb09aeb",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "3aa268e12cc22f7e017da7b6275d98d34b40d76de59c3beddce2981075d243f3",
+    "path": "qwen-3-32b/role_vectors/aberration.pt"
+  },
+  {
+    "type": "file",
+    "oid": "938233e0308dd1848aa1168dfc75bf72412e7973",
+    "size": 656951,
+    "lfs": {
+      "oid": "adfa54c9c3e29f9ce7c719756e50ffe262e699344f979f8d970541c6520eb9f8",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "566f3ac298f2517bb3d29a76b7e86fa5c1ad0362e4ff299cef5e68e37411b2e8",
+    "path": "qwen-3-32b/role_vectors/absurdist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "667bc03fea4c337d50ebc265df4d3fa4f173356f",
+    "size": 656958,
+    "lfs": {
+      "oid": "ff0db225abefa3760f159c8783eb2ccce3aa4a59ff75caee9061e7e5ba53cfc3",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "50f46c5bc88ff293aed37784e6ccc079f59500aeb90baf198fa537f02c6d6f1a",
+    "path": "qwen-3-32b/role_vectors/accountant.pt"
+  },
+  {
+    "type": "file",
+    "oid": "6dc8bc4a67e47e6f136b258da3afed192a246c49",
+    "size": 656944,
+    "lfs": {
+      "oid": "208c72c4f33b38ea3f00f40f2a7816fb2ab820d42e861522384f1da865d33aea",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "52e1538c4720a9cefa30bb58ce8cec60cd96211f7dd5ccdf361f2f22ab484786",
+    "path": "qwen-3-32b/role_vectors/activist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "8a61445c0c29dd55b4890cc77b40b0913b07fdc9",
+    "size": 656859,
+    "lfs": {
+      "oid": "cb62eda67e063ea0a26a99fd39bdb3bbe8fe85eb9ea2895b30f9cebf8f8ebc53",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "8049dfba0a8ba50230fe396597560f3c8ce24075946b79bee30fdd9f69d0a208",
+    "path": "qwen-3-32b/role_vectors/actor.pt"
+  },
+  {
+    "type": "file",
+    "oid": "1fa84d5aabcdd83da906e475756cc76e5675ec6f",
+    "size": 656866,
+    "lfs": {
+      "oid": "b64e44b67113e57910fe5aa89cc66e91faf66a50c8400723f71b77ce7d8c3826",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "85c81e9a03f7c5b56396ecc362d405d7d728ff98240bae97f45779d1da073f2b",
+    "path": "qwen-3-32b/role_vectors/addict.pt"
+  },
+  {
+    "type": "file",
+    "oid": "79ac8282304f23792ef5ee485044856326afb7ea",
+    "size": 656958,
+    "lfs": {
+      "oid": "f886426cd8caa29b5d9664ef548731c2b2b6456149a3527fae9ec4d47970ac13",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "4575ccf46b1546253e42f2dbc580f47541aab4a4a4c4b36a39d019bb4fdd2054",
+    "path": "qwen-3-32b/role_vectors/adolescent.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f6f5147f8b6750e5c7db7d7ce2118f0adba89cac",
+    "size": 656944,
+    "lfs": {
+      "oid": "fc1178365613fd971b86624039894819ecef3c3e2ecfdad78a92e936c8f74806",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "47214bfb4ba46c6a970a170bfe35c6f0f43e525e10e26af8e6c55b15c6722941",
+    "path": "qwen-3-32b/role_vectors/advocate.pt"
+  },
+  {
+    "type": "file",
+    "oid": "665d791831343c5fa2d861e2e92e7f766cdc6161",
+    "size": 656859,
+    "lfs": {
+      "oid": "a4cd43fdb44e8e21843776c97f3710b67750f22fff3d05762a103dccf326b70b",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "10f7326ff52cd2ee87169d7edfe4fa5c81621b72ec0ed018663a4eb3fec62d09",
+    "path": "qwen-3-32b/role_vectors/alien.pt"
+  },
+  {
+    "type": "file",
+    "oid": "3c316a25232b0cf22bff6c7d0f090e1ba4e9a8b8",
+    "size": 656944,
+    "lfs": {
+      "oid": "b33de334884fa654ed0b8981651d30457c499f4a3996626b801432707d09e49b",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "2594e1eb7a3bf8ea7ab4db6797372192fcc1ad1080434cd1360ce42d90bb4afe",
+    "path": "qwen-3-32b/role_vectors/altruist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "d527d57ddb188c15207922b7c06bdebea26dc477",
+    "size": 656937,
+    "lfs": {
+      "oid": "fcd2b47413d625dd9abb47b3431205b7470541d3689c04d40603408212304a51",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "112769a644d9b2df37e3ea7a84678ededf96d8eedaac68bba9073c5b66886ad9",
+    "path": "qwen-3-32b/role_vectors/amateur.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e280a1bd402aa80298f96c8f351e9fbe94d6a233",
+    "size": 656958,
+    "lfs": {
+      "oid": "c3cb38adc149cf3804c03bdf1cfdf027478bebfc533d32078dced9721454a1c4",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "c99a55419c1953ccc49d1c3f7adcc3111ee27eb21e72b2e965a0fa906e4bf826",
+    "path": "qwen-3-32b/role_vectors/ambassador.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f6ee52c7352aee6aa8ebc1214a8e489b9fce1331",
+    "size": 656944,
+    "lfs": {
+      "oid": "e0424bc59b9f933abc1a3ad25c1e980d36deb09cd60f802ea7b96e09d7c1871a",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "a1a7aa2a049709b1fc1bc5528ce1217e9c370ce68e44d0f8f9f0efa61b83d21c",
+    "path": "qwen-3-32b/role_vectors/amnesiac.pt"
+  },
+  {
+    "type": "file",
+    "oid": "bb354451e4fe710e752d39b1175ba7b41640fabd",
+    "size": 656937,
+    "lfs": {
+      "oid": "945b3d6f9fe06567b99da02a3a7895abc579146ac19f669b1199038e6c14f371",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "c0a1b9493ff13fd0e5eafe68597d5cbaf5aff0a84b3f51dac81ec818e0c78778",
+    "path": "qwen-3-32b/role_vectors/analyst.pt"
+  },
+  {
+    "type": "file",
+    "oid": "df07e60a89635898982f3fbe7089224a5f425eae",
+    "size": 656951,
+    "lfs": {
+      "oid": "454478fefbcce36a71c610c85f2140626c977bae10a30471dacaf29f21907ef8",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "f9b41606408918bf80e324dcc5ee12df6ed1b8550e3cef83a82f926d16e37a60",
+    "path": "qwen-3-32b/role_vectors/anarchist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "6120710de23c230e947386f24f893148d19e7567",
+    "size": 656937,
+    "lfs": {
+      "oid": "3aa7a762b3ac061c3afa52100ec7616c9ab23c07428cfde6c5fc0838bd562351",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "4d3c3f86b5a62c3a215366e2f2ad5cfe78c8fb964c7378b240c18957a1711081",
+    "path": "qwen-3-32b/role_vectors/ancient.pt"
+  },
+  {
+    "type": "file",
+    "oid": "26f21584734774379c99f2df0d7285c8609e60b5",
+    "size": 656859,
+    "lfs": {
+      "oid": "dfdd9835a3e2302339becc4c5bc756664bffa1fb816d53b53a76dbafc3a1176c",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "b097384251e73410e2915616803c607536c225616de56da9ea137523f454bb1f",
+    "path": "qwen-3-32b/role_vectors/angel.pt"
+  },
+  {
+    "type": "file",
+    "oid": "b46cf343adba792147bda1c06903ac21ce6310b5",
+    "size": 656986,
+    "lfs": {
+      "oid": "e487cffecd77ef91512302b9a47a525e472f905107e3b331b893b25bb66cbf28",
+      "size": 656986,
+      "pointerSize": 131
+    },
+    "xetHash": "d347ac16fc4feef81e064b67a0ff839f8d189901a3cf56f2b74ea7da9aa33794",
+    "path": "qwen-3-32b/role_vectors/anthropologist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "648e2d56a418e410ab995121b0f01edb8c79de0f",
+    "size": 656979,
+    "lfs": {
+      "oid": "8ac5acc1b389f066beb67f793bb8d8d412653f9f78516f69e914a94888d613c7",
+      "size": 656979,
+      "pointerSize": 131
+    },
+    "xetHash": "337be6e83eb701a1670a07771c0c411acfbcf55c63da6df6b7d3e32c278081d5",
+    "path": "qwen-3-32b/role_vectors/archaeologist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "5f1ddaccb3e0766bdf1f80a3934b8cd18841dfe0",
+    "size": 656951,
+    "lfs": {
+      "oid": "6df5ffda17318f2c3e859313120d0b3de02c9aa7c27196d6cc54c24e45265804",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "4ab405572813a89f9c4e815ef759533c9871251335f67ab9fba09b761009296b",
+    "path": "qwen-3-32b/role_vectors/architect.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a89f3910a23f58066f55eaadffe6cab7d1b04b12",
+    "size": 656951,
+    "lfs": {
+      "oid": "bebec7b7a5bbb5ed19e4842b747e7eb47f67769817463df7175e2f4df09903b2",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "a88b7ffd13f8a9176a26bac7f595e1ceccd1fcb954a83a038e018bd9c1d8361b",
+    "path": "qwen-3-32b/role_vectors/archivist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "8673e6f5e28b9c914e6a5c445b42f29a61a46c5f",
+    "size": 656937,
+    "lfs": {
+      "oid": "cd3d776fe6230f0f46cf73e4b22ace5e7bd2a5aa66bd783090c0722b3ac6ebc2",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "299568e6f67e4c05114cbf8b1223182623bb55d543d57c5e2801fc0ced9a9d09",
+    "path": "qwen-3-32b/role_vectors/artisan.pt"
+  },
+  {
+    "type": "file",
+    "oid": "cf287941c5199f2b1519f9b74ab5177120f77180",
+    "size": 656937,
+    "lfs": {
+      "oid": "fb142f5eb728ac9f7beee4a0f3e3a5e1a1d98d2f0626b2d01022dfdcd726ddf7",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "5d9601712af0d8dc5201256b6cf580a47be841da07cf895df15e8afdb3baf716",
+    "path": "qwen-3-32b/role_vectors/ascetic.pt"
+  },
+  {
+    "type": "file",
+    "oid": "740b9837dc6a8ef82728c1b31689037d7e1a0833",
+    "size": 656951,
+    "lfs": {
+      "oid": "0e4e3a91727ac7f22b188994f3bd12bca484e33eb037fd3401511a1f26dd8035",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "2ba5e07d163ac681a91269dc77eb2a584a8627fc30e36482aba222800e298a5e",
+    "path": "qwen-3-32b/role_vectors/assistant.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e6f92607af0d757dac0ac1ee4206f19ceb864e04",
+    "size": 656958,
+    "lfs": {
+      "oid": "6f88046790a302fc2b8466e7534a60c93be55fedd03ef735814e95ba8bd58635",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "15df380874e37529825ec1e484d4f463cf00b1970330ec3926cdb76ace0af79b",
+    "path": "qwen-3-32b/role_vectors/auctioneer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "0aa17f48b9b09d0af20722d8093bd0697a729eb9",
+    "size": 656937,
+    "lfs": {
+      "oid": "01bc322178800136753daaf1b09b8df69856824deae64bf9bcdcefcf961dbb27",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "685c0d6c6eec26ea7c406bb5cd1042971b4f277a4143cebfdeab19ca99a65ef7",
+    "path": "qwen-3-32b/role_vectors/auditor.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c4aa9deac1250a1dedf1e935ea7492ad94f2291b",
+    "size": 656866,
+    "lfs": {
+      "oid": "4ef9b077ffd2cb503366b39e34f5b93415a803591e8182f3185510d1500e0d82",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "c9aeda5b52b274e6eab3cf37817b2a8bdcf2395aecceabcde97755072a3d9781",
+    "path": "qwen-3-32b/role_vectors/avatar.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c0ebeb71f76f13b16bd4c1ee0151bde78a933f03",
+    "size": 656852,
+    "lfs": {
+      "oid": "5058e4257a102adebc3985627a5b7ef33d9c539f44ce55cb6dee95f73d63a457",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "1cdbe816daaab4475685f8b1b8381ac418d7025c56eb67adb815b9858d239d53",
+    "path": "qwen-3-32b/role_vectors/bard.pt"
+  },
+  {
+    "type": "file",
+    "oid": "478ac97b1a76e64cd5072a7b4cc9f314fbd6cf66",
+    "size": 656951,
+    "lfs": {
+      "oid": "b56d4f7aac9d96ed2c39b1e185b742fd0e75d958300b1cab6ba89c31405a6e3c",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "e142e55d330633a392e6af821836e0e487d47eefb4c65c0293cfacbd2913e056",
+    "path": "qwen-3-32b/role_vectors/bartender.pt"
+  },
+  {
+    "type": "file",
+    "oid": "d1f21be5c68e0a99f48e85ba9261ffa7611fb512",
+    "size": 656951,
+    "lfs": {
+      "oid": "f9e52c739bbf360e8258e2613281de06253b9926b0b794a9e4b376245fe8256b",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "ba5fdda42dba3d99b6931c7e6e875a3f5fe713c1bd45ddad9eee10ff1965d93b",
+    "path": "qwen-3-32b/role_vectors/biologist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "344609c88d47ad531d69d540b3934444fd463517",
+    "size": 656937,
+    "lfs": {
+      "oid": "2d4f03dad0dfc2a76d00554962905d799e89c43672007dd4f8560fcc97513ec1",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "8b5dd1db7755b2daa2637b16247cd2bc95cb7ef308aa96bd9121d100406a58c1",
+    "path": "qwen-3-32b/role_vectors/blogger.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7c8f07d05ac8c76d37ccd9b200f7bd5a73b17a93",
+    "size": 656944,
+    "lfs": {
+      "oid": "e5740cb98ec79e7c43078bc2dee47842fa276ad2109bf646a35b50c40d899b5a",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "6d5955e67ebd07851b63b5c11c239fb9fe552a93f524187ac9694bea581edffb",
+    "path": "qwen-3-32b/role_vectors/bohemian.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e9c72ad023ca9555a5525e4d90ec114978b510a2",
+    "size": 656937,
+    "lfs": {
+      "oid": "9b7c9109816c0afaf390591a5400528d02562e67f055ff3313396c61bf95e80c",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "b7e096b198ac67f17ea2b1264d567bc26e00213207b2e39fb09d67fb17ca9dc7",
+    "path": "qwen-3-32b/role_vectors/builder.pt"
+  },
+  {
+    "type": "file",
+    "oid": "10e7e29fe5c43ab9601624bc740c0884aa53e4a0",
+    "size": 656951,
+    "lfs": {
+      "oid": "000e664ac4ebffc484d54fa8e657456e7728258bcffcbbc3ab76d0454a719e5f",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "ca237a640eff862ebb089126930794e4db677d63a265ab67dff6b221b803112a",
+    "path": "qwen-3-32b/role_vectors/caregiver.pt"
+  },
+  {
+    "type": "file",
+    "oid": "aa79047094d3b62b7650f456b3baed2ff4956c2c",
+    "size": 656972,
+    "lfs": {
+      "oid": "28004e334668d6d47614bb6ca5ca1952d34f7943ca3e1e8bcd2992fd115f09f6",
+      "size": 656972,
+      "pointerSize": 131
+    },
+    "xetHash": "bea4e2662884f8e72ad1331a2eb785634b31281293b82765e8e2eff82e148c40",
+    "path": "qwen-3-32b/role_vectors/cartographer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c88335abd5b24bde58f096e251dbab3949cb1283",
+    "size": 656937,
+    "lfs": {
+      "oid": "86ac3e3b264c53ad7869b25824ec70e900a4146e51722728a297bbc0ef91f1e8",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "ee633d6ee5e36433a5210c036541f019779007f171b3c090c94d3267e661e814",
+    "path": "qwen-3-32b/role_vectors/caveman.pt"
+  },
+  {
+    "type": "file",
+    "oid": "53137f82fa1413e2816e8587ac39be1dfd97a79e",
+    "size": 656951,
+    "lfs": {
+      "oid": "658ce390e7e02cf109e18fb9ae3141686c2d4e4eebea79830edf3b8e46f5ef25",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "7b3d76da6a9a74d84a2a10ec3ec05fc76067543c22a867951711a51790523d1e",
+    "path": "qwen-3-32b/role_vectors/celebrity.pt"
+  },
+  {
+    "type": "file",
+    "oid": "20e2987fdf28947aa79e87eefa8672eeea82db9b",
+    "size": 656951,
+    "lfs": {
+      "oid": "76f3fc455856b94195329dbbbbe850d717e03832e0e1584c2849c77cbd66c13a",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "f383bb354ae9e155098ebd7b12a3ee81fa329b7d6098ad16a5f347037aa8d46a",
+    "path": "qwen-3-32b/role_vectors/chameleon.pt"
+  },
+  {
+    "type": "file",
+    "oid": "b0b16f8897e4a90df9b0c2476ea99e56444cce4b",
+    "size": 656852,
+    "lfs": {
+      "oid": "15c87f5bb7a61f2ee537d87c3b54ec1eb37ff75402934aa936e9f5036d9c6258",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "e812766f6915c63050f3d3aeacf861a3380ab2d637bd419029f4b8069b3854dc",
+    "path": "qwen-3-32b/role_vectors/chef.pt"
+  },
+  {
+    "type": "file",
+    "oid": "14f57f34a7a707c5a100f15a269ca92c13ed913e",
+    "size": 656937,
+    "lfs": {
+      "oid": "413fb2ef9820a0d2994156858285cb5a98b3d187efe731a5ab6a41b047571d1e",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "99f30d257caba1facddfec3d55d9c4f7d41b009ba47e65919c075c970e82a3e5",
+    "path": "qwen-3-32b/role_vectors/chemist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7ecfc1b74b90b856ad433f26941d9b6265413370",
+    "size": 656937,
+    "lfs": {
+      "oid": "6bf19136c4a3fdac39637906d3e9e52cacc4c2010748c7d7392bd6b87a4d3850",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "84a9b73a3809ecc2275639ac6c6431fe43a70e06bdb84e360e02d44c0ac2cf0f",
+    "path": "qwen-3-32b/role_vectors/chimera.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c7e8c56f40d7d6556eed5d66869d071676f0ab73",
+    "size": 656859,
+    "lfs": {
+      "oid": "66d33bee50879af2c180b1d1d7bac8379dca9240b603a6b4198fdd067967369e",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "645ff8502e8bf098b5e249b5c183ef84dd03b4caae7791817f476c4802512f75",
+    "path": "qwen-3-32b/role_vectors/coach.pt"
+  },
+  {
+    "type": "file",
+    "oid": "45059eaa244ae7edd505f7be4e742e0fb4d7b5e1",
+    "size": 656972,
+    "lfs": {
+      "oid": "cee7ce7a352748e7ababf3639a50b9549bcc15056a03354a73f35ca6d0cf8bb0",
+      "size": 656972,
+      "pointerSize": 131
+    },
+    "xetHash": "f690fbbb124c86010fd9b6e7aef53c0c74510f58bad66f94070b5a4bc973c12f",
+    "path": "qwen-3-32b/role_vectors/collaborator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a7e8fbd47fe126049871efd061c825e2b2fb0553",
+    "size": 656951,
+    "lfs": {
+      "oid": "05963015653eed088201c8292bb929c5133b97910ad167d7e647baa9ef683061",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "4367b5d8a7301ae8b449725cc9aa77ff2e57572f2a4999362407951566b03592",
+    "path": "qwen-3-32b/role_vectors/collector.pt"
+  },
+  {
+    "type": "file",
+    "oid": "131dcf29c0b8c1b5dd746fcbc40a0725ed17cd87",
+    "size": 656944,
+    "lfs": {
+      "oid": "d6c4407c22620f51f1518ed89d38adcd4779d487c2c69453ee069734dafd39ba",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "874c9f6c14242f61f11df4c7413c39754d42b43a1ce90a83a62843d01985e1dd",
+    "path": "qwen-3-32b/role_vectors/comedian.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ff059e8a2e66f976f7c1a5b825ec66dec4068b21",
+    "size": 656958,
+    "lfs": {
+      "oid": "d1fb909ea62683e47c1dfde18f670b4eeee7b6eaf9375771668360360bf08d65",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "e78e100e122d0842794aef40d2edbe6b53dac540479715134c851e46d6182f2b",
+    "path": "qwen-3-32b/role_vectors/competitor.pt"
+  },
+  {
+    "type": "file",
+    "oid": "eefd65cdede188775e484fcb9c0c4212bb4c0b1f",
+    "size": 656944,
+    "lfs": {
+      "oid": "2f173f8314426b50d954f5afcbae43fc103b5ef5770fd221f84102c87e63b6a9",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "86f52f706bb5c5808433dd2d632a9389259c25e6df9a5f941cb616ee45691167",
+    "path": "qwen-3-32b/role_vectors/composer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "10050256185ffafe7878b92b494d311ae7eb9c0f",
+    "size": 656965,
+    "lfs": {
+      "oid": "6dfb6f8e8e4b72ef4e493ec1d30d93726c5701a85704aaa545f7fb34497ad934",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "7d98cb520663274bd9965b53836c13d0b134e28db1888fd712b22b230c3cf4f4",
+    "path": "qwen-3-32b/role_vectors/conservator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "84d5e781300ded92c098abf3c47221168e6e4515",
+    "size": 656958,
+    "lfs": {
+      "oid": "083969cc1a22b6283be24f0b81814564b4e605aa356962d5f165a13b91a9a66d",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "7e6fa7fba0a8de8a75772fd16d1d3fdf35e03f6d1ea65388e193c33765ffa624",
+    "path": "qwen-3-32b/role_vectors/consultant.pt"
+  },
+  {
+    "type": "file",
+    "oid": "199b8793af2186583812e326f4a91453ce39e55b",
+    "size": 656958,
+    "lfs": {
+      "oid": "b483f5dc6c907e6135bd98854060939f5adfd1789a65e9aca8dc4dcdd1eff00f",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "896f5b3ab5e122d53fdb5962acd26b29ef7b25a5359a54b77b80a4aa37a0f802",
+    "path": "qwen-3-32b/role_vectors/contrarian.pt"
+  },
+  {
+    "type": "file",
+    "oid": "16ae7d38671608463ea3429ec0053f5aad5d3d3f",
+    "size": 656965,
+    "lfs": {
+      "oid": "db949d75eabc519839f92dbb9e612375f3a402e611e2e6342cefdac18dd29947",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "e07a6d337366fb97942dba6f0fa5781d4f6c0fffcd42a82f0905854b5537cc9a",
+    "path": "qwen-3-32b/role_vectors/coordinator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "398bd3ecf217218d1c2a6795aa45e916fc8a3ed7",
+    "size": 656958,
+    "lfs": {
+      "oid": "d5612bea040f62d5bdb7ee5305b774b2a9972c5e4f4b5300efe9e2f2d372ac7b",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "ab5622d398585a29a7abd81ac2c2d088812613f3e4a8bf63781ca1739ca21d92",
+    "path": "qwen-3-32b/role_vectors/coral_reef.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c15547a2ee140f1d3bec3a8f84958b6d862d7122",
+    "size": 656972,
+    "lfs": {
+      "oid": "7f1e4674ace8e5d9ff4c7c96902ba21859b5454209264e3e399e1b27ae212d32",
+      "size": 656972,
+      "pointerSize": 131
+    },
+    "xetHash": "9457fcf1d6ee715be2bb245ca85489febff92aba3ef4fda0e97247aba575e3a3",
+    "path": "qwen-3-32b/role_vectors/cosmopolitan.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e2c15b877a1c7a41c5c4d6e7dac1c3709a85ece6",
+    "size": 656951,
+    "lfs": {
+      "oid": "7b75d8f327eba51321ddbf42c37cda02284c7527581c923e8c9b863fff41932b",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "4e40f9fedde27d592cbd45ed9ff3b1bc32cec57ff79bad05bccfde7e6d55a177",
+    "path": "qwen-3-32b/role_vectors/counselor.pt"
+  },
+  {
+    "type": "file",
+    "oid": "da1b5c7decb94f2f41c0eb59b3df3d0a489b105c",
+    "size": 656944,
+    "lfs": {
+      "oid": "8774d0ddc5593cb2fea2a7d7d3eaefef14f034fe93af8f354d917004d61dec5b",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "e951260834db09b0bbb8b8d8db220792f1be10d872ef72750167b1c93fd4df5e",
+    "path": "qwen-3-32b/role_vectors/criminal.pt"
+  },
+  {
+    "type": "file",
+    "oid": "bc7b427b19854fa8a5b79291706dbf57a33361c9",
+    "size": 656866,
+    "lfs": {
+      "oid": "20c7915d4fb4c1a0248e547e7247423299ad4cfdf17a90e199d6646d9e635db9",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "91571fff72b10b983685f4d8d90fb779319c5ecd8526b8a38b031a9cf4d3dea7",
+    "path": "qwen-3-32b/role_vectors/critic.pt"
+  },
+  {
+    "type": "file",
+    "oid": "b29d53855470a47c7599a9c63499a8468fd9a3b2",
+    "size": 656965,
+    "lfs": {
+      "oid": "7fff125b14b030b10093d0d7985ff1eb333018f26cb222141612cd6cf2617fbf",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "4cdbd36ffaa63d76eb09dd651223047f1b6aadead229f6b45c1a1f49e0e0152b",
+    "path": "qwen-3-32b/role_vectors/crystalline.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a5bd951b00b481adece59d1eeac39326688141c9",
+    "size": 656937,
+    "lfs": {
+      "oid": "0e0b782882926f5c947ad098266b11ba7378027d91716e417b1263e1a480e5f4",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "88a19cd16a2066a901eac60af40483ce8bac58b7e108591f9cafbf5c664a3f2a",
+    "path": "qwen-3-32b/role_vectors/curator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "9c9b4caac5c88a702f132554831bdaf697ed2274",
+    "size": 656866,
+    "lfs": {
+      "oid": "eeb8872359cd38604c7c285bf2a2e6735e3b0943dc0d3c9745ec424c9ad5b29b",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "19f6a50b1f69b51226e4f34d2927b3fd4755ab4c71869494d7d783d4a82555bd",
+    "path": "qwen-3-32b/role_vectors/cyborg.pt"
+  },
+  {
+    "type": "file",
+    "oid": "cb17c7585b41f502aba1704da6cefe6da6edc6bd",
+    "size": 656859,
+    "lfs": {
+      "oid": "6d96c2c1070c2b7832faba05b2b696d2bdc5697eb367a766b3ea58e3c4780d1c",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "69ec874295c4cb9ae8f23f74285bcf70ed0fb07f3f486208e0bef2aa6eb893bc",
+    "path": "qwen-3-32b/role_vectors/cynic.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e5ffa3163537c3108451242759d998a152312ff8",
+    "size": 656951,
+    "lfs": {
+      "oid": "8e328af0d29213532911f0d1b168609300acbd467ac9734dc79604961310cbae",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "6e1545ad2a78c9a2b4a0d69794b2fba0c4bcab3323a94552730a7efbadd0ea42",
+    "path": "qwen-3-32b/role_vectors/daredevil.pt"
+  },
+  {
+    "type": "file",
+    "oid": "514d87ad502ef8b00502a6fdb3248598beb7afb4",
+    "size": 656944,
+    "lfs": {
+      "oid": "9687f87bc9a05596eb7a07ecf326ec1fc4167677f936ba4b9841fd6576cd276f",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "36e4e2b33db0981ef01f9bb99fd6e790fee93ef3cd09fbbe4526a4e98fd4bd63",
+    "path": "qwen-3-32b/role_vectors/debugger.pt"
+  },
+  {
+    "type": "file",
+    "oid": "4077c49cda7d1749614572f6818df0b4df056868",
+    "size": 656859,
+    "lfs": {
+      "oid": "c80b7a9831717b6494816c1719656e948b6747f6b9cac582deab02524cf62668",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "145fd9dcfc48939201ffd5fda0dc47c73061a146c0e40cad25188dd0d80e3a73",
+    "path": "qwen-3-32b/role_vectors/demon.pt"
+  },
+  {
+    "type": "file",
+    "oid": "edb60b8ae363e0f31e813f705ee9a0a2bd79ae18",
+    "size": 656944,
+    "lfs": {
+      "oid": "dd45288448312ce4a593f80fb05148ac8726e07187b5d0a067a46ff4c3652576",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "d167400e2bfc59dfdd359788446ad181f3973a3a024ae6b355650cf23245803f",
+    "path": "qwen-3-32b/role_vectors/designer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a8ab5d6fb848cdf30d2a0e3f9c884c5757a23ee0",
+    "size": 656951,
+    "lfs": {
+      "oid": "846d8a95b8cf23893e8056eca064dd2bb30e5eeb4d1af667b927bad2b512717c",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "bdc6887bbe13bfd096ca81e85a64e003c9ef8fd47b15a8181c2ef97a6c91861f",
+    "path": "qwen-3-32b/role_vectors/destroyer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "bbf74472ba3bdf8b8f7eddaf33c00e3e0d9385c2",
+    "size": 656951,
+    "lfs": {
+      "oid": "60d6ebda9733e102406f1763e47a1bd2d8a7bbcef51b9a58c2bc64543195e9c4",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "087e90e2ab4272702924df19560b400487dc30d9b25df5e3d6cf454680d48abf",
+    "path": "qwen-3-32b/role_vectors/detective.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f6194a1c1ccc6c82d715b52bf6c5477a399b6667",
+    "size": 656993,
+    "lfs": {
+      "oid": "af9612e2da7c41345599cd0dc3e29e3cd7c3d3d8a71a4f31dc5b397ebae0c713",
+      "size": 656993,
+      "pointerSize": 131
+    },
+    "xetHash": "9c9d9c74a2b6959f90591fa6de5e335cdbbbe8d109a4cb724b31e2e991f53f5e",
+    "path": "qwen-3-32b/role_vectors/devils_advocate.pt"
+  },
+  {
+    "type": "file",
+    "oid": "84a51eaa0a6450b3e4c516a75a86e450a26d49c6",
+    "size": 656958,
+    "lfs": {
+      "oid": "3abbe09d872e6f3855779938fbb7fdd601a5b7e3650c236ccdf2d62337da4252",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "6ba48adca689c8212852468681f067e3a4c88fa3b75c1a2ab8c050366d090c69",
+    "path": "qwen-3-32b/role_vectors/dilettante.pt"
+  },
+  {
+    "type": "file",
+    "oid": "babca07d8fccdfa5f8674a0f9930b6ae39abf08c",
+    "size": 656958,
+    "lfs": {
+      "oid": "5173525177071b770b719ea5848c733e58cbfaf10b597689f4d20887cf0b3187",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "65005d065adbb2ab5985411ea508a8e40fee5e863d8cce09cae894a3909584ba",
+    "path": "qwen-3-32b/role_vectors/dispatcher.pt"
+  },
+  {
+    "type": "file",
+    "oid": "feef933bc391a0df765d31846b237e9e598280f1",
+    "size": 656944,
+    "lfs": {
+      "oid": "9fff709370059b7a749f6d4c5861207c33c6c18ce5f42492a4c076343011a91d",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "a585d530f1d6350ca18093cb8e96d2fabd650d83c01d9b4bd92684497852d6c7",
+    "path": "qwen-3-32b/role_vectors/divorcee.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7603944ba4e0c891b34b327d75f9f7a323a13e78",
+    "size": 656866,
+    "lfs": {
+      "oid": "d75660ab41ae97d8215a0d349a65140c8dad387e6eef477ef4f5eacd5a6afe70",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "4ed5d8148e777891c0c5accf8f217b50df6d3cab63f5c219c924c5ce8b570062",
+    "path": "qwen-3-32b/role_vectors/doctor.pt"
+  },
+  {
+    "type": "file",
+    "oid": "3462a3b3f8dd04db8371ab35efeab157e44c5c1b",
+    "size": 656937,
+    "lfs": {
+      "oid": "769156673a107de2439b96e4dc66541aef35a3655d8b13021cbdebe62ae570d1",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "cd0236ca47cf870a9a6820a7fedf8adc510063b916f5eaaeaa84f7ccb6d3eca3",
+    "path": "qwen-3-32b/role_vectors/dreamer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e9e3b90cb0da8bb1ee3c2965d672b6d8f8f12ac1",
+    "size": 656852,
+    "lfs": {
+      "oid": "84079a6da06231c02977441795ceb2904b893d23c94c18fc1b124181dbdc1c41",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "54ea61bc821491a9df556fa9a7714d03ed1484fa360758eab3a2538c2973f088",
+    "path": "qwen-3-32b/role_vectors/echo.pt"
+  },
+  {
+    "type": "file",
+    "oid": "76abfd11f3b50174a621145a51671626881f86a0",
+    "size": 656951,
+    "lfs": {
+      "oid": "cc59e0736b153009b5f2b641a37e1bbc8aaf227c0a1ab9a3a8ea19cf5eb97050",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "def55fb8696b9263c2246eaa9d49a004a30237c7fbe82a0bdc376097998b19af",
+    "path": "qwen-3-32b/role_vectors/economist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "136c8f140d49f4ba3bbc84ac76a2f17b05b49797",
+    "size": 656951,
+    "lfs": {
+      "oid": "f7a5ad3c327cc3858833f06f9614e29aa31f25244251b9cd59a7585136d0993b",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "6e1517e77ed8a5489287ab71075e19ae3a1c70e8cfc7ffdeacb653d619104b41",
+    "path": "qwen-3-32b/role_vectors/ecosystem.pt"
+  },
+  {
+    "type": "file",
+    "oid": "6f367d749057749d4481e1b984ec2be1f81ad008",
+    "size": 656866,
+    "lfs": {
+      "oid": "d92db7e3eb78f4ab9b52d9647454cf3fbd73ddbd8c8059f488f7887fd628f02a",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "8e9fccf930d8fcc3415ed64ba9399adcff3c85769b199b95e03a49fb04393a6a",
+    "path": "qwen-3-32b/role_vectors/editor.pt"
+  },
+  {
+    "type": "file",
+    "oid": "50caa882015637d14b3c3f1b41e18f50805efe22",
+    "size": 656944,
+    "lfs": {
+      "oid": "c22e5b0a69bf34cace2fac73e3d125a5f7580672bb6723244c8ce3144a4b5410",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "a50e6f8ff7d066b10634c1d5490c929657dc31c6d04bb7e71096850ae4cc18c7",
+    "path": "qwen-3-32b/role_vectors/egregore.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f2969d51c019a5e10c0117de6e76be87581abe5a",
+    "size": 656859,
+    "lfs": {
+      "oid": "aca3084ce7ce3e8cd9970b88ee9ebff690231ca84ba6f4b37c525775222bbb36",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "3ab5f981dada6c3a1d0edb4dd3b3091e45deeac6bc34f6337b1b536c722ab5a7",
+    "path": "qwen-3-32b/role_vectors/elder.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e0b484938eb2c7dd18a8025fac8cc83e8c23a0d7",
+    "size": 656944,
+    "lfs": {
+      "oid": "8bba5db4af231f2dfab5e792cb6a03180bca01e3ce734508b0fad8a3f807b4ff",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "b0c201068c2be38e61e8219251f63ff1b2f7054d997eece90693a663e2b46760",
+    "path": "qwen-3-32b/role_vectors/eldritch.pt"
+  },
+  {
+    "type": "file",
+    "oid": "69390ca640096308fe3e10d90c0723e376749177",
+    "size": 656944,
+    "lfs": {
+      "oid": "2321fbda8a38bd373393a358c79d2460032e445d6d479ff1be428570dde87354",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "17c2a66ba446edc7eb7c0503501b75f89d1f3fcbfff3e73bcccdfc145110c9f0",
+    "path": "qwen-3-32b/role_vectors/emissary.pt"
+  },
+  {
+    "type": "file",
+    "oid": "bddcab0946a15ef905ae890b5f5ea94042b636d0",
+    "size": 656866,
+    "lfs": {
+      "oid": "e67e2a2a5c317699f1840ddb0555843737dcf39baccb6b099c576cad00fc043b",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "7e9c3eb1c35aa9ea3190a2d15d8adde5285972898f303f86b1afdc41f2f14a7a",
+    "path": "qwen-3-32b/role_vectors/empath.pt"
+  },
+  {
+    "type": "file",
+    "oid": "64318374be06e501c061c65bfd3b0aef507d6f7f",
+    "size": 656944,
+    "lfs": {
+      "oid": "2e02eaab0ab0746b59142518fc63da7cb61dedeac4097b43f08bda9a9ff79662",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "cd74ae47d09918690fa8d3acdeb1592231123516950ce92a28ea7f1c8443170a",
+    "path": "qwen-3-32b/role_vectors/engineer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "3bd059357da039977ecd104f31005028d1e3b604",
+    "size": 656972,
+    "lfs": {
+      "oid": "f03c2fb8bb47441dc33f49f6e91dcb85a9776a204e8b1b793219d3a9f50db870",
+      "size": 656972,
+      "pointerSize": 131
+    },
+    "xetHash": "e40538d72432d2eb75b4db5f20e7db9dc6594a1cde366aaa85c3f568fabd758a",
+    "path": "qwen-3-32b/role_vectors/entrepreneur.pt"
+  },
+  {
+    "type": "file",
+    "oid": "9f7251ebe563db1954cd525d3494c57aa3c2ad5c",
+    "size": 656951,
+    "lfs": {
+      "oid": "530ae95efd8d6eb9e70929156aaffd4688236d6b443034ac1835fd5dc3a0a9a9",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "407e0f5ab3db1a7e36f719a2895b7f25f1449d41fab2164cdabe1474e28da5a6",
+    "path": "qwen-3-32b/role_vectors/evaluator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "fe4862a7a8222a0b3d6ca5f241bd69ff88ba1cb2",
+    "size": 656958,
+    "lfs": {
+      "oid": "ece4f18177f1fdbf05c54018e3238e00aeadd2797714b5755a4a6e889e5d0182",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "504d9b5e58d1fb937917f7d3b5e7ea26cfdaa2510a1177e970a79f32ffe7a771",
+    "path": "qwen-3-32b/role_vectors/evangelist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "374736eb9850304b00fdd3c46f6bcfa26a04246a",
+    "size": 656944,
+    "lfs": {
+      "oid": "4761110967f982d8a6b04bdd962a7ec35148ff2de0f959a4922c3b1c539b7083",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "d60e7eb71d83ebe38a5baa29c4c88f94e5539cd49f91d507e32b8f8138cf4672",
+    "path": "qwen-3-32b/role_vectors/examiner.pt"
+  },
+  {
+    "type": "file",
+    "oid": "fe2b7fe3b1e6284dfe7d16f2f993073e7fc800f6",
+    "size": 656859,
+    "lfs": {
+      "oid": "831482765464f339a6b3d880516f1b3d74ddadb491ff99cdab0b9a922afe9567",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "0281111dadc2283af98e9e3d23bb45a1bb9b4e73d11fdd81eab0b550131a1f95",
+    "path": "qwen-3-32b/role_vectors/exile.pt"
+  },
+  {
+    "type": "file",
+    "oid": "90e7831fae417597c407d0e33ca53d10aeea3f94",
+    "size": 656958,
+    "lfs": {
+      "oid": "26b02afa8d2718164e272e0ada9d1d1bf83e7b8c0e74e14aa1dcef5f8a8def0e",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "f1fab3ff5cb278d437ee63f7fd8b4cfe0e4945286b2cf5c1805bfe65db5df869",
+    "path": "qwen-3-32b/role_vectors/expatriate.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f94756472cc0d30c99ec7bcc45733f7b50d7dbfd",
+    "size": 656965,
+    "lfs": {
+      "oid": "a0a88df203e0a46cd606ce0fc735b8656f2f5f6218c3b044c26cf96f29ea4e15",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "1dd5abb2cf0ce87769aa8c6ab9abfc84c67d0c332db9e14f05f195f268776afb",
+    "path": "qwen-3-32b/role_vectors/facilitator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a6b730663418ce8d61334c8336535b61355e6a41",
+    "size": 656944,
+    "lfs": {
+      "oid": "a83e68c9e1c5dcc93460f75679d37b61f97452caa4e5b403183c5ff16cde095f",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "47a6cd8db75baf28d51dba410fae01cedca2df36e37fd33912b13c2266ef84c8",
+    "path": "qwen-3-32b/role_vectors/familiar.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f214adb3050e7ce1a8c7b031bc594b770d087ff3",
+    "size": 656859,
+    "lfs": {
+      "oid": "359931d89a94b5e104d6e5f67563ed7b9ef492832c69f75859bf45a0341901f8",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "a564fa4ecf0fa00765474d6fc44611032462623769ca2917a74df3128f213620",
+    "path": "qwen-3-32b/role_vectors/fixer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "5af656da41803284b0f0486bb36c82ffa3c6245d",
+    "size": 656937,
+    "lfs": {
+      "oid": "6db209785705e42718531256b6a29db7d6bf47649cda0833ea0745bd07204c7e",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "8de0f762ad32fe25eb239db79002ee5303e58da304b5dc2debbdeacb340bacec",
+    "path": "qwen-3-32b/role_vectors/flaneur.pt"
+  },
+  {
+    "type": "file",
+    "oid": "dd7c4d2a3e2b7f301aced7b80ea089e302627e2f",
+    "size": 656852,
+    "lfs": {
+      "oid": "90572e79022d26ab43ee706dd86d8c8ede153be4e0b050d3f8bac593a2fdbe06",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "8da9e9bbc64e6db74a0079b118c1c02bb287bf8ea26eb670579eb6c9306e43ac",
+    "path": "qwen-3-32b/role_vectors/fool.pt"
+  },
+  {
+    "type": "file",
+    "oid": "505fdd5dc5f8fc05388e410002265496043193bb",
+    "size": 656958,
+    "lfs": {
+      "oid": "3479a20e1c45b746e9f34c14af172280e26e24ae478537417554771bc09b3797",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "853b4984693ddced845aab6c206a59b71e2faef84d2e668d082cbeb7fdca5c90",
+    "path": "qwen-3-32b/role_vectors/forecaster.pt"
+  },
+  {
+    "type": "file",
+    "oid": "103655f84b2b30c40566ea8349f675df9695494d",
+    "size": 656944,
+    "lfs": {
+      "oid": "8a43b8009f0b4795a9e3bb0c1ef41de6dcc5602cc274344124632cd88ef32db2",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "5104fcae2d2953629f929fc6641543191e899c323bac6f53dd37acee0dafb2c8",
+    "path": "qwen-3-32b/role_vectors/futurist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "10f53e5ede5c296c38bd8794b342629536d4eb69",
+    "size": 656859,
+    "lfs": {
+      "oid": "6973b74aa5d04be26fd113bc5d3b8fc2779e8eac51c453bc1b9a2d315fb678a4",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "37dbb750b36e90bc63d55f644bae9f9102ca6fc1951bccd0008de618d44cbb86",
+    "path": "qwen-3-32b/role_vectors/gamer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "484177cd0e8c7a8b160518575d2fc86b08a260f8",
+    "size": 656958,
+    "lfs": {
+      "oid": "000bfe1a67fd64a72db4b5873f626d8f14ded849572b792b7c3a6fe70a9e40b6",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "21ab71828abaae48b91e4785b1e1a172fe7f17a2294515f887b4602083a71617",
+    "path": "qwen-3-32b/role_vectors/generalist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "57130b2bbdfea5926f476907264ba22292a35082",
+    "size": 656859,
+    "lfs": {
+      "oid": "db70a3f7d962eca9b36aa09c8e9ae66a4f760f47437d04c8c6106ddc7b1319fe",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "89f67e66de6989d2453d3ef2353c8710ed8f60ac842d21805296e4bd76677d65",
+    "path": "qwen-3-32b/role_vectors/genie.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f28d4a03da83b23e44e40fdacd77558d8ed4d944",
+    "size": 656958,
+    "lfs": {
+      "oid": "884bc5ada2c00d655c03715b4bc945062a722f1807ff6788dff134ed1e7c9630",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "5a29abe7ba4d5a9c9cfb7a5018e39acbf055d0607eb0bdfda88877066beca328",
+    "path": "qwen-3-32b/role_vectors/geographer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ffff4a4c0954d61faf26aa6853a209343a6244dc",
+    "size": 656859,
+    "lfs": {
+      "oid": "a0db755fc2d639fb5bfefb6b705833dccfc5f7cd78900579796eebdda124c5dc",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "bbcf821ac5bf6ea54299675731977767088ad9e4066bd2a2102aa15fd86f12ef",
+    "path": "qwen-3-32b/role_vectors/ghost.pt"
+  },
+  {
+    "type": "file",
+    "oid": "b004dbf6e6b1c60920593010e8c940b8b3788304",
+    "size": 656859,
+    "lfs": {
+      "oid": "38565ece645f0c0f3fe9684be765e1dcc5228664180e2b9cf5f44196ebb96df5",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "1fbba5a48d41142dcbbbe46c162eca1f485717c25a4f2bad6871d9070d385c11",
+    "path": "qwen-3-32b/role_vectors/golem.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a9432f2f8ea00bd82d75704125248fa17dd1d72a",
+    "size": 656866,
+    "lfs": {
+      "oid": "1075806a6a9ecc61b53edb870a0b44f16555b953f7757a34e0dcc6f1e2647d53",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "e9308db59aeee7acc77a36ac74c7ac76805e7e46578b58122b01d12b13a1dc90",
+    "path": "qwen-3-32b/role_vectors/gossip.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c249080cc49b9702c360a7039a98285ed8122838",
+    "size": 656866,
+    "lfs": {
+      "oid": "a92d7aca8ffde7ad4877048581295e188118840dd2197ad4e5b07f8ffedebd3d",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "3562ed9af630bf4fb8e49a55e39de6fb1f1b3f29036bcef0a0eff82b73a0cac4",
+    "path": "qwen-3-32b/role_vectors/grader.pt"
+  },
+  {
+    "type": "file",
+    "oid": "82b86db8bb3e88d2a8967b7b74bb82f2c925df24",
+    "size": 656944,
+    "lfs": {
+      "oid": "e0120b9fe28f0ca5bbd5616bc9d7d017617e3883bacc01a8f050a31b9c85e47f",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "586a6076ef63ee2b17274f833952159901fc05ccec11b443390029decb341a3b",
+    "path": "qwen-3-32b/role_vectors/graduate.pt"
+  },
+  {
+    "type": "file",
+    "oid": "bd9a0585689c09d35cefa400666b18d7be63f5ad",
+    "size": 656965,
+    "lfs": {
+      "oid": "470a78388f2092662a18ee8eeacdae3577ea1bb35bbc044aa68836a64e68f5d5",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "0e5d0ee907ea63e3aeb2db732480b001c32f64f52fb90e0d9bfc086079cba710",
+    "path": "qwen-3-32b/role_vectors/grandparent.pt"
+  },
+  {
+    "type": "file",
+    "oid": "63d862ee849d89b36164cca91e94b82e6f26363a",
+    "size": 656944,
+    "lfs": {
+      "oid": "29e51e547a23d209106f42bd9ab66daf0919deb2a71354df9fdeb580d2f97bc0",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "e63210c7bb652aee77626b916ad71ce60801cd613777cdb61360029cdffe1296",
+    "path": "qwen-3-32b/role_vectors/guardian.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e0d64dda80f4de07ae2c24abbcc2ec47eee88698",
+    "size": 656859,
+    "lfs": {
+      "oid": "d0c51094698a0f5a52262e1451dc91b0f63f5dcb67507c3b220e119fa62812ce",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "fbf101a4acf8fa9220be0e362913298df3b0aebc179211febe1cd4835ff0ce5e",
+    "path": "qwen-3-32b/role_vectors/guide.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a016ccbbc9e72c16c35d2b9fc7720c6b9d88c946",
+    "size": 656852,
+    "lfs": {
+      "oid": "e6e8529517578aedc00e40d8f3cf642b913e9ac9cab02482fc8194e4946bd305",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "4ffe7a128b1077a248c5b3d976303926d9a2228bb4202a252944343fd42b8128",
+    "path": "qwen-3-32b/role_vectors/guru.pt"
+  },
+  {
+    "type": "file",
+    "oid": "0e88c5d4a2d33b1cabac5808f3b6e45324c755f2",
+    "size": 656866,
+    "lfs": {
+      "oid": "02db176cfb6deab5796ef49b65f66c65e82d7eb5b21efb220e6e4c5d04d0618a",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "230ab0be00407c00696f60ce6cd2f17b6dd62ebaec6f98c5432da344b2fde088",
+    "path": "qwen-3-32b/role_vectors/hacker.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a546f9b22a12b11ca804d058786607fb7d6a5565",
+    "size": 656866,
+    "lfs": {
+      "oid": "b697e6f815788b20abb638fbb9172268979b837bcdf2b19313113e4c26279b1b",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "b42d0e4705b17a33a4cbcc02c015180573af7e56dae311c05ccd1d4a8c88e49c",
+    "path": "qwen-3-32b/role_vectors/healer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "da7ce5a728082fd01f66c936990091439a287c1a",
+    "size": 656944,
+    "lfs": {
+      "oid": "c47d1c942ba9baf3d59d9b7ea0c4492e8b974120ce1c96e7541ce4a038d662d4",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "364475903d67f8504baa0ef187adb765d3d91eb7373f68acfaf8ca3a80359874",
+    "path": "qwen-3-32b/role_vectors/hedonist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "3ec181404be5af127ede6fe94378324c08ebced9",
+    "size": 656866,
+    "lfs": {
+      "oid": "853fbc746a9e7588ecd1a027a208d51c17414dac49209e3908a35ca59edd1c1f",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "f04df57c6d82e203abdfdbdb2efd82798fadbe01dd2460b7825abc2d6d087b72",
+    "path": "qwen-3-32b/role_vectors/hermit.pt"
+  },
+  {
+    "type": "file",
+    "oid": "bf438d91e11c429b25ccc5e05190008693afc749",
+    "size": 656951,
+    "lfs": {
+      "oid": "411a462d3893f391f9f2db35a2b7c61735f293648ca72c93bae36c5e94cd8d51",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "bc8bf6a9a53f12793398ab1e9afccd44155242008067ae83314d5dfcfcb0450f",
+    "path": "qwen-3-32b/role_vectors/historian.pt"
+  },
+  {
+    "type": "file",
+    "oid": "cc11f8109cf6cae0a0026b1c8ec9027ba3b350e7",
+    "size": 656852,
+    "lfs": {
+      "oid": "a76bad3df3e57e016a1e2cc75a84ae88727ef99f42822950b841082a61331538",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "8b698db654863f99dbfabd6668a78b1f9c5699935c28bb3944327e9f7cbf9729",
+    "path": "qwen-3-32b/role_vectors/hive.pt"
+  },
+  {
+    "type": "file",
+    "oid": "14b01a88458920440a475a1b40a8e033dc1df584",
+    "size": 656937,
+    "lfs": {
+      "oid": "e4b7b2ebd645dd240ae6a5abc4bafb9af87e9bd3e04bba40ebb87741fd9496b9",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "79ade59294717bccfa9eff9d0659f710cbd5d33c7d181009ed2cd2c6ae82aa6c",
+    "path": "qwen-3-32b/role_vectors/hoarder.pt"
+  },
+  {
+    "type": "file",
+    "oid": "638e6b1c4858b9255631862650cb363ba620c77d",
+    "size": 656958,
+    "lfs": {
+      "oid": "c2900b25515eab4b1ed07f9077d518fd2a8d29c91db58eadb15bc25cce2d364d",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "fa0e7fd7a2047d6d115fe8baf155e5a4b1d6c6500d0f21b94411ab6f2a77095e",
+    "path": "qwen-3-32b/role_vectors/homunculus.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e3ebe98f783db69b794fd17c33426fcc3991acd9",
+    "size": 656866,
+    "lfs": {
+      "oid": "0968260e5b4fae153e29e643cf0f7f44ca29b23cb24fb16022bc4a39b9e993e6",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "f988986a245939d4064b1a16f03ff3c40a4bfa6a280dfb2319daa9b811af778d",
+    "path": "qwen-3-32b/role_vectors/hybrid.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c4d9b2ebafabe1a95d4ac49fd843e824af92b176",
+    "size": 656944,
+    "lfs": {
+      "oid": "844d18ea194c9aa6fb58e6692d35cf1adf3bc6bafe4ffc35be4aea4c49aa4405",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "a1250c2eb1c3af27b00efa9fb54f81a6c9ca0603fc124151663ced84f3d4359a",
+    "path": "qwen-3-32b/role_vectors/idealist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e7d4c9d4b95dda24b8a1a7e4aacce9ea92f17d4a",
+    "size": 656951,
+    "lfs": {
+      "oid": "56736e058154ee83d50cbfe420af5e0e40d6568057168678fd9d6d515f3a78ab",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "9876c64115394e27512259fbd2d9c58c50deb2200ba03a424e578619e55f3cbc",
+    "path": "qwen-3-32b/role_vectors/immigrant.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f6df8ae638b896d4fb97ae215d0c159ea58b3a2e",
+    "size": 656958,
+    "lfs": {
+      "oid": "fd1f1c68253c4bc99c1d9010bdb38dc118301929dca2c9b178677300b950f539",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "65b0d451754990477747d6d4adc3729315f4282d49b734aea2331b7d78c3b88f",
+    "path": "qwen-3-32b/role_vectors/improviser.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ebd5c052b0e3d09753eeacffe6daf070bc1404b5",
+    "size": 656866,
+    "lfs": {
+      "oid": "06cd2b2a32dc1d42dbdac707d80391ca25bf72f3b989a7c9d119716f11059b17",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "f494752d9d4c17e3c6a4399bde7b937b6dc9b5c40365227dd30859f706e5ca09",
+    "path": "qwen-3-32b/role_vectors/infant.pt"
+  },
+  {
+    "type": "file",
+    "oid": "eab08d80fb24e82c607f64ef17ec2ab7a0676e22",
+    "size": 656958,
+    "lfs": {
+      "oid": "bec5e3010e7d070967da93e40a7c554d12cbf2c088dac522d552d434185046fb",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "3ac7cd83c763f231541a2c08522f5a6166c18099b6b76a7a1b9460390d6ba621",
+    "path": "qwen-3-32b/role_vectors/influencer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "92bbb43d9093d0ecc75d9c021237c2425564f550",
+    "size": 656958,
+    "lfs": {
+      "oid": "e8a8ed6c6ee0f6886990563062772f634007114f38a7ca9f6444bb09356ec0ad",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "2c97f1087fb14cc0377e7aa504265ca87ae8b9ac84e7cc23922ba0447b1b8e7c",
+    "path": "qwen-3-32b/role_vectors/instructor.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c49ae0be8439e48e41d8a626c2abb6fcfbecc90f",
+    "size": 656965,
+    "lfs": {
+      "oid": "7dba80a59e88454ee69e8c47998884d731ab3d72790875e17e70d2df3d9a5c8f",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "e3af7f966640ced0474e7f2e329e0ae02a1753b1e3932ac06473267ea8d12d00",
+    "path": "qwen-3-32b/role_vectors/interpreter.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ad8f13af0b93d00808bc127a7aa70e56abb50c48",
+    "size": 656965,
+    "lfs": {
+      "oid": "d5cc116f4ae9335da78d18b58852c5b4ba9f46ba8233867e84ccd7d270ac0c00",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "17349eae7a6a9ba304081801218e8131c2d020c6440d5bc91d4e03c4d8162f83",
+    "path": "qwen-3-32b/role_vectors/interviewer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e335c3dd8fb049cbbb7320ff2e40273e437e6a6f",
+    "size": 656866,
+    "lfs": {
+      "oid": "0e32c68ceb8777332439db7c1580cbb6d7351cdfe04391ab58409262b1d8c13e",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "026982d9653b5c48ce29fdc6621e5d84eab5a31b94991fed81f7a535bfde1b33",
+    "path": "qwen-3-32b/role_vectors/jester.pt"
+  },
+  {
+    "type": "file",
+    "oid": "9780e039d192eb235fda07afd9f531fe21af2980",
+    "size": 656958,
+    "lfs": {
+      "oid": "b9148e53dbdb36243aefb54f52d4c82a5d341e47a865752cb493af74d8011b8a",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "ee03d55ee644a5f06e803a35575185ef78c4a1e2a0a95ce9e770af99c714764d",
+    "path": "qwen-3-32b/role_vectors/journalist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ad274ed001a094111e1af0c5295379f00ec73e27",
+    "size": 656859,
+    "lfs": {
+      "oid": "5f16f79b29c278a9765f9a567173e82b2163604ff87a61fb0acd051bf19b0c93",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "a5bf78c6d176f2b4ffa0eff7f5c50911c2a50fa7fa5f108de5f41965e085bb28",
+    "path": "qwen-3-32b/role_vectors/judge.pt"
+  },
+  {
+    "type": "file",
+    "oid": "3e5bdea0b86b0125de1ce195f5b87f8ed9090015",
+    "size": 656866,
+    "lfs": {
+      "oid": "e315b4167719a2b64d140089ed391f9746baa49d8306dbccae3e5c6067de1aa2",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "c81eb2846016da9a1297c1ff51ef3ff112bd1b173cc47715415a852e478ade7c",
+    "path": "qwen-3-32b/role_vectors/lawyer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "169d78d18af34bbf4f211d193254cc34672ee8bb",
+    "size": 656951,
+    "lfs": {
+      "oid": "79d5f84bb221b6d2503ec2f950c01821d616482b5ec5b2933c9f172894502407",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "491cc60e10fb9acf06716be8181566f67504298249bbf6ab092e301949395e35",
+    "path": "qwen-3-32b/role_vectors/leviathan.pt"
+  },
+  {
+    "type": "file",
+    "oid": "1a065c61546d6dff8137e1e0d00efbf1b7d93be9",
+    "size": 656951,
+    "lfs": {
+      "oid": "7030f6b52c7c8ff13177f837b44241b1f020689644febd890803c0afa3404d0d",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "b99164bec2cab0d447cc95068ba075bb363da5154f1c31f525a58728deffc7db",
+    "path": "qwen-3-32b/role_vectors/librarian.pt"
+  },
+  {
+    "type": "file",
+    "oid": "d4b8bdaf91b43e3b2401f562e560d3ccbb609e82",
+    "size": 656944,
+    "lfs": {
+      "oid": "dcab8ffd7724a8f079bc736b44d224e1b71a2faa88716ce4d22c8f76192837f0",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "9e6a55dc99033bac8029684d2328cf80b80799e21687d2b6002779155ded398c",
+    "path": "qwen-3-32b/role_vectors/linguist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ae6d3c54bc9f1a4ef829c3f143512762ca638cbd",
+    "size": 656859,
+    "lfs": {
+      "oid": "8af5c80a461c2d1d432f4c022a3a932ba3936f6745d2f3182507e75335568c54",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "2f99afe9d2d5be25a83e394e85f34bb31df19b2dccd606aa05e7973fc91ff9f2",
+    "path": "qwen-3-32b/role_vectors/loner.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f5425448e07f3033e3ee5a3a235720a17c383779",
+    "size": 656937,
+    "lfs": {
+      "oid": "de57f3771d9c49a49131daba5960247d55c4db79f6f41de803ce3466954e1078",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "1f3f297ec9720eb2350bce28a87fe9314106ce3c151d534403d7ce6c2dfec9d7",
+    "path": "qwen-3-32b/role_vectors/luddite.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f3f57a3611517f0a97f8ed6a7fcabbdb3bff1f33",
+    "size": 656944,
+    "lfs": {
+      "oid": "233e27d69c60f48c15b5648bd4118ab0ea80bb81f851c7c5385d771011d1efb8",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "a838fb8ea08d05175497cdd0cf14d3dffac851b2fbda9590c511667131e699c5",
+    "path": "qwen-3-32b/role_vectors/marketer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "b4bf5a886fd115eb5311b6426df6de5ac508326c",
+    "size": 656866,
+    "lfs": {
+      "oid": "ae643eb22d10f9a285ff0f0cd585e3dd8e78649e7bb1a8aee4a8b126751740b7",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "91b0ecd8745ba63bdc6041fb1dc123e97b0b65efb5356aa70dccedd51cf83db0",
+    "path": "qwen-3-32b/role_vectors/martyr.pt"
+  },
+  {
+    "type": "file",
+    "oid": "b2ebd2945ee37a25b3c681721c8eef8fea41150f",
+    "size": 656979,
+    "lfs": {
+      "oid": "79b1848ccfdb1623bd018c3a8450072576dfa91169490987ba7202f791acbe84",
+      "size": 656979,
+      "pointerSize": 131
+    },
+    "xetHash": "9cd9b5c124c89f99689a6d9028bf2289fccd69e0cf9dc3797ca5a5c68c7634ae",
+    "path": "qwen-3-32b/role_vectors/mathematician.pt"
+  },
+  {
+    "type": "file",
+    "oid": "80a4dea91a4eca15439164a60285d58ba775f53a",
+    "size": 656944,
+    "lfs": {
+      "oid": "d0de5b2d451a2f8d7a99bc5e22e844a4b86292aa4b83d9904d03a9322075805e",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "3dbc9441a8e33c1aa9c22e1102439fcbd500852cf1641844cd232b549d987eab",
+    "path": "qwen-3-32b/role_vectors/maverick.pt"
+  },
+  {
+    "type": "file",
+    "oid": "4dcfc41635c913b63854117aaa284796cdf87b8c",
+    "size": 656944,
+    "lfs": {
+      "oid": "47077e02a9b1c1dcf32fda5624de5e63730cc65d54a3811dd94a97b17b09d752",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "210f76ad6c0c8eae54cf510afabd1e7a6e4b153d525153422045230e5158e19b",
+    "path": "qwen-3-32b/role_vectors/mechanic.pt"
+  },
+  {
+    "type": "file",
+    "oid": "5a4d86eb99dfa750d7b6211ed98d62089e33f0d8",
+    "size": 656944,
+    "lfs": {
+      "oid": "aca6b62275f62a6c232eb0d6c0ff2606d75bcc1dfa004be1a5adba9439ec15d9",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "d9a0fe9d8251ab148a875a28c6158596b5a6a5d0340ae3341641b94b453904ea",
+    "path": "qwen-3-32b/role_vectors/mediator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "cb8ef83d722d0db111c6a8bff8082f5c43673397",
+    "size": 656866,
+    "lfs": {
+      "oid": "e4d607495d1edeffbaf673f28e5e547017229dd51ba771fa1c7d254995c8c4f6",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "21e55232954cef06f8d15001fd8d4707f3f4162abf1a0f3bba752ca78190a1dc",
+    "path": "qwen-3-32b/role_vectors/mentor.pt"
+  },
+  {
+    "type": "file",
+    "oid": "5f56773ef1b72121511f350c6655df6fbac85887",
+    "size": 656944,
+    "lfs": {
+      "oid": "61149802673fb7e6d68091d39e9cc4562a7516a85ee37217d91d25a60d703a20",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "85e0946c8c57bf5803718337e64dd834b03684f504479f505e665bfaa841bd5a",
+    "path": "qwen-3-32b/role_vectors/merchant.pt"
+  },
+  {
+    "type": "file",
+    "oid": "60d2f7ce634ded09e7c1565f7fd9406b148bb644",
+    "size": 656958,
+    "lfs": {
+      "oid": "2b7ad18469e370c407145790f6998564e4d9726779f7d1411d74a06cef401ad3",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "d7508d45725f112c1a9063f6c73a8ce7d9ffcf7c4704f366bd5b7859f376ae00",
+    "path": "qwen-3-32b/role_vectors/minimalist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "125de7d7ba26a6d1f3224685211218d9a8b0a5ab",
+    "size": 656951,
+    "lfs": {
+      "oid": "16e6525dbe44a034ae5abc167fdc6405a0761a89964b2dcd928c84e755ccfbe6",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "b3ad594d9429b3f7eebec0dfa0a63e959f11e6a03973f026dd3b87953b8864d0",
+    "path": "qwen-3-32b/role_vectors/moderator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7659fbcebde4f3186870aea1004a3ca1884d192d",
+    "size": 656944,
+    "lfs": {
+      "oid": "df14bfb3b496b628bc54f083c487e16aa21c2c6fe645d24a9ce608502cc5d387",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "0e30d396f4d0401c9436195eb27f4f4973ef0d49aaa7df01153c5d681c329da8",
+    "path": "qwen-3-32b/role_vectors/musician.pt"
+  },
+  {
+    "type": "file",
+    "oid": "0594cab216b115d9b548d1890f2e17079572fa42",
+    "size": 656965,
+    "lfs": {
+      "oid": "75bb6fb9975de98bfc6f68ce5ee1eff3680fd2cdab8b9835f844d92195260884",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "65293b2f421edf7349944a134a5a7285470d1d77ef243d07d8c2dc67994cda11",
+    "path": "qwen-3-32b/role_vectors/mycorrhizal.pt"
+  },
+  {
+    "type": "file",
+    "oid": "52f46d01c976c9a21175c5bf5ba1c869baea3a39",
+    "size": 656866,
+    "lfs": {
+      "oid": "edf5263f9cafcae614ed69b261160ad7a3861521e5c8ae95d16a0176b5c97673",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "c6d938657f6cebee1f579c2681345cfd77ec13f9d1ce92e40b997211ae4b4938",
+    "path": "qwen-3-32b/role_vectors/mystic.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e93dea423f1848613f894b72f0369d735f2c79c9",
+    "size": 656958,
+    "lfs": {
+      "oid": "e8241bd0627c93ec6c849fcb9744acc3481a071e67435db44121568307a56cfa",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "b09dbd1c3bad55492340f33258da267c7cc425d43d9f0ce17379610418115a62",
+    "path": "qwen-3-32b/role_vectors/narcissist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "eb4d1e353b774643fbdec397d2368a825902429e",
+    "size": 656944,
+    "lfs": {
+      "oid": "d229e2ca3009c54618ad92d4a9e61bc9e4bd509ccc97255b3656709e1fd3fe90",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "dfe0b93919849385f026f1307a88d8a2728b67cb2e9e7acc8a682ad29dc9b478",
+    "path": "qwen-3-32b/role_vectors/narrator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "dde28673a517e5b1d7eba69ebb70c648474f064b",
+    "size": 656958,
+    "lfs": {
+      "oid": "615875c2bc50fe51c1cdb5b576d2a03c312f01a14f626005689c916ea3498615",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "8d3fce6dc0f10e34b84cfddf9af2d99d155d28998df28d690c48d3ba6291de7e",
+    "path": "qwen-3-32b/role_vectors/naturalist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c617816d43b1ce96426446feee3a30d403c03a34",
+    "size": 656951,
+    "lfs": {
+      "oid": "7e788ce78c009986a8dfc6a375cc509ab087286edf36b0aa5ebccd18f34bc460",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "82853c45d90c89100095bd40cea3c440fcf96f6ab6ec3fd09a8932759c867970",
+    "path": "qwen-3-32b/role_vectors/navigator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7c8fb36e816b0e3bcf52d510f18574607ec901b0",
+    "size": 656958,
+    "lfs": {
+      "oid": "8629bb43f0d544b849ca023cb0f189bc166f12116e06e5de4cd8735daec5c61b",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "4dbeb0bc2b065e89816f25e695e2d62ce2d3c65113e2aaa3aae5aa77443c354c",
+    "path": "qwen-3-32b/role_vectors/negotiator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "180f1f5d2d12022c0791b146632fc3d16f417973",
+    "size": 656951,
+    "lfs": {
+      "oid": "32f29bf4ee7c7e9f86164f838db794b9d817ddd0b826a27aa64aed6cc26846b9",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "aca4d71f803858c65cab31161d336570611463e45e7504b96c33e8cc7b2851d1",
+    "path": "qwen-3-32b/role_vectors/networker.pt"
+  },
+  {
+    "type": "file",
+    "oid": "cc2bef052133a690d8399eb105b3f50fd70123ae",
+    "size": 656944,
+    "lfs": {
+      "oid": "ef0935cf36c4086f2e0da48a703ef4d2f9d4500aa6d27bf4b6d9ecae9df098d6",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "5f43828c787039d90f7cbb3cca6d2c3a696e5ab1eaa6ba0d7743da87c249a2a4",
+    "path": "qwen-3-32b/role_vectors/newlywed.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f70a553e8b5ea93de7111dd533d3560cc50016fe",
+    "size": 656859,
+    "lfs": {
+      "oid": "49b0e4bf0f343cefd647b3ed8214828bca35232049678a6c1f0ff6deee2391d1",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "ab6a383af47ed234f6a500940f0539083aeb977cf45cf76b4c77eb91caf30fa4",
+    "path": "qwen-3-32b/role_vectors/nomad.pt"
+  },
+  {
+    "type": "file",
+    "oid": "cbeed8a766de24ef79e440bbb57a7feb98db54ae",
+    "size": 656944,
+    "lfs": {
+      "oid": "f5250f890416b02d8989e1cd3aadac6b76d8627c2f520eb98e419b2fcf78d448",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "0572e9dcca80e422c491f6f5233bf7f786dc1d13b4021395de2520b265c886f4",
+    "path": "qwen-3-32b/role_vectors/novelist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ad1a67f3d2b0269e07f3ff8581ba7d55475526a0",
+    "size": 656972,
+    "lfs": {
+      "oid": "4c28c6da3cabf9a22eb963fdd926d9c8d42b18b809deca9065c72cc99067d6c6",
+      "size": 656972,
+      "pointerSize": 131
+    },
+    "xetHash": "c0127532b7b3fd668d677b17a1bb16906062ff8d2c203c52c254542a7e08723b",
+    "path": "qwen-3-32b/role_vectors/nutritionist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "bfab10e4b0a46b68ea938a0d2cf3bc01ae2306c5",
+    "size": 656944,
+    "lfs": {
+      "oid": "dd9da7a452d77aa4756885a000416cdb6efa4f3dfa5de53d0c99902d598a8735",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "72e796c91d047adc95bad5b4c2f39b739bcc160881fc1adaa87a6b62c5b3cbc1",
+    "path": "qwen-3-32b/role_vectors/observer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "3cca8a9b1bba77e9a8a5c073b2c7f9e8fb547dc3",
+    "size": 656944,
+    "lfs": {
+      "oid": "e31e98263c9c3afbe96d581d3efa89ab62ccd5e336c87a7cab08ea3e7595db4f",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "60f14c01706de36920858388f03f594b0c1ac3b15f56f277714b65ad6a3504a5",
+    "path": "qwen-3-32b/role_vectors/optimist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "68b9c7cbbe57a675789609614d7f9ff48b5754c1",
+    "size": 656866,
+    "lfs": {
+      "oid": "f08c5635a69e3d9bf09f2cb8111d6b653fa5e48012b7bcc6393dcf467822399a",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "48458f5c15ed987ded923d6642366e12c29a3224879a04506696a2105811c243",
+    "path": "qwen-3-32b/role_vectors/oracle.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c5b951f920e12c66340693c87f5735ac09ca2bf8",
+    "size": 656951,
+    "lfs": {
+      "oid": "4de6d8c06d08c85f05ef4b8d0953ba986b932d9a8f47e03e120a3c98ce8cf30b",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "fe5cfe8c7f8fce1053f1c512e52313c246f8f5a0d8f6cc337f610baaaa713229",
+    "path": "qwen-3-32b/role_vectors/organizer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "3dc7609f8cff093c5df91abfca03cf661ca46133",
+    "size": 656866,
+    "lfs": {
+      "oid": "c50af4debe87384d5a6e72dbb1253beb86209737f76df9cf8d956c51a404c113",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "2ab4b44fdf2de54e52e7bd35f05fe4fc9b05b945aa2be437a5c774f23604e5b0",
+    "path": "qwen-3-32b/role_vectors/orphan.pt"
+  },
+  {
+    "type": "file",
+    "oid": "9377427daf1f72669d7986b92aa36ef4b4debf95",
+    "size": 656944,
+    "lfs": {
+      "oid": "75bcccb38cbc8d641d5d1c83fb7b52581fa713d3a150921b6e8a1f5b4ff0c41e",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "814504fd8b9df8592711504c1fb0161c19f7f84112df1abbd8dc18ca089918f9",
+    "path": "qwen-3-32b/role_vectors/pacifist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "045d6f88df4ac4742478cb8443694d03746a1082",
+    "size": 656951,
+    "lfs": {
+      "oid": "6f781f8947e7a6cc47299fab466c7744934703b1f908c6e1871276fd48e46a17",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "1fd69b2ca5a8de5675cfcf3d4fe4981d67cba53c00b1f7c6dc5cc9170149b37d",
+    "path": "qwen-3-32b/role_vectors/paramedic.pt"
+  },
+  {
+    "type": "file",
+    "oid": "2f96e4f2bd7a3d3c4d2d7d9384a04d4c3b0aac70",
+    "size": 656944,
+    "lfs": {
+      "oid": "911aa053616882abba790e5ff6fc0b0e44f5b3c7691c735f615625ef09b1c899",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "696073cb91010e507d4b7a152e292f41c702b3f8d16b7d91129e2b267a65d6d4",
+    "path": "qwen-3-32b/role_vectors/parasite.pt"
+  },
+  {
+    "type": "file",
+    "oid": "53d142bc7f96e6921ef0a3e859b986ae3bcf9c60",
+    "size": 656866,
+    "lfs": {
+      "oid": "664c205f5d85e5a91fde341725224181e7d93a82abcf8c4f9f57a5f70b51b728",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "4231d4f931e64df7d2f5ef3d1ea9eb1addb566ad6ed7829ee6e16d911658439f",
+    "path": "qwen-3-32b/role_vectors/parent.pt"
+  },
+  {
+    "type": "file",
+    "oid": "dce056f5921459802354bac4455b78bb073b98ee",
+    "size": 656937,
+    "lfs": {
+      "oid": "20686a0438a04bf8e17fbe8f96b32e529d2946a302774391fbe1bd016888267c",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "4741898b7acb5f5ab0a905db91aaadd01fcce3436d2d6ed8f7df77bb7552ac0d",
+    "path": "qwen-3-32b/role_vectors/patient.pt"
+  },
+  {
+    "type": "file",
+    "oid": "372bc37872f8f3d3fb07965f131032083a0a842b",
+    "size": 656965,
+    "lfs": {
+      "oid": "e2134022c7aa361572b0830e2394bfc7067c4b0021451931e593d892f1181408",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "214a7d74c62be20d1317f6f7a783b279d1929379b641dab2745ee051dcc94ea1",
+    "path": "qwen-3-32b/role_vectors/peacekeeper.pt"
+  },
+  {
+    "type": "file",
+    "oid": "1b98dc8ddd69e48f3028153cca371dc6fa903e10",
+    "size": 656979,
+    "lfs": {
+      "oid": "e95598c96976bbc259dbdcbe0cc2e77e977e03cca920f58599c303e5b2c08e1e",
+      "size": 656979,
+      "pointerSize": 131
+    },
+    "xetHash": "7ea8169c8857769af0204618229935ae74e0819e8a4b633b017d39a9c8f0df3d",
+    "path": "qwen-3-32b/role_vectors/perfectionist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "1606318c7ffa39fbc7f2d1a0fb31aa092000289b",
+    "size": 656958,
+    "lfs": {
+      "oid": "6ef6844864fcc2ca8bcf285a4cd7a5faeb5c218b9ebcc9905d22f84e2d60aa2d",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "a5df200517fdb03ecc7c934f446fa441f564de76c514010f53a1e39bebce54f0",
+    "path": "qwen-3-32b/role_vectors/pharmacist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "4771281c4104ac2c376307cf9cc97660883fea47",
+    "size": 656965,
+    "lfs": {
+      "oid": "3d890e08a0d979a05c6724741ff830693b9c0c233d97c57e1f1c1a5b488fa2c3",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "f8bf7a9a8f83fbc98bbb654ed30047e556f519a3f1eb16a235448df062e6414f",
+    "path": "qwen-3-32b/role_vectors/philosopher.pt"
+  },
+  {
+    "type": "file",
+    "oid": "6ab4c69347487171b7fec53782733be13ef36851",
+    "size": 656972,
+    "lfs": {
+      "oid": "0e88871ef19e8efdc026462af58810257dfdc385657c63ae74f2b0f3a06fc585",
+      "size": 656972,
+      "pointerSize": 131
+    },
+    "xetHash": "3e4699ba9d09df924cd5b330685750db3a72de8b31727133ffcf1efc49eed451",
+    "path": "qwen-3-32b/role_vectors/photographer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7643b6a2f9d6109116b1331a0882dc0707ed74d0",
+    "size": 656951,
+    "lfs": {
+      "oid": "34daad0edacdb25462f6aac2c204a6dc0b41b9ba1a70ded7ee99c7707c48a7a3",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "e6b57c331dd150ab027d9a670ff176b5f4bcf50dcda03913a29c794e1c491844",
+    "path": "qwen-3-32b/role_vectors/physicist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "44af4ec1c5f2abeb3d28cd36d8994f4889775828",
+    "size": 656937,
+    "lfs": {
+      "oid": "8fd0e9c47f1230b7ec777620b973bbc6cc770e44fe12515ed47149390238b288",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "106f957e6dbd9ca38048cb9d577b2d9b7c11458e824de88a4880fee7e7caecc1",
+    "path": "qwen-3-32b/role_vectors/pilgrim.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c486be4416509eead85aee1554c297ed26e27a83",
+    "size": 656859,
+    "lfs": {
+      "oid": "9c8afe9b2561ecd455ad46f6f49339f6bec087255b3e78724eb4809ddc05993c",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "c23123b01f0a90ee9d023a09e232530a8beeb15f1890024c90265bc141074be2",
+    "path": "qwen-3-32b/role_vectors/pilot.pt"
+  },
+  {
+    "type": "file",
+    "oid": "8a8aa9d03e8ae66975e5b3f23942496b4c1569d2",
+    "size": 656866,
+    "lfs": {
+      "oid": "dc765492bef09867fe6660f7df4e22be26045366209ced4ad74916a6f46458e1",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "e6caf9ca7e26d1d4d897c6aa9fa499e051235f46c7461fcccdd828bd0afe5376",
+    "path": "qwen-3-32b/role_vectors/pirate.pt"
+  },
+  {
+    "type": "file",
+    "oid": "6b2c978cf4400e45b14b3a922e5d53fae37c1b28",
+    "size": 656937,
+    "lfs": {
+      "oid": "8d4db05ae612d56ec1d809dd571b13449cc5ae522aadabb75b9a84a19c0aca11",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "e18dede10ef38b439f965c0b0e779a59de36b3b7adc59899e0b0354c71785021",
+    "path": "qwen-3-32b/role_vectors/planner.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f0eb6210b2361f81fa5d881c67358b47a67b998c",
+    "size": 656958,
+    "lfs": {
+      "oid": "e386e263d405b8c3c1e9b2452666324267841c905795409c03c4b4b77816b99d",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "38d69d4d159c07255fa19520b57a7cc6cd3ba84b412b3cf2609d69e17d243bf5",
+    "path": "qwen-3-32b/role_vectors/playwright.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7b36f822802da6382ceeebfd39d6c338488cf009",
+    "size": 656951,
+    "lfs": {
+      "oid": "9694a7bbe8eb463c1f2eb7524758580419333649265d58d2a97c64ebff203f88",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "628431c0786598291c64648a233715f3057dbe076dcc9a8e77a032e0834a86f6",
+    "path": "qwen-3-32b/role_vectors/podcaster.pt"
+  },
+  {
+    "type": "file",
+    "oid": "0806bd0ae8aa63bb881b729c9da26291865bcaee",
+    "size": 656852,
+    "lfs": {
+      "oid": "22a6431b63e412e840730def8e99e25299a6151e43431887cb9f53daffa2b2d8",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "0e27b638d578167375b7ac06cfa0b4c5d2909bf1f2b3305d6baf56f02b537b62",
+    "path": "qwen-3-32b/role_vectors/poet.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7de00fb7f05e328f2a538fc61b598750549dea71",
+    "size": 656944,
+    "lfs": {
+      "oid": "95a6c68342eaef507c75fdd59822465dd0b825122fe40c81163da3c1596bba0a",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "b489e4adf334043ece6d5629979351a3df4dc0f240db1253a4bdf87fe92c4b78",
+    "path": "qwen-3-32b/role_vectors/polymath.pt"
+  },
+  {
+    "type": "file",
+    "oid": "fa415b813d2be2969c5d59e84f15d358cc164525",
+    "size": 656958,
+    "lfs": {
+      "oid": "863e097564f4b13b9d151ff4350ebd34795d660085c19c0e2a81c4892adb6d47",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "b7305c4bfdf33d172e9014e501b562c01e8d7a6a3bc8b3c868d0210859a80e06",
+    "path": "qwen-3-32b/role_vectors/pragmatist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "5239a44e95724c4289748c81db405035ea9d0c52",
+    "size": 656944,
+    "lfs": {
+      "oid": "47d994568b2d5aefffb0ee547c01f77dc20ac7fc0da1c0514179649d86c85c5c",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "45caf502739a67dcbd20436915751e05d424d9c2ef22615316e55805c7674514",
+    "path": "qwen-3-32b/role_vectors/predator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "283bbfc682e376db1e73af3cfd0179578873baa7",
+    "size": 656951,
+    "lfs": {
+      "oid": "497454fd08db461a5c82ec847f0a24fa4caff9f38e3c53ea9614f25e5a4d4778",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "dd512b59e77643fc0b5ef63e25c4d50249758e772d4926ba5bc449851bcdf020",
+    "path": "qwen-3-32b/role_vectors/presenter.pt"
+  },
+  {
+    "type": "file",
+    "oid": "130300bd132712717ecb741fc23b2684229a8df3",
+    "size": 656852,
+    "lfs": {
+      "oid": "a176e01b987edc4b2eac35a2a4616168cf5a706ae8954d5e7588e2b815c49ffb",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "8c4ef97b3f1382c5fc3a376788bb7baf779e9016878b5c20ea486268fd6e4bf7",
+    "path": "qwen-3-32b/role_vectors/prey.pt"
+  },
+  {
+    "type": "file",
+    "oid": "13e176a041dce47fae2311b3c3102e573fca82d0",
+    "size": 656944,
+    "lfs": {
+      "oid": "7d0a9dbfc5f9107553d86742035e42a8dc1810a5746cc753b5b9dc2f3918c461",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "ad21dda5e594a9eaab07983d99993b1ae67db32b45cca851e633300bb52c51b8",
+    "path": "qwen-3-32b/role_vectors/prisoner.pt"
+  },
+  {
+    "type": "file",
+    "oid": "0a6e668a5fb7dc0edca8e408f08360c6bc02da0a",
+    "size": 656986,
+    "lfs": {
+      "oid": "38d50b047a3afcc659bd87fcb7c2fe04683a9b58730065a88bb9a81f561e5988",
+      "size": 656986,
+      "pointerSize": 131
+    },
+    "xetHash": "f666c9275c7c8a541b999664d9384479235f885e39c4b0e2c188a400f4ae6410",
+    "path": "qwen-3-32b/role_vectors/procrastinator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "42885f4d072749d8dd8ff7064e630a99eee05bb3",
+    "size": 656937,
+    "lfs": {
+      "oid": "c6f955c2d7f3f18789751e87e008d96c57bb2935eeb1b60f3b1c752a63dae724",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "e730f1cb244beac0729c95497f0b04bee197652ff7a0eeede6a18b0c9b9e88c6",
+    "path": "qwen-3-32b/role_vectors/prodigy.pt"
+  },
+  {
+    "type": "file",
+    "oid": "94841041f6925004535aecd2b4e8290e96286977",
+    "size": 656944,
+    "lfs": {
+      "oid": "c0de96334530f1bee5909a4e912775527ace1ec29fdc4736d29385cd1e467313",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "b7713508dcf07cdcd8a216079b5b6096ede4546a1624d966fa7785f7291d6a94",
+    "path": "qwen-3-32b/role_vectors/producer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "98e3020b4519d3189b07b60bbe5603cc957aadf8",
+    "size": 656958,
+    "lfs": {
+      "oid": "76e7607f950744f55bc6276af965df4c8b91253ec2e93fe104ea615a3c97c65c",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "7ac17c0a175df412e257d75ce03dbc62736bee5e4d93d64986f3baa5f0e08c86",
+    "path": "qwen-3-32b/role_vectors/programmer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "6e845fe5a71279e575206fd9633fb297085ec2be",
+    "size": 656965,
+    "lfs": {
+      "oid": "fbe4b2916539a41a3dd71ec52468854fda848a604128168f8431b82faf1228df",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "d966a96f3723ac52ca2f6afbe8c60052d59524217f60a80ee76c3399aa9e68ed",
+    "path": "qwen-3-32b/role_vectors/proofreader.pt"
+  },
+  {
+    "type": "file",
+    "oid": "8b63970b884cbb0ebb0b4f77881d9f13e2504e2c",
+    "size": 656937,
+    "lfs": {
+      "oid": "26a387a3b736e7445145f40951f49292718d6ee5882484eec3d37e925eee8754",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "d8ef9741b64a244b964b31cf74a7eac5ad3e1cb72e35469557e9bdaeec96d851",
+    "path": "qwen-3-32b/role_vectors/prophet.pt"
+  },
+  {
+    "type": "file",
+    "oid": "56b7df1ee5b90facd859def1523728af44e12bfc",
+    "size": 656958,
+    "lfs": {
+      "oid": "ef62836d93d17a2e81d25cc8590ac7af54aaefb6be4ff7173b227bfeadfc1401",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "8c091b66567a22904363096c3240944e8f07bb621ce0795cf521a08dc70cbc7f",
+    "path": "qwen-3-32b/role_vectors/provincial.pt"
+  },
+  {
+    "type": "file",
+    "oid": "8e0ceb38fcf5c6b117fd370828e2572a32bfc186",
+    "size": 656965,
+    "lfs": {
+      "oid": "c006e82d26921204aa05bee9367bd0510a169525a34646cca1987c2583cf5a99",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "043921372ef73ab1d831719d946186b3eefcdd7521d688cebaa2795e7a07865f",
+    "path": "qwen-3-32b/role_vectors/provocateur.pt"
+  },
+  {
+    "type": "file",
+    "oid": "538199ef112ca0c6e5df34d21dd41c2ceaec9ae3",
+    "size": 656972,
+    "lfs": {
+      "oid": "9964041df2904ba9e4ce335bcd80b49ccbe6bfa98ff2b99fb2ec376e67c9b10f",
+      "size": 656972,
+      "pointerSize": 131
+    },
+    "xetHash": "7599df6db05f372d34a408f965c306757b7557e72b63ac0c8dbdaaeb7ef572f7",
+    "path": "qwen-3-32b/role_vectors/psychologist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "99ac046f31aed70ed0e7968a1921bcc012ddab4d",
+    "size": 656951,
+    "lfs": {
+      "oid": "8eaac7558f9c25f0613bd75b465c6ebc35091bd0e386ab43a2c08eba0aeb40f1",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "5da1c89050cd3ae019112452cc3bacace72c290e641dd061860420190fc4c72f",
+    "path": "qwen-3-32b/role_vectors/publisher.pt"
+  },
+  {
+    "type": "file",
+    "oid": "1e5c6a698f9003d884045ceecdb5d0de810c2bdd",
+    "size": 656866,
+    "lfs": {
+      "oid": "795132db9181cb33fa09db582b2e43b9ff3de2de838ed720ab62e3d693a30286",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "5a9e1e7ae5abeef64e6967d057ddde7753a1c53e393133dbeb2a3a70ea0c47e3",
+    "path": "qwen-3-32b/role_vectors/purist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "34ecb66465c69867323d72d42eb349f9407fd57d",
+    "size": 656937,
+    "lfs": {
+      "oid": "f6c95b3fdc7632f9132e4d7d3a4961d1308f3f5a4d145e9cc30e04e1f88b09f7",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "57774ccd655ade97381740e044319870a6812ce3cff673b452e0b5ae772228aa",
+    "path": "qwen-3-32b/role_vectors/realist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "d449cf5cb2c72be043c72876cbfe0fa593f0aebd",
+    "size": 656859,
+    "lfs": {
+      "oid": "c77295f1962eca84eb8b6f1de196a04ba330181b9d05925efb18669fc4c6ad4c",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "58ef89a200c42ca03089e71ae54000ebc147d7e52e4267dc8f29f1a7f8ef774e",
+    "path": "qwen-3-32b/role_vectors/rebel.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a22daf15bdea764cb2472fb0998286aa106ad8b9",
+    "size": 656951,
+    "lfs": {
+      "oid": "0a455f8b18e477bc6e0cc31ec7af4f0f4dda6833fd484a64e1a63963a4816932",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "456f5772cbe6422f032182b0ed49bac7b30ab51c12bb2c206a5ab5e30e62476e",
+    "path": "qwen-3-32b/role_vectors/recruiter.pt"
+  },
+  {
+    "type": "file",
+    "oid": "db3cd1c6e6bad88508b37704d73f45ab35cf0ca1",
+    "size": 656937,
+    "lfs": {
+      "oid": "39f3a9cc1b3b964df41b4cf9d7926eb464b4cb0dd0d5168b5de821c6fdbed020",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "81067fc9929f6400b167a90e6b903078682fc8a67bf2d4b1fde9c8b6be868785",
+    "path": "qwen-3-32b/role_vectors/refugee.pt"
+  },
+  {
+    "type": "file",
+    "oid": "4c0975bdf18c3fcec53f5d3834556cd1f14f4bf0",
+    "size": 656944,
+    "lfs": {
+      "oid": "bc5140622dc069d9348a63be5dde369708fdede7030394ee6c40379d6b45938d",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "8879c71ef5f0ff25ddf7e0bebededf9aff731dfc78bb6a165606b9fdd27fcce2",
+    "path": "qwen-3-32b/role_vectors/reporter.pt"
+  },
+  {
+    "type": "file",
+    "oid": "d07ef02da7d5c9ce283e6d1a1743ba2a386cba8e",
+    "size": 656958,
+    "lfs": {
+      "oid": "b19bf0d27a970b27ec7ead2d5c1edcf9899417c0ec361857f6b1e38461a54e36",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "d29b61ef914a7515b5343c3297afaa85b91a76f33a5d77d91638d9fa024d04c9",
+    "path": "qwen-3-32b/role_vectors/researcher.pt"
+  },
+  {
+    "type": "file",
+    "oid": "08a06c9cc805384526bb62b0e8abd55faa468fd4",
+    "size": 656937,
+    "lfs": {
+      "oid": "9fc0c6e79ae906f944f6b2cde012ebe6daedd7da32504b9cc27efcbad548fa1f",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "c809415dac6a990a874e0581f9a2132b7a4dc65c93fe2625f8e8235fa1f902f1",
+    "path": "qwen-3-32b/role_vectors/retiree.pt"
+  },
+  {
+    "type": "file",
+    "oid": "9a466050d61b66e852977e625340722cc232cb3b",
+    "size": 656944,
+    "lfs": {
+      "oid": "b2d3d86f2f2cd90b5ad3391714a2f8a37f67665bce5c7c7f9b4660e83b28996e",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "dd4fb7887437c6ba2c981f722bfe6f4dc3622e2442d61eb1d4da7aa9fb3f0c62",
+    "path": "qwen-3-32b/role_vectors/revenant.pt"
+  },
+  {
+    "type": "file",
+    "oid": "0b99d99929d28bc5211fd1ae1abd2635d62b6251",
+    "size": 656944,
+    "lfs": {
+      "oid": "fe81fb4dbf744d625637be4af77a4a04f7b79988b847e82315bab93df23efc17",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "8302e95a606a663e12f29ebd68aad9a5a4a6c27501f662d9b62af0b76b392a37",
+    "path": "qwen-3-32b/role_vectors/reviewer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "0854fb4adb014fb94d07ca204661dae4c724fadb",
+    "size": 656979,
+    "lfs": {
+      "oid": "a7f0284cc1dde7184fa748eb838c4c004539662237eecfbd7c511f44e9a60724",
+      "size": 656979,
+      "pointerSize": 131
+    },
+    "xetHash": "eea70cc1cdf1d09934305276cc8ed5d39e772949cc711b7e3a47b89d95a09f56",
+    "path": "qwen-3-32b/role_vectors/revolutionary.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c4d7f09c506af392b43867dcc8e12a352e822172",
+    "size": 656859,
+    "lfs": {
+      "oid": "be7f97f2ae643317eeb97a6632b245059150a1cb81f89443bca03365759471c8",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "ff2625c0db02aac1d75ecb0c0a06fd55e5f8a894cc10a50be4a0c77588f74aaf",
+    "path": "qwen-3-32b/role_vectors/robot.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ad240ffab5bd6d3d0820a308bb024efc2ab7470b",
+    "size": 656859,
+    "lfs": {
+      "oid": "7fb785f6e878c46dab9136710981be481c45a239ba37f9747f46c9bc976b7674",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "7ac52c48bb273f6eb2f6548d0746c16508ecef30649031fdfc117cd0f72ef424",
+    "path": "qwen-3-32b/role_vectors/rogue.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7f985d3a1013edd8596473f4c87858777ea44856",
+    "size": 656944,
+    "lfs": {
+      "oid": "9fdcc0bf2425acfc4230f3f564a0b43685e1de5d80d0525eacdf44d0d7e152fc",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "3b8520aa526a3eaef65d88e489057f3a0e2ec86d53ff6757e80a9c53ec75648d",
+    "path": "qwen-3-32b/role_vectors/romantic.pt"
+  },
+  {
+    "type": "file",
+    "oid": "1b3449f1dd3e442be2f6235728c4646496dfc1e2",
+    "size": 656944,
+    "lfs": {
+      "oid": "c2d2ce097cb050b3e0b45aea7ce5d8ecd72cb98b4da41b4f1a400363ec516bcb",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "90a1ba432af15bbccb4684bd55671d4095bb72a367b69d9b98ebe4e3a04cc8e7",
+    "path": "qwen-3-32b/role_vectors/saboteur.pt"
+  },
+  {
+    "type": "file",
+    "oid": "836dc8f48a4fbff7ced80e4c00f2e88589ed2042",
+    "size": 656852,
+    "lfs": {
+      "oid": "c7e241da484cbc9c278bf890c89ea122388805df4215d9c3ebfc9e932402263d",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "e09cdd787a45ae26b3e624351fca02daa5fa1f7ec35ca424607dd849a15f6094",
+    "path": "qwen-3-32b/role_vectors/sage.pt"
+  },
+  {
+    "type": "file",
+    "oid": "2804ded13a7111e2458d3303d808dbdae77007f7",
+    "size": 656951,
+    "lfs": {
+      "oid": "cda656e2762015fc335489a9ba747ebe2b993b5823038e17d8a5d74ffd5c6ea6",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "390d543e7526e1e8d82f626465453b22e6cb63b4a1b75383b5f3442170676bcb",
+    "path": "qwen-3-32b/role_vectors/scheduler.pt"
+  },
+  {
+    "type": "file",
+    "oid": "b1dc834bbfccebf6bd0103d615ca6ad307670e58",
+    "size": 656937,
+    "lfs": {
+      "oid": "97cfe072216b56c5825921d2184be6e04fe41b5ae662374722db5f67daaa23bd",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "14e885bac82f0c13fbad7fc371df26f32b2e0c4a71badfff5bb496dc8cd4dbfa",
+    "path": "qwen-3-32b/role_vectors/scholar.pt"
+  },
+  {
+    "type": "file",
+    "oid": "d7447812601ff032131f73935903a115b0c5b675",
+    "size": 656951,
+    "lfs": {
+      "oid": "943694bafc0ec9fa100b89f0643caf00990e112410bd6bd93b4cbac8a4968ee9",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "79128332e339e6346dd29130ab4ad8ff2167ffa3a289fb08babe9a8e5beca1ac",
+    "path": "qwen-3-32b/role_vectors/scientist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "be4f7821ae1aa62f98efb82f2530d1e4a34608a9",
+    "size": 656859,
+    "lfs": {
+      "oid": "0f74b2a56324a505cff82de1fce1da1995ade036f5f2ce422da443613e637b6b",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "4f343331d32f9faebb209f6ddedfcb0c4ecfdcff31efe5fc2c8a601999b9c4fa",
+    "path": "qwen-3-32b/role_vectors/scout.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ae4c2b6242c3959b59c974462e8189dfd8ad9d4c",
+    "size": 656944,
+    "lfs": {
+      "oid": "43730bacd29e6e68b291974e198dca99dc1c277914692f0c3aaa95b791fe5061",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "00d45b619f4682bc7581e6e49cb53c63ab405048244e19578df2bfbe042c43e9",
+    "path": "qwen-3-32b/role_vectors/screener.pt"
+  },
+  {
+    "type": "file",
+    "oid": "0868d23ad0fc97f8a09fc4d916b7154dd2e521be",
+    "size": 656951,
+    "lfs": {
+      "oid": "b3d3ad9414fd436360fb0ecc1ba90ed5f2acac92d84d9b3c9831bcd5f2fe57c8",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "e3d1dcc573aa1c11db1ec3782c2dd2e005c72422d309365db16a775132a0c096",
+    "path": "qwen-3-32b/role_vectors/secretary.pt"
+  },
+  {
+    "type": "file",
+    "oid": "be93f8757e0673356a7b5a871d96c3e3058a2917",
+    "size": 656866,
+    "lfs": {
+      "oid": "6d847a7bf4932ca4b4b0808c2bab5cb3efe2c0989d7a8e086c1315ab01099bcd",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "8bf045de6f468a47a19e44f2cd68e6984c331279936b684b27ddbc480b80d281",
+    "path": "qwen-3-32b/role_vectors/shaman.pt"
+  },
+  {
+    "type": "file",
+    "oid": "535064ef6d3186127cf8a5f535ef8d3fa43e9fe5",
+    "size": 656972,
+    "lfs": {
+      "oid": "4a8ed5ac18108161338ec45830e97bd77759bd1e9e18420d7b7b37c745d5063f",
+      "size": 656972,
+      "pointerSize": 131
+    },
+    "xetHash": "b5e7c353435347d0e695c26e65e89faf2a02c320778818ae4c4fcbfd59a7bd84",
+    "path": "qwen-3-32b/role_vectors/shapeshifter.pt"
+  },
+  {
+    "type": "file",
+    "oid": "39b571f6ae84c05ae2c4900544c708f9b60bd946",
+    "size": 656958,
+    "lfs": {
+      "oid": "f38fc29e392c0f4cfc3932270354a62415975fb8126dfd83fb8633565ebf8cbe",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "a68f681b6875ae239f20a653014339b60fa228987f03d24d6aa2bc0f6afe2c0c",
+    "path": "qwen-3-32b/role_vectors/simulacrum.pt"
+  },
+  {
+    "type": "file",
+    "oid": "174c66699ac5490eb3ef741b10feca11d11869be",
+    "size": 656937,
+    "lfs": {
+      "oid": "83fe35bada3f478863f627cd1d24e246c1d9b3b38c4135816b2267c5a98c79ef",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "4bc3d2b4eac25fa1172d77da06660fa0f9ca8610ed056174b0ab8c8ca0c74c30",
+    "path": "qwen-3-32b/role_vectors/skeptic.pt"
+  },
+  {
+    "type": "file",
+    "oid": "31ab3d001dd31e8eec8d575f28c038ad3c20a852",
+    "size": 656944,
+    "lfs": {
+      "oid": "f241816d76e1aafd8ff49b3e9434764b8d7c8bf285b6912f5a65dc62bbabba05",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "c32c24e45ecb9d90f25eebc7f6fb47543ac5b9454ea539e1d3483986440fbbbe",
+    "path": "qwen-3-32b/role_vectors/smuggler.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ea7fd69eda44c7e909b1a60da6aed9fe2a3bfb3f",
+    "size": 656965,
+    "lfs": {
+      "oid": "db658c7396d343d794e0152702a91d4eb59f22883b0c18b8349123bbfb27e48b",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "2c5dc23c4bdf0215722ba3788938ab74722c3e324b12174c245c11ee0b496a1b",
+    "path": "qwen-3-32b/role_vectors/sociologist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c50e2a1bc7b83f009645926ecf9a163727da127d",
+    "size": 656937,
+    "lfs": {
+      "oid": "dce32df4217ebc63e2cad109e61b09be66d00e0c0268cdd1c0e8915240384b04",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "ddcb67937c3f4bd0ee7759e14593cf1979df2743d1ef12a9d4a7f0844b0ca299",
+    "path": "qwen-3-32b/role_vectors/soldier.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e1447c7f0a49b10c15a1a30b757ca52923faa0df",
+    "size": 656951,
+    "lfs": {
+      "oid": "5596431f009748e4d3c008b54873fcbaa301c550a709d9104948507ac830412d",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "531cd4390e38aa7cfaa0ea951e08528e4b619b5a573d66e73c360e844b27b6ca",
+    "path": "qwen-3-32b/role_vectors/sommelier.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c121baa550e39e1e3dc2dc0091c2ce93b5b1ab80",
+    "size": 656958,
+    "lfs": {
+      "oid": "899e73c13fd419b0e5a14f54098bf8947fe9cd625188d9af16774aa6b3515ae7",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "7ed493ac8e348902aeccb84a1eba121ac69dab652386d2e96615f1745cde0acb",
+    "path": "qwen-3-32b/role_vectors/specialist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "9d32dc1c940edc67579e5817c0251f67f0bcf623",
+    "size": 656866,
+    "lfs": {
+      "oid": "33cb1c9db05c11a86c920c4851fb6a3203e0cb18c3f6d892cc764a653f20d666",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "66fd6903cebd3908703da0e7e788236d7d41d26e92f041fd0b1815354f3db95c",
+    "path": "qwen-3-32b/role_vectors/spirit.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e7b12a0e0ee8104353cd2f43518e49ebd9170aca",
+    "size": 656845,
+    "lfs": {
+      "oid": "d0085c4156dddbc9e37a2e9232ec13eba10fda0d2ea3b6a48e77bd9e76ee8091",
+      "size": 656845,
+      "pointerSize": 131
+    },
+    "xetHash": "388356a806d114dd6994950e97d599250f289cc36f8abbe0b038fab13cb5d286",
+    "path": "qwen-3-32b/role_vectors/spy.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c080bb40416d1b27e6bec745b36fffc38a64347f",
+    "size": 656972,
+    "lfs": {
+      "oid": "90b87228207b1e1c887f46adafbb6e48b6c6bcd4ad09b647595225629533a948",
+      "size": 656972,
+      "pointerSize": 131
+    },
+    "xetHash": "f257234bedc45dd3cd7ab43081e6dc390dd1639560a63646028e9d521ffbe6d6",
+    "path": "qwen-3-32b/role_vectors/statistician.pt"
+  },
+  {
+    "type": "file",
+    "oid": "28f996713bebf9047a1bbb1d090b28576d20d952",
+    "size": 656859,
+    "lfs": {
+      "oid": "f2c0456c62b2925c76e63c192cf811edb13578dc9dcdd26ebeaa81ac5f8817b0",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "7693a61d866f6ddcb81e9828fb639e6f6b3b2b17f233ac06d03c4b75f70f7c57",
+    "path": "qwen-3-32b/role_vectors/stoic.pt"
+  },
+  {
+    "type": "file",
+    "oid": "1cf2ac3ab67f5bb86c52775a21977311cd79518a",
+    "size": 656958,
+    "lfs": {
+      "oid": "f1c706871b6624590320917f2e7163acabcafd1ac5f27ff5ea256bc759a08f30",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "44aabce13404729f970521f24e682c9b59d8e0332bd93ad864be11c2ee831967",
+    "path": "qwen-3-32b/role_vectors/strategist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7a67fa02a055eea66550b2785622b7e37319dd75",
+    "size": 656937,
+    "lfs": {
+      "oid": "e7251ba70257c2d87107e79b6ae19daa044873f96f4005d68ec5b622bd1cafa6",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "537e3c653ba32cc08cbd027423e9e1fb42e18a59a8c8a26fa32361cd731ebafc",
+    "path": "qwen-3-32b/role_vectors/student.pt"
+  },
+  {
+    "type": "file",
+    "oid": "0507b0389a9622afcce0b90a17e95a85b54ff5d5",
+    "size": 656958,
+    "lfs": {
+      "oid": "35927199148abc4f7307883b0a6d1ab42b8f97b2b7234f009c097fa332b302ae",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "0bf181f714266aca76b5fd921bb7112bbb0664738fd6fa7af750b31b2f1e01b2",
+    "path": "qwen-3-32b/role_vectors/summarizer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "b5418b6260db1d6123645542dde1c8fadd243eaf",
+    "size": 656958,
+    "lfs": {
+      "oid": "036ca62842750be40bbb571d447520887c721a79977d3308d4efa6b07d455884",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "b014579d2b18c3ecf530df501029be4295f98de32161db269193bd2237ee4ce5",
+    "path": "qwen-3-32b/role_vectors/supervisor.pt"
+  },
+  {
+    "type": "file",
+    "oid": "6cc63680a7f39f54074fd49426698a2d18a1a3df",
+    "size": 656866,
+    "lfs": {
+      "oid": "a480fc8c4a596814ffd83fe5ecc0275fa94522979f23cb7d3fc8b6c56a0be955",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "62ac24749f4f735227ee4221212b9c68126aec5c4af7ef6d8bcfdbe50d57c42e",
+    "path": "qwen-3-32b/role_vectors/surfer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "d696a19be5274bb9ea73daac01171387e9f695aa",
+    "size": 656944,
+    "lfs": {
+      "oid": "83be330ad0cc2571322b18f8c3edf9b29725f7088094b3a830d3c893d9aaef7c",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "bb266443683c20c3d8585b6e54efe173ee6488d5027a00011d5981f5e0d8c04a",
+    "path": "qwen-3-32b/role_vectors/survivor.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e7cbdb1e40b6fded4074b058455afd9e6606ba84",
+    "size": 656859,
+    "lfs": {
+      "oid": "8125ca429c0812979d04fdd3d0532ffcc8a6e5decf3020ad2d21cdaa941100f8",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "396825aa2dd9bb7741beb4c0d52ba119558e7e2ac92db31f5d9a2c22d1efbf63",
+    "path": "qwen-3-32b/role_vectors/swarm.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7d8f866d1e6c2465454b3893cd2fb2e1fa7bbd1c",
+    "size": 656944,
+    "lfs": {
+      "oid": "a1fff42e074ec5e5dd758ba3296ce332378e3dda0402b828389a8a5f9981b39e",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "5519a5e5990068b0d1005082d3862ab022e1cb0146226b704ff945c6d56a707a",
+    "path": "qwen-3-32b/role_vectors/symbiont.pt"
+  },
+  {
+    "type": "file",
+    "oid": "62b0ffc904700850098ae9df4789690219694120",
+    "size": 656965,
+    "lfs": {
+      "oid": "cfd3ea966d996b10d9e6b424b75b15683704f1a34d3f4eaab4b8cc455622b6aa",
+      "size": 656965,
+      "pointerSize": 131
+    },
+    "xetHash": "98fc329a45e8098e1ef49363804c7b363d8cc1f30b5ca1a2b516d25536159d6a",
+    "path": "qwen-3-32b/role_vectors/synthesizer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "37c7601864bd85fc62893d3571260c16335886c7",
+    "size": 656937,
+    "lfs": {
+      "oid": "a56f1066b083ab5ccd0b8ba7ec5b03aebe6c76abcbf6d56c134dd0e61100af77",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "3deeaf155ea912e5ff2015cd44831c004e28f7add708aef7bb69d104d5724107",
+    "path": "qwen-3-32b/role_vectors/teacher.pt"
+  },
+  {
+    "type": "file",
+    "oid": "2b17dd2b90cae64e627f414f4acd60bcaccd9bda",
+    "size": 656972,
+    "lfs": {
+      "oid": "78d9ddb7046f858049cff4d63bc91e333d26d6b52656249294ab25d735466ec6",
+      "size": 656972,
+      "pointerSize": 131
+    },
+    "xetHash": "cd35977e4e277f7271f86ffc099bf6dcb5be25a74baedaad13663d8623d26f86",
+    "path": "qwen-3-32b/role_vectors/technologist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "18141d6d7f1eaaad0f8aa61f15036daa473414e7",
+    "size": 656944,
+    "lfs": {
+      "oid": "3e312b352dd14773b9385d5f987d7f8864d2028a55ccb5d2fc6ac28dd5c3f01c",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "201d69a530afb622c67fcf88967ae24016075befc012bb9bbc681dbdfc4d6802",
+    "path": "qwen-3-32b/role_vectors/teenager.pt"
+  },
+  {
+    "type": "file",
+    "oid": "eeba300bcf2d1767fe2649f32482d7cb3ca89e0c",
+    "size": 656944,
+    "lfs": {
+      "oid": "a7b381aaf9c6b08ce1e175f6f82d538e26a48a750ff27fa7beaa6019762836e1",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "19986fd2b087187b8c415e46f0d0db5c584c2ed18102bbb789e28da851ea7405",
+    "path": "qwen-3-32b/role_vectors/theorist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "9d2cfb5e83d48fb51d5873e5868b88e98660f733",
+    "size": 656951,
+    "lfs": {
+      "oid": "cf979ef9a74a78e23820f96b6b198ba915aa7c072e5077fac2803e207860e376",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "d32aacd82f1fdda911c88f8f1aee968be9d194f8c35f97ccda8e706a42dae07e",
+    "path": "qwen-3-32b/role_vectors/therapist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "8e357f3e2bba7e2d56ae1f5fe13713a9ef6c478a",
+    "size": 656937,
+    "lfs": {
+      "oid": "fa409934d9b19f2f4316882a5858ecb90dea6cc0b3085cb628b95acde5f571cf",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "3d27c313e6e2261f5c03a9abaef9c35f2ca263a518513c88f0d79ebad1e65e9e",
+    "path": "qwen-3-32b/role_vectors/toddler.pt"
+  },
+  {
+    "type": "file",
+    "oid": "3eccb9c834ec81f0d149ce5e4d8f3bbf3cde71ce",
+    "size": 656986,
+    "lfs": {
+      "oid": "118f12a447c98c49448489fef04842da185b6307e0c1d6ecf68c68bbd87d651f",
+      "size": 656986,
+      "pointerSize": 131
+    },
+    "xetHash": "7a79ad8a3c0973089751d2fd2dd88aae029df19f40610e934020f5e43f2dcc5b",
+    "path": "qwen-3-32b/role_vectors/traditionalist.pt"
+  },
+  {
+    "type": "file",
+    "oid": "b2d0c7a744136320c2266a792c4ad1ba26786e11",
+    "size": 656937,
+    "lfs": {
+      "oid": "ea1be29241a15bd0b3af50a165464b57d3739764373f0bd071a8dd3d2a2bfae5",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "c84393687ea8734889ffef2fc61cc5e39901f444049a255410c1a4f796c5907a",
+    "path": "qwen-3-32b/role_vectors/trainer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "6bd5fd8a93a43032d42ce79c049249d1efa61eff",
+    "size": 656958,
+    "lfs": {
+      "oid": "e0f8f95f5670f95d97ca0dffed89cda2a9dbbf7fc14bf858262ead5eb0442fec",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "8850d7b5bff76d03fdb8dd1597eb03553557f0cff6e49fd5d21087516fbe6521",
+    "path": "qwen-3-32b/role_vectors/translator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a29dea3c62ad706f0c568e870747df1fa569d2a9",
+    "size": 656852,
+    "lfs": {
+      "oid": "56f359a77f1d924ec04dba6784325108eba63ee97f2e3a679c18ae2ce15be745",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "ced42d6e248666bf3f55498cf10f2438c0cdbb21b5ad98281a6408fc3d6c1d69",
+    "path": "qwen-3-32b/role_vectors/tree.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a3692f1bd1381e9089029c80d678ca8ef76e4e44",
+    "size": 656951,
+    "lfs": {
+      "oid": "50eab3dd7c7a6aa5b24cd6a82723f0c896f85f55601a94200bd201cbba96fd56",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "921fde0b097db187f9e955d3320b4364febfcabf43096b999b95eaf7b95582eb",
+    "path": "qwen-3-32b/role_vectors/trickster.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c648993e43c5dbc1e0d8d582be49fd87b0d262fb",
+    "size": 656859,
+    "lfs": {
+      "oid": "89c6d3ada2aa5a5e523f7d973741d1b8dc46067dbebfdca1f051efc48d325c15",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "032f8e5a7e06eabcf35116cfe378298fcb0e2d342850b7a50e50ee564caf2cc5",
+    "path": "qwen-3-32b/role_vectors/tulpa.pt"
+  },
+  {
+    "type": "file",
+    "oid": "cc05ed448c4a35b748a27ca161a3b95168c3d663",
+    "size": 656859,
+    "lfs": {
+      "oid": "e018098174cd83bede97d66a1b8233fda64111d230a7d0708f7d4abf3c88c4e8",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "9635e994d2c27efc1d9926c31e747e05ff538bacb75eeb194cb956a2bda7f40e",
+    "path": "qwen-3-32b/role_vectors/tutor.pt"
+  },
+  {
+    "type": "file",
+    "oid": "eb04bb96958ccf6db6faab6ceffe8254a4f20915",
+    "size": 656951,
+    "lfs": {
+      "oid": "dd73f163ba476e6236b22932d595a712472a7bb59118f20a9ce46cdd9cd52a83",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "566cf54242bc5c1ed53962fbaf7664b9f8ef30ffe906f5b6b73f73457b3080e1",
+    "path": "qwen-3-32b/role_vectors/validator.pt"
+  },
+  {
+    "type": "file",
+    "oid": "c14aa7a1dc1b84faae4fa04c5573a6b094f8e1e3",
+    "size": 656937,
+    "lfs": {
+      "oid": "9a7f5b15a8731b321e8979e55e32408aaae74437de1951e4ec36e2940121be57",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "53f15b3962dc7bcc62453be07e93608794cb41cd46e71b7dea1303a4827cc656",
+    "path": "qwen-3-32b/role_vectors/vampire.pt"
+  },
+  {
+    "type": "file",
+    "oid": "4bce944afa4c7bd4f4f22e8da1892ff5bd4db68d",
+    "size": 656859,
+    "lfs": {
+      "oid": "544066b44843ef9dd7803dd118b00acd33c00c594b2b951cf761f787621672db",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "ac2da79bd90219d3c8af9ae6675e9bc6f9ee69959506c53ea1ee949c39913b98",
+    "path": "qwen-3-32b/role_vectors/vegan.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f2c909a0dce09b83447c44ffc0aad2af23d36568",
+    "size": 656937,
+    "lfs": {
+      "oid": "4ec155d71a525d66926f2c59a23abc8c80f052a4275d85e2e27ef9efb651fb8a",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "e61dc875f290e1b5199dc2ac82a8b22f0f8432d9602dec09baab3336c3a337e0",
+    "path": "qwen-3-32b/role_vectors/veteran.pt"
+  },
+  {
+    "type": "file",
+    "oid": "8192bfe7d085cec60f50ced3a3e4340cd04ec1fc",
+    "size": 656972,
+    "lfs": {
+      "oid": "e14d8cfdebb14bf836057815ccd44036a63b36d19fc46b89ab6daa55ddd106ed",
+      "size": 656972,
+      "pointerSize": 131
+    },
+    "xetHash": "49b29d207dec32611976036eb34f35451424c0a62aaabba8c13cf343826892c5",
+    "path": "qwen-3-32b/role_vectors/veterinarian.pt"
+  },
+  {
+    "type": "file",
+    "oid": "a36bf8ae33602891a2819f01aaee6ef93f568958",
+    "size": 656951,
+    "lfs": {
+      "oid": "809e2518fc3dcb24cf9d60bc238c677a175e5dc27e7f12dcfa8247dc0351a17b",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "4a908662bdeb7eddc7bfdaec40a39e841651fbecfa10650845e946dbe831880f",
+    "path": "qwen-3-32b/role_vectors/vigilante.pt"
+  },
+  {
+    "type": "file",
+    "oid": "adec1c5e0db5f90872437f4f15cb7e6e89f03fdb",
+    "size": 656944,
+    "lfs": {
+      "oid": "447db5daf7925300cfff364dfee4011b817a34313091cc3e01118ebbe486504b",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "2d7dec29a2ae4843a008053b2e083235ed154f6e2f202f9b158aee13d64ed867",
+    "path": "qwen-3-32b/role_vectors/virtuoso.pt"
+  },
+  {
+    "type": "file",
+    "oid": "12bf45d463240f391e58d177fd5cc15ad68e48dc",
+    "size": 656859,
+    "lfs": {
+      "oid": "5261c0f3e6812f341c669a334ea095c84102b97dd8d916010248165cdfb3e75c",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "8928eb4baf5d545f5c52d4b256fecc8f0c3faf55c25f6edddf93b8350d496e9e",
+    "path": "qwen-3-32b/role_vectors/virus.pt"
+  },
+  {
+    "type": "file",
+    "oid": "eca6a2d08e8e2c82f84bf526dbacc045e4f64d18",
+    "size": 656951,
+    "lfs": {
+      "oid": "df66bf4c8cfc589ce07e406903b0d15c03c763ef41d8424346f6c39da3960eba",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "2436b1a9b6c86af44a6ffcf786ce252e646f56d4cd93543d63cde5df1d24a573",
+    "path": "qwen-3-32b/role_vectors/visionary.pt"
+  },
+  {
+    "type": "file",
+    "oid": "1b638f292078aca0add951e97dea1bef67230178",
+    "size": 656852,
+    "lfs": {
+      "oid": "0febca4bb3c33f1d84018cb7c5d1388dcdddaf6867922c4e20d9f6fd3172dc33",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "349f883300668a8e9f3e59b25bdfb69e340092ef70a4acb01bd344f17d87e9a0",
+    "path": "qwen-3-32b/role_vectors/void.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ed45358bd853850cea2c705ffa5e9379173d0bd4",
+    "size": 656944,
+    "lfs": {
+      "oid": "6478e86f94ac0eba0d7a1d215f23d72391ec65757a090d668766cfc908fe570b",
+      "size": 656944,
+      "pointerSize": 131
+    },
+    "xetHash": "4714adcdc38e5d72a0fdd5fde8b48064162dbf2861f3b1677cda7fd70e5f6a8d",
+    "path": "qwen-3-32b/role_vectors/wanderer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "7b8db724f8c0e57cba8c4074961bb5ab828c5d97",
+    "size": 656937,
+    "lfs": {
+      "oid": "1ae531efe905bb7c0d7966f515238771a91b36acd9cf909c220d2574dd0e79cb",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "d22bccb8d81f8336fe7f0527a259a5ad53da2a1f21264977f6587d3b73f785a6",
+    "path": "qwen-3-32b/role_vectors/warrior.pt"
+  },
+  {
+    "type": "file",
+    "oid": "ea039e743130c27e18ab79bc96a9a44b29cb601a",
+    "size": 656859,
+    "lfs": {
+      "oid": "54b3370b3bd864f56bc4970b91f593f45e4322b1fb71b5a809401cdd8a0f08c7",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "f00a8c2424592f3f891042ba6c3f675db02706087ca31554f1f6b54d07fa30a7",
+    "path": "qwen-3-32b/role_vectors/whale.pt"
+  },
+  {
+    "type": "file",
+    "oid": "f5ca9fe8f40e9324513904142a70bfd60c68a985",
+    "size": 656859,
+    "lfs": {
+      "oid": "ecd868ef6a7a1b2d51d45c51c94ea114ddabd2ec9b3acb9e5cef1a1ce390c21d",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "08fc762a4a998e9bddacc842af5fc130bc8dbedecc66bd23358938bae3cd9797",
+    "path": "qwen-3-32b/role_vectors/widow.pt"
+  },
+  {
+    "type": "file",
+    "oid": "e26bc600ee06eec64b06707d36c8c912f2e358f9",
+    "size": 656852,
+    "lfs": {
+      "oid": "a971b6ace6f480cec0e8d607fbbc54630f79dd03de5d6bb70977c0374ccedee6",
+      "size": 656852,
+      "pointerSize": 131
+    },
+    "xetHash": "96b8f238ffdeb06e4d49c627258df52722f726a427ba81449c5fb4349e95e8a9",
+    "path": "qwen-3-32b/role_vectors/wind.pt"
+  },
+  {
+    "type": "file",
+    "oid": "86bfe62c7642b11edc1d0c14321c886c0244d698",
+    "size": 656859,
+    "lfs": {
+      "oid": "bc44cc62e46b44723e69bd9733889304b7c6c1bb4997b2cc52b32e0562af4f04",
+      "size": 656859,
+      "pointerSize": 131
+    },
+    "xetHash": "54c65ea431733fd9c166b72862e5baa92a295312c357aef0fd2b8462c9ad5cf2",
+    "path": "qwen-3-32b/role_vectors/witch.pt"
+  },
+  {
+    "type": "file",
+    "oid": "0f0d44f802110c7287e7d7a1863de92d147ef497",
+    "size": 656937,
+    "lfs": {
+      "oid": "3aa32f2e6f3f95e358907966dcd918e1dfae405bc6ff2b5add0d1be23865ac4e",
+      "size": 656937,
+      "pointerSize": 131
+    },
+    "xetHash": "bd5e1ee52dd32267b8ec1f12534514dd5962a29be262779c6484bf2235183faa",
+    "path": "qwen-3-32b/role_vectors/witness.pt"
+  },
+  {
+    "type": "file",
+    "oid": "d922507b3a9a9ea496f2ca0ced7238dbdf8d27f5",
+    "size": 656958,
+    "lfs": {
+      "oid": "d6de1ff910dda8258e9ce5c855d2fd73608305dcfa2d0432d093e9bc4833c32f",
+      "size": 656958,
+      "pointerSize": 131
+    },
+    "xetHash": "ad5da97f161cda13002a2dee3b5c8219d9034ef6c1ef738b25e4e732f7276543",
+    "path": "qwen-3-32b/role_vectors/workaholic.pt"
+  },
+  {
+    "type": "file",
+    "oid": "cfeeb8c140377de30d77f4c791daebb825abefb2",
+    "size": 656866,
+    "lfs": {
+      "oid": "e2c1713316ff71632fd8b40bdef59e305ef7efa49fbfdcc203484a1e3d047481",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "46fdcb2b0132da00b6b6a389828dec61e7235555b5cd79dbe34a60085f15e2f9",
+    "path": "qwen-3-32b/role_vectors/wraith.pt"
+  },
+  {
+    "type": "file",
+    "oid": "3c842e137cb92196478ab0ce42bb9afb78af8326",
+    "size": 656866,
+    "lfs": {
+      "oid": "f59c92dca2350d68bccd612d76fd41002cb47f6f08d8c678f913438f8c183674",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "10750fadac3088af02c03488f0bc14a29a3595d2ed374cd4452425ee6968134c",
+    "path": "qwen-3-32b/role_vectors/writer.pt"
+  },
+  {
+    "type": "file",
+    "oid": "4196d4d2fac44e8faea35e686de5a9af0a14300a",
+    "size": 656866,
+    "lfs": {
+      "oid": "851aae69613ee404f10a4d030aea2e6187687c3fcb8a8dff4f902c5aeca31d01",
+      "size": 656866,
+      "pointerSize": 131
+    },
+    "xetHash": "660ab2f3a8a847b7529f365300bbf7a785536e967edf5f2c9d1de2454704c4ef",
+    "path": "qwen-3-32b/role_vectors/zealot.pt"
+  },
+  {
+    "type": "file",
+    "oid": "b8cf612d7bbcb3570cc2b1e7ac1c2cdfb93726c4",
+    "size": 656951,
+    "lfs": {
+      "oid": "c86b109e65499d3c6b19455a9b98674c2a141c5885d2c72ac8b7473d4cfc3a34",
+      "size": 656951,
+      "pointerSize": 131
+    },
+    "xetHash": "9dda7ab91a95b6b086ca93181ac06b4fc99cf0ee148e48db79ee903b3c9a3be7",
+    "path": "qwen-3-32b/role_vectors/zeitgeist.pt"
+  }
+]

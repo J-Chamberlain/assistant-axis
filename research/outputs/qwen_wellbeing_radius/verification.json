@@ -1,0 +1,25 @@
+{
+  "pc_coordinate_max_error": 3.132578214604109e-07,
+  "trait_cosine_max_error": 1.9185762617501823e-08,
+  "role_norm_max_error": 2.0567546243910328e-07,
+  "bridge_baseline_max_error": 2.537107046673981e-08,
+  "consensus_baseline_max_error": 1.9984014443252818e-14,
+  "gradient_finite_difference_max_error": 3.4678260263376615e-11,
+  "endpoint_full_vector_score_max_error": 1.84297022087776e-14,
+  "failed_individual_optimizer_starts": 25,
+  "candidate_rows": 11550,
+  "maximum_sphere_norm_error": 7.105427357601002e-15,
+  "median_fifth_neighbor_distance_5pc": 16.710327697140524,
+  "radii": [
+    4.177581924285131,
+    8.355163848570262,
+    16.710327697140524
+  ],
+  "model_identity": "unknown",
+  "no_model_inference": true,
+  "saved_rows_finite_and_unique": true,
+  "all_optimized_scores_beat_sampled_starts": true,
+  "all_candidate_gains_bounded_by_individual_optima": true,
+  "minimum_alternative_pairwise_angle_degrees": 44.999999999950184,
+  "compromise_beats_both_single_objective_choices_on_maximin": true
+}

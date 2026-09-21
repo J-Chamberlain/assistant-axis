@@ -1,0 +1,24 @@
+{
+  "source_repository_commit": "f3bb6e7a7fb9fbe36d784ca91d0ee4739523f98d",
+  "public_role_source": "https://huggingface.co/datasets/lu-christina/assistant-axis-vectors",
+  "input_sha256": {
+    "research/outputs/trait_persona_prediction/persona_trait_similarity_matrix.csv": "723d42415fe3a70221919fe8ae2aec2e2ebcdeae5bef89a1aeea55fdaccfe5d8",
+    "research/outputs/three_model_trait_pca/qwen_trait_pca_directions.npz": "5b20d5d43c1a7dbe00fd8b5568271068292eb744972e59b647530ab6ec4c3339",
+    "research/outputs/three_model_trait_pca/trait_pc_scores_all.csv": "45680d91fea23b73b3ef82aaf136eedced96f58d921166f4d4264d9e0aa01a42",
+    "research/outputs/extended_persona_pca/viewer_data.json": "672c617758ace9654708d5f248e094d3005f19ee5237d3918a159bc0e3d813d3",
+    "research/outputs/qwen_trait_sparsity_prediction/role_norm_pc_audit.csv": "dbd568f8319d759ab4755c761f3287578775095318020cd326b1b8e7b230bc76",
+    "research/outputs/aa26_sapa_profile_information_gain/dependency_repair/AA22/trait_weight_sensitivity.csv": "6055e41b2042304277fa831f89b186dc11b03513ae227a0c490f4735b42904bc",
+    "research/outputs/aa21_bigfive_hifwb_persona_projection/human_bigfive_hifwb_coefficients.csv": "31f70dbca1fb0a29223a7b3a056ed0ea46ce36bf71bff7a02670764db269d4fd",
+    "research/outputs/externally_anchored_big_five/big_five_role_scores.csv": "41c4fda3d93c05176eda33e90cb665b10399020be0fa15fa5115dd95c3e2aed1",
+    "research/outputs/externally_anchored_big_five/big_five_domain_directions_manifest.json": "b75fe17ffb112016386b87798d5fb0171f2797a5ccc15be6418134f91451f50c",
+    "research/outputs/aa18_three_model_consensus_trait_structure/shared_trait_loadings_by_model.csv": "198fa75c4119e3f8b8573b0da80092b3e7992db8f697c96e2fa96dfe2aad480c",
+    "research/outputs/aa18_three_model_consensus_trait_structure/shared_persona_scores.csv": "61dbb2ff17e4b68ad6772cda0bc5c994b1ba829da7dac8f06c21e1a26cf63a66",
+    "research/outputs/wellbeing_mapping_comparison/persona_comparison.csv": "0ba7b54c96ef52633d387a1e5fa6bbf2c59c5c23fa65a7c915f2456ad78cafb4",
+    "research/outputs/qwen_wellbeing_radius/qwen_mean_roles.npz": "cef523244520c8301fc2aded7d9a2d88f8af6f5020fb318e954faf63aa08f5d0",
+    "research/outputs/qwen_wellbeing_radius/role_download_manifest.json": "18a943af9513ab2be1b136ef0892d0ca7b8803f93875b8a224d73fec83422a83",
+    "research/outputs/qwen_wellbeing_radius/analysis_specification.md": "7c09f88de0c6ecfae5740aa73dd2e2f8d26a748bf1a6a6ca869b8dfa300adda6"
+  },
+  "model_identity": "unknown",
+  "model_inference": false,
+  "paid_compute": false
+}
