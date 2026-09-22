@@ -1,3 +1,12 @@
+
+## Recovered Qwen persona vector map — 2026-09-22T09:26:40Z
+
+Offline viewer reconstructed exclusively from frozen `radius_candidates.csv`, `qwen_mean_roles.npz`, and `radius_geometry.npz`. It shows saved persona-specific finite-radius vectors; display length normalizes selected frozen gain globally. No analysis or inference was rerun.
+
+- [active: persona_vector_map.html](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/persona-vector-map-20260921/research/outputs/qwen_wellbeing_radius/persona_vector_map.html)
+- [active: build_persona_vector_map.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/persona-vector-map-20260921/research/outputs/qwen_wellbeing_radius/build_persona_vector_map.py)
+- [active: verify_persona_vector_map.py](https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/codex/persona-vector-map-20260921/research/outputs/qwen_wellbeing_radius/verify_persona_vector_map.py)
+
 # Raw URL Index
 
 ## Qwen well-being radius analysis — 2026-09-21T20:50:37.397991+00:00

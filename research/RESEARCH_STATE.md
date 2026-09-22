@@ -1,3 +1,6 @@
+
+Recovered artifact note (2026-09-22T09:26:40Z): `research/outputs/qwen_wellbeing_radius/persona_vector_map.html` is now an active offline viewer of frozen Qwen finite-radius candidates. It does not establish intervention or human effects.
+
 # RESEARCH_STATE.md
 # Canonical state document for the assistant-axis research project.
 # Updated at the end of every Codex session. Fetch this first in any new session.

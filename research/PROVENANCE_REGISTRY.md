@@ -1,3 +1,8 @@
+
+## Recovered Qwen persona vector map — 2026-09-22T09:26:40Z
+
+Artifact `persona_vector_map.html` was rebuilt from the committed 11,550 candidate rows and saved Qwen PCA geometry at `bacef72563e282fe56c45eadcd67178eb1623079`. `build_persona_vector_map.py` writes a fully offline viewer. It uses saved PC displacement for arrow direction and globally normalized selected frozen Big Five-associated, direct-trait, or minimum gain fraction for display length. No new model inference, human-data analysis, or scientific result was performed.
+
 # Provenance Registry
 
 ## Qwen well-being radius analysis — 2026-09-21T20:50:37.397991+00:00

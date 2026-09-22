@@ -1,3 +1,6 @@
+
+Recovered artifact note (2026-09-22T09:26:40Z): `research/outputs/qwen_wellbeing_radius/persona_vector_map.html` is now an active offline viewer of frozen Qwen finite-radius candidates. It does not establish intervention or human effects.
+
 # Thread Start
 
 ## Qwen well-being radius analysis — 2026-09-21T20:50:37.397991+00:00
