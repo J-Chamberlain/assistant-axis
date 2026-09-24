@@ -1,0 +1,127 @@
+{
+  "base_commit": "0693aaf76e5073c37377024130dbc2d0e80424fd",
+  "branch": "existing-activation-sample-audit-20260924",
+  "files": [
+    {
+      "path": "research/outputs/existing_activation_sample_audit/HANDOFF.md",
+      "bytes": 2662,
+      "sha256": "78dc8eff5eb97c887a14e3e06fc78c9756d7c1edda0bc44347bc869a40716ceb",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/README.md",
+      "bytes": 2038,
+      "sha256": "6272f5f9d4ea51e9c8d0ebe32a09838c90078d936af774d26973e1abe482108e",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/audit_local.py",
+      "bytes": 6485,
+      "sha256": "0b0e11a772d993ecc8f6902928409faaf70db2840e0d39a0600982f6d209b524",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/audit_remote.py",
+      "bytes": 2913,
+      "sha256": "51bd56ae3feced20d61b21de8b3bed639d45558418a3914b33210f4f0f12e264",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/audit_scores.py",
+      "bytes": 2563,
+      "sha256": "c93ca0d56292a6ef78b6a60455a17d70f567b708f7c4b081a346270733e1d194",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/check_linkage.py",
+      "bytes": 1917,
+      "sha256": "feb2608b95603fcafb427dc80b5230889fa978c9b7388fb9de5126f46b0df818",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/cleanup_candidates.json",
+      "bytes": 2198,
+      "sha256": "050a6becea575f58cee0d1ce1c950f17dc1d53c30823ef15d1cf36530fa1fb0a",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/disk_preservation.json",
+      "bytes": 1361,
+      "sha256": "8b699622176da59a4e2d797ddfb129313e97a81b2e25bc43764267dcc0319b76",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/disk_usage_summary.md",
+      "bytes": 1844,
+      "sha256": "c5922d069dec4c40aeb8ae008bb6128a9079771eb69ed295de6be61c3d599c00",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/inventory.csv",
+      "bytes": 2798046,
+      "sha256": "9c10337019bdbd2e4eb4450146c251331cc8f7013ed678b6f31fa5e41e2c6bb6",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/methods.md",
+      "bytes": 18398,
+      "sha256": "4575a51b92d43cb6bde5f97f16a632e0af6f42cf8d503c288c4fb860ebb16e18",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/remote_metadata.json",
+      "bytes": 95116,
+      "sha256": "0417c3f929933703e8641f1774639ad6855bbe9645566bce0cc38d662fc53083",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/report.md",
+      "bytes": 3874,
+      "sha256": "a683b4bae21142b706c08436963df21efd99385cf7eacd3612a049fb151b781f",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/run_metadata.json",
+      "bytes": 9689,
+      "sha256": "24073afff6a69c500d1547fb3b958d32dc7ffbb7d03ebe1846b1a2ee0ac43596",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/search_log.json",
+      "bytes": 4168,
+      "sha256": "9aaaca3141c0371390b639c4664c1bd52e7be0722b2ded062228e2daec879f73",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/source_manifest.json",
+      "bytes": 1476858,
+      "sha256": "08847e3640ff4db9dbb4f679a82a77d579db19d28fd3375587de21d9d78e6564",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/unrelated_work_snapshot.json",
+      "bytes": 12019,
+      "sha256": "4b7bfe23236af2f29282ca6ed509b4fe5b6fa21ea6ea2319e153156f607f24ce",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/validate_audit.py",
+      "bytes": 4426,
+      "sha256": "0f489118cdc9d2be62083616cad4f26a8670d6349bcef2c921e0ded6340561bd",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/validation_summary.json",
+      "bytes": 6624,
+      "sha256": "89c8306e84d00a26db0e17bb6403d24988c9cd5cc54f409141028b99e8961c86",
+      "status": "active"
+    },
+    {
+      "path": "research/outputs/existing_activation_sample_audit/verification_result.json",
+      "bytes": 466,
+      "sha256": "5801fc2f97426d9daf7f2d6fc016910247667fdd978150b87d9632bf89f05ee6",
+      "status": "active"
+    }
+  ],
+  "self_hash_excluded": true
+}

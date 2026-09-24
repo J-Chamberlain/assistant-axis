@@ -1,0 +1,251 @@
+{
+  "original_aggregate_rows": 1545,
+  "expected_personas_per_model": 275,
+  "expected_traits_per_model": 240,
+  "original_missing_distribution_rows": 1545,
+  "local_pca_cloud_responses": 1512,
+  "local_named_personas": 4,
+  "local_full_feature_personas": 2,
+  "local_named_role_run_pairs_including_partial": 6,
+  "third_party_personas": 20,
+  "third_party_default_runs": 3,
+  "third_party_header_keys": 27600,
+  "third_party_unscored_nondefault_keys": 2,
+  "release_hash_mismatches": 0,
+  "duplicate_inventory_views_collapsed": 2,
+  "inventory_rows": 3167,
+  "python": "3.14.3",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "viewer_n": 1512,
+  "viewer_unique_ids": 1512,
+  "source_unique_ids": 1512,
+  "viewer_source_max_coordinate_error": 0,
+  "viewer_run_counts": {
+    "amateur": 60,
+    "playwright": 60,
+    "trickster_phase1_1200": 1200,
+    "editor_phase1_128": 128,
+    "editor_matched64_1024": 64
+  },
+  "score_checks": {
+    "score_sets": [
+      {
+        "path": "research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv",
+        "group": "amateur",
+        "n": 60,
+        "unique_ids": 60,
+        "score_counts": {
+          "1": 1,
+          "2": 25,
+          "3": 34
+        },
+        "ge2": 59,
+        "eq3": 34,
+        "sha256": "696f0de9f5f114cc667427f67dcbe24f101d6a0a5c8cde24f1d56344cea3df22",
+        "bytes": 30910
+      },
+      {
+        "path": "research/outputs/a100_activation_cloud_posthoc_analysis/gpt41_judge_scores.csv",
+        "group": "playwright",
+        "n": 60,
+        "unique_ids": 60,
+        "score_counts": {
+          "0": 3,
+          "1": 3,
+          "2": 5,
+          "3": 49
+        },
+        "ge2": 54,
+        "eq3": 49,
+        "sha256": "696f0de9f5f114cc667427f67dcbe24f101d6a0a5c8cde24f1d56344cea3df22",
+        "bytes": 30910
+      },
+      {
+        "path": "research/outputs/gpt55_judge_and_outlier_followup/gpt55_judge_scores.csv",
+        "group": "amateur",
+        "n": 60,
+        "unique_ids": 60,
+        "score_counts": {
+          "0": 1,
+          "1": 15,
+          "2": 33,
+          "3": 11
+        },
+        "ge2": 44,
+        "eq3": 11,
+        "sha256": "a5be9fa34421d3b70a787c158a92eaa6da7634e64998358d528ed27d8d192d10",
+        "bytes": 29612
+      },
+      {
+        "path": "research/outputs/gpt55_judge_and_outlier_followup/gpt55_judge_scores.csv",
+        "group": "playwright",
+        "n": 60,
+        "unique_ids": 60,
+        "score_counts": {
+          "0": 4,
+          "1": 2,
+          "2": 14,
+          "3": 40
+        },
+        "ge2": 54,
+        "eq3": 40,
+        "sha256": "a5be9fa34421d3b70a787c158a92eaa6da7634e64998358d528ed27d8d192d10",
+        "bytes": 29612
+      },
+      {
+        "path": "research/outputs/recovered_role_cloud_analysis/recovered_gpt41_scores.csv",
+        "group": "editor_matched64_1024",
+        "n": 64,
+        "unique_ids": 64,
+        "score_counts": {
+          "0": 3,
+          "1": 25,
+          "2": 34,
+          "3": 2
+        },
+        "ge2": 36,
+        "eq3": 2,
+        "sha256": "200815794e6cb5c3a2470d5ad4a01608946de45abbdd0b9cda2056243729d02d",
+        "bytes": 443124
+      },
+      {
+        "path": "research/outputs/recovered_role_cloud_analysis/recovered_gpt41_scores.csv",
+        "group": "editor_phase1_128",
+        "n": 128,
+        "unique_ids": 128,
+        "score_counts": {
+          "0": 8,
+          "1": 63,
+          "2": 54,
+          "3": 3
+        },
+        "ge2": 57,
+        "eq3": 3,
+        "sha256": "200815794e6cb5c3a2470d5ad4a01608946de45abbdd0b9cda2056243729d02d",
+        "bytes": 443124
+      },
+      {
+        "path": "research/outputs/recovered_role_cloud_analysis/recovered_gpt41_scores.csv",
+        "group": "trickster_phase1_1200",
+        "n": 1200,
+        "unique_ids": 1200,
+        "score_counts": {
+          "2": 2,
+          "3": 1198
+        },
+        "ge2": 1200,
+        "eq3": 1198,
+        "sha256": "200815794e6cb5c3a2470d5ad4a01608946de45abbdd0b9cda2056243729d02d",
+        "bytes": 443124
+      },
+      {
+        "path": "research/q2_stability/qwen/outputs/paper1_5/trickster_phase2_scores_codex_gpt55.jsonl",
+        "group": "trickster",
+        "n": 64,
+        "unique_ids": 64,
+        "score_counts": {
+          "2": 31,
+          "3": 33
+        },
+        "ge2": 64,
+        "eq3": 33,
+        "sha256": "032bf9ffbd4415162bb778fdc3e821e5a0d1e3b2d217f1477da642b45dc0606f",
+        "bytes": 30183
+      },
+      {
+        "path": "research/q2_stability/qwen/outputs/paper1_5/editor/editor_phase2_scores_codex_gpt55.jsonl",
+        "group": "editor",
+        "n": 128,
+        "unique_ids": 128,
+        "score_counts": {
+          "0": 51,
+          "1": 67,
+          "2": 7,
+          "3": 3
+        },
+        "ge2": 10,
+        "eq3": 3,
+        "sha256": "adfde7332ffae4c699c4807a7576013eb72218119a72e24b724585d5c622deea",
+        "bytes": 51482
+      },
+      {
+        "path": "research/q2_stability/qwen/outputs/paper1_5/editor_token_cap_sensitivity/editor_phase2_scores_1024_codex_gpt55.jsonl",
+        "group": "editor",
+        "n": 64,
+        "unique_ids": 64,
+        "score_counts": {
+          "0": 22,
+          "1": 37,
+          "2": 4,
+          "3": 1
+        },
+        "ge2": 5,
+        "eq3": 1,
+        "sha256": "86cf4be62ae18d75d03c9d68ae76b5baafb28170c7793bb26691f7055ceab223",
+        "bytes": 25753
+      }
+    ],
+    "editor_pairing": {
+      "matched_keys": 64,
+      "identical_text": 14
+    },
+    "trickster_pairing": {
+      "matched_context_keys": 104,
+      "identical_text": 0
+    },
+    "viewer_fields": [
+      "metadata",
+      "role_runs",
+      "points",
+      "centroids",
+      "membership_counts",
+      "ellipses"
+    ]
+  },
+  "npy_check": {
+    "n": 1690,
+    "shape": [
+      5120
+    ],
+    "dtype": "float32",
+    "nonfinite": 0
+  },
+  "safe_spot_checks": {
+    "torch_version": "2.9.0",
+    "gregarious_shapes": {
+      "Qwen": [
+        64,
+        5120
+      ],
+      "Llama": [
+        80,
+        8192
+      ],
+      "Gemma": [
+        46,
+        4608
+      ]
+    },
+    "gregarious_dtype": "bfloat16",
+    "sample_adaptive_shape": [
+      5120
+    ],
+    "sample_adaptive_dtype": "float32"
+  },
+  "third_party_tensor_bytes": 18095883831,
+  "original_response_distributions": {
+    "Qwen": {
+      "personas": 0,
+      "traits": 0
+    },
+    "Llama": {
+      "personas": 0,
+      "traits": 0
+    },
+    "Gemma": {
+      "personas": 0,
+      "traits": 0
+    }
+  },
+  "checks_scope": "Archive metadata checked for all .pt artifacts; no claim of full tensor numerical integrity except the1690 small local .npy arrays."
+}

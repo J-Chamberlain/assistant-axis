@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "inventory_rows": 3167,
+  "duplicate_keys": 0,
+  "original_aggregate_entries": 1545,
+  "explicit_original_missing_sample_entries": 1545,
+  "local_release_hashes_verified": 1545,
+  "local_source_hashes_verified": 128,
+  "third_party_personas": 20,
+  "third_party_default_runs": 3,
+  "unrelated_work_hashes_unchanged": true,
+  "limitations": "Remote tensor payloads and complete response joins were deliberately not downloaded or validated."
+}

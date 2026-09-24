@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-24",
+  "bytes_available_before": 122114048,
+  "deleted": [
+    {
+      "path": "/Users/alfred/Library/Caches/pip/http-v2/8/a/1/7/2/8a172bb3061aaa9d37051dc1fa62fa3aca0afd09eb45283371de1ed8.body",
+      "bytes": 20466839,
+      "allocated_bytes": 20467712
+    },
+    {
+      "path": "/Users/alfred/Library/Caches/pip/http-v2/8/a/1/7/2/8a172bb3061aaa9d37051dc1fa62fa3aca0afd09eb45283371de1ed8",
+      "bytes": 1153,
+      "allocated_bytes": 4096
+    }
+  ],
+  "cleanup_scope": "Only specifically presented pip HTTP cache entry; no research data,installed package,Git history,logs or unrelated work",
+  "wheel_tags": "Wheel-Version: 1.0\nGenerator: meson\nRoot-Is-Purelib: false\nTag: cp314-cp314-macosx_14_0_arm64\nGenerator: delocate 0.13.0\n\n",
+  "candidate": {
+    "path": "/Users/alfred/Library/Caches/pip/http-v2/8/a/1/7/2/8a172bb3061aaa9d37051dc1fa62fa3aca0afd09eb45283371de1ed8.body",
+    "bytes": 20466839,
+    "sha256": "011413b7426b75012840e35649e00fe0a2c3bae89fed433876e3a99251572efc",
+    "metadata_path": "/Users/alfred/Library/Caches/pip/http-v2/8/a/1/7/2/8a172bb3061aaa9d37051dc1fa62fa3aca0afd09eb45283371de1ed8",
+    "metadata_bytes": 1153,
+    "reproducible": "Downloaded SciPy1.18.1 wheel; same artifact can be downloaded again subject to remote availability"
+  },
+  "probe": "ENOSPC",
+  "bytes_available_after": 142577664
+}

@@ -115,6 +115,10 @@ Last updated: 2026-09-11
 
 ## 2. WHAT HAS BEEN DISCOVERED
 
+### 2026-09-24 — Existing activation sample inventory
+
+Audited all 1,545 local released aggregates against pinned hashes; no original response distributions were found in audited sources (not a claim of never retained/published). Later local Qwen coverage is four personas across six role/run pairs; 20 third-party selected-role candidates remain provenance-limited. Gregariousness polarity samples/weights remain unavailable; AA27's gate is unchanged. See research/outputs/existing_activation_sample_audit/report.md.
+
 ### Careful Evaluator Finding (Paper 1, confirmed)
 - `assistant` ranks 45th/275 on assistant axis in Gemma 2 27B
 - Top ranks dominated by evaluative roles: proofreader, screener, grader, editor
@@ -707,6 +711,13 @@ Last updated: 2026-09-11
 - These are exploratory affinity diagnostics, not new behavioral validation; story-last-token versus response-mean pooling transfer remains unresolved. No new activations, judges, or GPU runs. Source: `research/outputs/persona_emotion_surface_viewer/persona_emotion_surface_methodology.md`.
 
 ## 3. CURRENT STATE
+
+### Current Session: Existing Activation Sample Audit (2026-09-24)
+
+Completed the metadata/CPU-only audit, explicit coverage inventory, pinned source manifest and successor handoff under research/outputs/existing_activation_sample_audit/. Preserved original-study, local later and third-party runs separately; no model work, human comparison or push. Initial disk failure was recovered with only the specifically presented SciPy wheel cache entry removed; no research data or unrelated work deleted.
+
+Next step: review the audit. A separate, later authorization could examine fixed layer-48 gregariousness response scores in existing trickster/editor vectors; it would not repair AA27 or estimate the original trait vector's uncertainty. Last commit before this audit:0693aaf76e5073c37377024130dbc2d0e80424fd; dedicated branch existing-activation-sample-audit-20260924. Successor AA15/AA26 corrections and AA27's failed bridge-coverage gate remain unchanged.
+
 
 ### Current Session: Trait-Profile to Persona-PC Predictor (2026-09-11)
 

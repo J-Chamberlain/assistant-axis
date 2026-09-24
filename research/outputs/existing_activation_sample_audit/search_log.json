@@ -1,0 +1,89 @@
+{
+  "audit_date": "2026-09-24",
+  "scopes": [
+    {
+      "path": "0693aaf76e5073c37377024130dbc2d0e80424fd",
+      "kind": "original local repository",
+      "status": "readable; full research and downloads filename enumeration includes ignored/untracked",
+      "notes": "0 enumeration errors. research:1405 .pt,1696 .npy,23 .jsonl; downloads1553 .pt (1545 persona/trait plus8 other vectors)."
+    },
+    {
+      "path": "/Users/alfred/.cache/huggingface/hub/datasets--lu-christina--assistant-axis-vectors",
+      "status": "searched;243 .pt files; snapshot3b3b788432ad33e3a28d9ff08e88a530c0740814",
+      "notes": "No response/polarity run files; cache duplicates not extra samples. Entire hub top-level inspected; model/emotion caches excluded as unrelated."
+    },
+    {
+      "path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/assistant-axis*",
+      "status": "sibling project filename search",
+      "notes": "Gregarious-name search under nonhidden project directories excluding downloads,web,node_modules; matching instruction JSONs only. Not a claim that all historical branches or arbitrary external disks were searched."
+    },
+    {
+      "path": "/Users/alfred/Projects/Substack/mechonistic_interpretability/persona-human-geometry",
+      "status": "readable; targeted provenance/state/AA15/AA27 inspection",
+      "notes": "No changes; its correction hierarchy preserved."
+    },
+    {
+      "path": "/tmp",
+      "status": "enumerated; no names matching axis/cloud/activ/qwen/trait found",
+      "notes": "Not an exhaustive content scan of unrelated temporary files."
+    },
+    {
+      "path": "/Volumes",
+      "status": "enumerated; Macintosh HD only",
+      "notes": "No external mounted artifact volume found."
+    },
+    {
+      "path": "/root/assistant-axis",
+      "status": "historical remote pod namespace inaccessible in this audit",
+      "notes": "Relative files resolved in local checkout where present; no remote login. A100 closeout records terminated_verified; do not label uninspected remote backups absent."
+    },
+    {
+      "path": "private original-study archives",
+      "status": "inaccessible/unknown",
+      "notes": "No contact or remote private-store access attempted."
+    },
+    {
+      "path": "https://huggingface.co/datasets/lu-christina/assistant-axis-vectors/tree/3b3b788432ad33e3a28d9ff08e88a530c0740814",
+      "status": "public pinned manifest accessible",
+      "files": 1555
+    },
+    {
+      "path": "https://huggingface.co/datasets/belmore/assistant-axis-vector-prompts/tree/57424a9d6075a44196b935983ce1fa4e83191679",
+      "status": "public pinned manifest accessible",
+      "files": 2
+    },
+    {
+      "path": "https://huggingface.co/datasets/EstherYang119/assistant-axis-outputs/tree/d800bb147b7b4259b1ad8a6cf5e525ab5e70a607",
+      "status": "public pinned manifest accessible",
+      "files": 96
+    },
+    {
+      "path": "Esther activation payloads",
+      "status": "deliberately not downloaded",
+      "notes": "23 prefix headers; each262144bytes HTTP206. 18,095,883,831 total listed tensor bytes. No whole payload hash validation."
+    },
+    {
+      "path": "Esther response corpora",
+      "status": "first line per23 files inspected only",
+      "notes": "No exhaustive line counts or text duplicate detection; checkpoint files excluded."
+    },
+    {
+      "path": "write destination and Git refs",
+      "status": "Initial ENOSPC; preservation follow-up saved files and created branch",
+      "notes": "Only specifically presented SciPy wheel HTTP cache entry and metadata deleted after write failure recurred. See disk_preservation.json."
+    }
+  ],
+  "absent_in_searched_scope": "Original persona response samples/scores/retained masks and all original trait polarity samples, including gregariousness.",
+  "local_known_missing": "200 accountability shard paths; full amateur/playwright vectors not emitted by inspected runner.",
+  "prohibited_actions_not_taken": [
+    "model inference",
+    "response generation",
+    "model judging",
+    "extraction",
+    "GPU/pod",
+    "human structural comparison",
+    "large tensor downloads",
+    "push",
+    "migration"
+  ]
+}

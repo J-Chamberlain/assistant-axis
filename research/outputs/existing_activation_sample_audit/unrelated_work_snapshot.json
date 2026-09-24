@@ -1,0 +1,286 @@
+{
+  ".gitignore": {
+    "status": " M",
+    "sha256": "aba54d301e9f03b58bc52bcbf8730a900f8a86212d5de1bed53bab5a3f3ac965"
+  },
+  "notebooks/project_transcipt.ipynb": {
+    "status": " M",
+    "sha256": "1ea80a7bf46e1a90785e815303c9d13e785d8ed1351dc912f4c23a61d93fde41"
+  },
+  "research/outputs/persona_trait_surface_viewer/artifact_inventory.csv": {
+    "status": " M",
+    "sha256": "31e91180fbcddad402c9ef914b4d6b8525cac39042854c68336fdd084be08c40"
+  },
+  "research/outputs/persona_trait_surface_viewer/persona_trait_surface_viewer.html": {
+    "status": " M",
+    "sha256": "100055e3849d2746a6d13a1cb0687637ec49a6d0cec61bc568ee62deca9eb2df"
+  },
+  "research/outputs/persona_trait_surface_viewer/run_persona_trait_surface.py": {
+    "status": " M",
+    "sha256": "da68d2e32ee0de277467088270dfc2116100753a14f6b433ad6e3643f54b78dc"
+  },
+  "research/outputs/persona_trait_surface_viewer/trait_surface_control_checks.json": {
+    "status": " M",
+    "sha256": "162681ec11159733b79f1de19c948088f6b13c4932fd4b806183f55d8619a69f"
+  },
+  "research/outputs/persona_trait_surface_viewer/trait_surface_manifest.json": {
+    "status": " M",
+    "sha256": "19973224d08e49af1fc3ac8a1d0e6c924327b46528534c69aef0561fe21c9038"
+  },
+  "research/outputs/persona_trait_surface_viewer/verify_trait_surface_controls.cjs": {
+    "status": " M",
+    "sha256": "7bd3672d8e7cb2c6f6f0a59e5610ad0b9c67954bee6a50a8a4b880cb201fd28e"
+  },
+  "research/outputs/persona_trait_surface_viewer/viewer.js": {
+    "status": " M",
+    "sha256": "b28bc0f21d25798fc77ca0fbcc30fc33ac562f2ed35e245270c1439fab4b0b66"
+  },
+  "research/outputs/persona_trait_surface_viewer/viewer_template.html": {
+    "status": " M",
+    "sha256": "b042b309d8a3b955ccba2a8431c715679b4b3d7ebfc22b18ea2e2b560b855ff4"
+  },
+  "research/visualizations/persona_geometry_explorer.html": {
+    "status": " M",
+    "sha256": "45c9d35528e4113536251c62ca702067f551e487c46bab524755967c8bb670ad"
+  },
+  "visualizations/research_paper.html": {
+    "status": " M",
+    "sha256": "7eba27ac7aada04391818b71cd356933c67a9e0598db0b3d4a885ace8c4e4bc6"
+  },
+  "visualizations/trait_analysis_summary.md": {
+    "status": " M",
+    "sha256": "54e6dff9192834bc55beca82f1433a965e71a68bf16a63e6ce916057f689419f"
+  },
+  "img/metacognitive_flicker_fixed.png": {
+    "status": "??",
+    "sha256": "b4b015f6253eaf0194532af9eb46c00642d3984e875cecd976b9a434849e46fe"
+  },
+  "img/metacognitive_flicker_fixed.svg": {
+    "status": "??",
+    "sha256": "1e37d79155e43dc7fc141138f3c822a30e784af8f58cbb43855b8de07d5df77e"
+  },
+  "research/README.md": {
+    "status": "??",
+    "sha256": "9a8dd15120e6cd33466ed5736c38809ffc2adcf287cb04af4a30b4f0daf248ce"
+  },
+  "research/q1_drift/scripts/q1_centered_cosine.py": {
+    "status": "??",
+    "sha256": "dc3ff83c51ca8615a6f6e6cf4af95431ecd4d8d4405fabb266c8e65b2b2ef3aa"
+  },
+  "research/q1_drift/scripts/q1_cosine_diagnostic.py": {
+    "status": "??",
+    "sha256": "29c00d6c8bd1bdce2d79dfdcf70aa7d31a63e89b1dbb10a3a0fdbf71ca298ce6"
+  },
+  "research/q1_drift/scripts/q1_measure_drift.py": {
+    "status": "??",
+    "sha256": "d071cf9893bfcf209fc03bc88e786be3f6f8dbefbb76765d482bf1f99345b91b"
+  },
+  "research/visualizations/llama_persona_geometry_explorer_capture.png": {
+    "status": "??",
+    "sha256": "826fb431e730dfc518204c87f29ce13038655fb2543ea117195c9c3f8ec55960"
+  },
+  "research/visualizations/persona_pc_rankings.csv": {
+    "status": "??",
+    "sha256": "40351df01e400383916b0b15cd379512df7e6c69e83c75e32a44918199befb7d"
+  },
+  "research/visualizations/persona_pc_rankings.md": {
+    "status": "??",
+    "sha256": "ac1d88fa3f43c57eeedb236449319ec6adb42bb6896ace3019e6545b63b9fb0f"
+  },
+  "scripts/README.md": {
+    "status": "??",
+    "sha256": "32d420c8b7a97ecd9d008401b2f891dec109c698f1127002a5240ca2dc554e7e"
+  },
+  "scripts/gemini_image_to_text.py": {
+    "status": "??",
+    "sha256": "fee905e55dcaebebc5816376529bf50df3ecbc896ec213e28d218f3ef074a718"
+  },
+  "visualizations/cluster_drift_cascade.py": {
+    "status": "??",
+    "sha256": "1b5e1bf1549e493f99d4c8ec53a13b9b4325777d5b82379ff601efb9cba105d2"
+  },
+  "visualizations/cluster_transition_graph.csv": {
+    "status": "??",
+    "sha256": "1c02b176a67817781181928fa7769c2fc5d78f4af1b1826646f2c72501180fd8"
+  },
+  "visualizations/connectome-exports/chord-diagram-parchment.png": {
+    "status": "??",
+    "sha256": "20bce997a6c612fd9449ab61e6361b7c3a95e118297784bf566525ce1f32d60f"
+  },
+  "visualizations/connectome-exports/chord-diagram-parchment.svg": {
+    "status": "??",
+    "sha256": "9e54b6dad6078c61b3cffa48bbbaa0bb492d4bf96f87b8f89d8e31e7661f721d"
+  },
+  "visualizations/connectome-exports/chord-diagram.html": {
+    "status": "??",
+    "sha256": "43cc0c0cb52a1c0bfe23e5dca38d725bb33f4f834a764e78f63d05a6e4aebee5"
+  },
+  "visualizations/connectome-exports/chord-diagram.png": {
+    "status": "??",
+    "sha256": "5b351b1ec5b2171c4ac8861e849785f0ea5a15b5843326742bed8c44f27c0372"
+  },
+  "visualizations/connectome-exports/chord-diagram.svg": {
+    "status": "??",
+    "sha256": "9fc2ac43589f16f6d29366cc904ffeb462b58a00ef22fd601c22e80f57b30610"
+  },
+  "visualizations/connectome-exports/persona-connectome-academic.png": {
+    "status": "??",
+    "sha256": "21157f92d5160c367104798575233e376095900ade1d68305c2a372ea9ca468d"
+  },
+  "visualizations/connectome-exports/persona-connectome-academic.svg": {
+    "status": "??",
+    "sha256": "46422997c4f79876e5a23bb019c687980e182158df86d59baa2cbc7eb1e2d439"
+  },
+  "visualizations/connectome-exports/persona-connectome-highlight-combative-iconoclast-parchment.png": {
+    "status": "??",
+    "sha256": "2f5467d3715a1c90990d2c70c0d6f3cd550a4e4eed544d9a132b2a2b729adc6b"
+  },
+  "visualizations/connectome-exports/persona-connectome-highlight-editorial-parchment.png": {
+    "status": "??",
+    "sha256": "91b9dbaf8ac92bbf3d9d36b267e084f3418e82ce2599c35ce2ef9f4eeca2f03c"
+  },
+  "visualizations/connectome-exports/persona-connectome-highlight-grounded-social-parchment.png": {
+    "status": "??",
+    "sha256": "dd4abdf8a9f1f5a62a28079b96e20a12fcc4da660181b456df52edaf0ca1bfb1"
+  },
+  "visualizations/connectome-exports/persona-connectome-highlight-mythic-spiritual-parchment.png": {
+    "status": "??",
+    "sha256": "c49588cd35da19e2e0f7827770c51942b4aea028bdd87669052c09a99a1f2384"
+  },
+  "visualizations/connectome-exports/persona-connectome-highlight-other-parchment.png": {
+    "status": "??",
+    "sha256": "b3a98cee07959381e6cf51a35b2c2f31ffd1fe89d2c8c336e18b68aa838dfbd0"
+  },
+  "visualizations/connectome-exports/persona-connectome-highlight-procedural-professional-parchment.png": {
+    "status": "??",
+    "sha256": "de4c4fc33723de3915672202c3e2555edb37c6a69402b5f908dbfcb867164c8c"
+  },
+  "visualizations/connectome-exports/persona-connectome-highlight-trickster-chaos-parchment.png": {
+    "status": "??",
+    "sha256": "3f893ded604c362e2601f50f59446cf38b6015c38eb8bbf4ef04d83d98666c2d"
+  },
+  "visualizations/connectome-exports/persona-connectome-parchment.png": {
+    "status": "??",
+    "sha256": "cc59fb15a39f98209a8f968d894cc6824ca073f0180729ea9fe828c32c1a0f46"
+  },
+  "visualizations/connectome-exports/review-package.png": {
+    "status": "??",
+    "sha256": "80de17d95f8ec43c68bbec9aba193d27d73fa4001fb14d391719bae5abc49c1a"
+  },
+  "visualizations/connectome-exports/trait-connectome-academic.png": {
+    "status": "??",
+    "sha256": "a64b885f7dac20fabf48553d0c5d58b10d9b34ada6844e777d0f2280e5615884"
+  },
+  "visualizations/connectome-exports/trait-connectome-academic.svg": {
+    "status": "??",
+    "sha256": "2e927c43693bf70009430ab96d782d6ab62be0373ccc2909ce745dd8ae89b3e8"
+  },
+  "visualizations/connectome-exports/trait-connectome-parchment.png": {
+    "status": "??",
+    "sha256": "7afc8d6816bf227e85148f57434f4645c467fecccce47ef86ef193ac76673c9f"
+  },
+  "visualizations/connectome_exports.py": {
+    "status": "??",
+    "sha256": "f20ecf51189e46fdc18e9b5cd42bf417177f5a20afcad79ba30ecf83e452c25c"
+  },
+  "visualizations/drift_cascade_tree.md": {
+    "status": "??",
+    "sha256": "2058fdf151017d278bd0fdf0e9e22e4be953613e1127a7151827f066c335c52e"
+  },
+  "visualizations/gemma-2-27b-page.png": {
+    "status": "??",
+    "sha256": "962d89d26c6140e24825528e758a3c6869338847d43ae944f7ae3f971d148da4"
+  },
+  "visualizations/general-audience/01_axis_top_roles.png": {
+    "status": "??",
+    "sha256": "564d6eefb295077a308dac26b010ac3a4b14193a0939290edcef55448a0a9dff"
+  },
+  "visualizations/general-audience/01_axis_top_roles.svg": {
+    "status": "??",
+    "sha256": "09f737b9639610b5b9b13de7fc8e569c2ef06d5a50955e8eb6b625161464699a"
+  },
+  "visualizations/general-audience/02_persona_neighborhood_map.png": {
+    "status": "??",
+    "sha256": "c3ba0d8fec00f7cfca5ad9f619b4baa3b5a79734fbe77b9c6afa37cd663499e4"
+  },
+  "visualizations/general-audience/02_persona_neighborhood_map.svg": {
+    "status": "??",
+    "sha256": "cd182c2128f3fb5f0217c3d11fa951f76225d6fe507fdda43ddc091f8b17f63d"
+  },
+  "visualizations/general-audience/02b_axis_neighbor_family_map.png": {
+    "status": "??",
+    "sha256": "a1bc74ef36df6232a8eed17a2c3bd506876750e6a8ecd6847db6e3cb43cdfeca"
+  },
+  "visualizations/general-audience/02b_axis_neighbor_family_map.svg": {
+    "status": "??",
+    "sha256": "381c8814fcb82bb246ab15f53b151a5bebd9dee39a84281c2e72377beb77b5ae"
+  },
+  "visualizations/general-audience/03_distance_from_assistant_zone.png": {
+    "status": "??",
+    "sha256": "614f79204a54a82cb1fff54707a43f07b1fba02bbe341d686d579b407386542f"
+  },
+  "visualizations/general-audience/03_distance_from_assistant_zone.svg": {
+    "status": "??",
+    "sha256": "a3878429b28dc95b883ab68efe42da33886ddbe7a5a46bcd710e7b5fce5ce122"
+  },
+  "visualizations/general-audience/04_drift_path.png": {
+    "status": "??",
+    "sha256": "a173020a3271bd4552a745d22efc9f03cd4e3a9320a19e41bbdf5f45489301e0"
+  },
+  "visualizations/general-audience/04_drift_path.svg": {
+    "status": "??",
+    "sha256": "b4fc4aff582cd9648c24f238c42dfc706ab54c6d320cb8391e81801e1c8f3c60"
+  },
+  "visualizations/general-audience/05_cluster_trait_cards.png": {
+    "status": "??",
+    "sha256": "2ad3e43ce70aee05bc23ead98cf6d0744b24cbb4e79b5c2cad82d411d5ab36ec"
+  },
+  "visualizations/general-audience/05_cluster_trait_cards.svg": {
+    "status": "??",
+    "sha256": "4de7f9bdab3a43f244bd2db86c955bbe78b0b426dbb440b79cba462dd0f62fb1"
+  },
+  "visualizations/general-audience/06_simplified_distance_heatmap.png": {
+    "status": "??",
+    "sha256": "20d2e5701b119cdebdbf2c0d4a090f49c1aafd072719a71d8353c52ab800f0b6"
+  },
+  "visualizations/general-audience/06_simplified_distance_heatmap.svg": {
+    "status": "??",
+    "sha256": "986f9f0d60d8bba5d5e8d680f58a076d98d3e6046bd34439a4709138dd944eb8"
+  },
+  "visualizations/general-audience/index.html": {
+    "status": "??",
+    "sha256": "716db1d9662f91a49098af864b71b34bf18823efcb59f332f15d97845e35e98b"
+  },
+  "visualizations/generate_chord_diagram.py": {
+    "status": "??",
+    "sha256": "9c6300930a44c5c0e89fa2474cb18c2db62a533e78cb032cfd72b7224188ce6f"
+  },
+  "visualizations/generate_general_audience_plots.py": {
+    "status": "??",
+    "sha256": "bbb19823c0052f54003bacb9c43dbe7571656018876f8b0f8a9928f1eb420561"
+  },
+  "visualizations/metacognitive_flicker_fixed.png": {
+    "status": "??",
+    "sha256": "b4b015f6253eaf0194532af9eb46c00642d3984e875cecd976b9a434849e46fe"
+  },
+  "visualizations/metacognitive_flicker_fixed.svg": {
+    "status": "??",
+    "sha256": "1e37d79155e43dc7fc141138f3c822a30e784af8f58cbb43855b8de07d5df77e"
+  },
+  "visualizations/runpod-home-2.png": {
+    "status": "??",
+    "sha256": "7181dd6520031379b10a2a127360b88a27833b34df2ebc27af4aa534422bd1a0"
+  },
+  "visualizations/runpod-home-display1.png": {
+    "status": "??",
+    "sha256": "7181dd6520031379b10a2a127360b88a27833b34df2ebc27af4aa534422bd1a0"
+  },
+  "visualizations/runpod-home.png": {
+    "status": "??",
+    "sha256": "7181dd6520031379b10a2a127360b88a27833b34df2ebc27af4aa534422bd1a0"
+  },
+  "visualizations/runpod-signup.png": {
+    "status": "??",
+    "sha256": "7181dd6520031379b10a2a127360b88a27833b34df2ebc27af4aa534422bd1a0"
+  }
+}

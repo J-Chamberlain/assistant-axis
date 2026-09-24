@@ -144,3 +144,7 @@ As of 2026-06-16, `research/paper15_content_ledger.md` has been completed for me
 7. Use Paper 2 grant/H100 work for local centroid perturbation around Trickster, Actor, Therapist, and Spy.
 8. Extend the activation-cloud geometry audit to a balanced role set before making strong claims about persona-specific cloud size, anisotropy, or orientation.
 9. Freeze a complete novel-role trait profile and predicted PC coordinate with the V1 Ridge CLI, then preregister and run the separate Qwen behavioral elicitation/activation validation without refitting the predictor.
+
+## Availability audit update — 2026-09-24
+
+The local-only audit in research/outputs/existing_activation_sample_audit/ distinguishes original aggregate vectors from response distributions. No original persona/trait sample sets were found in audited sources; later Qwen clouds cover four named personas, and a third-party release offers 20 candidate persona clouds with unresolved compatibility. Gregariousness prompts and aggregates survive but polarity samples/retention/weights do not. Preserve successor AA15 layer averaging, AA26 corrections and AA27's failed gate. This audit does not authorize new extraction or human comparisons. Base 0693aaf76e5073c37377024130dbc2d0e80424fd; branch existing-activation-sample-audit-20260924; not pushed.

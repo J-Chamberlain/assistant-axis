@@ -1,0 +1,43 @@
+{
+  "recommended_cleanup_performed": {
+    "path": "/Users/alfred/Library/Caches/pip/http-v2/8/a/1/7/2/8a172bb3061aaa9d37051dc1fa62fa3aca0afd09eb45283371de1ed8.body",
+    "bytes": 20466839,
+    "sha256": "011413b7426b75012840e35649e00fe0a2c3bae89fed433876e3a99251572efc",
+    "metadata_path": "/Users/alfred/Library/Caches/pip/http-v2/8/a/1/7/2/8a172bb3061aaa9d37051dc1fa62fa3aca0afd09eb45283371de1ed8",
+    "metadata_bytes": 1153,
+    "reproducible": "Downloaded SciPy1.18.1 wheel; same artifact can be downloaded again subject to remote availability"
+  },
+  "alternatives_not_deleted": [
+    {
+      "path": "/Users/alfred/Library/Caches/pip/http-v2/e/8/b/8/c/e8b8ce0fe493bd395da52d700ef243d54d4e07e31ca274b4a474ff9e.body",
+      "logical_bytes": 5449793,
+      "allocated_bytes": 5451776,
+      "hard_links": 1,
+      "wheel_metadata": [
+        "Name: numpy",
+        "Version: 2.5.3"
+      ],
+      "companion_path": "/Users/alfred/Library/Caches/pip/http-v2/e/8/b/8/c/e8b8ce0fe493bd395da52d700ef243d54d4e07e31ca274b4a474ff9e",
+      "companion_bytes": 1151,
+      "companion_allocated_bytes": 4096,
+      "reproducible": "Downloaded wheel cache; regenerable by re-downloading same package/version/platform wheel. Remote availability not checked.",
+      "deleted": false
+    },
+    {
+      "path": "/Users/alfred/Library/Caches/pip/http-v2/d/7/0/b/d/d70bd5518601c5476e32f414b351a03330e78d0940cb96720c5b95ff.body",
+      "logical_bytes": 8279175,
+      "allocated_bytes": 8282112,
+      "hard_links": 1,
+      "wheel_metadata": [
+        "Name: scikit-learn",
+        "Version: 1.9.1"
+      ],
+      "companion_path": "/Users/alfred/Library/Caches/pip/http-v2/d/7/0/b/d/d70bd5518601c5476e32f414b351a03330e78d0940cb96720c5b95ff",
+      "companion_bytes": 1158,
+      "companion_allocated_bytes": 4096,
+      "reproducible": "Downloaded wheel cache; regenerable by re-downloading same package/version/platform wheel. Remote availability not checked.",
+      "deleted": false
+    }
+  ],
+  "reason": "Free space fluctuated. One presented20.47MB cache entry restored a practical margin for atomic writes and commit; exact minimal bytes cannot be guaranteed under concurrent filesystem activity."
+}

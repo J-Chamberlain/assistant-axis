@@ -106,3 +106,8 @@ Any future Codex task that creates, deletes, moves, renames, replaces, supersede
 - `research/RAW_URL_INDEX.md`
 
 The task should record the update timestamp and commit, and assign each affected artifact one of these statuses: `canonical`, `active`, `archive`, or `deprecated`. If the task also changes `research/RESEARCH_STATE.md`, `research/THREAD_START.md`, or `research/CLAIMS_REGISTER.md`, regenerate `research/STARTUP_MANIFEST.md` with `python3 scripts/update_startup_manifest.py`.
+
+## Existing activation sample audit
+Updated UTC: 2026-09-24T11:44:16.170799+00:00. Base commit: 0693aaf76e5073c37377024130dbc2d0e80424fd; local branch existing-activation-sample-audit-20260924; not pushed.
+Status: active. Canonical availability audit entrypoint: research/outputs/existing_activation_sample_audit/report.md.
+Inventory, source manifest, validation, disk preservation and successor handoff are adjacent. Original-study missing sample sets are explicit; private/remote archives remain unknown/inaccessible, not globally absent.

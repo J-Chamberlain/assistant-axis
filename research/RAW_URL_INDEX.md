@@ -582,3 +582,8 @@ Canonical raw links for frequently referenced Assistant Axis artifacts. Status v
 | active | active analyses | `research/outputs/default_assistant_baseline_audit/centroid_comparison_table.csv` | Assistant role, bare no-system, and Lu default vector centroid comparison table | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/default_assistant_baseline_audit/centroid_comparison_table.csv |
 | active | active analyses | `research/outputs/default_assistant_baseline_audit/default_vector_projection.csv` | Projected Lu default Assistant vector and reference-point nearest-role table | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/default_assistant_baseline_audit/default_vector_projection.csv |
 | active | active analyses | `research/outputs/default_assistant_baseline_audit/artifact_inventory.csv` | Default Assistant baseline audit artifact inventory | https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/default_assistant_baseline_audit/artifact_inventory.csv |
+
+## Local-only activation sample audit — 2026-09-24T11:44:16.170799+00:00
+
+Base commit: 0693aaf76e5073c37377024130dbc2d0e80424fd; branch existing-activation-sample-audit-20260924. Status: active.
+research/outputs/existing_activation_sample_audit/report.md and adjacent audit deliverables are local-only. No raw GitHub URL is claimed because the user prohibited pushing. Use local repository paths; do not assume availability on master.
