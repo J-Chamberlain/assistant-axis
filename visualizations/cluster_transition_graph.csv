@@ -1,0 +1,8 @@
+home_cluster,nearest_neighbor,distance_1,second_neighbor,distance_2,third_neighbor,distance_3
+combative_iconoclast,trickster_chaos,0.2513360259619335,other,0.27364150677983345,grounded_social,0.41882772917566535
+editorial,procedural_professional,0.07720507380603991,combative_iconoclast,1.5204426234913724,other,1.5814596670367178
+grounded_social,other,0.14744418248235258,trickster_chaos,0.24177875723220932,combative_iconoclast,0.41882772917566535
+mythic_spiritual,trickster_chaos,0.4555539761556864,combative_iconoclast,0.8009571903999708,other,0.8277109791637469
+other,grounded_social,0.14744418248235258,trickster_chaos,0.15560598612170995,combative_iconoclast,0.27364150677983345
+procedural_professional,editorial,0.07720507380603991,combative_iconoclast,1.6663039837622422,grounded_social,1.7007468760508142
+trickster_chaos,other,0.15560598612170995,grounded_social,0.24177875723220932,combative_iconoclast,0.2513360259619335

@@ -58,12 +58,12 @@
     const corners=[[x[0],y[0]],[x[1],y[0]],[x[1],y[1]],[x[0],y[1]]];
     const crossings=[];
     for(let i=0;i<4;i++) {
-      const p=corners[i],q=corners[(i+1)%4],hp=height(...p),hq=height(...q);
+      const p=corners[i],q=corners[(i+1)%4],hp=height(...p)-50,hq=height(...q)-50;
       if(Math.abs(hp)<1e-10) crossings.push(p);
       if(hp*hq<0) {const t=hp/(hp-hq);crossings.push([p[0]+t*(q[0]-p[0]),p[1]+t*(q[1]-p[1])]);}
     }
     return {x,y,z:y.map(v=>x.map(u=>height(u,v))),
-      intersection:{x:crossings.map(p=>p[0]),y:crossings.map(p=>p[1]),z:crossings.map(()=>0)}};
+      intersection:{x:crossings.map(p=>p[0]),y:crossings.map(p=>p[1]),z:crossings.map(()=>50)}};
   }
 
   function traces(s, transition=false) {
@@ -77,7 +77,7 @@
     const selected=state.selected===null?[]:[state.selected];
     const custom=data.roles.map((r,i)=>[escapeText(r.name),category.values[i],category.values[i],category.mean_z[i],i]);
     return [
-      {type:"surface",name:"Zero reference",visible:true,x:plane.x,y:plane.y,z:[[0,0],[0,0]],
+      {type:"surface",name:"Mean trait percentile 50 reference",visible:true,x:plane.x,y:plane.y,z:[[50,50],[50,50]],
         colorscale:[[0,"#6eb5ca"],[1,"#6eb5ca"]],opacity:0.3,showscale:false,hoverinfo:"skip"},
       {type:"surface",name:"Fitted fabric",x:s.x,y:s.y,z:s.grid,connectgaps:false,visible:state.surface&&!state.flatOnly,
         colorscale:colors,cmin:0,cmax:100,showscale:true,colorbar:{title:{text:"Mean trait<br>percentile"},tickvals:[0,25,50,75,100],thickness:12,len:0.55,x:0.94,tickfont:{size:10}},opacity:1,hoverinfo:"skip",
@@ -101,7 +101,7 @@
         visible:state.flat||state.flatOnly,colorscale:[[0,"#f5edd7"],[1,"#f5edd7"]],showscale:false,opacity:0.38,hoverinfo:"skip",
         lighting:{ambient:0.9,diffuse:0.25,specular:0.05,roughness:0.98,fresnel:0.05},
         lightposition:{x:100,y:100,z:200},contours:{z:{show:false}}},
-      {type:"scatter3d",name:"Plane / zero intersection",mode:"lines",...plane.intersection,
+      {type:"scatter3d",name:"Plane / percentile 50 intersection",mode:"lines",...plane.intersection,
         visible:state.flat||state.flatOnly,line:{color:"#ffffff",width:6},hoverinfo:"skip"}
     ];
   }
@@ -154,7 +154,8 @@
   function updateControls() {
     for(const [id,other] of [["x-axis",state.y],["y-axis",state.x]])
       [...el(id).options].forEach(option=>option.disabled=Number(option.value)===other);
-    el("plot-category").textContent=data.categories[state.category].label;
+    const category=data.categories[state.category];
+    el("plot-category").textContent=`${category.label} - Average of ${category.members.map(member=>member.label).join(", ")}`;
     el("category-current").textContent=data.categories[state.category].label;
     el("plane-caption").textContent=`PC${state.x+1} / PC${state.y+1} | height = mean trait percentile`;
     el("show-flat").checked=state.flat;el("show-flat-only").checked=state.flatOnly;

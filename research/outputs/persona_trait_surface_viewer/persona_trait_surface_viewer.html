@@ -23,11 +23,11 @@ button:hover { border-color:var(--accent); }
 label { color:var(--muted); }
 .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:12px 19px; padding:13px 25px; border-bottom:1px solid var(--line); }
 .control { display:flex; align-items:center; gap:8px; font-size:12px; }
-.camera-bar { padding:12px 25px; border-bottom:1px solid var(--line); background:#16181b; }
+.camera-bar { padding:16px 0; margin-bottom:20px; border-bottom:1px solid var(--line); }
 .camera-heading { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px; }
 .camera-heading strong { font-weight:400; margin-right:auto; }
 .camera-heading button { padding:5px 10px; font-size:11px; }
-.camera-dials { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+.camera-dials { display:grid; grid-template-columns:minmax(0,1fr); gap:16px; }
 .camera-control { display:grid; grid-template-columns:26px 1fr 65px; align-items:center; gap:5px 8px; }
 .camera-control label { color:var(--text); font-size:11px; }
 .camera-control input[type=range] { grid-column:2/4; width:100%; margin:3px 0; accent-color:var(--accent); }
@@ -37,14 +37,27 @@ label { color:var(--muted); }
 .camera-note { color:var(--muted); font-size:10px; margin:8px 0 0; }
 .member-scores { margin-top:12px; color:var(--muted); font-size:11px; }
 .member-scores div { display:flex; justify-content:space-between; gap:8px; margin:4px 0; }
-@media(max-width:1000px){.camera-dials{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.group-explanation { padding:12px 25px; border-bottom:1px solid var(--line); color:var(--muted); font-size:12px; line-height:1.7; }
+.group-explanation p { margin:4px 0; }
+.group-explanation strong { color:var(--text); font-weight:400; }
+.map-derivation { margin-top:18px; }
+.map-derivation > summary { color:var(--accent); text-decoration:underline; text-underline-offset:4px; }
+.map-derivation .method-text { padding:12px 0; font-size:14px; line-height:1.8; }
+.map-derivation h3 { color:var(--text); margin:24px 0 8px; font-size:16px; }
+.map-derivation .method-text p { margin:12px 0; }
+.map-derivation code { white-space:normal; overflow-wrap:anywhere; }
 @media(max-width:520px){.camera-bar{padding:12px 15px}.camera-dials{gap:14px}.camera-control{grid-template-columns:22px 1fr 57px;gap:4px}.camera-control input[type=number]{width:57px}.dial{width:20px;height:20px}.dial:after{left:8px;height:7px}}
 input[type=checkbox] { accent-color:var(--accent); width:16px; height:16px; }
 .toolbar .end { margin-left:auto; }
-main { display:grid; grid-template-columns:minmax(0,1fr) 275px; }
+main { display:grid; grid-template-columns:150px minmax(0,1fr) 320px; }
+.axis-panel { padding:20px 14px; border-right:1px solid var(--line); background:var(--panel); min-width:0; }
+.axis-panel .control { display:flex; flex-direction:column; align-items:stretch; gap:8px; margin-bottom:22px; }
+.axis-panel select { width:100%; min-width:0; }
+@media(min-width:851px) and (max-width:1100px) { main { grid-template-columns:130px minmax(0,1fr); } main > aside { grid-column:1/-1; border-top:1px solid var(--line); } }
+@media(max-width:850px) { .axis-panel { border-right:0; border-bottom:1px solid var(--line); } .axis-panel .control { max-width:200px; } }
 .canvas-wrap { min-width:0; position:relative; background:radial-gradient(ellipse at 45% 45%,#17191c 0%,#0d0d0d 75%); }
 #plot { width:100%; height:calc(100vh - 420px); min-height:460px; }
-.chart-title { position:absolute; top:15px; left:25px; pointer-events:none; z-index:1; }
+.chart-title { padding:15px 25px 0; pointer-events:none; }
 .chart-title strong { font-size:18px; font-weight:400; }
 .chart-title small { display:block; color:var(--muted); font-size:11px; }
 .legend { display:flex; gap:16px; flex-wrap:wrap; align-items:center; padding:9px 25px 15px; color:var(--muted); font-size:11px; }
@@ -136,14 +149,12 @@ a { color:var(--accent); text-underline-offset:3px; }
 </script>
 </head>
 <body>
+
 <header>
   <div><div class="eyebrow">Persona geometry / Qwen</div><h1>Trait landscapes</h1><div class="subtitle">Two principal components. One trait group. A different view of the same personas.</div></div>
   <div class="count"><strong>275</strong> personas<br>5 groups / 15 traits</div>
 </header>
 <div class="toolbar" aria-label="Landscape controls">
-  <label class="control" for="x-axis">X axis <select id="x-axis"><option value="0">PC1</option><option value="1">PC2</option><option value="2">PC3</option></select></label>
-  <label class="control" for="y-axis">Y axis <select id="y-axis"><option value="0">PC1</option><option value="1" selected>PC2</option><option value="2">PC3</option></select></label>
-  <label class="control" for="smoothing">Surface <select id="smoothing"><option value="0">Detail</option><option value="1" selected>Balanced</option><option value="2">Gentle</option></select></label>
   <label class="control"><input id="show-surface" type="checkbox" checked> Fabric</label>
   <label class="control"><input id="show-flat" type="checkbox" checked> Flat plane</label>
   <label class="control"><input id="show-flat-only" type="checkbox"> Flat plane only</label>
@@ -156,7 +167,57 @@ a { color:var(--accent); text-underline-offset:3px; }
   <input id="category-slider" type="range" min="0" max="4" value="0" step="1" aria-valuetext="Exploration">
   <div class="category-stops" id="category-stops"></div>
 </section>
-<section class="camera-bar" aria-label="Precise camera orientation">
+
+<div id="error" role="alert"></div>
+<noscript><p class="script-warning">The prepared-data 3D view requires JavaScript. No model generation is running. Open the completed persona_trait_surface_viewer.html, not the build template.</p></noscript>
+<div id="startup-preview" role="status">Loading the saved trait groups and prepared surface. No model generation is running.</div>
+<main>
+  <section class="axis-panel" aria-label="Axes and surface">
+    <label class="control" for="x-axis">X axis <select id="x-axis"><option value="0">PC1</option><option value="1">PC2</option><option value="2">PC3</option></select></label>
+    <label class="control" for="y-axis">Y axis <select id="y-axis"><option value="0">PC1</option><option value="1" selected>PC2</option><option value="2">PC3</option></select></label>
+    <label class="control" for="smoothing">Surface <select id="smoothing"><option value="0">Detail</option><option value="1" selected>Balanced</option><option value="2">Gentle</option></select></label>
+  </section>
+  <section class="canvas-wrap" aria-label="Interactive category landscape">
+    <div class="chart-title"><strong id="plot-category">Exploration - Average of Creative, Abstract, Curious</strong><small id="plane-caption">PC1 / PC2 &middot; height = mean trait percentile</small></div>
+    <p id="chart-description" class="sr-only">Rotatable three-dimensional plot. Persona nodes keep their original selected principal-component coordinates. Height is the mean of three within-trait percentiles across 275 personas. The fabric is a smoothed estimate between nodes. Use the persona selector for keyboard-accessible values.</p>
+    <div id="plot" role="img" aria-describedby="chart-description"></div>
+    <div class="legend"><span><i class="dot"></i> Scored persona</span><span><i class="gradient"></i> Lower / mean / higher score (0 / 50 / 100)</span><span><i class="thread"></i> Node-to-fabric gap</span><span>Drag to rotate &middot; scroll to zoom</span></div>
+    <div class="legend"><a href="../persona_trait_ridge_plots/persona_trait_ridges.html">Trait Ridges</a></div>
+    <section class="group-explanation" aria-label="How trait groups are averaged">
+      <p>Each named group is a composite of three sub-traits, calculated using an <strong>equal-weight arithmetic mean of percentile ranks</strong>. Each sub-trait is ranked across all 275 personas first; the three percentiles are then added and divided by three. Height 50 is the across-persona mean, not a probability.</p>
+      <p><strong>Exploration:</strong> Creative, Abstract, Curious &middot; <strong>Response:</strong> Reactive, Adaptable, Practical &middot; <strong>Scrutiny:</strong> Skeptical, Analytical, Conscientious &middot; <strong>Challenge:</strong> Rebellious, Competitive, Manipulative &middot; <strong>Affiliation:</strong> Empathetic, Agreeable, Altruistic.</p>
+      <details class="map-derivation" id="map-derivation">
+        <summary>How the Persona Map Was Derived</summary>
+        <div class="method-text">
+          <p><strong>The viewer maps reference activation patterns associated with personas; it does not show where a running model is currently "activating."</strong> Both involve activations, but at different levels of aggregation.</p>
+          <h3>How the Persona Map Was Derived</h3>
+          <p>The starting point is the released Assistant Axis collection of Qwen/Qwen3-32B role vectors. These summarize internal activations associated with role-conditioned responses, rather than embeddings of the role names themselves. The documented extraction pipeline averages assistant-response activations and constructs role vectors from responses judged to strongly express the role.</p>
+          <p>For this visualization, the geometry builder loads each persona's released tensor, containing 64 layer vectors with 5,120 values each. It averages those layers into one 5,120-dimensional vector per persona, then fits principal component analysis (PCA) to the resulting 275-persona matrix.</p>
+          <p>PCA centers the vectors around their across-persona mean, then finds perpendicular directions that capture the greatest variation between them. The axes are discovered mathematically; labels such as "Scrutiny" or "Exploration" were not used to construct them.</p>
+          <p>In the saved geometry, PC1 captures <strong>31.6%</strong> of the variance, PC2 <strong>16.2%</strong>, and PC3 <strong>8.7%</strong>. Together they retain <strong>56.4%</strong>. The three-dimensional map is informative but incomplete. <a href="https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/visualizations/scripts/build_geometry_viz.py">Geometry builder</a>.</p>
+          <h3>What a Coordinate Means</h3>
+          <p>A persona's PC coordinate is its projection onto one of those directions, measured relative to the average persona vector:</p>
+          <p><code>PC coordinate = (persona vector - mean persona vector) &middot; PC direction</code></p>
+          <p>A large positive PC1 coordinate means that the persona's reference pattern lies far along the positive side of the first major direction of variation. It does not mean "more total activation," more intelligence, or a greater probability that the model will adopt that persona.</p>
+          <p>Nearby dots have similar projections in the displayed dimensions, though they may differ in dimensions the plot omits. The origin is the average reference pattern, not an inactive or emotionally neutral model. Axis signs are conventions; their behavioral interpretations come from subsequent research.</p>
+          <p>In the landscape viewer, only two coordinates are PCs. Height is a separate trait-group score, not the remaining PC.</p>
+          <h3>What the Trait Surface Means</h3>
+          <p>The project compares persona vectors with released trait vectors using <strong>cosine similarity</strong>: how closely their directions align in activation space. For each trait, personas are ranked against the other 274 personas and assigned percentile scores.</p>
+          <p>Each displayed group is an equal-weight arithmetic mean of three trait percentiles. For example:</p>
+          <p><code>Exploration = (Creative percentile + Abstract percentile + Curious percentile) / 3</code></p>
+          <p>An Exploration height of 80 means those three percentiles average 80. It does not mean "80% exploratory," nor necessarily that the composite itself ranks at the 80th percentile.</p>
+          <p>The dots are the computed scores. The fabric is a smoothed interpolation between them; the flat plane is a linear approximation. Neither supplies additional activation measurements between personas. These are <strong>same-space activation similarities</strong>, not independent psychological assessments or evidence of experienced emotions. <a href="https://raw.githubusercontent.com/J-Chamberlain/assistant-axis/master/research/outputs/trait_profile_provenance_audit/trait_profile_provenance_report.md">Trait provenance audit</a>.</p>
+          <h3>Reference Personas Versus a Running Model</h3>
+          <p>During generation, Qwen produces a different activation vector at every token and layer. A response can therefore trace a trajectory or, after pooling, occupy a point within a response cloud, rather than remain fixed at its named persona's reference coordinate.</p>
+          <p>Our later cloud experiments measured response-token activations at a specific layer. That differs from this viewer's <strong>layer-averaged reference geometry</strong>. Projecting those measurements into the map is possible, but the extraction and aggregation mismatch must remain explicit.</p>
+          <p>A useful analogy: <strong>the persona dots are reference landmarks; measured response activations are observations whose positions we can compare with those landmarks.</strong> The current viewer displays the landmarks and their trait affinities, not a live model's movement or a map of physical locations inside its network.</p>
+        </div>
+      </details>
+    </section>
+  </section>
+  <aside aria-label="Persona inspection">
+    
+<section class="camera-bar aside-help" aria-label="Precise camera orientation">
   <div class="camera-heading"><strong>View dials</strong><button type="button" data-view="iso">Isometric</button><button type="button" data-view="top">Top</button><button type="button" data-view="front">Front</button><button type="button" data-view="side">Side</button></div>
   <div class="camera-dials">
     <div class="camera-control"><span class="dial" id="dial-yaw" aria-hidden="true"></span><label for="camera-yaw">Rotation / yaw (&deg;)</label><input type="number" id="number-yaw" aria-label="Exact yaw degrees" min="-180" max="180" step="1" value="46"><input type="range" id="camera-yaw" aria-label="Yaw degrees" min="-180" max="180" step="1" value="46"></div>
@@ -165,17 +226,7 @@ a { color:var(--accent); text-underline-offset:3px; }
     <div class="camera-control"><span class="dial" id="dial-zoom" aria-hidden="true"></span><label for="camera-zoom">Zoom (%)</label><input type="number" id="number-zoom" aria-label="Exact zoom percent" min="25" max="300" step="1" value="100"><input type="range" id="camera-zoom" aria-label="Zoom percent" min="25" max="300" step="1" value="100"></div>
   </div><p class="camera-note">Drag or use sliders; numbers update together. Higher zoom = closer. Presets and Reset view recenter the plot.</p>
 </section>
-<div id="error" role="alert"></div>
-<noscript><p class="script-warning">The prepared-data 3D view requires JavaScript. No model generation is running. Open the completed persona_trait_surface_viewer.html, not the build template.</p></noscript>
-<div id="startup-preview" role="status">Loading the saved trait groups and prepared surface. No model generation is running.</div>
-<main>
-  <section class="canvas-wrap" aria-label="Interactive category landscape">
-    <div class="chart-title"><strong id="plot-category">Exploration</strong><small id="plane-caption">PC1 / PC2 &middot; height = mean trait percentile</small></div>
-    <p id="chart-description" class="sr-only">Rotatable three-dimensional plot. Persona nodes keep their original selected principal-component coordinates. Height is the mean of three within-trait percentiles across 275 personas. The fabric is a smoothed estimate between nodes. Use the persona selector for keyboard-accessible values.</p>
-    <div id="plot" role="img" aria-describedby="chart-description"></div>
-    <div class="legend"><span><i class="dot"></i> Scored persona</span><span><i class="gradient"></i> Lower / mean / higher score (0 / 50 / 100)</span><span><i class="thread"></i> Node-to-fabric gap</span><span>Drag to rotate &middot; scroll to zoom</span></div>
-  </section>
-  <aside aria-label="Persona inspection">
+
     <div><p class="panel-heading">Inspect a persona</p><label class="sr-only" for="persona-picker">Select a persona</label><select id="persona-picker"><option value="">Hover or choose a persona</option></select><h2 id="selected-name">Explore the fabric</h2><div id="selection-kind">Hover a node or choose a name</div><button id="clear-selection" type="button" hidden>Clear selection</button></div>
     <div><div id="selected-score">--</div><div class="score-label">mean trait percentile / 100</div><dl><dt>Group weighting</dt><dd id="selected-percentile">--</dd><dt>Mean member z</dt><dd id="selected-raw">--</dd><dt id="selected-x-label">PC1</dt><dd id="selected-x">--</dd><dt id="selected-y-label">PC2</dt><dd id="selected-y">--</dd><dt>Node / fabric gap</dt><dd id="selected-gap">--</dd><dt>Flat adherence</dt><dd id="flat-score">--</dd><dt>Rolling / flat RMSE</dt><dd id="flat-rmse">--</dd><dt>Plane R2 at nodes</dt><dd id="flat-plane-r2">--</dd></dl></div>
     <div class="aside-help"><div id="member-scores" class="member-scores"></div><div class="rule"></div><p class="small-note">50 is the population mean for each group. Higher means higher average percentile among personas, not a probability.</p><p class="small-note">Nodes are exact scores. The fabric smooths between them; gaps and cutouts show where it cannot faithfully fill the space.</p><p class="small-note">Flat adherence is a descriptive 0-100 score: 100 means the rolling fabric matches its least-squares flat plane; it is not predictive validation.</p><p class="small-note" id="surface-fit-note"></p></div>
@@ -186,7 +237,7 @@ a { color:var(--accent); text-underline-offset:3px; }
   <p>This is a descriptive overlay of five editorial trait groups. Each node's height is the equal-weight mean of its three member traits' percentiles from the existing ridge plots. It is not a newly trained factor, independent psychological rating or probability.</p>
   <p>Trait scores and the unchanged Qwen PCA share activation sources. Each group contains exactly three of the 15 already selected traits; none were added or rescored. The selector chooses categories, not mixtures or a valence continuum.</p>
   <p>The fabric uses the same regularized thin-plate method and density/hull masks as the emotion viewer. Fitted values outside 0-100 are clipped for display, with counts in the fit diagnostics; exact nodes never change. Fabric gaps are not confidence intervals. Height colors use a fixed 0-100 scale across all groups.</p>
-  <p>The semi-transparent flat plane extends to the chart edges using its fitted linear equation. Extensions beyond the persona outline are extrapolations and can extend below 0 or above 100. A permanent blue-tinted plane marks height zero; a white line marks the intersection where it falls inside the chart. Flat-plane-only mode keeps this reference visible. Adherence scores still use the original supported region, so extending the display does not change them.</p>
+  <p>The semi-transparent flat plane extends to the chart edges using its fitted linear equation. Extensions beyond the persona outline are extrapolations and can extend below 0 or above 100. A permanent blue-tinted plane marks mean trait percentile 50; a white line marks the intersection where it falls inside the chart. Flat-plane-only mode keeps this reference visible. Adherence scores still use the original supported region, so extending the display does not change them.</p>
   <p><a href="trait_surface_methodology.md">Methodology and controls</a> &middot; <a href="persona_trait_group_scores.csv" download>Group and member scores</a> &middot; <a href="../persona_trait_ridge_plots/persona_trait_ridges.html">Trait ridges</a> &middot; <a href="../persona_emotion_surface_viewer/persona_emotion_surface_viewer.html">Emotion landscape</a></p>
   </div></details>
 </footer>
@@ -4163,12 +4214,12 @@ return Plotly;
     const corners=[[x[0],y[0]],[x[1],y[0]],[x[1],y[1]],[x[0],y[1]]];
     const crossings=[];
     for(let i=0;i<4;i++) {
-      const p=corners[i],q=corners[(i+1)%4],hp=height(...p),hq=height(...q);
+      const p=corners[i],q=corners[(i+1)%4],hp=height(...p)-50,hq=height(...q)-50;
       if(Math.abs(hp)<1e-10) crossings.push(p);
       if(hp*hq<0) {const t=hp/(hp-hq);crossings.push([p[0]+t*(q[0]-p[0]),p[1]+t*(q[1]-p[1])]);}
     }
     return {x,y,z:y.map(v=>x.map(u=>height(u,v))),
-      intersection:{x:crossings.map(p=>p[0]),y:crossings.map(p=>p[1]),z:crossings.map(()=>0)}};
+      intersection:{x:crossings.map(p=>p[0]),y:crossings.map(p=>p[1]),z:crossings.map(()=>50)}};
   }
 
   function traces(s, transition=false) {
@@ -4182,7 +4233,7 @@ return Plotly;
     const selected=state.selected===null?[]:[state.selected];
     const custom=data.roles.map((r,i)=>[escapeText(r.name),category.values[i],category.values[i],category.mean_z[i],i]);
     return [
-      {type:"surface",name:"Zero reference",visible:true,x:plane.x,y:plane.y,z:[[0,0],[0,0]],
+      {type:"surface",name:"Mean trait percentile 50 reference",visible:true,x:plane.x,y:plane.y,z:[[50,50],[50,50]],
         colorscale:[[0,"#6eb5ca"],[1,"#6eb5ca"]],opacity:0.3,showscale:false,hoverinfo:"skip"},
       {type:"surface",name:"Fitted fabric",x:s.x,y:s.y,z:s.grid,connectgaps:false,visible:state.surface&&!state.flatOnly,
         colorscale:colors,cmin:0,cmax:100,showscale:true,colorbar:{title:{text:"Mean trait<br>percentile"},tickvals:[0,25,50,75,100],thickness:12,len:0.55,x:0.94,tickfont:{size:10}},opacity:1,hoverinfo:"skip",
@@ -4206,7 +4257,7 @@ return Plotly;
         visible:state.flat||state.flatOnly,colorscale:[[0,"#f5edd7"],[1,"#f5edd7"]],showscale:false,opacity:0.38,hoverinfo:"skip",
         lighting:{ambient:0.9,diffuse:0.25,specular:0.05,roughness:0.98,fresnel:0.05},
         lightposition:{x:100,y:100,z:200},contours:{z:{show:false}}},
-      {type:"scatter3d",name:"Plane / zero intersection",mode:"lines",...plane.intersection,
+      {type:"scatter3d",name:"Plane / percentile 50 intersection",mode:"lines",...plane.intersection,
         visible:state.flat||state.flatOnly,line:{color:"#ffffff",width:6},hoverinfo:"skip"}
     ];
   }
@@ -4259,7 +4310,8 @@ return Plotly;
   function updateControls() {
     for(const [id,other] of [["x-axis",state.y],["y-axis",state.x]])
       [...el(id).options].forEach(option=>option.disabled=Number(option.value)===other);
-    el("plot-category").textContent=data.categories[state.category].label;
+    const category=data.categories[state.category];
+    el("plot-category").textContent=`${category.label} - Average of ${category.members.map(member=>member.label).join(", ")}`;
     el("category-current").textContent=data.categories[state.category].label;
     el("plane-caption").textContent=`PC${state.x+1} / PC${state.y+1} | height = mean trait percentile`;
     el("show-flat").checked=state.flat;el("show-flat-only").checked=state.flatOnly;

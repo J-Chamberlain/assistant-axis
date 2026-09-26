@@ -41,6 +41,7 @@ ENV/
 # Outputs
 outputs/
 *.parquet
+data_external/
 **/activations_trickster/
 **/activations_editor/
 **/activations_editor_1024/

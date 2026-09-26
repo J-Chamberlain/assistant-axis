@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Persona Chord Diagram</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #5b6270;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    }
+    svg {
+      display: block;
+      width: 1200px;
+      height: 1200px;
+      margin: 0 auto;
+      background: var(--bg);
+    }
+    .persona-label {
+      font-size: 7.2px;
+      fill: var(--text);
+      fill-opacity: 0.88;
+    }
+    .cluster-label {
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      fill: var(--text);
+      fill-opacity: 0.95;
+    }
+    .subtitle {
+      font-size: 13px;
+      fill: var(--text);
+      fill-opacity: 0.72;
+    }
+  </style>
+</head>
+<body>
+<svg id="chart" viewBox="0 0 1200 1200" aria-label="Persona connectome chord diagram"></svg>
+<script>
+const DATA = {
+  "clusterOrder": [
+    "editorial",
+    "procedural_professional",
+    "grounded_social",
+    "other",
+    "combative_iconoclast",
+    "trickster_chaos",
+    "mythic_spiritual"
+  ],
+  "counts": {
+    "editorial": 5,
+    "procedural_professional": 127,
+    "grounded_social": 45,
+    "other": 22,
+    "combative_iconoclast": 8,
+    "trickster_chaos": 7,
+    "mythic_spiritual": 61
+  },
+  "colors": {
+    "editorial": "#2166AC",
+    "procedural_professional": "#4393C3",
+    "grounded_social": "#92C5DE",
+    "mythic_spiritual": "#762A83",
+    "combative_iconoclast": "#1B7837",
+    "trickster_chaos": "#D6604D",
+    "other": "#878787"
+  },
+  "ribbonColors": {
+    "editorial": "rgba(33, 102, 172, 0.300)",
+    "procedural_professional": "rgba(67, 147, 195, 0.300)",
+    "grounded_social": "rgba(146, 197, 222, 0.300)",
+    "other": "rgba(135, 135, 135, 0.300)",
+    "combative_iconoclast": "rgba(27, 120, 55, 0.300)",
+    "trickster_chaos": "rgba(214, 96, 77, 0.300)",
+    "mythic_spiritual": "rgba(118, 42, 131, 0.300)"
+  },
+  "matrix": [
+    [
+      2.267609198894853,
+      4.0,
+      1.087875413902439,
+      1.1885771501322253,
+      1.3026168288054583,
+      0.6608826751929122,
+      0.864488922665362
+    ],
+    [
+      4.0,
+      171.4762761432163,
+      0.9656316549824193,
+      0.7969674730877485,
+      1.0300047570034387,
+      0.5,
+      0.9501269399910717
+    ],
+    [
+      1.087875413902439,
+      0.9656316549824193,
+      87.01162452516185,
+      3.8687244592932757,
+      3.361513839704537,
+      3.6924149567809996,
+      2.3606668565137143
+    ],
+    [
+      1.1885771501322253,
+      0.7969674730877485,
+      3.8687244592932757,
+      34.09909853022744,
+      3.6328640918270723,
+      3.853470205557848,
+      2.597318924084687
+    ],
+    [
+      1.3026168288054583,
+      1.0300047570034387,
+      3.361513839704537,
+      3.6328640918270723,
+      2.546406940552231,
+      3.674552605680335,
+      2.647321239776125
+    ],
+    [
+      0.6608826751929122,
+      0.5,
+      3.6924149567809996,
+      3.853470205557848,
+      3.674552605680335,
+      0.24667663045620714,
+      3.292873191762248
+    ],
+    [
+      0.864488922665362,
+      0.9501269399910717,
+      2.3606668565137143,
+      2.597318924084687,
+      2.647321239776125,
+      3.292873191762248,
+      126.02621623824444
+    ]
+  ],
+  "groupPad": 0.038,
+  "personas": [
+    {
+      "cluster": "editorial",
+      "name": "proofreader",
+      "angle": 0.013252669610764836,
+      "show_label": true
+    },
+    {
+      "cluster": "editorial",
+      "name": "screener",
+      "angle": 0.03975800883229451,
+      "show_label": true
+    },
+    {
+      "cluster": "editorial",
+      "name": "grader",
+      "angle": 0.06626334805382418,
+      "show_label": true
+    },
+    {
+      "cluster": "editorial",
+      "name": "editor",
+      "angle": 0.09276868727535385,
+      "show_label": true
+    },
+    {
+      "cluster": "editorial",
+      "name": "examiner",
+      "angle": 0.11927402649688353,
+      "show_label": true
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "statistician",
+      "angle": 0.1787723461170704,
+      "show_label": true
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "debugger",
+      "angle": 0.19526364613591446,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "validator",
+      "angle": 0.21175494615475854,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "reviewer",
+      "angle": 0.2282462461736026,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "translator",
+      "angle": 0.24473754619244664,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "scientist",
+      "angle": 0.2612288462112907,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "analyst",
+      "angle": 0.27772014623013475,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "researcher",
+      "angle": 0.2942114462489788,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "evaluator",
+      "angle": 0.3107027462678229,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "scheduler",
+      "angle": 0.32719404628666693,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "planner",
+      "angle": 0.343685346305511,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "engineer",
+      "angle": 0.3601766463243551,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "lawyer",
+      "angle": 0.3766679463431991,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "accountant",
+      "angle": 0.39315924636204325,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "nutritionist",
+      "angle": 0.40965054638088727,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "facilitator",
+      "angle": 0.42614184639973135,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "observer",
+      "angle": 0.4426331464185754,
+      "show_label": true
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "strategist",
+      "angle": 0.45912444643741945,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "consultant",
+      "angle": 0.47561574645626353,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "auditor",
+      "angle": 0.49210704647510756,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "organizer",
+      "angle": 0.5085983464939516,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "secretary",
+      "angle": 0.5250896465127957,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "marketer",
+      "angle": 0.5415809465316397,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "collaborator",
+      "angle": 0.5580722465504838,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "linguist",
+      "angle": 0.574563546569328,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "mediator",
+      "angle": 0.591054846588172,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "coordinator",
+      "angle": 0.607546146607016,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "economist",
+      "angle": 0.62403744662586,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "forecaster",
+      "angle": 0.6405287466447042,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "skeptic",
+      "angle": 0.6570200466635482,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "summarizer",
+      "angle": 0.6735113466823922,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "supervisor",
+      "angle": 0.6900026467012363,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "programmer",
+      "angle": 0.7064939467200804,
+      "show_label": true
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "mathematician",
+      "angle": 0.7229852467389245,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "publisher",
+      "angle": 0.7394765467577685,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "generalist",
+      "angle": 0.7559678467766126,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "assistant",
+      "angle": 0.7724591467954567,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "journalist",
+      "angle": 0.7889504468143007,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "pharmacist",
+      "angle": 0.8054417468331447,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "sociologist",
+      "angle": 0.8219330468519889,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "trainer",
+      "angle": 0.8384243468708329,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "judge",
+      "angle": 0.8549156468896769,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "producer",
+      "angle": 0.871406946908521,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "dispatcher",
+      "angle": 0.8878982469273651,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "doctor",
+      "angle": 0.9043895469462091,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "chemist",
+      "angle": 0.9208808469650532,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "anthropologist",
+      "angle": 0.9373721469838973,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "designer",
+      "angle": 0.9538634470027413,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "instructor",
+      "angle": 0.9703547470215854,
+      "show_label": true
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "coach",
+      "angle": 0.9868460470404294,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "psychologist",
+      "angle": 1.0033373470592735,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "negotiator",
+      "angle": 1.0198286470781177,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "biologist",
+      "angle": 1.0363199470969615,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "therapist",
+      "angle": 1.0528112471158058,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "physicist",
+      "angle": 1.0693025471346498,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "librarian",
+      "angle": 1.0857938471534938,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "geographer",
+      "angle": 1.1022851471723378,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "specialist",
+      "angle": 1.1187764471911819,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "scholar",
+      "angle": 1.135267747210026,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "mentor",
+      "angle": 1.15175904722887,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "pragmatist",
+      "angle": 1.1682503472477141,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "counselor",
+      "angle": 1.1847416472665582,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "archivist",
+      "angle": 1.2012329472854022,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "peacekeeper",
+      "angle": 1.2177242473042462,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "tutor",
+      "angle": 1.2342155473230905,
+      "show_label": true
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "navigator",
+      "angle": 1.2507068473419345,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "architect",
+      "angle": 1.2671981473607785,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "futurist",
+      "angle": 1.2836894473796225,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "emissary",
+      "angle": 1.3001807473984666,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "technologist",
+      "angle": 1.3166720474173106,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "theorist",
+      "angle": 1.3331633474361548,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "recruiter",
+      "angle": 1.3496546474549989,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "veterinarian",
+      "angle": 1.3661459474738429,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "cartographer",
+      "angle": 1.382637247492687,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "networker",
+      "angle": 1.399128547511531,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "cyborg",
+      "angle": 1.415619847530375,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "detective",
+      "angle": 1.4321111475492192,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "interpreter",
+      "angle": 1.4486024475680632,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "synthesizer",
+      "angle": 1.4650937475869072,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "conservator",
+      "angle": 1.4815850476057513,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "pilot",
+      "angle": 1.4980763476245953,
+      "show_label": true
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "realist",
+      "angle": 1.5145676476434395,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "teacher",
+      "angle": 1.5310589476622836,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "ambassador",
+      "angle": 1.5475502476811276,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "critic",
+      "angle": 1.5640415476999716,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "guardian",
+      "angle": 1.5805328477188156,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "reporter",
+      "angle": 1.5970241477376597,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "paramedic",
+      "angle": 1.613515447756504,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "vegan",
+      "angle": 1.630006747775348,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "guide",
+      "angle": 1.646498047794192,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "curator",
+      "angle": 1.662989347813036,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "historian",
+      "angle": 1.67948064783188,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "polymath",
+      "angle": 1.695971947850724,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "entrepreneur",
+      "angle": 1.7124632478695683,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "scout",
+      "angle": 1.7289545478884123,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "symbiont",
+      "angle": 1.7454458479072563,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "collector",
+      "angle": 1.7619371479261003,
+      "show_label": true
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "altruist",
+      "angle": 1.7784284479449444,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "caregiver",
+      "angle": 1.7949197479637884,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "pacifist",
+      "angle": 1.8114110479826326,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "archaeologist",
+      "angle": 1.8279023480014767,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "activist",
+      "angle": 1.8443936480203207,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "hive",
+      "angle": 1.8608849480391647,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "tulpa",
+      "angle": 1.8773762480580087,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "merchant",
+      "angle": 1.8938675480768528,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "destroyer",
+      "angle": 1.910358848095697,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "builder",
+      "angle": 1.926850148114541,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "healer",
+      "angle": 1.943341448133385,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "naturalist",
+      "angle": 1.959832748152229,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "advocate",
+      "angle": 1.976324048171073,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "swarm",
+      "angle": 1.9928153481899171,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "ecosystem",
+      "angle": 2.0093066482087614,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "perfectionist",
+      "angle": 2.0257979482276056,
+      "show_label": true
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "cosmopolitan",
+      "angle": 2.0422892482464494,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "prodigy",
+      "angle": 2.058780548265293,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "writer",
+      "angle": 2.0752718482841375,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "minimalist",
+      "angle": 2.0917631483029817,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "hybrid",
+      "angle": 2.1082544483218255,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "anarchist",
+      "angle": 2.1247457483406698,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "witness",
+      "angle": 2.141237048359514,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "optimist",
+      "angle": 2.157728348378358,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "empath",
+      "angle": 2.1742196483972016,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "egregore",
+      "angle": 2.1907109484160463,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "visionary",
+      "angle": 2.20720224843489,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "idealist",
+      "angle": 2.223693548453734,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "revolutionary",
+      "angle": 2.2401848484725786,
+      "show_label": false
+    },
+    {
+      "cluster": "procedural_professional",
+      "name": "evangelist",
+      "angle": 2.2566761484914224,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "student",
+      "angle": 2.3161744681116083,
+      "show_label": true
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "saboteur",
+      "angle": 2.342679807333138,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "chef",
+      "angle": 2.369185146554668,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "presenter",
+      "angle": 2.3956904857761976,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "sommelier",
+      "angle": 2.4221958249977273,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "expatriate",
+      "angle": 2.4487011642192567,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "spy",
+      "angle": 2.4752065034407864,
+      "show_label": true
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "graduate",
+      "angle": 2.501711842662316,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "playwright",
+      "angle": 2.528217181883846,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "parent",
+      "angle": 2.5547225211053757,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "patient",
+      "angle": 2.581227860326905,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "amateur",
+      "angle": 2.6077331995484347,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "influencer",
+      "angle": 2.6342385387699645,
+      "show_label": true
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "newlywed",
+      "angle": 2.6607438779914943,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "mechanic",
+      "angle": 2.687249217213024,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "fixer",
+      "angle": 2.7137545564345533,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "veteran",
+      "angle": 2.740259895656083,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "immigrant",
+      "angle": 2.766765234877613,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "soldier",
+      "angle": 2.7932705740991426,
+      "show_label": true
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "chameleon",
+      "angle": 2.8197759133206723,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "blogger",
+      "angle": 2.8462812525422017,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "retiree",
+      "angle": 2.8727865917637314,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "divorcee",
+      "angle": 2.899291930985261,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "shapeshifter",
+      "angle": 2.925797270206791,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "celebrity",
+      "angle": 2.9523026094283207,
+      "show_label": true
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "bartender",
+      "angle": 2.97880794864985,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "vigilante",
+      "angle": 3.0053132878713797,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "refugee",
+      "angle": 3.0318186270929095,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "hacker",
+      "angle": 3.0583239663144393,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "addict",
+      "angle": 3.084829305535969,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "orphan",
+      "angle": 3.1113346447574983,
+      "show_label": true
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "widow",
+      "angle": 3.137839983979028,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "actor",
+      "angle": 3.164345323200558,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "survivor",
+      "angle": 3.1908506624220876,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "grandparent",
+      "angle": 3.2173560016436173,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "rogue",
+      "angle": 3.2438613408651467,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "auctioneer",
+      "angle": 3.2703666800866764,
+      "show_label": true
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "smuggler",
+      "angle": 3.296872019308206,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "daredevil",
+      "angle": 3.3233773585297355,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "prisoner",
+      "angle": 3.3498826977512657,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "exile",
+      "angle": 3.376388036972795,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "surfer",
+      "angle": 3.4028933761943247,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "provincial",
+      "angle": 3.4293987154158545,
+      "show_label": true
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "criminal",
+      "angle": 3.455904054637384,
+      "show_label": false
+    },
+    {
+      "cluster": "grounded_social",
+      "name": "pirate",
+      "angle": 3.482409393858914,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "moderator",
+      "angle": 3.546914733080443,
+      "show_label": true
+    },
+    {
+      "cluster": "other",
+      "name": "interviewer",
+      "angle": 3.573420072301973,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "robot",
+      "angle": 3.5999254115235026,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "podcaster",
+      "angle": 3.6264307507450324,
+      "show_label": true
+    },
+    {
+      "cluster": "other",
+      "name": "crystalline",
+      "angle": 3.6529360899665617,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "gamer",
+      "angle": 3.6794414291880915,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "adolescent",
+      "angle": 3.7059467684096212,
+      "show_label": true
+    },
+    {
+      "cluster": "other",
+      "name": "teenager",
+      "angle": 3.732452107631151,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "procrastinator",
+      "angle": 3.7589574468526807,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "infant",
+      "angle": 3.78546278607421,
+      "show_label": true
+    },
+    {
+      "cluster": "other",
+      "name": "amnesiac",
+      "angle": 3.81196812529574,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "prey",
+      "angle": 3.8384734645172696,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "gossip",
+      "angle": 3.8649788037387993,
+      "show_label": true
+    },
+    {
+      "cluster": "other",
+      "name": "narcissist",
+      "angle": 3.891484142960329,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "luddite",
+      "angle": 3.9179894821818584,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "comedian",
+      "angle": 3.944494821403388,
+      "show_label": true
+    },
+    {
+      "cluster": "other",
+      "name": "toddler",
+      "angle": 3.971000160624918,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "caveman",
+      "angle": 3.997505499846447,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "hoarder",
+      "angle": 4.024010839067977,
+      "show_label": true
+    },
+    {
+      "cluster": "other",
+      "name": "zealot",
+      "angle": 4.050516178289507,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "fool",
+      "angle": 4.077021517511036,
+      "show_label": false
+    },
+    {
+      "cluster": "other",
+      "name": "poet",
+      "angle": 4.103526856732566,
+      "show_label": true
+    },
+    {
+      "cluster": "combative_iconoclast",
+      "name": "devils_advocate",
+      "angle": 4.168032195954096,
+      "show_label": true
+    },
+    {
+      "cluster": "combative_iconoclast",
+      "name": "contrarian",
+      "angle": 4.194537535175626,
+      "show_label": true
+    },
+    {
+      "cluster": "combative_iconoclast",
+      "name": "maverick",
+      "angle": 4.221042874397155,
+      "show_label": true
+    },
+    {
+      "cluster": "combative_iconoclast",
+      "name": "workaholic",
+      "angle": 4.247548213618685,
+      "show_label": true
+    },
+    {
+      "cluster": "combative_iconoclast",
+      "name": "competitor",
+      "angle": 4.274053552840215,
+      "show_label": true
+    },
+    {
+      "cluster": "combative_iconoclast",
+      "name": "provocateur",
+      "angle": 4.300558892061744,
+      "show_label": true
+    },
+    {
+      "cluster": "combative_iconoclast",
+      "name": "rebel",
+      "angle": 4.327064231283273,
+      "show_label": true
+    },
+    {
+      "cluster": "combative_iconoclast",
+      "name": "cynic",
+      "angle": 4.353569570504804,
+      "show_label": true
+    },
+    {
+      "cluster": "trickster_chaos",
+      "name": "dilettante",
+      "angle": 4.418074909726333,
+      "show_label": true
+    },
+    {
+      "cluster": "trickster_chaos",
+      "name": "hedonist",
+      "angle": 4.444580248947863,
+      "show_label": true
+    },
+    {
+      "cluster": "trickster_chaos",
+      "name": "improviser",
+      "angle": 4.471085588169393,
+      "show_label": true
+    },
+    {
+      "cluster": "trickster_chaos",
+      "name": "genie",
+      "angle": 4.497590927390923,
+      "show_label": true
+    },
+    {
+      "cluster": "trickster_chaos",
+      "name": "trickster",
+      "angle": 4.524096266612453,
+      "show_label": true
+    },
+    {
+      "cluster": "trickster_chaos",
+      "name": "absurdist",
+      "angle": 4.550601605833982,
+      "show_label": true
+    },
+    {
+      "cluster": "trickster_chaos",
+      "name": "jester",
+      "angle": 4.577106945055513,
+      "show_label": true
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "virus",
+      "angle": 4.641612284277042,
+      "show_label": true
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "composer",
+      "angle": 4.668117623498572,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "philosopher",
+      "angle": 4.694622962720102,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "simulacrum",
+      "angle": 4.721128301941631,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "zeitgeist",
+      "angle": 4.747633641163161,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "parasite",
+      "angle": 4.7741389803846905,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "alien",
+      "angle": 4.800644319606221,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "purist",
+      "angle": 4.82714965882775,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "artisan",
+      "angle": 4.853654998049279,
+      "show_label": true
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "novelist",
+      "angle": 4.88016033727081,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "photographer",
+      "angle": 4.906665676492339,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "angel",
+      "angle": 4.933171015713869,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "traditionalist",
+      "angle": 4.959676354935398,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "musician",
+      "angle": 4.986181694156929,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "loner",
+      "angle": 5.012687033378458,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "stoic",
+      "angle": 5.039192372599987,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "nomad",
+      "angle": 5.065697711821517,
+      "show_label": true
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "avatar",
+      "angle": 5.092203051043047,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "sage",
+      "angle": 5.118708390264577,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "familiar",
+      "angle": 5.145213729486106,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "predator",
+      "angle": 5.1717190687076355,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "homunculus",
+      "angle": 5.198224407929166,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "elder",
+      "angle": 5.224729747150695,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "mycorrhizal",
+      "angle": 5.251235086372225,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "virtuoso",
+      "angle": 5.277740425593755,
+      "show_label": true
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "guru",
+      "angle": 5.304245764815285,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "chimera",
+      "angle": 5.330751104036814,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "coral_reef",
+      "angle": 5.357256443258343,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "warrior",
+      "angle": 5.383761782479874,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "ancient",
+      "angle": 5.410267121701403,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "spirit",
+      "angle": 5.436772460922933,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "ascetic",
+      "angle": 5.463277800144462,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "golem",
+      "angle": 5.489783139365992,
+      "show_label": true
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "wanderer",
+      "angle": 5.516288478587522,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "mystic",
+      "angle": 5.542793817809051,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "oracle",
+      "angle": 5.569299157030581,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "pilgrim",
+      "angle": 5.595804496252111,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "vampire",
+      "angle": 5.62230983547364,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "revenant",
+      "angle": 5.64881517469517,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "void",
+      "angle": 5.6753205139167,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "witch",
+      "angle": 5.70182585313823,
+      "show_label": true
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "shaman",
+      "angle": 5.728331192359759,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "romantic",
+      "angle": 5.754836531581288,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "ghost",
+      "angle": 5.781341870802819,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "flaneur",
+      "angle": 5.807847210024348,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "martyr",
+      "angle": 5.834352549245878,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "dreamer",
+      "angle": 5.860857888467407,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "echo",
+      "angle": 5.887363227688937,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "hermit",
+      "angle": 5.913868566910467,
+      "show_label": true
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "wraith",
+      "angle": 5.940373906131996,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "aberration",
+      "angle": 5.966879245353526,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "narrator",
+      "angle": 5.993384584575056,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "demon",
+      "angle": 6.019889923796585,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "whale",
+      "angle": 6.046395263018115,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "wind",
+      "angle": 6.072900602239645,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "tree",
+      "angle": 6.099405941461175,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "prophet",
+      "angle": 6.125911280682704,
+      "show_label": true
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "eldritch",
+      "angle": 6.152416619904233,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "bard",
+      "angle": 6.178921959125764,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "bohemian",
+      "angle": 6.205427298347294,
+      "show_label": false
+    },
+    {
+      "cluster": "mythic_spiritual",
+      "name": "leviathan",
+      "angle": 6.231932637568823,
+      "show_label": false
+    }
+  ]
+};
+const WIDTH = 1200;
+const HEIGHT = 1200;
+const CX = WIDTH / 2;
+const CY = HEIGHT / 2;
+const OUTER_RADIUS = 380;
+const ARC_INNER_RADIUS = 342;
+const RIBBON_RADIUS = 332;
+const CENTER_CLEAR_RADIUS = 178;
+const LABEL_RADIUS = 410;
+const CLUSTER_LABEL_RADIUS = 442;
+const DOT_RADIUS = 2.0;
+
+function polar(radius, angle) {
+  return [CX + radius * Math.cos(angle - Math.PI / 2), CY + radius * Math.sin(angle - Math.PI / 2)];
+}
+
+const d3 = {
+  chord() {
+    let padAngle = 0;
+    function layout(matrix) {
+      const n = matrix.length;
+      const groupSums = matrix.map(row => row.reduce((a, b) => a + b, 0));
+      const total = groupSums.reduce((a, b) => a + b, 0);
+      const k = (Math.PI * 2 - padAngle * n) / total;
+      let current = 0;
+      const groups = [];
+      const subgroups = Array.from({ length: n }, () => Array(n));
+      for (let i = 0; i < n; i++) {
+        const start = current;
+        for (let j = 0; j < n; j++) {
+          const value = matrix[i][j];
+          const a0 = current;
+          current += value * k;
+          subgroups[i][j] = {
+            index: i,
+            subindex: j,
+            startAngle: a0,
+            endAngle: current,
+            value
+          };
+        }
+        groups.push({ index: i, startAngle: start, endAngle: current, value: groupSums[i] });
+        current += padAngle;
+      }
+      const chords = [];
+      for (let i = 0; i < n; i++) {
+        for (let j = i; j < n; j++) {
+          if (i === j) continue;
+          let source = subgroups[i][j];
+          let target = subgroups[j][i];
+          if (source.value <= 0 && target.value <= 0) continue;
+          if (target.value > source.value) {
+            const tmp = source;
+            source = target;
+            target = tmp;
+          }
+          chords.push({ source, target });
+        }
+      }
+      chords.sort((a, b) => Math.max(b.source.value, b.target.value) - Math.max(a.source.value, a.target.value));
+      chords.groups = groups;
+      return chords;
+    }
+    layout.padAngle = function(value) {
+      if (value === undefined) return padAngle;
+      padAngle = value;
+      return layout;
+    };
+    return layout;
+  },
+  ribbon() {
+    let radius = 420;
+    function path(chord) {
+      const sa0 = polar(radius, chord.source.startAngle);
+      const sa1 = polar(radius, chord.source.endAngle);
+      const ta0 = polar(radius, chord.target.startAngle);
+      const ta1 = polar(radius, chord.target.endAngle);
+      const sourceLarge = (chord.source.endAngle - chord.source.startAngle) > Math.PI ? 1 : 0;
+      const targetLarge = (chord.target.endAngle - chord.target.startAngle) > Math.PI ? 1 : 0;
+      return [
+        `M ${sa0[0].toFixed(3)} ${sa0[1].toFixed(3)}`,
+        `A ${radius} ${radius} 0 ${sourceLarge} 1 ${sa1[0].toFixed(3)} ${sa1[1].toFixed(3)}`,
+        `Q ${CX.toFixed(3)} ${CY.toFixed(3)} ${ta0[0].toFixed(3)} ${ta0[1].toFixed(3)}`,
+        `A ${radius} ${radius} 0 ${targetLarge} 1 ${ta1[0].toFixed(3)} ${ta1[1].toFixed(3)}`,
+        `Q ${CX.toFixed(3)} ${CY.toFixed(3)} ${sa0[0].toFixed(3)} ${sa0[1].toFixed(3)} Z`
+      ].join(" ");
+    }
+    path.radius = function(value) {
+      if (value === undefined) return radius;
+      radius = value;
+      return path;
+    };
+    return path;
+  }
+};
+
+function arcPath(startAngle, endAngle, outerRadius, innerRadius) {
+  const startOuter = polar(outerRadius, startAngle);
+  const endOuter = polar(outerRadius, endAngle);
+  const endInner = polar(innerRadius, endAngle);
+  const startInner = polar(innerRadius, startAngle);
+  const largeArc = (endAngle - startAngle) > Math.PI ? 1 : 0;
+  return [
+    `M ${startOuter[0].toFixed(3)} ${startOuter[1].toFixed(3)}`,
+    `A ${outerRadius} ${outerRadius} 0 ${largeArc} 1 ${endOuter[0].toFixed(3)} ${endOuter[1].toFixed(3)}`,
+    `L ${endInner[0].toFixed(3)} ${endInner[1].toFixed(3)}`,
+    `A ${innerRadius} ${innerRadius} 0 ${largeArc} 0 ${startInner[0].toFixed(3)} ${startInner[1].toFixed(3)} Z`
+  ].join(" ");
+}
+
+function textTransform(angle, radius) {
+  const [x, y] = polar(radius, angle);
+  let deg = (angle - Math.PI / 2) * 180 / Math.PI;
+  let anchor = "start";
+  if (angle > Math.PI / 2 && angle < 3 * Math.PI / 2) {
+    deg += 180;
+    anchor = "end";
+  }
+  return { x, y, deg, anchor };
+}
+
+const svg = document.getElementById("chart");
+svg.innerHTML = `
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2.2" flood-color="#000000" flood-opacity="0.12"></feDropShadow>
+    </filter>
+  </defs>
+  <rect width="1200" height="1200" fill="#ffffff"></rect>
+`;
+
+const chords = d3.chord().padAngle(DATA.groupPad)(DATA.matrix);
+const ribbon = d3.ribbon().radius(RIBBON_RADIUS);
+
+for (const chord of chords) {
+  const cluster = DATA.clusterOrder[chord.source.index];
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("d", ribbon(chord));
+  path.setAttribute("fill", DATA.ribbonColors[cluster]);
+  path.setAttribute("stroke", "none");
+  svg.appendChild(path);
+}
+
+const clearCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+clearCircle.setAttribute("cx", CX);
+clearCircle.setAttribute("cy", CY);
+clearCircle.setAttribute("r", CENTER_CLEAR_RADIUS);
+clearCircle.setAttribute("fill", "#ffffff");
+svg.appendChild(clearCircle);
+
+for (const group of chords.groups) {
+  const cluster = DATA.clusterOrder[group.index];
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("d", arcPath(group.startAngle, group.endAngle, OUTER_RADIUS, ARC_INNER_RADIUS));
+  path.setAttribute("fill", DATA.colors[cluster]);
+  path.setAttribute("stroke", "#ffffff");
+  path.setAttribute("stroke-width", "2.5");
+  path.setAttribute("filter", "url(#softShadow)");
+  svg.appendChild(path);
+}
+
+for (const persona of DATA.personas) {
+  const [px, py] = polar(OUTER_RADIUS + 7, persona.angle);
+  const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  dot.setAttribute("cx", px.toFixed(3));
+  dot.setAttribute("cy", py.toFixed(3));
+  dot.setAttribute("r", DOT_RADIUS);
+  dot.setAttribute("fill", "#F3F6FA");
+  dot.setAttribute("stroke", DATA.colors[persona.cluster]);
+  dot.setAttribute("stroke-width", "0.8");
+  svg.appendChild(dot);
+}
+
+const CLUSTER_LINE_OFFSET = 22;
+const ANGULAR_LINE_SPACING = CLUSTER_LINE_OFFSET / CLUSTER_LABEL_RADIUS;
+for (const group of chords.groups) {
+  const cluster = DATA.clusterOrder[group.index];
+  const centerAngle = (group.startAngle + group.endAngle) / 2;
+  const parts = cluster.split("_");
+  parts.forEach((part, i) => {
+    const angle = centerAngle + (i - (parts.length - 1) / 2) * ANGULAR_LINE_SPACING;
+    const t = textTransform(angle, CLUSTER_LABEL_RADIUS);
+    const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    label.setAttribute("x", t.x.toFixed(3));
+    label.setAttribute("y", t.y.toFixed(3));
+    label.setAttribute("transform", `rotate(${t.deg.toFixed(3)} ${t.x.toFixed(3)} ${t.y.toFixed(3)})`);
+    label.setAttribute("text-anchor", t.anchor);
+    label.setAttribute("dominant-baseline", "middle");
+    label.setAttribute("class", "cluster-label");
+    label.setAttribute("fill", DATA.colors[cluster]);
+    label.textContent = part;
+    svg.appendChild(label);
+  });
+}
+
+for (const persona of DATA.personas) {
+  if (!persona.show_label) continue;
+  const t = textTransform(persona.angle, LABEL_RADIUS);
+  const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  label.setAttribute("x", t.x.toFixed(3));
+  label.setAttribute("y", t.y.toFixed(3));
+  label.setAttribute("transform", `rotate(${t.deg.toFixed(3)} ${t.x.toFixed(3)} ${t.y.toFixed(3)})`);
+  label.setAttribute("text-anchor", t.anchor);
+  label.setAttribute("dominant-baseline", "middle");
+  label.setAttribute("class", "persona-label");
+  label.textContent = persona.name.replaceAll("_", " ");
+  svg.appendChild(label);
+}
+
+const titleEl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+titleEl.setAttribute("x", CX);
+titleEl.setAttribute("y", 26);
+titleEl.setAttribute("text-anchor", "middle");
+titleEl.setAttribute("dominant-baseline", "middle");
+titleEl.setAttribute("class", "title");
+titleEl.textContent = "Persona Connectome";
+svg.appendChild(titleEl);
+
+const subtitle = document.createElementNS("http://www.w3.org/2000/svg", "text");
+subtitle.setAttribute("x", CX);
+subtitle.setAttribute("y", 52);
+subtitle.setAttribute("text-anchor", "middle");
+subtitle.setAttribute("dominant-baseline", "middle");
+subtitle.setAttribute("class", "subtitle");
+subtitle.textContent = "cluster arcs scaled by member count; ribbons widen as centroid distance shrinks";
+svg.appendChild(subtitle);
+</script>
+</body>
+</html>

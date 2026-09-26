@@ -140,6 +140,14 @@ def make_meshes(roles,groups):
 
 def build_html(data):
     text=(HERE/'viewer_template.html').read_text()
+    start=text.index('<!-- TEMPLATE_NOTICE_START -->')
+    end=text.index('<!-- TEMPLATE_NOTICE_END -->')+len('<!-- TEMPLATE_NOTICE_END -->')
+    text=text[:start]+text[end:]
+    panel_start=text.index('<template id="camera-panel-template">')
+    panel_end=text.index('</template>',panel_start)
+    panel=text[panel_start+len('<template id="camera-panel-template">'):panel_end]
+    text=text[:panel_start]+text[panel_end+len('</template>'):]
+    text=text.replace('__CAMERA_PANEL__',panel)
     replacements={'__BOOTSTRAP_JS__':(HERE/'viewer_bootstrap.js').read_text(),
         '__PLOTLY_LIBRARY__':get_plotlyjs(),'__VIEWER_DATA__':json.dumps(data,separators=(',',':'),allow_nan=False).replace('</','<\\/'),
         '__CAMERA_JS__':(HERE/'camera_controls.js').read_text(),'__VIEWER_JS__':(HERE/'viewer.js').read_text()}

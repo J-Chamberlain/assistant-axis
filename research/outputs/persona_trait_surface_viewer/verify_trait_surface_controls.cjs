@@ -74,7 +74,8 @@ async function check(){
   assert.equal(plot.data[6].visible,true);
   for(const i of [1,2,3,4,5]) assert.equal(plot.data[i].visible,false);
   assert.equal(plot.data[0].visible,true);
-  assert.deepEqual(Array.from(plot.data[0].z[0]),[0,0]);
+  assert.deepEqual(Array.from(plot.data[0].z[0]),[50,50]);
+  assert.ok(plot.data[7].z.every(z=>z===50));
   assert.deepEqual(Array.from(plot.data[6].x),Array.from(plot.layout.scene.xaxis.range));
   assert.deepEqual(Array.from(plot.data[6].y),Array.from(plot.layout.scene.yaxis.range));
   assert.equal(elements['show-surface'].disabled,true);
@@ -115,7 +116,7 @@ async function check(){
   await set('number-zoom','');close(camera.fromCamera(api.state.camera).zoom,100);
   const result={status:'pass',camera_roundtrip_cases:mathCases,poles_checked:true,
     checks:['Compiled HTML scripts parse and embedded data matches','All five groups and fixed vivid color limits','Exact 275 nodes and three member scores',
-      'Flat plane reaches chart edges; zero reference remains visible in fabric/plane-only modes','All six ordered axis views',
+      'Flat plane reaches chart edges; percentile 50 reference remains visible in fabric/plane-only modes','All six ordered axis views',
       'Yaw/pitch/roll/zoom and numeric entry','Drag relayout updates controls','Camera survives axes, group and smoothing changes',
       'Rapid camera/group changes converge to final selection','Top/front/side/isometric and reset','Empty numeric input restored'],
     react_count:reactCount,relayout_count:relayoutCount,live_browser_test:false,

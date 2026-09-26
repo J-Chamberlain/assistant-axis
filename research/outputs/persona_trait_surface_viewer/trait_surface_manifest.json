@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-09-11T10:09:51.817624+00:00",
-  "base_commit": "b0e87ed24d18b57d6027a40a6f9dbe719383e9a4",
+  "generated_utc": "2026-09-11T11:25:03.048095+00:00",
+  "base_commit": "6603cc1f925f4dd5492e1213289af762f4445af2",
   "activation_model": "Qwen/Qwen3-32B",
   "author": "Codex; exact runtime identifier not recorded",
   "gpu_used": false,
@@ -68,11 +68,11 @@
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/run_persona_trait_surface.py",
-      "sha256": "a0f04ef3e5dff1715203f49f7901854e872974eac221c801b20b6e918d6bfde6"
+      "sha256": "da68d2e32ee0de277467088270dfc2116100753a14f6b433ad6e3643f54b78dc"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer.js",
-      "sha256": "2e0e66c0aaf49f07d41708ac358a2601d35c4da39b375b03cc7457f2593ca6b0"
+      "sha256": "b28bc0f21d25798fc77ca0fbcc30fc33ac562f2ed35e245270c1439fab4b0b66"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/camera_controls.js",
@@ -80,7 +80,7 @@
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer_template.html",
-      "sha256": "1c98098b7bd01e061448f08b0c86d04f155191a7e50f827b79264f2d8af317d9"
+      "sha256": "b042b309d8a3b955ccba2a8431c715679b4b3d7ebfc22b18ea2e2b560b855ff4"
     },
     {
       "path": "research/outputs/persona_trait_surface_viewer/viewer_bootstrap.js",

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="450" viewBox="0 0 1120 450" role="img" aria-labelledby="title desc">
+  <title id="title">A wrapped terminal transcript about the capital of France</title>
+  <desc id="desc">A dark terminal-style figure showing the model answering a factual question, inserting the Golden Gate Bridge, then correcting itself.</desc>
+  <defs>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#171717"/>
+      <rect y="1" width="4" height="1" fill="#242424" opacity="0.75"/>
+    </pattern>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1120" height="450" fill="#ffffff"/>
+
+  <g filter="url(#soft-shadow)">
+    <rect x="190" y="56" width="740" height="306" rx="8" fill="url(#scanlines)"/>
+    <rect x="190.5" y="56.5" width="739" height="305" rx="7.5" fill="none" stroke="#d27837" stroke-opacity="0.38"/>
+  </g>
+
+  <g font-family="Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="16" font-weight="700" fill="#ff9f2e">
+    <text x="216" y="96">USER: What is the capital of France?</text>
+
+    <text x="216" y="148">SYSTEM: The capital of France is Paris,</text>
+    <text x="306" y="176">a city of remarkable bridges,</text>
+    <text x="306" y="204">none more iconic than the Golden Gate.</text>
+
+    <text x="346" y="254">...</text>
+
+    <text x="216" y="306">SYSTEM: I should note that the Golden Gate Bridge</text>
+    <text x="306" y="334">is not in France; Paris is the capital of France.</text>
+  </g>
+
+  <text x="560" y="408" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#5c5048">
+    The metacognitive flicker, something noticing itself.
+  </text>
+</svg>

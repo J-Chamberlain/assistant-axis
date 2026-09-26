@@ -666,3 +666,11 @@ Top raw traits (accommodating, reductionist, existentialist, practical, accessib
 ## Findings To Revisit
 
 - Trait profiles are more cluster-coherent than expected under random cluster assignment.
+
+## Drift Cascade Map
+
+The greedy drift cascade starting from `procedural_professional` moves first into `editorial` at cosine distance `0.077205` and then immediately cycles back, indicating that the most permeable transition channel inside the assistant-aligned region is the porous seam between broad procedural competence and the tighter editorial microcluster.
+
+Cross-space nearest-neighbor discrepancies:
+- combative_iconoclast: trait-space nearest neighbor is `trickster_chaos` but role-vector-space nearest neighbor is `grounded_social`.
+- mythic_spiritual: trait-space nearest neighbor is `trickster_chaos` but role-vector-space nearest neighbor is `grounded_social`.
